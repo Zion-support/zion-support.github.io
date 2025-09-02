@@ -1,5 +1,4 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -25,17 +24,14 @@ class ErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error: ', error, errorInfo);
     }
 
     // Call custom error handler if provided
     this.props.onError?.(error, errorInfo);
-
     // Send error to monitoring service in production
     if (process.env.NODE_ENV === 'production') {
       this.logErrorToService(error, errorInfo);
@@ -47,28 +43,26 @@ class ErrorBoundary extends Component<Props, State> {
     fetch('/api/analytics/error', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
         error: {
           message: error.message,
           stack: error.stack,
-          name: error.name
+          name: error.name,
         },
         errorInfo: {
-          componentStack: errorInfo.componentStack
+          componentStack: errorInfo.componentStack,
         },
         url: window.location.href,
         timestamp: Date.now(),
-        userAgent: navigator.userAgent
-      })
+        userAgent: navigator.userAgent,
+      }),
     }).catch(console.error);
   };
-
   private handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
-
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -100,9 +94,10 @@ class ErrorBoundary extends Component<Props, State> {
               Something went wrong
             </h1>
             <p className="text-gray-600 text-center mb-6">
-              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
+              We're sorry, but something unexpected happened. Please try
+              refreshing the page.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm: flex-row gap-3">
               <button
                 onClick={this.handleRetry}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
@@ -111,7 +106,7 @@ class ErrorBoundary extends Component<Props, State> {
               </button>
               <button
                 onClick={() => window.location.reload()}
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
+                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md hover: bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 transition-colors"
               >
                 Refresh Page
               </button>

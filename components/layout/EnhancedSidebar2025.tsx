@@ -2,14 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
-  Phone, Mail, MapPin, ChevronRight, ChevronDown, 
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
-  Award, Clock, Heart, Lightbulb, Users, FileText, 
-  HelpCircle, BookOpen, Target, TrendingUp, Star
-} from 'lucide-react';
-
 interface SidebarItem {
   name: string;
   href: string;
@@ -36,17 +28,35 @@ const sidebarSections = [
         icon: Brain,
         description: 'Advanced AI consciousness and evolution platforms',
         children: [
-          { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' },
+          {
+            name: 'AI Consciousness Evolution',
+            href: '/ai-consciousness-evolution',
+          },
           { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
           { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
           { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
           { name: 'AI Education Platform', href: '/ai-education-platform' },
-          { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },
-          { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
-          { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' },
-          { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' },
-          { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }
-        ]
+          {
+            name: 'AI Healthcare Diagnostics',
+            href: '/ai-healthcare-diagnostics',
+          },
+          {
+            name: 'AI Financial Intelligence',
+            href: '/ai-financial-intelligence',
+          },
+          {
+            name: 'AI Sustainability Platform',
+            href: '/ai-sustainability-platform',
+          },
+          {
+            name: 'AI Emotional Intelligence',
+            href: '/ai-emotional-intelligence-platform',
+          },
+          {
+            name: 'AI Legal Contract Analyzer',
+            href: '/ai-legal-contract-analyzer',
+          },
+        ],
       },
       {
         name: 'Quantum Computing',
@@ -54,15 +64,30 @@ const sidebarSections = [
         icon: Atom,
         description: 'Next-generation quantum computing solutions',
         children: [
-          { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
+          {
+            name: 'Quantum Cloud Infrastructure',
+            href: '/quantum-cloud-infrastructure',
+          },
           { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
           { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
-          { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery' },
+          {
+            name: 'Quantum Materials Discovery',
+            href: '/quantum-materials-discovery',
+          },
           { name: 'Quantum Robotics', href: '/quantum-robotics' },
-          { name: 'Quantum Internet Security', href: '/quantum-internet-security' },
-          { name: 'Quantum Logistics', href: '/quantum-logistics-optimization' },
-          { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform' }
-        ]
+          {
+            name: 'Quantum Internet Security',
+            href: '/quantum-internet-security',
+          },
+          {
+            name: 'Quantum Logistics',
+            href: '/quantum-logistics-optimization',
+          },
+          {
+            name: 'Quantum Cybersecurity',
+            href: '/quantum-cybersecurity-platform',
+          },
+        ],
       },
       {
         name: 'Enterprise IT',
@@ -70,17 +95,29 @@ const sidebarSections = [
         icon: Shield,
         description: 'Enterprise-grade IT infrastructure and security',
         children: [
-          { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration' },
-          { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture' },
-          { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform' },
+          {
+            name: 'Edge Computing Orchestrator',
+            href: '/edge-computing-orchestration',
+          },
+          {
+            name: 'Zero Trust Security Platform',
+            href: '/zero-trust-network-architecture',
+          },
+          {
+            name: 'Blockchain Enterprise Platform',
+            href: '/blockchain-infrastructure-platform',
+          },
           { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
           { name: 'Quantum Networking', href: '/quantum-networking' },
-          { name: 'Autonomous IT Operations', href: '/autonomous-it-operations' },
+          {
+            name: 'Autonomous IT Operations',
+            href: '/autonomous-it-operations',
+          },
           { name: 'Quantum Data Center', href: '/quantum-data-center' },
-          { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }
-        ]
-      }
-    ]
+          { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' },
+        ],
+      },
+    ],
   },
   {
     title: 'Innovation Hub',
@@ -97,8 +134,8 @@ const sidebarSections = [
           { name: 'Quantum Research Center', href: '/quantum-research-center' },
           { name: 'Biotech Innovation Hub', href: '/biotech-innovation-hub' },
           { name: 'Space Technology Lab', href: '/space-technology-lab' },
-          { name: 'Green Technology Center', href: '/green-technology-center' }
-        ]
+          { name: 'Green Technology Center', href: '/green-technology-center' },
+        ],
       },
       {
         name: 'Future Technologies',
@@ -107,13 +144,19 @@ const sidebarSections = [
         description: 'Emerging technologies and trends',
         children: [
           { name: 'Metaverse Platform', href: '/metaverse-platform' },
-          { name: 'Neural Interface Technology', href: '/neural-interface-technology' },
+          {
+            name: 'Neural Interface Technology',
+            href: '/neural-interface-technology',
+          },
           { name: 'Holographic Computing', href: '/holographic-computing' },
           { name: 'Time Crystal Computing', href: '/time-crystal-computing' },
-          { name: 'Consciousness Upload Platform', href: '/consciousness-upload-platform' }
-        ]
-      }
-    ]
+          {
+            name: 'Consciousness Upload Platform',
+            href: '/consciousness-upload-platform',
+          },
+        ],
+      },
+    ],
   },
   {
     title: 'Company',
@@ -124,27 +167,27 @@ const sidebarSections = [
         name: 'About Us',
         href: '/about',
         icon: Users,
-        description: 'Learn about our mission and vision'
+        description: 'Learn about our mission and vision',
       },
       {
         name: 'Leadership',
         href: '/leadership',
         icon: Award,
-        description: 'Meet our executive team'
+        description: 'Meet our executive team',
       },
       {
         name: 'Careers',
         href: '/careers',
         icon: Target,
-        description: 'Join our innovative team'
+        description: 'Join our innovative team',
       },
       {
         name: 'News & Media',
         href: '/news',
         icon: FileText,
-        description: 'Latest news and press releases'
-      }
-    ]
+        description: 'Latest news and press releases',
+      },
+    ],
   },
   {
     title: 'Support',
@@ -155,34 +198,35 @@ const sidebarSections = [
         name: 'Documentation',
         href: '/docs',
         icon: BookOpen,
-        description: 'Technical documentation and guides'
+        description: 'Technical documentation and guides',
       },
       {
         name: 'Contact',
         href: '/contact',
         icon: Phone,
-        description: 'Get in touch with our team'
+        description: 'Get in touch with our team',
       },
       {
         name: 'Status',
         href: '/status',
         icon: BarChart3,
-        description: 'System status and uptime'
-      }
-    ]
-  }
+        description: 'System status and uptime',
+      },
+    ],
+  },
 ];
-
 interface EnhancedSidebar2025Props {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClose }) => {
+const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({
+  isOpen,
+  onClose,
+}) => {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
-
   const toggleSection = (sectionTitle: string) => {
     setExpandedSections(prev =>
       prev.includes(sectionTitle)
@@ -190,7 +234,6 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
         : [...prev, sectionTitle]
     );
   };
-
   const toggleItem = (itemName: string) => {
     setExpandedItems(prev =>
       prev.includes(itemName)
@@ -198,9 +241,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
         : [...prev, itemName]
     );
   };
-
   const isActive = (href: string) => router.pathname === href;
-
   return (
     <>
       {/* Mobile overlay */}
@@ -249,13 +290,17 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                 <div key={sectionIndex}>
                   <button
                     onClick={() => toggleSection(section.title)}
-                    className="w-full flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="w-full flex items-center justify-between p-3 rounded-lg hover: bg-gray-50 transition-colors"
                   >
                     <div className="flex items-center">
-                      <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mr-3`}>
+                      <div
+                        className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center mr-3`}
+                      >
                         <section.icon className="w-4 h-4 text-white" />
                       </div>
-                      <span className="font-semibold text-gray-900">{section.title}</span>
+                      <span className="font-semibold text-gray-900">
+                        {section.title}
+                      </span>
                     </div>
                     {expandedSections.includes(section.title) ? (
                       <ChevronDown className="w-5 h-5 text-gray-500" />
@@ -287,16 +332,18 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
                               <div className="flex-1">
                                 <div className="font-medium">{item.name}</div>
                                 {item.description && (
-                                  <div className="text-sm text-gray-500">{item.description}</div>
+                                  <div className="text-sm text-gray-500">
+                                    {item.description}
+                                  </div>
                                 )}
                               </div>
                               {item.children && (
                                 <button
-                                  onClick={(e) => {
+                                  onClick={e => {
                                     e.preventDefault();
                                     toggleItem(item.name);
                                   }}
-                                  className="p-1 hover:bg-gray-200 rounded"
+                                  className="p-1 hover: bg-gray-200 rounded"
                                 >
                                   {expandedItems.includes(item.name) ? (
                                     <ChevronDown className="w-4 h-4" />
@@ -348,7 +395,7 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
           <div className="p-4 border-t border-gray-200">
             <div className="flex items-center space-x-4">
               <a
-                href="https://linkedin.com/company/ziontechgroup"
+                href="https: //linkedin.com/company/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
@@ -371,5 +418,4 @@ const EnhancedSidebar2025: React.FC<EnhancedSidebar2025Props> = ({ isOpen, onClo
     </>
   );
 };
-
 export default EnhancedSidebar2025;

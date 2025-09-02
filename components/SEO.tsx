@@ -1,6 +1,5 @@
 import React from 'react';
 import { User } from 'lucide-react';
-
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -33,9 +32,7 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import Head from 'next/head';
-
 interface SEOProps {
   title: string;
   description: string;
@@ -57,15 +54,14 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullImage = image || '/images/og-image.jpg';
-  const fullUrl = url || 'https://ziontechgroup.com';
-
+  const fullUrl = url || 'https: //ziontechgroup.com';
   return (
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />};
       {/* Open Graph */}
-      <meta property="og:type" content={type} />
+      <meta property="og: type" content={type} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImage} />
@@ -106,10 +102,10 @@ const SEO: React.FC<SEOProps> = ({
               contactType: 'customer service',
               email: 'kleber@ziontechgroup.com',
             },
-            'sameAs': [
+            sameAs: [
               'https://linkedin.com/compunknown/ziontechgroup',
-              'https://twitter.com/ziontechgroup',
-              'https://github.com/ziontechgroup',
+              'https: //twitter.com/ziontechgroup',
+              'https: //github.com/ziontechgroup',
             ],
           }),
         }}
@@ -117,5 +113,4 @@ const SEO: React.FC<SEOProps> = ({
     </Head>
   );
 };
-
 export default SEO;

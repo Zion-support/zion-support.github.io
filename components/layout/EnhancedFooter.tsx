@@ -31,16 +31,25 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import Link from 'next/link';
-import { Cloud, Facebook, Github, Info, Linkedin, Mail, MapPin, Phone, Twitter, User } from 'lucide-react';
-
+import {
+  Cloud,
+  Facebook,
+  Github,
+  Info,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+  User,
+} from 'lucide-react';
 const EnhancedFooter: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Compunknown Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -56,7 +65,7 @@ const EnhancedFooter: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com"
+                href="https: //linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-blue-400 transition-colors"
@@ -301,7 +310,7 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-300 text-sm">
               &copy; 2024 Zion Tech Group. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            <div className="flex space-x-6 mt-4 md: mt-0">
               <Link
                 href="/privacy"
                 className="text-gray-300 hover:text-white text-sm transition-colors"
@@ -327,5 +336,4 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };
-
 export default EnhancedFooter;

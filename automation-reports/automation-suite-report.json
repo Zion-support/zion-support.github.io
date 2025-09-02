@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-02T21:22:03.716Z",
+  "timestamp": "2025-09-02T22:05:40.018Z",
   "summary": {
     "total": 8,
     "successful": 4,
@@ -10,25 +10,25 @@
       "command": "npm run lint:fix",
       "description": "ESLint Fix",
       "success": false,
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"lint:fix\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_22_03_129Z-debug-0.log\n"
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n"
     },
     {
       "command": "npm run type-check",
       "description": "TypeScript Type Check",
       "success": false,
-      "error": "Command failed: npm run type-check\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: tsc: not found\n"
+      "error": "spawnSync /bin/sh ENOBUFS"
     },
     {
       "command": "npm run test",
       "description": "Test Suite",
       "success": false,
-      "error": "Command failed: npm run test\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: jest: not found\n"
+      "error": "spawnSync /bin/sh ENOBUFS"
     },
     {
       "command": "npm run build",
       "description": "Build Application",
       "success": false,
-      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nsh: 1: next: not found\n"
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nFailed to compile.\n\n./components/ui/Button.tsx\nModule parse failed: Identifier 'Button' has already been declared (10:6)\nFile was processed with these loaders:\n * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js\nYou may need an additional loader to handle the result of these loaders.\n|     });\n| }\n> const Button = /*#__PURE__*/ React.forwardRef(({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref)=>{\n|     return /*#__PURE__*/ _jsx(\"button\", {\n|         className: cn('inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50', {\n\nImport trace for requested module:\n./components/ui/Button.tsx\n./pages/careers.tsx\n\n./pages/NotFound.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'jsx text (\n  \u001b[31m|\u001b[0m                 )'\n     ,-[\u001b[36;1;4m/workspace/pages/NotFound.tsx\u001b[0m:140:1]\n \u001b[2m137\u001b[0m |                     >\n \u001b[2m138\u001b[0m |                       <Phone className=\"w-5 h-5 mr-2\" />\n \u001b[2m139\u001b[0m |                       Contact Support\n \u001b[2m140\u001b[0m | \u001b[35;1m,\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m                 </a>\n \u001b[2m141\u001b[0m | \u001b[35;1m`\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m                 <a\n \u001b[2m142\u001b[0m |                       href=\"mailto:kleber@ziontechgroup.com\"\n \u001b[2m143\u001b[0m |                       className=\"inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors\"\n \u001b[2m144\u001b[0m |                     >\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/NotFound.tsx\n\n./pages/blog.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n    ,-[\u001b[36;1;4m/workspace/pages/blog.tsx\u001b[0m:96:1]\n \u001b[2m93\u001b[0m |   return (\n \u001b[2m94\u001b[0m |     <Layout\n \u001b[2m95\u001b[0m |       title=\"Blog - Zion Tech Group\"\n \u001b[2m96\u001b[0m |       description=\"Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group&apos;s expert team.\"'\n    : \u001b[35;1m                                                                                                                                         ^\u001b[0m\n \u001b[2m97\u001b[0m |     >\n \u001b[2m98\u001b[0m |       {/* Hero Section */}\n \u001b[2m99\u001b[0m |       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">\n    `----\n  \u001b[31mx\u001b[0m Unexpected token `string literal (, ')`. Expected jsx identifier\n    ,-[\u001b[36;1;4m/workspace/pages/blog.tsx\u001b[0m:96:1]\n \u001b[2m93\u001b[0m |   return (\n \u001b[2m94\u001b[0m |     <Layout\n \u001b[2m95\u001b[0m |       title=\"Blog - Zion Tech Group\"\n \u001b[2m96\u001b[0m |       description=\"Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group&apos;s expert team.\"'\n    : \u001b[35;1m                                                                                                                                         ^\u001b[0m\n \u001b[2m97\u001b[0m |     >\n \u001b[2m98\u001b[0m |       {/* Hero Section */}\n \u001b[2m99\u001b[0m |       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/blog.tsx\n\n./pages/contact.tsx\nError:   \u001b[31mx\u001b[0m Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\n     ,-[\u001b[36;1;4m/workspace/pages/contact.tsx\u001b[0m:151:1]\n \u001b[2m148\u001b[0m |                   </a>\n \u001b[2m149\u001b[0m |                   <p className=\"text-sm text-gray-600\">{method.description}</p>\n \u001b[2m150\u001b[0m |                 </div>\n \u001b[2m151\u001b[0m |               ))}\n     : \u001b[35;1m                ^\u001b[0m\n \u001b[2m152\u001b[0m |             </div>\n \u001b[2m153\u001b[0m | \n \u001b[2m154\u001b[0m |             <div className=\"grid grid-cols-1 lg: grid-cols-2 gap-12\">\n     `----\n  \u001b[31mx\u001b[0m Expected '</', got 'jsx text (\n  \u001b[31m|\u001b[0m               ))}\n  \u001b[31m|\u001b[0m             )'\n     ,-[\u001b[36;1;4m/workspace/pages/contact.tsx\u001b[0m:150:1]\n \u001b[2m147\u001b[0m |                         {method.details}\n \u001b[2m148\u001b[0m |                       </a>\n \u001b[2m149\u001b[0m |                       <p className=\"text-sm text-gray-600\">{method.description}</p>\n \u001b[2m150\u001b[0m | \u001b[35;1m,\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m                 </div>\n \u001b[2m151\u001b[0m | \u001b[35;1m|\u001b[0m                 ))}\n \u001b[2m152\u001b[0m | \u001b[35;1m`\u001b[0m\u001b[35;1m-\u001b[0m\u001b[35;1m>\u001b[0m             </div>\n \u001b[2m153\u001b[0m |     \n \u001b[2m154\u001b[0m |                 <div className=\"grid grid-cols-1 lg: grid-cols-2 gap-12\">\n \u001b[2m155\u001b[0m |                   {/* Contact Form */}\n     `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/contact.tsx\n\n./pages/index.tsx\nModule parse failed: Identifier 'ArrowRight' has already been declared (8:9)\nFile was processed with these loaders:\n * ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js\nYou may need an additional loader to handle the result of these loaders.\n| import { Button } from '../components/ui/Button';\n| import { Card } from '../components/ui/Card';\n> import { ArrowRight, CheckCircle, Star, Zap, Shield, Globe, TrendingUp, Brain, Cloud, Network, Phone, Mail } from \"__barrel_optimize__?names=ArrowRight,Brain,CheckCircle,Cloud,Globe,Mail,Network,Phone,Shield,Star,TrendingUp,Zap!=!lucide-react\";\n| export default function Home() {\n|     const stats = [\n\nImport trace for requested module:\n./pages/index.tsx\n\n\n> Build failed because of webpack errors\n"
     },
     {
       "name": "Error Detection",
@@ -56,10 +56,6 @@
             "issue": "Potential N+1 query problem"
           },
           {
-            "file": "/workspace/src/components/disabled/AdvancedAICodeGenerator.jsx",
-            "issue": "Potential infinite re-render"
-          },
-          {
             "file": "/workspace/src/pages/Checkout.jsx",
             "issue": "Potential infinite re-render"
           },
@@ -68,7 +64,7 @@
             "issue": "Potential infinite re-render"
           }
         ],
-        "count": 6
+        "count": 5
       }
     },
     {
@@ -76,10 +72,6 @@
       "success": true,
       "result": {
         "issues": [
-          {
-            "file": "/workspace/src/components/SEO.tsx",
-            "issue": "Potential XSS vulnerability"
-          },
           {
             "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
             "issue": "Potential XSS vulnerability"
@@ -89,7 +81,7 @@
             "issue": "Use of eval() detected"
           }
         ],
-        "count": 3
+        "count": 2
       }
     },
     {
@@ -98,19 +90,7 @@
       "result": {
         "issues": [
           {
-            "file": "/workspace/src/components/AICodeGenerator.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/EnterpriseDashboard.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/MachineLearningDashboard.jsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
+            "file": "/workspace/src/components/ErrorBoundary.tsx",
             "issue": "Console.log in production code"
           },
           {
@@ -118,15 +98,15 @@
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
+            "file": "/workspace/src/components/header/LanguageSelector.jsx",
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/hooks/usePerformanceMonitoring.ts",
+            "file": "/workspace/src/components/header/UserMenu.jsx",
             "issue": "Console.log in production code"
           }
         ],
-        "count": 7
+        "count": 4
       }
     }
   ]

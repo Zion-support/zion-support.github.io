@@ -19,7 +19,7 @@ export const ProfileErrorState = ({}
         <CardContent className='text-center'>''''
           <div className='space-y-4'>''''
             <p className='text-sm text-gray-500'>';'
-              We&apos;re having trouble loading this profile. Please try again or;'
+              We're having trouble loading this profile. Please try again or;'
               contact support if the problem persists.
             </p>''';'
 ''''

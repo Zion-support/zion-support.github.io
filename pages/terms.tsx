@@ -31,15 +31,30 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import Layout from '../components/Layout';
-import { AlertTriangle, By, CheckCircle, Cloud, Common, Copy, FileText, For, Late, Mobile, Phone, Scale, Shield, To, User, XCircle } from 'lucide-react';
-
+import {
+  AlertTriangle,
+  By,
+  CheckCircle,
+  Cloud,
+  Common,
+  Copy,
+  FileText,
+  For,
+  Late,
+  Mobile,
+  Phone,
+  Scale,
+  Shield,
+  To,
+  User,
+  XCircle,
+} from 'lucide-react';
 const Terms: NextPage = () => {
   return (
     <Layout
       title="Terms of Service - Zion Tech Group"
-      description="Read Zion Tech Group&apos;s Terms of Service to understand the terms and conditions for using our website and services."'
+      description="Read Zion Tech Group's Terms of Service to understand the terms and conditions for using our website and services."
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -90,7 +105,7 @@ const Terms: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 Zion Tech Group provides technology consulting and development
-                services, including but not limited to:
+                services, including but not limited to:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>AI and Machine Learning Development</li>
@@ -110,15 +125,19 @@ const Terms: NextPage = () => {
                 User Responsibilities
               </h2>
               <p className="text-gray-600 mb-4">
-                When using our services, you agree to: {' '}
+                When using our services, you agree to:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Provide accurate and complete information</li>
                 <li>Use our services in compliance with applicable laws</li>
                 <li>Respect intellectual property rights</li>
                 <li>Not engage in unknown illegal or harmful activities</li>
-                <li>Maintain the confidentiality of unknown credentials provided</li>
-                <li>Notify us of unknown security breaches or unauthorized access</li>
+                <li>
+                  Maintain the confidentiality of unknown credentials provided
+                </li>
+                <li>
+                  Notify us of unknown security breaches or unauthorized access
+                </li>
               </ul>
             </div>
 
@@ -129,7 +148,8 @@ const Terms: NextPage = () => {
                 Prohibited Uses
               </h2>
               <p className="text-gray-600 mb-4">
-                You may not use our services for unknown of the following purposes:
+                You may not use our services for unknown of the following
+                purposes:
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Violating unknown applicable laws or regulations</li>
@@ -150,7 +170,7 @@ const Terms: NextPage = () => {
               <p className="text-gray-600 mb-4">
                 All content, trademarks, and intellectual property on our
                 website and in our services are owned by Zion Tech Group or our
-                licensors. You may not:
+                licensors. You may not:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>
@@ -171,7 +191,8 @@ const Terms: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 We strive to maintain high availability of our services, but we
-                cannot guarantee uninterrupted access. We reserve the right to:
+                cannot guarantee uninterrupted access. We reserve the right
+                to:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Modify or discontinue services with reasonable notice</li>
@@ -189,7 +210,7 @@ const Terms: NextPage = () => {
                 Payment Terms
               </h2>
               <p className="text-gray-600 mb-4">
-                For paid services, the following terms apply: {' '}
+                For paid services, the following terms apply:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Payment is due according to the agreed schedule</li>
@@ -207,7 +228,10 @@ const Terms: NextPage = () => {
                 Limitation of Liability
               </h2>
               <p className="text-gray-600 mb-4">
-                To the maximum extent permitted by law, Zion Tech Group shall not be liable for unknown indirect, incidental, special, consequential, or punitive damages, including but not limited to:
+                To the maximum extent permitted by law, Zion Tech Group shall
+                not be liable for unknown indirect, incidental, special,
+                consequential, or punitive damages, including but not limited
+                to:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Loss of profits or revenue</li>
@@ -224,7 +248,8 @@ const Terms: NextPage = () => {
                 Indemnification
               </h2>
               <p className="text-gray-600 mb-4">
-                You agree to indemnify and hold harmless Zion Tech Group from unknown claims, damages, or expenses arising from:
+                You agree to indemnify and hold harmless Zion Tech Group from
+                unknown claims, damages, or expenses arising from:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your use of our services</li>
@@ -240,13 +265,18 @@ const Terms: NextPage = () => {
                 Termination
               </h2>
               <p className="text-gray-600 mb-4">
-                We may terminate or suspend your access to our services at unknown time, with or without cause, with or without notice. Upon termination:
+                We may terminate or suspend your access to our services at
+                unknown time, with or without cause, with or without notice.
+                Upon termination:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Your right to use our services will cease immediately</li>
                 <li>We may delete your account and data</li>
                 <li>You remain liable for unknown outstanding obligations</li>
-                <li>Provisions that should survive termination will remain in effect</li>
+                <li>
+                  Provisions that should survive termination will remain in
+                  effect
+                </li>
               </ul>
             </div>
 
@@ -269,7 +299,8 @@ const Terms: NextPage = () => {
                 Changes to Terms
               </h2>
               <p className="text-gray-600 mb-4">
-                We reserve the right to modify these Terms at unknown time. We will notify users of unknown material changes by:
+                We reserve the right to modify these Terms at unknown time. We
+                will notify users of unknown material changes by:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Posting the updated Terms on our website</li>
@@ -288,7 +319,8 @@ const Terms: NextPage = () => {
                 Contact Information
               </h2>
               <p className="text-gray-600 mb-4">
-                If you have unknown questions about these Terms of Service, please contact us:
+                If you have unknown questions about these Terms of Service,
+                please contact us:{' '}
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 mb-2">
@@ -298,7 +330,7 @@ const Terms: NextPage = () => {
                   <strong>Phone:</strong> +1 (302) 464-0950
                 </p>
                 <p className="text-gray-700 mb-2">
-                  <strong>Address:</strong> 364 E Main St STE 1008, Middletown,
+                  <strong>Address: </strong> 364 E Main St STE 1008, Middletown,
                   DE 19709
                 </p>
               </div>
@@ -329,11 +361,11 @@ const Terms: NextPage = () => {
             Questions About Our Terms?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            We're here to help clarify unknown questions you may have about our Terms of Service.
-            We're here to help clarify any questions you may have about our
-            Terms of Service.
+            We're here to help clarify unknown questions you may have about our
+            Terms of Service. We're here to help clarify any questions you may
+            have about our Terms of Service.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -352,5 +384,4 @@ const Terms: NextPage = () => {
     </Layout>
   );
 };
-
 export default Terms;

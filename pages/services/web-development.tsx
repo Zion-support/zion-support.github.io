@@ -1,6 +1,18 @@
 import type { NextPage } from 'next';
-import { Award, Best, Code, Cross, Globe, Mobile, Regular, Smartphone, Today, User, Users, Zap } from 'lucide-react';
-
+import {
+  Award,
+  Best,
+  Code,
+  Cross,
+  Globe,
+  Mobile,
+  Regular,
+  Smartphone,
+  Today,
+  User,
+  Users,
+  Zap,
+} from 'lucide-react';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 const WebDevelopment: NextPage = () => {
@@ -27,7 +39,7 @@ const WebDevelopment: NextPage = () => {
             technologies that deliver exceptional user experiences.
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+          <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
             <Link
               href="/contact"
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -248,7 +260,7 @@ const WebDevelopment: NextPage = () => {
             Let's discuss your web development needs and create a solution that
             drives your business forward.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link
               href="/contact"
               className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -267,5 +279,4 @@ const WebDevelopment: NextPage = () => {
     </Layout>
   );
 };
-
 export default WebDevelopment;

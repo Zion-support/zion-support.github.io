@@ -34,7 +34,6 @@ interface ComponentProps {
 
 import { motion } from 'framer-motion';
 import { CheckCircle, Cloud, Mail, MapPin, Phone, Send, User } from 'lucide-react';
-
 interface FormData {
   name: string;
   email: string;
@@ -44,24 +43,17 @@ interface FormData {
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    compunknown: '',
-    service: '',
-    message: '',
-  });
+    name: '', email: '',
+    compunknown: '', service: '',
+    message: '', });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const services = [
-    'AI & Machine Learning',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'Web Development',
-    'Mobile Development',
-    'Data Analytics',
-    'Digital Transformation',
-    'Other',
+    'AI & Machine Learning', 'Cloud & DevOps',
+    'Cybersecurity', 'Web Development',
+    'Mobile Development', 'Data Analytics',
+    'Digital Transformation', 'Other',
   ];
   const validateForm = (): boolean => {
     const newErrors: Partial<FormData> = {};
@@ -71,7 +63,7 @@ const ContactForm: React.FC = () => {
 
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+    } else if (!/\\S+@\\S+\\.\S+/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
 
@@ -97,12 +89,9 @@ const ContactForm: React.FC = () => {
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
-        name: '',
-        email: '',
-        compunknown: '',
-        service: '',
-        message: '',
-      });
+        name: '', email: '',
+        compunknown: '', service: '',
+        message: '', });
     }, 3000);
   };
   const handleChange = (
@@ -129,10 +118,10 @@ const ContactForm: React.FC = () => {
           Message Sent!
         </h3>
         <p className="text-green-600">
-          Thank you for reaching out. We&apos;ll get back to you within 24
+          Thank you for reaching out. We'll get back to you within 24
           hours.'
         </p>
-      </motion.div>
+          </motion.div>
     )}
 
   return (
@@ -140,7 +129,7 @@ const ContactForm: React.FC = () => {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Ready to transform your business? Let&apos;s discuss how our
+          Ready to transform your business? Let's discuss how our
           technology' solutions can drive your success.
         </p>
       </div>
@@ -217,7 +206,7 @@ const ContactForm: React.FC = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+                className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${
                   errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
                 placeholder="john@compunknown.com"
@@ -261,7 +250,7 @@ const ContactForm: React.FC = () => {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                <option value="">Select a service</option>
+                <option value=">Select a service</option>
                 {services.map(service => (
                   <option key={service} value={service}>
                     {service}
@@ -284,7 +273,7 @@ const ContactForm: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
               rows={5}
-              className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent ${
+              className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${
                 errors.message ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Tell us about your project and how we can help..."

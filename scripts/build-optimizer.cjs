@@ -11,23 +11,23 @@ class BuildOptimizer {
 
   async optimize() {
     console.log('🔨 Starting build optimization...');
-    
+
     try {
       // Clean previous builds
       this.cleanBuild();
-      
+
       // Run type checking
       this.runTypeCheck();
-      
+
       // Run linting
       this.runLinting();
-      
+
       // Build the application
       this.buildApplication();
-      
+
       // Analyze bundle
       this.analyzeBundle();
-      
+
       console.log('✅ Build optimization completed successfully');
     } catch (error) {
       console.error('❌ Build optimization failed:', error.message);
@@ -38,7 +38,7 @@ class BuildOptimizer {
   cleanBuild() {
     console.log('🧹 Cleaning previous builds...');
     const buildDirs = ['.next', 'dist', 'build'];
-    
+
     buildDirs.forEach(dir => {
       const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {
@@ -54,7 +54,9 @@ class BuildOptimizer {
 
   runLinting() {
     console.log('🔧 Running ESLint...');
-    execSync('npx eslint . --ext .ts,.tsx,.js,.jsx --fix', { stdio: 'inherit' });
+    execSync('npx eslint . --ext .ts,.tsx,.js,.jsx --fix', {
+      stdio: 'inherit',
+    });
   }
 
   buildApplication() {

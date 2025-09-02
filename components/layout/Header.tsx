@@ -1,7 +1,17 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Brain, ChevronDown, Cloud, Code, Home, Info, Mail, Menu, Phone, X } from 'lucide-react';
-
+import {
+  Brain,
+  ChevronDown,
+  Cloud,
+  Code,
+  Home,
+  Info,
+  Mail,
+  Menu,
+  Phone,
+  X,
+} from 'lucide-react';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -40,7 +50,7 @@ const Header: React.FC = () => {
   ];
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -65,7 +75,7 @@ const Header: React.FC = () => {
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <button className="text-gray-900 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
+                      <button className="text-gray-900 hover: text-blue-600 px-3 py-2 rounded-md text-sm font-medium flex items-center">
                         {item.name}
                         <ChevronDown className="ml-1 h-4 w-4" />
                       </button>
@@ -114,7 +124,7 @@ const Header: React.FC = () => {
           </nav>
 
           {/* Contact Info & CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
+          <div className="hidden lg: flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Phone className="h-4 w-4" />
               <a href="tel:+13024640950" className="hover:text-blue-600">
@@ -133,7 +143,7 @@ const Header: React.FC = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-900 hover:text-blue-600 p-2"
+              className="text-gray-900 hover: text-blue-600 p-2"
             >
               {isMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -146,7 +156,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
+          <div className="lg: hidden border-t border-gray-200 py-4">
             <div className="space-y-2">
               {navigation.map(item => (
                 <div key={item.name}>
@@ -186,7 +196,7 @@ const Header: React.FC = () => {
             <div className="mt-4 pt-4 border-t border-gray-200">
               <div className="flex items-center space-x-2 text-sm text-gray-600 px-3 py-2">
                 <Phone className="h-4 w-4" />
-                <a href="tel:+13024640950" className="hover:text-blue-600">
+                <a href="tel: +13024640950" className="hover:text-blue-600">
                   +1 302 464 0950
                 </a>
               </div>
@@ -213,5 +223,4 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
 export default Header;

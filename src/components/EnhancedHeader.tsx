@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud,
   Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen,

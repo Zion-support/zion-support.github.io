@@ -5,23 +5,6 @@ import SEO from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
-import {
-  Users,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  MapPin,
-  Clock,
-  Briefcase,
-  Heart,
-  Lightbulb,
-  Zap,
-  Globe,
-  Award,
-  Coffee,
-  Home,
-} from 'lucide-react';
-
 export default function Careers() {
   const benefits = [
     {
@@ -58,7 +41,6 @@ export default function Careers() {
         'Make a difference with projects that impact businesses worldwide.',
     },
   ];
-
   const openPositions = [
     {
       title: 'Senior Full Stack Developer',
@@ -109,7 +91,6 @@ export default function Careers() {
         'Ensure client satisfaction and help customers achieve their goals with our solutions.',
     },
   ];
-
   return (
     <>
       <SEO
@@ -137,9 +118,9 @@ export default function Careers() {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join our team of innovators, creators, and problem-solvers.
-              We&apos;re building the next generation ' of technology solutions
-              and we want you to be part of it.
+              Join our team of innovators, creators, and problem-solvers. We're
+              building the next generation ' of technology solutions and we want
+              you to be part of it.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
@@ -296,9 +277,9 @@ export default function Careers() {
                 Join Our Team
               </h3>
               <p className="text-gray-600 mb-6">
-                Ready to start your journey with us? We&apos;re always looking
-                for talented individuals ' who share our passion for technology
-                and innovation.
+                Ready to start your journey with us? We're always looking for
+                talented individuals ' who share our passion for technology and
+                innovation.
               </p>
               <div className="space-y-4">
                 <Link href="/contact">
@@ -323,9 +304,9 @@ export default function Careers() {
             Ready to Join Our Team?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Don&apos;t see a position that fits? We&apos;re always interested in
-            hearing from talented individuals. Send us your resume and
-            let&apos;s start a conversation.'
+            Don't see a position that fits? We're always interested in hearing
+            from talented individuals. Send us your resume and let's start a
+            conversation.'
           </p>
           <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link href="/contact">

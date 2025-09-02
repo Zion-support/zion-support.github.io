@@ -12,12 +12,17 @@ import {
   Database,
   Code,
   TrendingUp,
-  TrendingDown
+  TrendingDown,
 } from 'lucide-react';
-
 interface SecurityThreat {
   id: string;
-  type: 'malware' | 'phishing' | 'ddos' | 'brute-force' | 'sql-injection' | 'xss';
+  type:
+    | 'malware'
+    | 'phishing'
+    | 'ddos'
+    | 'brute-force'
+    | 'sql-injection'
+    | 'xss';
   severity: 'low' | 'medium' | 'high' | 'critical';
   source: string;
   target: string;
@@ -49,7 +54,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
   title = 'Enhanced Security Dashboard',
   subtitle = 'Real-time threat monitoring and security analytics for comprehensive protection',
   showThreats = true,
-  autoRefresh = true
+  autoRefresh = true,
 }) => {
   const [threats, setThreats] = useState<SecurityThreat[]>([
     {
@@ -61,7 +66,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       timestamp: '2024-01-15 14:30:00',
       status: 'blocked',
       description: 'Distributed Denial of Service attack detected',
-      impact: 'High traffic volume from multiple sources'
+      impact: 'High traffic volume from multiple sources',
     },
     {
       id: '2',
@@ -72,7 +77,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       timestamp: '2024-01-15 13:45:00',
       status: 'investigating',
       description: 'Phishing attempt targeting user credentials',
-      impact: 'Potential credential compromise'
+      impact: 'Potential credential compromise',
     },
     {
       id: '3',
@@ -83,10 +88,9 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       timestamp: '2024-01-15 12:20:00',
       status: 'blocked',
       description: 'Multiple failed login attempts detected',
-      impact: 'Account lockout protection activated'
-    }
+      impact: 'Account lockout protection activated',
+    },
   ]);
-
   const [metrics, setMetrics] = useState<SecurityMetric[]>([
     {
       id: 'threats-blocked',
@@ -96,7 +100,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       change: -15.2,
       changeType: 'decrease',
       status: 'secure',
-      icon: Shield
+      icon: Shield,
     },
     {
       id: 'response-time',
@@ -106,7 +110,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       change: -8.5,
       changeType: 'decrease',
       status: 'secure',
-      icon: Zap
+      icon: Zap,
     },
     {
       id: 'vulnerabilities',
@@ -116,7 +120,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       change: -25.0,
       changeType: 'decrease',
       status: 'warning',
-      icon: AlertTriangle
+      icon: AlertTriangle,
     },
     {
       id: 'security-score',
@@ -126,42 +130,49 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       change: 2.1,
       changeType: 'increase',
       status: 'secure',
-      icon: CheckCircle
-    }
+      icon: CheckCircle,
+    },
   ]);
-
   const [selectedThreat, setSelectedThreat] = useState<string | null>(null);
   const [timeRange, setTimeRange] = useState<'1h' | '6h' | '24h' | '7d'>('24h');
-
   useEffect(() => {
     if (!autoRefresh) return;
-
     const interval = setInterval(() => {
       // Simulate new threats
       if (Math.random() > 0.7) {
-        const threatTypes = ['malware', 'phishing', 'ddos', 'brute-force'] as const;
+        const threatTypes = [
+          'malware',
+          'phishing',
+          'ddos',
+          'brute-force',
+        ] as const;
         const severityLevels = ['low', 'medium', 'high'] as const;
         const targetSystems = ['Web Server', 'Database', 'API Gateway'];
-
         const newThreat: SecurityThreat = {
           id: Date.now().toString(),
-          type: threatTypes[Math.floor(Math.random() * threatTypes.length)] || 'malware',
-          severity: severityLevels[Math.floor(Math.random() * severityLevels.length)] || 'medium',
+          type:
+            threatTypes[Math.floor(Math.random() * threatTypes.length)] ||
+            'malware',
+          severity:
+            severityLevels[Math.floor(Math.random() * severityLevels.length)] ||
+            'medium',
           source: `${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}.${Math.floor(Math.random() * 255)}`,
-          target: targetSystems[Math.floor(Math.random() * targetSystems.length)] || 'Web Server',
-          timestamp: new Date().toISOString().replace('T', ' ').substring(0, 19),
+          target:
+            targetSystems[Math.floor(Math.random() * targetSystems.length)] ||
+            'Web Server',
+          timestamp: new Date()
+            .toISOString()
+            .replace('T', ' ')
+            .substring(0, 19),
           status: 'active',
           description: 'New security threat detected',
-          impact: 'Under investigation'
+          impact: 'Under investigation',
         };
-
         setThreats(prev => [newThreat, ...prev.slice(0, 9)]);
       }
     }, 10000);
-
     return () => clearInterval(interval);
   }, [autoRefresh]);
-
   const getThreatTypeIcon = (type: string) => {
     switch (type) {
       case 'malware':
@@ -180,7 +191,6 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         return <AlertTriangle className="w-5 h-5" />;
     }
   };
-
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical':
@@ -195,7 +205,6 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         return 'text-gray-600 bg-gray-100 border-gray-200';
     }
   };
-
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active':
@@ -210,7 +219,6 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         return 'text-gray-600 bg-gray-100';
     }
   };
-
   const getMetricStatusColor = (status: string) => {
     switch (status) {
       case 'secure':
@@ -223,18 +231,16 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
         return 'text-gray-600 bg-gray-100';
     }
   };
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
         staggerChildren: 0.1,
-        delayChildren: 0.2
-      }
-    }
+        delayChildren: 0.2,
+      },
+    },
   };
-
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
     visible: {
@@ -242,11 +248,10 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
       opacity: 1,
       transition: {
         duration: 0.5,
-        ease: 'easeOut'
-      }
-    }
+        ease: 'easeOut',
+      },
+    },
   };
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
       <div className="container mx-auto px-4">
@@ -257,12 +262,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {title}
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            {subtitle}
-          </p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">{title}</h2>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">{subtitle}</p>
         </motion.div>
 
         {/* Security Metrics Overview */}
@@ -273,9 +274,8 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
         >
-          {metrics.map((metric) => {
+          {metrics.map(metric => {
             const IconComponent = metric.icon;
-
             return (
               <motion.div
                 key={metric.id}
@@ -287,7 +287,9 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center">
                     <IconComponent className="w-6 h-6 text-blue-400" />
                   </div>
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getMetricStatusColor(metric.status)}`}>
+                  <div
+                    className={`px-3 py-1 rounded-full text-xs font-medium border ${getMetricStatusColor(metric.status)}`}
+                  >
                     {metric.status}
                   </div>
                 </div>
@@ -311,9 +313,13 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                   ) : (
                     <TrendingDown className="w-4 h-4 text-red-400" />
                   )}
-                  <span className={`text-sm font-medium ${
-                    metric.changeType === 'increase' ? 'text-green-400' : 'text-red-400'
-                  }`}>
+                  <span
+                    className={`text-sm font-medium ${
+                      metric.changeType === 'increase'
+                        ? 'text-green-400'
+                        : 'text-red-400'
+                    }`}
+                  >
                     {Math.abs(metric.change).toFixed(1)}%
                   </span>
                   <span className="text-sm text-gray-500">vs last period</span>
@@ -332,7 +338,7 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
           className="flex justify-center mb-12"
         >
           <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-2 border border-gray-700/50">
-            {(['1h', '6h', '24h', '7d'] as const).map((range) => (
+            {(['1h', '6h', '24h', '7d'] as const).map(range => (
               <button
                 key={range}
                 onClick={() => setTimeRange(range)}
@@ -368,18 +374,24 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
             </div>
 
             <div className="space-y-4">
-              {threats.map((threat) => (
+              {threats.map(threat => (
                 <motion.div
                   key={threat.id}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5 }}
                   className="bg-gray-800/50 backdrop-blur-sm rounded-2xl border border-gray-700/50 p-6 hover:bg-gray-800/70 transition-all duration-300 cursor-pointer"
-                  onClick={() => setSelectedThreat(selectedThreat === threat.id ? null : threat.id)}
+                  onClick={() =>
+                    setSelectedThreat(
+                      selectedThreat === threat.id ? null : threat.id
+                    )
+                  }
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex items-start gap-4">
-                      <div className={`w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center border ${getSeverityColor(threat.severity)}`}>
+                      <div
+                        className={`w-12 h-12 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center border ${getSeverityColor(threat.severity)}`}
+                      >
                         {getThreatTypeIcon(threat.type)}
                       </div>
 
@@ -388,32 +400,46 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                           <h4 className="text-lg font-semibold text-white capitalize">
                             {threat.type.replace('-', ' ')} Attack
                           </h4>
-                          <div className={`px-3 py-1 rounded-full text-xs font-medium border ${getSeverityColor(threat.severity)}`}>
+                          <div
+                            className={`px-3 py-1 rounded-full text-xs font-medium border ${getSeverityColor(threat.severity)}`}
+                          >
                             {threat.severity}
                           </div>
-                          <div className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(threat.status)}`}>
+                          <div
+                            className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(threat.status)}`}
+                          >
                             {threat.status}
                           </div>
                         </div>
 
-                        <p className="text-gray-300 mb-3">{threat.description}</p>
+                        <p className="text-gray-300 mb-3">
+                          {threat.description}
+                        </p>
 
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                        <div className="grid grid-cols-2 md: grid-cols-4 gap-4 text-sm">
                           <div>
                             <span className="text-gray-400">Source:</span>
-                            <span className="text-white ml-2 font-mono">{threat.source}</span>
+                            <span className="text-white ml-2 font-mono">
+                              {threat.source}
+                            </span>
                           </div>
                           <div>
                             <span className="text-gray-400">Target:</span>
-                            <span className="text-white ml-2">{threat.target}</span>
+                            <span className="text-white ml-2">
+                              {threat.target}
+                            </span>
                           </div>
                           <div>
                             <span className="text-gray-400">Time:</span>
-                            <span className="text-white ml-2">{threat.timestamp}</span>
+                            <span className="text-white ml-2">
+                              {threat.timestamp}
+                            </span>
                           </div>
                           <div>
                             <span className="text-gray-400">Impact:</span>
-                            <span className="text-white ml-2">{threat.impact}</span>
+                            <span className="text-white ml-2">
+                              {threat.impact}
+                            </span>
                           </div>
                         </div>
                       </div>
@@ -432,7 +458,9 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                       >
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                           <div>
-                            <h5 className="font-semibold text-gray-200 mb-3">Recommended Actions</h5>
+                            <h5 className="font-semibold text-gray-200 mb-3">
+                              Recommended Actions
+                            </h5>
                             <ul className="space-y-2 text-sm text-gray-300">
                               <li className="flex items-center gap-2">
                                 <CheckCircle className="w-4 h-4 text-green-400" />
@@ -449,18 +477,26 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
                             </ul>
                           </div>
                           <div>
-                            <h5 className="font-semibold text-gray-200 mb-3">Security Metrics</h5>
+                            <h5 className="font-semibold text-gray-200 mb-3">
+                              Security Metrics
+                            </h5>
                             <div className="space-y-2 text-sm">
                               <div className="flex justify-between">
-                                <span className="text-gray-400">Risk Score:</span>
+                                <span className="text-gray-400">
+                                  Risk Score:
+                                </span>
                                 <span className="text-white">8.5/10</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-gray-400">Confidence:</span>
+                                <span className="text-gray-400">
+                                  Confidence:
+                                </span>
                                 <span className="text-white">95%</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-gray-400">Response Time:</span>
+                                <span className="text-gray-400">
+                                  Response Time:
+                                </span>
                                 <span className="text-white">2.3s</span>
                               </div>
                             </div>
@@ -509,5 +545,4 @@ const EnhancedSecurityDashboard: React.FC<EnhancedSecurityDashboardProps> = ({
     </section>
   );
 };
-
 export default EnhancedSecurityDashboard;

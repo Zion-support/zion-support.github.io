@@ -1,6 +1,5 @@
 import React from 'react';
 import { User } from 'lucide-react';
-
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -124,7 +123,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
                 '@type': 'ContactPoint',
                 'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact'},
               'sameAs': [;
-                'https://linkedin.com/compunknown/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
+                'https: //linkedin.com/compunknown/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
               ], 'offers': {
                 '@type': 'AggregateOffer',
                 'offerCount': '500+', 'description': 'Technology solutions and services'}

@@ -5,24 +5,6 @@ import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
-import {
-  Mail,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Target,
-  Lightbulb,
-  TrendingUp,
-  BarChart3,
-  Send,
-  UserCheck,
-  Aperture,
-  Clock,
-} from 'lucide-react';
-
 export default function EmailAutomation() {
   const features = [
     {
@@ -62,7 +44,6 @@ export default function EmailAutomation() {
         'Process and send emails in real-time with our high-performance infrastructure.',
     },
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -110,7 +91,6 @@ export default function EmailAutomation() {
       popular: false,
     },
   ];
-
   return (
     <>
       <SEO

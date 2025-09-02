@@ -1,7 +1,5 @@
 'use client';
-
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
@@ -21,7 +19,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null
+      errorInfo: null,
     };
   }
 
@@ -29,24 +27,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorInfo: null
+      errorInfo: null,
     };
   }
 
   override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary: ', error, errorInfo);
     }
 
     // Send error to monitoring service
     this.logErrorToService(error, errorInfo);
-
     // Call custom error handler
     this.props.onError?.(error, errorInfo);
   }
@@ -59,7 +54,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       if (typeof gtag !== 'undefined') {
         gtag('event', 'exception', {
           description: error.message,
-          fatal: false
+          fatal: false,
         });
       }
 
@@ -67,24 +62,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       fetch('/api/error-reporting', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           error: {
             message: error.message,
             stack: error.stack,
-            componentStack: errorInfo.componentStack
+            componentStack: errorInfo.componentStack,
           },
           timestamp: new Date().toISOString(),
           userAgent: navigator.userAgent,
-          url: window.location.href
-        })
+          url: window.location.href,
+        }),
       }).catch(console.error);
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
-    }
+    } catch (loggingError) {}
   };
-
   render() {
     if (this.state.hasError) {
       // Custom fallback UI
@@ -98,19 +90,34 @@ class EnhancedErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
             <div className="flex items-center mb-4">
               <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mr-4">
-                <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                <svg
+                  className="w-6 h-6 text-red-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"
+                  />
                 </svg>
               </div>
               <div>
-                <h2 className="text-lg font-semibold text-gray-900">Something went wrong</h2>
-                <p className="text-sm text-gray-600">We're sorry for the inconvenience</p>
+                <h2 className="text-lg font-semibold text-gray-900">
+                  Something went wrong
+                </h2>
+                <p className="text-sm text-gray-600">
+                  We're sorry for the inconvenience
+                </p>
               </div>
             </div>
 
             <div className="mb-4">
               <p className="text-gray-700">
-                An unexpected error occurred. Our team has been notified and is working to fix this issue.
+                An unexpected error occurred. Our team has been notified and is
+                working to fix this issue.
               </p>
             </div>
 
@@ -121,12 +128,14 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 </summary>
                 <div className="bg-gray-100 rounded p-3 text-xs font-mono text-gray-600 overflow-auto max-h-32">
                   <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
+                    <strong>Error: </strong> {this.state.error.message}
                   </div>
                   {this.state.error.stack && (
                     <div>
                       <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap mt-1">{this.state.error.stack}</pre>
+                      <pre className="whitespace-pre-wrap mt-1">
+                        {this.state.error.stack}
+                      </pre>
                     </div>
                   )}
                 </div>
@@ -136,13 +145,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
             <div className="flex space-x-3">
               <button
                 onClick={() => window.location.reload()}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
+                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover: bg-blue-700 transition-colors"
               >
                 Reload Page
               </button>
               <button
                 onClick={() => window.history.back()}
-                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-300 transition-colors"
+                className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-md text-sm font-medium hover: bg-gray-300 transition-colors"
               >
                 Go Back
               </button>

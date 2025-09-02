@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
-
 interface WebVitalsMetric {
   name: string;
   value: number;
@@ -14,17 +13,17 @@ const sendToAnalytics = (metric: WebVitalsMetric) => {
     (window as any).gtag('event', metric.name, {
       event_category: 'Web Vitals',
       event_label: metric.id,
-      value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value),
+      value: Math.round(
+        metric.name === 'CLS' ? metric.value * 1000 : metric.value
+      ),
       non_interaction: true,
     });
   }
-  
+
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('Web Vital:', metric);
   }
 };
-
 export const WebVitals = () => {
   useEffect(() => {
     getCLS(sendToAnalytics);
@@ -33,6 +32,5 @@ export const WebVitals = () => {
     getLCP(sendToAnalytics);
     getTTFB(sendToAnalytics);
   }, []);
-
   return null;
 };

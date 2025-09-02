@@ -5,18 +5,6 @@ import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
-import {
-  Workflow,
-  ArrowRight,
-  CheckCircle,
-  Zap,
-  Settings,
-  BarChart3,
-  Shield,
-  Globe,
-  Clock,
-} from 'lucide-react';
-
 export default function WorkflowAutomation() {
   const features = [
     {
@@ -56,7 +44,6 @@ export default function WorkflowAutomation() {
         'Execute workflows in real-time with high-performance infrastructure.',
     },
   ];
-
   return (
     <>
       <SEO

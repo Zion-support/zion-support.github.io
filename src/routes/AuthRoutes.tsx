@@ -1,6 +1,5 @@
 import { Route, Routes    } from 'react-router-dom';
 import { Lazy, Settings } from 'lucide-react';
-
 export default function Page() {
   import { Suspense, lazy } from 'react';
   import { ProtectedRoute } from '../components/ProtectedRoute';
@@ -26,8 +25,7 @@ const AuthRoutes: React.FC = () => {
         <Route path='/profile' element={
           <ProtectedRoute" >
             <div>Profile Page</div>
-          </ProtectedRoute>,
-} />"
+          </ProtectedRoute>, } />"
         <Route path='/dashboard' element={
           <ProtectedRoute" >
             <div>Dashboard</div>
@@ -36,8 +34,7 @@ const AuthRoutes: React.FC = () => {
         <Route path='/settings' element={
           <ProtectedRoute" >
             <div>Settings</div>
-          </ProtectedRoute>,
-} />
+          </ProtectedRoute>, } />
       </Routes>
     </Suspense>
   )}

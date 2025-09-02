@@ -1,6 +1,15 @@
 import type { NextPage } from 'next';
-import { Award, Brain, Cloud, Globe, Image, Target, Today, Users, Zap } from 'lucide-react';
-
+import {
+  Award,
+  Brain,
+  Cloud,
+  Globe,
+  Image,
+  Target,
+  Today,
+  Users,
+  Zap,
+} from 'lucide-react';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 const AIDevelopment: NextPage = () => {
@@ -261,5 +270,4 @@ const AIDevelopment: NextPage = () => {
     </Layout>
   );
 };
-
 export default AIDevelopment;

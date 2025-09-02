@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { Bottom, Center, Cloud, Common, Cookie, File, Info, User } from 'lucide-react';
-
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -48,8 +47,7 @@ export default function Footer() {
         { name: 'Space Technology', href: '/solutions/space-tech' },"
         { name: 'Supply Chain', href: '/solutions/supply-chain' },"
         { name: 'Industry Solutions', href: '/solutions/industry' }
-      ]},
-    {
+      ]}, {
       title: 'Compunknown',
       links: [
         { name: 'About Us', href: '/about' },

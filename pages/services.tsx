@@ -1,17 +1,65 @@
 import React from 'react';
 import Link from 'next/link';
-import { Activity, ArrowRight, Award, Back, BarChart3, Bot, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Cpu, CreditCard, Cross, Database, Eye, For, From, Globe, Grid, HardDrive, Home, Image, Link2, Lock, Low, Mail, MessageSquare, Mobile, Monitor, Network, No, Palette, Phone, Secure, Server, Settings, Shield, Smartphone, Snowflake, Star, Terminal, Today, TrendingUp, Typical, Users, Wifi, Zap } from 'lucide-react';
+import {
+  Activity,
+  ArrowRight,
+  Award,
+  Back,
+  BarChart3,
+  Bot,
+  Brain,
+  Calendar,
+  CheckCircle,
+  Clock,
+  Cloud,
+  Code,
+  Cpu,
+  CreditCard,
+  Cross,
+  Database,
+  Eye,
+  For,
+  From,
+  Globe,
+  Grid,
+  HardDrive,
+  Home,
+  Image,
+  Link2,
+  Lock,
+  Low,
+  Mail,
+  MessageSquare,
+  Mobile,
+  Monitor,
+  Network,
+  No,
+  Palette,
+  Phone,
+  Secure,
+  Server,
+  Settings,
+  Shield,
+  Smartphone,
+  Snowflake,
+  Star,
+  Terminal,
+  Today,
+  TrendingUp,
+  Typical,
+  Users,
+  Wifi,
+  Zap,
+} from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
-
 export default function Services() {
   const title = 'Services — Zion Tech Group';
   const description =
     'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
-
   return (
     <PageTransition>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
+      <section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <div className="flex items-center justify-center mb-4">
@@ -32,7 +80,7 @@ export default function Services() {
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-24 sm:py-32">
+      <section className="py-24 sm: py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-2">
             {/* AI Autonomous Systems */}
@@ -153,7 +201,7 @@ export default function Services() {
                 </div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group"
+                  className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group"
                   aria-label="Get started with cloud services"
                 >
                   Get started with Cloud
@@ -299,7 +347,7 @@ export default function Services() {
               solutions are designed for enterprise scalability with transparent
               pricing and measurable outcomes. Explore our full capabilities at{' '}
               <a
-                href="https://ziontechgroup.com"
+                href="https: //ziontechgroup.com"
                 className="text-blue-600 hover:text-blue-500 underline font-semibold"
                 target="_blank"
                 rel="noreferrer"
@@ -343,7 +391,7 @@ export default function Services() {
               enterprise solutions and volume discounts, see our{' '}
               <Link
                 href="/pricing-guide"
-                className="text-blue-600 hover:text-blue-500 underline"
+                className="text-blue-600 hover: text-blue-500 underline"
               >
                 Enterprise Pricing Guide
               </Link>
@@ -372,7 +420,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover:text-blue-500"
+                  className="text-blue-600 hover: text-blue-500"
                 >
                   Talk to us →
                 </Link>
@@ -398,7 +446,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-indigo-600 hover:text-indigo-500"
+                  className="text-indigo-600 hover: text-indigo-500"
                 >
                   Get estimate →
                 </Link>
@@ -424,7 +472,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-emerald-600 hover:text-emerald-500"
+                  className="text-emerald-600 hover: text-emerald-500"
                 >
                   Learn more →
                 </Link>
@@ -451,7 +499,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover:text-green-500"
+                  className="text-green-600 hover: text-green-500"
                 >
                   Start now →
                 </Link>
@@ -477,7 +525,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover:text-purple-500"
+                  className="text-purple-600 hover: text-purple-500"
                 >
                   Request details →
                 </Link>
@@ -503,7 +551,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover:text-orange-500"
+                  className="text-orange-600 hover: text-orange-500"
                 >
                   Book intro →
                 </Link>
@@ -532,7 +580,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-violet-600 hover:text-violet-500"
+                  className="text-violet-600 hover: text-violet-500"
                 >
                   Schedule demo →
                 </Link>
@@ -559,7 +607,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-cyan-600 hover:text-cyan-500"
+                  className="text-cyan-600 hover: text-cyan-500"
                 >
                   Try free trial →
                 </Link>
@@ -637,7 +685,7 @@ export default function Services() {
                 <span className="font-semibold text-sky-600">From $299/mo</span>
                 <Link
                   href="/contact"
-                  className="text-sky-600 hover:text-sky-500"
+                  className="text-sky-600 hover: text-sky-500"
                 >
                   See live demo →
                 </Link>
@@ -663,7 +711,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-teal-600 hover:text-teal-500"
+                  className="text-teal-600 hover: text-teal-500"
                 >
                   Book a walkthrough →
                 </Link>
@@ -745,7 +793,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-amber-600 hover:text-amber-500"
+                  className="text-amber-600 hover: text-amber-500"
                 >
                   Monitor now →
                 </Link>
@@ -771,11 +819,11 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between text-sm">
                 <span className="font-semibold text-blue-600">
-                  From $2,500/mo
+                  From $2, 500/mo
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover:text-blue-500"
+                  className="text-blue-600 hover: text-blue-500"
                 >
                   Schedule demo →
                 </Link>
@@ -800,11 +848,11 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between text-sm">
                 <span className="font-semibold text-green-600">
-                  From $1,800/mo
+                  From $1, 800/mo
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover:text-green-500"
+                  className="text-green-600 hover: text-green-500"
                 >
                   Try API →
                 </Link>
@@ -828,11 +876,11 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between text-sm">
                 <span className="font-semibold text-purple-600">
-                  From $3,200/mo
+                  From $3, 200/mo
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover:text-purple-500"
+                  className="text-purple-600 hover: text-purple-500"
                 >
                   Create content →
                 </Link>
@@ -861,7 +909,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover:text-orange-500"
+                  className="text-orange-600 hover: text-orange-500"
                 >
                   Build chatbot →
                 </Link>
@@ -886,11 +934,11 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between text-sm">
                 <span className="font-semibold text-red-600">
-                  From $2,800/mo
+                  From $2, 800/mo
                 </span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover:text-red-500"
+                  className="text-red-600 hover: text-red-500"
                 >
                   Predict trends →
                 </Link>
@@ -918,7 +966,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-emerald-600 hover:text-emerald-500"
+                  className="text-emerald-600 hover: text-emerald-500"
                 >
                   Start free trial →
                 </Link>
@@ -944,11 +992,11 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between text-sm">
                 <span className="font-semibold text-blue-600">
-                  From $4,500/mo
+                  From $4, 500/mo
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover:text-blue-500"
+                  className="text-blue-600 hover: text-blue-500"
                 >
                   Deploy edge →
                 </Link>
@@ -977,7 +1025,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover:text-green-500"
+                  className="text-green-600 hover: text-green-500"
                 >
                   Build Web3 →
                 </Link>
@@ -1002,11 +1050,11 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between text-sm">
                 <span className="font-semibold text-purple-600">
-                  From $12,000/mo
+                  From $12, 000/mo
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover:text-purple-500"
+                  className="text-purple-600 hover: text-purple-500"
                 >
                   Upgrade network →
                 </Link>
@@ -1035,7 +1083,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover:text-orange-500"
+                  className="text-orange-600 hover: text-orange-500"
                 >
                   Go quantum →
                 </Link>
@@ -1060,11 +1108,11 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between text-sm">
                 <span className="font-semibold text-red-600">
-                  From $6,500/mo
+                  From $6, 500/mo
                 </span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover:text-red-500"
+                  className="text-red-600 hover: text-red-500"
                 >
                   Enter XR →
                 </Link>
@@ -1151,7 +1199,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover:text-green-500"
+                  className="text-green-600 hover: text-green-500"
                 >
                   Manage APIs →
                 </Link>
@@ -1232,11 +1280,11 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between text-sm">
                 <span className="font-semibold text-red-600">
-                  From $1,299/mo
+                  From $1, 299/mo
                 </span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover:text-red-500"
+                  className="text-red-600 hover: text-red-500"
                 >
                   Build apps →
                 </Link>
@@ -1298,7 +1346,7 @@ export default function Services() {
         </div>
       </section>
       {/* New Innovative Services Section */}
-      <section className="py-24 sm:py-32 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-24 sm: py-32 bg-gradient-to-br from-blue-50 to-indigo-50">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -1343,7 +1391,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover:text-blue-500"
+                  className="text-blue-600 hover: text-blue-500"
                 >
                   Start free trial →
                 </Link>
@@ -1433,7 +1481,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover:text-orange-500"
+                  className="text-orange-600 hover: text-orange-500"
                 >
                   Setup support →
                 </Link>
@@ -1502,7 +1550,7 @@ export default function Services() {
               All services include 30-day free trial, setup assistance, and 24/7
               support.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 transition-colors"
@@ -1560,7 +1608,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover:text-blue-500"
+                  className="text-blue-600 hover: text-blue-500"
                 >
                   Get started →
                 </Link>
@@ -1590,7 +1638,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-green-600 hover:text-green-500"
+                  className="text-green-600 hover: text-green-500"
                 >
                   Monitor now →
                 </Link>
@@ -1620,7 +1668,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-purple-600 hover:text-purple-500"
+                  className="text-purple-600 hover: text-purple-500"
                 >
                   Manage APIs →
                 </Link>
@@ -1650,7 +1698,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-orange-600 hover:text-orange-500"
+                  className="text-orange-600 hover: text-orange-500"
                 >
                   Optimize DB →
                 </Link>
@@ -1676,11 +1724,11 @@ export default function Services() {
               </ul>
               <div className="flex items-center justify-between text-sm">
                 <span className="font-semibold text-red-600">
-                  From $2,500/project
+                  From $2, 500/project
                 </span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover:text-red-500"
+                  className="text-red-600 hover: text-red-500"
                 >
                   Secure now →
                 </Link>
@@ -1722,7 +1770,7 @@ export default function Services() {
               All IT services include 24/7 monitoring, regular maintenance, and
               expert support.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors"
@@ -1781,7 +1829,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-blue-600 hover:text-blue-500"
+                  className="text-blue-600 hover: text-blue-500"
                 >
                   Start free trial →
                 </Link>
@@ -1899,7 +1947,7 @@ export default function Services() {
                 <span className="font-semibold text-red-600">From $249/mo</span>
                 <Link
                   href="/contact"
-                  className="text-red-600 hover:text-red-500"
+                  className="text-red-600 hover: text-red-500"
                 >
                   Manage HR →
                 </Link>
@@ -1929,7 +1977,7 @@ export default function Services() {
                 </span>
                 <Link
                   href="/contact"
-                  className="text-indigo-600 hover:text-indigo-500"
+                  className="text-indigo-600 hover: text-indigo-500"
                 >
                   Manage finances →
                 </Link>
@@ -1941,7 +1989,7 @@ export default function Services() {
               All Micro SaaS solutions include free setup, training, and 30-day
               money-back guarantee.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 transition-colors"
@@ -1974,7 +2022,7 @@ export default function Services() {
               successful outcomes.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-4 gap-8">
             <div className="text-center group">
               <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">
                 <span className="text-2xl font-bold text-blue-600">1</span>
@@ -2030,7 +2078,7 @@ export default function Services() {
           </div>
 
           {/* Pricing Tiers */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8 mb-16">
             <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -2061,7 +2109,7 @@ export default function Services() {
               </ul>
               <div className="text-center">
                 <div className="text-xs text-gray-500 mb-2">
-                  Market Average: $1,200 - $15,000/month
+                  Market Average: $1, 200 - $15,000/month
                 </div>
                 <div className="text-sm font-medium text-green-600">
                   Save up to 60%
@@ -2069,7 +2117,7 @@ export default function Services() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300 ring-2 ring-blue-500">
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover: shadow-lg transition-all duration-300 ring-2 ring-blue-500">
               <div className="text-center mb-6">
                 <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 mb-2">
                   Most Popular
@@ -2078,7 +2126,7 @@ export default function Services() {
                   AI Services
                 </h3>
                 <div className="text-3xl font-bold text-blue-600 mb-2">
-                  $1,500 - $75,000
+                  $1, 500 - $75,000
                 </div>
                 <div className="text-sm text-gray-500">per month</div>
               </div>
@@ -2102,7 +2150,7 @@ export default function Services() {
               </ul>
               <div className="text-center">
                 <div className="text-xs text-gray-500 mb-2">
-                  Market Average: $5,000 - $100,000/month
+                  Market Average: $5, 000 - $100,000/month
                 </div>
                 <div className="text-sm font-medium text-green-600">
                   Save up to 40%
@@ -2110,13 +2158,13 @@ export default function Services() {
               </div>
             </div>
 
-            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300">
+            <div className="bg-white rounded-2xl border border-gray-200 p-8 shadow-sm hover: shadow-lg transition-all duration-300">
               <div className="text-center mb-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">
                   IT Services
                 </h3>
                 <div className="text-3xl font-bold text-blue-600 mb-2">
-                  $4,000 - $150,000
+                  $4, 000 - $150,000
                 </div>
                 <div className="text-sm text-gray-500">per month</div>
               </div>
@@ -2140,7 +2188,7 @@ export default function Services() {
               </ul>
               <div className="text-center">
                 <div className="text-xs text-gray-500 mb-2">
-                  Market Average: $8,000 - $200,000/month
+                  Market Average: $8, 000 - $200,000/month
                 </div>
                 <div className="text-sm font-medium text-green-600">
                   Save up to 50%
@@ -2161,7 +2209,7 @@ export default function Services() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 mb-4">
                   <Award className="h-6 w-6 text-blue-600" />

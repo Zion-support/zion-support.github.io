@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Home, Menu, X } from 'lucide-react';
-
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -42,7 +41,7 @@ const Navigation: React.FC = () => {
   };
   return (
     <nav className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -62,7 +61,7 @@ const Navigation: React.FC = () => {
                     <div className="relative">
                       <button
                         onClick={() => toggleDropdown(item.name)}
-                        className="text-white hover:text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                        className="text-white hover: text-blue-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
                       >
                         {item.name}
                         <ChevronDown className="ml-1 h-4 w-4" />
@@ -95,10 +94,10 @@ const Navigation: React.FC = () => {
             </div>
           </div>
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md: hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white hover:text-blue-300 p-2 rounded-md transition-colors"
+              className="text-white hover: text-blue-300 p-2 rounded-md transition-colors"
             >
               {isOpen ? (
                 <X className="h-6 w-6" />
@@ -111,7 +110,7 @@ const Navigation: React.FC = () => {
       </div>
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden">
+        <div className="md: hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-800 bg-opacity-95">
             {navigationItems.map(item => (
               <div key={item.name}>
@@ -119,7 +118,7 @@ const Navigation: React.FC = () => {
                   <div>
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="text-white hover:text-blue-300 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
+                      className="text-white hover: text-blue-300 block px-3 py-2 rounded-md text-base font-medium w-full text-left flex items-center justify-between"
                     >
                       {item.name}
                       <ChevronDown className="h-4 w-4" />
@@ -133,7 +132,8 @@ const Navigation: React.FC = () => {
                             className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-sm"
                             onClick={() => {
                               setIsOpen(false);
-                              setActiveDropdown(null)}}
+                              setActiveDropdown(null);
+                            }}
                           >
                             {dropdownItem.name}
                           </Link>
@@ -158,5 +158,4 @@ const Navigation: React.FC = () => {
     </nav>
   );
 };
-
 export default Navigation;

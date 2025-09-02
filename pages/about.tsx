@@ -218,5 +218,4 @@ const About: NextPage = () => {
     </Layout>
   );
 };
-
 export default About;

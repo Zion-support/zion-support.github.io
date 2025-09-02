@@ -1,354 +1,313 @@
-import type { NextPage } from 'next';
-// Common interfaces for better type safety
-interface ApiResponse<T = unknown> {
-  data: T;
-  status: number;
-  message?: string;
-}
-
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-}
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-}
-
-interface FormData {
-  [key: string]: string | number | boolean | File;
-}
-
-interface ComponentProps {
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
-
-
-import Layout from '../components/Layout';
-import { CheckCircle, Clock, Closed, Cloud, Common, File, Mail, MapPin, Mobile, Now, Phone, Send, User } from 'lucide-react';
-
-const Contact: NextPage = () => {
+import React, { useState } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import { Layout } from '../components/Layout';
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '', email: '',
+    company: '', service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev, [name]: value
+    }));
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    setIsSubmitting(false);
+    setIsSubmitted(true);
+  };
+  const contactMethods = [
+    {
+      icon: Phone, title: 'Phone',
+      details: '+1 (555) 123-4567', description: 'Call us for immediate assistance'
+    },
+    {
+      icon: Mail, title: 'Email',
+      details: 'info@ziontechgroup.com', description: 'Send us an email anytime'
+    },
+    {
+      icon: MapPin, title: 'Office',
+      details: '123 Tech Street, Innovation City',
+      description: 'Visit our headquarters'
+    }, {
+      icon: Clock,
+      title: 'Hours', details: 'Mon-Fri 9AM-6PM EST',
+      description: 'We\\'re here to help'
+    }
+  ];
   return (
-    <>
+    <Layout
+      title="Contact Us - Zion Tech Group"
+      description="Get in touch with Zion Tech Group for expert technology solutions. We're here to help transform your business."
+    >
       <Head>
         <title>Contact Us - Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Get in touch with Zion Tech Group for AI services, IT solutions, and Micro SaaS development. Call +1 302 464 0950 or email kleber@ziontechgroup.com"
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <main className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-50 to-purple-50 py-20">
-          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-gray-900 mb-6">
-                Contact Zion Tech Group
-              </h1>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Ready to transform your business with cutting-edge technology?
-                Get in touch with our experts today.
-              </p>
-            </div>
-          </div>
-        </section>
+      {/* Hero Section */}
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+        <div className="container mx-auto px-4 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Let's Build Something
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                {' '}Amazing Together
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Ready to transform your business with cutting-edge technology? 
+              Our team of experts is here to help you succeed.
+            </p>
+          </motion.div>
+        </div>
+      </section>
 
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="john@example.com"
-                  />
-                </div>
+      {/* Contact Methods */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Get in Touch
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Choose your preferred way to reach us. We're always ready to help.
+            </p>
+          </motion.div>
 
-                <div>
-                  <label htmlFor="compunknown" className="block text-sm font-medium text-gray-700 mb-2">
-                    Compunknown
-                  </label>
-                  <input
-                    type="text"
-                    id="compunknown"
-                    name="compunknown"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Your Compunknown"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interest
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="ai-development">AI Development</option>
-                    <option value="cloud-services">Cloud Services</option>
-                    <option value="web-development">Web Development</option>
-                    <option value="mobile-development">Mobile Development</option>
-                    <option value="blockchain-solutions">Blockchain Solutions</option>
-                    <option value="iot-platforms">IoT Platforms</option>
-                    <option value="cybersecurity">Cybersecurity</option>
-                    <option value="consulting">Consulting</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Tell us about your project and how we can help..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors flex items-center justify-center"
-                >
-                  <div className="p-3 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-4">
-                    <method.icon className="w-6 h-6 text-white" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {contactMethods.map((method, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <div className="flex items-center mb-4">
+                  <div className="p-3 bg-blue-100 rounded-lg mr-4">
+                    <method.icon className="h-6 w-6 text-blue-600" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900">
                     {method.title}
                   </h3>
-                  <a
-                    href={method.href}
-                    className="text-blue-600 hover:text-blue-500 font-medium block mb-2"
-                    target={
-                      method.href.startsWith('http') ? '_blank' : undefined
-                    }
-                    rel={
-                      method.href.startsWith('http') ? 'noreferrer' : undefined
-                    }
-                  >
-                    {method.details}
-                  </a>
-                  <p className="text-sm text-gray-600">{method.description}</p>
                 </div>
-              ))}
-            </div>
+                <a
+                  href={method.title === 'Phone' ? 'tel:+15551234567' : 
+                        method.title === 'Email' ? 'mailto:info@ziontechgroup.com' : '#'}
+                  className="text-blue-600 hover:text-blue-800 font-medium"
+                >
+                  {method.details}
+                </a>
+                <p className="text-sm text-gray-600 mt-2">
+                  {method.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                  Send us a Message
-                </h2>
-                <form className="space-y-6">
+          <div className="grid grid-cols-1 lg: grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="bg-white p-8 rounded-2xl shadow-lg"
+            >
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Send us a Message
+              </h2>
+              
+              {isSubmitted ? (
+                <div className="text-center py-8">
+                  <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Message Sent!
+                  </h3>
+                  <p className="text-gray-600">
+                    Thank you for reaching out. We'll get back to you within 24 hours.
+                  </p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <label
-                        htmlFor="firstName"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        First Name
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Full Name *
                       </label>
                       <input
                         type="text"
-                        id="firstName"
-                        name="firstName"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="John"
                       />
                     </div>
                     <div>
-                      <label
-                        htmlFor="lastName"
-                        className="block text-sm font-medium text-gray-700 mb-2"
-                      >
-                        Last Name
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Email Address *
                       </label>
                       <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="Doe"
                       />
                     </div>
                   </div>
 
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Email Address
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="john@company.com"
-                    />
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                        Service Interest
+                      </label>
+                      <select
+                        name="service"
+                        value={formData.service}
+                        onChange={handleInputChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      >
+                        <option value="">Select a service</option>
+                        <option value="ai-development">AI Development</option>
+                        <option value="cloud-services">Cloud Services</option>
+                        <option value="web-development">Web Development</option>
+                        <option value="mobile-development">Mobile Development</option>
+                        <option value="blockchain-solutions">Blockchain Solutions</option>
+                        <option value="iot-platforms">IoT Platforms</option>
+                        <option value="cybersecurity">Cybersecurity</option>
+                        <option value="consulting">Consulting</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="company"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Company
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Your Company Name"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="service"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Service Interest
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="ai-services">
-                        AI Services & Solutions
-                      </option>
-                      <option value="it-services">
-                        IT Services & Cloud Platforms
-                      </option>
-                      <option value="micro-saas">Micro SaaS Development</option>
-                      <option value="cybersecurity">
-                        Cybersecurity & Compliance
-                      </option>
-                      <option value="digital-transformation">
-                        Digital Transformation
-                      </option>
-                      <option value="devops">DevOps & Automation</option>
-                      <option value="consulting">Consulting & Advisory</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Message
+                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                      Message *
                     </label>
                     <textarea
-                      id="message"
                       name="message"
-                      rows={5}
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={6}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="Tell us about your project requirements..."
+                      placeholder="Tell us about your project or how we can help..."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg font-medium hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                   >
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-5 w-5 mr-2" />
+                        Send Message
+                      </>
+                    )}
                   </button>
                 </form>
+              )}
+            </motion.div>
+
+            {/* Additional Info */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div className="bg-white p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                  Why Choose Zion Tech Group?
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Expert Team</h4>
+                      <p className="text-gray-600">Certified professionals with years of experience</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-gray-900">24/7 Support</h4>
+                      <p className="text-gray-600">Round-the-clock assistance for your projects</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <h4 className="font-semibold text-gray-900">Proven Results</h4>
+                      <p className="text-gray-600">Track record of successful project deliveries</p>
+                    </div>
+                  </li>
+                </ul>
               </div>
 
-              {/* Business Info */}
-              <div className="space-y-8">
-                {/* Business Hours */}
-                <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Clock className="w-5 h-5 mr-2 text-blue-600" />
-                    Business Hours
-                  </h3>
-                  <div className="space-y-3">
-                    {businessHours.map((schedule, index) => (
-                      <div
-                        key={index}
-                        className="flex justify-between items-center py-2 border-b border-gray-100 last:border-b-0"
-                      >
-                        <span className="font-medium text-gray-900">
-                          {schedule.day}
-                        </span>
-                        <span className="text-gray-600">{schedule.hours}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Services We Offer */}
-                <div className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm">
-                  <h3 className="text-xl font-bold text-gray-900 mb-6 flex items-center">
-                    <Award className="w-5 h-5 mr-2 text-blue-600" />
-                    Services We Offer
-                  </h3>
-                  <ul className="space-y-3">
-                    {services.map((service, index) => (
-                      <li key={index} className="flex items-center space-x-3">
-                        <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                        <span className="text-gray-700">{service}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* Why Choose Us */}
-                <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-2xl text-white">
-                  <h3 className="text-xl font-bold mb-4">
-                    Why Choose Zion Tech Group?
-                  </h3>
-                  <ul className="space-y-3">
-                    <li className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-300 flex-shrink-0" />
-                      <span>500+ Projects Completed</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-300 flex-shrink-0" />
-                      <span>99.9% Uptime Guarantee</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-300 flex-shrink-0" />
-                      <span>24/7 Support Available</span>
-                    </li>
-                    <li className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-green-300 flex-shrink-0" />
-                      <span>Transparent Pricing</span>
-                    </li>
-                  </ul>
-                </div>
+              <div className="bg-gradient-to-r from-blue-500 to-purple-600 p-8 rounded-2xl text-white">
+                <h3 className="text-2xl font-bold mb-4">
+                  Ready to Start Your Project?
+                </h3>
+                <p className="text-blue-100 mb-6">
+                  Let's discuss your requirements and create a custom solution that drives your business forward.
+                </p>
+                <a
+                  href="tel:+15551234567"
+                  className="inline-flex items-center px-6 py-3 bg-white text-blue-600 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+                >
+                  <Phone className="h-5 w-5 mr-2" />
+                  Call Now
+                </a>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </section>
-      </main>
-    </>
+        </div>
+      </section>
+    </Layout>
   );
 }

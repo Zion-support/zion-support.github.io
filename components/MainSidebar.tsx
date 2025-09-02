@@ -1,72 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import {
-  Home,
-  Briefcase,
-  Users,
-  Phone,
-  Mail,
-  MapPin,
-  Globe,
-  Linkedin,
-  Twitter,
-  Shield,
-  Handshake,
-  ChevronDown,
-  ChevronRight,
-  Brain,
-  Cpu,
-  Database,
-  Network,
-  Code,
-  Palette,
-  Target,
-  Rocket,
-  Eye,
-  DollarSign,
-  ShoppingCart,
-  Clock,
-  Cloud,
-  Search,
-  Building,
-  Zap,
-  Heart,
-  Lightbulb,
-  TrendingUp,
-  BarChart3,
-  Lock,
-  AlertTriangle,
-  Server,
-  CheckCircle,
-  Truck,
-  Car,
-  TestTube,
-  PenTool,
-  Building2,
-  Atom,
-  FileText,
-  Quote,
-  Newspaper,
-  Calendar,
-  Video,
-  HelpCircle,
-  LifeBuoy,
-  Store,
-  PieChart,
-  Share2,
-  Monitor,
-  Smartphone,
-  Settings,
-  User,
-  Bell,
-  BookOpen,
-  Award,
-  Leaf,
-  Sun,
-  Wind
-} from 'lucide-react';
-
 interface SidebarProps extends React.PropsWithChildren<{}> {
   isOpen: boolean;
   onClose: () => void;
@@ -75,7 +9,6 @@ interface SidebarProps extends React.PropsWithChildren<{}> {
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   const router = useRouter();
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
-
   const toggleSection = (section: string) => {
     setExpandedSections(prev =>
       prev.includes(section)
@@ -83,9 +16,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         : [...prev, section]
     );
   };
-
   const isActive = (path: string) => router.pathname === path;
-
   const navigation = {
     main: [
       { name: 'Home', href: '/', icon: Home },
@@ -106,7 +37,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Machine Learning', href: '/services/machine-learning' },
           { name: 'Natural Language Processing', href: '/services/nlp' },
           { name: 'Computer Vision', href: '/services/computer-vision' },
-        ]
+        ],
       },
       {
         name: 'Cloud & Infrastructure',
@@ -116,7 +47,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'DevOps', href: '/services/devops' },
           { name: 'Microservices', href: '/services/microservices' },
           { name: 'Containerization', href: '/services/containerization' },
-        ]
+        ],
       },
       {
         name: 'Web Development',
@@ -126,17 +57,20 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Backend Development', href: '/services/backend' },
           { name: 'Full-Stack Development', href: '/services/fullstack' },
           { name: 'E-commerce Solutions', href: '/services/ecommerce' },
-        ]
+        ],
       },
       {
         name: 'Cybersecurity',
         icon: Shield,
         children: [
           { name: 'Security Audits', href: '/services/security-audits' },
-          { name: 'Penetration Testing', href: '/services/penetration-testing' },
+          {
+            name: 'Penetration Testing',
+            href: '/services/penetration-testing',
+          },
           { name: 'Compliance', href: '/services/compliance' },
           { name: 'Incident Response', href: '/services/incident-response' },
-        ]
+        ],
       },
     ],
     solutions: [
@@ -148,7 +82,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Finance', href: '/solutions/finance' },
           { name: 'Education', href: '/solutions/education' },
           { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        ]
+        ],
       },
       {
         name: 'Technology Solutions',
@@ -158,7 +92,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           { name: 'Blockchain', href: '/solutions/blockchain' },
           { name: 'Quantum Computing', href: '/solutions/quantum' },
           { name: 'AR/VR', href: '/solutions/ar-vr' },
-        ]
+        ],
       },
     ],
     resources: [
@@ -174,14 +108,12 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Contact Support', href: '/support', icon: LifeBuoy },
       { name: 'Status Page', href: '/status', icon: Server },
       { name: 'Community', href: '/community', icon: Users },
-    ]
+    ],
   };
-
   const renderNavigationItem = (item: any, level = 0) => {
     const hasChildren = item.children && item.children.length > 0;
     const isExpanded = expandedSections.includes(item.name);
     const isCurrentActive = isActive(item.href);
-
     return (
       <div key={item.name} className={`${level > 0 ? 'ml-4' : ''}`}>
         {hasChildren ? (
@@ -239,20 +171,19 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       </div>
     );
   };
-
   return (
     <>
       {/* Mobile overlay */}
       {isOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg: hidden"
           onClick={onClose}
         />
       )}
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 lg:translate-x-0 lg:static lg:shadow-none ${
+        className={`fixed top-0 left-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-50 lg: translate-x-0 lg:static lg:shadow-none ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -263,14 +194,26 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">Z</span>
               </div>
-              <span className="ml-3 text-xl font-bold text-gray-900">Zion Tech</span>
+              <span className="ml-3 text-xl font-bold text-gray-900">
+                Zion Tech
+              </span>
             </div>
             <button
               onClick={onClose}
               className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
             >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
             </button>
           </div>
@@ -334,7 +277,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="p-4 border-t border-gray-200">
             <div className="flex items-center space-x-4">
               <a
-                href="https://linkedin.com/company/ziontechgroup"
+                href="https: //linkedin.com/company/ziontechgroup"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 text-gray-400 hover:text-blue-600 transition-colors"
@@ -365,5 +308,4 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </>
   );
 };
-
 export default MainSidebar;

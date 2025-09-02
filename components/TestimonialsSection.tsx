@@ -31,18 +31,17 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import { motion } from 'framer-motion';
 import { Card, CardContent } from './ui/Card';
 import { Star, User } from 'lucide-react';
-
 const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
       name: 'Sarah Johnson',
       role: 'CEO',
       compunknown: 'TechStart Inc.',
-      content: 'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
+      content:
+        'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 40% and their cloud migration was seamless.',
       rating: 5,
       avatar: '/api/placeholder/64/64',
     },
@@ -50,7 +49,8 @@ const TestimonialsSection: React.FC = () => {
       name: 'Michael Chen',
       role: 'CTO',
       compunknown: 'DataCorp',
-      content: 'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
+      content:
+        'The cybersecurity audit they performed saved us from a potential breach. Their expertise and attention to detail are unmatched.',
       rating: 5,
       avatar: '/api/placeholder/64/64',
     },
@@ -58,14 +58,15 @@ const TestimonialsSection: React.FC = () => {
       name: 'Emily Rodriguez',
       role: 'VP of Operations',
       compunknown: 'GrowthCo',
-      content: 'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
+      content:
+        'Their custom development team delivered exactly what we needed, on time and within budget. Highly recommend their services.',
       rating: 5,
       avatar: '/api/placeholder/64/64',
     },
   ];
   return (
     <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -106,8 +107,12 @@ const TestimonialsSection: React.FC = () => {
                       {testimonial.name.charAt(0)}
                     </div>
                     <div>
-                      <div className='font-semibold text-gray-900'>{testimonial.name}</div>
-                      <div className='text-sm text-gray-500'>{testimonial.role}, {testimonial.compunknown}</div>
+                      <div className="font-semibold text-gray-900">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {testimonial.role}, {testimonial.compunknown}
+                      </div>
                     </div>
                   </div>
                 </CardContent>

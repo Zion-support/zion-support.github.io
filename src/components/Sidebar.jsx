@@ -1,57 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Zap,
-  Brain,
-  Shield,
-  Cloud,
-  Cpu,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Star,
-  Target,
-  TrendingUp,
-  Award,
-  Settings,
-  Globe,
-  Rocket,
-  Heart,
-  Lock,
-  Database,
-  Network,
-  Palette,
-  Video,
-  PenTool,
-  Atom,
-  Server,
-  Smartphone,
-  BarChart3,
-  Search,
-  FileText,
-  Calendar,
-  Briefcase,
-  Info,
-  Phone,
-  Mail,
-  MapPin,
-  Building,
-  TestTube,
-  Newspaper,
-  X,
-  Code
-} from 'lucide-react';
-
 export function Sidebar({ isOpen = false, onClose }) {
   const location = useLocation();
   const [expandedSections, setExpandedSections] = useState(['services', 'solutions']);
-
   const toggleSection = (sectionName) => {
     setExpandedSections(prev => 
       prev.includes(sectionName) 
@@ -59,25 +10,17 @@ export function Sidebar({ isOpen = false, onClose }) {
         : [...prev, sectionName]
     );
   };
-
   const navigationSections = [
     {
-      title: 'Main',
-      items: [
+      title: 'Main', items: [
         { name: 'Home', href: '/', icon: Home },
-        { name: 'About', href: '/about', icon: Building },
-        { name: 'Services', href: '/services', icon: Briefcase },
-        { name: 'Solutions', href: '/solutions', icon: Target },
-        { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'Research', href: '/research-development', icon: TestTube },
-        { name: 'Events', href: '/events', icon: Video },
-        { name: 'News', href: '/news', icon: Newspaper },
-        { name: 'Contact', href: '/contact', icon: Mail },
-        { name: 'Blog', href: '/blog', icon: FileText }
+        { name: 'About', href: '/about', icon: Building }, { name: 'Services', href: '/services', icon: Briefcase },
+        { name: 'Solutions', href: '/solutions', icon: Target }, { name: 'AI Solutions', href: '/ai-solutions', icon: Brain },
+        { name: 'Case Studies', href: '/case-studies', icon: FileText }, { name: 'Research', href: '/research-development', icon: TestTube },
+        { name: 'Events', href: '/events', icon: Video }, { name: 'News', href: '/news', icon: Newspaper },
+        { name: 'Contact', href: '/contact', icon: Mail }, { name: 'Blog', href: '/blog', icon: FileText }
       ]
-    },
-    {
+    }, {
       title: 'Core Services',
       items: [
         { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
@@ -87,8 +30,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'IT Infrastructure', href: '/services/infrastructure', icon: Server, description: 'Hardware & Networks' },
         { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business Evolution' }
       ]
-    },
-    {
+    }, {
       title: 'Industry Solutions',
       items: [
         { name: 'Manufacturing', href: '/solutions/manufacturing', icon: Cpu, description: 'Smart Factory Solutions' },
@@ -98,8 +40,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'Education', href: '/solutions/education', icon: BookOpen, description: 'EdTech & Learning' },
         { name: 'Energy', href: '/solutions/energy', icon: Zap, description: 'Renewable & Smart Grid' }
       ]
-    },
-    {
+    }, {
       title: 'Resources',
       items: [
         { name: 'White Papers', href: '/white-papers', icon: FileText, description: 'Industry Insights' },
@@ -109,8 +50,7 @@ export function Sidebar({ isOpen = false, onClose }) {
         { name: 'API Reference', href: '/api', icon: Code, description: 'Developer Resources' },
         { name: 'Status Page', href: '/status', icon: BarChart3, description: 'System Health' }
       ]
-    },
-    {
+    }, {
       title: 'Support',
       items: [
         { name: 'Help Center', href: '/support', icon: HelpCircle, description: 'Self-Service Support' },
@@ -121,20 +61,18 @@ export function Sidebar({ isOpen = false, onClose }) {
       ]
     }
   ];
-
   const isActive = (href) => {
     if (href === '/') {
       return location.pathname === '/';
     }
     return location.pathname.startsWith(href);
   };
-
   return (
     <>
       {/* Overlay */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg: hidden"
           onClick={onClose}
         />
       )}
@@ -196,7 +134,7 @@ export function Sidebar({ isOpen = false, onClose }) {
                     ) : (
                       <button
                         onClick={() => toggleSection(item.name.toLowerCase())}
-                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover:text-white hover:bg-zion-purple/10 transition-colors"
+                        className="w-full flex items-center justify-between px-4 py-2 text-sm text-zion-slate-light hover: text-white hover:bg-zion-purple/10 transition-colors"
                       >
                         <div className="flex items-center">
                           <item.icon className="h-4 w-4 mr-3 flex-shrink-0" />
@@ -224,7 +162,7 @@ export function Sidebar({ isOpen = false, onClose }) {
             </p>
             <Link
               to="/contact"
-              className="inline-flex items-center text-xs text-zion-cyan hover:text-white transition-colors"
+              className="inline-flex items-center text-xs text-zion-cyan hover: text-white transition-colors"
               onClick={onClose}
             >
               <MessageCircle className="h-3 w-3 mr-1" />

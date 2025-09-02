@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 export function Logo({ customLogo, customColor }) {
   const logoColor = customColor || '#8B5CF6'; // Default Zion purple
   

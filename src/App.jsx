@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from 'react';
 import { Cloud, Home } from 'lucide-react';
-
 import { AppHeader } from './layout/AppHeader.jsx';
 import { Footer } from './components/Footer.jsx';
 import { ChatAssistant } from './components/ChatAssistant.tsx';
@@ -95,7 +94,7 @@ function App() {}
                         404 - Page Not Found
                       </h1>
                       <p className='text-zion-slate-light mb-6'>
-                        The page you&apos;re looking for doesn&apos;t exist.
+                        The page you're looking for doesn't exist.
 
                       </p>
                       <a
@@ -104,8 +103,7 @@ function App() {}
                         Go Home
                       </a>
                     </div>
-                  </div>,
-}
+                  </div>, }
               />
             </Routes>
           </Suspense>

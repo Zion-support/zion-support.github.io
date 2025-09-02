@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Check } from 'lucide-react';
-
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -24,7 +22,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     setIsHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
     setReducedMotion(prefersReducedMotion);
-
     // Apply initial styles
     applyAccessibilityStyles(
       savedHighContrast,
@@ -32,7 +29,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       prefersReducedMotion
     );
   }, []);
-
   const applyAccessibilityStyles = (
     highContrast: boolean,
     fontSize: string,
@@ -61,14 +57,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       root.classList.remove('reduced-motion');
     }
   };
-
   const toggleHighContrast = () => {
     const newValue = !isHighContrast;
     setIsHighContrast(newValue);
     localStorage.setItem('highContrast', newValue.toString());
     applyAccessibilityStyles(newValue, fontSize, reducedMotion);
   };
-
   const changeFontSize = (newSize: string) => {
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
@@ -77,7 +71,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <>
       {/* Accessibility Controls */}
-      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 border">
+      <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark: bg-gray-800 shadow-lg rounded-lg p-4 border">
         <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">
           Accessibility Options
         </h3>
@@ -117,7 +111,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       {/* Skip to main content link */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
+        className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50"
       >
         Skip to main content
       </a>
@@ -205,5 +199,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     </>
   );
 };
-
 export default AccessibilityEnhancer;

@@ -5,19 +5,6 @@ import SEO from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
-import {
-  Users2 as Handshake,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Globe,
-  Award,
-  Target,
-  Zap,
-  Shield,
-} from 'lucide-react';
-
 export default function Partners() {
   const partnerBenefits = [
     {
@@ -57,7 +44,6 @@ export default function Partners() {
         'Expand your business reach with our global partner network.',
     },
   ];
-
   const partnerTypes = [
     {
       title: 'Technology Partners',
@@ -93,7 +79,6 @@ export default function Partners() {
       ],
     },
   ];
-
   return (
     <>
       <SEO
@@ -122,9 +107,8 @@ export default function Partners() {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Join our growing partner network and unlock new opportunities for
-              growth. Whether you&apos;re a technology company, solution
-              provider, or channel partner, ' we have programs designed to help
-              you succeed.
+              growth. Whether you're a technology company, solution provider, or
+              channel partner, ' we have programs designed to help you succeed.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700">

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { User } from 'lucide-react';
-
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -33,11 +32,10 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
-
 // Declare gtag function for TypeScript
 declare global {
-  function gtag(...args: unknown[]): void}
+  function gtag(...args: unknown[]): void;
+}
 
 interface AnalyticsProps {
   trackingId?: string;
@@ -71,7 +69,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
         });
       }
     };
-
     // Listen for route changes (Next.js)
     window.addEventListener('popstate', handleRouteChange);
     return () => {
@@ -97,14 +94,11 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
         }
       }
     };
-
     window.addEventListener('load', trackPerformance);
     return () => window.removeEventListener('load', trackPerformance);
   }, []);
-
   return null;
 };
-
 // Export tracking functions for use in components
 export const trackEvent = (
   action: string,
@@ -120,7 +114,6 @@ export const trackEvent = (
     });
   }
 };
-
 export const trackPageView = (url: string, title: string) => {
   if (typeof gtag !== 'undefined') {
     gtag('config', process.env['NEXT_PUBLIC_GA_TRACKING_ID'] || '', {
@@ -129,5 +122,4 @@ export const trackPageView = (url: string, title: string) => {
     });
   }
 };
-
 export default Analytics;

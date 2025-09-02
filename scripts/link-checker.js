@@ -4,7 +4,7 @@
  * Replaces GitHub Actions link-checker workflow;
  * Checks for broken links in the project;
  */;
-import fs from;
+import fs from "fs";
   'fs';
 import path from;
   'path';

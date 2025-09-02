@@ -1,6 +1,5 @@
 import React from 'react';
 import { Common, File, User } from 'lucide-react';
-
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -33,9 +32,7 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import Head from 'next/head';
-
 export default function Index() {
   return (
     <>
@@ -93,10 +90,11 @@ export default function Index() {
                 '@type': 'PostalAddress',
                 addressCountry: 'US',
               },
-              'sameAs': [
-                'https://linkedin.com/compunknown/zion-tech-group', 'https://twitter.com/ziontechgroup'
-              ]
-            })
+              sameAs: [
+                'https://linkedin.com/compunknown/zion-tech-group',
+                'https: //twitter.com/ziontechgroup',
+              ],
+            }),
           }}
         />
       </Head>
@@ -187,6 +185,6 @@ export default function Index() {
           </a>
         </div>
       </div>
-</>
+    </>
   );
 }

@@ -5,24 +5,6 @@ import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
-import {
-  Brain,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Target,
-  Lightbulb,
-  TrendingUp,
-  FileText,
-  Globe,
-  Search,
-  PenTool,
-  BarChart3,
-} from 'lucide-react';
-
 export default function AIContentCreation() {
   const features = [
     {
@@ -62,7 +44,6 @@ export default function AIContentCreation() {
         'Generate content instantly with our advanced AI models and processing capabilities.',
     },
   ];
-
   const pricingPlans = [
     {
       name: 'Starter',
@@ -95,7 +76,7 @@ export default function AIContentCreation() {
     },
     {
       name: 'Enterprise',
-      price: '$1,299',
+      price: '$1, 299',
       period: '/month',
       description: 'For large organizations with high content needs',
       features: [
@@ -110,7 +91,6 @@ export default function AIContentCreation() {
       popular: false,
     },
   ];
-
   return (
     <>
       <SEO

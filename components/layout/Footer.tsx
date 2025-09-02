@@ -1,6 +1,5 @@
 import React from 'react';
 import { ArrowRight, Brain, Cloud, Network, Phone, Mail, User, Heart, Info } from 'lucide-react';
-
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -40,38 +39,17 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const serviceCategories = [
     {
-      title: 'AI & Automation',
-      icon: Brain,
-      color: 'text-blue-400',
-      services: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'Machine Learning', href: '/ai-services#ml' },
-        { name: 'Natural Language Processing', href: '/ai-services#nlp' },
-        { name: 'Computer Vision', href: '/ai-services#vision' },
-      ],
-    },
+      title: 'AI & Automation', icon: Brain,
+      color: 'text-blue-400', services: [
+        { name: 'AI Services', href: '/ai-services' }, { name: 'Machine Learning', href: '/ai-services#ml' }, { name: 'Natural Language Processing', href: '/ai-services#nlp' }, { name: 'Computer Vision', href: '/ai-services#vision' },  ], },
     {
-      title: 'IT & Infrastructure',
-      icon: Cloud,
-      color: 'text-green-400',
-      services: [
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud Migration', href: '/it-services#cloud' },
-        { name: 'Cybersecurity', href: '/it-services#security' },
-        { name: 'Network Management', href: '/it-services#network' },
-      ],
-    },
+      title: 'IT & Infrastructure', icon: Cloud,
+      color: 'text-green-400', services: [
+        { name: 'IT Services', href: '/it-services' }, { name: 'Cloud Migration', href: '/it-services#cloud' }, { name: 'Cybersecurity', href: '/it-services#security' }, { name: 'Network Management', href: '/it-services#network' },  ], },
     {
-      title: 'Software Solutions',
-      icon: Code,
-      color: 'text-orange-400',
-      services: [
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'Custom Applications', href: '/micro-saas#custom' },
-        { name: 'API Development', href: '/micro-saas#api' },
-        { name: 'Integration Services', href: '/micro-saas#integration' },
-      ],
-    },
+      title: 'Software Solutions', icon: Code,
+      color: 'text-orange-400', services: [
+        { name: 'Micro SaaS', href: '/micro-saas' }, { name: 'Custom Applications', href: '/micro-saas#custom' }, { name: 'API Development', href: '/micro-saas#api' }, { name: 'Integration Services', href: '/micro-saas#integration' },  ], },
   ];
   const quickLinks = [
     { name: 'About Us', href: '/about' },
@@ -90,31 +68,24 @@ const Footer: React.FC = () => {
     { name: 'Sitemap', href: '/sitemap' },
   ];
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-    {
+    { name: 'LinkedIn', href: 'https://linkedin.com/compunknown/ziontechgroup', icon: Linkedin }, { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }, {
       name: 'YouTube',
-      href: 'https://youtube.com/ziontechgroup',
-      icon: Youtube,
-    },
-    {
+      href: 'https://youtube.com/ziontechgroup', icon: Youtube,
+    }, {
       name: 'Instagram',
-      href: 'https://instagram.com/ziontechgroup',
-      icon: Instagram,
-    },
-  ];
+      href: 'https://instagram.com/ziontechgroup', icon: Instagram,
+    },  ];
   const contactInfo = {
-    email: 'kleber@ziontechgroup.com',
-    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com', phone: '+1 302 464 0950',
     address: '364 E Main St STE 1008, Middletown DE 19709',
   };
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
       {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-4 gap-12'>
-          {/* Compunknown Info */}
+                      {/* Compunknown Info */}
           <div className='lg:col-span-1'>
             <Link href='/' className='flex items-center space-x-2 mb-6'>
               <div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center'>
@@ -178,7 +149,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Services */}
-          <div className="lg:col-span-2">
+          <div className="lg: col-span-2">
             <h3 className="text-xl font-bold text-white mb-6">Our Services</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {serviceCategories.map(category => (
@@ -210,7 +181,7 @@ const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links & Newsletter */}
-          <div className="lg:col-span-1">
+          <div className="lg: col-span-1">
             <h3 className="text-xl font-bold text-white mb-6">Quick Links</h3>
             <div className="grid grid-cols-2 gap-4 mb-8">
               {quickLinks.map(link => (
@@ -234,7 +205,7 @@ const Footer: React.FC = () => {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                  className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                 />
                 <Button
                   size="sm"
@@ -303,5 +274,4 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
 export default Footer;

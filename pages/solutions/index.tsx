@@ -5,24 +5,6 @@ import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
-import {
-  Brain,
-  Mail,
-  Headphones,
-  Calendar,
-  FolderKanban,
-  Workflow,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Target,
-  Lightbulb,
-  TrendingUp,
-} from 'lucide-react';
-
 export default function Solutions() {
   const solutions = [
     {
@@ -110,7 +92,6 @@ export default function Solutions() {
       pricing: 'Starting at $249/month',
     },
   ];
-
   const benefits = [
     {
       icon: Zap,
@@ -133,7 +114,6 @@ export default function Solutions() {
       description: 'Grow with confidence as your business expands.',
     },
   ];
-
   return (
     <>
       <SEO

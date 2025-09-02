@@ -5,18 +5,6 @@ import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
-import {
-  FolderKanban,
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Clock,
-  BarChart3,
-  Target,
-  FileText,
-  MessageSquare,
-} from 'lucide-react';
-
 export default function ProjectManagement() {
   const features = [
     {
@@ -56,7 +44,6 @@ export default function ProjectManagement() {
         'Integrated messaging and discussion threads for project communication.',
     },
   ];
-
   return (
     <>
       <SEO

@@ -6,32 +6,6 @@ import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
-import {
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  TrendingUp,
-  Award,
-  Clock,
-  Brain,
-  Cloud,
-  Database,
-  Network,
-  Target,
-  Phone,
-  Mail,
-  Bot,
-  Calendar,
-  Workflow,
-  BarChart3,
-  MessageSquare,
-  FileText,
-} from 'lucide-react';
-
 export default function Solutions() {
   const solutions = [
     {
@@ -116,14 +90,12 @@ export default function Solutions() {
       color: 'red',
     },
   ];
-
   const stats = [
     { number: '95%', label: 'Process Efficiency' },
     { number: '60%', label: 'Time Savings' },
     { number: '40%', label: 'Cost Reduction' },
     { number: '99%', label: 'Customer Satisfaction' },
   ];
-
   return (
     <Layout>
       <Head>

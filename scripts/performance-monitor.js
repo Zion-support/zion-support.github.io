@@ -181,9 +181,9 @@ class PerformanceMonitor {
     console.log('─'.repeat(50));
     // System metrics
     console.log('💻 System:');
-    console.log(`   Memory: ${this.metrics.system.memory?.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory?.heapTotal || 'N/A'}MB total`);
-    console.log(`   CPU: ${this.metrics.system.cpu?.user || 'N/A'}ms user / ${this.metrics.system.cpu?.system || 'N/A'}ms system`);
-    console.log(`   Uptime: ${this.metrics.system.process?.uptime || 'N/A}s`);
+    console.log(`   Memory: ${this.metrics.system.memory.heapUsed || 'N/A'}MB used / ${this.metrics.system.memory.heapTotal || 'N/A'}MB total`);
+    console.log(`   CPU: ${this.metrics.system.cpu.user || 'N/A'}ms user / ${this.metrics.system.cpu.system || 'N/A'}ms system`);
+    console.log(`   Uptime: ${this.metrics.system.process.uptime || 'N/A}s`);
     // Application metrics
     console.log('\n📱 Application:');
     if (this.metrics.application.buildSize) {

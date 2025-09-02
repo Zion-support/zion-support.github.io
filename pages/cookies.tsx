@@ -5,7 +5,6 @@ import SEO from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { ArrowLeft, Cookie, Shield, Eye, Settings } from 'lucide-react';
-
 export default function CookiePolicy() {
   return (
     <>

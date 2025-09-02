@@ -1,8 +1,21 @@
 import type { NextPage } from 'next';
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { ArrowRight, Best, Beyond, Building, Calendar, Clock, Cloud, Cross, Future, Mobile, Tag, Today, User } from 'lucide-react';
-
+import {
+  ArrowRight,
+  Best,
+  Beyond,
+  Building,
+  Calendar,
+  Clock,
+  Cloud,
+  Cross,
+  Future,
+  Mobile,
+  Tag,
+  Today,
+  User,
+} from 'lucide-react';
 const Blog: NextPage = () => {
   const blogPosts = [
     {
@@ -89,11 +102,10 @@ const Blog: NextPage = () => {
     'IoT',
     'Industry Insights',
   ];
-
   return (
     <Layout
       title="Blog - Zion Tech Group"
-      description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group&apos;s expert team."'
+      description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -260,5 +272,4 @@ const Blog: NextPage = () => {
     </Layout>
   );
 };
-
 export default Blog;

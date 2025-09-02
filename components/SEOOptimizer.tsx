@@ -1,6 +1,5 @@
 import React from 'react';
 import { User } from 'lucide-react';
-
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -33,19 +32,17 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import Head from 'next/head';
-
 interface SEOOptimizerProps {
   title?: string;
-   description?: string;
-   keywords?: string;
-   ogImage?: string;
-   ogType?: string;
-   canonicalUrl?: string;
-   structuredData?: unknown;
-   noindex?: boolean;
-   nofollow?: boolean;
+  description?: string;
+  keywords?: string;
+  ogImage?: string;
+  ogType?: string;
+  canonicalUrl?: string;
+  structuredData?: unknown;
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -87,14 +84,15 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       contactType: 'customer service',
       availableLanguage: 'English',
     },
-    'sameAs': [
-      'https://linkedin.com/compunknown/zion-tech-group', 'https://twitter.com/ziontechgroup'
-    ], 'foundingDate': '2020',
-    'numberOfEmployees': '50+', 'industry': 'Technology Services'
+    sameAs: [
+      'https://linkedin.com/compunknown/zion-tech-group',
+      'https: //twitter.com/ziontechgroup',
+    ],
+    foundingDate: '2020',
+    numberOfEmployees: '50+',
+    industry: 'Technology Services',
   };
-
   const finalStructuredData = structuredData || defaultStructuredData;
-
   return (
     <Head>
       {/* Basic Meta Tags */}
@@ -114,7 +112,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {/* Canonical URL */}
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />};
       {/* Open Graph */}
-      <meta property="og:title" content={fullTitle} />
+      <meta property="og: title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta
         property="og:image"
@@ -199,5 +197,4 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     </Head>
   );
 };
-
 export default SEOOptimizer;

@@ -1,30 +1,29 @@
-'use client';''
-''
+'use client';
+'';
+'';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void}
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
 
 interface State {
   hasError: boolean;
   error: Error | null;
-  errorInfo: ErrorInfo | null}
+  errorInfo: ErrorInfo | null;
+}
 
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false,
   };
-
   constructor(props: Props) {
-
     super(props);
-    this.state = { hasError: false, error: null, errorInfo: null }
+    this.state = { hasError: false, error: null, errorInfo: null };
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-
     // Log error to monitoring service
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {
@@ -66,7 +65,7 @@ export class ErrorBoundary extends Component<Props, State> {
                 <div className="mt-6">
                   <button
                     onClick={() => window.location.reload()}
-                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                    className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover: bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
                   >
                     Refresh Page
                   </button>

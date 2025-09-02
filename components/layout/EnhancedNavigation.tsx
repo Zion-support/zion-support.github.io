@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { ChevronDown, Cloud, Home, Menu, X } from 'lucide-react';
-
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -23,7 +22,7 @@ const EnhancedNavigation: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg: flex items-center space-x-8">
             <Link
               href="/"
               className="text-gray-600 hover:text-blue-600 transition-colors"
@@ -48,7 +47,7 @@ const EnhancedNavigation: React.FC = () => {
               >
                 <Link
                   href="/services/ai-development"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
                 >
                   AI Development
                 </Link>
@@ -108,7 +107,7 @@ const EnhancedNavigation: React.FC = () => {
               >
                 <Link
                   href="/solutions/enterprise"
-                  className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                  className="block px-4 py-2 text-gray-700 hover: bg-blue-50 hover:text-blue-600"
                 >
                   Enterprise Solutions
                 </Link>

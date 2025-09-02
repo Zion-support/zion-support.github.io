@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface StructuredDataProps {
   data: any;
 }
@@ -12,7 +11,6 @@ export const StructuredData: React.FC<StructuredDataProps> = ({ data }) => {
     />
   );
 };
-
 export const OrganizationSchema = () => {
   const organizationData = {
     '@context': 'https://schema.org',
@@ -33,16 +31,14 @@ export const OrganizationSchema = () => {
     },
     sameAs: [
       'https://linkedin.com/company/ziontechgroup',
-      'https://twitter.com/ziontechgroup',
+      'https: //twitter.com/ziontechgroup',
     ],
     foundingDate: '2020',
     numberOfEmployees: '50-100',
     industry: 'Technology Services',
   };
-
   return <StructuredData data={organizationData} />;
 };
-
 export const WebSiteSchema = () => {
   const websiteData = {
     '@context': 'https://schema.org',
@@ -57,10 +53,8 @@ export const WebSiteSchema = () => {
       'query-input': 'required name=search_term_string',
     },
   };
-
   return <StructuredData data={websiteData} />;
 };
-
 export const ServiceSchema = () => {
   const serviceData = {
     '@context': 'https://schema.org',
@@ -109,6 +103,5 @@ export const ServiceSchema = () => {
       ],
     },
   };
-
   return <StructuredData data={serviceData} />;
 };

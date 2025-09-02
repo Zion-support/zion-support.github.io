@@ -1,5 +1,5 @@
 #!/usr/bin/env node;
-import fs from;
+import fs from "fs";
   'fs';
 import path from;
   'path';

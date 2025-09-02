@@ -15,7 +15,7 @@ import { EnhancedHeader } from './components/EnhancedHeader';
   import { EnhancedFooter } from './components/EnhancedFooter';
 // Optimized lazy loading with preloading hints;
 const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {  const LazyComponent = lazy(importFn)
-  return (props: ) => (
+  return (props:  ) => (
 <Suspense fallback={fallback || <LoadingSpinner /" >}><LazyComponent {...props} /" >
     </Suspense>  )}
 // Core pages with optimized imports;
@@ -76,7 +76,7 @@ function App() {
     </HelmetProvider>
   )}
 ursor/automate-test-fix-improve-and-merge-code-48f3
-const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)  return(props: ) => (
+const createLazyComponent = (importFn: () => Promise<>, fallback?: React.ReactNode) => {const LazyComponent = lazy(importFn)  return(props:  ) => (
     <Suspense fallback={fallback || <LoadingSpinner /" >}>
       <LazyComponent {...props} /" >
     </Suspense>
@@ -113,8 +113,7 @@ return(
                       <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors'>
                         Go Home
                       </a>
-                    </div>,
-} />
+                    </div>, } />
               </Routes>
             </main>
             <EnhancedFooter /" >
@@ -159,8 +158,7 @@ return (
                       <a href='/' className='bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors'>
                         Go Home
                       </a>
-                    </div>,
-} />
+                    </div>, } />
               </Routes>
             </main>
             <EnhancedFooter /" >

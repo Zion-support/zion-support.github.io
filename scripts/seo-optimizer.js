@@ -3,7 +3,7 @@
  * SEO Optimization Script for Zion Tech Group Website;
  * Generates sitemap, robots.txt, and optimizes meta tags;
  */;
-import fs from,
+import fs from "fs";
   fs';
 import path from;
   'path';

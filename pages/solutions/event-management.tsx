@@ -5,19 +5,6 @@ import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
-import {
-  Calendar,
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Ticket,
-  BarChart3,
-  Clock,
-  Globe,
-  Mail,
-  Smartphone,
-} from 'lucide-react';
-
 export default function EventManagement() {
   const features = [
     {
@@ -57,7 +44,6 @@ export default function EventManagement() {
         'Send updates, reminders, and follow-ups to attendees automatically.',
     },
   ];
-
   return (
     <>
       <SEO

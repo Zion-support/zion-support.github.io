@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { Menu, X, Search, Phone, Mail } from 'lucide-react';
-
 export function Header() {
   const router = useRouter();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [scrolled, setScrolled] = useState(false);
-
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -16,14 +13,12 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const handleSearch = async (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
     }
   };
-
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -31,7 +26,6 @@ export function Header() {
     { name: 'Solutions', href: '/solutions' },
     { name: 'Contact', href: '/contact' }
   ];
-
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
       scrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'

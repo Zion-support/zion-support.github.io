@@ -10,23 +10,23 @@ class DeploymentAutomation {
 
   async deploy() {
     console.log('🚀 Starting deployment automation...');
-    
+
     try {
       // Run tests
       this.runTests();
-      
+
       // Build application
       this.buildApplication();
-      
+
       // Deploy to staging
       this.deployToStaging();
-      
+
       // Run smoke tests
       this.runSmokeTests();
-      
+
       // Deploy to production
       this.deployToProduction();
-      
+
       console.log('✅ Deployment completed successfully');
     } catch (error) {
       console.error('❌ Deployment failed:', error.message);

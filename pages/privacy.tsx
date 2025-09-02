@@ -31,10 +31,21 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import Layout from '../components/Layout';
-import { Common, Database, Eye, FileText, Lock, Party, Phone, Regular, Secure, Shield, UserCheck, With } from 'lucide-react';
-
+import {
+  Common,
+  Database,
+  Eye,
+  FileText,
+  Lock,
+  Party,
+  Phone,
+  Regular,
+  Secure,
+  Shield,
+  UserCheck,
+  With,
+} from 'lucide-react';
 const Privacy: NextPage = () => {
   return (
     <Layout
@@ -71,7 +82,7 @@ const Privacy: NextPage = () => {
                 Introduction
               </h2>
               <p className="text-gray-600 mb-4">
-                Zion Tech Group ("we," "our," or "us") is committed to
+                Zion Tech Group ("we," "our, " or "us") is committed to
                 protecting your privacy. This Privacy Policy explains how we
                 collect, use, disclose, and safeguard your information when you
                 visit our website ziontechgroup.com or use our services.
@@ -94,7 +105,7 @@ const Privacy: NextPage = () => {
               </h3>
               <p className="text-gray-600 mb-4">
                 We may collect personal information that you voluntarily provide
-                to us when you:
+                to us when you:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Register for an account or use our services</li>
@@ -109,7 +120,7 @@ const Privacy: NextPage = () => {
               </h3>
               <p className="text-gray-600 mb-4">
                 We may automatically collect certain information about your
-                device and usage patterns, including:
+                device and usage patterns, including:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>IP address and location data</li>
@@ -128,7 +139,7 @@ const Privacy: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 We use the information we collect for various purposes,
-                including:
+                including:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Providing and maintaining our services</li>
@@ -149,7 +160,7 @@ const Privacy: NextPage = () => {
               <p className="text-gray-600 mb-4">
                 We do not sell, trade, or otherwise transfer your personal
                 information to third parties without your consent, except in the
-                following circumstances:
+                following circumstances:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>
@@ -173,7 +184,7 @@ const Privacy: NextPage = () => {
                 We implement appropriate technical and organizational security
                 measures to protect your personal information against
                 unauthorized access, alteration, disclosure, or destruction.
-                These measures include:
+                These measures include:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>SSL encryption for data transmission</li>
@@ -191,7 +202,7 @@ const Privacy: NextPage = () => {
               </h2>
               <p className="text-gray-600 mb-4">
                 Depending on your location, you may have certain rights
-                regarding your personal information:
+                regarding your personal information:{' '}
               </p>
               <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
                 <li>Access to your personal information</li>
@@ -226,7 +237,7 @@ const Privacy: NextPage = () => {
                 policies.
               </p>
             </div>
-            {/* Children&apos;s Privacy */}'
+            {/* Children's Privacy */}'
             <div className="mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Children's Privacy
@@ -243,7 +254,9 @@ const Privacy: NextPage = () => {
                 Changes to This Privacy Policy
               </h2>
               <p className="text-gray-600 mb-4">
-                We may update this Privacy Policy from time to time. We will notify you of unknown changes by posting the new Privacy Policy on this page and updating the "Last updated" date.
+                We may update this Privacy Policy from time to time. We will
+                notify you of unknown changes by posting the new Privacy Policy
+                on this page and updating the "Last updated" date.
               </p>
             </div>
             {/* Contact Information */}
@@ -253,7 +266,8 @@ const Privacy: NextPage = () => {
                 Contact Us
               </h2>
               <p className="text-gray-600 mb-4">
-                If you have unknown questions about this Privacy Policy or our data practices, please contact us:
+                If you have unknown questions about this Privacy Policy or our
+                data practices, please contact us:{' '}
               </p>
               <div className="bg-gray-50 rounded-lg p-6">
                 <p className="text-gray-700 mb-2">
@@ -263,7 +277,7 @@ const Privacy: NextPage = () => {
                   <strong>Phone:</strong> +1 (302) 464-0950
                 </p>
                 <p className="text-gray-700 mb-2">
-                  <strong>Address:</strong> 364 E Main St STE 1008, Middletown,
+                  <strong>Address: </strong> 364 E Main St STE 1008, Middletown,
                   DE 19709
                 </p>
               </div>
@@ -279,11 +293,12 @@ const Privacy: NextPage = () => {
             Questions About Your Privacy?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            We're here to help. Contact us if you have unknown questions about how we handle your personal information.
-            We're here to help. Contact us if you have any questions about how
-            we handle your personal information.
+            We're here to help. Contact us if you have unknown questions about
+            how we handle your personal information. We're here to help. Contact
+            us if you have any questions about how we handle your personal
+            information.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -302,5 +317,4 @@ const Privacy: NextPage = () => {
     </Layout>
   );
 };
-
 export default Privacy;

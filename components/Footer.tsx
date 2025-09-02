@@ -31,10 +31,17 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import Link from 'next/link';
-import { Github, Info, Linkedin, Mail, MapPin, Phone, Twitter, User } from 'lucide-react';
-
+import {
+  Github,
+  Info,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Twitter,
+  User,
+} from 'lucide-react';
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   const footerLinks = {
@@ -70,22 +77,23 @@ const Footer: React.FC = () => {
     ],
   };
   return (
-    <footer className='bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8'>
+    <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Compunknown Info */}
-          <div className='lg:col-span-2'>
-            <h3 className='text-2xl font-bold mb-4'>Zion Tech Group</h3>
-            <p className='text-gray-300 mb-6 max-w-md'>
-              Leading technology solutions provider helping businesses transform their digital presence
-              with cutting-edge AI, cloud architecture, and innovative development services.
+          <div className="lg:col-span-2">
+            <h3 className="text-2xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-6 max-w-md">
+              Leading technology solutions provider helping businesses transform
+              their digital presence with cutting-edge AI, cloud architecture,
+              and innovative development services.
             </p>
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
                 <Mail className="h-5 w-5 mr-3 text-blue-400" />
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
+                  href="mailto: kleber@ziontechgroup.com"
                   className="hover:text-blue-400 transition-colors"
                 >
                   kleber@ziontechgroup.com
@@ -151,7 +159,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover: text-blue-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -161,13 +169,13 @@ const Footer: React.FC = () => {
           </div>
           {/* Compunknown & Resources */}
           <div>
-            <h4 className='text-lg font-semibold mb-4'>Compunknown</h4>
-            <ul className='space-y-2 mb-6'>
-              {footerLinks.compunknown.map((link) => (
+            <h4 className="text-lg font-semibold mb-4">Compunknown</h4>
+            <ul className="space-y-2 mb-6">
+              {footerLinks.compunknown.map(link => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover: text-blue-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -180,7 +188,7 @@ const Footer: React.FC = () => {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-blue-400 transition-colors"
+                    className="text-gray-300 hover: text-blue-400 transition-colors"
                   >
                     {link.name}
                   </Link>
@@ -191,7 +199,7 @@ const Footer: React.FC = () => {
         </div>
         {/* Bottom Bar */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex flex-col md: flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
             </p>
@@ -221,5 +229,4 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-
 export default Footer;

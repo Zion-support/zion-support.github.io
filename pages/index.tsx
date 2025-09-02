@@ -1,32 +1,4 @@
 import React from 'react';
-import { ArrowRight, Brain, CheckCircle, Cloud, Home, Mail, Network, Phone, Today } from 'lucide-react';
-
-import Head from 'next/head';
-import Link from 'next/link';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
-import {
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap,
-  Shield,
-  Globe,
-  TrendingUp,
-  Award,
-  Clock,
-  Brain,
-  Cloud,
-  Database,
-  Network,
-  Target,
-  Phone,
-  Mail,
-} from 'lucide-react';
-
 export default function Home() {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
@@ -34,7 +6,6 @@ export default function Home() {
     { number: '99.9%', label: 'Uptime Guarantee' },
     { number: '24/7', label: 'Support Available' },
   ];
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -58,7 +29,6 @@ export default function Home() {
       rating: 5,
     },
   ];
-
   const features = [
     {
       icon: Zap,
@@ -97,7 +67,8 @@ export default function Home() {
     },
     {
       title: 'IT Services',
-      description: 'Advanced IT solutions including blockchain integration, IoT management, edge computing, and quantum-ready security',
+      description:
+        'Advanced IT solutions including blockchain integration, IoT management, edge computing, and quantum-ready security',
       icon: Network,
       href: '/services#cloud',
       features: [
@@ -109,7 +80,8 @@ export default function Home() {
     },
     {
       title: 'Micro SaaS',
-      description: 'Innovative software solutions including email automation, inventory management, pricing optimization, and lead scoring',
+      description:
+        'Innovative software solutions including email automation, inventory management, pricing optimization, and lead scoring',
       icon: Cloud,
       href: '/services#saas',
       features: [
@@ -165,7 +137,7 @@ export default function Home() {
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-32">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-20 sm:py-32">
             <div className="text-center">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
                 Welcome to Zion Tech Group
@@ -174,7 +146,7 @@ export default function Home() {
                 Leading provider of revolutionary technology solutions, AI
                 services, and cutting-edge innovations.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">
                 <Link href="/services">
                   <Button className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold">
                     Explore Our Services
@@ -200,7 +172,7 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-2">
+                  <div className="text-3xl sm: text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
                   <div className="text-sm sm:text-base text-gray-600">
@@ -213,7 +185,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 sm:py-32">
+        <section className="py-20 sm: py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
@@ -228,7 +200,7 @@ export default function Home() {
               {services.map((service, index) => (
                 <Card
                   key={index}
-                  className="p-8 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg"
+                  className="p-8 hover: shadow-xl transition-all duration-300 hover:-translate-y-2 bg-white border-0 shadow-lg"
                 >
                   <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6">
                     <service.icon className="w-8 h-8 text-white" />
@@ -256,7 +228,7 @@ export default function Home() {
                     </div>
                   </div>
                   <Link href={service.href}>
-                    <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white">
+                    <Button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white">
                       Learn More
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
@@ -269,7 +241,7 @@ export default function Home() {
 
         {/* Features Section */}
         <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 Why Choose Zion Tech Group?
@@ -279,10 +251,10 @@ export default function Home() {
                 and unwavering commitment to excellence.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
                 <div key={index} className="text-center group">
-                  <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="p-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 w-fit mx-auto mb-6 group-hover: scale-110 transition-transform duration-300">
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">
@@ -297,7 +269,7 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
                 What Our Clients Say
@@ -311,7 +283,7 @@ export default function Home() {
               {testimonials.map((testimonial, index) => (
                 <Card
                   key={index}
-                  className="p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="p-8 bg-white border-0 shadow-lg hover: shadow-xl transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -340,7 +312,7 @@ export default function Home() {
 
         {/* Contact CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
@@ -371,7 +343,7 @@ export default function Home() {
               <p className="text-sm mt-1">
                 Visit us at{' '}
                 <a
-                  href="https://ziontechgroup.com"
+                  href="https: //ziontechgroup.com"
                   className="underline hover:text-white"
                   target="_blank"
                   rel="noreferrer"

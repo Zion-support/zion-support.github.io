@@ -17,7 +17,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           'animate-spin rounded-full border-2 border-gray-300 border-t-blue-600', sizeClasses[size])}
         role='status';
         aria-label='Loading'/>{text && (
-        <p className='text-sm text-gray-600 animate-pulse'>{text}</p>
+        <p className='text-sm text-gray-600 animate-pulse'>
+                      {text}</p>
       )}
     </div>
   )}

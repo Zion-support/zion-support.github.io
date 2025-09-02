@@ -1,7 +1,5 @@
 'use client';
-
 import React, { useEffect, useState, useCallback } from 'react';
-
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -20,56 +18,55 @@ const PerformanceEnhancer: React.FC = () => {
     cls: null,
     ttfb: null,
     loadTime: null,
-    memoryUsage: null
+    memoryUsage: null,
   });
   const [isVisible, setIsVisible] = useState(false);
-
   // Only show in development or when explicitly enabled
   useEffect(() => {
-    if (process.env.NODE_ENV === 'development' || process.env['NEXT_PUBLIC_SHOW_PERFORMANCE'] === 'true') {
+    if (
+      process.env.NODE_ENV === 'development' ||
+      process.env['NEXT_PUBLIC_SHOW_PERFORMANCE'] === 'true'
+    ) {
       setIsVisible(true);
     }
   }, []);
-
   // Measure Core Web Vitals
   useEffect(() => {
     if (typeof window === 'undefined' || !isVisible) return;
-
     const measurePerformance = () => {
       // Measure First Contentful Paint (FCP)
       if ('PerformanceObserver' in window) {
-        const fcpObserver = new PerformanceObserver((list) => {
+        const fcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          const fcpEntry = entries.find((entry) => entry.name === 'first-contentful-paint');
+          const fcpEntry = entries.find(
+            entry => entry.name === 'first-contentful-paint'
+          );
           if (fcpEntry) {
             setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
           }
         });
         fcpObserver.observe({ entryTypes: ['paint'] });
-
         // Measure Largest Contentful Paint (LCP)
-        const lcpObserver = new PerformanceObserver((list) => {
+        const lcpObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
           setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
         // Measure First Input Delay (FID)
-        const fidObserver = new PerformanceObserver((list) => {
+        const fidObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
             setMetrics(prev => ({
               ...prev,
-              fid: entry.processingStart - entry.startTime
+              fid: entry.processingStart - entry.startTime,
             }));
           });
         });
         fidObserver.observe({ entryTypes: ['first-input'] });
-
         // Measure Cumulative Layout Shift (CLS)
         let clsValue = 0;
-        const clsObserver = new PerformanceObserver((list) => {
+        const clsObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
             if (!entry.hadRecentInput) {
@@ -79,39 +76,34 @@ const PerformanceEnhancer: React.FC = () => {
           });
         });
         clsObserver.observe({ entryTypes: ['layout-shift'] });
-
         // Measure Time to First Byte (TTFB)
-        const navigationObserver = new PerformanceObserver((list) => {
+        const navigationObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
           entries.forEach((entry: any) => {
             setMetrics(prev => ({
               ...prev,
-              ttfb: entry.responseStart - entry.requestStart
+              ttfb: entry.responseStart - entry.requestStart,
             }));
           });
         });
         navigationObserver.observe({ entryTypes: ['navigation'] });
-
         // Measure page load time
         window.addEventListener('load', () => {
           const loadTime = performance.now();
           setMetrics(prev => ({ ...prev, loadTime }));
         });
-
         // Measure memory usage
         const updateMemoryUsage = () => {
           if ('memory' in performance) {
             const memory = (performance as any).memory;
             setMetrics(prev => ({
               ...prev,
-              memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
+              memoryUsage: memory.usedJSHeapSize / 1024 / 1024, // Convert to MB
             }));
           }
         };
-
         updateMemoryUsage();
         const memoryInterval = setInterval(updateMemoryUsage, 5000);
-
         return () => {
           fcpObserver.disconnect();
           lcpObserver.disconnect();
@@ -122,11 +114,9 @@ const PerformanceEnhancer: React.FC = () => {
         };
       }
     };
-
     const cleanup = measurePerformance();
     return cleanup;
   }, [isVisible]);
-
   // Send metrics to analytics
   const sendToAnalytics = useCallback((metricName: string, value: number) => {
     if (typeof gtag !== 'undefined') {
@@ -135,11 +125,10 @@ const PerformanceEnhancer: React.FC = () => {
         value: Math.round(value),
         event_category: 'Performance',
         event_label: metricName,
-        non_interaction: true
+        non_interaction: true,
       });
     }
   }, []);
-
   // Send metrics when they change
   useEffect(() => {
     Object.entries(metrics).forEach(([key, value]) => {
@@ -148,7 +137,6 @@ const PerformanceEnhancer: React.FC = () => {
       }
     });
   }, [metrics, sendToAnalytics]);
-
   if (!isVisible) {
     return null;
   }
@@ -157,21 +145,11 @@ const PerformanceEnhancer: React.FC = () => {
     <div className="fixed bottom-4 left-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 max-w-xs">
       <div className="mb-2 font-bold">Performance Metrics</div>
       <div className="space-y-1">
-        {metrics.fcp !== null && (
-          <div>FCP: {metrics.fcp.toFixed(2)}ms</div>
-        )}
-        {metrics.lcp !== null && (
-          <div>LCP: {metrics.lcp.toFixed(2)}ms</div>
-        )}
-        {metrics.fid !== null && (
-          <div>FID: {metrics.fid.toFixed(2)}ms</div>
-        )}
-        {metrics.cls !== null && (
-          <div>CLS: {metrics.cls.toFixed(4)}</div>
-        )}
-        {metrics.ttfb !== null && (
-          <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>
-        )}
+        {metrics.fcp !== null && <div>FCP: {metrics.fcp.toFixed(2)}ms</div>}
+        {metrics.lcp !== null && <div>LCP: {metrics.lcp.toFixed(2)}ms</div>}
+        {metrics.fid !== null && <div>FID: {metrics.fid.toFixed(2)}ms</div>}
+        {metrics.cls !== null && <div>CLS: {metrics.cls.toFixed(4)}</div>}
+        {metrics.ttfb !== null && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
         {metrics.loadTime !== null && (
           <div>Load: {metrics.loadTime.toFixed(2)}ms</div>
         )}
@@ -182,5 +160,4 @@ const PerformanceEnhancer: React.FC = () => {
     </div>
   );
 };
-
 export default PerformanceEnhancer;

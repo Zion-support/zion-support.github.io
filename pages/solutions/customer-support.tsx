@@ -5,19 +5,6 @@ import SEO from '../../components/SEO';
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
-import {
-  Headphones,
-  ArrowRight,
-  CheckCircle,
-  MessageSquare,
-  Bot,
-  FileText,
-  Globe,
-  BarChart3,
-  Clock,
-  Users,
-} from 'lucide-react';
-
 export default function CustomerSupport() {
   const features = [
     {
@@ -57,7 +44,6 @@ export default function CustomerSupport() {
         'Round-the-clock customer support with automated responses and escalation.',
     },
   ];
-
   return (
     <>
       <SEO

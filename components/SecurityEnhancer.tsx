@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
 import { X, Check } from 'lucide-react';
-
 import Head from 'next/head';
-
 const SecurityEnhancer: React.FC = () => {
   useEffect(() => {
     // Content Security Policy;
@@ -22,16 +20,11 @@ const SecurityEnhancer: React.FC = () => {
     cspMeta.httpEquiv = 'Content-Security-Policy';
     cspMeta.content = csp;
     document.head.appendChild(cspMeta);
-
     // Security headers
     const securityHeaders = {
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
-      'X-XSS-Protection': '1 mode=block',
-      'Referrer-Policy': 'strict-origin-when-cross-origin',
-      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
-    };
-
+      'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',
+      'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()', };
     // Add security headers via meta tags
     Object.entries(securityHeaders).forEach(([name, value]) => {
       const meta = document.createElement('meta');
@@ -39,7 +32,6 @@ const SecurityEnhancer: React.FC = () => {
       meta.content = value;
       document.head.appendChild(meta);
     });
-
     // Detect and prevent XSS attempts
     const detectXSS = () => {
       const scripts = document.querySelectorAll('script');
@@ -52,7 +44,6 @@ const SecurityEnhancer: React.FC = () => {
         }
       });
     };
-
     // Monitor for suspicious activity
     const monitorSuspiciousActivity = () => {
       // Detect iframe injection attempts
@@ -66,7 +57,7 @@ const SecurityEnhancer: React.FC = () => {
              !iframe.src.includes('youtube.com') &&
              !iframe.src.includes('vimeo.com')) {
 
-          console.warn('Potentially malicious iframe detected: ', iframe.src);
+          
           iframe.remove();
         }
       });
@@ -76,13 +67,9 @@ const SecurityEnhancer: React.FC = () => {
         form.addEventListener('submit', e => {
           const formData = new FormData(form);
           const suspiciousPatterns = [
-            /<script/i,
-            /javascript: /i,
-            /on\w+\s*=/i,
-            /eval\(/i,
-            /expression\(/i,
-          ];
-
+            /<script/i, /javascript: /i,
+            /on\\w+\\s*=/i, /eval\\(/i,
+            /expression\\(/i,  ];
           for (const [key, value] of formData.entries()) {
             if (typeof value === 'string') {
               suspiciousPatterns.forEach(pattern => {
@@ -130,8 +117,7 @@ const SecurityEnhancer: React.FC = () => {
       {/* Content Security Policy */}
       <meta
         httpEquiv="Content-Security-Policy"
-        content="default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'"
-      />
+        content="default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self"/>
       {/* Additional Security Meta Tags */}
       <meta name="robots" content="index, follow, noarchive, nosnippet" />
       <meta name="googlebot" content="index, follow, noarchive, nosnippet" />
@@ -143,5 +129,4 @@ const SecurityEnhancer: React.FC = () => {
     </Head>
   );
 };
-
 export default SecurityEnhancer;

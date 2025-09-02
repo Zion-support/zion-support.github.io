@@ -1,6 +1,14 @@
 import type { NextPage } from 'next';
-import { Award, Cloud, High, Server, Shield, Today, Users, Zap } from 'lucide-react';
-
+import {
+  Award,
+  Cloud,
+  High,
+  Server,
+  Shield,
+  Today,
+  Users,
+  Zap,
+} from 'lucide-react';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
 const CloudServices: NextPage = () => {
@@ -255,5 +263,4 @@ const CloudServices: NextPage = () => {
     </Layout>
   );
 };
-
 export default CloudServices;

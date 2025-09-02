@@ -19,8 +19,7 @@ const observer = new IntersectionObserver ( (entries) => {
             const target = entry.target as HTMLElement;
             if (target.dataset.src) {"
 target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }
-          }",
-})}, { rootMargin: '50px' }') ';// Observe lazy load elements;"
+          }", })}, { rootMargin: '50px' }') ';// Observe lazy load elements;"
     const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {
       observer.disconnect () }
   }, []) 

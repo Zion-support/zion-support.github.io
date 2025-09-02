@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Home } from 'lucide-react';
-
 import Head from 'next/head';
 interface AnalyticsTrackerProps {
   pageName?: string;
@@ -50,7 +49,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           }
         }
       };
-
       // Track when user leaves
       const handleBeforeUnload = () => {
         isActive = false;
@@ -63,14 +61,12 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           });
         }
       };
-
       // Track scroll depth
       const trackScrollDepth = () => {
         const scrollDepth = Math.round(
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
             100
         );
-
         if (scrollDepth >= 25 && scrollDepth < 50) {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'scroll', {
@@ -114,7 +110,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           }
         }
       };
-
       // Track form interactions
       const trackFormInteractions = (e: Event) => {
         const target = e.target as
@@ -135,7 +130,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           }
         }
       };
-
       // Set up event listeners
       window.addEventListener('beforeunload', handleBeforeUnload);
       window.addEventListener('scroll', trackScrollDepth, { passive: true });
@@ -151,7 +145,6 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         clearInterval(interval);
       };
     };
-
     // Track custom events
     const trackCustomEvents = () => {
       customEvents.forEach(event => {
@@ -164,12 +157,10 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         }
       });
     };
-
     // Initialize tracking
     trackPageView();
     const cleanup = trackEngagement();
     trackCustomEvents();
-
     return cleanup;
   }, [pageName, customEvents]);
   return (
@@ -177,7 +168,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       {/* Google Analytics 4 */}
       <script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+        src="https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
       />
       <script
         dangerouslySetInnerHTML={{
@@ -225,5 +216,4 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     </Head>
   );
 };
-
 export default AnalyticsTracker;

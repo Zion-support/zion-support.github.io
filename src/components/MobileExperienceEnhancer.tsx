@@ -1,17 +1,6 @@
 
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Smartphone, Tablet, 
-  Monitor, Touch, 
-  Gesture, Swipe, 
-  Pinch, Rotate,
-  X, Menu,
-  Home, Search,
-  User, Settings,
-  ArrowUp, ArrowDown,
-  ArrowLeft, ArrowRight
-} from 'lucide-react';
 interface TouchGesture {
   type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
   direction?: 'up' | 'down' | 'left' | 'right';
@@ -110,8 +99,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
           if (gesture.direction === 'left') {
             // Swipe left - go forward
             if (window.history.length > 1) {
-              window.history.forward()}",
-} else if (gesture.direction === 'right') {
+              window.history.forward()}", } else if (gesture.direction === 'right') {
             // Swipe right - go back
             if (window.history.length > 1) {
               window.history.back()}

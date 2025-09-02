@@ -1,7 +1,6 @@
 'use client';
 import { useEffect, useState, useCallback } from 'react';
 import { User } from 'lucide-react';
-
 // Common interfaces for better type safety
 interface ApiResponse<T = unknown> {
   data: T;
@@ -42,7 +41,6 @@ declare global {
 }
 
 declare const gtag: (...args: unknown[]) => void;
-
 interface AnalyticsEvent {
   name: string;
   category: string;
@@ -70,10 +68,8 @@ interface UserBehavior {
 const AnalyticsManager: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
   const [userBehavior, setUserBehavior] = useState<UserBehavior>({
-    pageViews: 0,
-    sessionDuration: 0,
-    bounceRate: 0,
-    conversionRate: 0,
+    pageViews: 0, sessionDuration: 0,
+    bounceRate: 0, conversionRate: 0,
   });
   // Initialize analytics
   useEffect(() => {
@@ -88,21 +84,16 @@ const AnalyticsManager: React.FC = () => {
     // Initialize Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('config', 'GA_MEASUREMENT_ID', {
-        page_title: document.title,
-        page_location: window.location.href,
+        page_title: document.title, page_location: window.location.href,
         custom_map: {
-          custom_parameter_1: 'user_type',
-          custom_parameter_2: 'session_id',
-        },
-      });
+          custom_parameter_1: 'user_type', custom_parameter_2: 'session_id',
+        }, });
     }
 
     // Initialize other analytics services
     initializeCustomAnalytics();
-
     setIsInitialized(true);
   }, []);
-
   const initializeCustomAnalytics = useCallback(() => {
     // Custom analytics initialization
     const sessionId = generateSessionId();
@@ -113,23 +104,17 @@ const AnalyticsManager: React.FC = () => {
     sessionStorage.setItem('analytics_start_time', Date.now().toString());
     // Track user properties
     trackUserProperties({
-      session_id: sessionId,
-      user_id: userId,
-      user_agent: navigator.userAgent,
-      screen_resolution: `${screen.width}x${screen.height}`,
-      viewport_size: `${window.innerWidth}x${window.innerHeight}`,
-      color_depth: screen.colorDepth,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      language: navigator.language,
+      session_id: sessionId, user_id: userId,
+      user_agent: navigator.userAgent, screen_resolution: `${screen.width}x${screen.height}`,
+      viewport_size: `${window.innerWidth}x${window.innerHeight}`, color_depth: screen.colorDepth,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone, language: navigator.language,
     });
   }, []);
-
   const generateSessionId = useCallback(() => {
     return (
       'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)
     );
   }, []);
-
   const getUserId = useCallback(() => {
     let userId = localStorage.getItem('analytics_user_id');
     if (!userId) {
@@ -141,13 +126,9 @@ const AnalyticsManager: React.FC = () => {
   }, []);
   const trackPageView = useCallback(() => {
     const pageData = {
-      page_title: document.title,
-      page_location: window.location.href,
-      page_path: window.location.pathname,
-      referrer: document.referrer,
-      timestamp: new Date().toISOString(),
-    };
-
+      page_title: document.title, page_location: window.location.href,
+      page_path: window.location.pathname, referrer: document.referrer,
+      timestamp: new Date().toISOString(), };
     // Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', 'page_view', pageData);
@@ -155,56 +136,39 @@ const AnalyticsManager: React.FC = () => {
 
     // Custom analytics
     sendAnalyticsEvent({
-      name: 'page_view',
-      category: 'Navigation',
-      action: 'view',
-      label: window.location.pathname,
-      custom_parameters: pageData,
-    });
+      name: 'page_view', category: 'Navigation',
+      action: 'view', label: window.location.pathname,
+      custom_parameters: pageData, });
   }, []);
-
   const trackEvent = useCallback(
     (event: AnalyticsEvent) => {
       if (!isInitialized) return;
-
       // Google Analytics
       if (typeof gtag !== 'undefined') {
         gtag('event', event.name, {
-          event_category: event.category,
-          event_label: event.label,
-          value: event.value,
-          ...event.custom_parameters,
+          event_category: event.category, event_label: event.label,
+          value: event.value, ...event.custom_parameters,
         });
       }
 
       // Custom analytics
       sendAnalyticsEvent(event);
-    },
-    [isInitialized]
+    }, [isInitialized]
   );
-
       // Custom analytics
       sendAnalyticsEvent(event);
-    },
-    [isInitialized]
+    }, [isInitialized]
   );
   const sendAnalyticsEvent = useCallback(async (event: AnalyticsEvent) => {
     try {
       const eventData = {
-        ...event,
-        timestamp: new Date().toISOString(),
-        session_id: sessionStorage.getItem('analytics_session_id'),
-        user_id: sessionStorage.getItem('analytics_user_id'),
-        page_url: window.location.href,
-        user_agent: navigator.userAgent,
-      };
-
+        ...event, timestamp: new Date().toISOString(), session_id: sessionStorage.getItem('analytics_session_id'), user_id: sessionStorage.getItem('analytics_user_id'), page_url: window.location.href,
+        user_agent: navigator.userAgent, };
       // Send to custom analytics endpoint
       await fetch('/api/analytics', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-        },
+          'Content-Type': 'application/json', },
         body: JSON.stringify(eventData)
       })} catch (error) {
       console.error('Analytics: Failed to send event', error)}
@@ -212,74 +176,52 @@ const AnalyticsManager: React.FC = () => {
   const trackUserProperties = useCallback((properties: Record<string, unknown>) => {
     if (typeof gtag !== 'undefined') {
       gtag('config', 'GA_MEASUREMENT_ID', {
-        custom_map: properties,
-      });
+        custom_map: properties, });
     }
 
     // Store in custom analytics
     sendAnalyticsEvent({
-      name: 'user_properties',
-      category: 'User',
-      action: 'identify',
-      custom_parameters: properties,
+      name: 'user_properties', category: 'User',
+      action: 'identify', custom_parameters: properties,
     });
   }, []);
-
   const trackPerformance = useCallback((metrics: PerformanceMetrics) => {
     // Google Analytics
     if (typeof gtag !== 'undefined') {
       gtag('event', 'web_vitals', {
-        name: 'FCP',
-        value: Math.round(metrics.fcp),
-        event_category: 'Performance',
+        name: 'FCP', value: Math.round(metrics.fcp), event_category: 'Performance',
       });
       gtag('event', 'web_vitals', {
-        name: 'LCP',
-        value: Math.round(metrics.lcp),
-        event_category: 'Performance',
+        name: 'LCP', value: Math.round(metrics.lcp), event_category: 'Performance',
       });
       gtag('event', 'web_vitals', {
-        name: 'FID',
-        value: Math.round(metrics.fid),
-        event_category: 'Performance',
+        name: 'FID', value: Math.round(metrics.fid), event_category: 'Performance',
       });
       gtag('event', 'web_vitals', {
-        name: 'CLS',
-        value: Math.round(metrics.cls * 1000),
-        event_category: 'Performance',
+        name: 'CLS', value: Math.round(metrics.cls * 1000), event_category: 'Performance',
       });
     }
 
     // Custom analytics
     sendAnalyticsEvent({
-      name: 'performance_metrics',
-      category: 'Performance',
-      action: 'measure',
-      custom_parameters: metrics,
+      name: 'performance_metrics', category: 'Performance',
+      action: 'measure', custom_parameters: metrics,
     });
   }, []);
-
   const trackConversion = useCallback(
     (conversionType: string, value?: number) => {
       trackEvent({
-        name: 'conversion',
-        category: 'Conversion',
-        action: conversionType,
-        ...(value !== undefined && { value }),
-      });
-    },
-    [trackEvent]
+        name: 'conversion', category: 'Conversion',
+        action: conversionType, ...(value !== undefined && { value }), });
+    }, [trackEvent]
   );
-
   const startSessionTimer = useCallback(() => {
     const updateSessionDuration = () => {
       // Session duration tracking logic can be added here if needed
     };
-
     const interval = setInterval(updateSessionDuration, 1000);
     // Store interval ID for cleanup
     (window as unknown).analyticsSessionInterval = interval}, []);
-
   const endSession = useCallback(() => {
     const interval = (window as unknown).analyticsSessionInterval;
     if (interval) {
@@ -289,15 +231,12 @@ const AnalyticsManager: React.FC = () => {
     const sessionDuration =
       Date.now() -
       parseInt(sessionStorage.getItem('analytics_start_time') || '0');
-
     const sessionDuration =
       Date.now() -
       parseInt(sessionStorage.getItem('analytics_start_time') || '0');
     trackEvent({
-      name: 'session_end',
-      category: 'Session',
-      action: 'end',
-      value: sessionDuration,
+      name: 'session_end', category: 'Session',
+      action: 'end', value: sessionDuration,
     });
   }, [trackEvent]);
   // Track user interactions
@@ -308,47 +247,35 @@ const AnalyticsManager: React.FC = () => {
       const button = target.closest('button');
       if (link) {
         trackEvent({
-          name: 'link_click',
-          category: 'Interaction',
-          action: 'click',
-          label: link.href,
+          name: 'link_click', category: 'Interaction',
+          action: 'click', label: link.href,
         });
       } else if (button) {
         trackEvent({
-          name: 'button_click',
-          category: 'Interaction',
-          action: 'click',
-          label: button.textContent || button.className,
+          name: 'button_click', category: 'Interaction',
+          action: 'click', label: button.textContent || button.className,
         });
       }
     };
-
     const handleScroll = () => {
       const scrollPercent = Math.round(
         (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
           100
       );
-
       if (scrollPercent > 0 && scrollPercent % 25 === 0) {
         trackEvent({
-          name: 'scroll_depth',
-          category: 'Engagement',
-          action: 'scroll',
-          value: scrollPercent,
+          name: 'scroll_depth', category: 'Engagement',
+          action: 'scroll', value: scrollPercent,
         });
       }
     };
-
     const handleFormSubmit = (event: Event) => {
       const form = event.target as HTMLFormElement;
       trackEvent({
-        name: 'form_submit',
-        category: 'Conversion',
-        action: 'submit',
-        label: form.action || form.className,
+        name: 'form_submit', category: 'Conversion',
+        action: 'submit', label: form.action || form.className,
       });
     };
-
     document.addEventListener('click', handleClick);
     document.addEventListener('scroll', handleScroll);
     document.addEventListener('submit', handleFormSubmit);
@@ -361,13 +288,10 @@ const AnalyticsManager: React.FC = () => {
   // Expose analytics functions globally
   useEffect(() => {
     (window as unknown).analytics = {
-      track: trackEvent,
-      trackConversion,
-      trackPerformance,
-      trackUserProperties,
+      track: trackEvent, trackConversion,
+      trackPerformance, trackUserProperties,
     };
   }, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
-
   return null; // This component doesn't render unknownthing
 }
 

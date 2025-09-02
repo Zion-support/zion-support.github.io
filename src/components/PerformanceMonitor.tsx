@@ -1,10 +1,8 @@
 import { useEffect } from 'react';
-
 export function PerformanceMonitor() {
   useEffect(() => {
     // Only run in production
     if (process.env.NODE_ENV !== 'production') return;
-
     // Web Vitals monitoring
     const reportWebVitals = (metric: any) => {
       // Send to analytics service
@@ -15,7 +13,6 @@ export function PerformanceMonitor() {
         });
       }
     };
-
     // Import web-vitals dynamically
     import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
       getCLS(reportWebVitals);
@@ -24,25 +21,19 @@ export function PerformanceMonitor() {
       getLCP(reportWebVitals);
       getTTFB(reportWebVitals);
     });
-
     // Performance observer for custom metrics
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'navigation') {
             const navEntry = entry as PerformanceNavigationTiming;
-            console.log('Navigation timing: ', {
-              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
-              loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart, totalTime: navEntry.loadEventEnd - navEntry.fetchStart
-            });
+            
           }
         }
       });
-
       observer.observe({ entryTypes: ['navigation'] });
     }
   }, []);
-
   return null;
 }
 

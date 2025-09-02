@@ -1,6 +1,5 @@
 import { Route, Routes    } from 'react-router-dom';
 import { Lazy } from 'lucide-react';
-
 export default function Page() {
   import { Suspense, lazy } from 'react';
   import { ProtectedRoute } from '../components/ProtectedRoute';
@@ -20,8 +19,7 @@ const DashboardRoutes: React.FC = () => {
         <Route path='/dashboard' element={
           <ProtectedRoute" >
             <Dashboard /" >
-          </ProtectedRoute>,
-} />"
+          </ProtectedRoute>, } />"
         <Route path='/client-dashboard' element={
           <ProtectedRoute" >
             <ClientDashboard /" >
@@ -30,8 +28,7 @@ const DashboardRoutes: React.FC = () => {
         <Route path='/talent-dashboard' element={
           <ProtectedRoute" >
             <TalentDashboard /" >
-          </ProtectedRoute>,
-} />"
+          </ProtectedRoute>, } />"
         <Route path='/creator-dashboard' element={
           <ProtectedRoute" >
             <CreatorDashboard /" >
@@ -40,8 +37,7 @@ const DashboardRoutes: React.FC = () => {
         <Route path='/analytics' element={
           <ProtectedRoute" >
             <Analytics /" >
-          </ProtectedRoute>,
-} />"
+          </ProtectedRoute>, } />"
         <Route path='/project-milestones' element={
           <ProtectedRoute" >
             <ProjectMilestones /" >
@@ -50,8 +46,7 @@ const DashboardRoutes: React.FC = () => {
         <Route path='/project-details' element={
           <ProtectedRoute" >
             <ProjectDetails /" >
-          </ProtectedRoute>,
-} />"
+          </ProtectedRoute>, } />"
         <Route path='/project-room' element={
           <ProtectedRoute" >
             <ProjectRoom /" >

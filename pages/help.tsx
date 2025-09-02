@@ -31,11 +31,27 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
 import Layout from '../components/Layout';
 import Link from 'next/link';
-import { BookOpen, Can, CheckCircle, Clock, Common, FileText, Frequently, HelpCircle, Mail, MessageCircle, Phone, Quick, Search, Users, Video, Within, Yes } from 'lucide-react';
-
+import {
+  BookOpen,
+  Can,
+  CheckCircle,
+  Clock,
+  Common,
+  FileText,
+  Frequently,
+  HelpCircle,
+  Mail,
+  MessageCircle,
+  Phone,
+  Quick,
+  Search,
+  Users,
+  Video,
+  Within,
+  Yes,
+} from 'lucide-react';
 const Help: NextPage = () => {
   const faqs = [
     {
@@ -95,7 +111,6 @@ const Help: NextPage = () => {
       color: 'purple',
     },
   ];
-
   const resources = [
     {
       icon: BookOpen,
@@ -116,9 +131,12 @@ const Help: NextPage = () => {
       link: '/knowledge-base',
     },
     {
-      icon: FileText, title: 'Knowledge Base',
-      description: 'Searchable articles and troubleshooting guides', link: '/knowledge-base',
-    }, {
+      icon: FileText,
+      title: 'Knowledge Base',
+      description: 'Searchable articles and troubleshooting guides',
+      link: '/knowledge-base',
+    },
+    {
       icon: Users,
       title: 'Community Forum',
       description: 'Connect with other users and get peer support',
@@ -173,7 +191,7 @@ const Help: NextPage = () => {
             {supportChannels.map((channel, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-lg p-8 text-center hover:shadow-lg transition-shadow"
+                className="bg-white border border-gray-200 rounded-lg p-8 text-center hover: shadow-lg transition-shadow"
               >
                 <div
                   className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center bg-${channel.color}-100`}
@@ -202,12 +220,12 @@ const Help: NextPage = () => {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Helpful Resources
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {resources.map((resource, index) => (
               <Link
                 key={index}
                 href={resource.link}
-                className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow group"
+                className="bg-white border border-gray-200 rounded-lg p-6 hover: shadow-lg transition-shadow group"
               >
                 <div className="w-12 h-12 mb-4 rounded-lg bg-blue-100 flex items-center justify-center group-hover:bg-blue-200 transition-colors">
                   <resource.icon className="w-6 h-6 text-blue-600" />
@@ -250,7 +268,7 @@ const Help: NextPage = () => {
           <h2 className="text-3xl font-bold text-center mb-12">
             Quick Actions
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             <Link
               href="/contact"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-lg p-6 text-center transition-colors"
@@ -309,9 +327,10 @@ const Help: NextPage = () => {
             Still Need Help?
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Can't find what you're looking for? Our support team is ready to help you with unknown questions or concerns.
             Can't find what you're looking for? Our support team is ready to
-            help you with any questions or concerns.
+            help you with unknown questions or concerns. Can't find what you're
+            looking for? Our support team is ready to help you with any
+            questions or concerns.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a
@@ -332,5 +351,4 @@ const Help: NextPage = () => {
     </Layout>
   );
 };
-
 export default Help;
