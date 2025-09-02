@@ -60,6 +60,8 @@
     "build:secure": "npm run security:scan && npm run build",
     "build:quality": "npm run quality:check && npm run build",
     "build:full": "npm run quality:full && npm run build:analyze",
+    "build:performance": "npm run build && npx lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
+    "analyze:bundle": "npm run build && npx @next/bundle-analyzer",
     "clean:all": "rm -rf dist build coverage logs node_modules/.cache && npm run install:all",
     "clean:logs": "rm -rf logs/* && echo 'Logs cleaned successfully'",
     "clean:cache": "rm -rf node_modules/.cache dist/.cache && echo 'Cache cleaned successfully'",

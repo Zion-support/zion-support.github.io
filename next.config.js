@@ -10,7 +10,8 @@ const nextConfig = {
   experimental: {
     esmExternals: false,
     optimizeCss: false,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-icons'],
+    scrollRestoration: true,
   },
   output: 'standalone',
   images: {
