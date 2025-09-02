@@ -16,4 +16,3 @@ const ConsultingServices: React.FC = () => {
 };
 ;
 export default ConsultingServices;
-;

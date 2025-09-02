@@ -16,4 +16,3 @@ const InfrastructureServices: React.FC = () => {
 };
 ;
 export default InfrastructureServices;
-;

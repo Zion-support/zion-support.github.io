@@ -6,4 +6,3 @@ const NotFound = lazy(() => import('../pages/NotFound'))';const ErrorRoutes: Rea
 };
 ;
 export default ErrorRoutes";;
-;

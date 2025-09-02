@@ -1,10 +1,5 @@
 
-<<<<<<< HEAD
-;
-=======
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-import { motion } from 'framer-motion';
+;import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {;
   Brain,;
@@ -112,4 +107,3 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
 ;
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
-;

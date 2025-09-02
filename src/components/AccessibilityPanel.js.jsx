@@ -1,6 +1,1 @@
-<<<<<<< HEAD
  export const AccessibilityPanel = ({ isOpen, onToggle }) => { const [settings, setSettings] = useState ({ highContrast: false, fontSize: 100, colorBlindness: 'none', reducedMotion: false, screenReader: false, keyboardNavigation: false, focusIndicator: true, colorBlindness: 'none' })  const [accessibilityScore, setAccessibilityScore] = useState (85)  const [activeTab, setActiveTab] = useState ('general')  useEffect ( () => {''";
-;
-=======
- export const AccessibilityPanel = ({ isOpen, onToggle }) => { const [settings, setSettings] = useState ({ highContrast: false, fontSize: 100, colorBlindness: "none", reducedMotion: false, screenReader: false, keyboardNavigation: false, focusIndicator: true, colorBlindness: "none" })  const [accessibilityScore, setAccessibilityScore] = useState (85)  const [activeTab, setActiveTab] = useState ("general")  useEffect ( () => {""";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a

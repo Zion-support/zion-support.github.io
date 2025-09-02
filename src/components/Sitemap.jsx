@@ -1,11 +1,6 @@
 import { Link  } from 'react-router-dom';
 export default function Page() {}
-<<<<<<< HEAD
-,;
-=======
-,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-import { Link } from 'react-router-dom';
+,;import { Link } from 'react-router-dom';
 const Sitemap = () => {}
     const sitemapData = {}
   main[';

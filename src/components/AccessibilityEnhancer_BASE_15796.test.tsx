@@ -12,4 +12,3 @@ describe('AccessibilityEnhancer_BASE_15796', () => {;
     // Add specific test assertions based on component content;
   });
 });
-;

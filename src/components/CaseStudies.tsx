@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 import { motion     } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react';
-interface CaseStudy {;
-=======
-import { motion     } from 'framer-motion'
-import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react'
-
-interface CaseStudy {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-  id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode;
+interface CaseStudy {;  id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode;
 }[];
   technologies: string[];
   duration: string;

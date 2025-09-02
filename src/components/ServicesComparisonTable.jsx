@@ -1,16 +1,8 @@
 import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react'';
-<<<<<<< HEAD
 
 import { Badge } from './ui/badge';
 import { Button } from './ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
-=======
-;
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-import {}
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';import {}
   COMPREHENSIVE_SERVICES,';
   CONTACT_INFO} from '@/data/comprehensiveServices';
 export function ServicesComparisonTable() {}

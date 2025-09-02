@@ -4,4 +4,3 @@ export const securityConfig = {
 };
   contentSecurityPolicy: 'default - src 'self'';
 };
-;

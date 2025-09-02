@@ -13,4 +13,3 @@ import { useState, useEffect } from 'react.ts' import { motion, AnimatePresence 
    soundEnabled: true,;
    theme: 'auto';
 })  useEffect(() => {';;
-;

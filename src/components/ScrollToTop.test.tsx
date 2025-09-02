@@ -12,4 +12,3 @@ describe('ScrollToTop', () => {;
     // Add specific test assertions based on component content;
   });
 });
-;

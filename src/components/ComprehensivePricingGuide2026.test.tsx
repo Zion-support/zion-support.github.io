@@ -12,4 +12,3 @@ describe('ComprehensivePricingGuide2026', () => {;
     // Add specific test assertions based on component content;
   });
 });
-;

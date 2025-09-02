@@ -1,9 +1,4 @@
-<<<<<<< HEAD
- import { Helmet } from 'react - helmet - async'  interface SEOHeadProps {
-=======
- import { Helmet } from 'react - helmet - async'  interface SEOHeadProps {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-   title?: string;
+ import { Helmet } from 'react - helmet - async'  interface SEOHeadProps {   title?: string;
    description?: string;
    keywords?: string;
    image?: string;
@@ -11,4 +6,3 @@
    type?: 'website' | 'article' | 'service';
    structuredData?: object;
 } export function SEOHead ({ title = 'Zion Tech Group - Leading AI, Quantum Computing & Advanced Technology Solutions', description = 'Transform your business with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions. Trusted by 1000 + companies worldwide.', keywords = 'AI solutions, quantum computing, cybersecurity, digital transformation, cloud services, DevOps, machine learning, space technology', image = '/images / zion - tech - group - og.jpg', url = 'https:''';
-;

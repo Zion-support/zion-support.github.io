@@ -32,4 +32,3 @@ target.style.backgroundImage = `url (${target.dataset.src}) `              targe
   }, []) ;
   return <>{children}</>
 };
-;

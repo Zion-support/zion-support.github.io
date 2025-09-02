@@ -16,4 +16,3 @@ const CloudServices: React.FC = () => {
 };
 ;
 export default CloudServices;
-;

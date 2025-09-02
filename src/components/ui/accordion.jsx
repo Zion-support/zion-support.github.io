@@ -22,4 +22,3 @@ const AccordionContent = React.forwardRef(({ className, children, ...props }, re
   </AccordionPrimitive.Content>));
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent };
-;

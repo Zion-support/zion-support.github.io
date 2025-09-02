@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import { motion     } from 'framer-motion';
-=======
-import { motion     } from 'framer-motion'
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
-interface EnhancedLoadingSpinnerProps {
+import { motion     } from 'framer-motion';interface EnhancedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' text?: string className?: string;
 }
 ;
@@ -74,5 +68,4 @@ export default function EnhancedLoadingSpinner({
     </div>
   );
 }
-;
 ;

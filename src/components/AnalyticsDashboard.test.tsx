@@ -12,4 +12,3 @@ describe('AnalyticsDashboard', () => {;
     // Add specific test assertions based on component content;
   });
 });
-;

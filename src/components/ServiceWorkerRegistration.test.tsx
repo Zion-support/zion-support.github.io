@@ -12,4 +12,3 @@ describe('ServiceWorkerRegistration', () => {;
     // Add specific test assertions based on component content;
   });
 });
-;

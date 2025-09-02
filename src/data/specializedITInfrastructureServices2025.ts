@@ -1,1 +1,1 @@
-import { ProductListing } from '@/types/listings';
+import React from "react";

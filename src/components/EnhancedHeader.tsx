@@ -339,4 +339,3 @@ export const EnhancedHeader: React.FC = () => {;
     </header>
   );
 };
-;

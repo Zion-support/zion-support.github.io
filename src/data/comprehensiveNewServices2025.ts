@@ -10,4 +10,3 @@ export interface ComprehensiveNewService {
    setup: string;
    marketPrice: string;
 } features: string[] benefits: string[] useCases: string[] targetAudience: string[] tags: string[] estimatedDelivery: string supportLevel: string marketPrice: string roi: string innovationLevel: string contactInfo: { phone: string email: string website: string address: string } technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[] } competitors?: string[] marketSize?: string implementationTime?: string trainingRequired?: string compliance?: string[] } export const COMPREHENSIVE_NEW_SERVICES: ComprehensiveService[] = [';;
-;

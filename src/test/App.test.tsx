@@ -15,4 +15,3 @@ describe('App', () => {'  it('renders without crashing', () => {'    render('   
     );
     // Test that key components are rendered;
     expect(screen.getByTestId('app-header')).toBeInTheDocument()'    expect(screen.getByTestId('footer')).toBeInTheDocument()'  })'})'";
-;

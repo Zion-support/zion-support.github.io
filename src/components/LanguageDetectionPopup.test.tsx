@@ -12,4 +12,3 @@ describe('LanguageDetectionPopup', () => {;
     // Add specific test assertions based on component content;
   });
 });
-;
