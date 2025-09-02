@@ -1,6 +1,6 @@
 import React from 'react'
-import { motion } from 'framer-motion'
-import { CheckCircle, TrendingUp, Users, DollarSign } from 'lucide-react'
+import { motion  } from 'framer-motion'
+import { CheckCircle, TrendingUp, Users, DollarSign  } from 'lucide-react'
 
 interface CaseStudy {
   id: string
@@ -16,8 +16,7 @@ interface CaseStudy {
   duration: string
 }
 
-const caseStudies: CaseStudy[] = [
-  {
+const caseStudies: CaseStudy[] = [{
     id: '1',
     title: 'AI-Powered Customer Service Automation',
     description: 'Implemented multi-agent AI system for enterprise customer service, reducing response time and improving satisfaction.',
@@ -35,8 +34,7 @@ const caseStudies: CaseStudy[] = [
     title: 'Cloud-Native Data Platform Migration',
     description: 'Migrated legacy data infrastructure to modern cloud-native platform with real-time analytics capabilities.',
     industry: 'Financial Services',
-    results: [
-      { metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className="w-5 h-5" /> },
+    results: [{ metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className="w-5 h-5" /> },
       { metric: 'Scalability', value: 'Unlimited', icon: <Users className="w-5 h-5" /> },
       { metric: 'Infrastructure Cost', value: '-60%', icon: <DollarSign className="w-5 h-5" /> }
     ],
@@ -48,8 +46,7 @@ const caseStudies: CaseStudy[] = [
     title: 'Zero-Trust Cybersecurity Implementation',
     description: 'Deployed comprehensive zero-trust security framework with automated threat detection and response.',
     industry: 'Healthcare',
-    results: [
-      { metric: 'Security Incidents', value: '-95%', icon: <CheckCircle className="w-5 h-5" /> },
+    results: [{ metric: 'Security Incidents', value: '-95%', icon: <CheckCircle className="w-5 h-5" /> },
       { metric: 'Compliance Score', value: '99.9%', icon: <CheckCircle className="w-5 h-5" /> },
       { metric: 'Detection Time', value: 'Real-time', icon: <TrendingUp className="w-5 h-5" /> }
     ],
@@ -59,8 +56,7 @@ const caseStudies: CaseStudy[] = [
 ]
 
 export default function CaseStudies() {
-  return (
-    <section className="py-24 sm:py-32 bg-gradient-to-br from-slate-50 to-blue-50">
+  return(<section className="py-24 sm:py-32 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="mx-auto max-w-2xl lg:text-center mb-16">
@@ -89,8 +85,7 @@ export default function CaseStudies() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.
-          </motion.p>
+            See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.</motion.p>
         </div>
 
         {/* Case Studies Grid */}

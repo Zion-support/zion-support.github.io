@@ -1,5 +1,5 @@
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion  } from 'framer-motion'
 
 interface EnhancedLoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg'
@@ -24,8 +24,7 @@ export default function EnhancedLoadingSpinner({
     lg: 'text-lg'
   }
 
-  return (
-    <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
+  return(<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
       <motion.div
         className={`${sizeClasses[size]} relative`}
         animate={{ rotate: 360 }}

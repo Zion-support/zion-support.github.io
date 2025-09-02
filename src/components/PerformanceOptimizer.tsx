@@ -8,8 +8,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
-      const criticalFonts = [
-        'https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap'
+      const criticalFonts = ['https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap'
       ];
       
       criticalFonts.forEach(font => {
@@ -28,7 +27,7 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
         if (!img.loading) {
           img.loading = 'lazy';
         }
-        if (!img.decoding) {
+        if(!img.decoding) {
           img.decoding = 'async';
         }
       });
@@ -39,12 +38,11 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
     optimizeImages();
 
     // Set up intersection observer for lazy loading
-    const observer = new IntersectionObserver(
-      (entries) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const target = entry.target as HTMLElement;
-            if (target.dataset.src) {
+            if(target.dataset.src) {
               target.style.backgroundImage = `url(${target.dataset.src})`;
               target.removeAttribute('data-src');
               observer.unobserve(target);
