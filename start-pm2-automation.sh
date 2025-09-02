@@ -40,34 +40,21 @@ else
 fi
 
 # Create necessary directories
-print_status "Creating necessary directories..."
-mkdir -p logs
-mkdir -p error-reports
-mkdir -p scripts
+mkdir -p logs backups/merge-conflicts
 
 # Make scripts executable
 print_status "Making scripts executable..."
 chmod +x scripts/*.js 2>/dev/null || true
 chmod +x scripts/*.sh 2>/dev/null || true
 
-# Install dependencies if not already installed
-if [ ! -d "node_modules" ]; then
-    print_status "Installing dependencies..."
-    npm install --legacy-peer-deps
-else
-    print_status "Dependencies already installed"
-fi
-
-# Build the project
-print_status "Building the project..."
-if npm run build; then
-    print_status "Build completed successfully"
-else
-    print_warning "Build failed, but continuing with automation setup"
+# Install PM2 if not installed
+if ! command -v pm2 &> /dev/null; then
+    echo "📦 Installing PM2..."
+    npm install -g pm2
 fi
 
 # Stop any existing PM2 processes
-print_status "Stopping existing PM2 processes..."
+echo "🔄 Stopping existing PM2 processes..."
 pm2 delete all 2>/dev/null || true
 
 # Start PM2 processes using ecosystem file
@@ -79,26 +66,22 @@ else
     exit 1
 fi
 
-# Install PM2 logrotate module
-print_status "Installing PM2 logrotate..."
-pm2 install pm2-logrotate 2>/dev/null || true
+# Install PM2 modules for enhanced monitoring
+echo "📊 Installing PM2 monitoring modules..."
+pm2 install pm2-logrotate
+pm2 install pm2-auto-pull
 
-# Configure PM2 logrotate
-print_status "Configuring PM2 logrotate..."
+# Configure log rotation
 pm2 set pm2-logrotate:max_size 10M
 pm2 set pm2-logrotate:retain 7
 pm2 set pm2-logrotate:compress true
-pm2 set pm2-logrotate:dateFormat 'YYYY-MM-DD_HH-mm-ss'
 
 # Save PM2 configuration
-print_status "Saving PM2 configuration..."
 pm2 save
 
-# Setup PM2 startup (optional - only if running as system service)
-if [ "$1" = "--startup" ]; then
-    print_status "Setting up PM2 startup..."
-    pm2 startup | tail -1 | bash
-fi
+# Set up PM2 to start on boot (optional)
+echo "💾 Setting up PM2 startup..."
+pm2 startup
 
 # Create health endpoint if it doesn't exist
 print_status "Creating health endpoint..."
@@ -193,8 +176,11 @@ echo -e "  • ${BLUE}auto-fixer${NC} - Automatically fixes detected errors"
 echo -e "  • ${BLUE}log-cleaner${NC} - Manages log files and cleanup"
 echo -e "  • ${BLUE}health-endpoint${NC} - Provides health check endpoint"
 echo ""
-echo -e "${GREEN}Log files are stored in:${NC} ./logs/"
-echo -e "${GREEN}Error reports are stored in:${NC} ./error-reports/"
+echo "🤖 Active Services:"
+echo "  - error-monitor: Checks for build, lint, and TypeScript errors every 5 minutes"
+echo "  - syntax-fixer: Automatically fixes common syntax errors every 10 minutes"
+echo "  - build-health-check: Monitors build health and dependencies every 15 minutes"
+echo "  - merge-conflict-resolver: Resolves merge conflicts automatically every 30 minutes"
 echo ""
 echo -e "${YELLOW}To monitor the system:${NC}"
 echo -e "  pm2 monit           - Real-time monitoring dashboard"

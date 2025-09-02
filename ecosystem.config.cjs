@@ -22,7 +22,8 @@ module.exports = {
       out_file: './logs/zion-website-out.log',
       error_file: './logs/zion-website-error.log',
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true
+      merge_logs: false,
+      time: false
     },
 
     // Enhanced Error Monitor - Monitors and detects errors
@@ -107,9 +108,9 @@ module.exports = {
       error_file: './logs/health-checker-error.log',
       out_file: './logs/health-checker-out.log',
       log_file: './logs/health-checker-combined.log',
-      time: true,
+      time: false,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
+      merge_logs: false,
       max_restarts: 5,
       min_uptime: '5s',
       restart_delay: 2000,
@@ -130,9 +131,9 @@ module.exports = {
       error_file: './logs/auto-fixer-error.log',
       out_file: './logs/auto-fixer-out.log',
       log_file: './logs/auto-fixer-combined.log',
-      time: true,
+      time: false,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
+      merge_logs: false,
       max_restarts: 3,
       min_uptime: '10s',
       restart_delay: 5000,
@@ -144,7 +145,7 @@ module.exports = {
       name: 'log-cleaner',
       script: './scripts/log-cleaner.js',
       instances: 1,
-      autorestart: true,
+      autorestart: false,
       watch: false,
       max_memory_restart: '200M',
       env: {
@@ -156,7 +157,7 @@ module.exports = {
       error_file: './logs/log-cleaner-error.log',
       time: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
+      merge_logs: false,
       max_restarts: 3,
       min_uptime: '5s',
       restart_delay: 2000
@@ -216,14 +217,12 @@ module.exports = {
 
   deploy: {
     production: {
-      user: 'ubuntu',
+      user: 'deploy',
       host: 'localhost',
       ref: 'origin/main',
-      repo: 'https://github.com/Zion-Holdings/zion.app.git',
-      path: '/var/www/zion.app',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': 'mkdir -p /var/www/zion.app/logs'
+      repo: 'git@github.com:your-username/your-repo.git',
+      path: '/var/www/production',
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'
     }
   }
 };

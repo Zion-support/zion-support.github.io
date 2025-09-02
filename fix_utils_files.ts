@@ -116,14 +116,11 @@ function fixUtilsFile(...args: unknown[]): unknown {
     content = content.replace(/au,\s*t,\s*h/g, "auth");
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, "utf8");
-      // // // // // // // console.log(`Fixed: ${filePath}`);
-      return true;
+// // // console.log(`Fixed: ${filePath}`);return true;
 
     return false;
   } catch (error) {
-    // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-
+// // // console.error(`Error processing ${filePath}:`, error.message);return false;
 
 async function fixAllUtilsFiles(...args: unknown[]): unknown {
   const files = await glob("utils/**/*.{ts,tsx}", {
@@ -133,18 +130,13 @@ async function fixAllUtilsFiles(...args: unknown[]): unknown {
   for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++;
-    }
-  }
-  // // // // // // // console.log(`Fixed ${fixedCount} utils files.`);
-}
-      console.log(`Fixed: ${filePath}`);
+// // // console.log(`Fixed ${fixedCount} utils files.`);console.log(`Fixed: ${filePath}`);
       return true}
     return false} catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
     return false}
 }
-async function fixedCount = 0;
-  for (const file of files) {
+async function fixedCount = 0;for (const file of files) {
     if (fixUtilsFile(file)) {
       fixedCount++}
   }

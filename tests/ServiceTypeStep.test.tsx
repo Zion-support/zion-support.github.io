@@ -1,6 +1,7 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { ServiceTypeStep } from '@/components/QuoteRequestForm/ServiceTypeStep';
 import { QuoteFormData } from '@/types/quotes';
+import { vi } from 'vitest';
 
 const baseData: QuoteFormData = {
   serviceType: '',
@@ -27,7 +28,6 @@ it('shows results when searching services', async () => {
   }) as any;
 
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
-
   fireEvent.click(screen.getByText('Services'));
 
   const input = screen.getByPlaceholderText(/search service/i);
@@ -52,11 +52,9 @@ it('renders services from api response', async () => {
   }) as any;
 
   render(<ServiceTypeStep formData={data} updateFormData={updateFormData} />);
-
   fireEvent.click(screen.getByText('Services'));
 
   await waitFor(() => {
     expect(screen.getAllByRole('button', { name: /request quote/i })).toHaveLength(3);
   });
 });
-

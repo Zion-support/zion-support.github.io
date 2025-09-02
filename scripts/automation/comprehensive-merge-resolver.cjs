@@ -274,8 +274,7 @@ class ComprehensiveMergeResolver {
 
     // Strategy 1: Remove all merge conflict markers and keep the incoming changes
     resolvedContent = resolvedContent.replace(
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g,
-      '$1'
+      /([\s\S]*?)      '$1'
     );
 
     // Strategy 2: For specific file types, apply specialized resolution
@@ -304,8 +303,7 @@ class ComprehensiveMergeResolver {
     try {
       // Remove any remaining conflict markers
       content = content.replace(
-        /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g,
-        '$1'
+        /([\s\S]*?)        '$1'
       );
 
       // Validate JSON
@@ -314,8 +312,7 @@ class ComprehensiveMergeResolver {
     } catch (error) {
       // If JSON is invalid, keep the incoming changes
       return content.replace(
-        /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g,
-        '$1'
+        /([\s\S]*?)        '$1'
       );
     }
   }
@@ -323,8 +320,7 @@ class ComprehensiveMergeResolver {
   resolveCodeConflicts(content) {
     // For code files, keep the incoming changes but clean up syntax
     let resolved = content.replace(
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g,
-      '$1'
+      /([\s\S]*?)      '$1'
     );
 
     // Clean up any duplicate imports or declarations
@@ -336,8 +332,7 @@ class ComprehensiveMergeResolver {
   resolveMarkdownConflicts(content) {
     // For markdown files, combine content intelligently
     return content.replace(
-      /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]*/g,
-      '$1'
+      /([\s\S]*?)      '$1'
     );
   }
 

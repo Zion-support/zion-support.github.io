@@ -7,7 +7,7 @@ import { vi, expect, test } from 'vitest';
 vi.mock('@/hooks/use-toast');
 
 vi.mock('@/services/apiClient', () => ({
-  default: { post: vi.fn() }
+  default: { post: vi.fn() },
 }));
 
 const mockedApi = api as unknown as { post: any };
@@ -20,6 +20,8 @@ test('shows success toast when subscription succeeds', async () => {
   });
   fireEvent.submit(screen.getByRole('button', { name: /subscribe/i }));
   await waitFor(() => {
-    expect(toastHook.toast.success).toHaveBeenCalledWith('¡Gracias por suscribirte!');
+    expect(toastHook.toast.success).toHaveBeenCalledWith(
+      '¡Gracias por suscribirte!'
+    );
   });
 });
