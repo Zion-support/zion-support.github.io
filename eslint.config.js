@@ -60,6 +60,11 @@ export default [
       'react/prop-types': 'off',
       'no-console': 'warn',
     },
+    settings: {
+      react: {
+        version: '18.2.0',
+      },
+    },
   },
   {
     files: ['**/*.{ts,tsx}'],
@@ -130,7 +135,7 @@ export default [
     },
     settings: {
       react: {
-        version: 'detect',
+        version: '18.2.0',
       },
     },
   },

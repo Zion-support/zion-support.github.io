@@ -1,25 +1,55 @@
-export async /**;
- * register function;
- * @param {*} params - Function parameters;
- * @returns {*} Function return value;*/
- */;
-function register () {
+export async function register(params: any) {
   try {
-    try {
-     try { const res = await fetch ('/api / auth / register', { method: 'POST', headers: { 'Content - Type': 'application / json' } catch (error) {
-    console.error ('Error in register: ', error) }
-} catch (error) {
-    console.error ('Error in register: ', error) }
-} catch (error) { console.error ('Error in register: ', error)  } }, body: JSON.stringify ({ name, email, password })})  const data = await res.json () .catch ( () => ({}) )  return { res, data } } export async /**;
- * forgotPassword function;
- * @param {*} params - Function parameters;
- * @returns {*} Function return value;*/
- */;
-function forgotPassword () {
+    const res = await fetch('/api/auth/register', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(params)
+    });
+    
+      throw new Error('Registration failed');
+    }
+    
+    return await res.json();
+  } catch (error) {
+    console.error('Error in register:', error);
+    throw error;
+  }
+}
+
+export async function login(params: any) {
   try {
-    try {
-     try {' const res = await fetch ('/api / auth / forgot', { method: 'POST', headers: { 'Content - Type': 'application / json' } catch (error) {'
-    console.error ('Error in forgotPassword: ', error) }
-} catch (error) {
-    console.error ('Error in forgotPassword: ', error) }
-} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) '} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email })})  const data = await res.json () .catch ( () => ({}) ) ';'";'"
+    const res = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(params)
+    });
+    
+      throw new Error('Login failed');
+    }
+    
+    return await res.json();
+  } catch (error) {
+    console.error('Error in login:', error);
+    throw error;
+  }
+}
+
+export async function logout() {
+  try {
+    const res = await fetch('/api/auth/logout', {
+      method: 'POST'
+    });
+    
+      throw new Error('Logout failed');
+    }
+    
+    return await res.json();
+  } catch (error) {
+    console.error('Error in logout:', error);
+    throw error;
+  }
+}
