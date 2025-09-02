@@ -243,7 +243,7 @@ export default function Home() {
                 What Our Clients Say
               </h2>
               <p className='text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto'>
-                Don't just take our word for it. Here's what our satisfied clients have to say about working with us.
+                Don&apos;t just take our word for it. Here&apos;s what our satisfied clients have to say about working with us.
               </p>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
@@ -254,7 +254,7 @@ export default function Home() {
                       <Star key={i} className='w-5 h-5 text-yellow-400 fill-current' />
                     ))}
                   </div>
-                  <p className='text-gray-600 mb-6 italic'>"{testimonial.content}"</p>
+                  <p className='text-gray-600 mb-6 italic'>&quot;{testimonial.content}&quot;</p>
                   <div className='border-t pt-4'>
                     <div className='font-semibold text-gray-900'>{testimonial.name}</div>
                     <div className='text-sm text-gray-500'>{testimonial.role}</div>

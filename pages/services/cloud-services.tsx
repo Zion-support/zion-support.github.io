@@ -195,7 +195,7 @@ const CloudServices: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Move to the Cloud?</h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our cloud services can transform your infrastructure and drive business growth.
+            Let&apos;s discuss how our cloud services can transform your infrastructure and drive business growth.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">

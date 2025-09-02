@@ -15,7 +15,7 @@ const ContactForm: React.FC = () => {
 
   const [formData, setFormData] = useState<FormData>({
 
-    name: '',
+    name: &apos;',
     email: '',
     company: '',
     service: '',
@@ -88,7 +88,7 @@ const ContactForm: React.FC = () => {
         email: '',
         company: '',
         service: '',
-        message: ''});
+        message: '&apos;});
     }, 3000);
   };
 
@@ -121,7 +121,7 @@ const ContactForm: React.FC = () => {
           Message Sent!
         </h3>
         <p className="text-green-600">
-          Thank you for reaching out. We'll get back to you within 24 hours.
+          Thank you for reaching out. We&apos;ll get back to you within 24 hours.
         </p>
       </motion.div>
     );
@@ -132,7 +132,7 @@ const ContactForm: React.FC = () => {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          Ready to transform your business? Let's discuss how our technology
+          Ready to transform your business? Let&apos;s discuss how our technology
           solutions can drive your success.
         </p>
       </div>
@@ -255,7 +255,7 @@ const ContactForm: React.FC = () => {
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
-                <option value="">Select a service</option>
+                <option value=&quot;">Select a service</option>
                 {services.map(service => (
                   <option key={service} value={service}>
                     {service}
@@ -282,7 +282,7 @@ const ContactForm: React.FC = () => {
 
                 errors.message ? 'border-red-500' : 'border-gray-300'
               }`}
-              placeholder="Tell us about your project and how we can help..."
+              placeholder="Tell us about your project and how we can help...&quot;
             />
             {errors.message && (
               <p className="text-red-500 text-sm mt-1">{errors.message}</p>
@@ -296,7 +296,7 @@ const ContactForm: React.FC = () => {
             whileTap={{ scale: 0.98 }}
             className={`w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200 flex items-center justify-center space-x-2 ${
 
-              isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+              isSubmitting ? 'opacity-50 cursor-not-allowed' : &apos;&apos;
             }`}
           >
             {isSubmitting ? (

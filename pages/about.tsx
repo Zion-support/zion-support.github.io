@@ -172,7 +172,7 @@ const About: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Let's discuss how we can help transform your business with innovative technology solutions.
+            Let&apos;s discuss how we can help transform your business with innovative technology solutions.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">

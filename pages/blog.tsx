@@ -12,7 +12,7 @@ const Blog: NextPage = () => {
       author: "Kleber Santos",
       date: "2024-01-15",
       readTime: "5 min read",
-      category: "AI & Machine Learning",
+      category: &quot;AI & Machine Learning",
       image: "/api/placeholder/600/400",
       slug: "future-of-ai-in-business-2024"
     },
@@ -88,7 +88,7 @@ const Blog: NextPage = () => {
   return (
     <Layout
       title="Blog - Zion Tech Group"
-      description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group's expert team."
+      description="Stay updated with the latest technology trends, insights, and best practices from Zion Tech Group&apos;s expert team."
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -220,8 +220,8 @@ const Blog: NextPage = () => {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Let's discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.
+          <p className="text-xl mb-8 max-w-3xl mx-auto&quot;>
+            Let&apos;s discuss how our technology solutions can help you achieve your goals and stay ahead of the competition.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">

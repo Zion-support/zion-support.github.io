@@ -11,7 +11,7 @@ const Help: NextPage = () => {
     },
     {
       question: "How do I get started with a project?",
-      answer: "Contact us through our website, email, or phone to schedule a consultation. We'll discuss your requirements and provide a customized solution proposal."
+      answer: &quot;Contact us through our website, email, or phone to schedule a consultation. We&apos;ll discuss your requirements and provide a customized solution proposal."
     },
     {
       question: "What is your typical project timeline?",
@@ -93,12 +93,12 @@ const Help: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6&quot;>
             Help &
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Support</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            We're here to help you succeed. Find answers, get support, and access resources to make the most of our services.
+            We&apos;re here to help you succeed. Find answers, get support, and access resources to make the most of our services.
           </p>
         </div>
       </section>

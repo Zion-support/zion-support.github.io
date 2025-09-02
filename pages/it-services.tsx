@@ -39,7 +39,7 @@ export default function ITServices() {
 
   const itServices = [
     {
-      title: 'Cloud Infrastructure & Migration',
+      title: &apos;Cloud Infrastructure & Migration',
       description: 'Complete cloud transformation with AWS, Azure, and Google Cloud Platform',
       icon: Cloud,
       features: [
@@ -344,7 +344,7 @@ export default function ITServices() {
       title: 'Scalability',
       description: 'Flexible and scalable solutions',
       icon: TrendingUp,
-      stat: 'Unlimited'
+      stat: 'Unlimited&apos;
     }
   ];
 
@@ -516,7 +516,7 @@ export default function ITServices() {
               Ready to Transform Your IT Infrastructure?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Let's discuss how our IT services can optimize your technology infrastructure. 
+              Let&apos;s discuss how our IT services can optimize your technology infrastructure. 
               Get a free consultation and custom proposal.
             </p>
             <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-3">

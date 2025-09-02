@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Index() {
   return (
@@ -64,7 +65,7 @@ export default function Index() {
           gap: '1rem', flexWrap: 'wrap',
           justifyContent: 'center'
         }}>
-          <a
+          <Link
             href='/services'
             style={{
               padding: '12px 24px', background: 'linear-gradient(45deg, #00d4ff, #0099cc)', color: 'white',
@@ -75,8 +76,8 @@ export default function Index() {
             onMouseOut={(e) => e.target.style.transform = 'translateY(0)'}
           >
             Our Services
-          </a>
-          <a
+          </Link>
+          <Link
             href='/contact'
             style={{
               padding: '12px 24px', background: 'transparent',
@@ -94,7 +95,7 @@ export default function Index() {
             }}
           >
             Get Started
-          </a>
+          </Link>
         </div>
       </div>
     </>

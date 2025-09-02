@@ -6,7 +6,7 @@ const Terms: NextPage = () => {
   return (
     <Layout
       title="Terms of Service - Zion Tech Group"
-      description="Read Zion Tech Group's Terms of Service to understand the terms and conditions for using our website and services."
+      description=&quot;Read Zion Tech Group&apos;s Terms of Service to understand the terms and conditions for using our website and services."
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -245,8 +245,8 @@ const Terms: NextPage = () => {
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Questions About Our Terms?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            We're here to help clarify any questions you may have about our Terms of Service.
+          <p className="text-xl mb-8 max-w-3xl mx-auto&quot;>
+            We&apos;re here to help clarify any questions you may have about our Terms of Service.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <a href="mailto:kleber@ziontechgroup.com" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">

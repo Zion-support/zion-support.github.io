@@ -93,7 +93,7 @@ const Pricing: NextPage = () => {
   return (
     <Layout
       title="Pricing - Zion Tech Group"
-      description="Transparent pricing for Zion Tech Group's technology services. Choose the plan that fits your business needs and budget."
+      description=&quot;Transparent pricing for Zion Tech Group&apos;s technology services. Choose the plan that fits your business needs and budget."
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -112,7 +112,7 @@ const Pricing: NextPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Choose Your Plan</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto&quot;>
             {pricingPlans.map((plan, index) => (
               <div
                 key={index}
@@ -251,7 +251,7 @@ const Pricing: NextPage = () => {
             </div>
 
             <div className="bg-white rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">What's included in maintenance?</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">What&apos;s included in maintenance?</h3>
               <p className="text-gray-600">
                 Maintenance includes bug fixes, security updates, performance optimization, and minor feature enhancements as specified in your plan.
               </p>
@@ -260,7 +260,7 @@ const Pricing: NextPage = () => {
             <div className="bg-white rounded-lg p-6">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">Can I change my plan later?</h3>
               <p className="text-gray-600">
-                Absolutely! You can upgrade or downgrade your plan at any time. We'll work with you to ensure a smooth transition.
+                Absolutely! You can upgrade or downgrade your plan at any time. We&apos;ll work with you to ensure a smooth transition.
               </p>
             </div>
 
