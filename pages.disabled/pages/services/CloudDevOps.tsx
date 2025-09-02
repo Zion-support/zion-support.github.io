@@ -36,7 +36,8 @@ import {}
   Rocket,
   RefreshCw,
   Shield,
-  Lock} from 'lucide-react';
+  Lock} from
+  'lucide-react';
 
 :pages.disabled/pages/services/CloudDevOps.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
@@ -56,7 +57,9 @@ import {}
 ""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               Cloud""
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 DevOps;
               </span>
 :pages.disabled/pages/services/CloudDevOps.tsx
@@ -285,4 +288,4 @@ import {}
 ;
 :pages.disabled/pages/services/CloudDevOps.tsx
 export { CloudDevOps };export default CloudDevOps;'"
-'"'"
+  '"'"

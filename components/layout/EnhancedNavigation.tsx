@@ -29,7 +29,7 @@ const EnhancedNavigation: React.FC = () => {
             
             {/* Services Dropdown */}
             <div className="relative group">
-              <button 
+              <button
                 className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
@@ -37,11 +37,12 @@ const EnhancedNavigation: React.FC = () => {
                 Services
                 <ChevronDown className="ml-1 w-4 h-4" />
               </button>
-              <div 
+              <div
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
+<<<<<<< HEAD
                 <Link href="/services/ai-services" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   AI Services
                 </Link>
@@ -53,6 +54,10 @@ const EnhancedNavigation: React.FC = () => {
                 </Link>
                 <Link href="/services/ai-ops-copilot" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   AI Ops Copilot
+=======
+                <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Development
+>>>>>>> origin/main
                 </Link>
                 <Link href="/services/security-copilot" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Security Copilot
@@ -68,7 +73,7 @@ const EnhancedNavigation: React.FC = () => {
 
             {/* Solutions Dropdown */}
             <div className="relative group">
-              <button 
+              <button
                 className="flex items-center text-gray-600 hover:text-blue-600 transition-colors"
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
@@ -76,7 +81,7 @@ const EnhancedNavigation: React.FC = () => {
                 Solutions
                 <ChevronDown className="ml-1 w-4 h-4" />
               </button>
-              <div 
+              <div
                 className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${solutionsOpen ? 'block' : 'hidden'}`}
                 onMouseEnter={() => setSolutionsOpen(true)}
                 onMouseLeave={() => setSolutionsOpen(false)}
@@ -93,8 +98,16 @@ const EnhancedNavigation: React.FC = () => {
                 <Link href="/solutions/startups" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Startups
                 </Link>
+<<<<<<< HEAD
                 <Link href="/case-studies" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Case Studies
+=======
+                <Link href="/solutions/healthcare" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Healthcare
+                </Link>
+                <Link href="/solutions/finance" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  Finance
+>>>>>>> origin/main
                 </Link>
               </div>
             </div>
@@ -102,8 +115,8 @@ const EnhancedNavigation: React.FC = () => {
             <Link href="/products" className="text-gray-600 hover:text-blue-600 transition-colors">
               Products
             </Link>
-            <Link href="/services" className="text-gray-600 hover:text-blue-600 transition-colors">
-              Services
+            <Link href="/solutions" className="text-gray-600 hover:text-blue-600 transition-colors">
+              Solutions
             </Link>
             <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
               About

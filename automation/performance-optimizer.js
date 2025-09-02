@@ -1,19 +1,22 @@
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+const fs = require(
+  'fs');
+const path = require(
+  'path');
+const { execSync } = require(
+  'child_process');
 class PerformanceOptimizer {;
   constructor() {;
     this.optimizations = [];
     // // // // // // // // console.log(message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-    fs.appendFileSync(this.logFile, logMessage);
+fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
 ;
 ;
   async optimizePerformance() {;
     try {;
 
-      this.log('Starting performance optimization...');
+      this.log(
+  'Starting performance optimization...');
 ;
       // Analyze bundle size;
       const bundleAnalysis = this.analyzeBundleSize();
@@ -40,20 +43,22 @@ class PerformanceOptimizer {;
 ;
 };
 ;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      this.saveReport(report);
-      this.log('Performance optimization completed');
+this.saveReport(report);this.saveReport(report);
+this.log(
+  'Performance optimization completed');
       return report} catch (error) {;
-      this.log(`Performance optimization failed: ${error.message}`, 'ERROR');
+      this.log(`Performance optimization failed: ${error.message}`,
+,
+  ERROR');
       return null};
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  analyzeBundleSize() {;
-    try {;
+analyzeBundleSize() {;analyzeBundleSize() {;
+try {;
       // Placeholder for bundle analysis;
       return {;
-        totalSize: '2.1MB',;
-        gzippedSize: '650KB',;
+        totalSize: '2.1MB,;
+        gzippedSize:
+  '650KB',;
 ;
 ;
 ;
@@ -63,12 +68,15 @@ class PerformanceOptimizer {;
       return {;
         optimized: 0,;
         totalImages: 0,;
-        savings: '0KB';
+        savings:
+  '0KB';
 ;
 ;
   analyzeDependencies() {;
     try {;
-      const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../package.json'), 'utf8'));
+      const packageJson = JSON.parse(fs.readFileSync(path.resolve(__dirname,
+  '../package.json'),
+  'utf8'));
       const dependencies = Object.keys(packageJson.dependencies || { /* empty */ });
       const devDependencies = Object.keys(packageJson.devDependencies || { /* empty */ });
 ;
@@ -82,19 +90,25 @@ class PerformanceOptimizer {;
 ;
   findUnusedDependencies() {;
     // Placeholder for unused dependency detection;
-    return ['example-unused-package'];
+    return [
+  'example-unused-package'];
 ;
 ;
   generateRecommendations() {;
     return [;
-      'Implement code splitting for better performance',;
-      'Optimize images using WebP format',;
-      'Remove unused dependencies',;
-      'Enable gzip compression',;
-      'Use React.memo for expensive components';
-    // // // // // // // // console.log('Performance report:', report);
+
+  'Implement code splitting for better performance',;
+
+  'Optimize images using WebP format',;
+
+  'Remove unused dependencies',;
+
+  'Enable gzip compression',;
+
+  'Use React.memo for expensive components';
+    // // // // // // // // console.log(
+  'Performance report:', report);
   };
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
 ;
 });
 }}}}}}}}}}}}}}}
