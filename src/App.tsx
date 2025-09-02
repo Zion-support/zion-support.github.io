@@ -6,10 +6,10 @@ import { HelmetProvider } from 'react-helmet-async';
 // Enhanced Components
 import { ErrorBoundary } from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AccessibilityEnhancer from './components/accessibility/AccessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
-import { ChatAssistant } from './components/ChatAssistant';
+import { ChatAssistant } from './components/ChatAssistant/ChatAssistant';
 import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
 import ComprehensiveOptimizer from './components/ComprehensiveOptimizer';
 import ComprehensiveSEOEnhancer from './components/ComprehensiveSEOEnhancer';
@@ -117,6 +117,16 @@ const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Research = createLazyComponent(() => import('./pages/Research'));
 const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
 
+// New Autonomous AI Services 2025
+const AIAutonomousContentMarketingPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Content-Marketing-Platform'));
+const AIAutonomousCustomerSuccessPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Customer-Success-Platform'));
+const AIAutonomousDevOpsPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-DevOps-Platform'));
+const AIAutonomousSalesPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Sales-Platform'));
+const AIAutonomousHRPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-HR-Platform'));
+
+// New Autonomous AI Services Showcase 2025
+const NewAutonomousAIServicesShowcase2025 = createLazyComponent(() => import('./pages/NewAutonomousAIServicesShowcase2025'));
+
 function App() {
   return (
     <HelmetProvider>
@@ -150,6 +160,16 @@ function App() {
                   <Route path="/webinars" element={<Webinars />} />
                   <Route path="/research" element={<Research />} />
                   <Route path="/sitemap" element={<Sitemap />} />
+                  
+                  {/* New Autonomous AI Services 2025 */}
+                  <Route path="/services/ai-autonomous-content-marketing-platform" element={<AIAutonomousContentMarketingPlatform />} />
+                  <Route path="/services/ai-autonomous-customer-success-platform" element={<AIAutonomousCustomerSuccessPlatform />} />
+                  <Route path="/services/ai-autonomous-devops-platform" element={<AIAutonomousDevOpsPlatform />} />
+                  <Route path="/services/ai-autonomous-sales-platform" element={<AIAutonomousSalesPlatform />} />
+                  <Route path="/services/ai-autonomous-hr-platform" element={<AIAutonomousHRPlatform />} />
+                  
+                  {/* Showcase pages */}
+                  <Route path="/new-autonomous-ai-services-2025" element={<NewAutonomousAIServicesShowcase2025 />} />
                   
                   {/* Legacy routes for compatibility */}
                   <Route path="/privacy" element={<PrivacyPolicy />} />
