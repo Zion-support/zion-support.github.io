@@ -407,7 +407,6 @@ export function MobileExperienceEnhancer(...args: any[]): any {;
 
         <Smartphone className="w-6 h-6 text-white" />
         <div className="absolute -top-2 -right-2 w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-=======
   Smartphone as Touch,
   Gesture,
   Eye,

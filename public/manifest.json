@@ -11,18 +11,13 @@
   "categories": ["business", "productivity", "technology"],
   "icons": [
     {
-      "src": "/favicon.ico",
-      "sizes": "16x16 32x32",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/logo192.png",
+      "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/logo512.png",
+      "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
@@ -36,8 +31,8 @@
       "url": "/services",
       "icons": [
         {
-          "src": "/logo192.png",
-          "sizes": "192x192"
+          "src": "/icon-services.png",
+          "sizes": "96x96"
         }
       ]
     },
@@ -48,19 +43,19 @@
       "url": "/contact",
       "icons": [
         {
-          "src": "/favicon.ico",
+          "src": "/icon-contact.png",
           "sizes": "96x96"
         }
       ]
     },
     {
-      "name": "Pricing",
-      "short_name": "Pricing",
-      "description": "View our service pricing",
-      "url": "/pricing",
+      "name": "Marketplace",
+      "short_name": "Marketplace",
+      "description": "Browse our marketplace",
+      "url": "/marketplace",
       "icons": [
         {
-          "src": "/favicon.ico",
+          "src": "/icon-marketplace.png",
           "sizes": "96x96"
         }
       ]

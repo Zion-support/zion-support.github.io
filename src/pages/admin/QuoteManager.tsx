@@ -51,7 +51,6 @@ export default function QuoteManager(...args[]: any):  {
 };
 
   const handleViewDetails = (quote: anyanyanyanyanyanyanyanyanyanyanyanyanyQuoteRequest)               => {
-=======
   new: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'new').length,
     in_review: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'in_review').length,;
     accepted: anyanyanyanyanyanyanyanyanyanyanyanyanyquotes.filter((q: QuoteRequest)              => q.status === 'accepted').length,;

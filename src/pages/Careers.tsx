@@ -43,6 +43,13 @@ export default function Careers() {
     { id: 'new-york', name: 'New York, NY', count: 1 }
   ];
 
+  const locations = [
+    { id: 'all', name: 'All Locations', count: 12 },
+    { id: 'remote', name: 'Remote', count: 8 },
+    { id: 'san-francisco', name: 'San Francisco, CA', count: 3 },
+    { id: 'new-york', name: 'New York, NY', count: 1 }
+  ];
+
   const jobListings = [
     {
       id: 1,
@@ -130,6 +137,8 @@ export default function Careers() {
       ],
       benefits: [
         'Competitive salary and equity',
+        'Security training and certification support',
+        'Work with cutting-edge security technologies',
         'Remote work flexibility',
         'Learning and certification budget',
         'Health and wellness benefits'

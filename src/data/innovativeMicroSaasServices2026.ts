@@ -62,7 +62,6 @@ export interface InnovativeMicroSaasService2026 {
     caseStudies?: string[];
   };
 }
-=======
   innovationLevel: string;
 contactInfo: {;
     phone: string;

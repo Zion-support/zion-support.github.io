@@ -25,13 +25,13 @@ import {
   Cpu,
   Shield,
   Rocket,
-=======
 import { 
   Menu, 
   X, 
   ChevronDown, 
   ChevronRight,
   Home,
+=======
   Zap,
   Cloud,
   ShoppingCart,
@@ -118,9 +118,7 @@ interface SidebarItem {
 }
 
 interface NavigationSection {
-=======
   Users
-=======
   Audio,
   Document,
   Folder,
@@ -168,10 +166,6 @@ interface SidebarItem {
   badge?: string;
   disabled?: boolean;
 }
-
-
-export function MainSidebar() {
-=======
 
 export function MainSidebar(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
@@ -268,6 +262,13 @@ export function MainSidebar(...args: any[]): any {
       ]
     },
     {
+=======
+      name: 'Emerging Tech',
+      href: '#',
+      icon: Rocket,
+      children: [
+      title: 'Resources',
+      items: [
         {
           name: 'Quantum Computing',
           href: '/services/quantum-computing',
@@ -449,6 +450,10 @@ export function MainSidebar(...args: any[]): any {
             {isFeatured && (
               <Star className="w-3 h-3 text-yellow-400" />
             )}
+          </Link>
+        )}
+      </div>
+    );
 
 interface MainSidebarProps {
   className?: string;

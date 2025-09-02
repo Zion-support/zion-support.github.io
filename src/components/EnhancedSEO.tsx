@@ -18,7 +18,6 @@ export interface SEOData {
   structuredData?: object;
   noIndex?: boolean;
   noFollow?: boolean;
-=======
   twitterCreator?: string;
   twitterSite?: string;
   robots?: string;
@@ -30,7 +29,6 @@ export interface SEOData {
   favicon?: string;
   msTileColor?: string;
   msConfig?: string;
-=======
 
 }
 

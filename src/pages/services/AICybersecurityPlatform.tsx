@@ -242,7 +242,6 @@ export default function AICybersecurityPlatform(...args: any[]): any {
               <Users className="w-5 h-5 text-purple-400" />
               <span>1000+ Protected Organizations</span>
             </div>
-=======
 import { SEO              } from '../../components/SEO';
 import { Button              } from '../../components/ui/Button';
 import { Card              } from '../../components/ui/Card';
@@ -363,7 +362,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
                 </div>
               </div>
             ))}
-=======
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">
@@ -854,7 +852,6 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
           </div>
         </div>
       </section>
-=======
       <section className="py-20 lg:py-32 bg-gradient-to-br from-red-900 via-gray-900 to-black text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6">

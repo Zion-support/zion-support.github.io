@@ -1,3 +1,7 @@
+    // Monitor Core Web Vitals
+    // Observe all lazy elements
+    const lazyElements = document.querySelectorAll('[data-lazy], img[data-src]');
+    lazyElements.forEach((el) => observer.observe(el));
           setMetrics(prev => ({ ...prev, fcp: fcp.startTime }));
         }
       });
@@ -280,8 +284,9 @@
         observerRef.current.disconnect();
       }
     };
+
+export default PerformanceOptimizer;
   }, []);
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -410,7 +415,214 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
         tbt: 0, // Total Blocking Time
       };
 
-  }, [enabled, monitorPerformance, setupLazyLoading, optimizeImages]);
+      // LCP Observer
+      if ('PerformanceObserver' in window) {
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          newMetrics.lcp = lastEntry.startTime;
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // FID Observer
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry) => {
+            newMetrics.fid = Math.max(newMetrics.fid, entry.processingStart - entry.startTime);
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // CLS Observer
+        const clsObserver = new PerformanceObserver((list) => {
+          let clsValue = 0;
+          list.getEntries().forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+            }
+          });
+          newMetrics.cls = clsValue;
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+      }
+
+      setMetrics(newMetrics);
+      onMetricsUpdate?.(newMetrics);
+      
+      // Analyze for issues
+      analyzePerformanceIssues(newMetrics);
+      
+    } catch (error) {
+      console.error('Error measuring performance:', error);
+    }
+  }, [onMetricsUpdate]);
+
+  // Analyze bundle size and composition
+  const analyzeBundle = useCallback(async () => {
+    try {
+      // This would typically come from webpack-bundle-analyzer or similar
+      // For now, we'll simulate the analysis
+      const mockBundleAnalysis: BundleAnalysis = {
+        totalSize: 2.4 * 1024 * 1024, // 2.4MB
+        jsSize: 1.8 * 1024 * 1024, // 1.8MB
+        cssSize: 300 * 1024, // 300KB
+        imageSize: 200 * 1024, // 200KB
+        fontSize: 100 * 1024, // 100KB
+        compressionRatio: 0.7, // 70% compression
+        chunkCount: 45,
+        largestChunks: [
+          { name: 'vendor.js', size: 800 * 1024, percentage: 33 },
+          { name: 'app.js', size: 600 * 1024, percentage: 25 },
+          { name: 'styles.css', size: 300 * 1024, percentage: 12.5 },
+        ]
+      };
+
+      setBundleAnalysis(mockBundleAnalysis);
+    } catch (error) {
+      console.error('Error analyzing bundle:', error);
+    }
+  }, []);
+
+  // Analyze performance issues
+  const analyzePerformanceIssues = useCallback((currentMetrics: PerformanceMetrics) => {
+    const newIssues: PerformanceIssue[] = [];
+
+    // LCP issues
+    if (currentMetrics.lcp > 2500) {
+      newIssues.push({
+        id: 'lcp-slow',
+        type: 'error',
+        title: 'Slow Largest Contentful Paint',
+        description: `LCP is ${currentMetrics.lcp}ms, should be under 2.5s`,
+        impact: 'high',
+        category: 'core-web-vitals',
+        fixable: true,
+        estimatedImpact: 15
+      });
+    }
+
+    // FID issues
+    if (currentMetrics.fid > 100) {
+      newIssues.push({
+        id: 'fid-slow',
+        type: 'error',
+        title: 'Slow First Input Delay',
+        description: `FID is ${currentMetrics.fid}ms, should be under 100ms`,
+        impact: 'high',
+        category: 'core-web-vitals',
+        fixable: true,
+        estimatedImpact: 12
+      });
+    }
+
+    // CLS issues
+    if (currentMetrics.cls > 0.1) {
+      newIssues.push({
+        id: 'cls-high',
+        type: 'warning',
+        title: 'High Cumulative Layout Shift',
+        description: `CLS is ${currentMetrics.cls.toFixed(3)}, should be under 0.1`,
+        impact: 'medium',
+        category: 'core-web-vitals',
+        fixable: true,
+        estimatedImpact: 8
+      });
+    }
+
+    // Bundle size issues
+    if (bundleAnalysis && bundleAnalysis.totalSize > 2 * 1024 * 1024) {
+      newIssues.push({
+        id: 'bundle-large',
+        type: 'warning',
+        title: 'Large Bundle Size',
+        description: `Bundle is ${(bundleAnalysis.totalSize / 1024 / 1024).toFixed(1)}MB, consider code splitting`,
+        impact: 'medium',
+        category: 'bundle',
+        fixable: true,
+        estimatedImpact: 10
+      });
+    }
+
+    setIssues(newIssues);
+  }, [bundleAnalysis]);
+
+  // Get performance score
+  const getPerformanceScore = useCallback((currentMetrics: PerformanceMetrics) => {
+    let score = 100;
+
+    // LCP scoring
+    if (currentMetrics.lcp > 4000) score -= 25;
+    else if (currentMetrics.lcp > 2500) score -= 15;
+    else if (currentMetrics.lcp > 2000) score -= 5;
+
+    // FID scoring
+    if (currentMetrics.fid > 300) score -= 25;
+    else if (currentMetrics.fid > 100) score -= 15;
+    else if (currentMetrics.fid > 50) score -= 5;
+
+    // CLS scoring
+    if (currentMetrics.cls > 0.25) score -= 25;
+    else if (currentMetrics.cls > 0.1) score -= 15;
+    else if (currentMetrics.cls > 0.05) score -= 5;
+
+    return Math.max(0, score);
+  }, []);
+
+  // Get score color
+  const getScoreColor = useCallback((score: number) => {
+    if (score >= 90) return 'text-green-500';
+    if (score >= 70) return 'text-yellow-500';
+    return 'text-red-500';
+  }, []);
+
+  // Get score background
+  const getScoreBackground = useCallback((score: number) => {
+    if (score >= 90) return 'bg-green-100';
+    if (score >= 70) return 'bg-yellow-100';
+    return 'bg-red-100';
+  }, []);
+
+  // Get impact color
+  const getImpactColor = useCallback((impact: string) => {
+    switch (impact) {
+      case 'high': return 'text-red-500 bg-red-50 border-red-200';
+      case 'medium': return 'text-yellow-500 bg-yellow-50 border-yellow-200';
+      case 'low': return 'text-blue-500 bg-blue-50 border-blue-200';
+      default: return 'text-gray-500 bg-gray-50 border-gray-200';
+    }
+  }, []);
+
+  // Filter issues by category
+  const filteredIssues = useMemo(() => {
+    if (selectedCategory === 'all') return issues;
+    return issues.filter(issue => issue.category === selectedCategory);
+  }, [issues, selectedCategory]);
+
+  // Optimize performance
+  const optimizePerformance = useCallback(async () => {
+    setIsAnalyzing(true);
+    
+    // Simulate optimization process
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // Add optimization to history
+    const optimization = {
+      timestamp: new Date(),
+      action: 'Performance optimization applied',
+      impact: 15
+    };
+    
+    setOptimizationHistory(prev => [optimization, ...prev.slice(0, 9)]);
+    setIsAnalyzing(false);
+    
+    // Re-measure performance
+    measurePerformance();
+  }, [measurePerformance]);
+
+  // Toggle monitoring
+  const toggleMonitoring = useCallback(() => {
+    setIsMonitoring(!isMonitoring);
+  }, [isMonitoring]);
 
   if (!metrics && !bundleAnalysis) {
     return (
@@ -421,18 +633,33 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     );
   }
 
-  return null; // This component doesn't render anything visible
-                  <div className="p-2 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                    <BarChart3 className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <div>
-                    <h2 className="text-xl font-bold text-gray-900 dark:text-white">
-                      Performance Dashboard
-                    </h2>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Real-time performance monitoring and optimization
-                    </p>
-                  </div>
+  return (
+    <>
+      {/* Floating Performance Button */}
+      <button
+        onClick={() => setShowPanel(!showPanel)}
+        className="fixed bottom-6 left-6 z-50 w-14 h-14 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-green-300/50"
+        aria-label="Open performance optimizer"
+        title="Performance Optimizer"
+      >
+        <Zap className="w-6 h-6 mx-auto" />
+      </button>
+
+      {/* Performance Panel */}
+      <AnimatePresence>
+        {showPanel && (
+          <motion.div
+            initial={{ opacity: 0, x: -300 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -300 }}
+            className="fixed top-0 left-0 h-full w-96 bg-white shadow-2xl border-r border-gray-200 z-40 overflow-y-auto"
+          >
+            {/* Header */}
+            <div className="sticky top-0 bg-gradient-to-r from-green-500 to-blue-600 text-white p-6">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-3">
+                  <Zap className="w-6 h-6" />
+                  <h2 className="text-xl font-semibold">Performance</h2>
                 </div>
                 <button
                   onClick={() => setIsExpanded(false)}
@@ -573,14 +800,9 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
                       </label>
                     </div>
                   </div>
-                ) : (
-                  <div className="text-center py-12">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                    <p className="text-gray-500 dark:text-gray-400">Measuring performance...</p>
-                  </div>
-                )}
-              </div>
-            </motion.div>
+                </div>
+              )}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -601,11 +823,12 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       )}
     </>
   );
-};
-
-=======
   return <>{children}</>;
 };
 
 export default PerformanceOptimizer;
 
+=======
+};
+
+export default PerformanceOptimizer;

@@ -244,7 +244,6 @@ const ComprehensivePricingGuide2027: React.FC = () => {
             </div>
           </motion.div>
         </div>
-=======
 export default function ComprehensivePricingGuide2027(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = React.useState('all');
 
@@ -499,7 +498,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
           {/* Services Grid */}
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {filteredServices.map((service, index)              => (
-=======
     }
     setExpandedServices(newExpanded);
   };
@@ -873,7 +871,6 @@ export default function ComprehensivePricingGuide2027(...args: any[]): any {
                         <span className="text-sm font-medium">Get Quote</span>
                         <Mail className="w-4 h-4" />
                       </Link>
-=======
 
                         {/* Target Audience */}
                         <div>

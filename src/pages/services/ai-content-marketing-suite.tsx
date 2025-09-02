@@ -22,7 +22,7 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIContentMarketingSuite() {
+const AIContentMarketingSuite: React.FC = () => {
   const features = [
     {
       icon: PenTool,
@@ -147,7 +147,6 @@ export default function AIContentMarketingSuite() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -190,7 +189,6 @@ export default function AIContentMarketingSuite() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -237,7 +235,6 @@ export default function AIContentMarketingSuite() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -277,7 +274,6 @@ export default function AIContentMarketingSuite() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Transform Your Content Marketing?
@@ -285,6 +281,22 @@ export default function AIContentMarketingSuite() {
             <p className="text-xl mb-8 text-pink-100 max-w-3xl mx-auto">
               Join marketers who are already leveraging AI to create engaging content that drives results.
             </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="flex items-center justify-center space-x-3 text-gray-300">
+                <Phone className="w-5 h-5 text-orange-400" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-gray-300">
+                <Mail className="w-5 h-5 text-orange-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center justify-center space-x-3 text-gray-300">
+                <MapPin className="w-5 h-5 text-orange-400" />
+                <span>Middletown, DE 19709</span>
+              </div>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -305,4 +317,6 @@ export default function AIContentMarketingSuite() {
       </section>
     </div>
   );
-}
+};
+
+export default AIContentMarketingSuite;

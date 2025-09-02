@@ -201,7 +201,6 @@ export const notify = {
     console.log('Warning notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message, ...options })},
   info: (title: string, message: string, options?: Partial<Notification>)                => {
     console.log('Info notification:', { title, message, ...options })};
-=======;
     console.log('Success notification: anyanyanyanyanyanyanyanyanyanyanyanyanyany', { title, message,;
   ;
   ;

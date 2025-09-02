@@ -89,7 +89,6 @@ const frequencies = [;
       // Here you would typically send the data to your newsletter service
       // // // // // // // console.log('Newsletter subscription:', formData);
 
-=======
       console.log('Newsletter subscription: anyanyanyanyanyanyanyanyanyanyanyanyanyany', formData);
       
       setStatus('success');

@@ -1,5 +1,21 @@
   useCases: string[];
   targetAudience: string[];
+  marketPrice: string;
+  roi: string;
+  innovationLevel: 'Emerging' | 'Established' | 'Cutting-edge' | 'Revolutionary';
+  contactInfo: {
+    phone: string;
+    email: string;
+    website: string;
+  };
+  technicalSpecs?: {
+    technology: string[];
+    integrations: string[];
+    apiEndpoints: number;
+    uptime: string;
+    security: string[];
+  };
+}
   tags: string[];
   estimatedDelivery: string;
   supportLevel: string;
@@ -20,21 +36,10 @@
     security: string[];
     compliance: string[];
   };
-import { ProductListing              } from '@/types/listings';
-  competitors: string[];
-  marketTrend: string;
-  aiModel?: string;
-  trainingData?: string;
-  marketingContent: {
-    headline: string;
-    valueProposition: string;
-    keyFeatures: string[];
-    competitiveAdvantages: string[];
-    testimonials?: string[];
-    caseStudies?: string[];
-  };
-}
 =======
+  competitors?: string[];
+  marketSize?: string;
+import { ProductListing              } from '@/types/listings';
 
 export const INNOVATIVE_SERVICES_2025: InnovativeService2025[] = [
   // AI-Powered Quantum Computing Platform

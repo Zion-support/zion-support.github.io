@@ -233,7 +233,6 @@ export default function AIPoweredSEO(...args: any[]): any {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)              => (
               <motion.div
@@ -343,7 +342,6 @@ export default function AIPoweredSEO(...args: any[]): any {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index)              => (
               <motion.div

@@ -385,7 +385,6 @@ export default function Help(...args[]: any):  {
                   <div className="flex items-center space-x-3">
                     <Clock className={`w-5 h-5 ${schedule.available ? 'text-green-400' : 'text-orange-400'}`} />
                     <span className="text-white font-medium">{schedule.day}</span>
-=======
       {/* Help Categories */}
       {!searchQuery && (
         <section className="py-20 bg-slate-900">

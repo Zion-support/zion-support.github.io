@@ -238,7 +238,7 @@ export default function Terms() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
-      </section>
+      </motion.div>
 
       {/* Terms Overview */}
       <section className="py-20 relative">
@@ -299,7 +299,7 @@ export default function Terms() {
                 <h3 className="text-xl font-semibold text-white mb-3">Applicability</h3>
                 <p className="text-gray-400">Global Coverage</p>
               </div>
-            </motion.div>
+            </section>
           </div>
         </div>
       </section>

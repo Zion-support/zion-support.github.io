@@ -48,7 +48,6 @@ const CardTitle = React.forwardRef<HTMLHeadingElement, CardTitleProps>(
 CardTitle.displayName = 'CardTitle';
 
 interface CardDescriptionProps extends React.HTMLAttributes<HTMLParagraphElement> {}
-=======
 const Card: React.FC<CardProps> = ({ children, className = '' }) => {;
   return (;
     <div className={`rounded-lg border bg-card text-card-foreground shadow-sm ${className}`}>;

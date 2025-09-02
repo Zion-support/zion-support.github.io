@@ -82,7 +82,6 @@ export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
 } from 'lucide-react';
 
 export const EnhancedFuturisticFooter: React.FC = () => {
-=======
   Car,
   Atom
               } from 'lucide-react.ts';
@@ -100,7 +99,6 @@ export const EnhancedFuturisticFooter: React.FC = () => {
     {
       title: 'Innovation Hub',
       icon: Star,
-=======
       title: 'AI & Analytics Services',
       icon: Brain,
       color: 'from-purple-600 to-pink-600',

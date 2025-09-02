@@ -22,7 +22,6 @@ import { motion              } from 'framer-motion.ts';
   Phone,
   Mail,
   MapPin
-
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 import INNOVATIVE_SERVICES_2025 from '../data/innovativeServices2025';
@@ -182,7 +181,6 @@ const ServiceCard = ({ service, viewMode }: { service: anyanyanyanyanyanyanyanya
     const cat = serviceCategories.find(c => c.id === category);
     return cat ? cat.icon : Grid;
   };
-=======
 import { Search, Filter, Star, TrendingUp, Clock, Users, DollarSign, Globe, Shield, Bot, Cloud, BarChart3, Workflow, FileText, Sparkles, Building, Car, Leaf, Zap, Home, Scale, GraduationCap, ShoppingCart, Hotel              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
 import { enhancedServices2025              } from '../../data/enhanced-2025-services';
@@ -285,14 +283,12 @@ export default function ServicesOverview(...args: any[]): any {
       pricing: "Starting at $89/month",
       href: "/services/llm-content-studio",
       benefits: ["Faster content creation", "Better quality", "SEO optimization"]
-=======
       id: 'IT Services',
       name: 'IT Services',
       icon: Server,
       color: 'from-blue-600 to-cyan-600',
       description: 'Enterprise-grade IT infrastructure and digital transformation solutions',
       count: INNOVATIVE_SERVICES_2025.filter(s => s.category === 'IT Services').length
-
     },
     {
       title: "Cybersecurity & Compliance",
@@ -481,6 +477,19 @@ export default function ServicesOverview(...args: any[]): any {
     }
   };
 =======
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'AI Solutions': return 'from-purple-600 to-pink-600';
+      case 'IT Services': return 'from-blue-600 to-cyan-600';
+      case 'Micro SaaS': return 'from-green-600 to-emerald-600';
+      case 'Cybersecurity': return 'from-red-600 to-orange-600';
+      case 'Data Analytics': return 'from-indigo-600 to-purple-600';
+      case 'Cloud Services': return 'from-cyan-600 to-blue-600';
+      case 'Emerging Tech': return 'from-yellow-600 to-orange-600';
+      default: return 'from-gray-600 to-slate-600';
+    }
+  };
   const renderServiceCard = (service: anyanyanyanyanyanyanyanyanyanyanyanyany)              => (
     <motion.div
       key={service.id}
@@ -599,26 +608,6 @@ export default function ServicesOverview(...args: any[]): any {
       </div>
     </motion.div>
   );
-      <div className="relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <div className="text-center">
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-6xl font-bold text-white mb-6"
-            >
-              <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Services Overview
-              </span>
-              <span className="block text-white">Complete Portfolio</span>
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-300 max-w-3xl mx-auto mb-8"
-            >
 
               {/* Category Filter */}
               <div>
@@ -818,7 +807,6 @@ export default function ServicesOverview(...args: any[]): any {
         <section className="py-20 px-6 bg-slate-800/30">
           <div className="container mx-auto max-w-7xl">
             <motion.div
-=======
               Discover our comprehensive range of innovative technology services designed to 
               transform your business, enhance efficiency, and drive competitive advantage.
             </motion.p>

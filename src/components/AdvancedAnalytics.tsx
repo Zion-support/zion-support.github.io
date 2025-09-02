@@ -41,7 +41,6 @@ interface AnalyticsData {
 
 
 
-=======
 import React, { useEffect, useCallback, useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -98,7 +97,6 @@ interface AdvancedAnalyticsProps extends React.PropsWithChildren<{}> {
 export function AdvancedAnalytics(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
   const [analyticsData, setAnalyticsData] = useState<any>({
-=======
   topPages: string[];
   userJourney: string[];
   engagementScore: number;
@@ -185,7 +183,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       sessionId: anyanyanyanyanyanyanyanyanyanyanyanyanyanyuserSession,
       path,
       timestamp: new Date().toISOString(),
-=======
 
   // Generate unique session ID
   function generateSessionId(): string {
@@ -333,7 +330,6 @@ export const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
       };
       // Send to analytics endpoint
       await fetch('/api/analytics', {
-=======
 
     trackEvent(event);
     updateUserBehavior(page);

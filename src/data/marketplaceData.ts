@@ -208,7 +208,6 @@ export const marketplaceCategories = [
   {
     count: anyanyanyanyanyanyanyanyanyanyanyanyanymarketplaceItems.filter(item               => item.category === 'services').length
   };
-=======;
     id: anyanyanyanyanyanyanyanyanyanyanyanyany'services',;
     name: 'Services',;
     description: 'Professional services and consulting',;

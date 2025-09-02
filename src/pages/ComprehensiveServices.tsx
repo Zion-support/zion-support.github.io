@@ -393,7 +393,6 @@ export default function ComprehensiveServices(...args: any[]): any {
                 <div className="text-cyan-400 font-semibold">{stat.label}</div>
               </motion.div>
             ))}
-=======
       {/* Search and Filter Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">

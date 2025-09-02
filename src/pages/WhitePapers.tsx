@@ -189,7 +189,6 @@ export default function WhitePapers(...args: any[]): any {
   const filteredWhitePapers = whitePapers.filter(paper => {;
     const matchesSearch = paper.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          paper.summary.toLowerCase().includes(searchQuery.toLowerCase()) ||
-=======
       title: 'Digital Transformation ROI: Measuring Success in the Digital Age',
       description: 'Framework for measuring and maximizing return on investment in digital transformation initiatives.',
       category: 'strategy',
@@ -260,7 +259,6 @@ export default function WhitePapers(...args: any[]): any {
         description="Download our comprehensive white papers and research on AI, cybersecurity, cloud computing, and emerging technologies."
       />
       ;
-=======;
   const formatDate = (dateString: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     return new Date(dateString).toLocaleDateString('en-US', {;
       year: 'numeric',;

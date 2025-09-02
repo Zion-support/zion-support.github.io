@@ -107,7 +107,6 @@
                       {solution.features.map((feature, featureIndex)              => (
                         <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-=======
 import React, { useState } from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Link               } from 'react-router-dom.ts';

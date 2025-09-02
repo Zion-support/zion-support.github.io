@@ -132,7 +132,6 @@ export class EnhancedErrorBoundary extends Component<Props, State> {
       };
 
       // // // // // // // console.error('Failed to log error:', logError);
-=======
       // Send to analytics endpoint
       fetch('/api/analytics/error', {
         method: anyanyanyanyanyanyanyanyanyanyanyanyanyany'POST',

@@ -40,7 +40,6 @@ export function Sidebar(...args: any[]): any {
       return location.pathname === '/';
 
     return location.pathname.startsWith(href);
-=======
     },
     {
       id: 'ai-ml',

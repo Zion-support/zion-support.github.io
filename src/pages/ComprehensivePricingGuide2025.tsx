@@ -4,7 +4,6 @@ import { Link              } from 'react-router-dom.ts';
 import { DollarSign, 
   Star, 
   CheckCircle, 
-=======
 import React, { useState } from 'react';
 import { 
   CheckCircle, 
@@ -44,14 +43,44 @@ import {
   Server,
   Smartphone,
   Network,
-  CheckCircle, 
-  Target,
-  DollarSign,
   Clock,
   ArrowRight,
   Phone,
   Mail,
   MapPin,
+  CheckCircle,
+  Award,
+  Target,
+  Lightbulb,
+  Sparkles,
+  Eye,
+  Heart,
+  DollarSign,
+  Calendar,
+  Settings,
+  Monitor,
+  Smartphone as MobileIcon,
+  Globe as WebIcon,
+  Shield as SecurityIcon,
+  Zap as PerformanceIcon,
+  Brain as AIIcon,
+  Cloud as CloudIcon,
+  Rocket as InnovationIcon,
+  ChevronDown,
+  ChevronUp,
+  Info,
+  AlertCircle,
+  Clock as TimeIcon,
+  Users as TeamIcon,
+  Globe as WorldIcon,
+  Shield as SecurityIcon2,
+  Zap as SpeedIcon,
+  Brain as IntelligenceIcon,
+  Cloud as CloudIcon2,
+  Rocket as LaunchIcon
+} from 'lucide-react';
+import { comprehensiveServices2025Enhanced, serviceCategories } from '../data/comprehensive-services-2025-enhanced';
+
   Linkedin,
   Twitter,
   Github
@@ -227,7 +256,6 @@ const ComprehensivePricingGuide2025: React.FC = (): JSX.Element => {
   growthRate?: string;
   compliance?: string[];
 }
-=======
 export function ComprehensivePricingGuide2025() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -507,21 +535,7 @@ export default function ComprehensivePricingGuide2025() {
             </div>
           </div>
         </div>
-      </section>
-                </div>
-                <div className="flex flex-col items-center">
-                  <MapPin className="w-10 h-10 text-purple-400 mb-3" />
-                  <p className="text-white font-semibold text-lg mb-2">Address</p>
-                  <p className="text-purple-300 text-lg">
-                    364 E Main St STE 1008<br />
-                    Middletown DE 19709
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* Pricing Statistics */}
       <section className="py-12 px-4">
@@ -660,7 +674,6 @@ export default function ComprehensivePricingGuide2025() {
                   {service.marketPrice && (
                     <div className="text-sm text-slate-400 mb-2">
                       Market Price: {service.marketPrice}
-=======
           {/* Services Grid */}
           <div className={`grid gap-6 ${
             viewMode === 'grid' 
@@ -864,7 +877,6 @@ export default function ComprehensivePricingGuide2025() {
                   Get ROI Consultation
                 </a>
               </div>
-=======
         {/* Pricing Benefits */}
         <motion.section 
           className="py-16 px-6 bg-gradient-to-br from-purple-900/20 via-slate-900/50 to-pink-900/20"
@@ -1051,7 +1063,6 @@ export default function ComprehensivePricingGuide2025() {
               >
                 Clear Filters
               </button>
-=======
             <div className="text-center py-20">
               <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-white mb-2">No services found</h3>
@@ -1342,7 +1353,6 @@ export default function ComprehensivePricingGuide2025() {
               </a>
             </div>
           </motion.div>
-=======
                 className="px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
               >
                 <option value="name">Sort by Name</option>
@@ -1570,6 +1580,7 @@ export default function ComprehensivePricingGuide2025() {
               Visit us at: <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">https://ziontechgroup.com</a>
             </p>
           </div>
+=======
         </div>
       </div>
     </div>

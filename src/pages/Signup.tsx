@@ -1,7 +1,3 @@
-  TrendingUp,
-  BarChart3,
-  Atom,
-  Network,
 =======
 import React, { useState } from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
@@ -30,7 +26,6 @@ import { Mail,
   CheckCircle
               } from 'lucide-react.ts';
 export default function Signup(...args[]: any):  {
-
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',

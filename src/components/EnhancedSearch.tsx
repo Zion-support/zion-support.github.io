@@ -249,7 +249,6 @@ export function EnhancedSearch(...args: any[]): any {;
   const handleResultClick = (result: anyanyanyanyanyanyanyanyanyanyanyanyanyanySearchResult)                => {;
     handleSearch(result.title);
     router(result.url);
-=======
     const handleKeyDown = (event: anyanyanyanyanyanyanyanyanyanyanyanyanyanyKeyboardEvent)               => {;
       if (!isOpen) return;
       switch (event.key) {

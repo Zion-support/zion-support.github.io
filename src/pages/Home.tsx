@@ -64,10 +64,11 @@ import {
   BookOpen,
   Home
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 // Optimized futuristic animated background component
 const FuturisticBackground = React.memo(() => {
-  const particles = useMemo(() =>
+  const particles = React.useMemo(() =>
     [...Array(20)].map((_, i) => ({
       id: i,
       left: `${Math.random() * 100}%`,

@@ -4,7 +4,6 @@ import { motion               } from 'framer-motion.ts';
 import { Twitter,
   Linkedin,
   Instagram,
-=======
   Globe, 
   Linkedin, 
   Twitter, 
@@ -131,7 +130,6 @@ export function Footer(...args: any[]): any {
         { name: 'Manufacturing', href: '/manufacturing-solutions' },
         { name: 'Industry Solutions', href: '/industry-solutions' },
         { name: 'Emerging Tech', href: '/emerging-tech' }
-
       ]
     },
     {
@@ -179,11 +177,9 @@ export function Footer(...args: any[]): any {
     { name: "Startup Solutions", href: "/solutions/startup" }
   ];
 
-    { name: "FAQ", href: "/faq" }
-  ];
-=======
 =======
 
+=======
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
       {/* Main Footer Content */}
@@ -240,7 +236,6 @@ export function Footer(...args: any[]): any {
                   </Link>
                 ))}
               </div>
-=======
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

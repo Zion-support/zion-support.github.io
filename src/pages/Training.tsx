@@ -66,6 +66,47 @@ import {
   Database
 } from 'lucide-react';
 
+interface TrainingProgram {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  level: string;
+  format: string;
+  duration: string;
+  price: number;
+  rating: number;
+  reviews: number;
+  instructor: string;
+  location: string;
+  startDate: string;
+  seats: number;
+  availableSeats: number;
+  tags: string[];
+  featured?: boolean;
+  popular?: boolean;
+  new?: boolean;
+}
+
+interface Category {
+  id: string;
+  name: string;
+  icon: React.ComponentType<any>;
+  count: number;
+}
+
+interface Level {
+  id: string;
+  name: string;
+  count: number;
+}
+
+interface Format {
+  id: string;
+  name: string;
+  count: number;
+}
+
 export default function Training() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');

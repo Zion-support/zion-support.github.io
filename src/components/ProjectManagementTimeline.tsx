@@ -277,7 +277,6 @@ export const ProjectManagementTimeline: React.FC<ProjectManagementTimelineProps>
   const getStatusDisplay = (status: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {
     switch (status) {
       case 'planning':
-=======
   total: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.length,
     active: projects.filter(p               => p.status === 'active').length,
     completed: anyanyanyanyanyanyanyanyanyanyanyanyanyanyprojects.filter(p               => p.status === 'completed').length,

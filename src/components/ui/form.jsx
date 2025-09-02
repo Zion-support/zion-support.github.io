@@ -13,7 +13,7 @@ export const FormItem = ({ children, className = '' }) => {
 };
 
 export const FormControl = ({ children }) => {
-  return <div>{children}</div>;
+  return <>{children}</>;
 };
 
 export const FormLabel = ({ children, className = '' }) => {

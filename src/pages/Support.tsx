@@ -180,7 +180,6 @@ const faqCategories: FAQCategory[] = [
     ]
 
 ];
-=======
 import { HelpCircle, 
   MessageCircle, 
   Phone, 
@@ -530,7 +529,6 @@ export default function Support(...args: any[]): any {
 
               <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
               <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-=======
               transition={{ duration: 0.6, delay: index * 0.1 }}
               onClick={() => setActiveTab(category.id)}
               className={`cursor-pointer p-6 rounded-xl border transition-all duration-300 hover:scale-105 ${

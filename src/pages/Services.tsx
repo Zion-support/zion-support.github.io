@@ -1,6 +1,9 @@
-import React, { useState } from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Brain, 
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { 
+  Brain, 
   Cloud, 
   Shield, 
   Zap, 
@@ -39,97 +42,14 @@ import { Brain,
   FileText,
   MessageCircle,
   Search,
-  Clock
-             } from 'lucide-react.ts';
-
-type Service = {
-  title: string;
-  description: string;
-  priceRange: string;
-  learnMoreUrl?: string;
-  ctaUrl?: string;
-};
-
-const featuredServices: Service[] = [
-  {
-    title: 'AI Development & MLOps',
-    description: 'Custom LLMs, RAG, fine-tuning, and MLOps pipelines on AWS/Azure/GCP.',
-    priceRange: '$8,000 - $120,000',
-    learnMoreUrl: 'https://learn.microsoft.com/azure/machine-learning/',
-  },
-  {
-    title: 'Cloud Migration & Modernization',
-    description: 'Lift-and-shift, containerization, and serverless refactors with IaC.',
-    priceRange: '$15,000 - $250,000',
-    learnMoreUrl: 'https://aws.amazon.com/migration-hub/',
-  },
-  {
-    title: 'Zero-Trust Cybersecurity',
-    description: 'ZTA architecture, SOC hardening, SIEM, EDR/XDR integrations.',
-    priceRange: '$5,000 - $90,000',
-    learnMoreUrl: 'https://cloud.google.com/security-command-center',
-  },
-  {
-    title: 'Data Engineering & Analytics',
-    description: 'ELT/ETL, data lakes/warehouses, BI dashboards, KPI design.',
-    priceRange: '$7,500 - $140,000',
-    learnMoreUrl: 'https://cloud.google.com/bigquery/docs',
-  },
-  {
-    title: 'IoT & Edge Platforms',
-    description: 'Secure device onboarding, telemetry pipelines, OTA, and twin modeling.',
-    priceRange: '$12,000 - $180,000',
-    learnMoreUrl: 'https://learn.microsoft.com/azure/iot-hub/',
-  },
-  {
-    title: 'Quantum Readiness Advisory',
-    description: 'PQ crypto readiness, QC PoCs, and quantum-inspired optimizations.',
-    priceRange: '$6,000 - $60,000',
-    learnMoreUrl: 'https://quantum.microsoft.com/azure-quantum',
-  },
-];
-
-const microSaaS: Service[] = [
-  {
-    title: 'LeadGen AI Microsite',
-    description: 'SEO + AI chat, CRM integration, and analytics for B2B lead capture.',
-    priceRange: '$99 - $499/mo',
-    learnMoreUrl: 'https://vercel.com/ai',
-  },
-  {
-    title: 'Agentic Support Bot',
-    description: 'Retrieval-augmented agent with help center and Slack/Teams connectors.',
-    priceRange: '$149 - $999/mo',
-    learnMoreUrl: 'https://platform.openai.com/',
-  },
-  {
-    title: 'Automated Reporting Studio',
-    description: 'Auto-ingest spreadsheets/CSV, generate dashboards and scheduled PDFs.',
-    priceRange: '$79 - $399/mo',
-    learnMoreUrl: 'https://www.metabase.com/',
-  },
-  {
-    title: 'Security Posture Scanner',
-    description: 'Continuous cloud config checks and CIS benchmarks with alerts.',
-    priceRange: '$199 - $1,499/mo',
-    learnMoreUrl: 'https://www.aquasec.com/cloud-security/',
-  },
-  {
-    title: 'Image/Doc OCR Pipeline',
-    description: 'OCR + LLM extraction for invoices, IDs, and contracts at scale.',
-    priceRange: '$0.50 - $2.00 / 1k tokens + hosting',
-    learnMoreUrl: 'https://platform.openai.com/docs/guides/vision',
-  },
-  {
-    title: 'Synthetic Data Generator',
-    description: 'Privacy-safe tabular and text data generation to augment small datasets.',
-    priceRange: '$299 - $1,999/mo',
-    learnMoreUrl: 'https://huggingface.co/',
-  },
-];
-
-const Services: React.FC = (): JSX.Element => {
-  const [activeCategory, setActiveCategory] = useState('all');
+  BarChart,
+  Users2,
+  Settings,
+  Palette,
+  TrendingUp,
+  Scale,
+  Gauge
+} from 'lucide-react';
 
 export default function Services() {
   const serviceCategories = [
@@ -456,6 +376,38 @@ export default function Services() {
                 </motion.div>
               ))}
             </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Our
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                {" "}Services
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Discover our comprehensive range of AI-powered solutions, cloud services, cybersecurity, 
+              and innovative micro-SaaS platforms designed to transform your business.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Category Filter */}
+      <section className="py-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-4">
+            {serviceCategories.map((category) => (
+              <button
+                key={category.id}
+                onClick={() => setActiveCategory(category.id)}
+                className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                  activeCategory === category.id
+                    ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg'
+                    : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700'
+                }`}
+              >
+                <category.icon className="w-5 h-5" />
+                <span>{category.name}</span>
+              </button>
+            ))}
           </div>
         </section>
 

@@ -325,7 +325,6 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
   };
 
   ];
-=======
 import React from 'react.ts';
 
 export default function ResearchDevelopment(...args: any[]): any {

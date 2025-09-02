@@ -169,7 +169,6 @@ const AllServices2027: React.FC = (): JSX.Element => {;
           </div>
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {categories.map((category)               => {;
-=======;
               specific business challenges and drive innovation.;
             </p>;
           </div>;

@@ -62,7 +62,6 @@ const SpaceTech = () => {
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">
               <Rocket className="w-4 h-4 mr-2"/>
               Space Technology
-=======
       icon: Navigation,
       title: 'Space Navigation',
       description: 'Advanced positioning and navigation systems for space missions';

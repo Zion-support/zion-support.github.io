@@ -285,7 +285,6 @@ self.addEventListener('push', (event: PushEvent)              => {
     body: anyanyanyanyanyanyanyanyanyanyanyanyanyevent.data?.text() || 'New notification from Zion Tech Group',
     icon: '/icon-192x192.png',
     badge: '/badge-72x72.png',
-=======
     // Return a fallback response if both network and cache fail
     return new Response('Content not available offline', {
       status: 503,

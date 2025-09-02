@@ -233,7 +233,11 @@ export default function Cookies(...args: any[]): any {
     });
     savePreferences();
   };
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Cookie, Shield, Settings, Eye, Database, Users, FileText, CheckCircle } from 'lucide-react';
 
+export default function Cookies() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}

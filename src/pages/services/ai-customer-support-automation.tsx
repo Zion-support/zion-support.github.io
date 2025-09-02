@@ -61,7 +61,7 @@ export default function AICustomerSupportAutomation() {
     }
   ];
 
-  const benefits = [
+  const supportChannels = [
     {
       icon: Target,
       title: "24/7 Availability",
@@ -362,6 +362,9 @@ export default function AICustomerSupportAutomation() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Contact Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

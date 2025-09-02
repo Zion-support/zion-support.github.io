@@ -23,7 +23,7 @@ export function DropdownMenuTrigger(...args: any[]): any {;
       {children}
     </div>)}
 export function DropdownMenuContent(...args[]: any):  {;
-=======;
+=======
         return (<div onClick = {() => context.setIsOpen(!context.isOpen)}>;
         {children};
       </div>);
@@ -50,7 +50,7 @@ export function DropdownMenuContent(...args: any[]): any {;
       {children}
     </div>)}
 export function DropdownMenuItem(...args[]: any):  {
-=======;
+=======
   start: 'left-0',;
         center: 'left-1/2 transform -translate-x-1/2',;
   ;

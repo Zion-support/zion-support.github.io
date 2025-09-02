@@ -89,7 +89,6 @@ fontSize: 'small' | 'medium' | 'large' | 'extra-large';
 };
       root.style.filter = filters[newSettings.colorBlindness]} else {
       root.style.filter = 'none'}
-=======;
   protanopia: 'brightness(0.8) saturate(0.5) hue-rotate(180deg)',;
         deuteranopia: 'brightness(0.8) saturate(0.5) hue-rotate(90deg)',;
   ;
