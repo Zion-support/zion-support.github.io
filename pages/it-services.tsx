@@ -28,7 +28,8 @@ import {
   FileText,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  TrendingUp
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -164,6 +165,150 @@ export default function ITServices() {
       pricing: '$2,500 - $15,000/month',
       delivery: '2-4 weeks',
       category: 'Managed Services'
+    },
+    {
+      title: 'Blockchain & Web3 Solutions',
+      description: 'Blockchain development, smart contracts, and decentralized applications',
+      icon: Network,
+      features: [
+        'Smart contract development and auditing',
+        'DeFi and NFT platform development',
+        'Blockchain integration and consulting',
+        'Cryptocurrency wallet development',
+        'Tokenomics and governance design',
+        'Cross-chain interoperability solutions'
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-20 weeks',
+      category: 'Blockchain Services'
+    },
+    {
+      title: 'IoT & Edge Computing',
+      description: 'Internet of Things solutions and edge computing infrastructure',
+      icon: Cpu,
+      features: [
+        'IoT device development and integration',
+        'Edge computing platform setup',
+        'Real-time data processing and analytics',
+        'IoT security and device management',
+        'Sensor network design and deployment',
+        'Edge AI and machine learning integration'
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-16 weeks',
+      category: 'IoT Services'
+    },
+    {
+      title: 'Quantum Computing Consulting',
+      description: 'Quantum computing strategy, algorithm development, and implementation',
+      icon: Cpu,
+      features: [
+        'Quantum algorithm development',
+        'Quantum computing strategy consulting',
+        'Hybrid classical-quantum solutions',
+        'Quantum security and cryptography',
+        'Quantum machine learning applications',
+        'Quantum hardware evaluation and selection'
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'Quantum Services'
+    },
+    {
+      title: '5G & Network Modernization',
+      description: '5G network implementation and legacy network modernization',
+      icon: Wifi,
+      features: [
+        '5G network planning and deployment',
+        'Network slicing and optimization',
+        'Legacy network migration',
+        'Private 5G network setup',
+        'Network performance monitoring',
+        'Edge computing integration'
+      ],
+      pricing: '$10,000 - $75,000/month',
+      delivery: '8-20 weeks',
+      category: 'Network Services'
+    },
+    {
+      title: 'AR/VR Development & Implementation',
+      description: 'Augmented and virtual reality solutions for business applications',
+      icon: Monitor,
+      features: [
+        'AR/VR application development',
+        '3D modeling and animation',
+        'Immersive training and simulation',
+        'Virtual showroom and retail solutions',
+        'AR/VR hardware integration',
+        'Performance optimization and testing'
+      ],
+      pricing: '$6,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'AR/VR Services'
+    },
+    {
+      title: 'API Management & Integration',
+      description: 'Comprehensive API strategy, development, and management platform',
+      icon: Code,
+      features: [
+        'API design and development',
+        'API gateway setup and management',
+        'Third-party API integration',
+        'API security and authentication',
+        'API analytics and monitoring',
+        'Microservices architecture design'
+      ],
+      pricing: '$3,000 - $20,000/month',
+      delivery: '4-12 weeks',
+      category: 'API Services'
+    },
+    {
+      title: 'Disaster Recovery & Business Continuity',
+      description: 'Comprehensive disaster recovery planning and implementation',
+      icon: Shield,
+      features: [
+        'Disaster recovery strategy development',
+        'Backup and replication solutions',
+        'Business continuity planning',
+        'Recovery time objective optimization',
+        'Testing and validation services',
+        'Compliance and audit support'
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '6-16 weeks',
+      category: 'Recovery Services'
+    },
+    {
+      title: 'Green IT & Sustainability Solutions',
+      description: 'Sustainable IT practices and carbon footprint reduction',
+      icon: Globe,
+      features: [
+        'Energy-efficient infrastructure design',
+        'Carbon footprint assessment and reduction',
+        'Sustainable cloud migration',
+        'Green data center optimization',
+        'E-waste management and recycling',
+        'Sustainability reporting and compliance'
+      ],
+      pricing: '$4,000 - $25,000/month',
+      delivery: '6-14 weeks',
+      category: 'Sustainability Services'
+    },
+    {
+      title: 'FinTech & Payment Solutions',
+      description: 'Financial technology solutions and payment system integration',
+      icon: Database,
+      features: [
+        'Payment gateway integration',
+        'Financial API development',
+        'Compliance and regulatory solutions',
+        'Fraud detection and prevention',
+        'Digital banking solutions',
+        'Cryptocurrency integration'
+      ],
+      pricing: '$8,000 - $60,000/month',
+      delivery: '10-24 weeks',
+      category: 'FinTech Services'
     }
   ];
 

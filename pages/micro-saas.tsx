@@ -31,7 +31,8 @@ import {
   Lock,
   Cpu,
   Network,
-  Terminal
+  Terminal,
+  Calendar
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 
@@ -199,6 +200,150 @@ export default function MicroSaaS() {
       pricing: '$3,000 - $10,000/month',
       delivery: '4-7 weeks',
       category: 'Automation SaaS'
+    },
+    {
+      title: 'AI-Powered E-commerce Return Manager',
+      description: 'Intelligent return processing system with automated decision making and fraud detection',
+      icon: ArrowRight,
+      features: [
+        'Automated return request processing',
+        'AI-powered fraud detection and prevention',
+        'Smart return label generation',
+        'Real-time inventory updates',
+        'Customer satisfaction tracking',
+        'Analytics and reporting dashboard'
+      ],
+      pricing: '$1,500 - $5,000/month',
+      delivery: '3-5 weeks',
+      category: 'E-commerce SaaS'
+    },
+    {
+      title: 'Smart Inventory Optimization Platform',
+      description: 'AI-driven inventory management with demand forecasting and automated reordering',
+      icon: BarChart3,
+      features: [
+        'Demand forecasting with machine learning',
+        'Automated reorder point calculations',
+        'Multi-location inventory tracking',
+        'Supplier performance analytics',
+        'Cost optimization recommendations',
+        'Integration with ERP and POS systems'
+      ],
+      pricing: '$2,500 - $8,000/month',
+      delivery: '4-6 weeks',
+      category: 'Inventory SaaS'
+    },
+    {
+      title: 'AI-Powered SEO Content Optimizer',
+      description: 'Intelligent content optimization platform that enhances web page performance and rankings',
+      icon: TrendingUp,
+      features: [
+        'Real-time SEO analysis and recommendations',
+        'Content optimization suggestions',
+        'Keyword research and competitor analysis',
+        'Technical SEO audits and fixes',
+        'Performance tracking and reporting',
+        'Multi-language SEO support'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '1-2 weeks',
+      category: 'SEO SaaS'
+    },
+    {
+      title: 'Intelligent Lead Scoring Platform',
+      description: 'AI-powered lead qualification and scoring system with behavioral analysis',
+      icon: Target,
+      features: [
+        'Behavioral lead scoring algorithms',
+        'Multi-channel lead tracking',
+        'Automated lead qualification',
+        'CRM integration and synchronization',
+        'Predictive analytics and insights',
+        'Custom scoring model creation'
+      ],
+      pricing: '$299 - $1,200/month',
+      delivery: '2-4 weeks',
+      category: 'Sales SaaS'
+    },
+    {
+      title: 'AI-Powered Social Media Manager',
+      description: 'Comprehensive social media management with AI content creation and scheduling',
+      icon: Globe,
+      features: [
+        'AI-generated social media content',
+        'Optimal posting time recommendations',
+        'Hashtag research and optimization',
+        'Engagement analytics and insights',
+        'Multi-platform scheduling',
+        'Brand voice consistency monitoring'
+      ],
+      pricing: '$149 - $599/month',
+      delivery: '2-3 weeks',
+      category: 'Social Media SaaS'
+    },
+    {
+      title: 'Smart Expense Management System',
+      description: 'AI-powered expense tracking and approval workflow with receipt processing',
+      icon: FileText,
+      features: [
+        'Automated receipt scanning and processing',
+        'Expense categorization with AI',
+        'Approval workflow automation',
+        'Policy compliance checking',
+        'Real-time expense reporting',
+        'Integration with accounting software'
+      ],
+      pricing: '$99 - $399/month',
+      delivery: '2-3 weeks',
+      category: 'Finance SaaS'
+    },
+    {
+      title: 'AI-Powered Customer Onboarding Platform',
+      description: 'Intelligent customer onboarding with personalized journey mapping and automation',
+      icon: Users,
+      features: [
+        'Personalized onboarding workflows',
+        'Progress tracking and analytics',
+        'Automated email sequences',
+        'Interactive tutorials and guides',
+        'Success metrics and optimization',
+        'Integration with CRM and support tools'
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '3-4 weeks',
+      category: 'Customer Success SaaS'
+    },
+    {
+      title: 'Intelligent Meeting Scheduler',
+      description: 'AI-powered meeting scheduling with time zone optimization and conflict resolution',
+      icon: Calendar,
+      features: [
+        'Smart time zone handling',
+        'Automatic conflict detection and resolution',
+        'Meeting room and resource booking',
+        'Calendar integration across platforms',
+        'Meeting preparation automation',
+        'Follow-up task generation'
+      ],
+      pricing: '$49 - $199/month',
+      delivery: '1-2 weeks',
+      category: 'Productivity SaaS'
+    },
+    {
+      title: 'AI-Powered Code Review Assistant',
+      description: 'Intelligent code analysis and review platform with automated quality checks',
+      icon: Code,
+      features: [
+        'Automated code quality analysis',
+        'Security vulnerability detection',
+        'Performance optimization suggestions',
+        'Code style and best practices enforcement',
+        'Integration with Git and CI/CD',
+        'Team collaboration and feedback tools'
+      ],
+      pricing: '$299 - $1,200/month',
+      delivery: '3-5 weeks',
+      category: 'Development SaaS'
     }
   ];
 
