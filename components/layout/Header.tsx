@@ -23,8 +23,7 @@ const Header: React.FC = () => {
     { name: 'Solutions', href: '/solutions' },
     { name: 'Products', href: '/products' },
     { name: 'Partners', href: '/partners' },
-    { name: 'FAQ', href: '/faq' },
-    { name: 'News', href: '/news' },
+    { name: 'Resources', href: '/resources' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -36,11 +35,7 @@ const Header: React.FC = () => {
     { name: 'AI Content Generator', href: '/services/ai-content-generator' },
   ];
 
-  const solutionCategories = [
-    { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
-    { name: 'Small Business', href: '/solutions/small-business' },
-    { name: 'Startup Solutions', href: '/solutions/startups' },
-  ];
+  // Detailed solution categories are now handled inline in the dropdown
 
   return (
     <header className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-xl' : 'shadow-lg'}`}>
@@ -147,6 +142,25 @@ const Header: React.FC = () => {
                       >
                         Startup Solutions
                       </Link>
+                    </div>
+                  </div>
+                ) : item.name === 'Resources' ? (
+                  <div className="relative group">
+                    <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                      Resources
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <Link href="/blog" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Blog</Link>
+                      <Link href="/news" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">News</Link>
+                      <Link href="/case-studies" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Case Studies</Link>
+                      <Link href="/white-papers" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">White Papers</Link>
+                      <Link href="/webinars" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Webinars</Link>
+                      <Link href="/faq" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">FAQ</Link>
+                      <Link href="/status" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Status</Link>
+                      <Link href="/sitemap" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors">Sitemap</Link>
                     </div>
                   </div>
                 ) : (

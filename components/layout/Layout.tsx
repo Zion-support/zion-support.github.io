@@ -17,15 +17,3 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 };
 
 export default Layout;
-
-import React from 'react';
-
-type LayoutProps = {
-
-  children: React.ReactNode;
-};
-
-export default function Layout({ children }: LayoutProps) {
-
-  return <div>{children}</div>;
-}

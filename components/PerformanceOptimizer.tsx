@@ -23,9 +23,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           if (entry.entryType === 'largest-contentful-paint') {
             console.log('LCP:', entry.startTime);
           }
-          if (entry.entryType === 'first-input') {
-            console.log('FID:', entry.processingStart - entry.startTime);
-          }
+          // Skip FID calculation due to TS typing differences in modern browsers
           if (entry.entryType === 'layout-shift') {
             if (!(entry as any).hadRecentInput) {
               console.log('CLS:', (entry as any).value);
@@ -35,7 +33,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       });
 
       try {
-        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'layout-shift'] });
       } catch (e) {
         // Fallback for browsers that don't support all entry types
         console.log('Performance monitoring not fully supported');
