@@ -5,11 +5,14 @@ export const EnhancedHeader: React.FC = () => {
 
   const navLinks = [
     { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
     { label: 'Solutions', href: '/solutions' },
-    { label: 'Enterprise', href: '/enterprise' },
-    { label: 'Request Quote', href: '/request-quote' },
+    { label: 'AI Services', href: '/services/ai-services' },
+    { label: 'Micro SAAS', href: '/services/micro-saas' },
+    { label: 'IT Services', href: '/services/it-services' },
     { label: 'Case Studies', href: '/case-studies' },
+    { label: 'Team', href: '/team' },
     { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' }
   ];
