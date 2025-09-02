@@ -99,28 +99,63 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Contact', href: '/contact', icon: Phone },
     ],
     services: [
-      { name: 'Web Development', href: '/services/web-development', icon: Code },
-      { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain },
-      { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud },
-      { name: 'Data Analytics', href: '/services/data-analytics', icon: BarChart3 },
+      {
+        name: 'AI Services',
+        icon: Brain,
+        children: [
+          { name: 'AI Services', href: '/services/ai-services' },
+          { name: 'AI Development', href: '/services/ai-development' },
+        ]
+      },
+      {
+        name: 'IT & Development',
+        icon: Code,
+        children: [
+          { name: 'IT Services', href: '/services/it-services' },
+          { name: 'Web Development', href: '/services/web-development' },
+          { name: 'Cloud Services', href: '/services/cloud-services' },
+        ]
+      },
+      {
+        name: 'SaaS Solutions',
+        icon: Cloud,
+        children: [
+          { name: 'Micro SaaS', href: '/services/micro-saas' },
+        ]
+      },
     ],
     solutions: [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building },
-      { name: 'E-commerce', href: '/solutions/ecommerce', icon: ShoppingCart },
-      { name: 'Mobile Apps', href: '/solutions/mobile', icon: Smartphone },
-      { name: 'IoT Solutions', href: '/solutions/iot', icon: Network },
+      {
+        name: 'Automation Solutions',
+        icon: Zap,
+        children: [
+          { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
+          { name: 'Email Automation', href: '/solutions/email-automation' },
+          { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
+        ]
+      },
+      {
+        name: 'Business Solutions',
+        icon: Target,
+        children: [
+          { name: 'Customer Support', href: '/solutions/customer-support' },
+          { name: 'Event Management', href: '/solutions/event-management' },
+          { name: 'Project Management', href: '/solutions/project-management' },
+        ]
+      },
     ],
     resources: [
-      { name: 'Blog', href: '/blog', icon: FileText },
-      { name: 'Case Studies', href: '/case-studies', icon: Target },
-      { name: 'Documentation', href: '/docs', icon: BookOpen },
-      { name: 'Support', href: '/support', icon: LifeBuoy },
+      { name: 'Blog', href: '/blog', icon: BookOpen },
+      { name: 'Help Center', href: '/help', icon: HelpCircle },
+      { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign },
+      { name: 'Sitemap', href: '/sitemap', icon: Globe },
+      { name: 'Search', href: '/search', icon: Search },
     ],
-    company: [
-      { name: 'Our Team', href: '/team', icon: Users },
-      { name: 'Careers', href: '/careers', icon: Briefcase },
-      { name: 'News', href: '/news', icon: Newspaper },
-      { name: 'Contact', href: '/contact', icon: Mail },
+    support: [
+      { name: 'Contact Us', href: '/contact', icon: Phone },
+      { name: 'Privacy Policy', href: '/privacy', icon: Shield },
+      { name: 'Terms of Service', href: '/terms', icon: FileText },
+      { name: 'Cookie Policy', href: '/cookies', icon: Shield },
     ]
   }
   const quickActions = [

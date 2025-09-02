@@ -21,13 +21,13 @@ const NotFound: React.FC = () => {
   const quickLinks = [
     { name: 'Home', url: '/', icon: Home }, 
     { name: 'Services', url: '/services', icon: Briefcase },
+    { name: 'Solutions', url: '/solutions', icon: Award },
     { name: 'About', url: '/about', icon: Users }, 
     { name: 'Contact', url: '/contact', icon: Phone },
     { name: 'Blog', url: '/blog', icon: BookOpen }, 
-    { name: 'Pricing', url: '/pricing', icon: DollarSign },
-    { name: 'Team', url: '/team', icon: Award }, 
-    { name: 'Webinars', url: '/webinars', icon: Calendar },
-    { name: 'White Papers', url: '/white-papers', icon: FileText }, 
+    { name: 'Careers', url: '/careers', icon: Briefcase },
+    { name: 'Pricing Guide', url: '/pricing-guide', icon: DollarSign },
+    { name: 'Help Center', url: '/help', icon: FileText }, 
     { name: 'Privacy Policy', url: '/privacy', icon: Shield }
   ];
 
