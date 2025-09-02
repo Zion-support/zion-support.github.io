@@ -16,105 +16,105 @@ const AccessibilityManager: React.FC = () => {
     focusVisible: false,
     screenReader: false
   });
-;
+  
   const [isOpen, setIsOpen] = useState(false);
-;
-  useEffect(() => {;
-    // Check for user preferences;
+  
+  useEffect(() => {
+    // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
-;
-    // Load saved settings;
+    
+    // Load saved settings
     const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {;
+    if (savedSettings) {
       setSettings(JSON.parse(savedSettings));
-    } else {;
+    } else {
       setSettings(prev => ({
         ...prev,
         reducedMotion: prefersReducedMotion,
         highContrast: prefersHighContrast
       }));
     }
-;
-    // Detect screen reader;
+    
+    // Detect screen reader
     const hasScreenReader = window.speechSynthesis && window.speechSynthesis.getVoices().length > 0;
     setSettings(prev => ({ ...prev, screenReader: hasScreenReader }));
   }, []);
-;
-  useEffect(() => {;
-    // Apply accessibility settings;
+  
+  useEffect(() => {
+    // Apply accessibility settings
     const root = document.documentElement;
-;
-    // High contrast;
-    if (settings.highContrast) {;
+    
+    // High contrast
+    if (settings.highContrast) {
       root.classList.add('high-contrast');
-    } else {;
+    } else {
       root.classList.remove('high-contrast');
     }
-;
-    // Font size;
+    
+    // Font size
     root.setAttribute('data-font-size', settings.fontSize);
-;
-    // Reduced motion;
-    if (settings.reducedMotion) {;
+    
+    // Reduced motion
+    if (settings.reducedMotion) {
       root.classList.add('reduced-motion');
-    } else {;
+    } else {
       root.classList.remove('reduced-motion');
     }
-;
-    // Focus visible;
-    if (settings.focusVisible) {;
+    
+    // Focus visible
+    if (settings.focusVisible) {
       root.classList.add('focus-visible');
-    } else {;
+    } else {
       root.classList.remove('focus-visible');
     }
-;
-    // Save settings;
+    
+    // Save settings
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
   }, [settings]);
-;
-  const updateSetting = <K extends keyof AccessibilitySettings>(;
-    key: K,;
-    value: AccessibilitySettings[K];
-  ) => {;
+  
+  const updateSetting = <K extends keyof AccessibilitySettings>(
+    key: K,
+    value: AccessibilitySettings[K]
+  ) => {
     setSettings(prev => ({ ...prev, [key]: value }));
   };
-;
-  const announceToScreenReader = (message: string) => {;
-    if (settings.screenReader) {;
+  
+  const announceToScreenReader = (message: string) => {
+    if (settings.screenReader) {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
       announcement.setAttribute('aria-atomic', 'true');
       announcement.className = 'sr-only';
       announcement.textContent = message;
       document.body.appendChild(announcement);
-;
-      setTimeout(() => {;
+      
+      setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);
     }
   };
-;
-  const handleToggle = (key: keyof AccessibilitySettings, value: boolean) => {;
+  
+  const handleToggle = (key: keyof AccessibilitySettings, value: boolean) => {
     updateSetting(key, value);
     announceToScreenReader(`${key} ${value ? 'enabled' : 'disabled'}`);
   };
-;
-  const handleFontSizeChange = (size: AccessibilitySettings['fontSize']) => {;
+  
+  const handleFontSizeChange = (size: AccessibilitySettings['fontSize']) => {
     updateSetting('fontSize', size);
     announceToScreenReader(`Font size changed to ${size}`);
   };
-;
-  return (;
-    <>;
+  
+  return (
+    <>
       {/* Accessibility Controls */}
       <div className='accessibility-controls fixed bottom-4 right-4 z-50'>
-        <button;
+        <button
           onClick={() => setIsOpen(!isOpen)}
           className='bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2';
-          aria-label='Open accessibility settings';
+          aria-label='Open accessibility settings'
           aria-expanded={isOpen}
-        >;
+        >
           <svg className='w-6 h-6' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
             <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4' />
           </svg>

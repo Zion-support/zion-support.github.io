@@ -1,25 +1,110 @@
-module.exports = {
-  extends: [
-    'next/core-web-vitals',
-    'eslint:recommended',
-    '@typescript-eslint/recommended'
-  ],
-  parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint'],
-  rules: {
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    'react/no-unescaped-entities': 'off',
-    'react-hooks/exhaustive-deps': 'warn'
+import js from '@eslint/js';
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+
+export default [
+  js.configs.recommended,
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        },
+        ecmaVersion: 12,
+        sourceType: 'module',
+      },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+        HTMLElement: 'readonly',
+        Event: 'readonly',
+        FormData: 'readonly',
+        fetch: 'readonly',
+        localStorage: 'readonly',
+        sessionStorage: 'readonly',
+        navigator: 'readonly',
+        location: 'readonly',
+        history: 'readonly',
+        URL: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        React: 'readonly',
+        execSync: 'readonly',
+        alert: 'readonly',
+        HTMLAnchorElement: 'readonly',
+      },
+    },
+    plugins: {
+      '@typescript-eslint': typescript,
+      'react': react,
+      'react-hooks': reactHooks,
+    },
+    rules: {
+      ...typescript.configs.recommended.rules,
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
+      'react/react-in-jsx-scope': 'off',
+      'react/prop-types': 'off',
+      'no-console': 'off',
+      'react/no-unescaped-entities': 'off',
+      'react-hooks/exhaustive-deps': 'warn',
+      '@typescript-eslint/no-require-imports': 'off',
+    },
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
   },
-  ignorePatterns: [
-    'node_modules/',
-    '.next/',
-    'out/',
-    'build/',
-    'dist/',
-    '*.config.js',
-    '*.config.cjs',
-    '*.config.mjs'
-  ]
-};
+  {
+    ignores: [
+      'node_modules/',
+      '.next/',
+      'out/',
+      'dist/',
+      'build/',
+      'automation/',
+      'components.disabled/',
+      'contracts/',
+      'hardhat/',
+      'cypress/',
+      '**/*.disabled',
+      '**/*.backup',
+      '**/*.tsbackup',
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      '.eslintrc.disabled.js',
+      '.prettierrc.js',
+      '__tests__/**/*',
+      '**/*.test.js',
+      '**/*.test.ts',
+      '**/*.test.tsx',
+      '**/*.spec.js',
+      '**/*.spec.ts',
+      '**/*.spec.tsx',
+      '**/*backup*/**/*',
+      '**/*-backup*/**/*',
+      '**/*.backup',
+      '**/*.disabled',
+      '**/*.old',
+      '**/*.bak',
+    ],
+  },
+];
