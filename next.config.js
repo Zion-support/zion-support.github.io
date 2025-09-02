@@ -25,7 +25,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config, { dev, isServer }) => {
-    // Exclude contracts directory from compilation
+    // Exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       include: [
@@ -46,13 +46,15 @@ const nextConfig = {
         /broken_files_backup/,
         /contracts/,
         /cypress/,
+        /hardhat/,
       ],
     });
     
-    // Exclude contracts directory specifically
+    // Exclude contracts and hardhat from resolution
     config.resolve.alias = {
       ...config.resolve.alias,
       'hardhat/config': false,
+      'hardhat': false,
     };
     
     // Add fallback for problematic modules
