@@ -1,9 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';
+import { Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';
 import { 
   CheckCircle, 
   Star, 
@@ -24,19 +30,16 @@ import {
   Cloud,
   Database,
   Lock,
-  Network,
   BarChart3,
   Rocket,
   Heart,
   Sparkles,
-  Network,
   Calculator,
   BookOpen,
   Lightbulb,
   HelpCircle
-} from 'lucide-react';
-// Ensure all icons referenced below are imported
-import { Network } from 'lucide-react';
+} from
+  'lucide-react';
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [

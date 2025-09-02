@@ -1,4 +1,7 @@
-import React from 'react';'import { Link } from 'react-router-dom';'import { ;'  Brain, Mail,
+React from
+  'react';
+import { Link } from
+  'react-router-dom';'import { ;'  Brain, Mail,
   Phone, MapPin,
   Linkedin, Twitter,
   Github, Youtube,
@@ -10,7 +13,11 @@ import React from 'react';'import { Link } from 'react-router-dom';'import { ;' 
   Database, Network,
   Target, CheckCircle,
   ExternalLink
-} from 'lucide-react';'import { Button } from '../ui/Button';'import { Badge } from '../ui/Badge';''const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
+} from
+  'lucide-react';'{ Button } from
+  '../ui/Button';
+import { Badge } from
+  '../ui/Badge';''const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
 
   const serviceCategories = [;
     {

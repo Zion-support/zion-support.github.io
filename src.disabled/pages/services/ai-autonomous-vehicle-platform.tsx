@@ -1,6 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { Link } from
+  'react-router-dom';
 import { 
   Car, 
   Brain, 
@@ -31,7 +34,8 @@ import {
   MessageCircle,
   Phone,
   Mail
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 const AIAutonomousVehiclePlatform = () => {
   const features = [
@@ -373,8 +377,8 @@ const AIAutonomousVehiclePlatform = () => {
                 viewport={{ once: true }}
                 className={`relative bg-slate-800/30 backdrop-blur-sm border rounded-xl p-6 ${
                   tier.popular 
-                    ? 'border-blue-500/50 shadow-lg shadow-blue-500/20' 
-                    : 'border-slate-700/50'
+                    ?,
+  border-blue-500/50 shadow-lg shadow-blue-500/20': 'border-slate-700/50
                 }`}
               >
                 {tier.popular && (
@@ -408,8 +412,10 @@ const AIAutonomousVehiclePlatform = () => {
                   to={tier.name === "Enterprise" ? "/contact" : "/signup"}
                   className={`w-full px-6 py-3 rounded-lg font-semibold text-center transition-all duration-300 ${
                     tier.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700'
-                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white'
+                      ?,
+  bg-gradient-to-r from-blue-500 to-purple-600 text-white hover: from-blue-600 hover:to-purple-700'
+                      :
+  'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white
                   }`}
                 >
                   {tier.cta}

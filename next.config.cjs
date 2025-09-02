@@ -1,4 +1,5 @@
-/** @type {import('next').NextConfig} */
+/** @type {import(
+  'next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
 eslint: {
@@ -17,11 +18,13 @@ eslint: {
   typescript: {
     ignoreBuildErrors: true,},
   images: {
-    domains: ['ziontechgroup.com'],
+    domains: [
+  'ziontechgroup.com'],
     unoptimized: true,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV ===
+  'production',
   },
   webpack: (config, { dev, isServer }) => {
     // Completely exclude problematic directories from the build
@@ -52,8 +55,12 @@ eslint: {
     
     return config;
   },
-  // Only treat TypeScript pages as routes to avoid SSR issues from JSX pages using react-router-dom
-  pageExtensions: ['tsx', 'ts'],
+  // Try to exclude problematic directories at the Next.js level
+  pageExtensions: [
+  'tsx',
+  'ts',
+  'jsx',
+  'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
@@ -62,4 +69,4 @@ eslint: {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;

@@ -31,7 +31,8 @@ import {}
   Factory,
   Ship,
   Plane,
-  Store} from 'lucide-react';
+  Store} from
+  'lucide-react';
 
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
 export default function AISupplyChainOptimization() {
@@ -57,8 +58,10 @@ export default function AISupplyChainOptimization() {
             </div>""
             <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">"
               AI Supply Chain""
-              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">'
-                {' '}
+              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+  '
+                {' 
+  '}
                 Optimization
               </span>"
             </h1>""
@@ -287,11 +290,11 @@ export default function AISupplyChainOptimization() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
-'
-                  plan.popular''
-                    ? 'border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-red-500/10'''`
-                    : 'border-white/10 hover:border-orange-500/50'``
+                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${,
+  plan.popular'
+  '
+                    ? 'border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-red-500/10''
+  '`: 'border-white/10 hover:border-orange-500/50``
                 }`}
               >"{plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
@@ -328,11 +331,12 @@ export default function AISupplyChainOptimization() {
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
 `
                 <button``
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-'
-                    plan.popular''
-                      ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'''`
-                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'``}`}
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
+  plan.popular'
+  '
+                      ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover: from-orange-700 hover:to-red-700''
+  '`
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20``}`}
                 >
                   {plan.cta}
                 </button>
@@ -474,4 +478,4 @@ export default function AISupplyChainOptimization() {
       </section>
     </div>
   )}'"`
-'"`'"`
+  '"`'"`

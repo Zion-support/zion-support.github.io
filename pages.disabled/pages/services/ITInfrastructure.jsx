@@ -1,71 +1,102 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Helmet } from 'react-helmet-async';
-;
-:pages.disabled/pages/services/ITInfrastructure.jsx
+import React from,
+  react';'
+import { Link } from
+  'react-router-dom';'
+import { Helmet } from
+  'react-helmet-async';
+;: pages.disabled/pages/services/ITInfrastructure.jsx
 const ITInfrastructure = () => {
   const features = [
     {
-'
-      title: 'Network Management','
-      description:''
-        'Comprehensive network infrastructure design, implementation, and maintenance','
+  '
+      title: 'Network Management,'
+      description:,
+  '
+        'Comprehensive network infrastructure design, implementation, and maintenance
+  ','
+      features: ['
+  '
+        'Network Design,Performance Optimization,
+  ,Security Implementation
+  ',24/7 Monitoring',
+      ],
+  '
+      icon: '🌐},
+    {,
+  title: 'System Administration,
+,
+  description: ''Expert management of servers, operating systems, and enterprise applications,
+  ,
+  '
       features: [''
-        'Network Design',Performance Optimization',Security Implementation',24/7 Monitoring',
+  'Server Management,OS Administration,
+  ,Application Support',Performance Tuning
+  ',
       ],'
-      icon: '🌐'},
-    {
-'
-      title: 'System Administration','
-      description:''
-        'Expert management of servers, operating systems, and enterprise applications','
-      features: [''
-        'Server Management',OS Administration',Application Support',Performance Tuning',
-      ],'
-      icon: '🖥️'},
-    {
-'
-      title: 'Data Center Operations','
-      description:''
-        'Professional data center management and optimization services','
-      features: [''
-        'Facility Management',Power & Cooling',Hardware Maintenance',Capacity Planning',
-      ],'
-      icon: '🏢'},
-    {
-'
-      title: 'Performance Optimization','
-      description: 'System and network performance analysis and improvement','
-      features: [''
-        'Performance Monitoring',Bottleneck Analysis',Optimization Strategies',Capacity Planning',
-      ],'
-      icon: '⚡'},
+      icon: '🖥️},
+    {,
+  title: 'Data Center Operations,'
+      description:,
+  '
+        'Professional data center management and optimization services
+  ','
+      features: ['
+  '
+        'Facility Management,Power & Cooling,
+  ,Hardware Maintenance
+  ',Capacity Planning',
+      ],
+  '
+      icon: '🏢},
+    {,
+  title: 'Performance Optimization,
+,
+  description: 'System and network performance analysis and improvement,'
+      features: [,
+  '
+        'Performance Monitoring
+  ',Bottleneck Analysis',Optimization Strategies
+  ',Capacity Planning',
+      ],
+  '
+      icon: '⚡},
   ];
 
   const infrastructureAreas = [
-    {
-'
-      area: 'Hardware Infrastructure','
-      solutions: [''
-        'Servers',Storage systems',Network equipment',Workstations',
+    {,
+  area: 'Hardware Infrastructure,
+,
+  solutions: [''
+  'Servers,Storage systems,
+  ,Network equipment',Workstations
+  ',
       ]},
     {
 '
-      area: 'Software Infrastructure','
-      solutions: [''
-        'Operating systems',Virtualization platforms',Database systems',Management tools',
+      area: 'Software Infrastructure,
+,
+  solutions: [''
+  'Operating systems,Virtualization platforms,
+  ,Database systems',Management tools
+  ',
       ]},
     {
 '
-      area: 'Network Infrastructure','
-      solutions: [''
-        'LAN/WAN setup',Wireless networks',VPN solutions',Network security',
+      area: 'Network Infrastructure,
+,
+  solutions: [''
+  'LAN/WAN setup,Wireless networks,
+  ,VPN solutions',Network security
+  ',
       ]},
     {
 '
-      area: 'Storage Infrastructure','
-      solutions: [''
-        'Storage arrays',Backup systems',Cloud storage',Data protection',
+      area: 'Storage Infrastructure,
+,
+  solutions: [''
+  'Storage arrays,Backup systems
+  ',Cloud storage',Data protection
+  ',
       ]},];
 
   return()
@@ -104,7 +135,8 @@ const ITInfrastructure = () => {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">"
               IT""
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">'
-                {' '}
+                {
+  ' '}
                 Infrastructure
               </span>"</h1>""
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -297,7 +329,8 @@ const ITInfrastructure = () => {
 :pages.disabled/pages/services/ITInfrastructure.jsx
               Ready to Build Your Infrastructure?"
             </h2>""
-            <p className="text-xl text-gray-300 mb-8">'
+            <p className="text-xl text-gray-300 mb-8">
+  '
               Let's discuss how our infrastructure services can support your
               business growth
             </p>"
@@ -315,4 +348,4 @@ const ITInfrastructure = () => {
 
 :pages.disabled/pages/services/ITInfrastructure.jsx
 export default ITInfrastructure;'"
-'"'"
+  '"'"

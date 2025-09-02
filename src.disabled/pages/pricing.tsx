@@ -1,4 +1,5 @@
-import React from 'react';
+import React from
+  'react';
 
 const Pricing: React.FC = () => (
   <div className="max-w-5xl mx-auto px-4 py-12 text-white">
