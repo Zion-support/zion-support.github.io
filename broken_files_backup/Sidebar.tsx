@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from
+  'react';
+import { Link, useLocation } from
+  'react-router-dom';
 import {
   Home,
   Briefcase,
@@ -31,7 +33,8 @@ import {
   PieChart,
   BarChart,
   X,
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 interface SidebarItem {
   name: string;
@@ -48,121 +51,167 @@ export function Sidebar() {
 
   const sidebarItems: SidebarItem[] = [
     {
-      name: 'Dashboard',
-      path: '/',
+      name:,
+  Dashboard',
+      path: '/,
       icon: Home,
     },
     {
-      name: 'Services',
-      path: '/services',
+      name:,
+  Services',
+      path: '/services,
       icon: Briefcase,
       children: [
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
-        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
+        { name:,
+  AI Solutions', path: '/ai-solutions, icon: Brain },
+        { name:,
+  Cybersecurity', path: '/cybersecurity, icon: Shield },
+        { name:,
+  Quantum Technology', path: '/quantum-technology, icon: Cpu },
+        { name:,
+  Cloud & DevOps', path: '/services/cloud-devops, icon: Cloud },
         {
-          name: 'IT Infrastructure',
-          path: '/services/it-infrastructure',
+          name:,
+  IT Infrastructure',
+          path: '/services/it-infrastructure,
           icon: Server,
         },
         {
-          name: 'Digital Transformation',
-          path: '/services/digital-transformation',
+          name:,
+  Digital Transformation',
+          path: '/services/digital-transformation,
           icon: Zap,
         },
-        { name: 'Green IT', path: '/green-it', icon: Leaf },
-        { name: 'Space Tech', path: '/space-tech', icon: Rocket },
-        { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone },
+        { name:,
+  Green IT', path: '/green-it, icon: Leaf },
+        { name:,
+  Space Tech', path: '/space-tech, icon: Rocket },
+        { name:,
+  Mobile Solutions', path: '/mobile, icon: Smartphone },
         {
-          name: 'Financial Solutions',
-          path: '/financial-solutions',
+          name:,
+  Financial Solutions',
+          path: '/financial-solutions,
           icon: DollarSign,
         },
         {
-          name: 'Micro SaaS Services',
-          path: '/micro-saas-services',
+          name:,
+  Micro SaaS Services',
+          path: '/micro-saas-services,
           icon: Building,
         },
       ],
     },
     {
-      name: 'Company',
-      path: '/company',
+      name:,
+  Company',
+      path: '/company,
       icon: Building,
       children: [
-        { name: 'About Us', path: '/about', icon: Building },
-        { name: 'Our Team', path: '/team', icon: Users2 },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Handshake },
-        { name: 'Press', path: '/press', icon: FileText },
+        { name:,
+  About Us', path: '/about, icon: Building },
+        { name:,
+  Our Team', path: '/team, icon: Users2 },
+        { name:,
+  Careers', path: '/careers, icon: Briefcase },
+        { name:,
+  Partners', path: '/partners, icon: Handshake },
+        { name:,
+  Press', path: '/press, icon: FileText },
         {
-          name: 'Research & Development',
-          path: '/research-development',
+          name:,
+  Research & Development',
+          path: '/research-development,
           icon: Lightbulb,
         },
       ],
     },
     {
-      name: 'Resources',
-      path: '/resources',
+      name:,
+  Resources',
+      path: '/resources,
       icon: FileText,
       children: [
-        { name: 'Blog & Insights', path: '/blog', icon: BookOpen },
-        { name: 'Case Studies', path: '/case-studies', icon: Target },
-        { name: 'Help Center', path: '/help-center', icon: HelpCircle },
-        { name: 'API Documentation', path: '/api-docs', icon: Code },
-        { name: 'Tutorials', path: '/tutorials', icon: Code },
-        { name: 'Webinars', path: '/webinars', icon: Video },
-        { name: 'White Papers', path: '/white-papers', icon: FileSearch },
-        { name: 'Documentation', path: '/documentation', icon: Code },
+        { name:,
+  Blog & Insights', path: '/blog, icon: BookOpen },
+        { name:,
+  Case Studies', path: '/case-studies, icon: Target },
+        { name:,
+  Help Center', path: '/help-center, icon: HelpCircle },
+        { name:,
+  API Documentation', path: '/api-docs, icon: Code },
+        { name:,
+  Tutorials', path: '/tutorials, icon: Code },
+        { name:,
+  Webinars', path: '/webinars, icon: Video },
+        { name:,
+  White Papers', path: '/white-papers, icon: FileSearch },
+        { name:,
+  Documentation', path: '/documentation, icon: Code },
       ],
     },
     {
-      name: 'Support',
-      path: '/support',
+      name:,
+  Support',
+      path: '/support,
       icon: HelpCircle,
       children: [
-        { name: 'Help Center', path: '/help-center', icon: HelpCircle },
-        { name: 'FAQ', path: '/help-center#faq', icon: HelpCircle },
-        { name: 'Contact Support', path: '/contact', icon: MessageSquare },
+        { name:,
+  Help Center', path: '/help-center, icon: HelpCircle },
+        { name:,
+  FAQ', path: '/help-center#faq, icon: HelpCircle },
+        { name:,
+  Contact Support', path: '/contact, icon: MessageSquare },
         {
-          name: 'Live Chat',
-          path: '/help-center/live-chat',
+          name:,
+  Live Chat',
+          path: '/help-center/live-chat,
           icon: MessageSquare,
         },
-        { name: 'Status', path: '/status', icon: BarChart3 },
-        { name: 'Request Quote', path: '/contact', icon: MessageSquare },
+        { name:,
+  Status', path: '/status, icon: BarChart3 },
+        { name:,
+  Request Quote', path: '/contact, icon: MessageSquare },
       ],
     },
     {
-      name: 'Enterprise',
-      path: '/enterprise',
+      name:,
+  Enterprise',
+      path: '/enterprise,
       icon: Building,
       children: [
-        { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
-        { name: 'Custom Solutions', path: '/solutions', icon: Target },
-        { name: 'Partnerships', path: '/partners', icon: Handshake },
-        { name: 'Case Studies', path: '/case-studies', icon: Target },
+        { name:,
+  Enterprise Solutions', path: '/enterprise, icon: Building },
+        { name:,
+  Custom Solutions', path: '/solutions, icon: Target },
+        { name:,
+  Partnerships', path: '/partners, icon: Handshake },
+        { name:,
+  Case Studies', path: '/case-studies, icon: Target },
       ],
     },
     {
-      name: 'Analytics',
-      path: '/analytics',
+      name:,
+  Analytics',
+      path: '/analytics,
       icon: BarChart3,
       children: [
         {
-          name: 'Performance Metrics',
-          path: '/analytics/performance',
+          name:,
+  Performance Metrics',
+          path: '/analytics/performance,
           icon: Activity,
         },
-        { name: 'User Analytics', path: '/analytics/users', icon: Users },
+        { name:,
+  User Analytics', path: '/analytics/users, icon: Users },
         {
-          name: 'Business Intelligence',
-          path: '/analytics/bi',
+          name:,
+  Business Intelligence',
+          path: '/analytics/bi,
           icon: PieChart,
         },
-        { name: 'Reports', path: '/analytics/reports', icon: BarChart },
+        { name:,
+  Reports', path: '/analytics/reports, icon: BarChart },
       ],
     },
   ];
@@ -180,7 +229,8 @@ export function Sidebar() {
   return (
     <div
       className={`fixed inset-y-0 right-0 z-50 w-80 bg-slate-900/95 backdrop-blur-lg border-l border-white/10 transform transition-transform duration-300 ease-in-out ${
-        isOpen ? 'translate-x-0' : 'translate-x-full'
+        isOpen ?,
+  translate-x-0': 'translate-x-full
       }`}
     >
       <div className="flex flex-col h-full">
@@ -207,8 +257,8 @@ export function Sidebar() {
                       onClick={() => toggleItem(item.name)}
                       className={`w-full flex items-center justify-between p-3 rounded-lg text-left transition-colors ${
                         isActive(item.path)
-                          ? 'bg-blue-600/20 text-white'
-                          : 'text-gray-300 hover:text-white hover:bg-white/10'
+                          ?,
+  bg-blue-600/20 text-white': 'text-gray-300 hover:text-white hover:bg-white/10
                       }`}
                     >
                       <div className="flex items-center space-x-3">
@@ -217,7 +267,8 @@ export function Sidebar() {
                       </div>
                       <ChevronDown
                         className={`h-4 w-4 transition-transform ${
-                          expandedItems.includes(item.name) ? 'rotate-180' : ''
+                          expandedItems.includes(item.name) ?,
+  rotate-180': '
                         }`}
                       />
                     </button>
@@ -230,8 +281,9 @@ export function Sidebar() {
                             to={child.path}
                             className={`flex items-center space-x-3 p-2 rounded-lg transition-colors ${
                               isActive(child.path)
-                                ? 'bg-blue-600/20 text-white'
-                                : 'text-gray-400 hover:text-white hover:bg-white/10'
+                                ?,
+  bg-blue-600/20 text-white
+  ': 'text-gray-400 hover:text-white hover:bg-white/10
                             }`}
                             onClick={onClose}
                           >
@@ -247,8 +299,9 @@ export function Sidebar() {
                     to={item.path}
                     className={`flex items-center space-x-3 p-3 rounded-lg transition-colors ${
                       isActive(item.path)
-                        ? 'bg-blue-600/20 text-white'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
+                        ?,
+  bg-blue-600/20 text-white
+  ': 'text-gray-300 hover:text-white hover:bg-white/10
                     }`}
                     onClick={onClose}
                   >
