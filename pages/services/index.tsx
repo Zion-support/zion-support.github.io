@@ -96,7 +96,7 @@ const ServicesPage: NextPage = () => {
               and streamline your operations.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {microSaasServices.map((service) => (
               <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
                 <div className="flex items-start justify-between mb-6">
@@ -162,7 +162,7 @@ const ServicesPage: NextPage = () => {
               and optimize your technology operations.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {itServices.map((service) => (
               <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="flex items-start justify-between mb-6">
@@ -228,7 +228,7 @@ const ServicesPage: NextPage = () => {
               and create competitive advantages for your business.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {aiServices.map((service) => (
               <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
                 <div className="flex items-start justify-between mb-6">
