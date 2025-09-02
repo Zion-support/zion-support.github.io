@@ -1,42 +1,9 @@
-import type { NextPage } from 'next';
-// Common interfaces for better type safety
-interface ApiResponse<T = unknown> {
-  data: T;
-  status: number;
-  message?: string;
-}
-
-interface User {
-  id: string;
-  email: string;
-  name: string;
-  role: 'admin' | 'user' | 'guest';
-}
-
-interface Service {
-  id: string;
-  name: string;
-  description: string;
-  price: number;
-  category: string;
-}
-
-interface FormData {
-  [key: string]: string | number | boolean | File;
-}
-
-interface ComponentProps {
-  className?: string;
-  children?: React.ReactNode;
-  [key: string]: unknown;
-}
-
-
-import Layout from '../components/Layout';
+import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { BookOpen, Can, CheckCircle, Clock, Common, FileText, Frequently, HelpCircle, Mail, MessageCircle, Phone, Quick, Search, Users, Video, Within, Yes } from 'lucide-react';
 
-const Help: NextPage = () => {
+export default function Help() {
   const faqs = [
     {
       question: 'What services does Zion Tech Group offer?',
@@ -126,10 +93,14 @@ const Help: NextPage = () => {
     },
   ];
   return (
-    <Layout
-      title="Help & Support - Zion Tech Group"
-      description="Get help and support for Zion Tech Group services. Find answers to common questions, contact our support team, and access helpful resources."
-    >
+    <>
+      <Head>
+        <title>Help & Support - Zion Tech Group</title>
+        <meta name="description" content="Get help and support for Zion Tech Group services. Find answers to common questions, contact our support team, and access helpful resources." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -329,8 +300,7 @@ const Help: NextPage = () => {
           </div>
         </div>
       </section>
-    </Layout>
+      </main>
+    </>
   );
-};
-
-export default Help;
+}

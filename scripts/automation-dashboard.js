@@ -1,11 +1,11 @@
 #!/usr/bin/env node;
 import { execSync } from,
   child_process';
-import fs from;
+import fs from "fs";
   'fs';
-import path from;
+import path from "path";
   'path';
-import { fileURLToPath } from;
+import { fileURLToPath } from "url";
   'url';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(

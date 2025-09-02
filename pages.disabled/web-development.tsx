@@ -1,14 +1,18 @@
-import type { NextPage } from 'next';
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { Award, Best, Code, Cross, Globe, Mobile, Regular, Smartphone, Today, User, Users, Zap } from 'lucide-react';
 
-import Layout from '../../components/Layout';
-import Link from 'next/link';
-const WebDevelopment: NextPage = () => {
+export default function WebDevelopment() {
   return (
-    <Layout
-      title="Web Development Services - Zion Tech Group"
-      description="Modern, responsive web applications built with cutting-edge technologies. Transform your digital presence with our expert web development services."
-    >
+    <>
+      <Head>
+        <title>Web Development Services - Zion Tech Group</title>
+        <meta name="description" content="Modern, responsive web applications built with cutting-edge technologies. Transform your digital presence with our expert web development services." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      
+      <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-900 via-blue-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -264,8 +268,7 @@ const WebDevelopment: NextPage = () => {
           </div>
         </div>
       </section>
-    </Layout>
+      </main>
+    </>
   );
-};
-
-export default WebDevelopment;
+}

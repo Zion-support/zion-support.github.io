@@ -9,34 +9,41 @@ const Navigation: React.FC = () => {
   const navigationItems = [
     { name: 'Home', href: '/' },
     {
-      name: 'Services',
+      name: 'Services', 
       href: '/services',
       dropdown: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: 'All Services', href: '/services' }
+        { name: 'AI Services', href: '/services/ai-services' },
+        { name: 'IT Services', href: '/services/it-services' },
+        { name: 'Micro SaaS', href: '/services/micro-saas' },
+        { name: 'Web Development', href: '/services/web-development' },
+        { name: 'Cloud Services', href: '/services/cloud-services' },
+        { name: 'AI Development', href: '/services/ai-development' }
+      ]
+    }, 
+    {
+      name: 'Solutions',
+      href: '/solutions', 
+      dropdown: [
+        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
+        { name: 'Customer Support', href: '/solutions/customer-support' },
+        { name: 'Email Automation', href: '/solutions/email-automation' },
+        { name: 'Event Management', href: '/solutions/event-management' },
+        { name: 'Project Management', href: '/solutions/project-management' },
+        { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
       ]
     },
     {
-      name: 'Solutions',
-      href: '/solutions',
+      name: 'Company',
+      href: '/about',
       dropdown: [
-        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
-        { name: 'Email Automation', href: '/solutions/email-automation' },
-        { name: 'Customer Support Platform', href: '/solutions/customer-support' },
-        { name: 'Event Management', href: '/solutions/event-management' },
-        { name: 'Project Management', href: '/solutions/project-management' },
-        { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
-        { name: 'Affiliate Marketing Tracking', href: '/solutions/affiliate-tracking' },
-        { name: 'Financial Analytics', href: '/solutions/financial-analytics' },
-        { name: 'HR Management', href: '/solutions/hr-management' },
-        { name: 'Helpdesk & Support', href: '/solutions/helpdesk-support' }
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' }
       ]
     },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }
   ];
 

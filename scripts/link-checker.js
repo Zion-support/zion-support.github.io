@@ -4,11 +4,11 @@
  * Replaces GitHub Actions link-checker workflow;
  * Checks for broken links in the project;
  */;
-import fs from;
+import fs from "fs";
   'fs';
-import path from;
+import path from "path";
   'path';
-import { fileURLToPath } from;
+import { fileURLToPath } from "url";
   'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);

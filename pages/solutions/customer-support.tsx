@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
+
 import { Card } from '../../components/ui/Card';
 import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
@@ -60,11 +60,6 @@ export default function CustomerSupport() {
 
   return (
     <>
-      <SEO
-        title="Customer Support Platform - Zion Tech Group"
-        description="AI-powered customer support system with chatbots, ticket management, and knowledge base. Improve customer satisfaction."
-        keywords="customer support, AI chatbots, ticket management, knowledge base, helpdesk"
-      />
       <Head>
         <title>Customer Support Platform - Zion Tech Group</title>
       </Head>
