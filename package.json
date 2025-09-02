@@ -41,9 +41,10 @@
     "analyze": "ANALYZE=true npm run build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test": "vitest run --reporter=verbose",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "ci": "bash scripts/ci-check.sh"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
