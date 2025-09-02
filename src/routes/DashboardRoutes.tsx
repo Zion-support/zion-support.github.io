@@ -23,8 +23,7 @@ const Dashboard = lazy(() => import('../pages/Dashboard'));'const ClientDashboar
         <Route path="/project-details" element={"          <ProtectedRoute>"            <ProjectDetails />
           </ProtectedRoute>
         } />
-        <Route path="/project-room" element={"          <ProtectedRoute>"            <ProjectRoom />
-          </ProtectedRoute>
+        <Route path="/project-room" element={"          <ProtectedRoute>"            <ProjectRoom /></ProtectedRoute>
         } />
       </Routes>
     </Suspense>

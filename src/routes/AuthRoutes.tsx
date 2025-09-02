@@ -8,8 +8,7 @@ const Login = lazy(() => import('../pages/Login'));'const Signup = lazy(() => im
         <Route path="/dashboard" element={"          <ProtectedRoute>"            <div>Dashboard</div>
           </ProtectedRoute>
         } />
-        <Route path="/settings" element={"          <ProtectedRoute>"            <div>Settings</div>
-          </ProtectedRoute>
+        <Route path="/settings" element={"          <ProtectedRoute>"            <div>Settings</div></ProtectedRoute>
         } />
       </Routes>
     </Suspense>

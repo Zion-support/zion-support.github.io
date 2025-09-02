@@ -33,8 +33,7 @@ export default function EnhancedLoadingSpinner({
             }}
             transition={{ ;
               duration: 1.5, repeat: Infinity, ;
-              delay: i * 0.2, ease: "easeInOut""            }}"          />
-        ))}
+              delay: i * 0.2, ease: "easeInOut""            }}"          />))}
       </div>
     </div>
   )

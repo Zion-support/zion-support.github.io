@@ -4,7 +4,6 @@ import AICodeGenerator from './AICodeGenerator';''describe('AICodeGenerator', ()
     // Add specific content checks based on component functionality
   });
 
-  it('handles user interactions', () => {''    render(<AICodeGenerator />);
-    // Add interaction tests based on component functionality
+  it('handles user interactions', () => {''    render(<AICodeGenerator />);// Add interaction tests based on component functionality
   });
 });

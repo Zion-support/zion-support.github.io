@@ -1,5 +1,31 @@
 #!/bin/bash
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# Script to resolve common merge conflicts
+echo "Starting merge conflict resolution..."
+
+# Find all files with merge conflicts
+conflicted_files=$(grep -l "^<<<<<<<\|^=======\|^>>>>>>>" -r src/ 2>/dev/null | head -20)
+
+for file in $conflicted_files; do
+    echo "Processing: $file"
+    
+    # Create a backup
+    cp "$file" "$file.backup"
+    
+    # Remove merge conflict markers and keep the first version (HEAD)
+    sed -i '/^<<<<<<< /,/^=======/d' "$file"
+    sed -i '/^>>>>>>> /d' "$file"
+    
+    echo "Resolved conflicts in: $file"
+done
+
+echo "Merge conflict resolution completed for first 20 files."
+echo "Please review the changes and test the build."
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 echo "Starting merge conflict resolution..."
 
 # List of critical files that we want to keep our version for
@@ -57,5 +83,19 @@ while IFS= read -r file; do
 done <<< "$conflict_files"
 
 echo "Merge conflict resolution completed!"
+<<<<<<< HEAD
 
 # Do not auto-run build here to avoid CI side effects
+=======
+echo "Running build to check for errors..."
+
+# Try to build the project
+npm run build
+
+if [ $? -eq 0 ]; then
+    echo "✅ Build successful after conflict resolution!"
+else
+    echo "❌ Build failed. Please check for remaining issues."
+fi
+>>>>>>> d6585b798475a0a58fc2298a75192e5aeb0df69c
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

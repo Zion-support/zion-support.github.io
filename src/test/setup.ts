@@ -16,5 +16,4 @@ global.ResizeObserver = vi.fn().mockImplementation(() => ({;
 global.scrollTo = vi.fn();
 // Mock console methods to reduce noise in tests
 global.console = {
-  ...console, warn: vi.fn(), error: vi.fn(),
-}
+  ...console, warn: vi.fn(), error: vi.fn(),}

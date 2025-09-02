@@ -30,9 +30,7 @@ import React, { useState              } from 'react.ts';'import Link from 'next/
   Leaf, Sun,
   Wind
   
-} from 'lucide-react.ts';''interface SidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+} from 'lucide-react.ts';''interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
   onClose: ()               => void}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
@@ -50,7 +48,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
   const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === path;
 
-  const navigation = {;
+const navigation = {;
 
     main: [
       { name: 'Home', href: '/', icon: Home }, { name: 'About', href: '/about', icon: Building },'      { name: 'Services', href: '/services', icon: Briefcase }, { name: 'Solutions', href: '/solutions', icon: Target },'      { name: 'Partners', href: '/partners', icon: Handshake }, { name: 'Careers', href: '/careers', icon: Users },'      { name: 'Blog', href: '/blog', icon: Newspaper }, { name: 'Contact', href: '/contact', icon: Phone },'    ], services: ['      { name: 'AI Solutions', href: '/services/ai-solutions', icon: Brain, description: 'Autonomous AI systems' }, { name: 'Cloud & DevOps', href: '/services/cloud', icon: Cloud, description: 'Infrastructure & automation' }, { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield, description: 'Zero-trust security' }, { name: 'Data & Analytics', href: '/services/data', icon: Database, description: 'Data pipelines & ML ops' }, { name: 'Micro SaaS', href: '/services/micro-saas', icon: Store, description: 'Rapid product development' }, { name: 'Digital Transformation', href: '/services/transformation', icon: Rocket, description: 'Business modernization' },  ], solutions: ['      { name: 'Enterprise', href: '/solutions/enterprise', icon: Building2, description: 'Large-scale implementations' }, { name: 'SMB', href: '/solutions/smb', icon: Store, description: 'Small business focused' }, { name: 'Startup', href: '/solutions/startup', icon: Rocket, description: 'Growth acceleration' }, { name: 'Government', href: '/solutions/government', icon: Building, description: 'Public sector expertise' }, { name: 'Healthcare', href: '/solutions/healthcare', icon: Heart, description: 'Health tech solutions' }, { name: 'Financial Services', href: '/solutions/financial', icon: DollarSign, description: 'Fintech & compliance' },  ], resources: ['      { name: 'Documentation', href: '/docs', icon: FileText, description: 'Technical guides' }, { name: 'API Reference', href: '/api', icon: Code, description: 'Developer resources' }, { name: 'Case Studies', href: '/case-studies', icon: BarChart3, description: 'Success stories' }, { name: 'Help Center', href: '/help', icon: HelpCircle, description: 'Support & FAQs' }, { name: 'Status', href: '/status', icon: CheckCircle, description: 'System status' }, { name: 'Pricing', href: '/pricing', icon: DollarSign, description: 'Service pricing' },  ], company: ['      { name: 'About Us', href: '/about', icon: Building, description: 'Our story & mission' }, { name: 'Team', href: '/team', icon: Users, description: 'Meet our experts' }, { name: 'Partners', href: '/partners', icon: Handshake, description: 'Strategic partnerships' }, { name: 'Careers', href: '/careers', icon: Briefcase, description: 'Join our team' }, { name: 'News', href: '/news', icon: Newspaper, description: 'Company updates' }, { name: 'Press', href: '/press', icon: Quote, description: 'Media resources' },  ]'  };'
@@ -70,8 +68,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               onClick={onClose}
               className={`flex items-center gap-3 px-3 py-2 text-sm rounded-lg transition-all duration-200 ${`
                 isActive(item.href);
-                  ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan''                  : 'text-gray-400 hover:text-white hover:bg-white/5''              }`}'            >`              <item.icon className="w-4 h-4 flex-shrink-0" />"              <div className="flex-1 min-w-0">"                <div className="font-medium">{item.name}</div>"                {item.description && ("                  <div className="text-xs text-gray-500 truncate">{item.description}</div>"                )}"              </div>
-            </Link>
+                  ? 'bg-zion-cyan/20 text-zion-cyan border-l-2 border-zion-cyan''                  : 'text-gray-400 hover:text-white hover:bg-white/5''              }`}'            >`              <item.icon className="w-4 h-4 flex-shrink-0" />"              <div className="flex-1 min-w-0">"                <div className="font-medium">{item.name}</div>"                {item.description && ("                  <div className="text-xs text-gray-500 truncate">{item.description}</div>"                )}"              </div></Link>
           ))}
         </div>
       )}
@@ -83,7 +80,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Backdrop */}
       {isOpen && (
         <div 
-          className = "fixed inset-0 bg-black/50 z-40 lg: hidden""          onClick={onClose}"        />
+className = "fixed inset-0 bg-black/50 z-40 lg: hidden""          onClick={onClose}"        />
       )}
 
       {/* Sidebar */}
@@ -102,12 +99,11 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   key={action.name}
                   href={action.href}
                   onClick={onClose}
-                  className="flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-200 group""                >"                  <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>`                    <action.icon className="w-4 h-4 text-white" />"                  </div>"                  <span className="text-xs text-white text-center">{action.name}</span>"                </Link>"              ))}
-            </div>
+                  className="flex flex-col items-center gap-2 p-3 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-200 group""                >"                  <div className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-200`}>`                    <action.icon className="w-4 h-4 text-white" />"                  </div>"                  <span className="text-xs text-white text-center">{action.name}</span>"                </Link>"              ))}</div>
           </div>
 
           {/* Main Navigation */}
-          <div className="space-y-1">"            {navigation.main.map((item) => ("              <Link
+<div className="space-y-1">"            {navigation.main.map((item) => ("              <Link
                 key={item.name}
                 href={item.href}
                 onClick={onClose}
@@ -140,8 +136,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <div className="text-xs text-zion-slate-light text-center">"            © {new Date().getFullYear()} Zion Tech Group;"          </div>
         </div>
       </div>
-</>
-  );
+</>);
 };
 
 export default MainSidebar;

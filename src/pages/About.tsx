@@ -6,8 +6,7 @@ import React from 'react';'import { SEO } from '../components/SEO';''const About
           </p>
           <p className="text-lg text-gray-600">"            Our team of experts specializes in AI, cybersecurity, cloud infrastructure, and digital transformation services."          </p></div>
       </div>
-</>
-  );
+</>);
 };
 
 export default About;

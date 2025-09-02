@@ -1,7 +1,5 @@
 import React, { useState, useEffect              } from 'react.ts';'import Link from 'next/link.ts';'import { motion, AnimatePresence               } from 'framer-motion.ts';'import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ;'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star
-              } from 'lucide-react.ts';''interface SidebarItem {
-
-  name: string;
+              } from 'lucide-react.ts';''interface SidebarItem {name: string;
   href: string;
   icon: React.ReactNode;
   description?: string;
@@ -12,17 +10,6 @@ import React, { useState, useEffect              } from 'react.ts';'import Link 
   isHot?: boolean;
   isPremium?: boolean;
 category?: string;
-
-
-
-
-
-
-
-
-
-
-
 
 }
 
@@ -66,8 +53,7 @@ const sidebarSections = [;
 
         name: 'Resources','        href: '/resources', icon: BookOpen,'        description: 'Educational content and documentation', subItems['          { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api-docs' }, { name: 'Blog & News', href: '/blog' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'Whitepapers', href: '/whitepapers' }, { name: 'Webinars', href: '/webinars' }'        ]'      }, {;
 
-        name: 'Support','        href: '/support', icon: HelpCircle,'        description: 'Get help and support', subItems['          { name: 'Contact Support', href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training';'},;'          { name: 'Community Forum', href: '/community' },;'          { name: 'Knowledge Base', href: '/knowledge-base' };'        ];'      };
-    ];
+        name: 'Support','        href: '/support', icon: HelpCircle,'        description: 'Get help and support', subItems['          { name: 'Contact Support', href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training';'},;'          { name: 'Community Forum', href: '/community' },;'          { name: 'Knowledge Base', href: '/knowledge-base' };'        ];'      };];
   };
 ];
 
@@ -76,9 +62,7 @@ interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
   isOpen: boolean;
   onClose: ()               => void}
 
-export default function EnhancedSidebar2025(...args[]: any): {
-
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+export default function EnhancedSidebar2025(...args[]: any): {const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
       newExpanded.delete(sectionTitle)} else {
@@ -104,10 +88,8 @@ export default function EnhancedSidebar2025(...args[]: any): {
 
     if (isOpen) {
 
-      document.body.style.overflow = 'hidden'} else {''      document.body.style.overflow = 'unset'}';'    return () => {;
-      document.body.style.overflow = 'unset'}}, [isOpen]);''  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;
-
-  return (
+document.body.style.overflow = 'hidden'} else {''      document.body.style.overflow = 'unset'}';'    return () => {;
+      document.body.style.overflow = 'unset'}}, [isOpen]);''  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (
     <>
       {/* Backdrop */}
       <AnimatePresence>
@@ -117,21 +99,14 @@ export default function EnhancedSidebar2025(...args[]: any): {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden""            onClick={onClose}"          />
-        )}
+className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden""            onClick={onClose}"          />)}
       </AnimatePresence>
 
       {/* Sidebar */}
       <motion.div
-        initial={{ x: '-100%' }}'        animate={{ x: isOpen ? 0 : '-100%' }}'        transition = {'
-  { type: 'spring', damping: 25,'  stiffness: 200 '
-
-
-
-
-
-}}
-        className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`
+initial={{ x: '-100%' }}'        animate={{ x: isOpen ? 0 : '-100%' }}'        transition = {'
+  { type: 'spring', damping: 25,'  stiffness: 200 '}}
+className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`
         {/* Header */}
         <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6">"          <div className="flex items-center justify-between mb-6">"            <div className="flex items-center gap-3">"              <div className="relative">"                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">"                  <Zap className="w-6 h-6 text-white" />"                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20"></div>"              </div>"              <div>
                 <h2 className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">"                  Zion Tech Group"                </h2>
@@ -151,50 +126,28 @@ export default function EnhancedSidebar2025(...args[]: any): {
           {sidebarSections.map((section, sectionIndex) => (
             <div key={sectionIndex} className="space-y-3">"              <button"                onClick={() => toggleSection(section.title)}
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"""                <div className="flex items-center gap-3">"                  <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>"                    <section.icon className="w-4 h-4 text-white" />"                  </div>"                  <span className="text-white font-semibold">{section.title}</span>"                </div>"                <ChevronDown`                  className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${`
-                    expandedSections.has(section.title) ? 'rotate-180' : '''                  }`}'                />`              </button>
-
-              <AnimatePresence>
+                    expandedSections.has(section.title) ? 'rotate-180' : '''                  }`}'                />`              </button><AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
                     initial = {
 
-  { opacity: 0, height: 0 
-
-
-
-
-
-
-}}
+{ opacity: 0, height: 0}}
                     animate = {
 
-  { opacity: 1,;
-  height: 'auto' ''
-
-
-
-
-}}
+{ opacity: 1,;
+  height: 'auto' ''}}
                     exit = {
 
-  { opacity: 0, height: 0 
-
-
-
-
-
-
-}}
+{ opacity: 0, height: 0}}
                     transition={{ duration: 0.3 }}
-                    className="space-y-2 ml-6"""                    {section.items.map((item, itemIndex) => (
+className="space-y-2 ml-6"""                    {section.items.map((item, itemIndex) => (
                       <div key={itemIndex} className="space-y-2">"                        <button"                          onClick={() => toggleItem(item.name)}
                           className="w-full flex items-center justify-between p-2 hover: bg-gray-800/30 rounded-lg transition-all duration-300 group text-left"""                          <div className="flex items-center gap-3">"                            <item.icon className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 transition-colors duration-200" />"                            <div>"                              <span className="text-gray-300 group-hover:text-white transition-colors duration-200 text-sm font-medium">"                                {item.name}"                              </span>
                               <p className="text-gray-500 text-xs">{item.description}</p>"                            </div>"                          </div>
                           {item.subItems && item.subItems.length > 0 && (
                             <ChevronRight
                               className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${`
-                                expandedItems.has(item.name) ? 'rotate-90' : '''                              }`}'                            />`                          )}
-                        </button>
+                                expandedItems.has(item.name) ? 'rotate-90' : '''                              }`}'                            />`                          )}</button>
 
                         {/* Sub-items */}
                         {item.subItems && item.subItems.length > 0 && (
@@ -203,41 +156,20 @@ export default function EnhancedSidebar2025(...args[]: any): {
                               <motion.div
                                 initial = {
 
-  { opacity: 0, height: 0 
-
-
-
-
-
-
-}}
+{ opacity: 0, height: 0}}
                                 animate = {
 
-  { opacity: 1,;
-  height: 'auto' ''
-
-
-
-
-}}
+{ opacity: 1,;
+  height: 'auto' ''}}
                                 exit = {
 
-  { opacity: 0, height: 0 
-
-
-
-
-
-
-}}
+{ opacity: 0, height: 0}}
                                 transition={{ duration: 0.3 }}
-                                className="space-y-1 ml-6"""                                {item.subItems.map((subItem, subIndex) => (
-                                  <Link
+className="space-y-1 ml-6"""                                {item.subItems.map((subItem, subIndex) => (<Link
                                     key={subIndex}
                                     href={subItem.href}
                                     onClick={onClose}
-                                    className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group"""                                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>"                                    <span className="text-gray-400 group-hover:text-cyan-300 transition-colors duration-200 text-xs">"                                      {subItem.name}"                                    </span>
-                                  </Link>
+className="flex items-center gap-2 p-2 hover: bg-gray-800/20 rounded-lg transition-all duration-300 group"""                                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full group-hover:scale-150 transition-transform duration-200"></div>"                                    <span className="text-gray-400 group-hover:text-cyan-300 transition-colors duration-200 text-xs">"                                      {subItem.name}"                                    </span></Link>
                                 ))}
                               </motion.div>
                             )}
@@ -252,7 +184,7 @@ export default function EnhancedSidebar2025(...args[]: any): {
           ))}
 
           {/* Quick Stats */}
-          <div className="pt-6 border-t border-gray-800/50">"            <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>"            <div className="grid grid-cols-2 gap-3">"              <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">"                <div className="text-lg font-bold text-cyan-400">500+</div>"                <div className="text-xs text-gray-400">Services</div>"              </div>"              <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">"                <div className="text-lg font-bold text-purple-400">1000+</div>"                <div className="text-xs text-gray-400">Clients</div>"              </div>"            </div>
+<div className="pt-6 border-t border-gray-800/50">"            <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Quick Stats</h4>"            <div className="grid grid-cols-2 gap-3">"              <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">"                <div className="text-lg font-bold text-cyan-400">500+</div>"                <div className="text-xs text-gray-400">Services</div>"              </div>"              <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/30">"                <div className="text-lg font-bold text-purple-400">1000+</div>"                <div className="text-xs text-gray-400">Clients</div>"              </div>"            </div>
           </div>
 
           {/* Contact CTA */}
@@ -263,6 +195,5 @@ export default function EnhancedSidebar2025(...args[]: any): {
           </div>;
         </div>;
       </motion.div>;
-</>;
-  );
+</>;);
 }

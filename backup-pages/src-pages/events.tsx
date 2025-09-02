@@ -20,8 +20,7 @@ import {
   BookOpen,
   CheckCircle} from 'lucide-react.ts';
 
-'All','
-  'AI & ML','
+'All',''AI & ML','
   'Cybersecurity','
   'Cloud & DevOps','
   'Data Analytics','
@@ -36,16 +35,14 @@ export default function Events(...args: any[]): any {
   const [selectedStatus, setSelectedStatus] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
 
-    return matchesType && matchesCategory && matchesStatus && matchesSearch}) ;
-
-    return date.toLocaleDateString('en-US', {
+return matchesType && matchesCategory && matchesStatus && matchesSearch}) ;return date.toLocaleDateString('en-US', {
 
       weekday: 'long',
       year: 'numeric',
       month: 'long',
       day: 'numeric'})};
 
-      case 'Cybersecurity':
+case 'Cybersecurity':
         return Shield;
       case 'Cloud & DevOps':
         return Cloud;
@@ -185,7 +182,7 @@ export default function Events(...args: any[]): any {
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {upcomingEvents.map((event, index) => {
 
-                return()                  <motion.div
+return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -320,7 +317,7 @@ export default function Events(...args: any[]): any {
             <div className="grid grid-cols-1 lg: anygrid-cols-2 gap-8">
               {pastEvents.map((event, index) => {
 
-                return()                  <motion.div
+return()                  <motion.div
                     key={event.id}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}

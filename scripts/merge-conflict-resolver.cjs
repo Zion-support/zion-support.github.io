@@ -258,3 +258,7 @@ if (require.main === module) {
 }
 
 module.exports = MergeConflictResolver;
+<<<<<<< HEAD
+=======
+>>>>>>> e2490d5a35d5a0dd04450da6c597434927cc01aa
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

@@ -522,7 +522,7 @@ class DependencyMonitor {;
         const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days;
 ;
         for (const filePath = path.join(logsDir, file);
-const stats = fs.statSync(filePath);
+const stats = fs.statSync(filePath);const stats = fs.statSync(filePath);
 ;
             if (now - stats.mtime.getTime() > maxAge) {;
               fs.unlinkSync(filePath);

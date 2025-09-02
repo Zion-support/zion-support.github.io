@@ -36,7 +36,7 @@
     "build:vite": "vite build",
     "start": "next start",
     "start:vite": "vite preview",
-    "lint": "eslint .",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "type-check": "tsc --noEmit",
     "analyze": "ANALYZE=true npm run build",
     "format": "prettier --write .",
@@ -94,6 +94,7 @@
     "node-cron": "^4.2.1",
     "openai": "^5.11.0",
     "path": "^0.12.7",
+<<<<<<< HEAD
     "postcss": "^8.4.32",
     "queue-microtask": "^1.2.3",
     "react": "^17.0.2",

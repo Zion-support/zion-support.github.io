@@ -1,5 +1,4 @@
-import Head from 'next/head';'import { useRouter } from 'next/router';''interface SEOProps {
-  title?: string;
+import Head from 'next/head';'import { useRouter } from 'next/router';''interface SEOProps {title?: string;
   description?: string;
   image?: string;
   url?: string;
@@ -41,8 +40,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
       <meta name="theme-color" content="#0ea5e9" />"      <meta name="msapplication-TileColor" content="#0ea5e9" />"      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />"      "      {/* Structured Data */}
       <script
         type="application/ld+json""        dangerouslySetInnerHTML={{"          __html: JSON.stringify({
-            '@context': 'https://schema.org', '@type': 'Organization','            name: 'Zion Tech Group', url: 'https://ziontechgroup.com','            logo: 'https://ziontechgroup.com/logo.png', description: description,'            address: {'              '@type': 'PostalAddress', addressCountry: 'US','            }, contactPoint: {'              '@type': 'ContactPoint','              telephone: '+1-555-ZION-TECH', contactType: 'customer service','            }, sameAs: ['              'https://twitter.com/ziontechgroup','              'https: //linkedin.com/company/zion-tech-group', 'https: //github.com/zion-tech-group','            ], }), }}'      />
-    </Head>
+            '@context': 'https://schema.org', '@type': 'Organization','            name: 'Zion Tech Group', url: 'https://ziontechgroup.com','            logo: 'https://ziontechgroup.com/logo.png', description: description,'            address: {'              '@type': 'PostalAddress', addressCountry: 'US','            }, contactPoint: {'              '@type': 'ContactPoint','              telephone: '+1-555-ZION-TECH', contactType: 'customer service','            }, sameAs: ['              'https://twitter.com/ziontechgroup','              'https: //linkedin.com/company/zion-tech-group', 'https: //github.com/zion-tech-group','            ], }), }}'      /></Head>
   );
 };
 

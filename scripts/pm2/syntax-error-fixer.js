@@ -124,10 +124,88 @@ class SyntaxErrorFixer {
         { pattern: /{\s*$/, error: 'Unclosed brace' },
         { pattern: /\w+:\s*$/, error: 'Missing type or value' },
         { pattern: /return\s*}/, error: 'Missing return value' },
-        { pattern: //, error: 'Git merge conflict marker' },
-        { pattern: /{ pattern: /.replace(/\\n([\\s\\S]*?)}
+{ pattern: //, error: 'Git merge conflict marker' },
+        { pattern: /{ pattern: /.replace(/\\n([\\s\\S]*?)}{ pattern: //, error: 'Git merge conflict marker' },
+        { pattern: /'\s*$/, error: 'Unterminated string literal' },
+        { pattern: /"\s*$/, error: 'Unterminated string literal' },
+      ];
 
-  saveReport(report) {
+      lines.forEach((line, index) => {
+        patterns.forEach(({ pattern, error }) => {
+          if (pattern.test(line)) {
+            errors.push({
+              line: index + 1,
+              content: line.trim(),
+              error,
+              type: 'syntax'
+            });
+          }
+        });
+      });
+
+    } catch (error) {
+      errors.push({
+        line: 1,
+        content: '',
+        error: `File read error: ${error.message}`,
+        type: 'file-error'
+      });
+    }
+
+    return errors;
+  }
+
+  async fixSyntaxErrors(filePath, errors) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      let modified = false;
+
+      // Handle merge conflicts first
+      if (content.includes('')) {
+        content = this.fixMergeConflicts(content);
+        modified = true;
+      }
+
+      // Fix incomplete exports
+      content = content.replace(/export\\s*$/gm, 'export default {};');
+      if (content !== fs.readFileSync(filePath, 'utf8')) modified = true;
+
+      // Fix missing type annotations
+      content = content.replace(/(\\w+):\\s*;/g, '$1: any;');
+      if (content !== fs.readFileSync(filePath, 'utf8')) modified = true;
+
+      // Fix unclosed braces
+      const openBraces = (content.match(/{/g) || []).length;
+      const closeBraces = (content.match(/}/g) || []).length;
+      if (openBraces > closeBraces) {
+        content += '\\n'.repeat(openBraces - closeBraces) + '}'.repeat(openBraces - closeBraces);
+        modified = true;
+      }
+
+      // Fix unterminated strings
+      content = content.replace(/'/g, "'").replace(/"/g, '"');
+
+      if (modified) {
+        // Create backup
+        fs.writeFileSync(filePath + '.backup', fs.readFileSync(filePath, 'utf8'));
+        
+        // Write fixed content
+        fs.writeFileSync(filePath, content);
+        return true;
+      }
+
+      return false;
+    } catch (error) {
+      console.error(`Error fixing ${filePath}:`, error.message);
+      return false;
+    }
+  }
+
+  fixMergeConflicts(content) {
+    // Simple merge conflict resolution - take HEAD version
+    return content
+      .replace(/\\n([\\s\\S]*?).replace(/\\n([\\s\\S]*?)}
+saveReport(report) {
     try {
       fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
     } catch (error) {

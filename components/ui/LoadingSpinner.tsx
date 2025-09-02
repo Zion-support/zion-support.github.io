@@ -9,8 +9,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         className={`${sizeClasses[size]} border-2 border-blue-200 border-t-blue-600 rounded-full`}`        animate={{ rotate: 360 }}
         transition={{;
           duration: 1, repeat: Infinity,;
-          ease: "linear""        }}"      />
-    </div>
+          ease: "linear""        }}"      /></div>
   );
 };
 

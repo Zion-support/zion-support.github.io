@@ -21,8 +21,8 @@ self.addEventListener('install', (event) => {
           STATIC_FILES.map(url =>
             cache.add(url).catch(error => {
               // // // // // // // console.warn(`Dev SW: Failed to cache ${url}:`, error);
-return null;
-            })
+return null;return null;
+})
           )
         );
       })
@@ -34,8 +34,8 @@ return null;
       })
       .catch((error) => {
         // // // // // // // console.error('Dev SW: Error in install:', error);
-})
-  );
+})})
+);
 });
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
@@ -46,14 +46,14 @@ self.addEventListener('activate', (event) => {
           cacheNames.map((cacheName) => {
             if (cacheName !== CACHE_NAME) {
               // // // // // // // console.log('Dev SW: Deleting old cache:', cacheName);
-return caches.delete(cacheName);
-          })
+return caches.delete(cacheName);return caches.delete(cacheName);
+})
         );
       })
       .then(() => {
         // // // // // // // console.log('Dev SW: Activated');
-return self.clients.claim();
-      })
+return self.clients.claim();return self.clients.claim();
+})
   );
 });
 // Fetch event - network first for development
@@ -68,8 +68,8 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(request).catch((error) => {
         // // // // // // // console.warn('Dev SW: External request failed:', url.href, error);
-// Return empty response for failed external requests
-        return new Response('', { status: 204 });
+// Return empty response for failed external requests// Return empty response for failed external requests
+return new Response('', { status: 204 });
       })
     );
     return;
@@ -87,8 +87,8 @@ self.addEventListener('fetch', (event) => {
       })
       .catch((error) => {
         // // // // // // // console.log('Dev SW: Network failed, trying cache:', url.href);
-// Try to serve from cache if network fails
-        return caches.match(request).then((cachedResponse) => {
+// Try to serve from cache if network fails// Try to serve from cache if network fails
+return caches.match(request).then((cachedResponse) => {
           if (cachedResponse) {
             return cachedResponse;
           // Return offline page for navigation requests

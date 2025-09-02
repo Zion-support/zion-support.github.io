@@ -1,14 +1,16 @@
-:backup-pages/src-pages/ContactPage.tsx
-import {
+:backup-pages/src-pages/ContactPage.tsximport {
 
   Phone,  Mail,
   MapPin,
   Clock,
-  MessageSquare,Send,
+MessageSquare,Send,
+  CheckCircle,
+  Globe,
+:backup-pages/src-pages/ContactPage.tsxSend,
   CheckCircle,
   Globe,
 :backup-pages/src-pages/ContactPage.tsx
-  ArrowRight,
+ArrowRight,
   Linkedin,
   Twitter,
   Github,
@@ -20,12 +22,16 @@ export function ContactPage(...args: any[]): any {
   const [formData, setFormData] = useState({
 
     firstName: '',
-    lastName: '',email: '',
+lastName: '',email: '',
+    company: '',
+    phone: '',
+    service: '',
+:backup-pages/src-pages/ContactPage.tsxemail: '',
     company: '',
     phone: '',
     service: '',
 :backup-pages/src-pages/ContactPage.tsx
-    message: ''});
+message: ''});
 
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) };
@@ -53,7 +59,7 @@ export function ContactPage(...args: any[]): any {
         service: '',
         message: ''})}, 3000)};
 
-  if (isSubmitted) {
+if (isSubmitted) {
 
     return()
       <div className="min-h-screen py-8 flex items-center justify-center">"
@@ -259,15 +265,14 @@ export function ContactPage(...args: any[]): any {
                     value={formData.service}
                     onChange={handleInputChange}"
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  >"<option value="">Select a service</option>
-                    {services.map((service, index) => (
+>"<option value="">Select a service</option><option value="">Select a service</option>
+{services.map((service, index) => (
                       <option key={index} value={service}>{service}</option>
                     ))}
                   </select>
                 </div>
 
-:backup-pages/src-pages/ContactPage.tsx
-              <div>
+:backup-pages/src-pages/ContactPage.tsx<div>
                 <label"
                   htmlFor="message"
                   className="block text-sm font-medium text-gray-300 mb-2"

@@ -31,7 +31,7 @@ async function prerender() {
 }
 prerender().catch((err) => {
   // // // // // // // console.error('Error prerendering:', err);
-process.exit(1);
+process.exit(1);process.exit(1);
 });
 }
 

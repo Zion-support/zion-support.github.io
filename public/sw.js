@@ -34,13 +34,12 @@ self.addEventListener('fetch', (event) => {
         }
         return fetch(event.request);
       }
-    ));
+)););
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
-event.waitUntil(
-    caches.keys().then((cacheNames) => {
+event.waitUntil(caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
           if (cacheName !== CACHE_NAME) {
