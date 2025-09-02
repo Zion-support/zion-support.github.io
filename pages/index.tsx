@@ -16,24 +16,24 @@ export default function Home() {
   const services = [
     {
       title: 'AI Services',
-      description: 'Revolutionary AI solutions including autonomous systems, machine learning, and intelligent automation',
+      description: 'Cutting-edge AI solutions including drug discovery, quantum computing, climate analytics, and autonomous systems',
       icon: Brain,
       href: '/ai-services',
-      features: ['AI-Powered Drug Discovery', 'Quantum Computing Interface', 'Climate Analytics', 'Space Analytics']
+      features: ['AI-Powered Drug Discovery', 'Quantum Computing Interface', 'Climate Analytics', 'Space Analytics', 'Autonomous Vehicles', 'Smart City Management']
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive IT infrastructure, cybersecurity, cloud solutions, and digital transformation',
+      description: 'Enterprise-grade IT infrastructure, cybersecurity, cloud solutions, and digital transformation services',
       icon: Network,
       href: '/it-services',
-      features: ['Zero Trust Security', 'Edge Computing', 'Digital Twin Platforms', 'Hyperautomation']
+      features: ['Zero Trust Security', 'Edge Computing', 'Digital Twin Platforms', 'Hyperautomation', 'MLOps Infrastructure', 'Blockchain Solutions']
     },
     {
       title: 'Micro SaaS',
-      description: 'Innovative micro SaaS solutions for modern businesses with rapid deployment',
+      description: 'Innovative micro SaaS solutions for modern businesses with rapid deployment and scalable architecture',
       icon: Cloud,
       href: '/micro-saas',
-      features: ['Affiliate Marketing Tracker', 'Contract Management', 'Video Content Generator', 'Energy Management']
+      features: ['Code Review Assistant', 'Contract Management', 'Video Content Analyzer', 'Energy Management', 'Healthcare Analytics', 'Financial Planning']
     }
   ];
 
@@ -190,26 +190,43 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
               {/* Pricing Highlights */}
               <div className="bg-white rounded-lg p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Pricing Ranges</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Competitive Service Pricing</h3>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="text-gray-700">Micro SaaS Solutions</span>
+                    <div>
+                      <span className="text-gray-700 font-medium">Micro SaaS Solutions</span>
+                      <p className="text-xs text-gray-500">Rapid deployment, scalable architecture</p>
+                    </div>
                     <span className="font-semibold text-blue-600">$99 - $8,000/month</span>
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="text-gray-700">AI Services</span>
-                    <span className="font-semibold text-blue-600">$1,500 - $100,000/month</span>
+                    <div>
+                      <span className="text-gray-700 font-medium">AI Services</span>
+                      <p className="text-xs text-gray-500">Advanced AI, ML, and automation</p>
+                    </div>
+                    <span className="font-semibold text-blue-600">$1,500 - $300,000/month</span>
                   </div>
                   <div className="flex justify-between items-center py-3 border-b border-gray-100">
-                    <span className="text-gray-700">IT Services</span>
-                    <span className="font-semibold text-blue-600">$1,500 - $100,000/month</span>
+                    <div>
+                      <span className="text-gray-700 font-medium">IT Services</span>
+                      <p className="text-xs text-gray-500">Infrastructure, security, cloud solutions</p>
+                    </div>
+                    <span className="font-semibold text-blue-600">$1,500 - $200,000/month</span>
                   </div>
                   <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-700">Enterprise Solutions</span>
+                    <div>
+                      <span className="text-gray-700 font-medium">Enterprise Solutions</span>
+                      <p className="text-xs text-gray-500">Custom development, consulting</p>
+                    </div>
                     <span className="font-semibold text-blue-600">Custom Pricing</span>
                   </div>
                 </div>
-                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                <div className="mt-6 p-4 bg-green-50 rounded-lg">
+                  <p className="text-sm text-green-800">
+                    <strong>Market Advantage:</strong> Our pricing is 15-30% below market rates while delivering superior quality and faster delivery times.
+                  </p>
+                </div>
+                <div className="mt-4 p-4 bg-blue-50 rounded-lg">
                   <p className="text-sm text-blue-800">
                     <strong>Free Consultation:</strong> All projects start with a complimentary strategy session to understand your needs and provide accurate pricing.
                   </p>
@@ -218,20 +235,22 @@ export default function Home() {
 
               {/* Contact Information */}
               <div className="bg-white rounded-lg p-8 shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Zion Tech Group</h3>
                 <div className="space-y-4">
                   <div className="flex items-center">
                     <Phone className="w-5 h-5 text-blue-600 mr-3" />
                     <div>
                       <p className="font-semibold text-gray-900">Phone</p>
-                      <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">+1 302 464 0950</a>
+                      <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700 font-medium">+1 302 464 0950</a>
+                      <p className="text-xs text-gray-500">Available 24/7 for urgent support</p>
                     </div>
                   </div>
                   <div className="flex items-center">
                     <Mail className="w-5 h-5 text-blue-600 mr-3" />
                     <div>
                       <p className="font-semibold text-gray-900">Email</p>
-                      <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">kleber@ziontechgroup.com</a>
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700 font-medium">kleber@ziontechgroup.com</a>
+                      <p className="text-xs text-gray-500">Response within 2 hours</p>
                     </div>
                   </div>
                   <div className="flex items-start">
@@ -241,14 +260,26 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">Address</p>
+                      <p className="font-semibold text-gray-900">Headquarters</p>
                       <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                      <p className="text-xs text-gray-500">Serving clients globally</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <Globe className="w-5 h-5 text-blue-600 mr-3" />
+                    <div>
+                      <p className="font-semibold text-gray-900">Website</p>
+                      <a href="https://ziontechgroup.com" className="text-blue-600 hover:text-blue-700 font-medium">https://ziontechgroup.com</a>
+                      <p className="text-xs text-gray-500">Explore our full service portfolio</p>
                     </div>
                   </div>
                 </div>
-                <div className="mt-6">
+                <div className="mt-6 space-y-3">
                   <Link href="/contact" className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block">
                     Schedule Free Consultation
+                  </Link>
+                  <Link href="/services" className="w-full border-2 border-blue-600 text-blue-600 py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors text-center block">
+                    View All Services
                   </Link>
                 </div>
               </div>

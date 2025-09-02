@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Eye, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -302,14 +302,14 @@ export default function ITServices() {
       features: [
         'Enterprise blockchain platform development',
         'Smart contract auditing and optimization',
-        'DeFi protocol integration and development',
+        'DeFi protocol integration',
+        'NFT marketplace development',
         'Cross-chain interoperability solutions',
-        'NFT marketplace and tokenization',
-        'Blockchain governance and DAO implementation',
+        'Blockchain governance and tokenomics',
       ],
       pricing: '$12,000 - $80,000/month',
-      delivery: '12-24 weeks',
-      category: 'Web3 Services',
+      delivery: '10-24 weeks',
+      category: 'Blockchain Services',
     },
     {
       title: 'AI Infrastructure & MLOps',
@@ -317,16 +317,186 @@ export default function ITServices() {
         'Complete AI infrastructure setup with machine learning operations and model deployment',
       icon: Brain,
       features: [
-        'AI/ML infrastructure design and setup',
-        'Model training and deployment pipelines',
-        'MLOps and model lifecycle management',
+        'MLOps pipeline development and automation',
+        'AI model training and deployment infrastructure',
         'GPU cluster management and optimization',
-        'AI model monitoring and governance',
-        'AutoML and hyperparameter optimization',
+        'Model versioning and monitoring',
+        'Auto-scaling AI workloads',
+        'AI security and compliance frameworks',
       ],
       pricing: '$8,000 - $50,000/month',
       delivery: '8-16 weeks',
       category: 'AI Infrastructure',
+    },
+    {
+      title: 'Edge AI & Computer Vision Systems',
+      description:
+        'Edge computing solutions with AI and computer vision for real-time processing',
+      icon: Eye,
+      features: [
+        'Edge AI model deployment and optimization',
+        'Computer vision system development',
+        'Real-time video analytics',
+        'Edge device management and monitoring',
+        'Low-latency processing optimization',
+        'Edge-to-cloud data synchronization',
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '6-14 weeks',
+      category: 'Edge AI Services',
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description:
+        'Comprehensive zero trust security implementation with identity and access management',
+      icon: Shield,
+      features: [
+        'Zero trust network architecture design',
+        'Identity and access management (IAM)',
+        'Multi-factor authentication implementation',
+        'Network segmentation and micro-segmentation',
+        'Continuous security monitoring',
+        'Compliance automation and reporting',
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '8-20 weeks',
+      category: 'Security Services',
+    },
+    {
+      title: 'Hybrid Cloud & Multi-Cloud Management',
+      description:
+        'Advanced hybrid and multi-cloud infrastructure with seamless workload orchestration',
+      icon: Cloud,
+      features: [
+        'Multi-cloud strategy and architecture',
+        'Hybrid cloud workload migration',
+        'Cloud cost optimization and FinOps',
+        'Cross-cloud data synchronization',
+        'Disaster recovery across clouds',
+        'Cloud governance and compliance',
+      ],
+      pricing: '$12,000 - $75,000/month',
+      delivery: '10-24 weeks',
+      category: 'Cloud Services',
+    },
+    {
+      title: 'Advanced Analytics & Data Engineering',
+      description:
+        'Enterprise data engineering with real-time analytics and business intelligence',
+      icon: BarChart3,
+      features: [
+        'Real-time data pipeline development',
+        'Advanced analytics and machine learning',
+        'Data lake and warehouse architecture',
+        'Stream processing and event-driven analytics',
+        'Data governance and quality management',
+        'Self-service analytics platforms',
+      ],
+      pricing: '$8,000 - $45,000/month',
+      delivery: '8-18 weeks',
+      category: 'Data Services',
+    },
+    {
+      title: 'Robotic Process Automation (RPA)',
+      description:
+        'Intelligent automation solutions with RPA and AI for business process optimization',
+      icon: Settings,
+      features: [
+        'RPA bot development and deployment',
+        'Process mining and optimization',
+        'AI-powered decision automation',
+        'Workflow orchestration and management',
+        'Exception handling and monitoring',
+        'Integration with enterprise systems',
+      ],
+      pricing: '$5,000 - $30,000/month',
+      delivery: '6-16 weeks',
+      category: 'Automation Services',
+    },
+    {
+      title: 'Cybersecurity Operations Center (SOC)',
+      description:
+        '24/7 security monitoring and incident response with advanced threat detection',
+      icon: Shield,
+      features: [
+        '24/7 security monitoring and alerting',
+        'Advanced threat detection and response',
+        'Security incident management',
+        'Threat intelligence and analysis',
+        'Vulnerability management and patching',
+        'Security awareness training and testing',
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '4-8 weeks',
+      category: 'Security Services',
+    },
+    {
+      title: 'Digital Twin & Simulation Platforms',
+      description:
+        'Digital twin development for industrial and business process simulation',
+      icon: Monitor,
+      features: [
+        'Digital twin architecture and development',
+        'Real-time simulation and modeling',
+        'IoT sensor integration and data processing',
+        'Predictive maintenance and optimization',
+        'Virtual testing and validation',
+        'Integration with existing systems',
+      ],
+      pricing: '$20,000 - $120,000/month',
+      delivery: '12-32 weeks',
+      category: 'Simulation Services',
+    },
+    {
+      title: 'Advanced Network Security & SD-WAN',
+      description:
+        'Next-generation network security with software-defined wide area networking',
+      icon: Network,
+      features: [
+        'SD-WAN implementation and optimization',
+        'Next-generation firewall deployment',
+        'Network segmentation and micro-segmentation',
+        'Advanced threat protection',
+        'Network performance monitoring',
+        'Cloud connectivity optimization',
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '6-16 weeks',
+      category: 'Network Services',
+    },
+    {
+      title: 'Serverless & Event-Driven Architecture',
+      description:
+        'Modern serverless architecture with event-driven design and microservices',
+      icon: Server,
+      features: [
+        'Serverless architecture design and implementation',
+        'Event-driven system development',
+        'Microservices architecture and orchestration',
+        'Function-as-a-Service (FaaS) optimization',
+        'Event streaming and message queuing',
+        'Auto-scaling and cost optimization',
+      ],
+      pricing: '$6,000 - $35,000/month',
+      delivery: '6-14 weeks',
+      category: 'Architecture Services',
+    },
+    {
+      title: 'Advanced Compliance & Governance',
+      description:
+        'Comprehensive compliance management with automated governance and risk assessment',
+      icon: Shield,
+      features: [
+        'Compliance automation and monitoring',
+        'Risk assessment and management',
+        'Audit trail and documentation',
+        'Regulatory reporting automation',
+        'Policy management and enforcement',
+        'Third-party risk assessment',
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '8-20 weeks',
+      category: 'Compliance Services',
     },
     {
       title: 'Edge Computing & Distributed Systems',
