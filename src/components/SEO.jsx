@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -18,3 +19,6 @@ export function SEO({
 }
 
 export default SEO;
+=======
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages.disabled_auto/pricing.tsx
 import React from
   'react';
 import { motion } from
@@ -19,6 +20,23 @@ import {
   Globe, 
   Phone, 
   Mail, 
+=======
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
+import {
+  CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  Phone,
+  Mail,
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
   ArrowRight,
   DollarSign,
   TrendingUp,
@@ -32,109 +50,134 @@ import {
   BarChart3,
   Rocket,
   Heart,
+<<<<<<< HEAD:pages.disabled_auto/pricing.tsx
   Sparkles
 } from
   'lucide-react';
+=======
+  Sparkles,
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
 
 const Pricing: React.FC = () => {
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for small businesses getting started with AI",
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
+      description: 'Perfect for small businesses getting started with AI',
       features: [
-        "AI-powered analytics dashboard",
-        "Basic automation tools",
-        "Email support",
-        "Up to 5 team members",
-        "Standard integrations",
-        "Monthly reports"
+        'AI-powered analytics dashboard',
+        'Basic automation tools',
+        'Email support',
+        'Up to 5 team members',
+        'Standard integrations',
+        'Monthly reports',
       ],
       popular: false,
-      color: "from-blue-500 to-cyan-500",
-      buttonText: "Get Started",
-      buttonVariant: "outline" as const
+      color: 'from-blue-500 to-cyan-500',
+      buttonText: 'Get Started',
+      buttonVariant: 'outline' as const,
     },
     {
-      name: "Professional",
-      price: "$799",
-      period: "/month",
-      description: "Ideal for growing businesses with advanced needs",
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
+      description: 'Ideal for growing businesses with advanced needs',
       features: [
-        "Advanced AI analytics",
-        "Custom automation workflows",
-        "Priority support",
-        "Up to 25 team members",
-        "Advanced integrations",
-        "Real-time reporting",
-        "API access",
-        "Custom branding"
+        'Advanced AI analytics',
+        'Custom automation workflows',
+        'Priority support',
+        'Up to 25 team members',
+        'Advanced integrations',
+        'Real-time reporting',
+        'API access',
+        'Custom branding',
       ],
       popular: true,
-      color: "from-purple-500 to-pink-500",
-      buttonText: "Start Free Trial",
-      buttonVariant: "default" as const
+      color: 'from-purple-500 to-pink-500',
+      buttonText: 'Start Free Trial',
+      buttonVariant: 'default' as const,
     },
     {
-      name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Tailored solutions for large organizations",
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large organizations',
       features: [
-        "Unlimited AI capabilities",
-        "Custom AI model training",
-        "Dedicated support team",
-        "Unlimited team members",
-        "White-label solutions",
-        "Advanced security",
-        "Custom integrations",
-        "24/7 phone support",
-        "SLA guarantee"
+        'Unlimited AI capabilities',
+        'Custom AI model training',
+        'Dedicated support team',
+        'Unlimited team members',
+        'White-label solutions',
+        'Advanced security',
+        'Custom integrations',
+        '24/7 phone support',
+        'SLA guarantee',
       ],
       popular: false,
-      color: "from-orange-500 to-red-500",
-      buttonText: "Contact Sales",
-      buttonVariant: "outline" as const
-    }
+      color: 'from-orange-500 to-red-500',
+      buttonText: 'Contact Sales',
+      buttonVariant: 'outline' as const,
+    },
   ];
 
   const servicePricing = [
     {
-      service: "AI Development",
-      startingPrice: "$5,000",
-      description: "Custom AI solutions and machine learning models",
-      features: ["Custom AI models", "Data analysis", "Integration support", "Training & documentation"]
+      service: 'AI Development',
+      startingPrice: '$5,000',
+      description: 'Custom AI solutions and machine learning models',
+      features: [
+        'Custom AI models',
+        'Data analysis',
+        'Integration support',
+        'Training & documentation',
+      ],
     },
     {
-      service: "Cloud Migration",
-      startingPrice: "$3,000",
-      description: "Seamless migration to cloud infrastructure",
-      features: ["Infrastructure assessment", "Migration planning", "Data transfer", "Performance optimization"]
+      service: 'Cloud Migration',
+      startingPrice: '$3, 000',
+      description: 'Seamless migration to cloud infrastructure',
+      features: [
+        'Infrastructure assessment',
+        'Migration planning',
+        'Data transfer',
+        'Performance optimization',
+      ],
     },
     {
-      service: "Cybersecurity",
-      startingPrice: "$2,500",
-      description: "Comprehensive security solutions and monitoring",
-      features: ["Security audit", "Threat monitoring", "Incident response", "Compliance support"]
+      service: 'Cybersecurity',
+      startingPrice: '$2, 500',
+      description: 'Comprehensive security solutions and monitoring',
+      features: [
+        'Security audit',
+        'Threat monitoring',
+        'Incident response',
+        'Compliance support',
+      ],
     },
     {
-      service: "Digital Transformation",
-      startingPrice: "$10,000",
-      description: "End-to-end digital transformation consulting",
-      features: ["Strategy development", "Process optimization", "Technology implementation", "Change management"]
-    }
+      service: 'Digital Transformation',
+      startingPrice: '$10, 000',
+      description: 'End-to-end digital transformation consulting',
+      features: [
+        'Strategy development',
+        'Process optimization',
+        'Technology implementation',
+        'Change management',
+      ],
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Pricing - Zion Tech Group" 
+      <SEO
+        title="Pricing - Zion Tech Group"
         description="Transparent pricing for AI-powered solutions. Choose the perfect plan for your business needs with flexible options and enterprise solutions."
       />
-      
+
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -149,7 +192,8 @@ const Pricing: React.FC = () => {
               Choose Your Perfect Plan
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your business. Start small and grow with us.
+              Flexible pricing options designed to scale with your business.
+              Start small and grow with us.
             </p>
           </motion.div>
         </div>
@@ -172,8 +216,14 @@ const Pricing: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="relative"
               >
+<<<<<<< HEAD:pages.disabled_auto/pricing.tsx
                 <Card className={`p-8 h-full ${plan.popular ?,
   ring-2 ring-purple-500 scale-105': '}`}>
+=======
+                <Card
+                  className={`p-8 h-full ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}
+                >
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">
@@ -182,11 +232,15 @@ const Pricing: React.FC = () => {
                       </Badge>
                     </div>
                   )}
-                  
+
                   <div className="text-center mb-8">
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      {plan.name}
+                    </h3>
                     <div className="mb-4">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-4xl font-bold text-white">
+                        {plan.price}
+                      </span>
                       <span className="text-gray-400">{plan.period}</span>
                     </div>
                     <p className="text-gray-300">{plan.description}</p>
@@ -194,16 +248,19 @@ const Pricing: React.FC = () => {
 
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
+                      <li
+                        key={featureIndex}
+                        className="flex items-center text-gray-300"
+                      >
                         <CheckCircle className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
 
-                  <Button 
+                  <Button
                     variant={plan.buttonVariant}
-                    className={`w-full bg-gradient-to-r ${plan.color} text-white hover:opacity-90 transition-opacity`}
+                    className={`w-full bg-gradient-to-r ${plan.color} text-white hover: opacity-90 transition-opacity`}
                   >
                     {plan.buttonText}
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -216,7 +273,7 @@ const Pricing: React.FC = () => {
       </section>
 
       {/* Service Pricing */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -242,12 +299,16 @@ const Pricing: React.FC = () => {
               >
                 <Card className="p-6 h-full">
                   <div className="text-center">
-                    <h3 className="text-xl font-bold text-white mb-2">{service.service}</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">
+                      {service.service}
+                    </h3>
                     <div className="text-3xl font-bold text-blue-400 mb-2">
                       {service.startingPrice}
                     </div>
-                    <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                    
+                    <p className="text-gray-300 mb-4 text-sm">
+                      {service.description}
+                    </p>
+
                     <ul className="space-y-2 text-sm text-gray-300">
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-center">
@@ -265,7 +326,7 @@ const Pricing: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -276,10 +337,14 @@ const Pricing: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Get started today with a free consultation and discover how our AI solutions can drive your success.
+              Get started today with a free consultation and discover how our AI
+              solutions can drive your success.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
+              >
                 <Phone className="w-5 h-5 mr-2" />
                 Schedule Free Consultation
               </Button>

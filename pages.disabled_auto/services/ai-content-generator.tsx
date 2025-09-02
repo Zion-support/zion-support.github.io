@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
 import React from,
   react';
 import type { NextPage } from
@@ -8,10 +9,26 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from
   'lucide-react';
 import Link from
   'next/link';
+=======
+import React from 'react';
+import type { NextPage } from 'next';
+import MainLayout from '../../components/layout/MainLayout';
+import {
+  CheckCircle,
+  Star,
+  Users,
+  Zap,
+  Globe,
+  Shield,
+  ArrowRight,
+} from 'lucide-react';
+import Link from 'next/link';
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
 
 const AIContentGenerator: NextPage = () => {
   const features = [
     {
+<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
       title:
   'Multi-Language Support,
       description:
@@ -36,6 +53,28 @@ const AIContentGenerator: NextPage = () => {
       description: 'Work together with your team in real-time,
       icon: <Users className="w-6 h-6" />
     }
+=======
+      title: 'Multi-Language Support',
+      description:
+        'Generate content in over 50 languages with native-level quality',
+      icon: <Globe className="w-6 h-6" />,
+    },
+    {
+      title: 'SEO Optimization',
+      description: 'AI-powered SEO optimization for better search rankings',
+      icon: <Zap className="w-6 h-6" />,
+    },
+    {
+      title: 'Brand Voice Consistency',
+      description: 'Maintain consistent brand voice across all content',
+      icon: <Shield className="w-6 h-6" />,
+    },
+    {
+      title: 'Real-time Collaboration',
+      description: 'Work together with your team in real-time',
+      icon: <Users className="w-6 h-6" />,
+    },
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
   ];
 
   const pricingPlans = [
@@ -47,13 +86,21 @@ const AIContentGenerator: NextPage = () => {
   /month',
       description: 'Perfect for small businesses and individuals,
       features: [
+<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
   '10,000 words per month',
   '5 languages supported',
   'Basic SEO optimization',
   'Email support',
   'Standard templates'
+=======
+        '10, 000 words per month',
+        '5 languages supported',
+        'Basic SEO optimization',
+        'Email support',
+        'Standard templates',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
       ],
-      popular: false
+      popular: false,
     },
     {
       name:,
@@ -63,6 +110,7 @@ const AIContentGenerator: NextPage = () => {
   /month',
       description: 'Ideal for growing businesses and content teams,
       features: [
+<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
   '50,000 words per month',
   '25 languages supported',
   'Advanced SEO optimization',
@@ -70,8 +118,17 @@ const AIContentGenerator: NextPage = () => {
   'Custom templates',
   'Team collaboration (up to 5 users)',
   'API access'
+=======
+        '50, 000 words per month',
+        '25 languages supported',
+        'Advanced SEO optimization',
+        'Priority support',
+        'Custom templates',
+        'Team collaboration (up to 5 users)',
+        'API access',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
       ],
-      popular: true
+      popular: true,
     },
     {
       name:,
@@ -81,6 +138,7 @@ const AIContentGenerator: NextPage = () => {
   ',
       description: 'Tailored solutions for large organizations,
       features: [
+<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
         'Unlimited words
   ',
         'All languages supported
@@ -97,9 +155,19 @@ const AIContentGenerator: NextPage = () => {
   ',
         'Custom integrations
   '
+=======
+        'Unlimited words',
+        'All languages supported',
+        'Custom AI models',
+        'Dedicated support',
+        'White-label solution',
+        'Unlimited team members',
+        'Advanced analytics',
+        'Custom integrations',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
       ],
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   return (
@@ -110,19 +178,29 @@ const AIContentGenerator: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            AI Content <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Generator</span>
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
+            AI Content{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              Generator
+            </span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Transform your content creation process with our advanced AI-powered platform. 
-            Generate high-quality, SEO-optimized content in minutes, not hours.
+            Transform your content creation process with our advanced AI-powered
+            platform. Generate high-quality, SEO-optimized content in minutes,
+            not hours.
           </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+
+          <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
               Start Free Trial
             </Link>
-            <Link href="#demo" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link
+              href="#demo"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
               Watch Demo
             </Link>
           </div>
@@ -153,19 +231,26 @@ const AIContentGenerator: NextPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Powerful Features</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Powerful Features
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Everything you need to create exceptional content at scale.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center">
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-lg text-center"
+              >
                 <div className="text-blue-600 mb-4 flex justify-center">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
                 <p className="text-gray-600">{feature.description}</p>
               </div>
             ))}
@@ -177,17 +262,26 @@ const AIContentGenerator: NextPage = () => {
       <section className="py-20" id="pricing">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Simple, Transparent Pricing</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Simple, Transparent Pricing
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the plan that fits your content creation needs.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
+<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
               <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${plan.popular ?,
   ring-2 ring-blue-500
   ': '}`}>
+=======
+              <div
+                key={index}
+                className={`bg-white p-8 rounded-lg shadow-lg relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}
+              >
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -195,16 +289,18 @@ const AIContentGenerator: NextPage = () => {
                     </span>
                   </div>
                 )}
-                
+
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {plan.name}
+                  </h3>
                   <div className="text-4xl font-bold text-blue-600 mb-1">
                     {plan.price}
                     <span className="text-lg text-gray-500">{plan.period}</span>
                   </div>
                   <p className="text-gray-600">{plan.description}</p>
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
@@ -213,15 +309,20 @@ const AIContentGenerator: NextPage = () => {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Link
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
+<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
                       ?,
   bg-blue-600 hover: bg-blue-700 text-white'
                       :
   'bg-gray-100 hover:bg-gray-200 text-gray-900
+=======
+                      ? 'bg-blue-600 hover: bg-blue-700 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
                   }`}
                 >
                   Get Started
@@ -239,9 +340,13 @@ const AIContentGenerator: NextPage = () => {
             Ready to Transform Your Content Creation?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of businesses already using our AI Content Generator to create better content faster.
+            Join thousands of businesses already using our AI Content Generator
+            to create better content faster.
           </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <Link
+            href="/contact"
+            className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+          >
             Start Your Free Trial
           </Link>
         </div>

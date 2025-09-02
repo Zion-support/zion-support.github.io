@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from,
   react';import Head from
   'next/head';
@@ -13,6 +14,30 @@ import UltraFuturisticBackground2034 from
   '../components/ui/UltraFuturisticBackground2034';
 import Link from
   'next/link';
+=======
+import React, { useState, useMemo } from 'react';
+import Head from 'next/head';
+import { motion } from 'framer-motion';
+import {
+  Search,
+  Filter,
+  Star,
+  Users,
+  TrendingUp,
+  Brain,
+  Atom,
+  Cpu,
+  Shield,
+  Database,
+  Cloud,
+  ArrowRight,
+  CheckCircle,
+  Zap,
+  Sparkles,
+} from 'lucide-react';
+import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
+import Link from 'next/link';
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 
 // Import the new 2024 services
 import { realMicroSaasServices2024 } from
@@ -21,8 +46,13 @@ import { innovativeITServices2024 } from
   '../data/2024-innovative-it-services';
 
 // Combine all services
-  const allServices = [...ultimateInnovativeServices2026, ...enterpriseITInfrastructureServices2026];const serviceCategories = [
+const allServices = [
+  ...ultimateInnovativeServices2026,
+  ...enterpriseITInfrastructureServices2026,
+];
+const serviceCategories = [
   {
+<<<<<<< HEAD
     id: 'ai-services,
     title:,
   🧠 AI & Machine Learning',
@@ -40,10 +70,27 @@ import { innovativeITServices2024 } from
     title:,
   ⚛️ Quantum & Security',
     description: 'Future-proof quantum-resistant encryption and blockchain solutions,
+=======
+    id: 'ai-services',
+    title: '🧠 AI & Machine Learning',
+    description:
+      'Revolutionary AI-powered solutions for business automation and intelligence',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-500',
+    services: realMicroSaasServices2024.filter(s => s.category.includes('AI')),
+    gradient: 'from-violet-500/20 to-indigo-500/20',
+  },
+  {
+    id: 'quantum-security',
+    title: '⚛️ Quantum & Security',
+    description:
+      'Future-proof quantum-resistant encryption and blockchain solutions',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     icon: Atom,
     color:,
   from-indigo-500 to-blue-500',
     services: [
+<<<<<<< HEAD
       ...realMicroSaasServices2024.filter(s => s.category.includes(
   'Quantum') || s.category.includes(
   'Blockchain)),
@@ -66,6 +113,26 @@ import { innovativeITServices2024 } from
   'DevOps)),
     gradient:,
   from-blue-500/20 to-teal-500/20'
+=======
+      ...realMicroSaasServices2024.filter(
+        s => s.category.includes('Quantum') || s.category.includes('Blockchain')
+      ),
+      ...innovativeITServices2024.filter(s => s.category.includes('Security')),
+    ],
+    gradient: 'from-indigo-500/20 to-cyan-500/20',
+  },
+  {
+    id: 'enterprise-it',
+    title: '🏙️ Enterprise IT Solutions',
+    description:
+      'Autonomous operations and intelligent infrastructure management',
+    icon: Cpu,
+    color: 'from-blue-500 to-cyan-500',
+    services: innovativeITServices2024.filter(
+      s => s.category.includes('Enterprise') || s.category.includes('DevOps')
+    ),
+    gradient: 'from-blue-500/20 to-teal-500/20',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   },
   {
     id: 'api-development,
@@ -73,6 +140,7 @@ import { innovativeITServices2024 } from
   🔌 API & Development',
     description: 'Intelligent API management and development tools,
     icon: Code,
+<<<<<<< HEAD
     color:,
   from-teal-500 to-emerald-500',
     services: innovativeITServices2024.filter(s => s.category.includes(
@@ -80,6 +148,13 @@ import { innovativeITServices2024 } from
   'Development)),
     gradient:,
   from-teal-500/20 to-green-500/20'
+=======
+    color: 'from-teal-500 to-emerald-500',
+    services: innovativeITServices2024.filter(
+      s => s.category.includes('API') || s.category.includes('Development')
+    ),
+    gradient: 'from-teal-500/20 to-green-500/20',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   },
   {
     id: 'business-analytics,
@@ -87,6 +162,7 @@ import { innovativeITServices2024 } from
   💰 Business & Analytics',
     description: 'AI-powered business intelligence and optimization solutions,
     icon: BarChart,
+<<<<<<< HEAD
     color:,
   from-green-500 to-yellow-500',
     services: realMicroSaasServices2024.filter(s => s.category.includes(
@@ -94,6 +170,13 @@ import { innovativeITServices2024 } from
   'Analytics)),
     gradient:,
   from-green-500/20 to-orange-500/20'
+=======
+    color: 'from-green-500 to-yellow-500',
+    services: realMicroSaasServices2024.filter(
+      s => s.category.includes('Business') || s.category.includes('Analytics')
+    ),
+    gradient: 'from-green-500/20 to-orange-500/20',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   },
   {
     id: 'marketing-automation,
@@ -101,6 +184,7 @@ import { innovativeITServices2024 } from
   📱 Marketing & Automation',
     description: 'Intelligent marketing automation and social media management,
     icon: Target,
+<<<<<<< HEAD
     color:,
   from-orange-500 to-red-500',
     services: realMicroSaasServices2024.filter(s => s.category.includes(
@@ -109,6 +193,14 @@ import { innovativeITServices2024 } from
     gradient:,
   from-orange-500/20 to-pink-500/20'
   }
+=======
+    color: 'from-orange-500 to-red-500',
+    services: realMicroSaasServices2024.filter(
+      s => s.category.includes('Marketing') || s.category.includes('Social')
+    ),
+    gradient: 'from-orange-500/20 to-pink-500/20',
+  },
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 ];
 
 export default function Services2024Page() {
@@ -121,6 +213,7 @@ export default function Services2024Page() {
   const [sortBy, setSortBy] = useState('popularity
   ');
 
+<<<<<<< HEAD
   const filteredServices = serviceCategories.flatMap(category => category.services).filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -184,6 +277,88 @@ const categories = [
   ', icon: CheckCircle, count: allServices.filter(s => s.variant.includes(,
   customer
   ')).length }
+=======
+  const filteredServices = serviceCategories
+    .flatMap(category => category.services)
+    .filter(service => {
+      const matchesSearch =
+        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        service.category.toLowerCase().includes(searchTerm.toLowerCase());
+
+      const matchesCategory =
+        selectedCategory === 'all' ||
+        service.category.toLowerCase().includes(selectedCategory.toLowerCase());
+
+      const matchesPrice =
+        priceRange === 'all' ||
+        (priceRange === 'low' &&
+          parseInt(service.price.replace('$', '')) < 200) ||
+        (priceRange === 'medium' &&
+          parseInt(service.price.replace('$', '')) >= 200 &&
+          parseInt(service.price.replace('$', '')) < 500) ||
+        (priceRange === 'high' &&
+          parseInt(service.price.replace('$', '')) >= 500);
+
+      return matchesSearch && matchesCategory && matchesPrice;
+    });
+
+  const categories = [
+    {
+      id: 'all',
+      name: 'All Services',
+      icon: Sparkles,
+      count: allServices.length,
+    },
+    {
+      id: 'ai',
+      name: 'AI & ML',
+      icon: Brain,
+      count: allServices.filter(s => s.variant.includes('ai')).length,
+    },
+    {
+      id: 'quantum',
+      name: 'Quantum & Security',
+      icon: Shield,
+      count: allServices.filter(s => s.variant.includes('security')).length,
+    },
+    {
+      id: 'it',
+      name: 'Enterprise IT',
+      icon: Cpu,
+      count: allServices.filter(s => s.variant.includes('it')).length,
+    },
+    {
+      id: 'api',
+      name: 'API & Development',
+      icon: Database,
+      count: allServices.filter(s => s.variant.includes('api')).length,
+    },
+    {
+      id: 'cloud',
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      count: allServices.filter(s => s.variant.includes('cloud')).length,
+    },
+    {
+      id: 'marketing',
+      name: 'Marketing & SEO',
+      icon: TrendingUp,
+      count: allServices.filter(s => s.variant.includes('marketing')).length,
+    },
+    {
+      id: 'project',
+      name: 'Project Management',
+      icon: Users,
+      count: allServices.filter(s => s.variant.includes('project')).length,
+    },
+    {
+      id: 'customer',
+      name: 'Customer Success',
+      icon: CheckCircle,
+      count: allServices.filter(s => s.variant.includes('customer')).length,
+    },
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   ];
 
   const getVariantIcon = (variant: string) => {
@@ -206,6 +381,7 @@ const categories = [
   };
 
   const getVariantColor = (variant: string) => {
+<<<<<<< HEAD
     if (variant.includes('ai
   ')) return 'from-blue-500 to-cyan-500
   ';
@@ -233,11 +409,30 @@ const categories = [
     return 'from-gray-500 to-slate-500
   ';
   };return (
+=======
+    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
+    if (variant.includes('security')) return 'from-red-500 to-pink-500';
+    if (variant.includes('it')) return 'from-green-500 to-emerald-500';
+    if (variant.includes('api')) return 'from-purple-500 to-violet-500';
+    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500';
+    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
+    if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
+    if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
+    return 'from-gray-500 to-slate-500';
+  };
+  return (
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     <>
       <Head>
-<title>2024 Revolutionary Services - Zion Tech Group</title>
-        <meta name="description" content="Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group" />
+        <title>2024 Revolutionary Services - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Discover our revolutionary 2024 services including AI automation, quantum security, and enterprise IT solutions. Transform your business with cutting-edge technology."
+        />
+        <meta
+          name="keywords"
+          content="AI services, quantum security, enterprise IT, automation, 2024 technology, Zion Tech Group"
+        />
         <link rel="canonical" href="https://ziontechgroup.com/services-2024" />
       </Head>
 
@@ -246,16 +441,19 @@ const categories = [
       <div className="relative z-10 min-h-screen">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center"><motion.div
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
+              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 border border-cyan-500/30 rounded-full px-6 py-2 mb-8">
                 <Sparkles className="w-5 h-5 text-cyan-400" />
-                <span className="text-cyan-400 font-medium">2024 Revolutionary Services</span>
+                <span className="text-cyan-400 font-medium">
+                  2024 Revolutionary Services
+                </span>
               </div>
-              
+
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
                   Future-Ready
@@ -263,28 +461,37 @@ const categories = [
                 <br />
                 <span className="text-white">Solutions</span>
               </h1>
-              
+
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Experience the next generation of AI, quantum security, and enterprise IT solutions. 
-                Transform your business with our revolutionary 2024 service portfolio.
+                Experience the next generation of AI, quantum security, and
+                enterprise IT solutions. Transform your business with our
+                revolutionary 2024 service portfolio.
               </p>
 
               {/* Stats */}
               <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{allServices.length}</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">
+                    {allServices.length}
+                  </div>
                   <div className="text-gray-400">Revolutionary Services</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">17</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">
+                    17
+                  </div>
                   <div className="text-gray-400">Service Categories</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">4.8</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">
+                    4.8
+                  </div>
                   <div className="text-gray-400">Average Rating</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-green-400 mb-2">1000+</div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">
+                    1000+
+                  </div>
                   <div className="text-gray-400">Happy Customers</div>
                 </div>
               </div>
@@ -305,7 +512,8 @@ const categories = [
                       type="text"
                       placeholder="Search services by name, features, or description..."
                       value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)} className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
+                      onChange={e => setSearchQuery(e.target.value)}
+                      className="w-full pl-12 pr-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
                     />
                   </div>
                 </div>
@@ -314,8 +522,10 @@ const categories = [
                 <div>
                   <select
                     value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)} className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
-                    {categories.map((category) => (
+                    onChange={e => setSelectedCategory(e.target.value)}
+                    className="w-full px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
+                  >
+                    {categories.map(category => (
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
@@ -327,13 +537,16 @@ const categories = [
                 <div className="flex space-x-2">
                   <select
                     value={sortBy}
-                    onChange={(e) => setSortBy(e.target.value as any)} className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200">
+                    onChange={e => setSortBy(e.target.value as any)}
+                    className="flex-1 px-4 py-3 bg-black/50 border border-cyan-500/30 rounded-lg text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition-all duration-200"
+                  >
                     <option value="name">Sort by Name</option>
                     <option value="price">Sort by Price</option>
                     <option value="rating">Sort by Rating</option>
                     <option value="customers">Sort by Customers</option>
                   </select>
                   <button
+<<<<<<< HEAD
                     onClick={() => setSortOrder(sortOrder ===,
   asc
   ' ? 'desc
@@ -342,20 +555,33 @@ const categories = [
   asc
   ' ? '↑
   ': '↓}
+=======
+                    onClick={() =>
+                      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
+                    }
+                    className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200"
+                  >
+                    {sortOrder === 'asc' ? '↑' : '↓'}
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
                   </button>
                 </div>
-              </div></div>
+              </div>
+            </div>
           </div>
         </section>
 
-{/* Services Grid */}
+        {/* Services Grid */}
         <section className="px-4 sm:px-6 lg:px-8 mb-20">
           <div className="max-w-7xl mx-auto">
             {filteredServices.length === 0 ? (
               <div className="text-center py-20">
                 <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
-                <p className="text-gray-400">Try adjusting your search criteria or filters.</p>
+                <h3 className="text-2xl font-semibold text-white mb-2">
+                  No services found
+                </h3>
+                <p className="text-gray-400">
+                  Try adjusting your search criteria or filters.
+                </p>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -364,17 +590,24 @@ const categories = [
                     key={service.id}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }} className="group">
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="group"
+                  >
                     <div className="bg-black/50 border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 hover:transform hover:scale-105 backdrop-blur-sm">
                       {/* Service Header */}
                       <div className="flex items-start justify-between mb-4">
                         <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-lg flex items-center justify-center">
-                          {React.createElement(getVariantIcon(service.variant), { 
-                            className: `w-6 h-6 text-cyan-400` 
-                          })}
+                          {React.createElement(
+                            getVariantIcon(service.variant),
+                            {
+                              className: `w-6 h-6 text-cyan-400`,
+                            }
+                          )}
                         </div>
                         <div className="text-right">
-                          <div className="text-2xl font-bold text-cyan-400">{service.price}</div>
+                          <div className="text-2xl font-bold text-cyan-400">
+                            {service.price}
+                          </div>
                           <div className="text-sm text-gray-400">per month</div>
                         </div>
                       </div>
@@ -389,14 +622,23 @@ const categories = [
 
                       {/* Features */}
                       <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">Key Features</h4>
+                        <h4 className="text-sm font-semibold text-gray-400 mb-3 uppercase tracking-wider">
+                          Key Features
+                        </h4>
                         <div className="space-y-2">
-                          {service.features.slice(0, 3).map((feature, featureIndex) => (
-                            <div key={featureIndex} className="flex items-center space-x-2">
-                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                              <span className="text-sm text-gray-300">{feature}</span>
-                            </div>
-                          ))}
+                          {service.features
+                            .slice(0, 3)
+                            .map((feature, featureIndex) => (
+                              <div
+                                key={featureIndex}
+                                className="flex items-center space-x-2"
+                              >
+                                <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                                <span className="text-sm text-gray-300">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
                           {service.features.length > 3 && (
                             <div className="text-sm text-cyan-400">
                               +{service.features.length - 3} more features
@@ -410,16 +652,22 @@ const categories = [
                         <div className="text-center">
                           <div className="flex items-center justify-center space-x-1 mb-1">
                             <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                            <span className="text-sm font-semibold text-white">{service.rating}</span>
+                            <span className="text-sm font-semibold text-white">
+                              {service.rating}
+                            </span>
                           </div>
                           <div className="text-xs text-gray-400">Rating</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-sm font-semibold text-white mb-1">{service.customers}</div>
+                          <div className="text-sm font-semibold text-white mb-1">
+                            {service.customers}
+                          </div>
                           <div className="text-xs text-gray-400">Customers</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-sm font-semibold text-white mb-1">{service.launchDate}</div>
+                          <div className="text-sm font-semibold text-white mb-1">
+                            {service.launchDate}
+                          </div>
                           <div className="text-xs text-gray-400">Launched</div>
                         </div>
                       </div>
@@ -427,22 +675,31 @@ const categories = [
                       {/* CTA */}
                       <div className="flex items-center justify-between">
                         <Link
-                          href={service.link} className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group">
+                          href={service.link}
+                          className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 group"
+                        >
                           <span className="font-medium">Learn More</span>
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
+<<<<<<< HEAD
                           {service.variant.replace('-futuristic
   ', '').replace(
   '-',
   ' ')}
+=======
+                          {service.variant
+                            .replace('-futuristic', '')
+                            .replace('-', ' ')}
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
                         </div>
                       </div>
                     </div>
                   </motion.div>
                 ))}
               </div>
-            )}</div>
+            )}
+          </div>
         </section>
 
         {/* CTA Section */}
@@ -452,22 +709,29 @@ const categories = [
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              viewport={{ once: true }} className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm">
+              viewport={{ once: true }}
+              className="bg-gradient-to-r from-cyan-500/10 to-purple-600/10 border border-cyan-500/30 rounded-2xl p-12 backdrop-blur-sm"
+            >
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Join thousands of businesses already leveraging our revolutionary 2024 services. 
-                Get started today and experience the future of technology.
+                Join thousands of businesses already leveraging our
+                revolutionary 2024 services. Get started today and experience
+                the future of technology.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
-                  href="/contact" className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold">
+                  href="/contact"
+                  className="flex items-center space-x-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-cyan-500/25 font-semibold"
+                >
                   <Zap className="w-5 h-5" />
                   <span>Get Started Today</span>
                 </Link>
                 <Link
-                  href="/pricing-2033" className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold">
+                  href="/pricing-2033"
+                  className="flex items-center space-x-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-lg hover:bg-cyan-500/10 transition-all duration-200 font-semibold"
+                >
                   <span>View Pricing Plans</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
@@ -478,6 +742,6 @@ const categories = [
       </div>
     </>
   );
-};
+}
 
 export default Services2024Page;

@@ -15,15 +15,27 @@ const AIOpsCopilot: NextPage = () => {
     >
       <section className="bg-gradient-to-br from-slate-900 via-indigo-900 to-blue-900 text-white py-16">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI Ops Copilot</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            AI Ops Copilot
+          </h1>
           <p className="text-lg text-gray-200 mb-6">
-            An end-to-end AI assistant for SRE teams that correlates signals across logs, metrics, traces, and alerts to auto-triage incidents, generate runbooks, and recommend remediations.
+            An end-to-end AI assistant for SRE teams that correlates signals
+            across logs, metrics, traces, and alerts to auto-triage incidents,
+            generate runbooks, and recommend remediations.
           </p>
           <div className="flex flex-wrap gap-3">
-            <span className="px-3 py-1 rounded bg-white/10">LLM Root Cause Analysis</span>
-            <span className="px-3 py-1 rounded bg-white/10">Automated Runbooks</span>
-            <span className="px-3 py-1 rounded bg-white/10">PagerDuty/Jira Integrations</span>
-            <span className="px-3 py-1 rounded bg-white/10">Prometheus/OpenTelemetry</span>
+            <span className="px-3 py-1 rounded bg-white/10">
+              LLM Root Cause Analysis
+            </span>
+            <span className="px-3 py-1 rounded bg-white/10">
+              Automated Runbooks
+            </span>
+            <span className="px-3 py-1 rounded bg-white/10">
+              PagerDuty/Jira Integrations
+            </span>
+            <span className="px-3 py-1 rounded bg-white/10">
+              Prometheus/OpenTelemetry
+            </span>
           </div>
         </div>
       </section>
@@ -32,7 +44,9 @@ const AIOpsCopilot: NextPage = () => {
         <div className="container mx-auto px-4 max-w-5xl grid md:grid-cols-3 gap-8">
           <div className="p-6 border rounded-lg">
             <h3 className="text-xl font-semibold mb-2">Starter</h3>
-            <p className="text-gray-600 mb-4">For small teams centralizing alerts.</p>
+            <p className="text-gray-600 mb-4">
+              For small teams centralizing alerts.
+            </p>
             <ul className="text-sm text-gray-700 space-y-2 mb-4">
               <li>• 3 data sources (CloudWatch, Prometheus, ELK)</li>
               <li>• AI incident summaries & de-duplication</li>
@@ -42,9 +56,13 @@ const AIOpsCopilot: NextPage = () => {
           </div>
           <div className="p-6 border rounded-lg ring-2 ring-blue-600">
             <h3 className="text-xl font-semibold mb-2">Growth</h3>
-            <p className="text-gray-600 mb-4">For teams automating triage and RCA.</p>
+            <p className="text-gray-600 mb-4">
+              For teams automating triage and RCA.
+            </p>
             <ul className="text-sm text-gray-700 space-y-2 mb-4">
-              <li>• Unlimited sources, correlation across logs/metrics/traces</li>
+              <li>
+                • Unlimited sources, correlation across logs/metrics/traces
+              </li>
               <li>• LLM-based root-cause suggestions</li>
               <li>• PagerDuty/Jira/ServiceNow automations</li>
             </ul>
@@ -52,7 +70,9 @@ const AIOpsCopilot: NextPage = () => {
           </div>
           <div className="p-6 border rounded-lg">
             <h3 className="text-xl font-semibold mb-2">Enterprise</h3>
-            <p className="text-gray-600 mb-4">For regulated, mission-critical workloads.</p>
+            <p className="text-gray-600 mb-4">
+              For regulated, mission-critical workloads.
+            </p>
             <ul className="text-sm text-gray-700 space-y-2 mb-4">
               <li>• Private deployment (VPC/on-prem)</li>
               <li>• Custom playbooks & guardrails</li>
@@ -67,15 +87,27 @@ const AIOpsCopilot: NextPage = () => {
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-2xl font-bold mb-3">Outcomes</h2>
           <ul className="grid md:grid-cols-3 gap-4 text-gray-700">
-            <li className="p-4 bg-white rounded border">Reduce MTTR by 30-60%</li>
-            <li className="p-4 bg-white rounded border">Cut alert noise 40%+</li>
-            <li className="p-4 bg-white rounded border">Automate 25% L1 tasks</li>
+            <li className="p-4 bg-white rounded border">
+              Reduce MTTR by 30-60%
+            </li>
+            <li className="p-4 bg-white rounded border">
+              Cut alert noise 40%+
+            </li>
+            <li className="p-4 bg-white rounded border">
+              Automate 25% L1 tasks
+            </li>
           </ul>
           <div className="mt-6 text-sm text-gray-600">
-            Pricing ranges benchmarked vs market tools like Datadog AIOps, PagerDuty AIOps, New Relic, and Elastic Observability.
+            Pricing ranges benchmarked vs market tools like Datadog AIOps,
+            PagerDuty AIOps, New Relic, and Elastic Observability.
           </div>
           <div className="mt-4">
-            <Link href="/contact" className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg">Request a demo</Link>
+            <Link
+              href="/contact"
+              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg"
+            >
+              Request a demo
+            </Link>
           </div>
         </div>
       </section>
@@ -84,4 +116,3 @@ const AIOpsCopilot: NextPage = () => {
 };
 
 export default AIOpsCopilot;
-

@@ -36,7 +36,7 @@ module.exports = {
       pid_file: './logs/app.pid',
       pmx: true,
       max_unstable_restarts: 5,
-      unstable_restart_delay: 10000
+      unstable_restart_delay: 10000,
     },
 
     // Core automation processes
@@ -48,7 +48,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/error-monitor-error.log',
       out_file: './logs/error-monitor-out.log',
@@ -59,7 +59,7 @@ module.exports = {
       max_restarts: 5,
       min_uptime: '5s',
       restart_delay: 2000,
-      cron_restart: '*/5 * * * *'
+      cron_restart: '*/5 * * * *',
     },
 
     {
@@ -70,7 +70,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/syntax-fixer-error.log',
       out_file: './logs/syntax-fixer-out.log',
@@ -81,7 +81,7 @@ module.exports = {
       max_restarts: 3,
       min_uptime: '5s',
       restart_delay: 2000,
-      cron_restart: '*/10 * * * *'
+      cron_restart: '*/10 * * * *',
     },
 
     {
@@ -92,7 +92,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '300M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/build-health-error.log',
       out_file: './logs/build-health-out.log',
@@ -103,7 +103,7 @@ module.exports = {
       max_restarts: 5,
       min_uptime: '5s',
       restart_delay: 1000,
-      cron_restart: '*/15 * * * *'
+      cron_restart: '*/15 * * * *',
     },
 
     {
@@ -114,7 +114,7 @@ module.exports = {
       watch: false,
       max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
       },
       error_file: './logs/merge-resolver-error.log',
       out_file: './logs/merge-resolver-out.log',
@@ -125,7 +125,7 @@ module.exports = {
       max_restarts: 3,
       min_uptime: '10s',
       restart_delay: 5000,
-      cron_restart: '*/30 * * * *'
+      cron_restart: '*/30 * * * *',
     },
 
     // Enhanced automation processes
@@ -223,7 +223,7 @@ module.exports = {
       out_file: './logs/quality-checks-out.log',
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    }
+    },
   ],
 
   deploy: {
@@ -234,8 +234,9 @@ module.exports = {
       repo: 'https://github.com/Zion-Holdings/zion.app.git',
       path: '/workspace',
       'pre-deploy-local': '',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.working.cjs --env production',
-      'pre-setup': ''
-    }
-  }
+      'post-deploy':
+        'npm install && npm run build && pm2 reload ecosystem.working.cjs --env production',
+      'pre-setup': '',
+    },
+  },
 };

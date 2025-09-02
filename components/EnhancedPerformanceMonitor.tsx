@@ -75,10 +75,14 @@ const navigationEntry = performance.getEntriesByType(
         }
 
         // Calculate FMP (First Meaningful Paint)
+<<<<<<< HEAD
         const paintEntries = performance.getEntriesByType('paint
   ');'        const fmpEntry = paintEntries.find(entry => entry.name ===
   'first-meaningful-paint');'        if (fmpEntry) {
   '          metrics.fmp = Math.round(fmpEntry.startTime);}
+=======
+        const paintEntries = performance.getEntriesByType('paint');'        const fmpEntry = paintEntries.find(entry => entry.name === 'first-meaningful-paint');'        if (fmpEntry) {'          metrics.fmp = Math.round(fmpEntry.startTime);}'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 
         // Calculate TTI (Time to Interactive) - simplified
         metrics.tti = Math.round(performance.now());
@@ -169,7 +173,7 @@ const getScoreColor = (score: number): string => {;
   }
 
   return (
-<div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700">"      <div className="flex items-center justify-between mb-4">"        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">"          <Activity className="w-5 h-5 mr-2 text-blue-500" />"          Performance Monitor"        </h3>
+<div className="bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700">"      <div className="flex items-center justify-between mb-4">"        <h3 className="text-lg font-semibold text-gray-900 dark:text-white flex items-center">"          <Activity className="w-5 h-5 mr-2 text-blue-500" />"          Performance Monitor"        </h3>"
         <div className="flex items-center space-x-2">"          <button"            onClick={updateMetrics}
             disabled={isLoading}
             className="px-3 py-1 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50""          >"            {isLoading ?,
@@ -186,25 +190,29 @@ const getScoreColor = (score: number): string => {;
           <div className="grid grid-cols-2 gap-4">"            <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">"              <div className="flex items-center justify-between">"                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">FCP</span>"                <span className="text-sm font-bold text-gray-900 dark:text-white">"                  {metrics.fcp}ms"                </span>
               </div>
               <div className="text-xs text-gray-500 mt-1">First Contentful Paint</div>"            </div>"
-            <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">"              <div className="flex items-center justify-between">"                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">LCP</span>"                <span className="text-sm font-bold text-gray-900 dark:text-white">"                  {metrics.lcp}ms"                </span>
+            <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">"              <div className="flex items-center justify-between">"                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">LCP</span>"                <span className="text-sm font-bold text-gray-900 dark:text-white">"                  {metrics.lcp}ms"                </span>"
               </div>
               <div className="text-xs text-gray-500 mt-1">Largest Contentful Paint</div>"            </div>"
-            <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">"              <div className="flex items-center justify-between">"                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">FID</span>"                <span className="text-sm font-bold text-gray-900 dark:text-white">"                  {metrics.fid}ms"                </span>
+            <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">"              <div className="flex items-center justify-between">"                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">FID</span>"                <span className="text-sm font-bold text-gray-900 dark:text-white">"                  {metrics.fid}ms"                </span>"
               </div>
               <div className="text-xs text-gray-500 mt-1">First Input Delay</div>"            </div>"
-            <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">"              <div className="flex items-center justify-between">"                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">CLS</span>"                <span className="text-sm font-bold text-gray-900 dark:text-white">"                  {metrics.cls.toFixed(3)}"                </span>
+            <div className="bg-gray-50 dark:bg-gray-700 p-3 rounded-lg">"              <div className="flex items-center justify-between">"                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">CLS</span>"                <span className="text-sm font-bold text-gray-900 dark:text-white">"                  {metrics.cls.toFixed(3)}"                </span>"
               </div>
               <div className="text-xs text-gray-500 mt-1">Cumulative Layout Shift</div>"            </div>"          </div>
 
           {/* Additional Metrics */}
-          <div className="grid grid-cols-3 gap-3">"            <div className="text-center">"              <div className="text-lg font-bold text-gray-900 dark: text-white">{metrics.ttfb}ms</div>"              <div className="text-xs text-gray-500">TTFB</div>"            </div>"            <div className="text-center">"              <div className="text-lg font-bold text-gray-900 dark:text-white">{metrics.fmp}ms</div>"              <div className="text-xs text-gray-500">FMP</div>"            </div>"            <div className="text-center">"              <div className="text-lg font-bold text-gray-900 dark:text-white">{metrics.tti}ms</div>"              <div className="text-xs text-gray-500">TTI</div>"            </div>"          </div>{/* Alerts */}
+          <div className="grid grid-cols-3 gap-3">"            <div className="text-center">"              <div className="text-lg font-bold text-gray-900 dark: text-white">{metrics.ttfb}ms</div>"              <div className="text-xs text-gray-500">TTFB</div>"            </div>"            <div className="text-center">"              <div className="text-lg font-bold text-gray-900 dark:text-white">{metrics.fmp}ms</div>"              <div className="text-xs text-gray-500">FMP</div>"            </div>"            <div className="text-center">"              <div className="text-lg font-bold text-gray-900 dark:text-white">{metrics.tti}ms</div>"              <div className="text-xs text-gray-500">TTI</div>"            </div>"          </div>{/* Alerts */}"
           <AnimatePresence>
             {alerts.length > 0 && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
+<<<<<<< HEAD
 animate={{ opacity: 1, height:
   'auto' }}
   '                exit={{ opacity: 0, height: 0 }}'                className="space-y-2""              >"                <h4 className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center">"                  <AlertTriangle className="w-4 h-4 mr-1" />"                  Performance Alerts"                </h4>{alerts.map((alert, index) => (
+=======
+animate={{ opacity: 1, height: 'auto' }}'                exit={{ opacity: 0, height: 0 }}'                className="space-y-2""              >"                <h4 className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center">"                  <AlertTriangle className="w-4 h-4 mr-1" />"                  Performance Alerts"                </h4>{alerts.map((alert, index) => ("
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
@@ -218,7 +226,7 @@ className="flex items-center text-sm text-red-600 dark:text-red-400 bg-red-50 da
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-className="flex items-center justify-center text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 p-3 rounded""            >"              <CheckCircle className="w-4 h-4 mr-2" />"              <span className="text-sm">All performance metrics are within acceptable ranges</span>"            </motion.div>"          )}</div>
+className="flex items-center justify-center text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 p-3 rounded""            >"              <CheckCircle className="w-4 h-4 mr-2" />"              <span className="text-sm">All performance metrics are within acceptable ranges</span>"            </motion.div>"          )}</div>"
       )}
     </div>
   );

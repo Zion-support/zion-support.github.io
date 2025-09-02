@@ -124,12 +124,12 @@ module.exports = {
       max_memory_restart: '2G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'comprehensive-error-fixer'
+        PM2_PROCESS: 'comprehensive-error-fixer',
       },
       cron_restart: '0 */2 * * *', // Restart every 2 hours
       log_file: 'logs/comprehensive-error-fixer.log',
       out_file: 'logs/comprehensive-error-fixer-out.log',
-      error_file: 'logs/comprehensive-error-fixer-error.log'
+      error_file: 'logs/comprehensive-error-fixer-error.log',
     },
 
     // Advanced Syntax Fixer - Fixes complex syntax issues
@@ -142,12 +142,12 @@ module.exports = {
       max_memory_restart: '2G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'advanced-syntax-fixer'
+        PM2_PROCESS: 'advanced-syntax-fixer',
       },
       cron_restart: '0 */3 * * *', // Restart every 3 hours
       log_file: 'logs/advanced-syntax-fixer.log',
       out_file: 'logs/advanced-syntax-fixer-out.log',
-      error_file: 'logs/advanced-syntax-fixer-error.log'
+      error_file: 'logs/advanced-syntax-fixer-error.log',
     },
 
     // Final Syntax Fixer - Fixes remaining syntax issues
@@ -160,12 +160,12 @@ module.exports = {
       max_memory_restart: '2G',
       env: {
         NODE_ENV: 'production',
-        PM2_PROCESS: 'final-syntax-fixer'
+        PM2_PROCESS: 'final-syntax-fixer',
       },
       cron_restart: '0 */4 * * *', // Restart every 4 hours
       log_file: 'logs/final-syntax-fixer.log',
       out_file: 'logs/final-syntax-fixer-out.log',
-      error_file: 'logs/final-syntax-fixer-error.log'
+      error_file: 'logs/final-syntax-fixer-error.log',
     },
 
     // Security Vulnerability Scanner - Continuously scans for security issues

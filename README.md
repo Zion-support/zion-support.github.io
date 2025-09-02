@@ -5,23 +5,27 @@ A modern, responsive website for Zion Tech Group, showcasing comprehensive techn
 ## 🚀 Features
 
 ### Comprehensive Service Offerings
+
 - **Micro SaaS Solutions**: AI Content Generator, Project Management, Inventory Tracker, Customer Support Platform
 - **IT Services**: Cloud Migration, Cybersecurity, DevOps Automation, Data Backup & Recovery
 - **AI Services**: Custom AI Models, Process Automation, Analytics Platform, Chatbot Development
 
 ### Modern Design & User Experience
+
 - Responsive design that works on all devices
 - Modern gradient backgrounds and clean typography
 - Interactive hover effects and smooth transitions
 - Professional color scheme with blue and purple gradients
 
 ### SEO Optimized
+
 - Structured data markup for better search engine visibility
 - Meta tags and Open Graph tags for social media sharing
 - Semantic HTML structure
 - Fast loading times with optimized images and code
 
 ### Contact Information
+
 - **Phone**: +1 302 464 0950
 - **Email**: kleber@ziontechgroup.com
 - **Address**: 364 E Main St STE 1008, Middletown DE 19709
@@ -64,12 +68,14 @@ A modern, responsive website for Zion Tech Group, showcasing comprehensive techn
 ## 🎨 Design Features
 
 ### Header
+
 - Sticky navigation with contact information
 - Dropdown menu for service categories
 - Mobile-responsive hamburger menu
 - Call-to-action buttons
 
 ### Footer
+
 - Comprehensive company information
 - Service category links
 - Social media links
@@ -77,6 +83,7 @@ A modern, responsive website for Zion Tech Group, showcasing comprehensive techn
 - Contact details
 
 ### Service Pages
+
 - Detailed service descriptions
 - Pricing information
 - Feature comparisons
@@ -86,16 +93,19 @@ A modern, responsive website for Zion Tech Group, showcasing comprehensive techn
 ## 💰 Pricing Structure
 
 ### Micro SaaS Solutions
+
 - **Starter**: $29/month
 - **Professional**: $79/month
 - **Enterprise**: $199/month
 
 ### IT Services
+
 - **Basic**: $2,000+
 - **Professional**: $8,000+
 - **Enterprise**: $25,000+
 
 ### AI Services
+
 - **Starter**: $5,000+
 - **Professional**: $25,000+
 - **Enterprise**: $100,000+
@@ -103,23 +113,27 @@ A modern, responsive website for Zion Tech Group, showcasing comprehensive techn
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js 20.18.1 or higher
 - npm 10.0.0 or higher
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd zion-tech-group
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 ```
@@ -136,6 +150,7 @@ npm start
 ## 📱 Responsive Design
 
 The website is fully responsive and optimized for:
+
 - Desktop (1200px+)
 - Tablet (768px - 1199px)
 - Mobile (320px - 767px)
@@ -143,12 +158,15 @@ The website is fully responsive and optimized for:
 ## 🔧 Configuration
 
 ### Environment Variables
+
 Create a `.env.local` file with the following variables:
+
 ```
 NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
 ```
 
 ### Tailwind CSS
+
 The project uses Tailwind CSS for styling. Configuration is in `tailwind.config.js`.
 
 ## 📈 Performance
@@ -168,6 +186,7 @@ The project uses Tailwind CSS for styling. Configuration is in `tailwind.config.
 ## 📞 Support
 
 For technical support or questions about the website:
+
 - **Email**: kleber@ziontechgroup.com
 - **Phone**: +1 302 464 0950
 
@@ -181,6 +200,7 @@ The website is deployed on Netlify and can be accessed at:
 **https://ziontechgroup.com**
 
 ### Deployment Process
+
 1. Push changes to the main branch
 2. Netlify automatically builds and deploys
 3. Preview deployments are created for pull requests
@@ -188,6 +208,7 @@ The website is deployed on Netlify and can be accessed at:
 ## 🔄 Recent Updates
 
 ### Version 2.0 (Current)
+
 - ✅ Complete redesign with modern UI/UX
 - ✅ Added comprehensive service pages
 - ✅ Implemented responsive navigation
@@ -199,6 +220,7 @@ The website is deployed on Netlify and can be accessed at:
 - ✅ Optimized for performance and accessibility
 
 ### Version 1.0 (Previous)
+
 - Basic website structure
 - Simple service listings
 - Contact information
@@ -210,3 +232,13 @@ This is a proprietary project for Zion Tech Group. For feature requests or bug r
 ---
 
 **Zion Tech Group** - Transforming businesses through innovative technology solutions.
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+---
+
+# Automation summary: README refreshed 2025-09-02T14:59:22.867Z
+
+> > > > > > > origin/cursor/install-dependencies-and-fix-errors-827a
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1

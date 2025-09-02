@@ -238,7 +238,7 @@ export type DeepPartial<T> = {
   id?: string;
 'data-testid'?: string;'}'
 export interface ButtonProps extends BaseComponentProps {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';'  size?: 'sm' | 'md' | 'lg';'  disabled?: boolean;'  loading?: boolean;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';'  size?: 'sm' | 'md' | 'lg';'  disabled?: boolean;'  loading?: boolean;'
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';'}'
 export interface InputProps extends BaseComponentProps {
