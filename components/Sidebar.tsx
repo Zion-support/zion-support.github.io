@@ -34,6 +34,7 @@ import {
   ArrowRight,
   Calendar,
   DollarSign,
+  Play,
   X
 } from 'lucide-react';
 
@@ -57,6 +58,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const mainNavigation = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'About', href: '/about', icon: Users },
+    { name: 'Pricing', href: '/pricing', icon: DollarSign },
     { name: 'Contact', href: '/contact', icon: Phone },
     { name: 'Blog', href: '/blog', icon: FileText },
     { name: 'Careers', href: '/careers', icon: Briefcase }
@@ -86,7 +88,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Help & Support', href: '/help', icon: HelpCircle },
     { name: 'Training', href: '/training', icon: Users },
     { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
-    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign }
+    { name: 'Pricing Guide', href: '/pricing-guide', icon: DollarSign },
+    { name: 'Demo', href: '/demo', icon: Play },
+    { name: 'Brochure', href: '/brochure', icon: FileText }
   ];
 
   const legal = [
