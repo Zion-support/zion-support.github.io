@@ -13,6 +13,10 @@ const Footer: React.FC = () => {
         { name: 'Project Management', href: '/services/project-management-suite' },
         { name: 'Inventory Tracker', href: '/services/inventory-management' },
         { name: 'Customer Support', href: '/services/customer-support-platform' },
+        { name: 'Social Media Automation', href: '/services/social-media-automation' },
+        { name: 'Email Marketing Pro', href: '/services/email-marketing-automation' },
+        { name: 'HR Management', href: '/services/hr-management-system' },
+        { name: 'Financial Analytics', href: '/services/financial-analytics-dashboard' },
       ]
     },
     {
@@ -22,6 +26,10 @@ const Footer: React.FC = () => {
         { name: 'Cybersecurity', href: '/services/cybersecurity-audit' },
         { name: 'DevOps Automation', href: '/services/devops-automation' },
         { name: 'Data Backup', href: '/services/data-backup-recovery' },
+        { name: 'Blockchain Development', href: '/services/blockchain-development' },
+        { name: 'IoT Solutions', href: '/services/iot-solutions' },
+        { name: 'API Development', href: '/services/api-development-integration' },
+        { name: 'Mobile App Development', href: '/services/mobile-app-development' },
       ]
     },
     {
@@ -31,6 +39,10 @@ const Footer: React.FC = () => {
         { name: 'Process Automation', href: '/services/ai-process-automation' },
         { name: 'Analytics Platform', href: '/services/ai-analytics-platform' },
         { name: 'Chatbot Development', href: '/services/ai-chatbot-development' },
+        { name: 'Computer Vision', href: '/services/computer-vision-solutions' },
+        { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
+        { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
+        { name: 'Recommendation Engine', href: '/services/ai-powered-recommendation-engine' },
       ]
     }
   ];
@@ -39,7 +51,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
@@ -90,7 +102,7 @@ const Footer: React.FC = () => {
 
         {/* Quick Links */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div>
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Quick Links</h4>
               <ul className="space-y-2">

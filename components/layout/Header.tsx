@@ -8,8 +8,9 @@ const Header: React.FC = () => {
   const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-    { name: 'Products', href: '/products' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -24,20 +25,21 @@ const Header: React.FC = () => {
       {/* Top bar with contact info */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-4 mb-2 sm:mb-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center text-sm">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 mb-2 lg:mb-0">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                <a href="tel:+13024640950" className="hover:text-blue-200 transition-colors">+1 302 464 0950</a>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-200 transition-colors">kleber@ziontechgroup.com</a>
               </div>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 text-center">
               <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="hidden sm:inline">364 E Main St STE 1008, Middletown DE 19709</span>
+              <span className="sm:hidden">Middletown, DE</span>
             </div>
           </div>
         </div>
@@ -49,7 +51,7 @@ const Header: React.FC = () => {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <Link href="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-blue-900">Zion Tech Group</div>
+              <div className="text-xl md:text-2xl font-bold text-blue-900">Zion Tech Group</div>
             </Link>
 
             {/* Desktop Navigation */}
@@ -115,7 +117,7 @@ const Header: React.FC = () => {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors py-2"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {item.name}
@@ -124,12 +126,12 @@ const Header: React.FC = () => {
                 
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">
-                  <div className="text-gray-700 font-medium mb-2">Services</div>
+                  <div className="text-gray-700 font-semibold mb-3 text-lg">Our Services</div>
                   {serviceCategories.map((category) => (
                     <Link
                       key={category.name}
                       href={category.href}
-                      className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                      className="block py-2 text-gray-600 hover:text-blue-600 transition-colors pl-4"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {category.name}
@@ -137,14 +139,31 @@ const Header: React.FC = () => {
                   ))}
                 </div>
 
+                {/* Mobile Contact Info */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="text-gray-700 font-semibold mb-3">Contact Us</div>
+                  <div className="space-y-2 pl-4">
+                    <a href="tel:+13024640950" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors">
+                      <Phone className="w-4 h-4" />
+                      <span>+1 302 464 0950</span>
+                    </a>
+                    <a href="mailto:kleber@ziontechgroup.com" className="flex items-center space-x-2 text-gray-600 hover:text-blue-600 transition-colors">
+                      <Mail className="w-4 h-4" />
+                      <span>kleber@ziontechgroup.com</span>
+                    </a>
+                  </div>
+                </div>
+
                 {/* Mobile CTA */}
-                <Link
-                  href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors text-center"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Quote
-                </Link>
+                <div className="pt-4">
+                  <Link
+                    href="/contact"
+                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center block"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Get Free Quote
+                  </Link>
+                </div>
               </div>
             </div>
           )}

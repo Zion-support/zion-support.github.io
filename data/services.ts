@@ -442,6 +442,432 @@ export const services: Service[] = [
     technologies: ['OpenAI GPT', 'Dialogflow', 'React', 'Node.js', 'MongoDB'],
     link: 'https://ziontechgroup.com/services/ai-chatbot',
     icon: '💬'
+  },
+
+  // Additional Micro SaaS Services
+  {
+    id: 'social-media-automation',
+    name: 'Social Media Automation Suite',
+    category: 'micro-saas',
+    description: 'Comprehensive social media management platform with AI-powered content creation and scheduling.',
+    features: [
+      'AI content generation',
+      'Multi-platform posting',
+      'Analytics & insights',
+      'Hashtag optimization',
+      'Competitor analysis',
+      'Team collaboration'
+    ],
+    pricing: {
+      starter: 35,
+      professional: 85,
+      enterprise: 225,
+      currency: 'USD'
+    },
+    benefits: [
+      'Save 10+ hours weekly',
+      'Increase engagement by 40%',
+      'Consistent brand presence',
+      'Data-driven strategies'
+    ],
+    useCases: [
+      'Marketing agencies',
+      'E-commerce brands',
+      'Content creators',
+      'Small businesses'
+    ],
+    technologies: ['React', 'Node.js', 'OpenAI API', 'Social Media APIs', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/social-media-automation',
+    icon: '📱'
+  },
+  {
+    id: 'email-marketing-automation',
+    name: 'Email Marketing Automation Pro',
+    category: 'micro-saas',
+    description: 'Advanced email marketing platform with AI-driven personalization and automation workflows.',
+    features: [
+      'AI email personalization',
+      'Behavioral triggers',
+      'A/B testing',
+      'Advanced segmentation',
+      'Deliverability optimization',
+      'Revenue tracking'
+    ],
+    pricing: {
+      starter: 45,
+      professional: 95,
+      enterprise: 275,
+      currency: 'USD'
+    },
+    benefits: [
+      '3x higher open rates',
+      'Automated lead nurturing',
+      'Personalized experiences',
+      'ROI optimization'
+    ],
+    useCases: [
+      'E-commerce stores',
+      'SaaS companies',
+      'Online courses',
+      'Service businesses'
+    ],
+    technologies: ['React', 'Node.js', 'SendGrid', 'Machine Learning', 'Redis'],
+    link: 'https://ziontechgroup.com/services/email-marketing-automation',
+    icon: '📧'
+  },
+  {
+    id: 'hr-management-system',
+    name: 'Smart HR Management System',
+    category: 'micro-saas',
+    description: 'Comprehensive HR platform with AI-powered recruitment, employee management, and performance analytics.',
+    features: [
+      'AI resume screening',
+      'Employee onboarding',
+      'Performance tracking',
+      'Payroll integration',
+      'Time & attendance',
+      'Compliance management'
+    ],
+    pricing: {
+      starter: 55,
+      professional: 125,
+      enterprise: 350,
+      currency: 'USD'
+    },
+    benefits: [
+      'Reduce hiring time by 60%',
+      'Improve employee retention',
+      'Automated compliance',
+      'Data-driven insights'
+    ],
+    useCases: [
+      'Growing companies',
+      'Remote teams',
+      'HR departments',
+      'Staffing agencies'
+    ],
+    technologies: ['React', 'Node.js', 'AI/ML', 'Payroll APIs', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/hr-management',
+    icon: '👥'
+  },
+  {
+    id: 'financial-analytics-dashboard',
+    name: 'Financial Analytics Dashboard',
+    category: 'micro-saas',
+    description: 'Real-time financial analytics platform with AI-powered insights and forecasting capabilities.',
+    features: [
+      'Real-time financial tracking',
+      'AI cash flow forecasting',
+      'Expense categorization',
+      'Investment analysis',
+      'Tax optimization',
+      'Multi-currency support'
+    ],
+    pricing: {
+      starter: 65,
+      professional: 145,
+      enterprise: 425,
+      currency: 'USD'
+    },
+    benefits: [
+      'Better financial decisions',
+      'Automated reporting',
+      'Tax savings identification',
+      'Risk assessment'
+    ],
+    useCases: [
+      'Small businesses',
+      'Freelancers',
+      'Investment firms',
+      'Accounting firms'
+    ],
+    technologies: ['React', 'Python', 'Financial APIs', 'Machine Learning', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/financial-analytics',
+    icon: '💰'
+  },
+
+  // Additional IT Services
+  {
+    id: 'blockchain-development',
+    name: 'Blockchain Development Services',
+    category: 'it-services',
+    description: 'Comprehensive blockchain solutions including smart contracts, DeFi applications, and NFT platforms.',
+    features: [
+      'Smart contract development',
+      'DeFi protocol creation',
+      'NFT marketplace development',
+      'Blockchain integration',
+      'Security auditing',
+      'Token economics design'
+    ],
+    pricing: {
+      starter: 15000,
+      professional: 45000,
+      enterprise: 150000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Decentralized solutions',
+      'Enhanced security',
+      'Transparent transactions',
+      'Future-proof technology'
+    ],
+    useCases: [
+      'Financial services',
+      'Supply chain management',
+      'Digital identity',
+      'Gaming platforms'
+    ],
+    technologies: ['Solidity', 'Web3.js', 'Ethereum', 'Polygon', 'IPFS'],
+    link: 'https://ziontechgroup.com/services/blockchain-development',
+    icon: '⛓️'
+  },
+  {
+    id: 'iot-solutions',
+    name: 'IoT Solutions & Integration',
+    category: 'it-services',
+    description: 'End-to-end IoT solutions including device connectivity, data analytics, and smart system integration.',
+    features: [
+      'IoT device development',
+      'Sensor integration',
+      'Real-time data processing',
+      'Cloud connectivity',
+      'Predictive maintenance',
+      'Mobile app development'
+    ],
+    pricing: {
+      starter: 12000,
+      professional: 35000,
+      enterprise: 100000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Operational efficiency',
+      'Predictive insights',
+      'Cost reduction',
+      'Automated monitoring'
+    ],
+    useCases: [
+      'Smart manufacturing',
+      'Agriculture monitoring',
+      'Building automation',
+      'Fleet management'
+    ],
+    technologies: ['Arduino', 'Raspberry Pi', 'AWS IoT', 'MQTT', 'Time Series DB'],
+    link: 'https://ziontechgroup.com/services/iot-solutions',
+    icon: '🌐'
+  },
+  {
+    id: 'api-development-integration',
+    name: 'API Development & Integration',
+    category: 'it-services',
+    description: 'Custom API development and third-party integration services for seamless system connectivity.',
+    features: [
+      'RESTful API development',
+      'GraphQL implementation',
+      'Third-party integrations',
+      'API documentation',
+      'Rate limiting & security',
+      'Performance optimization'
+    ],
+    pricing: {
+      starter: 8000,
+      professional: 25000,
+      enterprise: 75000,
+      currency: 'USD'
+    },
+    benefits: [
+      'System interoperability',
+      'Improved efficiency',
+      'Scalable architecture',
+      'Enhanced user experience'
+    ],
+    useCases: [
+      'Legacy system integration',
+      'Third-party service integration',
+      'Mobile app backends',
+      'Microservices architecture'
+    ],
+    technologies: ['Node.js', 'Python', 'GraphQL', 'Postman', 'Swagger'],
+    link: 'https://ziontechgroup.com/services/api-development',
+    icon: '🔌'
+  },
+  {
+    id: 'mobile-app-development',
+    name: 'Mobile App Development',
+    category: 'it-services',
+    description: 'Native and cross-platform mobile app development with modern UI/UX and backend integration.',
+    features: [
+      'iOS & Android development',
+      'Cross-platform solutions',
+      'UI/UX design',
+      'Backend integration',
+      'Push notifications',
+      'App store optimization'
+    ],
+    pricing: {
+      starter: 10000,
+      professional: 30000,
+      enterprise: 90000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Enhanced user engagement',
+      'Mobile-first experience',
+      'Offline functionality',
+      'App store presence'
+    ],
+    useCases: [
+      'Business applications',
+      'E-commerce platforms',
+      'Social networking',
+      'Productivity tools'
+    ],
+    technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase'],
+    link: 'https://ziontechgroup.com/services/mobile-app-development',
+    icon: '📱'
+  },
+
+  // Additional AI Services
+  {
+    id: 'computer-vision-solutions',
+    name: 'Computer Vision Solutions',
+    category: 'ai-services',
+    description: 'Advanced computer vision solutions for image recognition, object detection, and visual analytics.',
+    features: [
+      'Image classification',
+      'Object detection & tracking',
+      'Facial recognition',
+      'OCR text extraction',
+      'Quality inspection',
+      'Real-time processing'
+    ],
+    pricing: {
+      starter: 12000,
+      professional: 35000,
+      enterprise: 120000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Automated visual inspection',
+      'Enhanced security',
+      'Quality control',
+      'Process automation'
+    ],
+    useCases: [
+      'Manufacturing quality control',
+      'Security surveillance',
+      'Medical imaging',
+      'Retail analytics'
+    ],
+    technologies: ['OpenCV', 'TensorFlow', 'PyTorch', 'YOLO', 'CUDA'],
+    link: 'https://ziontechgroup.com/services/computer-vision',
+    icon: '👁️'
+  },
+  {
+    id: 'natural-language-processing',
+    name: 'Natural Language Processing',
+    category: 'ai-services',
+    description: 'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',
+    features: [
+      'Sentiment analysis',
+      'Text classification',
+      'Named entity recognition',
+      'Language translation',
+      'Text summarization',
+      'Chatbot development'
+    ],
+    pricing: {
+      starter: 9000,
+      professional: 28000,
+      enterprise: 85000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Automated text processing',
+      'Customer insight extraction',
+      'Multilingual support',
+      'Content optimization'
+    ],
+    useCases: [
+      'Customer feedback analysis',
+      'Content moderation',
+      'Document processing',
+      'Market research'
+    ],
+    technologies: ['spaCy', 'NLTK', 'Transformers', 'BERT', 'GPT'],
+    link: 'https://ziontechgroup.com/services/nlp',
+    icon: '📝'
+  },
+  {
+    id: 'predictive-analytics',
+    name: 'Predictive Analytics Solutions',
+    category: 'ai-services',
+    description: 'Advanced predictive analytics using machine learning to forecast trends and optimize business decisions.',
+    features: [
+      'Demand forecasting',
+      'Risk assessment',
+      'Customer behavior prediction',
+      'Market trend analysis',
+      'Anomaly detection',
+      'Real-time predictions'
+    ],
+    pricing: {
+      starter: 15000,
+      professional: 45000,
+      enterprise: 150000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Data-driven decisions',
+      'Risk mitigation',
+      'Revenue optimization',
+      'Competitive advantage'
+    ],
+    useCases: [
+      'Supply chain optimization',
+      'Financial risk management',
+      'Marketing campaign optimization',
+      'Inventory management'
+    ],
+    technologies: ['Python', 'Scikit-learn', 'XGBoost', 'Apache Spark', 'TensorFlow'],
+    link: 'https://ziontechgroup.com/services/predictive-analytics',
+    icon: '🔮'
+  },
+  {
+    id: 'ai-powered-recommendation-engine',
+    name: 'AI Recommendation Engine',
+    category: 'ai-services',
+    description: 'Intelligent recommendation systems to personalize user experiences and increase engagement.',
+    features: [
+      'Collaborative filtering',
+      'Content-based recommendations',
+      'Hybrid recommendation models',
+      'Real-time personalization',
+      'A/B testing framework',
+      'Performance analytics'
+    ],
+    pricing: {
+      starter: 11000,
+      professional: 32000,
+      enterprise: 95000,
+      currency: 'USD'
+    },
+    benefits: [
+      'Increased user engagement',
+      'Higher conversion rates',
+      'Personalized experiences',
+      'Revenue growth'
+    ],
+    useCases: [
+      'E-commerce platforms',
+      'Streaming services',
+      'Content platforms',
+      'Social media'
+    ],
+    technologies: ['Python', 'TensorFlow', 'Apache Kafka', 'Redis', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/recommendation-engine',
+    icon: '🎯'
   }
 ];
 
