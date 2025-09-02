@@ -31,6 +31,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         AI_ANALYSIS_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */2 * * *', // Restart every 2 hours
       log_file: './logs/ai-code-analyzer.log',
@@ -51,6 +52,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         PERFORMANCE_OPTIMIZATION_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */4 * * *', // Restart every 4 hours
       log_file: './logs/smart-performance-optimizer.log',
@@ -71,6 +73,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         DEPENDENCY_MANAGEMENT_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 6,18 * * *', // Restart at 6 AM and 6 PM
       log_file: './logs/intelligent-dependency-manager.log',
@@ -91,6 +94,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         DEPLOYMENT_AUTOMATION_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       log_file: './logs/smart-deployment-automation.log',
@@ -111,6 +115,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         CI_CD_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */3 * * *', // Restart every 3 hours
       log_file: './logs/enhanced-ci-cd-automation.log',
@@ -131,6 +136,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         SECURITY_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */2 * * *', // Restart every 2 hours
       log_file: './logs/enhanced-security-automation.log',
@@ -151,6 +157,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         TESTING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */4 * * *', // Restart every 4 hours
       log_file: './logs/enhanced-testing-automation.log',
@@ -170,6 +177,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         HEALTH_MONITORING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */1 * * *', // Restart every hour
       log_file: './logs/project-health-monitor.log',
@@ -190,6 +198,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         SYNC_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */2 * * *', // Restart every 2 hours
       log_file: './logs/pm2-sync-automation.log',
@@ -209,6 +218,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         MONITORING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */1 * * *', // Restart every hour
       log_file: './logs/pm2-sync-monitor.log',
@@ -229,6 +239,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         LINK_CHECKING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 8,20 * * *', // Restart at 8 AM and 8 PM
       log_file: './logs/link-checker-automation.log',
@@ -248,6 +259,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         SYNTAX_FIXING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */6 * * *', // Restart every 6 hours
       log_file: './logs/typescript-syntax-fixer.log',
@@ -267,6 +279,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         ERROR_FIXING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */3 * * *', // Restart every 3 hours
       log_file: './logs/console-error-fixer.log',
@@ -287,6 +300,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         DEPENDENCY_MANAGEMENT_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 7,19 * * *', // Restart at 7 AM and 7 PM
       log_file: './logs/dependency-manager.log',
@@ -306,6 +320,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         PERFORMANCE_MONITORING_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */1 * * *', // Restart every hour
       log_file: './logs/performance-monitor.log',
@@ -325,6 +340,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         FRONTEND_OPTIMIZATION_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */4 * * *', // Restart every 4 hours
       log_file: './logs/front-maximizer.log',
@@ -343,12 +359,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */4 * * *', // Every 4 hours
       log_file: './automation/logs/ai-code-review-automation.log',
       error_file: './automation/logs/ai-code-review-automation-error.log',
-      out_file: './automation/logs/ai-code-review-automation-out.log'
+      out_file: './automation/logs/ai-code-review-automation-out.log',
     },
 
     {
@@ -359,12 +376,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */3 * * *', // Every 3 hours
       log_file: './automation/logs/predictive-issue-detection.log',
       error_file: './automation/logs/predictive-issue-detection-error.log',
-      out_file: './automation/logs/predictive-issue-detection-out.log'
+      out_file: './automation/logs/predictive-issue-detection-out.log',
     },
 
     {
@@ -375,12 +393,13 @@ module.exports = {
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'production'
+        NODE_ENV: 'production',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */8 * * *', // Every 8 hours
       log_file: './automation/logs/intelligent-build-pipeline.log',
       error_file: './automation/logs/intelligent-build-pipeline-error.log',
-      out_file: './automation/logs/intelligent-build-pipeline-out.log'
+      out_file: './automation/logs/intelligent-build-pipeline-out.log',
     },
 
     // MONITORING AND DASHBOARDS
@@ -394,6 +413,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         SITEMAP_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 5,17 * * *', // Restart at 5 AM and 5 PM
       log_file: './logs/sitemap-runner.log',
@@ -413,6 +433,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         QUALITY_CHECK_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */2 * * *', // Restart every 2 hours
       log_file: './logs/quality-checks.log',
@@ -431,12 +452,13 @@ module.exports = {
       max_memory_restart: '1G',
       env: {
         NODE_ENV: 'production',
-        AUTOMATION_INTERVAL: '300000' // 5 minutes
+        AUTOMATION_INTERVAL: '300000', // 5 minutes
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '*/5 * * * *', // Every 5 minutes
       log_file: './automation/logs/unified-automation-dashboard.log',
       error_file: './automation/logs/unified-automation-dashboard-error.log',
-      out_file: './automation/logs/unified-automation-dashboard-out.log'
+      out_file: './automation/logs/unified-automation-dashboard-out.log',
     },
 
     // RECOVERY AND MAINTENANCE
@@ -450,6 +472,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         SECURITY_AUDIT_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 3,15 * * *', // Restart at 3 AM and 3 PM
       log_file: './logs/security-audit.log',
@@ -469,6 +492,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         CONTINUOUS_IMPROVEMENT_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 */8 * * *', // Restart every 8 hours
       log_file: './logs/continuous-improvement.log',
@@ -489,6 +513,7 @@ module.exports = {
       env: {
         NODE_ENV: 'production',
         BUILD_TEST_MODE: 'true',
+        PM2_PATH: 'npx pm2',
       },
       cron_restart: '0 2 * * *', // Restart daily at 2 AM
       log_file: './logs/daily-build-test.log',

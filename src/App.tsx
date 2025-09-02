@@ -1,7 +1,10 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
-import LoadingSpinner from './components/ui/loading-spinner';
+import { motion, AnimatePresence } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
+import Layout from './components/layout/Layout';
+import ErrorBoundary from './components/ErrorBoundary';
+import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
 const HomePage: any = lazy(() => import('./pages/HomePage').then(module => ({ default: module.HomePage })));
@@ -60,9 +63,9 @@ function App(): any {
               <Route path="*" element={<SimplePage />} />
             </Routes>
           </Suspense>
-        </div>
-      </div>
-    </ErrorBoundary>
+        </Layout>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 

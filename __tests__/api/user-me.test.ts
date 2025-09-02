@@ -6,8 +6,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 interface MockApiResponse extends NextApiResponse {
   status: vi.Mock<[number], MockApiResponse>;
   json: vi.Mock<[unknown], MockApiResponse>; // Changed from [any] to [unknown]
-  setHeader: vi.Mock<[string, string | string[]], void>; 
-  end: vi.Mock<[(cb?: () => void) => void], void>; 
+  setHeader: vi.Mock<[string, string | string[]], void>;
+  end: vi.Mock<[(cb?: () => void) => void], void>;
 }
 
 function mockReq(method: string, body?: unknown): NextApiRequest {
@@ -32,10 +32,13 @@ function mockRes(): MockApiResponse {
 test('GET returns profile', () => {
   const req = mockReq('GET');
   const res = mockRes();
-  handler(req, res); 
+  handler(req, res);
   expect(res.status).toHaveBeenCalledWith(200);
   expect(res.json).toHaveBeenCalledWith(
-    expect.objectContaining({ email: 'jane@example.com', points: expect.any(Number) })
+    expect.objectContaining({
+      email: 'jane@example.com',
+      points: expect.any(Number),
+    })
   );
 });
 
@@ -43,7 +46,9 @@ test('PUT updates profile', () => {
   const req = mockReq('PUT', { name: 'New' });
   const res = mockRes();
   handler(req, res);
-  expect(res.json).toHaveBeenCalledWith(expect.objectContaining({ name: 'New' }));
+  expect(res.json).toHaveBeenCalledWith(
+    expect.objectContaining({ name: 'New' })
+  );
 });
 
 test('DELETE soft deletes account', () => {
