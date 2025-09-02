@@ -5,7 +5,6 @@ import { services, getServicesByCategory } from '../../data/services';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
 const ServicesPage: NextPage = () => {
   const microSaasServices = getServicesByCategory('micro-saas');
   const itServices = getServicesByCategory('it-services');
