@@ -1,12 +1,18 @@
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-react';
-import Layout from '../components/layout/Layout';
+import React from
+  'react';
+import Head from
+  'next/head';
+import { Phone, Mail, MapPin, Check, ArrowRight, Star } from
+  'lucide-react';
+import Layout from
+  '../components/layout/Layout';
 
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { enhancedRealMicroSaasServices } from
+  '../data/enhanced-real-micro-saas-services';
 
 export default function AutonomousManufacturingPage() {
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/autonomous-manufacturing'));
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith(
+  '/autonomous-manufacturing'));
   if (!service) return null;
   const contactInfo = service.contactInfo;
 <Layout>

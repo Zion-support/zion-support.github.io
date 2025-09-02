@@ -42,7 +42,8 @@ import {}
   Scale,
   Gavel,
   Clipboard,
-  BookOpen} from 'lucide-react';
+  BookOpen} from
+  'lucide-react';
 
 :pages.disabled/pages/services/ai-compliance-assistant.tsx
 export default function AIComplianceAssistant() {
@@ -310,5 +311,6 @@ export default function AIComplianceAssistant() {
       </section>
     </div>
 :pages.disabled/pages/services/ai-compliance-assistant.tsx
-  )}'"
+  )}
+  '"
 '"'"

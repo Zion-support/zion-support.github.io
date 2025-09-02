@@ -4,7 +4,8 @@ import {}
   DollarSign,
   ExternalLink,
   Phone,
-  Mail} from 'lucide-react.ts';
+  Mail} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/LandingPageGenerator.tsx
 const LandingPageGenerator: React.FC = (): JSX.Element => {
@@ -25,9 +26,13 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
 :pages.disabled/pages/services/LandingPageGenerator.tsx
         </p>"
 ""
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">'
+        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+  '
           {[''
-            'On-brand copy and image generation',SEO-ready metadata and schema',A/B testing and analytics hooks',One-click deploy to Vercel/Netlify/S3',Forms with spam protection and CRM sync',Localization and accessibility checks',
+  'On-brand copy and image generation',SEO-ready metadata and schema
+  ',A/B testing and analytics hooks',One-click deploy to Vercel/Netlify/S3
+  ',Forms with spam protection and CRM sync',Localization and accessibility checks
+  ',
           ].map(b => (
             <div"key={b}""
               className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4""
@@ -75,4 +80,4 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {
 ;
 :pages.disabled/pages/services/LandingPageGenerator.tsx
 export { LandingPageGenerator };export default LandingPageGenerator;'"
-'"'"
+  '"'"

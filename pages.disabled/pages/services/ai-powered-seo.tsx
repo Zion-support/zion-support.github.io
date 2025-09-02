@@ -20,7 +20,8 @@ import {}
   Monitor,
   Smartphone,
   Laptop,
-  Phone} from 'lucide-react.ts';
+  Phone} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/ai-powered-seo.tsx
 export default function AIPoweredSEO(...args: any[]): any {
@@ -92,9 +93,11 @@ export default function AIPoweredSEO(...args: any[]): any {
               Powered by Advanced AI Technology"
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered SEO platform combines machine learning, natural'
+              Our AI-powered SEO platform combines machine learning, natural
+  '
               language processing, and predictive analytics to deliver results''
-              that traditional SEO methods can't match.
+              that traditional SEO methods can
+  't match.
             </p>
           </motion.div>"""
           <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
@@ -234,4 +237,4 @@ export default function AIPoweredSEO(...args: any[]): any {
     </div>
 :pages.disabled/pages/services/ai-powered-seo.tsx
   )}'"
-'"'"
+  '"'"

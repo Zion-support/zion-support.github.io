@@ -1,12 +1,16 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';
 import {}
   ComputerDesktopIcon,
   ServerIcon,
   ShieldCheckIcon,
   CogIcon,
-  WrenchScrewdriverIcon,'
-  CloudIcon} from '@heroicons/react/24/outline';
+  WrenchScrewdriverIcon,
+  '
+  CloudIcon} from '@heroicons/react/24/outline
+  ';
 const ITServices = () => {}
   return()
 :pages.disabled/pages/services/ITServices.jsx
@@ -459,7 +463,8 @@ const ITServices = () => {}
                     Proactive Approach"
                   </h3>""
                   <p className="text-gray-300">'
-                    We don't just fix problems - we prevent them through
+                    We don
+  't just fix problems - we prevent them through
                     proactive monitoring, maintenance, and strategic planning.
                   </p>
                 </div>
@@ -561,4 +566,4 @@ const ITServices = () => {}
 export { ITServices };
 :pages.disabled/pages/services/ITServices.jsx
 export default ITServices;'"
-'"'"
+  '"'"
