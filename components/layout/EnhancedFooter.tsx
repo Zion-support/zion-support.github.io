@@ -21,16 +21,16 @@ const EnhancedFooter: React.FC = () => {
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.linkedin.com/company/zion-tech-group/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="https://twitter.com/ZionTechGroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="https://github.com/ZionTechGroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="https://www.facebook.com/ZionTechGroup" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
             </div>
@@ -140,21 +140,21 @@ const EnhancedFooter: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-blue-400" />
-                <a href="mailto:kleber@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
-                  kleber@ziontechgroup.com
+                <a href="mailto:info@ziontechgroup.com" className="text-gray-300 hover:text-white transition-colors">
+                  info@ziontechgroup.com
                 </a>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-blue-400" />
-                <a href="tel:+13024640950" className="text-gray-300 hover:text-white transition-colors">
-                  +1 302 464 0950
+                <a href="tel:+1-555-123-4567" className="text-gray-300 hover:text-white transition-colors">
+                  +1 (555) 123-4567
                 </a>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-blue-400" />
                 <span className="text-gray-300">
-                  364 E Main St STE 1008<br />
-                  Middletown, DE 19709
+                  123 Tech Street, Innovation District<br />
+                  San Francisco, CA 94105
                 </span>
               </div>
             </div>
