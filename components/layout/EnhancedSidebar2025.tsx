@@ -23,17 +23,6 @@ interface SidebarItem {
   isPremium?: boolean;
 category?: string;
 
-
-
-
-
-
-
-
-
-
-
-
 }
 
 const sidebarSections = [
@@ -341,11 +330,6 @@ export default function EnhancedSidebar2025(...args[]: any):  {
   { type: 'spring', damping: 25,
   stiffness: 200 
 
-
-
-
-
-
 }}
         className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}
 
@@ -428,32 +412,17 @@ export default function EnhancedSidebar2025(...args[]: any):  {
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }}
                     animate = {
 
   { opacity: 1,
   height: 'auto' 
 
-
-
-
-
-
 }}
                     exit = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                     transition={{ duration: 0.3 }}
@@ -494,32 +463,17 @@ export default function EnhancedSidebar2025(...args[]: any):  {
   { opacity: 0,
   height: 0 
 
-
-
-
-
-
 }}
                                 animate = {
 
   { opacity: 1,
   height: 'auto' 
 
-
-
-
-
-
 }}
                                 exit = {
 
   { opacity: 0,
   height: 0 
-
-
-
-
-
 
 }}
                                 transition={{ duration: 0.3 }}
