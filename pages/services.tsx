@@ -252,6 +252,36 @@ export default function Services() {
 							Average market price ranges referenced from public agency rate cards and vendor quotes. For tailored pricing, see our{' '}
 							<Link href='/pricing-guide' className='text-blue-600 hover:text-blue-500 underline'>Pricing Guide</Link>.
 						</p>
+						
+						{/* Service Category Links */}
+						<div className='mt-8 grid grid-cols-1 md:grid-cols-3 gap-6'>
+							<Link href='/ai-services' className='group bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300'>
+								<div className='flex items-center justify-center mb-4'>
+									<Brain className='h-12 w-12 text-blue-600 group-hover:scale-110 transition-transform' />
+								</div>
+								<h3 className='text-xl font-bold text-gray-900 mb-2'>AI Services</h3>
+								<p className='text-gray-600 text-sm mb-4'>Cutting-edge artificial intelligence solutions including machine learning, NLP, and computer vision.</p>
+								<div className='text-blue-600 font-semibold group-hover:text-blue-700'>Explore AI Services →</div>
+							</Link>
+							
+							<Link href='/it-services' className='group bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300'>
+								<div className='flex items-center justify-center mb-4'>
+									<Cloud className='h-12 w-12 text-green-600 group-hover:scale-110 transition-transform' />
+								</div>
+								<h3 className='text-xl font-bold text-gray-900 mb-2'>IT Services</h3>
+								<p className='text-gray-600 text-sm mb-4'>Comprehensive IT solutions including cloud infrastructure, cybersecurity, and network management.</p>
+								<div className='text-green-600 font-semibold group-hover:text-green-700'>Explore IT Services →</div>
+							</Link>
+							
+							<Link href='/micro-saas' className='group bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300'>
+								<div className='flex items-center justify-center mb-4'>
+									<Code className='h-12 w-12 text-orange-600 group-hover:scale-110 transition-transform' />
+								</div>
+								<h3 className='text-xl font-bold text-gray-900 mb-2'>Micro SaaS</h3>
+								<p className='text-gray-600 text-sm mb-4'>Custom software solutions and micro SaaS applications tailored to your business needs.</p>
+								<div className='text-orange-600 font-semibold group-hover:text-orange-700'>Explore Micro SaaS →</div>
+							</Link>
+						</div>
 					</div>
 					<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
 						{/* AI Services */}
