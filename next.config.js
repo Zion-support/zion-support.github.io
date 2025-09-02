@@ -9,14 +9,22 @@ eslint: {
     esmExternals: false,
     newNextLinkBehavior: true,
   },
+<<<<<<< HEAD
+=======
   typescript: {
     ignoreBuildErrors: true,
   },
+>>>>>>> origin/main
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
+<<<<<<< HEAD
+    ignoreBuildErrors: true,
+  },
+=======
     ignoreBuildErrors: true,},
+>>>>>>> origin/main
   images: {
     domains: [
   'ziontechgroup.com'],
