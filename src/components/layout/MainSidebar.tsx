@@ -1,48 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import React, { useState } from 'react.ts';
 import { Link, useLocation               } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { cn               } from '@/lib/utils';
-import { Home,
-  Briefcase,
-  Users,
-  Settings,
-  BarChart3,
-  FileText,
-  MessageSquare,
-  HelpCircle,
-  Code,
-  Smartphone,
-  Globe,
-  Building,
-  Mail,
-  Phone,
-  MapPin,
-  Brain,
-  Cpu,
-  Shield,
-  Rocket,
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-=======
-<<<<<<< HEAD
->>>>>>> 29f254fe9be1bd5b31fe3bfec5a570a9a2c707f8
-=======
-import React, { useState } from 'react.ts';
-import { Link, useLocation               } from 'react-router-dom.ts';
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
-import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-=======
 import { cn } from '@/lib/utils';
 import {
   Menu,
@@ -68,7 +25,13 @@ import {
   Cpu,
   Shield,
   Rocket,
->>>>>>> origin/main
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  ChevronRight,
+  Home,
+=======
   Zap,
   Cloud,
   ShoppingCart,
@@ -85,77 +48,7 @@ import {
   Network,
   Palette,
   Video,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
-<<<<<<< HEAD
-  Audio,
-  Document,
-  Folder,
-  File,
-  Archive,
-  Backup,
-  Restore,
-  Sync,
-  Share,
-  Export,
-  Import,
-  Download,
-  Upload,
-  Copy,
-  Paste,
-  Cut,
-  Delete,
-  Undo,
-  Redo,
-  Save,
-  Load,
-  Open,
-  Close,
-  Minimize,
-  Maximize,
-  Restore as RestoreIcon,
-  Move,
-  Resize,
-  Rotate,
-  Scale,
-  Transform,
-  Animate,
-  Transition,
-  Effect,
-  Filter,
-  Blend,
-  Mask,
-  Clip,
-  Crop,
-  Resize as ResizeIcon,
-  Rotate as RotateIcon,
-  Scale as ScaleIcon,
-  Transform as TransformIcon,
-  Animate as AnimateIcon,
-  Transition as TransitionIcon,
-  Effect as EffectIcon,
-  Filter as FilterIcon,
-  Blend as BlendIcon,
-  Mask as MaskIcon,
-  Clip as ClipIcon,
-  Crop as CropIcon,
-  Clock,
-  Handshake,
-  Leaf,
-  HardDrive,
-  RefreshCw
-interface MainSidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
-  onClose: ()               => void;
-=======
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
-=======
->>>>>>> 29f254fe9be1bd5b31fe3bfec5a570a9a2c707f8
-=======
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   PenTool,
   Atom,
   Server,
@@ -169,18 +62,10 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
   Phone,
   Mail,
   MapPin,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Users
-<<<<<<< HEAD
-} from 'lucide-react';
-=======
-=======
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
  
 } from 'lucide-react.ts';
 
+=======
   Building2,
   TestTube,
   Newspaper,
@@ -192,6 +77,7 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
   Activity,
   Workflow,
   Truck
+
 } from 'lucide-react';
 
 interface SidebarItem {
@@ -232,9 +118,7 @@ interface SidebarItem {
 }
 
 interface NavigationSection {
-=======
   Users
-=======
   Audio,
   Document,
   Folder,
@@ -273,10 +157,8 @@ interface NavigationSection {
   Mask,
   Clip,
   Crop
->>>>>>> origin/main
 } from 'lucide-react';
 interface SidebarItem {
->>>>>>> 29f254fe9be1bd5b31fe3bfec5a570a9a2c707f8
   title: string;
   href?: string;
   icon: React.ComponentType<{ className?: string }>;
@@ -284,27 +166,14 @@ interface SidebarItem {
   badge?: string;
   disabled?: boolean;
 }
-<<<<<<< HEAD
-
-export function MainSidebar() {
 
 export function MainSidebar(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
 
-<<<<<<< HEAD
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
-=======
-<<<<<<< HEAD
-export function MainSidebar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const [expandedSections, setExpandedSections] = useState<string[]>(['services']);
-  const location = useLocation();
->>>>>>> 29f254fe9be1bd5b31fe3bfec5a570a9a2c707f8
-=======
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   const toggleSection = (section: string) => {
+=======
 
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setExpandedSections(prev => 
@@ -393,137 +262,13 @@ export function MainSidebar() {
       ]
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
->>>>>>> 29f254fe9be1bd5b31fe3bfec5a570a9a2c707f8
       name: 'Emerging Tech',
       href: '#',
       icon: Rocket,
       children: [
-<<<<<<< HEAD
-        {
-          name: 'Quantum Computing',
-          href: '/services/quantum-computing',
-          icon: Atom,
-          description: 'Next-gen Computing'
-        },
-        {
-          name: 'AI Cybersecurity',
-          href: '/services/ai-cybersecurity',
-          icon: Lock,
-          description: 'Intelligent Security'
-        },
-        {
-          name: 'IoT Edge Computing',
-          href: '/services/iot-edge-computing',
-          icon: Smartphone,
-          description: 'Connected Ecosystems'
-        },
-        {
-          name: 'AI Content Creation',
-          href: '/services/ai-content-creation',
-          icon: Video,
-          description: 'Creative AI'
-        }
-      ]
-    },
-    {
-      name: 'Business Solutions',
-      href: '#',
-      icon: Briefcase,
-      children: [
-        {
-          name: 'Marketplace',
-          href: '/marketplace',
-          icon: ShoppingCart,
-          description: 'Product & Service Hub'
-        },
-        {
-          name: 'Talent Solutions',
-          href: '/talent',
-          icon: Users,
-          description: 'HR & Recruitment'
-        },
-        {
-          name: 'Equipment Services',
-          href: '/equipment',
-          icon: Server,
-          description: 'Hardware Solutions'
-        },
-        {
-          name: 'Request Quote',
-          href: '/request-quote',
-          icon: MessageCircle,
-          description: 'Get Pricing'
-        }
-      ]
-    },
-    {
-      name: 'Comp',
-      href: '#',
-      icon: Info,
-      children: [
-        {
-          name: 'About Us',
-          href: '/about',
-          icon: Info,
-          description: 'Our Story'
-        },
-        {
-          name: 'Team',
-          href: '/team',
-          icon: Users,
-          description: 'Meet Our Team'
-        },
-        {
-          name: 'Careers',
-          href: '/careers',
-          icon: Briefcase,
-          description: 'Join Us'
-        },
-        {
-          name: 'Partners',
-          href: '/partners',
-          icon: Users,
-          description: 'Partnerships'
-        }
-      ]
-    },
-    {
-      name: 'Resources',
-      href: '#',
-      icon: BookOpen,
-      children: [
-        {
-          name: 'Blog',
-          href: '/blog',
-          icon: FileText,
-          description: 'Latest Insights'
-        },
-        {
-          name: 'FAQ',
-          href: '/faq',
-          icon: HelpCircle,
-          description: 'Common Questions'
-        },
-        {
-          name: 'Help Center',
-          href: '/help',
-          icon: MessageCircle,
-          description: 'Support Resources'
-        },
-=======
       title: 'Resources',
       items: [
->>>>>>> f219bce04e406d3d2d696cae82a13fb57f779089
-=======
->>>>>>> 29f254fe9be1bd5b31fe3bfec5a570a9a2c707f8
-=======
-      title: 'Resources',
-      items: [
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
         {
           name: 'Quantum Computing',
           href: '/services/quantum-computing',
@@ -635,6 +380,9 @@ export function MainSidebar() {
           icon: MessageCircle,
           description: 'Support Resources'
         },
+=======
+      title: 'Resources',
+      items: [
         {
           name: 'Documentation',
           href: '/docs',
@@ -706,7 +454,6 @@ export function MainSidebar() {
         )}
       </div>
     );
-=======
 
 interface MainSidebarProps {
   className?: string;
@@ -816,75 +563,8 @@ const SidebarItem: React.FC<{ item: SidebarItem; level?: number }> = ({ item, le
     if (hasChildren) {
       setIsExpanded(!isExpanded);
     }
->>>>>>> origin/main
   };
   return (
-<<<<<<< HEAD
-    <>
-      {/* Mobile menu button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-      >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
-      {/* Sidebar */}
-      <div className={`
-        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl
-        transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-      `}>
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-slate-700/50">
-            <h2 className="text-lg font-semibold text-white">Navigation</h2>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
-            >
-              <X className="w-5 h-5" />
-            </button>
-          </div>
-          {/* Navigation */}
-          <nav className="flex-1 overflow-y-auto p-4 space-y-2">
-            {navigation.map(item => renderSidebarItem(item))}
-          </nav>
-          {/* Footer */}
-          <div className="p-4 border-t border-slate-700/50">
-            <div className="text-xs text-slate-400 space-y-2">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-3 h-3" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-3 h-3" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-3 h-3" />
-                <span>Middletown DE 19709</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/50 lg:hidden"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
-    </>
-  )};
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-    </>;
-  );
-}
-=======
     <div>
       <div
         className={cn(
@@ -933,6 +613,12 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({
 }) => {
   const [isCollapsed, setIsCollapsed] = useState(false);
 
+=======
+          />
+        )}
+      </div>
+    );
+  };
   return (
     <aside
       className={cn(
@@ -940,42 +626,12 @@ export const MainSidebar: React.FC<MainSidebarProps> = ({
         isCollapsed ? 'w-16' : 'w-64',
         className
       )}
-    >
-      <div className="flex flex-col h-full">
-        {/* Header */}
-        <div className="flex items-center justify-between p-4 border-b border-white/10">
-          {!isCollapsed && (
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-lg font-bold text-white">Zion Tech</span>
-            </div>
-          )}
-          <button
-            onClick={() => setIsCollapsed(!isCollapsed)}
-            className="p-1 rounded-lg hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
-          >
-            {isCollapsed ? <ChevronRight className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-          </button>
-        </div>
-
-        {/* Navigation */}
-        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
-          {navigationItems.map((item, index) => (
-            <SidebarItem key={index} item={item} />
-          ))}
-        </nav>
-
-        {/* Footer */}
-        <div className="p-4 border-t border-white/10">
-          <div className="flex items-center space-x-3 text-sm text-gray-400">
-            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-            <span>System Online</span>
-          </div>
-        </div>
-      </div>
-    </aside>
+    </>
+  )};
+            </div>;
+          </div>;
+        </div>;
+      </div>;
+    </>;
   );
 };
->>>>>>> origin/main

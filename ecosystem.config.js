@@ -1,240 +1,141 @@
 module.exports = {
   apps: [
     {
-      name: 'lint-fixer',
-      script: 'scripts/pm2/lint-fixer.js',
+      name: 'zion-app',
+      script: 'npm',
+      args: 'run preview',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '2G',
       env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'lint-fixer',
-        AUTO_FIX: 'true',
-        STRICT_MODE: 'true'
+        NODE_ENV: 'production',
+        PORT: 3000
       },
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
-      log_file: 'logs/pm2/lint-fixer.log',
-      error_file: 'logs/pm2/lint-fixer-error.log',
-      out_file: 'logs/pm2/lint-fixer-out.log'
+      env_production: {
+        NODE_ENV: 'production',
+        PORT: 3000
+      },
+      error_file: './logs/app-error.log',
+      out_file: './logs/app-out.log',
+      log_file: './logs/app-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '10s',
+      restart_delay: 4000,
+      kill_timeout: 5000,
+      wait_ready: true,
+      listen_timeout: 8000,
+      health_check_grace_period: 30000,
+      health_check_fatal_exceptions: true,
+      cron_restart: '0 4 * * *', // Daily restart at 4 AM
+      pmx: true,
+      log_type: 'json',
+      max_unstable_restarts: 5,
+      unstable_restart_delay: 10000
     },
     {
-      name: 'code-quality-monitor',
-      script: 'scripts/pm2/code-quality-monitor.js',
+      name: 'error-monitor',
+      script: './scripts/error-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '500M',
       env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'code-quality-monitor',
-        QUALITY_THRESHOLD: '80',
-        AUTO_FIX_CRITICAL: 'true'
+        NODE_ENV: 'production'
       },
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      log_file: 'logs/pm2/code-quality-monitor.log',
-      error_file: 'logs/pm2/code-quality-monitor-error.log',
-      out_file: 'logs/pm2/code-quality-monitor-out.log'
+      error_file: './logs/error-monitor-error.log',
+      out_file: './logs/error-monitor-out.log',
+      log_file: './logs/error-monitor-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 10,
+      min_uptime: '5s',
+      restart_delay: 2000,
+      cron_restart: '*/10 * * * *', // Run every 10 minutes
+      pmx: true
     },
     {
-      name: 'auto-commit-fixes',
-      script: 'scripts/pm2/auto-commit-fixes.js',
+      name: 'health-checker',
+      script: './scripts/health-checker.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '300M',
       env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'auto-commit-fixes',
-        COMMIT_FREQUENCY: 'hourly',
-        AUTO_PUSH: 'false'
+        NODE_ENV: 'production'
       },
-      cron_restart: '0 */2 * * *', // Restart every 2 hours
-      log_file: 'logs/pm2/auto-commit-fixes.log',
-      error_file: 'logs/pm2/auto-commit-fixes-error.log',
-      out_file: 'logs/pm2/auto-commit-fixes-out.log'
+      error_file: './logs/health-checker-error.log',
+      out_file: './logs/health-checker-out.log',
+      log_file: './logs/health-checker-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 5,
+      min_uptime: '5s',
+      restart_delay: 2000,
+      cron_restart: '*/5 * * * *', // Run every 5 minutes
+      pmx: true
     },
     {
-      name: 'dependency-monitor',
-      script: 'scripts/pm2/dependency-monitor.js',
+      name: 'auto-fixer',
+      script: './scripts/auto-fixer.js',
       instances: 1,
       autorestart: true,
       watch: false,
       max_memory_restart: '1G',
       env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'dependency-monitor',
-        AUTO_UPDATE_DEV: 'true',
-        SECURITY_ALERTS: 'true'
+        NODE_ENV: 'production'
       },
-      cron_restart: '0 0 * * 0', // Restart weekly on Sunday
-      log_file: 'logs/pm2/dependency-monitor.log',
-      error_file: 'logs/pm2/dependency-monitor-error.log',
-      out_file: 'logs/pm2/dependency-monitor-out.log'
+      error_file: './logs/auto-fixer-error.log',
+      out_file: './logs/auto-fixer-out.log',
+      log_file: './logs/auto-fixer-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '10s',
+      restart_delay: 5000,
+      cron_restart: '0 */2 * * *', // Run every 2 hours
+      pmx: true
     },
     {
-      name: 'performance-monitor',
-      script: 'scripts/pm2/performance-monitor.js',
+      name: 'log-cleaner',
+      script: './scripts/log-cleaner.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '1G',
+      max_memory_restart: '200M',
       env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'performance-monitor',
-        PERFORMANCE_THRESHOLD: '3000',
-        BUNDLE_SIZE_LIMIT: '2MB'
+        NODE_ENV: 'production'
       },
-      cron_restart: '0 */8 * * *', // Restart every 8 hours
-      log_file: 'logs/pm2/performance-monitor.log',
-      error_file: 'logs/pm2/performance-monitor-error.log',
-      out_file: 'logs/pm2/performance-monitor-out.log'
-    },
-    // NEW: Intelligent Test Automation
-    {
-      name: 'test-automation',
-      script: 'scripts/pm2/test-automation.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'test-automation',
-        TEST_COVERAGE_THRESHOLD: '80',
-        AUTO_RETRY_FAILED: 'true',
-        PARALLEL_TESTS: 'true'
-      },
-      cron_restart: '0 */3 * * *', // Restart every 3 hours
-      log_file: 'logs/pm2/test-automation.log',
-      error_file: 'logs/pm2/test-automation-error.log',
-      out_file: 'logs/pm2/test-automation-out.log'
-    },
-    // NEW: Security Scanner
-    {
-      name: 'security-scanner',
-      script: 'scripts/pm2/security-scanner.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'security-scanner',
-        SCAN_DEPENDENCIES: 'true',
-        SCAN_CODE: 'true',
-        SCAN_CONFIGS: 'true',
-        ALERT_ON_CRITICAL: 'true'
-      },
-      cron_restart: '0 */12 * * *', // Restart every 12 hours
-      log_file: 'logs/pm2/security-scanner.log',
-      error_file: 'logs/pm2/security-scanner-error.log',
-      out_file: 'logs/pm2/security-scanner-out.log'
-    },
-    // NEW: Build Optimization Monitor
-    {
-      name: 'build-optimizer',
-      script: 'scripts/pm2/build-optimizer.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'build-optimizer',
-        OPTIMIZE_BUNDLES: 'true',
-        TREE_SHAKING: 'true',
-        CODE_SPLITTING: 'true',
-        MINIFICATION: 'true'
-      },
-      cron_restart: '0 0 * * *', // Restart daily at midnight
-      log_file: 'logs/pm2/build-optimizer.log',
-      error_file: 'logs/pm2/build-optimizer-error.log',
-      out_file: 'logs/pm2/build-optimizer-out.log'
-    },
-    // NEW: Git Workflow Automation
-    {
-      name: 'git-workflow',
-      script: 'scripts/pm2/git-workflow.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'git-workflow',
-        AUTO_BRANCH_CLEANUP: 'true',
-        AUTO_MERGE_SAFE: 'true',
-        CONFLICT_RESOLUTION: 'true',
-        BRANCH_STRATEGY: 'gitflow'
-      },
-      cron_restart: '0 */6 * * *', // Restart every 6 hours
-      log_file: 'logs/pm2/git-workflow.log',
-      error_file: 'logs/pm2/git-workflow-error.log',
-      out_file: 'logs/pm2/git-workflow-out.log'
-    },
-    // NEW: Environment Health Monitor
-    {
-      name: 'health-monitor',
-      script: 'scripts/pm2/health-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'health-monitor',
-        MONITOR_SYSTEM: 'true',
-        MONITOR_PROCESSES: 'true',
-        MONITOR_RESOURCES: 'true',
-        ALERT_THRESHOLD: '80'
-      },
-      cron_restart: '0 */1 * * *', // Restart every hour
-      log_file: 'logs/pm2/health-monitor.log',
-      error_file: 'logs/pm2/health-monitor-error.log',
-      out_file: 'logs/pm2/health-monitor-out.log'
-    },
-    // NEW: Documentation Generator
-    {
-      name: 'docs-generator',
-      script: 'scripts/pm2/docs-generator.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'docs-generator',
-        AUTO_GENERATE: 'true',
-        UPDATE_README: 'true',
-        API_DOCS: 'true',
-        COMPONENT_DOCS: 'true'
-      },
-      cron_restart: '0 2 * * *', // Restart daily at 2 AM
-      log_file: 'logs/pm2/docs-generator.log',
-      error_file: 'logs/pm2/docs-generator-error.log',
-      out_file: 'logs/pm2/docs-generator-out.log'
-    },
-    // NEW: SEO and Accessibility Monitor
-    {
-      name: 'seo-accessibility',
-      script: 'scripts/pm2/seo-accessibility.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '1G',
-      env: {
-        NODE_ENV: 'development',
-        PM2_PROCESS_NAME: 'seo-accessibility',
-        CHECK_SEO: 'true',
-        CHECK_ACCESSIBILITY: 'true',
-        CHECK_PERFORMANCE: 'true',
-        LIGHTHOUSE_AUDIT: 'true'
-      },
-      cron_restart: '0 */4 * * *', // Restart every 4 hours
-      log_file: 'logs/pm2/seo-accessibility.log',
-      error_file: 'logs/pm2/seo-accessibility-error.log',
-      out_file: 'logs/pm2/seo-accessibility-out.log'
+      error_file: './logs/log-cleaner-error.log',
+      out_file: './logs/log-cleaner-out.log',
+      log_file: './logs/log-cleaner-combined.log',
+      time: true,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: true,
+      max_restarts: 3,
+      min_uptime: '5s',
+      restart_delay: 2000,
+      cron_restart: '0 2 * * *', // Run daily at 2 AM
+      pmx: true
     }
-  ]
+  ],
+
+  deploy: {
+    production: {
+      user: 'ubuntu',
+      host: 'localhost',
+      ref: 'origin/main',
+      repo: 'https://github.com/Zion-Holdings/zion.app.git',
+      path: '/var/www/zion.app',
+      'pre-deploy-local': '',
+      'post-deploy': 'npm install --legacy-peer-deps && npm run build && pm2 reload ecosystem.config.js --env production',
+      'pre-setup': 'mkdir -p /var/www/zion.app/logs'
+    }
+  }
 };

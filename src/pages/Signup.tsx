@@ -1,3 +1,4 @@
+=======
 import React, { useState } from 'react.ts';
 import { Link              } from 'react-router-dom.ts';
 import { motion              } from 'framer-motion.ts';
@@ -29,15 +30,13 @@ export default function Signup(...args[]: any):  {
     firstName: '',
     lastName: '',
     email: '',
+    phone: '',
+    company: '',
+    industry: '',
     password: '',
     confirmPassword: '',
-    companyName: '',
-    companySize: '',
-    industry: '',
-    role: '',
-    phone: '',
     agreeToTerms: false,
-    subscribeToNewsletter: false
+    agreeToMarketing: false
   });
 
   const [showPassword, setShowPassword] = useState(false);

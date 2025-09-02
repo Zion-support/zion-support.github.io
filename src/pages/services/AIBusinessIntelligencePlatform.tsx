@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-=======
 import React from 'react.ts';
 import { motion               } from 'framer-motion.ts';
 import { Brain, 
   TrendingUp, 
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   BarChart3, 
   TrendingUp, 
   Brain, 
@@ -30,23 +23,6 @@ import { Brain,
   Activity,
   PieChart,
   LineChart,
-<<<<<<< HEAD
-  BarChart,
-  Gauge,
-  Calendar,
-  Filter,
-  Search,
-  Download,
-  Share2,
-  Eye,
-  Lock,
-  Shield,
-  Phone,
-  Mail
-} from 'lucide-react';
-
-export default function AIBusinessIntelligencePlatform() {
-=======
   Activity
  } from 'lucide-react';
 import { SEO               } from '@/components/SEO';
@@ -54,7 +30,6 @@ import { Button               } from '@/components/ui/button';
 import { Badge               } from '@/components/ui/badge';
 
 export default function AIBusinessIntelligencePlatform(...args[]: any):  {
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   const features = [
     {
       icon: Brain,
@@ -237,13 +212,12 @@ export default function AIBusinessIntelligencePlatform(...args[]: any):  {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -255,13 +229,8 @@ export default function AIBusinessIntelligencePlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -298,7 +267,6 @@ export default function AIBusinessIntelligencePlatform(...args[]: any):  {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -310,13 +278,8 @@ export default function AIBusinessIntelligencePlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index)               => (
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -337,13 +300,12 @@ export default function AIBusinessIntelligencePlatform(...args[]: any):  {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -355,13 +317,8 @@ export default function AIBusinessIntelligencePlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
             {pricingTiers.map((tier, index)               => (
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -399,19 +356,6 @@ export default function AIBusinessIntelligencePlatform(...args[]: any):  {
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-
-                <a
-                  href={plan.name === 'Enterprise' ? 'https://ziontechgroup.com/contact' : 'https://ziontechgroup.com/request-quote'}
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white hover:from-blue-600 hover:to-cyan-600'
-                      : 'bg-white/10 text-white hover:bg-white/20'
-                  }`}
-                >
-                  {plan.cta}
-                </a>
-=======
                 <Button
                   className={`w-full ${
                     tier.popular
@@ -468,7 +412,6 @@ export default function AIBusinessIntelligencePlatform(...args[]: any):  {
                 className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700"
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.industry}</h3>
                 <p className="text-gray-300">{useCase.description}</p>
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               </motion.div>
             ))}
           </div>
@@ -485,7 +428,7 @@ export default function AIBusinessIntelligencePlatform(...args[]: any):  {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Business Intelligence?
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Join thousands of businesses that have already transformed their data into actionable insights. 
@@ -541,4 +484,6 @@ export default function AIBusinessIntelligencePlatform(...args[]: any):  {
       </section>
     </div>
   );
-}
+};
+
+export default AIBusinessIntelligencePlatform;

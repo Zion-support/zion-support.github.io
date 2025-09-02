@@ -117,6 +117,7 @@ export function TeamExpertiseSection(...args: any[]): any {
                   {stat.value}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
+=======
         <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {teamExpertise.map((expertise, index)               => (
             <motion.div

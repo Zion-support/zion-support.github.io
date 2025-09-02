@@ -1,3 +1,4 @@
+=======
 import React, { useState } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { SEO              } from '../components/SEO';
@@ -52,18 +53,18 @@ import { Calculator,
 } from 'lucide-react';
 
 export default function RequestQuote(...args: any[]): any {
+
   const [formData, setFormData] = useState({
-    companyName: '',
-    contactName: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
-    companySize: '',
+    company: '',
     industry: '',
-    services: [],
-    budget: '',
+    projectSize: '',
     timeline: '',
-    description: '',
-    preferredContact: 'email'
+    budget: '',
+    description: ''
   });
 
   const [formStep, setFormStep] = useState(1);
@@ -288,6 +289,7 @@ export default function RequestQuote(...args: any[]): any {
     }));
   };
 
+=======
   const toggleService = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setFormData(prev => ({
       ...prev,
@@ -388,17 +390,19 @@ export default function RequestQuote(...args: any[]): any {
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index)              => (
               <motion.div
-                key={feature.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 + index * 0.1 }}
-                className="text-center"
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="text-center group"
               >
-                <div className="w-16 h-16 bg-zion-cyan/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-zion-cyan" />
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-cyan-400">
+                    {feature.icon}
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-zinc-400 text-sm">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -867,6 +871,7 @@ export default function RequestQuote(...args: any[]): any {
           </motion.div>
         </div>
       </div>
+
     </div>
   );
 }

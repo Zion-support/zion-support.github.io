@@ -165,6 +165,7 @@ export function usePerformance(...args: any[]): any {
       // // // // // // // console.warn('Error setting up long task observer: anyanyanyanyanyanyanyanyanyanyanyanyany', error);
     }
     return ()              => longTaskObserver.disconnect();
+=======
       if (logToConsole) {
         console.log('Navigation Timing:', { ttfb, domLoad, windowLoad });
       }

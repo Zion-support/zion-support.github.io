@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Search,
   Filter,
+=======
   ArrowRight,
   Star,
   Clock,
@@ -54,6 +55,7 @@ const ComprehensiveServicesShowcase2026: React.FC = (): JSX.Element => {;
       case 'Breakthrough': return 'bg-gradient-to-r from-blue-600 to-cyan-600';
       case 'Advanced': return 'bg-gradient-to-r from-green-600 to-emerald-600';
       default: return 'bg-gray-600';
+=======
       icon: Search,
       title: "AI-Powered SEO Platform",
       description: "Intelligent SEO optimization using AI to boost search rankings and drive organic traffic",

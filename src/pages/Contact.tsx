@@ -5,6 +5,7 @@ import {
   Phone, 
   MapPin, 
   Clock, 
+  MessageSquare, 
   Send, 
   MessageSquare,
   Building2,
@@ -20,7 +21,7 @@ import {
   Youtube
 } from 'lucide-react';
 
-export default function Contact() {
+const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -559,6 +560,183 @@ export default function Contact() {
                   <Building2 className="w-5 h-5 text-zion-cyan" />
                   <span className="text-zion-slate-light">15+ Years of Technology Excellence</span>
                 </div>
+
+                <div>
+                  <label htmlFor="company" className="block text-sm font-medium text-slate-300 mb-2">
+                    Company *
+                  </label>
+                  <input
+                    type="text"
+                    id="company"
+                    name="company"
+                    value={formData.company}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    placeholder="Enter your company name"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="service" className="block text-sm font-medium text-slate-300 mb-2">
+                    Service of Interest *
+                  </label>
+                  <select
+                    id="service"
+                    name="service"
+                    value={formData.service}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    <option value="">Select a service</option>
+                    {services.map((service) => (
+                      <option key={service} value={service}>{service}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="budget" className="block text-sm font-medium text-slate-300 mb-2">
+                      Budget Range
+                    </label>
+                    <select
+                      id="budget"
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select budget range</option>
+                      {budgets.map((budget) => (
+                        <option key={budget} value={budget}>{budget}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="timeline" className="block text-sm font-medium text-slate-300 mb-2">
+                      Project Timeline
+                    </label>
+                    <select
+                      id="timeline"
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    >
+                      <option value="">Select timeline</option>
+                      {timelines.map((timeline) => (
+                        <option key={timeline} value={timeline}>{timeline}</option>
+                      ))}
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="howDidYouHear" className="block text-sm font-medium text-slate-300 mb-2">
+                    How did you hear about us?
+                  </label>
+                  <select
+                    id="howDidYouHear"
+                    name="howDidYouHear"
+                    value={formData.howDidYouHear}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                  >
+                    <option value="">Select an option</option>
+                    {howDidYouHear.map((option) => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
+                  </select>
+                </div>
+
+                <div>
+                  <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows={5}
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent resize-none"
+                    placeholder="Tell us about your project, requirements, or any questions you have..."
+                  />
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center gap-2"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      Sending Message...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="w-5 h-5" />
+                      Send Message
+                    </>
+                  )}
+                </button>
+              </form>
+              )}
+            </motion.div>
+
+            {/* Additional Information */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              {/* Why Choose Us */}
+              <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8">
+                <h3 className="text-2xl font-bold text-white mb-6">Why Choose Zion Tech Group?</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                      <CheckCircle className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Expert Team</h4>
+                      <p className="text-slate-400 text-sm">Industry veterans with deep technical expertise</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                      <Shield className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Enterprise Security</h4>
+                      <p className="text-slate-400 text-sm">Bank-level security and compliance standards</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                      <Zap className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Rapid Delivery</h4>
+                      <p className="text-slate-400 text-sm">Agile development with quick time-to-market</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-8 h-8 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                      <Star className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-white mb-1">Proven Results</h4>
+                      <p className="text-slate-400 text-sm">Track record of successful implementations</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -601,4 +779,6 @@ export default function Contact() {
       </section>
     </div>
   );
-}
+};
+
+export default Contact;

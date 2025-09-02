@@ -130,6 +130,7 @@ export const EnhancedSidebar: React.FC = (): JSX.Element => {;
       ]
     }
   ];
+
   const quickActions = [
     { name: 'Request Quote', href: '/request-quote', icon: DollarSign, color: 'bg-blue-500' },
     { name: 'Schedule Demo', href: '/schedule-demo', icon: Calendar, color: 'bg-green-500' },

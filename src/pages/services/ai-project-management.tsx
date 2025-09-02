@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -27,7 +26,6 @@ import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
 
 export default function AIProjectManagement() {
   const features = [
@@ -175,10 +173,6 @@ export default function AIProjectManagement() {
                 viewport={{ once: true }}
                 className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
-<<<<<<< HEAD
-                <div className="flex items-center justify-center w-16 h-16 bg-emerald-100 rounded-lg mb-6">
-                  <feature.icon className="h-8 w-8 text-emerald-600" />
-=======
                 <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-orange-400" />
                 </div>
@@ -221,7 +215,6 @@ export default function AIProjectManagement() {
                 <div className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-orange-400" />
                   <span className="text-white font-medium text-lg">{type}</span>
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
                   {feature.title}
@@ -253,60 +246,8 @@ export default function AIProjectManagement() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-                className="flex items-start space-x-4"
-              >
-                <div className="flex-shrink-0">
-                  <div className="flex items-center justify-center w-12 h-12 bg-emerald-100 rounded-lg">
-                    <benefit.icon className="h-6 w-6 text-emerald-600" />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {benefit.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Project Types Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Project Type Support
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our platform supports various project types to meet your management needs.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projectTypes.map((projectType, index) => (
-=======
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {solutions.map((solution, index)              => (
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -327,7 +268,6 @@ export default function AIProjectManagement() {
         </div>
       </section>
 
-<<<<<<< HEAD
 =======
       {/* Project Types Section */}
       <section className="py-20 bg-slate-800/30">
@@ -366,7 +306,6 @@ export default function AIProjectManagement() {
         </div>
       </section>
 
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-emerald-600 to-green-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

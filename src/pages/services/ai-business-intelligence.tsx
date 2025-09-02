@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -8,7 +7,6 @@ import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Link              } from 'react-router-dom.ts';
 import { Brain, 
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   BarChart3, 
   TrendingUp, 
   Zap, 
@@ -16,7 +14,6 @@ import { Brain,
   Users, 
   CheckCircle, 
   ArrowRight,
-<<<<<<< HEAD
   Database,
   PieChart,
   LineChart,
@@ -39,7 +36,6 @@ import { Link } from 'react-router-dom';
   Factory
              } from 'lucide-react.ts';
 import { SEO              } from '../../components/SEO';
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
 
 export default function AIBusinessIntelligence() {
   const features = [
@@ -129,14 +125,6 @@ export default function AIBusinessIntelligence() {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-<<<<<<< HEAD
-            <div className="flex justify-center mb-6">
-              <div className="p-3 bg-white/20 rounded-full">
-                <Brain className="h-8 w-8 text-white" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-=======
             <div className="flex items-center justify-center space-x-3 mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center">
                 <Brain className="w-8 h-8 text-white" />
@@ -145,7 +133,6 @@ export default function AIBusinessIntelligence() {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               AI Business Intelligence
             </h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100">
@@ -187,15 +174,9 @@ export default function AIBusinessIntelligence() {
               Our AI-powered platform provides comprehensive business intelligence capabilities to help you make better decisions.
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-=======
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index)              => (
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -220,7 +201,6 @@ export default function AIBusinessIntelligence() {
       </section>
 
       {/* Benefits Section */}
-<<<<<<< HEAD
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
@@ -275,7 +255,6 @@ export default function AIBusinessIntelligence() {
       {/* Use Cases Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -290,15 +269,9 @@ export default function AIBusinessIntelligence() {
               Experience the benefits of AI-powered business intelligence that drives real results.
             </p>
           </motion.div>
-<<<<<<< HEAD
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {benefits.map((benefit, index) => (
-=======
           
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {useCases.map((useCase, index)              => (
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -354,14 +327,6 @@ export default function AIBusinessIntelligence() {
                 viewport={{ once: true }}
                 className="bg-gray-50 p-8 rounded-xl border border-gray-200"
               >
-<<<<<<< HEAD
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {useCase.title}
-                </h3>
-                <p className="text-gray-600">
-                  {useCase.description}
-                </p>
-=======
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-medium">
@@ -479,7 +444,6 @@ export default function AIBusinessIntelligence() {
                 }`}>
                   {plan.name === 'Enterprise' ? 'Contact Sales' : 'Get Started'}
                 </button>
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               </motion.div>
             ))}
           </div>

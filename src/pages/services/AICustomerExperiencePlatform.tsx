@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../../components/SEO';
-import { 
-  Users, 
-=======
 import React from 'react.ts';
 import { SEO               } from '../../components/SEO';
 import { motion               } from 'framer-motion.ts';
 import { Users, 
   Brain, 
   MessageSquare, 
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   Heart, 
   MessageCircle, 
   CheckCircle, 
@@ -47,7 +39,6 @@ import { Users,
   TrendingUp,
   Brain,
   Bot,
-<<<<<<< HEAD
   Headphones,
   Smartphone,
   Tablet,
@@ -63,7 +54,6 @@ export default function AICustomerExperiencePlatform() {
               } from 'lucide-react.ts';
 
 export default function AICustomerExperiencePlatform(...args[]: any):  {
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   const features = [
     {
       icon: Brain,
@@ -114,134 +104,6 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
       ]
     }
   ];
-<<<<<<< HEAD
-
-  const pricingPlans = [
-    {
-      name: 'Starter',
-      price: '$399',
-      period: '/month',
-      description: 'Perfect for small businesses starting their CX journey',
-      features: [
-        'Up to 10,000 interactions/month',
-        'Basic AI personalization',
-        'Email & chat support',
-        'Standard analytics',
-        'Email support',
-        '5GB data storage'
-      ],
-      cta: 'Start Free Trial',
-      popular: false
-    },
-    {
-      name: 'Professional',
-      price: '$899',
-      period: '/month',
-      description: 'Ideal for growing businesses with advanced CX needs',
-      features: [
-        'Up to 100,000 interactions/month',
-        'Advanced AI personalization',
-        'Omnichannel support',
-        'Advanced analytics',
-        'Priority support',
-        '50GB data storage',
-        'API access',
-        'Custom integrations'
-      ],
-      cta: 'Start Free Trial',
-      popular: true
-    },
-    {
-      name: 'Enterprise',
-      price: '$2,499',
-      period: '/month',
-      description: 'For large organizations with complex CX requirements',
-      features: [
-        'Unlimited interactions',
-        'Custom AI models',
-        'White-label solution',
-        '24/7 dedicated support',
-        'Unlimited data storage',
-        'Advanced security',
-        'Custom integrations',
-        'Dedicated account manager'
-      ],
-      cta: 'Contact Sales',
-      popular: false
-    }
-  ];
-
-  const useCases = [
-    {
-      title: 'E-commerce & Retail',
-      description: 'Personalized shopping experiences, product recommendations, and seamless checkout',
-      icon: ShoppingCart,
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      title: 'Financial Services',
-      description: 'Personalized banking experiences, fraud detection, and customer support',
-      icon: CreditCard,
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      title: 'Healthcare',
-      description: 'Patient engagement, appointment scheduling, and health monitoring',
-      icon: Activity,
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      title: 'Travel & Hospitality',
-      description: 'Personalized travel recommendations, booking assistance, and loyalty programs',
-      icon: Plane,
-      color: 'from-orange-500 to-red-500'
-    }
-  ];
-
-  const benefits = [
-    {
-      title: 'Increase Customer Satisfaction',
-      value: '45%',
-      description: 'Higher customer satisfaction scores through personalized experiences'
-    },
-    {
-      title: 'Reduce Customer Churn',
-      value: '32%',
-      description: 'Lower customer churn rates with proactive engagement'
-    },
-    {
-      title: 'Boost Conversion Rates',
-      value: '28%',
-      description: 'Higher conversion rates through intelligent personalization'
-    },
-    {
-      title: 'Improve Response Time',
-      value: '85%',
-      description: 'Faster response times with AI-powered automation'
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      <SEO
-        title="AI Customer Experience Platform - Zion Tech Group"
-        description="Transform customer interactions with AI-powered personalization, omnichannel communication, and predictive insights. Deliver exceptional customer experiences."
-        keywords="AI customer experience, customer personalization, omnichannel communication, sentiment analysis, customer service AI"
-        canonicalUrl="https://ziontechgroup.com/services/ai-customer-experience-platform"
-      />
-
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 text-purple-400 text-sm font-medium mb-6">
-              <Heart className="w-4 h-4 mr-2" />
-              AI-Powered Customer Experience
-=======
   const useCases = [;
     'E-commerce customer experience optimization',;
     'SaaS product user engagement tracking',;
@@ -322,7 +184,6 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
             <div key={t} className="p-6 bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
               <Brain className="w-6 h-6 text-pink-600 mb-3" />
               <div className="text-gray-900 font-semibold">{t}</div>
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Deliver Exceptional
@@ -370,13 +231,11 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
             {features.map((feature, index) => (
 =======
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index)               => (
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -424,13 +283,11 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {benefits.map((benefit, index) => (
 =======
           <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
             {services.map((service, index)               => (
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -546,7 +403,6 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
 
                 <a
                   href={plan.name === 'Enterprise' ? 'https://ziontechgroup.com/contact' : 'https://ziontechgroup.com/request-quote'}
@@ -558,68 +414,10 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
                 >
                   {plan.cta}
                 </a>
-=======
               </motion.div>
             ))}
           </div>
         </div>
-      {/* Use Cases Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial = {
-  { opacity: 0,
-  y: 20 
-}}
-            whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Real-World Applications
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how AI-powered customer experience transforms different business functions
-            </p>
-          </motion.div>
-
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {useCases.map((useCase, index)               => (
-              <motion.div
-                key={index}
-                initial = {
-  { opacity: 0,
-  y: 20 
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-}}
-                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
-              >
-                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
-                <p className="text-gray-300 mb-6">{useCase.description}</p>
-                <div className="space-y-3">
-                  {useCase.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center gap-3 text-green-400">
-                      <TrendingUp className="w-5 h-5 flex-shrink-0" />
-                      {benefit}
-                    </div>
-                  ))}
-                </div>
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
-              </motion.div>
-            ))}
-          </div>
-        </div>
-<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -688,6 +486,61 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
       </section>
     </div>
 =======
+      {/* Use Cases Section */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial = {
+  { opacity: 0,
+  y: 20 
+}}
+            whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Real-World Applications
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              See how AI-powered customer experience transforms different business functions
+            </p>
+          </motion.div>
+
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)               => (
+              <motion.div
+                key={index}
+                initial = {
+  { opacity: 0,
+  y: 20 
+}}
+                whileInView = {
+  { opacity: 1,
+  y: 0 
+}}
+                transition = {
+  { duration: 0.6,
+  delay: index * 0.1 
+}}
+                className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600"
+              >
+                <h3 className="text-2xl font-bold text-white mb-4">{useCase.title}</h3>
+                <p className="text-gray-300 mb-6">{useCase.description}</p>
+                <div className="space-y-3">
+                  {useCase.benefits.map((benefit, benefitIndex) => (
+                    <div key={benefitIndex} className="flex items-center gap-3 text-green-400">
+                      <TrendingUp className="w-5 h-5 flex-shrink-0" />
+                      {benefit}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
       {/* Benefits Section */}
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
         <div className="container mx-auto px-4">
@@ -743,6 +596,5 @@ export default function AICustomerExperiencePlatform(...args[]: any):  {
         </div>;
       </section>;
     </div>;
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
   );
 }

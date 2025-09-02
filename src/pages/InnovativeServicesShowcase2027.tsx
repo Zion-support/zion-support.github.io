@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2027               } from '@/data/innovativeMicroSaasServices2027';
 import { EMERGING_TECH_SERVICES_2027               } from '@/data/emergingTechServices2027';
@@ -51,7 +49,7 @@ export default function InnovativeServicesShowcase2027(...args[]: any):  {
       transition: {
         duration: 0.3,
         ease: "easeOut"
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
+=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -161,9 +159,6 @@ import {
 export default function InnovativeServicesShowcase2027() {
   const services = [
     {
-<<<<<<< HEAD
-      category: "AI & Automation",
-=======
       title: "AI Autonomous Financial Advisor",
       description: "Revolutionary AI-powered financial advice and portfolio optimization with 99.7% accuracy",
       icon: DollarSign,
@@ -222,7 +217,6 @@ export default function InnovativeServicesShowcase2027() {
   const serviceCategories = [
     {
       title: "AI & Automation",
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
       icon: Brain,
       color: "text-zion-cyan",
       bgColor: "bg-zion-cyan/20",
@@ -368,30 +362,6 @@ export default function InnovativeServicesShowcase2027() {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <Helmet>
-        <title>Innovative AI Services Showcase 2027 | Zion Tech Group</title>
-        <meta name="description" content="Discover Zion Tech Group's comprehensive suite of innovative AI services and solutions for 2027. From autonomous platforms to industry-specific solutions." />
-        <meta name="keywords" content="AI services 2027, innovative solutions, autonomous platforms, AI automation, micro SaaS, industry solutions, Zion Tech Group" />
-        <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase-2027" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <div className="flex justify-center mb-6">
-              <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl">
-                <Rocket className="w-12 h-12 text-white" />
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Innovative AI Services Showcase 2027
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Discover our comprehensive suite of cutting-edge AI services and solutions designed to transform your business and drive innovation across all industries.
-=======
                   className="appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10"
                 >
                   {categories.map(category               => (
@@ -399,6 +369,7 @@ export default function InnovativeServicesShowcase2027() {
                   ))}
                 </select>
                 <ChevronDown className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5 pointer-events-none" />
+=======
     <EnhancedSEO data={SEOConfigs.innovativeServicesShowcase2027}>
       <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-slate-dark to-zion-blue-dark">
         <SEO
@@ -907,7 +878,29 @@ export default function InnovativeServicesShowcase2027() {
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Get in touch with our experts to discuss how these innovative services can drive your success
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <Helmet>
+        <title>Innovative AI Services Showcase 2027 | Zion Tech Group</title>
+        <meta name="description" content="Discover Zion Tech Group's comprehensive suite of innovative AI services and solutions for 2027. From autonomous platforms to industry-specific solutions." />
+        <meta name="keywords" content="AI services 2027, innovative solutions, autonomous platforms, AI automation, micro SaaS, industry solutions, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/innovative-services-showcase-2027" />
+      </Helmet>
+
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl">
+                <Rocket className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Innovative AI Services Showcase 2027
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Discover our comprehensive suite of cutting-edge AI services and solutions designed to transform your business and drive innovation across all industries.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -916,7 +909,12 @@ export default function InnovativeServicesShowcase2027() {
               >
                 Explore Services
               </a>
-<<<<<<< HEAD
+        </section>
+      </div>
+    </EnhancedSEO>
+  );
+};
+=======
               <a 
                 href="#contact" 
                 className="px-8 py-4 border-2 border-blue-500 text-blue-400 font-semibold rounded-lg hover:bg-blue-500 hover:text-white transition-all duration-300"
@@ -927,18 +925,6 @@ export default function InnovativeServicesShowcase2027() {
           </div>
         </div>
       </section>
-=======
-            </div>;
-          </div>;
-        </div>;
-      </motion.section>;
-    </div>;
-        </section>
-      </div>
-    </EnhancedSEO>
-  );
-};
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
 
       {/* Services Overview */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">

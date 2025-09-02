@@ -1,6 +1,6 @@
 // Security Headers Configuration
 // This file provides security headers for the Zion Tech Group application
-
+;
 const securityHeaders = {
   // Content Security Policy
   'Content-Security-Policy': [
@@ -15,8 +15,7 @@ const securityHeaders = {
     "object-src 'none'",
     "base-uri 'self'",
     "form-action 'self'",
-    "frame-ancestors 'none'",
-    "upgrade-insecure-requests"
+    "frame-ancestors 'none'",upgrade-insecure-requests',
   ].join('; '),
 
   // X-Frame-Options
@@ -33,15 +32,8 @@ const securityHeaders = {
 
   // Permissions Policy
   'Permissions-Policy': [
-    'camera=()',
-    'microphone=()',
-    'geolocation=()',
-    'payment=()',
-    'usb=()',
-    'magnetometer=()',
-    'gyroscope=()',
-    'accelerometer=()'
-  ].join(', '),
+    'camera=(),microphone=(),geolocation=(),payment=(),usb=(),magnetometer=(),gyroscope=(),accelerometer=(),
+  ].join(',),
 
   // Strict-Transport-Security
   'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload',
@@ -56,30 +48,32 @@ const securityHeaders = {
   'Cross-Origin-Resource-Policy': 'same-origin',
 
   // Origin-Agent-Cluster
-  'Origin-Agent-Cluster': '?1'
+  'Origin-Agent-Cluster': '?1',
 };
 
-// Function to apply security headers
+// Function to apply security headers;
 function applySecurityHeaders() {
   if (typeof window !== 'undefined') {
     // Client-side security measures
     console.log('Security headers applied on client side');
-    
+
     // Disable console in production
     if (process.env.NODE_ENV === 'production') {
       console.log = () => {};
       console.warn = () => {};
       console.error = () => {};
     }
-    
+
     // Prevent eval usage
-    window.eval = function() {
+    window.eval = function () {
       throw new Error('eval() is not allowed for security reasons');
     };
-    
+
     // Prevent Function constructor
-    window.Function = function() {
-      throw new Error('Function constructor is not allowed for security reasons');
+    window.Function = function () {
+      throw new Error(
+        'Function constructor is not allowed for security reasons'
+      );
     };
   }
 }

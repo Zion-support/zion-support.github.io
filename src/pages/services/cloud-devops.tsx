@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -104,7 +103,6 @@ import React from 'react.ts';
 import { Helmet               } from 'react-helmet-async.ts';
 import { Cloud, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, GitBranch, Server               } from 'lucide-react.ts';
 import { Link               } from 'react-router-dom.ts';
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
@@ -123,13 +121,6 @@ import { Link               } from 'react-router-dom.ts';
                 <Cloud className="h-8 w-8 text-white" />
               </div>
             </div>
-<<<<<<< HEAD
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Cloud DevOps Services
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-blue-100">
-              Transform your development and operations with cloud-native DevOps solutions.
-=======
           </div>
         </section>
 
@@ -433,7 +424,6 @@ import { Link               } from 'react-router-dom.ts';
             </h2>
             <p className="text-xl text-slate-300 mb-8">
               Accelerate your software delivery with cloud-native DevOps solutions and automation.
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

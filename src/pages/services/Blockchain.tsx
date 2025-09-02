@@ -1,10 +1,10 @@
-import React from 'react.ts';
-import { motion              } from 'framer-motion.ts';
-import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone              } from 'lucide-react.ts';
-import SEO from '@/components/SEO';
-import { Link as RouterLink              } from 'react-router-dom.ts';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';
+import SEO from '../../components/SEO';
+import { Link as RouterLink } from 'react-router-dom';
 
-export default function Blockchain(...args[]: any):  {
+export default function Blockchain() {
   const features = [
     {
       icon: Link,

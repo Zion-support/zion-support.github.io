@@ -39,6 +39,7 @@ interface SecurityStatus {
 }
 
 interface SecurityThreat {
+=======
   status: 'active' | 'mitigated' | 'resolved';
 }
 interface SecurityMetrics {
@@ -82,6 +83,7 @@ interface SecurityMetrics {
   encryptionStrength: number;
 }
 interface SecurityCheck {
+=======
 encryptionStrength: number;
 
 
@@ -141,6 +143,7 @@ category: 'authentication' | 'data-protection' | 'network-security' | 'complianc
   timestamp: Date;
 }
 
+=======
   category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
 }
 const SecurityEnhancer: React.FC = (): JSX.Element => {

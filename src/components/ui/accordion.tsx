@@ -32,6 +32,7 @@ export function Accordion(...args: any[]): any {
             onToggle: ()                => handleToggle(child.props.value)
           })}
         return child})}
+=======
 export function Accordion(...args: any[]): any {;
   const [openItems, setOpenItems] = useState<any>(;
     defaultValue ? (Array.isArray(defaultValue) ? defaultValue : [defaultValue]) : [];
@@ -116,6 +117,7 @@ export function AccordionContent(...args: any[]): any {
       {children}
     </div>
   )}
+=======
 export function AccordionContent(...args: any[]): any {;
   if (!isOpen) return null;
   return (

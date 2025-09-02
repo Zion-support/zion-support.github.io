@@ -1,89 +1,99 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Sun, Moon, Monitor } from 'lucide-react';
+import React from 'react';
+import { Sun, Moon, Monitor, Palette } from 'lucide-react';
+import { useTheme, ColorScheme } from '../../context/ThemeContext';
 
-type Theme = 'light' | 'dark' | 'system';
+interface ThemeToggleProps {
+  showColorSchemes?: boolean;
+  className?: string;
+}
 
-export const ThemeToggle: React.FC = () => {
-  const [theme, setTheme] = useState<Theme>('system');
-  const [mounted, setMounted] = useState(false);
+export const ThemeToggle: React.FC<ThemeToggleProps> = ({
+  showColorSchemes = false,
+  className = ''
+}) => {
+  const { theme, colorScheme, setTheme, setColorScheme, toggleTheme, isDark } = useTheme();
 
-  useEffect(() => {
-    setMounted(true);
-    const savedTheme = localStorage.getItem('theme') as Theme;
-    if (savedTheme) {
-      setTheme(savedTheme);
+  const colorSchemes: { value: ColorScheme; name: string; color: string }[] = [
+    { value: 'blue', name: 'Blue', color: '#0ea5e9' },
+    { value: 'purple', name: 'Purple', color: '#8b5cf6' },
+    { value: 'green', name: 'Green', color: '#10b981' },
+    { value: 'orange', name: 'Orange', color: '#f97316' },
+    { value: 'red', name: 'Red', color: '#ef4444' },
+    { value: 'pink', name: 'Pink', color: '#ec4899' },
+  ];
+
+  const getThemeIcon = () => {
+    switch (theme) {
+      case 'light':
+        return <Sun className="w-4 h-4" />;
+      case 'dark':
+        return <Moon className="w-4 h-4" />;
+      case 'system':
+        return <Monitor className="w-4 h-4" />;
+      default:
+        return <Sun className="w-4 h-4" />;
     }
-  }, []);
-
-  useEffect(() => {
-    if (!mounted) return;
-
-    const root = window.document.documentElement;
-    root.classList.remove('light', 'dark');
-
-    if (theme === 'system') {
-      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      root.classList.add(systemTheme);
-    } else {
-      root.classList.add(theme);
-    }
-
-    localStorage.setItem('theme', theme);
-  }, [theme, mounted]);
-
-  const handleThemeChange = (newTheme: Theme) => {
-    setTheme(newTheme);
   };
 
-  if (!mounted) {
-    return (
-      <div className="w-10 h-10 bg-gray-200 rounded-lg animate-pulse" />
-    );
-  }
-
   return (
-    <motion.div
-      className="relative inline-flex items-center bg-gray-100 dark:bg-gray-800 rounded-lg p-1"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.2 }}
-    >
-      <button
-        onClick={() => handleThemeChange('light')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'light'
-            ? 'bg-white text-yellow-600 shadow-md'
-            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-        }`}
-        aria-label="Light theme"
-      >
-        <Sun className="w-4 h-4" />
-      </button>
-      
-      <button
-        onClick={() => handleThemeChange('system')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'system'
-            ? 'bg-white text-blue-600 shadow-md'
-            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-        }`}
-        aria-label="System theme"
-      >
-        <Monitor className="w-4 h-4" />
-      </button>
-      
-      <button
-        onClick={() => handleThemeChange('dark')}
-        className={`p-2 rounded-md transition-all duration-200 ${
-          theme === 'dark'
-            ? 'bg-gray-700 text-blue-400 shadow-md'
-            : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-        }`}
-        aria-label="Dark theme"
-      >
-        <Moon className="w-4 h-4" />
-      </button>
-    </motion.div>
+    <div className={`flex items-center space-x-2 ${className}`}>
+      {/* Theme Toggle */}
+      <div className="relative">
+        <button
+          onClick={toggleTheme}
+          className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+          title={`Current theme: ${theme}`}
+        >
+          {getThemeIcon()}
+          <span className="text-sm font-medium capitalize">{theme}</span>
+        </button>
+      </div>
+
+      {/* Color Scheme Selector */}
+      {showColorSchemes && (
+        <div className="relative group">
+          <button
+            className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            title="Color scheme"
+          >
+            <Palette className="w-4 h-4" />
+            <div
+              className="w-4 h-4 rounded-full border-2 border-white dark:border-gray-800"
+              style={{ backgroundColor: colorSchemes.find(cs => cs.value === colorScheme)?.color }}
+            />
+          </button>
+
+          {/* Color Scheme Dropdown */}
+          <div className="absolute right-0 top-full mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+            <div className="p-2">
+              <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
+                Color Scheme
+              </div>
+              <div className="grid grid-cols-2 gap-1">
+                {colorSchemes.map((scheme) => (
+                  <button
+                    key={scheme.value}
+                    onClick={() => setColorScheme(scheme.value)}
+                    className={`flex items-center space-x-2 px-2 py-1 rounded text-sm transition-colors ${
+                      colorScheme === scheme.value
+                        ? 'bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300'
+                        : 'hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300'
+                    }`}
+                  >
+                    <div
+                      className="w-3 h-3 rounded-full border border-gray-300 dark:border-gray-600"
+                      style={{ backgroundColor: scheme.color }}
+                    />
+                    <span>{scheme.name}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
+
+export default ThemeToggle;

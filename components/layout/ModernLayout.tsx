@@ -12,12 +12,14 @@ interface ModernLayoutProps extends React.PropsWithChildren<{}> {
   canonical?: string}
 
 const ModernLayout: React.FC<ModernLayoutProps> = ({
+
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
   keywords = 'AI services, IT solutions, SAAS platforms, web development, mobile apps, cybersecurity, cloud migration, data analytics, Zion Tech Group',
   canonical = 'https: anyanyanyanyanyanyanyanyanyanyanyanyanyany//ziontechgroup.com'
 })               => {
+
   return (
     <>
       <Helmet>
@@ -58,8 +60,11 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML = {
+
   {
+
             __html: JSON.stringify({
+
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "Zion Tech Group",
@@ -67,6 +72,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
               "logo": "https://ziontechgroup.com/logo.png",
               "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
               "address": {
+
                 "@type": "PostalAddress",
                 "streetAddress": "364 E Main St STE 1008",
                 "addressLocality": "Middletown",
@@ -82,6 +88,7 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
 
 },
               "contactPoint": {
+
                 "@type": "ContactPoint",
                 "telephone": "+1-302-464-0950",
                 "contactType": "customer service",

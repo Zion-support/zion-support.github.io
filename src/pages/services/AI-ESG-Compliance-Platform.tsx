@@ -4,62 +4,80 @@ import {
   Leaf, 
   Shield, 
   BarChart3, 
+  AlertTriangle, 
   Globe, 
-  FileText, 
   Users, 
   CheckCircle, 
-  ArrowRight,
   Zap,
-  Database,
+  FileText,
   Settings,
-  Eye,
-  Star,
+  Brain,
   Target,
-  TrendingUp,
+  Activity,
+  MapPin,
+  Clock,
   Award
 } from 'lucide-react';
 
 const AIESGCompliancePlatform: React.FC = () => {
   const features = [
     {
-      icon: Leaf,
-      title: "Environmental Impact Monitoring",
-      description: "Track carbon emissions, energy consumption, and environmental metrics in real-time"
+      icon: <Brain className="w-6 h-6" />,
+      title: "AI-Powered ESG Assessment",
+      description: "Advanced machine learning algorithms analyze environmental, social, and governance data to provide comprehensive ESG scoring with 95%+ accuracy."
     },
     {
-      icon: Users,
-      title: "Social Responsibility Tracking",
-      description: "Monitor labor practices, diversity metrics, and community impact assessments"
+      icon: <Leaf className="w-6 h-6" />,
+      title: "Environmental Impact Tracking",
+      description: "Real-time monitoring of carbon footprint, energy consumption, waste management, and sustainability metrics across all operations."
     },
     {
-      icon: Shield,
-      title: "Governance Compliance",
-      description: "Ensure board diversity, executive compensation transparency, and ethical practices"
+      icon: <Users className="w-6 h-6" />,
+      title: "Social Responsibility Monitoring",
+      description: "Track labor practices, human rights, community engagement, and diversity metrics to ensure social compliance standards."
     },
     {
-      icon: BarChart3,
-      title: "AI-Powered ESG Scoring",
-      description: "Advanced algorithms calculate comprehensive ESG ratings and identify improvement areas"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Governance Risk Assessment",
+      description: "AI-driven analysis of board composition, executive compensation, shareholder rights, and regulatory compliance."
     },
     {
-      icon: FileText,
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Predictive Compliance",
+      description: "Machine learning models forecast potential ESG violations and provide proactive recommendations for risk mitigation."
+    },
+    {
+      icon: <Target className="w-6 h-6" />,
       title: "Automated Reporting",
-      description: "Generate regulatory reports for SEC, EU Taxonomy, and other ESG frameworks"
-    },
-    {
-      icon: Globe,
-      title: "Stakeholder Communication",
-      description: "Transparent ESG disclosure and investor relations management"
+      description: "Generate comprehensive ESG reports for stakeholders, regulators, and investors with real-time data and insights."
     }
   ];
 
   const benefits = [
-    "Achieve 40-60% improvement in ESG ratings within 12 months",
-    "Reduce compliance costs by 50% through automation",
-    "Increase investor confidence with transparent ESG reporting",
-    "Meet regulatory requirements across all jurisdictions",
-    "Identify ESG risks before they impact business performance",
-    "Enhance brand reputation and stakeholder trust"
+    "Achieve 99.9% ESG compliance accuracy with AI-powered validation",
+    "Reduce ESG reporting time by 70-80% through automation",
+    "Improve ESG scores by 25-40% through data-driven insights",
+    "Eliminate manual compliance monitoring processes",
+    "Provide real-time ESG performance visibility",
+    "Enable proactive ESG risk management and improvement"
+  ];
+
+  const regulatoryFrameworks = [
+    "GRI (Global Reporting Initiative)",
+    "SASB (Sustainability Accounting Standards Board)",
+    "TCFD (Task Force on Climate-related Financial Disclosures)",
+    "CDP (Carbon Disclosure Project)",
+    "UN SDGs (Sustainable Development Goals)",
+    "ISO 14001 Environmental Management"
+  ];
+
+  const industrySolutions = [
+    "Financial Services & Banking",
+    "Manufacturing & Industrial",
+    "Energy & Utilities",
+    "Technology & Software",
+    "Healthcare & Pharmaceuticals",
+    "Retail & Consumer Goods"
   ];
 
   const pricing = [
@@ -68,27 +86,26 @@ const AIESGCompliancePlatform: React.FC = () => {
       price: "$3,200",
       period: "/month",
       features: [
-        "Up to 100 ESG metrics tracking",
-        "Basic AI scoring models",
-        "Monthly ESG reports",
-        "Standard compliance tools",
+        "Up to 100 ESG metrics",
+        "Basic AI assessment",
+        "Standard reporting",
         "Email support",
-        "Basic stakeholder portal"
+        "Basic compliance tools",
+        "GRI framework support"
       ]
     },
     {
       plan: "Enterprise",
-      price: "$7,800",
+      price: "$12,500",
       period: "/month",
       features: [
-        "Up to 500 ESG metrics tracking",
-        "Advanced AI scoring models",
-        "Real-time monitoring",
-        "Custom ESG frameworks",
-        "Full compliance suite",
+        "Up to 500 ESG metrics",
+        "Advanced AI models",
+        "Custom frameworks",
         "Priority support",
-        "API access",
-        "Advanced analytics"
+        "Advanced analytics",
+        "Custom integrations",
+        "Multi-location support"
       ]
     },
     {
@@ -96,303 +113,220 @@ const AIESGCompliancePlatform: React.FC = () => {
       price: "$18,500",
       period: "/month",
       features: [
-        "Unlimited ESG metrics tracking",
-        "Custom AI model training",
-        "Multi-region compliance",
+        "Unlimited ESG metrics",
+        "Full AI compliance suite",
+        "Custom model training",
         "24/7 dedicated support",
-        "Custom integrations",
+        "Advanced risk detection",
         "White-label solutions",
         "On-premise deployment"
       ]
     }
   ];
 
-  const frameworks = [
-    {
-      title: "SEC Climate Disclosure",
-      description: "Comply with new SEC climate risk disclosure requirements",
-      icon: FileText
-    },
-    {
-      title: "EU Taxonomy",
-      description: "Meet European Union sustainable finance classification",
-      icon: Globe
-    },
-    {
-      title: "SASB Standards",
-      description: "Industry-specific sustainability accounting standards",
-      icon: Award
-    },
-    {
-      title: "TCFD Framework",
-      description: "Task Force on Climate-related Financial Disclosures",
-      icon: Leaf
-    }
-  ];
-
-  const industries = [
-    {
-      title: "Financial Services",
-      description: "ESG risk assessment and sustainable investment management",
-      icon: TrendingUp
-    },
-    {
-      title: "Manufacturing",
-      description: "Supply chain sustainability and environmental compliance",
-      icon: Target
-    },
-    {
-      title: "Energy",
-      description: "Renewable energy transition and carbon footprint reduction",
-      icon: Leaf
-    },
-    {
-      title: "Technology",
-      description: "Data center efficiency and responsible AI development",
-      icon: Shield
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
-              <Leaf className="w-4 h-4 mr-2" />
-              AI-Powered ESG Compliance
+      {/* Header */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="pt-20 pb-16 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="max-w-7xl mx-auto text-center">
+          <div className="flex justify-center mb-6">
+            <div className="p-3 bg-green-600/20 rounded-full">
+              <Leaf className="w-12 h-12 text-green-400" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              AI ESG
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
-                {" "}Compliance Platform
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your ESG compliance with AI-driven automation. Monitor environmental, social, 
-              and governance metrics, ensure regulatory compliance, and enhance stakeholder trust.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200"
-              >
-                Get Started
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="#demo"
-                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-200"
-              >
-                Watch Demo
-              </a>
-            </div>
-          </motion.div>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            AI ESG Compliance Platform
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Transform your ESG compliance with AI-powered assessment, real-time monitoring, 
+            and automated reporting. Achieve sustainability excellence and regulatory compliance.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
+              Start Free Trial
+            </button>
+            <button className="px-8 py-4 border border-gray-600 text-gray-300 hover:border-gray-500 font-semibold rounded-lg transition-colors">
+              Schedule Demo
+            </button>
+          </div>
         </div>
-      </section>
+      </motion.div>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Comprehensive ESG Management Features
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              AI-Powered ESG Compliance Features
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Leverage AI to automate ESG compliance and drive sustainable business practices
+              Leverage cutting-edge artificial intelligence to achieve comprehensive ESG compliance
             </p>
-          </motion.div>
-
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all"
               >
-                <div className="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-green-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-400">
-                  {feature.description}
-                </p>
+                <div className="text-green-400 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-400">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Frameworks Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Regulatory Framework Support
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Comply with all major ESG and sustainability reporting standards
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {frameworks.map((framework, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <framework.icon className="w-8 h-8 text-green-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {framework.title}
-                </h3>
-                <p className="text-gray-400">
-                  {framework.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Industry Solutions
-            </h2>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              Tailored ESG compliance solutions for different industries
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {industries.map((industry, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <industry.icon className="w-8 h-8 text-green-400" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {industry.title}
-                </h3>
-                <p className="text-gray-400">
-                  {industry.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </motion.section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 bg-slate-800/30">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Transform Your ESG Performance
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Platform?
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-              See measurable improvements in sustainability, compliance, and stakeholder trust
+              Experience unprecedented efficiency and accuracy in ESG compliance management
             </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="flex items-start space-x-3"
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="flex items-start space-x-4"
               >
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
+                <p className="text-gray-300 text-lg">{benefit}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Regulatory Frameworks Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Supported Regulatory Frameworks
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Our platform supports all major ESG reporting standards and frameworks
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {regulatoryFrameworks.map((framework, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center hover:border-green-500/50 transition-all"
+              >
+                <div className="p-3 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Award className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{framework}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Industry Solutions Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5"
+      >
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Industry Solutions
+            </h2>
+            <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              Tailored ESG compliance solutions for diverse industries and sectors
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industrySolutions.map((industry, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 text-center hover:border-green-500/50 transition-all"
+              >
+                <div className="p-3 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                  <Activity className="w-8 h-8 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white">{industry}</h3>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8"
+      >
         <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Transparent Pricing
             </h2>
             <p className="text-xl text-gray-400 max-w-2xl mx-auto">
               Choose the plan that fits your organization's ESG compliance needs
             </p>
-          </motion.div>
-
+          </div>
           <div className="grid md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
-                  index === 1 
-                    ? 'border-green-500/50 bg-green-500/5' 
-                    : 'border-slate-700'
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className={`bg-white/5 backdrop-blur-lg rounded-xl p-8 border ${
+                  index === 1 ? 'border-green-500/50 bg-green-500/10' : 'border-white/10'
                 }`}
               >
-                {index === 1 && (
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-green-500 text-white text-sm font-medium mb-4">
-                    Most Popular
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
-                )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.plan}</h3>
-                <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="text-gray-400">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
@@ -402,83 +336,87 @@ const AIESGCompliancePlatform: React.FC = () => {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="/contact"
-                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                    index === 1
-                      ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-600 hover:to-emerald-600'
-                      : 'border border-slate-600 text-gray-300 hover:border-slate-500 hover:text-white'
-                  }`}
-                >
+                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
+                  index === 1
+                    ? 'bg-green-600 hover:bg-green-700 text-white'
+                    : 'bg-white/10 hover:bg-white/20 text-white border border-white/20'
+                }`}>
                   Get Started
-                </a>
+                </button>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-600/20 to-blue-600/20"
+      >
         <div className="max-w-4xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Lead in ESG Compliance?
-            </h2>
-            <p className="text-xl text-gray-400 mb-8">
-              Join leading organizations that trust our AI-powered ESG compliance platform
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-200"
-              >
-                Schedule a Demo
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </a>
-              <a
-                href="tel:+13024640950"
-                className="inline-flex items-center px-8 py-4 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:border-gray-500 hover:text-white transition-all duration-200"
-              >
-                Call +1 (302) 464-0950
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Info */}
-      <section className="py-12 px-4 border-t border-slate-700">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="grid md:grid-cols-3 gap-8 text-gray-400">
-            <div>
-              <h3 className="text-white font-semibold mb-2">Contact Us</h3>
-              <p>kleber@ziontechgroup.com</p>
-              <p>+1 (302) 464-0950</p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p>364 E Main St STE 1008</p>
-              <p>Middletown DE 19709</p>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-2">Website</h3>
-              <a 
-                href="https://ziontechgroup.com" 
-                className="text-green-400 hover:text-green-300 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ziontechgroup.com
-              </a>
-            </div>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Achieve ESG Excellence?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Join leading organizations that trust our AI-powered platform for their ESG compliance needs
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-colors">
+              Start Free Trial
+            </button>
+            <button className="px-8 py-4 border border-white/30 text-white hover:bg-white/10 font-semibold rounded-lg transition-colors">
+              Contact Sales
+            </button>
           </div>
         </div>
-      </section>
+      </motion.section>
+
+      {/* Contact Section */}
+      <motion.section
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="py-20 px-4 sm:px-6 lg:px-8"
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Get in Touch
+          </h2>
+          <p className="text-xl text-gray-400 mb-8">
+            Have questions about our AI ESG Compliance Platform? Our experts are here to help.
+          </p>
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <div className="p-3 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <Globe className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Website</h3>
+              <p className="text-gray-400">https://ziontechgroup.com</p>
+            </div>
+            <div>
+              <div className="p-3 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <FileText className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+              <p className="text-gray-400">kleber@ziontechgroup.com</p>
+            </div>
+            <div>
+              <div className="p-3 bg-green-600/20 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                <Settings className="w-8 h-8 text-green-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+              <p className="text-gray-400">+1 (302) 464-0950</p>
+            </div>
+          </div>
+          <div className="mt-12 p-6 bg-white/5 rounded-xl border border-white/10">
+            <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+            <p className="text-gray-400">364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+        </div>
+      </motion.section>
     </div>
   );
 };

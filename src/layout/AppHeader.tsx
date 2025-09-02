@@ -9,6 +9,7 @@ import { ThemeToggle              } from '../components/ThemeToggle';
 import { ZionLoadingSpinner              } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar              } from '../components/Sidebar';
 import { EnhancedSearch              } from '../components/EnhancedSearch';
+=======
 import { motion, AnimatePresence } from 'framer-motion';
 
 export function AppHeader(...args: any[]): any {

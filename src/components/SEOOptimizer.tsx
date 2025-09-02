@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -26,26 +27,11 @@ interface SEOAnalysis {
     grade: 'A' | 'B' | 'C' | 'D' | 'F';
   };
 }
-=======
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
 
-export interface SEOData {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+interface SEOOptimizerProps {
+  enabled?: boolean;
+  showPanel?: boolean;
+  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
 }
 import React, { useState, useEffect, useCallback, useMemo } from 'react.ts';
 import { motion, AnimatePresence               } from 'framer-motion.ts';
@@ -364,29 +350,32 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     );
   }
 
-export const defaultSEO: SEOData = {
-  title: 'Zion Tech Group - Innovation • Technology • Growth',
-  description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud computing, and digital transformation. Empowering businesses with cutting-edge technology solutions.',
-  keywords: 'AI, artificial intelligence, cybersecurity, cloud computing, digital transformation, technology solutions, business automation, IT services',
-  ogType: 'website',
-  twitterCard: 'summary_large_image',
-  structuredData: {
+export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Zion Tech Group delivers cutting-edge AI solutions, enterprise automation, quantum computing, and innovative technology services. Transform your business with our advanced AI platforms.',
+  keywords = 'AI solutions, artificial intelligence, enterprise automation, quantum computing, technology services, AI platforms, machine learning, data analytics, cybersecurity, cloud solutions',
+  canonicalUrl,
+  ogImage = '/images/zion-tech-group-og.jpg',
+  ogType = 'website',
+  structuredData,
+  noIndex = false,
+  noFollow = false,
+}) => {
+  const defaultStructuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading technology solutions provider specializing in AI, cybersecurity, cloud computing, and digital transformation.',
+    logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
+    description: 'Leading provider of AI and technology solutions for enterprises',
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'US',
-      addressLocality: 'Delaware'
     },
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
       contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com'
+      email: 'contact@ziontechgroup.com',
     },
     sameAs: [
       'https://linkedin.com/company/ziontechgroup',
@@ -394,13 +383,7 @@ export const defaultSEO: SEOData = {
     ]
   }
 };
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
-
-interface SEOOptimizerProps {
-  enabled?: boolean;
-  showPanel?: boolean;
-  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
-}
+=======
 
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   enabled = true,
@@ -599,166 +582,6 @@ export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   );
 };
 
-<<<<<<< HEAD
-export default SEOOptimizer;
-=======
-// Enhanced SEO component for specific page types
-export const PageSEO: React.FC<SEOOptimizerProps & { pageType: 'home' | 'service' | 'blog' | 'about' | 'contact' }> = ({ 
-  pageType, 
-  data = {}, 
-  children 
-}) => {
-  const pageSpecificSEO: Record<string, SEOData> = {
-    home: {
-      title: 'Zion Tech Group - Leading AI & Technology Solutions',
-      description: 'Transform your business with Zion Tech Group\'s cutting-edge AI, cybersecurity, and digital transformation solutions. Expert technology consulting and implementation.',
-      keywords: 'AI solutions, cybersecurity, digital transformation, cloud computing, technology consulting, business automation',
-      structuredData: {
-        '@context': 'https://schema.org',
-        '@type': 'WebSite',
-        name: 'Zion Tech Group',
-        url: 'https://ziontechgroup.com',
-        potentialAction: {
-          '@type': 'SearchAction',
-          target: 'https://ziontechgroup.com/search?q={search_term_string}',
-          'query-input': 'required name=search_term_string'
-        }
-      }
-    },
-    service: {
-      title: `${data.title || 'AI & Technology Services'} - Zion Tech Group`,
-      description: data.description || 'Professional AI and technology services from Zion Tech Group. Expert solutions for modern business challenges.',
-      keywords: `${data.keywords || 'AI services, technology solutions'}, Zion Tech Group, professional services`,
-      structuredData: {
-        '@context': 'https://schema.org',
-        '@type': 'Service',
-        name: data.title || 'Technology Services',
-        description: data.description || 'Professional technology services',
-        provider: {
-          '@type': 'Organization',
-          name: 'Zion Tech Group'
-        }
-      }
-    },
-    blog: {
-      title: `${data.title || 'Technology Insights'} - Zion Tech Group Blog`,
-      description: data.description || 'Latest insights on AI, cybersecurity, and technology trends from Zion Tech Group experts.',
-      keywords: `${data.keywords || 'technology blog, AI insights, cybersecurity news'}, Zion Tech Group`,
-      ogType: 'article',
-      structuredData: {
-        '@context': 'https://schema.org',
-        '@type': 'BlogPosting',
-        headline: data.title || 'Technology Insights',
-        description: data.description || 'Latest technology insights',
-        author: {
-          '@type': 'Organization',
-          name: 'Zion Tech Group'
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: 'Zion Tech Group',
-          logo: {
-            '@type': 'ImageObject',
-            url: 'https://ziontechgroup.com/logo.png'
-          }
-        }
-      }
-    },
-    about: {
-      title: 'About Zion Tech Group - Our Mission & Vision',
-      description: 'Learn about Zion Tech Group\'s mission to empower businesses with innovative technology solutions. Discover our expertise in AI, cybersecurity, and digital transformation.',
-      keywords: 'about Zion Tech Group, company mission, technology expertise, AI specialists, cybersecurity experts',
-      structuredData: {
-        '@context': 'https://schema.org',
-        '@type': 'AboutPage',
-        name: 'About Zion Tech Group',
-        description: 'Learn about our mission and expertise in technology solutions'
-      }
-    },
-    contact: {
-      title: 'Contact Zion Tech Group - Get Expert Technology Consultation',
-      description: 'Ready to transform your business? Contact Zion Tech Group for expert technology consultation, AI solutions, and digital transformation services.',
-      keywords: 'contact Zion Tech Group, technology consultation, AI solutions, digital transformation services, IT consulting',
-      structuredData: {
-        '@context': 'https://schema.org',
-        '@type': 'ContactPage',
-        name: 'Contact Zion Tech Group',
-        description: 'Get expert technology consultation and solutions'
-      }
-    }
-  };
-
-  const pageSEO = { ...pageSpecificSEO[pageType], ...data };
-  
-  return (
-    <SEOOptimizer data={pageSEO}>
-      {children}
-    </SEOOptimizer>
-  );
-};
-
-// SEO component for service pages
-export const ServiceSEO: React.FC<SEOOptimizerProps & { 
-  serviceName: string;
-  serviceDescription: string;
-  serviceCategory: string;
-  pricing?: string;
-  features?: string[];
-}> = ({ 
-  serviceName, 
-  serviceDescription, 
-  serviceCategory, 
-  pricing, 
-  features = [], 
-  data = {}, 
-  children 
-}) => {
-  const serviceSEO: SEOData = {
-    title: `${serviceName} - ${serviceCategory} Services | Zion Tech Group`,
-    description: serviceDescription,
-    keywords: `${serviceName}, ${serviceCategory}, AI services, technology solutions, Zion Tech Group`,
-    ogType: 'service',
-    structuredData: {
-      '@context': 'https://schema.org',
-      '@type': 'Service',
-      name: serviceName,
-      description: serviceDescription,
-      category: serviceCategory,
-      provider: {
-        '@type': 'Organization',
-        name: 'Zion Tech Group',
-        url: 'https://ziontechgroup.com'
-      },
-      ...(pricing && {
-        offers: {
-          '@type': 'Offer',
-          price: pricing,
-          priceCurrency: 'USD',
-          availability: 'https://schema.org/InStock'
-        }
-      }),
-      ...(features.length > 0 && {
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: `${serviceName} Features`,
-          itemListElement: features.map(feature => ({
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: feature
-            }
-          }))
-        }
-      })
-    }
-  };
-
-  return (
-    <SEOOptimizer data={{ ...serviceSEO, ...data }}>
-      {children}
-    </SEOOptimizer>
-  );
-};
 // Hook for using SEO optimization
 export const useSEOOptimization = () => {;
   const [analysis, setAnalysis] = useState<any>(null);
@@ -775,4 +598,7 @@ export const useSEOOptimization = () => {;
     isOptimizing,
     optimizePage
   }};
->>>>>>> 39d9340a9992ff3996694fc13e4beac30359b409
+export default SEOOptimizer;
+=======
+=======
+export default SEOOptimizer;
