@@ -1,16 +1,23 @@
 #!/usr/bin/env node;
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
-const http = require('http');
-const url = require('url');
+const fs = require(,
+  fs');
+const path = require(
+  'path');
+const { execSync } = require(
+  'child_process');
+const http = require(
+  'http');
+const url = require(
+  'url');
 class AutomationDashboard {;
   constructor() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     this.automationSystems = new Map();
     this.metrics = new Map();
     this.alerts = [];
-    this.logFile = path.join(__dirname, 'logs', 'automation-dashboard.log');
+    this.logFile = path.join(__dirname,
+  'logs',
+  'automation-dashboard.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
 ;
@@ -19,35 +26,44 @@ class AutomationDashboard {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     // // // // // // // // console.log(message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-    fs.appendFileSync(this.logFile, logMessage);
+fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logMessage);
 ;
-=======;
-    this.startMetricsCollection()};
-  ensureLogDirectory() {;
-    const logDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logDir)) {;
-      fs.mkdirSync(logDir, { recursive: true })};
-  };
-  log(message) {;
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] ${message}\n`;
-    console.log(message);
-    fs.appendFileSync(this.logFile, logMessage)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+;
   loadAutomationSystems() {;
     const systems = [;
-      { name: 'lint-monitor', path: 'lint-monitor.js', category: 'code-quality', status: 'available' },;
-      { name: 'lint-fixer', path: 'lint-error-fixer.js', category: 'code-quality', status: 'available' },;
-      { name: 'lint-manager', path: 'lint-automation-manager.js', category: 'code-quality', status: 'available' },;
-      { name: 'code-quality', path: 'code-quality-monitor.js', category: 'analysis', status: 'available' },;
-      { name: 'performance', path: 'performance-optimizer.js', category: 'optimization', status: 'available' },;
-      { name: 'content-generator', path: 'content-generator.js', category: 'generation', status: 'available' },;
-      { name: 'seo-optimizer', path: 'seo-optimizer.js', category: 'seo', status: 'available' },;
-      { name: 'security-scanner', path: 'security-scanner.js', category: 'security', status: 'available' },;
-      { name: 'test-generator', path: 'test-generator.js', category: 'testing', status: 'available' },;
-      { name: 'intelligent-orchestrator', path: 'intelligent-orchestrator.js', category: 'orchestration', status: 'available' },;
-      { name: 'automation-factory', path: 'automation-factory.js', category: 'factory', status: 'available' };
+      { name: 'lint-monitor, path:,
+  lint-monitor.js', category: 'code-quality, status:,
+  available' },;
+      { name: 'lint-fixer, path:,
+  lint-error-fixer.js', category: 'code-quality, status:,
+  available' },;
+      { name: 'lint-manager, path:,
+  lint-automation-manager.js', category: 'code-quality, status:,
+  available' },;
+      { name: 'code-quality, path:,
+  code-quality-monitor.js', category: 'analysis, status:,
+  available' },;
+      { name: 'performance, path:,
+  performance-optimizer.js', category: 'optimization, status:,
+  available' },;
+      { name: 'content-generator, path:,
+  content-generator.js', category: 'generation, status:,
+  available' },;
+      { name: 'seo-optimizer, path:,
+  seo-optimizer.js', category: 'seo, status:,
+  available' },;
+      { name: 'security-scanner, path:,
+  security-scanner.js', category: 'security, status:,
+  available' },;
+      { name: 'test-generator, path:,
+  test-generator.js', category: 'testing, status:,
+  available' },;
+      { name: 'intelligent-orchestrator, path:,
+  intelligent-orchestrator.js', category: 'orchestration, status:,
+  available' },;
+      { name: 'automation-factory, path:,
+  automation-factory.js', category: 'factory, status:
+  'available' };
     ];
     for (const systemPath = path.join(__dirname, system.path);
       if (fs.existsSync(systemPath)) {;
@@ -64,87 +80,70 @@ class AutomationDashboard {;
         })};
     };
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  startMetricsCollection() {;
-    // Collect metrics every 30 seconds;
+startMetricsCollection() {;startMetricsCollection() {;
+// Collect metrics every 30 seconds;
     setInterval(() => {;
       this.collectMetrics()}, 30000);
     // Generate alerts every minute;
     setInterval(() => {;
       this.generateAlerts()}, 60000)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  collectMetrics() {;
-    for (const [name, system] of this.automationSystems) {;
+collectMetrics() {;collectMetrics() {;
+for (const [name, system] of this.automationSystems) {;
       const metrics = {;
   timestamp: new Date().toISOString(),;
         isRunning: system.isRunning,;
         lastRun: system.lastRun,;
         successRate: system.successCount / (system.successCount + system.failureCount) || 0,;
         averageExecutionTime: system.averageExecutionTime,;
-  <<<<<<< HEAD;
-        uptime: system.uptime;
-;
-;
-};
-      this.metrics.set(name, metrics)};
-=======;
-  uptime: system.uptime;
-;
-;
-;
-;
-;
-};
-      this.metrics.set(name, metrics);
-    };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
+  ursor/fix-project-errors-and-automate-future-fixes-53bd;
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  generateAlerts() {;
-    this.alerts = [];
+generateAlerts() {;generateAlerts() {;
+this.alerts = [];
     for (const [name, system] of this.automationSystems) {;
       const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
 ;
       if (successRate < 0.8) {;
         this.alerts.push({;
-          type: 'warning',;
+          type:
+  'warning',;
           system: name,;
           message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,;
           timestamp: new Date().toISOString();
         })};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      if (system.averageExecutionTime > 30000) {;
-        this.alerts.push({;
-          type: 'warning',;
+if (system.averageExecutionTime > 30000) {;if (system.averageExecutionTime > 30000) {;
+this.alerts.push({;
+          type:
+  'warning',;
           system: name,;
           message: `Slow execution time: ${system.averageExecutionTime}ms`,;
           timestamp: new Date().toISOString();
         })};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
-        this.alerts.push({;
-          type: 'error',;
+if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
+this.alerts.push({;
+          type:
+  'error',;
           system: name,;
-          message: 'System not running recently',;
+          message:
+  'System not running recently',;
           timestamp: new Date().toISOString();
         })};
     };
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  async runSystem(systemName) {;
-    const system = this.automationSystems.get(systemName);
+async runSystem(systemName) {;async runSystem(systemName) {;
+const system = this.automationSystems.get(systemName);
     if (!system) {;
       this.log(`❌ System not found: ${systemName}`);
       return false};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-    const startTime = Date.now();
-    system.isRunning = true;
+const startTime = Date.now();const startTime = Date.now();
+system.isRunning = true;
     try {;
       this.log(`🚀 Running system: ${systemName}`);
 ;
-      const result = execSync(`node '${system.path}'`, {;
-        encoding: 'utf8',;
-        stdio: 'pipe';
+      const result = execSync(`node,
+  ${system.path}'`, {;
+        encoding: 'utf8,;
+        stdio:
+  'pipe';
       });
 ;
       const executionTime = Date.now() - startTime;
@@ -159,9 +158,8 @@ class AutomationDashboard {;
       return { success: false, error: error.message, executionTime }} finally {;
       system.isRunning = false};
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  updateSystemMetrics(systemName, success, executionTime) {;
-    const system = this.automationSystems.get(systemName);
+updateSystemMetrics(systemName, success, executionTime) {;updateSystemMetrics(systemName, success, executionTime) {;
+const system = this.automationSystems.get(systemName);
     if (!system) return;
     if (success) {;
       system.successCount++} else {;
@@ -169,13 +167,14 @@ class AutomationDashboard {;
     system.totalExecutionTime += executionTime;
     system.averageExecutionTime = system.totalExecutionTime / (system.successCount + system.failureCount);
     system.lastRun = new Date()};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  async runAllSystems() {;
-    this.log('🚀 Running all automation systems...');
+async runAllSystems() {;async runAllSystems() {;
+this.log(,
+  🚀 Running all automation systems...');
 ;
     const results = [];
     for (const [name, system] of this.automationSystems) {;
-      if (system.status === 'available') {;
+      if (system.status ===
+  'available') {;
         const result = await this.runSystem(name);
         results.push({ name, ...result });
 ;
@@ -185,73 +184,113 @@ class AutomationDashboard {;
 ;
     this.log(`📊 Completed ${results.length} systems`);
     return results};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  generateDashboardHTML() {;
-    const systems = Array.from(this.automationSystems.values());
+generateDashboardHTML() {;generateDashboardHTML() {;
+const systems = Array.from(this.automationSystems.values());
     const metrics = Array.from(this.metrics.values());
     const alerts = this.alerts;
     return `<!DOCTYPE html>;
-<html lang='en'>;
+<html lang=
+  'en'>;
 <head>;
-    <meta charset='UTF-8'>;
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>;
+    <meta charset=
+  'UTF-8'>;
+    <meta name=
+  'viewport' content=
+  'width=device-width, initial-scale=1.0'>;
     <title>Automation Dashboard</title>;
-    <script src='https://cdn.tailwindcss.com'></script>;
-    <script src='https://cdn.jsdelivr.net/npm/chart.js'></script>;
+    <script src=
+  'https: //cdn.tailwindcss.com'></script>;
+    <script src=
+  'https://cdn.jsdelivr.net/npm/chart.js'></script>;
 </head>;
-<body class='bg-gray-100'>;
-    <div class='container mx-auto px-4 py-8'>;
-        <h1 class='text-3xl font-bold text-gray-800 mb-8'>Automation Dashboard</h1>;
+<body class=
+  'bg-gray-100'>;
+    <div class=
+  'container mx-auto px-4 py-8'>;
+        <h1 class=
+  'text-3xl font-bold text-gray-800 mb-8'>Automation Dashboard</h1>;
 ;
         <!-- System Status -->;
-        <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8'>;
+        <div class=
+  'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8'>;
             ${systems.map(system => `;
-                <div class='bg-white rounded-lg shadow-md p-6'>;
-                    <div class='flex items-center justify-between mb-4'>;
-                        <h3 class='text-lg font-semibold text-gray-800'>${system.name}</h3>;
-                        <span class='px-2 py-1 rounded-full text-xs font-medium ${;
-                            system.isRunning ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800';
+                <div class=
+  'bg-white rounded-lg shadow-md p-6'>;
+                    <div class=
+  'flex items-center justify-between mb-4'>;
+                        <h3 class=
+  'text-lg font-semibold text-gray-800>${system.name}</h3>;
+                        <span class=,
+  px-2 py-1 rounded-full text-xs font-medium ${;
+                            system.isRunning ? 'bg-green-100 text-green-800
+  ': 'bg-gray-100 text-gray-800;
                         }'>;
-                            ${system.isRunning ? 'Running' : 'Idle'};
+                            ${system.isRunning ?,
+  Running': 'Idle};
                         </span>;
                     </div>;
-                    <div class='space-y-2 text-sm text-gray-600'>;
+                    <div class=
+  'space-y-2 text-sm text-gray-600'>;
                         <p>Category: ${system.category}</p>;
                         <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p>;
                         <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p>;
-                        <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}</p>;
+                        <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
+  Never'}</p>;
                     </div>;
                 </div>;
-            `).join('')};
+            `).join('
+  ')};
         </div>;
         <!-- Alerts -->;
-        <div class='bg-white rounded-lg shadow-md p-6 mb-8'>;
-            <h2 class='text-xl font-semibold text-gray-800 mb-4'>Alerts</h2>;
+        <div class='bg-white rounded-lg shadow-md p-6 mb-8
+  '>;
+            <h2 class='text-xl font-semibold text-gray-800 mb-4
+  '>Alerts</h2>;
             ${alerts.length > 0 ? alerts.map(alert => `;
                 <div class='p-3 rounded-lg mb-2 ${;
-                    alert.type === 'error' ? 'bg-red-100 text-red-800' : 'bg-yellow-100 text-yellow-800';
-                }'>;
+                    alert.type ===
+  'error' ?
+  'bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800;
+                }
+  '>;
                     <strong>${alert.system}:</strong> ${alert.message};
-                    <span class='text-xs ml-2'>${new Date(alert.timestamp).toLocaleString()}</span>;
+                    <span class=,
+  text-xs ml-2
+  '>${new Date(alert.timestamp).toLocaleString()}</span>;
                 </div>;
-            `).join('') : '<p class='text-gray-500'>No alerts</p>'};
+            `).join(''): '<p class='text-gray-500
+  '>No alerts</p>};
         </div>;
         <!-- Performance Chart -->;
-        <div class='bg-white rounded-lg shadow-md p-6'>;
-            <h2 class='text-xl font-semibold text-gray-800 mb-4'>Performance Metrics</h2>;
-            <canvas id='performanceChart' width='400' height='200'></canvas>;
+        <div class=,
+  bg-white rounded-lg shadow-md p-6'>;
+            <h2 class=
+  'text-xl font-semibold text-gray-800 mb-4'>Performance Metrics</h2>;
+            <canvas id=
+  'performanceChart' width=
+  '400' height=
+  '200'></canvas>;
         </div>;
         <!-- Actions -->;
-        <div class='bg-white rounded-lg shadow-md p-6 mt-8'>;
-            <h2 class='text-xl font-semibold text-gray-800 mb-4'>Actions</h2>;
-            <div class='flex flex-wrap gap-4'>;
-                <button onclick='runAllSystems()' class='bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg'>;
+        <div class=
+  'bg-white rounded-lg shadow-md p-6 mt-8'>;
+            <h2 class=
+  'text-xl font-semibold text-gray-800 mb-4'>Actions</h2>;
+            <div class=
+  'flex flex-wrap gap-4'>;
+                <button onclick=
+  'runAllSystems()' class=
+  'bg-blue-500 hover: bg-blue-600 text-white px-4 py-2 rounded-lg'>;
                     Run All Systems;
                 </button>;
-                <button onclick='refreshDashboard()' class='bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg'>;
+                <button onclick=
+  'refreshDashboard()' class=
+  'bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg'>;
                     Refresh Dashboard;
                 </button>;
-                <button onclick='generateReport()' class='bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg'>;
+                <button onclick=
+  'generateReport()' class=
+  'bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg'>;
                     Generate Report;
                 </button>;
             </div>;
@@ -259,16 +298,21 @@ class AutomationDashboard {;
     </div>;
     <script>;
         // Performance Chart;
-        const ctx = document.getElementById('performanceChart').getContext('2d');
+        const ctx = document.getElementById(
+  'performanceChart').getContext(
+  '2d);
         const performanceChart = new Chart(ctx, {;
-            type: 'line',;
+            type:
+  'line',;
             data: {;
                 labels: ${JSON.stringify(metrics.map(m => new Date(m.timestamp).toLocaleTimeString()))},;
                 datasets[{;
-                    label: 'Success Rate',;
+                    label:
+  'Success Rate',;
                     data: ${JSON.stringify(metrics.map(m => m.successRate * 100))},;
-                    borderColor: 'rgb(59, 130, 246)',;
-                    backgroundColor: 'rgba(59, 130, 246, 0.1)',;
+                    borderColor:,
+  rgb(59, 130, 246)',;
+                    backgroundColor: rgba(59, 130, 246, 0.1)',;
                     tension: 0.1;
                 }];
             },;
@@ -283,33 +327,35 @@ class AutomationDashboard {;
 ;
         });
         function runAllSystems() {;
-            fetch('/api/run-all', { method: 'POST' });
+            fetch(,
+  /api/run-all', { method: 'POST });
                 .then(response => response.json());
                 .then(data => {;
-                    alert('All systems started');
+                    alert(,
+  All systems started');
                     setTimeout(refreshDashboard, 5000)})};
         function refreshDashboard() {;
             location.reload()};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-        function generateReport() {;
-            fetch('/api/report');
+function generateReport() {;function generateReport() {;
+fetch(
+  '/api/report');
                 .then(response => response.json());
                 .then(data => {;
-                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json });
                     const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement('a');
+                    const a = document.createElement(
+  'a');
                     a.href = url;
-                    a.download = 'automation-report.json';
+                    a.download =
+  'automation-report.json';
                     a.click()})};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-        // Auto-refresh every 30 seconds;
-        setInterval(refreshDashboard, 30000);
+// Auto-refresh every 30 seconds;// Auto-refresh every 30 seconds;
+setInterval(refreshDashboard, 30000);
     </script>;
 </body>;
 </html>`};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  generateReport() {;
-    const report = {;
+generateReport() {;generateReport() {;
+const report = {;
   timestamp: new Date().toISOString(),;
       summary: {;
         totalSystems: this.automationSystems.size,;
@@ -326,9 +372,8 @@ class AutomationDashboard {;
 },;
       systems: {},;
       metrics: {},;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      alerts: this.alerts,;
-      recommendations: this.generateRecommendations();
+alerts: this.alerts,;alerts: this.alerts,;
+recommendations: this.generateRecommendations();
     };
     // System details;
     for (const [name, system] of this.automationSystems) {;
@@ -347,65 +392,76 @@ class AutomationDashboard {;
     for (const [name, metric] of this.metrics) {;
       report.metrics[name] = metric};
     return report};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  calculateAverageSuccessRate() {;
-    const systems = Array.from(this.automationSystems.values());
+calculateAverageSuccessRate() {;calculateAverageSuccessRate() {;
+const systems = Array.from(this.automationSystems.values());
     const totalSuccessRate = systems.reduce((sum, system) => {;
       const rate = system.successCount / (system.successCount + system.failureCount) || 0;
       return sum + rate}, 0);
 ;
     return systems.length > 0 ? totalSuccessRate / systems.length : 0};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  generateRecommendations() {;
-    const recommendations = [];
+generateRecommendations() {;generateRecommendations() {;
+const recommendations = [];
     for (const [name, system] of this.automationSystems) {;
       const successRate = system.successCount / (system.successCount + system.failureCount) || 0;
 ;
       if (successRate < 0.8) {;
         recommendations.push({;
-          type: 'performance',;
+          type:
+  'performance',;
           system: name,;
           message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,;
-          priority: 'high';
+          priority:,
+  high';
         })};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      if (system.averageExecutionTime > 30000) {;
-        recommendations.push({;
-          type: 'optimization',;
+if (system.averageExecutionTime > 30000) {;if (system.averageExecutionTime > 30000) {;
+recommendations.push({;
+          type: 'optimization,;
           system: name,;
           message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,;
-          priority: 'medium';
+          priority:,
+  medium';
         })};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
-        recommendations.push({;
-          type: 'maintenance',;
+if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
+recommendations.push({;
+          type: 'maintenance,;
           system: name,;
-          message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}`,;
-          priority: 'low';
+          message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
+  Never'}`,;
+          priority: 'low;
         })};
     };
     return recommendations};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  createServer() {;
-    const server = http.createServer((req, res) => {;
+createServer() {;createServer() {;
+const server = http.createServer((req, res) => {;
       const pathname = parsedUrl.pathname;
-      res.setHeader('Content-Type', 'application/json');
-      res.setHeader('Access-Control-Allow-Origin', '*');
-      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-      res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-      if (req.method === 'OPTIONS') {;
+      res.setHeader(,
+  Content-Type',
+  'application/json');
+      res.setHeader(
+  'Access-Control-Allow-Origin',
+  '*');
+      res.setHeader(
+  'Access-Control-Allow-Methods',
+  'GET, POST, OPTIONS');
+      res.setHeader(
+  'Access-Control-Allow-Headers',
+  'Content-Type');
+      if (req.method ===
+  'OPTIONS') {;
         res.writeHead(200);
         res.end();
         return};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-      switch (pathname) {;
-        case '/':;
-          res.setHeader('Content-Type', 'text/html');
+switch (pathname) {;switch (pathname) {;
+case
+  '/': ;
+          res.setHeader(
+  'Content-Type,
+  'text/html');
           res.writeHead(200);
           res.end(this.generateDashboardHTML());
           break;
-        case '/api/status':;
+        case
+  '/api/status':;
           res.writeHead(200);
           res.end(JSON.stringify({;
             systems: Array.from(this.automationSystems.entries()),;
@@ -413,96 +469,93 @@ class AutomationDashboard {;
             alerts: this.alerts;
           }));
           break;
-        case '/api/run-all':;
-          if (req.method === 'POST') {;
+        case,
+  /api/run-all': ;
+          if (req.method ===
+  'POST) {;
             this.runAllSystems().then(results => {;
               res.writeHead(200);
               res.end(JSON.stringify({ success: true, results }))})} else {;
             res.writeHead(405);
-            res.end(JSON.stringify({ error: 'Method not allowed' }))};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-          break;
-        case '/api/run':;
-          if (req.method === 'POST') {;
-            const body = '';
-            req.on('data', chunk => body += chunk);
-            req.on('end', () => {;
+            res.end(JSON.stringify({ error:,
+  Method not allowed' }))};
+break;break;
+case
+  '/api/run': ;
+          if (req.method ===
+  'POST') {;
+            const body = '
+  ';
+            req.on('data, chunk => body += chunk);
+            req.on(,
+  end
+  ', () => {;
               const { system } = JSON.parse(body);
               this.runSystem(system).then(result => {;
                 res.writeHead(200);
                 res.end(JSON.stringify(result))})})} else {;
             res.writeHead(405);
-            res.end(JSON.stringify({ error: 'Method not allowed' }))};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-          break;
-        case '/api/report':;
+            res.end(JSON.stringify({ error: 'Method not allowed }))};
+break;break;
+case,
+  /api/report
+  ': ;
           res.writeHead(200);
           res.end(JSON.stringify(this.generateReport()));
           break;
         default:;
           res.writeHead(404);
-          res.end(JSON.stringify({ error: 'Not found' }))};
+          res.end(JSON.stringify({ error: 'Not found }))};
     });
     return server};
   sleep(ms) {;
     return new Promise(resolve => setTimeout(resolve, ms))};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
-  start(port = 3001) {;
-    const server = this.createServer();
+start(port = 3001) {;start(port = 3001) {;
+const server = this.createServer();
     server.listen(port, () => {;
       this.log(`🚀 Automation Dashboard started on port ${port}`);
       this.log(`📊 Dashboard available at: http://localhost:${port}`);
       this.log(`📊 API available at: http://localhost:${port}/api/status`)})};
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
 // CLI handling;
 const dashboard = new AutomationDashboard();
 const command = process.argv[2];
 const port = process.argv[3] || 3001;
 switch (command) {;
-  case 'start':;
+  case,
+  start
+  ': ;
     dashboard.start(parseInt(port));
     break;
-  case 'status':;
+  case 'status:;
     // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
     break;
-  case 'run-all':;
+  case 'run-all
+  ':;
     dashboard.runAllSystems().then(results => {;
       // // // // // // // // console.log(JSON.stringify(results, null, 2));
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-      process.exit(0);
-    });
+process.exit(0);process.exit(0);
+});
     break;
   default:;
-    // // // // // // // // console.log('Usage: node automation-dashboard.js [start|status|run-all] [port]');
-    // // // // // // // // console.log('\nCommands:');
-    // // // // // // // // console.log('  start    - Start the dashboard server');
-    // // // // // // // // console.log('  status   - Show current status');
-    // // // // // // // // console.log('  run-all  - Run all automation systems');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-    process.exit(1);
+    // // // // // // // // console.log(,
+  Usage: node automation-dashboard.js [start|status|run-all] [port]
+  ');
+    // // // // // // // // console.log('\nCommands:
+  ');
+    // // // // // // // // console.log('  start    - Start the dashboard server
+  ');
+    // // // // // // // // console.log('  status   - Show current status
+  ');
+    // // // // // // // // console.log('  run-all  - Run all automation systems
+  ');
+process.exit(1);process.exit(1);
 ;
 // Graceful shutdown;
-process.on('SIGINT', () => {;
+process.on('SIGINT, () => {;
   // // // // // // // // console.log('\n🛑 Shutting down automation dashboard...');
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
-  process.exit(0);
+process.exit(0);process.exit(0);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
-=======;
-      console.log(JSON.stringify(results, null, 2));
-      process.exit(0)});
-    break;
-  default:;
-    console.log('Usage: node automation-dashboard.js [start|status|run-all] [port]');
-    console.log('\nCommands:');
-    console.log('  start    - Start the dashboard server');
-    console.log('  status   - Show current status');
-    console.log('  run-all  - Run all automation systems');
-    process.exit(1)};
-// Graceful shutdown;
-process.on('SIGINT', () => {;
-  console.log('\n🛑 Shutting down automation dashboard...');
-  process.exit(0)});
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+;
+

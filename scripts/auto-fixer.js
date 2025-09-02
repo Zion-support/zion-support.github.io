@@ -1,350 +1,482 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
-const { execSync } = require('child_process');
+import fs from
+  'fs';
+import path from
+  'path';
+import { execSync } from
+  'child_process';
+import { fileURLToPath } from
+  'url';
 
-const FIX_INTERVAL = parseInt(process.env.FIX_INTERVAL) || 300000; // 5 minutes
-const LOG_FILE = path.join(__dirname, '../logs/auto-fixer.log');
-const ERROR_REPORT_FILE = path.join(__dirname, '../error-reports/current-errors.json');
-const FIX_REPORT_FILE = path.join(__dirname, '../error-reports/auto-fix-report.json');
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 class AutoFixer {
   constructor() {
-    this.fixHistory = [];
-    this.lastRun = new Date();
-    this.runCount = 0;
+    this.projectRoot = path.join(__dirname,
+  '..');
+    this.logDir = path.join(this.projectRoot,
+  'logs');
+    this.errorReportDir = path.join(this.projectRoot,
+  'error-reports');
+    this.fixesApplied = [];
+    this.fixesFailed = [];
+    
+    this.ensureDirectories();
   }
 
-  log(message, level = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${level}] ${message}`;
-    
-    console.log(logMessage);
-    
-    try {
-      fs.appendFileSync(LOG_FILE, logMessage + '\n');
-    } catch (error) {
-      console.error('Failed to write to log file:', error.message);
-    }
-  }
-
-  async loadCurrentErrors() {
-    try {
-      if (fs.existsSync(ERROR_REPORT_FILE)) {
-        const content = fs.readFileSync(ERROR_REPORT_FILE, 'utf8');
-        return JSON.parse(content);
-      }
-    } catch (error) {
-      this.log(`Failed to load error report: ${error.message}`, 'ERROR');
-    }
-    return null;
-  }
-
-  async fixESLintErrors() {
-    const fixes = [];
-    
-    try {
-      // Try to auto-fix ESLint errors
-      const result = execSync('npx eslint . --fix', {
-        cwd: '/workspace',
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      
-      fixes.push({
-        type: 'eslint',
-        action: 'auto-fix',
-        success: true,
-        message: 'ESLint auto-fix completed',
-        timestamp: new Date().toISOString()
-      });
-      
-      this.log('✅ ESLint auto-fix completed');
-    } catch (error) {
-      fixes.push({
-        type: 'eslint',
-        action: 'auto-fix',
-        success: false,
-        message: error.message,
-        timestamp: new Date().toISOString()
-      });
-      
-      this.log(`❌ ESLint auto-fix failed: ${error.message}`, 'WARNING');
-    }
-    
-    return fixes;
-  }
-
-  async fixCommonTypeScriptErrors() {
-    const fixes = [];
-    
-    try {
-      // Common TypeScript fixes
-      const commonFixes = [
-        {
-          pattern: /export\s*$/gm,
-          replacement: 'export default {};',
-          description: 'Fix incomplete export statements'
-        },
-        {
-          pattern: /:\s*;/g,
-          replacement: ': any;',
-          description: 'Fix empty type annotations'
-        },
-        {
-          pattern: /\{\s*\}/g,
-          replacement: '{ [key: string]: any }',
-          description: 'Fix empty object types'
-        },
-        {
-          pattern: /\[\s*\]/g,
-          replacement: '[]',
-          description: 'Fix empty array brackets'
-        }
-      ];
-
-      const srcDir = path.join('/workspace', 'src');
-      const files = this.getTypeScriptFiles(srcDir);
-
-      for (const filePath of files) {
-        let content = fs.readFileSync(filePath, 'utf8');
-        let fileModified = false;
-
-        for (const fix of commonFixes) {
-          if (fix.pattern.test(content)) {
-            content = content.replace(fix.pattern, fix.replacement);
-            fileModified = true;
-            
-            fixes.push({
-              type: 'typescript',
-              action: 'pattern-fix',
-              file: filePath,
-              description: fix.description,
-              success: true,
-              timestamp: new Date().toISOString()
-            });
-          }
-        }
-
-        if (fileModified) {
-          fs.writeFileSync(filePath, content);
-          this.log(`✅ Fixed TypeScript issues in: ${filePath}`);
-        }
-      }
-
-    } catch (error) {
-      fixes.push({
-        type: 'typescript',
-        action: 'pattern-fix',
-        success: false,
-        message: error.message,
-        timestamp: new Date().toISOString()
-      });
-      
-      this.log(`❌ TypeScript auto-fix failed: ${error.message}`, 'ERROR');
-    }
-    
-    return fixes;
-  }
-
-  getTypeScriptFiles(dir) {
-    const files = [];
-    
-    try {
-      const items = fs.readdirSync(dir);
-      
-      for (const item of items) {
-        const fullPath = path.join(dir, item);
-        const stat = fs.statSync(fullPath);
-        
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-          files.push(...this.getTypeScriptFiles(fullPath));
-        } else if (stat.isFile() && (item.endsWith('.ts') || item.endsWith('.tsx'))) {
-          files.push(fullPath);
-        }
-      }
-    } catch (error) {
-      this.log(`Error reading directory ${dir}: ${error.message}`, 'WARNING');
-    }
-    
-    return files;
-  }
-
-  async fixDependencyIssues() {
-    const fixes = [];
-    
-    try {
-      // Try to install missing dependencies
-      execSync('npm install --legacy-peer-deps', {
-        cwd: '/workspace',
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      
-      fixes.push({
-        type: 'dependencies',
-        action: 'install',
-        success: true,
-        message: 'Dependencies installed successfully',
-        timestamp: new Date().toISOString()
-      });
-      
-      this.log('✅ Dependencies installation completed');
-    } catch (error) {
-      fixes.push({
-        type: 'dependencies',
-        action: 'install',
-        success: false,
-        message: error.message,
-        timestamp: new Date().toISOString()
-      });
-      
-      this.log(`❌ Dependencies installation failed: ${error.message}`, 'WARNING');
-    }
-    
-    return fixes;
-  }
-
-  async fixBuildIssues() {
-    const fixes = [];
-    
-    try {
-      // Clean and rebuild
-      execSync('rm -rf dist node_modules/.vite', {
-        cwd: '/workspace',
-        stdio: 'pipe'
-      });
-      
-      execSync('npm run build', {
-        cwd: '/workspace',
-        stdio: 'pipe',
-        encoding: 'utf8'
-      });
-      
-      fixes.push({
-        type: 'build',
-        action: 'clean-rebuild',
-        success: true,
-        message: 'Clean rebuild completed successfully',
-        timestamp: new Date().toISOString()
-      });
-      
-      this.log('✅ Clean rebuild completed');
-    } catch (error) {
-      fixes.push({
-        type: 'build',
-        action: 'clean-rebuild',
-        success: false,
-        message: error.message,
-        timestamp: new Date().toISOString()
-      });
-      
-      this.log(`❌ Clean rebuild failed: ${error.message}`, 'WARNING');
-    }
-    
-    return fixes;
-  }
-
-  async saveFixes(fixes) {
-    const report = {
-      timestamp: new Date().toISOString(),
-      runCount: this.runCount,
-      fixes: fixes,
-      summary: {
-        total: fixes.length,
-        successful: fixes.filter(f => f.success).length,
-        failed: fixes.filter(f => !f.success).length
-      }
-    };
-
-    try {
-      const dir = path.dirname(FIX_REPORT_FILE);
+  ensureDirectories() {
+    [this.logDir, this.errorReportDir].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
+    });
+  }
+
+  log(level, message, error = null) {
+    const timestamp = new Date().toISOString();
+    const logEntry = {
+      timestamp,
+      level,
+      message,
+      error: error ? {
+        message: error.message,
+        stack: error.stack
+      } : null
+    };
+
+    console.log(`[${timestamp}] ${level.toUpperCase()}: ${message}`);
+    
+    if (error) {
+      console.error(error);
+    }
+
+    // Write to log file
+    const logFile = path.join(this.logDir,
+  'auto-fixer.log');
+    fs.appendFileSync(logFile, JSON.stringify(logEntry) +
+  '\n');
+  }
+
+  async fixMergeConflicts() {
+    try {
+      this.log(
+  'info',
+  'Checking for merge conflicts...');
       
-      fs.writeFileSync(FIX_REPORT_FILE, JSON.stringify(report, null, 2));
-      this.log(`Auto-fix report saved: ${report.summary.successful}/${report.summary.total} fixes successful`);
-    } catch (error) {
-      this.log(`Failed to save fix report: ${error.message}`, 'ERROR');
-    }
-  }
-
-  async runAutoFix() {
-    this.runCount++;
-    this.lastRun = new Date();
-    
-    this.log(`🔧 Starting auto-fix run #${this.runCount}`);
-    
-    const errorReport = await this.loadCurrentErrors();
-    if (!errorReport || errorReport.summary.total === 0) {
-      this.log('No errors found, skipping auto-fix');
-      return;
-    }
-
-    this.log(`Found ${errorReport.summary.total} errors to fix`);
-    
-    const allFixes = [];
-    
-    // Run different types of fixes
-    const fixers = [
-      { name: 'ESLint', fn: () => this.fixESLintErrors() },
-      { name: 'TypeScript', fn: () => this.fixCommonTypeScriptErrors() },
-      { name: 'Dependencies', fn: () => this.fixDependencyIssues() },
-      { name: 'Build', fn: () => this.fixBuildIssues() }
-    ];
-
-    for (const fixer of fixers) {
-      try {
-        this.log(`Running ${fixer.name} fixes...`);
-        const fixes = await fixer.fn();
-        allFixes.push(...fixes);
-      } catch (error) {
-        this.log(`${fixer.name} fixer failed: ${error.message}`, 'ERROR');
-        allFixes.push({
-          type: fixer.name.toLowerCase(),
-          action: 'auto-fix',
-          success: false,
-          message: error.message,
-          timestamp: new Date().toISOString()
-        });
+      // Find files with merge conflict markers
+      const conflictFiles = execSync(
+  'grep -r "" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {
+        cwd: this.projectRoot,
+        encoding:
+  'utf8'
+      }).trim().split(
+  '\n').filter(f => f);
+      
+      if (conflictFiles.length === 0) {
+        this.log(
+  'info',
+  'No merge conflicts found');
+        return true;
       }
+      
+      this.log(
+  'info', `Found ${conflictFiles.length} files with merge conflicts`);
+      
+      for (const file of conflictFiles) {
+        if (!file.trim()) continue;
+        
+        try {
+          await this.resolveMergeConflict(path.join(this.projectRoot, file));
+          this.fixesApplied.push(`Resolved merge conflict in ${file}`);
+        } catch (error) {
+          this.log(
+  'error', `Failed to resolve merge conflict in ${file}`, error);
+          this.fixesFailed.push(`Failed to resolve merge conflict in ${file}: ${error.message}`);
+        }
+      }
+      
+      return true;
+    } catch (error) {
+      this.log(
+  'error',
+  'Failed to fix merge conflicts', error);
+      return false;
     }
-
-    await this.saveFixes(allFixes);
-    
-    const successful = allFixes.filter(f => f.success).length;
-    this.log(`🏁 Auto-fix completed: ${successful}/${allFixes.length} fixes successful`);
   }
 
-  start() {
-    this.log('🚀 Auto-Fixer started');
-    this.log(`Fix interval: ${FIX_INTERVAL}ms`);
+  async resolveMergeConflict(filePath) {
+    const content = fs.readFileSync(filePath,
+  'utf8');
     
-    // Run initial fix after a short delay
-    setTimeout(() => {
-      this.runAutoFix();
-    }, 10000); // 10 seconds delay
+    // Simple merge conflict resolution - keep HEAD version and remove markers
+    let fixed = content
+      .replace(/\n/g, '
+  ')
+      .replace(/.replace(/// Clean up any remaining artifacts
+    fixed = fixed
+      .replace(/\n\n\n+/g, '\n\n
+  ')
+      .replace(/^\s*\n/gm, '\n
+  ')
+      .trim();
     
-    // Set up periodic fixes
-    setInterval(() => {
-      this.runAutoFix();
-    }, FIX_INTERVAL);
+    fs.writeFileSync(filePath, fixed + '\n
+  ');
+    this.log('info
+  ', `Resolved merge conflict in ${filePath}`);
+  }
+
+  async fixImportErrors() {
+    try {
+      this.log('info
+  ', 'Fixing import errors...
+  ');
+      
+      // Run ESLint auto-fix for import/export issues
+      execSync('npx eslint src/ --fix --quiet || true
+  ', {
+        cwd: this.projectRoot,
+        timeout: 120000
+      });
+      
+      this.fixesApplied.push('Applied ESLint auto-fixes for imports
+  ');
+      return true;
+    } catch (error) {
+      this.log('error
+  ', 'Failed to fix import errors
+  ', error);
+      this.fixesFailed.push(`Failed to fix import errors: ${error.message}`);
+      return false;
+    }
+  }
+
+  async fixTypeScriptErrors() {
+    try {
+      this.log('info
+  ', 'Fixing TypeScript errors...
+  ');
+      
+      // Common TypeScript fixes
+      const fixes = [
+        this.fixMissingTypes.bind(this),
+        this.fixSyntaxErrors.bind(this),
+        this.fixImportExtensions.bind(this)
+      ];
+      
+      for (const fix of fixes) {
+        await fix();
+      }
+      
+      return true;
+    } catch (error) {
+      this.log('error
+  ', 'Failed to fix TypeScript errors
+  ', error);
+      return false;
+    }
+  }
+
+  async fixMissingTypes() {
+    try {
+      // Find files with missing type annotations
+      const tsFiles = execSync('find src/ -name "*.ts" -o -name "*.tsx"
+  ', {
+        cwd: this.projectRoot,
+        encoding:,
+  utf8
+  '
+      }).trim().split('\n
+  ');
+      
+      for (const file of tsFiles) {
+        if (!file.trim()) continue;
+        
+        const filePath = path.join(this.projectRoot, file);
+        let content = fs.readFileSync(filePath, 'utf8
+  ');
+        
+        // Fix common missing type issues
+        content = content
+          // Add any type for untyped variables
+          .replace(/const (\w+) = /g, 'const $1: any =)
+          // Fix function return types
+          .replace(/function (\w+)\([^)]*\) {/g, ,
+  function $1($&): any {)
+          // Fix arrow functions
+          .replace(/const (\w+) = \([^)]*\) => {/g, ,
+  const $1 = ($&): any => {);
+        
+        if (content !== fs.readFileSync(filePath, 'utf8
+  ')) {
+          fs.writeFileSync(filePath, content);
+          this.fixesApplied.push(`Added missing types in ${file}`);
+        }
+      }
+    } catch (error) {
+      this.log('error
+  ', 'Failed to fix missing types
+  ', error);
+    }
+  }
+
+  async fixSyntaxErrors() {
+    try {
+      // Find and fix common syntax errors
+      const files = execSync('find src/ -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx"
+  ', {
+        cwd: this.projectRoot,
+        encoding: 'utf8
+  '
+      }).trim().split('\n
+  ');
+      
+      for (const file of files) {
+        if (!file.trim()) continue;
+        
+        const filePath = path.join(this.projectRoot, file);
+        let content = fs.readFileSync(filePath, 'utf8
+  ');
+        const originalContent = content;
+        
+        // Fix common syntax issues
+        content = content
+          // Fix missing semicolons
+          .replace(/(\w+)\s*$/gm, '$1;')
+          // Fix incomplete function declarations
+          .replace(/export\s*$/gm,
+  'export default {};')
+          // Fix incomplete object declarations
+          .replace(/{\s*$/gm,
+  '{}')
+          // Fix incomplete string literals
+          .replace(/"\s*$/gm,
+  '""')
+          // Fix incomplete array declarations
+          .replace(/\[\s*$/gm,
+,
+  '[]')
+          // Remove trailing commas in objects/arrays
+          .replace(/,(\s*[}\]])/g,
+  '$1')
+          // Fix incomplete type declarations
+          .replace(/:\s*;/g,
+  ': any;')
+          .replace(/:\s*}/g,
+  ': any }')
+          .replace(/:\s*$/gm,
+  ': any;');
+        
+        if (content !== originalContent) {
+          fs.writeFileSync(filePath, content);
+          this.fixesApplied.push(`Fixed syntax errors in ${file}`);
+        }
+      }
+    } catch (error) {
+      this.log(
+  'error',
+  'Failed to fix syntax errors', error);
+    }
+  }
+
+  async fixImportExtensions() {
+    try {
+      // Fix import extensions for TypeScript
+      const tsFiles = execSync(
+  'find src/ -name "*.ts" -o -name "*.tsx"', {
+        cwd: this.projectRoot,
+        encoding:
+  'utf8'
+      }).trim().split(
+  '\n');
+      
+      for (const file of tsFiles) {
+        if (!file.trim()) continue;
+        
+        const filePath = path.join(this.projectRoot, file);
+        let content = fs.readFileSync(filePath,
+  'utf8');
+        const originalContent = content;
+        
+        // Fix import extensions
+        content = content
+          // Remove .js extensions from imports
+          .replace(/from [
+  '"]([^'"]+)\.js[
+  '"]/g, "from '$1
+  '")
+          // Add proper TypeScript imports
+          .replace(/import\s+(\w+)\s+from\s+['"]([^
+  '"]+)['"]/g, "import $1 from
+  '$2'")
+          // Fix relative imports
+          .replace(/from [
+  '"]\.\/([^'"]+)[
+  '"]/g, "from './$1
+  '")
+          .replace(/from ['"]\.\.\/([^
+  '"]+)['"]/g, "from
+  '../$1'");
+        
+        if (content !== originalContent) {
+          fs.writeFileSync(filePath, content);
+          this.fixesApplied.push(`Fixed import extensions in ${file}`);
+        }
+      }
+    } catch (error) {
+      this.log(
+  'error',
+  'Failed to fix import extensions', error);
+    }
+  }
+
+  async cleanupFiles() {
+    try {
+      this.log(
+  'info',
+  'Cleaning up problematic files...');
+      
+      // Remove empty files
+      const emptyFiles = execSync(
+  'find src/ -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs -I {} sh -c \'[ ! -s "{}" ] && echo "{}"\'
+  ', {
+        cwd: this.projectRoot,
+        encoding: 'utf8
+  '
+      }).trim().split('\n
+  ').filter(f => f);
+      
+      for (const file of emptyFiles) {
+        if (!file.trim()) continue;
+        
+        const filePath = path.join(this.projectRoot, file);
+        fs.writeFileSync(filePath, 'export {};\n
+  ');
+        this.fixesApplied.push(`Added default export to empty file ${file}`);
+      }
+      
+      return true;
+    } catch (error) {
+      this.log('error
+  ', 'Failed to cleanup files
+  ', error);
+      return false;
+    }
+  }
+
+  async validateFixes() {
+    try {
+      this.log('info
+  ', 'Validating applied fixes...
+  ');
+      
+      // Run type check to validate fixes
+      const typeCheckResult = execSync('npm run type-check 2>&1 || echo "TYPE_CHECK_FAILED"
+  ', {
+        cwd: this.projectRoot,
+        encoding: 'utf8
+  ',
+        timeout: 120000
+      });
+      
+      if (!typeCheckResult.includes('TYPE_CHECK_FAILED
+  ')) {
+        this.log('info
+  ', 'Type check passed after fixes
+  ');
+        return true;
+      } else {
+        this.log('warning
+  ', 'Some type errors remain after fixes
+  ');
+        return false;
+      }
+    } catch (error) {
+      this.log('error
+  ', 'Failed to validate fixes
+  ', error);
+      return false;
+    }
+  }
+
+  async generateReport() {
+    const timestamp = new Date().toISOString();
+    const reportFile = path.join(this.errorReportDir, `auto-fixer-report-${Date.now()}.json`);
+    
+    const report = {
+      timestamp,
+      summary: {
+        fixesApplied: this.fixesApplied.length,
+        fixesFailed: this.fixesFailed.length
+      },
+      fixesApplied: this.fixesApplied,
+      fixesFailed: this.fixesFailed,
+      status: this.fixesFailed.length === 0 ?,
+  success
+  ': 'partial
+    };
+    
+    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
+    this.log('info
+  ', `Auto-fixer report generated: ${reportFile}`);
+    
+    return report;
+  }
+
+  async run(errorFile = null) {
+    try {
+      this.log('info
+  ', 'Starting auto-fixer...
+  ');
+      
+      if (errorFile && fs.existsSync(errorFile)) {
+        const errors = JSON.parse(fs.readFileSync(errorFile, 'utf8
+  '));
+        this.log('info
+  ', `Processing ${errors.length} reported errors`);
+      }
+      
+      // Apply various fixes
+      await this.fixMergeConflicts();
+      await this.fixImportErrors();
+      await this.fixTypeScriptErrors();
+      await this.cleanupFiles();
+      
+      // Validate fixes
+      await this.validateFixes();
+      
+      // Generate report
+      const report = await this.generateReport();
+      
+      this.log('info
+  ', `Auto-fixer completed. Applied ${this.fixesApplied.length} fixes, ${this.fixesFailed.length} failed.`);
+      
+      return report;
+    } catch (error) {
+      this.log('error
+  ', 'Auto-fixer failed
+  ', error);
+      throw error;
+    }
   }
 }
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('\n🛑 Auto-Fixer shutting down...');
-  process.exit(0);
-});
+// Run if called directly
+const isMainModule = import.meta.url === `file://${process.argv[1]}`;
+if (isMainModule) {
+  const fixer = new AutoFixer();
+  const errorFile = process.argv[2];
+  
+  fixer.run(errorFile).then(report => {
+    console.log('Auto-fixer completed successfully
+  ');
+    process.exit(0);
+  }).catch(error => {
+    console.error('Auto-fixer failed:', error);
+    process.exit(1);
+  });
+}
 
-process.on('SIGTERM', () => {
-  console.log('\n🛑 Auto-Fixer terminated...');
-  process.exit(0);
-});
-
-// Start the auto-fixer
-const fixer = new AutoFixer();
-fixer.start();
+export default AutoFixer;

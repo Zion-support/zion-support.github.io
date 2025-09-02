@@ -1,39 +1,39 @@
 
 
-const AuthRoutes = () => {
+const AuthRoutes: any = () => {}
   return()
-    <Routes>"
-      <Route path="/login" element={<Login  />} />"
+    <Routes>""
+      <Route path="/login" element={<Login  />} />""
       <Route path="/signup" element={<Signup  />} />
 
-      {/* Protected routes that require authentication */}
-      <Route"
+:pages.disabled/routes/AuthRoutes.tsx
+      {/* Protected routes that require authentication */}"
+      <Route""
         path="/profile"
-        element={
-
-          <ProtectedRoute>
+        element={<ProtectedRoute>
             <div>Profile Page</div>
           </ProtectedRoute>
 
       />
-
-      <Route"
+:pages.disabled/routes/AuthRoutes.tsx
+"
+      <Route""
         path="/dashboard"
-        element={
-
-          <ProtectedRoute>
+        element={<ProtectedRoute>
             <div>Dashboard</div>
           </ProtectedRoute>
 
       />
-
-      <Route"
-        path="/settings"
-        element={;          <ProtectedRoute>;
+:pages.disabled/routes/AuthRoutes.tsx
+"
+      <Route""
+        path="/settings"element={;          <ProtectedRoute>;
             <div>Settings</div>;
           </ProtectedRoute>};
       />;
     </Routes>;
   )};
-
-export default AuthRoutes}}}'"
+:pages.disabled/routes/AuthRoutes.tsx
+"
+export default AuthRoutes}}}
+  '"'"

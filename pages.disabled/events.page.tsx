@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import Link from 'next/link';
+import React, { useState } from
+  'react';
+import { motion  } from
+  'framer-motion';
+import Link from
+  'next/link';
 import { Calendar,
   Clock,
   MapPin,
@@ -20,14 +23,16 @@ import { Calendar,
   TrendingUp,
   MessageCircle,
   BookOpen,
-  CheckCircle'
- } from 'lucide-react';
+  CheckCircle
+  '
+ } from 'lucide-react
+  ';
 ;
 const events = [
   {
 
     id: 1,
-<<<<<<<< HEAD:pages.disabled/root_pages/events.page.tsx
+<:pages.disabled/root_pages/events.page.tsx
     title: "AI & Machine Learning Summit 2027","
     type: "Conference","
     date: "2027-03-15","
@@ -42,30 +47,12 @@ const events = [
     highlights = ["
       "Keynote presentations from AI pioneers","
       "Hands-on workshops with real datasets","
-      "Networking with industry professionals","
-========
-    title: "AI & Machine Learning Summit 2027",
-    type: "Conference",
-    date: "2027-03-15",
-    time: "9:00 AM - 6:00 PM EST",
-    location: "Virtual + New York City",
-    status: "upcoming",
-    category: "AI & ML",
-    description: "Join industry leaders for a comprehensive exploration of AI and machine learning innovations, featuring keynote speakers, workshops, and networking opportunities.",
-    speakers: ["Dr. Sarah Chen", "Prof. Michael Rodriguez", "AI Expert Lisa Wang"],
-    attendees: 500,
-    price: "$299",
-    highlights: [
-      "Keynote presentations from AI pioneers",
-      "Hands-on workshops with real datasets",
-      "Networking with industry professionals",
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/events.page.tsx
-      "Latest AI research and applications"
+      "Networking with industry professionals",""Latest AI research and applications"
     ],"
     image: "/images/ai-summit-2027.jpg"
   },
   {
-<<<<<<<< HEAD:pages.disabled/root_pages/events.page.tsx
+<:pages.disabled/root_pages/events.page.tsx
 
     id: 2,"
     title: "Cybersecurity Best Practices Workshop","
@@ -82,31 +69,12 @@ const events = [
     highlights = ["
       "Threat detection strategies","
       "Incident response protocols","
-      "Compliance best practices","
-========
-    id: 2,
-    title: "Cybersecurity Best Practices Workshop",
-    type: "Workshop",
-    date: "2027-02-28",
-    time: "2:00 PM - 5:00 PM EST",
-    location: "Virtual",
-    status: "upcoming",
-    category: "Cybersecurity",
-    description: "Learn essential cybersecurity practices for modern businesses, including threat detection, incident response, and compliance requirements.",
-    speakers: ["Security Expert John Smith", "Compliance Officer Maria Garcia"],
-    attendees: 150,
-    price: "Free",
-    highlights: [
-      "Threat detection strategies",
-      "Incident response protocols",
-      "Compliance best practices",
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/events.page.tsx
-      "Security tool demonstrations"
+      "Compliance best practices",""Security tool demonstrations"
     ],"
     image: "/images/cybersecurity-workshop.jpg"
   },
   {
-<<<<<<<< HEAD:pages.disabled/root_pages/events.page.tsx
+<:pages.disabled/root_pages/events.page.tsx
 
     id: 3,"
     title: "Cloud Computing & DevOps Conference","
@@ -123,31 +91,12 @@ const events = [
     highlights = ["
       "Cloud migration strategies","
       "Container orchestration","
-      "CI/CD pipeline optimization","
-========
-    id: 3,
-    title: "Cloud Computing & DevOps Conference",
-    type: "Conference",
-    date: "2027-01-20",
-    time: "8:00 AM - 7:00 PM EST",
-    location: "San Francisco, CA",
-    status: "upcoming",
-    category: "Cloud & DevOps",
-    description: "Explore the latest trends in cloud computing, containerization, and DevOps practices with hands-on demonstrations and expert insights.",
-    speakers: ["Cloud Architect David Lee", "DevOps Engineer Sarah Johnson"],
-    attendees: 300,
-    price: "$199",
-    highlights: [
-      "Cloud migration strategies",
-      "Container orchestration",
-      "CI/CD pipeline optimization",
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/events.page.tsx
-      "Cost optimization techniques"
+      "CI/CD pipeline optimization",""Cost optimization techniques"
     ],"
     image: "/images/cloud-devops-conference.jpg"
   },
   {
-<<<<<<<< HEAD:pages.disabled/root_pages/events.page.tsx
+<:pages.disabled/root_pages/events.page.tsx
 
     id: 4,"
     title: "Data Analytics & Business Intelligence","
@@ -164,31 +113,12 @@ const events = [
     highlights = ["
       "Data visualization techniques","
       "Predictive analytics models","
-      "Business intelligence tools","
-========
-    id: 4,
-    title: "Data Analytics & Business Intelligence",
-    type: "Webinar",
-    date: "2027-01-10",
-    time: "1:00 PM - 3:00 PM EST",
-    location: "Virtual",
-    status: "upcoming",
-    category: "Data Analytics",
-    description: "Discover how data analytics can transform your business decisions with real-world case studies and practical implementation strategies.",
-    speakers: ["Data Scientist Emily Chen", "BI Consultant Robert Wilson"],
-    attendees: 200,
-    price: "Free",
-    highlights: [
-      "Data visualization techniques",
-      "Predictive analytics models",
-      "Business intelligence tools",
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/events.page.tsx
-      "ROI measurement strategies"
+      "Business intelligence tools",""ROI measurement strategies"
     ],"
     image: "/images/data-analytics-webinar.jpg"
   },
   {
-<<<<<<<< HEAD:pages.disabled/root_pages/events.page.tsx
+<:pages.disabled/root_pages/events.page.tsx
 
     id: 5,"
     title: "IoT & Edge Computing Symposium","
@@ -205,31 +135,12 @@ const events = [
     highlights = ["
       "IoT architecture design","
       "Edge computing optimization","
-      "Security considerations","
-========
-    id: 5,
-    title: "IoT & Edge Computing Symposium",
-    type: "Symposium",
-    date: "2026-12-15",
-    time: "10:00 AM - 4:00 PM EST",
-    location: "Virtual",
-    status: "past",
-    category: "IoT & Edge",
-    description: "Explore the future of IoT and edge computing with industry experts, featuring case studies and emerging technology trends.",
-    speakers: ["IoT Specialist Dr. James Brown", "Edge Computing Expert Lisa Chen"],
-    attendees: 180,
-    price: "$149",
-    highlights: [
-      "IoT architecture design",
-      "Edge computing optimization",
-      "Security considerations",
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/events.page.tsx
-      "Industry applications"
+      "Security considerations",""Industry applications"
     ],"
     image: "/images/iot-symposium.jpg"
   },
   {
-<<<<<<<< HEAD:pages.disabled/root_pages/events.page.tsx
+<:pages.disabled/root_pages/events.page.tsx
 
     id: 6,"
     title: "Digital Transformation Summit","
@@ -250,41 +161,30 @@ const events = [
       "Success metrics";
     ],;"
     image: "/images/digital-transformation-summit.jpg";
-  };
-========
-    id: 6,
-    title: "Digital Transformation Summit",
-    type: "Conference",
-    date: "2026-11-30",
-    time: "9:00 AM - 6:00 PM EST",
-    location: "Chicago, IL",
-    status: "past",
-    category: "Digital Transformation",
-    description: "Learn from successful digital transformation stories and discover strategies to modernize your business operations and customer experience.",
-    speakers: ["Digital Strategist Mark Davis", "Transformation Expert Anna Rodriguez"],
-    attendees: 400,
-    price: "$249",
-    highlights: [
-      "Transformation roadmaps",
-      "Change management strategies",
-      "Technology selection",
-      "Success metrics"
-    ],
-    image: "/images/digital-transformation-summit.jpg"
-  }
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/events.page.tsx
-];
+  };];
 
-const eventTypes = ['All',Conference',Workshop',Webinar',Symposium'];
-const categories = ['All',AI & ML',Cybersecurity',Cloud & DevOps',Data Analytics',IoT & Edge',Digital Transformation'];
-const statuses = ['All',upcoming',past'];
+const eventTypes = ['All
+  ',Conference',Workshop
+  ',Webinar',Symposium
+  '];
+const categories = ['All
+  ',AI & ML',Cybersecurity
+  ',Cloud & DevOps',Data Analytics
+  ',IoT & Edge',Digital Transformation
+  '];
+const statuses = ['All
+  ',upcoming',past
+  '];
 ;
 export { function };
 export default function Events(...args[]):  {
 
-  const [selectedType, setSelectedType] = useState('All');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedStatus, setSelectedStatus] = useState('All');
+  const [selectedType, setSelectedType] = useState('All
+  ');
+  const [selectedCategory, setSelectedCategory] = useState('All
+  ');
+  const [selectedStatus, setSelectedStatus] = useState('All
+  ');
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredEvents = events.filter(event => {;
@@ -294,8 +194,10 @@ export default function Events(...args[]):  {
     
     return matchesType && matchesCategory && matchesStatus && matchesSearch});
 
-  const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
-  const pastEvents = filteredEvents.filter(event => event.status === 'past');
+  const upcomingEvents = filteredEvents.filter(event => event.status ===
+  'upcoming');
+  const pastEvents = filteredEvents.filter(event => event.status ===
+  'past');
 
       default: return BookOpen}
   };
@@ -314,21 +216,11 @@ export default function Events(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -403,7 +295,11 @@ export default function Events(...args[]):  {
                 >
                   {statuses.map(status  => (
                     <option key={status} value={status}>
-                      {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
+                      {status ===,
+  upcoming' ?
+  'Upcoming': status ===
+  'past' ?
+  'Past : status}
                     </option>
                   ))}
                 </select>
@@ -423,28 +319,19 @@ export default function Events(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}"
               className="mb-12"
 "
-              <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>'"
+              <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>
+  '"
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>;
             </motion.div>;
 ;"
@@ -459,32 +346,17 @@ export default function Events(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                     whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                     transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                     viewport={{ once: true }}"
@@ -590,21 +462,11 @@ export default function Events(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
               whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
               transition={{ duration: 0.6 }}
@@ -626,32 +488,17 @@ export default function Events(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                     whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                     transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                     viewport={{ once: true }}"
@@ -719,21 +566,11 @@ export default function Events(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -744,7 +581,8 @@ export default function Events(...args[]):  {
               Want to Host an Event?
             </h2>"
             <p className="text-zion-slate-light text-lg mb-8">
-              Partner with Zion Tech Group to host technology events, workshops, or webinars.'
+              Partner with Zion Tech Group to host technology events, workshops, or webinars.
+  '
               Let's create valuable learning experiences together.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

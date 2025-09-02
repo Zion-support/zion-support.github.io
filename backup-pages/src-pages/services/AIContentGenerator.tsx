@@ -1,16 +1,4 @@
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-import React from 'react';
-import { motion } from 'framer-motion';
-import SEO from '@/components/SEO';
-import {
-  PenTool,
-  FileText,
-  Image,
-  Video,
-  Globe,
-  Zap,
-  Brain,
-========
+<=
 import {
   PenTool, 
   FileText, 
@@ -19,8 +7,7 @@ import {
   Globe, 
   Zap, 
   Brain, 
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-  Shield,
+>  Shield,
   CheckCircle,
   TrendingUp,
   MessageSquare,
@@ -28,8 +15,10 @@ import {
   Target,
   BarChart3,
   Users,
-  Sparkles'
-} from 'lucide-react';
+  Sparkles
+  '
+} from 'lucide-react
+  ';
 ;
 export { function };
 export default function AIContentGenerator(...args[]):  {
@@ -104,49 +93,63 @@ export default function AIContentGenerator(...args[]):  {
     {
 
       icon: Target,
-      title: 'Audience Targeting',
-      description: 'Content tailored to specific demographics, industries, and customer personas'},;
+      title:,
+  Audience Targeting
+  ',
+      description: Content tailored to specific demographics, industries, and customer personas
+  '},;
     {;
       icon: BarChart3,;
-      title: 'Performance Analytics',;
-      description: 'Track content performance with AI-powered insights and optimization recommendations'};
+      title:,
+  Performance Analytics
+  ',;
+      description: 'Track content performance with AI-powered insights and optimization recommendations};
+  ];,
+  Increase content production by 10x with AI assistance
+  ',;
+    'Improve SEO rankings by 45% with optimized content
+  ',;
+    'Reduce content creation costs by 60%
+  ',;
+    'Boost engagement rates by 35% with targeted content
+  ',;
+    'Save 20+ hours per week on content creation
+  ',;
+    'Maintain consistent brand voice across all content
+  ';
   ];
 
-  
-    'Increase content production by 10x with AI assistance',;
-    'Improve SEO rankings by 45% with optimized content',;
-    'Reduce content creation costs by 60%',;
-    'Boost engagement rates by 35% with targeted content',;
-    'Save 20+ hours per week on content creation',;
-    'Maintain consistent brand voice across all content';
-  ];
-
-  
-        'Advanced security features',;
-        'Custom integrations';
+        'Advanced security features
+  ',;
+        'Custom integrations
+  ';
       ],;
-=======
-        'Unlimited AI-generated content','
-        'Unlimited image generation','
-        'Custom AI model training','
-        'White-label solution','
-        'Dedicated account manager','
-        'SLA guarantees',;'
-        'Advanced security features',;'        'Custom integrations';
+'Unlimited AI-generated content
+  ','
+
+  'Unlimited image generation',
+  '
+        'Custom AI model training
+  ','
+
+  'White-label solution',
+  '
+        'Dedicated account manager
+  ','
+
+  'SLA guarantees',;'
+  'Advanced security features',;'
+  'Custom integrations';
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      cta: 'Contact Sales',;
+      cta: 'Contact Sales,;
       popular: false};
   ];
 
   return()
     <>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-      <SEO
-========
+<=
       <SEO "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-        title = "AI Content Generator - Create Engaging Content with AI"
+>        title = "AI Content Generator - Create Engaging Content with AI"
         description="Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns."
         canonical="/services/ai-content-generator"
        />
@@ -217,12 +220,9 @@ export default function AIContentGenerator(...args[]):  {
                 that engages your audience and drives results.
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index (
                 <motion.div
                   key={index}
@@ -268,12 +268,9 @@ export default function AIContentGenerator(...args[]):  {
                 From blog posts to social media content, our AI handles it all
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {contentTypes.map(type: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -316,15 +313,13 @@ export default function AIContentGenerator(...args[]):  {
                 Perfect for Every Team
               </h2>"
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Whether you're a solo creator or enterprise team, our platform scales with you
+                Whether you
+  're a solo creator or enterprise team, our platform scales with you
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {useCases.map(useCase: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -386,12 +381,9 @@ export default function AIContentGenerator(...args[]):  {
                 their content strategy with AI-powered generation.
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-            <div className="grid md: grid-cols-2 gap-8">
+>            <div className="grid md: grid-cols-2 gap-8">
               {benefits.map(benefit: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -449,12 +441,9 @@ export default function AIContentGenerator(...args[]):  {
                 All plans include a 14-day free trial.
               </p>
             </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/AIContentGenerator.tsx
-
-========
+<=
             "
->>>>>>>> main:backup-pages/src-pages/services/AIContentGenerator.tsx
-            <div className="grid md: grid-cols-3 gap-8">
+>            <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map(plan: unknown, index: unknown (
                 <motion.div
                   key={index}
@@ -478,9 +467,9 @@ export default function AIContentGenerator(...args[]):  {
 }}
                   className={`relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 ${
 
-                    plan.popular'
-                      ? 'border-purple-500/50 shadow-lg shadow-purple-500/20''
-                      : 'border-slate-700/50'`
+                    plan.popular,
+  ?
+  'border-purple-500/50 shadow-lg shadow-purple-500/20'': 'border-slate-700/50`
                   }`}
 
                   {plan.popular && (;"
@@ -510,9 +499,10 @@ export default function AIContentGenerator(...args[]):  {
 `
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 
-                    plan.popular'
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white''
-                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white'`
+                    plan.popular,
+  ? 'bg-gradient-to-r from-purple-500 to-pink-600 hover: from-purple-600 hover:to-pink-700 text-white'
+  '
+                      : 'border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white`
                   }`}>
                     {plan.cta}
                   </button>
