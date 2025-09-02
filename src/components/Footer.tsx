@@ -48,7 +48,20 @@ export default function Footer() {
               <li><Link href="/ai-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">AI Services</Link></li>
               <li><Link href="/it-services" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">IT Services</Link></li>
               <li><Link href="/micro-saas" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Micro SaaS</Link></li>
-              <li><Link href="/solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Solutions</Link></li>
+              <li><Link href="/cybersecurity" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Cybersecurity</Link></li>
+              <li><Link href="/cloud-devops" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Cloud & DevOps</Link></li>
+            </ul>
+          </div>
+
+          {/* Solutions */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">Solutions</h3>
+            <ul className="space-y-2">
+              <li><Link href="/solutions" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">All Solutions</Link></li>
+              <li><Link href="/solutions/ai-business-intelligence" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">AI Business Intelligence</Link></li>
+              <li><Link href="/solutions/ai-content-creation" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">AI Content Creation</Link></li>
+              <li><Link href="/solutions/customer-support" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Customer Support</Link></li>
+              <li><Link href="/solutions/workflow-automation" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Workflow Automation</Link></li>
             </ul>
           </div>
 
@@ -60,6 +73,8 @@ export default function Footer() {
               <li><Link href="/careers" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Careers</Link></li>
               <li><Link href="/blog" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Blog</Link></li>
               <li><Link href="/partners" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Partners</Link></li>
+              <li><Link href="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Request Demo</Link></li>
+              <li><Link href="/brochure" className="text-gray-400 hover:text-cyan-400 transition-colors text-sm">Download Brochure</Link></li>
             </ul>
           </div>
 

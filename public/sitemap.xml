@@ -163,6 +163,36 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://ziontechgroup.com/cybersecurity</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/cloud-devops</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/solutions/ai-business-intelligence</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/demo</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ziontechgroup.com/brochure</loc>
+    <lastmod>2025-01-27T00:00:00.000Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ziontechgroup.com/sitemap</loc>
     <lastmod>2025-01-27T00:00:00.000Z</lastmod>
     <changefreq>monthly</changefreq>
