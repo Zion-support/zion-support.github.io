@@ -30,13 +30,25 @@ export interface RealMarketService {
     mobile: string;
     email: string;
     address: string;
+<<<<<<< HEAD
+    website: string;
+  };
+=======
     website: string};
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
+<<<<<<< HEAD
+  reviews: number;
+}
+
+export const realMarketServices: RealMarketService[] = [
+=======
 reviews: number;export const realMarketServices: RealMarketService[] = [
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   // AI-Powered Business Intelligence
   {
     id: 'ai-business-intelligence-pro',
@@ -45,7 +57,11 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     price: '$299',
     period: '/month',
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.',
+<<<<<<< HEAD
+    features: [
+=======
     features[
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'Real-time data analytics dashboard',
       'AI-powered trend prediction',
       'Custom KPI tracking and alerts',
@@ -68,11 +84,19 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     setupTime: '2 hours',
     category: 'AI & Analytics',
     realService: true,
+<<<<<<< HEAD
+    technology: ['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS'],
+    integrations: ['Salesforce, HubSpot, Google Analytics, Shopify, QuickBooks, Zapier'],
+    useCases: ['Sales performance analysis, Marketing ROI tracking, Customer behavior insights, Operational efficiency, Financial forecasting, Competitive analysis'],
+    roi: 'Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency.',
+    competitors: ['Tableau, Power BI, Looker, Qlik, Sisense'],
+=======
     technology['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS'],
     integrations['Salesforce, HubSpot, Google Analytics, Shopify, QuickBooks, Zapier'],
     useCases['Sales performance analysis, Marketing ROI tracking, Customer behavior insights, Operational efficiency, Financial forecasting, Competitive analysis'],
     roi: 'Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency.',
     competitors['Tableau, Power BI, Looker, Qlik, Sisense'],
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     marketSize: '$29.48B market',
     growthRate: '15.7% annual growth',
     variant: 'ai-futuristic',
@@ -97,7 +121,11 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     price: '$199',
     period: '/month',
     description: 'Comprehensive customer success automation platform that helps businesses reduce churn, increase customer lifetime value, and automate customer engagement workflows.',
+<<<<<<< HEAD
+    features: [
+=======
     features[
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'Automated onboarding sequences',
       'Health score monitoring',
       'Churn prediction alerts',
@@ -120,11 +148,19 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     setupTime: '1 day',
     category: 'Customer Success',
     realService: true,
+<<<<<<< HEAD
+    technology: ['React, Node.js, PostgreSQL, Redis, AWS, SendGrid'],
+    integrations: ['Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack'],
+    useCases: ['Customer onboarding automation, Churn prevention, Customer health monitoring, Success playbook execution, Customer feedback management'],
+    roi: 'Average customer sees 300% ROI within 4 months through reduced churn and increased customer lifetime value.',
+    competitors: ['Gainsight, Totango, ChurnZero, CustomerSuccessBox, Planhat'],
+=======
     technology['React, Node.js, PostgreSQL, Redis, AWS, SendGrid'],
     integrations['Salesforce, HubSpot, Pipedrive, Intercom, Zendesk, Slack'],
     useCases['Customer onboarding automation, Churn prevention, Customer health monitoring, Success playbook execution, Customer feedback management'],
     roi: 'Average customer sees 300% ROI within 4 months through reduced churn and increased customer lifetime value.',
     competitors['Gainsight, Totango, ChurnZero, CustomerSuccessBox, Planhat'],
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     marketSize: '$1.5B market',
     growthRate: '25% annual growth',
     variant: 'micro-saas-futuristic',
@@ -149,7 +185,11 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     price: '$399',
     period: '/month',
     description: 'Comprehensive API security and monitoring solution that protects your APIs from attacks, monitors performance, and ensures compliance with security standards.',
+<<<<<<< HEAD
+    features: [
+=======
     features[
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'Real-time threat detection',
       'API rate limiting and throttling',
       'OAuth 2.0 and JWT management',
@@ -172,11 +212,19 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     setupTime: '4 hours',
     category: 'Security & DevOps',
     realService: true,
+<<<<<<< HEAD
+    technology: ['Go, React, Node.js, PostgreSQL, Redis, Kubernetes, AWS'],
+    integrations: ['GitHub, GitLab, Jenkins, CircleCI, AWS, Azure, GCP'],
+    useCases: ['API security hardening, Performance monitoring, Compliance reporting, Developer experience improvement, API lifecycle management'],
+    roi: 'Average customer sees 250% ROI within 3 months through improved security posture and reduced API downtime.',
+    competitors: ['Kong, Tyk, AWS API Gateway, Azure API Management, Google Cloud Endpoints'],
+=======
     technology['Go, React, Node.js, PostgreSQL, Redis, Kubernetes, AWS'],
     integrations['GitHub, GitLab, Jenkins, CircleCI, AWS, Azure, GCP'],
     useCases['API security hardening, Performance monitoring, Compliance reporting, Developer experience improvement, API lifecycle management'],
     roi: 'Average customer sees 250% ROI within 3 months through improved security posture and reduced API downtime.',
     competitors['Kong, Tyk, AWS API Gateway, Azure API Management, Google Cloud Endpoints'],
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     marketSize: '$4.5B market',
     growthRate: '18.5% annual growth',
     variant: 'enterprise-futuristic',
@@ -201,7 +249,11 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     price: '$249',
     period: '/month',
     description: 'All-in-one e-commerce automation platform that streamlines inventory management, order processing, customer service, and marketing automation for online stores.',
+<<<<<<< HEAD
+    features: [
+=======
     features[
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'Automated inventory management',
       'Order processing automation',
       'Customer service chatbot',
@@ -224,11 +276,19 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     setupTime: '1 week',
     category: 'E-commerce',
     realService: true,
+<<<<<<< HEAD
+    technology: ['React, Node.js, PostgreSQL, Redis, AWS, Stripe, PayPal'],
+    integrations: ['Shopify, WooCommerce, BigCommerce, Magento, Amazon, eBay, Facebook Shop'],
+    useCases: ['Inventory automation, Order processing, Customer service, Marketing automation, Multi-channel selling'],
+    roi: 'Average customer sees 350% ROI within 5 months through increased sales and reduced operational costs.',
+    competitors: ['Shopify Plus, BigCommerce Enterprise, WooCommerce Enterprise, Magento Commerce'],
+=======
     technology['React, Node.js, PostgreSQL, Redis, AWS, Stripe, PayPal'],
     integrations['Shopify, WooCommerce, BigCommerce, Magento, Amazon, eBay, Facebook Shop'],
     useCases['Inventory automation, Order processing, Customer service, Marketing automation, Multi-channel selling'],
     roi: 'Average customer sees 350% ROI within 5 months through increased sales and reduced operational costs.',
     competitors['Shopify Plus, BigCommerce Enterprise, WooCommerce Enterprise, Magento Commerce'],
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     marketSize: '$18.2B market',
     growthRate: '22% annual growth',
     variant: 'micro-saas-futuristic',
@@ -253,7 +313,11 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     price: '$179',
     period: '/month',
     description: 'Comprehensive HR automation platform that handles recruitment, onboarding, performance management, and employee engagement through AI-powered workflows.',
+<<<<<<< HEAD
+    features: [
+=======
     features[
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'AI-powered recruitment automation',
       'Automated onboarding workflows',
       'Performance management system',
@@ -276,11 +340,19 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     setupTime: '1 week',
     category: 'HR & Recruitment',
     realService: true,
+<<<<<<< HEAD
+    technology: ['React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms'],
+    integrations: ['ADP, Paychex, QuickBooks, Slack, Microsoft Teams, Zoom'],
+    useCases: ['Recruitment automation, Employee onboarding, Performance management, Compliance reporting, Employee engagement'],
+    roi: 'Average customer sees 280% ROI within 4 months through improved HR efficiency and reduced administrative costs.',
+    competitors: ['BambooHR, Workday, ADP, Paychex, Gusto'],
+=======
     technology['React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms'],
     integrations['ADP, Paychex, QuickBooks, Slack, Microsoft Teams, Zoom'],
     useCases['Recruitment automation, Employee onboarding, Performance management, Compliance reporting, Employee engagement'],
     roi: 'Average customer sees 280% ROI within 4 months through improved HR efficiency and reduced administrative costs.',
     competitors['BambooHR, Workday, ADP, Paychex, Gusto'],
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     marketSize: '$15.6B market',
     growthRate: '12.8% annual growth',
     variant: 'hr-futuristic',
@@ -305,7 +377,11 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     price: '$349',
     period: '/month',
     description: 'Advanced financial analytics platform that provides real-time insights, automated reporting, and AI-powered forecasting for businesses of all sizes.',
+<<<<<<< HEAD
+    features: [
+=======
     features[
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'Real-time financial dashboards',
       'AI-powered cash flow forecasting',
       'Automated financial reporting',
@@ -328,11 +404,19 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     setupTime: '2 hours',
     category: 'Finance & Accounting',
     realService: true,
+<<<<<<< HEAD
+    technology: ['React, Node.js, PostgreSQL, Redis, AWS, Python, TensorFlow'],
+    integrations: ['QuickBooks, Xero, FreshBooks, Stripe, PayPal, Bank APIs'],
+    useCases: ['Financial planning, Cash flow management, Budget tracking, Investment analysis, Compliance reporting'],
+    roi: 'Average customer sees 320% ROI within 4 months through improved financial decision-making and cost optimization.',
+    competitors: ['QuickBooks Online, Xero, FreshBooks, Sage, NetSuite'],
+=======
     technology['React, Node.js, PostgreSQL, Redis, AWS, Python, TensorFlow'],
     integrations['QuickBooks, Xero, FreshBooks, Stripe, PayPal, Bank APIs'],
     useCases['Financial planning, Cash flow management, Budget tracking, Investment analysis, Compliance reporting'],
     roi: 'Average customer sees 320% ROI within 4 months through improved financial decision-making and cost optimization.',
     competitors['QuickBooks Online, Xero, FreshBooks, Sage, NetSuite'],
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     marketSize: '$11.9B market',
     growthRate: '16.2% annual growth',
     variant: 'micro-saas-futuristic',
@@ -357,7 +441,11 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     price: '$199',
     period: '/month',
     description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, and enhance team collaboration for better project outcomes.',
+<<<<<<< HEAD
+    features: [
+=======
     features[
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'AI-powered project planning',
       'Risk prediction and mitigation',
       'Resource optimization',
@@ -380,11 +468,19 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     setupTime: '1 day',
     category: 'Project Management',
     realService: true,
+<<<<<<< HEAD
+    technology: ['React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms'],
+    integrations: ['Slack, Microsoft Teams, Jira, GitHub, GitLab, Trello'],
+    useCases: ['Project planning, Team collaboration, Resource management, Risk assessment, Progress tracking'],
+    roi: 'Average customer sees 290% ROI within 3 months through improved project efficiency and better resource utilization.',
+    competitors: ['Asana, Monday.com, ClickUp, Trello, Jira'],
+=======
     technology['React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms'],
     integrations['Slack, Microsoft Teams, Jira, GitHub, GitLab, Trello'],
     useCases['Project planning, Team collaboration, Resource management, Risk assessment, Progress tracking'],
     roi: 'Average customer sees 290% ROI within 3 months through improved project efficiency and better resource utilization.',
     competitors['Asana, Monday.com, ClickUp, Trello, Jira'],
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     marketSize: '$6.68B market',
     growthRate: '14.3% annual growth',
     variant: 'micro-saas-futuristic',
@@ -409,7 +505,11 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     price: '$279',
     period: '/month',
     description: 'Comprehensive marketing automation platform that streamlines email marketing, social media management, lead generation, and campaign analytics through intelligent automation.',
+<<<<<<< HEAD
+    features: [
+=======
     features[
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'Email marketing automation',
       'Social media management',
       'Lead generation and scoring',
@@ -432,11 +532,19 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     setupTime: '1 week',
     category: 'Marketing',
     realService: true,
+<<<<<<< HEAD
+    technology: ['React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms'],
+    integrations: ['Salesforce, HubSpot, Mailchimp, Facebook, Instagram, LinkedIn, Google Ads'],
+    useCases: ['Email marketing, Social media management, Lead generation, Campaign automation, Marketing analytics'],
+    roi: 'Average customer sees 380% ROI within 4 months through improved marketing efficiency and increased lead generation.',
+    competitors: ['HubSpot, Marketo, Pardot, Mailchimp, ActiveCampaign'],
+=======
     technology['React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms'],
     integrations['Salesforce, HubSpot, Mailchimp, Facebook, Instagram, LinkedIn, Google Ads'],
     useCases['Email marketing, Social media management, Lead generation, Campaign automation, Marketing analytics'],
     roi: 'Average customer sees 380% ROI within 4 months through improved marketing efficiency and increased lead generation.',
     competitors['HubSpot, Marketo, Pardot, Mailchimp, ActiveCampaign'],
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     marketSize: '$25.1B market',
     growthRate: '19.8% annual growth',
     variant: 'marketing-futuristic',
@@ -461,7 +569,11 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     price: '$399',
     period: '/month',
     description: 'AI-powered legal document automation platform that streamlines contract creation, document review, and legal workflow management for law firms and businesses.',
+<<<<<<< HEAD
+    features: [
+=======
     features[
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       'AI-powered contract generation',
       'Document review automation',
       'Legal workflow management',
@@ -484,11 +596,19 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     setupTime: '1 week',
     category: 'Legal Tech',
     realService: true,
+<<<<<<< HEAD
+    technology: ['React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms'],
+    integrations: ['DocuSign, Adobe Sign, Salesforce, QuickBooks, Clio, PracticePanther'],
+    useCases: ['Contract generation, Document review, Legal workflow automation, Compliance management, Client collaboration'],
+    roi: 'Average customer sees 420% ROI within 5 months through improved efficiency and reduced legal costs.',
+    competitors: ['DocuSign, PandaDoc, HelloSign, ContractPodAi, Evisort'],
+=======
     technology['React, Node.js, PostgreSQL, Redis, AWS, AI/ML algorithms'],
     integrations['DocuSign, Adobe Sign, Salesforce, QuickBooks, Clio, PracticePanther'],
     useCases['Contract generation, Document review, Legal workflow automation, Compliance management, Client collaboration'],
     roi: 'Average customer sees 420% ROI within 5 months through improved efficiency and reduced legal costs.',
     competitors['DocuSign, PandaDoc, HelloSign, ContractPodAi, Evisort'],
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     marketSize: '$2.8B market',
     growthRate: '28.5% annual growth',
     variant: 'legal-futuristic',
@@ -504,4 +624,8 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     customers: 850,
     rating: 4.8,
     reviews: 480
+<<<<<<< HEAD
+];
+=======
 ];}}
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

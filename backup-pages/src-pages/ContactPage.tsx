@@ -1,9 +1,19 @@
+<<<<<<< HEAD
+:backup-pages/src-pages/ContactPage.tsx
+=======
 <<<<<<< HEAD:backup-pages/src-pages/ContactPage.tsx
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 import {
 
   Phone,  Mail,
   MapPin,
   Clock,
+<<<<<<< HEAD
+  MessageSquare,Send,
+  CheckCircle,
+  Globe,
+:backup-pages/src-pages/ContactPage.tsx
+=======
   MessageSquare,
 =======
 import React, { useState } from 'react';
@@ -18,6 +28,7 @@ import {
   CheckCircle,
   Globe,
 <<<<<<< HEAD:backup-pages/src-pages/ContactPage.tsx
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   ArrowRight,
   Linkedin,
   Twitter,
@@ -30,6 +41,13 @@ export function ContactPage(...args: any[]): any {
   const [formData, setFormData] = useState({
 
     firstName: '',
+<<<<<<< HEAD
+    lastName: '',email: '',
+    company: '',
+    phone: '',
+    service: '',
+:backup-pages/src-pages/ContactPage.tsx
+=======
     lastName: '',
 =======
   Building,
@@ -45,6 +63,7 @@ export default function ContactPage() {
     phone: '',
     service: '',
 <<<<<<< HEAD:backup-pages/src-pages/ContactPage.tsx
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     message: ''});
 
   const [isSubmitting, setIsSubmitting] = useState (false) ;
@@ -73,9 +92,12 @@ export default function ContactPage() {
         service: '',
         message: ''})}, 3000)};
 
+<<<<<<< HEAD
+=======
   
   
   
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   if (isSubmitted) {
 
     return()
@@ -282,6 +304,9 @@ export default function ContactPage() {
                     value={formData.service}
                     onChange={handleInputChange}"
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+<<<<<<< HEAD
+                  >"<option value="">Select a service</option>
+=======
                   >"
 =======
     message: ''
@@ -503,13 +528,18 @@ export default function ContactPage() {
                   >
 >>>>>>> cursor/migrate-ci-to-pm2-and-clean-up-github-actions-430a:src/pages/ContactPage.tsx
                     <option value="">Select a service</option>
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
                     {services.map((service, index) => (
                       <option key={index} value={service}>{service}</option>
                     ))}
                   </select>
                 </div>
 
+<<<<<<< HEAD
+:backup-pages/src-pages/ContactPage.tsx
+=======
 <<<<<<< HEAD:backup-pages/src-pages/ContactPage.tsx
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
               <div>
                 <label"
                   htmlFor="message"
@@ -639,6 +669,9 @@ export default function ContactPage() {
       </div>
     </div>
   )}
+<<<<<<< HEAD
+'"`
+=======
 '"`
 =======
                 <div>
@@ -825,3 +858,4 @@ export default function ContactPage() {
   );
 }
 >>>>>>> cursor/migrate-ci-to-pm2-and-clean-up-github-actions-430a:src/pages/ContactPage.tsx
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

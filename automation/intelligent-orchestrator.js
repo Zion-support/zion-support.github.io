@@ -15,8 +15,12 @@ class IntelligentOrchestrator {;
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
     // // // // // // // // console.log(message);
+<<<<<<< HEAD
+fs.appendFileSync(this.logFile, logMessage);
+=======
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
     fs.appendFileSync(this.logFile, logMessage);
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 ;
     this.loadAutomationSystems()};
   ensureLogDirectory() {;
@@ -30,8 +34,12 @@ class IntelligentOrchestrator {;
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     console.log(message);
     fs.appendFileSync(this.logFile, logMessage)};
+<<<<<<< HEAD
+loadAutomationSystems() {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   loadAutomationSystems() {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     const systems = [;
       { name: 'lint-monitor', path: 'lint-monitor.js', priority: 'high' },;
       { name: 'lint-fixer', path: 'lint-error-fixer.js', priority: 'high' },;
@@ -60,8 +68,12 @@ class IntelligentOrchestrator {;
     if (!system) {;
       this.log(`❌ System not found: ${systemName}`);
       return false};
+<<<<<<< HEAD
+const startTime = Date.now();
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
     const startTime = Date.now();
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     try {;
       this.log(`🚀 Running system: ${systemName}`);
 ;
@@ -82,8 +94,12 @@ class IntelligentOrchestrator {;
       this.log(`❌ System failed: ${systemName} - ${error.message}`);
       return { success: false, error: error.message, executionTime }};
   };
+<<<<<<< HEAD
+updateSystemMetrics(systemName, success, executionTime) {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   updateSystemMetrics(systemName, success, executionTime) {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     const system = this.automationSystems.get(systemName);
     if (!system) return;
     // Update success rate;
@@ -95,8 +111,12 @@ class IntelligentOrchestrator {;
     system.averageExecutionTime = (currentAvgTime + executionTime) / totalRuns;
     system.lastRun = new Date();
     system.status = success ? 'success' : 'failed'};
+<<<<<<< HEAD
+async runPriorityBasedExecution() {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   async runPriorityBasedExecution() {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     this.log('🎯 Running priority-based execution...');
 ;
     const systems = Array.from(this.automationSystems.values());
@@ -113,8 +133,12 @@ class IntelligentOrchestrator {;
 };
         return priorityOrder[b.priority] - priorityOrder[a.priority];
       });
+<<<<<<< HEAD
+const results = [];
+=======
 >>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd;
     const results = [];
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     for (const system of systems) {;
       if (system.status === 'available') {;
         const result = await this.runSystem(system.name);
@@ -127,8 +151,12 @@ class IntelligentOrchestrator {;
     };
     this.log(`📊 Priority execution completed: ${results.length} systems`);
     return results};
+<<<<<<< HEAD
+async runIntelligentExecution() {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   async runIntelligentExecution() {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     this.log('🧠 Running intelligent execution...');
 ;
     // Analyze current state;
@@ -146,8 +174,12 @@ class IntelligentOrchestrator {;
       this.learnFromExecution(systemName, result, state)};
     this.log(`📊 Intelligent execution completed: ${results.length} systems`);
     return results};
+<<<<<<< HEAD
+async analyzeCurrentState() {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   async analyzeCurrentState() {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     const state = {;
   hasLintErrors: false,;
       hasTypeScriptErrors: false,;
@@ -173,8 +205,12 @@ class IntelligentOrchestrator {;
       // Check for TypeScript errors;
       execSync('npx tsc --noEmit', { stdio: 'pipe' })} catch (error) {;
       state.hasTypeScriptErrors = true};
+<<<<<<< HEAD
+// Check build time;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
     // Check build time;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     try {;
       const buildStart = Date.now();
       execSync('npm run build', { stdio: 'pipe' });
@@ -182,8 +218,12 @@ class IntelligentOrchestrator {;
       // Build failed;
     };
     return state};
+<<<<<<< HEAD
+determineOptimalSystems(state) {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   determineOptimalSystems(state) {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     const systems = [];
     // Always run high-priority systems if there are issues;
     if (state.hasLintErrors) {;
@@ -206,8 +246,12 @@ class IntelligentOrchestrator {;
         systems.push(systemName)};
     };
     return systems};
+<<<<<<< HEAD
+learnFromExecution(systemName, result, state) {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   learnFromExecution(systemName, result, state) {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     const learningKey = `${systemName}_${JSON.stringify(state)}`;
     const currentData = this.learningData.get(learningKey) || {;
       totalRuns: 0,;
@@ -219,8 +263,12 @@ class IntelligentOrchestrator {;
       currentData.successfulRuns++};
     currentData.averageExecutionTime = (currentData.averageExecutionTime + result.executionTime) / currentData.totalRuns;
     this.learningData.set(learningKey, currentData)};
+<<<<<<< HEAD
+async runContinuousIntelligence() {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   async runContinuousIntelligence() {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     this.log('🔄 Starting continuous intelligent automation...');
 ;
     // Run initial analysis;
@@ -232,8 +280,12 @@ class IntelligentOrchestrator {;
       await this.runIntelligentExecution()}, 5 * 60 * 1000); // Every 5 minutes;
     // Set up file watcher for immediate response;
     this.startFileWatcher()};
+<<<<<<< HEAD
+startFileWatcher() {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   startFileWatcher() {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     this.log('👀 Starting intelligent file watcher...');
 ;
     // Simple file watcher using fs.watch;
@@ -251,8 +303,12 @@ class IntelligentOrchestrator {;
     };
 ;
     this.log('✅ Intelligent file watcher started')};
+<<<<<<< HEAD
+async handleIntelligentFileChange(filePath) {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   async handleIntelligentFileChange(filePath) {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     // Analyze the type of change and run appropriate systems;
     const fileName = path.basename(filePath);
 ;
@@ -263,8 +319,12 @@ class IntelligentOrchestrator {;
         this.log(`🔧 Auto-fixing issues in: ${filePath}`);
         await this.runSystem('lint-fixer')};
 ;
+<<<<<<< HEAD
+// If it's a component, consider generating tests;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
       // If it's a component, consider generating tests;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       if (filePath.includes('components/')) {;
         const system = this.automationSystems.get('test-generator');
         if (system && (!system.lastRun || Date.now() - system.lastRun.getTime() > 10 * 60 * 1000)) {;
@@ -285,8 +345,12 @@ class IntelligentOrchestrator {;
 },;
       learningData: {},;
       recommendations[];
+<<<<<<< HEAD
+};
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
     };
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     // System performance data;
     for (const [name, system] of this.automationSystems) {;
       report.systems[name] = {;
@@ -296,8 +360,12 @@ class IntelligentOrchestrator {;
         lastRun: system.lastRun?.toISOString(),;
         status: system.status;
       }};
+<<<<<<< HEAD
+// Learning data;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
     // Learning data;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     for (const [key, data] of this.learningData) {;
       report.learningData[key] = {;
         successRate: data.successfulRuns / data.totalRuns,;
@@ -312,8 +380,12 @@ class IntelligentOrchestrator {;
         report.recommendations.push(`Optimize ${name} system performance (avg time: ${system.averageExecutionTime}ms)`)};
     };
     return report};
+<<<<<<< HEAD
+async optimizeSystems() {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   async optimizeSystems() {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     this.log('🔧 Optimizing automation systems...');
 ;
     const report = this.generateIntelligenceReport();
@@ -321,8 +393,12 @@ class IntelligentOrchestrator {;
     // Implement optimizations based on report;
     for (const recommendation of report.recommendations) {;
       this.log(`💡 Recommendation: ${recommendation}`)};
+<<<<<<< HEAD
+// Adjust system priorities based on performance;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
     // Adjust system priorities based on performance;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     for (const [name, system] of this.automationSystems) {;
       if (system.successRate < 0.7) {;
         system.priority = 'high';
@@ -335,8 +411,12 @@ class IntelligentOrchestrator {;
     return new Promise(resolve => setTimeout(resolve, ms))};
   stop() {;
     this.log('🛑 Intelligent orchestrator stopped')};
+<<<<<<< HEAD
+getStatus() {;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
   getStatus() {;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     const status = {;
   running: true,;
       systemsCount: this.automationSystems.size,;
@@ -357,7 +437,10 @@ class IntelligentOrchestrator {;
 ;
     return status};
 };
+<<<<<<< HEAD
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 // CLI handling;
 const orchestrator = new IntelligentOrchestrator();
 const command = process.argv[2];
@@ -368,8 +451,12 @@ switch (command) {;
       orchestrator.runPriorityBasedExecution()} else if (subCommand === 'intelligent') {;
       orchestrator.runIntelligentExecution()} else {;
       orchestrator.runIntelligentExecution()};
+<<<<<<< HEAD
+break;
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
     break;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   case 'continuous':;
     orchestrator.runContinuousIntelligence();
     break;
@@ -394,8 +481,12 @@ switch (command) {;
     // // // // // // // // console.log('  optimize         - Optimize systems based on performance');
     // // // // // // // // console.log('  status           - Show current status');
     // // // // // // // // console.log('  report           - Generate intelligence report');
+<<<<<<< HEAD
+process.exit(1);
+=======
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
     process.exit(1);
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 ;
     console.log('Usage: node intelligent-orchestrator.js [run|continuous|optimize|status|report] [priority|intelligent]');
     console.log('\nCommands:');
@@ -406,7 +497,10 @@ switch (command) {;
     console.log('  status           - Show current status');
     console.log('  report           - Generate intelligence report');
     process.exit(1)};
+<<<<<<< HEAD
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 // Graceful shutdown;
 process.on('SIGINT', () => {;
   orchestrator.stop();
@@ -414,5 +508,8 @@ process.on('SIGINT', () => {;
 process.on('SIGTERM', () => {;
   orchestrator.stop();
   process.exit(0)});
+<<<<<<< HEAD
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
 
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

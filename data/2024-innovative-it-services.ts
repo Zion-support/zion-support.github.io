@@ -17,9 +17,15 @@ export interface InnovativeITService2024 {
   setupTime: string;
   category: string;
   realService: boolean;
+<<<<<<< HEAD
+  technology: string | string[];
+  integrations: string | string[];
+  useCases: string | string[];
+=======
   technology: string;
   integrations: string;
   useCases: string;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   roi: string;
   competitors: string[];
   marketSize: string;
@@ -28,6 +34,10 @@ export interface InnovativeITService2024 {
   contactInfo: {
     mobile: string;
     email: string;
+<<<<<<< HEAD
+    address?: string;
+=======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     website: string;
   };
   realImplementation: boolean;

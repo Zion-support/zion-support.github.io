@@ -361,11 +361,17 @@ class GitWorkflowAutomator {
           // Try to auto-resolve common conflicts
           const content = fs.readFileSync(file, 'utf8');
           
+<<<<<<< HEAD
+          if (content.includes('<<<<<<<') && content.includes('') && content.includes('>>>>>>>')) {
+            // Simple conflict resolution - take the incoming change
+            const resolved = content.replace(/\n[\s\S]*?fs.writeFileSync(file, resolved);
+=======
           if (content.includes('<<<<<<<') && content.includes('=======') && content.includes('>>>>>>>')) {
             // Simple conflict resolution - take the incoming change
             const resolved = content.replace(/<<<<<<< HEAD\n[\s\S]*?=======\n([\s\S]*?)>>>>>>> [^\n]*\n?/g, '$1');
             
             fs.writeFileSync(file, resolved);
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
             
             this.log(`✅ Auto-resolved conflicts in: ${file}`);

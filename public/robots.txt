@@ -3,6 +3,8 @@ Allow: /
 
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
+<<<<<<< HEAD
+=======
 
 <<<<<<< HEAD
 =======
@@ -13,6 +15,7 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 >>>>>>> d6585b798475a0a58fc2298a75192e5aeb0df69c
 >>>>>>> 4d4d0101fe3f5e682336bc916d8652d84dbb4685
 =======
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
@@ -23,7 +26,11 @@ Disallow: /_next/
 Disallow: /static/
 Disallow: /private/
 
+<<<<<<< HEAD
+# Allow important sections
+=======
 # Allow important pages
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 Allow: /services/
 Allow: /solutions/
 Allow: /about/
@@ -35,4 +42,7 @@ Allow: /careers/
 Disallow: /*.json$
 Disallow: /*?*
 Disallow: /*#*
+<<<<<<< HEAD
+=======
 >>>>>>> origin/pr-update-cursor/analyze-improve-and-deploy-application-6fbe
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

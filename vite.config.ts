@@ -1,5 +1,26 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+<<<<<<< HEAD
+
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    sourcemap: false,
+    target: 'es2018',
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom'],
+          'router-vendor': ['react-router-dom'],
+        },
+      },
+    },
+  },
+});
+
+// Duplicate block removed to resolve multiple default export error.
+=======
 import path from 'node:path';
 
 export default defineConfig({
@@ -41,3 +62,4 @@ export default defineConfig({
 		open: true
 	}
 });
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

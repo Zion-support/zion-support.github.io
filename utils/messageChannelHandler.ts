@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+export const messageChannelHandler = {;
+  sendMessage: (message: string) => {
+    // Implementation for sending messages
+    console.log('Sending message: ', message);'  }, receiveMessage: (callback: (message: string) => void) => {'    // Implementation for receiving messages
+    console.log('Setting up message receiver');'  }, };'
+=======
 export const messageChannelHandler = {
   sendMessage: (message: string) => {
     // Implementation for sending messages
@@ -8,3 +15,4 @@ export const messageChannelHandler = {
     console.log('Setting up message receiver');
   },
 };
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

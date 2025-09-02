@@ -1,4 +1,7 @@
+<<<<<<< HEAD
+=======
 >>>>>>> 3f7ebdbe1e1fa0e4c5dda1aa85d4701fd0f9aea5
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 const fs = require('fs');
 const path = require('path');
 

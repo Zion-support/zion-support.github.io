@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+describe ("ClientSuccessStoriesSection", () => { it ("renders without crashing", () => { render (<ClientSuccessStoriesSection />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<ClientSuccessStoriesSection />) ;""
+=======
 describe ("ClientSuccessStoriesSection", () => { it ("renders without crashing", () => { render (<ClientSuccessStoriesSection />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<ClientSuccessStoriesSection />) ;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

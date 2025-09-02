@@ -31,8 +31,12 @@ async function prerender() {
 }
 prerender().catch((err) => {
   // // // // // // // console.error('Error prerendering:', err);
+<<<<<<< HEAD
+process.exit(1);
+=======
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(1);
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 });
 }
 

@@ -6,7 +6,10 @@ const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 ;
 // // // // // // // // console.log('📦 Dependency Monitor Starting...\n');
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 ;
 class DependencyMonitor {;
   constructor() {;
@@ -35,7 +38,10 @@ class DependencyMonitor {;
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     // // // // // // // // console.log(logEntry.trim());
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 ;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
@@ -43,7 +49,10 @@ class DependencyMonitor {;
       // // // // // // // console.error('Failed to write to log file:', error.message);
     };
   };
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 ;
   async startMonitoring() {;
 
@@ -525,8 +534,12 @@ class DependencyMonitor {;
         const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days;
 ;
         for (const filePath = path.join(logsDir, file);
+<<<<<<< HEAD
+const stats = fs.statSync(filePath);
+=======
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
             const stats = fs.statSync(filePath);
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 ;
             if (now - stats.mtime.getTime() > maxAge) {;
               fs.unlinkSync(filePath);

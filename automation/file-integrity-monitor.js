@@ -7,7 +7,10 @@ const cron = require('node-cron');
 const crypto = require('crypto');
 ;
 // // // // // // // // console.log('🔒 File Integrity Monitor Starting...\n');
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 ;
 class FileIntegrityMonitor {;
   constructor() {;
@@ -38,7 +41,10 @@ class FileIntegrityMonitor {;
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 ;
     // // // // // // // // console.log(logEntry.trim());
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 ;
     try {;
       fs.appendFileSync(this.logFile, logEntry);
@@ -46,7 +52,10 @@ class FileIntegrityMonitor {;
       // // // // // // // console.error('Failed to write to log file:', error.message);
     };
   };
+<<<<<<< HEAD
+=======
 >>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 ;
   async startMonitoring() {;
 

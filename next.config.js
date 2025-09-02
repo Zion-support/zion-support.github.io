@@ -1,15 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+<<<<<<< HEAD
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   experimental: {
     esmExternals: false,
     newNextLinkBehavior: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: true,
+=======
+  experimental: {
+    esmExternals: false,
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   },
   images: {
     domains: ['ziontechgroup.com'],
@@ -27,7 +38,10 @@ const nextConfig = {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
+<<<<<<< HEAD
+=======
         /components\//,
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
         /\.backup/,
         /\.disabled/,
         /automation\/backups/,

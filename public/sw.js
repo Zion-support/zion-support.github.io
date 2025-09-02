@@ -1,5 +1,8 @@
 const CACHE_NAME = 'zion-tech-group-v1';
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 const urlsToCache = [
   '/',
   '/about',
@@ -35,6 +38,9 @@ self.addEventListener('fetch', (event) => {
         }
         return fetch(event.request);
       }
+<<<<<<< HEAD
+    ));
+=======
     )
 =======
 const STATIC_CACHE = 'zion-static-v1';
@@ -68,12 +74,17 @@ self.addEventListener('install', (event) => {
       })
 >>>>>>> origin/pr-update-cursor/analyze-improve-and-deploy-application-6fbe
   );
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
 <<<<<<< HEAD
+event.waitUntil(
+=======
+<<<<<<< HEAD
   event.waitUntil(
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     caches.keys().then((cacheNames) => {
       return Promise.all(
         cacheNames.map((cacheName) => {
@@ -85,6 +96,9 @@ self.addEventListener('activate', (event) => {
       );
     })
   );
+<<<<<<< HEAD
+});
+=======
 });
 =======
   console.log('Service Worker activating...');
@@ -278,3 +292,4 @@ async function removePendingSubmission(id) {
   return Promise.resolve();
 }
 >>>>>>> origin/pr-update-cursor/analyze-improve-and-deploy-application-6fbe
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

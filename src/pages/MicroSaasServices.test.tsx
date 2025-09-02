@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+describe ("MicroSaasServices", () => { it ("renders without crashing", () => { render (<MicroSaasServices />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<MicroSaasServices />) ;""
+=======
 describe ("MicroSaasServices", () => { it ("renders without crashing", () => { render (<MicroSaasServices />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () ; }) ; it ("displays expected content", () => { render (<MicroSaasServices />) ;
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a

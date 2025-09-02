@@ -146,11 +146,11 @@ const ServicesPage: NextPage = () => {
               <div className="mb-6">
                 <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• AI Ops Copilot</li>
-                  <li>• AI Sales Assistant</li>
-                  <li>• Security Copilot</li>
-                  <li>• Modern Data Platform</li>
-                  <li>• MarTech Automation</li>
+                  <li>• AI Content Generator Pro</li>
+                  <li>• AI Email Responder</li>
+                  <li>• Event Management Dashboard</li>
+                  <li>• AI SEO Optimizer</li>
+                  <li>• Quantum Computing Solutions</li>
                 </ul>
               </div>
               <div className="mb-6">
@@ -183,9 +183,9 @@ const ServicesPage: NextPage = () => {
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• Cloud Migration Expert</li>
                   <li>• Edge Computing Solutions</li>
+                  <li>• Blockchain Infrastructure</li>
                   <li>• Zero Trust Security</li>
-                  <li>• Data Platform Modernization</li>
-                  <li>• MLOps Foundations</li>
+                  <li>• 5G Network Implementation</li>
                 </ul>
               </div>
               <div className="mb-6">
@@ -216,11 +216,11 @@ const ServicesPage: NextPage = () => {
               <div className="mb-6">
                 <div className="text-sm text-gray-500 mb-2">Popular Services:</div>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• AI Sales Assistant</li>
-                  <li>• AI Ops Copilot</li>
-                  <li>• Security Copilot</li>
-                  <li>• AI Agent Integrations</li>
-                  <li>• AI Support Automation</li>
+                  <li>• AI Drug Discovery Platform</li>
+                  <li>• AI Climate Modeling</li>
+                  <li>• AI Space Exploration</li>
+                  <li>• AI Neuroscience Research</li>
+                  <li>• AI Financial Trading</li>
                 </ul>
               </div>
               <div className="mb-6">

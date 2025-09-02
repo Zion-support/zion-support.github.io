@@ -124,6 +124,10 @@ class SyntaxErrorFixer {
         { pattern: /{\s*$/, error: 'Unclosed brace' },
         { pattern: /\w+:\s*$/, error: 'Missing type or value' },
         { pattern: /return\s*}/, error: 'Missing return value' },
+<<<<<<< HEAD
+        { pattern: //, error: 'Git merge conflict marker' },
+        { pattern: /{ pattern: /.replace(/\\n([\\s\\S]*?)}
+=======
         { pattern: /<<<<<<< HEAD/, error: 'Git merge conflict marker' },
         { pattern: />>>>>>> /, error: 'Git merge conflict marker' },
         { pattern: /=======/, error: 'Git merge conflict marker' },
@@ -208,6 +212,7 @@ class SyntaxErrorFixer {
       .replace(/<<<<<<< HEAD\\n([\\s\\S]*?)=======\\n[\\s\\S]*?>>>>>>> .*?\\n/g, '$1')
       .replace(/<<<<<<< HEAD\\n([\\s\\S]*?)>>>>>>> .*?\\n/g, '$1');
   }
+>>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 
   saveReport(report) {
     try {
