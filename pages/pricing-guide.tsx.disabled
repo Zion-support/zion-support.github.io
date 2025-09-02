@@ -1,15 +1,5 @@
-import React from;
-  'react';
-import { motion } from;
-  'framer-motion';
-import { SEO } from;
-  '../components/SEO';
-import { Button } from;
-  '../components/ui/Button';
-import { Card } from;
-  '../components/ui/Card';
-import { Badge } from;
-  '../components/ui/Badge';
+import React from 'react';
+import Head from 'next/head';
 import { 
   CheckCircle, 
   Star, 
@@ -18,7 +8,8 @@ import {
   Users, 
   Globe, 
   Phone, 
-  Mail,   ArrowRight,
+  Mail,   
+  ArrowRight,
   DollarSign,
   TrendingUp,
   Award,
@@ -36,11 +27,9 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-  HelpCircle;
+  HelpCircle,
+  Network
 } from 'lucide-react';
-import { Network } from 'lucide-react';
-} from
-  'lucide-react';
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [
@@ -122,11 +111,12 @@ const PricingGuide: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Pricing Guide - Zion Tech Group" 
-        description="Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project."
-      />
+    <>
+      <Head>
+        <title>Pricing Guide - Zion Tech Group</title>
+        <meta name="description" content="Comprehensive guide to understanding AI solution pricing. Learn about cost factors, get estimates, and find the best pricing strategy for your project." />
+      </Head>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
@@ -328,7 +318,8 @@ const PricingGuide: React.FC = () => {
           </motion.div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

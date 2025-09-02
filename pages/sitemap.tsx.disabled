@@ -17,7 +17,7 @@ import {
   Database, Zap,
   Lock, Code,
   Smartphone, Monitor,
-  Server, Network;
+  Server, Network
 } from 'lucide-react';
 
 const SitemapPage: React.FC = () => {

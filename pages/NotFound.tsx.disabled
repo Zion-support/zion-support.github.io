@@ -1,13 +1,8 @@
-import React from;
-  'react';
-import { motion } from;
-  'framer-motion';
-import { SEO } from;
-  '../components/SEO';
-import { Button } from;
-  '../components/ui/Button';
-import { Card } from;
-  '../components/ui/Card';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
 import {   Home,
   ArrowLeft,
   Phone,
@@ -20,8 +15,7 @@ import {   Home,
   Calendar,
   Award,
   Shield
-} from;
-  'lucide-react';
+} from 'lucide-react';
 const NotFound: React.FC = () => {
   const quickLinks = [
     { name: "Home", url: "/", icon: Home }, { name: "Services", url: "/services", icon: Briefcase },

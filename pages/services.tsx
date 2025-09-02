@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ArrowRight,
   Brain,
@@ -17,9 +17,10 @@ import {
   Star,
   TrendingUp,
   Clock,
-  Award,;
+  Award,
+  Mail,
 } from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
+// import PageTransition from '../src/components/PageTransition';
 
 export default function Services() {
 	const title =
@@ -28,7 +29,7 @@ export default function Services() {
   'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
 
 	return (
-		<PageTransition>
+		<>
 			{/* Hero Section */}
 			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -276,10 +277,50 @@ export default function Services() {
 							<ul className="text-sm text-gray-700 space-y-1 mb-4">
 								<li>• Integrates CRM, Helpdesk, and Knowledge Base</li>
 								<li>• Measurable pipeline lift and deflection</li>
+								<li>• 24/7 intelligent lead qualification</li>
+								<li>• Automated follow-up sequences</li>
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-blue-600">Starting $8k–$25k</span>
 								<Link href="/contact" className="text-blue-600 hover:text-blue-500">Talk to us →</Link>
+							</div>
+						</div>
+
+						{/* AI-Powered Email Responder */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Mail className="h-5 w-5 text-blue-500" />
+								<h3 className="font-semibold text-gray-900">AI-Powered Email Responder</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Automated email responses with intelligent categorization and priority flagging.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Smart email categorization and routing</li>
+								<li>• Automated response generation</li>
+								<li>• Priority detection and escalation</li>
+								<li>• Integration with major email platforms</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-blue-500">From $199/mo</span>
+								<Link href="/contact" className="text-blue-500 hover:text-blue-400">Try free trial →</Link>
+							</div>
+						</div>
+
+						{/* Mobile-First Survey Tool */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Users className="h-5 w-5 text-green-500" />
+								<h3 className="font-semibold text-gray-900">Mobile-First Survey Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Engaging, adaptive surveys optimized for mobile with AI-driven insights.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Adaptive questioning based on responses</li>
+								<li>• Mobile-optimized interface design</li>
+								<li>• Real-time analytics and insights</li>
+								<li>• Multi-language support</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-green-500">From $149/mo</span>
+								<Link href="/contact" className="text-green-500 hover:text-green-400">Create survey →</Link>
 							</div>
 						</div>
 
@@ -568,6 +609,120 @@ export default function Services() {
 								<Link href="/contact" className="text-red-600 hover:text-red-500">Automate workflows →</Link>
 							</div>
 						</div>
+
+						{/* E-Commerce Return Management SaaS */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<ArrowRight className="h-5 w-5 text-purple-500" />
+								<h3 className="font-semibold text-gray-900">E-Commerce Return Management SaaS</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Automated return processing with intelligent label generation and tracking.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Automated return label generation</li>
+								<li>• Real-time return status tracking</li>
+								<li>• Inventory management integration</li>
+								<li>• Customer self-service portal</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-purple-500">From $299/mo</span>
+								<Link href="/contact" className="text-purple-500 hover:text-purple-400">Manage returns →</Link>
+							</div>
+						</div>
+
+						{/* Automated Email Follow-up Service */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Mail className="h-5 w-5 text-cyan-500" />
+								<h3 className="font-semibold text-gray-900">Automated Email Follow-up Service</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Intelligent email sequences with personalized timing and content optimization.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Smart timing based on recipient behavior</li>
+								<li>• A/B testing for email content</li>
+								<li>• Lead scoring and qualification</li>
+								<li>• CRM integration and analytics</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-cyan-500">From $179/mo</span>
+								<Link href="/contact" className="text-cyan-500 hover:text-cyan-400">Start follow-ups →</Link>
+							</div>
+						</div>
+
+						{/* Customer Support and Helpdesk Platform */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Users className="h-5 w-5 text-orange-500" />
+								<h3 className="font-semibold text-gray-900">AI-Powered Helpdesk Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Comprehensive support system with AI chatbots and intelligent ticket routing.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• AI-powered chatbot with natural language processing</li>
+								<li>• Intelligent ticket categorization and routing</li>
+								<li>• Knowledge base with auto-updating content</li>
+								<li>• Multi-channel support (email, chat, phone)</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-orange-500">From $399/mo</span>
+								<Link href="/contact" className="text-orange-500 hover:text-orange-400">Setup helpdesk →</Link>
+							</div>
+						</div>
+
+						{/* AI-Powered Content Creation Tool */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Brain className="h-5 w-5 text-pink-500" />
+								<h3 className="font-semibold text-gray-900">AI Content Creation Suite</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Generate high-quality content across multiple formats with brand consistency.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Blog posts, social media, and marketing copy</li>
+								<li>• Brand voice consistency across all content</li>
+								<li>• SEO optimization and keyword integration</li>
+								<li>• Multi-language content generation</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-pink-500">From $249/mo</span>
+								<Link href="/contact" className="text-pink-500 hover:text-pink-400">Create content →</Link>
+							</div>
+						</div>
+
+						{/* Appointment Scheduler for Healthcare */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Clock className="h-5 w-5 text-teal-500" />
+								<h3 className="font-semibold text-gray-900">Healthcare Appointment Scheduler</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">HIPAA-compliant scheduling system with patient data management.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• HIPAA-compliant patient data storage</li>
+								<li>• Automated appointment reminders</li>
+								<li>• Medical history integration</li>
+								<li>• Telemedicine video conferencing</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-teal-500">From $199/mo</span>
+								<Link href="/contact" className="text-teal-500 hover:text-teal-400">Schedule appointments →</Link>
+							</div>
+						</div>
+
+						{/* AI-Powered SEO Content Optimization Tool */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<TrendingUp className="h-5 w-5 text-emerald-500" />
+								<h3 className="font-semibold text-gray-900">AI SEO Content Optimizer</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Real-time SEO analysis and optimization recommendations for better rankings.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Real-time SEO scoring and suggestions</li>
+								<li>• Competitor analysis and gap identification</li>
+								<li>• Content optimization recommendations</li>
+								<li>• Keyword research and trend analysis</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-emerald-500">From $149/mo</span>
+								<Link href="/contact" className="text-emerald-500 hover:text-emerald-400">Optimize SEO →</Link>
+							</div>
+						</div>
 					</div>
 
 					<div className="mt-10 text-center text-sm text-gray-500">
@@ -578,6 +733,10 @@ export default function Services() {
 						or call
 						{' '}
 						<a href="tel:+13024640950" className="text-blue-600 hover:text-blue-500">+1 302 464 0950</a>.
+						<br />
+						Visit us at: 364 E Main St STE 1008, Middletown DE 19709
+						<br />
+						Website: <a href="https://ziontechgroup.com" className="text-blue-600 hover:text-blue-500" target="_blank" rel="noreferrer">https://ziontechgroup.com</a>
 					</div>
 				</div>
 			</section>
@@ -656,6 +815,6 @@ export default function Services() {
 					</div>
 				</div>
 			</section>
-		</PageTransition>
+		</>
 	)
 }
