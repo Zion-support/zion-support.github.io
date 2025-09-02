@@ -205,6 +205,7 @@ export default [
       '.eslintrc.js',
       'jest.*',
       'App.test.ts',
+      'build-verification.js',
       'ecosystem*.js',
       'jest.setup.jsx',
       'jest.config.jsx',
