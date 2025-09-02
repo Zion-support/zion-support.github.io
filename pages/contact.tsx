@@ -1,7 +1,7 @@
+import React, { useState } from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
 import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from 'lucide-react';
-import { useState } from 'react';
 
 const ContactPage: NextPage = () => {
   const [formData, setFormData] = useState({

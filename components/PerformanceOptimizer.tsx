@@ -9,11 +9,28 @@ const PerformanceOptimizer: React.FC = () => {
         '/favicon.ico'
       ];
 
+      const criticalFonts = [
+        'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap'
+      ];
+
+      // Preload critical images
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
+        document.head.appendChild(link);
+      });
+
+      // Preload critical fonts
+      criticalFonts.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'style';
+        link.href = href;
+        link.onload = () => {
+          link.rel = 'stylesheet';
+        };
         document.head.appendChild(link);
       });
     };
@@ -58,9 +75,33 @@ const PerformanceOptimizer: React.FC = () => {
       };
     };
 
+    // Add service worker for caching
+    const registerServiceWorker = () => {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('SW registered: ', registration);
+          })
+          .catch(registrationError => {
+            console.log('SW registration failed: ', registrationError);
+          });
+      }
+    };
+
+    // Optimize third-party scripts
+    const optimizeThirdPartyScripts = () => {
+      // Defer non-critical scripts
+      const scripts = document.querySelectorAll('script[data-defer]');
+      scripts.forEach(script => {
+        script.defer = true;
+      });
+    };
+
     // Initialize optimizations
     preloadCriticalResources();
     lazyLoadImages();
+    registerServiceWorker();
+    optimizeThirdPartyScripts();
     const cleanup = optimizeScroll();
 
     return cleanup;

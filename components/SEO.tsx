@@ -9,6 +9,14 @@ interface SEOProps {
   url?: string;
   type?: string;
   structuredData?: any;
+  noindex?: boolean;
+  nofollow?: boolean;
+  publishedTime?: string;
+  modifiedTime?: string;
+  author?: string;
+  section?: string;
+  tags?: string[];
+  breadcrumbs?: Array<{name: string, url: string}>;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -18,9 +26,46 @@ const SEO: React.FC<SEOProps> = ({
   ogImage = '/og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
-  structuredData
+  structuredData,
+  noindex = false,
+  nofollow = false,
+  publishedTime,
+  modifiedTime,
+  author = 'Zion Tech Group',
+  section,
+  tags = [],
+  breadcrumbs = []
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const robotsContent = `${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`;
+  
+  // Generate default structured data if not provided
+  const defaultStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/og-image.jpg",
+    "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services.",
+    "foundingDate": "1998",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "BR",
+      "addressLocality": "São Paulo"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-ZION-TECH",
+      "contactType": "customer service",
+      "availableLanguage": ["English", "Portuguese"]
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/zion-technologies",
+      "https://twitter.com/ziontechgroup"
+    ]
+  };
+
+  const finalStructuredData = structuredData || defaultStructuredData;
   
   return (
     <Head>
@@ -29,9 +74,12 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="robots" content="index, follow" />
-      <meta name="author" content="Zion Tech Group" />
+      <meta name="robots" content={robotsContent} />
+      <meta name="author" content={author} />
       <meta name="language" content="en" />
+      <meta name="revisit-after" content="7 days" />
+      <meta name="rating" content="general" />
+      <meta name="distribution" content="global" />
       
       {/* Open Graph */}
       <meta property="og:title" content={fullTitle} />
@@ -41,6 +89,13 @@ const SEO: React.FC<SEOProps> = ({
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
+      {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+      {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+      {author && <meta property="article:author" content={author} />}
+      {section && <meta property="article:section" content={section} />}
+      {tags.map((tag, index) => (
+        <meta key={index} property="article:tag" content={tag} />
+      ))}
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -60,15 +115,32 @@ const SEO: React.FC<SEOProps> = ({
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
       
-      {/* Structured Data */}
-      {structuredData && (
+      {/* Breadcrumbs */}
+      {breadcrumbs.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": breadcrumbs.map((crumb, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "name": crumb.name,
+                "item": crumb.url
+              }))
+            })
           }}
         />
       )}
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(finalStructuredData)
+        }}
+      />
     </Head>
   );
 };
