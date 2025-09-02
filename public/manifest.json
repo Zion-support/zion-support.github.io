@@ -1,16 +1,31 @@
 {
-  "name": "Zion Tech Group - Future Technology Solutions",
+  "name": "Zion Tech Group - Technology Solutions Provider",
   "short_name": "Zion Tech",
-  "description": "Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation.",
+  "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
+  "background_color": "#ffffff",
   "theme_color": "#0ea5e9",
   "orientation": "portrait-primary",
-  "lang": "en",
-  "categories": ["business", "productivity", "technology"],
-
+  "scope": "/",
+  "lang": "en-US",
+  "categories": ["business", "technology", "productivity"],
   "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
@@ -22,7 +37,22 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Zion Tech Group Desktop View"
+    },
+    {
+      "src": "/screenshot-mobile.png",
+      "sizes": "375x667",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Zion Tech Group Mobile View"
     }
   ],
   "shortcuts": [
@@ -30,40 +60,37 @@
       "name": "Services",
       "short_name": "Services",
       "description": "View our technology services",
-
       "url": "/services",
       "icons": [
         {
-          "src": "/icon-services.png",
-          "sizes": "96x96"
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
         }
       ]
     },
     {
-
       "name": "Contact",
       "short_name": "Contact",
       "description": "Get in touch with us",
       "url": "/contact",
       "icons": [
         {
-          "src": "/icon-contact.png",
-          "sizes": "96x96"
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
         }
       ]
     },
     {
-      "name": "Marketplace",
-      "short_name": "Marketplace",
-      "description": "Browse our marketplace",
-      "url": "/marketplace",
+      "name": "About",
+      "short_name": "About",
+      "description": "Learn about Zion Tech Group",
+      "url": "/about",
       "icons": [
         {
-          "src": "/icon-marketplace.png",
-          "sizes": "96x96"
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
         }
       ]
     }
-
   ]
 }

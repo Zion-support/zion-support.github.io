@@ -9,40 +9,40 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SaaS',
       services: [
-        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
-        { name: 'Project Management', href: '/services/project-management-suite' },
-        { name: 'Inventory Tracker', href: '/services/inventory-management' },
-        { name: 'Customer Support', href: '/services/customer-support-platform' },
-        { name: 'Social Media Automation', href: '/services/social-media-automation' },
-        { name: 'Email Marketing Pro', href: '/services/email-marketing-automation' },
-        { name: 'HR Management', href: '/services/hr-management-system' },
-        { name: 'Financial Analytics', href: '/services/financial-analytics-dashboard' },
+        { name: 'Custom Software Development', href: '/services/micro-saas' },
+        { name: 'SaaS Platform Development', href: '/services/micro-saas' },
+        { name: 'API Development', href: '/services/micro-saas' },
+        { name: 'Mobile App Development', href: '/services/micro-saas' },
+        { name: 'Web Application Development', href: '/services/micro-saas' },
+        { name: 'Cloud Integration', href: '/services/micro-saas' },
+        { name: 'Database Design', href: '/services/micro-saas' },
+        { name: 'Performance Optimization', href: '/services/micro-saas' },
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', href: '/services/cloud-migration' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity-audit' },
-        { name: 'DevOps Automation', href: '/services/devops-automation' },
-        { name: 'Data Backup', href: '/services/data-backup-recovery' },
-        { name: 'Blockchain Development', href: '/services/blockchain-development' },
-        { name: 'IoT Solutions', href: '/services/iot-solutions' },
-        { name: 'API Development', href: '/services/api-development-integration' },
-        { name: 'Mobile App Development', href: '/services/mobile-app-development' },
+        { name: 'Cloud Migration', href: '/services/it-services' },
+        { name: 'Infrastructure Management', href: '/services/it-services' },
+        { name: 'Network Security', href: '/services/it-services' },
+        { name: 'Database Administration', href: '/services/it-services' },
+        { name: 'System Monitoring', href: '/services/it-services' },
+        { name: 'Backup & Recovery', href: '/services/it-services' },
+        { name: 'IT Consulting', href: '/services/it-services' },
+        { name: 'Technical Support', href: '/services/it-services' },
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'Custom AI Models', href: '/services/custom-ai-models' },
-        { name: 'Process Automation', href: '/services/ai-process-automation' },
-        { name: 'Analytics Platform', href: '/services/ai-analytics-platform' },
-        { name: 'Chatbot Development', href: '/services/ai-chatbot-development' },
-        { name: 'Computer Vision', href: '/services/computer-vision-solutions' },
-        { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
-        { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
-        { name: 'Recommendation Engine', href: '/services/ai-powered-recommendation-engine' },
+        { name: 'Machine Learning Models', href: '/services/ai-services' },
+        { name: 'Computer Vision', href: '/services/ai-services' },
+        { name: 'Natural Language Processing', href: '/services/ai-services' },
+        { name: 'Predictive Analytics', href: '/services/ai-services' },
+        { name: 'AI Chatbots', href: '/services/ai-services' },
+        { name: 'Data Analytics', href: '/services/ai-services' },
+        { name: 'AI Automation', href: '/services/ai-services' },
+        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
       ]
     }
   ];
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
@@ -102,14 +102,14 @@ const Footer: React.FC = () => {
 
         {/* Quick Links */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-blue-400">Quick Links</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Company</h4>
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors">About Us</Link></li>
+                <li><Link href="/team" className="text-gray-300 hover:text-blue-400 transition-colors">Our Team</Link></li>
+                <li><Link href="/careers" className="text-gray-300 hover:text-blue-400 transition-colors">Careers</Link></li>
                 <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</Link></li>
-                <li><Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
             
@@ -118,18 +118,18 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 <li><Link href="/blog" className="text-gray-300 hover:text-blue-400 transition-colors">Blog</Link></li>
                 <li><Link href="/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors">Case Studies</Link></li>
-                <li><Link href="/whitepapers" className="text-gray-300 hover:text-blue-400 transition-colors">Whitepapers</Link></li>
+                <li><Link href="/white-papers" className="text-gray-300 hover:text-blue-400 transition-colors">White Papers</Link></li>
                 <li><Link href="/webinars" className="text-gray-300 hover:text-blue-400 transition-colors">Webinars</Link></li>
               </ul>
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4 text-blue-400">Support</h4>
+              <h4 className="text-lg font-semibold mb-4 text-blue-400">Legal</h4>
               <ul className="space-y-2">
-                <li><Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors">Help Center</Link></li>
-                <li><Link href="/documentation" className="text-gray-300 hover:text-blue-400 transition-colors">Documentation</Link></li>
-                <li><Link href="/api" className="text-gray-300 hover:text-blue-400 transition-colors">API Reference</Link></li>
-                <li><Link href="/status" className="text-gray-300 hover:text-blue-400 transition-colors">System Status</Link></li>
+                <li><Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>
+                <li><Link href="/cookies" className="text-gray-300 hover:text-blue-400 transition-colors">Cookie Policy</Link></li>
+                <li><Link href="/sitemap" className="text-gray-300 hover:text-blue-400 transition-colors">Sitemap</Link></li>
               </ul>
             </div>
             
