@@ -15,6 +15,6 @@ interface Address {
    onSelect?: (rate: ShippingRate) => void} export /**;
  * CheckoutShippingOptions function;
  * @param {*} params - Function parameters;
- * @returns {*} Function return value;
+ * @returns {*} Function return value
  */
 function CheckoutShippingOptions ({ toAddress, onSelect }: Props) { const [rates, setRates] = useState < ShippingRate[]> ([])  const [loading, setLoading] = useState (false)  const [selected, setSelected] = useState < string> (')  useEffect ( () => { if (!toAddress) return try { if (res.ok) { setRates (data.rates || []) } else {'''"

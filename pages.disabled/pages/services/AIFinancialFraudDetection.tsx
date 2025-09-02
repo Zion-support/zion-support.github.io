@@ -78,7 +78,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
       period: '',';
       features: ['Unlimited transactions', 'Custom AI models', 'White-label solution', 'Dedicated support', 'SLA guarantees'],
       popular: false}
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
   ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white'>
@@ -88,7 +88,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 =;
       <SEO '>        title='AI Financial Fraud Detection Platform - Zion Tech Group';
         description='Protect your business with AI-powered fraud detection. Detect and prevent financial fraud with 99.2% accuracy, reduce losses by 85-95%, and ensure compliance.';
-        keywords='fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics';
+        keywords='fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics'
         canonical='https://ziontechgroup.com/services/ai-financial-fraud-detection'/>        keywords='fraud detection, AI security, financial fraud prevention, machine learning security, transaction monitoring, fraud analytics''        canonical='https://ziontechgroup.com/services/ai-financial-fraud-detection'/>'
       <SEO ''
         title='AI Financial Fraud Detection Platform - Zion Tech Group'';
@@ -120,9 +120,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
   y: 0}}';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='mb-8'';
+            className='mb-8''
 ''
-            <div className='inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full text-red-400 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
               <Shield className='w-4 h-4 mr-2'  />              Fraud Prevention Platform'
             </div>''
@@ -142,7 +142,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>''
               <div className='flex items-center text-cyan-400 font-semibold'>''
                 <Star className='w-5 h-5 mr-2 fill-current'  />
-:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
+:pages.disabled/pages/services/AIFinancialFraudDetection.tsx
                 4.9/5 Rating'
               </div>''
               <div className='flex items-center text-green-400 font-semibold'>''
@@ -150,7 +150,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
                 99.2% Accuracy'
               </div>''
               <div className='flex items-center text-blue-400 font-semibold'>''
-                <Clock className='w-5 h-5 mr-2'  />                Real-time Detection;
+                <Clock className='w-5 h-5 mr-2'  />                Real-time Detection
                 4.9/5 Rating
               </div>''
               <div className='flex items-center text-green-400 font-semibold'>''
@@ -191,7 +191,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 '';
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-              Advanced Security Features';
+              Advanced Security Features'
               Advanced Security Features
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
@@ -202,7 +202,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
 <:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid md: grid-cols-2 gap-8'>
             {features.map((feature, index()
@@ -240,21 +240,21 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
   delay: index * 0.1}}';
-                className='bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300';
+                className='bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300'
 '
                 <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6'>'
                   <feature.icon className='w-8 h-8 text-white' />
                 </div>'
                 <h3 className='text-2xl font-bold text-white mb-4'>{feature.title}</h3>';
   delay: index * 0.1 '}}'';
-                className='bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300'';
+                className='bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6'>''
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>''
                 <h3 className='text-2xl font-bold text-white mb-4'>{feature.title}</h3>'';
   delay: index * 0.1}}'';
-                className='bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300'';
+                className='bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border border-slate-700 hover:border-red-500 transition-all duration-300''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6'>''
                   <feature.icon className='w-8 h-8 text-white' />
@@ -293,7 +293,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 '';
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-              Proven Results';
+              Proven Results'
               Proven Results
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
@@ -304,7 +304,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
 <:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -337,12 +337,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 ';
                 <div className='w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4'>';
   delay: index * 0.1}}'';
-                className='bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center'';
+                className='bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4'>''
                   <CheckCircle className='w-6 h-6 text-white'  />
   delay: index * 0.1 '}}'';
-                className='bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center'';
+                className='bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-xl border border-slate-700 text-center''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-green-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4'>''
                   <CheckCircle className='w-6 h-6 text-white'  />'
@@ -379,7 +379,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 '';
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-              Industry Applications';
+              Industry Applications'
               Industry Applications
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
@@ -390,7 +390,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
 <:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-2 md: grid-cols-3 gap-6'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -423,12 +423,12 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 ';
                 <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4'>';
   delay: index * 0.1}}'';
-                className='bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors'';
+                className='bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4'>''
                   <Target className='w-6 h-6 text-white'  />
   delay: index * 0.1 '}}'';
-                className='bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors'';
+                className='bg-slate-800 p-6 rounded-xl border border-slate-700 text-center hover:border-purple-500 transition-colors''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4'>''
                   <Target className='w-6 h-6 text-white'  />'
@@ -465,7 +465,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 '';
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-indigo-400 to-blue-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-              Seamless Integrations';
+              Seamless Integrations'
               Seamless Integrations
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
@@ -476,7 +476,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
 <:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6'>
             {integrations.map(integration: unknown, index: unknown()
@@ -552,7 +552,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 '';
             <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
-              Transparent Pricing';
+              Transparent Pricing'
               Transparent Pricing
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
@@ -563,7 +563,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
 <:pages.disabled/pages/services/AIFinancialFraudDetection.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricing.map(plan: unknown, index: unknown()
@@ -609,7 +609,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
   delay: index * 0.1}}
                 className={`relative bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-2xl border ${}
                   plan.popular';
-                    ? 'border-red-500 shadow-lg shadow-red-500/20'';
+                    ? 'border-red-500 shadow-lg shadow-red-500/20''
                     : 'border-slate-700'`}`}
                 {plan.popular && ('
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -627,7 +627,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
                   </div>'
                   <p className='text-gray-300'>{plan.description}</p>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                 </div>
@@ -639,7 +639,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
                     </li>
                   ))}
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-                </ul>';
+                </ul>'
 ''
                 <button className='w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${
 ';
@@ -686,7 +686,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
             <p className='text-xl text-red-100 mb-8 max-w-3xl mx-auto'>
               Join 200+ companies that have protected their business with our AI-powered fraud detection platform'
             </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
   y: 0}}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -724,7 +724,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
       <section className='py-16 bg-slate-900'>'
         <div className='container mx-auto px-4 text-center'>''
           <div className='max-w-2xl mx-auto'>''
-            <h3 className='text-2xl font-bold text-white mb-6'>Get in Touch</h3>'';
+            <h3 className='text-2xl font-bold text-white mb-6'>Get in Touch</h3>''
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
             <div className='grid md:grid-cols-3 gap-6 text-slate-300'>'
             <div className='grid md:grid-cols-3 gap-6 text-slate-300'>
@@ -769,5 +769,5 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
     </div>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx)}''`;
 export default AIFinancialFraudDetection}}}''`''`)}
-;
+
 export default AIFinancialFraudDetection}}}'"`

@@ -114,7 +114,7 @@ const Pricing: NextPage = () => {
         'Deployment support',
       ],
     },
-  ];
+  ]
   return (
     <Layout
       title="Pricing - Zion Tech Group"
@@ -374,4 +374,4 @@ const Pricing: NextPage = () => {
     </Layout>
   );
 };
-export default Pricing;
+export default Pricing

@@ -30,7 +30,7 @@ export function Header() {
     { name: 'Services', href: '/services' },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Contact', href: '/contact' }
-  ];
+  ]
 
   return (
     <header className={`fixed w-full z-50 transition-all duration-300 ${
@@ -131,5 +131,5 @@ export function Header() {
         )}
       </div>
     </header>
-  );
+  )
 }

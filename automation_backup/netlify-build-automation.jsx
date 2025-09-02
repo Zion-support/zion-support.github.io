@@ -374,7 +374,7 @@ class NetlifyBuildAutomation {
 ;
       if (data) {
         const postData = JSON.stringify(data);
-        options.headers['Content-Length;
+        options.headers['Content-Length
   '] = Buffer.byteLength(postData)}
       const req = https.request(options, res => {
         let responseData = ''
@@ -1010,7 +1010,7 @@ if (require.main === module) {
   '\nReceived SIGTERM, shutting down gracefully...');
     await automation.stop();
     process.exit(0)})
-  // Start the automation;
+  // Start the automation
   automation.start().catch(error => {
     console.error(
   'Failed to start automation:', error)

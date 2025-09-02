@@ -56,7 +56,7 @@ import React from;
   'Custom integrations' ], cta: 'Start Professional, popular: true }, { name:,
   Enterprise', price: $29, 999,
   , period: '/month, description:,
-  For large-scale blockchain operations', features: [;
+  For large-scale blockchain operations', features: [
   'Unlimited smart contracts,
 ,
   Full blockchain suite',

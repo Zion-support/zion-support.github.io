@@ -84,7 +84,7 @@ FuturisticBackground.displayName = 'FuturisticBackground;
   ';
 // Enhanced hero section component}, [heroSlides.length]) }, [heroSlides.length]) ;
   useEffect ( () => {
-    return () => clearInterval (interval) }, [nextSlide]) ;
+    return () => clearInterval (interval) }, [nextSlide]) 
   return ('
     <section className='relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20'>'
       <div className='max-w-7xl mx-auto text-center'>
@@ -173,7 +173,7 @@ FuturisticBackground.displayName = 'FuturisticBackground;
                   onClick={() => setCurrentSlide(index)}`;
                   className={`w-3 h-3 rounded-full transition-colors ${
                     index === currentSlide ?,
-  bg-cyan-400;
+  bg-cyan-400
   ': 'bg-white/30`}`}`
                   aria-label={`Go to slide ${index + 1}`}
                 />))}
@@ -185,7 +185,7 @@ FuturisticBackground.displayName = 'FuturisticBackground;
   )})
 HeroSection.displayName = 'HeroSection;
   ';
-// Enhanced features section;
+// Enhanced features section
   return ('
     <section className='py-20 px-4 sm:px-6 lg:px-8'>'
       <div className='max-w-7xl mx-auto'>
@@ -226,7 +226,7 @@ HeroSection.displayName = 'HeroSection;
   )})
 FeaturesSection.displayName = 'FeaturesSection;
   ';
-// Enhanced stats section;
+// Enhanced stats section
   return ('
     <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-slate-dark to-zion-slate'>'
       <div className='max-w-7xl mx-auto'>'
@@ -263,7 +263,7 @@ const EnhancedHome: React.FC = () => {
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior:;
   'smooth' })}
-  }, []) ;
+  }, []) 
   if (!isLoaded) {
     return ('
       <div className='min-h-screen bg-zion-slate-dark flex items-center justify-center'>'

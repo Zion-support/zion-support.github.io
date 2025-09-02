@@ -11,7 +11,7 @@ post: {
     createdAt: string;
     likes: number;
     replies: number;
-    views: number;
+    views: number
 author: {
       name: string
       avatar: string}}}

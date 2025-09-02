@@ -4,7 +4,7 @@ import Head from 'next/head';
 export default function Index() {
   return (
     <>
-      ;
+      
       <Head>
         <title>Zion Tech Group - Leading Technology Solutions Provider</title>
         <meta
@@ -151,7 +151,7 @@ export default function Index() {
             }}
             onMouseOut={e => {
               e.target.style.background = 'transparent';
-              e.target.style.color = '#00d4ff';
+              e.target.style.color = '#00d4ff'
             }}
           >
             Get Started
@@ -159,5 +159,5 @@ export default function Index() {
         </div>
       </div>
     </>
-  );
+  )
 }

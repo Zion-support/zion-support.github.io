@@ -213,7 +213,7 @@ const Products: NextPage = () => {
   'Digital Transformation',
   'IoT & Edge Computing';
       users: '100+',
-      image: '/products/iot-edge-platform.jpg'}];
+      image: '/products/iot-edge-platform.jpg'}]
   const categories = [
     'All Products',
     'AI & Analytics',
@@ -386,5 +386,5 @@ const Products: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default Products

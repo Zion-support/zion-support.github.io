@@ -1,8 +1,8 @@
 ;
 const VendorRiskManagement: React.FC = (): JSX.Element => (
-  <div className='min-h-screen bg-slate-900 text-white'>'';
+  <div className='min-h-screen bg-slate-900 text-white'>''
 :pages.disabled/pages/services/VendorRiskManagement.tsx
-    <SEO title='Vendor Risk Management (VRM) SaaS - Zion Tech Group' description='Continuously assess, score, and monitor third-party risk with automated evidence collection and remediation workflows.'  />';
+    <SEO title='Vendor Risk Management (VRM) SaaS - Zion Tech Group' description='Continuously assess, score, and monitor third-party risk with automated evidence collection and remediation workflows.'  />'
 ''
     <section className='container mx-auto px-4 py-12'>''
       <h1 className='text-4xl font-bold mb-3'>Vendor Risk Management (VRM)</h1>'      <p className='text-slate-300 max-w-3xl'>Automate third-party due diligence, security questionnaires, continuous control monitoring, and risk scoring. Consolidate SIG/Lite responses, map to SOC 2/ISO 27001, and trigger remediation with owners and SLAs.</p>
@@ -40,5 +40,5 @@ const VendorRiskManagement: React.FC = (): JSX.Element => (
 export { VendorRiskManagement }
 export default VendorRiskManagement;
 :pages.disabled/pages/services/VendorRiskManagement.tsx;
-';
+'
   '''"

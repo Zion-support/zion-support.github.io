@@ -7,8 +7,7 @@ import {
 } from 'lucide-react';
 export default function Pricing() {
   const pricingPlans = [
-    {
-      name: "Starter", price: "$99",
+    { name: "Starter", price: "$99",
       period: "per month", description: "Perfect for small businesses getting started with AI",
       features: [
         "Basic AI tools and services", "Email support",
@@ -16,8 +15,7 @@ export default function Pricing() {
         "Basic analytics dashboard"
       ], popular: false,
       color: "from-blue-500 to-cyan-500"
-    }, {
-      name: "Professional",
+    }, { name: "Professional",
       price: "$299", period: "per month",
       description: "Ideal for growing businesses with advanced needs", features: [
         "Advanced AI and machine learning tools",
@@ -26,8 +24,7 @@ export default function Pricing() {
         "API access", "Custom integrations"
       ], popular: true,
       color: "from-purple-500 to-pink-500"
-    }, {
-      name: "Enterprise",
+    }, { name: "Enterprise",
       price: "$999", period: "per month",
       description: "Comprehensive solution for large organizations", features: [
         "Full AI and quantum computing suite",
@@ -40,20 +37,16 @@ export default function Pricing() {
     }
   ];
   const serviceCategories = [
-    {
-      title: "AI Services", icon: Brain,
+    { title: "AI Services", icon: Brain,
       startingPrice: "$99/month", description: "Machine learning, natural language processing, and AI automation"
     },
-    {
-      title: "Quantum Computing", icon: Atom,
+    { title: "Quantum Computing", icon: Atom,
       startingPrice: "$499/month", description: "Quantum algorithms, quantum machine learning, and quantum optimization"
     },
-    {
-      title: "Cybersecurity", icon: Shield,
+    { title: "Cybersecurity", icon: Shield,
       startingPrice: "$199/month", description: "Advanced threat detection, security monitoring, and compliance"
     },
-    {
-      title: "Micro SaaS", icon: Rocket,
+    { title: "Micro SaaS", icon: Rocket,
       startingPrice: "$149/month", description: "Custom software solutions and micro SaaS applications"
     }
   ];
@@ -72,7 +65,7 @@ export default function Pricing() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -95,7 +88,7 @@ export default function Pricing() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Choose Your Plan</h2>
@@ -165,7 +158,7 @@ export default function Pricing() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Service Categories</h2>
@@ -204,7 +197,7 @@ export default function Pricing() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -235,5 +228,5 @@ export default function Pricing() {
         </section>
       </div>
 </>
-  );
+  )
 }

@@ -77,17 +77,17 @@ const HealthcareSolutions = () => {
 ,
   description: 'HIPAA-compliant solutions protect patient data.,      icon: Shield}
   ];
-  return();
+  return()
 :pages.disabled/solutions/Healthcare.jsx
     <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white'>'{/* Header Section */}''      <div className='pt-32 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
           <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>
-:pages.disabled/solutions/Healthcare.jsx;
+:pages.disabled/solutions/Healthcare.jsx
             Healthcare AI Solutions'
           </h1>''
           <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
             Revolutionizing healthcare with cutting-edge AI technology. Improve;
-            patient outcomes, streamline operations, and ensure compliance with;
+            patient outcomes, streamline operations, and ensure compliance with
             our comprehensive healthcare solutions.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -107,23 +107,23 @@ const HealthcareSolutions = () => {
 '{/* Core Solutions */}''      <div className='px-4 sm:px-6 lg:px-8 pb-16'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-:pages.disabled/solutions/Healthcare.jsx;
+:pages.disabled/solutions/Healthcare.jsx
             Healthcare AI Solutions
           </h2>'''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {solutions.map((solution, index) => {}
               const Icon = solution.icon;
-              return();
+              return()
 :pages.disabled/solutions/Healthcare.jsx
                 <div'key={index}''                  className='bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300''>''
                   <div className='flex items-center mb-6'>''
-                    <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>'';
+                    <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>''
 :pages.disabled/solutions/Healthcare.jsx
                       <Icon className='w-8 h-8 text-white' />'
                     </div>''
                     <h3 className='text-2xl font-bold'>{solution.title}</h3>
-                  </div>';
+                  </div>'
 ''
-                  <p className='text-gray-300 mb-6'>{solution.description}</p>';
+                  <p className='text-gray-300 mb-6'>{solution.description}</p>'
 ''
                   <ul className='space-y-3 mb-6'>
                     {solution.features.map((feature, featureIndex) => (
@@ -156,9 +156,9 @@ const HealthcareSolutions = () => {
 '{/* Benefits Section */}''      <div className='px-4 sm:px-6 lg:px-8 pb-16'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-:pages.disabled/solutions/Healthcare.jsx;
+:pages.disabled/solutions/Healthcare.jsx
             Benefits for Healthcare Organizations
-          </h2>';
+          </h2>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {benefits.map((benefit, index) => {
@@ -178,11 +178,11 @@ const HealthcareSolutions = () => {
         <div className='max-w-4xl mx-auto text-center'>''
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30'>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-:pages.disabled/solutions/Healthcare.jsx;
+:pages.disabled/solutions/Healthcare.jsx
               Transform Healthcare with AI'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Join leading healthcare organizations using our AI solutions to;
+              Join leading healthcare organizations using our AI solutions to
               improve patient care and operational efficiency.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -203,4 +203,4 @@ const HealthcareSolutions = () => {
   )}
 ;
 :pages.disabled/solutions/Healthcare.jsx;
-export default HealthcareSolutions'';''"
+export default HealthcareSolutions''''"

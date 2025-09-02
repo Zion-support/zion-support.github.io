@@ -49,7 +49,7 @@ const Sitemap: React.FC = () => {
     { name: 'Technology News', url: '/tech-news', description: 'Technology industry news', icon: TrendingUp },
     { name: 'Research Papers', url: '/research', description: 'Technical research and papers', icon: FileText },
     { name: 'Tutorials', url: '/tutorials', description: 'Learning resources and tutorials', icon: BookOpen }
-  ];
+  ]
   const allPages = [...mainPages, ...servicePages, ...contentPages]
 
   return(
@@ -219,5 +219,5 @@ const Sitemap: React.FC = () => {
       </div>
     </>
   )}
-;
+
 export default Sitemap

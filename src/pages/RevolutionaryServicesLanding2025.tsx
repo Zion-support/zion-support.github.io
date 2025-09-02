@@ -5,22 +5,18 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
   const featuredServices = [;
     revolutionaryMicroSaasServices2025[0], // AI Business Intelligence;
     revolutionaryITServices2025[0], // AI Cybersecurity;
-    revolutionaryAIServices2025[0] // AI Enterprise Automation;
+    revolutionaryAIServices2025[0] // AI Enterprise Automation
   ]
   const stats = [
     { label: 'Total Services', value: '16', icon: <Users className='w-6 h-6' /> }, { label: 'Micro SAAS', value: '10', icon: <Zap className='w-6 h-6' /> },
     { label: 'IT Services', value: '3', icon: <Shield className='w-6 h-6' /> }, { label: 'AI Services', value: '3', icon: <Brain className='w-6 h-6' /> }
   ]
   const benefits = [
-    {
-      icon: <Rocket className='w-8 h-8' />, title: 'Cutting-Edge Innovation',
-      description: 'Stay ahead with the latest AI and technology advancements'}, {
-      icon: <Target className='w-8 h-8' />,
+    { icon: <Rocket className='w-8 h-8' />, title: 'Cutting-Edge Innovation',
+      description: 'Stay ahead with the latest AI and technology advancements'}, { icon: <Target className='w-8 h-8' />,
       title: 'Proven ROI', description: 'Average 300%+ return on investment within 6 months'},
-    {
-      icon: <Clock className='w-8 h-8' />, title: 'Rapid Implementation',
-      description: 'Get up and running in as little as 1-2 weeks'}, {
-      icon: <DollarSign className='w-8 h-8' />,
+    { icon: <Clock className='w-8 h-8' />, title: 'Rapid Implementation',
+      description: 'Get up and running in as little as 1-2 weeks'}, { icon: <DollarSign className='w-8 h-8' />,
       title: 'Competitive Pricing', description: 'Affordable solutions that fit any business budget'}
   ]
   return(
@@ -33,7 +29,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               Revolutionary Services 2025
             </h1>
             <p className='text-2xl mb-8 leading-relaxed max-w-4xl mx-auto'>
-              Transform your business with our cutting-edge AI-powered micro SAAS, IT, and AI services.;
+              Transform your business with our cutting-edge AI-powered micro SAAS, IT, and AI services.
               Experience the future of technology with intelligent automation, advanced analytics, and innovative solutions.
             </p>
             {/* CTA Buttons */}
@@ -105,7 +101,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               Service Categories
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Choose from our comprehensive range of revolutionary services designed to;
+              Choose from our comprehensive range of revolutionary services designed to
               transform your business operations and drive growth.
             </p>
           </div>
@@ -247,7 +243,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               Featured Services
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Discover our most popular and innovative solutions that are transforming;
+              Discover our most popular and innovative solutions that are transforming
               businesses across industries.
             </p>
           </div>
@@ -302,7 +298,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
               Why Choose Zion Tech Group?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We combine cutting-edge technology with proven business expertise to deliver;
+              We combine cutting-edge technology with proven business expertise to deliver
               solutions that drive real results.
             </p>
           </div>
@@ -328,7 +324,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
             Ready to Transform Your Business?
           </h2>
           <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
-            Join hundreds of businesses that have already transformed their operations;
+            Join hundreds of businesses that have already transformed their operations
             with our revolutionary AI-powered services. Get started today!
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center mb-8'>
@@ -378,7 +374,7 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
                 </div>
               </div>
               <p className='text-gray-400 text-sm leading-relaxed mb-6'>
-                Pioneering the future of technology with AI-powered solutions that transform businesses;
+                Pioneering the future of technology with AI-powered solutions that transform businesses
                 and empower innovation. We specialize in cutting-edge AI, IT infrastructure, and micro SAAS solutions.
               </p>
             </div>
@@ -429,5 +425,5 @@ const RevolutionaryServicesLanding2025: React.FC = () => {
       </footer>
     </div>
   )}
-;
+
 export default RevolutionaryServicesLanding2025

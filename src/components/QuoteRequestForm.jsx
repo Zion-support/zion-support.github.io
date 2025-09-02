@@ -99,7 +99,7 @@ export const QuoteRequestForm = () => {}
       // console.error('Error submitting form: ', error)} finally {}
       setIsSubmitting(false)}
   }
-;
+
   if(isSubmitted) {}
     return()
       <Card className='max-w-2xl mx-auto'>''''
@@ -116,13 +116,13 @@ export const QuoteRequestForm = () => {}
           </Button>
         </CardContent>
       </Card>) }
-''';'
+''''
   return (''''
     <Card className='max-w-4xl mx-auto'>''''
       <CardHeader className='text-center'>''''
         <CardTitle className='text-3xl font-bold'>Request a Quote</CardTitle>
         <CardDescription>';'
-          Tell us about your project and we'll provide you with a customized;'
+          Tell us about your project and we'll provide you with a customized'
           quote
         </CardDescription>''''
       </CardHeader>''''
@@ -136,7 +136,7 @@ export const QuoteRequestForm = () => {}
               <Input;
                 value={formData.firstName}'''';
                 onChange={e => handleChange('firstName', e.target.value)}''''';'
-                placeholder='John''';
+                placeholder='John'''
                 className={errors.firstName ? 'border-red-500' : ''}
               />'''{errors.firstName && ('''''
                 <p className='text-red-500 text-sm mt-1'>{errors.firstName}</p>
@@ -150,7 +150,7 @@ export const QuoteRequestForm = () => {}
               <Input;
                 value={formData.lastName}'''';
                 onChange={e => handleChange('lastName', e.target.value)}''''';'
-                placeholder='Doe''';
+                placeholder='Doe'''
                 className={errors.lastName ? 'border-red-500' : ''}
               />'''{errors.lastName && ('''''
                 <p className='text-red-500 text-sm mt-1'>{errors.lastName}</p>
@@ -167,7 +167,7 @@ export const QuoteRequestForm = () => {}
                 type='email''';
                 value={formData.email}'''';
                 onChange={e => handleChange('email', e.target.value)}''''';'
-                placeholder='john@company.com''';
+                placeholder='john@company.com'''
                 className={errors.email ? 'border-red-500' : ''}
               />'''{errors.email && ('''''
                 <p className='text-red-500 text-sm mt-1'>{errors.email}</p>
@@ -180,7 +180,7 @@ export const QuoteRequestForm = () => {}
               </label>
               <Input;
                 value={formData.phone}'''';
-                onChange={e => handleChange('phone', e.target.value)}'''';
+                onChange={e => handleChange('phone', e.target.value)}''''
                 placeholder='+1 (555) 123-4567'''
               />
             </div>
@@ -193,7 +193,7 @@ export const QuoteRequestForm = () => {}
             <Input;
               value={formData.company}'''';
               onChange={e => handleChange('company', e.target.value)}''''';'
-              placeholder='Your Company Inc.''';
+              placeholder='Your Company Inc.'''
               className={errors.company ? 'border-red-500' : ''}
             />'''{errors.company && ('''''
               <p className='text-red-500 text-sm mt-1'>{errors.company}</p>
@@ -245,7 +245,7 @@ export const QuoteRequestForm = () => {}
                 </SelectContent>
               </Select>
             </div>
-          </div>''';'
+          </div>''''
 ''''
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
             <div>''''
@@ -297,7 +297,7 @@ export const QuoteRequestForm = () => {}
               value={formData.projectDescription}'''';
               onChange={e => handleChange('projectDescription', e.target.value)}'''';
               placeholder='Please describe your project requirements, goals, and any specific needs...''';
-              rows={6}';'
+              rows={6}''
               className={errors.projectDescription ? 'border-red-500' : ''}
             />'''{errors.projectDescription && ('''''
               <p className='text-red-500 text-sm mt-1'>
@@ -332,24 +332,24 @@ export const QuoteRequestForm = () => {}
               <Checkbox'''';
                 id='terms''';
                 checked={formData.agreeToTerms}
-                onCheckedChange={checked =>';'
+                onCheckedChange={checked =>''
                   handleChange('agreeToTerms', checked)}'''/>'''''
-              <label htmlFor='terms' className='text-sm text-gray-700'>'''';
+              <label htmlFor='terms' className='text-sm text-gray-700'>''''
                 I agree to the{' '}''''
-                <a href='/terms' className='text-blue-600 hover: underline'>';'
+                <a href='/terms' className='text-blue-600 hover: underline'>''
                   Terms and Conditions''
                 </a>{' '}
                 *
               </label>
             </div>'''{errors.agreeToTerms && ('''''
               <p className='text-red-500 text-sm'>{errors.agreeToTerms}</p>
-            )}''';'
+            )}''''
 ''''
             <div className='flex items-center space-x-2'>''''
               <Checkbox'''';
                 id='marketing''';
                 checked={formData.agreeToMarketing}
-                onCheckedChange={checked =>';'
+                onCheckedChange={checked =>''
                   handleChange('agreeToMarketing', checked)}'''/>'''''
               <label htmlFor='marketing' className='text-sm text-gray-700'>
                 I agree to receive marketing communications from Zion Tech Group
@@ -376,5 +376,5 @@ export const QuoteRequestForm = () => {}
         </form>
       </CardContent>
     </Card>) }'';""
-}'';';'
+}'';''
 ''''''

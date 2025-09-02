@@ -87,7 +87,7 @@ export default function RootLayout(...args: unknown[]): unknown {
                   Zion OS
                 </h3>
                 <p className='text-sm text-gray-400'>
-                  Unified deployment protocol for sovereign AI-powered digital;
+                  Unified deployment protocol for sovereign AI-powered digital
                   economies.
                 </p>
               </div>

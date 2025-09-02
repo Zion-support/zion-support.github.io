@@ -54,7 +54,7 @@ import {}
 const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview;
   ')  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {}
-    setIsVisible(true)}, []);
+    setIsVisible(true)}, [])
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>'{/* Hero Section */}''      <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>
@@ -62,14 +62,14 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8 }}''            className='mb-8''>''
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-300 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-red-500/20 text-red-300 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
               <Shield className='w-4 h-4 mr-2'  />              Enterprise-Grade Security'
             </div>''
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
               AI-Powered Cybersecurity Platform'</h1>''            <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
               Next-generation cybersecurity powered by artificial intelligence,
-              providing proactive threat detection, automated response, and;
+              providing proactive threat detection, automated response, and
               comprehensive protection for your digital assets.
             </p>
           </motion.div>
@@ -79,11 +79,11 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}';
             transition={{ duration: 0.8, delay: 0.2 }}'';
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'<Link''              to='/contact'';
-              className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105''>'';
+              className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
               <Shield className='w-5 h-5 mr-2'  />              Secure Your Business
             </Link>'<Link''              to='#demo'';
-              className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300''>'';
+              className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
               <Eye className='w-5 h-5 mr-2'  />              Security Demo
             </Link>
@@ -124,11 +124,11 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
               Advanced Security Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Comprehensive cybersecurity protection powered by cutting-edge AI;
+              Comprehensive cybersecurity protection powered by cutting-edge AI
               technology
             </p>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -136,7 +136,7 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}''                className='bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20 hover:border-red-500/40 transition-all duration-300 hover:transform hover:scale-105''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -169,7 +169,7 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border border-red-500/20''>''
-                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>'';
+                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
                   <Shield className='w-6 h-6 mr-3 text-red-400'  />                  {module.name}'
                 </h3>''
@@ -195,11 +195,11 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
               Competitive Security Pricing'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Enterprise-grade security at accessible prices with significant;
+              Enterprise-grade security at accessible prices with significant
               market savings
             </p>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingTiers.map(tier: unknown, index: unknown()
@@ -216,7 +216,7 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx)}';
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -237,7 +237,7 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
                     </span>
                   </div>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>
                   {tier.features.map((feature, featureIndex) => (
@@ -246,7 +246,7 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
                     </li>
                   ))}
                 </ul>
-:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
+:pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
 '
                 <Link''`
                   to='/contact'``;
@@ -276,7 +276,7 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
               Comprehensive protection that adapts to your business needs
             </p>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -285,7 +285,7 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}'transition={{ duration: 0.8, delay: 0.2 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-orange-800/80 backdrop-blur-sm rounded-2xl p-8 border border-orange-500/20''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -310,7 +310,7 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
               Ready to Secure Your Business?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Protect your digital assets with AI-powered cybersecurity that;
+              Protect your digital assets with AI-powered cybersecurity that
               never sleeps
             </p>'''            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>''
               <div className='flex items-center text-gray-300'>''
@@ -324,14 +324,14 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
                 <MapPin className='w-5 h-5 mr-2 text-red-400'  />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-            </div>';
+            </div>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<Link''                to='/contact'';
-                className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold text-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
                 <Shield className='w-5 h-5 mr-2'  />                Get Security Assessment
               </Link>'<Link''                to='https://ziontechgroup.com'';
-                className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
                 <Globe className='w-5 h-5 mr-2'  />                Visit Our Website</Link>            </div>
           </motion.div>
@@ -340,5 +340,5 @@ const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab]
     </div>
   )}
 ;
-export default AICybersecurityPlatform''`;
+export default AICybersecurityPlatform''`
   ''`'"`

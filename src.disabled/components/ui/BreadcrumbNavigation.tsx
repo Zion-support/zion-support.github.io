@@ -8,5 +8,5 @@ import React from;
    isCurrent?: boolean} interface BreadcrumbNavigationProps {
    items?: BreadcrumbItem[];
    className?: string;
-   showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = ';
+   showHome?: boolean} export const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({ items = [], className = '
   ', showHome = true }) => { const location = useLocation() '

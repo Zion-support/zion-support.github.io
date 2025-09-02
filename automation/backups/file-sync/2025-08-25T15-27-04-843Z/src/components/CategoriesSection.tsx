@@ -31,7 +31,7 @@ import { Briefcase, HardDrive, Lightbulb, Users const categories = [
     color: 'from-emerald-500 to-green-600',
     gradient: 'from-zion-purple-light to-zion-purple',
   },
-];
+]
 const specialServices = [
   {
     title: 'IT Onsite Services',

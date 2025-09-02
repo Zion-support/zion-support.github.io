@@ -155,7 +155,7 @@
               Resources & Knowledge
             </h1>'
             <p className='text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8'>
-              Access our comprehensive library of case studies, white papers, webinars, and support materials.;
+              Access our comprehensive library of case studies, white papers, webinars, and support materials.
               Learn from our expertise and stay ahead of the technology curve.
             </p>'
             <div className='flex flex-wrap justify-center gap-4'>
@@ -419,7 +419,7 @@
               Complete Resource Library
             </h2>'
             <p className='text-xl text-zion-slate-light mb-8'>
-              Get notified about new resources, research findings, and industry insights.;
+              Get notified about new resources, research findings, and industry insights.
               Never miss valuable knowledge from Zion Tech Group.
             </p>
           </motion.div>
@@ -546,7 +546,7 @@
               </h2>'
               <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
                 Can't find what you;
-  're looking for? Our team is here to help you access;
+  're looking for? Our team is here to help you access
                 the right resources and support for your needs.
               </p>
               {/* Contact Information */}'

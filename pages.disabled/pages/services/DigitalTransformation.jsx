@@ -127,7 +127,7 @@ import { ArrowRight } from;
       icon:,
   📈',
   ';
-      description: 'Continuous improvement and scaling}];
+      description: 'Continuous improvement and scaling}]
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20'>'<SEO''        title='Digital Transformation - Zion Tech Group''
         description='Transform your business for the digital age with our comprehensive digital transformation services.'';
@@ -142,7 +142,7 @@ import { ArrowRight } from;
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-          >';
+          >'
             Digital''
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>'{
   ' '}              Transformation
@@ -154,7 +154,7 @@ import { ArrowRight } from;
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Embrace the future of business with our comprehensive digital;
-            transformation services designed to modernize your operations and;
+            transformation services designed to modernize your operations and
             drive sustainable growth.
           </motion.p>
           <motion.div;
@@ -179,7 +179,7 @@ import { ArrowRight } from;
               End-to-end digital transformation solutions for modern businesses
             </p>
 :pages.disabled/pages/services/DigitalTransformation.jsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {transformationServices.map((service, index) => (
@@ -194,7 +194,7 @@ import { ArrowRight } from;
                 <h3 className='text-2xl font-semibold text-white mb-4'>
                   {service.title}'
                 </h3>''
-                <p className='text-gray-300 mb-6'>{service.description}</p>';
+                <p className='text-gray-300 mb-6'>{service.description}</p>'
 ''
                 <div className='mb-6'>''
                   <h4 className='text-sm font-semibold text-blue-400 mb-3'>
@@ -224,7 +224,7 @@ import { ArrowRight } from;
               Unlock new opportunities and competitive advantages
             </p>
 :pages.disabled/pages/services/DigitalTransformation.jsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'
             <motion.div'';
@@ -249,7 +249,7 @@ import { ArrowRight } from;
                 Streamlined processes and automated workflows
               </p>
             </motion.div>
-:pages.disabled/pages/services/DigitalTransformation.jsx;
+:pages.disabled/pages/services/DigitalTransformation.jsx
 '
             <motion.div'';
               className='text-center';
@@ -273,7 +273,7 @@ import { ArrowRight } from;
                 Enhanced engagement and satisfaction
               </p>
             </motion.div>
-:pages.disabled/pages/services/DigitalTransformation.jsx;
+:pages.disabled/pages/services/DigitalTransformation.jsx
 '
             <motion.div'';
               className='text-center';
@@ -310,7 +310,7 @@ import { ArrowRight } from;
               A proven methodology for successful digital transformation
             </p>
 :pages.disabled/pages/services/DigitalTransformation.jsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {transformationApproach.map((step, index) => (
@@ -335,12 +335,12 @@ import { ArrowRight } from;
 '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50'>''
         <div className='max-w-4xl mx-auto text-center'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/DigitalTransformation.jsx;
+:pages.disabled/pages/services/DigitalTransformation.jsx
             Ready to Transform Your Business?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
   ';
-            Let's discuss how digital transformation can drive your business;
+            Let's discuss how digital transformation can drive your business
             forward
           </p>'
           <Link'';
@@ -353,4 +353,4 @@ import { ArrowRight } from;
   )}
 ;
 :pages.disabled/pages/services/DigitalTransformation.jsx;
-export default DigitalTransformation'';''"
+export default DigitalTransformation''''"

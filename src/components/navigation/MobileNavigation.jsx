@@ -10,7 +10,7 @@ export function MobileNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
+  }
   return (
     <div className="lg: hidden">
       <Button
@@ -41,5 +41,5 @@ export function MobileNavigation() {
         </div>
       )}
     </div>
-  );
+  )
 }

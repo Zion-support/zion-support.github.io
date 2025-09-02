@@ -1,13 +1,13 @@
 // removed duplicate old section;
 const EcommercePersonalization: React.FC = (): JSX.Element => {}
-  return();
+  return()
 :pages.disabled/pages/services/EcommercePersonalization.tsx
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>'<SEO''        title='E‑commerce Personalization - Zion Tech Group'';
         description='Realtime recommendations, bundles, and pricing nudges to maximize AOV and LTV.'';
         keywords='ecommerce personalization, recommendations, AOV, LTV''/>''
       <section className='mx-auto max-w-6xl px-6 py-16'>''
         <div className='flex items-center gap-3 mb-6 text-cyan-300'>''
-          <ShoppingCart className='h-5 w-5'  />'';
+          <ShoppingCart className='h-5 w-5'  />''
 :pages.disabled/pages/services/EcommercePersonalization.tsx
           <span className='text-sm font-semibold'>E‑COMMERCE PERSONALIZATION</span>'
         </div>''
@@ -24,7 +24,7 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
             </ul>'</div>''          <div className='rounded-xl border border-white/10 bg-white/5 p-6'>''
             <div className='mb-2 font-semibold'>Outcomes</div>''
             <ul className='space-y-2 text-sm text-slate-300'>''
-              <li className='flex items-center gap-2'><Sparkles className='h-4 w-4 text-cyan-300' /> +5–15% AOV</li>'';
+              <li className='flex items-center gap-2'><Sparkles className='h-4 w-4 text-cyan-300' /> +5–15% AOV</li>''
 :pages.disabled/pages/services/EcommercePersonalization.tsx
               <li className='flex items-center gap-2'><Sparkles className='h-4 w-4 text-cyan-300' /> +3–8% conversion rate</li>'              <li className='flex items-center gap-2'><BarChart3 className='h-4 w-4 text-cyan-300'/> Experiment results dashboard</li>'
             </ul>''
@@ -36,6 +36,6 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
   )}
 ;
 :pages.disabled/pages/services/EcommercePersonalization.tsx;
-export { EcommercePersonalization }';
+export { EcommercePersonalization }'
 export default EcommercePersonalization}
   '''"

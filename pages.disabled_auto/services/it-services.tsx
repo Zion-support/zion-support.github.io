@@ -66,7 +66,7 @@ const ITServicesPage: NextPage = () => {
     {
       icon: <Globe className='w-8 h-8' />,
       title: 'Global Support',
-      description:;
+      description:
         '24/7 support and monitoring to ensure your systems run smoothly.'}]
   return(
     <MainLayout
@@ -331,7 +331,7 @@ const ITServicesPage: NextPage = () => {
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your IT Infrastructure?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
-            Let&aposs discuss how our IT services can help modernize your infrastructure '';
+            Let&aposs discuss how our IT services can help modernize your infrastructure ''
             and drive operational efficiency.
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -351,5 +351,5 @@ const ITServicesPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default ITServicesPage

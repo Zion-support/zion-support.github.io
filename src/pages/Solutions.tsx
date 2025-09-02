@@ -11,4 +11,3 @@ const Solutions: React.FC = () => {
       </div>
 </>
   )}
-;

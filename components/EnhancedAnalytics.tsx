@@ -7,10 +7,11 @@ interface AnalyticsData {
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
-  topPages: Array<{ page: string views: number }>
-  trafficSources: Array<{ source: string percentage: number }>
-  deviceTypes: Array<{ device: string percentage: number }>
-  realTimeUsers: number}
+  topPages: Array<{ page: string; views: number }>;
+  trafficSources: Array<{ source: string; percentage: number }>;
+  deviceTypes: Array<{ device: string; percentage: number }>;
+  realTimeUsers: number;
+}
 const EnhancedAnalytics: React.FC = () => {
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
     pageViews: 0, uniqueVisitors: 0,
@@ -35,7 +36,7 @@ const EnhancedAnalytics: React.FC = () => {
         ], realTimeUsers: 23})} catch (error) {
       console.error('Error fetching analytics data: ', error)} finally {
       setIsLoading(false)}
-  }, [selectedTimeRange]);
+  }, [selectedTimeRange])
   useEffect(() => {
     fetchAnalyticsData()}, [fetchAnalyticsData])
   const StatCard: React.FC<{
@@ -73,10 +74,10 @@ const EnhancedAnalytics: React.FC = () => {
     <div className='space-y-6'>
       <div className='flex items-center justify-between'>
         <h1 className='text-3xl font-bold text-gray-900'>Analytics Dashboard</h1>
-        <select;
+        <select
           value={selectedTimeRange}
           onChange={(e) => setSelectedTimeRange(e.target.value)}
-          className='px-4 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500'
+          className='px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500'
         >
           <option value='24h'>Last 24 hours</option>
           <option value='7d'>Last 7 days</option>
@@ -85,29 +86,29 @@ const EnhancedAnalytics: React.FC = () => {
         </select>
       </div>
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
-        <StatCard;
-          title='Page Views';
+        <StatCard
+          title='Page Views'
           value={analyticsData.pageViews.toLocaleString()}
           icon={<Eye className='w-6 h-6 text-blue-600' />}
           change={12.5}
           color='blue'
         />
-        <StatCard;
-          title='Unique Visitors';
+        <StatCard
+          title='Unique Visitors'
           value={analyticsData.uniqueVisitors.toLocaleString()}
           icon={<Users className='w-6 h-6 text-green-600' />}
           change={8.3}
           color='green'
         />
-        <StatCard;
-          title='Bounce Rate';
+        <StatCard
+          title='Bounce Rate'
           value={`${analyticsData.bounceRate}%`}
           icon={<MousePointer className='w-6 h-6 text-orange-600' />}
           change={-2.1}
           color='orange'
         />
-        <StatCard;
-          title='Avg. Session Duration';
+        <StatCard
+          title='Avg. Session Duration'
           value={`${analyticsData.avgSessionDuration}m`}
           icon={<Clock className='w-6 h-6 text-purple-600' />}
           change={5.7}
@@ -160,5 +161,5 @@ const EnhancedAnalytics: React.FC = () => {
       </motion.div>
     </div>
   )}
-;
+
 export default EnhancedAnalytics

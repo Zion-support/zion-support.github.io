@@ -22,16 +22,16 @@ export default function AIQuantumComputingPlatform() {
   return();
     <div className='min-h-screen bg-white'>'{/* Hero Section */}''      <section className='bg-gradient-to-br from-purple-600 via-indigo-600 to-blue-800 py-20 text-center text-white'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
-            <Atom className='w-4 h-4 mr-2'  /> AI-Powered Quantum Computing;
+            <Atom className='w-4 h-4 mr-2'  /> AI-Powered Quantum Computing
             Platform'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold mb-6'>
             AI Quantum Computing Platform'
           </h1>'          <p className='text-xl text-purple-100 mb-8 max-w-3xl mx-auto'>
             Harness the power of quantum computing with AI-driven optimization,
-            hybrid quantum-classical solutions, and breakthrough computational;
+            hybrid quantum-classical solutions, and breakthrough computational
             capabilities. Solve the impossible with quantum intelligence.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -57,7 +57,7 @@ export default function AIQuantumComputingPlatform() {
             Advanced quantum computing solutions powered by AI
           </p>
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='grid md:grid-cols-2 gap-8'>'
           <div>''
@@ -70,7 +70,7 @@ export default function AIQuantumComputingPlatform() {
               ))}
             </ul>
           </div>
-:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx;
+:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
 '
           <div>''
             <h3 className='text-2xl font-semibold text-gray-900 mb-6'>
@@ -93,16 +93,16 @@ export default function AIQuantumComputingPlatform() {
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
               Why Choose AI Quantum Computing Platform?'</h2>''            <p className='text-xl text-gray-600'>
-              Transform your computational capabilities with quantum;
+              Transform your computational capabilities with quantum
               intelligence
             </p>
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map((benefit, index) => (
               <div'key={index}''                className='bg-white p-6 rounded-xl shadow-sm border border-gray-100''>''
-                <div className='w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
                   <TrendingUp className='w-6 h-6 text-purple-600'  />'</div>'                <p className='text-gray-700 font-medium'>{benefit}</p>              </div>
             ))}
@@ -118,12 +118,12 @@ export default function AIQuantumComputingPlatform() {
             Revolutionary applications across cutting-edge industries
           </p>
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {useCases.map((useCase, index) => (
             <div'key={index}''              className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow''>''
-              <div className='w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-4'>'';
+              <div className='w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
                 <Cpu className='w-5 h-5 text-purple-600'  />'</div>'              <h3 className='font-semibold text-gray-900 mb-2'>{useCase}</h3>            </div>
           ))}
@@ -153,7 +153,7 @@ export default function AIQuantumComputingPlatform() {
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx)}';
+:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-gray-900 mb-2'>
@@ -163,14 +163,14 @@ export default function AIQuantumComputingPlatform() {
                     {plan.price}'
                   </div>''
                   <p className='text-gray-600'>per month</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='flex items-start'>''
                       <CheckCircle className='w-5 h-5 text-purple-500 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-700'>{feature}</span>
                     </li>
                   ))}
                 </ul>
-:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx;
+:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
 `
                 <button``
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${,
@@ -184,7 +184,7 @@ export default function AIQuantumComputingPlatform() {
               </div>
             ))}
 :pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='text-center mt-12'>''
             <p className='text-gray-600 mb-4'>
@@ -205,7 +205,7 @@ export default function AIQuantumComputingPlatform() {
             Proven Results'</h2>''          <div className='grid md:grid-cols-3 gap-8'>''
             <div className='bg-white rounded-lg p-6 shadow-sm'>''
               <div className='text-3xl font-bold text-purple-600 mb-2'>
-:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx;
+:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
                 1000x'
               </div>''
               <p className='text-gray-700'>Faster problem solving</p>'
@@ -227,11 +227,11 @@ export default function AIQuantumComputingPlatform() {
 '{/* CTA Section */}''      <section className='py-16 bg-gray-900 text-white'>''
         <div className='max-w-4xl mx-auto px-6 text-center'>''
           <h2 className='text-3xl font-bold mb-6'>
-:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx;
+:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
             Ready to Harness Quantum Power?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
-            Join leading organizations already using AI Quantum Computing;
+            Join leading organizations already using AI Quantum Computing
             Platform to solve the impossible.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -247,16 +247,16 @@ export default function AIQuantumComputingPlatform() {
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx;
+:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
 '{/* Contact Section */}''
       <section className='py-16 max-w-4xl mx-auto px-6 text-center'>''
-        <h2 className='text-3xl font-bold text-gray-900 mb-8'>';
+        <h2 className='text-3xl font-bold text-gray-900 mb-8'>'
           Questions? We
   're Here to Help'</h2>''        <div className='grid md:grid-cols-2 gap-8'>''
           <div className='bg-white border border-gray-200 rounded-xl p-6 shadow-sm'>''
             <Phone className='w-8 h-8 text-purple-500 mx-auto mb-4'  />''
             <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx;
+:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
               Call Us'
             </h3>''
             <p className='text-gray-600 mb-4'>
@@ -271,7 +271,7 @@ export default function AIQuantumComputingPlatform() {
           </div>'''          <div className='bg-white border border-gray-200 rounded-xl p-6 shadow-sm'>''
             <Mail className='w-8 h-8 text-purple-500 mx-auto mb-4'  />''
             <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx;
+:pages.disabled/pages/services/AIQuantumComputingPlatform.tsx
               Email Us'
             </h3>''
             <p className='text-gray-600 mb-4'>
@@ -282,7 +282,7 @@ export default function AIQuantumComputingPlatform() {
               className='text-purple-600 hover:text-purple-700 font-semibold'>              kleber@ziontechgroup.com
             </a>
           </div>
-        </div>';
+        </div>'
 ''
         <div className='mt-12 p-6 bg-gray-50 rounded-xl'>''
           <h3 className='text-lg font-semibold text-gray-900 mb-2'>
@@ -298,5 +298,5 @@ export default function AIQuantumComputingPlatform() {
         </div>
       </section>
     </div>
-  )}''`;
+  )}''`
   ''`'"`

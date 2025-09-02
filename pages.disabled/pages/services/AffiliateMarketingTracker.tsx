@@ -81,7 +81,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 <:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
       <SEO;
 =;
-      <SEO '>        title = 'Affiliate Marketing Tracker - Zion Tech Group';
+      <SEO '>        title = 'Affiliate Marketing Tracker - Zion Tech Group'
         description='Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI.'
     <>'
       <SEO '';
@@ -117,7 +117,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
                   </span>'
                 </h1>''
                 <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-                  Advanced affiliate tracking platform with AI-powered analytics, real-time reporting, and fraud detection.;
+                  Advanced affiliate tracking platform with AI-powered analytics, real-time reporting, and fraud detection.
                   Optimize your affiliate program and maximize ROI.'
                 </p>''
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -139,7 +139,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
                   </span>
                 </h1>''
                 <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-                  Advanced affiliate tracking platform with AI-powered analytics, real-time reporting, and fraud detection.;
+                  Advanced affiliate tracking platform with AI-powered analytics, real-time reporting, and fraud detection.
                   Optimize your affiliate program and maximize ROI.
                 </p>''
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -158,14 +158,14 @@ export default function AffiliateMarketingTracker(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx
 '{/* Features Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-                Powerful Features for Modern Affiliate Marketing';
+                Powerful Features for Modern Affiliate Marketing'
                 Powerful Features for Modern Affiliate Marketing
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -176,7 +176,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
 <:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map((feature, index()
@@ -206,7 +206,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -218,14 +218,14 @@ export default function AffiliateMarketingTracker(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx
 '{/* Benefits Section */}''
         <section className='py-20 bg-slate-800/30'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-                Why Choose Our Affiliate Tracker?';
+                Why Choose Our Affiliate Tracker?'
                 Why Choose Our Affiliate Tracker?
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -236,7 +236,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
 <:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefit: unknown, index: unknown()
@@ -280,14 +280,14 @@ export default function AffiliateMarketingTracker(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx
 '{/* Pricing Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
-                Transparent Pricing Plans';
+                Transparent Pricing Plans'
                 Transparent Pricing Plans
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -298,7 +298,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
 <:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(plan: unknown, index: unknown()
@@ -342,12 +342,12 @@ export default function AffiliateMarketingTracker(...args[]):  {}
                   <div className='text-center mb-6'>''
                     <h3 className='text-2xl font-bold mb-2 text-white'>{plan.name}</h3>''
                     <div className='mb-4'>''
-                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
                       <span className='text-gray-400'>{plan.period}</span>'
                     </div>''
                     <p className='text-gray-300'>{plan.description}</p>
-                  </div>';
+                  </div>'
 ''
                   <ul className='space-y-3 mb-8'>'
                       <span className='text-gray-400'>{plan.period}</span>
@@ -362,7 +362,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
                       </li>
                     ))}
                   </ul>
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx
 '
                   <Link''`
                     to='/request-quote'``;
@@ -384,7 +384,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AffiliateMarketingTracker.tsx;
+:pages.disabled/pages/services/AffiliateMarketingTracker.tsx
 '{/* CTA Section */}''
         <section className='py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20'>'
           <div className='max-w-4xl mx-auto text-center px-6'>
@@ -442,5 +442,5 @@ export default function AffiliateMarketingTracker(...args[]):  {}
         </section>
       </div>
     </>
-  )}''`;
+  )}''`
 ''`''`

@@ -37,10 +37,10 @@ import {}
       period: '/mo',';
       contacts: 'Unlimited contacts',';
       features: ['Full AI suite',White-label options',Dedicated support',SAML/SSO',Custom integrations',Advanced reporting']}
-  ];
+  ]
   return()
     <>
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
 <:pages.disabled/pages/services/AIMarketingAutomation.tsx
       <SEO;
@@ -79,7 +79,7 @@ import {}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}'';
               className='text-center''>''
-              <div className='inline-flex items-center px-4 py-2 rounded-full bg-pink-500/20 border border-pink-400/30 text-pink-400 text-sm font-medium mb-6'>'';
+              <div className='inline-flex items-center px-4 py-2 rounded-full bg-pink-500/20 border border-pink-400/30 text-pink-400 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
                 <Target className='w-4 h-4 mr-2'  />                AI Marketing Automation'
               </div>''
@@ -92,10 +92,10 @@ import {}
               </h1>''
               <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
 :pages.disabled/pages/services/AIMarketingAutomation.tsx;
-                Transform your marketing with AI that personalizes campaigns, optimizes performance, and delivers;
+                Transform your marketing with AI that personalizes campaigns, optimizes performance, and delivers
                 exceptional ROI. Automate what you can, personalize what matters.
               </p>';
-                Transform your marketing with AI that personalizes campaigns, optimizes performance, and delivers;
+                Transform your marketing with AI that personalizes campaigns, optimizes performance, and delivers
                 exceptional ROI. Automate what you can, personalize what matters.'
               </p>''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -119,7 +119,7 @@ import {}
                 <span className='text-white'>That Converts</span>
               </h1>''
               <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-                Transform your marketing with AI that personalizes campaigns, optimizes performance, and delivers;
+                Transform your marketing with AI that personalizes campaigns, optimizes performance, and delivers
                 exceptional ROI. Automate what you can, personalize what matters.
               </p>''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -139,7 +139,7 @@ import {}
             </motion.div>
           </div>
         </section>
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx
 '{/* Benefits Section */}''
         <section className='py-20 px-4'>''
           <div className='container mx-auto max-w-7xl'>
@@ -152,14 +152,14 @@ import {}
               className='text-center mb-16''>''
               <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIMarketingAutomation.tsx;
-                Transform Your Marketing Results';
+                Transform Your Marketing Results'
                 Transform Your Marketing Results
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 See measurable improvements in ROI, customer engagement, and campaign performance
               </p>
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {benefits.map((benefit, index()
@@ -177,7 +177,7 @@ import {}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}'';
                   className='text-center''>''
-                  <div className='w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                  <div className='w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
                     <benefit.icon className='w-8 h-8 text-white' />'
                     <benefit.icon className='w-8 h-8 text-white' />
@@ -189,7 +189,7 @@ import {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx
 '{/* Features Section */}''
         <section className='py-20 px-4 bg-slate-800/30'>''
           <div className='container mx-auto max-w-7xl'>
@@ -201,13 +201,13 @@ import {}
               transition={{ duration: 0.8 }}'';
               className='text-center mb-16''>''
               <h2 className='text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx
                 AI-Powered Features That Revolutionize Marketing'
               </h2>''
-              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'
                 Our AI doesn't just automate—it personalizes, optimizes, and delivers results that matter
               </p>
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map(feature: unknown, index: unknown()
@@ -230,7 +230,7 @@ import {}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}'';
                   className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-pink-400/50 transition-all duration-300 group''>''
-                  <div className='w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>'';
+                  <div className='w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -243,7 +243,7 @@ import {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx
 '{/* Pricing Section */}''
         <section className='py-20 px-4'>''
           <div className='container mx-auto max-w-7xl'>
@@ -256,14 +256,14 @@ import {}
               className='text-center mb-16''>''
               <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIMarketingAutomation.tsx;
-                Choose Your AI Marketing Plan';
+                Choose Your AI Marketing Plan'
                 Choose Your AI Marketing Plan
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Start with our free trial and scale as you grow. All plans include our core AI features.
               </p>
 :pages.disabled/pages/services/AIMarketingAutomation.tsx
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid md:grid-cols-3 gap-8'>
               {pricingPlans.map(plan: unknown, index: unknown()
@@ -290,7 +290,7 @@ import {}
                       ? 'border-pink-400 shadow-lg shadow-pink-400/20' ';
                       : 'border-slate-700/50'`>';
                     plan.popular '';
-                      ? 'border-pink-400 shadow-lg shadow-pink-400/20' ''`;
+                      ? 'border-pink-400 shadow-lg shadow-pink-400/20' ''`
                       : 'border-slate-700/50'``}`}
 :pages.disabled/pages/services/AIMarketingAutomation.tsx>'>{plan.popular && (''
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -305,14 +305,14 @@ import {}
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>
                     <div className='flex items-baseline justify-center mb-2'>
                       <span className='text-4xl font-bold text-white'>{plan.price}</span>
-=;
+=
                   '
                   <div className='text-center mb-6'>'
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
                     <div className='flex items-baseline justify-center mb-2'>'
                       <span className='text-4xl font-bold text-white'>{plan.price}</span>'
 >                      <span className='text-gray-400 ml-1'>{plan.period}</span>
-                    </div>')}';
+                    </div>')}'
                   ''
                   <div className='text-center mb-6'>''
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
@@ -321,9 +321,9 @@ import {}
                       <span className='text-gray-400 ml-1'>{plan.period}</span>'
                     </div>''
                     <p className='text-gray-300'>{plan.description}</p>
-                  </div>';
+                  </div>'
 ''
-                  <ul className='space-y-3 mb-8'>';
+                  <ul className='space-y-3 mb-8'>'
                   ''
                   <div className='text-center mb-6'>''
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
@@ -365,7 +365,7 @@ import {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AIMarketingAutomation.tsx;
+:pages.disabled/pages/services/AIMarketingAutomation.tsx
 '{/* CTA Section */}''
         <section className='py-20 px-4 bg-slate-800/30'>''
           <div className='container mx-auto max-w-4xl text-center'>
@@ -384,7 +384,7 @@ import {}
                 <motion.button;
                   whileHover={{ scale: 1.05 }}';
                   whileTap={{ scale: 0.95 }}'';
-                  className='px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center'>';
+                  className='px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center'>'
                   Start Free Trial''
                   <ArrowRight className='w-5 h-5 ml-2'  />                </motion.button>
                 <motion.button;
@@ -420,5 +420,5 @@ import {}
     </>
   )}
 ;
-export { AIMarketingAutomation }export default AIMarketingAutomation''`;
+export { AIMarketingAutomation }export default AIMarketingAutomation''`
 ''`''`

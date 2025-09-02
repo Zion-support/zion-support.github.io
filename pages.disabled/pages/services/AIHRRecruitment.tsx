@@ -27,18 +27,18 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
   ]';High-volume recruitment and hiring',';Technical talent acquisition',';Executive search and placement',';Seasonal hiring optimization',';Diversity and inclusion hiring',';Remote workforce recruitment';
   ]';Reduce time-to-hire by 40-60%',';Improve candidate quality by 30-50%',';Cut recruitment costs by 25-40%',';Increase diversity in hiring by 35-55%',';Enhance candidate experience',';Scale recruitment without additional staff';
   ]';Technology & Software',';Healthcare & Life Sciences',';Financial Services',';Manufacturing & Industrial',';Retail & E-commerce',';Professional Services';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIHRRecruitment.tsx
             <Users className='w-4 h-4 mr-2'  /> AI-Powered HR Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI HR Recruitment Platform</h1>'          <p className='text-purple-100 text-xl'>Revolutionize your hiring process with AI-powered recruitment that finds the best talent faster, reduces bias, and improves hiring outcomes.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           </div>
 :pages.disabled/pages/services/AIHRRecruitment.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           ))}
 :pages.disabled/pages/services/AIHRRecruitment.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
 :pages.disabled/pages/services/AIHRRecruitment.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-violet-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Business Impact</h3>''
@@ -146,7 +146,7 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
 :pages.disabled/pages/services/AIHRRecruitment.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your recruitment process?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-violet-600 text-white rounded-lg hover:bg-violet-700 transition-colors'>''
 :pages.disabled/pages/services/AIHRRecruitment.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

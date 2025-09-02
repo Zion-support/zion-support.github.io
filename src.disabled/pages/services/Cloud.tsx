@@ -44,17 +44,17 @@ const CloudServices = () => {
     'Global availability and disaster recovery',';Automated scaling and resource management';
   ];
 :pages.disabled/pages/services/Cloud.tsx;
-';
+'
   return (''
     <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''
       <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
           <div className='mb-8'>''
-            <div className='inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/Cloud.tsx
               <Cloud className='w-4 h-4 mr-2' />              Cloud & DevOps'
             </div>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Cloud & DevOps''
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'> Solutions</span>'
             </h1>''
@@ -72,7 +72,7 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/Cloud.tsx;
+:pages.disabled/pages/services/Cloud.tsx
 '{/* Cloud Services */}''
       <section id='services' className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
@@ -81,11 +81,11 @@ const CloudServices = () => {
 :pages.disabled/pages/services/Cloud.tsx
               Our Cloud Services'</h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              End-to-end cloud solutions designed to modernize your infrastructure;
+              End-to-end cloud solutions designed to modernize your infrastructure
               and accelerate your business growth.
             </p>
 :pages.disabled/pages/services/Cloud.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{cloudServices.map((service, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300'>''
@@ -93,7 +93,7 @@ const CloudServices = () => {
                   <service.icon className='w-8 h-8 text-white'/>'</div>''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
                 <p className='text-gray-300 mb-4'>{service.description}</p>''
-                <p className='text-lg font-semibold text-blue-400 mb-4'>{service.price}</p>'';
+                <p className='text-lg font-semibold text-blue-400 mb-4'>{service.price}</p>''
 :pages.disabled/pages/services/Cloud.tsx
                 <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='text-sm text-gray-400 flex items-start'>''
@@ -107,7 +107,7 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/Cloud.tsx;
+:pages.disabled/pages/services/Cloud.tsx
 '{/* Cloud Platforms */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>''
         <div className='max-w-7xl mx-auto'>''
@@ -116,11 +116,11 @@ const CloudServices = () => {
 :pages.disabled/pages/services/Cloud.tsx
               Cloud Platforms We Work With'</h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Expertise across all major cloud providers to ensure you get the best;
+              Expertise across all major cloud providers to ensure you get the best
               solutions for your specific needs.
             </p>
 :pages.disabled/pages/services/Cloud.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{cloudPlatforms.map((platform, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300'>''
@@ -140,7 +140,7 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/Cloud.tsx;
+:pages.disabled/pages/services/Cloud.tsx
 '{/* Benefits Section */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
@@ -150,7 +150,7 @@ const CloudServices = () => {
                 Why Choose Cloud Solutions?'
               </h2>''
               <p className='text-lg text-gray-300 mb-6'>
-                Cloud computing provides numerous advantages that can transform;
+                Cloud computing provides numerous advantages that can transform
                 your business operations and drive innovation.'
               </p>''
               <ul className='space-y-3'>'{benefits.map((benefit, index) => (''
@@ -165,7 +165,7 @@ const CloudServices = () => {
               <div className='text-center'>''
                 <Zap className='w-24 h-24 text-blue-400 mx-auto mb-4' />''
                 <h3 className='text-2xl font-bold text-white mb-2'>Cloud Expertise</h3>'                <p className='text-gray-300 mb-6'>
-:pages.disabled/pages/services/Cloud.tsx;
+:pages.disabled/pages/services/Cloud.tsx
                   Our team has extensive experience with cloud platforms and
                   can help you navigate the complex cloud landscape.'</p>''
                 <div className='text-sm text-gray-400'>
@@ -178,12 +178,12 @@ const CloudServices = () => {
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/Cloud.tsx;
+:pages.disabled/pages/services/Cloud.tsx
 '{/* CTA Section */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-4xl mx-auto text-center'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/Cloud.tsx;
+:pages.disabled/pages/services/Cloud.tsx
             Ready to Scale Your Infrastructure?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
@@ -201,5 +201,5 @@ const CloudServices = () => {
     </div>
   )}
 :pages.disabled/pages/services/Cloud.tsx;
-';
+'
 export default CloudServices}}}''''

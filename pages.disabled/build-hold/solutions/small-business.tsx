@@ -14,13 +14,13 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   '        'Inventory tracking;
   ', 'Financial reporting;
   ',';
-  'Team collaboration tools''      ];
+  'Team collaboration tools''      ]
   '    }, {
       title: 'AI-Powered Customer Support,'      description:
   'Automated customer service with human touch', icon: <Users className='w-8 h-8' />,'      features: [',
   24/7 chatbot support',
   'Ticket management system',
-  '        'Knowledge base integration;
+  '        'Knowledge base integration
   ', 'Performance analytics'
   '      ]'    }, {
       title: 'Digital Marketing Automation,
@@ -30,14 +30,14 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   ', 'Social media management;
   ',';
   'Content generation',
-  'Lead nurturing automation''      ];
+  'Lead nurturing automation''      ]
   '    }, {
       title: 'Cybersecurity Protection,'      description:
   'Comprehensive security for your business data', icon: <Shield className='w-8 h-8' />,'      features: [';
   'Data encryption',
   'Regular security audits',
   '        'Backup and recovery;
-  ', 'Employee training';
+  ', 'Employee training'
   '      ]'    }
   ]
   const benefits = [
@@ -90,7 +90,7 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
   ',';
   '24/7 phone support',
   'Custom development',
-  '        'Advanced security features';
+  '        'Advanced security features'
   '      ]'    }
   ]
   return(
@@ -147,5 +147,5 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
       </section>
     </MainLayout>
   )}
-;
+
 export default SmallBusiness

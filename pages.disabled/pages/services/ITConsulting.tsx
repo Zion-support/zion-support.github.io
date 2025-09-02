@@ -186,9 +186,9 @@ export default function ITConsulting(...args: []):  {}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}'';
             className='text-center''>''
-            <div className='inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/ITConsulting.tsx
-              <Briefcase className='w-4 h-4 mr-2'  />              IT Consulting Services;
+              <Briefcase className='w-4 h-4 mr-2'  />              IT Consulting Services
 :pages.disabled/pages/services/ITConsulting.tsx
             </div>
 <:pages.disabled/pages/services/ITConsulting.tsx;
@@ -201,7 +201,7 @@ export default function ITConsulting(...args: []):  {}
               <span className='bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'> Consulting</span>
             </h1>''
             <p className='text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed'>
-              Strategic IT consulting services that align technology with your business objectives.;
+              Strategic IT consulting services that align technology with your business objectives.
               Our expert consultants help you make informed technology decisions that drive growth and innovation.
             </p>
 :pages.disabled/pages/services/ITConsulting.tsx
@@ -210,16 +210,16 @@ export default function ITConsulting(...args: []):  {}
             '>            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <Link';
                 to='/contact';
-            </div>';
+            </div>'
             ''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               IT''
               <span className='bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent'> Consulting</span>'
             </h1>''
             <p className='text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed'>
-              Strategic IT consulting services that align technology with your business objectives.;
+              Strategic IT consulting services that align technology with your business objectives.
               Our expert consultants help you make informed technology decisions that drive growth and innovation.
-            </p>';
+            </p>'
             ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <Link'';
@@ -265,11 +265,11 @@ export default function ITConsulting(...args: []):  {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ITConsulting.tsx;
-              Comprehensive IT Consulting Features';
+              Comprehensive IT Consulting Features'
               Comprehensive IT Consulting Features
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Comprehensive IT consulting services designed to help you make the right technology decisions;
+              Comprehensive IT consulting services designed to help you make the right technology decisions
               and implement solutions that drive business success.
             </p>
 :pages.disabled/pages/services/ITConsulting.tsx
@@ -303,10 +303,10 @@ export default function ITConsulting(...args: []):  {}
                 <div className='flex items-start gap-4 mb-6'>'
                   <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0'>';
   delay: index * 0.1 ';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200''>''
                 <div className='flex items-start gap-4 mb-6'>''
-                  <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0'>'';
+                  <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0'>''
 :pages.disabled/pages/services/ITConsulting.tsx
                     <service.icon className='w-8 h-8 text-white' />
                   </div>'
@@ -317,7 +317,7 @@ export default function ITConsulting(...args: []):  {}
                     <p className='text-zion-slate-light leading-relaxed'>{service.description}</p>
                   </div>
 :pages.disabled/pages/services/ITConsulting.tsx
-                </div>';
+                </div>'
 ''
                 <div className='mb-6'>''''
                   <h4 className='text-zion-cyan font-semibold mb-3'>What's Included:</h4>''
@@ -360,14 +360,14 @@ export default function ITConsulting(...args: []):  {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/ITConsulting.tsx;
+:pages.disabled/pages/services/ITConsulting.tsx
               Core IT Consulting Services'
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              From strategy to implementation, we provide;
+              From strategy to implementation, we provide
               comprehensive IT consulting solutions.
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {expertise.map(area: unknown, index: unknown()
@@ -375,7 +375,7 @@ export default function ITConsulting(...args: []):  {}
               Core IT Consulting Services;
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              From strategy to implementation, we provide;
+              From strategy to implementation, we provide
               comprehensive IT consulting solutions.
             </p>
           </motion.div>
@@ -407,10 +407,10 @@ export default function ITConsulting(...args: []):  {}
                 <div className='flex items-start space-x-4'>'
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0'>';
   delay: index * 0.1 ';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200''>''
                 <div className='flex items-start space-x-4'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0'>''
 :pages.disabled/pages/services/ITConsulting.tsx
                     <service.icon className='w-6 h-6 text-white' />
                   </div>'
@@ -449,14 +449,14 @@ export default function ITConsulting(...args: []):  {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ITConsulting.tsx;
-              IT Consulting Benefits';
+              IT Consulting Benefits'
               IT Consulting Benefits
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Experience measurable improvements in IT efficiency, security, and business alignment.
             </p>
 :pages.disabled/pages/services/ITConsulting.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -508,7 +508,7 @@ export default function ITConsulting(...args: []):  {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ITConsulting.tsx;
-              Industry Applications';
+              Industry Applications'
               Industry Applications
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
@@ -516,7 +516,7 @@ export default function ITConsulting(...args: []):  {}
               each with unique technology challenges and requirements.
             </p>
 :pages.disabled/pages/services/ITConsulting.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {industries.map(industry: unknown, index: unknown()
@@ -549,7 +549,7 @@ export default function ITConsulting(...args: []):  {}
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200'>';
   delay: index * 0.1 '}}'';
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200''>'';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200''>''
                 <div className='text-zion-cyan font-semibold'>{industry}</div>
               </motion.div>
@@ -585,7 +585,7 @@ export default function ITConsulting(...args: []):  {}
               A proven methodology that ensures successful consulting outcomes and lasting value.
             </p>
 :pages.disabled/pages/services/ITConsulting.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>'{[''{ step: '01', title: 'Discovery', description: 'Understand your business needs and technology challenges' },'{ step: '02', title: 'Analysis', description: 'Analyze current state and identify opportunities' },'{ step: '03', title: 'Recommendations', description: 'Provide strategic recommendations and action plans' },'{ step: '04', title: 'Implementation', description: 'Support implementation and measure results' }
             ].map(phase: unknown, index: unknown()
@@ -633,7 +633,7 @@ export default function ITConsulting(...args: []):  {}
               Start Your IT Consultation Today'
             </h2>''
             <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
-              Let our IT consulting experts help you make the right technology decisions.;
+              Let our IT consulting experts help you make the right technology decisions.
               Get started with a free consultation today.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -659,7 +659,7 @@ export default function ITConsulting(...args: []):  {}
               Start Your IT Consultation Today
             </h2>''
             <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
-              Let our IT consulting experts help you make the right technology decisions.;
+              Let our IT consulting experts help you make the right technology decisions.
               Get started with a free consultation today.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -679,4 +679,4 @@ export default function ITConsulting(...args: []):  {}
       </section>
     </div>
   )}
-:pages.disabled/pages/services/ITConsulting.tsx;export default ITConsulting'';''";export default ITConsulting''
+:pages.disabled/pages/services/ITConsulting.tsx;export default ITConsulting'';''"export default ITConsulting''

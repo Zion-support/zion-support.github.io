@@ -141,14 +141,14 @@ export default function AIContentGenerator(...args[]):  {}
       cta: 'Contact Sales',
       popular: false}
   ];
-  return();
+  return()
 :pages.disabled/pages/services/AIContentGenerator.tsx
     <>
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
       <SEO;
 =;
-      <SEO '>        title = 'AI Content Generator - Create Engaging Content with AI';
+      <SEO '>        title = 'AI Content Generator - Create Engaging Content with AI'
         description='Generate high-quality, SEO-optimized content 10x faster with AI. Create articles, images, videos, and more for blogs, social media, and marketing campaigns.'
     <>'
       <SEO '';
@@ -181,17 +181,17 @@ export default function AIContentGenerator(...args[]):  {}
 '';
               <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-                AI Content Generator';
+                AI Content Generator'
                 AI Content Generator
               </h1>''
               <p className='text-xl md:text-2xl text-gray-300 mb-8'>
 :pages.disabled/pages/services/AIContentGenerator.tsx;
                 Create engaging, SEO-optimized content 10x faster with artificial intelligence.;
-                Generate articles, images, videos, and more for  platform.;
+                Generate articles, images, videos, and more for  platform.
 :pages.disabled/pages/services/AIContentGenerator.tsx
               </p>'
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
-                Create engaging, SEO-optimized content 10x faster with artificial intelligence.;
+                Create engaging, SEO-optimized content 10x faster with artificial intelligence.
                 Generate articles, images, videos, and more for  platform.'
               </p>''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -209,7 +209,7 @@ export default function AIContentGenerator(...args[]):  {}
             </motion.div>
           </div>
         </section>
-:pages.disabled/pages/services/AIContentGenerator.tsx;
+:pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* Features Section */}''
         <section className='py-20 bg-black/30'>'
           <div className='container-responsive'>
@@ -229,11 +229,11 @@ export default function AIContentGenerator(...args[]):  {}
 '';
               <h2 className='text-4xl md:text-5xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-                AI-Powered Content Creation';
+                AI-Powered Content Creation'
                 AI-Powered Content Creation
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Leverage cutting-edge artificial intelligence to create high-quality content;
+                Leverage cutting-edge artificial intelligence to create high-quality content
                 that engages your audience and drives results.
               </p>
 :pages.disabled/pages/services/AIContentGenerator.tsx
@@ -241,7 +241,7 @@ export default function AIContentGenerator(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map((feature, index()
@@ -271,7 +271,7 @@ export default function AIContentGenerator(...args[]):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300 group'';
 '';
-                  <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>'';
+                  <div className='inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-lg mb-4 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIContentGenerator.tsx
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -283,14 +283,14 @@ export default function AIContentGenerator(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AIContentGenerator.tsx;
+:pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* Content Types Section */}''
         <section className='py-20 bg-slate-800/30'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-                Create Any Type of Content';
+                Create Any Type of Content'
                 Create Any Type of Content
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -301,7 +301,7 @@ export default function AIContentGenerator(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {contentTypes.map(type: unknown, index: unknown()
@@ -331,13 +331,13 @@ export default function AIContentGenerator(...args[]):  {}
                   </div>'
                   <h3 className='text-xl font-semibold mb-3 text-white'>{type.title}</h3>';
   delay: index * 0.1;
-'}}'';
+'}}''
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300''>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>''
                     <type.icon className='w-6 h-6 text-white' />'
                   </div>''
                   <h3 className='text-xl font-semibold mb-3 text-white'>{type.title}</h3>'';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300''>''
                   <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>''
                     <type.icon className='w-6 h-6 text-white' />
@@ -349,17 +349,17 @@ export default function AIContentGenerator(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AIContentGenerator.tsx;
+:pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* Use Cases Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
-:pages.disabled/pages/services/AIContentGenerator.tsx;
+:pages.disabled/pages/services/AIContentGenerator.tsx
                 Perfect for Every Team'
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
-                Whether you're a solo creator or enterprise team, our platform scales with you;
+                Whether you're a solo creator or enterprise team, our platform scales with you
                 Perfect for Every Team
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -370,7 +370,7 @@ export default function AIContentGenerator(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {useCases.map(useCase: unknown, index: unknown()
@@ -400,13 +400,13 @@ export default function AIContentGenerator(...args[]):  {}
                   </div>'
                   <h3 className='text-xl font-semibold mb-3 text-white'>{useCase.title}</h3>';
   delay: index * 0.1;
-'}}'';
+'}}''
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300''>''
                   <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
                     <useCase.icon className='w-6 h-6 text-white' />'
                   </div>''
                   <h3 className='text-xl font-semibold mb-3 text-white'>{useCase.title}</h3>'';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-pink-500 transition-all duration-300''>''
                   <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
                     <useCase.icon className='w-6 h-6 text-white' />
@@ -418,7 +418,7 @@ export default function AIContentGenerator(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AIContentGenerator.tsx;
+:pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* Benefits Section */}''
         <section className='py-20'>'
           <div className='container-responsive'>
@@ -438,11 +438,11 @@ export default function AIContentGenerator(...args[]):  {}
 '';
               <h2 className='text-4xl md:text-5xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-                Proven Results';
+                Proven Results'
                 Proven Results
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Join thousands of content creators and marketers who have transformed;
+                Join thousands of content creators and marketers who have transformed
                 their content strategy with AI-powered generation.
               </p>
 :pages.disabled/pages/services/AIContentGenerator.tsx
@@ -450,7 +450,7 @@ export default function AIContentGenerator(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefit: unknown, index: unknown()
@@ -486,7 +486,7 @@ export default function AIContentGenerator(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AIContentGenerator.tsx;
+:pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* Pricing Section */}''
         <section className='py-20 bg-black/30'>'
           <div className='container-responsive'>
@@ -506,11 +506,11 @@ export default function AIContentGenerator(...args[]):  {}
 '';
               <h2 className='text-4xl md:text-5xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AIContentGenerator.tsx;
-                Simple, Transparent Pricing';
+                Simple, Transparent Pricing'
                 Simple, Transparent Pricing
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Choose the plan that fits your content creation needs.;
+                Choose the plan that fits your content creation needs.
                 All plans include a 14-day free trial.
               </p>
 :pages.disabled/pages/services/AIContentGenerator.tsx
@@ -518,7 +518,7 @@ export default function AIContentGenerator(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerator.tsx
 <:pages.disabled/pages/services/AIContentGenerator.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(plan: unknown, index: unknown()
@@ -563,12 +563,12 @@ export default function AIContentGenerator(...args[]):  {}
                   <div className='text-center mb-8'>''
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                     <div className='flex items-baseline justify-center mb-2'>''
-                      <span className='text-4xl font-bold text-purple-400'>{plan.price}</span>'';
+                      <span className='text-4xl font-bold text-purple-400'>{plan.price}</span>''
 :pages.disabled/pages/services/AIContentGenerator.tsx
                       <span className='text-gray-400 ml-1'>{plan.period}</span>'
                     </div>''
                     <p className='text-gray-300'>{plan.description}</p>
-                  </div>';
+                  </div>'
 ''
                   <ul className='space-y-3 mb-8'>'
                       <span className='text-gray-400 ml-1'>{plan.period}</span>
@@ -583,7 +583,7 @@ export default function AIContentGenerator(...args[]):  {}
                       </li>
                     ))}
 :pages.disabled/pages/services/AIContentGenerator.tsx
-                  </ul>`;
+                  </ul>`
 ``
                   <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -602,7 +602,7 @@ export default function AIContentGenerator(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AIContentGenerator.tsx;
+:pages.disabled/pages/services/AIContentGenerator.tsx
 '{/* CTA Section */}''
         <section className='py-20'>'
           <div className='container-responsive'>
@@ -621,20 +621,20 @@ export default function AIContentGenerator(...args[]):  {}
               className='text-center max-w-4xl mx-auto'';
 '';
               <h2 className='text-4xl md:text-5xl font-bold mb-6 text-white'>
-:pages.disabled/pages/services/AIContentGenerator.tsx;
+:pages.disabled/pages/services/AIContentGenerator.tsx
                 Ready to Revolutionize Your Content Creation?'
               </h2>''
               <p className='text-xl text-gray-300 mb-8'>
-                Join thousands of creators using AI to produce engaging content;
+                Join thousands of creators using AI to produce engaging content
                 faster, smarter, and more effectively than ever before.'
               </p>''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
                 <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>
-                  Start Free Trial';
+                  Start Free Trial'
                 Ready to Revolutionize Your Content Creation?
               </h2>''
               <p className='text-xl text-gray-300 mb-8'>
-                Join thousands of creators using AI to produce engaging content;
+                Join thousands of creators using AI to produce engaging content
                 faster, smarter, and more effectively than ever before.
               </p>''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -650,5 +650,5 @@ export default function AIContentGenerator(...args[]):  {}
         </section>
       </div>
     </>
-  )}''`;
+  )}''`
 ''`'"`

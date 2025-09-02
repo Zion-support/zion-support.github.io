@@ -19,7 +19,7 @@ import React, { createContext, useContext, useEffect, useState } from;
   '(prefers-color-scheme: dark)').matches ?;
   'dark' :;
   'light } else { effectiveTheme = theme } setIsDark(effectiveTheme ===,
-  dark') if (effectiveTheme ===;
+  dark') if (effectiveTheme ===
   'dark') { root.classList.add(
   'dark') root.classList.remove(
   'light') } else { root.classList.add(

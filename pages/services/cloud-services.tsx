@@ -263,4 +263,4 @@ const CloudServices: NextPage = () => {
     </Layout>
   );
 };
-export default CloudServices;
+export default CloudServices

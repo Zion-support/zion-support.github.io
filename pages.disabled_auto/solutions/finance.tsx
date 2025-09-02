@@ -111,5 +111,5 @@ export default function FinanceSolutions() {
         </div>
       </section>
     </div>
-  );
+  )
 }

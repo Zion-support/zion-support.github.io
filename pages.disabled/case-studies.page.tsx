@@ -182,7 +182,7 @@ export default function CaseStudies(...args: any[]): any {
   ' ||;
       study.technologies.some(tech => tech.toLowerCase().includes(selectedTechnology.toLowerCase()));
     const matchesSearch = study.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-                         study.comp.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         study.comp.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          study.challenge.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesIndustry && matchesTechnology && matchesSearch})
   return(
@@ -208,7 +208,7 @@ export default function CaseStudies(...args: any[]): any {
             </h1>
             <p className='text-xl text-zion-slate-light max-w-4xl mx-auto'>
               Discover how Zion Tech Group has transformed businesses across industries with;
-              cutting-edge technology solutions. Our case studies showcase measurable results;
+              cutting-edge technology solutions. Our case studies showcase measurable results
               and proven success stories.
             </p>
           </motion.div>
@@ -380,7 +380,7 @@ export default function CaseStudies(...args: any[]): any {
               Ready to Create Your Success Story?
             </h2>
             <p className='text-zion-slate-light text-lg mb-8'>
-              Let's discuss how Zion Tech Group can transform your business with;
+              Let's discuss how Zion Tech Group can transform your business with
               cutting-edge technology solutions.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

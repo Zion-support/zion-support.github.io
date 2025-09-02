@@ -27,7 +27,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {
   'ai')) return Brain';
     if (category.toLowerCase().includes(
   'cybersecurity')) return Shield'    if (category.toLowerCase().includes(
-  'cloud')) return Cloud;
+  'cloud')) return Cloud
     return Star}
 
     if (price < 300) return { tier: 'Starter, color:,
@@ -158,7 +158,7 @@ features[';Basic AI features',
                   type='text';
                   placeholder='Search services by name, description, or tags...';
                   value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}';
+                  onChange={(e) => setSearchTerm(e.target.value)}'
                   className='w-full px-4 py-3 pl-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-purple-500'/>'
                 <Search className='absolute left-4 top-1/2 transform -translate-y-1/2 text-white/60 w-5 h-5'  />              </div>
             </div>'
@@ -169,7 +169,7 @@ features[';Basic AI features',
                   onClick={() => setActiveCategory(category.id)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${
                     activeCategory === category.id,
-  ? 'bg-purple-600 border-purple-500 text-white';
+  ? 'bg-purple-600 border-purple-500 text-white'
   ': 'bg-white/10 border-white/20 text-white hover:bg-white/20`}`}
 '
                   <category.icon className='w-4 h-4' />
@@ -228,7 +228,7 @@ features[';Basic AI features',
         <div className='max-w-7xl mx-auto'>'
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredServices.map((service, index) => {
-;
+
               return()
                 <motion.div
                   key = {service.id}
@@ -310,7 +310,7 @@ features[';Basic AI features',
               <div className='text-gray-400 text-lg mb-4'>No services found matching your criteria</div>
               <button;
                 onClick={() => {
-                  setSearchTerm('');
+                  setSearchTerm('')
                   setActiveCategory(
   'all')}}'                className = 'bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg transition-colors'>
                 Clear all filters
@@ -363,7 +363,7 @@ features[';Basic AI features',
                 description: 'Try our services with confidence. Free trials and money-back guarantees.'},
               {
                 icon: Clock,';
-                title: '24/7 Support',';
+                title: '24/7 Support','
                 description: 'Round-the-clock support included in all plans. No additional support fees.'
             ].map ( (benefit, index) => (
               <motion.div;
@@ -429,7 +429,7 @@ features[';Basic AI features',
   { duration: 0.8,
   delay: 0.2}}';
               className='text-xl text-slate-300 mb-8'>
-              Our team of experts is ready to help you choose the right services and pricing plan.;
+              Our team of experts is ready to help you choose the right services and pricing plan.
               Get in touch today for a personalized consultation.
             </motion.p>
             <motion.div;
@@ -536,5 +536,5 @@ features[';Basic AI features',
         </div>
       </section>
     </div>) }
-;
+
 export default ComprehensivePricingGuide2030}}''`

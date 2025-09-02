@@ -110,17 +110,17 @@ import {}
   ';
         'Customer personalization;
   ',Inventory management',Demand forecasting;
-  ',E-commerce optimization']}];
+  ',E-commerce optimization']}]
   return()
     <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white'>'{/* Header Section */}''      <div className='pt-32 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
           <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>
-:pages.disabled/solutions/Enterprise.jsx;
+:pages.disabled/solutions/Enterprise.jsx
             Enterprise Solutions'
           </h1>''
           <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
             Transform your enterprise with cutting-edge AI technology. Our;
-            solutions are designed to scale with your business and drive;
+            solutions are designed to scale with your business and drive
             measurable results across all departments.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -140,23 +140,23 @@ import {}
 '{/* Core Solutions */}''      <div className='px-4 sm:px-6 lg:px-8 pb-16'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-:pages.disabled/solutions/Enterprise.jsx;
+:pages.disabled/solutions/Enterprise.jsx
             Core Enterprise Solutions
           </h2>'''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {solutions.map((solution, index) => {}
               const Icon = solution.icon;
-              return();
+              return()
 :pages.disabled/solutions/Enterprise.jsx
                 <div'key={index}''                  className='bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300''>''
                   <div className='flex items-center mb-6'>''
-                    <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>'';
+                    <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>''
 :pages.disabled/solutions/Enterprise.jsx
                       <Icon className='w-8 h-8 text-white' />'
                     </div>''
                     <h3 className='text-2xl font-bold'>{solution.title}</h3>
-                  </div>';
+                  </div>'
 ''
-                  <p className='text-gray-300 mb-6'>{solution.description}</p>';
+                  <p className='text-gray-300 mb-6'>{solution.description}</p>'
 ''
                   <ul className='space-y-3 mb-6'>
                     {solution.features.map((feature, featureIndex) => (
@@ -189,23 +189,23 @@ import {}
 '{/* Industry Solutions */}''      <div className='px-4 sm:px-6 lg:px-8 pb-16'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-:pages.disabled/solutions/Enterprise.jsx;
+:pages.disabled/solutions/Enterprise.jsx
             Industry-Specific Solutions
           </h2>'''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {industries.map((industry, index) => {}
               const Icon = industry.icon;
-              return();
+              return()
 :pages.disabled/solutions/Enterprise.jsx
                 <div'key={index}''                  className='bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300''>''
                   <div className='flex items-center mb-6'>''
-                    <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>'';
+                    <div className='w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4'>''
 :pages.disabled/solutions/Enterprise.jsx
                       <Icon className='w-8 h-8 text-white' />'
                     </div>''
                     <h3 className='text-2xl font-bold'>{industry.name}</h3>
-                  </div>';
+                  </div>'
 ''
-                  <p className='text-gray-300 mb-6'>{industry.description}</p>';
+                  <p className='text-gray-300 mb-6'>{industry.description}</p>'
 ''
                   <div className='grid grid-cols-1 gap-3'>
                     {industry.solutions.map((solution, solutionIndex) => (
@@ -223,9 +223,9 @@ import {}
 '{/* Benefits Section */}''      <div className='px-4 sm:px-6 lg:px-8 pb-16'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-            Why Choose Zion Tech Group?;
+            Why Choose Zion Tech Group?
 :pages.disabled/solutions/Enterprise.jsx
-          </h2>';
+          </h2>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {[{,
@@ -245,7 +245,7 @@ import {}
   title: '24/7 Support,';
                 description:';
   ';
-                  'Round-the-clock support with dedicated account managers.;
+                  'Round-the-clock support with dedicated account managers.
   ',
                 icon: Users}].map((benefit, index) => {
               const Icon = benefit.icon'
@@ -264,12 +264,12 @@ import {}
         <div className='max-w-4xl mx-auto text-center'>''
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30'>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-:pages.disabled/solutions/Enterprise.jsx;
+:pages.disabled/solutions/Enterprise.jsx
               Ready to Transform Your Enterprise?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>';
               Let;
-  's discuss how our AI solutions can drive innovation and growth;
+  's discuss how our AI solutions can drive innovation and growth
               in your organization.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -290,4 +290,4 @@ import {}
   )}
 ;
 :pages.disabled/solutions/Enterprise.jsx;
-export default EnterpriseSolutions'';'''
+export default EnterpriseSolutions'''''

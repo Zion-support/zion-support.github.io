@@ -32,7 +32,7 @@ const AuthContext = createContext<AuthContextType | null>(null);
 export const useAuth: React.FC = ($2) => {
   const context = useContext(AuthContext);
   if (context = == null) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error('useAuth must be used within an AuthProvider')
   return context}
 
 export { AuthContext }

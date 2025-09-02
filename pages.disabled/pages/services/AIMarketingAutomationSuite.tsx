@@ -15,18 +15,18 @@ import {}
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx;
 export default function AIMarketingAutomationSuite(...args: any[]): any {return()    <div className='min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-purple-900 via-purple-800 to-purple-700 py-20 text-center'>''
-        <div className='max-w-5xl mx-auto px-6'>'';
+        <div className='max-w-5xl mx-auto px-6'>''
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
           <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'            <BarChart3 className='w-4 h-4 mr-2' /> AI-Powered Marketing'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>
             AI Marketing Automation Suite'</h1>''          <p className='text-purple-100 text-xl'>
-            Transform your marketing with intelligent automation, predictive;
+            Transform your marketing with intelligent automation, predictive
             analytics, and personalized customer experiences.
           </p>
         </div>
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -72,7 +72,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
             </div>
           </div>
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-2 gap-8'>'
           <div>''
@@ -97,7 +97,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
             </ul>
           </div>
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12'>''
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>
@@ -111,7 +111,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
             ))}
           </div>
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12'>''
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>
@@ -125,7 +125,7 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
             ))}
           </div>
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 bg-gradient-to-r from-purple-50 to-purple-100 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-4 text-center'>
@@ -173,18 +173,18 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
             </div>
           </div>
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-zion-slate-light mb-2'>
             Ready to revolutionize your marketing?'
           </div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<a''              href='tel:+13024640950'';
-              className='inline-flex items-center px-5 py-3 bg-purple-600 text-white rounded-lg''>'';
+              className='inline-flex items-center px-5 py-3 bg-purple-600 text-white rounded-lg''>''
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
               <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950
             </a>'<a''              href='mailto:kleber@ziontechgroup.com'';
-              className='inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg''>'';
+              className='inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg''>''
 :pages.disabled/pages/services/AIMarketingAutomationSuite.tsx
               <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com
             </a>'
@@ -199,5 +199,5 @@ export default function AIMarketingAutomationSuite(...args: any[]): any {return(
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx)}'';
+:pages.disabled/pages/services/AIMarketingAutomationSuite.tsx)}''
   ''''

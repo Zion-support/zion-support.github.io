@@ -37,7 +37,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
   return (';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO ';
-        title='Zero Trust Network Architecture - Zion Tech Group'>        description='Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions.'/>        title='Zero Trust Network Architecture - Zion Tech Group''        description='Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions.'/>';
+        title='Zero Trust Network Architecture - Zion Tech Group'>        description='Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions.'/>        title='Zero Trust Network Architecture - Zion Tech Group''        description='Transform your security with Zero Trust Network Architecture. Never trust, always verify with our comprehensive security solutions.'/>'
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO ''
@@ -72,20 +72,20 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
               Zero Trust';
   y: 0}}';
             transition={{ duration: 0.6 }}'';
-            className='text-center max-w-4xl mx-auto'';
+            className='text-center max-w-4xl mx-auto''
 ''
             <div className='flex justify-center mb-6'>''
               <div className='w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center'>''
                 <Shield className='w-10 h-10 text-white'  />              </div>'
             </div>''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               Zero Trust''
               <span className='block bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>
                 Network Architecture
               </span>'
             </h1>''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-              Never trust, always verify. Transform your security posture with Zero Trust principles;
+              Never trust, always verify. Transform your security posture with Zero Trust principles
               that protect your network from modern cyber threats.'
             </p>''
             <div className='flex flex-wrap justify-center gap-4'>
@@ -106,7 +106,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
               </span>
             </h1>''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-              Never trust, always verify. Transform your security posture with Zero Trust principles;
+              Never trust, always verify. Transform your security posture with Zero Trust principles
               that protect your network from modern cyber threats.
             </p>''
             <div className='flex flex-wrap justify-center gap-4'>
@@ -155,13 +155,13 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
               Core Zero Trust Principles';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Core Zero Trust Principles
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Zero Trust is built on fundamental principles that ensure comprehensive;
+              Zero Trust is built on fundamental principles that ensure comprehensive
               security across your entire network infrastructure.
             </p>
 :pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx
@@ -196,13 +196,13 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
                   <feature.icon className='w-6 h-6 text-white' />
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
-  delay: index * 0.1 '}}'';
+  delay: index * 0.1 '}}''
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''
                   <feature.icon className='w-6 h-6 text-white' />
@@ -243,13 +243,13 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
               Our Zero Trust Services';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Our Zero Trust Services
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Comprehensive Zero Trust implementation services designed to meet your;
+              Comprehensive Zero Trust implementation services designed to meet your
               security requirements and business objectives
             </p>
 :pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx
@@ -288,7 +288,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
                   {service.features.map((feature, featureIndex) => ('
                     <li key={featureIndex} className='flex items-center text-sm text-slate-300'>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
 ''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
                 <p className='text-slate-300 mb-4'>{service.description}</p>''
@@ -296,7 +296,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
                 <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center text-sm text-slate-300'>'';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
 ''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
                 <p className='text-slate-300 mb-4'>{service.description}</p>''
@@ -355,13 +355,13 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
               Benefits of Zero Trust';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Benefits of Zero Trust
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Discover how Zero Trust Network Architecture can transform your security;
+              Discover how Zero Trust Network Architecture can transform your security
               posture and protect your business from modern cyber threats
             </p>
 :pages.disabled/pages/services/ZeroTrustNetworkArchitecture.tsx
@@ -398,14 +398,14 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
                 </div>'
                 <h3 className='text-lg font-semibold text-white mb-2'>{benefit.name}</h3>';
   delay: index * 0.1 '}}'';
-                className='text-center group'';
+                className='text-center group''
 ''
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>''
                   <benefit.icon className='w-8 h-8 text-pink-400' />'
                 </div>''
                 <h3 className='text-lg font-semibold text-white mb-2'>{benefit.name}</h3>'';
   delay: index * 0.1}}'';
-                className='text-center group'';
+                className='text-center group''
 ''
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>''
                   <benefit.icon className='w-8 h-8 text-pink-400' />
@@ -442,7 +442,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
               Ready to Secure Your Network?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>';
-              Let's discuss how Zero Trust Network Architecture can protect your business,';
+              Let's discuss how Zero Trust Network Architecture can protect your business,'
               improve compliance, and provide peace of mind in today's threat landscape.'
             </p>''
             <div className='flex flex-wrap justify-center gap-4'>

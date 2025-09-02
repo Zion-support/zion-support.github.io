@@ -92,22 +92,22 @@ const AIContentGeneration = () => {
             phase: 'Deployment','';
             description: 'Full deployment and team training','';
             duration: '1-2 weeks';
-';
+'
     ]'
     return (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'{/* Hero Section */}''      <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
           <div className='mb-8'>''
             <div className='inline-flex items-center px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-medium mb-6'>''
               <FileText className='w-4 h-4 mr-2'/>
-:pages.disabled/solutions/AIContentGeneration.jsx;
+:pages.disabled/solutions/AIContentGeneration.jsx
               AI Content Solution'
             </div>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               AI''
               <span className='bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent'> Content Generation</span>'
             </h1>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Transform your content creation process with AI-powered tools;
+              Transform your content creation process with AI-powered tools
               that generate high-quality, engaging content at scale.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -126,12 +126,12 @@ const AIContentGeneration = () => {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/solutions/AIContentGeneration.jsx
               Content Generation Features'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our AI content generation platform supports multiple content types;
+              Our AI content generation platform supports multiple content types
               and formats for comprehensive content creation.
             </p>
 :pages.disabled/solutions/AIContentGeneration.jsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''{contentFeatures.map((feature, index) => (<div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300'>''
-                <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/solutions/AIContentGeneration.jsx
                   <feature.icon className='w-8 h-8 text-white'/>'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''
                 <p className='text-gray-300 mb-4'>{feature.description}</p>''
@@ -151,12 +151,12 @@ const AIContentGeneration = () => {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/solutions/AIContentGeneration.jsx
               Content Types'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Generate diverse content types to meet all your business;
+              Generate diverse content types to meet all your business
               and communication needs.
             </p>
 :pages.disabled/solutions/AIContentGeneration.jsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''{contentTypes.map((contentType, index) => (<div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300'>''
-                <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/solutions/AIContentGeneration.jsx
                   <contentType.icon className='w-8 h-8 text-white'/>'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{contentType.title}</h3>''
                 <p className='text-gray-300 mb-4'>{contentType.description}</p>''
@@ -169,7 +169,7 @@ const AIContentGeneration = () => {
           </div>
         </div>
       </section>
-:pages.disabled/solutions/AIContentGeneration.jsx;
+:pages.disabled/solutions/AIContentGeneration.jsx
 '{/* Benefits Section */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
@@ -190,7 +190,7 @@ const AIContentGeneration = () => {
                 <Lightbulb className='w-24 h-24 text-emerald-400 mx-auto mb-4'/>''
                 <h3 className='text-2xl font-bold text-white mb-2'>Content Innovation</h3>''
                 <p className='text-gray-300 mb-6'>
-:pages.disabled/solutions/AIContentGeneration.jsx;
+:pages.disabled/solutions/AIContentGeneration.jsx
                   Leverage AI to create engaging, high-quality content that
                   resonates with your audience and drives results.'</p>''                <div className='text-sm text-gray-400'>
                   <p>• Quality content</p>
@@ -209,7 +209,7 @@ const AIContentGeneration = () => {
 :pages.disabled/solutions/AIContentGeneration.jsx
             Implementation Process'</h2>''          <p className='text-xl text-gray-300 mb-8'>
             A structured approach to implementing AI content generation;
-            in your organization.;
+            in your organization.
 :pages.disabled/solutions/AIContentGeneration.jsx
           </p>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''{implementation.map((phase, index) => (<div key={index} className='text-center'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white'>
@@ -224,11 +224,11 @@ const AIContentGeneration = () => {
 '{/* CTA Section */}''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-4xl mx-auto text-center'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/solutions/AIContentGeneration.jsx;
+:pages.disabled/solutions/AIContentGeneration.jsx
             Ready to Transform Your Content Creation?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
-            Start generating high-quality content at scale with AI-powered;
+            Start generating high-quality content at scale with AI-powered
             content creation tools.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -241,6 +241,6 @@ const AIContentGeneration = () => {
       </section>
     </div>)}
 export { AIContentGeneration }
-:pages.disabled/solutions/AIContentGeneration.jsx;
+:pages.disabled/solutions/AIContentGeneration.jsx
 export default AIContentGeneration''}}}}
   ''''

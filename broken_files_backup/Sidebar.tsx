@@ -39,7 +39,7 @@ interface SidebarItem {
    path: string;
    icon: React.ComponentType<{ className?: string
 }>
-  children?: SidebarItem[];
+  children?: SidebarItem[]
   badge?: string
   external?: boolean}
 export function Sidebar() {
@@ -188,7 +188,7 @@ export function Sidebar() {
         ? prev.filter(name => name !== itemName);
         : [...prev, itemName]
     )}
-;
+
   const isActive = (path: string) => location.pathname === path
   return(
     <div

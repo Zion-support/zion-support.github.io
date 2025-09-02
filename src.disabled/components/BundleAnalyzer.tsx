@@ -7,7 +7,7 @@ interface BundleMetrics {
   totalSize: number;
    chunkCount: number;
    largestChunk: {
-   name: string;
+   name: string
    size: number}
   averageChunkSize: number
   gzipSavings: number}
@@ -95,7 +95,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({
     const optimizations = optimizeBundle();
     if (optimizations && optimizations.length > 0) {
       console.log('📊 Bundle optimization recommendations:', optimizations)}
-  }, [enabled, optimizeBundle]);
+  }, [enabled, optimizeBundle])
   // Don't render UI unless explicitly requested
   if (!showUI) {
     return null}

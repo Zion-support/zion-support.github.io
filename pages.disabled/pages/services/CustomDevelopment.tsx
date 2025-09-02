@@ -137,7 +137,7 @@ export default function CustomDevelopment(...args[]):  {}
               Custom Development'
             </h1>''
             <p className='text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed'>
-              Tailored software solutions designed specifically for your business needs.;
+              Tailored software solutions designed specifically for your business needs.
               From web applications to mobile apps, we build custom software that drives results.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -157,7 +157,7 @@ export default function CustomDevelopment(...args[]):  {}
               Custom Development
             </h1>''
             <p className='text-xl lg:text-2xl text-zion-slate-light mb-8 leading-relaxed'>
-              Tailored software solutions designed specifically for your business needs.;
+              Tailored software solutions designed specifically for your business needs.
               From web applications to mobile apps, we build custom software that drives results.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -202,7 +202,7 @@ export default function CustomDevelopment(...args[]):  {}
             transition={{ duration: 0.8 }}';
 '';
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
-              Our Custom Development Services';
+              Our Custom Development Services'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -210,11 +210,11 @@ export default function CustomDevelopment(...args[]):  {}
               Our Custom Development Services
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Comprehensive custom development services designed to create software solutions;
+              Comprehensive custom development services designed to create software solutions
               that perfectly align with your business requirements.
             </p>
 :pages.disabled/pages/services/CustomDevelopment.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {services.map((service, index
@@ -250,12 +250,12 @@ export default function CustomDevelopment(...args[]):  {}
   delay: index * 0.1}}
               >'
                 <div className='flex items-start gap-4 mb-6'>'
-                  <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0'>';
+                  <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0'>'
   delay: index * 0.1}}'>''
                 <div className='flex items-start gap-4 mb-6'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center flex-shrink-0'>''
                     <service.icon className='w-8 h-8 text-white' />
-                  </div>';
+                  </div>'
   delay: index * 0.1}}
               >''
                 <div className='flex items-start gap-4 mb-6'>''
@@ -267,7 +267,7 @@ export default function CustomDevelopment(...args[]):  {}
                     <p className='text-zion-slate-light leading-relaxed'>{service.description}</p>
                   </div>
 :pages.disabled/pages/services/CustomDevelopment.tsx
-                </div>';
+                </div>'
 '''
                 <div className='mb-6'>''''
                   <h4 className='text-zion-cyan font-semibold mb-3'>What's Included:</h4>''
@@ -316,7 +316,7 @@ export default function CustomDevelopment(...args[]):  {}
             transition={{ duration: 0.8 }}';
 '';
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
-              Our Technology Stack';
+              Our Technology Stack'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -328,7 +328,7 @@ export default function CustomDevelopment(...args[]):  {}
               scalable, and maintainable applications.
             </p>
 :pages.disabled/pages/services/CustomDevelopment.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {technologies.map(tech: unknown, index: unknown
@@ -363,16 +363,16 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx;
   delay: index * 0.1}}
               >'
-                <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>';
+                <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>'
   delay: index * 0.1}}'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>''
                   <tech.icon className='w-8 h-8 text-white' />
-                </div>';
+                </div>'
 ''
                 <h3 className='text-xl font-bold text-white mb-3'>{tech.title}</h3>''
-                <p className='text-zion-slate-light mb-4 leading-relaxed text-sm'>{tech.description}</p>';
+                <p className='text-zion-slate-light mb-4 leading-relaxed text-sm'>{tech.description}</p>'
 ''
-                <div className='space-y-2'>';
+                <div className='space-y-2'>'
   delay: index * 0.1}}
               >''
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>''
@@ -419,7 +419,7 @@ export default function CustomDevelopment(...args[]):  {}
             transition={{ duration: 0.8 }}';
 '';
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
-              Why Choose Custom Development?';
+              Why Choose Custom Development?'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -430,7 +430,7 @@ export default function CustomDevelopment(...args[]):  {}
               Custom development offers unique advantages that off-the-shelf solutions cannot provide.
             </p>
 :pages.disabled/pages/services/CustomDevelopment.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -470,7 +470,7 @@ export default function CustomDevelopment(...args[]):  {}
                   <benefit.icon className='w-8 h-8 text-white' />
 :pages.disabled/pages/services/CustomDevelopment.tsx
                 </div>'
-                <h3 className='text-xl font-bold text-white mb-3'>{benefit.title}</h3>';
+                <h3 className='text-xl font-bold text-white mb-3'>{benefit.title}</h3>'
   delay: index * 0.1}}'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-lg flex items-center justify-center mb-6'>''
                   <benefit.icon className='w-8 h-8 text-white' />'
@@ -511,7 +511,7 @@ export default function CustomDevelopment(...args[]):  {}
             transition={{ duration: 0.8 }}';
 '';
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
-              Industries We Serve';
+              Industries We Serve'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -523,7 +523,7 @@ export default function CustomDevelopment(...args[]):  {}
               each with unique software requirements and challenges.
             </p>
 :pages.disabled/pages/services/CustomDevelopment.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {industries.map(industry: unknown, index: unknown()
@@ -558,7 +558,7 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx;
   delay: index * 0.1}}
               >';
-  delay: index * 0.1}}'>'';
+  delay: index * 0.1}}'>''
   delay: index * 0.1}}
               >''
                 <div className='text-zion-cyan font-semibold'>{industry}</div>
@@ -594,7 +594,7 @@ export default function CustomDevelopment(...args[]):  {}
             transition={{ duration: 0.8 }}';
 '';
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
-              Our Development Process';
+              Our Development Process'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -605,7 +605,7 @@ export default function CustomDevelopment(...args[]):  {}
               A proven agile development methodology that ensures successful project delivery and client satisfaction.
             </p>
 :pages.disabled/pages/services/CustomDevelopment.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-4 gap-8'>'{[''{ step: '01', title: 'Discovery', description: 'Understand requirements and plan the solution architecture' },'{ step: '02', title: 'Design', description: 'Create detailed designs and user experience mockups' },'{ step: '03', title: 'Development', description: 'Build the application using agile development practices' },'{ step: '04', title: 'Deployment', description: 'Deploy and launch with ongoing support and maintenance' }
             ].map(phase: unknown, index: unknown()
@@ -643,10 +643,10 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx;
 :pages.disabled/pages/services/CustomDevelopment.tsx;
   delay: index * 0.1}}
-              >';
+              >'
   delay: index * 0.1}}'>''
                 <div className='w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>
-                  {phase.step}';
+                  {phase.step}'
   delay: index * 0.1}}
               >''
                 <div className='w-20 h-20 bg-gradient-to-r from-zion-cyan to-zion-blue rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white'>
@@ -689,7 +689,7 @@ export default function CustomDevelopment(...args[]):  {}
               Ready to Build Your Custom Solution?'
             </h2>''
             <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
-              Let our development experts create the perfect software solution for your business.;
+              Let our development experts create the perfect software solution for your business.
               Get started with a free consultation today.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -709,7 +709,7 @@ export default function CustomDevelopment(...args[]):  {}
               Ready to Build Your Custom Solution?
             </h2>''
             <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
-              Let our development experts create the perfect software solution for your business.;
+              Let our development experts create the perfect software solution for your business.
               Get started with a free consultation today.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -728,6 +728,6 @@ export default function CustomDevelopment(...args[]):  {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/CustomDevelopment.tsx)}'';
+:pages.disabled/pages/services/CustomDevelopment.tsx)}''
 '''')}
 ''"

@@ -207,5 +207,5 @@ class ResourceMonitor {}
     return summary}
 }
 :pages.disabled/utils/resourceMonitor.tsx;
-// Create singleton instance;
+// Create singleton instance
 '`

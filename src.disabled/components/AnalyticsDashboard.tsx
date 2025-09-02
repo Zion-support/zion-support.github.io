@@ -10,7 +10,7 @@ import React, { useState, useEffect, useCallback } from;
    topPages: Array<{ page: string
    views: number;
    change: number}> trafficSources: Array<{ source: string percentage: number color: string }> deviceTypes: Array<{ device: string percentage: number color: string }> geographicData: Array<{ country: string visitors: number change: number }> hourlyTraffic: Array<{ hour: number visitors: number }> weeklyTrends: Array<{ week: string visitors: number pageViews: number }> } interface AnalyticsDashboardProps {
-   showPanel?: boolean;
+   showPanel?: boolean
    autoRefresh?: boolean
    refreshInterval?: number} export function AnalyticsDashboard({ showPanel = true, autoRefresh = true, refreshInterval = 30000 }: AnalyticsDashboardProps) { const [isOpen, setIsOpen] = useState(false) const [isExpanded, setIsExpanded] = useState(false) const [timeRange, setTimeRange] = useState<;
   '1h' |;

@@ -275,4 +275,4 @@ const WebDevelopment: NextPage = () => {
     </Layout>
   );
 };
-export default WebDevelopment;
+export default WebDevelopment

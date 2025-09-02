@@ -15,5 +15,5 @@ export default function EnterpriseRoutes() {
       <Route path="/enterprise/billing" element={<EnterpriseBilling />} />
       <Route path="/enterprise/demo" element={<EnterpriseDemo />} />
     </Routes>
-  );
+  )
 }

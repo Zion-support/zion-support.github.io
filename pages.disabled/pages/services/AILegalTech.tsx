@@ -27,18 +27,18 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
   ]';Contract review and risk assessment',';Legal document automation',';Compliance monitoring and reporting',';Legal research and case preparation',';Due diligence and discovery',';Regulatory compliance management';
   ]';Reduce document review time by 70-85%',';Improve accuracy and consistency by 90%',';Cut legal costs by 30-50%',';Accelerate contract negotiations by 3-5x',';Enhance compliance and risk management',';Scale legal operations without additional staff';
   ]';Corporate Law',';Real Estate Law',';Healthcare Law',';Financial Services',';Technology & IP',';Government & Public Sector';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-slate-600 via-gray-600 to-zinc-600 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AILegalTech.tsx
             <Scale className='w-4 h-4 mr-2'  /> AI-Powered Legal Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Legal Tech Platform</h1>'          <p className='text-gray-100 text-xl'>Revolutionize your legal practice with AI-powered tools that automate document review, enhance accuracy, and accelerate legal workflows.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
             </div>
           </div>
 :pages.disabled/pages/services/AILegalTech.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
             </div>
           ))}
 :pages.disabled/pages/services/AILegalTech.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
             ))}
           </div>
 :pages.disabled/pages/services/AILegalTech.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-slate-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Business Impact</h3>''
@@ -146,7 +146,7 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
             ))}
           </div>
 :pages.disabled/pages/services/AILegalTech.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your legal practice?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition-colors'>''
 :pages.disabled/pages/services/AILegalTech.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

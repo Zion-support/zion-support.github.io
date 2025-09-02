@@ -19,7 +19,7 @@ const server = setupServer(
   'React'],
         average_rating: 4.5}))));
 beforeAll(() => server.listen());
-afterEach(() => server.resetHandlers());
+afterEach(() => server.resetHandlers())
 afterAll(() => server.close())
 function renderPage() {
   return render(

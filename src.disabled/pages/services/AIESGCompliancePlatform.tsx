@@ -64,7 +64,7 @@ export default function AIESGCompliancePlatform() {
           </div>
           <h1 className='text-4xl md:text-6xl font-bold mb-6'>AI ESG Compliance Platform</h1>
           <p className='text-xl text-green-100 mb-8 max-w-3xl mx-auto'>
-            Streamline your ESG compliance with AI-driven data collection, automated reporting, and real-time sustainability;
+            Streamline your ESG compliance with AI-driven data collection, automated reporting, and real-time sustainability
             monitoring. Meet regulatory requirements while driving positive environmental and social impact.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>

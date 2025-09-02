@@ -69,7 +69,7 @@ const AccessibilityManager: React.FC = () => {
 
     // Save settings
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
-  }, [settings]);
+  }, [settings])
   const updateSetting = <K extends keyof AccessibilitySettings>(
     key: K,
     value: AccessibilitySettings[K]
@@ -96,7 +96,7 @@ const AccessibilityManager: React.FC = () => {
   const handleFontSizeChange = (size: AccessibilitySettings['fontSize']) => {
     updateSetting('fontSize', size);
     announceToScreenReader(`Font size changed to ${size}`);
-  };
+  }
   return (
     <>
       {/* Accessibility Controls */}
@@ -236,4 +236,4 @@ const AccessibilityManager: React.FC = () => {
     </>
   );
 };
-export default AccessibilityManager;
+export default AccessibilityManager

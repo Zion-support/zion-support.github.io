@@ -276,5 +276,5 @@ export default function PricingGuide() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

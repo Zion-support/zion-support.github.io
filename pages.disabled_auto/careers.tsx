@@ -25,7 +25,7 @@ const Careers: NextPage = () => {
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Team</span>
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Be part of a team that&apos;s transforming businesses through innovative technology solutions. '';
+            Be part of a team that&apos;s transforming businesses through innovative technology solutions. ''
             Grow your career with us and make a real impact.
           </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>
@@ -49,7 +49,7 @@ const Careers: NextPage = () => {
   re building a culture of innovation, collaboration, and continuous learning.;
               Here's what makes us special.;
               We&apos;re building a culture of innovation, collaboration, and continuous learning. ';
-              Here&apos;s what makes us special.'
+              Here&aposs what makes us special.'
             </p>
           </div>
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -59,7 +59,7 @@ const Careers: NextPage = () => {
               </div>
               <h3 className='text-xl font-semibold mb-4'>Collaborative Culture</h3>
               <p className='text-gray-600'>
-                Work with talented professionals who share your passion for technology and innovation.;
+                Work with talented professionals who share your passion for technology and innovation.
                 Our team-first approach fosters creativity and problem-solving.
               </p>
             </div>
@@ -71,7 +71,7 @@ const Careers: NextPage = () => {
               <p className='text-gray-600'>
 :pages.disabled_auto/careers.tsx;
                 Work with the latest technologies and frameworks. Were always exploring new;
-                Work with the latest technologies and frameworks. We&apos;re always exploring new ';
+                Work with the latest technologies and frameworks. We&apos;re always exploring new '
                 tools and approaches to solve complex business challenges.
               </p>
             </div>
@@ -90,7 +90,7 @@ const Careers: NextPage = () => {
               </div>
               <h3 className='text-xl font-semibold mb-4'>Career Growth</h3>
               <p className='text-gray-600'>
-                Continuous learning and development opportunities. We invest in your growth;
+                Continuous learning and development opportunities. We invest in your growth
                 through training, certifications, and mentorship programs.
               </p>
             </div>
@@ -100,7 +100,7 @@ const Careers: NextPage = () => {
               </div>
               <h3 className='text-xl font-semibold mb-4'>Impactful Work</h3>
               <p className='text-gray-600'>
-                Work on projects that make a real difference. Our solutions help businesses;
+                Work on projects that make a real difference. Our solutions help businesses
                 transform and grow, creating meaningful impact in various industries.
               </p>
             </div>
@@ -110,7 +110,7 @@ const Careers: NextPage = () => {
               </div>
               <h3 className='text-xl font-semibold mb-4'>Diverse Team</h3>
               <p className='text-gray-600'>
-                Join a diverse team with different backgrounds, perspectives, and experiences.;
+                Join a diverse team with different backgrounds, perspectives, and experiences.
                 We believe diversity drives innovation and better solutions.
               </p>
             </div>
@@ -347,7 +347,7 @@ const Careers: NextPage = () => {
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Join Our Team?</h2>
           <p className='text-xl mb-8 text-gray-300 max-w-3xl mx-auto'>
-            Don&apos;t see the perfect role? Send us your resume and we&apos;ll keep you in mind for future opportunities.
+            Don&apos;t see the perfect role? Send us your resume and we&aposll keep you in mind for future opportunities.
           </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>
             <Link href='/contact'>
@@ -363,5 +363,5 @@ const Careers: NextPage = () => {
       </section>
     </Layout>
   )}
-;
+
 export default Careers

@@ -9,63 +9,52 @@ export default function Help() {
   const [searchQuery, setSearchQuery] = useState('');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
   const faqs = [
-    {
-      id: 1, question: "How do I get started with Zion Tech Group services?",
+    { id: 1, question: "How do I get started with Zion Tech Group services?",
       answer: "Getting started is easy! Contact our team through our contact form or call us directly. We'll schedule a consultation to understand your needs and recommend the best solutions for your business.", '
       category: "Getting Started"
     },
-    {
-      id: 2, question: "What AI services do you offer?",
+    { id: 2, question: "What AI services do you offer?",
       answer: "We offer comprehensive AI services including machine learning, natural language processing, computer vision, predictive analytics, and custom AI solutions tailored to your business needs.", category: "AI Services"
     },
-    {
-      id: 3, question: "Do you provide quantum computing solutions?",
+    { id: 3, question: "Do you provide quantum computing solutions?",
       answer: "Yes! We offer quantum computing services including quantum algorithm development, quantum machine learning, and access to quantum computing platforms for research and development.", category: "Quantum Computing"
     },
-    {
-      id: 4, question: "What is your pricing structure?",
+    { id: 4, question: "What is your pricing structure?",
       answer: "Our pricing varies based on project scope, complexity, and requirements. We offer flexible pricing models including project-based, retainer, and subscription options. Contact us for a customized quote.", category: "Pricing"
     }
   ];
   const helpCategories = [
-    {
-      title: "Getting Started", description: "New to Zion Tech Group? Start here",
+    { title: "Getting Started", description: "New to Zion Tech Group? Start here",
       icon: BookOpen, articles: 12,
       color: "from-blue-500 to-cyan-500"
-    }, {
-      title: "AI Services",
+    }, { title: "AI Services",
       description: "Learn about our AI and machine learning solutions", icon: MessageCircle,
       articles: 25, color: "from-purple-500 to-pink-500"
     },
-    {
-      title: "Quantum Computing", description: "Explore quantum computing capabilities",
+    { title: "Quantum Computing", description: "Explore quantum computing capabilities",
       icon: Star, articles: 18,
       color: "from-orange-500 to-red-500"
-    }, {
-      title: "Technical Support",
+    }, { title: "Technical Support",
       description: "Get help with technical issues", icon: HelpCircle,
       articles: 30, color: "from-green-500 to-emerald-500"
     }
   ];
   const contactMethods = [
-    {
-      title: "Live Chat", description: "Get instant help from our support team",
+    { title: "Live Chat", description: "Get instant help from our support team",
       icon: MessageCircle, availability: "24/7 Available",
       responseTime: "Immediate"
-    }, {
-      title: "Phone Support",
+    }, { title: "Phone Support",
       description: "Speak directly with our technical experts", icon: Phone,
       availability: "Mon-Fri 9AM-6PM EST", responseTime: "Immediate"
     },
-    {
-      title: "Email Support", description: "Send us your questions and we'll respond quickly", '
+    { title: "Email Support", description: "Send us your questions and we'll respond quickly", '
       icon: Mail,
       availability: "24/7 Available", responseTime: "Within 4 hours"
     }
   ];
   const toggleFAQ = (id: number) => {
     setExpandedFAQ(expandedFAQ === id ? null : id);
-  };
+  }
   return (
     <>
       <SEO 
@@ -81,7 +70,7 @@ export default function Help() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -114,7 +103,7 @@ export default function Help() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Browse by Category</h2>
@@ -153,7 +142,7 @@ export default function Help() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Frequently Asked Questions</h2>
@@ -194,7 +183,7 @@ export default function Help() {
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.3 }}
+                      transition={{ duration: 0.3   }}
                       className="px-6 pb-6"
                     >
                       <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
@@ -212,7 +201,7 @@ export default function Help() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Contact Support</h2>
@@ -255,5 +244,5 @@ export default function Help() {
         </section>
       </div>
 </>
-  );
+  )
 }

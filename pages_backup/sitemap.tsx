@@ -139,7 +139,7 @@ const SitemapPage: React.FC = () => {
         },
       ],
     },
-  ];
+  ]
 
   return (
     <>
@@ -258,4 +258,4 @@ const SitemapPage: React.FC = () => {
     </>
   );
 };
-export default SitemapPage;
+export default SitemapPage

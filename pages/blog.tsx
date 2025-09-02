@@ -87,7 +87,7 @@ const Blog: NextPage = () => {
     'Cybersecurity',
     'IoT',
     'Industry Insights',
-  ];
+  ]
   return (
     <Layout
       title="Blog - Zion Tech Group"
@@ -258,4 +258,4 @@ const Blog: NextPage = () => {
     </Layout>
   );
 };
-export default Blog;
+export default Blog

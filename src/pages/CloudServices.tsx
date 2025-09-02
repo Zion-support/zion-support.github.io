@@ -11,4 +11,3 @@ const CloudServices: React.FC = () => {
       </div>
 </>
   )}
-;

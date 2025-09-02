@@ -21,13 +21,13 @@ const serviceCategories = []{}
     color: 'from-purple-600 to-pink-600', services: revolutionary2027AdvancedMicroSaasServices},
   {}
 ';'
-    id: 'it-infrastructure', '''';
+    id: 'it-infrastructure', ''''
     name: 'IT Infrastructure & Cybersecurity', ''''
     icon: <Shield className='w-6 h-6' />,';'
     color: 'from-red-600 to-orange-600', services: revolutionary2027ITInfrastructureCybersecurityServices},
   {}
 ';'
-    id: 'ai-innovation', '''';
+    id: 'ai-innovation', ''''
     name: 'AI Innovation Services', ''''
     icon: <Brain className='w-6 h-6' />,';'
     color: 'from-blue-600 to-cyan-600', services: revolutionary2027AIInnovationServices}
@@ -66,7 +66,7 @@ export function ComprehensiveServicesShowcase() {}
         duration: 0.4, '''';
         ease: 'easeOut'''}
     }
-  }';';
+  }';'
   return (''''
     <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>''''
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
@@ -83,7 +83,7 @@ export function ComprehensiveServicesShowcase() {}
             Revolutionary 2027 Services''''
           </h2>''''
           <p className='text-xl text-zion-cyan-light max-w-3xl mx-auto'>
-            Discover cutting-edge micro SAAS solutions, advanced IT infrastructure, and innovative AI services;
+            Discover cutting-edge micro SAAS solutions, advanced IT infrastructure, and innovative AI services
             designed to transform your business and drive exponential growth.
           </p>
           '''{/* Contact Information */}'''''
@@ -130,7 +130,7 @@ export function ComprehensiveServicesShowcase() {}
 `;
 `'`;'
 `'`'`;
-                selectedCategory === category.id`'`'`'`;'
+                selectedCategory === category.id`'`'`'`'
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`''`'`'`
                   : 'bg-zion-slate-dark text-zion-cyan-light hover:bg-zion-slate hover:text-zion-cyan border border-zion-cyan/30'````}`}
             >{category.icon}
@@ -240,7 +240,7 @@ export function ComprehensiveServicesShowcase() {}
               Ready to Get Started?''''
             </h3>''''
             <p className='text-zion-cyan-light mb-6 max-w-2xl mx-auto'>
-              Join thousands of businesses already transforming their operations with our revolutionary services.;
+              Join thousands of businesses already transforming their operations with our revolutionary services.
               Get expert consultation and custom implementation tailored to your needs.''''
             </p>''''
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
@@ -281,14 +281,14 @@ export function ComprehensiveServicesShowcase() {}
               <div className='flex items-start justify-between mb-6'>''''
                 <div className='text-6xl'>{selectedService.icon}</div>
                 <button''';'
-                  onClick={() => setSelectedService(null)}'''';
+                  onClick={() => setSelectedService(null)}''''
                   className='text-zion-cyan-light hover: text-white transition-colors '>
                   ✕
                 </button>
-              </div>''';'
+              </div>''''
 ''''
               <h2 className='text-3xl font-bold text-white mb-4'>{selectedService.name}</h2>''''
-              <p className='text-zion-cyan-light text-lg mb-6'>{selectedService.description}</p>''';'
+              <p className='text-zion-cyan-light text-lg mb-6'>{selectedService.description}</p>''''
 ''''
               <div className='grid md: grid-cols-2 gap-8'>''''
                 <div>''''
@@ -325,14 +325,14 @@ export function ComprehensiveServicesShowcase() {}
                       <span className='text-zion-cyan-light'>Rating: </span>''''
                       <span className='text-white font-medium'>{selectedService.rating}/5 ({selectedService.reviews} reviews)</span>
                     </div>
-                  </div>''';'
+                  </div>''''
 ''''
                   <div className='mt-6'>''''
                     <h4 className='text-lg font-semibold text-white mb-2'>ROI</h4>''''
                     <p className='text-zion-cyan-light text-sm'>{selectedService.roi}</p>
                   </div>
                 </div>
-              </div>''';'
+              </div>''''
 ''''
               <div className='mt-8 pt-6 border-t border-zion-cyan/20'>''''
                 <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -352,5 +352,5 @@ export function ComprehensiveServicesShowcase() {}
           </motion.div>) }
       </AnimatePresence>
     </section>
-  )}''`;
+  )}''`
 ''`'"`'"

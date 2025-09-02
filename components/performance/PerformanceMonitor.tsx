@@ -92,5 +92,5 @@ const PerformanceMonitor: React.FC = () => {
       window.removeEventListener('beforeunload', sendMetrics)}
   }, []);
   return null // This component doesn't render anything'}'
-;
+
 export default PerformanceMonitor

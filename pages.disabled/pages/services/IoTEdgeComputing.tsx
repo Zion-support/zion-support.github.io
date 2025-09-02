@@ -19,7 +19,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {
   return();
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>'
       <SEO'';
-        title='IoT Edge Computing Services - Zion Tech Group''        description='Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems.'/>';
+        title='IoT Edge Computing Services - Zion Tech Group''        description='Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems.'/>'
 export default function IoTEdgeComputing(...args: unknown[]): unknown {}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>
@@ -43,10 +43,10 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}'';
             className='text-center max-w-4xl mx-auto''>''
-            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/IoTEdgeComputing.tsx
               <Cpu className='w-4 h-4 mr-2'  />              IoT Edge Computing
-            </div>';
+            </div>'
 ''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               <Cpu className='w-4 h-4 mr-2'  />              IoT Edge Computing
@@ -64,14 +64,14 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {}
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Transform your business with IoT and edge computing that brings;
               processing power closer to your data sources. Enable real-time;
-              insights, reduce latency, and create connected ecosystems.;
+              insights, reduce latency, and create connected ecosystems.
 :pages.disabled/pages/services/IoTEdgeComputing.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <Link'';
                 to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20'>'
                 Get Started''
                 <ArrowRight className='w-5 h-5 ml-2'  />              </Link>'
               <Link''
@@ -108,16 +108,16 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/IoTEdgeComputing.tsx;
-              Edge Computing Features';
+              Edge Computing Features'
               Edge Computing Features
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Our IoT edge computing platform combines cutting-edge technology;
-              with practical business applications to deliver real-time;
+              with practical business applications to deliver real-time
               processing and insights.
             </p>
 :pages.disabled/pages/services/IoTEdgeComputing.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index()
@@ -135,7 +135,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}'';
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 group''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-green-400/40 group-hover:to-blue-500/40 transition-all duration-200'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-green-400/40 group-hover:to-blue-500/40 transition-all duration-200'>''
 :pages.disabled/pages/services/IoTEdgeComputing.tsx
                   <feature.icon className='w-6 h-6 text-green-400' />'
                 </div>''
@@ -166,11 +166,11 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/IoTEdgeComputing.tsx;
-              Comprehensive IoT Services';
+              Comprehensive IoT Services'
               Comprehensive IoT Services
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-              From edge infrastructure to device management, our IoT services;
+              From edge infrastructure to device management, our IoT services
               cover every aspect of your connected ecosystem needs.
             </p>
 :pages.disabled/pages/services/IoTEdgeComputing.tsx
@@ -187,7 +187,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}'';
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-200''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/IoTEdgeComputing.tsx
                   <service.icon className='w-8 h-8 text-green-400' />'
                 </div>''
@@ -236,15 +236,15 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/IoTEdgeComputing.tsx;
-              Advanced IoT Technologies';
+              Advanced IoT Technologies'
               Advanced IoT Technologies
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-              Our platform leverages cutting-edge technologies to provide the;
+              Our platform leverages cutting-edge technologies to provide the
               most advanced IoT and edge computing solutions available.
             </p>
 :pages.disabled/pages/services/IoTEdgeComputing.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {technologies.map(tech: unknown, index: unknown()
@@ -279,7 +279,7 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {}
 :pages.disabled/pages/services/IoTEdgeComputing.tsx;
             transition={{ duration: 0.6 }}'>''
             <h2 className='text-4xl font-bold text-white mb-4'>
-              Ready to Transform with IoT Edge Computing?';
+              Ready to Transform with IoT Edge Computing?'
             transition={{ duration: 0.6 }}
           >''
             <h2 className='text-4xl font-bold text-white mb-4'>
@@ -287,14 +287,14 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {}
             </h2>''
             <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
               Join the IoT revolution and unlock real-time insights and;
-              connected ecosystems for your business.;
+              connected ecosystems for your business.
 :pages.disabled/pages/services/IoTEdgeComputing.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <Link'';
                 to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20'>'
                 Start Your IoT Journey''
                 <ArrowRight className='w-5 h-5 ml-2'  />              </Link>'
               <Link''
@@ -318,6 +318,6 @@ export default function IoTEdgeComputing(...args: unknown[]): unknown {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/IoTEdgeComputing.tsx)}'';
+:pages.disabled/pages/services/IoTEdgeComputing.tsx)}''
 '''')}
 '''

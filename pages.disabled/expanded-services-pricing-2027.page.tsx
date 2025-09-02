@@ -20,7 +20,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
   'all', ...Array.from(new Set(
     (selectedCategory ===;
   'all';
-      ? ALL_EXPANDED_SERVICES_PRICING: ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory)).map(s => s.subcategory)))];
+      ? ALL_EXPANDED_SERVICES_PRICING: ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory)).map(s => s.subcategory)))]
   // Filter services based on search and filters
 <:pages.disabled/root_pages/expanded-services-pricing-2027.page.tsx;
   const filteredServices = useMemo(: unknown {
@@ -35,7 +35,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
   'all');
     setSelectedSubcategory(
   'all')}
-;
+
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900'>
       <Helmet>
@@ -54,7 +54,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             Expanded Services Pricing Guide 2027
           </h1>'
           <p className='text-xl mb-8 max-w-4xl mx-auto'>
-            Comprehensive pricing information, ROI analysis, and market positioning for our cutting-edge;
+            Comprehensive pricing information, ROI analysis, and market positioning for our cutting-edge
             technology services. Compare pricing tiers, understand value propositions, and make informed decisions.
           </p>
           {/* Contact Information */}'
@@ -84,7 +84,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               type='text';
               placeholder='Search services...';
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}';
+              onChange={(e) => setSearchTerm(e.target.value)}'
               className='px-4 py-2 rounded-lg bg-white/20 text-white placeholder-white/70 border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400'
             />
             <select;
@@ -92,10 +92,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               onChange={(e) => {
                 setSelectedCategory(e.target.value);
                 setSelectedSubcategory(
-  'all')}}';
+  'all')}}'
               className = 'px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400'>{categories.map(cat  => ('
                 <option key={cat} value={cat} className='bg-gray-800 text-white'>
-                  {cat ===;
+                  {cat ===
   'all' ?
   'All Categories' : cat}
                 </option>
@@ -103,10 +103,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             </select>
             <select;
               value={selectedSubcategory}
-              onChange={(e) => setSelectedSubcategory(e.target.value)}';
+              onChange={(e) => setSelectedSubcategory(e.target.value)}'
               className='px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus: outline-none focus:ring-2 focus:ring-blue-400'>{subcategories.map(subcat  => ('
                 <option key={subcat} value={subcat} className='bg-gray-800 text-white'>
-                  {subcat ===;
+                  {subcat ===
   'all' ?
   'All Subcategories' : subcat}
                 </option>
@@ -301,7 +301,7 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               Ready to Get Started?
             </h2>'
             <p className='text-white/80 mb-6'>
-              Our comprehensive pricing structure is designed to provide maximum value at competitive rates.;
+              Our comprehensive pricing structure is designed to provide maximum value at competitive rates.
               Contact us today to discuss your specific needs and get a customized quote.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -321,5 +321,5 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
       </main>
     </div>
   )}
-;
+
 export default ExpandedServicesPricingGuide2027}}''`

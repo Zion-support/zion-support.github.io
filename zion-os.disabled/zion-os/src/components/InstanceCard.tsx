@@ -37,7 +37,7 @@ export function InstanceCard({ instance }: InstanceCardProps) {
   'bg-green-500/20 text-green-400 border-green-500/30';
       case;
   'DAO_LITE': return;
-  'bg-blue-500/20 text-blue-400 border-blue-500/30';
+  'bg-blue-500/20 text-blue-400 border-blue-500/30'
       default: return
   'bg-gray-500/20 text-gray-400 border-gray-500/30}
   const formatDate = (date: Date) => {

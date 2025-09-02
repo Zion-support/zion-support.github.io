@@ -12,13 +12,13 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>''
       <section className='mx-auto max-w-7xl px-6 py-20 lg:py-28'>''
         <div className='max-w-3xl'>''
-          <h1 className='text-3xl sm:text-5xl font-bold flex items-center gap-3'>'';
+          <h1 className='text-3xl sm:text-5xl font-bold flex items-center gap-3'>''
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
-            <Shield className='w-8 h-8 text-cyan-400'  /> Security Headers & CSP;
+            <Shield className='w-8 h-8 text-cyan-400'  /> Security Headers & CSP
             Manager'
           </h1>'          <p className='mt-4 text-slate-300'>
             Centralize HSTS, CSP, Referrer-Policy, Permissions-Policy and;
-            Subresource Integrity management across domains with rollout checks;
+            Subresource Integrity management across domains with rollout checks
             and reporting.'
           </p>''
           <div className='mt-8 grid gap-4 sm: anygrid-cols-2'>
@@ -38,11 +38,11 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
   CSP report-uri ingestion with triage and fixes.'},
               {
   ';
-                title: 'CI/CD integration,';
+                title: 'CI/CD integration,'
                 desc:
   'Fail builds on insecure headers or CSP regressions.'}].map(f => (
               <div'key={f.title}''                className='rounded-xl border border-white/10 bg-white/5 p-5''>''
-                <div className='flex items-center gap-2 text-cyan-300 font-semibold'>'';
+                <div className='flex items-center gap-2 text-cyan-300 font-semibold'>''
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
                   <CheckCircle className='w-4 h-4'  /> {f.title}'
                 </div>'                <div className='mt-1 text-sm text-slate-300'>{f.desc}</div>
@@ -53,7 +53,7 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
   'Typical pricing: {'}''            <span className='font-semibold text-cyan-300'>
               $49–$199/mo per domain
             </span>
-:pages.disabled/pages/services/SecurityHeadersCSPManager.tsx;
+:pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
             .'
           </div>''
           <div className='mt-4 flex gap-4 text-sm'>'<a''              className='inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200'';
@@ -75,14 +75,14 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               className='rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-4 py-2 text-sm font-semibold hover:from-cyan-400 hover:to-blue-500'>
               Start pilot
             </Link>'<a''              href='mailto:kleber@ziontechgroup.com'';
-              className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2''>'';
+              className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2''>''
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
               <Mail className='w-4 h-4'  /> kleber@ziontechgroup.com
             </a>'<a''              href='tel:+13024640950'';
-              className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2''>'';
+              className='rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2''>''
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
               <Phone className='w-4 h-4'  /> +1 302 464 0950</a>          </div>        </div>
       </section>
     </div>
-:pages.disabled/pages/services/SecurityHeadersCSPManager.tsx)}'';
+:pages.disabled/pages/services/SecurityHeadersCSPManager.tsx)}''
   '''"

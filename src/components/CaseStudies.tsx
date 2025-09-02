@@ -1,7 +1,6 @@
 import { motion     } from 'framer-motion';
 import { CheckCircle, TrendingUp, Users, DollarSign     } from 'lucide-react';
-interface CaseStudy {
-  id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode}[];
+interface CaseStudy { id: string title: string description: string industry: string results: { metric: string value: string icon: React.ReactNode  }[];
   technologies: string[]
   duration: string}
 const caseStudies: CaseStudy[] = [{ id: '1', title: 'AI-Powered Customer Service Automation',
@@ -29,8 +28,8 @@ export default function CaseStudies() {
             className='text-base font-semibold leading-7 text-blue-600';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true  }}
-            transition={{ duration: 0.6  }}
+            viewport={{ once: true    }}
+            transition={{ duration: 0.6    }}
           >
             Success Stories
           </motion.h2>
@@ -38,7 +37,7 @@ export default function CaseStudies() {
             className='mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true  }}
+            viewport={{ once: true    }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             Real results from real clients
@@ -47,7 +46,7 @@ export default function CaseStudies() {
             className='mt-6 text-lg leading-8 text-gray-600';
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true  }}
+            viewport={{ once: true    }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             See how our AI, cloud, and cybersecurity solutions have transformed businesses across industries.</motion.p>
@@ -60,7 +59,7 @@ export default function CaseStudies() {
               className='bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover: shadow-xl transition-all duration-300';
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true  }}
+              viewport={{ once: true    }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className='p-8'>
@@ -120,7 +119,7 @@ export default function CaseStudies() {
           className='text-center mt-12';
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true  }}
+          viewport={{ once: true    }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           <p className='text-lg text-gray-600 mb-6'>

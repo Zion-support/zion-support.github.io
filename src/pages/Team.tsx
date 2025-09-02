@@ -8,22 +8,18 @@ import {
 } from 'lucide-react';
 export default function Team() {
   const teamMembers = [
-    {
-      id: 1, name: "Dr. Sarah Chen",
+    { id: 1, name: "Dr. Sarah Chen",
       role: "Chief Executive Officer", department: "Executive",
       bio: "Visionary leader with 15+ years in AI and quantum computing. Former MIT researcher and Google AI pioneer.", expertise: ["AI Strategy", "Quantum Computing", "Leadership"], achievements: ["MIT PhD", "Google AI Research", "50+ Patents"]
-    }, {
-      id: 2,
+    }, { id: 2,
       name: "Prof. Michael Rodriguez", role: "Chief Technology Officer",
       department: "Technology", bio: "Quantum computing expert and former IBM Research scientist. Leading our quantum technology initiatives.",
       expertise: ["Quantum Computing", "Research", "Innovation"], achievements: ["IBM Research", "Quantum Pioneer", "Nobel Nominee"]
-    }, {
-      id: 3,
+    }, { id: 3,
       name: "Alex Thompson", role: "Head of AI Research",
       department: "AI & Machine Learning", bio: "AI researcher and entrepreneur. Former DeepMind engineer with expertise in neural networks and deep learning.",
       expertise: ["Deep Learning", "Neural Networks", "AI Ethics"], achievements: ["DeepMind Alumni", "AI Ethics Leader", "30+ Publications"]
-    }, {
-      id: 4,
+    }, { id: 4,
       name: "Lisa Park", role: "Chief Security Officer",
       department: "Cybersecurity", bio: "Cybersecurity expert with 12+ years protecting enterprise systems. Former NSA security analyst.",
       expertise: ["Cybersecurity", "Risk Management", "Compliance"], achievements: ["NSA Experience", "Security Expert", "CISSP Certified"]
@@ -48,7 +44,7 @@ export default function Team() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -84,7 +80,7 @@ export default function Team() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Leadership Team</h2>
@@ -167,7 +163,7 @@ export default function Team() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -198,5 +194,5 @@ export default function Team() {
         </section>
       </div>
 </>
-  );
+  )
 }

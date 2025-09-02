@@ -15,7 +15,7 @@ jest.mock(
   '@/lib/supabaseClient', () => ({
   supabase: {
     functions: {
-      invoke: jest.fn()}}}));
+      invoke: jest.fn()}}}))
 jest.mock(
   'sonner', () => ({
   toast: {
@@ -33,7 +33,7 @@ jest.mock(
       title,
       content,
       onContentChange}: {
-      title: string;
+      title: string
       content: string
       onContentChange: (newContent: string) => void}) => (
       <div
@@ -50,7 +50,7 @@ jest.mock(
   '@/components/WhitepaperPreviewPanel', () =>
   jest.fn(() => <div data-testid='mock-preview-panel' />));
 // Mock Recharts ResponsiveContainer as it can cause issues in JSDOM;
-jest;
+jest
   .spyOn(recharts'ResponsiveContainer')
   .mockImplementation(({ children }: { children: React.ReactNode }) => (
     <div data-testid='mock-responsive-container'>{children}</div>
@@ -102,7 +102,7 @@ const mockSupabaseInvoke = supabase.functions.invoke as jest.Mock;
 describe('WhitepaperGeneratorPage'', () => {
   beforeEach(() => {
     mockSupabaseInvoke.mockReset();
-    jest.clearAllMocks();
+    jest.clearAllMocks()
     mockCreateObjectURL.mockReset()
     mockRevokeObjectURL.mockReset()})
   test(
@@ -118,7 +118,7 @@ describe('WhitepaperGeneratorPage'', () => {
     expect(screen.getByRole(
   'button', { name: /MD/i })).toBeInTheDocument();
     expect(screen.getByRole(
-  'button', { name: /PDF/i })).toBeInTheDocument();
+  'button', { name: /PDF/i })).toBeInTheDocument()
     expect(screen.getByRole(
   'button', { name: /Share/i })).toBeInTheDocument()
     expect(
@@ -136,7 +136,7 @@ describe('WhitepaperGeneratorPage'', () => {
   ''Generate Draft' button', () => {
     test(
   'calls generate-whitepaper, renders sections on success', async () => {
-      const mockGeneratedDraft =;
+      const mockGeneratedDraft =
   '## Section 1\nContent 1\n## Section 2\nContent 2'
       mockSupabaseInvoke.mockResolvedValueOnce({
         data: { whitepaperDraft: mockGeneratedDraft },
@@ -162,7 +162,7 @@ describe('WhitepaperGeneratorPage'', () => {
   'mock-section-editor-section-2')).toBeInTheDocument()})
       expect(
         screen.getByRole(
-  'button', { name: /Submit to Counsel/i })).toBeInTheDocument();
+  'button', { name: /Submit to Counsel/i })).toBeInTheDocument()
       expect(generateButton).not.toBeDisabled()})
     test(
   'displays error message on generate-whitepaper failure', async () => {
@@ -179,7 +179,7 @@ describe('WhitepaperGeneratorPage'', () => {
           screen.getByText(/Supabase function error: Generation failed/i)).toBeInTheDocument())})})
   describe('Download Buttons'', () => {
     beforeEach(async () => {
-      // Ensure content is 'generated' before each download test;
+      // Ensure content is 'generated' before each download test
       mockSupabaseInvoke.mockResolvedValueOnce({
         data: { whitepaperDraft:
   '## Test\nContent },
@@ -224,7 +224,7 @@ describe('WhitepaperGeneratorPage'', () => {
           0,
           0,
           expect.any(Number),
-          expect.any(Number)));
+          expect.any(Number)))
       await waitFor(() =>
         expect(jsPDFMockInstance.save).toHaveBeenCalledWith(
           expect.stringContaining(
@@ -320,7 +320,7 @@ describe('WhitepaperGeneratorPage'', () => {
       await waitFor(() =>
         expect(
           screen.getByRole(
-  'button', { name: /Make Public/i })).toBeInTheDocument());
+  'button', { name: /Make Public/i })).toBeInTheDocument())
       expect(screen.getByText(/Currently: Private/i)).toBeInTheDocument()})})
   describe('Submit to Counsel' Button', () => {
     beforeEach(async () => {
@@ -411,7 +411,7 @@ describe('WhitepaperGeneratorPage'', () => {
       expect(
         mockSupabaseInvoke.mock.calls.filter(
           call => call[0] ===;
-  'create-shared-whitepaper').length).toBe(1);
+  'create-shared-whitepaper').length).toBe(1)
       expect(
         mockSupabaseInvoke.mock.calls.filter(
           call => call[0] ===

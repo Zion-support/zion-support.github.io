@@ -65,7 +65,7 @@ export default function HealthcareSolutions() {}
         <div className='max-w-7xl mx-auto'>''
           <div className='text-center'>''
             <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6'>
-:pages.disabled/solutions/HealthcareSolutions.jsx;
+:pages.disabled/solutions/HealthcareSolutions.jsx
               Healthcare Solutions'
             </h1>''
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
@@ -96,11 +96,11 @@ export default function HealthcareSolutions() {}
               From patient care to operational efficiency, we provide end-to-end healthcare technology solutions
             </p>
 :pages.disabled/solutions/HealthcareSolutions.jsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {solutions.map((solution, index) => {
-';
+'
             const Icon = solution.icon'
             return (<div key={index} className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'>''
                   <div className='w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6'>''
@@ -126,7 +126,7 @@ export default function HealthcareSolutions() {}
             </p>
 :pages.disabled/solutions/HealthcareSolutions.jsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''{benefits.map((benefit, index) => (<div key={index} className='text-center'>''
-                <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/solutions/HealthcareSolutions.jsx
                   <TrendingUp className='w-8 h-8 text-white'/>'</div>''                <p className='text-gray-300 text-lg'>{benefit}</p>
               </div>))}
@@ -145,7 +145,7 @@ export default function HealthcareSolutions() {}
 :pages.disabled/solutions/HealthcareSolutions.jsx
           </div>'''          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>''{caseStudies.map((study, index) => (<div key={index} className='bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8'>''
                 <div className='flex items-center mb-4'>''
-                  <Star className='w-5 h-5 text-yellow-400 mr-2'/>'';
+                  <Star className='w-5 h-5 text-yellow-400 mr-2'/>''
 :pages.disabled/solutions/HealthcareSolutions.jsx
                   <span className='text-sm text-gray-400'>{study.specialty}</span>'
                 </div>''
@@ -174,7 +174,7 @@ export default function HealthcareSolutions() {}
 '{/* CTA Section */}''      <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10'>''
         <div className='max-w-4xl mx-auto text-center'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/solutions/HealthcareSolutions.jsx;
+:pages.disabled/solutions/HealthcareSolutions.jsx
             Ready to Transform Healthcare?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>,

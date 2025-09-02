@@ -8,7 +8,7 @@ import Link from;
   'next/link';
 const AboutPage: NextPage = () => {
   const stats = [
-:pages.disabled_auto/about.tsx{ number:;
+:pages.disabled_auto/about.tsx{ number:
   '500+, label:
   'Projects Completed', icon: <Award className='w-8 h-8' /> },
     { number:,
@@ -18,7 +18,7 @@ const AboutPage: NextPage = () => {
     { number:,
   24/7', label: 'Support Available, icon: <Globe className='w-8 h-8' /> },
     { number: '500+', label: 'Projects Completed', icon: <Award className='w-8 h-8' /> }, { number: '50+', label: 'Happy Clients', icon: <Users className='w-8 h-8' /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className='w-8 h-8' /> }, { number: '24/7', label: 'Support Available', icon: <Globe className='w-8 h-8' /> }];
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className='w-8 h-8' /> }, { number: '24/7', label: 'Support Available', icon: <Globe className='w-8 h-8' /> }]
   const values = [
     {
 :pages.disabled_auto/about.tsx
@@ -35,14 +35,14 @@ const AboutPage: NextPage = () => {
     {
       icon: <Zap className='w-8 h-8' />,
       title:,
-  Excellence;
+  Excellence
   ',
       description: We maintain the highest standards of quality in everything we do, from code to customer service.
   '},
     {
       icon: <Target className='w-8 h-8' />,
       title:,
-  Results-Driven;
+  Results-Driven
   ',
       description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.
       icon: <Lightbulb className='w-8 h-8' />, title: 'Innovation',
@@ -141,7 +141,7 @@ const AboutPage: NextPage = () => {
       title: 'Global Reach,
       description:,
   Serving clients across multiple countries and industries, with a focus on AI and digital transformation.;
-  ';
+  '
       year: '2020', title: 'Company Founded',
       description: 'Zion Tech Group was established with a vision to democratize technology solutions for businesses of all sizes.'}, {
       year: '2021',
@@ -167,7 +167,7 @@ const AboutPage: NextPage = () => {
             <p className='text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed'>
 :pages.disabled_auto/about.tsx;
               Were a team of passionate technologists dedicated to helping businesses;
-              We&apos;re a team of passionate technologists dedicated to helping businesses ';
+              We&apos;re a team of passionate technologists dedicated to helping businesses '
               leverage cutting-edge technology to achieve their goals and drive growth.
             </p>
           </div>
@@ -181,11 +181,11 @@ const AboutPage: NextPage = () => {
               <h2 className='text-4xl font-bold text-gray-900 mb-6'>Our Mission</h2>
               <p className='text-lg text-gray-600 mb-6'>
                 At Zion Tech Group, we believe that every business deserves access to world-class;
-                technology solutions. Our mission is to democratize technology by providing;
+                technology solutions. Our mission is to democratize technology by providing
                 affordable, scalable, and innovative solutions that drive real business results.
               </p>
               <p className='text-lg text-gray-600 mb-6'>
-                We combine deep technical expertise with business acumen to deliver solutions;
+                We combine deep technical expertise with business acumen to deliver solutions
                 that not only work flawlessly but also provide measurable ROI for our clients.
               </p>
               <p className='text-lg text-gray-600'>
@@ -194,7 +194,7 @@ const AboutPage: NextPage = () => {
                 we;
   're here to be your technology partner every step of the way.;
                 Whether you&apos;re a startup looking to scale or an enterprise seeking digital transformation, ';
-                we&apos;re here to be your technology partner every step of the way.'
+                we&aposre here to be your technology partner every step of the way.'
               </p>
             </div>
             <div className='bg-gray-100 rounded-lg p-8'>
@@ -265,7 +265,7 @@ const AboutPage: NextPage = () => {
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Meet Our Team</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our expert team brings together diverse skills and experiences to deliver;
+              Our expert team brings together diverse skills and experiences to deliver
               exceptional results for our clients.
             </p>
           </div>
@@ -317,7 +317,7 @@ const AboutPage: NextPage = () => {
 :pages.disabled_auto/about.tsx;
               We;
   're not just another technology company. Here's what makes us different.;
-              We&apos;re not just another technology company. Here&apos;s what makes us different.
+              We&apos;re not just another technology company. Here&aposs what makes us different.
             </p>
           </div>
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
@@ -333,35 +333,35 @@ const AboutPage: NextPage = () => {
 :pages.disabled_auto/about.tsx;
                 We;
   've successfully delivered hundreds of projects across various industries;
-                We&apos;ve successfully delivered hundreds of projects across various industries ';
+                We&apos;ve successfully delivered hundreds of projects across various industries '
                 and business sizes.
               </p>
             </div>
             <div className='bg-white p-6 rounded-lg shadow-lg'>
               <h3 className='text-xl font-semibold text-gray-900 mb-3'>Innovation Focus</h3>
               <p className='text-gray-600'>
-                We stay ahead of technology trends and continuously innovate to provide;
+                We stay ahead of technology trends and continuously innovate to provide
                 cutting-edge solutions.
               </p>
             </div>
             <div className='bg-white p-6 rounded-lg shadow-lg'>
               <h3 className='text-xl font-semibold text-gray-900 mb-3'>Customer Success</h3>
               <p className='text-gray-600'>
-                Your success is our priority. We work closely with you to ensure;
+                Your success is our priority. We work closely with you to ensure
                 your goals are achieved.
               </p>
             </div>
             <div className='bg-white p-6 rounded-lg shadow-lg'>
               <h3 className='text-xl font-semibold text-gray-900 mb-3'>Scalable Solutions</h3>
               <p className='text-gray-600'>
-                We build solutions that grow with your business, ensuring long-term;
+                We build solutions that grow with your business, ensuring long-term
                 value and flexibility.
               </p>
             </div>
             <div className='bg-white p-6 rounded-lg shadow-lg'>
               <h3 className='text-xl font-semibold text-gray-900 mb-3'>24/7 Support</h3>
               <p className='text-gray-600'>
-                Round-the-clock support ensures your systems run smoothly and;
+                Round-the-clock support ensures your systems run smoothly and
                 issues are resolved quickly.
               </p>
             </div>
@@ -373,7 +373,7 @@ const AboutPage: NextPage = () => {
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Work Together?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
-            Let&aposs discuss how our team can help transform your business with innovative '';
+            Let&aposs discuss how our team can help transform your business with innovative ''
             technology solutions.
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -392,5 +392,5 @@ const AboutPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default AboutPage

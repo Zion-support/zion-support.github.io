@@ -11,7 +11,7 @@ export default function AIDevelopmentService() {
           </h1>
           <p className="mt-4 text-lg text-gray-600">
             End-to-end AI solutions: strategy, prototyping, model development,
-            evaluation, deployment, monitoring, and governance.; We build with
+            evaluation, deployment, monitoring, and governance. We build with
             OpenAI, Google Vertex, custom PyTorch/TensorFlow, and serve via
             scalable APIs.
           </p>
@@ -135,5 +135,5 @@ export default function AIDevelopmentService() {
         </div>
       </section>
     </div>
-  );
+  )
 }

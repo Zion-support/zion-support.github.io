@@ -110,14 +110,14 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     'High-Frequency Trading Engines',';
     'Real-time Data Processing',';Blockchain Integration';
   ];
-  return();
+  return()
 :pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
     <>
 <:pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx;
       <SEO;
 =;
       <SEO '>        title = 'AI Financial Trading & Risk Management - Zion Tech Group';
-        description='Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks.';
+        description='Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks.'
         canonical='/services/ai-financial-trading-risk-management'
     <>'
       <SEO '';
@@ -189,10 +189,10 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 Advanced Trading & Risk Management Features'
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Our AI platform provides comprehensive trading capabilities with;
+                Our AI platform provides comprehensive trading capabilities with
                 advanced risk management and market analysis
               </p>
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map(feature: unknown, index: unknown()
@@ -219,7 +219,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   </div>'
                   <h3 className='text-xl font-semibold mb-3 text-white'>{feature.title}</h3>';
   delay: index * 0.1 '}}'';
-                  className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300'';
+                  className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300''
 ''
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
                     <feature.icon className='w-6 h-6 text-white' />'
@@ -254,10 +254,10 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 Comprehensive Trading Solutions'
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Choose the perfect AI trading solution for your organization;
+                Choose the perfect AI trading solution for your organization
                 with scalable pricing and advanced features
               </p>
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
               {servicePackages.map(pkg: unknown, index: unknown
@@ -285,7 +285,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                     {pkg.features.map((feature, featureIndex) => ('
                       <li key={featureIndex} className='flex items-center text-gray-300'>';
   delay: index * 0.1 '}}'';
-                  className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300'';
+                  className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300''
 ''
                   <h3 className='text-xl font-semibold mb-3 text-white'>{pkg.name}</h3>''
                   <div className='text-3xl font-bold mb-6 text-cyan-400'>{pkg.price}</div>''
@@ -329,10 +329,10 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 Multi-Asset Trading Support'
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Our AI platform supports trading across all major asset classes;
+                Our AI platform supports trading across all major asset classes
                 with unified risk management and analysis
               </p>
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>
               {supportedAssets.map(asset: unknown, index: unknown()
@@ -389,7 +389,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 Experience significant improvements in trading performance,
                 risk management, and operational efficiency
               </p>
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {benefits.map(benefit: unknown, index: unknown()
@@ -414,7 +414,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4'>'
                     <CheckCircle className='w-6 h-6 text-white'  />
   delay: index * 0.1 '}}'';
-                  className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10'';
+                  className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10''
 ''
                   <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mb-4'>''
                     <CheckCircle className='w-6 h-6 text-white'  />'
@@ -447,10 +447,10 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 Cutting-Edge Trading Technology'
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Built with the latest AI and high-frequency trading technologies for;
+                Built with the latest AI and high-frequency trading technologies for
                 maximum performance and reliability
               </p>
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>
               {technologies.map(tech: unknown, index: unknown()
@@ -574,10 +574,10 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 Get in Touch'
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Ready to discuss how AI Financial Trading & Risk Management can transform;
+                Ready to discuss how AI Financial Trading & Risk Management can transform
                 your trading operations? Contact our experts today.
               </p>
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
               <motion.div;
@@ -596,7 +596,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 <Phone className='w-12 h-12 text-cyan-400 mx-auto mb-4'  />';
   y: 0}}';
                 transition={{ duration: 0.6 }}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <Phone className='w-12 h-12 text-cyan-400 mx-auto mb-4'  />''
                 <h3 className='text-xl font-semibold mb-2 text-white'>Phone</h3>'                <p className='text-gray-300'>+1 302 464 0950</p>
@@ -620,7 +620,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 ';
                 <Mail className='w-12 h-12 text-cyan-400 mx-auto mb-4'  />';
   delay: 0.2 '}}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <Mail className='w-12 h-12 text-cyan-400 mx-auto mb-4'  />''
                 <h3 className='text-xl font-semibold mb-2 text-white'>Email</h3>'                <p className='text-gray-300'>kleber@ziontechgroup.com</p>
@@ -644,7 +644,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 ';
                 <Globe className='w-12 h-12 text-cyan-400 mx-auto mb-4'  />';
   delay: 0.4 '}}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <Globe className='w-12 h-12 text-cyan-400 mx-auto mb-4'  />''
                 <h3 className='text-xl font-semibold mb-2 text-white'>Website</h3>'                <p className='text-gray-300'>https://ziontechgroup.com</p>
@@ -669,7 +669,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 ';
               <h3 className='text-2xl font-semibold mb-4 text-white'>Address</h3>';
   delay: 0.6 '}}'';
-              className='text-center mt-12'';
+              className='text-center mt-12''
 ''
               <h3 className='text-2xl font-semibold mb-4 text-white'>Address</h3>''
               <p className='text-gray-300'>
@@ -681,5 +681,5 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         </section>
       </div>
     </>
-  )}'';
+  )}''
 ''''

@@ -149,7 +149,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
                     'Predictive monitoring',
                     'Priority support',
                     'Custom integrations',
-                    'Self-healing systems';
+                    'Self-healing systems'
                   ],
                   popular: true},
                 {
@@ -229,7 +229,7 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
               <div>
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
-                  {[;
+                  {[
                     'Reduce deployment time by 80% with AI automation',
                     'Decrease infrastructure costs by 50% through intelligent optimization',
                     'Improve system reliability by 95% with self-healing capabilities',
@@ -307,5 +307,5 @@ const AIAutonomousDevOpsPlatform: React.FC = () => {
       </div>
     </>
   )}
-;
+
 export default AIAutonomousDevOpsPlatform

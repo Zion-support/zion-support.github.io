@@ -39,9 +39,9 @@ import {}
             transition={{ duration: 0.8 }}'>''
             <div className='inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6'>''
               <Brain className='w-4 h-4 mr-2'  />              AI-Powered Legal Technology
-            </div>';
+            </div>'
 ''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO''
@@ -74,14 +74,14 @@ import {}
             <p className='text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed'>
               Transform your legal practice with AI-powered document analysis.;
               Automate contract review, risk assessment, and compliance;
-              monitoring to save time and reduce legal risks.;
+              monitoring to save time and reduce legal risks.
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <a'';
                 href='#pricing'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl'>'
                 View Pricing''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
               <a''
@@ -130,11 +130,11 @@ import {}
               Powerful Features for Legal Professionals
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Leverage cutting-edge AI technology to streamline your legal;
+              Leverage cutting-edge AI technology to streamline your legal
               document workflow
             </p>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -203,7 +203,7 @@ import {}
               See how AI document analysis transforms various legal workflows
             </p>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -272,7 +272,7 @@ import {}
               Choose the plan that fits your practice size and needs
             </p>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -303,7 +303,7 @@ import {}
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/ai-legal-document-analyzer.tsx)}';
+:pages.disabled/pages/services/ai-legal-document-analyzer.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -316,7 +316,7 @@ import {}
                     <span className='text-slate-300 ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-slate-300 mt-2'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>')}
 ''
@@ -389,11 +389,11 @@ import {}
               Ready to Transform Your Legal Practice?
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Contact us today to learn how AI document analysis can streamline;
+              Contact us today to learn how AI document analysis can streamline
               your workflow
             </p>
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'
             <motion.div'';
@@ -506,5 +506,5 @@ import {}
   )}
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx;
 export default AILegalDocumentAnalyzer''`;
-''`''`;
+''`''`
 export default AILegalDocumentAnalyzer'"`

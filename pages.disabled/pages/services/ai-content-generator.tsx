@@ -25,7 +25,7 @@ export default function AIContentGenerator(...args: any[]): any {}
                 AI Content Generator'</h1>''              <p className='text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
                 Revolutionary AI-powered content creation that writes,
                 optimizes, and scales your content strategy. Generate;
-                high-quality, SEO-optimized content in minutes.;
+                high-quality, SEO-optimized content in minutes.
 :pages.disabled/pages/services/ai-content-generator.tsx
               </p>'
             </div>''
@@ -45,66 +45,66 @@ export default function AIContentGenerator(...args: any[]): any {}
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-content-generator.tsx
               Revolutionary AI Content Generation'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Transform your content marketing with our advanced AI content;
+              Transform your content marketing with our advanced AI content
               generator
             </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''
             <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20'>''
-              <div className='w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6'>'';
+              <div className='w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/ai-content-generator.tsx
                 <Brain className='w-8 h-8 text-blue-400'  />'
               </div>''
               <h3 className='text-xl font-bold text-white mb-4'>
-                Intelligent Content Creation'</h3>'              <p className='text-gray-300'>                AI-powered writing that understands your brand voice and creates;
+                Intelligent Content Creation'</h3>'              <p className='text-gray-300'>                AI-powered writing that understands your brand voice and creates
                 engaging, original content
               </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
-            </div>';
+            </div>'
 ''
             <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20'>''
               <div className='w-16 h-16 bg-green-600/20 rounded-2xl flex items-center justify-center mb-6'>''
                 <Zap className='w-8 h-8 text-green-400'  />'
               </div>''
               <h3 className='text-xl font-bold text-white mb-4'>
-                SEO Optimization'</h3>'              <p className='text-gray-300'>                Automatically optimize content for search engines with;
+                SEO Optimization'</h3>'              <p className='text-gray-300'>                Automatically optimize content for search engines with
                 intelligent keyword integration
               </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
-            </div>';
+            </div>'
 ''
             <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20'>''
               <div className='w-16 h-16 bg-purple-600/20 rounded-2xl flex items-center justify-center mb-6'>''
                 <Users className='w-8 h-8 text-purple-400'  />'
               </div>''
               <h3 className='text-xl font-bold text-white mb-4'>
-                Audience Targeting'</h3>'              <p className='text-gray-300'>                Create content specifically tailored to your target audience;
+                Audience Targeting'</h3>'              <p className='text-gray-300'>                Create content specifically tailored to your target audience
                 demographics and preferences
               </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
-            </div>';
+            </div>'
 ''
             <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20'>''
               <div className='w-16 h-16 bg-yellow-600/20 rounded-2xl flex items-center justify-center mb-6'>''
                 <TrendingUp className='w-8 h-8 text-yellow-400'  />'
               </div>''
               <h3 className='text-xl font-bold text-white mb-4'>
-                Performance Analytics'</h3>'              <p className='text-gray-300'>                Track content performance and get insights to improve your;
+                Performance Analytics'</h3>'              <p className='text-gray-300'>                Track content performance and get insights to improve your
                 content strategy
               </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
-            </div>';
+            </div>'
 ''
             <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20'>''
               <div className='w-16 h-16 bg-red-600/20 rounded-2xl flex items-center justify-center mb-6'>''
                 <Shield className='w-8 h-8 text-red-400'  />'
               </div>''
               <h3 className='text-xl font-bold text-white mb-4'>
-                Quality Assurance'</h3>'              <p className='text-gray-300'>                Built-in plagiarism detection and content quality checks ensure;
+                Quality Assurance'</h3>'              <p className='text-gray-300'>                Built-in plagiarism detection and content quality checks ensure
                 originality
               </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
-            </div>';
+            </div>'
 ''
             <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20'>''
               <div className='w-16 h-16 bg-indigo-600/20 rounded-2xl flex items-center justify-center mb-6'>''
@@ -121,7 +121,7 @@ export default function AIContentGenerator(...args: any[]): any {}
 '{/* CTA Section */}''      <section className='py-20'>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-8'>
-:pages.disabled/pages/services/ai-content-generator.tsx;
+:pages.disabled/pages/services/ai-content-generator.tsx
             Ready to Transform Your Content Strategy?'
           </h2>''
           <p className='text-xl text-gray-300 mb-12 max-w-3xl mx-auto'>
@@ -135,5 +135,5 @@ export default function AIContentGenerator(...args: any[]): any {}
       </section>
     </div>
 :pages.disabled/pages/services/ai-content-generator.tsx)}
-  '';
+  ''
 '''"

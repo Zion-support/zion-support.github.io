@@ -1,10 +1,8 @@
-export interface ServiceContact {
-  phone: string;
+export interface ServiceContact { phone: string;
   email: string;
   website: string;
-  address: string}
-export interface MicroSaasService {
-  id: string;
+  address: string  }
+export interface MicroSaasService { id: string;
   name: string;
   category: string;
   pricing: string;
@@ -27,9 +25,8 @@ export interface MicroSaasService {
   marketSize: string;
   growthRate: string;
   useCases: string[];
-  technologies: string[]}
-export interface ITService {
-  id: string;
+  technologies: string[]  }
+export interface ITService { id: string;
   name: string;
   category: string;
   pricing: string;
@@ -52,9 +49,8 @@ export interface ITService {
   marketSize: string;
   growthRate: string;
   useCases: string[];
-  technologies: string[]}
-export interface AIService {
-  id: string;
+  technologies: string[]  }
+export interface AIService { id: string;
   name: string;
   category: string;
   pricing: string;
@@ -77,15 +73,13 @@ export interface AIService {
   marketSize: string;
   growthRate: string;
   useCases: string[];
-  technologies: string[]}
+  technologies: string[]  }
 // Zion Tech Group Contact Information;
-export const zionContact: ServiceContact = {
-  phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+export const zionContact: ServiceContact = { phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
   website: 'https://ziontechgroup.com', address: '364 E Main St STE 1008 Middletown DE 19709'}
 ;
 // Revolutionary Micro SAAS Services 2025;
-export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
-    id: 'ai-business-intelligence-2025', name: 'AI Business Intelligence Platform',
+export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{ id: 'ai-business-intelligence-2025', name: 'AI Business Intelligence Platform',
     category: 'AI Analytics', pricing: 'Starting at $299/month',
     description: 'Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.', price: 299,
     pricingModel: 'month', features: [;
@@ -111,8 +105,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
       'Financial forecasting', 'Operational efficiency tracking',
       'Market trend analysis';
     ], technologies: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis']
-  }, {
-    id: 'customer-support-automation-2025',
+  }, { id: 'customer-support-automation-2025',
     name: 'AI Customer Support Automation', category: 'Customer Experience',
     pricing: 'Starting at $199/month', description: 'Intelligent customer support automation platform that handles inquiries, provides instant responses, and escalates complex issues to human agents seamlessly.',
     price: 199, pricingModel: 'month',
@@ -139,8 +132,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
       'Technical support', 'FAQ responses',
       'Appointment scheduling';
     ], technologies: ['Vue.js', 'Python', 'OpenAI GPT', 'MongoDB', 'WebSocket', 'Redis']
-  }, {
-    id: 'content-creation-platform-2025',
+  }, { id: 'content-creation-platform-2025',
     name: 'AI Content Creation Platform', category: 'Content Marketing',
     pricing: 'Starting at $149/month', description: 'Comprehensive AI-powered content creation platform that generates high-quality articles, social media posts, marketing copy, and multimedia content.', price: 149,
     pricingModel: 'month', features: [;
@@ -166,8 +158,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
       'Email marketing campaigns', 'Product descriptions',
       'Ad copy generation';
     ], technologies: ['Next.js', 'Python', 'OpenAI API', 'PostgreSQL', 'AWS S3', 'Cloudinary']
-  }, {
-    id: 'project-management-ai-2025',
+  }, { id: 'project-management-ai-2025',
     name: 'AI Project Management Suite', category: 'Project Management',
     pricing: 'Starting at $179/month', description: 'Intelligent project management platform that uses AI to optimize workflows, predict project risks, and automate task management for improved productivity.',
     price: 179, pricingModel: 'month',
@@ -194,8 +185,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
       'Event planning', 'Product launches',
       'Client project delivery';
     ], technologies: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis']
-  }, {
-    id: 'inventory-management-ai-2025',
+  }, { id: 'inventory-management-ai-2025',
     name: 'AI Inventory Management System', category: 'Supply Chain',
     pricing: 'Starting at $129/month', description: 'Smart inventory management system that uses AI to predict demand, optimize stock levels, and prevent stockouts while reducing carrying costs.',
     price: 129, pricingModel: 'month',
@@ -222,8 +212,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
       'Multi-store operations', 'Seasonal demand planning',
       'Supplier coordination';
     ], technologies: ['Vue.js', 'Python', 'Scikit-learn', 'PostgreSQL', 'Redis', 'Docker']
-  }, {
-    id: 'hr-automation-platform-2025',
+  }, { id: 'hr-automation-platform-2025',
     name: 'AI HR Automation Platform', category: 'Human Resources',
     pricing: 'Starting at $219/month', description: 'Comprehensive HR automation platform that streamlines recruitment, employee onboarding, performance management, and HR operations using AI.', price: 219,
     pricingModel: 'month', features: [;
@@ -249,8 +238,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
       'Performance reviews', 'Training management',
       'Compliance reporting';
     ], technologies: ['Angular', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS']
-  }, {
-    id: 'financial-analytics-ai-2025',
+  }, { id: 'financial-analytics-ai-2025',
     name: 'AI Financial Analytics Suite', category: 'Financial Services',
     pricing: 'Starting at $249/month', description: 'Advanced financial analytics platform that provides AI-powered insights, risk assessment, and financial forecasting for better decision making.',
     price: 249, pricingModel: 'month',
@@ -277,8 +265,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
       'Investment analysis', 'Budget management',
       'Compliance reporting';
     ], technologies: ['React', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Docker']
-  }, {
-    id: 'marketing-automation-ai-2025',
+  }, { id: 'marketing-automation-ai-2025',
     name: 'AI Marketing Automation Platform', category: 'Marketing',
     pricing: 'Starting at $189/month', description: 'Intelligent marketing automation platform that personalizes campaigns, optimizes customer journeys, and maximizes ROI through AI-driven insights.',
     price: 189, pricingModel: 'month',
@@ -305,8 +292,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
       'Social media marketing', 'Customer segmentation',
       'Campaign optimization';
     ], technologies: ['Vue.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'AWS']
-  }, {
-    id: 'sales-automation-ai-2025',
+  }, { id: 'sales-automation-ai-2025',
     name: 'AI Sales Automation Suite', category: 'Sales',
     pricing: 'Starting at $199/month', description: 'Comprehensive sales automation platform that uses AI to identify prospects, qualify leads, and optimize sales processes for increased revenue.',
     price: 199, pricingModel: 'month',
@@ -333,8 +319,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
       'Email outreach', 'Meeting scheduling',
       'Performance tracking';
     ], technologies: ['React', 'Node.js', 'Python', 'TensorFlow', 'PostgreSQL', 'Redis']
-  }, {
-    id: 'compliance-automation-ai-2025',
+  }, { id: 'compliance-automation-ai-2025',
     name: 'AI Compliance Automation Platform', category: 'Compliance',
     pricing: 'Starting at $279/month', description: 'Intelligent compliance automation platform that monitors regulatory requirements, automates reporting, and ensures adherence to industry standards.',
     price: 279, pricingModel: 'month',
@@ -364,8 +349,7 @@ export const revolutionaryMicroSaasServices2025: MicroSaasService[] = [{
   }
 ];
 // Revolutionary IT Services 2025;
-export const revolutionaryITServices2025: ITService[] = [{
-    id: 'ai-cybersecurity-suite-2025', name: 'AI Cybersecurity Suite',
+export const revolutionaryITServices2025: ITService[] = [{ id: 'ai-cybersecurity-suite-2025', name: 'AI Cybersecurity Suite',
     category: 'Cybersecurity', pricing: 'Starting at $399/month',
     description: 'Advanced AI-powered cybersecurity suite that provides real-time threat detection, automated incident response, and comprehensive security monitoring.', price: 399,
     pricingModel: 'month', features: [;
@@ -391,8 +375,7 @@ export const revolutionaryITServices2025: ITService[] = [{
       'Security monitoring', 'Compliance reporting',
       'Incident investigation';
     ], technologies: ['Python', 'TensorFlow', 'Elasticsearch', 'Kafka', 'Docker', 'Kubernetes']
-  }, {
-    id: 'cloud-infrastructure-optimization-2025',
+  }, { id: 'cloud-infrastructure-optimization-2025',
     name: 'Cloud Infrastructure Optimization', category: 'Cloud Services',
     pricing: 'Starting at $299/month', description: 'AI-driven cloud infrastructure optimization service that reduces costs, improves performance, and ensures optimal resource utilization across cloud platforms.',
     price: 299, pricingModel: 'month',
@@ -419,8 +402,7 @@ export const revolutionaryITServices2025: ITService[] = [{
       'Security hardening', 'Compliance management',
       'Disaster recovery';
     ], technologies: ['Python', 'Terraform', 'Kubernetes', 'Prometheus', 'Grafana', 'AWS SDK']
-  }, {
-    id: 'devops-automation-platform-2025',
+  }, { id: 'devops-automation-platform-2025',
     name: 'DevOps Automation Platform', category: 'DevOps',
     pricing: 'Starting at $249/month', description: 'Comprehensive DevOps automation platform that streamlines development workflows, automates deployments, and improves collaboration between development and operations teams.',
     price: 249, pricingModel: 'month',
@@ -450,8 +432,7 @@ export const revolutionaryITServices2025: ITService[] = [{
   }
 ];
 // Revolutionary AI Services 2025;
-export const revolutionaryAIServices2025: AIService[] = [{
-    id: 'ai-enterprise-automation-2025', name: 'AI Enterprise Automation Platform',
+export const revolutionaryAIServices2025: AIService[] = [{ id: 'ai-enterprise-automation-2025', name: 'AI Enterprise Automation Platform',
     category: 'Enterprise AI', pricing: 'Starting at $599/month',
     description: 'Comprehensive AI enterprise automation platform that transforms business processes, reduces operational costs, and drives innovation across all departments.', price: 599,
     pricingModel: 'month', features: [;
@@ -477,8 +458,7 @@ export const revolutionaryAIServices2025: AIService[] = [{
       'Customer service', 'Financial operations',
       'Supply chain optimization';
     ], technologies: ['Python', 'TensorFlow', 'PyTorch', 'Kubernetes', 'PostgreSQL', 'Redis']
-  }, {
-    id: 'ai-predictive-analytics-2025',
+  }, { id: 'ai-predictive-analytics-2025',
     name: 'AI Predictive Analytics Platform', category: 'Predictive Analytics',
     pricing: 'Starting at $449/month', description: 'Advanced AI predictive analytics platform that provides accurate forecasting, trend analysis, and actionable insights for strategic decision making.',
     price: 449, pricingModel: 'month',
@@ -505,8 +485,7 @@ export const revolutionaryAIServices2025: AIService[] = [{
       'Risk assessment', 'Market analysis',
       'Performance prediction';
     ], technologies: ['Python', 'Scikit-learn', 'TensorFlow', 'PyTorch', 'PostgreSQL', 'Apache Spark']
-  }, {
-    id: 'ai-natural-language-processing-2025',
+  }, { id: 'ai-natural-language-processing-2025',
     name: 'AI Natural Language Processing Platform', category: 'Natural Language Processing',
     pricing: 'Starting at $379/month', description: 'Advanced NLP platform that enables natural language understanding, text analysis, and conversational AI capabilities for enhanced user experiences.',
     price: 379, pricingModel: 'month',

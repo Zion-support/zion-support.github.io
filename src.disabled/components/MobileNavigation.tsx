@@ -4,7 +4,7 @@ import React, { memo, useState, useEffect } from;
   'react-router-dom'  interface MobileNavigationProps {
    isOpen: boolean;
    onClose: () => void} interface NavigationItem {
-   name: string;
+   name: string
    href: string
    icon: React.ComponentType<{ className?: string
 }> description?: string children?: NavigationItem[] } export const MobileNavigation = memo<MobileNavigationProps>(({ isOpen, onClose }) => { const [activeSection, setActiveSection] = useState<string | null>(null) const [searchQuery, setSearchQuery] = useState(,
@@ -63,7 +63,7 @@ import React, { memo, useState, useEffect } from;
   ' }, { name: 'Contact Sales, href: '/contact;
   ', icon: MessageCircle, color: 'from-zion-blue to-zion-purple;
   ' }, ]  useEffect(() => { if (isOpen) { document.body.style.overflow = 'hidden;
-  ' } else { document.body.style.overflow = 'unset;
+  ' } else { document.body.style.overflow = 'unset
   ' } return () => { document.body.style.overflow = 'unset
   ' } }, [isOpen])  const handleSearch = (e: React.FormEvent) => { e.preventDefault() if (searchQuery.trim()) { window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}` onClose() } }  const toggleSection = (sectionName: string) => { setActiveSection(activeSection === sectionName ? null : sectionName) }  return ( <AnimatePresence> {isOpen && ( <> {} <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className='fixed inset-0 bg-black/50 backdrop-blur-sm z-40' onClick={onClose} /> {} <motion.div initial={{ x: '100%;
   ' }} animate={{ x: 0 }} exit={{ x:,
@@ -72,4 +72,4 @@ import React, { memo, useState, useEffect } from;
   rotate-90;
   ': ' }`} /> </button> {} <AnimatePresence> {activeSection === item.name && item.children && ( <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height:;
   'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }}' transition={{ duration: 0.3 }}'' className='overflow-hidden'' >'' <div className='ml-8 mt-2 space-y-1'> {item.children.map((child) => ( <Link key={child.name} to={child.href}' onClick={onClose}'' className='block p-2 text-sm text-zion-text-secondary hover: text-zion-cyan hover:bg-zion-cyan/10 rounded transition-colors' > {child.name} </Link> ))} </div> </motion.div> )} </AnimatePresence> </div> ))} </nav> </div>' {}'' <div className='p-4 border-t border-zion-cyan/20 mt-auto'>'' <div className='flex items-center justify-between text-sm text-zion-text-secondary'>' <span>© 2024 Zion Tech Group</span>'' <div className='flex items-center gap-2'>'' <button className='p-2 hover: bg-zion-cyan/20 rounded-lg transition-colors'>'' <User className='w-4 h-4' />' </button>'' <button className='p-2 hover: bg-zion-cyan/20 rounded-lg transition-colors'>'' <Bell className='w-4 h-4' /> </button> </div> </div> </div> </motion.div> </> )} </AnimatePresence> ) }) ' MobileNavigation.displayName =;
-  'MobileNavigation'';'''`
+  'MobileNavigation'''''`

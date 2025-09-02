@@ -95,7 +95,7 @@ import React, { useState, useEffect } from;
   Most advanced services for 2027' }, { name: 'Innovative Services, href:;
   '/innovative-services-2027', icon: Lightbulb, description:,
   Cutting-edge innovative solutions' } ] }, { name: 'About, href:;
-  '/about', icon: Info, color:;
+  '/about', icon: Info, color:
   'from-zion-blue to-zion-cyan', isMain: true }, { name:,
   Contact', href: '/contact, icon: Phone, color:
   'from-zion-cyan to-zion-purple', isMain: true } ] return ( <> {} <nav className={`hidden lg: block fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${ scrolled ?,
@@ -112,4 +112,4 @@ import React, { useState, useEffect } from;
   rotate-180;
   ': ' }`} /> </button> {} <AnimatePresence> {activeDropdown === item.name && ( <motion.div initial = { { opacity: 0, height: 0 }} animate = { { opacity: 1, height:;
   'auto' }} exit = { { opacity: 0, height: 0 }} transition={{ duration: 0.3 }} className='ml-6 mt-2 space-y-1 overflow-hidden' {item.dropdown.map((dropdownItem) => ( <Link key={dropdownItem.name} to={dropdownItem.href} className='block px-4 py-2 text-gray-400 hover: text-white hover:bg-zion-slate-light/30 rounded-lg transition-all duration-200' {dropdownItem.name} </Link> ))} </motion.div> )} </AnimatePresence> </div> ) : ( <Link to={item.href} className={`block px-4 py-3 rounded-lg font-medium transition-all duration-300 ${ location.pathname === item.href ?,
-  bg-gradient-to-r from-zion-cyan to-zion-purple text-white': 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30 }`} <div className='flex items-center space-x-3'> {item.icon && <item.icon className='w-4 h-4' />} <span>{item.name}</span> </div> </Link> )} </div> ))} </div> {} <div className='mt-8 pt-6 border-t border-zion-cyan/20'> <div className='text-center'> <div className='text-zion-cyan font-semibold mb-2'>Contact Us</div> <div className='text-sm text-gray-400 space-y-1'> <div>+1 302 464 0950</div> <div>kleber@ziontechgroup.com</div> <div>364 E Main St STE 1008</div> <div>Middletown DE 19709</div> </div> </div> </div> </div> </motion.div> )} </AnimatePresence> </nav>  {} <div className='h-20'></div> </> ) }';`
+  bg-gradient-to-r from-zion-cyan to-zion-purple text-white': 'text-gray-300 hover:text-white hover:bg-zion-slate-light/30 }`} <div className='flex items-center space-x-3'> {item.icon && <item.icon className='w-4 h-4' />} <span>{item.name}</span> </div> </Link> )} </div> ))} </div> {} <div className='mt-8 pt-6 border-t border-zion-cyan/20'> <div className='text-center'> <div className='text-zion-cyan font-semibold mb-2'>Contact Us</div> <div className='text-sm text-gray-400 space-y-1'> <div>+1 302 464 0950</div> <div>kleber@ziontechgroup.com</div> <div>364 E Main St STE 1008</div> <div>Middletown DE 19709</div> </div> </div> </div> </div> </motion.div> )} </AnimatePresence> </nav>  {} <div className='h-20'></div> </> ) }'`

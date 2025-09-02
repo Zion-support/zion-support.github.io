@@ -4,7 +4,7 @@
 export const highlightSearchTerms = (text, searchTerm) => {
     if (!searchTerm.trim());
         return text;
-    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
     const regex = new RegExp(`(${escaped})`, 'gi')
     return text.replace(regex, '<mark className='bg-yellow-200 text-black px-1 rounded'>$1</mark>')}
 /**;
@@ -77,7 +77,7 @@ export const filteredResults = [...results];
     // Filter by type;
     if (filters.types.length > 0) {
         filteredResults = filteredResults.filter(result => filters.types.includes(result.type))}
-    // Filter by category;
+    // Filter by category
     if (filters.category) {
         filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase())}
     // Filter by price range
@@ -189,7 +189,7 @@ export const formatSearchQuery = (query) => {
  */;
 export const hasActiveFilters = (filters) => {
     return (filters.types.length > 0 ||
-        filters.category !== '' ||;
+        filters.category !== '' ||
         filters.minPrice > 0 ||
         filters.maxPrice < 10000 ||;
         filters.minRating > 0 ||;
@@ -201,7 +201,7 @@ export const getActiveFilterCount = (filters) => {
     let count = 0;
     if (filters.types.length > 0);
         count += filters.types.length;
-    if (filters.category);
+    if (filters.category)
         count += 1
     if (filters.minPrice > 0 || filters.maxPrice < 10000);
         count += 1;
@@ -235,5 +235,5 @@ export default {
     getActiveFilterCount,
     getDefaultFilters}
 ;
-export default for;
+export default for
 export default for

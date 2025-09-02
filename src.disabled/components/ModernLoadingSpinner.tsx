@@ -13,5 +13,5 @@ import React, { useState, useEffect } from,
   'Loading...', showProgress = false, progress = 0, duration = 3000, onComplete }) => { const [currentProgress, setCurrentProgress] = useState(0) const [isComplete, setIsComplete] = useState(false)  const sizeClasses = { sm: 'w-8 h-8, md:,
   w-12 h-12', lg: 'w-16 h-16, xl:,
   w-24 h-24' }  const textSizes = { sm: 'text-sm, md:,
-  text-base', lg: 'text-lg, xl:;
+  text-base', lg: 'text-lg, xl:
   'text-xl' } '

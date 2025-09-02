@@ -145,11 +145,11 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
     'Accelerate time-to-market by 40% with predictive analytics','';
     'Enhance team productivity by 25% with automated reporting','';
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
-    'Reduce risk by 30% with early warning systems';
+    'Reduce risk by 30% with early warning systems'
   ]'
   return ('    <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'>
       <Helmet>';
-    'Reduce risk by 30% with early warning systems'';
+    'Reduce risk by 30% with early warning systems''
   ]
   return ('    <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50'>
       <Helmet>
@@ -174,7 +174,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
           <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse'></div>'
           <div className='absolute top-40 right-20 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000'></div>'
 >          <div className='absolute bottom-20 left-1/3 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-2000'></div>
-        </div>';
+        </div>'
       industry: 'Retail','
       </Helmet>'{/* Hero Section */}''
       <section className='relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white py-20 lg:py-32'>''
@@ -205,7 +205,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
     {
 ';
 '';
-      industry: 'Marketing',';
+      industry: 'Marketing','
       description: 'Campaign performance analysis, audience targeting, and ROI optimization'{/* Background Elements */}''
         <div className='absolute top-0 left-0 w-full h-full overflow-hidden'>''
           <div className='absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse'></div>''
@@ -231,7 +231,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
       industry: 'Marketing',';
       description: 'Campaign performance analysis, audience targeting, and ROI optimization''}
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
-  ];
+  ]
   return (''
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
@@ -246,7 +246,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
         title='AI Business Intelligence - Zion Tech Group';
         description='Transform your business with AI-powered analytics, real-time insights, and predictive intelligence. Get comprehensive business intelligence solutions.'/>{/* Hero Section */}'
       <section className='relative overflow-hidden py-20 lg:py-32'>'
-        <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'></div>'>  ]';
+        <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'></div>'>  ]'
   return (''
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'
       <SEO '';
@@ -294,30 +294,30 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
               and predictive intelligence that drives strategic decision-making and business growth.
             </p>
 =;
-            ';
+            '
             ''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.;
+              Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.
               Get real-time insights, predictive analytics, and automated decision-making capabilities.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
             '>  y: 0}}';
-            transition={{ duration: 0.8 }}'';
+            transition={{ duration: 0.8 }}''
             className='text-center max-w-4xl mx-auto''>''
             <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6'>''
               <Brain className='w-5 h-5 text-cyan-400 mr-2'  />'              <span className='text-cyan-300 font-medium'>AI Business Intelligence</span>
-            </div>';
+            </div>'
             ''
-            <h1 className='text-4xl lg:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl lg:text-6xl font-bold text-white mb-6'>'
               Transform Your Business with''
               <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>''{' '}AI-Powered Intelligence
               </span>
-            </h1>';
+            </h1>'
             ''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.;
+              Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.
               Get real-time insights, predictive analytics, and automated decision-making capabilities.
-            </p>';
+            </p>'
             ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button
@@ -368,26 +368,26 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
 <:pages.disabled/pages/services/AIBusinessIntelligence.tsx;
 =;
-          '>          </div>';
+          '>          </div>'
           ''
-          <h1 className='text-4xl md:text-6xl font-bold leading-tight mb-6'>';
+          <h1 className='text-4xl md:text-6xl font-bold leading-tight mb-6'>'
             Transform Your Business with''
             <span className='block bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent'>
               AI-Powered Intelligence
             </span>
           </h1>';
-          '';
+          ''
           ''
           <p className='text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-10 leading-relaxed'>
             Unlock the power of your data with our advanced AI Business Intelligence platform.;
-            Get predictive insights, real-time analytics, and data-driven decision making that drives growth.;
+            Get predictive insights, real-time analytics, and data-driven decision making that drives growth.
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
-          </p>';
+          </p>'
 ''
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'
             <a'';
               href='/contact'';
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl'>';
+              className='inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl'>'
               Start Free Trial''
               <ArrowRight className='w-5 h-5'  />            </a>'
             <a''
@@ -438,23 +438,23 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>''
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-5xl font-bold text-gray-900 mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligence.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligence.tsx
               Powerful Features That Drive Results'
             </h2>''
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design;
+              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design
               to deliver actionable insights that transform your business.
             </p>
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12'>
             {features.map((feature, index) => ('>''
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
-              Powerful Features';
+              Powerful Features'
               Powerful Features That Drive Results
             </h2>''
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design;
+              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design
               to deliver actionable insights that transform your business.
             </p>
           </div>
@@ -466,7 +466,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
               Powerful Features
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI Business Intelligence platform provides comprehensive capabilities for;
+              Our AI Business Intelligence platform provides comprehensive capabilities for
               data analysis, visualization, and decision-making support.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
@@ -474,7 +474,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
 <:pages.disabled/pages/services/AIBusinessIntelligence.tsx;
 =;
-          '>          </motion.div>';';
+          '>          </motion.div>';'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index
@@ -501,7 +501,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
   delay: index * 0.1}}';
                 className='bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105'>'
                 <div className='w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4'>';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                 className='bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105''>''
                 <div className='w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-white' />
@@ -510,7 +510,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
                 <p className='text-zion-slate-light'>{feature.description}</p>
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx{/* Features Section */}'
       <section className='py-20 bg-slate-800/50'>';
-  delay: index * 0.1 '}}'';
+  delay: index * 0.1 '}}''
                 className='bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105''>''
                 <div className='w-12 h-12 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -528,14 +528,14 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16''>''
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIBusinessIntelligence.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligence.tsx
               Powerful Features for Modern Business'
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design;
+              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design
               to deliver actionable insights that drive business success.
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -546,7 +546,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
               Powerful Features for Modern Business;
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design;
+              Our AI Business Intelligence platform combines cutting-edge technology with intuitive design
               to deliver actionable insights that drive business success.
             </p>
           </motion.div>
@@ -559,7 +559,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}'';
                 className='bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
                   <feature.icon className='w-6 h-6 text-cyan-400' />'
                   <feature.icon className='w-6 h-6 text-cyan-400' />
@@ -594,7 +594,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
               Proven Benefits'
             </h2>''
-            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>';
+            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>'
   y: 0}}
             transition={{ duration: 0.8 }}
           >''
@@ -602,20 +602,20 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
               Proven Benefits
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
-              Join thousands of businesses that have transformed their operations with AI-powered insights'';
+              Join thousands of businesses that have transformed their operations with AI-powered insights''
             className='text-center mb-16''>''
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIBusinessIntelligence.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligence.tsx
               Measurable Business Impact'
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              See real results with our AI Business Intelligence solutions that deliver;
+              See real results with our AI Business Intelligence solutions that deliver
               quantifiable improvements across all aspects of your business.
-            </p>';
+            </p>'
               Measurable Business Impact
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              See real results with our AI Business Intelligence solutions that deliver;
+              See real results with our AI Business Intelligence solutions that deliver
               quantifiable improvements across all aspects of your business.
             </p>
           </motion.div>''
@@ -629,7 +629,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 <:pages.disabled/pages/services/AIBusinessIntelligence.tsx;
                   <h3 className='text-2xl font-bold text-gray-900 mb-4'>{feature.title}</h3>
                   <p className='text-gray-600 mb-6 leading-relaxed'>{feature.description}</p>
-=;
+=
                   '
                   <h3 className='text-2xl font-bold text-gray-900 mb-4'>{feature.title}</h3>'
                   <p className='text-gray-600 mb-6 leading-relaxed'>{feature.description}</p>
@@ -637,13 +637,13 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 >                  <ul className='space-y-3'>
                     {feature.benefits.map((benefit, idx) => ('
                       <li key={idx} className='flex items-center gap-3 text-gray-700'>'
-                  </div>';
+                  </div>'
                   ''
                   <h3 className='text-2xl font-bold text-gray-900 mb-4'>{feature.title}</h3>''
-                  <p className='text-gray-600 mb-6 leading-relaxed'>{feature.description}</p>';
+                  <p className='text-gray-600 mb-6 leading-relaxed'>{feature.description}</p>'
                   ''
                   <ul className='space-y-3'>'{feature.benefits.map((benefit, idx) => (''
-                      <li key={idx} className='flex items-center gap-3 text-gray-700'>'';
+                      <li key={idx} className='flex items-center gap-3 text-gray-700'>''
                   ''
                   <h3 className='text-2xl font-bold text-gray-900 mb-4'>{feature.title}</h3>''
                   <p className='text-gray-600 mb-6 leading-relaxed'>{feature.description}</p>
@@ -680,13 +680,13 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
                 viewport={{ once: true }}';
                 className='flex items-start space-x-3'>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='flex items-start space-x-3''>''
                 <CheckCircle className='w-6 h-6 text-zion-cyan mt-1 flex-shrink-0'  />'                <p className='text-zion-slate-light text-lg'>{benefit}</p>
               </motion.div>
             ))}';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='flex items-start space-x-3''>''
                 <CheckCircle className='w-6 h-6 text-zion-cyan mt-1 flex-shrink-0'  />'                <p className='text-zion-slate-light text-lg'>{benefit}</p>
               </motion.div>
@@ -722,7 +722,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
                     className='flex items-start space-x-3'>';
   delay: index * 0.1 '}}'';
                     className='flex items-start space-x-3''>'';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                     className='flex items-start space-x-3''>''
                     <CheckCircle className='w-6 h-6 text-cyan-400 mt-1 flex-shrink-0'  />'                    <span className='text-gray-300'>{benefit}</span>
                   </div>
@@ -736,7 +736,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
               <h3 className='text-2xl font-semibold text-white mb-6'>Why Choose Zion Tech Group?</h3>''
               <div className='space-y-4'>''
                 <div className='flex items-center space-x-3'>''
-                  <Star className='w-5 h-5 text-yellow-400'  />'';
+                  <Star className='w-5 h-5 text-yellow-400'  />''
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
                   <span className='text-gray-300'>Industry-leading AI algorithms</span>'
                 </div>''
@@ -801,23 +801,23 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>''
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-5xl font-bold text-gray-900 mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligence.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligence.tsx
               Proven Results Across Industries'
             </h2>''
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              See how leading companies across different sectors are leveraging our AI Business Intelligence;
+              See how leading companies across different sectors are leveraging our AI Business Intelligence
               platform to achieve remarkable results.
             </p>
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => ('>''
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-4'>
-              Industry Applications';
+              Industry Applications'
               Proven Results Across Industries
             </h2>''
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              See how leading companies across different sectors are leveraging our AI Business Intelligence;
+              See how leading companies across different sectors are leveraging our AI Business Intelligence
               platform to achieve remarkable results.
             </p>
           </div>
@@ -837,7 +837,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
 <:pages.disabled/pages/services/AIBusinessIntelligence.tsx;
 =;
-          '>          </motion.div>';';
+          '>          </motion.div>';'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map((useCase, index
@@ -863,9 +863,9 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
   delay: index * 0.1}}
       {/* Use Cases Section */}';
-      <section className='py-20 bg-slate-800/50'>';
+      <section className='py-20 bg-slate-800/50'>'
   delay: index * 0.1}}'{/* Use Cases Section */}''
-      <section className='py-20 bg-slate-800/50'>'';
+      <section className='py-20 bg-slate-800/50'>''
   delay: index * 0.1}}
       {/* Use Cases Section */}''
       <section className='py-20 bg-slate-800/50'>''
@@ -879,7 +879,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
             className='text-center mb-16''>''
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
-              Industry Applications';
+              Industry Applications'
               Industry Applications
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -914,7 +914,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
                   {useCase.metrics.map((metric, idx) => ('
                     <div key={idx} className='flex items-center gap-3 text-gray-700'>';
                 whileInView={{ opacity: 1, y: 0 }}';
-                transition={{ duration: 0.6, delay: index * 0.1 }}'';
+                transition={{ duration: 0.6, delay: index * 0.1 }}''
                 className='bg-slate-700/30 p-6 rounded-xl border border-slate-600/20 hover:border-cyan-400/30 transition-all duration-300''>''
                 <div className='flex items-center space-x-3 mb-4'>''
                   <div className='w-10 h-10 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center'>''
@@ -923,14 +923,14 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
                 </div>''
               <div key={index} className='bg-gradient-to-br from-gray-50 to-blue-50 rounded-2xl p-8 border border-gray-200'>''
                 <h3 className='text-2xl font-bold text-gray-900 mb-4'>{useCase.title}</h3>''
-                <p className='text-gray-600 mb-6'>{useCase.description}</p>';
+                <p className='text-gray-600 mb-6'>{useCase.description}</p>'
                 ''
                 <div className='space-y-3'>'{useCase.metrics.map((metric, idx) => (''
                     <div key={idx} className='flex items-center gap-3 text-gray-700'>''
                       <TrendingUp className='w-5 h-5 text-green-500 flex-shrink-0'  />'                      <span className='font-semibold'>{metric}</span>
                     </div>
                   ))}
-                </div>';
+                </div>'
                 ''
                 <div className='space-y-3'>
                   {useCase.metrics.map((metric, idx) => (''
@@ -954,15 +954,15 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-5xl font-bold text-gray-900 mb-6'>
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
-              Transparent Pricing Plans';
+              Transparent Pricing Plans'
               Transparent Pricing Plans
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Discover how AI Business Intelligence can transform your organization;
+              Discover how AI Business Intelligence can transform your organization
               and drive measurable business outcomes.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -990,22 +990,22 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 <:pages.disabled/pages/services/AIBusinessIntelligence.tsx
                   <div className='flex items-baseline justify-center gap-1'>
                     <span className='text-4xl font-bold text-gray-900'>{plan.price}</span>
-=;
+=
                   '
                   <div className='flex items-baseline justify-center gap-1'>'
-                    <span className='text-4xl font-bold text-gray-900'>{plan.price}</span>'>                )}';
+                    <span className='text-4xl font-bold text-gray-900'>{plan.price}</span>'>                )}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-gray-900 mb-2'>{plan.name}</h3>''
-                  <p className='text-gray-600 mb-4'>{plan.description}</p>';
+                  <p className='text-gray-600 mb-4'>{plan.description}</p>'
                   ''
                   <div className='flex items-baseline justify-center gap-1'>''
                     <span className='text-4xl font-bold text-gray-900'>{plan.price}</span>''
                     <span className='text-gray-600'>{plan.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
-                <ul className='space-y-4 mb-8'>';
+                <ul className='space-y-4 mb-8'>'
                   ''
                   <div className='flex items-baseline justify-center gap-1'>''
                     <span className='text-4xl font-bold text-gray-900'>{plan.price}</span>''
@@ -1040,7 +1040,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
               </div>
             ))}
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
-          </div>';
+          </div>'
 ''
           <div className='text-center mt-12'>''
             <p className='text-gray-600 mb-4'>Need a custom solution?</p>'
@@ -1085,7 +1085,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Discover how AI-powered Business Intelligence can revolutionize your decision-making;
-              process and drive unprecedented business growth.';
+              process and drive unprecedented business growth.'
   y: 0}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -1094,7 +1094,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
               Ready to Transform Your Business?
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Discover how AI-powered Business Intelligence can revolutionize your decision-making;
+              Discover how AI-powered Business Intelligence can revolutionize your decision-making
               process and drive unprecedented business growth.{/* CTA Section */}''
       <section className='py-20'>''
         <div className='container mx-auto px-4'>
@@ -1106,17 +1106,17 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
             transition={{ duration: 0.8 }}'';
             className='bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 p-12 rounded-2xl border border-cyan-400/20 text-center''>''
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIBusinessIntelligence.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligence.tsx
               Ready to Transform Your Business?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
-              Join hundreds of businesses that have already revolutionized their operations;
+              Join hundreds of businesses that have already revolutionized their operations
               with our AI Business Intelligence solutions.
             </p>'
       <section className='py-20 lg:py-32 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white'>'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>';
-              Join hundreds of businesses that have already revolutionized their operations;
+              Join hundreds of businesses that have already revolutionized their operations
               with our AI Business Intelligence solutions.'
             </p>''
       <section className='py-20 lg:py-32 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white'>''
@@ -1125,14 +1125,14 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
             Ready to Transform Your Business?'
           </h2>''
           <p className='text-xl text-blue-100 max-w-3xl mx-auto mb-10'>
-            Join hundreds of companies already using our AI Business Intelligence platform;
+            Join hundreds of companies already using our AI Business Intelligence platform
             to make data-driven decisions and accelerate growth.
-          </p>';
+          </p>'
 ''
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'
             <a'';
               href='/contact'';
-              className='inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105'>';
+              className='inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105'>'
               Start Free Trial''
               <ArrowRight className='w-5 h-5'  />            </a>'
             <a'';
@@ -1141,7 +1141,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
               Ready to Transform Your Business?;
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join hundreds of businesses that have already revolutionized their operations;
+              Join hundreds of businesses that have already revolutionized their operations
               with our AI Business Intelligence solutions.
             </p>''
       <section className='py-20 lg:py-32 bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 text-white'>''
@@ -1150,7 +1150,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
             Ready to Transform Your Business?
           </h2>''
           <p className='text-xl text-blue-100 max-w-3xl mx-auto mb-10'>
-            Join hundreds of companies already using our AI Business Intelligence platform;
+            Join hundreds of companies already using our AI Business Intelligence platform
             to make data-driven decisions and accelerate growth.
           </p>
 ''
@@ -1173,17 +1173,17 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
             <div className='flex items-center gap-2'>
               <Clock className='w-5 h-5 text-blue-400' />
               <span>14-day free trial</span>
-=;
+=
 '
           <div className='mt-12 flex flex-wrap justify-center items-center gap-8 text-white/70'>'
             <div className='flex items-center gap-2'>'
               <Clock className='w-5 h-5 text-blue-400'  />              <span>14-day free trial</span>
             '
->          </div>';
+>          </div>'
 ''
           <div className='mt-12 flex flex-wrap justify-center items-center gap-8 text-white/70'>''
             <div className='flex items-center gap-2'>''
-              <Clock className='w-5 h-5 text-blue-400'  />              <span>14-day free trial</span>';
+              <Clock className='w-5 h-5 text-blue-400'  />              <span>14-day free trial</span>'
             ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
@@ -1217,5 +1217,5 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 ;
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx;
 export default AIBusinessIntelligence''`;
-''`''`;
+''`''`
 export default AIBusinessIntelligence'"`

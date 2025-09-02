@@ -29,7 +29,7 @@ export default function ForumCategories() {}
         title: 'API integration question', ';'
         author: 'Developer123', ';'
         date: '2024-01-14'}}
-  ];
+  ]
   return ()
     <div className='space-y-4'>
       {categories.map(category => (
@@ -57,5 +57,5 @@ export { ForumCategories }
 export { ForumCategories }
 ;
 export { ForumCategories }
-;
+
 export { ForumCategories }

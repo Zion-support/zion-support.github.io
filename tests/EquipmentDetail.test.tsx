@@ -4,7 +4,7 @@ import EquipmentDetail from '@/pages/EquipmentDetail';
 import { AppLayout } from '@/layout/AppLayout';
 import * as router from 'react-router-dom';
 jest.mock(
-  '@/hooks/useAuth', () => ({ useAuth: () => ({ isAuthenticated: true })}));
+  '@/hooks/useAuth', () => ({ useAuth: () => ({ isAuthenticated: true })}))
 jest.mock(
   'react-router-dom', () => ({
   ...(jest.requireActual(
@@ -37,7 +37,7 @@ describe('EquipmentDetail page'', () => {
       .mockResolvedValue({
         json: () => Promise.resolve({ url:;
   'https://stripe.test/session })} as any);
-    const assignMock = jest.fn();
+    const assignMock = jest.fn()
     delete (window as any).location
     (window as any).location = { assign: assignMock, href:' }
     const { getByText } = render(
@@ -51,6 +51,6 @@ describe('EquipmentDetail page'', () => {
   ').click();
     await Promise.resolve();
     expect(fetchMock).toHaveBeenCalledWith('/checkout/create-session;
-  ', expect.any(Object));
+  ', expect.any(Object))
     expect(assignMock).toHaveBeenCalledWith('https: //stripe.test/session)
     fetchMock.mockRestore()})})

@@ -157,7 +157,7 @@ import {}
   CloudFog10,
   CloudHail10,
   CloudSnow10,
-  CloudSleet10''} from 'lucide-react';
+  CloudSleet10''} from 'lucide-react'
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 export default function AIHealthcareAnalyticsPlatform() {
   return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light'>'
@@ -173,21 +173,21 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}'';
             className='text-center''>''
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500 to-red-600 text-white text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
               <Sparkles className='w-4 h-4 mr-2'  />              AI-Powered Healthcare Analytics Platform'
             </div>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Transform Healthcare with''
               <span className='bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text text-transparent'>'{' '}AI Intelligence
               </span>'
             </h1>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-              Leverage artificial intelligence to improve patient outcomes, reduce costs, and;
+              Leverage artificial intelligence to improve patient outcomes, reduce costs, and
               enhance clinical decision-making. HIPAA-compliant healthcare analytics for the modern era.
             </p>';
-              Leverage artificial intelligence to improve patient outcomes, reduce costs, and;
+              Leverage artificial intelligence to improve patient outcomes, reduce costs, and
               enhance clinical decision-making. HIPAA-compliant healthcare analytics for the modern era.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -211,7 +211,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
               </span>
             </h1>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
-              Leverage artificial intelligence to improve patient outcomes, reduce costs, and;
+              Leverage artificial intelligence to improve patient outcomes, reduce costs, and
               enhance clinical decision-making. HIPAA-compliant healthcare analytics for the modern era.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -231,7 +231,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
           </motion.div>
         </div>
       </section>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 '{/* Key Metrics Section */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50'>''
         <div className='max-w-7xl mx-auto'>''
@@ -254,7 +254,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 '{/* Features Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>
@@ -267,7 +267,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-              Advanced AI-Powered Features';
+              Advanced AI-Powered Features'
               Advanced AI-Powered Features
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
@@ -278,7 +278,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 <:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -292,7 +292,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}'';
                 className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                   <feature.icon className='w-6 h-6 text-white' />
@@ -303,7 +303,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 '{/* Benefits Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50'>''
         <div className='max-w-7xl mx-auto'>
@@ -316,7 +316,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-              Measurable Healthcare Impact';
+              Measurable Healthcare Impact'
               Measurable Healthcare Impact
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
@@ -327,7 +327,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 <:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -349,7 +349,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 '{/* Use Cases Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>
@@ -362,7 +362,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-              Healthcare Solutions';
+              Healthcare Solutions'
               Healthcare Solutions
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
@@ -373,7 +373,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 <:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -395,7 +395,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             ))}
           </div>
         </section>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 '{/* Compliance Standards Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50'>''
         <div className='max-w-7xl mx-auto'>
@@ -408,7 +408,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-              Healthcare Compliance Standards';
+              Healthcare Compliance Standards'
               Healthcare Compliance Standards
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
@@ -419,7 +419,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 <:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4'>
             {complianceStandards.map(standard: unknown, index: unknown()
@@ -440,7 +440,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             ))}
           </div>
         </section>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 '{/* Pricing Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>
@@ -453,7 +453,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-              Transparent Pricing';
+              Transparent Pricing'
               Transparent Pricing
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
@@ -464,7 +464,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 <:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricing.map(plan: unknown, index: unknown()
@@ -495,7 +495,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx{index === 1 && (';
 ';
                   index === 1 '';
-                    ? 'border-pink-500/50 bg-gradient-to-b from-pink-500/10 to-transparent' ''`;
+                    ? 'border-pink-500/50 bg-gradient-to-b from-pink-500/10 to-transparent' ''`
                     : 'border-zion-slate-light/20'``}`}'>''
                 <div className='text-center mb-6'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.plan}</h3>''
@@ -521,7 +521,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             ))}
           </div>
         </section>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 '{/* Integrations Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50'>''
         <div className='max-w-7xl mx-auto'>
@@ -534,7 +534,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
-              Seamless Integrations';
+              Seamless Integrations'
               Seamless Integrations
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
@@ -545,7 +545,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 <:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6'>
             {integrations.map(integration: unknown, index: unknown()
@@ -566,7 +566,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             ))}
           </div>
         </section>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 '{/* CTA Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-4xl mx-auto text-center'>
@@ -592,7 +592,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
                 className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200''>''
-                <MessageSquare className='w-5 h-5 mr-2'  />                Schedule Demo;
+                <MessageSquare className='w-5 h-5 mr-2'  />                Schedule Demo
             transition={{ duration: 0.8 }}
           >''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -617,7 +617,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
 '{/* Contact Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50'>''
         <div className='max-w-4xl mx-auto text-center'>
@@ -630,7 +630,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
               Get in Touch'
             </h2>''
             <p className='text-xl text-zion-slate-light mb-8'>
-              Ready to discuss how AI can transform your healthcare operations?';
+              Ready to discuss how AI can transform your healthcare operations?'
             transition={{ duration: 0.8 }}
           >''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -641,7 +641,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             </p>''
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>''
               <div className='flex items-center justify-center space-x-3'>''
-                <Phone className='w-6 h-6 text-pink-400'  />'';
+                <Phone className='w-6 h-6 text-pink-400'  />''
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
                 <span className='text-zion-slate-light'>+1 302 464 0950</span>'
               </div>''
@@ -667,7 +667,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a'';
                 href='https://ziontechgroup.com/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200''>'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-red-600 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-red-700 transition-all duration-200''>''
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
                 <ArrowRight className='w-5 h-5 mr-2'  />                Contact Us
               </a>'
@@ -675,7 +675,7 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
               </a>
               <a'';
                 href='https://ziontechgroup.com'';
-                className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200''>'';
+                className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200''>''
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
                 <Globe className='w-5 h-5 mr-2'  />                Visit Website
                 <Globe className='w-5 h-5 mr-2'  />                Visit Website
@@ -685,5 +685,5 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
         </div>
       </section>
     </div>
-  )}''`;
+  )}''`
 export default AIHealthcareAnalyticsPlatform}}}}}''`''`

@@ -28,7 +28,7 @@ export default function Services() {
             </h1>
             <p className='mt-6 text-lg leading-8 text-gray-600'>
               From strategy to production, we deliver outcomes fast. Our;
-              comprehensive suite of services covers everything you need to;
+              comprehensive suite of services covers everything you need to
               transform your business.
             </p>
           </div>
@@ -56,7 +56,7 @@ export default function Services() {
                 </div>
               </div>
               <p className='text-gray-600 mb-6'>
-                Transform your operations with intelligent automation and;
+                Transform your operations with intelligent automation and
                 AI-powered decision making.
               </p>
               <ul className='space-y-3 mb-6'>
@@ -117,7 +117,7 @@ export default function Services() {
                 </div>
               </div>
               <p className='text-gray-600 mb-6'>
-                Build scalable, resilient cloud infrastructure that grows with;
+                Build scalable, resilient cloud infrastructure that grows with
                 your business.
               </p>
               <ul className='space-y-3 mb-6'>
@@ -178,7 +178,7 @@ export default function Services() {
                 </div>
               </div>
               <p className='text-gray-600 mb-6'>
-                Protect your business with enterprise-grade security frameworks;
+                Protect your business with enterprise-grade security frameworks
                 and compliance automation.
               </p>
               <ul className='space-y-3 mb-6'>
@@ -237,7 +237,7 @@ export default function Services() {
                 </div>
               </div>
               <p className='text-gray-600 mb-6'>
-                Custom software solutions tailored to your specific business;
+                Custom software solutions tailored to your specific business
                 needs and workflows.
               </p>
               <ul className='space-y-3 mb-6'>
@@ -289,7 +289,7 @@ export default function Services() {
               Our Delivery Process
             </h2>
             <p className='mt-6 text-lg leading-8 text-gray-600'>
-              We follow a proven methodology that ensures quality, speed, and;
+              We follow a proven methodology that ensures quality, speed, and
               successful outcomes.
             </p>
           </div>
@@ -343,7 +343,7 @@ export default function Services() {
               Ready to get started?
             </h2>
             <p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100'>
-              Let's discuss your project requirements and how we can help you;
+              Let's discuss your project requirements and how we can help you
               achieve your goals.
             </p>
             <div className='mt-10 flex items-center justify-center gap-x-6'>

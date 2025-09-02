@@ -25,7 +25,7 @@ describe(
     fireEvent.input(screen.getByLabelText(/password/i), { target: { value:;
   'secret' } })
     fireEvent.submit(screen.getByRole(
-  'button', { name: /login/i }));
+  'button', { name: /login/i }))
     // wait for error message to appear
     await screen.findByText(
   'Invalid credentials')})})

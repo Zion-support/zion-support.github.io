@@ -10,10 +10,10 @@ export function ContactInfo() {
             Get In Touch''''
           </h2>''''
           <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
-            Ready to transform your business with cutting-edge technology?;
+            Ready to transform your business with cutting-edge technology?
             Contact our experts today for a free consultation.
           </p>
-        </div>''';'
+        </div>''''
 ''''
         <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>'''{/* Contact Information */}'''''
           <div className='space-y-6'>''''
@@ -36,7 +36,7 @@ export function ContactInfo() {
                     <p className='text-white font-medium'>Phone</p>''''
                     <p className='text-zion-cyan'>+1 302 464 0950</p>
                   </div>
-                </div>''';'
+                </div>''''
 ''''
                 <div className='flex items-center gap-3'>''''
                   <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
@@ -46,7 +46,7 @@ export function ContactInfo() {
                     <p className='text-white font-medium'>Email</p>''''
                     <p className='text-zion-cyan'>kleber@ziontechgroup.com</p>
                   </div>
-                </div>''';'
+                </div>''''
 ''''
                 <div className='flex items-center gap-3'>''''
                   <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
@@ -60,7 +60,7 @@ export function ContactInfo() {
                       Middletown DE 19709
                     </p>
                   </div>
-                </div>''';'
+                </div>''''
 ''''
                 <div className='flex items-center gap-3'>''''
                   <div className='w-10 h-10 bg-zion-purple/20 rounded-full flex items-center justify-center'>''''
@@ -72,14 +72,14 @@ export function ContactInfo() {
                       href='https: //ziontechgroup.com'''';'
                       target='_blank'''';'
                       rel='noopener noreferrer'''';'
-                      className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''';'
+                      className='text-zion-cyan hover: text-zion-cyan-light transition-colors flex items-center gap-1 '>''''
                       ziontechgroup.com''''
                       <ExternalLink className='h-4 w-4' />
                     </a>
                   </div>
                 </div>
               </CardContent>
-            </Card>''';'
+            </Card>''''
 ''''
             <Card className='bg-zion-blue border-zion-blue-light'>''''
               <CardHeader>''''
@@ -87,7 +87,7 @@ export function ContactInfo() {
                   <Clock className='h-5 w-5 text-zion-cyan' />
                   Business Hours''''
                 </CardTitle>''''
-                <CardDescription className='text-zion-slate-light'>';'
+                <CardDescription className='text-zion-slate-light'>''
                   We're available when you need us'
                 </CardDescription>
               </CardHeader>''''
@@ -142,7 +142,7 @@ export function ContactInfo() {
                   <Button className='w-full bg-zion-purple hover: bg-zion-purple-dark text-white'>
                     Request Free Quote
                   </Button>
-                </Link>''';'
+                </Link>''''
 ''''
                 <Link to='/comprehensive-services'>''''
                   <Button''''
@@ -150,7 +150,7 @@ export function ContactInfo() {
                     className='w-full border-zion-purple text-zion-cyan hover: bg-zion-purple/10 '>
                     View All Services
                   </Button>
-                </Link>''';'
+                </Link>''''
 ''''
                 <Link to='/it-onsite-services'>''''
                   <Button''''
@@ -158,7 +158,7 @@ export function ContactInfo() {
                     className='w-full border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light/10 '>
                     IT Onsite Services
                   </Button>
-                </Link>''';'
+                </Link>''''
 ''''
                 <div className='pt-4 border-t border-zion-blue-light'>''''
                   <p className='text-zion-slate-light text-sm mb-3'>
@@ -172,7 +172,7 @@ export function ContactInfo() {
                   </div>
                 </div>
               </CardContent>
-            </Card>''';'
+            </Card>''''
 ''''
             <Card className='bg-zion-blue border-zion-blue-light'>''''
               <CardHeader>''''
@@ -218,7 +218,7 @@ export function ContactInfo() {
               Ready to Get Started?''''
             </h3>''''
             <p className='text-zion-slate-light mb-6'>
-              Join hundreds of satisfied clients who have transformed their;
+              Join hundreds of satisfied clients who have transformed their
               businesses with our technology solutions''''
             </p>''''
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
@@ -243,5 +243,5 @@ export function ContactInfo() {
       </div>
     </section>
   )}'"""'"
-}'''';
+}''''
 ''''''

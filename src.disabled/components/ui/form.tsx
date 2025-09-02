@@ -10,12 +10,12 @@ className?: string}
 export function FormLabel(...args[]: any):  {
   return <label className = {`block text-sm font-medium ${className}`}>{children}</label>}
 interface FormFieldProps extends React.PropsWithChildren<{}> {
-  control;name: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring
+  controlname: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring
   render: (props)                => React.ReactNode}
 export function FormField(...args[]: any):  {
   return render({ field: anyanyanyanyanyanyanyanyanyanyanyanyanyany{ name, value: '', onChange: ()                => {} } })}
 interface FormMessageProps extends React.PropsWithChildren<{}> {
-  children?: React.ReactNode;
+  children?: React.ReactNode
   className?: string}
 export function FormMessage(...args[]: any):  {
   if (!children) return null

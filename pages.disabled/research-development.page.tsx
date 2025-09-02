@@ -458,7 +458,7 @@ export default function ResearchDevelopment(...args[]):  {
                          project.description.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesArea && matchesStatus && matchesSearch})}
   }
-;
+
   return()
     <div className = 'min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-700'>
       {/* Hero Section */}'
@@ -501,7 +501,7 @@ export default function ResearchDevelopment(...args[]):  {
                     type='text';
                     placeholder='Search research...';
                     value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}';
+                    onChange={(e) => setSearchTerm(e.target.value)}'
                     className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 text-white placeholder-zion-slate-light rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan'
                   />
                 </div>
@@ -510,7 +510,7 @@ export default function ResearchDevelopment(...args[]):  {
               <div>
                 <select;
                   value={selectedArea}
-                  onChange={(e) => setSelectedArea(e.target.value)}';
+                  onChange={(e) => setSelectedArea(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan'
                 >{areas.map(area  => (
                     <option key={area} value={area}>{area}</option>
@@ -521,7 +521,7 @@ export default function ResearchDevelopment(...args[]):  {
               <div>
                 <select;
                   value={selectedStatus}
-                  onChange={(e) => setSelectedStatus(e.target.value)}';
+                  onChange={(e) => setSelectedStatus(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus: outline-none focus:ring-2 focus:ring-zion-cyan'
                 >{statuses.map(status  => (
                     <option key={status} value={status}>{status}</option>
@@ -552,7 +552,7 @@ export default function ResearchDevelopment(...args[]):  {
 '
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {researchAreas.map(area: unknown, index: unknown {
-              const IconComponent = area.icon;
+              const IconComponent = area.icon
               return()
                 <motion.div;
                   key = {area.id}
@@ -625,7 +625,7 @@ export default function ResearchDevelopment(...args[]):  {
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {filteredProjects.map(project: unknown, index: unknown {
               const IconComponent = getAreaIcon(project.area);
-              const areaColor = getAreaColor(project.area);
+              const areaColor = getAreaColor(project.area)
               return()
                 <motion.div;
                   key = {project.id}

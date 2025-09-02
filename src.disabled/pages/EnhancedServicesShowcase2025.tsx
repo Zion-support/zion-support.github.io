@@ -6,5 +6,5 @@ import React, { useState, useMemo } from;
   '../data/enhancedServicesCatalog2025'  export default function EnhancedServicesShowcase2025(...args: any[]): any { const [searchTerm, setSearchTerm] = useState(';
   ') const [selectedCategory, setSelectedCategory] = useState('all;
   ') const [sortBy, setSortBy] = useState('featured;
-  ') const [viewMode, setViewMode] = useState<any>('grid;
+  ') const [viewMode, setViewMode] = useState<any>('grid
   ') '

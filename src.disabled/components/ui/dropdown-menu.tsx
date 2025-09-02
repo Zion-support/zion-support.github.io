@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 interface DropdownMenuContextType {
   isOpen: boolean;
    setIsOpen: (open: boolean) => void}
-const DropdownMenuContext = createContext<DropdownMenuContextType | undefined>(undefined);
+const DropdownMenuContext = createContext<DropdownMenuContextType | undefined>(undefined)
 interface DropdownMenuProps {
   children: ReactNode}
 export function DropdownMenu({ children }: DropdownMenuProps) {
@@ -16,7 +16,7 @@ export function DropdownMenu({ children }: DropdownMenuProps) {
     </DropdownMenuContext.Provider>
   )}
 interface DropdownMenuTriggerProps {
-  children: ReactNode;
+  children: ReactNode
    asChild?: boolean}
 export function DropdownMenuTrigger({ children, asChild = false }: DropdownMenuTriggerProps) {
   const context = useContext(DropdownMenuContext)
@@ -36,7 +36,7 @@ interface DropdownMenuContentProps {
    align?: 'start' | 'center' | 'end';
    className?: string}
 export function DropdownMenuContent({ children, align = 'start', className = '' }: DropdownMenuContentProps) {
-  const context = useContext(DropdownMenuContext);
+  const context = useContext(DropdownMenuContext)
   if (!context) {
     throw new Error('DropdownMenuContent must be used within DropdownMenu')}
   if (!context.isOpen) {
@@ -57,7 +57,7 @@ interface DropdownMenuItemProps {
    asChild?: boolean;
    className?: string}
 export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }: DropdownMenuItemProps) {
-  const context = useContext(DropdownMenuContext);
+  const context = useContext(DropdownMenuContext)
   if (!context) {
     throw new Error('DropdownMenuItem must be used within DropdownMenu')}
   const handleClick = () => {

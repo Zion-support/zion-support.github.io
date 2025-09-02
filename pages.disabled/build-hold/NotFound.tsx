@@ -34,8 +34,8 @@ import { '  Home, ArrowLeft,
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className='mb-8''          >'            <h2 className='text-4xl font-bold text-white mb-4'>Page Not Found</h2>'            <p className='text-xl text-gray-300 mb-6'>'              Sorry, the page you&apos;re looking for doesn&apost exist or has been moved.'            </p>
-            <p className='text-gray-400'>'              Don&apos;t worry, we&apos;ll help you find what you&aposre looking for.''            </p>
+            className='mb-8''          >'            <h2 className='text-4xl font-bold text-white mb-4'>Page Not Found</h2>'            <p className='text-xl text-gray-300 mb-6'>'              Sorry, the page you&aposre looking for doesn&apost exist or has been moved.'            </p>
+            <p className='text-gray-400'>'              Don&apos;t worry, we&aposll help you find what you&aposre looking for.''            </p>
   '          </motion.div>
           {/* Action Buttons */}
           <motion.div;
@@ -72,7 +72,7 @@ import { '  Home, ArrowLeft,
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
-            className='mt-12''          >'            <div className='bg-slate-800/50 rounded-lg p-8'>'              <h3 className='text-2xl font-bold text-white mb-4'>Still Need Help?</h3>'              <p className='text-gray-300 mb-6'>'                If you can&apos;t find what you&aposre looking for, our team is here to help.'              </p>
+            className='mt-12''          >'            <div className='bg-slate-800/50 rounded-lg p-8'>'              <h3 className='text-2xl font-bold text-white mb-4'>Still Need Help?</h3>'              <p className='text-gray-300 mb-6'>'                If you can&apost find what you&aposre looking for, our team is here to help.'              </p>
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>'                <a'                  href='/contact''                  className='inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity''                >'                  <Phone className='w-5 h-5 mr-2' />'                  Contact Support'                </a>
                 <a;
                   href='mailto:support@ziontechgroup.com''                  className='inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors''                >'                  <Mail className='w-5 h-5 mr-2' />'                  Email Us"                </a>
@@ -83,5 +83,5 @@ import { '  Home, ArrowLeft,
       </div>
     </div>
   )}
-;
+
 export default NotFound

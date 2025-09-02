@@ -235,14 +235,14 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
         'Demand forecasting';
       ]}
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx;
-  ];
+  ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
 <:pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx;
       <SEO;
 =;
-      <SEO '>        title='AI Enterprise Orchestrator - Zion Tech Group';
+      <SEO '>        title='AI Enterprise Orchestrator - Zion Tech Group'
         description='Transform your enterprise with AI-powered orchestration, multi-agent coordination, and predictive analytics. Streamline operations and drive innovation.'/>        title='AI Enterprise Orchestrator - Zion Tech Group''        description='Transform your enterprise with AI-powered orchestration, multi-agent coordination, and predictive analytics. Streamline operations and drive innovation.'/>'
       <SEO ''
         title='AI Enterprise Orchestrator - Zion Tech Group'';
@@ -269,12 +269,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
   y: 0}}';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center'';
+            className='text-center''
 ''
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
               <Sparkles className='w-4 h-4 mr-2'  />              Revolutionary AI Technology
-            </div>';
+            </div>'
 ''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               AI Enterprise Orchestrator
@@ -288,9 +288,9 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
 ''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Unlock the full potential of your enterprise with our AI-powered orchestration platform.;
-              Coordinate multiple AI agents, automate complex workflows, and drive unprecedented efficiency.;
+              Coordinate multiple AI agents, automate complex workflows, and drive unprecedented efficiency.
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button
@@ -360,13 +360,13 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
               Revolutionary AI Capabilities';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Revolutionary AI Capabilities
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI Enterprise Orchestrator combines cutting-edge technologies to deliver;
+              Our AI Enterprise Orchestrator combines cutting-edge technologies to deliver
               unprecedented business transformation and operational excellence.
             </p>
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
@@ -403,20 +403,20 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
                     <feature.icon className='w-6 h-6 text-white' />
                   </div>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300''
 ''
                 <div className='flex items-center mb-4'>''
                   <div className='p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg mr-4'>''
                     <feature.icon className='w-6 h-6 text-white' />'
                   </div>''
                   <h3 className='text-2xl font-semibold text-white'>{feature.title}</h3>
-                </div>';
+                </div>'
 ''
-                <p className='text-gray-300 mb-6'>{feature.description}</p>';
+                <p className='text-gray-300 mb-6'>{feature.description}</p>'
 ''
                 <ul className='space-y-3'>';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-purple-500 transition-all duration-300''
 ''
                 <div className='flex items-center mb-4'>''
                   <div className='p-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg mr-4'>''
@@ -468,17 +468,17 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
               Transparent Pricing';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Transparent Pricing
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the plan that best fits your enterprise needs. All plans include;
+              Choose the plan that best fits your enterprise needs. All plans include
               our core AI orchestration capabilities with scalable features.
             </p>
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md: grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -529,12 +529,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                   <div className='mb-4'>''
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
                     <span className='text-gray-400'>{plan.period}</span>'
                   </div>''
                   <p className='text-gray-300'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                     <span className='text-gray-400'>{plan.period}</span>
@@ -601,7 +601,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
               Industry Applications';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Industry Applications
@@ -644,13 +644,13 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
                   {useCase.applications.map((application, appIndex) => ('
                     <li key={appIndex} className='text-gray-300 text-sm flex items-center'>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300''
 ''
                 <h3 className='text-xl font-semibold text-white mb-4'>{useCase.industry}</h3>''
                 <ul className='space-y-2'>'{useCase.applications.map((application, appIndex) => (''
                     <li key={appIndex} className='text-gray-300 text-sm flex items-center'>'';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300''
 ''
                 <h3 className='text-xl font-semibold text-white mb-4'>{useCase.industry}</h3>''
                 <ul className='space-y-2'>
@@ -687,7 +687,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
             transition={{ duration: 0.8 }}';
 '';
             <h2 className='text-4xl font-bold text-white mb-6'>
-              Ready to Transform Your Enterprise?';
+              Ready to Transform Your Enterprise?'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -696,9 +696,9 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Join the AI revolution and unlock unprecedented efficiency, innovation, and growth;
-              with our Enterprise Orchestrator platform.;
+              with our Enterprise Orchestrator platform.
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button
@@ -732,6 +732,6 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx)}''`;
+:pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx)}''`
 ''`''`)}
 '"`

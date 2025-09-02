@@ -105,17 +105,17 @@ const CloudDevOpsServices = () => {
 '''            name: 'Google Cloud Platform','';
             description: 'Innovative cloud services with AI and ML capabilities','';
             features['Compute Engine', 'Cloud Run', 'BigQuery', 'Cloud Build']
-:pages.disabled/pages/services/CloudDevOpsServices.jsx}';
+:pages.disabled/pages/services/CloudDevOpsServices.jsx}'
     ]'
     return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>'{/* Hero Section */}''      <section className='relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20'>''
         <div className='absolute inset-0 bg-black/20'></div>''
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>''
           <h1 className='text-5xl md:text-6xl font-bold mb-6'>
-:pages.disabled/pages/services/CloudDevOpsServices.jsx;
+:pages.disabled/pages/services/CloudDevOpsServices.jsx
             Cloud & DevOps Services'
           </h1>''
           <p className='text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto'>
-            Accelerate your digital transformation with modern cloud infrastructure;
+            Accelerate your digital transformation with modern cloud infrastructure
             and DevOps practices that drive innovation and efficiency.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -133,12 +133,12 @@ const CloudDevOpsServices = () => {
             <h2 className='text-4xl font-bold text-slate-900 mb-4'>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
               Comprehensive Cloud & DevOps Solutions'</h2>''            <p className='text-xl text-slate-600 max-w-3xl mx-auto'>
-              From cloud migration to DevOps transformation, we provide end-to-end;
+              From cloud migration to DevOps transformation, we provide end-to-end
               solutions that modernize your infrastructure and accelerate delivery.
             </p>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''{cloudServices.map((service, index) => (<div key={index} className='bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100'>''
-                <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
                   <service.icon className='w-8 h-8 text-white'/>'
                 </div>''
@@ -165,7 +165,7 @@ const CloudDevOpsServices = () => {
             <h2 className='text-4xl font-bold text-slate-900 mb-4'>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
               Multi-Cloud Expertise'</h2>''            <p className='text-xl text-slate-600 max-w-3xl mx-auto'>
-              We work with all major cloud providers to give you the best solutions;
+              We work with all major cloud providers to give you the best solutions
               for your specific needs and budget.
             </p>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -194,7 +194,7 @@ const CloudDevOpsServices = () => {
             </p>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''{benefits.map((benefit, index) => (<div key={index} className='text-center'>''
-                <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
                   <CheckCircle className='w-8 h-8 text-white'/>'</div>''                <p className='text-lg text-slate-700'>{benefit}</p>
               </div>))}
@@ -221,13 +221,13 @@ const CloudDevOpsServices = () => {
 '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white'>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>''
           <h2 className='text-4xl font-bold mb-6'>
-:pages.disabled/pages/services/CloudDevOpsServices.jsx;
+:pages.disabled/pages/services/CloudDevOpsServices.jsx
             Ready to Modernize Your Infrastructure?'
           </h2>''
           <p className='text-xl text-blue-100 mb-8 max-w-3xl mx-auto'>
   ';
             Let's discuss how our cloud and DevOps expertise can transform your';
-  ';
+  '
             organization's technology landscape.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -240,6 +240,6 @@ const CloudDevOpsServices = () => {
       </section>
     </div>)}
 export { CloudDevOpsServices }
-:pages.disabled/pages/services/CloudDevOpsServices.jsx;
+:pages.disabled/pages/services/CloudDevOpsServices.jsx
 export default CloudDevOpsServices''}}}
   ''''

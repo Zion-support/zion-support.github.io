@@ -27,18 +27,18 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
   ]';Production line optimization and monitoring',';Quality control and defect prevention',';Predictive maintenance and equipment management',';Supply chain optimization and inventory management',';Energy efficiency and sustainability',';Workforce safety and compliance';
   ]';Improve production efficiency by 25-40%',';Reduce equipment downtime by 30-50%',';Cut quality defects by 40-60%',';Optimize inventory levels by 20-35%',';Enhance worker safety and compliance',';Scale manufacturing operations efficiently';
   ]';Automotive Manufacturing',';Electronics & Semiconductors',';Food & Beverage Processing',';Pharmaceutical Manufacturing',';Textiles & Apparel',';Aerospace & Defense';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-gray-600 via-slate-600 to-zinc-600 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIManufacturing.tsx
             <Factory className='w-4 h-4 mr-2'  /> AI-Powered Manufacturing Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Manufacturing Platform</h1>'          <p className='text-slate-100 text-xl'>Transform your manufacturing operations with AI-powered insights that optimize production, enhance quality, and maximize efficiency.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             </div>
           </div>
 :pages.disabled/pages/services/AIManufacturing.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             </div>
           ))}
 :pages.disabled/pages/services/AIManufacturing.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             ))}
           </div>
 :pages.disabled/pages/services/AIManufacturing.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-100 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Manufacturing Impact</h3>''
@@ -146,7 +146,7 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
             ))}
           </div>
 :pages.disabled/pages/services/AIManufacturing.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { Factory, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Z
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your manufacturing with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors'>''
 :pages.disabled/pages/services/AIManufacturing.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

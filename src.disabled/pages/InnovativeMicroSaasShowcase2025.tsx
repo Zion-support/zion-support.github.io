@@ -6,5 +6,5 @@ import React, { useState, useMemo } from;
   'lucide-react' import { INNOVATIVE_MICRO_SAAS_SERVICES_2025, SERVICE_CATEGORIES, CONTACT_INFO } from;
   '../data/innovativeMicroSaasServices2025' export default function InnovativeMicroSaasShowcase2025() { const [selectedCategory, setSelectedCategory] = useState<string>(
   'All') const [searchTerm, setSearchTerm] = useState<string>('
-  ') const [sortBy, setSortBy] = useState<string>('innovation;
+  ') const [sortBy, setSortBy] = useState<string>('innovation
   ') const filteredServices = useMemo(() => { let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2025'

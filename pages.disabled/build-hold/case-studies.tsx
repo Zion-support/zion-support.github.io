@@ -33,7 +33,7 @@ import { Badge } from;
       id: 6,
       title: 'Education AI Learning Platform', company: 'EduTech Academy','      industry: 'Education', challenge: 'One-size-fits-all learning approach limiting student success','      solution: 'Created personalized AI learning platform with adaptive content delivery', results: ['        '40% improvement in student performance','        '60% increase in course completion rates', '50% reduction in learning time','        '95% student satisfaction rate''      ], duration: '9 months','      teamSize: '16 experts', technologies: ['Adaptive Learning', 'Educational AI', 'Content Personalization', 'Learning Analytics'], image: '/api/placeholder/600/400','      featured: false'    }
   ];
-  const industries = [{ name: 'All Industries', count: 24, active: true }, { name: 'Manufacturing', count: 6, active: false },'    { name: 'Healthcare', count: 4, active: false }, { name: 'Financial Services', count: 5, active: false },'    { name: 'Retail', count: 3, active: false }, { name: 'Energy', count: 3, active: false },'    { name: 'Education', count: 2, active: false }, { name: 'Other', count: 1, active: false }'  ]';
+  const industries = [{ name: 'All Industries', count: 24, active: true }, { name: 'Manufacturing', count: 6, active: false },'    { name: 'Healthcare', count: 4, active: false }, { name: 'Financial Services', count: 5, active: false },'    { name: 'Retail', count: 3, active: false }, { name: 'Energy', count: 3, active: false },'    { name: 'Education', count: 2, active: false }, { name: 'Other', count: 1, active: false }'  ]'
   const featuredCaseStudy = caseStudies.find(study => study.featured)
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'      <SEO '        title='Case Studies - Zion Tech Group' '        description='Explore real-world success stories of AI implementations across various industries. See how our solutions drive measurable business results.''      />'{/* Hero Section */}
@@ -140,5 +140,5 @@ import { Badge } from;
       </section>
     </div>
   )}
-;
+
 export default CaseStudies

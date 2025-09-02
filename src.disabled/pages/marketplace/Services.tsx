@@ -6,5 +6,5 @@ const Services: React.FC = () => (
 			<p className='text-xl text-gray-300'>Explore services.</p>
 		</div>
 	</div>
-);
+)
 export default Services

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from '../data/advancedCybersecurityServices2027';
 
 const AdvancedCybersecurityServices: NextPage = () => {'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all')';
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')'
   const [searchTerm, setSearchTerm] = useState('')'
   const [sortBy, setSortBy] = useState<any>('innovation');
 :pages.disabled/root_pages/advanced-cybersecurity.tsx;
@@ -55,7 +55,7 @@ const AdvancedCybersecurityServices: NextPage = () => {'
         return 0}
   })
 :pages.disabled/root_pages/advanced-cybersecurity.tsx;
-:backup-pages/advanced-cybersecurity.tsx;
+:backup-pages/advanced-cybersecurity.tsx
 :backup-pages/advanced-cybersecurity.tsx
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden'>
@@ -75,7 +75,7 @@ const AdvancedCybersecurityServices: NextPage = () => {'
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
   }';
       default: return '🛡️'}
-  }';
+  }'
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden'>'{/* Animated Security Background Elements */}''
       <div className='absolute inset-0 overflow-hidden'>''
@@ -98,7 +98,7 @@ const AdvancedCybersecurityServices: NextPage = () => {'
         <meta name='keywords' content='cybersecurity, AI security, quantum cryptography, zero trust, autonomous SOC, Zion Tech Group' />''
         <meta name='author' content='Zion Tech Group' />''
         <link rel='canonical' href='https://ziontechgroup.com/advanced-cybersecurity' />
-      </Helmet>';
+      </Helmet>'
 ''
       <div className='relative z-10 container mx-auto px-4 py-8'>'{/* Hero Section */}''
         <div className='text-center mb-16'>''
@@ -111,13 +111,13 @@ const AdvancedCybersecurityServices: NextPage = () => {'
                 <span className='text-sm'>🔒</span>
               </div>
             </div>
-          </div>';
+          </div>'
 ''
           <h1 className='text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
             Advanced Cybersecurity Services 2027'
           </h1>''
           <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-            Protect your digital assets with cutting-edge cybersecurity solutions.;
+            Protect your digital assets with cutting-edge cybersecurity solutions.
             From AI-powered threat detection to quantum cryptography, we deliver military-grade security for the modern world.'
           </p>''
           <div className='flex flex-wrap justify-center gap-4 mb-8'>''
@@ -157,7 +157,7 @@ const AdvancedCybersecurityServices: NextPage = () => {'
               <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-full flex items-center justify-center mx-auto mb-4`}>'
                 <span className='text-3xl'>{stat.icon}</span>
               </div>'
-              <div className='text-2xl font-bold text-blue-400 mb-2'>{stat.value}</div>';
+              <div className='text-2xl font-bold text-blue-400 mb-2'>{stat.value}</div>'
 '{/* Security Stats */}''
         <div className='grid grid-cols-1 md: grid-cols-4 gap-6 mb-12'>'{[''{ icon: '🛡️', label: 'Threats Blocked', value: '99.9%', color: 'from-green-500 to-emerald-600' },'{ icon: '👁️', label: '24/7 Monitoring', value: 'Always On', color: 'from-blue-500 to-cyan-600' },'{ icon: '🔒', label: 'Encryption', value: 'AES-256', color: 'from-purple-500 to-indigo-600' },'{ icon: '🧠', label: 'AI Detection', value: '10x Faster', color: 'from-orange-500 to-red-600' }
           ].map(stat: unknown, index: unknown()
@@ -181,7 +181,7 @@ const AdvancedCybersecurityServices: NextPage = () => {'
                 type='text'';
                 placeholder='Search cybersecurity services...';
                 value={searchTerm}';
-                onChange={(e) => setSearchTerm(e.target.value)}'';
+                onChange={(e) => setSearchTerm(e.target.value)}''
                 className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50''/>''
               <svg className='absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' fill='none' stroke='currentColor' viewBox='0 0 24 24'>''
                 <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' />
@@ -191,7 +191,7 @@ const AdvancedCybersecurityServices: NextPage = () => {'
             <div className='relative'>
               <select;
                 value={selectedCategory}';
-                onChange={(e) => setSelectedCategory(e.target.value)}'';
+                onChange={(e) => setSelectedCategory(e.target.value)}''
                 className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus: outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none'>{categories.map(category: unknown()
                   <option key={category.id} value={category.id}>
                     {category.name}
@@ -207,7 +207,7 @@ const AdvancedCybersecurityServices: NextPage = () => {'
               <select;
                 value={sortBy}';
                 onChange={(e) => setSortBy(e.target.value)}'';
-                className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none'';
+                className='w-full bg-white/10 border border-blue-400/30 rounded-xl px-4 py-3 text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400/50 appearance-none''
 ''
                 <option value='innovation'>Sort by Innovation Level</option>''
                 <option value='price'>Sort by Price</option>''
@@ -228,7 +228,7 @@ const AdvancedCybersecurityServices: NextPage = () => {'
 `;
                 selectedCategory === category.id`'`;
                   ? `bg-gradient-to-r ${category.color} text-white shadow-lg`''`;
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'``}`}';
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'``}`}'
 ''
               <span className='mr-2'>{getSecurityIcon(category.name)}</span>
               {category.name}
@@ -260,7 +260,7 @@ const AdvancedCybersecurityServices: NextPage = () => {'
               </div>
 '{/* Pricing */}''
               <div className='mb-4'>''
-                <div className='text-2xl font-bold text-blue-400'>';
+                <div className='text-2xl font-bold text-blue-400'>'
                   ${service.pricing.monthly.toLocaleString()}''
                   <span className='text-sm text-gray-400'>/month</span>'
                 </div>''
@@ -324,7 +324,7 @@ const AdvancedCybersecurityServices: NextPage = () => {'
           <h2 className='text-3xl font-bold text-white mb-4'>
             Secure Your Digital Future Today'
           </h2>''
-          <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>';
+          <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>'
             Don't wait for a security breach. Contact us today to discuss how our advanced cybersecurity solutions can protect your organization from evolving threats.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -342,5 +342,5 @@ const AdvancedCybersecurityServices: NextPage = () => {'
         </div>
       </div>
     </div>
-  )}''`;
+  )}''`
 export default AdvancedCybersecurityServices}}}}''`'"`

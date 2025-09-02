@@ -129,17 +129,17 @@ const AdvancedServiceInnovationHub = () => {}
     }
     const getCategoryIcon = (category) => {}
         switch(category) {}
-'''';
+''''
 ''''''
-            case 'quantum': return <Atom className='w-5 h-5'/>'';''''
-            case 'ai': return <Brain className='w-5 h-5'/>'';''''
-            case 'space-tech': return <Satellite className='w-5 h-5'/>'';''''
-            case 'green-tech': return <Leaf className='w-5 h-5'/>'';''''
-            case 'biotech-ai': return <Dna className='w-5 h-5'/>';'''
+            case 'quantum': return <Atom className='w-5 h-5'/>''''''
+            case 'ai': return <Brain className='w-5 h-5'/>''''''
+            case 'space-tech': return <Satellite className='w-5 h-5'/>''''''
+            case 'green-tech': return <Leaf className='w-5 h-5'/>''''''
+            case 'biotech-ai': return <Dna className='w-5 h-5'/>''''
             default: return <Cpu className='w-5 h-5'/>}
-    }'';''
+    }''''
     const categories = [''''''{ id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4'/> }, '''''{ id: 'quantum', name: 'Quantum Technology', icon: <Atom className='w-4 h-4'/> },'''''{ id: 'ai', name: 'Artificial Intelligence', icon: <Brain className='w-4 h-4'/> }, '''''{ id: 'space-tech', name: 'Space Technology', icon: <Satellite className='w-4 h-4'/> },'''''{ id: 'green-tech', name: 'Green Technology', icon: <Leaf className='w-4 h-4'/> }, '''''{ id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4'/> }''';
-    ]';'''
+    ]''''
     return (<div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div initial = {}
@@ -155,7 +155,7 @@ const AdvancedServiceInnovationHub = () => {}
             <p className='text-zion-slate-light'>
               Explore cutting-edge innovation trends, future technology roadmaps, and strategic insights for the next generation of services
             </p>
-          </div>''';'
+          </div>''''
           ''''''
           <div className='flex gap-2'>''''''{['trends', roadmap',insights'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size='sm' onClick={() => setViewMode(mode)}>''''''{mode === 'trends' && <TrendingUp className='w-4 h-4 mr-2'/>}''''''{mode === 'roadmap' && <Rocket className='w-4 h-4 mr-2'/>}''''''{mode === 'insights' && <Lightbulb className='w-4 h-4 mr-2'/>}
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
@@ -241,13 +241,13 @@ const AdvancedServiceInnovationHub = () => {}
                   <CardContent>''''
                     <p className='text-zion-slate-light mb-4'>
                       {trend.description}
-                    </p>''';'
+                    </p>''''
                     ''''
                     <div className='space-y-3'>''''
                       <div className='flex justify-between items-center'>''''
                         <span className='text-sm text-zion-slate-light'>Timeline: </span>''''
                         <span className='text-sm font-medium text-zion-slate-dark'>{trend.timeline}</span>
-                      </div>''';'
+                      </div>''''
                       ''''
                       <div className='flex justify-between items-center'>''''
                         <span className='text-sm text-zion-slate-light'>Adoption Rate: </span>''''
@@ -257,7 +257,7 @@ const AdvancedServiceInnovationHub = () => {}
                           </div>''''
                           <span className='text-sm font-medium'>{trend.adoption}%</span>
                         </div>
-                      </div>''';'
+                      </div>''''
                       ''''
                       <div className='flex justify-between items-center'>''''
                         <span className='text-sm text-zion-slate-light'>Investment: </span>''''
@@ -307,7 +307,7 @@ const AdvancedServiceInnovationHub = () => {}
                           </CardTitle>''''
                           <p className='text-zion-slate-light'>{roadmap.description}</p>
                         </div>
-                      </div>''';'
+                      </div>''''
                       ''''
                       <div className='flex flex-wrap gap-2'>''''
                         <Badge className='bg-zion-blue-light/10 text-zion-blue-dark'>
@@ -387,7 +387,7 @@ const AdvancedServiceInnovationHub = () => {}
                   </div>''''''
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '85%' }}></div>
-                  </div>''';'
+                  </div>''''
                   ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>AI & Machine Learning</span>''''
@@ -395,7 +395,7 @@ const AdvancedServiceInnovationHub = () => {}
                   </div>''''''
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-purple h-2 rounded-full' style={{ width: '95%' }}></div>
-                  </div>''';'
+                  </div>''''
                   ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>Space Technology</span>''''
@@ -403,7 +403,7 @@ const AdvancedServiceInnovationHub = () => {}
                   </div>''''''
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-blue h-2 rounded-full' style={{ width: '70%' }}></div>
-                  </div>''';'
+                  </div>''''
                   ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>Biotech AI</span>''''
@@ -430,7 +430,7 @@ const AdvancedServiceInnovationHub = () => {}
                   </div>''''''
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-cyan h-2 rounded-full' style={{ width: '15%' }}></div>
-                  </div>''';'
+                  </div>''''
                   ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>Growing Market</span>''''
@@ -438,7 +438,7 @@ const AdvancedServiceInnovationHub = () => {}
                   </div>''''''
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-purple h-2 rounded-full' style={{ width: '35%' }}></div>
-                  </div>''';'
+                  </div>''''
                   ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>Mainstream</span>''''
@@ -446,7 +446,7 @@ const AdvancedServiceInnovationHub = () => {}
                   </div>''''''
                   <div className='w-full bg-zion-slate-light/20 rounded-full h-2'>''''''
                     <div className='bg-zion-blue h-2 rounded-full' style={{ width: '40%' }}></div>
-                  </div>''';'
+                  </div>''''
                   ''''
                   <div className='flex justify-between items-center'>''''
                     <span className='text-zion-slate-light'>Mature Market</span>''''
@@ -516,20 +516,20 @@ const AdvancedServiceInnovationHub = () => {}
         <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
           <h3 className='text-3xl font-bold mb-4'>Ready to Shape the Future?</h3>''''
           <p className='text-xl mb-6 max-w-2xl mx-auto'>
-            Our innovation hub provides the insights and strategies you need to stay ahead;
+            Our innovation hub provides the insights and strategies you need to stay ahead
             of emerging technologies and capitalize on future opportunities.''''
           </p>''''
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
             <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}
 ';'
-  () => window.open('mailto: kleber@ziontechgroup.com?subject=Innovation Strategy Consultation', _blank');'
+  () => window.open('mailto: kleber@ziontechgroup.com?subject=Innovation Strategy Consultation', _blank')'
 '''}>'''''
               <Users className='w-5 h-5 mr-2'/>
               Get Innovation Strategy''''
             </Button>''''
             <Button variant='outline' className='border-white text-white hover: bg-white hover:text-zion-purple' onClick = {}
 ';'
-  () => window.open('tel: +13024640950', _blank');'
+  () => window.open('tel: +13024640950', _blank')'
 '''}>'''''
               <Zap className='w-5 h-5 mr-2"/>'"
               Speak with an Expert
@@ -544,7 +544,7 @@ export { AdvancedServiceInnovationHub }
 export { AdvancedServiceInnovationHub }
 ;
 export { AdvancedServiceInnovationHub }
-;
+
 export { AdvancedServiceInnovationHub }
 
 export { AdvancedServiceInnovationHub }

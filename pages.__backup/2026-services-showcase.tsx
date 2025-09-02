@@ -20,9 +20,9 @@ import { enterpriseIT2026ServicesV2 } from;
 export default function Services2026ShowcasePage() {
   const [searchTerm, setSearchTerm] = useState('
   ');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all
   ')
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all;
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all
   ')
   const [sortBy, setSortBy] = useState<string>('name;
   ');
@@ -269,7 +269,7 @@ export default function Services2026ShowcasePage() {
         const price = parseInt(service.price.replace('$;
   ', '').replace(
   ',', ';
-  '));
+  '))
         if (selectedPriceRange === 'low
   ') return price < 1000;
         if (selectedPriceRange === 'medium;
@@ -303,7 +303,7 @@ export default function Services2026ShowcasePage() {
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()        default:;
           return a.name.localeCompare(b.name)}
     })
-    return filtered}, [;
+    return filtered}, [
     searchTerm,
     selectedCategory,
     selectedPriceRange,
@@ -314,7 +314,7 @@ export default function Services2026ShowcasePage() {
       <div className='min-h-screen'>
         <Head>
           <title>
-            2026 Services Showcase - Zion Tech Group | Revolutionary AI, Quantum;
+            2026 Services Showcase - Zion Tech Group | Revolutionary AI, Quantum
             & IT Solutions
           </title>
           <meta
@@ -353,7 +353,7 @@ export default function Services2026ShowcasePage() {
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Discover our revolutionary AI, quantum computing, and emerging;
-                technology services that will define the future of business and;
+                technology services that will define the future of business and
                 technology.
               </p>
               <div className='flex flex-wrap justify-center gap-4 mb-12'>
@@ -471,7 +471,7 @@ export default function Services2026ShowcasePage() {
                       setSelectedCategory(
   'all');
                       setSelectedPriceRange(
-  'all');
+  'all')
                       setSortBy(
   'name')}} className='bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-xl hover:from-gray-500 hover:to-gray-600 transition-all duration-200'>                    Clear Filters
                   </button>
@@ -523,7 +523,7 @@ export default function Services2026ShowcasePage() {
                               Key Features:
                             </div>
                             <div className='space-y-1'>
-                              {service.features;
+                              {service.features
                                 .slice(0, 3)
                                 .map((feature, idx) => (
                                   <div
@@ -587,7 +587,7 @@ export default function Services2026ShowcasePage() {
                 Ready to Transform Your Business?
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
-                Our 2026 services are designed to give you a competitive edge in;
+                Our 2026 services are designed to give you a competitive edge in
                 the rapidly evolving technology landscape.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>

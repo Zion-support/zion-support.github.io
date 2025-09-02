@@ -33,12 +33,12 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}'>''
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 text-sm font-medium mb-6'>''
               <MessageCircle className='w-4 h-4 mr-2'  />              AI-Powered Autonomous Customer Service
-            </div>';
+            </div>'
 ''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Transform Your Customer Service with''
               <span className='bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'>
-  '{';
+  '{'
   '}
                 AI Intelligence
               </span>
@@ -46,9 +46,9 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
             </h1>'''            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Revolutionize your customer service with our AI-powered autonomous;
               platform. Provide instant support, resolve issues faster, and;
-              enhance customer satisfaction.;
+              enhance customer satisfaction.
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105'>
@@ -70,7 +70,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
               Advanced Customer Service Features'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our AI platform provides comprehensive customer service;
+              Our AI platform provides comprehensive customer service
               capabilities for modern businesses
             </p>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
@@ -82,7 +82,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx;
                 transition={{ duration: 0.6, delay: index * 0.1 }}'viewport={{ once: true }}''                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
@@ -104,7 +104,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
               Why Choose AI Autonomous Customer Service?'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Experience measurable improvements in customer service performance;
+              Experience measurable improvements in customer service performance
               and satisfaction
             </p>
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx
@@ -130,7 +130,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx;
               transition={{ duration: 0.8 }}'viewport={{ once: true }}''              className='bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-xl p-8''>''
               <h3 className='text-2xl font-semibold text-white mb-6'>
-:pages.disabled/pages/services/AIAutonomousCustomerService.tsx;
+:pages.disabled/pages/services/AIAutonomousCustomerService.tsx
                 Ready to Transform Customer Service?'
               </h3>''
               <p className='text-gray-300 mb-6'>
@@ -155,7 +155,7 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
               Ready to Revolutionize Customer Service?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Start your journey to AI-powered customer service with our;
+              Start your journey to AI-powered customer service with our
               comprehensive platform.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -171,4 +171,4 @@ const AIAutonomousCustomerService: React.FC = (): JSX.Element => {
   )}
 ;
 :pages.disabled/pages/services/AIAutonomousCustomerService.tsx;
-export default AIAutonomousCustomerService'';'''
+export default AIAutonomousCustomerService'''''

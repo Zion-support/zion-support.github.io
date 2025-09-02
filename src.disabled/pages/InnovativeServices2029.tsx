@@ -124,11 +124,11 @@ import React, { useState, useMemo } from;
   'Automation',
   'Workflow',
   'AI',
-  'Process Optimization'] } ]  const categories = ['All',';AI & Machine Learning',';Cybersecurity',';Cloud & DevOps',';Data & Analytics',';Automation & Integration' ]  export default function InnovativeServices2029() { const [selectedCategory, setSelectedCategory] = useState(
+  'Process Optimization'] } ]  const categories = ['All',';AI & Machine Learning',';Cybersecurity',';Cloud & DevOps',';Data & Analytics','Automation & Integration' ]  export default function InnovativeServices2029() { const [selectedCategory, setSelectedCategory] = useState(
   'All') const [searchQuery, setSearchQuery] = useState('
   ') const [selectedService, setSelectedService] = useState<Service | null>(null) const [sortBy, setSortBy] = useState<'name;
   ' | 'price;
   ' | 'roi;
   '>('name;
-  ')  const filteredServices = useMemo(() => { let filtered = services.filter(service => { const matchesCategory = selectedCategory === 'All;
+  ')  const filteredServices = useMemo(() => { let filtered = services.filter(service => { const matchesCategory = selectedCategory === 'All
   ' || service.category === selectedCategory const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) || service.description.toLowerCase().includes(searchQuery.toLowerCase()) || service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())) return matchesCategory && matchesSearch }) '

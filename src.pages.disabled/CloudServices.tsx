@@ -13,5 +13,5 @@ const CloudServices: React.FC = () => {
       </div>
     </>
   )}
-;
+
 export default CloudServices

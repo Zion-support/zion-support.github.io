@@ -1,5 +1,5 @@
 describe (
   'events', () => {}' it ('renders without crashing
-  ', () => {} render (<events />) '; expect (screen.getByRole (
+  ', () => {} render (<events />) ' expect (screen.getByRole (
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<events />) ''

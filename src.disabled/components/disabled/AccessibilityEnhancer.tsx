@@ -16,7 +16,7 @@ import React, { useEffect, useRef, useState, useCallback } from;
    onEscape?: () => void;
    returnFocus?: boolean} interface AccessibilityAnnouncement {
    message: string;
-   priority: 'polite' | 'assertive';
+   priority: 'polite' | 'assertive'
    id: number
    timestamp: number} export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { showAccessibilityPanel?: boolean }) { const [features, setFeatures] = useState<AccessibilityFeatures>({ highContrast: false, reducedMotion: false, largeText: false, focusHighlight: true, screenReaderMode: false, highContrastText: false, increasedSpacing: false, cursorEnhancement: false, keyboardNavigation: false, colorBlindnessSupport: false })  const [announcements, setAnnouncements] = useState<AccessibilityAnnouncement[]>([]) const [currentAnnouncement, setCurrentAnnouncement] = useState<string>('
   ') const [isMenuOpen, setIsMenuOpen] = useState(false) const [activeTab, setActiveTab] = useState<'visual;

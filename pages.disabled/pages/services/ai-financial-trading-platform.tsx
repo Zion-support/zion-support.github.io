@@ -52,14 +52,14 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
       title: 'Commodities',
       description: 'AI-driven insights for gold, oil, and other commodity markets',
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx  ];
-  return();
+  return()
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
 <:pages.disabled/pages/services/ai-financial-trading-platform.tsx;
       <SEO;
 =;
-      <SEO '>        title='AI Financial Trading Platform - Zion Tech Group';
+      <SEO '>        title='AI Financial Trading Platform - Zion Tech Group'
         description='Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month.'/>        title='AI Financial Trading Platform - Zion Tech Group''        description='Revolutionary AI-powered financial trading platform with 25% higher returns. Automated trading, real-time optimization, and advanced risk management. Start from $199/month.'/>'
       <SEO ''
         title='AI Financial Trading Platform - Zion Tech Group'';
@@ -84,12 +84,12 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
 '';
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-blue-600 text-white text-sm font-medium mb-6'>''
               <TrendingUp className='w-4 h-4 mr-2'  />              AI-Powered Trading
-            </div>';
+            </div>'
 ''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Trade Smarter with''
               <span className='bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent'> AI Intelligence</span>
-            </h1>';
+            </h1>'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -104,9 +104,9 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
 ''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Our AI-powered trading platform delivers 25% higher returns through intelligent market analysis,
-              automated strategies, and real-time portfolio optimization. Join the future of algorithmic trading.;
+              automated strategies, and real-time portfolio optimization. Join the future of algorithmic trading.
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
@@ -160,9 +160,9 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
   delay: index * 0.1}}';
   delay: index * 0.1}}
                 viewport={{ once: true }}'';
-                className='text-center'';
+                className='text-center''
 ''
-                <div className='text-4xl md:text-5xl font-bold text-white mb-2'>{item.metric}</div>'';
+                <div className='text-4xl md:text-5xl font-bold text-white mb-2'>{item.metric}</div>''
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
                 <div className='text-gray-300 text-lg'>{item.label}</div>
               </motion.div>
@@ -197,14 +197,14 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
 '';
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-              Powered by Advanced AI';
+              Powered by Advanced AI'
               Powered by Advanced AI
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Our platform leverages cutting-edge artificial intelligence to revolutionize your trading experience
             </p>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -245,7 +245,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -286,14 +286,14 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
 '';
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-              Why Choose AI Trading?';
+              Why Choose AI Trading?'
               Why Choose AI Trading?
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Experience the advantages of AI-powered trading over traditional methods
             </p>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -334,7 +334,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
                   <benefit.icon className='w-8 h-8 text-white' />'
@@ -375,14 +375,14 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
 '';
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-              Trade Across All Markets';
+              Trade Across All Markets'
               Trade Across All Markets
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Our AI platform excels in analyzing and trading across multiple asset classes
             </p>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {tradingMarkets.map(market: unknown, index: unknown()
@@ -423,7 +423,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
                 <h3 className='text-2xl font-semibold text-white mb-4'>{market.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-blue-600 rounded-lg flex items-center justify-center mb-6'>''
                   <market.icon className='w-8 h-8 text-white' />'
@@ -464,14 +464,14 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
 '';
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx;
-              Choose Your Trading Plan';
+              Choose Your Trading Plan'
               Choose Your Trading Plan
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Flexible pricing options designed for traders of all levels
             </p>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -530,7 +530,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
                     <span className='text-gray-300 ml-1'>{plan.period}</span>
                   </div>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                 </div>
@@ -542,7 +542,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
                     </li>
                   ))}
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -589,11 +589,11 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
               Join thousands of traders already experiencing the benefits of AI-powered trading
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
-                Start Free Trial';
+                Start Free Trial'
   y: 0}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

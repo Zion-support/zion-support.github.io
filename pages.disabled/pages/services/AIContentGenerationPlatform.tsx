@@ -171,14 +171,14 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       cta: 'Contact Sales',
       popular: false}
   ];
-:pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
+:pages.disabled/pages/services/AIContentGenerationPlatform.tsx
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
 <:pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
       <SEO;
 =;
-      <SEO '>        title='AI Content Generation Platform - Zion Tech Group';
+      <SEO '>        title='AI Content Generation Platform - Zion Tech Group'
         description='Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology.'/>        title='AI Content Generation Platform - Zion Tech Group''        description='Transform your content creation with our AI-powered platform. Generate high-quality text, images, videos, and more with advanced AI technology.'/>'
       <SEO ''
         title='AI Content Generation Platform - Zion Tech Group'';
@@ -210,18 +210,18 @@ export default function AIContentGenerationPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
   y: 0}}';
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-8'>''
               <PenTool className='w-10 h-10 text-white'  />'
-            </div>'            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            </div>'            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               AI-Powered''
               <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent'>'{' '}Content Generation
               </span>'
             </h1>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto mb-8'>
               Revolutionize your content creation with our advanced AI platform. Generate high-quality text, images,
-              videos, and multimedia content in minutes, not hours. Scale your content production while maintaining;
+              videos, and multimedia content in minutes, not hours. Scale your content production while maintaining
               exceptional quality and brand consistency.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'{' '}Content Generation
@@ -229,14 +229,14 @@ export default function AIContentGenerationPlatform(...args[]):  {}
             </h1>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto mb-8'>
               Revolutionize your content creation with our advanced AI platform. Generate high-quality text, images,
-              videos, and multimedia content in minutes, not hours. Scale your content production while maintaining;
+              videos, and multimedia content in minutes, not hours. Scale your content production while maintaining
               exceptional quality and brand consistency.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a'';
                 href='/contact'';
                 className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'';
-                <span>Start Free Trial</span>'';
+                <span>Start Free Trial</span>''
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                 <ArrowRight className='w-5 h-5'  />              </a>'
                 <ArrowRight className='w-5 h-5'  />              </a>
@@ -270,12 +270,12 @@ export default function AIContentGenerationPlatform(...args[]):  {}
             <div className='text-center'>
               <div className='text-3xl font-bold text-white mb-2'>80-90%</div>
 =;
-  delay: 0.2 }}'            className='grid grid-cols-2 md:grid-cols-4 gap-8';
+  delay: 0.2 }}'            className='grid grid-cols-2 md:grid-cols-4 gap-8'
 '
             <div className='text-center'>'
               <div className='text-3xl font-bold text-white mb-2'>80-90%</div>'>            transition = {}
   { duration: 0.8,
-  delay: 0.2 }}'            className='grid grid-cols-2 md:grid-cols-4 gap-8'';
+  delay: 0.2 }}'            className='grid grid-cols-2 md:grid-cols-4 gap-8''
 ''
             <div className='text-center'>'
               <div className='text-3xl font-bold text-white mb-2'>80-90%</div>''
@@ -292,7 +292,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
             </div>'
             <div className='text-center'>'
               <div className='text-3xl font-bold text-white mb-2'>10x</div>'{ duration: 0.8,';
-  delay: 0.2 }}'            className='grid grid-cols-2 md:grid-cols-4 gap-8'';
+  delay: 0.2 }}'            className='grid grid-cols-2 md:grid-cols-4 gap-8''
 ''
             <div className='text-center'>'
               <div className='text-3xl font-bold text-white mb-2'>80-90%</div>''
@@ -344,16 +344,16 @@ export default function AIContentGenerationPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
   y: 0}}';
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
-            <h2 className='text-4xl font-bold text-white mb-6'>';
+            <h2 className='text-4xl font-bold text-white mb-6'>'
               Powerful Features for''
               <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>'{' '}Content Creators
               </span>'{' '}Content Creators
               </span>
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-              Our AI content generation platform combines cutting-edge technology with intuitive design;
+              Our AI content generation platform combines cutting-edge technology with intuitive design
               to deliver exceptional content creation capabilities.
             </p>
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
@@ -387,7 +387,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
 ';
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6'>';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6'>''
                   <feature.icon className='w-8 h-8 text-white' />
@@ -398,7 +398,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx{feature.benefits.map((benefit, idx) => ('
                     <li key={idx} className='flex items-center space-x-2 text-sm'>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-500 rounded-xl flex items-center justify-center mb-6'>''
                   <feature.icon className='w-8 h-8 text-white' />'
@@ -445,9 +445,9 @@ export default function AIContentGenerationPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
   y: 0}}';
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
-            <h2 className='text-4xl font-bold text-white mb-6'>';
+            <h2 className='text-4xl font-bold text-white mb-6'>'
               Real-World''
               <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>'{' '}Applications
               </span>'{' '}Applications
@@ -488,9 +488,9 @@ export default function AIContentGenerationPlatform(...args[]):  {}
                 <div className='flex items-center space-x-3 mb-4'>';
   delay: index * 0.1 ';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-400/50 transition-all duration-300''
 ''
-                <div className='flex items-center space-x-3 mb-4'>'';
+                <div className='flex items-center space-x-3 mb-4'>''
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                   <span className='px-3 py-1 bg-purple-400/20 text-purple-400 text-sm rounded-full'>
                     {useCase.industry}
@@ -501,7 +501,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
                 </div>''
                 <h3 className='text-2xl font-bold text-white mb-4'>{useCase.title}</h3>''
                 <p className='text-slate-300 mb-6 leading-relaxed'>{useCase.description}</p>''
-                <div className='space-y-3'>'';
+                <div className='space-y-3'>''
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                   <h4 className='text-white font-semibold'>Key Results: any</h4>'
                   <h4 className='text-white font-semibold'>Key Results: any</h4>
@@ -544,9 +544,9 @@ export default function AIContentGenerationPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
   y: 0}}';
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
-            <h2 className='text-4xl font-bold text-white mb-6'>';
+            <h2 className='text-4xl font-bold text-white mb-6'>'
               Measurable''
               <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>'{' '}Business Impact
               </span>'{' '}Business Impact
@@ -556,7 +556,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
               Our AI content generation platform delivers quantifiable results that directly impact your content strategy.
             </p>
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -594,7 +594,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
                 <div className='text-4xl font-bold text-white mb-4'>{benefit.value}</div>'
                 <h3 className='text-xl font-bold text-white mb-3'>{benefit.title}</h3>';
   delay: index * 0.1 '}}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6'>''
                   <benefit.icon className='w-10 h-10 text-white' />'
@@ -602,7 +602,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
                 <div className='text-4xl font-bold text-white mb-4'>{benefit.value}</div>''
                 <h3 className='text-xl font-bold text-white mb-3'>{benefit.title}</h3>'';
   delay: index * 0.1}}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6'>''
                   <benefit.icon className='w-10 h-10 text-white' />
@@ -643,9 +643,9 @@ export default function AIContentGenerationPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
   y: 0}}';
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
-            <h2 className='text-4xl font-bold text-white mb-6'>';
+            <h2 className='text-4xl font-bold text-white mb-6'>'
               Cutting-Edge''
               <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>'{' '}Technologies
               </span>'{' '}Technologies
@@ -655,7 +655,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
               Built on the latest AI and machine learning technologies to deliver superior content generation capabilities.
             </p>
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-4'>
             {technologies.map(tech: unknown, index: unknown()
@@ -727,9 +727,9 @@ export default function AIContentGenerationPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx;
   y: 0}}';
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
-            <h2 className='text-4xl font-bold text-white mb-6'>';
+            <h2 className='text-4xl font-bold text-white mb-6'>'
               Transparent''
               <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>'{' '}Pricing
               </span>'{' '}Pricing
@@ -739,7 +739,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
               Choose the perfect plan for your content creation needs. All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricing.map(plan: unknown, index: unknown()
@@ -791,12 +791,12 @@ export default function AIContentGenerationPlatform(...args[]):  {}
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-4'>{plan.plan}</h3>''
                   <div className='flex items-baseline justify-center mb-2'>''
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                     <span className='text-slate-400 ml-2'>{plan.period}</span>'
                   </div>''
                   <p className='text-slate-300'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                     <span className='text-slate-400 ml-2'>{plan.period}</span>
@@ -854,16 +854,16 @@ export default function AIContentGenerationPlatform(...args[]):  {}
   y: 0}}
             transition={{ duration: 0.8 }}';
 '';
-            <h2 className='text-4xl font-bold text-white mb-6'>';
+            <h2 className='text-4xl font-bold text-white mb-6'>'
               Ready to Transform Your''
               <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>'{' '}Content Creation?
               </span>'
             </h2>''
             <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of content creators who have already revolutionized their workflow;
+              Join thousands of content creators who have already revolutionized their workflow
               with our AI-powered content generation platform.'
             </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -874,21 +874,21 @@ export default function AIContentGenerationPlatform(...args[]):  {}
               </span>
             </h2>''
             <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of content creators who have already revolutionized their workflow;
+              Join thousands of content creators who have already revolutionized their workflow
               with our AI-powered content generation platform.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a'';
                 href='/contact'';
                 className='inline-flex items-center space-x-2 bg-gradient-to-r from-purple-400 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-500 hover:to-pink-600 transition-all duration-300 transform hover:scale-105'';
-                <span>Start Free Trial</span>'';
+                <span>Start Free Trial</span>''
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                 <ArrowRight className='w-5 h-5'  />              </a>'
                 <ArrowRight className='w-5 h-5'  />              </a>
               <a'';
                 href='tel:+13024640950'';
                 className='inline-flex items-center space-x-2 border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300'';
-                <span>Call +1 302 464 0950</span>'';
+                <span>Call +1 302 464 0950</span>''
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
                 <ArrowRight className='w-5 h-5'  />              </a>'
                 <ArrowRight className='w-5 h-5'  />              </a>
@@ -901,6 +901,6 @@ export default function AIContentGenerationPlatform(...args[]):  {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AIContentGenerationPlatform.tsx)}''`;
+:pages.disabled/pages/services/AIContentGenerationPlatform.tsx)}''`
 ''`''`)}
 ''`

@@ -115,7 +115,7 @@ const API: NextPage = () => {
       method: 'POST',
       endpoint: '/api/v1/webhooks',
       description: 'Create a webhook',
-      category: 'Webhooks'}];
+      category: 'Webhooks'}]
   const sdkLanguages = [
     { name: 'JavaScript', version: '2.1.0', icon: '🟨' },
     { name: 'Python', version: '1.8.2', icon: '🐍' },
@@ -198,7 +198,7 @@ const API: NextPage = () => {
               </p>
               <div className='bg-gray-900 text-green-400 p-6 rounded-lg mb-6 overflow-x-auto'>
                 <pre className='text-sm'>
-{`curl -H 'Authorization: Bearer YOUR_API_KEY' \\;
+{`curl -H 'Authorization: Bearer YOUR_API_KEY' \\
      -H 'Content-Type: application/json' \\
      https://api.ziontechgroup.com/v1/users`}
                 </pre>
@@ -366,5 +366,5 @@ const API: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default API

@@ -84,7 +84,7 @@ const SEOOptimizer = () => {}
         analyzeSEO()}, [analyzeSEO]);
     const calculateSEOScore = (page) => {}
         let score = 0;
-        let maxScore = 0;
+        let maxScore = 0
         // Title optimization(0 - 20 points) maxScore += 20
         if(page.title.length >= 30 && page.title.length <= 60) {}
             score += 20}
@@ -116,7 +116,7 @@ const SEOOptimizer = () => {}
         else if(page.keywords.length >= 1) {}
             score += 5}
         // URL structure (0-15 points);
-        maxScore += 15';'
+        maxScore += 15''
         if (page.url === '/' || page.url.includes('-')) {}
             score += 15}
         else if(page.url.length > 0) {}
@@ -130,7 +130,7 @@ const SEOOptimizer = () => {}
             issues.push('Title is too short (should be 30-60 characters))}'
         else if (page.title.length > 60) {}
 ';'
-'';
+''
 ''''
             issues.push('Title is too long (should be 30-60 characters))}'
         if (!page.metaDescription || page.metaDescription.length < 120) {}
@@ -140,7 +140,7 @@ const SEOOptimizer = () => {}
             issues.push('Meta description is too short (should be 120-160 characters))}'
         else if (page.metaDescription.length > 160) {}
 ';'
-'';
+''
 ''''
             issues.push('Meta description is too long (should be 120-160 characters))}'
         if (page.headings.length < 2) {}
@@ -198,7 +198,7 @@ const SEOOptimizer = () => {}
         return recommendations}
     const generateSummary = (pageAnalyses, topIssues) => {}
         const totalPages = pageAnalyses.length;
-        const excellentPages = pageAnalyses.filter(page => page.score >= 80) .length;
+        const excellentPages = pageAnalyses.filter(page => page.score >= 80) .length
         const goodPages = pageAnalyses.filter(page => page.score >= 60) .length
         const poorPages = pageAnalyses.filter(page => page.score < 40) .length;
         let summary = `Analyzed ${totalPages} pages for SEO.`;
@@ -260,7 +260,7 @@ const SEOOptimizer = () => {}
             return 'Good';
         if (score >= 40)';'
             return 'Fair'';';
-        return 'Poor'}';'''
+        return 'Poor'}''''
     return (<div className='fixed bottom-6 right-24 z-50'>'''{/* Floating Action Button */}'''''
       <button onClick={() => setIsOpen(!isOpen)} className='bg-gradient-to-r from-purple-600 to-pink-600 hover: from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105' aria-label='Toggle SEO Optimizer'>''''
         <Search className='w-6 h-6'/>
@@ -359,7 +359,7 @@ const SEOOptimizer = () => {}
                         <button onClick={() => setSelectedPage(null)} className='text-gray-400 hover: text-gray-600 dark:hover:text-gray-300'>
                           ×
                         </button>
-                      </div>''';'
+                      </div>''''
                       ''''
                       <div className='space-y-4'>''''
                         <div className='grid grid-cols-2 gap-4'>''''
@@ -423,5 +423,5 @@ export { SEOOptimizer }
 export { SEOOptimizer }
 ;
 export { SEOOptimizer }
-;
+
 export { SEOOptimizer }

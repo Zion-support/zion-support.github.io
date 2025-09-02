@@ -193,5 +193,5 @@ import React from;
   ' case 'PUT;
   ': return 'bg-yellow-500/20 text-yellow-400 border-yellow-400/30;
   ' case 'DELETE;
-  ': return 'bg-red-500/20 text-red-400 border-red-400/30;
+  ': return 'bg-red-500/20 text-red-400 border-red-400/30
   ' default: return 'bg-gray-500/20 text-gray-400 border-gray-400/30 } } '

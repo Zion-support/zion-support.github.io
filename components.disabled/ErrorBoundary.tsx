@@ -21,7 +21,7 @@ error, errorInfo})
     // Log error to monitoring service;
     console.error(,
   Error caught by boundary: , error, errorInfo)'    // In production, you would send this to your error tracking service;
-    if (process.env.NODE_ENV === 'production;
+    if (process.env.NODE_ENV === 'production
   ') {'      // Example: Sentry.captureException(error, { extra: errorInfo })'    }}
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined })}
@@ -33,7 +33,7 @@ error, errorInfo})
       return(
 <div className='min-h-screen flex items-center justify-center bg-gray-50 px-4'>'          <div className='max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center'>'            <div className='w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4'>'              <AlertTriangle className='w-8 h-8 text-red-600' />'            </div>'
             <h1 className='text-2xl font-bold text-gray-900 mb-2'>'              Oops! Something went wrong'            </h1>
-            <p className='text-gray-600 mb-6'>'              We&apos;re sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.'
+            <p className='text-gray-600 mb-6'>'              We&aposre sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.'
   '            </p>'{process.env.NODE_ENV ===
   'development' && this.state.error && (
   '              <details className='mb-6 text-left'>'                <summary className='cursor-pointer text-sm font-medium text-gray-700 mb-2'>'                  Error Details (Development)'                </summary>

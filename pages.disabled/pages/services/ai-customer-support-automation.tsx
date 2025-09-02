@@ -62,7 +62,7 @@ export default function AICustomerSupportAutomation() {
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-customer-support-automation.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center''>''
-            <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
               <Bot className='w-4 h-4'  />              <span>AI-Powered Customer Support</span>'
             </div>''
@@ -71,14 +71,14 @@ export default function AICustomerSupportAutomation() {
             </h1>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Transform your customer support with intelligent automation, 24/7;
-              availability, and personalized assistance that delights your;
+              availability, and personalized assistance that delights your
               customers and reduces costs.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
-                className='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300'>';
+                className='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300'>'
                 Start Free Trial''
                 <ArrowRight className='inline ml-2 w-5 h-5'  />              </motion.button>
               <motion.button;
@@ -100,11 +100,11 @@ export default function AICustomerSupportAutomation() {
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
               Powerful Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Comprehensive AI-powered customer support tools designed to;
+              Comprehensive AI-powered customer support tools designed to
               enhance customer experience and streamline support operations.
             </p>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -112,7 +112,7 @@ export default function AICustomerSupportAutomation() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-300''>''
-                <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
                   <feature.icon className='w-8 h-8 text-blue-400' />'
                 </div>''
@@ -130,11 +130,11 @@ export default function AICustomerSupportAutomation() {
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
               Business Benefits'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              See measurable improvements in customer satisfaction and;
+              See measurable improvements in customer satisfaction and
               operational efficiency.
             </p>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -155,7 +155,7 @@ export default function AICustomerSupportAutomation() {
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
               Multi-Channel Support'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Provide seamless support across all customer touchpoints with;
+              Provide seamless support across all customer touchpoints with
               unified AI-powered assistance.
             </p>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
@@ -177,7 +177,7 @@ export default function AICustomerSupportAutomation() {
                     </h3>''
                     <p className='text-gray-400'>{channel.description}</p>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3'>'{channel.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='flex items-start'>''
                       <CheckCircle className='w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300 text-sm'>{feature}</span>
@@ -196,7 +196,7 @@ export default function AICustomerSupportAutomation() {
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
               Industry Applications'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Discover how AI customer support automation transforms operations;
+              Discover how AI customer support automation transforms operations
               across different industries.
             </p>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
@@ -208,13 +208,13 @@ export default function AICustomerSupportAutomation() {
 :pages.disabled/pages/services/ai-customer-support-automation.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-blue-400/30 transition-all duration-300''>''
                 <div className='flex items-center mb-6'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mr-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mr-4'>''
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
                     <useCase.icon className='w-6 h-6 text-blue-400' />'</div>''                  <h3 className='text-xl font-semibold text-white'>
                     {useCase.industry}
                   </h3>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3'>'{useCase.applications.map((application, appIndex) => (''                    <li key={appIndex} className='flex items-start'>''
                       <CheckCircle className='w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0'  />''
@@ -236,19 +236,19 @@ export default function AICustomerSupportAutomation() {
 :pages.disabled/pages/services/ai-customer-support-automation.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-400/30 rounded-2xl p-12''>''
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/ai-customer-support-automation.tsx;
+:pages.disabled/pages/services/ai-customer-support-automation.tsx
               Ready to Transform Your Customer Support?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
               Start leveraging the power of AI customer support automation today;
-              and see immediate improvements in customer satisfaction and;
+              and see immediate improvements in customer satisfaction and
               operational efficiency.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
-                className='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300'>';
+                className='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300'>'
                 Get Started Now''
                 <ArrowRight className='inline ml-2 w-5 h-5'  />              </motion.button>
               <motion.button;
@@ -262,5 +262,5 @@ export default function AICustomerSupportAutomation() {
       </section>
     </div>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx)}
-  '';
+  ''
 ''''

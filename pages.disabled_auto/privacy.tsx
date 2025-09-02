@@ -75,7 +75,7 @@ const Privacy: React.FC = () => {
         'We use cookies to improve your browsing experience', 'Essential cookies are required for website functionality',
         'Analytics cookies help us understand website usage', 'You can manage cookie preferences in your browser settings';
       ]}
-  ];
+  ]
   const contactInfo = {
     email: 'privacy@ziontechgroup.com', phone: '+1 (555) 123-4567', address: '123 Technology Drive, San Francisco, CA 94105'}
 
@@ -142,11 +142,11 @@ const Privacy: React.FC = () => {
               <div className='prose prose-invert max-w-none'>
                 <p className='text-gray-300 mb-4'>
                   Zion Tech Group ('we, ' 'our,' or 'us') is committed to protecting your privacy. This Privacy Policy;
-                  explains how we collect, use, disclose, and safeguard your information when you visit our website;
+                  explains how we collect, use, disclose, and safeguard your information when you visit our website
                   or use our services.
                 </p>
                 <p className='text-gray-300 mb-4'>
-                  By using our services, you agree to the collection and use of information in accordance with this policy.;
+                  By using our services, you agree to the collection and use of information in accordance with this policy.
                   If you do not agree with the terms of this Privacy Policy, please do not access or use our services.
                 </p>
                 <div className='bg-blue-500/10 border border-blue-500/30 rounded-lg p-4'>
@@ -155,7 +155,7 @@ const Privacy: React.FC = () => {
                     <div>
                       <h4 className='text-blue-400 font-semibold mb-2'>Important Notice</h4>
                       <p className='text-gray-300 text-sm'>
-                        We may update this Privacy Policy from time to time. We will notify you of any changes by;
+                        We may update this Privacy Policy from time to time. We will notify you of any changes by
                         posting the new Privacy Policy on this page and updating the 'Last Updated' date.
                       </p>
                     </div>
@@ -277,5 +277,5 @@ const Privacy: React.FC = () => {
       </section>
     </div>
   )}
-;
+
 export default Privacy

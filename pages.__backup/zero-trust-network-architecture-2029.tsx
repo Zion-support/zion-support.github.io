@@ -169,7 +169,7 @@ export default function ZeroTrustNetworkArchitecture2029() {
               </span>
             </h1>
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
-              Revolutionary zero trust network architecture that eliminates traditional;
+              Revolutionary zero trust network architecture that eliminates traditional
               network perimeters and provides continuous security verification.
             </p>
             {/* Key Stats */}

@@ -26,6 +26,6 @@ import React from;
   David Martinez', role: 'Project Director, company:;
   'InnovateTech Solutions', content:';AI Project Management Assistant has revolutionized our project delivery. We&apos;ve reduced delays by 40% and improved team productivity significantly.', rating: 5, }, { name:,
   Jennifer Lee', role: 'Program Manager, company:,
-  Global Dynamics', content: ';The predictive risk management feature has saved us countless hours and prevented major project setbacks. ROI within the first quarter!, rating: 5, }, { name:,
+  Global Dynamics', content: 'The predictive risk management feature has saved us countless hours and prevented major project setbacks. ROI within the first quarter!, rating: 5, }, { name:,
   Robert Wilson', role: 'Senior PMO, company:,
   TechFlow Enterprises', content: 'Real-time analytics and AI insights give us unprecedented visibility into project health. Stakeholder confidence has never been higher., rating: 5, }, ] ' return ('' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>' <SEO'' title='AI Project Management Assistant — Zion Tech Group | Intelligent Project Management'' description='Transform your project management with AI-powered task prioritization, risk management, team collaboration, and real-time analytics. Reduce delays by 45%.'' keywords='AI project management, project management software, task prioritization, risk management, team collaboration'' canonical='https:''';

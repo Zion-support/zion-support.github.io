@@ -21,5 +21,5 @@ import React, { useState } from;
   from-blue-500 to-indigo-500' }, { id: 'finance, name:;
   'Finance', icon: DollarSign, color:,
   from-green-500 to-blue-500' }, { id: 'real-estate, name:
-  'Real Estate', icon: Building2, color:;
+  'Real Estate', icon: Building2, color:
   'from-gray-500 to-blue-500' } ]  const microSAASServices = ['

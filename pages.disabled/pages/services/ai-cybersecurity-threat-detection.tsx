@@ -38,7 +38,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
       icon: Zap,
       title: 'Real-Time Intelligence',
       description: 'Live threat intelligence feeds and global attack pattern recognition'}
-  ]';On-premise options',';SLA guarantees',';Custom integrations';
+  ]';On-premise options',';SLA guarantees',';Custom integrations'
       ],
       popular: false}
   ]},
@@ -67,17 +67,17 @@ export default function AICybersecurityThreatDetection(...args: []):  {
 '';
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-600 to-orange-600 text-white text-sm font-medium mb-6'>''
               <Shield className='w-4 h-4 mr-2'  />              AI-Powered Cybersecurity
-            </div>';
+            </div>'
 ''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Stop Threats Before They''
               <span className='bg-gradient-to-r from-red-400 to-orange-400 bg-clip-text text-transparent'> Stop You</span>
-            </h1>';
+            </h1>'
 ''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Our AI-powered cybersecurity platform provides 99.9% threat detection with real-time monitoring,
               automated response, and zero-day attack prevention. Protect your business with the future of cybersecurity.
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105'>
@@ -113,7 +113,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Our platform leverages cutting-edge artificial intelligence to provide unmatched cybersecurity protection
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -142,7 +142,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-red-500 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -177,7 +177,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Join thousands of organizations already protected by our AI-powered cybersecurity platform
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -206,7 +206,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
                   <benefit.icon className='w-8 h-8 text-white' />'
@@ -241,7 +241,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Our AI platform protects against all types of cyber threats, from common attacks to sophisticated zero-day exploits
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {threatTypes.map(threat: unknown, index: unknown()
@@ -270,7 +270,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                 <h3 className='text-2xl font-semibold text-white mb-4'>{threat.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-gray-700''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-red-600 to-orange-600 rounded-lg flex items-center justify-center mb-6'>''
                   <threat.icon className='w-8 h-8 text-white' />'
@@ -305,7 +305,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Meet industry standards and regulatory requirements with our certified security platform
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6'>
             {complianceFrameworks.map(framework: unknown, index: unknown()
@@ -361,7 +361,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Flexible pricing options designed to protect organizations of all sizes
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -393,7 +393,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                       Most Popular
                     </span>
                   </div>
-                )}';
+                )}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
@@ -402,14 +402,14 @@ export default function AICybersecurityThreatDetection(...args: []):  {
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>''
                     <span className='text-gray-300 ml-1'>{plan.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'{plan.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-start'>''
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
                     </li>
                   ))}
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -444,7 +444,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
               Join thousands of organizations already protected by our AI-powered cybersecurity platform
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-orange-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-orange-700 transition-all duration-300 transform hover:scale-105'>
@@ -457,7 +457,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
             </div>
 <:pages.disabled/pages/services/ai-cybersecurity-threat-detection.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <p className='text-gray-400 mt-6'>
               No credit card required • 30-day free trial • 24/7 security monitoring

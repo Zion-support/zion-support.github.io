@@ -66,7 +66,7 @@ import {}
 const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview;
   ')  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {}
-    setIsVisible(true)}, []);
+    setIsVisible(true)}, [])
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900'>'{/* Hero Section */}''      <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>
@@ -74,14 +74,14 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx;
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8 }}''            className='mb-8''>''
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-300 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 text-green-300 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
               <Heart className='w-4 h-4 mr-2'  />              Healthcare Innovation'
             </div>''
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
               AI-Powered Healthcare Platform'</h1>''            <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
               Revolutionary healthcare technology that combines artificial;
-              intelligence with medical expertise to deliver superior patient;
+              intelligence with medical expertise to deliver superior patient
               care, accurate diagnostics, and improved health outcomes.
             </p>
           </motion.div>
@@ -91,11 +91,11 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}';
             transition={{ duration: 0.8, delay: 0.2 }}'';
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'<Link''              to='/contact'';
-              className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105''>'';
+              className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
               <Heart className='w-5 h-5 mr-2'  />              Transform Healthcare
             </Link>'<Link''              to='#demo'';
-              className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300''>'';
+              className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
               <Eye className='w-5 h-5 mr-2'  />              Watch Demo
             </Link>
@@ -136,11 +136,11 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
               Advanced Healthcare Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Comprehensive healthcare solutions powered by cutting-edge AI;
+              Comprehensive healthcare solutions powered by cutting-edge AI
               technology
             </p>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -148,7 +148,7 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}''                className='bg-gradient-to-br from-green-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20 hover:border-green-500/40 transition-all duration-300 hover:transform hover:scale-105''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -171,7 +171,7 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
               Comprehensive Healthcare Modules'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Modular healthcare solutions that adapt to your specific medical;
+              Modular healthcare solutions that adapt to your specific medical
               needs
             </p>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
@@ -182,7 +182,7 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx;
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20''>''
-                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>'';
+                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>''
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
                   <Heart className='w-6 h-6 mr-3 text-green-400'  />                  {module.name}'
                 </h3>''
@@ -220,7 +220,7 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx;
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}'transition={{ duration: 0.8, delay: 0.2 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-green-800/80 backdrop-blur-sm rounded-2xl p-8 border border-green-500/20''>''
-                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>'';
+                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>''
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
                   <Target className='w-6 h-6 mr-3 text-green-400'  />                  {useCase.industry}'
                 </h3>''
@@ -249,7 +249,7 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
               Access advanced healthcare AI technology at competitive prices
             </p>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingTiers.map(tier: unknown, index: unknown()
@@ -266,7 +266,7 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AI-Healthcare-Platform.tsx)}';
+:pages.disabled/pages/services/AI-Healthcare-Platform.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -287,7 +287,7 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                     </span>
                   </div>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>
                   {tier.features.map((feature, featureIndex) => (
@@ -296,7 +296,7 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                     </li>
                   ))}
                 </ul>
-:pages.disabled/pages/services/AI-Healthcare-Platform.tsx;
+:pages.disabled/pages/services/AI-Healthcare-Platform.tsx
 '
                 <Link''`
                   to='/contact'``;
@@ -326,7 +326,7 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
               Transform patient care with AI-powered healthcare technology
             </p>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -335,7 +335,7 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx;
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}'transition={{ duration: 0.8, delay: 0.2 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -373,14 +373,14 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
                 <MapPin className='w-5 h-5 mr-2 text-green-400'  />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
-            </div>';
+            </div>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<Link''                to='/contact'';
-                className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
                 <Heart className='w-5 h-5 mr-2'  />                Schedule Healthcare Demo
               </Link>'<Link''                to='https://ziontechgroup.com'';
-                className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-green-500 text-green-300 font-semibold text-lg hover:bg-green-500 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AI-Healthcare-Platform.tsx
                 <Globe className='w-5 h-5 mr-2'  />                Visit Our Website</Link>            </div>
           </motion.div>
@@ -389,5 +389,5 @@ const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = 
     </div>
   )}
 ;
-export default AIHealthcarePlatform''`;
+export default AIHealthcarePlatform''`
   ''`'"`

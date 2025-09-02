@@ -45,7 +45,7 @@ function PodcastTranscription(function PodcastTranscription() {): any {}
     </div>
   );
 export { PodcastTranscription }
-export default PodcastTranscription;
+export default PodcastTranscription
 :pages.disabled/pages/services/PodcastTranscription.tsx
 <:pages.disabled/pages/services/PodcastTranscription.tsx;
 =>export default PodcastTranscription;
@@ -55,5 +55,5 @@ export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;
 :pages.disabled/pages/services/PodcastTranscription.tsx;
-export default PodcastTranscription';''";
+export default PodcastTranscription';''"
 export default PodcastTranscription''

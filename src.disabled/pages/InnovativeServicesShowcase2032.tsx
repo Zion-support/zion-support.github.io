@@ -21,5 +21,5 @@ import React, { useState, useMemo } from;
   ',';Under $500;
   ',';$500 - $1, 000;
   ',';$1, 000 - $2,000;
-  ',';$2, 000+;
+  ',';$2, 000+
   ' ]  const filteredServices = useMemo(() => { let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2032 '

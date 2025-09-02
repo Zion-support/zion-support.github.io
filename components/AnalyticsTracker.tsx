@@ -8,7 +8,7 @@ interface AnalyticsTrackerProps {
     action: string;
     label?: string;
     value?: number;
-  }>;
+  }>
 }
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
@@ -65,7 +65,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
         const scrollDepth = Math.round(
           (window.scrollY / (document.body.scrollHeight - window.innerHeight)) *
             100
-        );
+        )
         if (scrollDepth >= 25 && scrollDepth < 50) {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'scroll', {
@@ -161,7 +161,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     const cleanup = trackEngagement();
     trackCustomEvents();
     return cleanup;
-  }, [pageName, customEvents]);
+  }, [pageName, customEvents])
   return (
     <Head>
       {/* Google Analytics 4 */}
@@ -215,4 +215,4 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
     </Head>
   );
 };
-export default AnalyticsTracker;
+export default AnalyticsTracker

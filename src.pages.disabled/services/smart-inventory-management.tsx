@@ -18,7 +18,7 @@ const SmartInventoryManagement: React.FC = () => {
             Smart Inventory Management
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Optimize your inventory with AI-powered predictions. Reduce stockouts by 90%;
+            Optimize your inventory with AI-powered predictions. Reduce stockouts by 90%
             and cut inventory costs by 40% with intelligent demand forecasting.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4 mb-12'>
@@ -267,5 +267,5 @@ const SmartInventoryManagement: React.FC = () => {
       </section>
     </Layout>
   )}
-;
+
 export default SmartInventoryManagement

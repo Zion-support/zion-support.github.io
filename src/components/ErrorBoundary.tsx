@@ -1,19 +1,17 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-interface Props {
-  children: ReactNode;
-   fallback?: ReactNode}
-interface State {
-  hasError: boolean;
-   error?: Error}
+interface Props { children: ReactNode;
+   fallback?: ReactNode  }
+interface State { hasError: boolean;
+   error?: Error  }
 export class ErrorBoundary extends Component<Props, State> {
-  public state: State = { hasError: false}
+  public state: State = { hasError: false  }
 ;
   public static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
   }
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     
-    // Log to external service in production;
+    // Log to external service in production
     if(process.env.NODE_ENV === 'production') {
       // You can integrate with services like Sentry here
       console.error('Production error: ', { error, errorInfo })}

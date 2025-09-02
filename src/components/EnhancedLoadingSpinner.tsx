@@ -11,14 +11,14 @@ export default function EnhancedLoadingSpinner({
   return (<div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>
       <motion.div
         className={`${sizeClasses[size]} relative`}
-        animate={{ rotate: 360  }}
+        animate={{ rotate: 360    }}
         transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
       >{/* Outer ring */}
         <div className={`${sizeClasses[size]} border-4 border-blue-200 rounded-full`} />
         {/* Inner spinning ring */}
         <motion.div
           className={`${sizeClasses[size]} border-4 border-transparent border-t-blue-600 rounded-full absolute inset-0`}
-          animate={{ rotate: -360  }}
+          animate={{ rotate: -360    }}
           transition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}
         />{/* Center dot */}
         <motion.div

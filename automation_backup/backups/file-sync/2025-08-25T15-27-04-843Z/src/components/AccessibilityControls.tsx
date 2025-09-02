@@ -55,7 +55,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
         return 'bottom-4 right-4;
   ';
       case 'floating;
-  ':;
+  ':
       default:
         return 'bottom-4 right-4}
   }
@@ -108,7 +108,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
                   className=,
   p-1 hover: bg-white/20 rounded transition-colors;
   ';
-                  aria-label='Close accessibility panel;
+                  aria-label='Close accessibility panel
   '
                   <X className='w-4 h-4                                                                                                                                                                              />
                 </button>
@@ -143,7 +143,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
 ;
 ;
 }
-                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
+                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2
   '
                   />
                   <span className='text-sm text-gray-700 dark:text-gray-300;
@@ -163,7 +163,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
 ;
 ;
 }
-                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
+                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2
   '
                   />
                   <span className='text-sm text-gray-700 dark:text-gray-300>Large Text</span>
@@ -196,7 +196,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
 ;
 ;
 }
-                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
+                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2
   '
                   />
                   <span className='text-sm text-gray-700 dark:text-gray-300>Reduce Motion</span>
@@ -229,7 +229,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
 ;
 ;
 }
-                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
+                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2
   '
                   />
                   <span className='text-sm text-gray-700 dark:text-gray-300;
@@ -249,7 +249,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
 ;
 ;
 }
-                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
+                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2
   '
                   />
                   <span className='text-sm text-gray-700 dark:text-gray-300>Keyboard Navigation</span>
@@ -282,7 +282,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
 ;
 ;
 }
-                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2;
+                    className='w-4 h-4 text-cyan-600 bg-gray-100 border-gray-300 rounded focus: ring-cyan-500 focus:ring-2
   '
                   />
                   <span className='text-sm text-gray-700 dark:text-gray-300>Enable Announcements</span>

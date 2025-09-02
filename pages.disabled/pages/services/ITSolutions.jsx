@@ -28,20 +28,20 @@ const ITSolutions = () => {
         'Reduced IT operational costs','';
         'Enhanced data security and compliance','';
         'Streamlined business processes','';
-        'Expert technical support and maintenance'';
+        'Expert technical support and maintenance''
     ]'
     return (<div className='min-h-screen bg-background'>''
       <SEO title='IT Solutions - Zion Tech Group' description='Comprehensive IT solutions to optimize your business operations and technology infrastructure.' keywords='IT solutions, system integration, IT support, data management, IT security' canonical='https://ziontechgroup.com/services/it-solutions'/>
 :pages.disabled/pages/services/ITSolutions.jsx
 '{/* Hero Section */}''      <section className='relative bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-20'>''
         <div className='absolute inset-0 bg-black/20'></div>''
-        <div className='relative container mx-auto px-4 text-center'>'';
+        <div className='relative container mx-auto px-4 text-center'>''
 :pages.disabled/pages/services/ITSolutions.jsx
           <motion.h1 className='text-5xl md:text-6xl font-bold mb-6' initial = {
   { opacity: 0,
   y: 20}} animate = {
   { opacity: 1,
-  y: 0}} transition={{ duration: 0.8 }}>';
+  y: 0}} transition={{ duration: 0.8 }}>'
             IT Solutions for''
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-400'>''{' '}Modern Business
             </span>'
@@ -81,7 +81,7 @@ const ITSolutions = () => {
               End-to-end IT solutions to modernize your business operations
             </p>
 :pages.disabled/pages/services/ITSolutions.jsx
-          </div>';
+          </div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>''{features.map((feature, index) => (<motion.div key={feature.title} className='text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300' initial = {
   { opacity: 0,
@@ -117,10 +117,10 @@ const ITSolutions = () => {
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold text-gray-900 mb-4'>Why Choose Our IT Solutions?</h2>''
               <p className='text-xl text-gray-600'>
-:pages.disabled/pages/services/ITSolutions.jsx;
+:pages.disabled/pages/services/ITSolutions.jsx
                 Experience the benefits of optimized IT infrastructure
               </p>
-            </div>';
+            </div>'
 ''
             <div className='space-y-6'>''{benefits.map((benefit, index) => (<motion.div key={index} className='flex items-center p-4 bg-white rounded-lg shadow-sm' initial = {
   { opacity: 0,
@@ -153,7 +153,7 @@ const ITSolutions = () => {
 :pages.disabled/pages/services/ITSolutions.jsx
 '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600 text-white'>''
         <div className='container mx-auto px-4 text-center'>''
-          <h2 className='text-4xl font-bold mb-6'>Ready to Optimize Your IT?</h2>'';
+          <h2 className='text-4xl font-bold mb-6'>Ready to Optimize Your IT?</h2>''
 :pages.disabled/pages/services/ITSolutions.jsx
           <p className='text-xl mb-8 max-w-3xl mx-auto'>
   '
@@ -164,6 +164,6 @@ const ITSolutions = () => {
       </section>
     </div>)}
 export { ITSolutions }
-:pages.disabled/pages/services/ITSolutions.jsx;
+:pages.disabled/pages/services/ITSolutions.jsx
 export default ITSolutions''}}
   ''''

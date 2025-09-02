@@ -31,7 +31,7 @@ const mockData: SecurityMetrics = {
         critical: Math.floor(Math.random() * 2), high: Math.floor(Math.random() * 5), medium: Math.floor(Math.random() * 8), low: Math.floor(Math.random() * 15)}, lastScan: new Date()}
 ;
     setTimeout(() => {
-      setSecurity(mockData);
+      setSecurity(mockData)
       setIsLoading(false)}, 1000)}, [])
 
   if (isLoading || !security) {
@@ -43,7 +43,7 @@ const mockData: SecurityMetrics = {
   }
 
   const getScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-500';
+    if (score >= 90) return 'text-green-500'
     if (score >= 70) return 'text-yellow-500'
     return 'text-red-500'}
 
@@ -88,7 +88,7 @@ const mockData: SecurityMetrics = {
     if (score >= 90) return 'text-green-500;'
    if (score >= 70) return;
   'text-yellow-500;'
-   return;
+   return
   'text-red-500}'
   return(
     <div className='space-y-6'>'      <div className='flex items-center justify-between'>'        <h2 className='text-2xl font-bold text-gray-900 dark: text-white flex items-center'>'          <Shield className='w-6 h-6 mr-2 text-blue-500' />'          Security Dashboard'        </h2></div>'
@@ -105,5 +105,5 @@ className='bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
       </div>
     </div>
   )}
-;
+
 export default SecurityDashboard

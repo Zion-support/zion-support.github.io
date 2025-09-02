@@ -11,7 +11,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
   ', phone: ',
 ,
   service: ', message: '';
-  '  })';
+  '  })'
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<;
   'idle' |;
@@ -33,7 +33,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
   '        name: ', email:,
   ','        company: ', phone:,
   ',
-  '        service: ', message: '';
+  '        service: ', message: ''
   '      })'    }, 2000)}
 
   const contactInfo = [
@@ -184,13 +184,13 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
   ',';
   'AI Cybersecurity Threat Intelligence',
   'AI Augmented Reality Solutions',
-  '    ';
+  '    '
   'Other''  ]'
   return(
     <MainLayout;
       title='Contact Us - Zion Tech Group''      description='Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&apos;re here to help transform your business.'';
   '    >'      {/* Hero Section */}
-      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4'>'          <div className='max-w-4xl mx-auto text-center'>'            <h1 className='text-5xl md: text-6xl font-bold mb-6 leading-tight'>'              Let&apos;s Build Something Amazing Together'
+      <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4'>'          <div className='max-w-4xl mx-auto text-center'>'            <h1 className='text-5xl md: text-6xl font-bold mb-6 leading-tight'>'              Let&aposs Build Something Amazing Together'
   '            </h1>            <p className='text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed'>'              Ready to transform your business with cutting-edge technology? '              Get in touch with our expert team today.
             </p>
           </div>
@@ -215,7 +215,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
       </section>
       {/* Contact Form and Info */}
       <section className='py-20 bg-gray-50'>'        <div className='container mx-auto px-4'>'          <div className='grid lg: grid-cols-2 gap-12'>'            {/* Contact Form */}'            <div className='bg-white rounded-lg shadow-lg p-8'>'              <h2 className='text-3xl font-bold text-gray-900 mb-6'>Send Us a Message</h2>'              '              {submitStatus === 'success
-  ' && ('                <div className='bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6'>'                  Thank you for your message! We&apos;ll get back to you within 24 hours.'
+  ' && ('                <div className='bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6'>'                  Thank you for your message! We&aposll get back to you within 24 hours.'
   '                </div>'              )}
               {submitStatus ===
   'error' && (
@@ -270,7 +270,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
               </form>
             </div>
             {/* Company Information */}
-            <div className='space-y-8'>'              <div>'                <h2 className='text-3xl font-bold text-gray-900 mb-6'>Get in Touch</h2>'                <p className='text-lg text-gray-600 mb-6'>'                  We&apos;re here to help you transform your business with cutting-edge technology solutions. ''                  Whether you need a custom AI solution, cloud migration, or a complete digital transformation, our expert team is ready to assist you.
+            <div className='space-y-8'>'              <div>'                <h2 className='text-3xl font-bold text-gray-900 mb-6'>Get in Touch</h2>'                <p className='text-lg text-gray-600 mb-6'>'                  We&aposre here to help you transform your business with cutting-edge technology solutions. ''                  Whether you need a custom AI solution, cloud migration, or a complete digital transformation, our expert team is ready to assist you.
   '                </p>
                 <p className='text-gray-600'>'                  Contact us today to schedule a free consultation and discover how we can help '                  you achieve your business goals.
                 </p>
@@ -293,7 +293,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
         </div>
       </section>
       {/* CTA Section */}
-      <section className='py-20 bg-blue-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Get Started?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>'            Don&apos;t wait to transform your business. Contact us today and let&apos;s discuss how we can help '            you achieve your technology goals.
+      <section className='py-20 bg-blue-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Get Started?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>'            Don&apos;t wait to transform your business. Contact us today and let&aposs discuss how we can help '            you achieve your technology goals.
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>'            <a'              href='tel:+13024640950''              className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center''            >'              <Phone className='mr-2 w-5 h-5' />'              Call +1 302 464 0950'            </a>
             <a;
@@ -303,5 +303,5 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
       </section>
     </MainLayout>
   )}
-;
+
 export default ContactPage

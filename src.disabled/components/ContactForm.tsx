@@ -28,18 +28,18 @@ export const ContactForm: React.FC = () => {
     message:,
   ',
     budget: ',
-    timeline: ';
+    timeline: '
   '})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle;
   ' | 'success;
   ' | 'error;
-  '>('idle;
+  '>('idle
   ')
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
 import React, { useState } from 'react';
 export const ContactForm: React.FC = () => {
-import { motion } from 'framer - motion';
+import { motion } from 'framer - motion'
   const [formData, setFormData] = useState ({
     firstName: '',
     lastName: '',
@@ -56,7 +56,7 @@ import { motion } from 'framer - motion';
   const handleInputChange = useCallback((
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev, [name]: value}))}
 :src.disabled/components/ContactForm.tsx

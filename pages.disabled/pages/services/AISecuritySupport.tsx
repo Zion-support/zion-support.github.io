@@ -27,18 +27,18 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
   ]';Security support optimization',';Support strategy management and execution',';Security issue resolution and assistance',';Support framework management and automation',';Support automation and orchestration',';Support scaling and management';
   ]';Improve security support performance by 50-80%',';Reduce support resolution time by 40-70%',';Cut security support costs by 35-65%',';Enhance security support reliability and scalability',';Optimize resource utilization',';Scale security support operations efficiently';
   ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-amber-500 via-orange-500 to-red-500 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AISecuritySupport.tsx
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Support Platform'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Support Platform</h1>'          <p className='text-amber-100 text-xl'>Transform your security support with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           </div>
 :pages.disabled/pages/services/AISecuritySupport.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           ))}
 :pages.disabled/pages/services/AISecuritySupport.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
 :pages.disabled/pages/services/AISecuritySupport.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-amber-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Security Support Impact</h3>''
@@ -146,7 +146,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
 :pages.disabled/pages/services/AISecuritySupport.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your security support with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors'>''
 :pages.disabled/pages/services/AISecuritySupport.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

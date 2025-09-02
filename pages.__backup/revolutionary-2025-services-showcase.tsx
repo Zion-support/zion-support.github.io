@@ -64,7 +64,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
       const price = parseInt(service.price.replace(
   '$', ';
   ').replace(',
-  ', ''));
+  ', ''))
       return sum + (price * service.customers)}, 0)}
 
   return(
@@ -96,7 +96,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
                 Revolutionary 2025 Services
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-                Experience the future of technology with our cutting-edge AI, quantum computing, and IT infrastructure services.;
+                Experience the future of technology with our cutting-edge AI, quantum computing, and IT infrastructure services.
                 Transform your business with solutions that were once only science fiction.
               </p>
               {/* Stats Grid */}
@@ -154,7 +154,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
                     className={`flex items-center gap-2 px-4 py-2 rounded-full border transition-all duration-300 ${
-                      selectedCategory === category.id;
+                      selectedCategory === category.id
                         ?,
   bg-gradient-to-r from-blue-600 to-purple-600 border-blue-500 text-white
   ': 'border-gray-600 text-gray-300 hover:border-blue-500 hover:text-blue-400}`}
@@ -188,7 +188,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
   grid;
   ')}
                     className={`p-2 rounded-lg transition-colors ${
-                      viewMode === 'grid;
+                      viewMode === 'grid
   ' ? 'bg-blue-600 text-white
   ': 'text-gray-400 hover:text-blue-400}`}
                   >
@@ -199,7 +199,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
   list;
   ')}
                     className={`p-2 rounded-lg transition-colors ${
-                      viewMode === 'list;
+                      viewMode === 'list
   ' ? 'bg-blue-600 text-white
   ': 'text-gray-400 hover:text-blue-400}`}
                   >
@@ -334,7 +334,7 @@ export default function Revolutionary2025ServicesShowcasePage() {
                 Ready to Transform Your Business?
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
-                Join thousands of businesses already leveraging our revolutionary 2025 services.;
+                Join thousands of businesses already leveraging our revolutionary 2025 services.
                 Get started today with a free consultation and discover how we can help you achieve the impossible.
               </p>
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>

@@ -20,7 +20,7 @@ const InfrastructureServices = () => {}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>''
             <div className='bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl'>''
               <h3 className='text-xl font-semibold text-slate-900 mb-4'>
-:pages.disabled/pages/services/Infrastructure.jsx;
+:pages.disabled/pages/services/Infrastructure.jsx
                 Network Design'
               </h3>''
               <p className='text-slate-600'>
@@ -58,4 +58,4 @@ const InfrastructureServices = () => {}
   )}
 export { InfrastructureServices }
 :pages.disabled/pages/services/Infrastructure.jsx;
-export default InfrastructureServices'';'''
+export default InfrastructureServices'''''

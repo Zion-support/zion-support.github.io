@@ -22,14 +22,14 @@ jest.mock(
         emit: jest.fn()},
       isFallback: false}
   }}));
-// Mock Next.js Image component;
+// Mock Next.js Image component
 jest.mock(
   'next/image', () => ({
   __esModule: true,
   default: props => {
     // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} />
-  }}));
+  }}))
 // Mock Next.js Link component
 jest.mock(
   'next/link', () => ({
@@ -44,7 +44,7 @@ jest.mock(
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn(),
   unobserve: jest.fn(),
-  disconnect: jest.fn()}));
+  disconnect: jest.fn()}))
 global.matchMedia = jest.fn().mockImplementation(query => ({
   matches: false,
   media: query,

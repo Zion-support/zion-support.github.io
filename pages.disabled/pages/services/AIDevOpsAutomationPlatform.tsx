@@ -31,7 +31,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white'>'
       <SEO'';
         title='AI DevOps Automation Platform | Zion Tech Group''';
-        description='Revolutionary AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.''        keywords='AI DevOps, automation platform, CI/CD, deployment automation, intelligent operations, Zion Tech Group'/>';
+        description='Revolutionary AI-powered DevOps automation platform that transforms software development, deployment, and operations with intelligent automation.''        keywords='AI DevOps, automation platform, CI/CD, deployment automation, intelligent operations, Zion Tech Group'/>'
 export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white'>
@@ -49,7 +49,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}'';
             className='text-center''>''
-            <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl mb-8 border border-blue-400/30'>'';
+            <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl mb-8 border border-blue-400/30'>''
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
               <Cpu className='w-10 h-10 text-blue-400'  />'
             </div>''
@@ -64,7 +64,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
               The future of DevOps is here. Our AI-powered automation platform;
               revolutionizes software development, deployment, and operations;
-              with intelligent automation that learns, adapts, and optimizes;
+              with intelligent automation that learns, adapts, and optimizes
               continuously.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -81,13 +81,13 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
               The future of DevOps is here. Our AI-powered automation platform;
               revolutionizes software development, deployment, and operations;
-              with intelligent automation that learns, adapts, and optimizes;
+              with intelligent automation that learns, adapts, and optimizes
               continuously.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a'';
                 href='tel:+13024640950'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
                 <Phone className='w-5 h-5 mr-2'  />                Get Started Today
               </a>'
@@ -95,7 +95,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
               </a>
               <a'';
                 href='mailto:kleber@ziontechgroup.com'';
-                className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
                 <Mail className='w-5 h-5 mr-2'  />                Contact Us
                 <Mail className='w-5 h-5 mr-2'  />                Contact Us
@@ -119,7 +119,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
-              Revolutionary Features';
+              Revolutionary Features'
               Revolutionary Features
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -140,7 +140,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}'';
                 className='bg-white/5 backdrop-blur-sm border border-blue-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-blue-400/40 transition-all duration-300''>''
-                <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30'>''
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
                   <Zap className='w-8 h-8 text-blue-400'  />'
                   <Zap className='w-8 h-8 text-blue-400'  />
@@ -167,11 +167,11 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
-              Transformative Benefits';
+              Transformative Benefits'
               Transformative Benefits
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              See measurable improvements across your entire development;
+              See measurable improvements across your entire development
               lifecycle
             </p>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
@@ -189,7 +189,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}'';
                 className='flex items-start space-x-4''>''
-                <div className='w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'';
+                <div className='w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>''
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
                   <CheckCircle className='w-5 h-5 text-white'  />'
                   <CheckCircle className='w-5 h-5 text-white'  />
@@ -214,11 +214,11 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
-              Comprehensive Capabilities';
+              Comprehensive Capabilities'
               Comprehensive Capabilities
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              End-to-end AI-powered DevOps automation across all aspects of;
+              End-to-end AI-powered DevOps automation across all aspects of
               software delivery
             </p>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
@@ -296,7 +296,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
-              Investment Plans';
+              Investment Plans'
               Investment Plans
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -323,7 +323,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
               >'';
                 className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${}
                   plan.name === 'Professional'';
-                    ? 'border-blue-400/50 bg-gradient-to-b from-blue-500/10 to-transparent'';
+                    ? 'border-blue-400/50 bg-gradient-to-b from-blue-500/10 to-transparent''
                     : 'border-blue-400/20'`} hover:border-blue-400/40 transition-all duration-300`}
               >{plan.name === 'Professional' && (''
                   <div className='text-center mb-4'>''
@@ -393,11 +393,11 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx;
-              Ready to Automate Your DevOps?';
+              Ready to Automate Your DevOps?'
               Ready to Automate Your DevOps?
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Contact us today to learn how our AI DevOps automation platform;
+              Contact us today to learn how our AI DevOps automation platform
               can transform your development workflow
             </p>
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
@@ -413,7 +413,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}'';
               className='text-center''>''
-              <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30'>'';
+              <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30'>''
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
                 <Phone className='w-8 h-8 text-blue-400'  />'
               </div>''
@@ -441,7 +441,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}'';
               className='text-center''>''
-              <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30'>'';
+              <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30'>''
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
                 <Mail className='w-8 h-8 text-blue-400'  />'
               </div>''
@@ -469,7 +469,7 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}'';
               className='text-center''>''
-              <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30'>'';
+              <div className='w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-blue-400/30'>''
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
                 <MapPin className='w-8 h-8 text-blue-400'  />'
               </div>''
@@ -499,6 +499,6 @@ export default function AIDevOpsAutomationPlatform(...args: any[]): any {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx)}''`;
+:pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx)}''`
 ''`''`)}
 ''`

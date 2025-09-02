@@ -27,18 +27,18 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
   ]';Retail analytics and customer behavior tracking',';Security surveillance and threat detection',';Manufacturing quality control and safety monitoring',';Traffic analysis and smart city applications',';Healthcare patient monitoring and safety',';Sports analytics and performance tracking';
   ]';Reduce security incidents by 60-80%',';Improve operational efficiency by 30-50%',';Cut manual monitoring costs by 70-90%',';Enhance safety compliance and reporting',';Gain actionable insights from video data',';Scale security operations without additional staff';
   ]';Retail & Shopping Centers',';Manufacturing & Industrial',';Healthcare & Hospitals',';Transportation & Logistics',';Education & Universities',';Government & Public Safety';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIVideoAnalytics.tsx
             <Video className='w-4 h-4 mr-2'  /> AI-Powered Video Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Video Analytics Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your video surveillance into intelligent insights with AI-powered analytics that detect, analyze, and respond to events in real-time.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             </div>
           </div>
 :pages.disabled/pages/services/AIVideoAnalytics.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             </div>
           ))}
 :pages.disabled/pages/services/AIVideoAnalytics.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             ))}
           </div>
 :pages.disabled/pages/services/AIVideoAnalytics.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-blue-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Business Impact</h3>''
@@ -146,7 +146,7 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             ))}
           </div>
 :pages.disabled/pages/services/AIVideoAnalytics.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to unlock video intelligence?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>''
 :pages.disabled/pages/services/AIVideoAnalytics.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

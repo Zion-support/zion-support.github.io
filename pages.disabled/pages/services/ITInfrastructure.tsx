@@ -23,10 +23,10 @@ import {}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}'';
             className='max-w-4xl mx-auto''>''
-            <div className='w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8'>'';
+            <div className='w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-8'>''
 :pages.disabled/pages/services/ITInfrastructure.tsx
               <Server className='w-12 h-12 text-white'  />'
-            </div>'            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            </div>'            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               IT Infrastructure''
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple'>
                 Solutions
@@ -40,7 +40,7 @@ import {}
             </h1>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed'>
               Build robust, scalable, and secure IT infrastructure that powers;
-              your business growth. Our expert team delivers enterprise-grade;
+              your business growth. Our expert team delivers enterprise-grade
               solutions with 99.9% uptime guarantee.
             </p>
           </motion.div>
@@ -61,12 +61,12 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/ITInfrastructure.tsx;
-              Comprehensive Infrastructure Services';
+              Comprehensive Infrastructure Services'
               Comprehensive Infrastructure Services
             </h2>''
             <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
               From server management to cloud optimization, we provide;
-              end-to-end IT infrastructure solutions that ensure your business;
+              end-to-end IT infrastructure solutions that ensure your business
               runs smoothly and efficiently.
             </p>
 :pages.disabled/pages/services/ITInfrastructure.tsx
@@ -134,15 +134,15 @@ import {}
               className='text-center mb-16''>''
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/ITInfrastructure.tsx;
-                Why Choose Our Infrastructure Solutions?';
+                Why Choose Our Infrastructure Solutions?'
                 Why Choose Our Infrastructure Solutions?
               </h2>''
               <p className='text-zion-slate-light text-lg max-w-3xl mx-auto'>
-                Experience enterprise-grade infrastructure with unmatched;
+                Experience enterprise-grade infrastructure with unmatched
                 reliability, security, and performance.
               </p>
 :pages.disabled/pages/services/ITInfrastructure.tsx
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
               {benefits.map(benefit: unknown, index: unknown()
@@ -162,7 +162,7 @@ import {}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}'';
                   className='flex items-center gap-4 p-4 bg-zion-slate-dark/50 backdrop-blur-sm border border-zion-cyan/20 rounded-lg''>''
-                  <div className='w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0'>'';
+                  <div className='w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0'>''
 :pages.disabled/pages/services/ITInfrastructure.tsx
                     <Check className='w-4 h-4 text-white'  />'
                     <Check className='w-4 h-4 text-white'  />
@@ -187,20 +187,20 @@ import {}
             transition={{ duration: 0.6 }}'';
             className='max-w-4xl mx-auto''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/ITInfrastructure.tsx;
+:pages.disabled/pages/services/ITInfrastructure.tsx
               Ready to Transform Your IT Infrastructure?'
             </h2>''
             <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
-              Let our experts help you build a robust, scalable, and secure;
+              Let our experts help you build a robust, scalable, and secure
               infrastructure that drives your business forward.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25'>
-                Get Started Today';
+                Get Started Today'
               Ready to Transform Your IT Infrastructure?
             </h2>''
             <p className='text-zion-slate-light text-lg mb-8 max-w-2xl mx-auto'>
-              Let our experts help you build a robust, scalable, and secure;
+              Let our experts help you build a robust, scalable, and secure
               infrastructure that drives your business forward.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -218,5 +218,5 @@ import {}
   )}
 ;
 :pages.disabled/pages/services/ITInfrastructure.tsx;
-export { ITInfrastructure }export default ITInfrastructure';''';
+export { ITInfrastructure }export default ITInfrastructure';'''
 export { ITInfrastructure }export default ITInfrastructure''

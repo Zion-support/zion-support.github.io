@@ -23,7 +23,7 @@ export default function GreenIT(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/green-it.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center max-w-4xl mx-auto''>''
-            <div className='inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-400/30 rounded-full text-green-300 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/green-it.tsx
               <Globe className='w-4 h-4 mr-2'  />              Sustainable Technology'
             </div>''
@@ -32,7 +32,7 @@ export default function GreenIT(...args: any[]): any {
             </h1>''
             <p className='text-xl text-slate-300 mb-8 leading-relaxed'>
               Transform your IT infrastructure with sustainable, eco-friendly;
-              solutions that reduce environmental impact while improving;
+              solutions that reduce environmental impact while improving
               performance and lowering costs.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -55,7 +55,7 @@ export default function GreenIT(...args: any[]): any {
 :pages.disabled/pages/services/green-it.tsx
               Sustainable Technology Features'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our Green IT solutions combine environmental responsibility with;
-              cutting-edge technology to deliver sustainable, high-performance;
+              cutting-edge technology to deliver sustainable, high-performance
               IT infrastructure.
             </p>
 :pages.disabled/pages/services/green-it.tsx
@@ -66,7 +66,7 @@ export default function GreenIT(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/green-it.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/green-it.tsx
                   <feature.icon className='w-6 h-6 text-green-400' />'
                 </div>''
@@ -90,7 +90,7 @@ export default function GreenIT(...args: any[]): any {
 :pages.disabled/pages/services/green-it.tsx
               Comprehensive Green IT Solutions'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               From data centers to cloud migration, we offer end-to-end;
-              sustainable IT solutions that align with your environmental and;
+              sustainable IT solutions that align with your environmental and
               business objectives.
             </p>
 :pages.disabled/pages/services/green-it.tsx
@@ -101,7 +101,7 @@ export default function GreenIT(...args: any[]): any {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/green-it.tsx;
                 whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-green-400/30 transition-all duration-200''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/green-it.tsx
                   <solution.icon className='w-8 h-8 text-green-400' />'
                 </div>''
@@ -131,7 +131,7 @@ export default function GreenIT(...args: any[]): any {
               </h2>''
               <p className='text-lg text-slate-300 mb-8 leading-relaxed'>
                 Our Green IT solutions deliver measurable benefits for both the;
-                environment and your business. Reduce costs while making a;
+                environment and your business. Reduce costs while making a
                 positive impact on the planet.'
               </p>''
               <div className='grid grid-cols-1 gap-4'>'{benefits.map((benefit, index) => (''                  <div key={index} className='flex items-center space-x-3'>''
@@ -146,7 +146,7 @@ export default function GreenIT(...args: any[]): any {
               whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6 }}''              className='relative''>''
               <div className='bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-2xl p-8 border border-green-400/30'>''
                 <div className='text-center'>''
-                  <div className='w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6'>'';
+                  <div className='w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6'>''
 :pages.disabled/pages/services/green-it.tsx
                     <Lightbulb className='w-10 h-10 text-white'  />'
                   </div>''
@@ -171,11 +171,11 @@ export default function GreenIT(...args: any[]): any {
 :pages.disabled/pages/services/green-it.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='max-w-3xl mx-auto''>''
             <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/green-it.tsx;
+:pages.disabled/pages/services/green-it.tsx
               Ready to Go Green?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
-              Join the sustainable technology revolution and make a positive;
+              Join the sustainable technology revolution and make a positive
               impact on the environment while improving your IT infrastructure.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -189,5 +189,5 @@ export default function GreenIT(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/green-it.tsx)}
-  '';
+  ''
 ''''

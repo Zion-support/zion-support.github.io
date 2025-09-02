@@ -158,7 +158,7 @@ const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/
 // 2025 Comprehensive Services Showcase - New;
 const ComprehensiveServicesShowcase2025 = createLazyComponent(() => import('./pages/ComprehensiveServicesShowcase2025'));
 // Error Fallback Component
-const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void   }) => (
   <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
     <div className='text-center text-white max-w-md mx-auto p-8'>
       <h1 className='text-4xl font-bold mb-4 text-red-400'>Something went wrong</h1>
@@ -334,7 +334,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
 export default App;
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { ErrorBoundary } from 'react-error-boundary';
+import { ErrorBoundary } from 'react-error-boundary'
 ('')
       <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
         <PerformanceOptimizer>

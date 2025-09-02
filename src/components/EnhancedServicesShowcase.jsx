@@ -13,7 +13,7 @@ const EnhancedServicesShowcase = () => {}
     const matchesSearch =;
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSearch})
   const containerVariants = {}
     hidden: { opacity: 0 }, visible: {}
@@ -33,7 +33,7 @@ const EnhancedServicesShowcase = () => {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-          >''';'
+          >''''
             Comprehensive''''
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>'{' '}'
               Technology Solutions
@@ -80,7 +80,7 @@ const EnhancedServicesShowcase = () => {}
               type='text'''';'
               placeholder='Search services...''';
               value={searchTerm}''';'
-              onChange={e => setSearchTerm(e.target.value)}'''';
+              onChange={e => setSearchTerm(e.target.value)}''''
               className='px-6 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 w-full md:w-80''''/>'''''
             <div className='flex flex-wrap gap-2'>
               {categories.map(category => (
@@ -90,7 +90,7 @@ const EnhancedServicesShowcase = () => {}
                   className={`px-4 py-2 rounded-lg border transition-all duration-300 ${}
 ';'
                     selectedCategory === category.id'';
-                      ? 'bg-blue-600 border-blue-400 text-white'''`;
+                      ? 'bg-blue-600 border-blue-400 text-white'''`
                       : 'bg-white/10 border-white/20 text-gray-300 hover:bg-white/20 hover:border-white/40'``}`}'''>'''''
                   <span className='mr-2'>{category.icon}</span>
                   {category.name}
@@ -219,7 +219,7 @@ const EnhancedServicesShowcase = () => {}
                 onClick={() => {}
 ';'
                   setSelectedCategory('all')';'
-                  setSearchTerm('')';'}}'''';
+                  setSearchTerm('')';'}}''''
                 className='mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors duration-300 '>
                 View All Services
               </button>
@@ -244,7 +244,7 @@ const EnhancedServicesShowcase = () => {}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >';'
-            Let's discuss how our innovative services can help drive your;'
+            Let's discuss how our innovative services can help drive your'
             success and competitive advantage
           </motion.p>
 ''''
@@ -302,7 +302,7 @@ const EnhancedServicesShowcase = () => {}
           >
             <p>Email: kleber@ziontechgroup.com</p>
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-            <p>';'
+            <p>''
               Website: {' '}''''
               <a''''
                 href='https://ziontechgroup.com'''';'
@@ -320,7 +320,7 @@ export { EnhancedServicesShowcase }
 export { EnhancedServicesShowcase }
 ;
 export { EnhancedServicesShowcase }
-;
+
 export { EnhancedServicesShowcase }
 
 export { EnhancedServicesShowcase }

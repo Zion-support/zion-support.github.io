@@ -144,7 +144,7 @@ const Help: NextPage = () => {
   const supportOptions = [
     {
       icon: MessageCircle,
-:pages.disabled_auto/help.tsx;
+:pages.disabled_auto/help.tsx
       title:,
   Live Chat',
       description: 'Get instant help from our support team,
@@ -194,7 +194,7 @@ const Help: NextPage = () => {
           <div className='container mx-auto px-4 text-center'>
             <h1 className='text-4xl md: text-5xl font-bold mb-6'>Help Center</h1>
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
-              Find answers, get support, and learn how to make the most of our services.;
+              Find answers, get support, and learn how to make the most of our services.
               We&aposre here to help you succeed.''
             </p>
           </div>
@@ -333,5 +333,5 @@ const Help: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
+
 export default Help

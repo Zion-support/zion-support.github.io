@@ -27,18 +27,18 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
   ]';E-commerce optimization and conversion rate improvement',';Brick-and-mortar store analytics and optimization',';Inventory management and supply chain optimization',';Customer segmentation and targeted marketing',';Price optimization and competitive analysis',';Omnichannel retail experience enhancement';
   ]';Increase sales conversion rates by 20-40%',';Improve customer retention by 30-50%',';Reduce inventory costs by 25-40%',';Optimize pricing for maximum profitability',';Enhance customer experience and satisfaction',';Scale retail operations efficiently';
   ]';E-commerce & Online Retail',';Brick & Mortar Stores',';Fashion & Apparel',';Electronics & Technology',';Home & Garden',';Food & Beverage Retail';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIRetail.tsx
             <ShoppingCart className='w-4 h-4 mr-2'  /> AI-Powered Retail Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Retail Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your retail business with AI-powered insights that optimize pricing, enhance customer experience, and maximize sales performance.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             </div>
           </div>
 :pages.disabled/pages/services/AIRetail.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             </div>
           ))}
 :pages.disabled/pages/services/AIRetail.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             ))}
           </div>
 :pages.disabled/pages/services/AIRetail.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-blue-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Retail Impact</h3>''
@@ -146,7 +146,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
             ))}
           </div>
 :pages.disabled/pages/services/AIRetail.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { ShoppingCart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Targ
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your retail business with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>''
 :pages.disabled/pages/services/AIRetail.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

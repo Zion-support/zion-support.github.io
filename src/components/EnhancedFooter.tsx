@@ -22,29 +22,24 @@ import {
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
   const footerSections = [
-    {
-      title: 'Featured Services', links: [{ name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true }, { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true }, { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true }, { name: 'AI Project Management', href: '/services/ai-project-management', icon: Brain, featured: true }, { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, featured: true }
-      ]}, {
-      title: 'Core Services',
+    { title: 'Featured Services', links: [{ name: 'AI Content Generator', href: '/services/ai-content-generator', icon: PenTool, featured: true }, { name: 'Smart Inventory Management', href: '/services/smart-inventory-management', icon: Database, featured: true }, { name: 'Cloud Migration Services', href: '/services/cloud-migration-services', icon: Cloud, featured: true }, { name: 'AI Project Management', href: '/services/ai-project-management', icon: Brain, featured: true }, { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', icon: MessageCircle, featured: true }
+      ]}, { title: 'Core Services',
       links: [
         { name: 'Micro SAAS Solutions', href: '/services/micro-saas-solutions', icon: Code }, { name: 'AI Services', href: '/ai-services', icon: Brain },
         { name: 'IT Infrastructure', href: '/it-services', icon: Server }, { name: 'Quantum Computing', href: '/services/quantum-computing', icon: Atom },
         { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions', icon: Shield }, { name: '2025 Innovative Services', href: '/zion-innovative-services-2025', icon: Star },
         { name: '2025 Services Showcase', href: '/innovative-services-showcase-2025', icon: Star }
-      ]}, {
-      title: 'Solutions',
+      ]}, { title: 'Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building }, { name: 'Healthcare Solutions', href: '/solutions/healthcare', icon: Users },
         { name: 'Financial Solutions', href: '/solutions/financial', icon: TrendingUp }, { name: 'Manufacturing Solutions', href: '/solutions/manufacturing', icon: Server },
         { name: 'Retail Solutions', href: '/solutions/retail', icon: ShoppingCart }, { name: 'Space Technology', href: '/solutions/space-tech', icon: Network }
-      ]}, {
-      title: 'Company',
+      ]}, { title: 'Company',
       links: [
         { name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award },
         { name: 'Careers', href: '/careers', icon: Users }, { name: 'News & Press', href: '/press', icon: BookOpen },
         { name: 'Case Studies', href: '/case-studies', icon: BarChart3 }, { name: 'Partners', href: '/partners', icon: Handshake }
-      ]}, {
-      title: 'Resources',
+      ]}, { title: 'Resources',
       links: [
         { name: 'Blog', href: '/blog', icon: BookOpen }, { name: 'Documentation', href: '/documentation', icon: FileText },
         { name: 'Help Center', href: '/help', icon: HelpCircle }, { name: 'Webinars', href: '/webinars', icon: Video },
@@ -105,8 +100,8 @@ export function EnhancedFooter() {
                   <a
                     key={social.name}
                     href={social.href}
-                    target='_blank';
-                    rel='noopener noreferrer';
+                    target='_blank'
+                    rel='noopener noreferrer'
                     className={`text-gray-400 ${social.color} transition-colors hover: scale-110 transform`}
                     aria-label={social.name}
                   >
@@ -210,7 +205,7 @@ export function EnhancedFooter() {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.5   }}
         className='fixed bottom-6 right-6 z-50'>
         <Link
           to='/contact';

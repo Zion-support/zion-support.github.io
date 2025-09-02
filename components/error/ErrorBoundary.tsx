@@ -4,7 +4,7 @@ interface Props {
    fallback?: ReactNode;
    onError?: (error: Error, errorInfo: ErrorInfo) => void}
 interface State {
-  hasError: boolean;
+  hasError: boolean
    error?: Error
    errorInfo?: ErrorInfo}
 class ErrorBoundary extends Component<Props, State> {
@@ -42,7 +42,7 @@ class ErrorBoundary extends Component<Props, State> {
 ;
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI;
+      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback}
       // Default error UI

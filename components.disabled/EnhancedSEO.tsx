@@ -44,7 +44,7 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   tags, noindex = false,
   nofollow = false}) => {
   const router = useRouter();
-  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`  const fullTitle = title === defaultSEO.title ? title : `${title} | Zion Tech Group`;
+  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`  const fullTitle = title === defaultSEO.title ? title : `${title} | Zion Tech Group`
   const robotsContent = [
     noindex ?,
   noindex': 'index, nofollow ?,
@@ -87,5 +87,5 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   'https: //linkedin.com/company/zion-tech-group, ,
   https: //github.com/zion-tech-group,'            ]})}}'      /></Head>
   )}
-;
+
 export default EnhancedSEO

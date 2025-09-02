@@ -9,44 +9,31 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 ;
 export default function About() {
   const values = [
-    {
-      icon: '🚀', title: 'Innovation First',
-      description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.'}, {
-      icon: '🤝',
-      title: 'Client Partnership', description: 'We build long-term relationships with our clients, understanding their unique challenges and goals.'}, {
-      icon: '💡',
-      title: 'Excellence', description: 'We maintain the highest standards of quality in every project, ensuring exceptional results.'}, {
-      icon: '🌱',
+    { icon: '🚀', title: 'Innovation First',
+      description: 'We push the boundaries of technology to deliver cutting-edge solutions that drive business transformation.'}, { icon: '🤝',
+      title: 'Client Partnership', description: 'We build long-term relationships with our clients, understanding their unique challenges and goals.'}, { icon: '💡',
+      title: 'Excellence', description: 'We maintain the highest standards of quality in every project, ensuring exceptional results.'}, { icon: '🌱',
       title: 'Continuous Learning', description: 'We stay ahead of technology trends and continuously enhance our expertise and capabilities.'}
   ];
   const team = [
-    {
-      name: 'Kleber Santos', role: 'Founder & CEO',
+    { name: 'Kleber Santos', role: 'Founder & CEO',
       description: 'Technology visionary with over 15 years of experience in AI, cloud computing, and digital transformation.', image: '👨‍💼'},
-    {
-      name: 'AI & ML Team', role: 'Machine Learning Engineers',
+    { name: 'AI & ML Team', role: 'Machine Learning Engineers',
       description: 'Expert data scientists and ML engineers specializing in AI solutions and predictive analytics.', image: '🤖'},
-    {
-      name: 'Cloud & DevOps', role: 'Infrastructure Specialists',
+    { name: 'Cloud & DevOps', role: 'Infrastructure Specialists',
       description: 'Cloud architects and DevOps engineers focused on scalable, secure infrastructure solutions.',
-      image: '☁️'}, {
-      name: 'Cybersecurity',
+      image: '☁️'}, { name: 'Cybersecurity',
       role: 'Security Experts', description: 'Certified security professionals dedicated to protecting your digital assets and infrastructure.',
       image: '🔒'}
-  ];
+  ]
   const milestones = [
-    {
-      year: '2020', title: 'Company Founded',
-      description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'}, {
-      year: '2021',
+    { year: '2020', title: 'Company Founded',
+      description: 'Zion Tech Group established with a vision to transform businesses through innovative technology.'}, { year: '2021',
       title: 'First AI Solutions', description: 'Successfully delivered our first AI-powered business intelligence solutions to enterprise clients.'},
-    {
-      year: '2022', title: 'Cloud Expansion',
-      description: 'Expanded services to include comprehensive cloud migration and DevOps solutions.'}, {
-      year: '2023',
+    { year: '2022', title: 'Cloud Expansion',
+      description: 'Expanded services to include comprehensive cloud migration and DevOps solutions.'}, { year: '2023',
       title: 'Industry Recognition', description: 'Recognized as a leading technology solutions provider in the Delaware region.'},
-    {
-      year: '2024', title: 'Global Reach',
+    { year: '2024', title: 'Global Reach',
       description: 'Extended our services to serve clients across multiple industries and geographies.'}
   ]
   return(
@@ -60,7 +47,7 @@ export default function About() {
               About Zion Tech Group
             </h1>
             <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-              We are a forward-thinking technology company dedicated to empowering businesses;
+              We are a forward-thinking technology company dedicated to empowering businesses
               with innovative solutions that drive growth and competitive advantage.
             </p>
           </div>
@@ -77,15 +64,15 @@ export default function About() {
               <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
                 Founded in 2020, Zion Tech Group emerged from a vision to bridge the gap between;
                 cutting-edge technology and practical business solutions. We recognized that many;
-                organizations struggle to harness the full potential of emerging technologies like;
+                organizations struggle to harness the full potential of emerging technologies like
                 AI, cloud computing, and cybersecurity.
               </p>
               <p className='text-lg text-gray-600 mb-6 leading-relaxed'>
-                Our journey began with a simple mission: to make advanced technology accessible, understandable, and beneficial for businesses of all sizes. We believe that;
+                Our journey began with a simple mission: to make advanced technology accessible, understandable, and beneficial for businesses of all sizes. We believe that
                 innovation should drive growth, not complexity.
               </p>
               <p className='text-lg text-gray-600 leading-relaxed'>
-                Today, we're proud to serve clients across various industries, helping them;'
+                Today, we're proud to serve clients across various industries, helping them'
                 navigate digital transformation, implement AI solutions, and build secure, scalable technology infrastructure.
               </p>
             </div>

@@ -153,7 +153,7 @@ const PricingGuide: React.FC = () => {
       description: 'Sign annual contracts for ongoing development and support',
       savings: 'Get 20% discount on all services',
     },
-  ];
+  ]
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
@@ -168,17 +168,17 @@ const PricingGuide: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            ;
+            
             <Badge variant="secondary" className="mb-4">
               <Calculator className="w-4 h-4 mr-2" />
-              Pricing Guide;
+              Pricing Guide
             </Badge>
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-              AI Solution Pricing Guide;
+              AI Solution Pricing Guide
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Understand the factors that influence AI solution costs and get
-              accurate estimates for your project.;
+              accurate estimates for your project.
             </p>
           </motion.div>
         </div>
@@ -207,7 +207,7 @@ const PricingGuide: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 * index }}
               >
-                ;
+                
                 <Card className="p-8 h-full">
                   <div className="flex items-start mb-6">
                     <div
@@ -354,13 +354,13 @@ const PricingGuide: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            ;
+            
             <h2 className="text-4xl font-bold text-white mb-6">
-              Get Your Custom Quote;
+              Get Your Custom Quote
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Ready to get started? Contact us for a personalized quote based on
-              your specific requirements.;
+              your specific requirements.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
@@ -368,11 +368,11 @@ const PricingGuide: React.FC = () => {
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white"
               >
                 <Calculator className="w-5 h-5 mr-2" />
-                Get Free Quote;
+                Get Free Quote
               </Button>
               <Button size="lg" variant="outline">
                 <HelpCircle className="w-5 h-5 mr-2" />
-                Ask Questions;
+                Ask Questions
               </Button>
             </div>
           </motion.div>
@@ -381,4 +381,4 @@ const PricingGuide: React.FC = () => {
     </div>
   );
 };
-export default PricingGuide;
+export default PricingGuide

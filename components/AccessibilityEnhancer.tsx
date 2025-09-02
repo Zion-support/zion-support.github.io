@@ -66,7 +66,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     setFontSize(newSize);
     localStorage.setItem('fontSize', newSize);
     applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);
-  };
+  }
   return (
     <>
       {/* Accessibility Controls */}
@@ -191,11 +191,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           height: auto;
           padding: inherit;
           margin: inherit;
-          overflow: visible;
+          overflow: visible
           clip: auto
           white-space: normal}
       `}</style>
     </>
   );
 };
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer

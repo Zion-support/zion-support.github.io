@@ -11,4 +11,3 @@ const AIServices: React.FC = () => {
       </div>
 </>
   )}
-;

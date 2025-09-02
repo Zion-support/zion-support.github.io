@@ -34,10 +34,10 @@ import {}
             initial={{ opacity: 0, y: 30 }}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center relative z-10''>''
-            <div className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm'>'';
+            <div className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
               <Brain className='w-4 h-4 mr-2 text-cyan-400'  />              AI-Powered Business Intelligence
-            </div>';
+            </div>'
 ''
             <h1 className='text-5xl md:text-7xl font-bold mb-6'>''
               <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
@@ -49,17 +49,17 @@ import {}
               Transform your business data into actionable insights with our;
               AI-powered business intelligence platform. Get real-time;
               analytics, predictive insights, and automated reporting that;
-              drives growth.;
+              drives growth.
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'
               <a'';
                 href='https://ziontechgroup.com/contact'';
-                className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group'>';
+                className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group'>'
                 Start Free Trial''
                 <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform'  />              </a>'<a''                href='#demo'';
-                className='border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group''>'';
+                className='border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group''>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
                 <Play className='w-5 h-5 mr-2'  />                Watch Demo</a>            </div>
           </motion.div>
@@ -70,7 +70,7 @@ import {}
           <div className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl'></div>
         </div>
       </section>
-:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 '{/* Features Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative'>''
         <div className='max-w-7xl mx-auto'>'
@@ -84,7 +84,7 @@ import {}
               <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
                 Powerful Features
               </span>'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Everything you need to transform your business data into;
+              Everything you need to transform your business data into
               actionable intelligence
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -97,7 +97,7 @@ import {}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
                 transition={{ duration: 0.6, delay: index * 0.1 }}'viewport={{ once: true }}''                className='group''>''
                 <div className='glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full'>''
-                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>'';
+                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
                     <feature.icon className='w-8 h-8 text-white' />'
                   </div>''
@@ -111,7 +111,7 @@ import {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 '{/* Use Cases Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>''
         <div className='max-w-7xl mx-auto'>'
@@ -125,7 +125,7 @@ import {}
               <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
                 Use Cases
               </span>'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              See how businesses are using our AI BI platform to drive growth;
+              See how businesses are using our AI BI platform to drive growth
               and efficiency
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -138,7 +138,7 @@ import {}
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
                 transition={{ duration: 0.6, delay: index * 0.1 }}'viewport={{ once: true }}''                className='group''>''
                 <div className='glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm'>''
-                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>'';
+                  <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
                     <useCase.icon className='w-8 h-8 text-white' />'
                   </div>''
@@ -152,7 +152,7 @@ import {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 '{/* Pricing Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-white/5 relative'>''
         <div className='max-w-7xl mx-auto'>'
@@ -166,7 +166,7 @@ import {}
               <span className='bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
                 Pricing Plans
               </span>'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the plan that fits your business needs. All plans include a;
+              Choose the plan that fits your business needs. All plans include a
               14-day free trial.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -187,7 +187,7 @@ import {}
                     </div>
                   </div>
                 )}
-:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 `
                 <div``;
                   className={`glass rounded-2xl p-8 border transition-all duration-300 backdrop-blur-sm h-full ${,
@@ -206,14 +206,14 @@ import {}
                       <span className='text-gray-400 ml-1'>{plan.period}</span>'
                     </div>''
                     <p className='text-gray-300 mt-2'>{plan.description}</p>
-                  </div>';
+                  </div>'
 ''
                   <ul className='space-y-4 mb-8'>'{plan.features.map((feature, idx) => (''                      <li key={idx} className='flex items-center text-gray-300'>''
                         <CheckCircle className='w-5 h-5 text-cyan-400 mr-3 flex-shrink-0'  />                        {feature}
                       </li>
                     ))}
                   </ul>
-:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 '
                   <a''`
                     href='https://ziontechgroup.com/contact'``;
@@ -231,7 +231,7 @@ import {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx;
+:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
 '{/* Testimonials Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>''
         <div className='max-w-7xl mx-auto'>'
@@ -260,7 +260,7 @@ import {}
                       <Star key={i}'';
                         className='w-5 h-5 fill-current text-yellow-400'/>                    ))}'
                   </div>''
-                  <p className='text-gray-300 mb-6 italic'>'';
+                  <p className='text-gray-300 mb-6 italic'>''
                     '{testimonial.content}'
                   </p>'
                   <div>''
@@ -291,16 +291,16 @@ import {}
               Ready to Transform Your Business?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of businesses that are already using AI-powered;
+              Join thousands of businesses that are already using AI-powered
               insights to drive growth and efficiency.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'
               <a'';
                 href='https://ziontechgroup.com/contact'';
-                className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group'>';
+                className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 flex items-center group'>'
                 Start Free Trial''
                 <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform'  />              </a>'<a''                href='tel:+13024640950'';
-                className='border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group''>'';
+                className='border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group''>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
                 <Phone className='w-5 h-5 mr-2'  />                Call +1 302 464 0950</a>            </div>
           </motion.div>
@@ -311,7 +311,7 @@ import {}
         <div className='max-w-4xl mx-auto text-center'>''
           <h3 className='text-2xl font-bold text-white mb-6'>Get in Touch</h3>''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>''
-            <div className='flex flex-col items-center'>'';
+            <div className='flex flex-col items-center'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
               <Phone className='w-8 h-8 text-cyan-400 mb-4'  />'              <div className='text-white font-semibold'>Phone</div>'
               <a''
@@ -340,5 +340,5 @@ import {}
     </div>
   )}
 ;
-export default AIBusinessIntelligenceDashboard''`;
+export default AIBusinessIntelligenceDashboard''`
   ''`''`

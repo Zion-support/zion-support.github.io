@@ -1,6 +1,6 @@
 // removed duplicate old section;
 const AiLeadScoring: React.FC = (): JSX.Element => {}
-  return();
+  return()
 :pages.disabled/pages/services/AiLeadScoring.tsx
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>'<SEO'';
         title='AI Lead Scoring - Zion Tech Group'';
@@ -8,7 +8,7 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
         keywords='lead scoring, AI sales, CRM, B2B marketing''/>''
       <section className='mx-auto max-w-6xl px-6 py-16'>''
         <div className='flex items-center gap-3 mb-6 text-cyan-300'>''
-          <TrendingUp className='h-5 w-5'  />'';
+          <TrendingUp className='h-5 w-5'  />''
 :pages.disabled/pages/services/AiLeadScoring.tsx
           <span className='text-sm font-semibold'>AI LEAD SCORING</span>'
         </div>''
@@ -28,7 +28,7 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
             <div className='mb-2 font-semibold'>Integrations</div>''
             <ul className='space-y-2 text-sm text-slate-300'>''
               <li className='flex items-center gap-2'><PlugZap className='h-4 w-4 text-cyan-300' /> Salesforce, HubSpot, Pipedrive</li>''
-              <li className='flex items-center gap-2'><Database className='h-4 w-4 text-cyan-300' /> Snowflake, BigQuery, Postgres</li>'';
+              <li className='flex items-center gap-2'><Database className='h-4 w-4 text-cyan-300' /> Snowflake, BigQuery, Postgres</li>''
 :pages.disabled/pages/services/AiLeadScoring.tsx
               <li className='flex items-center gap-2'><Database className='h-4 w-4 text-cyan-300' /> Secure S3/GCS data syncs</li>'
             </ul>'            <div className='mt-4 text-sm font-semibold text-cyan-300'>Pricing: $199–$799/month</div>
@@ -48,7 +48,7 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
             <h3 className='font-semibold mb-2'>References</h3>''
             <ul className='list-disc ml-5 text-slate-300 space-y-1'>
 :pages.disabled/pages/services/AiLeadScoring.tsx
-              <li>';
+              <li>'
                 Average pricing benchmarks for AI tools:''
                 <a className='text-cyan-400 hover:underline' href='https://www.g2.com/categories/predictive-lead-scoring' target='_blank' rel='noreferrer'>G2 Predictive Lead Scoring</a>
               </li>
@@ -76,5 +76,5 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
   )}
 ;
 :pages.disabled/pages/services/AiLeadScoring.tsx;
-export { AiLeadScoring }';
+export { AiLeadScoring }'
 export default AiLeadScoring}'''"

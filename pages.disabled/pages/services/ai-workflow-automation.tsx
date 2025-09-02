@@ -23,7 +23,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-workflow-automation.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center max-w-4xl mx-auto''>''
-            <div className='inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/ai-workflow-automation.tsx
               <Workflow className='w-4 h-4 mr-2'  />              AI-Powered Automation'
             </div>''
@@ -32,7 +32,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
             </h1>''
             <p className='text-xl text-slate-300 mb-8 leading-relaxed'>
               Transform your business operations with intelligent, AI-powered;
-              workflow automation. Reduce manual tasks, improve efficiency, and;
+              workflow automation. Reduce manual tasks, improve efficiency, and
               scale your operations seamlessly.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -55,7 +55,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
 :pages.disabled/pages/services/ai-workflow-automation.tsx
               Intelligent Automation Features'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our AI workflow automation platform combines cutting-edge;
-              technology with intuitive design to deliver powerful automation;
+              technology with intuitive design to deliver powerful automation
               capabilities.
             </p>
 :pages.disabled/pages/services/ai-workflow-automation.tsx
@@ -66,7 +66,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-workflow-automation.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/ai-workflow-automation.tsx
                   <feature.icon className='w-6 h-6 text-cyan-400' />'
                 </div>''
@@ -94,7 +94,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {
               <p className='text-lg text-slate-300 mb-8 leading-relaxed'>
                 Our AI workflow automation delivers measurable results that;
                 directly impact your bottom line. From cost reduction to;
-                improved customer satisfaction, the benefits are clear and;
+                improved customer satisfaction, the benefits are clear and
                 quantifiable.'
               </p>''
               <div className='grid grid-cols-1 gap-4'>'{benefits.map((benefit, index) => (''                  <div key={index} className='flex items-center space-x-3'>''
@@ -109,12 +109,12 @@ export default function AIWorkflowAutomation(...args: any[]): any {
               whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6 }}''              className='relative''>''
               <div className='bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 border border-cyan-400/30'>''
                 <div className='text-center'>''
-                  <div className='w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6'>'';
+                  <div className='w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6'>''
 :pages.disabled/pages/services/ai-workflow-automation.tsx
                     <Zap className='w-10 h-10 text-white'  />'</div>''                  <h3 className='text-2xl font-bold text-white mb-4'>
                     Ready to Automate?'
                   </h3>'                  <p className='text-slate-300 mb-6'>
-:pages.disabled/pages/services/ai-workflow-automation.tsx;
+:pages.disabled/pages/services/ai-workflow-automation.tsx
                     Start your AI workflow automation journey today and see the
                     transformation in action.'</p>''                  <button className='w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200'>
                     Schedule Demo
@@ -133,11 +133,11 @@ export default function AIWorkflowAutomation(...args: any[]): any {
 :pages.disabled/pages/services/ai-workflow-automation.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='max-w-3xl mx-auto''>''
             <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/ai-workflow-automation.tsx;
+:pages.disabled/pages/services/ai-workflow-automation.tsx
               Ready to Automate Your Workflows?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
-              Join hundreds of businesses that have already transformed their;
+              Join hundreds of businesses that have already transformed their
               operations with AI workflow automation.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -151,5 +151,5 @@ export default function AIWorkflowAutomation(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/ai-workflow-automation.tsx)}
-  '';
+  ''
 ''''

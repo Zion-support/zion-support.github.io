@@ -4,7 +4,7 @@ interface CheckboxProps extends React.PropsWithChildren<{
 }> {
   checked: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
   onChange: (checked: boolean)                => void;
-  label?: string;
+  label?: string
   disabled?: boolean
   className?: string}
 export function Checkbox(...args[]: any):  {

@@ -36,7 +36,7 @@ async function fixTypeScriptSyntaxErrors() {
       if (modified) {
         await fs.writeFile(file, lines.join('\n'));
         // // // console.log(`✅ Fixed syntax errors in: ${file}`)} catch (error) {
-      // // // console.error(`❌ Error processing ${file}:`, error.message);
+      // // // console.error(`❌ Error processing ${file}:`, error.message)
   // // // console.log('✅ TypeScript syntax error fixing completed')}
       }
       if (modified) {

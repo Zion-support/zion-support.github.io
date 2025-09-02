@@ -18,7 +18,7 @@ import {}
   ExternalLink} from,
   lucide-react.ts';: pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
 const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, setActiveTab] = useState('overview;
-  ');
+  ')
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white'>'{/* Hero Section */}''
       <section className='relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden'>'{/* Animated Background */}''        <div className='absolute inset-0'>''
@@ -45,7 +45,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
 '{/* Key Metrics */}''            <div className='grid grid-cols-1 md:grid-cols-4 gap-6 mb-12'>''
               <div className='bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/30'>''
-                <div className='text-3xl font-bold text-cyan-400'>90%</div>'';
+                <div className='text-3xl font-bold text-cyan-400'>90%</div>''
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                 <div className='text-gray-300'>Time Reduction</div>'
               </div>''
@@ -62,13 +62,13 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                   300-500%'</div>''                <div className='text-gray-300'>ROI</div>
               </div>
             </div>
-:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
+:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
 '{/* CTA Buttons */}''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
-                className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>';
+                className='bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 hover:from-cyan-600 hover:to-blue-600 transition-all duration-300'>'
                 Get Started Today''
                 <ArrowRight className='w-5 h-5'  />              </motion.button>
               <motion.button;
@@ -80,14 +80,14 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
           </motion.div>
         </div>
       </section>
-:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
+:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
 '{/* Navigation Tabs */}''
       <section className='px-4 sm:px-6 lg:px-8 mb-16'>''
         <div className='max-w-7xl mx-auto'>''
           <div className='flex flex-wrap justify-center gap-2'>,
   {[;
   'overview',features;
-  ',pricing',competitors;
+  ',pricing',competitors
   ',contact'].map()
               tab => (
                 <button;
@@ -96,7 +96,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
   ';
                     activeTab === tab'';
                       ?;
-  'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'';
+  'bg-gradient-to-r from-cyan-500 to-blue-500 text-white''
   '`
                       : 'text-gray-400 hover:text-white hover:bg-gray-800``}`}                >{tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
@@ -121,18 +121,18 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                 </h2>''
                 <p className='text-lg text-gray-300 mb-6'>
                   Our AI-powered platform transforms how legal professionals;
-                  analyze documents. Using advanced natural language processing;
+                  analyze documents. Using advanced natural language processing
                   and machine learning, we can identify risks, compliance
                   issues, and optimization opportunities in seconds, not hours.'</p>''                <div className='space-y-4'>''
                   <div className='flex items-center gap-3'>''
                     <CheckCircle className='w-6 h-6 text-green-400'  />''
                     <span className='text-gray-300'>
-                      Reduce legal review time by 90%;
+                      Reduce legal review time by 90%
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                     </span>'</div>''                  <div className='flex items-center gap-3'>''
                     <CheckCircle className='w-6 h-6 text-green-400'  />''
                     <span className='text-gray-300'>
-:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
+:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                       Identify 95% of compliance risks
                     </span>'</div>''                  <div className='flex items-center gap-3'>''
                     <CheckCircle className='w-6 h-6 text-green-400'  />''
@@ -146,7 +146,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                 <h3 className='text-2xl font-bold mb-4 text-center'>
                   Market Overview'</h3>''                <div className='space-y-4'>''
                   <div className='flex justify-between'>''
-                    <span className='text-gray-300'>Market Size:</span>'';
+                    <span className='text-gray-300'>Market Size:</span>''
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                     <span className='font-semibold'>$15.2 billion by 2027</span>'
                   </div>''
@@ -183,13 +183,13 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                     initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
                     animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                    className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 p-6 rounded-xl border border-gray-600 hover:border-cyan-500/50 transition-all duration-300''>''
-                    <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4'>'';
+                    <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                       <Zap className='w-6 h-6 text-white'  />'
                     </div>'                    <h3 className='text-lg font-semibold mb-2'>{feature}</h3>
                   </motion.div>
                 ))}
-              </div>';
+              </div>'
 ''
               <div className='mt-16 grid grid-cols-1 lg:grid-cols-2 gap-12'>'
                 <div>''
@@ -198,7 +198,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                     <div className='flex justify-between'>''
                       <span className='text-gray-300'>Technology:</span>''
                       <span className='font-semibold'>
-:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
+:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                         NLP, Machine Learning, Python, React, AWS
                       </span>'
                     </div>''
@@ -221,7 +221,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                   <h3 className='text-2xl font-bold mb-6'>Integrations</h3>''
                   <div className='grid grid-cols-2 gap-4'>'{[';
   ';
-                      'DocuSign;
+                      'DocuSign
   ',Adobe Acrobat',Microsoft Office
   ',Legal databases'].map((integration, index) => (
                       <div';
@@ -261,7 +261,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                           Most Popular
                         </span>
                       </div>
-:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx)}';
+:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx)}'
 ''
                     <div className='text-center mb-6'>''
                       <h3 className='text-2xl font-bold mb-2'>{plan.name}</h3>''
@@ -271,7 +271,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                         </span>'
                       </div>''
                       <p className='text-gray-300'>{plan.description}</p>
-                    </div>';
+                    </div>'
 ''
                     <ul className='space-y-3 mb-8'>
                       {plan.features.map((feature, featureIndex) => (
@@ -303,7 +303,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
               transition={{ duration: 0.6 }}'>''
               <h2 className='text-4xl font-bold mb-12 text-center bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
                 Competitive Analysis
-              </h2>';
+              </h2>'
 ''
               <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8 mb-12'>
                 {competitors.map((competitor, index) => (
@@ -318,13 +318,13 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                     </div>''
                     <div className='text-cyan-400 font-semibold mb-2'>
                       {competitor.price}'</div>''                    <div className='text-gray-300 text-sm'>
-                      Established competitor with similar features but higher;
+                      Established competitor with similar features but higher
                       pricing
                     </div>
                   </div>
                 ))}
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
-              </div>';
+              </div>'
 ''
               <div className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 p-8 rounded-2xl border border-green-500/30 text-center'>''
                 <h3 className='text-2xl font-bold mb-4 text-green-400'>
@@ -359,11 +359,11 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
               animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''              className='text-center''>''
               <h2 className='text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent'>
-:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
+:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                 Get Started Today
               </h2>'''              <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>''
                 <div className='bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/30'>''
-                  <Phone className='w-12 h-12 text-cyan-400 mx-auto mb-4'  />'';
+                  <Phone className='w-12 h-12 text-cyan-400 mx-auto mb-4'  />''
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                   <h3 className='text-xl font-semibold mb-2'>Call Us</h3>'                  <p className='text-gray-300 mb-4'>Speak with our experts</p>'
                   <a'';
@@ -371,7 +371,7 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                     className='text-cyan-400 font-semibold hover:text-cyan-300'>                    +1 302 464 0950
                   </a>
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
-                </div>';
+                </div>'
 ''
                 <div className='bg-gradient-to-r from-purple-500/20 to-pink-500/20 p-6 rounded-xl border border-purple-500/30'>''
                   <Mail className='w-12 h-12 text-purple-400 mx-auto mb-4'  />''
@@ -386,24 +386,24 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
                   <Globe className='w-12 h-12 text-green-400 mx-auto mb-4'  />''
                   <h3 className='text-xl font-semibold mb-2'>Visit Website</h3>''
                   <p className='text-gray-300 mb-4'>
-:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
+:pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx
                     Learn more about our services
                   </p>'<a''                    href='https://ziontechgroup.com'';
                     target='_blank'';
                     rel='noopener noreferrer'';
 :pages.disabled/pages/services/AILegalDocumentAnalyzer.tsx;
-                    className='text-green-400 font-semibold hover:text-green-300 flex items-center justify-center gap-2'>';
+                    className='text-green-400 font-semibold hover:text-green-300 flex items-center justify-center gap-2'>'
                     ziontechgroup.com''
                     <ExternalLink className='w-4 h-4'  />                  </a>
                 </div>
-              </div>';
+              </div>'
 ''
               <div className='bg-gray-800/50 p-8 rounded-2xl border border-gray-600'>''
                 <h3 className='text-2xl font-bold mb-4'>
                   Ready to Transform Your Legal Operations?'
                 </h3>''
                 <p className='text-gray-300 mb-6'>
-                  Join hundreds of legal professionals who have already;
+                  Join hundreds of legal professionals who have already
                   revolutionized their document analysis with AI.'
                 </p>''
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -420,5 +420,5 @@ const AILegalDocumentAnalyzer: React.FC = (): JSX.Element => {const [activeTab, 
     </div>
   )}
 ;
-export default AILegalDocumentAnalyzer''`;
+export default AILegalDocumentAnalyzer''`
   ''`''`

@@ -9,27 +9,21 @@ export default function Header() {
       setScrolled(window.scrollY > 50)}
 ;
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll)}, []);
+    return () => window.removeEventListener('scroll', handleScroll)}, [])
   const navigation = [
-    {
-      name: 'Home', href: '/',
-      current: location.pathname === '/'}, {
-      name: 'Services',
+    { name: 'Home', href: '/',
+      current: location.pathname === '/'}, { name: 'Services',
       href: '/services', current: location.pathname.startsWith('/services'), dropdown: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }, { name: 'Industry Solutions', href: '/services/industry-solutions' }
-      ]}, {
-      name: 'Solutions',
+      ]}, { name: 'Solutions',
       href: '/solutions', current: location.pathname.startsWith('/solutions'), dropdown: [
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' }, { name: 'Startup Solutions', href: '/solutions/startup' }, { name: 'Space Technology', href: '/solutions/space-tech' }, { name: 'Supply Chain', href: '/solutions/supply-chain' }
-      ]}, {
-      name: 'About',
+      ]}, { name: 'About',
       href: '/about', current: location.pathname.startsWith('/about'), dropdown: [
         { name: 'Our Story', href: '/about/story' }, { name: 'Team', href: '/about/team' }, { name: 'Careers', href: '/careers' }, { name: 'Partners', href: '/partners' }
-      ]}, {
-      name: 'Resources',
+      ]}, { name: 'Resources',
       href: '/resources', current: location.pathname.startsWith('/resources'), dropdown: [
         { name: 'Blog', href: '/blog' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'White Papers', href: '/white-papers' }, { name: 'Webinars', href: '/webinars' }, { name: 'Training', href: '/training' }, { name: 'Documentation', href: '/docs' }
-      ]}, {
-      name: 'Contact',
+      ]}, { name: 'Contact',
       href: '/contact', current: location.pathname === '/contact'}
   ]
   return(

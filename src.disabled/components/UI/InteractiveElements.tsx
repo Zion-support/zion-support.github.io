@@ -8,7 +8,7 @@ import React, { useState, useEffect } from,
    variant?: 'primary' | 'secondary' | 'ghost' | 'gradient';
    size?: 'sm' | 'md' | 'lg;
    disabled?: boolean;
-   loading?: boolean;
+   loading?: boolean
    icon?: React.ReactNode
    className?: string} export const InteractiveButton: React.FC<InteractiveButtonProps> = ({ children, onClick, variant =,
   primary', size =;
@@ -18,7 +18,7 @@ import React, { useState, useEffect } from,
   bg-gray-200 text-gray-900 hover: bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600, ghost:,
   text-gray-700 hover: bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800, gradient:,
   bg-gradient-to-r from-blue-600 to-purple-600 text-white hover: from-blue-700 hover:to-purple-700 focus:ring-blue-500} const sizeClasses = { sm:,
-  px-3 py-2 text-sm;
+  px-3 py-2 text-sm
   ', md: 'px-4 py-2 text-base, lg: 'px-6 py-3 text-lg
   '} return ( <motion.button className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`} onClick={onClick} disabled={disabled || loading} onHoverStart={() => setIsHovered(true)} onHoverEnd={() => setIsHovered(false)} onTapStart={() => setIsPressed(true)} onTapEnd={() => setIsPressed(false)} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} animate={{ boxShadow: isHovered ?,
   0 10px 25px rgba(0, 0, 0, 0.15)
@@ -28,15 +28,15 @@ import React, { useState, useEffect } from,
   ']: '-100%, opacity: isHovered ? [0, 0.2, 0] : 0}} transition={{ duration: 0.6 }} /> {} <div className='relative flex items-center gap-2'> {loading ? ( <motion.div className='w-4 h-4 border-2 border-current border-t-transparent rounded-full' animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear;
   ' }} /> ) : ( icon && <span className='flex-shrink-0'>{icon}</span> )} <span>{children}</span> </div> </motion.button> ) } interface AnimatedCardProps {
   children: React.ReactNode;
-   className?: string;
+   className?: string
    delay?: number
-   direction?: 'up ' | 'down ' | 'left ' | 'right '} export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className = '', delay = 0, direction =;
+   direction?: 'up ' | 'down ' | 'left ' | 'right '} export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className = '', delay = 0, direction =
   'up'}) => { const ref = useRef(null) const isInView = useInView(ref, { once: true, margin:
   '-100px' }) const controls = useAnimation() useEffect(() => { if (isInView) { controls.start(
   'visible') } }, [isInView, controls]) const directionVariants = { up: { hidden: { y: 50, opacity: 0 }, visible: { y: 0, opacity: 1 } }, down: { hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } }, left: { hidden: { x: 50, opacity: 0 }, visible: { x: 0, opacity: 1 } }, right: { hidden: { x: -50, opacity: 0 }, visible: { x: 0, opacity: 1 } }} return ( <motion.div ref={ref} className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`} variants={directionVariants[direction]} initial='hidden' animate={controls} transition={{ duration: 0.6, delay }} whileHover={{ y: -5 }} > {children} </motion.div> ) } interface FloatingActionButtonProps {
   icon: React.ReactNode;
    onClick: () => void;
-   tooltip?: string;
+   tooltip?: string
    position?:, bottom-right' | 'bottom-left' | 'top-right' | 'top-left'
    color?: 'blue' | 'green' | 'purple' | 'red} export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position =,
   bottom-right', color =
@@ -60,4 +60,4 @@ import React, { useState, useEffect } from,
   particleCount?: number
    color?: string} export const ParticleBackground: React.FC<ParticleBackgroundProps> = ({ particleCount = 50, color =
   '#3b82f6'}) => { const [particles, setParticles] = useState<Array<{ id: number x: number y: number size: number speedX: number speedY: number }>>([]) useEffect(() => { const newParticles = Array.from({ length: particleCount }, (_, i) => ({ id: i, x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight, size: Math.random() * 3 + 1, speedX: (Math.random() - 0.5) * 0.5, speedY: (Math.random() - 0.5) * 0.5})) setParticles(newParticles) }, [particleCount]) return ( <div className='fixed inset-0 pointer-events-none overflow-hidden'> {particles.map((particle) => ( <motion.div key={particle.id} className='absolute rounded-full opacity-20' style={{ backgroundColor: color, width: particle.size, height: particle.size, left: particle.x, top: particle.y}} animate={{ x: [0, particle.speedX * 100, 0], y: [0, particle.speedY * 100, 0]}} transition={{ duration: 20 + Math.random() * 10, repeat: Infinity, ease:;
-  'linear'}} /> ))} </div> ) }';`
+  'linear'}} /> ))} </div> ) }'`

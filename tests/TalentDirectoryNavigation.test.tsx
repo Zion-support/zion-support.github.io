@@ -20,7 +20,7 @@ test(
   'opens first talent profile from directory', async () => {
   renderWithRouter();
   const firstCard = await screen.findByText(
-  'Alexandra Chen');
+  'Alexandra Chen')
   fireEvent.click(firstCard)
   expect(await screen.findByTestId(
   'talent-details')).toHaveTextContent(

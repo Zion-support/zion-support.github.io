@@ -18,7 +18,7 @@ export function useLocation() {
   const router = useRouter();
   const asPath = router.asPath || router.pathname || '/';
   const [path, query = ''] = asPath.split('?');
-  const hashIndex = asPath.indexOf('#');
+  const hashIndex = asPath.indexOf('#')
   const hash = hashIndex >= 0 ? asPath.substring(hashIndex) : ''
   return {
     pathname: path, search: query ? `?${query}` : '',
@@ -31,5 +31,5 @@ export const HashRouter = BrowserRouter;
 // No-op hooks to satisfy imports if present;
 export const useHistory = () => ({ push: (url: string) => (window.location.href = url) })
 export const useParams = () => ({})
-export const NavLink = Link;
+export const NavLink = Link
 export default {} as any

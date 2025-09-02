@@ -200,5 +200,5 @@ export default function Partners() {
         </div>
       </section>
     </>
-  );
+  )
 }

@@ -42,7 +42,7 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
   100%;
   ','      responseTime: '30ms, lastIncident:,
   No incidents in the past 30 days''    }
-  '  ];
+  '  ]
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational
@@ -74,7 +74,7 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
   Database Performance Issue',
   '      status: 'resolved, date:,
   2025-01-15;
-  ','      description: 'Temporary performance degradation in database queries has been resolved., impact:;
+  ','      description: 'Temporary performance degradation in database queries has been resolved., impact:
   'minor''    }
   '  ]
   return(
@@ -153,5 +153,5 @@ import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, C
       </div>
     </MainLayout>
   )}
-;
+
 export default Status

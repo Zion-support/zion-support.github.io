@@ -37,10 +37,10 @@ export default function AIContentCreation(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center max-w-4xl mx-auto''>''
-            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AIContentCreation.tsx
               <PenTool className='w-4 h-4 mr-2'  />              AI Content Creation
-            </div>';
+            </div>'
 ''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'AI Content Creation''              <span className='block bg-gradient-to-r from-purple-400 via-pink-500 to-indigo-600 bg-clip-text text-transparent'>
                 Services
@@ -49,14 +49,14 @@ export default function AIContentCreation(...args: any[]): any {
             </h1>'''            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Transform your content strategy with AI-powered creation tools;
               that generate high-quality written content, visual assets, videos,
-              and multimedia content in seconds.;
+              and multimedia content in seconds.
 :pages.disabled/pages/services/AIContentCreation.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <Link'';
                 to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20'>'
                 Start Creating''
                 <ArrowRight className='w-5 h-5 ml-2'  />              </Link>'
               <Link'';
@@ -78,7 +78,7 @@ export default function AIContentCreation(...args: any[]): any {
 :pages.disabled/pages/services/AIContentCreation.tsx
               AI Content Creation Features'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Our AI content creation platform combines cutting-edge technology;
-              with creative intelligence to deliver engaging, high-quality;
+              with creative intelligence to deliver engaging, high-quality
               content across all media types.
             </p>
 :pages.disabled/pages/services/AIContentCreation.tsx
@@ -89,7 +89,7 @@ export default function AIContentCreation(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 group''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-200'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-200'>''
 :pages.disabled/pages/services/AIContentCreation.tsx
                   <feature.icon className='w-6 h-6 text-purple-400' />'
                 </div>''
@@ -110,7 +110,7 @@ export default function AIContentCreation(...args: any[]): any {
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIContentCreation.tsx
               Comprehensive Content Services'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-              From written content to visual media, our AI content creation;
+              From written content to visual media, our AI content creation
               services cover every aspect of your content needs.
             </p>
 :pages.disabled/pages/services/AIContentCreation.tsx
@@ -121,7 +121,7 @@ export default function AIContentCreation(...args: any[]): any {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx;
                 whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/AIContentCreation.tsx
                   <service.icon className='w-8 h-8 text-purple-400' />'
                 </div>''
@@ -153,7 +153,7 @@ export default function AIContentCreation(...args: any[]): any {
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIContentCreation.tsx
               Advanced AI Technologies'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-              Our platform leverages cutting-edge AI technologies to provide the;
+              Our platform leverages cutting-edge AI technologies to provide the
               most advanced content creation capabilities available.
             </p>
 :pages.disabled/pages/services/AIContentCreation.tsx
@@ -181,14 +181,14 @@ export default function AIContentCreation(...args: any[]): any {
             <h2 className='text-4xl font-bold text-white mb-4'>
               Ready to Transform Your Content?'</h2>''            <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
               Join the AI content revolution and create engaging, high-quality;
-              content in seconds.;
+              content in seconds.
 :pages.disabled/pages/services/AIContentCreation.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <Link'';
                 to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-pink-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-purple-500/20'>'
                 Start Creating Today''
                 <ArrowRight className='w-5 h-5 ml-2'  />              </Link>'
               <Link'';
@@ -201,5 +201,5 @@ export default function AIContentCreation(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/AIContentCreation.tsx)}
-  '';
+  ''
 '''"

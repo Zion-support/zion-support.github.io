@@ -42,15 +42,15 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
             </h1>''
             <p className='text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto'>
               Launch and scale your micro-SaaS business with our comprehensive;
-              platform. Everything you need to build, launch, and grow your SaaS;
+              platform. Everything you need to build, launch, and grow your SaaS
               business in one place.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <a'';
                 href='https://ziontechgroup.com/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105'>'
                 Launch Your SaaS''
-                <ArrowRight className='ml-2 h-5 w-5'  />              </a>';
+                <ArrowRight className='ml-2 h-5 w-5'  />              </a>'
             transition={{ duration: 0.8 }}
           >''
             <div className='flex justify-center mb-6'>''
@@ -62,7 +62,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
             </h1>''
             <p className='text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto'>
               Launch and scale your micro-SaaS business with our comprehensive;
-              platform. Everything you need to build, launch, and grow your SaaS;
+              platform. Everything you need to build, launch, and grow your SaaS
               business in one place.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -73,7 +73,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
                 <ArrowRight className='ml-2 h-5 w-5'  />              </a>
               <a'';
                 href='tel:+13024640950'';
-                className='inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300''>''
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
                 <Phone className='mr-2 h-5 w-5'  />                Call SaaS Team
                 <Phone className='mr-2 h-5 w-5'  />                Call SaaS Team
@@ -97,12 +97,12 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-              Complete SaaS Platform Features';
+              Complete SaaS Platform Features'
               Complete SaaS Platform Features
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our platform provides everything you need to build, launch, and;
-              scale your micro-SaaS business without the complexity of building;
+              scale your micro-SaaS business without the complexity of building
               from scratch.
             </p>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
@@ -120,7 +120,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}'';
                 className='bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-green-500 transition-all duration-300''>''
-                <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mb-6'>'';
+                <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mb-6'>''
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
                   <feature.icon className='h-8 w-8 text-white' />'
                 </div>''
@@ -152,11 +152,11 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-              Advanced Platform Capabilities';
+              Advanced Platform Capabilities'
               Advanced Platform Capabilities
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Go beyond basic SaaS functionality with our advanced platform;
+              Go beyond basic SaaS functionality with our advanced platform
               features designed to accelerate your business growth and success.
             </p>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
@@ -198,11 +198,11 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-              Ready-to-Use SaaS Templates';
+              Ready-to-Use SaaS Templates'
               Ready-to-Use SaaS Templates
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Choose from our library of proven SaaS templates and customize;
+              Choose from our library of proven SaaS templates and customize
               them to fit your specific business needs and market requirements.
             </p>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
@@ -220,7 +220,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}'';
                 className='bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center''>''
-                <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mx-auto mb-4'>'';
+                <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
                   <Code className='h-6 w-6 text-white'  />'
                   <Code className='h-6 w-6 text-white'  />
@@ -245,11 +245,11 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-              Transparent SaaS Platform Pricing';
+              Transparent SaaS Platform Pricing'
               Transparent SaaS Platform Pricing
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Choose the platform plan that fits your business needs. All plans;
+              Choose the platform plan that fits your business needs. All plans
               include our core SaaS platform and 24/7 customer support.
             </p>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
@@ -273,7 +273,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
               >';
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${}
                   plan.popular';
-                    ? 'border-green-500 shadow-2xl shadow-green-500/25'';
+                    ? 'border-green-500 shadow-2xl shadow-green-500/25''
                     : 'border-zion-slate-light'`}`}
               >{plan.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -281,7 +281,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx)}';
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -311,7 +311,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
                     {plan.description}
                   </p>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                 </div>
@@ -353,11 +353,11 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
-              Ready to Launch Your SaaS?';
+              Ready to Launch Your SaaS?'
               Ready to Launch Your SaaS?
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Get in touch with our SaaS platform experts to discuss how we can;
+              Get in touch with our SaaS platform experts to discuss how we can
               help you build, launch, and scale your micro-SaaS business.
             </p>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
@@ -366,7 +366,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>''
             <div className='text-center'>''
-              <div className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>'';
+              <div className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
                 <Phone className='h-8 w-8 text-white'  />'
               </div>''
@@ -386,7 +386,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
                 +1 (302) 464-0950
               </a>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
-            </div>';
+            </div>'
 ''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>''
@@ -412,7 +412,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
                 kleber@ziontechgroup.com
               </a>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
-            </div>';
+            </div>'
 ''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>''
@@ -435,7 +435,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
               </p>
             </div>
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
-          </div>';
+          </div>'
 ''
           <div className='text-center'>'
             <a'';
@@ -458,13 +458,13 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
       <footer className='py-12 px-4 sm:px-6 lg:px-8 border-t border-zion-slate-light'>''
         <div className='max-w-7xl mx-auto text-center'>''
           <p className='text-zion-slate-light mb-4'>
-:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
+:pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
             © 2024 Zion Tech Group. All rights reserved.'
           </p>''
           <div className='flex justify-center space-x-6'>'
             <a'';
               href='https://ziontechgroup.com'';
-              className='text-zion-slate-light hover:text-white transition-colors duration-300'>';
+              className='text-zion-slate-light hover:text-white transition-colors duration-300'>'
               Visit Website''
               <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>'
             <a''
@@ -500,5 +500,5 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
   )}
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx;
 export default MicroSaaSPlatformElite''`;
-''`''`;
+''`''`
 export default MicroSaaSPlatformElite'"`

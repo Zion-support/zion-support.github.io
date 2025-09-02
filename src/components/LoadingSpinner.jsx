@@ -15,7 +15,7 @@
 '';
 ''';'
     blue: 'text-blue-500', ''';'
-    white: 'text-white', ''';'
+    white: 'text-white', ''''
     gray: 'text-gray-500'}
   return()
     <div className={`flex flex-col items-center justify-center ${className}`}>```
@@ -46,5 +46,5 @@ export { LoadingSpinner }
 export { LoadingSpinner }
 ;
 export { LoadingSpinner }
-;
+
 export { LoadingSpinner }

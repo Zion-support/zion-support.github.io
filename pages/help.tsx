@@ -98,7 +98,7 @@ const Help: NextPage = () => {
       description: 'Connect with other users and get peer support',
       link: '/community',
     },
-  ];
+  ]
   return (
     <Layout
       title="Help & Support - Zion Tech Group"
@@ -305,4 +305,4 @@ const Help: NextPage = () => {
     </Layout>
   );
 };
-export default Help;
+export default Help

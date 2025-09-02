@@ -29,7 +29,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
   const calculateScore = useCallback((metrics: PerformanceMetrics): PerformanceScore => {
     let totalScore = 0;
     let validMetrics = 0;
-    // FCP scoring (0-100);
+    // FCP scoring (0-100)
     if (metrics.fcp !== null) {
       validMetrics++
       if (metrics.fcp < 1800) totalScore += 100;
@@ -131,7 +131,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 ;
   // Get metric rating;
   const getMetricRating = (metric: string, value: number | null): string => {
-    if (value === null) return 'N/A';
+    if (value === null) return 'N/A'
     switch (metric) {
       case 'fcp':
         return value < 1800 ? '🟢 Good' : value < 3000 ? '🟡 Needs Improvement' : '🔴 Poor';
@@ -149,7 +149,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
     return(
       <button;
         onClick={() => setIsVisible(true)}
-        className='fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50';
+        className='fixed bottom-4 right-4 bg-zion-cyan text-white p-3 rounded-full shadow-lg hover:bg-zion-cyan/90 transition-all duration-300 z-50'
         aria-label='Open Performance Monitor'
       >
         <Activity className='w-6 h-6' />
@@ -246,5 +246,5 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       )}
     </div>
   )}
-;
+
 export default AdvancedPerformanceMonitor

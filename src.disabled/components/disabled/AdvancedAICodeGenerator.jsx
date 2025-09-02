@@ -6,7 +6,7 @@ import React, { useState, useRef } from,
   react'  interface UseApiOptions<T> { url: string method?:;
   'GET' |;
   'POST' |;
-  'PUT' |;
+  'PUT' |
   'DELETE body?headers?: Record<string, string>} export function useApi<T>({ url, method =
   'GET', body, headers }: UseApiOptions<T>) { const [data, setData] = useState<T | null>(null) const [loading, setLoading] = useState(false) const [error, setError] = useState<string | null>(null)  const execute = async () => { try { setLoading (true)  setError (null)   const response = await fetch(url, { method, headers: {;
   Content-Type': 'application/json, ...headers}, body: body ? JSON.stringify(body) : null})  if (!response.ok) {`; throw new Error(\`HTTP error! status: \${response.status}\`)} const result = await response.json() setData(result)} catch (err) { setError(err instanceof Error ? err.message :,
@@ -27,4 +27,4 @@ import React, { useState, useRef } from,
   Advanced Form Validation', description: 'Comprehensive form validation with custom rules and error handling, language:;
   'javascript', ` code: `class FormValidator { constructor(form, options = {}) { this.form = form this.options = { validateOnBlur: true, validateOnSubmit: true, showErrors: true, ...options }  this.rules = new Map ()  this.errors = new Map ()  this.init () } addRule(field, rule) { if (!this.rules.has(field)) { this.rules.set(field, [])} this.rules.get(field).push(rule)} validateField(field) { const value = this.form[field]?.value const fieldErrors = []  for (const result = rule (value, this.form)  if (result !== true) { fieldErrors.push(result)} } this.errors.set (field, fieldErrors)  this.updateFieldUI (field)  return fieldErrors.length === 0} validateForm () { let isValid = true for (const fieldElement = this.form[field] const errors = this.errors.get (field) || []  if (errors.length > 0) { fieldElement.classList.add(
   'error') this.showFieldErrors(field, errors)} else { fieldElement.classList.remove(
-  'error') this.hideFieldErrors(field)} } showFieldErrors(field, errors) {';`
+  'error') this.hideFieldErrors(field)} } showFieldErrors(field, errors) {'`

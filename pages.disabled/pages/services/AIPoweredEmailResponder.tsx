@@ -8,7 +8,7 @@
             AI-Powered Email Responder'</h1>''          <p className='mt-4 text-lg text-slate-300 max-w-3xl'>
             Reduce response times and triage inboxes with an on-brand,
             compliant, and secure AI assistant that drafts and automates;
-            replies, prioritizes important threads, and escalates to humans when;
+            replies, prioritizes important threads, and escalates to humans when
             needed.
           </p>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
@@ -18,7 +18,7 @@
               <h2 className='text-2xl font-semibold mb-3'>Key Capabilities</h2>''
               <ul className='grid sm:grid-cols-2 gap-3 text-slate-300'>''
                 <li className='p-3 rounded-lg bg-slate-800/50'>
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx
                   Intelligent drafting with knowledge-base grounding'
                 </li>''
                 <li className='p-3 rounded-lg bg-slate-800/50'>
@@ -36,7 +36,7 @@
                 </li>
               </ul>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-            </div>';
+            </div>'
 ''
             <div className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6'>''
               <h2 className='text-2xl font-semibold mb-3'>
@@ -50,10 +50,10 @@
                   SSO, SOC2
                 </li>
                 <li>
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx
                   Enterprise: Custom — on-prem/VPC, DLP, custom compliance
                 </li>'</ul>''              <p className='mt-3 text-sm text-slate-400'>
-                Benchmarks informed by public pricing from common CX platforms;
+                Benchmarks informed by public pricing from common CX platforms
                 and AI add-ons.
               </p>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
@@ -99,7 +99,7 @@
             <div className='rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6'>''
               <h3 className='text-xl font-semibold'>Get a Quote</h3>''
               <p className='mt-2 text-slate-300'>
-:pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
+:pages.disabled/pages/services/AIPoweredEmailResponder.tsx
                 Call +1 302 464 0950 or email kleber@ziontechgroup.com
               </p>'
               <a''
@@ -120,4 +120,4 @@
     </div>
   )}
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx;
-export default AIPoweredEmailResponder';''"
+export default AIPoweredEmailResponder'''"

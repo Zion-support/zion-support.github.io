@@ -7,25 +7,25 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
         <meta name = 'description' content='Protect your organization with AI-powered cybersecurity threat detection, response, and prevention. Advanced security with machine learning.' />''
         <meta name='keywords' content='AI cybersecurity, threat detection, security automation, AI security, cybersecurity suite, threat intelligence' />
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
-      </Helmet>';
+      </Helmet>'
 ''
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'{/* Hero Section */}''        <section className='relative pt-32 pb-20 overflow-hidden'>''
           <div className='absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-600/10'></div>''
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>''
             <div className='text-center'>''
-              <div className='inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-8'>'';
+              <div className='inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-8'>''
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
                 <Shield className='w-4 h-4 mr-2'  />                AI-Powered Cybersecurity
-              </div>';
+              </div>'
 ''
-              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
                 AI Cybersecurity''
                 <span className='bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent'> Suite</span>
               </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
                 Defend against evolving cyber threats with AI-powered security that learns, adapts, and responds;
-                in real-time. Protect your digital assets with intelligent threat detection and automated response.;
+                in real-time. Protect your digital assets with intelligent threat detection and automated response.
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
-              </p>';
+              </p>'
 ''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
                 <Link'';
@@ -47,11 +47,11 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
                 Intelligent Threat Protection'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-                Our AI cybersecurity suite provides comprehensive protection against modern cyber threats;
+                Our AI cybersecurity suite provides comprehensive protection against modern cyber threats
                 with intelligent detection and automated response capabilities.
               </p>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[{
@@ -83,7 +83,7 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
 ';
                   icon: Lock,'';
                   title: 'Data Encryption','';
-                  description: 'End-to-end encryption with AI-powered key management and access control.'}';
+                  description: 'End-to-end encryption with AI-powered key management and access control.'}'
               ].map((feature, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
                   <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4'>''
@@ -104,7 +104,7 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
                 Our defense-in-depth approach ensures comprehensive protection across all attack vectors.
               </p>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
               {[{
@@ -130,7 +130,7 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
 '';
                   layer: '04','';
                   title: 'Data Security','';
-                  description: 'Encryption, access control, and data loss prevention.'}';
+                  description: 'Encryption, access control, and data loss prevention.'}'
               ].map((layer, index)  => (''
                 <div key={index} className='text-center'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -151,7 +151,7 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
                 Stay ahead of emerging threats with real-time intelligence and predictive analytics.
               </p>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>'
               <div>''
@@ -160,7 +160,7 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
                     'Predictive threat modeling and risk assessment','';
                     'Automated threat hunting and investigation','';
                     'Custom threat intelligence for your industry','';
-                    'Integration with major threat intelligence platforms'';
+                    'Integration with major threat intelligence platforms''
                   ].map((capability, index) => (''
                     <div key={index} className='flex items-start space-x-3'>''
                       <CheckCircle className='w-6 h-6 text-red-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{capability}</span>
@@ -168,12 +168,12 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
                   ))}
                 </div>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
-              </div>';
+              </div>'
 ''
               <div className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8'>''
                 <h3 className='text-2xl font-semibold text-white mb-4'>Threat Categories</h3>''
                 <div className='space-y-4'>'{[''                    { type: 'Malware', icon: AlertTriangle, color: 'from-red-500 to-pink-500', count: '10M+' },''{ type: 'Phishing', icon: Eye, color: 'from-orange-500 to-red-500', count: '5M+' },''{ type: 'Ransomware', icon: Lock, color: 'from-purple-500 to-red-500', count: '2M+' },'';
-:pages.disabled/pages/services/ai-cybersecurity-suite.tsx{ type: 'DDoS', icon: Activity, color: 'from-blue-500 to-cyan-500', count: '1M+' }';
+:pages.disabled/pages/services/ai-cybersecurity-suite.tsx{ type: 'DDoS', icon: Activity, color: 'from-blue-500 to-cyan-500', count: '1M+' }'
                   ].map((item, index)  => (''
                     <div key={index} className='flex justify-between items-center'>''
                       <div className='flex items-center space-x-3'>'
@@ -198,7 +198,7 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
                 Meet regulatory requirements with built-in compliance features and audit capabilities.
               </p>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[
@@ -248,7 +248,7 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
                   description: 'Cybersecurity framework alignment and implementation.',';
                   icon: Activity,'';
                   features: ['Framework mapping', 'Gap analysis', 'Implementation guidance']
-                }';
+                }'
               ].map((compliance, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
                   <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4'>''
@@ -270,7 +270,7 @@ export { function }export default function AICybersecuritySuite(...args: []):  {
 '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-red-500/10 to-orange-600/10'>'
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/ai-cybersecurity-suite.tsx;
+:pages.disabled/pages/services/ai-cybersecurity-suite.tsx
               Ready to Secure Your Digital Future?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>

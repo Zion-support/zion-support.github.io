@@ -32,12 +32,12 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
       {/* Hero Section */}''
       <section className='bg-gradient-to-br from-orange-600 via-orange-700 to-red-800 py-20 text-center text-white'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
             <Sparkles className='w-4 h-4 mr-2'  /> AI-Powered HR & Talent Management'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold mb-6'>AI HR & Talent Platform</h1>'          <p className='text-xl text-orange-100 mb-8 max-w-3xl mx-auto'>
-            Transform your HR operations with AI-driven insights, automated workflows, and intelligent talent management.;
+            Transform your HR operations with AI-driven insights, automated workflows, and intelligent talent management.
             Build better teams and drive organizational success.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -46,7 +46,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <Sparkles className='w-4 h-4 mr-2'  /> AI-Powered HR & Talent Management
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold mb-6'>AI HR & Talent Platform</h1>'          <p className='text-xl text-orange-100 mb-8 max-w-3xl mx-auto'>
-            Transform your HR operations with AI-driven insights, automated workflows, and intelligent talent management.;
+            Transform your HR operations with AI-driven insights, automated workflows, and intelligent talent management.
             Build better teams and drive organizational success.
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -67,7 +67,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <h2 className='text-3xl font-bold text-gray-900 mb-4'>Comprehensive HR Intelligence</h2>''
           <p className='text-xl text-gray-600'>Everything you need to manage talent intelligently</p>
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='grid md:grid-cols-2 gap-8'>'
           <div>''
@@ -86,7 +86,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
               ))}
             </ul>
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='bg-gray-50 rounded-xl p-8'>''
             <h3 className='text-2xl font-semibold text-gray-900 mb-6'>Key Benefits</h3>''
@@ -114,7 +114,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>Complete Platform Modules</h2>''
             <p className='text-xl text-gray-600'>From recruitment to retention, we cover all your HR needs</p>
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid md:grid-cols-4 gap-6'>'
           </div>
@@ -136,7 +136,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <h2 className='text-3xl font-bold text-gray-900 mb-4'>Perfect For</h2>''
           <p className='text-xl text-gray-600'>Ideal for HR teams and organizations seeking to optimize their talent management</p>
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='grid md:grid-cols-3 gap-6'>'
         </div>
@@ -164,14 +164,14 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <div className='grid md:grid-cols-3 gap-8'>''
             <div className='bg-white rounded-lg p-6 shadow-sm text-center'>''
               <Search className='w-12 h-12 text-orange-500 mx-auto mb-4'  />''
-              <h3 className='text-xl font-semibold text-gray-900 mb-2'>Smart Candidate Matching</h3>'';
+              <h3 className='text-xl font-semibold text-gray-900 mb-2'>Smart Candidate Matching</h3>''
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
               <p className='text-gray-600'>AI algorithms match candidates to job requirements with 90% accuracy</p>'
               <p className='text-gray-600'>AI algorithms match candidates to job requirements with 90% accuracy</p>
             </div>''
             <div className='bg-white rounded-lg p-6 shadow-sm text-center'>''
               <TrendingUp className='w-12 h-12 text-orange-500 mx-auto mb-4'  />''
-              <h3 className='text-xl font-semibold text-gray-900 mb-2'>Predictive Analytics</h3>'';
+              <h3 className='text-xl font-semibold text-gray-900 mb-2'>Predictive Analytics</h3>''
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
               <p className='text-gray-600'>Forecast employee turnover and identify retention risks early</p>'
               <p className='text-gray-600'>Forecast employee turnover and identify retention risks early</p>
@@ -192,7 +192,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>Simple, Transparent Pricing</h2>''
             <p className='text-xl text-gray-600'>Choose the plan that fits your organization size and needs</p>
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid md:grid-cols-3 gap-8'>
             {pricing.map(plan: unknown, index: unknown()
@@ -218,7 +218,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
                   <div className='text-4xl font-bold text-orange-600 mb-2'>{plan.price}</div>''
                   <p className='text-gray-600'>per month</p>
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3 mb-8'>'
                 </div>
@@ -230,7 +230,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
                     </li>
                   ))}
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
 ';
@@ -267,7 +267,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <h2 className='text-3xl font-bold text-gray-900 mb-6'>Proven Results</h2>''
           <div className='grid md:grid-cols-3 gap-8'>''
             <div className='bg-white rounded-lg p-6 shadow-sm'>''
-              <div className='text-3xl font-bold text-orange-600 mb-2'>60%</div>'';
+              <div className='text-3xl font-bold text-orange-600 mb-2'>60%</div>''
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
               <p className='text-gray-700'>Faster time-to-hire</p>'
             </div>''
@@ -294,12 +294,12 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
         <div className='max-w-4xl mx-auto px-6 text-center'>''
           <h2 className='text-3xl font-bold mb-6'>Ready to Transform Your HR Operations?</h2>''
           <p className='text-xl text-gray-300 mb-8'>
-:pages.disabled/pages/services/AIHRTalentPlatform.tsx;
+:pages.disabled/pages/services/AIHRTalentPlatform.tsx
             Join hundreds of organizations already using AI HR & Talent Platform to build better teams.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <a href='mailto:kleber@ziontechgroup.com' className='px-8 py-4 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 transition-colors'>
-              Start Free Trial';
+              Start Free Trial'
             Join hundreds of organizations already using AI HR & Talent Platform to build better teams.
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -344,7 +344,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
           <h3 className='text-lg font-semibold text-gray-900 mb-2'>Visit Our Website</h3>''
           <p className='text-gray-600 mb-4'>
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx;
-            Learn more about our complete suite of AI-powered business solutions;
+            Learn more about our complete suite of AI-powered business solutions
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
           </p>
 <:pages.disabled/pages/services/AIHRTalentPlatform.tsx;
@@ -352,7 +352,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
 =;
           <a '>            href='https://ziontechgroup.com';
             target='_blank';
-            rel='noreferrer';
+            rel='noreferrer'
             className='inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold'>'
           </p>'
           <a '';
@@ -363,7 +363,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             Visit ziontechgroup.com <ExternalLink className='w-4 h-4 ml-2'  />          </a>
         </div>
       </section>
-    </div>''`)}}}''`''`;
+    </div>''`)}}}''`''`
             Learn more about our complete suite of AI-powered business solutions
           </p>
           <a '';

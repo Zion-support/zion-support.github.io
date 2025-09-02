@@ -20,7 +20,7 @@ import React from,
   Blog', href: '/blog }, { name:,
   Webinars', href: '/webinars }, { name:,
   Support Center', href: '/support } ] }, { title:,
-  Legal', links: [ { name:;
+  Legal', links: [ { name:
   'Privacy Policy, href:,
   /privacy' }, { name: 'Terms of Service, href:,
   /terms' }, { name: 'Cookie Policy, href:,

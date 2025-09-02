@@ -149,7 +149,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}  }
       title: 'Database Performance Issue',
       status: 'resolved',
       date: '2025-01-15',
-      description:;
+      description:
         'Temporary performance degradation in database queries has been resolved.',
       impact: 'minor'}]
   return(
@@ -163,7 +163,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}  }
           <div className='container mx-auto px-4 text-center'>
             <h1 className='text-4xl md: text-5xl font-bold mb-6'>System Status</h1>
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
-              Monitor the real-time status of our services and infrastructure.;
+              Monitor the real-time status of our services and infrastructure.
               All systems are currently operational.
             </p>
           </div>
@@ -180,7 +180,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}  }
 :pages.disabled_auto/status.tsx;
                 All services are running normally. We;
   're monitoring our systems 24/7 to ensure optimal performance.;
-                All services are running normally. We&apos;re monitoring our;
+                All services are running normally. We&apos;re monitoring our
                 systems 24/7 to ensure optimal performance.'
               </p>
             </div>
@@ -358,5 +358,5 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}  }
       </div>
     </MainLayout>
   )}
-;
+
 export default Status

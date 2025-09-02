@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
       { name: 'Support', href: '/contact' },
       { name: 'Pricing Guide', href: '/pricing-guide' },
     ],
-  };
+  }
   return (
     <footer className="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
@@ -188,4 +188,4 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-export default Footer;
+export default Footer

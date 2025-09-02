@@ -11,4 +11,3 @@ const Services: React.FC = () => {
       </div>
 </>
   )}
-;

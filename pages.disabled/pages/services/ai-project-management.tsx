@@ -41,9 +41,9 @@ export default function AIProjectManagement(...args: any[]): any {
             <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6'>''
               <Target className='w-5 h-5 text-orange-400 mr-2'  />''
               <span className='text-orange-300 font-medium'>
-:pages.disabled/pages/services/ai-project-management.tsx;
+:pages.disabled/pages/services/ai-project-management.tsx
                 AI Project Management
-              </span>            </div>';
+              </span>            </div>'
 ''
             <h1 className='text-5xl lg:text-7xl font-bold text-white mb-6'>''
               <span className='bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent'>
@@ -55,9 +55,9 @@ export default function AIProjectManagement(...args: any[]): any {
               Transform your project delivery with AI-powered management that;
               optimizes planning, resource allocation, and risk management.;
               Deliver projects faster, cheaper, and with unprecedented success;
-              rates.;
+              rates.
 :pages.disabled/pages/services/ai-project-management.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
@@ -85,7 +85,7 @@ export default function AIProjectManagement(...args: any[]): any {
 :pages.disabled/pages/services/ai-project-management.tsx
               Advanced AI Technology for Better Project Delivery'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI-powered project management platform combines machine;
-              learning, predictive analytics, and automation to deliver;
+              learning, predictive analytics, and automation to deliver
               exceptional project outcomes.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -96,7 +96,7 @@ export default function AIProjectManagement(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-300 group''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-300'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-300'>''
 :pages.disabled/pages/services/ai-project-management.tsx
                   <feature.icon className='w-6 h-6 text-orange-400' />'
                 </div>''
@@ -117,7 +117,7 @@ export default function AIProjectManagement(...args: any[]): any {
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/ai-project-management.tsx
               Proven Results & Benefits'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI-powered project management delivers measurable improvements;
+              Our AI-powered project management delivers measurable improvements
               in delivery time, cost reduction, and project success rates.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -145,7 +145,7 @@ export default function AIProjectManagement(...args: any[]): any {
 :pages.disabled/pages/services/ai-project-management.tsx
               Flexible Solutions for Every Project'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose from our range of AI-powered project management solutions;
-              designed to meet your specific project needs and scale with your;
+              designed to meet your specific project needs and scale with your
               organization.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -159,7 +159,7 @@ export default function AIProjectManagement(...args: any[]): any {
                 <h3 className='text-2xl font-semibold text-white mb-4'>
 :pages.disabled/pages/services/ai-project-management.tsx{solution.title}'
                 </h3>''
-                <p className='text-gray-300 mb-6'>{solution.description}</p>';
+                <p className='text-gray-300 mb-6'>{solution.description}</p>'
 ''
                 <div className='space-y-3 mb-6'>
                   {solution.features.map((feature, featureIndex) => (
@@ -168,7 +168,7 @@ export default function AIProjectManagement(...args: any[]): any {
                     </div>
                   ))}
 :pages.disabled/pages/services/ai-project-management.tsx
-                </div>';
+                </div>'
 ''
                 <div className='text-3xl font-bold text-orange-400 mb-6'>
                   {solution.price}'</div>''                <button className='w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300'>
@@ -189,7 +189,7 @@ export default function AIProjectManagement(...args: any[]): any {
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/ai-project-management.tsx
               Optimized for Any Project Type'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI-powered project management platform is designed to handle;
+              Our AI-powered project management platform is designed to handle
               diverse project types across all industries and complexity levels.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -200,7 +200,7 @@ export default function AIProjectManagement(...args: any[]): any {
                 initial={{ opacity: 0, scale: 0.8 }}
 :pages.disabled/pages/services/ai-project-management.tsx;
                 whileInView={{ opacity: 1, scale: 1 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3'>''
 :pages.disabled/pages/services/ai-project-management.tsx
                   <GitBranch className='w-6 h-6 text-orange-400'  />'</div>''                <span className='text-white font-medium text-sm'>
                   {projectType}
@@ -221,7 +221,7 @@ export default function AIProjectManagement(...args: any[]): any {
               Ready to Transform Your Project Delivery?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Join the AI revolution in project management and deliver projects;
+              Join the AI revolution in project management and deliver projects
               faster, cheaper, and with higher success rates.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -241,5 +241,5 @@ export default function AIProjectManagement(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/ai-project-management.tsx)}
-  '';
+  ''
 ''''

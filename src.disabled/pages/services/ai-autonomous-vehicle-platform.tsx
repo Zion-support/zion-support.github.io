@@ -77,7 +77,7 @@ const AIAutonomousVehiclePlatform = () => {
       description: 'Advanced threat detection and prevention for vehicle systems and communications', icon: Shield,';
       color: 'text-red-400'}, {'
       title: 'Cloud Integration',';
-      description: 'Seamless cloud connectivity for updates, data sharing, and fleet management', icon: Cloud,';
+      description: 'Seamless cloud connectivity for updates, data sharing, and fleet management', icon: Cloud,'
       color: 'text-indigo-400'}
 
   return(
@@ -102,7 +102,7 @@ const AIAutonomousVehiclePlatform = () => {
               </span>
             </h1>
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
-              Transform your fleet with our cutting-edge AI autonomous vehicle platform.;
+              Transform your fleet with our cutting-edge AI autonomous vehicle platform.
               Experience unprecedented safety, efficiency, and scalability in autonomous transportation.
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center items-center mb-16'>
@@ -158,7 +158,7 @@ const AIAutonomousVehiclePlatform = () => {
               Advanced AI-Powered Features
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our platform combines cutting-edge AI, advanced sensors, and robust cybersecurity;
+              Our platform combines cutting-edge AI, advanced sensors, and robust cybersecurity
               to deliver the most reliable autonomous vehicle solution available.
             </p>
           </motion.div>
@@ -194,7 +194,7 @@ const AIAutonomousVehiclePlatform = () => {
               Versatile Applications
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              From urban transportation to industrial applications, our platform adapts;
+              From urban transportation to industrial applications, our platform adapts
               to diverse use cases and industry requirements.
             </p>
           </motion.div>
@@ -242,7 +242,7 @@ const AIAutonomousVehiclePlatform = () => {
               Transparent Pricing
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the perfect plan for your autonomous vehicle fleet.;
+              Choose the perfect plan for your autonomous vehicle fleet.
               All plans include our core AI features with no hidden fees.
             </p>
           </motion.div>
@@ -310,7 +310,7 @@ const AIAutonomousVehiclePlatform = () => {
               Why Choose Our Platform?
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Experience the advantages of the most advanced autonomous vehicle platform;
+              Experience the advantages of the most advanced autonomous vehicle platform
               in the market.
             </p>
           </motion.div>
@@ -346,7 +346,7 @@ const AIAutonomousVehiclePlatform = () => {
               Ready to Transform Your Fleet?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join the autonomous transportation revolution. Contact us today to learn;
+              Join the autonomous transportation revolution. Contact us today to learn
               how our AI platform can revolutionize your operations.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -408,7 +408,7 @@ const AIAutonomousVehiclePlatform = () => {
         </div>
       </section>
     </div>
-;
+
   return ('
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>
       {/* Hero Section */}'
@@ -431,7 +431,7 @@ const AIAutonomousVehiclePlatform = () => {
               </span>
             </h1>'
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>
-              Transform your fleet with our cutting-edge AI autonomous vehicle platform.;
+              Transform your fleet with our cutting-edge AI autonomous vehicle platform.
               Experience unprecedented safety, efficiency, and scalability in autonomous transportation.
             </p>'
             <div className='flex flex-col sm: flex-row gap-4 justify-center items-center mb-16'>
@@ -486,7 +486,7 @@ const AIAutonomousVehiclePlatform = () => {
               Advanced AI-Powered Features
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our platform combines cutting-edge AI, advanced sensors, and robust cybersecurity;
+              Our platform combines cutting-edge AI, advanced sensors, and robust cybersecurity
               to deliver the most reliable autonomous vehicle solution available.
             </p>
           </motion.div>'
@@ -522,7 +522,7 @@ const AIAutonomousVehiclePlatform = () => {
               Versatile Applications
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              From urban transportation to industrial applications, our platform adapts;
+              From urban transportation to industrial applications, our platform adapts
               to diverse use cases and industry requirements.
             </p>
           </motion.div>'
@@ -570,7 +570,7 @@ const AIAutonomousVehiclePlatform = () => {
               Transparent Pricing
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the perfect plan for your autonomous vehicle fleet.;
+              Choose the perfect plan for your autonomous vehicle fleet.
               All plans include our core AI features with no hidden fees.
             </p>
           </motion.div>'
@@ -636,7 +636,7 @@ const AIAutonomousVehiclePlatform = () => {
               Why Choose Our Platform?
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Experience the advantages of the most advanced autonomous vehicle platform;
+              Experience the advantages of the most advanced autonomous vehicle platform
               in the market.
             </p>
           </motion.div>'
@@ -672,7 +672,7 @@ const AIAutonomousVehiclePlatform = () => {
               Ready to Transform Your Fleet?
             </h2>'
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join the autonomous transportation revolution. Contact us today to learn;
+              Join the autonomous transportation revolution. Contact us today to learn
               how our AI platform can revolutionize your operations.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -736,4 +736,4 @@ const AIAutonomousVehiclePlatform = () => {
     </div>
   )}
 ;
-export default AIAutonomousVehiclePlatform";
+export default AIAutonomousVehiclePlatform"

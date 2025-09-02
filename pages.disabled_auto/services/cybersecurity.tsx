@@ -97,5 +97,5 @@ export default function Cybersecurity() {
         </div>
       </section>
     </div>
-  );
+  )
 }

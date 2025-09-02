@@ -21,7 +21,7 @@ export function Button(...args: any[]): any {
   sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-sm',
     lg: 'px-6 py-3 text-base',
-  ;
+  
   icon: 'w-10 h-10 p-0'}
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`
   if (asChild) {
@@ -35,7 +35,7 @@ export function Button(...args: any[]): any {
     >{children}
     </button>
   )}
-// Export button variants for use in other components;
+// Export button variants for use in other components
 export const buttonVariants = {
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan',
   outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan',

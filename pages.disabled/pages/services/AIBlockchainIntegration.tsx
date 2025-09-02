@@ -40,7 +40,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
             </div>''
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionize your blockchain operations with AI-powered;
-              intelligence, automated smart contracts, and enhanced security;
+              intelligence, automated smart contracts, and enhanced security
               protocols.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -70,7 +70,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
               Revolutionary Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI Blockchain Integration platform combines cutting-edge;
-              artificial intelligence with blockchain technology to deliver;
+              artificial intelligence with blockchain technology to deliver
               unprecedented capabilities.
             </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
@@ -81,7 +81,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 group''>''
-                <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -102,7 +102,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
               Why Choose AI Blockchain Integration?'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Transform your blockchain operations with intelligent automation;
+              Transform your blockchain operations with intelligent automation
               and enhanced security.
             </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
@@ -129,7 +129,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
               Transparent Pricing'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the plan that fits your business needs. All plans include;
+              Choose the plan that fits your business needs. All plans include
               our core AI features.
             </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
@@ -151,7 +151,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AIBlockchainIntegration.tsx)}';
+:pages.disabled/pages/services/AIBlockchainIntegration.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -163,7 +163,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
                     </span>''
                     <span className='text-gray-400 ml-2'>{plan.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'{plan.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='flex items-center'>''
                       <CheckCircle className='w-5 h-5 text-cyan-400 mr-3 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
@@ -199,7 +199,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {
               Ready to Transform Your Blockchain Operations?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Join the future of intelligent blockchain technology with;
+              Join the future of intelligent blockchain technology with
               AI-powered automation and security.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -219,5 +219,5 @@ export default function AIBlockchainIntegration(...args: any[]): any {
         </div>
       </section>
     </div>
-  )}''`;
+  )}''`
   ''`''`

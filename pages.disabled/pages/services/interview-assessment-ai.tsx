@@ -37,9 +37,9 @@ export default function InterviewAssessmentAI(...args: any[]): any {
             <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full border border-purple-400/30 mb-6'>''
               <Users className='w-5 h-5 text-purple-400 mr-2'  />''
               <span className='text-purple-300 font-medium'>
-:pages.disabled/pages/services/interview-assessment-ai.tsx;
+:pages.disabled/pages/services/interview-assessment-ai.tsx
                 AI Interview Assessment
-              </span>            </div>';
+              </span>            </div>'
 ''
             <h1 className='text-5xl lg:text-7xl font-bold text-white mb-6'>''
               <span className='bg-gradient-to-r from-purple-400 via-pink-500 to-red-600 bg-clip-text text-transparent'>
@@ -50,9 +50,9 @@ export default function InterviewAssessmentAI(...args: any[]): any {
             </h1>'''            <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Transform your hiring process with AI-powered interview assessment;
               technology. Eliminate bias, improve candidate quality, and make;
-              data-driven hiring decisions with unprecedented accuracy.;
+              data-driven hiring decisions with unprecedented accuracy.
 :pages.disabled/pages/services/interview-assessment-ai.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
@@ -80,7 +80,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 :pages.disabled/pages/services/interview-assessment-ai.tsx
               Advanced AI Technology for Better Hiring'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI-powered assessment platform combines natural language;
-              processing, computer vision, and machine learning to deliver;
+              processing, computer vision, and machine learning to deliver
               objective candidate evaluations.
             </p>
 :pages.disabled/pages/services/interview-assessment-ai.tsx
@@ -91,7 +91,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/interview-assessment-ai.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-300 group''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-300'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-purple-400/40 group-hover:to-pink-500/40 transition-all duration-300'>''
 :pages.disabled/pages/services/interview-assessment-ai.tsx
                   <feature.icon className='w-6 h-6 text-purple-400' />'
                 </div>''
@@ -113,7 +113,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 :pages.disabled/pages/services/interview-assessment-ai.tsx
               Proven Results & Benefits'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI-powered interview assessment services deliver measurable;
-              improvements in hiring efficiency, candidate quality, and;
+              improvements in hiring efficiency, candidate quality, and
               organizational diversity.
             </p>
 :pages.disabled/pages/services/interview-assessment-ai.tsx
@@ -140,7 +140,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/interview-assessment-ai.tsx
               Comprehensive Assessment Solutions'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose from our range of AI-powered assessment types designed to;
+              Choose from our range of AI-powered assessment types designed to
               evaluate different aspects of candidate suitability and potential.
             </p>
 :pages.disabled/pages/services/interview-assessment-ai.tsx
@@ -178,7 +178,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
 :pages.disabled/pages/services/interview-assessment-ai.tsx
               Trusted Across Industries'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI-powered assessment technology is successfully deployed;
-              across diverse industries, helping organizations make better;
+              across diverse industries, helping organizations make better
               hiring decisions.
             </p>
 :pages.disabled/pages/services/interview-assessment-ai.tsx
@@ -189,7 +189,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
                 initial={{ opacity: 0, scale: 0.8 }}
 :pages.disabled/pages/services/interview-assessment-ai.tsx;
                 whileInView={{ opacity: 1, scale: 1 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mx-auto mb-3'>''
 :pages.disabled/pages/services/interview-assessment-ai.tsx
                   <Trophy className='w-6 h-6 text-purple-400'  />'</div>''                <span className='text-white font-medium text-sm'>
                   {industry}
@@ -210,7 +210,7 @@ export default function InterviewAssessmentAI(...args: any[]): any {
               Ready to Transform Your Hiring Process?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Join the AI revolution in recruitment and make better hiring;
+              Join the AI revolution in recruitment and make better hiring
               decisions with objective, data-driven candidate assessments.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -230,5 +230,5 @@ export default function InterviewAssessmentAI(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/interview-assessment-ai.tsx)}
-  '';
+  ''
 ''''

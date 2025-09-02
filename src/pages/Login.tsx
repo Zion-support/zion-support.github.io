@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
 export default function Login() {
-  const [formData, setFormData] = useState({
-    email: '', password: ''
+  const [formData, setFormData] = useState({ email: '', password: ''
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -14,12 +13,12 @@ export default function Login() {
     setIsLoading(true);
     // Handle login logic here
     setTimeout(() => setIsLoading(false), 2000);
-  };
+  }
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData, [e.target.name]: e.target.value
     });
-  };
+  }
   return (
     <>
       <SEO 
@@ -33,7 +32,7 @@ export default function Login() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8   }}
             className="text-center"
           >
             <h2 className="text-4xl font-bold text-white mb-2">
@@ -174,5 +173,5 @@ export default function Login() {
         </div>
       </div>
 </>
-  );
+  )
 }

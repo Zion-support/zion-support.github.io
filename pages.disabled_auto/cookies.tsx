@@ -97,7 +97,7 @@ const Cookies: NextPage = () => {
   Transparency',
       description: 'We provide clear information about the cookies we use.}
       title: 'Cookie Consent',
-      description:;
+      description:
         'We obtain your consent before setting non-essential cookies.'},
     {
       icon: Settings,
@@ -182,7 +182,7 @@ const Cookies: NextPage = () => {
               <div className='prose prose-lg max-w-none'>
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>What Are Cookies?</h2>
                 <p className='text-gray-700 mb-4'>
-                  Cookies are small text files that are placed on your computer or mobile device when you visit a website.;
+                  Cookies are small text files that are placed on your computer or mobile device when you visit a website.
                   They are widely used to make websites work more efficiently and to provide information to website owners.
                 </p>
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>How We Use Cookies</h2>
@@ -207,7 +207,7 @@ const Cookies: NextPage = () => {
                 </ul>
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Browser Settings</h2>
                 <p className='text-gray-700 mb-4'>
-                  Most web browsers allow you to control cookies through their settings preferences.;
+                  Most web browsers allow you to control cookies through their settings preferences.
                   You can set your browser to refuse cookies or delete certain cookies. However, if you choose to delete or refuse cookies, some features of our website may not function properly.
                 </p>
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Third-Party Cookies</h2>
@@ -223,7 +223,7 @@ const Cookies: NextPage = () => {
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Updates to This Policy</h2>
                 <p className='text-gray-700 mb-4'>
                   We may update this cookie policy from time to time to reflect changes in our practices;
-                  or for other operational, legal, or regulatory reasons. We will notify you of any material;
+                  or for other operational, legal, or regulatory reasons. We will notify you of any material
                   changes by posting the updated policy on our website.
                 </p>
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>Contact Us</h2>
@@ -253,5 +253,5 @@ const Cookies: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
+
 export default Cookies

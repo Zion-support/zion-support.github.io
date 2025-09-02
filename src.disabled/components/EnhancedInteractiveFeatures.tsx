@@ -8,5 +8,5 @@ import React, { useState, useEffect } from,
   ') const [feedbackType, setFeedbackType] = useState<'positive;
   ' | 'negative;
   ' | 'suggestion;
-  '>('positive;
+  '>('positive
   ') const [isBookmarked, setIsBookmarked] = useState(false) const [rating, setRating] = useState(0) const [showRating, setShowRating] = useState(false)  useEffect(() => {'

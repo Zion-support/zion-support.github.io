@@ -25,7 +25,7 @@ export default function Sitemap() {
   )}
 
 import { Link } from 'react - router - dom';
-import React from 'react';
+import React from 'react'
 export default React.memo(function Sitemap () {
 
   const routes = ['/', '/about', '/contact', '/services', '/blog', '/pricing', '/privacy', '/terms']
@@ -36,4 +36,4 @@ export default React.memo(function Sitemap () {
         {routes.map ( (r) => (
           <li key={r}><Link to={r}>{r}</Link></li>) ) }
       </ul>
-    </div>) }";
+    </div>) }"

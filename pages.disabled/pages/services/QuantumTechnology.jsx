@@ -5,7 +5,7 @@ import { Link } from;
 import { Box, Cpu, Zap, Globe, Rocket, Shield } from;
   'lucide-react';
 const QuantumTechnology = () => {}
-  return();
+  return()
 :pages.disabled/pages/services/QuantumTechnology.jsx
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white'>'{/* Hero Section */}''      <section className='pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
@@ -23,7 +23,7 @@ const QuantumTechnology = () => {}
               Harness the power of quantum computing to solve complex problems;
   ';
               that are impossible for classical computers. Experience the future'';
-              of computation with Zion Tech Group;
+              of computation with Zion Tech Group
   's quantum solutions.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -40,7 +40,7 @@ const QuantumTechnology = () => {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/QuantumTechnology.jsx;
+:pages.disabled/pages/services/QuantumTechnology.jsx
 '{/* What is Quantum Computing Section */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>''
         <div className='max-w-7xl mx-auto'>''
@@ -51,24 +51,24 @@ const QuantumTechnology = () => {}
                 Quantum computing leverages the principles of quantum mechanics;
                 to process information in ways that classical computers cannot.;
 :pages.disabled/pages/services/QuantumTechnology.jsx;
-                By using quantum bits (qubits) that can exist in multiple states;
+                By using quantum bits (qubits) that can exist in multiple states
                 simultaneously, quantum computers can solve complex problems
                 exponentially faster.'</p>''              <div className='space-y-4'>''
                 <div className='flex items-center space-x-3'>''
                   <div className='w-2 h-2 bg-purple-400 rounded-full'></div>''
                   <span className='text-gray-300'>
-:pages.disabled/pages/services/QuantumTechnology.jsx;
+:pages.disabled/pages/services/QuantumTechnology.jsx
                     Superposition - Qubits can be in multiple states at once
                   </span>'</div>''                <div className='flex items-center space-x-3'>''
                   <div className='w-2 h-2 bg-purple-400 rounded-full'></div>''
                   <span className='text-gray-300'>
 :pages.disabled/pages/services/QuantumTechnology.jsx;
-                    Entanglement - Qubits can be correlated across vast;
+                    Entanglement - Qubits can be correlated across vast
                     distances
                   </span>'</div>''                <div className='flex items-center space-x-3'>''
                   <div className='w-2 h-2 bg-purple-400 rounded-full'></div>''
                   <span className='text-gray-300'>
-                    Quantum interference - Enables precise control over;
+                    Quantum interference - Enables precise control over
                     computations
                   </span>
                 </div>
@@ -78,7 +78,7 @@ const QuantumTechnology = () => {}
                 <CpuChipIcon className='h-24 w-24 text-purple-400 mx-auto mb-4' />''
                 <h3 className='text-2xl font-bold mb-2'>Quantum Advantage</h3>''
                 <p className='text-gray-300'>
-                  Solve problems in minutes that would take classical computers;
+                  Solve problems in minutes that would take classical computers
                   thousands of years
                 </p>
               </div>
@@ -93,17 +93,17 @@ const QuantumTechnology = () => {}
 :pages.disabled/pages/services/QuantumTechnology.jsx
             Our Quantum Services'</h2>''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''
             <div className='bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300'>''
-              <div className='p-3 bg-purple-600/20 rounded-lg w-fit mb-4'>'';
+              <div className='p-3 bg-purple-600/20 rounded-lg w-fit mb-4'>''
 :pages.disabled/pages/services/QuantumTechnology.jsx
                 <Box className='h-8 w-8 text-purple-400' />'
               </div>''
               <h3 className='text-xl font-semibold mb-3'>
                 Quantum Neural Networks'</h3>''              <p className='text-gray-300'>
-                Advanced quantum machine learning algorithms for pattern;
+                Advanced quantum machine learning algorithms for pattern
                 recognition and data analysis.
               </p>
 :pages.disabled/pages/services/QuantumTechnology.jsx
-            </div>';
+            </div>'
 ''
             <div className='bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300'>''
               <div className='p-3 bg-blue-600/20 rounded-lg w-fit mb-4'>''
@@ -111,11 +111,11 @@ const QuantumTechnology = () => {}
               </div>''
               <h3 className='text-xl font-semibold mb-3'>
                 Quantum Edge Computing'</h3>''              <p className='text-gray-300'>
-                Distributed quantum computing solutions for real-time processing;
+                Distributed quantum computing solutions for real-time processing
                 at the edge.
               </p>
 :pages.disabled/pages/services/QuantumTechnology.jsx
-            </div>';
+            </div>'
 ''
             <div className='bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300'>''
               <div className='p-3 bg-green-600/20 rounded-lg w-fit mb-4'>''
@@ -123,11 +123,11 @@ const QuantumTechnology = () => {}
               </div>''
               <h3 className='text-xl font-semibold mb-3'>
                 Quantum Cloud Infrastructure'</h3>''              <p className='text-gray-300'>
-                Scalable quantum computing resources accessible through cloud;
+                Scalable quantum computing resources accessible through cloud
                 platforms.
               </p>
 :pages.disabled/pages/services/QuantumTechnology.jsx
-            </div>';
+            </div>'
 ''
             <div className='bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300'>''
               <div className='p-3 bg-orange-600/20 rounded-lg w-fit mb-4'>''
@@ -135,11 +135,11 @@ const QuantumTechnology = () => {}
               </div>''
               <h3 className='text-xl font-semibold mb-3'>
                 Quantum Financial Trading'</h3>''              <p className='text-gray-300'>
-                High-frequency trading algorithms powered by quantum computing;
+                High-frequency trading algorithms powered by quantum computing
                 for market advantage.
               </p>
 :pages.disabled/pages/services/QuantumTechnology.jsx
-            </div>';
+            </div>'
 ''
             <div className='bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300'>''
               <div className='p-3 bg-cyan-600/20 rounded-lg w-fit mb-4'>''
@@ -147,11 +147,11 @@ const QuantumTechnology = () => {}
               </div>''
               <h3 className='text-xl font-semibold mb-3'>
                 Quantum Cryptography'</h3>''              <p className='text-gray-300'>
-                Unbreakable encryption systems based on quantum mechanical;
+                Unbreakable encryption systems based on quantum mechanical
                 principles.
               </p>
 :pages.disabled/pages/services/QuantumTechnology.jsx
-            </div>';
+            </div>'
 ''
             <div className='bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300'>''
               <div className='p-3 bg-pink-600/20 rounded-lg w-fit mb-4'>''
@@ -174,14 +174,14 @@ const QuantumTechnology = () => {}
             Quantum Computing Applications'</h2>''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''
             <div className='space-y-6'>''
               <h3 className='text-2xl font-semibold mb-4'>
-:pages.disabled/pages/services/QuantumTechnology.jsx;
+:pages.disabled/pages/services/QuantumTechnology.jsx
                 Scientific Research'
               </h3>''
               <div className='space-y-4'>''
                 <div className='flex items-start space-x-3'>''
                   <div className='w-2 h-2 bg-purple-400 rounded-full mt-2'></div>'<div>''                    <h4 className='font-semibold'>Drug Discovery</h4>''
                     <p className='text-gray-300'>
-                      Simulate molecular interactions for pharmaceutical;
+                      Simulate molecular interactions for pharmaceutical
                       development
                     </p>
 :pages.disabled/pages/services/QuantumTechnology.jsx
@@ -245,7 +245,7 @@ const QuantumTechnology = () => {}
 :pages.disabled/pages/services/QuantumTechnology.jsx
             Why Choose Quantum Computing?'</h2>''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''
             <div className='space-y-6'>''
-              <div className='flex items-start space-x-4'>'';
+              <div className='flex items-start space-x-4'>''
 :pages.disabled/pages/services/QuantumTechnology.jsx
                 <div className='bg-purple-600/20 p-2 rounded-lg'>'<svg''                    className='h-6 w-6 text-purple-400'';
                     fill='none'';
@@ -261,7 +261,7 @@ const QuantumTechnology = () => {}
                 <div>''
                   <h4 className='text-lg font-semibold mb-2'>
                     Exponential Speed'</h4>''                  <p className='text-gray-300'>
-                    Solve problems in minutes that would take classical;
+                    Solve problems in minutes that would take classical
                     computers years.
                   </p>
 :pages.disabled/pages/services/QuantumTechnology.jsx
@@ -364,7 +364,7 @@ const QuantumTechnology = () => {}
                 <div>''
                   <h4 className='text-lg font-semibold mb-2'>
                     Competitive Advantage'</h4>''                  <p className='text-gray-300'>
-                    Gain significant advantages over competitors using classical;
+                    Gain significant advantages over competitors using classical
                     computing.
                   </p>
                 </div>
@@ -377,11 +377,11 @@ const QuantumTechnology = () => {}
 '{/* CTA Section */}''      <section className='py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20'>''
         <div className='max-w-4xl mx-auto text-center'>''
           <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-:pages.disabled/pages/services/QuantumTechnology.jsx;
+:pages.disabled/pages/services/QuantumTechnology.jsx
             Ready for the Quantum Revolution?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
-            Transform your business with the power of quantum computing. Contact;
+            Transform your business with the power of quantum computing. Contact
             Zion Tech Group today.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -401,4 +401,4 @@ const QuantumTechnology = () => {}
   )}
 export { QuantumTechnology }
 :pages.disabled/pages/services/QuantumTechnology.jsx;
-export default QuantumTechnology'';''"
+export default QuantumTechnology''''"

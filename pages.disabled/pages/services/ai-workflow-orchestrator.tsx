@@ -46,7 +46,7 @@ import { Workflow,
   { opacity: 1,
 :pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
   y: 0}}
-              transition={{ duration: 0.6 }}';
+              transition={{ duration: 0.6 }}'
               className='text-center'
 <:pages.disabled/pages/services/ai-workflow-orchestrator.tsx
             >
@@ -65,17 +65,17 @@ import { Workflow,
                 <Workflow className='w-10 h-10 text-white'  />              </div>
               ';
   y: 0}}';
-              transition={{ duration: 0.6 }}'';
+              transition={{ duration: 0.6 }}''
               className='text-center''>''
               <div className='w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6'>''
-                <Workflow className='w-10 h-10 text-white'  />              </div>';
+                <Workflow className='w-10 h-10 text-white'  />              </div>'
               ''
               <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent mb-6'>
                 AI Workflow Orchestrator
-              </h1>';
+              </h1>'
               ''
               <p className='text-xl text-slate-600 max-w-3xl mx-auto mb-8'>
-                Transform your business processes with intelligent workflow automation. Our AI-powered orchestrator learns, adapts, and optimizes your workflows in real-time.;
+                Transform your business processes with intelligent workflow automation. Our AI-powered orchestrator learns, adapts, and optimizes your workflows in real-time.
 :pages.disabled/pages/services/ai-workflow-orchestrator.tsx
               </p>
               '
@@ -83,10 +83,10 @@ import { Workflow,
 >                <button className='px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2'>
                   Start Free Trial'
                   <ArrowRight className='w-5 h-5'  />
-              </p>';
+              </p>'
               ''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-                <button className='px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2'>';
+                <button className='px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-2'>'
                   Start Free Trial''
                   <ArrowRight className='w-5 h-5'  />'
                 </button>'                <button className='px-8 py-4 border border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors'>
@@ -122,7 +122,7 @@ import { Workflow,
               '>  delay: 0.2}}'>''
               <h2 className='text-3xl font-bold text-slate-900 text-center mb-12'>
                 Powerful Features for Modern Workflows
-              </h2>';
+              </h2>'
               ''
               <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
                 {features.map((feature, index()
@@ -147,7 +147,7 @@ import { Workflow,
                       <feature.icon className='w-6 h-6 text-blue-600' />
                     </div>'
                     <h3 className='text-xl font-semibold text-slate-900 mb-3'>{feature.title}</h3>';
-  delay: 0.1 * index '}}'';
+  delay: 0.1 * index '}}''
                     className='bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-slate-100 hover:border-blue-200''>''
                     <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4'>''
                       <feature.icon className='w-6 h-6 text-blue-600' />'
@@ -186,7 +186,7 @@ import { Workflow,
               '>  delay: 0.4}}'>''
               <h2 className='text-3xl font-bold text-slate-900 text-center mb-12'>
                 Why Choose AI Workflow Orchestrator?
-              </h2>';
+              </h2>'
               ''
               <div className='grid grid-cols-1 md: anygrid-cols-2 gap-6'>
                 {benefits.map(benefit: unknown, index: unknown()
@@ -207,7 +207,7 @@ import { Workflow,
 :pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
   delay: 0.05 * index}}';
                     className='flex items-center gap-3'>';
-  delay: 0.05 * index '}}'';
+  delay: 0.05 * index '}}''
                     className='flex items-center gap-3''>''
                     <CheckCircle className='w-5 h-5 text-green-500 flex-shrink-0'  />'                    <span className='text-slate-700'>{benefit}</span>
                   </motion.div>
@@ -242,7 +242,7 @@ import { Workflow,
               '>  delay: 0.6}}'>''
               <h2 className='text-3xl font-bold text-slate-900 text-center mb-12'>
                 Industry Applications
-              </h2>';
+              </h2>'
               ''
               <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-6'>
                 {useCases.map(useCase: unknown, index: unknown()
@@ -267,7 +267,7 @@ import { Workflow,
                       <useCase.icon className='w-8 h-8 text-blue-600' />
                     </div>'
                     <h3 className='text-lg font-semibold text-slate-900 mb-2'>{useCase.title}</h3>';
-  delay: 0.1 * index '}}'';
+  delay: 0.1 * index '}}''
                     className='text-center''>''
                     <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>''
                       <useCase.icon className='w-8 h-8 text-blue-600' />'
@@ -306,7 +306,7 @@ import { Workflow,
               '>  delay: 0.8}}'>''
               <h2 className='text-3xl font-bold text-slate-900 text-center mb-12'>
                 Simple, Transparent Pricing
-              </h2>';
+              </h2>'
               ''
               <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
                 {pricing.map(plan: unknown, index: unknown()
@@ -338,7 +338,7 @@ import { Workflow,
                     className={`relative bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border ${
 ';
                       plan.popular '';
-                        ? 'border-blue-500 ring-2 ring-blue-500/20' ''`;
+                        ? 'border-blue-500 ring-2 ring-blue-500/20' ''`
                         : 'border-slate-100 hover:border-blue-200'``}`}
                   >'{plan.popular && (''
                       <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>''
@@ -352,7 +352,7 @@ import { Workflow,
                       <h3 className='text-xl font-bold text-slate-900 mb-2'>{plan.name}</h3>
                       <div className='flex items-baseline justify-center gap-1'>
                         <span className='text-3xl font-bold text-slate-900'>{plan.price}</span>
-=;
+=
                     '
                     <div className='text-center mb-6'>'
                       <h3 className='text-xl font-bold text-slate-900 mb-2'>{plan.name}</h3>'
@@ -373,7 +373,7 @@ import { Workflow,
                     </ul>
 <:pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
 =;
-                    `>                    )}';
+                    `>                    )}'
                     ''
                     <div className='text-center mb-6'>''
                       <h3 className='text-xl font-bold text-slate-900 mb-2'>{plan.name}</h3>''
@@ -382,14 +382,14 @@ import { Workflow,
                         <span className='text-slate-500'>{plan.period}</span>'
                       </div>''
                       <p className='text-slate-600 mt-2'>{plan.description}</p>
-                    </div>';
+                    </div>'
                     ''
                     <ul className='space-y-3 mb-6'>'{plan.features.map((feature, idx) => (''
                         <li key={idx} className='flex items-center gap-2'>''
                           <CheckCircle className='w-4 h-4 text-green-500 flex-shrink-0'  />'                          <span className='text-slate-700 text-sm'>{feature}</span>
                         </li>
                       ))}
-                    </ul>`;
+                    </ul>`
                     ``
                     <button className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${
 ';
@@ -420,21 +420,21 @@ import { Workflow,
   { duration: 0.6,
 :pages.disabled/pages/services/ai-workflow-orchestrator.tsx;
   delay: 1.0}}
-            >';
+            >'
   delay: 1.0}}'>''
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
                 Ready to Transform Your Workflows?'
               </h2>''
               <p className='text-xl text-blue-100 mb-8'>
-                Join hundreds of companies already using AI Workflow Orchestrator to streamline their operations.;
+                Join hundreds of companies already using AI Workflow Orchestrator to streamline their operations.
 :pages.disabled/pages/services/ai-workflow-orchestrator.tsx
               </p>
 <:pages.disabled/pages/services/ai-workflow-orchestrator.tsx
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=;
+=
               '
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
->              </p>';
+>              </p>'
               ''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
                 <button className='px-8 py-4 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors'>
@@ -450,4 +450,4 @@ import { Workflow,
       </div>
     </>
   )}''`;
-export default AIWorkflowOrchestrator''`;'"`
+export default AIWorkflowOrchestrator''`'"`

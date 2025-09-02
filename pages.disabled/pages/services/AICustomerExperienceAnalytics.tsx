@@ -31,7 +31,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center text-white''>''
             <div className='flex justify-center mb-6'>''
-              <div className='p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full'>'';
+              <div className='p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full'>''
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
                 <Users className='w-8 h-8 text-white'  />              </div>'
             </div>''
@@ -39,15 +39,15 @@ const AICustomerExperienceAnalytics: React.FC = props {
               AI Customer Experience Analytics'
             </h1>''
             <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-300'>
-              Transform customer insights into actionable intelligence with;
+              Transform customer insights into actionable intelligence with
               AI-powered analytics that reveal the true voice of your customers.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<Link''                to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
                 <Play className='w-5 h-5 mr-2'  />                Start Free Trial
               </Link>'<Link''                to='/demo'';
-                className='inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
                 <ArrowRight className='w-5 h-5 mr-2'  />                Watch Demo</Link>            </div>
           </motion.div>
@@ -63,7 +63,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
               Advanced CX Analytics Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI-powered platform provides deep insights into customer behavior, sentiment, and journey optimization;
+              Our AI-powered platform provides deep insights into customer behavior, sentiment, and journey optimization
               to help you deliver exceptional experiences that drive loyalty and growth.
             </p>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
@@ -74,7 +74,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-purple-400/50 transition-all duration-300''>''
-                <div className='p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-6'>'';
+                <div className='p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg w-fit mb-6'>''
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
@@ -98,7 +98,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
               Join industry leaders who have revolutionized their customer experience with AI-powered analytics.
             </p>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto'>
             {analyticsCapabilities.map(capability: unknown, index: unknown()
@@ -106,7 +106,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center''>''
-                <div className='p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4'>'';
+                <div className='p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
                   <BarChart3 className='w-6 h-6 text-white' />'</div>''                <p className='text-white font-medium text-sm'>{capability}</p>
               </motion.div>
@@ -127,7 +127,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
               See how AI Customer Experience Analytics transforms different industries and business functions.
             </p>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricingTiers.map(tier: unknown, index: unknown()
@@ -145,7 +145,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx)}';
+:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -156,7 +156,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
                     </span>''
                     <span className='text-gray-400 ml-1'>{tier.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>
                   {tier.features.map((feature, featureIndex) => (
@@ -196,7 +196,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
               Choose the plan that best fits your business needs. All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -204,7 +204,7 @@ const AICustomerExperienceAnalytics: React.FC = props {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='text-center''>''
-                <div className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-6'>'';
+                <div className='p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full w-fit mx-auto mb-6'>''
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -223,19 +223,19 @@ const AICustomerExperienceAnalytics: React.FC = props {
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='max-w-4xl mx-auto''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx;
+:pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
               Ready to Transform Your Customer Experience?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Join leading companies that use AI-powered analytics to deliver;
+              Join leading companies that use AI-powered analytics to deliver
               exceptional customer experiences.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<Link''                to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
                 <Rocket className='w-5 h-5 mr-2'  />                Start Free Trial
               </Link>'<Link''                to='/demo'';
-                className='inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
                 <Play className='w-5 h-5 mr-2'  />                Schedule Demo</Link>            </div>
           </motion.div>
@@ -247,11 +247,11 @@ const AICustomerExperienceAnalytics: React.FC = props {
           <div className='grid md:grid-cols-3 gap-8 text-center'>''
             <div className='flex flex-col items-center'>''
               <Phone className='w-8 h-8 text-purple-400 mb-4'  />''
-              <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>'';
+              <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>''
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
               <p className='text-gray-300'>+1 302 464 0950</p>'</div>''            <div className='flex flex-col items-center'>''
               <Mail className='w-8 h-8 text-purple-400 mb-4'  />''
-              <h3 className='text-xl font-bold text-white mb-2'>Email</h3>'';
+              <h3 className='text-xl font-bold text-white mb-2'>Email</h3>''
 :pages.disabled/pages/services/AICustomerExperienceAnalytics.tsx
               <p className='text-gray-300'>kleber@ziontechgroup.com</p>'</div>''            <div className='flex flex-col items-center'>''
               <MapPin className='w-8 h-8 text-purple-400 mb-4'  />''
@@ -267,5 +267,5 @@ const AICustomerExperienceAnalytics: React.FC = props {
     </div>
   )}
 ;
-export default AICustomerExperienceAnalytics''`;
+export default AICustomerExperienceAnalytics''`
   ''`'"`

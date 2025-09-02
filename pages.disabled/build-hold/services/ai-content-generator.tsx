@@ -62,7 +62,7 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
   'White-label solution',
   'Unlimited team members',
   '        'Advanced analytics;
-  ', 'Custom integrations';
+  ', 'Custom integrations'
   '      ], popular: false    }
   ]
   return(
@@ -113,5 +113,5 @@ import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
       </section>
     </MainLayout>
   )}
-;
+
 export default AIContentGenerator

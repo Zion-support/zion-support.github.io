@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-interface PerformanceMetrics {
-  loadTime: number;
+interface PerformanceMetrics { loadTime: number;
   renderTime: number;
   memoryUsage: number;
   networkLatency: number;
-}
+  }
 
 export const PerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -23,7 +22,7 @@ export const PerformanceOptimizer: React.FC = () => {
         setMetrics({
           loadTime, renderTime,
           memoryUsage, networkLatency
-        });
+        })
         // Check if performance is optimized
         const isGoodPerformance = loadTime < 3000 && renderTime < 1500 && memoryUsage < 50;
         setIsOptimized(isGoodPerformance);
@@ -66,7 +65,7 @@ export const PerformanceOptimizer: React.FC = () => {
     }
   };
   if (!metrics) {
-    return null;
+    return null
   }
 
   return (
@@ -114,4 +113,4 @@ export const PerformanceOptimizer: React.FC = () => {
     </div>
   );
 };
-export default PerformanceOptimizer;
+export default PerformanceOptimizer

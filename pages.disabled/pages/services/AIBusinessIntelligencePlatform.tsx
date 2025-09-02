@@ -154,7 +154,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       industry: 'Manufacturing',';
       description: 'Predictive maintenance, quality control, and supply chain optimization'},
     {'
-      industry: 'Retail',';
+      industry: 'Retail','
       description: 'Demand forecasting, customer segmentation, and store performance analysis'}  ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -162,7 +162,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
 <:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
       <SEO;
 =;
-      <SEO '>        title='AI Business Intelligence Platform - Zion Tech Group';
+      <SEO '>        title='AI Business Intelligence Platform - Zion Tech Group'
         description='Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making.'/>        title='AI Business Intelligence Platform - Zion Tech Group''        description='Advanced AI-powered business intelligence platform providing real-time insights, predictive analytics, and automated reporting for data-driven decision making.'/>'
       <SEO ''
         title='AI Business Intelligence Platform - Zion Tech Group'';
@@ -188,7 +188,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
             <Badge className='mb-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white border-0'>
               AI-Powered Business Intelligence'
             </Badge>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Transform Your Data Into''
               <span className='bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'> Actionable Intelligence</span>'
             </h1>''
@@ -197,9 +197,9 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
               predictive analytics, and automated reporting for data-driven decision making.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <Button size='lg' className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700'>';
+              <Button size='lg' className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700'>'
                 Start Free Trial''
-                <ArrowRight className='ml-2 h-5 w-5'  />';
+                <ArrowRight className='ml-2 h-5 w-5'  />'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -252,15 +252,15 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
 '';
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-              Powerful Features for Modern Businesses';
+              Powerful Features for Modern Businesses'
               Powerful Features for Modern Businesses
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our AI-powered platform combines cutting-edge technology with intuitive design;
+              Our AI-powered platform combines cutting-edge technology with intuitive design
               to deliver actionable business intelligence.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -301,7 +301,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500/50 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='h-6 w-6 text-white' />'
@@ -342,14 +342,14 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
 '';
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-              Transform Your Business Performance';
+              Transform Your Business Performance'
               Transform Your Business Performance
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               See measurable improvements in efficiency, decision-making, and business outcomes.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -423,14 +423,14 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
 '';
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-              Choose Your Plan';
+              Choose Your Plan'
               Choose Your Plan
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Flexible pricing options designed to scale with your business needs.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricingTiers.map(tier: unknown, index: unknown()
@@ -488,7 +488,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
                     <span className='text-gray-400 ml-2'>/{tier.period}</span>
                   </div>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                 </div>
@@ -548,14 +548,14 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
 '';
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx;
-              Industry Applications';
+              Industry Applications'
               Industry Applications
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Our platform is designed to work across various industries and use cases.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -592,9 +592,9 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
   delay: index * 0.1}}';
   delay: index * 0.1}}
                 viewport={{ once: true }}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700''
 ''
-                <h3 className='text-xl font-semibold text-white mb-3'>{useCase.industry}</h3>'';
+                <h3 className='text-xl font-semibold text-white mb-3'>{useCase.industry}</h3>''
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
                 <p className='text-gray-300'>{useCase.description}</p>
               </motion.div>
@@ -631,9 +631,9 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
               Join thousands of businesses already using AI to make better decisions and drive growth.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <Button size='lg' className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700'>';
+              <Button size='lg' className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700'>'
                 Start Free Trial''
-                <ArrowRight className='ml-2 h-5 w-5'  />';
+                <ArrowRight className='ml-2 h-5 w-5'  />'
   y: 0}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -682,7 +682,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
               Have questions? Our team is here to help you get started.
-            </p>';
+            </p>'
   y: 0}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -697,14 +697,14 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8'>''
               <div className='flex flex-col items-center'>''
                 <Phone className='h-8 w-8 text-cyan-500 mb-4'  />''
-                <h3 className='text-lg font-semibold text-white mb-2'>Phone</h3>'';
+                <h3 className='text-lg font-semibold text-white mb-2'>Phone</h3>''
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
                 <p className='text-gray-300'>+1 302 464 0950</p>'
                 <p className='text-gray-300'>+1 302 464 0950</p>
               </div>''
               <div className='flex flex-col items-center'>''
                 <Mail className='h-8 w-8 text-cyan-500 mb-4'  />''
-                <h3 className='text-lg font-semibold text-white mb-2'>Email</h3>'';
+                <h3 className='text-lg font-semibold text-white mb-2'>Email</h3>''
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
                 <p className='text-gray-300'>kleber@ziontechgroup.com</p>'
                 <p className='text-gray-300'>kleber@ziontechgroup.com</p>
@@ -714,7 +714,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
                 <h3 className='text-lg font-semibold text-white mb-2'>Address</h3>'                <p className='text-gray-300'>364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
-            </div>';
+            </div>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <Button size='lg' className='bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700'>
@@ -733,6 +733,6 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx)}''`;
+:pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx)}''`
 ''`''`)}
 ''`

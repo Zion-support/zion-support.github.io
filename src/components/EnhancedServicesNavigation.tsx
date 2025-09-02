@@ -108,14 +108,14 @@
     <div className = 'relative'>
       {/* Main Services Button */}
       <button''';'
-        onClick={() => setIsOpen(!isOpen)}'''';
+        onClick={() => setIsOpen(!isOpen)}''''
         className='relative px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2''''>'''''
         <span className='flex items-center gap-2'>
           <span>🚀</span>
           <span > Services</span>
           <motion.span
-            animate={{ rotate: isOpen ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
+            animate={{ rotate: isOpen ? 180 : 0   }}
+            transition={{ duration: 0.3   }}
           >
             ▼
           </motion.span>
@@ -133,7 +133,7 @@
             exit = {}
   { opacity: 0, y: -10,
   scale: 0.95}}''';'
-            transition={{ duration: 0.2 }}'''';
+            transition={{ duration: 0.2   }}'''';
             className='absolute top-full left-0 mt-2 w-screen max-w-6xl bg-white/95 backdrop-blur-lg rounded-xl shadow-2xl border border-gray-200 z-50 overflow-hidden''''>'''''
             <div className='p-6'>'''{/* Header */}'''''
               <div className='text-center mb-8'>''''
@@ -168,7 +168,7 @@
                           <h4 className='text-lg font-semibold'>{category.name}</h4>''''
                           <p className='text-sm opacity-90'>{category.description}</p>
                         </div>
-                      </div>''';'
+                      </div>''''
                       ''''
                       <div className='space-y-2'>
                         {category.services.map((service, serviceIndex) => (
@@ -213,7 +213,7 @@
                     >
                       <Link;
                         to={link.url}''';'
-                        onClick={() => setIsOpen(false)}'''';
+                        onClick={() => setIsOpen(false)}''''
                         className='block p-4 text-center rounded-lg bg-gray-50 hover: bg-gray-100 transition-colors duration-200 group''''>'''''
                         <div className='text-2xl mb-2 group-hover:scale-110 transition-transform duration-200'>
                           {link.icon}''''
@@ -249,9 +249,9 @@
       </AnimatePresence>
       {/* Backdrop */}
       {isOpen && (<motion.div;
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}''';'
-          exit={{ opacity: 0 }}'''';
+          initial={{ opacity: 0   }}
+          animate={{ opacity: 1   }}''';'
+          exit={{ opacity: 0   }}'''';
           className='fixed inset-0 bg-black/20 z-40''";'"
           onClick={() => setIsOpen(false)}
         />)}
@@ -262,7 +262,7 @@ export default EnhancedServicesNavigation;
 export { EnhancedServicesNavigation }
 ;
 export { EnhancedServicesNavigation }
-;
+
 export { EnhancedServicesNavigation }
 
 export { EnhancedServicesNavigation }

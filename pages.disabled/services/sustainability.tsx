@@ -40,19 +40,19 @@ export default function Sustainability(...args: []):  {
             <div className='inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2 mb-6'>''
               <Heart className='w-5 h-5 text-emerald-400'  />'              <span className='text-emerald-400 font-medium'>Green IT & Sustainability</span>
 :pages.disabled/services/sustainability.tsx
-            </div>';
+            </div>'
 ''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               Technology for a''
               <span className='text-gradient'> Sustainable Future</span>
             </h1>'''            <p className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto'>
               Build a greener tomorrow with sustainable technology solutions.;
-              Reduce environmental impact while maintaining performance and efficiency.;
+              Reduce environmental impact while maintaining performance and efficiency.
 :pages.disabled/services/sustainability.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <button className='btn-futuristic px-8 py-4 text-lg'>';
+              <button className='btn-futuristic px-8 py-4 text-lg'>'
                 Go Green with Tech''
                 <ArrowRight className='w-5 h-5 ml-2'  />'</button>'              <button className='btn-outline px-8 py-4 text-lg'>                Learn More
               </button>
@@ -93,7 +93,7 @@ export default function Sustainability(...args: []):  {
   { duration: 0.6,
 :pages.disabled/services/sustainability.tsx;
   delay: index * 0.1}}'viewport={{ once: true }}''                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/services/sustainability.tsx
                   <feature.icon className='w-8 h-8 text-white' />'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''
                 <p className='text-zion-slate-light'>{feature.description}</p>
@@ -137,7 +137,7 @@ export default function Sustainability(...args: []):  {
   delay: index * 0.1}}'viewport={{ once: true }}''                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group''>''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
                 <p className='text-slate-300 mb-4'>{service.description}</p>''
-                <div className='text-2xl font-bold text-emerald-400 mb-4'>{service.price}</div>'';
+                <div className='text-2xl font-bold text-emerald-400 mb-4'>{service.price}</div>''
 :pages.disabled/services/sustainability.tsx
                 <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='flex items-center text-sm text-slate-300'>''
                       <div className='w-2 h-2 bg-emerald-400 rounded-full mr-3'></div>
@@ -169,7 +169,7 @@ export default function Sustainability(...args: []):  {
   y: 0}}'transition={{ duration: 0.6 }}''            className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/services/sustainability.tsx;
-:pages.disabled/services/sustainability.tsx;
+:pages.disabled/services/sustainability.tsx
               Sustainability Solutions
 <=;
             </h2>'<p className='text-xl text-slate-300 max-w-3xl mx-auto'>              Discover how sustainable technology can transform various aspects of your business>              and create positive environmental impact
@@ -177,7 +177,7 @@ export default function Sustainability(...args: []):  {
           </motion.div>'
 Sustainability Solutions            </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Discover how sustainable technology can transform various aspects of your business;
+              Discover how sustainable technology can transform various aspects of your business
               and create positive environmental impact
             </p>
           </motion.div>
@@ -200,7 +200,7 @@ Sustainability Solutions            </h2>''
   delay: index * 0.1}}';
                 className='text-center group'>'
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>'}}''                className='text-center group''>''
-                <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>'';
+                <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>''
 :pages.disabled/services/sustainability.tsx
 </div>              </motion.div>
             ))}
@@ -222,7 +222,7 @@ Sustainability Solutions            </h2>''
             <div className='absolute inset-0 bg-black/20'></div>''
             <div className='relative z-10'>''
               <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/services/sustainability.tsx;
+:pages.disabled/services/sustainability.tsx
                 Ready to Go Green?'
               </h2>''
               <p className='text-xl text-emerald-100 mb-8 max-w-2xl mx-auto'>
@@ -239,5 +239,5 @@ Sustainability Solutions            </h2>''
         </div>
       </section>
     </div>
-:pages.disabled/services/sustainability.tsx)}'';
+:pages.disabled/services/sustainability.tsx)}''
   ''''

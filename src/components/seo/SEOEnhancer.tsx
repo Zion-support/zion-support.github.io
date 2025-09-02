@@ -33,7 +33,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           }
         });
       });
-      observer.observe({ entryTypes: ['navigation'] });
+      observer.observe({ entryTypes: ['navigation']   });
     }
   }, [title]);
   const defaultStructuredData = {
@@ -52,7 +52,7 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "sameAs": [
       "https://ziontechgroup.com"
     ]
-  };
+  }
   return (
     <Head>
       <title>{title}</title>
@@ -80,9 +80,8 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       {/* Structured Data */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData)
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData || defaultStructuredData)
+          }}
       />
       
       {/* Performance hints */}
@@ -97,4 +96,4 @@ export const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </Head>
   );
 };
-export default SEOEnhancer;
+export default SEOEnhancer

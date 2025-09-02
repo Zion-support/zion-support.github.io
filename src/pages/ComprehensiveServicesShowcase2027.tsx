@@ -30,8 +30,7 @@ import {
 // Import our existing service data
 import { ULTIMATE_INNOVATIVE_SERVICES_2026 } from '../data/ultimateInnovativeServices2026';
 import { comprehensiveServices } from '../data/comprehensiveServices';
-interface Service {
-  id: string;
+interface Service { id: string;
   name: string;
   category: string;
   description: string;
@@ -43,7 +42,7 @@ interface Service {
     enterprise: number;
     currency: string;
     billingCycle: string;
-  };
+    };
   rating: number;
   reviewCount: number;
   launchDate: string;
@@ -51,29 +50,26 @@ interface Service {
   marketPrice: string;
   estimatedDelivery: string;
   website?: string;
-  contactInfo?: {
-    phone: string;
+  contactInfo?: { phone: string;
     email: string;
     address: string;
-  };
+    };
 }
 
 const ComprehensiveServicesShowcase2027: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<string>('All');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name');
+  const [searchTerm, setSearchTerm] = useState('')
+  const [selectedCategory, setSelectedCategory] = useState<string>('All')
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'newest'>('name')
   const [selectedService, setSelectedService] = useState<Service | null>(null);
   // Combine services from multiple sources
   const allServices: Service[] = useMemo(() => {
     const services: Service[] = [];
     // Add services from ULTIMATE_INNOVATIVE_SERVICES_2026
     ULTIMATE_INNOVATIVE_SERVICES_2026.forEach(service => {
-      services.push({
-        id: service.id, name: service.name,
+      services.push({ id: service.id, name: service.name,
         category: service.category, description: service.description,
         features: service.features, benefits: service.benefits,
-        pricing: {
-          starter: service.pricing.starter, professional: service.pricing.professional,
+        pricing: { starter: service.pricing.starter, professional: service.pricing.professional,
           enterprise: service.pricing.enterprise, currency: service.pricing.currency,
           billingCycle: service.pricing.billingCycle
         }, rating: service.rating,
@@ -85,12 +81,10 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     });
     // Add services from comprehensiveServices
     comprehensiveServices.forEach(service => {
-      services.push({
-        id: service.id, name: service.name,
+      services.push({ id: service.id, name: service.name,
         category: service.category, description: service.description,
         features: service.features, benefits: service.benefits,
-        pricing: {
-          starter: service.pricing.starter, professional: service.pricing.professional,
+        pricing: { starter: service.pricing.starter, professional: service.pricing.professional,
           enterprise: service.pricing.enterprise, currency: service.pricing.currency,
           billingCycle: service.pricing.billingCycle
         }, rating: service.rating,
@@ -127,20 +121,20 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     }
 
     return filtered;
-  }, [allServices, searchTerm, selectedCategory, sortBy]);
+  }, [allServices, searchTerm, selectedCategory, sortBy])
   const getCategoryIcon = (category: string) => {
     switch (category) {
-      case 'Artificial Intelligence': return <Brain className="w-6 h-6" />;
-      case 'Quantum Computing': return <Atom className="w-6 h-6" />;
-      case 'Neuromorphic Computing': return <Cpu className="w-6 h-6" />;
-      case 'Synthetic Biology': return <Heart className="w-6 h-6" />;
-      case 'Blockchain': return <Blockchain className="w-6 h-6" />;
-      case 'Cybersecurity': return <Shield className="w-6 h-6" />;
-      case 'Internet of Things': return <Network className="w-6 h-6" />;
-      case 'Metaverse': return <Globe className="w-6 h-6" />;
-      case 'Robotics': return <Factory className="w-6 h-6" />;
-      case 'Space Technology': return <Satellite className="w-6 h-6" />;
-      default: return <Lightbulb className="w-6 h-6" />;
+      case 'Artificial Intelligence': return <Brain className="w-6 h-6" />
+      case 'Quantum Computing': return <Atom className="w-6 h-6" />
+      case 'Neuromorphic Computing': return <Cpu className="w-6 h-6" />
+      case 'Synthetic Biology': return <Heart className="w-6 h-6" />
+      case 'Blockchain': return <Blockchain className="w-6 h-6" />
+      case 'Cybersecurity': return <Shield className="w-6 h-6" />
+      case 'Internet of Things': return <Network className="w-6 h-6" />
+      case 'Metaverse': return <Globe className="w-6 h-6" />
+      case 'Robotics': return <Factory className="w-6 h-6" />
+      case 'Space Technology': return <Satellite className="w-6 h-6" />
+      default: return <Lightbulb className="w-6 h-6" />
     }
   };
   const getStatusColor = (status: string) => {
@@ -151,7 +145,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       case 'preview': return 'bg-purple-100 text-purple-800';
       default: return 'bg-gray-100 text-gray-800';
     }
-  };
+  }
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       {/* Header */}
@@ -161,7 +155,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8   }}
             className="text-center"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
@@ -173,16 +167,16 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05   }}
+                whileTap={{ scale: 0.95   }}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
                 <Play className="w-5 h-5" />
                 Watch Demo
               </motion.button>
               <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: 1.05   }}
+                whileTap={{ scale: 0.95   }}
                 className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2"
               >
                 <BookOpen className="w-5 h-5" />
@@ -251,7 +245,7 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
+                whileHover={{ y: -5   }}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedService(service)}
               >
@@ -327,8 +321,8 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0   }}
+            animate={{ opacity: 1   }}
             className="text-center py-16"
           >
             <Search className="w-16 h-16 text-gray-400 mx-auto mb-4" />
@@ -342,9 +336,9 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
       <AnimatePresence>
         {selectedService && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0   }}
+            animate={{ opacity: 1   }}
+            exit={{ opacity: 0   }}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={() => setSelectedService(null)}
           >
@@ -503,16 +497,16 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05   }}
+              whileTap={{ scale: 0.95   }}
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >
               <Phone className="w-5 h-5" />
               Call +1 302 464 0950
             </motion.button>
             <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              whileHover={{ scale: 1.05   }}
+              whileTap={{ scale: 0.95   }}
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-2 justify-center"
             >
               <Mail className="w-5 h-5" />
@@ -528,4 +522,4 @@ const ComprehensiveServicesShowcase2027: React.FC = () => {
     </div>
   );
 };
-export default ComprehensiveServicesShowcase2027;
+export default ComprehensiveServicesShowcase2027

@@ -1,13 +1,12 @@
 import Image from 'next/image';
 import { useState } from 'react';
-interface OptimizedImageProps {
-  src: string;
+interface OptimizedImageProps { src: string;
   alt: string;
   width?: number;
   height?: number;
   className?: string;
   priority?: boolean;
-  quality?: number}
+  quality?: number  }
 
 export default function OptimizedImage({
   src, alt,
@@ -32,7 +31,7 @@ export default function OptimizedImage({
         className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
         onLoad={() => setIsLoading(false)}
         onError={() => {
-          setHasError(true);
+          setHasError(true)
           setIsLoading(false)}}
         placeholder="blur"
         blurDataURL="data: image/jpegbase64, /9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="

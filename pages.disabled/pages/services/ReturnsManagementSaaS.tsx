@@ -1,18 +1,18 @@
 ;const ReturnsManagementSaaS: React.FC = (): JSX.Element => {}
-  return();
+  return()
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white'>'<SEO''        title='E-commerce Returns Management SaaS - Zion Tech Group'';
         description='Automate returns labels, RMA approvals, tracking, refunds, and analytics. Integrates with Shopify, WooCommerce, BigCommerce, and custom stores.'';
         keywords='returns management, RMA, e-commerce, Shopify, automation, logistics'';
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx;
-        canonical='/services/returns-management'/>';
+        canonical='/services/returns-management'/>'
 ''
       <section className='mx-auto max-w-6xl px-6 py-16'>''
         <div className='flex items-center gap-3 mb-6 text-cyan-300'>''
           <Package className='h-5 w-5'  />'          <span className='text-sm font-semibold'>RETURNS MANAGEMENT</span>'</div>''        <h1 className='text-4xl font-bold'>Reduce returns friction and costs</h1>''
         <p className='mt-3 text-slate-300 max-w-2xl'>
           Streamline returns with branded portals, label generation, smart approvals, carrier pick-ups, refund workflows,
-          exchanges, and analytics to cut costs and lift repeat purchase rate.;
+          exchanges, and analytics to cut costs and lift repeat purchase rate.
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
         </p>'''        <div className='mt-10 grid gap-6 sm:grid-cols-2'>''
           <div className='rounded-xl border border-white/10 bg-white/5 p-6'>''
@@ -28,7 +28,7 @@
             <div className='mb-2 font-semibold'>Integrations</div>''
             <ul className='space-y-2 text-sm text-slate-300'>''
               <li className='flex items-center gap-2'><Truck className='h-4 w-4 text-cyan-300' /> Shopify, WooCommerce, BigCommerce, Magento</li>''
-              <li className='flex items-center gap-2'><Truck className='h-4 w-4 text-cyan-300' /> UPS, USPS, FedEx, DHL</li>'';
+              <li className='flex items-center gap-2'><Truck className='h-4 w-4 text-cyan-300' /> UPS, USPS, FedEx, DHL</li>''
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
               <li className='flex items-center gap-2'><Truck className='h-4 w-4 text-cyan-300' /> ERP/WMS via REST or webhooks</li>'
             </ul>'            <div className='mt-4 text-sm font-semibold text-cyan-300'>Pricing: $49–$299/month typical</div>
@@ -54,11 +54,11 @@
             </ul>
           </div>
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-8 flex items-center gap-3 text-slate-300 text-sm'>''
           <DollarSign className='w-4 h-4 text-cyan-300'  />          <span>ROI: reduce reverse logistics cost and increase retention via seamless exchanges.</span>
-        </div>';
+        </div>'
 ''
         <div className='mt-8'>''
           <a href='/contact' className='inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition'>'Book a demo'            <LinkIcon className='w-4 h-4'  />          </a>
@@ -68,6 +68,6 @@
   )}
 ;
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx;
-export { ReturnsManagementSaaS }';
+export { ReturnsManagementSaaS }'
 export default ReturnsManagementSaaS}
   '''"

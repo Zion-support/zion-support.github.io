@@ -9,7 +9,7 @@ const Signup = lazy(() => import('../pages/Signup'));
 const ForgotPassword = lazy(() => import('../pages/ForgotPassword'));
 const UpdatePassword = lazy(() => import('../pages/UpdatePassword'));
 const Onboarding = lazy(() => import('../pages/Onboarding'));
-const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));
+const TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'))
 const ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))
 const AuthRoutes: React.FC = () => {
   return (<Suspense fallback={<LoadingSpinner />}>
@@ -39,4 +39,3 @@ const AuthRoutes: React.FC = () => {
       </Routes>
     </Suspense>
   )}
-;

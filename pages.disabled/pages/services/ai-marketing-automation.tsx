@@ -40,18 +40,18 @@ export default function AIMarketingAutomation(...args: any[]): any {return()    
               <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6'>''
                 <Brain className='w-4 h-4 text-cyan-400 mr-2'  />''
                 <span className='text-cyan-400 text-sm font-medium'>
-:pages.disabled/pages/services/ai-marketing-automation.tsx;
+:pages.disabled/pages/services/ai-marketing-automation.tsx
                   AI-Powered Marketing Automation
-                </span>              </div>';
+                </span>              </div>'
 ''
               <h1 className='text-4xl lg:text-6xl font-bold text-white mb-6'>
                 AI Marketing Automation
               </h1>'''              <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
                 Revolutionize your marketing with intelligent AI automation.;
                 Personalize campaigns, optimize ROI, and scale your marketing;
-                operations with data-driven insights and predictive analytics.;
+                operations with data-driven insights and predictive analytics.
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-              </p>';
+              </p>'
 ''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <motion.button;
@@ -80,7 +80,7 @@ export default function AIMarketingAutomation(...args: any[]): any {return()    
 :pages.disabled/pages/services/ai-marketing-automation.tsx
                 Intelligent Marketing Automation'</h2>''              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                 Our AI marketing automation platform combines advanced machine;
-                learning with intelligent workflows to deliver personalized;
+                learning with intelligent workflows to deliver personalized
                 customer experiences at scale.
               </p>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
@@ -91,7 +91,7 @@ export default function AIMarketingAutomation(...args: any[]): any {return()    
                   initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx;
                   whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                  className='bg-slate-700/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105''>''
-                  <div className='w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/ai-marketing-automation.tsx
                     <feature.icon className='w-6 h-6 text-cyan-400' />'
                   </div>''
@@ -112,7 +112,7 @@ export default function AIMarketingAutomation(...args: any[]): any {return()    
               <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
                 Multi-Channel Marketing Automation'</h2>''              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Automate your marketing across all channels with unified;
+                Automate your marketing across all channels with unified
                 AI-powered workflows and consistent customer experiences.
               </p>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
@@ -123,7 +123,7 @@ export default function AIMarketingAutomation(...args: any[]): any {return()    
                   initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx;
                   whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                  className='bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-6 rounded-xl border border-slate-600/30 hover:border-cyan-400/30 transition-all duration-300 hover:transform hover:scale-105''>''
-                  <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/ai-marketing-automation.tsx
                     <channel.icon className='w-6 h-6 text-purple-400' />'
                   </div>''
@@ -144,7 +144,7 @@ export default function AIMarketingAutomation(...args: any[]): any {return()    
               <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
                 Marketing Automation Use Cases'</h2>''              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Discover how AI marketing automation can transform your specific;
+                Discover how AI marketing automation can transform your specific
                 marketing challenges and business objectives.
               </p>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
@@ -155,7 +155,7 @@ export default function AIMarketingAutomation(...args: any[]): any {return()    
                   initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-marketing-automation.tsx;
                   whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                  className='text-center''>''
-                  <div className='w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                  <div className='w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/ai-marketing-automation.tsx
                     <useCase.icon className='w-8 h-8 text-cyan-400' />'
                   </div>''
@@ -176,11 +176,11 @@ export default function AIMarketingAutomation(...args: any[]): any {return()    
               <h2 className='text-3xl lg:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
                 Why Choose AI Marketing Automation?'</h2>''              <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                Experience unprecedented efficiency and results in your;
+                Experience unprecedented efficiency and results in your
                 marketing operations.
               </p>
 :pages.disabled/pages/services/ai-marketing-automation.tsx
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto'>''
               <div className='space-y-6'>
@@ -214,12 +214,12 @@ export default function AIMarketingAutomation(...args: any[]): any {return()    
 :pages.disabled/pages/services/ai-marketing-automation.tsx;
               whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''              className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/30 rounded-2xl p-12 text-center''>''
               <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/ai-marketing-automation.tsx;
+:pages.disabled/pages/services/ai-marketing-automation.tsx
                 Ready to Transform Your Marketing?'
               </h2>''
               <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
                 Join thousands of marketers already using AI to automate and;
-                optimize their campaigns. Start your free trial today and;
+                optimize their campaigns. Start your free trial today and
                 experience the future of marketing automation.'
               </p>''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -241,5 +241,5 @@ export default function AIMarketingAutomation(...args: any[]): any {return()    
       </div>
     </>
 :pages.disabled/pages/services/ai-marketing-automation.tsx)}
-  '';
+  ''
 '''"

@@ -164,7 +164,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
   ]},
     {'
       metric: '3x',';
-      label: 'Faster Processing',';
+      label: 'Faster Processing','
       description: 'Improved inventory processing speed'}  ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -176,20 +176,20 @@ export default function AIInventoryManagement(...args: any[]): any {}
       {/* Hero Section */}
       <section className='relative overflow-hidden py-20 lg:py-32'>
         <div className='absolute inset-0 bg-gradient-to-br from-green-900/20 via-transparent to-blue-900/20'></div>
-=;
+=
         title='AI Inventory Management - Zion Tech Group''        description='Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts.'/>{/* Hero Section */}'
       <section className='relative overflow-hidden py-20 lg:py-32'>'
         <div className='absolute inset-0 bg-gradient-to-br from-green-900/20 via-transparent to-blue-900/20'></div>
         '>  ]},'{'
       metric: '3x',';
       label: 'Faster Processing',';
-      description: 'Improved inventory processing speed'}  ]';
+      description: 'Improved inventory processing speed'}  ]'
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'
       <SEO'';
         title='AI Inventory Management - Zion Tech Group''        description='Optimize your inventory with AI-powered demand forecasting, real-time tracking, and automated reordering. Reduce costs and prevent stockouts.'/>'{/* Hero Section */}''
       <section className='relative overflow-hidden py-20 lg:py-32'>''
-        <div className='absolute inset-0 bg-gradient-to-br from-green-900/20 via-transparent to-blue-900/20'></div>';
+        <div className='absolute inset-0 bg-gradient-to-br from-green-900/20 via-transparent to-blue-900/20'></div>'
         ''{/* Hero Section */}''
       <section className='relative overflow-hidden py-20 lg:py-32'>''
         <div className='absolute inset-0 bg-gradient-to-br from-green-900/20 via-transparent to-blue-900/20'></div>
@@ -213,11 +213,11 @@ export default function AIInventoryManagement(...args: any[]): any {}
             <div className='inline-flex items-center px-4 py-2 bg-green-600/20 text-green-400 rounded-full text-sm font-medium mb-6'>''
               <Package className='w-4 h-4 mr-2'  />              AI-Powered Inventory'
             </div>''
-            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>'
               AI Inventory''
               <span className='bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent'>
                 {' '}Management
-              </span>';
+              </span>'
   y: 0}}
             transition={{ duration: 0.8 }}
           >''
@@ -233,12 +233,12 @@ export default function AIInventoryManagement(...args: any[]): any {}
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
 :pages.disabled/pages/services/AIInventoryManagement.tsx;
               Transform your inventory management with AI-powered forecasting, real-time tracking, and automated optimization.;
-              Reduce costs, prevent stockouts, and improve operational efficiency.;
+              Reduce costs, prevent stockouts, and improve operational efficiency.
 :pages.disabled/pages/services/AIInventoryManagement.tsx
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <button className='bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-lg flex items-center justify-center'>';
-              Transform your inventory management with AI-powered forecasting, real-time tracking, and automated optimization.;
+              Transform your inventory management with AI-powered forecasting, real-time tracking, and automated optimization.
               Reduce costs, prevent stockouts, and improve operational efficiency.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -293,7 +293,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
                 viewport={{ once: true }}';
                 className='text-center'>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='text-center''>''
                 <div className='text-4xl md:text-5xl font-bold text-green-400 mb-2'>
                   {metric.metric}'
@@ -301,7 +301,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
                 <div className='text-lg font-semibold text-white mb-2'>
                   {metric.label}';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='text-center''>''
                 <div className='text-4xl md:text-5xl font-bold text-green-400 mb-2'>
                   {metric.metric}
@@ -343,14 +343,14 @@ export default function AIInventoryManagement(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIInventoryManagement.tsx;
-              Powerful Features';
+              Powerful Features'
               Powerful Features
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Advanced AI capabilities designed to revolutionize your inventory management and supply chain operations.
             </p>
 :pages.disabled/pages/services/AIInventoryManagement.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -385,7 +385,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50'>';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50''>{/* Icon */}''
                 <div className='mb-6'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
@@ -439,14 +439,14 @@ export default function AIInventoryManagement(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIInventoryManagement.tsx;
-              Business Benefits';
+              Business Benefits'
               Business Benefits
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how AI-powered inventory management can transform your operations and drive business growth.
             </p>
 :pages.disabled/pages/services/AIInventoryManagement.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -481,7 +481,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50'>';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50''>{/* Icon */}''
                 <div className='mb-6'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
@@ -535,14 +535,14 @@ export default function AIInventoryManagement(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIInventoryManagement.tsx;
-              Transparent Pricing';
+              Transparent Pricing'
               Transparent Pricing
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the plan that fits your business needs. All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AIInventoryManagement.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -589,7 +589,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
 ';
                   plan.popular '';
-                    ? 'border-green-500/50 bg-gradient-to-br from-green-500/10 to-blue-500/10' ''`;
+                    ? 'border-green-500/50 bg-gradient-to-br from-green-500/10 to-blue-500/10' ''`
                     : 'border-white/10 hover:border-green-500/50'``}`}
 :pages.disabled/pages/services/AIInventoryManagement.tsx>'>{plan.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -601,12 +601,12 @@ export default function AIInventoryManagement(...args: any[]): any {}
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
-                  <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>'';
+                  <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>''
 :pages.disabled/pages/services/AIInventoryManagement.tsx
                   <div className='text-4xl font-bold text-white mb-2'>'{plan.price}''
                     <span className='text-lg text-gray-400'>{plan.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                   <div className='text-4xl font-bold text-white mb-2'>
@@ -622,7 +622,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
                     </li>
                   ))}
 :pages.disabled/pages/services/AIInventoryManagement.tsx
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -667,14 +667,14 @@ export default function AIInventoryManagement(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIInventoryManagement.tsx;
-              Industry Use Cases';
+              Industry Use Cases'
               Industry Use Cases
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               See how organizations across industries leverage our AI inventory management to optimize operations.
             </p>
 :pages.disabled/pages/services/AIInventoryManagement.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -709,7 +709,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50'>';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50''>{/* Icon */}''
                 <div className='mb-6'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
@@ -763,7 +763,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIInventoryManagement.tsx;
-              Seamless Integrations';
+              Seamless Integrations'
               Seamless Integrations
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -799,7 +799,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
                 viewport={{ once: true }}';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50'>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-green-500/50''>''
                 <h3 className='text-xl font-bold text-white mb-4 group-hover:text-green-400 transition-colors duration-300'>
                   {integration.name}'
@@ -854,7 +854,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
 :pages.disabled/pages/services/AIInventoryManagement.tsx;
-              Join thousands of businesses already using AI-powered inventory management;
+              Join thousands of businesses already using AI-powered inventory management
               to reduce costs and improve operational efficiency.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -862,14 +862,14 @@ export default function AIInventoryManagement(...args: any[]): any {}
                 <Star className='w-5 h-5 mr-2'  />                Start Free Trial
               </button>'
               <button className='border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg'>';
-              Join thousands of businesses already using AI-powered inventory management;
+              Join thousands of businesses already using AI-powered inventory management
               to reduce costs and improve operational efficiency.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 text-lg flex items-center justify-center'>''
                 <Star className='w-5 h-5 mr-2'  />                Start Free Trial'
               </button>''
-              <button className='border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg'>'';
+              <button className='border border-green-500 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-500 hover:text-white transition-all duration-300 text-lg'>''
   y: 0}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -878,7 +878,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
               Ready to Optimize Your Inventory?
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of businesses already using AI-powered inventory management;
+              Join thousands of businesses already using AI-powered inventory management
               to reduce costs and improve operational efficiency.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''

@@ -11,4 +11,3 @@ const ConsultingServices: React.FC = () => {
       </div>
 </>
   )}
-;

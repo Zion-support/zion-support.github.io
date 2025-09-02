@@ -7,7 +7,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
   const [isLoading, setIsLoading] = useState<typeof false>(false)
   const [teamRecommendation, setTeamRecommendation] = useState<any>(null)
   const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<any>(null);
-:pages.disabled/pages/team-builder/index.tsx;
+:pages.disabled/pages/team-builder/index.tsx
 :pages.disabled/pages/team-builder/index.tsx
   const { control, handleSubmit, trigger, formState: { errors } } = useForm<ProjectBriefFormData>({
     resolver: zodResolver(projectBriefSchema),
@@ -22,7 +22,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       lockBudget: false,
       talentFilters: { // New;
         verifiedOnly: false,';
-        regions: ''}}})'{ name: 'Review & Submit', fields: [] }, // No fields, just review;
+        regions: ''}}})'{ name: 'Review & Submit', fields: [] }, // No fields, just review
   ]
     if (isValid) {
       setCurrentStep((prev) => prev + 1)}
@@ -40,7 +40,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       talentFilters: { // New;
         verifiedOnly: false,
         regions: ''}}}){ name: 'Review & Submit', fields: [] }, // No fields, just review;
-  ];
+  ]
     if (isValid) {}
       setCurrentStep((prev) => prev + 1)}
   }
@@ -62,7 +62,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       ...data,
       techStack: data.techStack?.split(',).map(s   => s.trim()).filter(s => s) || [],
       talentFilters: any{ // Ensure talentFilters is structured correctly
-:pages.disabled/pages/team-builder/index.tsx;
+:pages.disabled/pages/team-builder/index.tsx
         verifiedOnly: data.talentFilters?.verifiedOnly,
 :pages.disabled/pages/team-builder/index.tsx
 <:pages.disabled/pages/team-builder/index.tsx;
@@ -130,7 +130,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       toast.error(`Failed to send invite: ${error.message}`)}
   }
 ;
-    if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available;
+    if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available
     return()
       <TeamRecommendationDisplay recommendation = {teamRecommendation}        projectBrief={projectBriefSubmitted}
         onInviteTalent={handleInviteTalent}
@@ -138,14 +138,14 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 :pages.disabled/pages/team-builder/index.tsx;
   // In the main return of TeamBuilderPage:;
   // Remove the step-based rendering for the last step (results view);
-  // Instead, conditionally render the form or the recommendation display:;
+  // Instead, conditionally render the form or the recommendation display:
   return()'
     <AppLayout>''
       <div className = 'container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl'> {/* Increased max-width */}''
         <Card className='mb-8'>';
   // In the main return of TeamBuilderPage: any;
   // Remove the step-based rendering for the last step (results view);
-  // Instead, conditionally render the form or the recommendation display: any;
+  // Instead, conditionally render the form or the recommendation display: any
   return()
     <AppLayout>''
       <div className = 'container mx-auto py-8 px-4 sm:px-6 lg:px-8 max-w-4xl'> {/* Increased max-width */}''
@@ -254,7 +254,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='lockTimeline' className='cursor-pointer text-sm font-medium'>
                         Lock Timeline (Prioritize meeting this timeline)
                       </Label>'
-                    </div>''{errors.lockTimeline && <p className='text-sm text-red-600 mt-1'>{errors.lockTimeline.message}</p>}';
+                    </div>''{errors.lockTimeline && <p className='text-sm text-red-600 mt-1'>{errors.lockTimeline.message}</p>}'
 ''
                     <div className='flex items-center space-x-2 mt-3'>'
                       <Controller'';
@@ -268,7 +268,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
                       <Label htmlFor='lockBudget' className='cursor-pointer text-sm font-medium'>
                         Lock Budget (Prioritize staying within this budget)
                       </Label>'
-                    </div>''{errors.lockBudget && <p className='text-sm text-red-600 mt-1'>{errors.lockBudget.message}</p>}';
+                    </div>''{errors.lockBudget && <p className='text-sm text-red-600 mt-1'>{errors.lockBudget.message}</p>}'
 ''
                     <div className='mt-6 pt-6 border-t'>''
                       <Label className='text-base font-medium'>Talent Filters (Optional)</Label>''
@@ -359,7 +359,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 ''
                       <div className='mt-3'>''
                         <Label htmlFor='talentRegions' className='text-sm font-medium'>
-                          Preferred Regions (Comma-separated, e.g., LATAM, Europe);
+                          Preferred Regions (Comma-separated, e.g., LATAM, Europe)
 :pages.disabled/pages/team-builder/index.tsx
                         </Label>'
                         <Controller'';
@@ -421,5 +421,5 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 ;
 :pages.disabled/pages/team-builder/index.tsx;
 export { TeamBuilderPage }export default TeamBuilderPage''`;
-''`''`;
+''`''`
 export { TeamBuilderPage }export default TeamBuilderPage''`

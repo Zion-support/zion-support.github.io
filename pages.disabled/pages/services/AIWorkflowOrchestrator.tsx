@@ -32,7 +32,7 @@ const AIWorkflowOrchestrator: React.FC = props {
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center text-white''>''
             <div className='flex justify-center mb-6'>''
-              <div className='p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full'>'';
+              <div className='p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full'>''
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
                 <Workflow className='w-8 h-8 text-white'  />              </div>'
             </div>''
@@ -41,15 +41,15 @@ const AIWorkflowOrchestrator: React.FC = props {
             </h1>''
             <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-300'>
               Intelligent workflow automation platform that orchestrates complex;
-              business processes with AI-powered optimization and real-time;
+              business processes with AI-powered optimization and real-time
               execution.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<Link''                to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
                 <Play className='w-5 h-5 mr-2'  />                Start Free Trial
               </Link>'<Link''                to='/demo'';
-                className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
                 <ArrowRight className='w-5 h-5 mr-2'  />                Watch Demo</Link>            </div>
           </motion.div>
@@ -69,7 +69,7 @@ const AIWorkflowOrchestrator: React.FC = props {
               optimize, and orchestrate complex business processes.
             </p>
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -77,7 +77,7 @@ const AIWorkflowOrchestrator: React.FC = props {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300''>''
-                <div className='p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg w-fit mb-6'>'';
+                <div className='p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg w-fit mb-6'>''
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
@@ -98,11 +98,11 @@ const AIWorkflowOrchestrator: React.FC = props {
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
               Transparent Pricing'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the plan that best fits your workflow automation needs. All;
+              Choose the plan that best fits your workflow automation needs. All
               plans include our core AI optimization features.
             </p>
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricingTiers.map(tier: unknown, index: unknown()
@@ -120,7 +120,7 @@ const AIWorkflowOrchestrator: React.FC = props {
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx)}';
+:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -131,7 +131,7 @@ const AIWorkflowOrchestrator: React.FC = props {
                     </span>''
                     <span className='text-gray-400 ml-1'>{tier.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>
                   {tier.features.map((feature, featureIndex) => (
@@ -168,11 +168,11 @@ const AIWorkflowOrchestrator: React.FC = props {
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
               Why Choose AI Workflow Orchestrator?'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Transform your business processes with intelligent automation that;
+              Transform your business processes with intelligent automation that
               learns and improves over time.
             </p>
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -180,7 +180,7 @@ const AIWorkflowOrchestrator: React.FC = props {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='text-center''>''
-                <div className='p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-fit mx-auto mb-6'>'';
+                <div className='p-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full w-fit mx-auto mb-6'>''
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -199,19 +199,19 @@ const AIWorkflowOrchestrator: React.FC = props {
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='max-w-4xl mx-auto''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx;
+:pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
               Ready to Transform Your Workflows?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Join thousands of businesses that have already automated their;
+              Join thousands of businesses that have already automated their
               processes with AI-powered intelligence.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<Link''                to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
                 <Rocket className='w-5 h-5 mr-2'  />                Start Free Trial
               </Link>'<Link''                to='/demo'';
-                className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
                 <Play className='w-5 h-5 mr-2'  />                Schedule Demo</Link>            </div>
           </motion.div>
@@ -223,11 +223,11 @@ const AIWorkflowOrchestrator: React.FC = props {
           <div className='grid md:grid-cols-3 gap-8 text-center'>''
             <div className='flex flex-col items-center'>''
               <Phone className='w-8 h-8 text-blue-400 mb-4'  />''
-              <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>'';
+              <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>''
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
               <p className='text-gray-300'>+1 302 464 0950</p>'</div>''            <div className='flex flex-col items-center'>''
               <Mail className='w-8 h-8 text-blue-400 mb-4'  />''
-              <h3 className='text-xl font-bold text-white mb-2'>Email</h3>'';
+              <h3 className='text-xl font-bold text-white mb-2'>Email</h3>''
 :pages.disabled/pages/services/AIWorkflowOrchestrator.tsx
               <p className='text-gray-300'>kleber@ziontechgroup.com</p>'</div>''            <div className='flex flex-col items-center'>''
               <MapPin className='w-8 h-8 text-blue-400 mb-4'  />''
@@ -243,5 +243,5 @@ const AIWorkflowOrchestrator: React.FC = props {
     </div>
   )}
 ;
-export { AIWorkflowOrchestrator }export default AIWorkflowOrchestrator''`;
+export { AIWorkflowOrchestrator }export default AIWorkflowOrchestrator''`
   ''`'"`

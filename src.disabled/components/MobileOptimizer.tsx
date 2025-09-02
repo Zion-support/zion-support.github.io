@@ -25,6 +25,6 @@ import React, { useState, useEffect, useCallback, useRef } from,
   'help'>(
   'general') const [settings, setSettings] = useState<MobileSettings>({ touchOptimization: true, gestureSupport: true, pinchZoom: true, rotationSupport: true, hapticFeedback: true, adaptiveLayout: true, mobileNavigation: true, touchTargets: true, swipeGestures: true, orientationLock:,
   auto', fontSize: 'medium, contrast:,
-  normal', brightness: 'auto })  const [deviceInfo, setDeviceInfo] = useState({ isMobile: false, isTablet: false, isDesktop: false, orientation:;
+  normal', brightness: 'auto })  const [deviceInfo, setDeviceInfo] = useState({ isMobile: false, isTablet: false, isDesktop: false, orientation:
   'portrait', screenSize: { width: 0, height: 0 }, pixelRatio: 1, touchSupport: false, batteryLevel: 0, connectionType:
   'unknown' })  const [gestureHistory, setGestureHistory] = useState<Array<{ type: string timestamp: Date details: string }>>([])  const [isOptimizing, setIsOptimizing] = useState(false) const touchStartRef = useRef<{ x: number y: number time: number } | null>(null) const gestureRef = useRef<HTMLDivElement>(null) '

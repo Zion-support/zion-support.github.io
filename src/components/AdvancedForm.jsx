@@ -65,7 +65,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 if (!phonePattern.test(stringValue.replace(/[\\s\-\\(\)]/g,))) {}
 ';'
 '';
-''';'
+''''
                     return 'Please enter a valid phone number'}
             }
             // Length validation
@@ -171,17 +171,17 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     // Get field icon;
     const getFieldIcon = useCallback((field) => {}
         switch(field.type) {}
-'''';
+''''
 ''''''
-            case 'email': return <Mail className='w-4 h-4'/>'';''''
-            case 'tel': return <Phone className='w-4 h-4'/>'';''''
-            case 'textarea': return <MessageSquare className='w-4 h-4'/>'';''''
-            case 'select': return <Building className='w-4 h-4'/>';'''
+            case 'email': return <Mail className='w-4 h-4'/>''''''
+            case 'tel': return <Phone className='w-4 h-4'/>''''''
+            case 'textarea': return <MessageSquare className='w-4 h-4'/>''''''
+            case 'select': return <Building className='w-4 h-4'/>''''
             default: return <User className='w-4 h-4'/>}
     }, []);
     // Render field;
     const renderField = useCallback((field) => {}
-        const fieldValidation = validation[field.name]';'
+        const fieldValidation = validation[field.name]''
         const isPasswordField = field.name.toLowerCase().includes('password')
         return (<motion.div key={field.name} initial = {}
   { opacity: 0, y: 20}} animate = {}
@@ -189,7 +189,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   y: 0 ''';'
 ''''}} className='space-y-2'>''''
         <label className='block text-sm font-medium text-gray-700 dark: text-gray-300'>'''{field.label}''''{field.required && <span className='text-red-500 ml-1'>*</span>}'
-        </label>''';'
+        </label>''''
 ''''
         <div className='relative'>'''{/* Field Icon */}'''''
           <div className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400'>
@@ -199,14 +199,14 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   (e) => handleFieldChange(field.name, e.target.value)`;
 ``} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched';'
                     ? fieldValidation.isValid'';
-                        ? 'border-green-500 focus: ring-green-200'''`;
+                        ? 'border-green-500 focus: ring-green-200'''`
                         : 'border-red-500 focus:ring-red-200''`'`
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`} rows={4}/>) : field.type === 'select' ? (<select name={field.name} value={fieldValue} onChange = {}
   (e) => handleFieldChange(field.name, e.target.value)`;
 ``} onBlur={() => handleFieldBlur(field.name)} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched';'
                     ? fieldValidation.isValid'';
                         ? 'border-green-500 focus: ring-green-200'''`;
-                        : 'border-red-500 focus:ring-red-200''`''`;'
+                        : 'border-red-500 focus:ring-red-200''`''`'
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}>''''
               <option value=''>Select an option</option>
               {field.options?.map(option => (<option key={option.value} value={option.value}>
@@ -214,7 +214,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
                 </option>))}''''''
             </select>) : field.type === 'checkbox' ? (<div className='flex items-center space-x-3'>''''
               <input type='checkbox' name={field.name} checked={fieldValue} onChange = {}
-  (e) => handleFieldChange(field.name, e.target.checked)''';'
+  (e) => handleFieldChange(field.name, e.target.checked)''''
 ''''} className='w-4 h-4 text-blue-600 border-gray-300 rounded focus: ring-blue-500'/>''''
               <span className='text-sm text-gray-600 dark:text-gray-400'>
                 {field.placeholder}
@@ -223,7 +223,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   (e) => handleFieldChange(field.name, e.target.value)`;
 ``} onBlur={() => handleFieldBlur(field.name)} placeholder={field.placeholder} className={`w-full pl-10 pr-3 py-3 border rounded-lg focus: outline-none focus:ring-2 transition-all duration-200 ${fieldValidation?.isTouched';'
                     ? fieldValidation.isValid'';
-                        ? 'border-green-500 focus: ring-green-200'''`;
+                        ? 'border-green-500 focus: ring-green-200'''`
                         : 'border-red-500 focus:ring-red-200''`'`
                     : 'border-gray-300 focus:ring-blue-200 focus:border-blue-500'}`}/>)}
 '''{/* Password Toggle */}''''{isPasswordField && (<button type='button' onClick={() => togglePasswordVisibility(field.name)} className='absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover: text-gray-600 transition-colors'>''''{showPassword[field.name] ? <EyeOff className='w-4 h-4'/> : <Eye className='w-4 h-4'/>}'
@@ -249,7 +249,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         <h3 className='text-2xl font-bold text-green-800 dark:text-green-200 mb-2'>
           Thank You!''''
         </h3>''''
-        <p className='text-green-600 dark:text-green-300'>';'
+        <p className='text-green-600 dark:text-green-300'>''
           Your message has been sent successfully. We'll get back to you soon!'
         </p>
       </motion.div>)}
@@ -300,5 +300,5 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             </motion.div>) }
         </AnimatePresence>
       </form>
-    </motion.div>)}''`;
+    </motion.div>)}''`
 ''`'"`'"

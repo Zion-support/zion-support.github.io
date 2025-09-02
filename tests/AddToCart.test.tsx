@@ -16,7 +16,7 @@ describe('Equipment Add to Cart'', () => {
   beforeEach(() => {
     (router.useParams as jest.Mock).mockReturnValue({ id: '2u-rack-mount-server })
     safeStorage.removeItem(
-  'cart');
+  'cart')
     jest.useFakeTimers()})
   afterEach(() => {
     jest.runOnlyPendingTimers()
@@ -39,7 +39,7 @@ describe('Equipment Add to Cart'', () => {
     act(() => {
       jest.runAllTimers()})
     const cart = JSON.parse(safeStorage.getItem(,
-  cart') ||'[]');
+  cart') ||'[]')
     expect(cart).toHaveLength(1)
     expect(cart[0]).toEqual(
       expect.objectContaining({ id: '2u-rack-mount-server, quantity: 2 }))})})

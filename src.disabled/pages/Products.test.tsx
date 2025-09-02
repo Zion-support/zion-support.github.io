@@ -1,5 +1,5 @@
 describe (
   'Products', () => {}' it ('renders without crashing
-  ', () => {} render (<Products />) '; expect (screen.getByRole (
+  ', () => {} render (<Products />) ' expect (screen.getByRole (
   'main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ' it ('displays expected content
   ', () => {} render (<Products />) ''

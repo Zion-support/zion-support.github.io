@@ -21,7 +21,7 @@ import {}
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400 bg-clip-text text-transparent'>
               AI FinTech Platform';
   Lock,
-  PieChart} from 'lucide-react.ts';
+  PieChart} from 'lucide-react.ts'
 const AIFinTechPlatform: React.FC = (): JSX.Element => {}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -40,11 +40,11 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
             </h1>''
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
               Transform financial services with AI that detects fraud in;
-              real-time, provides intelligent banking insights, and delivers;
+              real-time, provides intelligent banking insights, and delivers
               99.9% accuracy with automated financial operations.
             </p>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'
             <Button''
@@ -79,14 +79,14 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-            Why Choose AI FinTech Platform?;
+            Why Choose AI FinTech Platform?
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
           </h2>'
           </h2>
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>''
             <Card className='bg-slate-800/50 border-slate-700 p-6 text-center'>''
-              <div className='w-16 h-16 bg-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+              <div className='w-16 h-16 bg-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
                 <Shield className='w-8 h-8 text-emerald-400'  />'
               </div>''
@@ -98,11 +98,11 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 99.9% Fraud Detection
               </h3>''
               <p className='text-gray-300'>
-                Advanced AI algorithms identify and prevent financial fraud in;
+                Advanced AI algorithms identify and prevent financial fraud in
                 real-time
               </p>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6 text-center'>''
               <div className='w-16 h-16 bg-teal-600/20 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -120,11 +120,11 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 Real-time Processing
               </h3>''
               <p className='text-gray-300'>
-                Millisecond-level financial transactions with AI-powered;
+                Millisecond-level financial transactions with AI-powered
                 optimization
               </p>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6 text-center'>''
               <div className='w-16 h-16 bg-cyan-600/20 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -142,11 +142,11 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 50% Cost Reduction
               </h3>''
               <p className='text-gray-300'>
-                Automated financial operations reduce operational costs;
+                Automated financial operations reduce operational costs
                 significantly
               </p>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6 text-center'>''
               <div className='w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -164,7 +164,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 300% ROI
               </h3>''
               <p className='text-gray-300'>
-                AI-driven insights and automation deliver exceptional returns on;
+                AI-driven insights and automation deliver exceptional returns on
                 investment
               </p>            </Card>
           </div>
@@ -176,15 +176,15 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx
             Advanced Financial Features
-          </h2>';
+          </h2>'
             Advanced Financial Features
           </h2>
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''
             <div className='space-y-6'>''
-              <div className='flex items-start space-x-4'>'';
+              <div className='flex items-start space-x-4'>''
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
                 <div>''
@@ -196,12 +196,12 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                     AI Fraud Detection
                   </h3>''
                   <p className='text-gray-300'>
-                    Machine learning algorithms detect fraudulent transactions;
+                    Machine learning algorithms detect fraudulent transactions
                     with 99.9% accuracy in real-time
                   </p>
                 </div>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -217,12 +217,12 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                     Intelligent Risk Assessment
                   </h3>''
                   <p className='text-gray-300'>
-                    AI-powered credit scoring and risk analysis for better;
+                    AI-powered credit scoring and risk analysis for better
                     lending decisions
                   </p>
                 </div>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -238,12 +238,12 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                     Automated Compliance
                   </h3>''
                   <p className='text-gray-300'>
-                    Regulatory compliance automation for KYC, AML, and financial;
+                    Regulatory compliance automation for KYC, AML, and financial
                     regulations
                   </p>
                 </div>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -264,7 +264,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 </div>
               </div>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-            </div>';
+            </div>'
 ''
             <div className='space-y-6'>''
               <div className='flex items-start space-x-4'>''
@@ -282,12 +282,12 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                     Smart Banking
                   </h3>''
                   <p className='text-gray-300'>
-                    Intelligent banking operations with automated customer;
+                    Intelligent banking operations with automated customer
                     service and insights
                   </p>
                 </div>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -303,12 +303,12 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                     Blockchain Integration
                   </h3>''
                   <p className='text-gray-300'>
-                    Secure blockchain-based transactions with AI-powered smart;
+                    Secure blockchain-based transactions with AI-powered smart
                     contracts
                   </p>
                 </div>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -324,12 +324,12 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                     Real-time Reporting
                   </h3>''
                   <p className='text-gray-300'>
-                    Instant financial reporting and regulatory compliance;
+                    Instant financial reporting and regulatory compliance
                     monitoring
                   </p>
                 </div>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -345,7 +345,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                     Multi-Currency Support
                   </h3>''
                   <p className='text-gray-300'>
-                    Global financial operations with real-time currency;
+                    Global financial operations with real-time currency
                     conversion and hedging
                   </p>                </div>
               </div>
@@ -359,15 +359,15 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx
             Comprehensive Financial Solutions
-          </h2>';
+          </h2>'
             Comprehensive Financial Solutions
           </h2>
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
-              <div className='w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center mb-4'>'';
+              <div className='w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
                 <CreditCard className='w-6 h-6 text-emerald-400'  />'
               </div>''
@@ -379,11 +379,11 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 Digital Banking
               </h3>''
               <p className='text-gray-300'>
-                AI-powered online banking with intelligent financial insights;
+                AI-powered online banking with intelligent financial insights
                 and automation
               </p>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
               <div className='w-12 h-12 bg-teal-600/20 rounded-lg flex items-center justify-center mb-4'>''
@@ -393,9 +393,9 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 Fraud Prevention'
               </h3>''
               <p className='text-gray-300'>
-                Real-time fraud detection and prevention across all financial;
+                Real-time fraud detection and prevention across all financial
                 transactions
-              </p>            </Card>';
+              </p>            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
               <div className='w-12 h-12 bg-cyan-600/20 rounded-lg flex items-center justify-center mb-4'>''
@@ -413,7 +413,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 Fraud Prevention
               </h3>''
               <p className='text-gray-300'>
-                Real-time fraud detection and prevention across all financial;
+                Real-time fraud detection and prevention across all financial
                 transactions
               </p>            </Card>
 ''
@@ -428,7 +428,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 AI-driven investment recommendations and portfolio optimization
               </p>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
               <div className='w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4'>''
@@ -449,7 +449,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 Intelligent credit scoring and automated lending decisions
               </p>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
               <div className='w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4'>''
@@ -467,11 +467,11 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 Cross-Border Payments
               </h3>''
               <p className='text-gray-300'>
-                Global payment processing with AI-powered compliance and fraud;
+                Global payment processing with AI-powered compliance and fraud
                 detection
               </p>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
               <div className='w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4'>''
@@ -500,15 +500,15 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx
             Competitive Pricing
-          </h2>';
+          </h2>'
             Competitive Pricing
           </h2>
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>''
             <Card className='bg-slate-800/50 border-slate-700 p-8 text-center relative'>''
-              <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
+              <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
                 <Badge variant='secondary'>Starter</Badge>'
               </div>''
@@ -530,7 +530,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
               <ul className='space-y-3 mb-8 text-left'>''
                 <li className='flex items-center text-gray-300'>''
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3'  />
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx
                   Up to 10,000 transactions/month'
                 </li>''
                 <li className='flex items-center text-gray-300'>''
@@ -543,7 +543,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 </li>''
                 <li className='flex items-center text-gray-300'>''
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3'  />                  Email support
-                </li>';
+                </li>'
                   Up to 10,000 transactions/month
                 </li>''
                 <li className='flex items-center text-gray-300'>''
@@ -562,7 +562,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 Start Free Trial
               </Button>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-gradient-to-br from-emerald-600 to-teal-600 p-8 text-center relative transform scale-105'>''
               <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'
@@ -583,7 +583,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
               </div>''
               <h3 className='text-2xl font-bold text-white mb-4'>Enterprise</h3>''
               <div className='mb-6'>''
-                <span className='text-4xl font-bold text-white'>$2,499</span>'';
+                <span className='text-4xl font-bold text-white'>$2,499</span>''
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
                 <span className='text-emerald-100'>/month</span>'
                 <span className='text-emerald-100'>/month</span>
@@ -591,7 +591,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
               <ul className='space-y-3 mb-8 text-left'>''
                 <li className='flex items-center text-white'>''
                   <CheckCircle className='w-5 h-5 text-white mr-3'  />
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx
                   Up to 100,000 transactions/month'
                 </li>''
                 <li className='flex items-center text-white'>''
@@ -608,7 +608,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 </li>''
                 <li className='flex items-center text-white'>''
                   <CheckCircle className='w-5 h-5 text-white mr-3'  />                  API access
-                </li>';
+                </li>'
                   Up to 100,000 transactions/month
                 </li>''
                 <li className='flex items-center text-white'>''
@@ -631,7 +631,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 Get Started
               </Button>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-8 text-center relative'>''
               <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -644,7 +644,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
               </div>''
               <h3 className='text-2xl font-bold text-white mb-4'>Ultimate</h3>''
               <div className='mb-6'>''
-                <span className='text-4xl font-bold text-white'>$5,999</span>'';
+                <span className='text-4xl font-bold text-white'>$5,999</span>''
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
                 <span className='text-gray-400'>/month</span>'
                 <span className='text-gray-400'>/month</span>
@@ -652,7 +652,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
               <ul className='space-y-3 mb-8 text-left'>''
                 <li className='flex items-center text-gray-300'>''
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3'  />
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx
                   Unlimited transactions'
                 </li>''
                 <li className='flex items-center text-gray-300'>''
@@ -669,7 +669,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
                 </li>''
                 <li className='flex items-center text-gray-300'>''
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3'  />                  White-label options
-                </li>';
+                </li>'
                   Unlimited transactions
                 </li>''
                 <li className='flex items-center text-gray-300'>''
@@ -701,16 +701,16 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx
             Market Analysis & ROI
-          </h2>';
+          </h2>'
             Market Analysis & ROI
           </h2>
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>''
             <div className='text-center'>''
               <div className='text-4xl font-bold text-emerald-400 mb-2'>
-:pages.disabled/pages/services/AIFinTechPlatform.tsx;
+:pages.disabled/pages/services/AIFinTechPlatform.tsx
                 $245.8B'
               </div>''
               <div className='text-gray-300'>Global FinTech Market (2026)</div>'
@@ -723,7 +723,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
             </div>''
             <div className='text-center'>''
               <div className='text-4xl font-bold text-cyan-400 mb-2'>99.9%</div>''
-              <div className='text-gray-300'>Fraud Detection Accuracy</div>';
+              <div className='text-gray-300'>Fraud Detection Accuracy</div>'
                 $245.8B
               </div>''
               <div className='text-gray-300'>Global FinTech Market (2026)</div>
@@ -752,12 +752,12 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
         <div className='max-w-4xl mx-auto text-center'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-8'>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx;
-            Ready to Transform Financial Services?';
+            Ready to Transform Financial Services?'
             Ready to Transform Financial Services?
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
             Join financial institutions already using AI to revolutionize their;
-            operations.;
+            operations.
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
           </p>'
           </p>
@@ -781,7 +781,7 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
               <Globe className='w-5 h-5 text-emerald-400'  />              <span>ziontechgroup.com</span>
             </div>
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
             <Button''
@@ -825,5 +825,5 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
     </div>
   )}
 :pages.disabled/pages/services/AIFinTechPlatform.tsx;
-export default AIFinTechPlatform'';''";
+export default AIFinTechPlatform'';''"
 export default AIFinTechPlatform''

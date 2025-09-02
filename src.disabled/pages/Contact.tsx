@@ -1,4 +1,4 @@
-import React from 'react';import { SEO } from '../components / SEO'';const Contact: React.FC = () => {';
+import React from 'react';import { SEO } from '../components / SEO'';const Contact: React.FC = () => {'
 export default Contact
   return (
     <>

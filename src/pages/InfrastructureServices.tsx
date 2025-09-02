@@ -11,4 +11,3 @@ const InfrastructureServices: React.FC = () => {
       </div>
 </>
   )}
-;

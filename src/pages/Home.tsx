@@ -9,20 +9,16 @@ import {
 } from 'lucide-react';
 export default React.memo(function Home() {
   const features = [
-    { 
-      icon: Brain, title: 'AI-Powered Solutions', 
+    { icon: Brain, title: 'AI-Powered Solutions', 
       description: 'Cutting-edge artificial intelligence that transforms business operations and drives innovation.', color: 'from-purple-500 to-pink-500' 
     },
-    { 
-      icon: Atom, title: 'Quantum Computing', 
+    { icon: Atom, title: 'Quantum Computing', 
       description: 'Next-generation quantum solutions that solve complex problems beyond classical computing.', color: 'from-orange-500 to-red-500' 
     },
-    { 
-      icon: Rocket, title: 'Micro SAAS Platform', 
+    { icon: Rocket, title: 'Micro SAAS Platform', 
       description: 'Innovative software-as-a-service solutions that scale with your business needs.', color: 'from-blue-500 to-cyan-500' 
     },
-    { 
-      icon: Shield, title: 'Enterprise Security', 
+    { icon: Shield, title: 'Enterprise Security', 
       description: 'Military-grade cybersecurity and compliance solutions for enterprise protection.', color: 'from-green-500 to-emerald-500' 
     }
   ];
@@ -31,21 +27,17 @@ export default React.memo(function Home() {
     { number: '25+', label: 'Countries Served', icon: Globe }, { number: '99%', label: 'Client Satisfaction', icon: Star }
   ];
   const services = [
-    { 
-      title: 'AI Services', description: 'Comprehensive AI solutions for business automation and intelligence', 
+    { title: 'AI Services', description: 'Comprehensive AI solutions for business automation and intelligence', 
       href: '/ai-services', icon: Brain, 
       color: 'from-purple-500 to-pink-500' 
-    }, { 
-      title: 'IT Infrastructure', 
+    }, { title: 'IT Infrastructure', 
       description: 'Enterprise-grade IT solutions and cloud architecture', href: '/it-services', 
       icon: Server, color: 'from-green-500 to-emerald-500' 
     },
-    { 
-      title: 'Quantum Solutions', description: 'Cutting-edge quantum computing and technology services', 
+    { title: 'Quantum Solutions', description: 'Cutting-edge quantum computing and technology services', 
       href: '/services/quantum-computing', icon: Atom, 
       color: 'from-orange-500 to-red-500' 
-    }, { 
-      title: 'Micro SAAS', 
+    }, { title: 'Micro SAAS', 
       description: 'Innovative software solutions for modern businesses', href: '/micro-saas', 
       icon: Rocket, color: 'from-blue-500 to-cyan-500' 
     }
@@ -86,7 +78,7 @@ export default React.memo(function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8   }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -123,7 +115,7 @@ export default React.memo(function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8   }}
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -170,7 +162,7 @@ export default React.memo(function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
             >
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
@@ -206,7 +198,7 @@ export default React.memo(function Home() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -260,4 +252,4 @@ export default React.memo(function Home() {
       </section>
 </>
   );
-});
+})

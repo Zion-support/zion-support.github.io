@@ -148,7 +148,7 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
                     'Multi-channel automation',
                     'Real-time analytics',
                     'Priority support',
-                    'Custom integrations';
+                    'Custom integrations'
                   ],
                   popular: true},
                 {
@@ -228,7 +228,7 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
               <div>
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
-                  {[;
+                  {[
                     'Reduce customer churn by up to 40% with predictive interventions',
                     'Increase customer lifetime value by 250% through AI optimization',
                     'Improve customer satisfaction scores by 60% with personalized experiences',
@@ -306,5 +306,5 @@ const AIAutonomousCustomerSuccessPlatform: React.FC = () => {
       </div>
     </>
   )}
-;
+
 export default AIAutonomousCustomerSuccessPlatform

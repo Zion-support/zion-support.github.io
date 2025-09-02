@@ -69,7 +69,7 @@ import {
                           featuredWebinar.status === 'upcoming';
                             ? 'default';
                             : 'secondary'}
-                        className='text-xs'>{featuredWebinar.status === 'upcoming';
+                        className='text-xs'>{featuredWebinar.status === 'upcoming'
                           ? 'Upcoming'
                           : 'Recorded'}
                       </Badge>
@@ -106,7 +106,7 @@ import {
 :pages.disabled_auto/webinars.tsx{featuredWebinar.status ===,
   upcoming' ?;
   'Register Now': 'Watch Recording}
-                        {featuredWebinar.status === 'upcoming';
+                        {featuredWebinar.status === 'upcoming'
                           ? 'Register Now'
                           : 'Watch Recording'}
                         <ArrowRight className='w-4 h-4 ml-2' />
@@ -267,5 +267,5 @@ import {
       </section>
     </div>
   )}
-;
+
 export default Webinars

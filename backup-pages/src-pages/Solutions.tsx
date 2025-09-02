@@ -114,7 +114,7 @@
                   onClick={() => setSelectedIndustry(industry.id)}
                   className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center ${
                     selectedIndustry === industry.id,
-  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30';
+  ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/30'
   ': 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-700/50`}`}
                 >'
                   <industry.icon className='w-5 h-5 mr-2' />
@@ -122,7 +122,7 @@
                 </button>) ) }
                 <select;
                   value={selectedCategory}
-                  onChange={(e) => setSelectedCategory(e.target.value)}';
+                  onChange={(e) => setSelectedCategory(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan'
                 >{categories.map (category => (<option key={category} value={category}>{category}</option>) ) }
                 </select>
@@ -131,7 +131,7 @@
               <div>
                 <select;
                   value={selectedIndustry}
-                  onChange={(e) => setSelectedIndustry(e.target.value)}';
+                  onChange={(e) => setSelectedIndustry(e.target.value)}'
                   className='w-full px-4 py-3 bg-white/10 border border-white/20 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-zion-cyan'
                 >{industries.map (industry => (<option key={industry} value={industry}>{industry}</option>) ) }
                 </select>
@@ -319,7 +319,7 @@
               Ready to Transform Your Business?
             </h2>'
             <p className='text-zion-slate-light text-lg mb-8'>
-              Let's discuss how our technology solutions can address your specific challenges;
+              Let's discuss how our technology solutions can address your specific challenges
               and drive measurable results for your organization.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

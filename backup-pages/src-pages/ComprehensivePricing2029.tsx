@@ -4,7 +4,7 @@ export default function ComprehensivePricing2029(...args: any[]): any {
   All');
   const [searchQuery, setSearchQuery] = useState(';
   ');
-  const [viewMode, setViewMode] = useState<any>('grid;
+  const [viewMode, setViewMode] = useState<any>('grid
   ')
   const [sortBy, setSortBy] = useState<any>('popularity;
   ');
@@ -24,7 +24,7 @@ return parseFloat(a.price.replace('$, ,
       case;
   'popularity:;
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) ;
-      default:;
+      default:
         return 0}
   })
     return iconMap[category] || Cpu}
@@ -85,7 +85,7 @@ return parseFloat(a.price.replace('$, ,
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}';
             className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-            Discover our complete portfolio of revolutionary micro SAAS, AI, and IT services.;
+            Discover our complete portfolio of revolutionary micro SAAS, AI, and IT services.
             From quantum computing to emotional intelligence AI, we have solutions for every business need.
           </motion.p>
           {/* Stats */}
@@ -128,7 +128,7 @@ return parseFloat(a.price.replace('$, ,
                 <input';
                   type='text''                  placeholder='Search services by name, description, or features...';
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}';
+                  onChange={(e) => setSearchQuery(e.target.value)}'
                   className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 />
               </div>
@@ -137,7 +137,7 @@ return parseFloat(a.price.replace('$, ,
                 {categories.map((category) => (
                   <button;
                     key={category}
-                    onClick={() => setSelectedCategory(category)}`;
+                    onClick={() => setSelectedCategory(category)}`
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                       selectedCategory === category,
   ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-lg'
@@ -150,7 +150,7 @@ return parseFloat(a.price.replace('$, ,
                 <span className='text-gray-400 text-sm'>Sort by:</span>
                 <select;
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as )}';
+                  onChange={(e) => setSortBy(e.target.value as )}'
                   className='bg-white/10 border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500'>'
                   <option value='popularity'>Popularity</option>'
                   <option value='price'>Price</option>'
@@ -164,7 +164,7 @@ return parseFloat(a.price.replace('$, ,
   'grid')}`;
                   className={`p-2 rounded-md transition-all duration-300 ${
                     viewMode ===;
-  'grid' ?;
+  'grid' ?
   'bg-gradient-to-r from-cyan-500 to-purple-500 text-white': 'text-gray-400 hover:text-white`}`}
                 >'
                   <Grid className='w-5 h-5'  />                </button>
@@ -173,7 +173,7 @@ return parseFloat(a.price.replace('$, ,
   ')}`;
                   className={`p-2 rounded-md transition-all duration-300 ${
                     viewMode === 'list;
-  ' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white;
+  ' ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white
   ': 'text-gray-400 hover:text-white`}`}
                 >'
                   <List className='w-5 h-5'  />                </button>

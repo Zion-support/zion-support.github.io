@@ -20,7 +20,7 @@ const FloatingActionButton = ({ className = '' }) => {}
       label: 'Email', ';'
       action: () => window.open('mailto: info@ziontechgroup.com', _self'), ';
       color: 'bg-purple-500 hover:bg-purple-600'}
-  ];
+  ]
   return ()
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>
       <AnimatePresence>
@@ -90,7 +90,7 @@ export { FloatingActionButton }
 export { FloatingActionButton }
 ;
 export { FloatingActionButton }
-;
+
 export { FloatingActionButton }
 
 export { FloatingActionButton }

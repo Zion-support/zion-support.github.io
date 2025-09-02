@@ -231,7 +231,7 @@ const Whitepapers: NextPage = () => {
   'Software Architecture',
   'Data Analytics',
   'Mobile Development'];
-      topics: ['React Native', 'Flutter', 'Performance', 'User Experience']}];
+      topics: ['React Native', 'Flutter', 'Performance', 'User Experience']}]
   const categories = [
     'All',
     'Artificial Intelligence',
@@ -279,7 +279,7 @@ const Whitepapers: NextPage = () => {
             </p>
           </div>
           <div className='space-y-12'>
-            {whitepapers;
+            {whitepapers
               .filter(paper => paper.featured)
               .map(paper => (
                 <div
@@ -369,7 +369,7 @@ const Whitepapers: NextPage = () => {
             </p>
           </div>
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
-            {whitepapers;
+            {whitepapers
               .filter(paper => !paper.featured)
               .map(paper => (
                 <div
@@ -453,7 +453,7 @@ const Whitepapers: NextPage = () => {
             Stay Updated with Latest Research
           </h2>
           <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-            Subscribe to receive our latest whitepapers and research insights;
+            Subscribe to receive our latest whitepapers and research insights
             directly in your inbox.
           </p>
           <div className='max-w-md mx-auto flex'>
@@ -469,5 +469,5 @@ const Whitepapers: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default Whitepapers

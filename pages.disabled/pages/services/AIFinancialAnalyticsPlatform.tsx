@@ -16,9 +16,9 @@ import {}
 export default function AIFinancialAnalyticsPlatform(...args: any[]): any {return()    <div className='min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-green-900 via-green-800 to-green-700 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-            <DollarSign className='w-4 h-4 mr-2'  /> AI-Powered Financial;
+            <DollarSign className='w-4 h-4 mr-2'  /> AI-Powered Financial
             Analytics'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>
@@ -27,7 +27,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
             predictive modeling, and real-time market insights.
           </p>        </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -40,7 +40,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
                 </li>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx))}'</ul>''            <div className='mt-6 text-sm text-zion-slate-light'>
               SOC 2 Type II, FINRA, SEC compliant. Real-time market data feeds.;
-              99.99% uptime SLA.;
+              99.99% uptime SLA.
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
             </div>'
           </div>''
@@ -73,7 +73,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
             </div>
           </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-2 gap-8'>'
           <div>''
@@ -98,7 +98,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
             </ul>
           </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12'>''
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>
@@ -112,7 +112,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
             ))}
           </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12'>''
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>
@@ -126,7 +126,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
             ))}
           </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 bg-gradient-to-r from-green-50 to-green-100 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-4 text-center'>
@@ -174,7 +174,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
             </div>
           </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-4 text-center'>
@@ -182,7 +182,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
             <div className='text-center'>''
               <Shield className='w-12 h-12 text-blue-600 mx-auto mb-3'  />''
               <h4 className='font-semibold text-zion-slate-dark mb-2'>
-:pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx;
+:pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
                 Financial Regulations'
               </h4>''
               <p className='text-sm text-zion-slate-light'>
@@ -196,18 +196,18 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
               </p>            </div>
           </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-zion-slate-light mb-2'>
             Ready to transform your financial analytics?'
           </div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<a''              href='tel:+13024640950'';
-              className='inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg''>'';
+              className='inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg''>''
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
               <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950
             </a>'<a''              href='mailto:kleber@ziontechgroup.com'';
-              className='inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg''>'';
+              className='inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg''>''
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
               <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com
             </a>'
@@ -222,5 +222,5 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {retur
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx)}'';
+:pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx)}''
   ''''

@@ -199,7 +199,7 @@ export function Cybersecurity() {
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Protect your digital assets with comprehensive cybersecurity;
               solutions. From threat detection to compliance management, we;
-              provide the security foundation your business needs to thrive in;
+              provide the security foundation your business needs to thrive in
               the digital age.
             </p>
             <div className='flex flex-wrap justify-center gap-4'>
@@ -281,7 +281,7 @@ export function Cybersecurity() {
               Security Service Categories
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-              Our cybersecurity services are organized into comprehensive;
+              Our cybersecurity services are organized into comprehensive
               categories to address all aspects of your security needs.
             </p>
           </motion.div>
@@ -332,7 +332,7 @@ export function Cybersecurity() {
               Security Technologies
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-              We leverage cutting-edge security technologies and tools to;
+              We leverage cutting-edge security technologies and tools to
               provide comprehensive protection for your digital infrastructure.
             </p>
           </motion.div>
@@ -371,7 +371,7 @@ export function Cybersecurity() {
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Our cybersecurity solutions help you meet industry standards and;
-              regulatory requirements while maintaining robust security;
+              regulatory requirements while maintaining robust security
               practices.
             </p>
           </motion.div>
@@ -411,7 +411,7 @@ export function Cybersecurity() {
               Ready to Secure Your Digital Future?
             </h2>
             <p className='text-xl text-red-100 mb-8'>
-              Let's discuss how our cybersecurity solutions can protect your;
+              Let's discuss how our cybersecurity solutions can protect your
               business and ensure compliance with industry standards.
             </p>
             <div className='flex flex-wrap justify-center gap-4'>

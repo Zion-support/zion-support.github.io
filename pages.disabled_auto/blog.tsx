@@ -130,7 +130,7 @@ const Blog: React.FC = () => {
     { name: 'Security', count: 4, active: false },
     { name: 'Cloud', count: 3, active: false },
     { name: 'Customer Experience', count: 2, active: false },
-    { name: 'Analytics', count: 1, active: false }];
+    { name: 'Analytics', count: 1, active: false }]
   const featuredPost = blogPosts.find(post => post.featured)
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -152,7 +152,7 @@ const Blog: React.FC = () => {
               Technology Blog
             </h1>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Stay ahead with expert insights on AI, technology trends, and;
+              Stay ahead with expert insights on AI, technology trends, and
               business innovation.
             </p>
           </motion.div>
@@ -231,7 +231,7 @@ const Blog: React.FC = () => {
                   Latest Articles
                 </h2>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-                  {blogPosts;
+                  {blogPosts
                     .filter(post => !post.featured)
                     .map((post, index) => (
                       <motion.div
@@ -327,7 +327,7 @@ const Blog: React.FC = () => {
                     Stay Updated
                   </h3>
                   <p className='text-gray-300 mb-4 text-sm'>
-                    Get the latest AI insights and technology trends delivered;
+                    Get the latest AI insights and technology trends delivered
                     to your inbox.
                   </p>
                   <div className='space-y-3'>
@@ -380,7 +380,7 @@ const Blog: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className='text-xl text-gray-300 mb-8'>
-              Let our experts help you implement the latest AI technologies and;
+              Let our experts help you implement the latest AI technologies and
               drive innovation in your organization.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -400,5 +400,5 @@ const Blog: React.FC = () => {
       </section>
     </div>
   )}
-;
+
 export default Blog

@@ -14,7 +14,7 @@ test;
     <MemoryRouter>
       <CreatePostButton />
     </MemoryRouter>
-  );
+  )
   fireEvent.click(screen.getByRole(
   'button', { name: /create new post/i }))
   expect(navigateMock).toHaveBeenCalledWith(

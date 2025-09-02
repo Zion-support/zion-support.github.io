@@ -27,11 +27,11 @@ import { enterpriseIT2026ServicesV3 } from;
 export default function Services2026ShowcaseEnhancedPage() {
   const [searchTerm, setSearchTerm] = useState('
   ');
-  const [selectedCategory, setSelectedCategory] = useState<string>('all;
+  const [selectedCategory, setSelectedCategory] = useState<string>('all
   ')
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all;
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all
   ')
-  const [sortBy, setSortBy] = useState<string>('name;
+  const [sortBy, setSortBy] = useState<string>('name
   ')
   const [viewMode, setViewMode] = useState<'grid;
   ' | 'list;
@@ -313,7 +313,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     if (selectedPriceRange !== 'all;
   ') {
       filtered = filtered.filter(service => {
-        const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+        const price = parseInt(service.price.replace(/[^0-9]/g, ''))
         if (selectedPriceRange ===
   'low') return price < 1000;
         if (selectedPriceRange ===;
@@ -349,7 +349,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     selectedCategory,
     selectedPriceRange,
     sortBy]);
-  // Service statistics;
+  // Service statistics
   const serviceStats = {
     totalServices: all2026Services.length,
     aiServices: all2026Services.filter(s => s.category.includes(,
@@ -423,7 +423,7 @@ export default function Services2026ShowcaseEnhancedPage() {
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
                 Discover our comprehensive collection of innovative micro SAAS;
-                services, AI solutions, quantum computing, and enterprise IT;
+                services, AI solutions, quantum computing, and enterprise IT
                 services that will transform your business in 2026 and beyond.
               </p>
               {/* Service Statistics */}
@@ -537,7 +537,7 @@ export default function Services2026ShowcaseEnhancedPage() {
                       onClick={() => setViewMode(,
   grid')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                        viewMode ===;
+                        viewMode ===
   'grid' ?
   'bg-cyan-600 text-white': 'text-gray-400 hover:text-white                      }`}
                     >
@@ -547,7 +547,7 @@ export default function Services2026ShowcaseEnhancedPage() {
                       onClick={() => setViewMode(,
   list')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-                        viewMode ===;
+                        viewMode ===
   'list' ?
   'bg-cyan-600 text-white': 'text-gray-400 hover:text-white                      }`}
                     >
@@ -635,7 +635,7 @@ export default function Services2026ShowcaseEnhancedPage() {
                               Key Features:
                             </h4>
                             <ul className='space-y-1'>
-                              {service.features;
+                              {service.features
                                 .slice(0, 3)
                                 .map((feature, idx) => (
                                   <li
@@ -696,7 +696,7 @@ export default function Services2026ShowcaseEnhancedPage() {
                           {/* Action Buttons */}
                           <div className='flex space-x-2'>
                             <button className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200';
-                              onClick={() => window.open(service.link, '_blank;
+                              onClick={() => window.open(service.link, '_blank
   ')}                            >
                               Learn More
                               <ArrowRight className='w-4 h-4 ml-1' />
@@ -733,7 +733,7 @@ export default function Services2026ShowcaseEnhancedPage() {
               </h2>
               <p className='text-xl text-gray-300 mb-8'>
                 Join thousands of businesses already using our innovative;
-                services to gain competitive advantages and achieve remarkable;
+                services to gain competitive advantages and achieve remarkable
                 ROI.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>

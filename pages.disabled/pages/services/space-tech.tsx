@@ -30,7 +30,7 @@ export default function SpaceTechnology(...args: any[]): any {
         title='Space Technology Services | Zion Tech Group'';
         description='Revolutionary space technology solutions including satellite systems, launch vehicles, AI-powered operations, and advanced space communications.'/>
 '{/* Hero Section */}''
-      <section className='relative py-20 overflow-hidden'>';
+      <section className='relative py-20 overflow-hidden'>'
   ''
         <div className='absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20'></div>''        <div className='absolute inset-0 bg-[url(
   'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30'></div>'''        <div className='container-responsive relative z-10'>
@@ -42,16 +42,16 @@ export default function SpaceTechnology(...args: any[]): any {
               <div className='w-20 h-20 bg-gradient-to-br from-blue-400 via-purple-500 to-cyan-400 rounded-2xl flex items-center justify-center'>''
                 <Rocket className='w-10 h-10 text-white'  />              </div>
 :pages.disabled/pages/services/space-tech.tsx
-            </div>';
+            </div>'
 ''
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6'>
               Space Technology
             </h1>'''            <p className='text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Pioneering the future of space exploration with cutting-edge;
               technology, AI-powered operations, and revolutionary space;
-              infrastructure solutions.;
+              infrastructure solutions.
 :pages.disabled/pages/services/space-tech.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-wrap justify-center gap-4'>
               <motion.button;
@@ -80,7 +80,7 @@ export default function SpaceTechnology(...args: any[]): any {
 :pages.disabled/pages/services/space-tech.tsx
               Revolutionary Space Solutions'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our comprehensive space technology portfolio combines cutting-edge;
-              innovation with proven expertise to deliver next-generation space;
+              innovation with proven expertise to deliver next-generation space
               capabilities.
             </p>
 :pages.disabled/pages/services/space-tech.tsx
@@ -91,7 +91,7 @@ export default function SpaceTechnology(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/space-tech.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/space-tech.tsx
                   <feature.icon className='w-8 h-8 text-blue-400' />'
                 </div>''
@@ -121,7 +121,7 @@ export default function SpaceTechnology(...args: any[]): any {
 :pages.disabled/pages/services/space-tech.tsx
               Space Applications'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               From commercial space ventures to scientific research and defense;
-              applications, our space technology solutions serve diverse mission;
+              applications, our space technology solutions serve diverse mission
               requirements.
             </p>
 :pages.disabled/pages/services/space-tech.tsx
@@ -132,7 +132,7 @@ export default function SpaceTechnology(...args: any[]): any {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/space-tech.tsx;
                 whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8''>''
-                <h3 className='text-2xl font-semibold text-white mb-6 flex items-center'>'';
+                <h3 className='text-2xl font-semibold text-white mb-6 flex items-center'>''
 :pages.disabled/pages/services/space-tech.tsx
                   <Target className='w-6 h-6 text-blue-400 mr-3'  />                  {app.category}'
                 </h3>''
@@ -158,7 +158,7 @@ export default function SpaceTechnology(...args: any[]): any {
 :pages.disabled/pages/services/space-tech.tsx
               Cutting-Edge Technologies'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our space technology solutions leverage the latest advancements in;
-              AI, quantum computing, and cybersecurity to deliver unprecedented;
+              AI, quantum computing, and cybersecurity to deliver unprecedented
               capabilities.
             </p>
 :pages.disabled/pages/services/space-tech.tsx
@@ -170,7 +170,7 @@ export default function SpaceTechnology(...args: any[]): any {
 :pages.disabled/pages/services/space-tech.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-blue-400/30 transition-all duration-300''>''
                 <div className='flex items-center mb-4'>''
-                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mr-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl flex items-center justify-center mr-4'>''
 :pages.disabled/pages/services/space-tech.tsx
                     <tech.icon className='w-6 h-6 text-blue-400' />'
                   </div>''
@@ -191,11 +191,11 @@ export default function SpaceTechnology(...args: any[]): any {
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center''>''
             <div className='bg-gradient-to-r from-blue-900/50 to-purple-900/50 border border-blue-400/30 rounded-3xl p-12'>''
               <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/space-tech.tsx;
+:pages.disabled/pages/services/space-tech.tsx
                 Ready to Launch Your Space Mission?'
               </h2>''
               <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
-                Partner with Zion Tech Group to access cutting-edge space;
+                Partner with Zion Tech Group to access cutting-edge space
                 technology solutions and turn your space ambitions into reality.'
               </p>''
               <div className='flex flex-wrap justify-center gap-4'>
@@ -220,7 +220,7 @@ export default function SpaceTechnology(...args: any[]): any {
         <div className='container-responsive'>''
           <div className='text-center'>''
             <h3 className='text-2xl font-semibold text-white mb-4'>
-:pages.disabled/pages/services/space-tech.tsx;
+:pages.disabled/pages/services/space-tech.tsx
               Contact Our Space Technology Team'
             </h3>''
             <p className='text-slate-300 mb-6'>
@@ -242,5 +242,5 @@ export default function SpaceTechnology(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/space-tech.tsx)}
-  '';
+  ''
 ''''

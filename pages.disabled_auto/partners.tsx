@@ -198,7 +198,7 @@ const Partners: NextPage = () => {
     {
       icon: CheckCircle,
       title: 'Comprehensive Support',
-      description:;
+      description:
         'Access to expert support and resources from our partner ecosystem.'}]
   return(
     <MainLayout
@@ -211,7 +211,7 @@ const Partners: NextPage = () => {
           <div className='container mx-auto px-4 text-center'>
             <h1 className='text-4xl md: text-5xl font-bold mb-6'>Our Partners</h1>
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
-              Building the future of technology through strategic partnerships with industry leaders;
+              Building the future of technology through strategic partnerships with industry leaders
               and innovative companies worldwide.
             </p>
           </div>
@@ -253,7 +253,7 @@ const Partners: NextPage = () => {
 :pages.disabled_auto/partners.tsx;
                 We;
   're proud to work with industry leaders and innovative companies across the globe.;
-                We&apos;re proud to work with industry leaders and innovative;
+                We&apos;re proud to work with industry leaders and innovative
                 companies across the globe.'
               </p>
             </div>
@@ -298,7 +298,7 @@ const Partners: NextPage = () => {
           <div className='container mx-auto px-4 text-center'>
             <h2 className='text-3xl font-bold mb-4'>Become a Partner</h2>
             <p className='text-xl text-blue-200 mb-8 max-w-2xl mx-auto'>
-              Ready to join our partner ecosystem? Let&apos;s explore how we can work together to drive innovation and growth.''
+              Ready to join our partner ecosystem? Let&aposs explore how we can work together to drive innovation and growth.''
             </p>
             <div className='flex flex-col sm: flex-row justify-center gap-4'>
               <Link
@@ -351,5 +351,5 @@ const Partners: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
+
 export default Partners

@@ -60,7 +60,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
   };
   const handleCardClick = () => {
     router.push(`/products/${product.id}`);
-  };
+  }
   return (
     <div 
       className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-between cursor-pointer hover: shadow-lg transition-shadow"
@@ -121,5 +121,5 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {
         </Button>
       </div>
     </div>
-  );
+  )
 }

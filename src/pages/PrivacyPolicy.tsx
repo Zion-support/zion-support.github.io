@@ -18,7 +18,7 @@ export default function PrivacyPolicy() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -40,7 +40,7 @@ export default function PrivacyPolicy() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="prose prose-lg prose-invert max-w-none"
             >
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 rounded-xl p-8 border border-slate-600/50">
@@ -111,5 +111,5 @@ export default function PrivacyPolicy() {
         </section>
       </div>
 </>
-  );
+  )
 }

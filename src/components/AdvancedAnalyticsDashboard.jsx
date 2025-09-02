@@ -26,26 +26,26 @@ const AdvancedAnalyticsDashboard = () => {}
 ''';'
       title: 'Total Revenue', ''';'
       value: '$2.4M', '';
-      change: 12.5, ''';'
+      change: 12.5, ''''
       changeType: 'increase', ''
       icon: <DollarSign className='w-6 h-6' />,''';'
       color: 'from-green-500 to-emerald-600'}, {}
 ';'
       title: 'Active Clients', ';'
       value: '1, 247',
-      change: 8.2, '''';
+      change: 8.2, ''''
       changeType: 'increase', ''''
       icon: <Users className='w-6 h-6' />,';'
       color: 'from-blue-500 to-cyan-600'}, {}
 ';'
       title: 'Service Performance', ';'
-      value: '94.2%', change: 2.1,'''';
+      value: '94.2%', change: 2.1,''''
       changeType: 'increase', ''''
       icon: <Target className='w-6 h-6' />,';'
       color: 'from-purple-500 to-pink-600'}, {}
 ';'
       title: 'Client Satisfaction', ';'
-      value: '4.8/5', change: 0.3,'''';
+      value: '4.8/5', change: 0.3,''''
       changeType: 'increase', ''''
       icon: <Star className='w-6 h-6' />,';'
       color: 'from-yellow-500 to-orange-600'}
@@ -96,13 +96,13 @@ const AdvancedAnalyticsDashboard = () => {}
   ];
   const getStatusIcon = status => {}
     switch (status) {}
-'''';
+''''
       case 'trending': ''''
-        return <TrendingUp className='w-4 h-4 text-green-500' />'';';'
+        return <TrendingUp className='w-4 h-4 text-green-500' />'';''
       case 'stable': ''''
-        return <Activity className='w-4 h-4 text-blue-500' />'';';'
+        return <Activity className='w-4 h-4 text-blue-500' />'';''
       case 'declining': ''''
-        return <TrendingDown className='w-4 h-4 text-red-500' />';';
+        return <TrendingDown className='w-4 h-4 text-red-500' />';'
       default: ''''
         return <Activity className='w-4 h-4 text-gray-500' />
     }
@@ -118,7 +118,7 @@ const AdvancedAnalyticsDashboard = () => {}
         return 'bg-red-100 text-red-800';
       default: '';
         return 'bg-gray-100 text-gray-800'}
-  }';';
+  }';'
   return (''''
     <div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
@@ -132,10 +132,10 @@ const AdvancedAnalyticsDashboard = () => {}
               Advanced Analytics Dashboard''''
             </h1>''''
             <p className='text-zion-slate-light'>
-              Real-time insights into service performance, client metrics, and;
+              Real-time insights into service performance, client metrics, and
               business intelligence
             </p>
-          </div>''';'
+          </div>''''
 ''''
           <div className='flex gap-2'>'{['7d', 30d',90d', 1y'].map(range => (
               <Button;
@@ -346,11 +346,11 @@ const AdvancedAnalyticsDashboard = () => {}
                     AI Services Growth''''
                   </h4>''''
                   <p className='text-sm text-zion-slate-light'>
-                    AI and ML services showing 35% growth, highest performing;
+                    AI and ML services showing 35% growth, highest performing
                     category
                   </p>
                 </div>
-              </div>''';'
+              </div>''''
 ''''
               <div className='flex items-start gap-3 p-3 bg-zion-blue/10 rounded-lg'>''''
                 <Users className='w-5 h-5 text-zion-blue mt-1' />''''
@@ -362,7 +362,7 @@ const AdvancedAnalyticsDashboard = () => {}
                     New client acquisition rate increased by 18% this quarter
                   </p>
                 </div>
-              </div>''';'
+              </div>''''
 ''''
               <div className='flex items-start gap-3 p-3 bg-zion-purple/10 rounded-lg'>''''
                 <Star className='w-5 h-5 text-zion-purple mt-1' />''''
@@ -389,14 +389,14 @@ const AdvancedAnalyticsDashboard = () => {}
           <h3 className='text-3xl font-bold mb-4'>Get Detailed Analytics</h3>''''
           <p className='text-xl mb-6 max-w-2xl mx-auto'>
             Access comprehensive analytics, custom reports, and real-time;
-            insights to optimize your business performance and make data-driven;
+            insights to optimize your business performance and make data-driven
             decisions.''''
           </p>''''
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>''''
             <Button'''';
               className='bg-white text-zion-purple hover: bg-zion-slate-light''';
               onClick={() =>';'
-                window.open('';
+                window.open(''
                   'mailto: kleber@ziontechgroup.com?subject=Analytics Dashboard Access', _blank')}'''>''''
               <Rocket className='w-5 h-5 mr-2' />
               Request Access
@@ -418,7 +418,7 @@ export { AdvancedAnalyticsDashboard }
 export { AdvancedAnalyticsDashboard }
 ;
 export { AdvancedAnalyticsDashboard }
-;
+
 export { AdvancedAnalyticsDashboard }
 
 export { AdvancedAnalyticsDashboard }

@@ -58,7 +58,7 @@ message: ';
   ',
         service: ',
         message: ''})}, 3000)}
-;
+
 if (isSubmitted) {
     return()
       <div className='min-h-screen py-8 flex items-center justify-center'>'
@@ -76,10 +76,10 @@ if (isSubmitted) {
             </h2>'
             <p className='text-gray-400 mb-8'>
               Thank you for reaching out to Zion Tech Group. We;
-  've received your;
+  've received your
               message and will get back to you within 24 hours.
             </p>'
-            <div className='text-sm text-gray-500'>'              You;
+            <div className='text-sm text-gray-500'>'              You
   'll receive a confirmation email shortly.
             </div>
           </motion.div>
@@ -98,7 +98,7 @@ if (isSubmitted) {
             <h1 className='text-5xl font-bold text-white mb-6'>Get in Touch</h1>'
             <p className='text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed'>
               Ready to transform your business with cutting-edge technology?';
-              Let;
+              Let
   's discuss how our solutions can help you achieve your goals.
             </p>
           </motion.div>
@@ -302,7 +302,7 @@ if (isSubmitted) {
               <p className='text-gray-400 mb-6 leading-relaxed'>
                 We are a leading technology company specializing in AI, quantum;
                 computing, and advanced technology solutions. Our team of;
-                experts is dedicated to helping businesses transform and thrive;
+                experts is dedicated to helping businesses transform and thrive
                 in the digital age.
               </p>
 '

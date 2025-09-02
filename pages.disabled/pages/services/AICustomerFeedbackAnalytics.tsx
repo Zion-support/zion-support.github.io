@@ -147,7 +147,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
       name: 'Review Platforms',';
       platforms: ['Google Reviews', 'Yelp', 'Trustpilot', 'G2']},
     {'
-      name: 'Analytics Tools',';
+      name: 'Analytics Tools','
       platforms: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Hotjar']}  ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -159,7 +159,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
       {/* Hero Section */}
       <section className='relative overflow-hidden py-20 lg:py-32'>
         <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20'></div>
-=;
+=
         title='AI Customer Feedback Analytics - Zion Tech Group''        description='Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction.'/>{/* Hero Section */}'
       <section className='relative overflow-hidden py-20 lg:py-32'>'
         <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20'></div>
@@ -167,13 +167,13 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
       name: 'Review Platforms',';
       platforms: ['Google Reviews', 'Yelp', 'Trustpilot', 'G2']},'{'
       name: 'Analytics Tools',';
-      platforms: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Hotjar']}  ]';
+      platforms: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Hotjar']}  ]'
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'
       <SEO'';
         title='AI Customer Feedback Analytics - Zion Tech Group''        description='Transform customer feedback into actionable insights with our AI-powered analytics platform. Analyze sentiment, predict churn, and improve customer satisfaction.'/>'{/* Hero Section */}''
       <section className='relative overflow-hidden py-20 lg:py-32'>''
-        <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20'></div>';
+        <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20'></div>'
         ''{/* Hero Section */}''
       <section className='relative overflow-hidden py-20 lg:py-32'>''
         <div className='absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20'></div>
@@ -197,11 +197,11 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
             <div className='inline-flex items-center px-4 py-2 bg-blue-600/20 text-blue-400 rounded-full text-sm font-medium mb-6'>''
               <Brain className='w-4 h-4 mr-2'  />              AI-Powered Analytics'
             </div>''
-            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>'
               AI Customer Feedback''
               <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>
                 {' '}Analytics
-              </span>';
+              </span>'
   y: 0}}
             transition={{ duration: 0.8 }}
           >''
@@ -217,12 +217,12 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
               Transform customer feedback into actionable insights with advanced AI analytics.;
-              Understand sentiment, predict churn, and optimize customer experience across all touchpoints.;
+              Understand sentiment, predict churn, and optimize customer experience across all touchpoints.
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <button className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg flex items-center justify-center'>';
-              Transform customer feedback into actionable insights with advanced AI analytics.;
+              Transform customer feedback into actionable insights with advanced AI analytics.
               Understand sentiment, predict churn, and optimize customer experience across all touchpoints.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -271,14 +271,14 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
-              Powerful Features';
+              Powerful Features'
               Powerful Features
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Advanced AI capabilities designed to transform how you understand and act on customer feedback.
             </p>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -313,7 +313,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50'>';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50''>{/* Icon */}''
                 <div className='mb-6'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
@@ -367,14 +367,14 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
-              Business Benefits';
+              Business Benefits'
               Business Benefits
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how AI-powered feedback analytics can transform your customer experience and drive business growth.
             </p>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -409,7 +409,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50'>';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50''>{/* Icon */}''
                 <div className='mb-6'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
@@ -463,14 +463,14 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
-              Transparent Pricing';
+              Transparent Pricing'
               Transparent Pricing
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the plan that fits your business needs. All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -517,7 +517,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
 ';
                   plan.popular '';
-                    ? 'border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10' ''`;
+                    ? 'border-blue-500/50 bg-gradient-to-br from-blue-500/10 to-purple-500/10' ''`
                     : 'border-white/10 hover:border-blue-500/50'``}`}
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx>'>{plan.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -529,12 +529,12 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
-                  <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>'';
+                  <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>''
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx
                   <div className='text-4xl font-bold text-white mb-2'>'{plan.price}''
                     <span className='text-lg text-gray-400'>{plan.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                   <div className='text-4xl font-bold text-white mb-2'>
@@ -550,7 +550,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
                     </li>
                   ))}
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -595,14 +595,14 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
-              Industry Use Cases';
+              Industry Use Cases'
               Industry Use Cases
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               See how organizations across industries leverage our AI feedback analytics to improve customer experience.
             </p>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -637,7 +637,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50'>';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50''>{/* Icon */}''
                 <div className='mb-6'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
@@ -691,7 +691,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
-              Seamless Integrations';
+              Seamless Integrations'
               Seamless Integrations
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -727,7 +727,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
                 viewport={{ once: true }}';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50'>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-blue-500/50''>''
                 <h3 className='text-xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300'>
                   {integration.name}'
@@ -782,7 +782,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
-              Join thousands of businesses already using AI-powered feedback analytics;
+              Join thousands of businesses already using AI-powered feedback analytics
               to improve customer satisfaction and drive growth.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -790,14 +790,14 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
                 <Star className='w-5 h-5 mr-2'  />                Start Free Trial
               </button>'
               <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg'>';
-              Join thousands of businesses already using AI-powered feedback analytics;
+              Join thousands of businesses already using AI-powered feedback analytics
               to improve customer satisfaction and drive growth.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 text-lg flex items-center justify-center'>''
                 <Star className='w-5 h-5 mr-2'  />                Start Free Trial'
               </button>''
-              <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg'>'';
+              <button className='border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg'>''
   y: 0}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -806,7 +806,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
               Ready to Transform Your Customer Feedback?
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of businesses already using AI-powered feedback analytics;
+              Join thousands of businesses already using AI-powered feedback analytics
               to improve customer satisfaction and drive growth.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''

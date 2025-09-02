@@ -15,7 +15,7 @@ public state: State = {
 console.error(,
   ErrorBoundary caught an error: , error, errorInfo);
   '    // Log to external service in production;
-    if (process.env.NODE_ENV === 'production;
+    if (process.env.NODE_ENV === 'production
   ') {'      // You can integrate with services like Sentry here
   '      console.error('Production error: , { error, errorInfo })'    }
   '  }public render() {

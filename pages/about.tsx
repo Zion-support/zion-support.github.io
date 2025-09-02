@@ -227,4 +227,4 @@ const About: NextPage = () => {
     </Layout>
   );
 };
-export default About;
+export default About

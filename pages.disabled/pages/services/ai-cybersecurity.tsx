@@ -20,7 +20,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     'Predictive threat intelligence',';
     'Cost-effective security operations',';Compliance and regulatory support';
   ]';Real-time threat detection and response',';Reduced false positives with AI accuracy',';24/7 automated security monitoring',';Predictive threat intelligence',';Cost-effective security operations',';Compliance and regulatory support';
-  ];
+  ]
 :pages.disabled/pages/services/ai-cybersecurity.tsx
 <:pages.disabled/pages/services/ai-cybersecurity.tsx
   return (
@@ -58,12 +58,12 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
   y: 0}}';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center'';
+            className='text-center''
 ''
-            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full border border-red-400/30 mb-6'>''
 :pages.disabled/pages/services/ai-cybersecurity.tsx
               <Shield className='w-5 h-5 text-red-400 mr-2'  />'              <span className='text-red-300 font-medium'>AI Cybersecurity</span>
-            </div>';
+            </div>'
 ''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               <Shield className='w-5 h-5 text-red-400 mr-2'  />'              <span className='text-red-300 font-medium'>AI Cybersecurity</span>
@@ -80,9 +80,9 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 ''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Protect your business with intelligent cybersecurity that learns, adapts, and evolves.;
-              Our AI-powered security solutions detect and prevent threats before they can cause harm.;
+              Our AI-powered security solutions detect and prevent threats before they can cause harm.
 :pages.disabled/pages/services/ai-cybersecurity.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20'>
@@ -129,7 +129,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               Advanced Security Features';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Advanced Security Features
@@ -171,14 +171,14 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105'';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-red-400' />'
                 </div>''
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>'';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105'';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200 hover:scale-105''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-red-400' />
@@ -219,7 +219,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               Comprehensive Security Services';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Comprehensive Security Services
@@ -261,14 +261,14 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
                   <div>'
                     <h3 className='text-xl font-semibold text-white mb-2'>{service.title}</h3>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200'';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200''
 ''
                 <div className='flex items-start space-x-4'>''
                   <div className='text-4xl'>{service.icon}</div>'
                   <div>''
                     <h3 className='text-xl font-semibold text-white mb-2'>{service.title}</h3>'';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200'';
+                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-red-400/30 transition-all duration-200''
 ''
                 <div className='flex items-start space-x-4'>''
                   <div className='text-4xl'>{service.icon}</div>
@@ -320,7 +320,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
               Why Choose AI Cybersecurity?';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Why Choose AI Cybersecurity?
@@ -356,7 +356,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
                   <li key={index} className='flex items-center space-x-3'>';
   x: 0}}';
               transition={{ duration: 0.6 }}'';
-              className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8'';
+              className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8''
 ''
               <h3 className='text-2xl font-semibold text-white mb-6'>Key Benefits</h3>''
               <ul className='space-y-4'>'{benefits.map((benefit, index) => (''
@@ -392,13 +392,13 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
 :pages.disabled/pages/services/ai-cybersecurity.tsx;
   x: 0}}';
               transition={{ duration: 0.6 }}'';
-              className='bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8'';
+              className='bg-gradient-to-br from-red-500/20 to-orange-500/20 border border-red-400/30 rounded-xl p-8''
 ''
               <h3 className='text-2xl font-semibold text-white mb-6'>Get Protected Today</h3>''
               <p className='text-gray-300 mb-6'>';
                 Don't wait for a security breach. Our AI cybersecurity experts can assess your current;
                 security posture and implement advanced protection measures.';
-                Don't wait for a security breach. Our AI cybersecurity experts can assess your current;
+                Don't wait for a security breach. Our AI cybersecurity experts can assess your current
                 security posture and implement advanced protection measures.
               </p>''
               <button className='w-full px-6 py-3 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20'>
@@ -437,7 +437,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-400 hover:to-orange-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-red-500/20'>
-                Start Security Assessment';
+                Start Security Assessment'
   y: 0}}
             transition={{ duration: 0.6 }}
 ''
@@ -461,5 +461,5 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
     </div>
 :pages.disabled/pages/services/ai-cybersecurity.tsx)}'';
 export default AICybersecurity}}}'''')}
-;
+
 export default AICybersecurity}}}'''

@@ -60,7 +60,7 @@ import React from;
   'Quantum optimization tools' ], cta: 'Start Enterprise Trial, popular: true }, { name:,
   Ultimate', price: $49, 999,
   , period: '/month, description:,
-  For large-scale quantum computing needs', features: [;
+  For large-scale quantum computing needs', features: [
   'Unlimited quantum operations,
 ,
   Full quantum computing suite',

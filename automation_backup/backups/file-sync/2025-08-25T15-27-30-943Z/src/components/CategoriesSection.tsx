@@ -82,7 +82,7 @@ ursor/website-audit-content-update-and-deployment-efec
     icon: <ZapIcon className=,
   w-10 h-10'                                                                                                                                                                              />,
     link: '/zion-hire-ai,
-    color:;
+    color:
   'from-zion-purple to-zion-purple-dark',
     featured: true}
 ]
@@ -131,7 +131,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
   const itemVariants = {
   hidden: { opacity: 0,
   y: 30;
-;
+
 
 },
     visible: {

@@ -153,7 +153,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     const clearConversation = useCallback(() => {
         setMessages([]);
         // setConversationContext([]); // This line was removed
-        trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction]);
+        trackChatbotInteraction('conversation_cleared')}, [trackChatbotInteraction])
     // Get typing indicator
     const TypingIndicator = () => (<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="flex items-center space-x-2 p-3 bg-gray-100 dark:bg-gray-700 rounded-lg">
       <Bot className="w-5 h-5 text-blue-500"/>
@@ -163,7 +163,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
         <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></div>
       </div>
       <span className="text-sm text-gray-600 dark:text-gray-400">AI is typing...</span>
-    </motion.div>);
+    </motion.div>)
     // Get message suggestions
     const MessageSuggestions = ({ suggestions }) => (<motion.div initial = {
   { opacity: 0, y: 10 
@@ -186,7 +186,7 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
       {suggestions.map((suggestion, index) => (<button key={index} onClick={() => handleSuggestionClick(suggestion)} className="px-3 py-1 text-xs bg-blue-100 dark: bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full hover:bg-blue-200 dark:hover:bg-blue-900/50 transition-colors">
           {suggestion}
         </button>))}
-    </motion.div>);
+    </motion.div>)
     return (<>
       {/* Chatbot Toggle Button */}
       <motion.button onClick={toggleChatbot} className="fixed bottom-6 right-6 z-50 p-4 bg-gradient-to-r from-blue-500 to-purple-500 hover: from-blue-600 hover:to-purple-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-blue-300" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} aria-label="Open AI chatbot">
@@ -321,4 +321,4 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
 </>)}
           </motion.div>)}
       </AnimatePresence>
-</>)};
+</>)}

@@ -66,19 +66,19 @@ export default function Blockchain(...args[]):  {},    {
             <div className='inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6'>''
               <Lock className='w-5 h-5 text-green-400'  />'              <span className='text-green-400 font-medium'>Blockchain Solutions</span>
 :pages.disabled/pages/services/Blockchain.tsx
-            </div>';
+            </div>'
 ''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               Trust Through''
               <span className='text-gradient'> Technology</span>
             </h1>'''            <p className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto'>
               Build trust, transparency, and efficiency with blockchain technology.;
-              Transform your business with decentralized solutions.;
+              Transform your business with decentralized solutions.
 :pages.disabled/pages/services/Blockchain.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <button className='btn-futuristic px-8 py-4 text-lg'>';
+              <button className='btn-futuristic px-8 py-4 text-lg'>'
                 Start Blockchain Project''
                 <ArrowRight className='w-5 h-5 ml-2'  />'</button>'              <button className='btn-outline px-8 py-4 text-lg'>                Learn More
               </button>
@@ -104,7 +104,7 @@ export default function Blockchain(...args[]):  {},    {
               Unprecedented security, transparency, and efficiency
             </p>
 :pages.disabled/pages/services/Blockchain.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index()
@@ -120,7 +120,7 @@ export default function Blockchain(...args[]):  {},    {
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx;
   delay: index * 0.1}}'viewport={{ once: true }}''                className='bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/Blockchain.tsx
                   <feature.icon className='w-8 h-8 text-white' />'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''
                 <p className='text-zion-slate-light'>{feature.description}</p>
@@ -129,7 +129,7 @@ export default function Blockchain(...args[]):  {},    {
           </div>
         </div>
 :pages.disabled/pages/services/Blockchain.tsx
-      </div>';
+      </div>'
 ''
       <div className='relative z-10'>'{/* Hero Section */}''
         <section className='pt-32 pb-20'>''
@@ -152,7 +152,7 @@ export default function Blockchain(...args[]):  {},    {
               </h1>''
               <p className='text-xl text-zinc-300 mb-8 leading-relaxed'>
                 Leverage the power of blockchain technology to create transparent, secure, and efficient';
-  ';
+  '
                 business processes. From smart contracts to DeFi, we're building the decentralized future.'
               </p>''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -169,7 +169,7 @@ export default function Blockchain(...args[]):  {},    {
             </motion.div>
           </div>
         </section>
-:pages.disabled/pages/services/Blockchain.tsx;
+:pages.disabled/pages/services/Blockchain.tsx
 '{/* Use Cases Section */}''
         <section className='py-20'>'
           <div className='container-responsive'>'
@@ -189,7 +189,7 @@ export default function Blockchain(...args[]):  {},    {
                 Discover how blockchain is transforming industries across the globe
               </p>
 :pages.disabled/pages/services/Blockchain.tsx
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
               {useCases.map(useCase: unknown, index: unknown
@@ -223,7 +223,7 @@ export default function Blockchain(...args[]):  {},    {
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/Blockchain.tsx;
+:pages.disabled/pages/services/Blockchain.tsx
 '{/* Features Section */}''
         <section className='py-20 bg-white/5'>'
           <div className='container-responsive'>'
@@ -243,7 +243,7 @@ export default function Blockchain(...args[]):  {},    {
                 Our comprehensive approach ensures your blockchain solutions are secure, scalable, and innovative
               </p>
 :pages.disabled/pages/services/Blockchain.tsx
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map(feature: unknown, index: unknown()
@@ -270,7 +270,7 @@ export default function Blockchain(...args[]):  {},    {
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/Blockchain.tsx;
+:pages.disabled/pages/services/Blockchain.tsx
 '{/* Pricing Section */}''
         <section className='py-20'>'
           <div className='container-responsive'>'
@@ -290,7 +290,7 @@ export default function Blockchain(...args[]):  {},    {
                 Choose the plan that fits your blockchain needs. All plans include our core blockchain features.
               </p>
 :pages.disabled/pages/services/Blockchain.tsx
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
               {pricing.map(plan: unknown, index: unknown()
@@ -321,19 +321,19 @@ export default function Blockchain(...args[]):  {},    {
 :pages.disabled/pages/services/Blockchain.tsx)}'''                  <div className='text-center mb-6'>''
                     <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                     <div className='flex items-baseline justify-center mb-2'>''
-                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/Blockchain.tsx
                       <span className='text-zinc-400 ml-1'>{plan.period}</span>'
                     </div>''
                     <p className='text-zinc-400'>{plan.description}</p>
-                  </div>';
+                  </div>'
 ''
                   <ul className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''                      <li key={featureIndex} className='flex items-center text-zinc-300'>''
                         <CheckCircle className='w-5 h-5 text-orange-400 mr-3 flex-shrink-0'  />                        {feature}
                       </li>
                     ))}
                   </ul>
-:pages.disabled/pages/services/Blockchain.tsx;
+:pages.disabled/pages/services/Blockchain.tsx
 '
                   <RouterLink''`
                     to={plan.name === 'Enterprise' ? '/contact' : '/request-quote'}``;
@@ -350,7 +350,7 @@ export default function Blockchain(...args[]):  {},    {
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/Blockchain.tsx;
+:pages.disabled/pages/services/Blockchain.tsx
 '{/* Benefits Section */}''
         <section className='py-20 bg-white/5'>'
           <div className='container-responsive'>'
@@ -370,7 +370,7 @@ export default function Blockchain(...args[]):  {},    {
                 See measurable improvements in your business processes and customer trust
               </p>
 :pages.disabled/pages/services/Blockchain.tsx
-            </motion.div>';
+            </motion.div>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {benefits.map(benefit: unknown, index: unknown()
@@ -417,7 +417,7 @@ export default function Blockchain(...args[]):  {},    {
                 Ready to Go Blockchain?'
               </h2>''
               <p className='text-xl text-zinc-300 mb-8 max-w-3xl mx-auto'>';
-                Join the blockchain revolution with Zion Tech Group;
+                Join the blockchain revolution with Zion Tech Group
   's cutting-edge decentralized solutions'
               </p>''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -436,5 +436,5 @@ export default function Blockchain(...args[]):  {},    {
         </section>
       </div>
     </div>
-  )}''`;
+  )}''`
   ''`''`

@@ -101,7 +101,7 @@ import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } 
   Customer Satisfaction;
   ', description: 'Increase in customer satisfaction scores }, { metric:,
   75%;
-  ', label: 'Time Savings, description: 'Reduction in time-to-market for new products;
+  ', label: 'Time Savings, description: 'Reduction in time-to-market for new products
   ' }'  ]'
   return(
     <MainLayout;
@@ -151,7 +151,7 @@ import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } 
           </div>
         </section>
         {/* CTA Section */}
-        <section className='py-16 bg-white'>'          <div className='container mx-auto px-4 text-center'>'            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Ready to Transform Your Business?</h2>'            <p className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto'>'              Let&apos;s discuss how we can help you achieve your digital transformation goals and drive sustainable growth.'
+        <section className='py-16 bg-white'>'          <div className='container mx-auto px-4 text-center'>'            <h2 className='text-3xl font-bold text-gray-900 mb-4'>Ready to Transform Your Business?</h2>'            <p className='text-lg text-gray-600 mb-8 max-w-2xl mx-auto'>'              Let&aposs discuss how we can help you achieve your digital transformation goals and drive sustainable growth.'
   '            </p>'            <div className='flex flex-col sm: flex-row justify-center gap-4'>'              <Link'                href='/contact''                className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors''              >'                Start Your Transformation
               </Link>
               <Link;
@@ -163,5 +163,5 @@ import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } 
       </div>
     </MainLayout>
   )}
-;
+
 export default DigitalTransformation

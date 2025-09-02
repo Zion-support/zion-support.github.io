@@ -402,7 +402,7 @@ export default function ComprehensiveServices2025() {
         <ArrowRight className='w-4 h-4 ml-2' />
       </Link>
     </motion.div>
-  );
+  )
   const serviceCategories = [
     { id: 'microsaas', label: 'Micro SAAS', count: microSaaSServices.length, services: microSaaSServices },
     { id: 'ai', label: 'AI Services', count: aiServices.length, services: aiServices },
@@ -437,7 +437,7 @@ export default function ComprehensiveServices2025() {
               </span>
             </h1>
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-              Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, and IT services.;
+              Discover our comprehensive portfolio of innovative micro SAAS services, AI solutions, and IT services.
               Transform your business with cutting-edge technology solutions designed for modern enterprises.
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -476,7 +476,7 @@ export default function ComprehensiveServices2025() {
                 key={category.id}
                 onClick={() => setActiveTab(category.id)}
                 className={`px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                  activeTab === category.id;
+                  activeTab === category.id
                     ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white'
                     : 'bg-slate-800 text-slate-300 hover:bg-slate-700'}`}
               >{category.label} ({category.count})
@@ -485,7 +485,7 @@ export default function ComprehensiveServices2025() {
           </div>
           {/* Service Grid */}
           <div className='grid lg: grid-cols-2 xl:grid-cols-3 gap-8'>
-            {serviceCategories;
+            {serviceCategories
               .find(cat => cat.id === activeTab)
               ?.services.map((service, index) => renderServiceCard(service, index))}
           </div>
@@ -502,7 +502,7 @@ export default function ComprehensiveServices2025() {
             >
               <h2 className='text-4xl font-bold text-white mb-4'>Ready to Transform Your Business?</h2>
               <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
-                Join the future of technology with Zion Tech Group&apos;s innovative services and solutions. ';
+                Join the future of technology with Zion Tech Group&apos;s innovative services and solutions. '
                 Get started with a free consultation today.
               </p>
               <div className='grid md: grid-cols-3 gap-6 mb-12'>

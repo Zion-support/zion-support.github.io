@@ -12,7 +12,7 @@ export default function PrivacyPage() {
       <h1 className='text-3xl font-bold mb-6'>Privacy Policy</h1>
       <p className='text-gray-700 leading-7'>
         We value your privacy. This page outlines how we collect, use, and;
-        safeguard your information. For questions, please contact us via the;
+        safeguard your information. For questions, please contact us via the
         Contact page.
       </p>
     </div>

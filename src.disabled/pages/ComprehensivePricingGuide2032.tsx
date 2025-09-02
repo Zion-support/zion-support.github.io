@@ -39,7 +39,7 @@ import React, { useState } from,
   'Compliance & AI', icon: ShieldCheck, count: INNOVATIVE_SERVICES.filter(s => s.category.includes(,
   Compliance')).length }, { id: 'Cloud, name:;
   'Cloud & FinOps', icon: Cloud, count: INNOVATIVE_SERVICES.filter(s => s.category.includes(,
-  Cloud')).length }, { id: 'Manufacturing, name:;
+  Cloud')).length }, { id: 'Manufacturing, name:
   'Manufacturing & AI', icon: Factory, count: INNOVATIVE_SERVICES.filter(s => s.category.includes(,
   Manufacturing')).length }, { id: 'Space Tech, name:
   'Space Tech & AI', icon: Satellite, count: INNOVATIVE_SERVICES.filter(s => s.category.includes(,
@@ -73,4 +73,4 @@ import React, { useState } from,
   'Revolutionary': 3 } return innovationOrder[a.innovationLevel] - innovationOrder[b.innovationLevel] case,
   delivery':  const aDelivery = parseInt(a.estimatedDelivery.split(
   '-')[0]) const bDelivery = parseInt(b.estimatedDelivery.split(
-  '-)[0]) return aDelivery - bDelivery default: return 0 } })  const contactInfo = { phone: '+1 302 464 0950', '';' email: 'kleber@ziontechgroup.com', '';' website: 'https:'''
+  '-)[0]) return aDelivery - bDelivery default: return 0 } })  const contactInfo = { phone: '+1 302 464 0950', '';' email: 'kleber@ziontechgroup.com', ''' website: 'https:'''

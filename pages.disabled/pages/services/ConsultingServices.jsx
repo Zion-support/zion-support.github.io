@@ -11,7 +11,7 @@ const ConsultingServices = () => {}
           <h1 className='text-5xl md:text-6xl font-bold mb-6'>
 :pages.disabled/pages/services/ConsultingServices.jsx
             Technology Consulting Services'</h1>''          <p className='text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto'>
-            Strategic technology consulting to help you make informed decisions;
+            Strategic technology consulting to help you make informed decisions
             and achieve your goals.
           </p>
         </div>
@@ -19,11 +19,11 @@ const ConsultingServices = () => {}
       </section>'''      <section className='py-20'>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>''
           <h2 className='text-3xl font-bold text-slate-900 mb-4'>
-:pages.disabled/pages/services/ConsultingServices.jsx;
+:pages.disabled/pages/services/ConsultingServices.jsx
             Coming Soon'
           </h2>''
           <p className='text-xl text-slate-600 mb-8'>
-  ';
+  '
             Were developing comprehensive consulting services. Check back soon!
           </p>'
           <Link'';
@@ -35,4 +35,4 @@ const ConsultingServices = () => {}
     </div>
   )}
 :pages.disabled/pages/services/ConsultingServices.jsx;
-export default ConsultingServices'';''"
+export default ConsultingServices''''"

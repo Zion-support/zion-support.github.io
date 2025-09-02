@@ -18,13 +18,13 @@ export default function ITHelpdesk() {
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-r from-zion-cyan to-zion-purple py-20 text-center text-white'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 mb-6'>''
 :pages.disabled/pages/services/ITHelpdesk.tsx
             <LifeBuoy className='w-4 h-4 mr-2' /> IT support that scales with your MSP'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold mb-4'>IT Helpdesk Software</h1>'          <p className='text-white/90 text-xl'>Ticketing, SLAs, and client portals built for managed service providers.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10'>'
         <div>''
@@ -49,12 +49,12 @@ export default function ITHelpdesk() {
             <a href='/pricing' className='px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 transition-colors inline-flex items-center'>View Full Pricing <ArrowRight className='w-4 h-4 ml-2' /></a>          </div>
         </div>
 :pages.disabled/pages/services/ITHelpdesk.tsx
-      </section>';
+      </section>'
 ''
       <section className='pb-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-3 gap-6'>
   ''{[{icon: Ticket, t: 'Tickets & SLAs;
-  '}, {icon: Cpu, t: 'Remote Support;
+  '}, {icon: Cpu, t: 'Remote Support
   '}, {icon: Shield, t: 'Security & SSO
   '}].map((c) => (''            <div key={c.t} className='p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm'>''
               <c.icon className='w-6 h-6 text-zion-cyan mb-3' />''

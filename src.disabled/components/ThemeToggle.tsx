@@ -8,6 +8,6 @@ import React from;
   Dark' }, { name: 'system, icon: Monitor, label:,
   System' } ] return ( <div className='relative'> <div className='flex items-center space-x-1 bg-zion-slate-light/30 rounded-lg p-1'> {themes.map((themeOption) => { const Icon = themeOption.icon const isActive = theme === themeOption.name return ( <motion.button key={themeOption.name} onClick={() => setTheme(themeOption.name as;
   'light' |;
-  'dark' |;
+  'dark' |
   'system')} className={`relative px-3 py-2 rounded-md transition-all duration-200 flex items-center space-x-2 ${ isActive ?
-  'text-white': 'text-gray-400 hover:text-white }`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} > {isActive && ( <motion.div layoutId='theme-bg' className='absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-md' initial={false} transition={{ type: 'spring', stiffness: 500, damping: 30 }} /> )} <Icon className='w-4 h-4 relative z-10' /> <span className='text-sm font-medium relative z-10 hidden sm: block'> {themeOption.label} </span> </motion.button> ) })} </div> </div> ) } export default ThemeToggle';`
+  'text-white': 'text-gray-400 hover:text-white }`} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} > {isActive && ( <motion.div layoutId='theme-bg' className='absolute inset-0 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-md' initial={false} transition={{ type: 'spring', stiffness: 500, damping: 30 }} /> )} <Icon className='w-4 h-4 relative z-10' /> <span className='text-sm font-medium relative z-10 hidden sm: block'> {themeOption.label} </span> </motion.button> ) })} </div> </div> ) } export default ThemeToggle'`

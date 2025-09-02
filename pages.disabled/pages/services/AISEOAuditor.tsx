@@ -5,10 +5,10 @@ import {}
 :pages.disabled/pages/services/AISEOAuditor.tsx;
   Phone,'';
   Mail} from 'lucide-react.ts'        <p className='mt-4 max-w-3xl text-slate-300'>
-          Identify SEO issues, generate prioritized fixes, and ship updates;
+          Identify SEO issues, generate prioritized fixes, and ship updates
           automatically with guardrails. Nightly crawls, Core Web Vitals checks,
           structured data validation, and content suggestions.
-        </p>';
+        </p>'
 ''
         <div className='mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3'>'{[''
             'Automated site crawl and issues triage',Core Web Vitals & Lighthouse monitoring',Schema.org and OpenGraph validation',Internal linking and orphan page detection',AI-generated meta tags and headings',CI-ready fix PRs with human-in-the-loop'].map(b => (
@@ -27,13 +27,13 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
           AI SEO Auditor
         </h1>''
         <p className='mt-4 max-w-3xl text-slate-300'>
-          Identify SEO issues, generate prioritized fixes, and ship updates;
+          Identify SEO issues, generate prioritized fixes, and ship updates
           automatically with guardrails. Nightly crawls, Core Web Vitals checks,
           structured data validation, and content suggestions.
         </p>
 ''
         <div className='mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3'>
-          {[';
+          {['
             'Automated site crawl and issues triage',Core Web Vitals & Lighthouse monitoring',Schema.org and OpenGraph validation',Internal linking and orphan page detection',AI-generated meta tags and headings',CI-ready fix PRs with human-in-the-loop'
           ].map(b => (
             <div;
@@ -44,7 +44,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
             </div>
           ))}
 :pages.disabled/pages/services/AISEOAuditor.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-10 rounded-xl border border-white/10 bg-white/5 p-6'>''
           <div className='flex items-center gap-2 text-slate-200 font-semibold'>''
@@ -66,7 +66,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
             className='mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200'';
             href='https://ziontechgroup.com/services'';
             target='_blank'';
-            rel='noreferrer''>'';
+            rel='noreferrer''>''
 :pages.disabled/pages/services/AISEOAuditor.tsx
             Learn more <ExternalLink className='ml-1 h-3 w-3'  />'
           </a>''
@@ -76,7 +76,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
           <div className='mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300'>
             <a'';
               href='tel:+13024640950'';
-              className='inline-flex items-center gap-2 hover:text-cyan-200''>'';
+              className='inline-flex items-center gap-2 hover:text-cyan-200''>''
 :pages.disabled/pages/services/AISEOAuditor.tsx
               <Phone className='h-4 w-4'  /> +1 302 464 0950
             </a>'
@@ -84,7 +84,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
             </a>
             <a'';
               href='mailto:kleber@ziontechgroup.com'';
-              className='inline-flex items-center gap-2 hover:text-cyan-200''>'';
+              className='inline-flex items-center gap-2 hover:text-cyan-200''>''
 :pages.disabled/pages/services/AISEOAuditor.tsx
               <Mail className='h-4 w-4'  /> kleber@ziontechgroup.com
               <Mail className='h-4 w-4'  /> kleber@ziontechgroup.com
@@ -95,5 +95,5 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
   )}
 ;
 :pages.disabled/pages/services/AISEOAuditor.tsx;
-export { AISEOAuditor }export default AISEOAuditor'';''';
+export { AISEOAuditor }export default AISEOAuditor'';'''
 export { AISEOAuditor }export default AISEOAuditor''

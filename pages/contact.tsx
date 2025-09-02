@@ -314,5 +314,5 @@ export default function Contact() {
         </section>
       </main>
     </>
-  );
+  )
 }

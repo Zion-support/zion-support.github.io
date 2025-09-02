@@ -255,7 +255,7 @@ export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unkn
               </span>
             </h1>
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
-              Transform employee performance management with AI-powered analytics.;
+              Transform employee performance management with AI-powered analytics.
               Track productivity, predict retention, and optimize team performance with data-driven insights.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -661,7 +661,7 @@ export default function AIEmployeePerformanceAnalytics(...args: unknown[]): unkn
               Ready to Transform Employee Performance?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of organizations already using AI-powered performance analytics;
+              Join thousands of organizations already using AI-powered performance analytics
               to optimize team performance and drive business success.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

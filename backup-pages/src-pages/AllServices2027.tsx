@@ -23,7 +23,7 @@
       opacity: 1,
       transition: {
         staggerChildren: 0.1}}}
-;
+
       opacity: 1,
       transition: {
         duration: 0.5}}}
@@ -52,7 +52,7 @@
               All Services 2027
             </h1>'
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-              Comprehensive technology solutions portfolio designed to transform your business.;
+              Comprehensive technology solutions portfolio designed to transform your business.
               Discover the perfect combination of services to accelerate your digital transformation.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -96,7 +96,7 @@
               Service Categories
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Explore our comprehensive range of technology services, each designed to address;
+              Explore our comprehensive range of technology services, each designed to address
               specific business challenges and drive innovation.
             </p>
           </div>'
@@ -142,13 +142,13 @@
         <div className='max-w-7xl mx-auto px-6'>'
           <div className='flex items-center justify-between mb-12'>'
             <h2 className='text-3xl md:text-4xl font-bold text-white'>
-  '`{selectedCategory === 'All;
+  '`{selectedCategory === 'All
   ' ? 'All Services
   ' : `${selectedCategory} Services`}
             </h2>'
             <div className='text-gray-400'>
               {filteredServices.length} service{filteredServices.length !== 1 ?,
-  s;
+  s
   ': '} available
             </div>
           </div>
@@ -191,7 +191,7 @@
               </div>'
               <p className='text-gray-300 mb-6'>
                 Transform your business with cutting-edge artificial intelligence solutions.;
-                From predictive analytics to autonomous systems, our AI services drive innovation;
+                From predictive analytics to autonomous systems, our AI services drive innovation
                 and efficiency across all business operations.
               </p>'
               <div className='space-y-3'>'
@@ -220,7 +220,7 @@
               </div>'
               <p className='text-gray-300 mb-6'>
                 Protect your digital assets with enterprise-grade security solutions.;
-                Our cybersecurity services provide comprehensive protection against evolving threats;
+                Our cybersecurity services provide comprehensive protection against evolving threats
                 while ensuring compliance with industry standards.
               </p>'
               <div className='space-y-3'>'
@@ -248,7 +248,7 @@
               </div>'
               <p className='text-gray-300 mb-6'>
                 Stay ahead of the curve with next-generation technologies. From quantum computing;
-                to blockchain solutions, we help you explore and implement cutting-edge innovations;
+                to blockchain solutions, we help you explore and implement cutting-edge innovations
                 that give you a competitive advantage.
               </p>'
               <div className='space-y-3'>'
@@ -276,7 +276,7 @@
               </div>'
               <p className='text-gray-300 mb-6'>
                 Streamline your IT operations with our comprehensive technology services.;
-                From DevOps automation to infrastructure management, we help you build;
+                From DevOps automation to infrastructure management, we help you build
                 robust, scalable, and efficient technology systems.
               </p>'
               <div className='space-y-3'>'
@@ -309,7 +309,7 @@
               Ready to Transform Your Business?
             </h2>'
             <p className='text-xl text-cyan-100 mb-8 max-w-2xl mx-auto'>
-              Choose from our comprehensive portfolio of services and start your digital;
+              Choose from our comprehensive portfolio of services and start your digital
               transformation journey today. Our experts are ready to help you succeed.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -329,10 +329,10 @@
       </section>
     </>
   )}
-;
+
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
-            </a>';
+            </a>'
       case 'AI Services
   ':            </a>
           </div>
@@ -340,21 +340,21 @@ const ServiceCard: React.FC<{ service}> = ({ service }) => {
       </section>
     </>
   )}
-;
+
 // Service Card Component
 const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     switch (category) {
       case,
-  AI Services;
+  AI Services
   ': '
         return <Brain className='w-5 h-5'  />
-      case 'Cybersecurity;
+      case 'Cybersecurity
   ':'
         return <Shield className='w-5 h-5'  />
-      case 'Emerging Technology;
+      case 'Emerging Technology
   ':'
         return <Zap className='w-5 h-5'  />
-      case 'IT Services;
+      case 'IT Services
   ':'
         return <Code className='w-5 h-5'  />
       case 'Telecommunications:'

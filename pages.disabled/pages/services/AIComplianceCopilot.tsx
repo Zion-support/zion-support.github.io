@@ -8,11 +8,11 @@ export { function }export default function AIComplianceCopilot(...args[]):  {}
 :pages.disabled/pages/services/AIComplianceCopilot.tsx
           AI Compliance Copilot'</h1>''        <p className='text-zion-slate-light max-w-3xl'>
           Automate compliance with real-time control monitoring, policy mapping, gap analysis, and auto-evidence generation.;
-          Integrates with cloud, code, identity, and ticketing to reduce audit prep from months to days.;
+          Integrates with cloud, code, identity, and ticketing to reduce audit prep from months to days.
 :pages.disabled/pages/services/AIComplianceCopilot.tsx
         </p>'''        <div className='grid gap-8 md:grid-cols-3 mt-10'>''
           <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>''
-            <h2 className='text-lg font-semibold mb-2'>Frameworks</h2>'';
+            <h2 className='text-lg font-semibold mb-2'>Frameworks</h2>''
 :pages.disabled/pages/services/AIComplianceCopilot.tsx
             <p className='text-sm text-zion-slate-light'>SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS, NIST 800-53.</p>'
           </div>'
@@ -34,5 +34,5 @@ export { function }export default function AIComplianceCopilot(...args[]):  {}
     </div>
   )}
 :pages.disabled/pages/services/AIComplianceCopilot.tsx;
-';
+'
   ''''

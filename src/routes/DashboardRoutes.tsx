@@ -10,7 +10,7 @@ const TalentDashboard = lazy(() => import('../pages/TalentDashboard'));
 const CreatorDashboard = lazy(() => import('../pages/CreatorDashboard'));
 const Analytics = lazy(() => import('../pages/Analytics'));
 const ProjectMilestones = lazy(() => import('../pages/ProjectMilestones'));
-const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
+const ProjectDetails = lazy(() => import('../pages/ProjectDetails'))
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'))
 const DashboardRoutes: React.FC = () => {
   return (<Suspense fallback={<LoadingSpinner />}>
@@ -58,4 +58,3 @@ const DashboardRoutes: React.FC = () => {
       </Routes>
     </Suspense>
   )}
-;

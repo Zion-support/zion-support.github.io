@@ -4,7 +4,7 @@ const SystemStatus: React.FC = () => {
     { name: 'Website', status: 'operational', icon: Server }, { name: 'API Services', status: 'operational', icon: Database },
     { name: 'Cloud Infrastructure', status: 'operational', icon: Cloud }, { name: 'AI Services', status: 'operational', icon: CheckCircle },
     { name: 'Support System', status: 'operational', icon: CheckCircle }
-  ];
+  ]
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'operational': return <CheckCircle className='h-5 w-5 text-green-500' />
@@ -44,5 +44,5 @@ const SystemStatus: React.FC = () => {
       </div>
     </div>
   )}
-;
+
 export default SystemStatus

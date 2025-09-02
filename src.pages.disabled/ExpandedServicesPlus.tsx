@@ -10,7 +10,7 @@ export default function ExpandedServicesPlus() {
           </div>
           <h1 className='text-3xl sm:text-4xl font-bold tracking-tight'>High-Impact Micro SaaS, IT, and AI Services</h1>
           <p className='mt-3 max-w-3xl text-slate-300'>
-            Add-on solutions you can deploy quickly, with transparent pricing and clear ROI. We don’t replace your;
+            Add-on solutions you can deploy quickly, with transparent pricing and clear ROI. We don’t replace your
             existing tools—we make them smarter and more effective across growth, operations, and security.
           </p>
           <div className='mt-6 flex flex-wrap gap-3 text-sm'>

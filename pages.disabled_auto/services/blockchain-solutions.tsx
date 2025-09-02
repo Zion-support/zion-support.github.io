@@ -95,5 +95,5 @@ export default function BlockchainSolutions() {
         </div>
       </section>
     </div>
-  );
+  )
 }

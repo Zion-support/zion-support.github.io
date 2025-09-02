@@ -98,7 +98,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 <:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
       <SEO;
 =;
-      <SEO '>        title = 'SOC2 Compliance Tracker - Zion Tech Group';
+      <SEO '>        title = 'SOC2 Compliance Tracker - Zion Tech Group'
         description='Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools.'
     <>'
       <SEO '';
@@ -175,14 +175,14 @@ export default function SOC2ComplianceTracker(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 '{/* Features Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-                Comprehensive SOC2 Compliance Features';
+                Comprehensive SOC2 Compliance Features'
                 Comprehensive SOC2 Compliance Features
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -193,7 +193,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 <:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map((feature, index()
@@ -223,7 +223,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -235,14 +235,14 @@ export default function SOC2ComplianceTracker(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 '{/* Compliance Areas Section */}''
         <section className='py-20 bg-slate-800/30'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-                Complete SOC2 Framework Coverage';
+                Complete SOC2 Framework Coverage'
                 Complete SOC2 Framework Coverage
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -253,7 +253,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 <:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {complianceAreas.map(area: unknown, index: unknown()
@@ -283,7 +283,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
                     <area.icon className='w-6 h-6 text-white' />'
                     <area.icon className='w-6 h-6 text-white' />
@@ -295,14 +295,14 @@ export default function SOC2ComplianceTracker(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 '{/* Compliance Journey Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-                Your SOC2 Compliance Journey';
+                Your SOC2 Compliance Journey'
                 Your SOC2 Compliance Journey
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -313,7 +313,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 <:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {complianceSteps.map(step: unknown, index: unknown()
@@ -343,7 +343,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-indigo-500 transition-all duration-300'';
 '';
-                  <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto'>'';
+                  <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mb-4 mx-auto'>''
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
                     <span className='text-white font-bold text-lg'>{step.step}</span>'
                     <span className='text-white font-bold text-lg'>{step.step}</span>
@@ -355,14 +355,14 @@ export default function SOC2ComplianceTracker(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 '{/* Benefits Section */}''
         <section className='py-20 bg-slate-800/30'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-                Why Choose Our SOC2 Compliance Platform?';
+                Why Choose Our SOC2 Compliance Platform?'
                 Why Choose Our SOC2 Compliance Platform?
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -373,7 +373,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 <:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefit: unknown, index: unknown()
@@ -417,14 +417,14 @@ export default function SOC2ComplianceTracker(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 '{/* Pricing Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
-                Transparent Pricing Plans';
+                Transparent Pricing Plans'
                 Transparent Pricing Plans
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -435,7 +435,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 <:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(plan: unknown, index: unknown()
@@ -480,12 +480,12 @@ export default function SOC2ComplianceTracker(...args: []):  {}
                   <div className='text-center mb-6'>''
                     <h3 className='text-2xl font-bold mb-2 text-white'>{plan.name}</h3>''
                     <div className='mb-4'>''
-                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
                       <span className='text-gray-400'>{plan.period}</span>'
                     </div>''
                     <p className='text-gray-300'>{plan.description}</p>
-                  </div>';
+                  </div>'
 ''
                   <ul className='space-y-3 mb-8'>'
                       <span className='text-gray-400'>{plan.period}</span>
@@ -500,7 +500,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
                       </li>
                     ))}
                   </ul>
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 '
                   <Link''`
                     to='/request-quote'``;
@@ -522,7 +522,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/SOC2ComplianceTracker.tsx;
+:pages.disabled/pages/services/SOC2ComplianceTracker.tsx
 '{/* CTA Section */}''
         <section className='py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20'>'
           <div className='max-w-4xl mx-auto text-center px-6'>

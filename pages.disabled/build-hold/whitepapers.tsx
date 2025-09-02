@@ -91,7 +91,7 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   ', 'Cloud Computing;
   ', 'Cybersecurity;
   ', 'Software Architecture;
-  ', 'Data Analytics;
+  ', 'Data Analytics
   ', 'Mobile Development
   ']'  return(
     <MainLayout;
@@ -157,5 +157,5 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
       </section>
     </MainLayout>
   )}
-;
+
 export default Whitepapers

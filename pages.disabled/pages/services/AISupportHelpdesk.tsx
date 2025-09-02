@@ -96,7 +96,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 <:pages.disabled/pages/services/AISupportHelpdesk.tsx;
       <SEO;
 =;
-      <SEO '>        title = 'AI Support Helpdesk - Zion Tech Group';
+      <SEO '>        title = 'AI Support Helpdesk - Zion Tech Group'
         description='Professional AI-powered support helpdesk platform with intelligent chatbots, multi-channel support, and advanced analytics for exceptional customer service.'
     <>'
       <SEO '';
@@ -173,14 +173,14 @@ export default function AISupportHelpdesk(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx
 '{/* Features Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx;
-                Powerful AI Support Features';
+                Powerful AI Support Features'
                 Powerful AI Support Features
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -191,7 +191,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
 <:pages.disabled/pages/services/AISupportHelpdesk.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map((feature, index()
@@ -221,7 +221,7 @@ export default function AISupportHelpdesk(...args[]):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -233,14 +233,14 @@ export default function AISupportHelpdesk(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx
 '{/* AI Capabilities Section */}''
         <section className='py-20 bg-slate-800/30'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx;
-                Advanced AI Capabilities';
+                Advanced AI Capabilities'
                 Advanced AI Capabilities
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -251,7 +251,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
 <:pages.disabled/pages/services/AISupportHelpdesk.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {aiCapabilities.map(capability: unknown, index: unknown()
@@ -281,7 +281,7 @@ export default function AISupportHelpdesk(...args[]):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
                     <capability.icon className='w-6 h-6 text-white' />'
                     <capability.icon className='w-6 h-6 text-white' />
@@ -293,14 +293,14 @@ export default function AISupportHelpdesk(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx
 '{/* Support Channels Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx;
-                Multi-Channel Support';
+                Multi-Channel Support'
                 Multi-Channel Support
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -311,7 +311,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
 <:pages.disabled/pages/services/AISupportHelpdesk.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {supportChannels.map(channel: unknown, index: unknown()
@@ -341,7 +341,7 @@ export default function AISupportHelpdesk(...args[]):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-teal-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-teal-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
                     <channel.icon className='w-6 h-6 text-white' />'
                     <channel.icon className='w-6 h-6 text-white' />
@@ -353,14 +353,14 @@ export default function AISupportHelpdesk(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx
 '{/* Benefits Section */}''
         <section className='py-20 bg-slate-800/30'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx;
-                Why Choose Our AI Support Platform?';
+                Why Choose Our AI Support Platform?'
                 Why Choose Our AI Support Platform?
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -371,7 +371,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
 <:pages.disabled/pages/services/AISupportHelpdesk.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefit: unknown, index: unknown()
@@ -415,14 +415,14 @@ export default function AISupportHelpdesk(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx
 '{/* Pricing Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/AISupportHelpdesk.tsx;
-                Transparent Pricing Plans';
+                Transparent Pricing Plans'
                 Transparent Pricing Plans
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -433,7 +433,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
 <:pages.disabled/pages/services/AISupportHelpdesk.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(plan: unknown, index: unknown()
@@ -477,12 +477,12 @@ export default function AISupportHelpdesk(...args[]):  {}
                   <div className='text-center mb-6'>''
                     <h3 className='text-2xl font-bold mb-2 text-white'>{plan.name}</h3>''
                     <div className='mb-4'>''
-                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
                       <span className='text-gray-400'>{plan.period}</span>'
                     </div>''
                     <p className='text-gray-300'>{plan.description}</p>
-                  </div>';
+                  </div>'
 ''
                   <ul className='space-y-3 mb-8'>'
                       <span className='text-gray-400'>{plan.period}</span>
@@ -497,7 +497,7 @@ export default function AISupportHelpdesk(...args[]):  {}
                       </li>
                     ))}
                   </ul>
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx
 '
                   <Link''`
                     to='/request-quote'``;
@@ -519,7 +519,7 @@ export default function AISupportHelpdesk(...args[]):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/AISupportHelpdesk.tsx;
+:pages.disabled/pages/services/AISupportHelpdesk.tsx
 '{/* CTA Section */}''
         <section className='py-20 bg-gradient-to-r from-teal-600/20 to-cyan-600/20'>'
           <div className='max-w-4xl mx-auto text-center px-6'>
@@ -577,5 +577,5 @@ export default function AISupportHelpdesk(...args[]):  {}
         </section>
       </div>
     </>
-  )}''`;
+  )}''`
 ''`'"`

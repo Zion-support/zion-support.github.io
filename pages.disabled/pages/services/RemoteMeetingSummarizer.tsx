@@ -6,7 +6,7 @@
           <h1 className='text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
             Remote Meeting Summarizer'</h1>''          <p className='mt-4 text-lg text-slate-300 max-w-3xl'>
-            Auto-transcribe calls, generate action items, and send summaries to;
+            Auto-transcribe calls, generate action items, and send summaries to
             Slack, Notion, and email.
           </p>
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
@@ -16,7 +16,7 @@
               <h2 className='text-2xl font-semibold mb-3'>Capabilities</h2>''
               <ul className='grid sm:grid-cols-2 gap-3 text-slate-300'>''
                 <li className='p-3 rounded-lg bg-slate-800/50'>
-:pages.disabled/pages/services/RemoteMeetingSummarizer.tsx;
+:pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
                   Zoom, Google Meet, Teams integrations'
                 </li>''
                 <li className='p-3 rounded-lg bg-slate-800/50'>
@@ -31,7 +31,7 @@
                 </li>
               </ul>
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-            </div>';
+            </div>'
 ''
             <div className='rounded-2xl border border-emerald-400/20 bg-slate-900/60 p-6'>''
               <h2 className='text-2xl font-semibold mb-3'>
@@ -73,7 +73,7 @@
               </ul>
             </div>
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx
-          </div>';
+          </div>'
 ''
           <aside className='space-y-6'>''
             <div className='rounded-2xl border border-emerald-400/20 bg-slate-900/60 p-6'>''
@@ -89,4 +89,4 @@
     </div>
   )}
 :pages.disabled/pages/services/RemoteMeetingSummarizer.tsx;
-export default RemoteMeetingSummarizer';'''
+export default RemoteMeetingSummarizer''''

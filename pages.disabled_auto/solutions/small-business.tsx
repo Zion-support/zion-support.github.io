@@ -27,7 +27,7 @@ import Link from 'next/link';
 const SmallBusiness: NextPage = () => {
   const solutions = [
     {
-      title:;
+      title:
   'Cloud-Based Business Management,
       description:
   'Complete business management suite in the cloud',
@@ -39,7 +39,7 @@ const SmallBusiness: NextPage = () => {
   'Financial reporting',
   'Team collaboration tools';
       ];
-      features: [;
+      features: [
         'Customer relationship management',
         'Inventory tracking',
         'Financial reporting',
@@ -56,7 +56,7 @@ const SmallBusiness: NextPage = () => {
   'Knowledge base integration',
   'Performance analytics';
       ];
-      features: [;
+      features: [
         '24/7 chatbot support',
         'Ticket management system',
         'Knowledge base integration',
@@ -73,7 +73,7 @@ const SmallBusiness: NextPage = () => {
   'Content generation',
   'Lead nurturing automation';
       ];
-      features: [;
+      features: [
         'Email marketing campaigns',
         'Social media management',
         'Content generation',
@@ -88,7 +88,7 @@ const SmallBusiness: NextPage = () => {
   'Data encryption',
   'Regular security audits',
   'Backup and recovery',
-  'Employee training';
+  'Employee training'
       ]}
         'Data encryption',
         'Regular security audits',
@@ -194,7 +194,7 @@ const SmallBusiness: NextPage = () => {
   'Dedicated account manager',
   '24/7 phone support',
   'Custom development',
-  'Advanced security features';
+  'Advanced security features'
       ]}
         'Unlimited users',
         'Full feature access',
@@ -212,7 +212,7 @@ const SmallBusiness: NextPage = () => {
             Small Business <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>Solutions</span>
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Comprehensive technology solutions designed specifically for small businesses.;
+            Comprehensive technology solutions designed specifically for small businesses.
             Streamline operations, reduce costs, and accelerate growth with our tailored approach.
           </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4 mb-12'>
@@ -350,5 +350,5 @@ const SmallBusiness: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default SmallBusiness

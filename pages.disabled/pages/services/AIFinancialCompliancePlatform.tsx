@@ -325,21 +325,21 @@ import {}
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center''>''
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
               <Sparkles className='w-4 h-4 mr-2'  />              AI-Powered Financial Compliance Platform'
             </div>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Transform Financial Compliance with''
               <span className='bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent'>
-  '{';
+  '{'
   '}
                 AI Intelligence
               </span>'
             </h1>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
               Automate financial compliance, reduce risks, and ensure regulatory;
-              adherence with our AI-powered platform. Stay ahead of regulatory;
+              adherence with our AI-powered platform. Stay ahead of regulatory
               changes and maintain compliance 24/7.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -386,7 +386,7 @@ import {}
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
               Advanced AI-Powered Features'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
-              Our platform combines cutting-edge AI with comprehensive;
+              Our platform combines cutting-edge AI with comprehensive
               compliance methodologies
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -397,7 +397,7 @@ import {}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
@@ -444,7 +444,7 @@ import {}
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
               Industry Solutions'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
-              Tailored solutions for various financial industries and compliance;
+              Tailored solutions for various financial industries and compliance
               requirements
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -500,7 +500,7 @@ import {}
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
               Transparent Pricing'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
-              Choose the plan that fits your compliance needs and scale as you;
+              Choose the plan that fits your compliance needs and scale as you
               grow
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -551,7 +551,7 @@ import {}
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
               Seamless Integrations'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
-              Connect with your existing financial systems and accounting;
+              Connect with your existing financial systems and accounting
               platforms
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -582,7 +582,7 @@ import {}
               Ready to Transform Your Financial Compliance?'
             </h2>''
             <p className='text-xl text-zion-slate-light mb-8'>
-              Join leading financial institutions using AI to ensure regulatory;
+              Join leading financial institutions using AI to ensure regulatory
               compliance'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -612,7 +612,7 @@ import {}
               Get in Touch'
             </h2>''
             <p className='text-xl text-zion-slate-light mb-8'>
-              Ready to discuss how AI can transform your financial compliance;
+              Ready to discuss how AI can transform your financial compliance
               operations?'
             </p>''
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>''
@@ -620,7 +620,7 @@ import {}
                 <Phone className='w-6 h-6 text-purple-400'  />'                <span className='text-zion-slate-light'>+1 302 464 0950</span>'</div>''              <div className='flex items-center justify-center space-x-3'>''
                 <Mail className='w-6 h-6 text-purple-400'  />''
                 <span className='text-zion-slate-light'>
-:pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx;
+:pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
                   kleber@ziontechgroup.com
                 </span>'</div>''              <div className='flex items-center justify-center space-x-3'>''
                 <MapPin className='w-6 h-6 text-purple-400'  />''
@@ -632,11 +632,11 @@ import {}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
               </div>'
             </div>'            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<a''                href='https://ziontechgroup.com/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200''>'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200''>''
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
                 <ArrowRight className='w-5 h-5 mr-2'  />                Contact Us
               </a>'<a''                href='https://ziontechgroup.com'';
-                className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200''>'';
+                className='inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200''>''
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
                 <Globe className='w-5 h-5 mr-2'  />                Visit Website</a>            </div>
           </motion.div>
@@ -645,5 +645,5 @@ import {}
     </div>
   )}
 ;
-export default AIFinancialCompliancePlatform''`;
+export default AIFinancialCompliancePlatform''`
   ''`'"`

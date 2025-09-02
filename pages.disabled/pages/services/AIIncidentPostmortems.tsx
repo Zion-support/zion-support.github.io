@@ -36,7 +36,7 @@ import { AlertTriangle,
   Server'} from 'lucide-react';
 export { function }
 export default function AIIncidentPostmortems(...args[]): {
-  ;
+  
   website: 'https://ziontechgroup.com'
 <:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
 }
@@ -101,7 +101,7 @@ export default function AIIncidentPostmortems(...args[]): {
   ]},'{'
       title: 'Customer Support','      description: 'Improve customer experience with faster incident resolution and communication',
       icon: MessageSquare}
-  ];
+  ]
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
@@ -109,7 +109,7 @@ export default function AIIncidentPostmortems(...args[]): {
       <SEO;
 =;
       <SEO '>        title='AI Incident Postmortems Platform | Zion Tech Group';
-        description='Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity.';
+        description='Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity.'
         keywords='AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response'/>        description='Revolutionize your incident management with AI-powered postmortems. Automate root cause analysis, prevent future incidents, and improve team productivity.''        keywords='AI incident management, incident postmortems, root cause analysis, DevOps, IT operations, incident response'/>'{/* Hero Section */}''
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>
@@ -128,19 +128,19 @@ export default function AIIncidentPostmortems(...args[]): {
 '';
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-purple-100/10 border border-purple-200/20 text-purple-200 text-sm font-medium mb-6'>''
               <AlertTriangle className='w-4 h-4 mr-2'  />              AI-Powered Incident Management
-            </div>';
+            </div>'
 ''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               AI Incident Postmortems''
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400'>
                 Platform
               </span>
-            </h1>';
+            </h1>'
 ''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Transform your incident management with AI-powered postmortems. Automate root cause analysis,
               prevent future incidents, and build a culture of continuous improvement.
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>
@@ -180,7 +180,7 @@ export default function AIIncidentPostmortems(...args[]): {
           </motion.div>
 <:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -209,7 +209,7 @@ export default function AIIncidentPostmortems(...args[]): {
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -248,7 +248,7 @@ export default function AIIncidentPostmortems(...args[]): {
           </motion.div>
 <:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -308,7 +308,7 @@ export default function AIIncidentPostmortems(...args[]): {
           </motion.div>
 <:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -340,7 +340,7 @@ export default function AIIncidentPostmortems(...args[]): {
                       Most Popular
                     </span>
                   </div>
-                )}';
+                )}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
@@ -349,14 +349,14 @@ export default function AIIncidentPostmortems(...args[]): {
                     <span className='text-slate-400 ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-slate-300'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'{plan.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-start space-x-3'>''
                       <CheckCircle className='w-5 h-5 text-green-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{feature}</span>
                     </li>
                   ))}
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -389,14 +389,14 @@ export default function AIIncidentPostmortems(...args[]): {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
               Perfect for Every Team'
             </h2>''
-            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>';
+            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>'
               Whether you're in IT, DevOps, Security, or Customer Support, our platform adapts to your needs
             </p>
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx
           </motion.div>
 <:pages.disabled/pages/services/AIIncidentPostmortems.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -425,7 +425,7 @@ export default function AIIncidentPostmortems(...args[]): {
                 <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4'>''
                   <useCase.icon className='w-8 h-8 text-white' />'
@@ -458,7 +458,7 @@ export default function AIIncidentPostmortems(...args[]): {
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
               Join thousands of teams who have already improved their incident response with AI
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>
@@ -467,7 +467,7 @@ export default function AIIncidentPostmortems(...args[]): {
               <button className='px-8 py-4 border border-purple-200/20 text-purple-200 font-semibold rounded-lg hover:bg-purple-200/10 transition-all duration-300'>
                 Schedule Demo
               </button>
-            </div>';
+            </div>'
 ''
             <p className='text-slate-400 mt-6'>
               No credit card required • 14-day free trial • Cancel time
@@ -496,7 +496,7 @@ export default function AIIncidentPostmortems(...args[]): {
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
               Our team is here to help you get started and answer  questions
-            </p>';
+            </p>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8'>''
               <div className='flex flex-col items-center'>''
@@ -523,5 +523,5 @@ export default function AIIncidentPostmortems(...args[]): {
         </div>
       </section>
     </div>
-  )}''`;
+  )}''`
 ''`'"`

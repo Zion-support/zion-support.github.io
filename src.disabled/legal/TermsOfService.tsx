@@ -125,5 +125,5 @@ const TermsOfService: React.FC = ($2) => {
       </div>
     </div>
   )}
-;
+
 export default TermsOfService

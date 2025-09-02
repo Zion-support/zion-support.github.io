@@ -183,7 +183,7 @@ export default function AICybersecurityPlatform(...args: any[]): any {
             </span>
           </h1>
           <p className='text-xl md:text-2xl text-gray-100 max-w-4xl mx-auto mb-10 leading-relaxed'>
-            Protect your business with the most advanced AI-powered cybersecurity platform.;
+            Protect your business with the most advanced AI-powered cybersecurity platform.
             Real-time threat detection, zero-trust architecture, and automated incident response.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -216,7 +216,7 @@ export default function AICybersecurityPlatform(...args: any[]): any {
 import { SEO              } from '../../components/SEO';
 import { Button              } from '../../components/ui/Button';
 import { Card              } from '../../components/ui/Card';
-import { Badge              } from '../../components/ui/Badge';
+import { Badge              } from '../../components/ui/Badge'
 import { CheckCircle, Brain, TrendingUp, Shield, Zap, Globe, Clock, Phone, Mail, Lock, Eye, AlertTriangle, Users, Database, Network, Cpu              } from 'lucide-react.ts'
 
 const AICybersecurityPlatform: React.FC = (): JSX.Element => {
@@ -296,7 +296,7 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               Advanced Security Features
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our AI-powered cybersecurity platform combines cutting-edge technology with intelligent automation;
+              Our AI-powered cybersecurity platform combines cutting-edge technology with intelligent automation
               to provide comprehensive protection against all types of cyber threats.
             </p>
           </div>
@@ -397,7 +397,7 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               Multi-Layer Security Architecture
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our defense-in-depth approach provides comprehensive protection across all attack vectors;
+              Our defense-in-depth approach provides comprehensive protection across all attack vectors
               and ensures no single point of failure.
             </p>
           </div>
@@ -432,7 +432,7 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               Advanced Threat Intelligence
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Stay ahead of emerging threats with our comprehensive threat intelligence platform;
+              Stay ahead of emerging threats with our comprehensive threat intelligence platform
               that provides real-time insights and automated response capabilities.
             </p>
           </div>
@@ -462,7 +462,7 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               Industry Compliance & Certifications
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Our platform meets the highest security standards and compliance requirements;
+              Our platform meets the highest security standards and compliance requirements
               across industries and regulatory frameworks.
             </p>
           </div>
@@ -487,7 +487,7 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
               Transparent Security Pricing
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              Choose the security plan that best fits your organization's needs. All plans include;
+              Choose the security plan that best fits your organization's needs. All plans include
               our core AI-powered protection and dedicated support.
             </p>
       {/* Security Solutions */}
@@ -771,7 +771,7 @@ const AICybersecurityPlatform: React.FC = (): JSX.Element => {
             Ready to Secure Your Business?
           </h2>
           <p className='text-xl text-gray-100 max-w-3xl mx-auto mb-10'>
-            Join thousands of organizations already protected by our AI-powered cybersecurity platform.;
+            Join thousands of organizations already protected by our AI-powered cybersecurity platform.
             Don't wait until it's too late - secure your future today.
           </p>
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>

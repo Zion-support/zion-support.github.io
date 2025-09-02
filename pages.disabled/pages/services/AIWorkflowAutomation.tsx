@@ -47,7 +47,7 @@ export { function }
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx;
 export default function AIWorkflowAutomation(...args[]):  {
 export default function AIWorkflowAutomation(...args[]):  {}
-  return();
+  return()
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
@@ -63,7 +63,7 @@ export default function AIWorkflowAutomation(...args[]):  {}
         title='AI Workflow Automation - Zion Tech Group';
         description='Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%.';
         keywords='AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization'/>        title='AI Workflow Automation - Zion Tech Group'';
-        description='Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%.'';
+        description='Transform your business with AI-powered workflow automation. Streamline processes, reduce errors, and increase efficiency by 300%.''
         keywords='AI workflow automation, business process automation, workflow orchestration, AI decision engine, process optimization''/>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx{/* Hero Section */}'
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>'
@@ -90,23 +90,23 @@ export default function AIWorkflowAutomation(...args[]):  {}
             </h1>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx;
-              Transform your business processes with intelligent automation. Our AI-powered workflows;
+              Transform your business processes with intelligent automation. Our AI-powered workflows
               orchestrate complex tasks, make smart decisions, and drive unprecedented efficiency.
             </p>';
-              Transform your business processes with intelligent automation. Our AI-powered workflows;
+              Transform your business processes with intelligent automation. Our AI-powered workflows
               orchestrate complex tasks, make smart decisions, and drive unprecedented efficiency.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
-                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center'>';
+                className='px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center'>'
                 Start Free Trial''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </motion.button>
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
-                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300'>';
+                className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300'>'
             transition={{ duration: 0.8 }}
           >''
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium mb-6'>''
@@ -116,7 +116,7 @@ export default function AIWorkflowAutomation(...args[]):  {}
               AI Workflow Automation
             </h1>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Transform your business processes with intelligent automation. Our AI-powered workflows;
+              Transform your business processes with intelligent automation. Our AI-powered workflows
               orchestrate complex tasks, make smart decisions, and drive unprecedented efficiency.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -151,14 +151,14 @@ export default function AIWorkflowAutomation(...args[]):  {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx;
-              Powerful Features for Modern Automation';
+              Powerful Features for Modern Automation'
               Powerful Features for Modern Automation
             </h2>''
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to build, deploy, and manage intelligent workflows at scale.
             </p>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index()
@@ -176,7 +176,7 @@ export default function AIWorkflowAutomation(...args[]):  {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}'';
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                   <feature.icon className='w-6 h-6 text-white' />
@@ -201,7 +201,7 @@ export default function AIWorkflowAutomation(...args[]):  {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx;
-              Advanced Capabilities';
+              Advanced Capabilities'
               Advanced Capabilities
             </h2>''
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -222,14 +222,14 @@ export default function AIWorkflowAutomation(...args[]):  {}
                 transition={{ duration: 0.8, delay: index * 0.1 }}'';
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-8 hover:border-blue-500/50 transition-all duration-300''>''
                 <div className='flex items-start space-x-4'>''
-                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0'>'';
+                  <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0'>''
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
                     <capability.icon className='w-6 h-6 text-white' />'
                     <capability.icon className='w-6 h-6 text-white' />
                   </div>''
                   <div className='flex-1'>''
                     <h3 className='text-xl font-semibold text-white mb-2'>{capability.title}</h3>''
-                    <p className='text-gray-400 mb-4'>{capability.description}</p>'';
+                    <p className='text-gray-400 mb-4'>{capability.description}</p>''
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
                     <ul className='space-y-2'>'
                     <ul className='space-y-2'>
@@ -260,7 +260,7 @@ export default function AIWorkflowAutomation(...args[]):  {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx;
-              Industry Solutions';
+              Industry Solutions'
               Industry Solutions
             </h2>''
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -280,7 +280,7 @@ export default function AIWorkflowAutomation(...args[]):  {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}'';
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
                   <useCase.icon className='w-6 h-6 text-white' />'
                 </div>''
@@ -319,14 +319,14 @@ export default function AIWorkflowAutomation(...args[]):  {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx;
-              Simple, Transparent Pricing';
+              Simple, Transparent Pricing'
               Simple, Transparent Pricing
             </h2>''
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Choose the plan that fits your automation needs. All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricing.map(plan: unknown, index: unknown()
@@ -353,7 +353,7 @@ export default function AIWorkflowAutomation(...args[]):  {}
                     ? 'border-blue-500/50 ring-2 ring-blue-500/20' ';
                     : 'border-gray-700 hover:border-blue-500/50'`>';
                   plan.popular '';
-                    ? 'border-blue-500/50 ring-2 ring-blue-500/20' ''`;
+                    ? 'border-blue-500/50 ring-2 ring-blue-500/20' ''`
                     : 'border-gray-700 hover:border-blue-500/50'``} transition-all duration-300`}
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx>'>{plan.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -368,14 +368,14 @@ export default function AIWorkflowAutomation(...args[]):  {}
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>
                   <div className='flex items-baseline justify-center mb-2'>
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>
-=;
+=
                 '
                 <div className='text-center mb-6'>'
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
                   <div className='flex items-baseline justify-center mb-2'>'
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>'
 >                    <span className='text-gray-400 ml-1'>{plan.period}</span>
-                  </div>')}';
+                  </div>')}'
                 ''
                 <div className='text-center mb-6'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
@@ -384,9 +384,9 @@ export default function AIWorkflowAutomation(...args[]):  {}
                     <span className='text-gray-400 ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-gray-400'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
-                <ul className='space-y-3 mb-8'>';
+                <ul className='space-y-3 mb-8'>'
                 ''
                 <div className='text-center mb-6'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
@@ -441,14 +441,14 @@ export default function AIWorkflowAutomation(...args[]):  {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx;
-              Transform Your Business Today';
+              Transform Your Business Today'
               Transform Your Business Today
             </h2>''
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Join thousands of companies that have revolutionized their operations with AI workflow automation.
             </p>
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -466,7 +466,7 @@ export default function AIWorkflowAutomation(...args[]):  {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}'';
                 className='text-center''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
                   <benefit.icon className='w-8 h-8 text-white' />'
                   <benefit.icon className='w-8 h-8 text-white' />
@@ -539,9 +539,9 @@ export default function AIWorkflowAutomation(...args[]):  {}
               <Phone className='w-8 h-8 text-purple-400 mb-4'  />''
               <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>''
               <a href='tel:+13024640950' className='text-purple-400 hover:text-purple-300'>
-:pages.disabled/pages/services/AIWorkflowAutomation.tsx;
+:pages.disabled/pages/services/AIWorkflowAutomation.tsx
                 +1 302 464 0950
-              </a>';
+              </a>'
                 +1 302 464 0950
               </a>
             </div>''
@@ -549,15 +549,15 @@ export default function AIWorkflowAutomation(...args[]):  {}
               <Mail className='w-8 h-8 text-purple-400 mb-4'  />''
               <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>''
               <a href='mailto:kleber@ziontechgroup.com' className='text-purple-400 hover:text-purple-300'>
-:pages.disabled/pages/services/AIWorkflowAutomation.tsx;
+:pages.disabled/pages/services/AIWorkflowAutomation.tsx
                 kleber@ziontechgroup.com
-              </a>';
+              </a>'
                 kleber@ziontechgroup.com
               </a>
             </div>''
             <div className='flex flex-col items-center'>''
               <Globe className='w-8 h-8 text-purple-400 mb-4'  />''
-              <h3 className='text-xl font-semibold text-white mb-2'>Website</h3>'';
+              <h3 className='text-xl font-semibold text-white mb-2'>Website</h3>''
 :pages.disabled/pages/services/AIWorkflowAutomation.tsx
               <a href='https://ziontechgroup.com' className='text-purple-400 hover:text-purple-300 flex items-center gap-2'>'
               <a href='https://ziontechgroup.com' className='text-purple-400 hover:text-purple-300 flex items-center gap-2'>
@@ -577,6 +577,6 @@ export default function AIWorkflowAutomation(...args[]):  {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AIWorkflowAutomation.tsx)}''`;
+:pages.disabled/pages/services/AIWorkflowAutomation.tsx)}''`
 ''`''`)}
 ''`

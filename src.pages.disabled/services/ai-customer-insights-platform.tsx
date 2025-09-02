@@ -55,7 +55,7 @@ import {
   Server} from 'lucide-react';
 const AICustomerInsightsPlatform = () => {
   const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     setIsVisible(true)}, [])
   const features = [
@@ -125,7 +125,7 @@ const AICustomerInsightsPlatform = () => {
         'Dedicated support',
         'Custom integrations',
         'White-label options',
-        'SLA guarantee';
+        'SLA guarantee'
       ],
       popular: false}
   ]
@@ -215,7 +215,7 @@ const AICustomerInsightsPlatform = () => {
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap capitalize ${
-                  activeTab === tab;
+                  activeTab === tab
                     ? 'border-green-500 text-green-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
               >{tab.replace('-', ' ')}
@@ -580,5 +580,5 @@ const AICustomerInsightsPlatform = () => {
       </div>
     </div>
   )}
-;
+
 export default AICustomerInsightsPlatform

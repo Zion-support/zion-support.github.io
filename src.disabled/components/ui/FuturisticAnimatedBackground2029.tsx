@@ -10,7 +10,7 @@ import React, { useEffect, useRef } from,
   #ff0080',
   '#00ffff',
   '#ffff00',
-  '#ff00ff'], holographic: [;
+  '#ff00ff'], holographic: [
   '#ff6b6b,
 ,
   #4ecdc4',

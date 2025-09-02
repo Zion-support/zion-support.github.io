@@ -52,7 +52,7 @@ const EnhancedPerformanceMonitor: React.FC = () => {
   }, []);
   useEffect(() => {
     updateMetrics();
-    const interval = setInterval(updateMetrics, 30000) // Update every 30 seconds;
+    const interval = setInterval(updateMetrics, 30000) // Update every 30 seconds
     return () => clearInterval(interval)}, [updateMetrics])
   if (!metrics) {
     return (
@@ -60,8 +60,8 @@ const EnhancedPerformanceMonitor: React.FC = () => {
         <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
       </div>
     )}
-  return(
-    <div className='bg-white dark: bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700'>
+  return (
+    <div className='bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700'>
       <div className='flex items-center justify-between mb-4'>
         <h3 className='text-lg font-semibold text-gray-900 dark:text-white flex items-center'>
           <Activity className='w-5 h-5 mr-2 text-blue-500' />
@@ -78,20 +78,20 @@ const EnhancedPerformanceMonitor: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4 mb-6'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6'>
         <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-4'>
           <div className='text-sm text-gray-600 dark:text-gray-400'>FCP</div>
           <div className='text-2xl font-bold text-gray-900 dark:text-white'>
             {Math.round(metrics.fcp)}ms
           </div>
         </div>
-        <div className='bg-gray-50 dark: bg-gray-700 rounded-lg p-4'>
+        <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-4'>
           <div className='text-sm text-gray-600 dark:text-gray-400'>LCP</div>
           <div className='text-2xl font-bold text-gray-900 dark:text-white'>
             {Math.round(metrics.lcp)}ms
           </div>
         </div>
-        <div className='bg-gray-50 dark: bg-gray-700 rounded-lg p-4'>
+        <div className='bg-gray-50 dark:bg-gray-700 rounded-lg p-4'>
           <div className='text-sm text-gray-600 dark:text-gray-400'>CLS</div>
           <div className='text-2xl font-bold text-gray-900 dark:text-white'>
             {metrics.cls.toFixed(3)}
@@ -100,15 +100,15 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </div>
       <div className='mb-4'>
         <div className='flex items-center justify-between mb-2'>
-          <span className='text-sm font-medium text-gray-700 dark: text-gray-300'>
+          <span className='text-sm font-medium text-gray-700 dark:text-gray-300'>
             Performance Score
           </span>
           <span className={`text-lg font-bold ${getScoreColor(metrics.score)}`}>
             {Math.round(metrics.score)}
           </span>
         </div>
-        <div className='w-full bg-gray-200 dark: bg-gray-600 rounded-full h-2'>
-          <div;
+        <div className='w-full bg-gray-200 dark:bg-gray-600 rounded-full h-2'>
+          <div
             className={`h-2 rounded-full ${
               metrics.score >= 90 ? 'bg-green-500' : metrics.score >= 50 ? 'bg-yellow-500' : 'bg-red-500'}`}
             style={{ width: `${metrics.score}%` }}
@@ -150,5 +150,5 @@ const EnhancedPerformanceMonitor: React.FC = () => {
       </AnimatePresence>
     </div>
   )}
-;
+
 export default EnhancedPerformanceMonitor

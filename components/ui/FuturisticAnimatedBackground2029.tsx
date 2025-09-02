@@ -8,10 +8,10 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       update() {;
         this.x += this.vx;
         this.y += this.vy;
-        this.life--;
+        this.life--
         // Wrap around edges
         if (this.x < 0) this.x = canvas.width;
-        if (this.x > canvas.width) this.x = 0;
+        if (this.x > canvas.width) this.x = 0
         if (this.y < 0) this.y = canvas.height;
         if (this.y > canvas.height) this.y = 0;
         // Add some gravity effect
@@ -31,7 +31,7 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
           // Add glow effect
           ctx.shadowColor = this.color;
           ctx.shadowBlur = 10;
-          ctx.fill();
+          ctx.fill()
           ctx.restore()}
       }
 
@@ -157,7 +157,7 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       // Draw connections between nearby particles
       ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
       ctx.lineWidth = 1;
-      for (let i = 0; i < particles.length; i++) {
+      for (let i = 0 i < particles.length; i++) {
 
         for (let j = i + 1; j < particles.length; j++) {
 
@@ -224,7 +224,7 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       if (animationId) {
 
         cancelAnimationFrame(animationId)}
-    }}, []);
+    }}, [])
   return (
     <div className = {`fixed inset-0 pointer-events-none ${className}`}>
       <canvas
@@ -250,10 +250,10 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-purple-900/10 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-blue-900/10 to-transparent" />
       
-      {/* Animated orbs */};
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />;
-      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />;
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />;
-    </div>;
-  );
+      {/* Animated orbs */}
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+    </div>
+  )
 }

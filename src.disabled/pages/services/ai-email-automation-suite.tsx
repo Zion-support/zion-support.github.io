@@ -35,7 +35,7 @@ import {
   Tablet} from 'lucide-react';
 const AIEmailAutomationSuite = () => {
   const [activeTab, setActiveTab] = useState('overview');
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false)
   useEffect(() => {
     setIsVisible(true)}, [])
   const features = [
@@ -102,7 +102,7 @@ const AIEmailAutomationSuite = () => {
         'Advanced security',
         'Custom integrations',
         'Dedicated support',
-        'SLA guarantee';
+        'SLA guarantee'
       ],
       popular: false}
   ]
@@ -166,7 +166,7 @@ const AIEmailAutomationSuite = () => {
                 key={tab}
                 onClick={() => setActiveTab(tab)}
                 className={`py-4 px-1 border-b-2 font-medium text-sm whitespace-nowrap capitalize ${
-                  activeTab === tab;
+                  activeTab === tab
                     ? 'border-blue-500 text-blue-600'
                     : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'}`}
               >{tab.replace('-', ' ')}
@@ -501,5 +501,5 @@ const AIEmailAutomationSuite = () => {
       </div>
     </div>
   )}
-;
+
 export default AIEmailAutomationSuite

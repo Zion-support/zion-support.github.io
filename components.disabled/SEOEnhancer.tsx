@@ -41,7 +41,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     sameAs: [;
       'https://www.linkedin.com/company/zion-tech-group',
       'https://github.com/Zion-Technologies']}
-;
+
   const finalStructuredData = structuredData || defaultStructuredData
   return(
     <Head>
@@ -96,5 +96,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta httpEquiv='Referrer-Policy' content='strict-origin-when-cross-origin' />
     </Head>
   )}
-;
+
 export default SEOEnhancer

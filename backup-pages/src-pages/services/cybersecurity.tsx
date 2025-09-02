@@ -1,7 +1,7 @@
 
 <=;
 =;
-          <motion.div '>            className='text-center';
+          <motion.div '>            className='text-center'
             initial = {
   { opacity: 0,
   y: 20}}
@@ -17,7 +17,7 @@
               </span>
             </h1>'
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-              Protect your business with enterprise-grade cybersecurity solutions. From threat detection;
+              Protect your business with enterprise-grade cybersecurity solutions. From threat detection
               to compliance management, we secure your digital assets.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -151,7 +151,7 @@
               Ready to Secure Your Business?
             </h2>'
             <p className='text-xl text-slate-300 mb-8'>
-              Let;
+              Let
   's discuss how our cybersecurity solutions can protect your organization
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

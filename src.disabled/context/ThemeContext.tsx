@@ -23,10 +23,10 @@ interface ThemeContextType {
    colorScheme: ColorScheme;
    config: ThemeConfig;
    setTheme: (theme: Theme) => void;
-   setColorScheme: (scheme: ColorScheme) => void;
+   setColorScheme: (scheme: ColorScheme) => void
    toggleTheme: () => void
    isDark: boolean}
-const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
+const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 // Color schemes
 const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dark: Partial<ThemeConfig> }> = {
   blue: {
@@ -138,7 +138,7 @@ const colorSchemes: Record<ColorScheme, { light: Partial<ThemeConfig> dark: Part
       infoColor: '#f472b6'}
   }
 }
-;
+
 // Base theme configurations
 const lightTheme: Partial<ThemeConfig> = {
   backgroundColor: '#ffffff',
@@ -157,7 +157,7 @@ const darkTheme: Partial<ThemeConfig> = {
   shadowColor: 'rgba(0, 0, 0, 0.3)'}
 ;
 interface ThemeProviderProps {
-  children: ReactNode;
+  children: ReactNode
    defaultTheme?: Theme
    defaultColorScheme?: ColorScheme}
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({
@@ -226,7 +226,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   const toggleTheme = () => {
     const newTheme = getEffectiveTheme() === 'light' ? 'dark' : 'light';
     setTheme(newTheme)}
-;
+
   const value: ThemeContextType = {
     theme,
     colorScheme,
@@ -247,5 +247,5 @@ export const useTheme = (): ThemeContextType => {
   if (context === undefined) {
     throw new Error('useTheme must be used within a ThemeProvider')}
   return context}
-;
+
 export default ThemeContext

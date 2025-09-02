@@ -85,7 +85,7 @@ const Pricing: React.FC = () => {
       ], popular: false,
       color: 'from-orange-500 to-red-500', buttonText: 'Contact Sales',
       buttonVariant: 'outline' as const}
-  ];
+  ]
   const servicePricing = [
     {
       service: 'AI Development', startingPrice: '$5,000', description: 'Custom AI solutions and machine learning models',
@@ -257,5 +257,5 @@ const Pricing: React.FC = () => {
       </section>
     </div>
   )}
-;
+
 export default Pricing

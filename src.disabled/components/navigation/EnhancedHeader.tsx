@@ -75,5 +75,5 @@ import React, { useState, useEffect } from;
   ', href: 'tel:+13024640950 }, { icon: Mail, text:,
   kleber@ziontechgroup.com;
   ', href: 'mailto:kleber@ziontechgroup.com }, { icon: MapPin, text:,
-  364 E Main St STE 1008, Middletown DE 19709;
+  364 E Main St STE 1008, Middletown DE 19709
   ', href: '# } ] const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) } const closeMobileMenu = () => { setIsOpen(false) setActiveDropdown(null) } const handleSearch = (e: React.FormEvent) => { e.preventDefault() if (searchQuery.trim()) {''

@@ -13,7 +13,7 @@ import { SEO } from '../components/SEO';
 const Search: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('relevance');
+  const [sortBy, setSortBy] = useState('relevance')
   const [results, setResults] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const categories = [
@@ -29,31 +29,27 @@ const Search: React.FC = () => {
     { id: 'price-high', name: 'Price: High to Low' }
   ];
   const mockResults = [
-    {
-      id: 1, title: 'AI-Powered Business Intelligence Platform',
+    { id: 1, title: 'AI-Powered Business Intelligence Platform',
       description: 'Advanced analytics and business intelligence solution powered by machine learning algorithms.', type: 'services',
       price: '$5, 000/month',
       rating: 4.8, reviews: 127,
       location: 'Remote', company: 'Zion Tech Group',
       tags: ['AI', 'Analytics', 'Business Intelligence', 'Machine Learning'], featured: true,
       date: '2024-12-01'
-    }, {
-      id: 2,
+    }, { id: 2,
       title: 'Senior Full-Stack Developer', description: 'Experienced developer specializing in React, Node.js, and cloud technologies.',
       type: 'talent', price: '$120/hour',
       rating: 4.9, reviews: 89,
       location: 'Remote', company: 'Zion Tech Group',
       tags: ['React', 'Node.js', 'Full-Stack', 'Cloud'], featured: false,
       date: '2024-11-28'
-    }, {
-      id: 3,
+    }, { id: 3,
       title: 'Cloud Infrastructure Setup', description: 'Complete cloud infrastructure design and implementation for enterprise applications.',
       type: 'services', price: '$15,000', rating: 4.7,
       reviews: 203, location: 'On-site',
       company: 'Zion Tech Group', tags: ['Cloud', 'Infrastructure', 'AWS', 'Azure'], featured: true,
       date: '2024-11-25'
-    }, {
-      id: 4,
+    }, { id: 4,
       title: 'High-Performance Computing Cluster', description: 'Enterprise-grade computing cluster for data processing and machine learning workloads.',
       type: 'equipment', price: '$50,000', rating: 4.6,
       reviews: 45, location: 'On-site',
@@ -96,13 +92,13 @@ const Search: React.FC = () => {
     if (searchQuery.trim()) {
       performSearch();
     }
-  };
+  }
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'services': return <Server className="w-5 h-5 text-blue-400" />;
-      case 'talent': return <Users className="w-5 h-5 text-purple-400" />;
-      case 'equipment': return <Building className="w-5 h-5 text-orange-400" />;
-      default: return <SearchIcon className="w-5 h-5 text-gray-400" />;
+      case 'services': return <Server className="w-5 h-5 text-blue-400" />
+      case 'talent': return <Users className="w-5 h-5 text-purple-400" />
+      case 'equipment': return <Building className="w-5 h-5 text-orange-400" />
+      default: return <SearchIcon className="w-5 h-5 text-gray-400" />
     }
   };
   const getTypeLabel = (type: string) => {
@@ -112,7 +108,7 @@ const Search: React.FC = () => {
       case 'equipment': return 'Equipment';
       default: return 'Unknown';
     }
-  };
+  }
   return (
     <>
       <SEO 
@@ -128,7 +124,7 @@ const Search: React.FC = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.6   }}
               className="text-center mb-8"
             >
               <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
@@ -316,4 +312,4 @@ const Search: React.FC = () => {
 </>
   );
 };
-export default Search;
+export default Search

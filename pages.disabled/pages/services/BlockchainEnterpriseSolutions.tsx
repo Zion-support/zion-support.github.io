@@ -58,7 +58,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
 <:pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx;
       <SEO;
 =;
-      <SEO '>        title='Blockchain Enterprise Solutions - Zion Tech Group';
+      <SEO '>        title='Blockchain Enterprise Solutions - Zion Tech Group'
         description='Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology.'/>        title='Blockchain Enterprise Solutions - Zion Tech Group''        description='Transform your business with enterprise-grade blockchain solutions. From smart contracts to DeFi applications, we help you leverage the power of distributed ledger technology.'/>'
       <SEO ''
         title='Blockchain Enterprise Solutions - Zion Tech Group'';
@@ -92,20 +92,20 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
               Blockchain';
   y: 0}}';
             transition={{ duration: 0.6 }}'';
-            className='text-center max-w-4xl mx-auto'';
+            className='text-center max-w-4xl mx-auto''
 ''
             <div className='flex justify-center mb-6'>''
               <div className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>''
                 <Lock className='w-10 h-10 text-white'  />              </div>'
             </div>''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               Blockchain''
               <span className='block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 Enterprise Solutions
               </span>'
             </h1>''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-              Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.;
+              Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.
               Build trust, transparency, and efficiency into your business processes.'
             </p>''
             <div className='flex flex-wrap justify-center gap-4'>
@@ -126,7 +126,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
               </span>
             </h1>''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-              Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.;
+              Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.
               Build trust, transparency, and efficiency into your business processes.
             </p>''
             <div className='flex flex-wrap justify-center gap-4'>
@@ -175,17 +175,17 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
               Why Choose Blockchain Technology?';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Why Choose Blockchain Technology?
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Blockchain offers unprecedented opportunities for businesses to create;
+              Blockchain offers unprecedented opportunities for businesses to create
               secure, transparent, and efficient systems that build trust with stakeholders.
             </p>
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -220,13 +220,13 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
                   <feature.icon className='w-6 h-6 text-white' />
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
-  delay: index * 0.1 '}}'';
+  delay: index * 0.1 '}}''
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''
                   <feature.icon className='w-6 h-6 text-white' />
@@ -267,7 +267,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
               Our Blockchain Services';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Our Blockchain Services
@@ -311,7 +311,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
                   {service.features.map((feature, featureIndex) => ('
                     <li key={featureIndex} className='flex items-center text-sm text-slate-300'>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
 ''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
                 <p className='text-slate-300 mb-4'>{service.description}</p>''
@@ -319,7 +319,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
                 <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center text-sm text-slate-300'>'';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
 ''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
                 <p className='text-slate-300 mb-4'>{service.description}</p>''
@@ -378,17 +378,17 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
               Blockchain Use Cases';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Blockchain Use Cases
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Discover how blockchain technology can transform various industries;
+              Discover how blockchain technology can transform various industries
               and business processes
             </p>
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -425,14 +425,14 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
                 </div>'
                 <h3 className='text-lg font-semibold text-white mb-2'>{useCase.name}</h3>';
   delay: index * 0.1 '}}'';
-                className='text-center group'';
+                className='text-center group''
 ''
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>''
                   <useCase.icon className='w-8 h-8 text-pink-400' />'
                 </div>''
                 <h3 className='text-lg font-semibold text-white mb-2'>{useCase.name}</h3>'';
   delay: index * 0.1}}'';
-                className='text-center group'';
+                className='text-center group''
 ''
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>''
                   <useCase.icon className='w-8 h-8 text-pink-400' />
@@ -468,7 +468,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
             <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Your Business?'
             </h2>''
-            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>';
+            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>'
               Let's discuss how blockchain technology can revolutionize your operations,
               enhance security, and create new opportunities for growth and innovation.'
             </p>''
@@ -512,6 +512,6 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx)}''`;
+:pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx)}''`
 ''`''`)}
 '"`

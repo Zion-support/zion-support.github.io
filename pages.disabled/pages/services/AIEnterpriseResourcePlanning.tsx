@@ -93,7 +93,7 @@ import { Brain,
     'Blockchain Security','';
     'API-First Architecture','';
     'Real-time Processing',';Predictive Analytics';
-:pages.disabled/pages/services/AIEnterpriseResourcePlanning.tsx;
+:pages.disabled/pages/services/AIEnterpriseResourcePlanning.tsx
   ]
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-zion-slate via-zion-slate-dark to-zion-blue-dark'>
@@ -101,7 +101,7 @@ import { Brain,
       <SEO;
 =;
       <SEO '>        title='AI-Powered Enterprise Resource Planning | Zion Tech Group';
-        description='Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation.';
+        description='Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation.'
         keywords='AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization'/>        description='Transform your business operations with our AI-driven ERP solution. Streamline processes, optimize resources, and drive growth with intelligent automation.''        keywords='AI ERP, Enterprise Resource Planning, Business Automation, AI Analytics, Process Optimization'/>'{/* Hero Section */}''
       <section className='relative py-20 overflow-hidden'>''
         <div className='absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10'></div>''
@@ -119,7 +119,7 @@ import { Brain,
             transition={{ duration: 0.8 }}';
             className='text-center max-w-4xl mx-auto'>';
   y: 0}}';
-            transition={{ duration: 0.8 }}'';
+            transition={{ duration: 0.8 }}''
             className='text-center max-w-4xl mx-auto''>''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               AI-Powered Enterprise Resource Planning'
@@ -130,7 +130,7 @@ import { Brain,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <Link'';
                 to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1'>'
                 Get Started Today''
                 <ArrowRight className='ml-2 w-5 h-5'  />'
               </Link>'              <button className='inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300'>
@@ -162,7 +162,7 @@ import { Brain,
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our AI-powered ERP solution combines cutting-edge technology with proven business processes to deliver unprecedented efficiency and insights
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -188,7 +188,7 @@ import { Brain,
                   <feature.icon className='w-8 h-8 text-white' />
                 </div>'
                 <h3 className='text-xl font-bold text-white mb-4'>{feature.title}</h3>';
-  delay: index * 0.1 '}}'';
+  delay: index * 0.1 '}}''
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8 hover:border-zion-cyan/50 transition-all duration-300''>''
                 <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mb-6'>''
                   <feature.icon className='w-8 h-8 text-white' />'
@@ -222,7 +222,7 @@ import { Brain,
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Flexible pricing options designed to scale with your business needs
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8 max-w-6xl mx-auto'>
             {services.map(service: unknown, index: unknown()
@@ -254,7 +254,7 @@ import { Brain,
                   service.popular ';
                     ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' ';
                     : 'border-zion-slate/30'`>                  service.popular '';
-                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' ''`;
+                    ? 'border-zion-cyan shadow-lg shadow-zion-cyan/25' ''`
                     : 'border-zion-slate/30'``}`}
               >'{service.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -268,12 +268,12 @@ import { Brain,
                   <h3 className='text-2xl font-bold text-white mb-4'>{service.name}</h3>
                   <div className='flex items-baseline justify-center'>
                     <span className='text-4xl font-bold text-zion-cyan'>{service.price}</span>
-=;
+=
                 '
                 <div className='text-center mb-8'>'
                   <h3 className='text-2xl font-bold text-white mb-4'>{service.name}</h3>'
                   <div className='flex items-baseline justify-center'>'
-                    <span className='text-4xl font-bold text-zion-cyan'>{service.price}</span>'>                )}';
+                    <span className='text-4xl font-bold text-zion-cyan'>{service.price}</span>'>                )}'
                 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-4'>{service.name}</h3>''
@@ -281,7 +281,7 @@ import { Brain,
                     <span className='text-4xl font-bold text-zion-cyan'>{service.price}</span>''
                     <span className='text-zion-slate-light ml-1'>{service.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'{service.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center text-zion-slate-light'>''
@@ -296,7 +296,7 @@ import { Brain,
                     service.popular'';
                       ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white hover:shadow-lg hover:shadow-zion-cyan/25'''`;
                       : 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white'``}`}
-                >';
+                >'
                   Get Started''
                   <ArrowRight className='ml-2 w-4 h-4'  />                </Link>
               </motion.div>
@@ -326,7 +326,7 @@ import { Brain,
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Tailored ERP solutions for various industries with proven results
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 lg: anygrid-cols-2 gap-8'>
             {useCases.map(useCase: unknown, index: unknown
@@ -355,7 +355,7 @@ import { Brain,
                 <div className='space-y-2'>
                   {useCase.benefits.map((benefit, benefitIndex) => ('
                     <div key={benefitIndex} className='flex items-center text-zion-slate-light'>';
-  delay: index * 0.1 '}}'';
+  delay: index * 0.1 '}}''
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-2xl p-8''>''
                 <div className='flex items-center mb-6'>''
                   <Target className='w-8 h-8 text-zion-cyan mr-3'  />'                  <h3 className='text-2xl font-bold text-white'>{useCase.industry}</h3>'
@@ -394,7 +394,7 @@ import { Brain,
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Built on the latest technologies to ensure scalability, security, and performance
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-2 md: anygrid-cols-4 gap-6 max-w-4xl mx-auto'>
             {technologies.map(tech: unknown, index: unknown()
@@ -418,7 +418,7 @@ import { Brain,
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300'>'
                 <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4'>'
                   <Activity className='w-6 h-6 text-white'  />
-  delay: index * 0.1 '}}'';
+  delay: index * 0.1 '}}''
                 className='bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300''>''
                 <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-xl flex items-center justify-center mx-auto mb-4'>''
                   <Activity className='w-6 h-6 text-white'  />'
@@ -454,7 +454,7 @@ import { Brain,
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
                 <Link'';
                   to='/contact'';
-                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1'>';
+                  className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-zion-cyan/25 transition-all duration-300 transform hover:-translate-y-1'>'
                   Start Your Transformation''
                   <ArrowRight className='ml-2 w-5 h-5'  />'
                 </Link>'                <button className='inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300'>
@@ -488,4 +488,4 @@ import { Brain,
       </section>
     </div>
   )}''`;
-export default AIEnterpriseResourcePlanning''`;'"`
+export default AIEnterpriseResourcePlanning''`'"`

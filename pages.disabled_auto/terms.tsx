@@ -77,7 +77,7 @@ const Terms: React.FC = () => {
         'Our services are provided 'as is' without warranties of any kind', 'We are not liable for any indirect, incidental, or consequential damages',
         'Our total liability is limited to the amount paid for the specific service', 'Some jurisdictions may not allow limitation of liability, so these limitations may not apply';
       ]}
-  ];
+  ]
   const contactInfo = {
     email: 'legal@ziontechgroup.com', phone: '+1 (555) 123-4567', address: '123 Technology Drive, San Francisco, CA 94105'}
 
@@ -104,7 +104,7 @@ const Terms: React.FC = () => {
               Terms of Service
             </h1>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              These terms and conditions govern your use of Zion Tech Group&apos;s services and solutions.''
+              These terms and conditions govern your use of Zion Tech Group&aposs services and solutions.''
             </p>
             <div className='flex items-center justify-center text-gray-400'>
               <Calendar className='w-4 h-4 mr-2' />
@@ -149,7 +149,7 @@ const Terms: React.FC = () => {
                   Welcome to Zion Tech Group. These Terms of Service ('Terms') govern your use of our website, services, and products. By accessing or using our services, you agree to be bound by these Terms.
                 </p>
                 <p className='text-gray-300 mb-4'>
-                  Please read these Terms carefully before using our services. If you disagree with any part of;
+                  Please read these Terms carefully before using our services. If you disagree with any part of
                   these terms, then you may not access our services.
                 </p>
                 <div className='bg-blue-500/10 border border-blue-500/30 rounded-lg p-4'>
@@ -158,7 +158,7 @@ const Terms: React.FC = () => {
                     <div>
                       <h4 className='text-blue-400 font-semibold mb-2'>Important Notice</h4>
                       <p className='text-gray-300 text-sm'>
-                        These Terms may be updated from time to time. Continued use of our services after;
+                        These Terms may be updated from time to time. Continued use of our services after
                         changes constitutes acceptance of the new Terms.
                       </p>
                     </div>
@@ -197,15 +197,15 @@ const Terms: React.FC = () => {
               <h2 className='text-3xl font-bold text-white mb-6'>Termination</h2>
               <div className='prose prose-invert max-w-none'>
                 <p className='text-gray-300 mb-4'>
-                  We may terminate or suspend your access to our services immediately, without prior notice or;
+                  We may terminate or suspend your access to our services immediately, without prior notice or
                   liability, for any reason whatsoever, including without limitation if you breach the Terms.
                 </p>
                 <p className='text-gray-300 mb-4'>
-                  Upon termination, your right to use the services will cease immediately. If you wish to;
+                  Upon termination, your right to use the services will cease immediately. If you wish to
                   terminate your account, you may simply discontinue using the services.
                 </p>
                 <p className='text-gray-300'>
-                  All provisions of the Terms which by their nature should survive termination shall survive;
+                  All provisions of the Terms which by their nature should survive termination shall survive
                   termination, including, without limitation, ownership provisions, warranty disclaimers,
                   indemnity, and limitations of liability.
                 </p>
@@ -220,7 +220,7 @@ const Terms: React.FC = () => {
                   United States, without regard to its conflict of law provisions.
                 </p>
                 <p className='text-gray-300 mb-4'>
-                  Our failure to enforce any right or provision of these Terms will not be considered a;
+                  Our failure to enforce any right or provision of these Terms will not be considered a
                   waiver of those rights.
                 </p>
                 <p className='text-gray-300'>
@@ -264,12 +264,12 @@ const Terms: React.FC = () => {
               <div className='prose prose-invert max-w-none'>
                 <p className='text-gray-300 mb-4'>
                   We reserve the right, at our sole discretion, to modify or replace these Terms at any time.;
-                  If a revision is material, we will try to provide at least 30 days notice prior to any new;
+                  If a revision is material, we will try to provide at least 30 days notice prior to any new
                   terms taking effect.
                 </p>
                 <p className='text-gray-300 mb-4'>
                   What constitutes a material change will be determined at our sole discretion. By continuing;
-                  to access or use our services after those revisions become effective, you agree to be bound;
+                  to access or use our services after those revisions become effective, you agree to be bound
                   by the revised terms.
                 </p>
                 <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4'>
@@ -278,7 +278,7 @@ const Terms: React.FC = () => {
                     <div>
                       <h4 className='text-yellow-400 font-semibold mb-2'>Stay Updated</h4>
                       <p className='text-gray-300 text-sm'>
-                        We recommend that you review these Terms periodically for any changes.;
+                        We recommend that you review these Terms periodically for any changes.
                         Changes to these Terms are effective when they are posted on this page.
                       </p>
                     </div>
@@ -291,5 +291,5 @@ const Terms: React.FC = () => {
       </section>
     </div>
   )}
-;
+
 export default Terms

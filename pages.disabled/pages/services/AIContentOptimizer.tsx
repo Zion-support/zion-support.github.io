@@ -20,7 +20,7 @@ export default function AIContentOptimizer(...args: any[]): any {
         description='Transform your content performance with AI-powered SEO optimization, analytics, and multi-platform content creation. Start free trial today.''        keywords='AI content optimization, content SEO, content analytics, content performance, AI content creation'/>'{/* Hero Section */}''
       <section className='relative py-20 overflow-hidden'>'''
         <div className='absolute inset-0 bg-gradient-to-r from-green-600/20 via-blue-600/20 to-purple-600/20' />''''
-        <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />';
+        <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />'
 ''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>'
           <motion.div'';
@@ -37,7 +37,7 @@ export default function AIContentOptimizer(...args: any[]): any {
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
-                Start Free Trial';
+                Start Free Trial'
 export default function AIContentOptimizer(...args: any[]): any {}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -100,11 +100,11 @@ export default function AIContentOptimizer(...args: any[]): any {}
               Powered by Advanced AI
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Our AI engine analyzes millions of content pieces to optimize;
+              Our AI engine analyzes millions of content pieces to optimize
               yours for maximum impact
             </p>
 :pages.disabled/pages/services/AIContentOptimizer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
@@ -171,11 +171,11 @@ export default function AIContentOptimizer(...args: any[]): any {}
               Optimize Any Content Type
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              From blog posts to social media, our AI optimizes content for;
+              From blog posts to social media, our AI optimizes content for
               every platform and audience
             </p>
 :pages.disabled/pages/services/AIContentOptimizer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8'>
             {useCases.map((useCase, index) => (
@@ -241,11 +241,11 @@ export default function AIContentOptimizer(...args: any[]): any {}
               Proven Results
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Join thousands of content creators who have transformed their;
+              Join thousands of content creators who have transformed their
               content performance with AI
             </p>
 :pages.disabled/pages/services/AIContentOptimizer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {benefits.map((benefit, index) => (
@@ -317,11 +317,11 @@ export default function AIContentOptimizer(...args: any[]): any {}
               Simple, Transparent Pricing
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-              Choose the plan that fits your content creation needs. All plans;
+              Choose the plan that fits your content creation needs. All plans
               include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AIContentOptimizer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricingPlans.map((plan, index) => (
@@ -353,7 +353,7 @@ export default function AIContentOptimizer(...args: any[]): any {}
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AIContentOptimizer.tsx)}';
+:pages.disabled/pages/services/AIContentOptimizer.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -368,7 +368,7 @@ export default function AIContentOptimizer(...args: any[]): any {}
                     </span>'
                   </div>''
                   <p className='text-zion-slate-light'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>')}
 ''
@@ -429,19 +429,19 @@ export default function AIContentOptimizer(...args: any[]): any {}
               Ready to Optimize Your Content?'
             </h2>''
             <p className='text-xl text-zion-slate-light mb-8'>
-              Join thousands of content creators who have already revolutionized;
+              Join thousands of content creators who have already revolutionized
               their content performance with AI'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
-                Start Free Trial';
+                Start Free Trial'
             transition={{ duration: 0.8 }}
           >''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to Optimize Your Content?
             </h2>''
             <p className='text-xl text-zion-slate-light mb-8'>
-              Join thousands of content creators who have already revolutionized;
+              Join thousands of content creators who have already revolutionized
               their content performance with AI
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -456,6 +456,6 @@ export default function AIContentOptimizer(...args: any[]): any {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AIContentOptimizer.tsx)}''`;
+:pages.disabled/pages/services/AIContentOptimizer.tsx)}''`
 ''`''`)}
 ''`

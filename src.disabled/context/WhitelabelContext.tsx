@@ -6,7 +6,7 @@ import React, { createContext, useContext, useState, ReactNode } from;
    primaryColor: string;
    secondaryColor: string;
    setBrandName: (name: string) => void;
-   setBrandLogo: (logo: string) => void;
+   setBrandLogo: (logo: string) => void
    setPrimaryColor: (color: string) => void
    setSecondaryColor: (color: string) => void} const WhitelabelContext = createContext<WhitelabelContextType | undefined>(undefined)  export const useWhitelabel = () => { const context = useContext(WhitelabelContext) if (context === undefined) { throw new Error(
   'useWhitelabel must be used within a WhitelabelProvider') } return context }  interface WhitelabelProviderProps {

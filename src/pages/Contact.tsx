@@ -4,12 +4,11 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
 </>)}
 ;
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    firstName: '', lastName: '',
+  const [formData, setFormData] = useState({ firstName: '', lastName: '',
     email: '', company: '',
     phone: '', service: '',
     message: ''})
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -26,8 +25,7 @@ export default function Contact() {
     // Reset form after success;
     setTimeout(() => {
       setSubmitSuccess(false);
-      setFormData({
-        firstName: '', lastName: '',
+      setFormData({ firstName: '', lastName: '',
         email: '', company: '',
         phone: '', service: '',
         message: ''})}, 5000)}
@@ -39,19 +37,15 @@ export default function Contact() {
     'Other';
   ];
   const contactMethods = [
-    {
-      icon: '📍', title: 'Office Address',
+    { icon: '📍', title: 'Office Address',
       details: '364 E Main St STE 1008, Middletown DE 19709',
-      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'}, {
-      icon: '📧',
+      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'}, { icon: '📧',
       title: 'Email', details: 'kleber@ziontechgroup.com',
-      link: 'mailto:kleber@ziontechgroup.com'}, {
-      icon: '📱',
+      link: 'mailto:kleber@ziontechgroup.com'}, { icon: '📱',
       title: 'Phone', details: '+1 (302) 464-0950', link: 'tel:+13024640950'},
-    {
-      icon: '🌐', title: 'Website',
+    { icon: '🌐', title: 'Website',
       details: 'ziontechgroup.com', link: 'https://ziontechgroup.com'}
-  ];
+  ]
   const officeHours = [
     { day: 'Monday - Friday', hours: '9:00 AM - 6:00 PM EST' },
     { day: 'Saturday', hours: '10:00 AM - 4:00 PM EST' },
@@ -68,7 +62,7 @@ export default function Contact() {
               Get In Touch
             </h1>
             <p className='text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-              Ready to transform your business? Let's discuss how our technology solutions;'
+              Ready to transform your business? Let's discuss how our technology solutions'
               can drive innovation and growth for your organization.
             </p>
           </div>

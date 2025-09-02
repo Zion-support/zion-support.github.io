@@ -119,14 +119,14 @@ export const MachineLearningDashboard = ({ className = '' }) => {
     }
     const getModelTypeIcon = (type) => {}
         switch(type) {}
-'''';
+''''
 ''''''
-            case 'classification': return <Target className='w-4 h-4'/>'';''''
-            case 'regression': return <TrendingUp className='w-4 h-4'/>'';''''
-            case 'clustering': return <Activity className='w-4 h-4'/>'';''''
-            case 'nlp': return <Brain className='w-4 h-4'/>'';''''
-            case 'computer_vision': return <Eye className='w-4 h-4'/>'';''''
-            case 'recommendation': return <Zap className='w-4 h-4'/>';'''
+            case 'classification': return <Target className='w-4 h-4'/>''''''
+            case 'regression': return <TrendingUp className='w-4 h-4'/>''''''
+            case 'clustering': return <Activity className='w-4 h-4'/>''''''
+            case 'nlp': return <Brain className='w-4 h-4'/>''''''
+            case 'computer_vision': return <Eye className='w-4 h-4'/>''''''
+            case 'recommendation': return <Zap className='w-4 h-4'/>''''
             default: return <Brain className='w-4 h-4'/>}
     }
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>'''{/* Header */}'''''
@@ -143,13 +143,13 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               AI Model Management & Training
             </p>
           </div>
-        </div>''';'
+        </div>''''
         ''''
         <div className='flex items-center space-x-2'>''''
           <button onClick={() => setShowImportModel(!showImportModel)} className='flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark: text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700'>''''
             <Upload className='w-4 h-4'/>
             <span>Import</span>
-          </button>''';'
+          </button>''''
           ''''
           <button onClick={() => setShowCreateModel(!showCreateModel)} className='flex items-center space-x-2 px-3 py-2 text-sm font-medium text-white bg-purple-600 rounded-lg hover: bg-purple-700'>''''
             <Plus className='w-4 h-4'/>
@@ -160,7 +160,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 '''{/* Navigation Tabs */}'''''
       <div className='flex border-b border-gray-200 dark:border-gray-700'>'{[''{ id: 'overview', label: 'Overview', icon: BarChart3 }, '{ id: 'models', label: 'Models', icon: Brain },'{ id: 'training', label: 'Training', icon: Activity }, '{ id: 'predictions', label: 'Predictions', icon: Target },'`{ id: 'analytics', label: 'Analytics', icon: TrendingUp }`'`
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id''`;
-                ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`;'
+                ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`'
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'}`}>''''
             <Icon className='w-4 h-4'/>
             <span>{label}</span>
@@ -183,7 +183,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     </div>''''
                     <Brain className='w-8 h-8 text-purple-500'/>
                   </div>
-                </div>''';'
+                </div>''''
                 ''''
                 <div className='bg-gray-50 dark: bg-gray-800 p-4 rounded-lg'>''''
                   <div className='flex items-center justify-between'>''''
@@ -193,7 +193,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     </div>''''
                     <CheckCircle className='w-8 h-8 text-green-500'/>
                   </div>
-                </div>''';'
+                </div>''''
                 ''''
                 <div className='bg-gray-50 dark: bg-gray-800 p-4 rounded-lg'>''''
                   <div className='flex items-center justify-between'>''''
@@ -203,7 +203,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     </div>''''
                     <Target className='w-8 h-8 text-blue-500'/>
                   </div>
-                </div>''';'
+                </div>''''
                 ''''
                 <div className='bg-gray-50 dark: bg-gray-800 p-4 rounded-lg'>''''
                   <div className='flex items-center justify-between'>''''
@@ -293,7 +293,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   (e) => setNewModelForm(prev => ({ ...prev, name: e.target.value ''''
 ''''}))} className='px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white'/>
                       <select value={newModelForm.type} onChange = {}
-  (e) => setNewModelForm(prev => ({ ...prev, type: e.target.value ''';'
+  (e) => setNewModelForm(prev => ({ ...prev, type: e.target.value ''''
 ''''}))} className='px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white'>''''
                         <option value='classification'>Classification</option>''''
                         <option value='regression'>Regression</option>''''
@@ -303,7 +303,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         <option value='recommendation'>Recommendation</option>
                       </select>
                       <select value={newModelForm.framework} onChange = {}
-  (e) => setNewModelForm(prev => ({ ...prev, framework: e.target.value ''';'
+  (e) => setNewModelForm(prev => ({ ...prev, framework: e.target.value ''''
 ''''}))} className='px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white'>''''
                         <option value='tensorflow'>TensorFlow</option>''''
                         <option value='pytorch'>PyTorch</option>''''
@@ -355,12 +355,12 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                           <Trash2 className='w-4 h-4'/>
                         </button>
                       </div>
-                    </div>''';'
+                    </div>''''
                     ''''
                     <h4 className='font-medium text-gray-900 dark: text-white mb-2'>{model.name}</h4>''''
                     <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
                       {model.type} • {model.framework} • v{model.version}
-                    </p>''';'
+                    </p>''''
                     ''''
                     <div className='space-y-2 mb-4'>''''
                       <div className='flex justify-between text-sm'>''''
@@ -381,7 +381,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                           {(model.recall * 100).toFixed(1)}%
                         </span>
                       </div>
-                    </div>''';'
+                    </div>''''
                     ''''
                     <div className='flex space-x-2'>''''{model.status === 'ready' && (<>''''
                           <button onClick={() => handleStartTraining(model.id)} className='flex-1 px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover: bg-blue-700'>''''
@@ -404,12 +404,12 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   y: 0}} exit = {}
   { opacity: 0, y: -20 ''';'
 ''''}} className='space-y-4'>''''
-              <h3 className='text-lg font-semibold text-gray-900 dark: text-white'>Training Jobs</h3>''';'
+              <h3 className='text-lg font-semibold text-gray-900 dark: text-white'>Training Jobs</h3>''''
               ''''
               <div className='space-y-4'>
                 {trainingJobs.map((job) => {}
 ''';'
-                const model = models.find(m => m.id === job.modelId)';'''
+                const model = models.find(m => m.id === job.modelId)''''
                 return (<div key={job.id} className='bg-gray-50 dark: bg-gray-800 p-4 rounded-lg'>''''
                       <div className='flex items-center justify-between mb-3'>''''
                         <div className='flex items-center space-x-3'>''''
@@ -448,7 +448,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                             <p className='font-medium text-gray-900 dark:text-white'>'{job.metrics.loss[job.metrics.loss.length - 1]?.toFixed(4) || 'N/A'}'
                             </p>
                           </div>
-                        </div>)}''';'
+                        </div>)}''''
                       ''''''
                       <div className='flex space-x-2'>''''''{job.status === 'running' && (<button onClick={() => handleStopTraining(job.id)} className='px-3 py-2 text-sm font-medium text-white bg-red-600 rounded-lg hover: bg-red-700'>''''
                             <Square className='w-4 h-4 inline mr-2'/>
@@ -480,7 +480,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               <div className='bg-gray-50 dark:bg-gray-800 p-4 rounded-lg'>''''
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mb-4'>
                   <select value={predictionForm.modelId} onChange = {}
-  (e) => setPredictionForm(prev => ({ ...prev, modelId: e.target.value ''';'
+  (e) => setPredictionForm(prev => ({ ...prev, modelId: e.target.value ''''
 ''''}))} className='px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white'>''''
                     <option value=''>Select a deployed model</option>'{models.filter(m => m.status === 'deployed').map(model => (<option key={model.id} value={model.id}>'
                         {model.name} ({model.type})
@@ -500,7 +500,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 <div className='space-y-3'>
                   {predictions.slice(0, 5).map((prediction) => {}
 ''';'
-                const model = models.find(m => m.id === prediction.modelId)';'''
+                const model = models.find(m => m.id === prediction.modelId)''''
                 return (<div key={prediction.id} className='bg-white dark: bg-gray-700 p-3 rounded-lg'>''''
                         <div className='flex items-center justify-between mb-2'>''''
                           <div className='flex items-center space-x-2'>''''
@@ -537,7 +537,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
   y: 0}} exit = {}
   { opacity: 0, y: -20 ''';'
 ''''}} className='space-y-4'>''''
-              <h3 className='text-lg font-semibold text-gray-900 dark: text-white'>Performance Analytics</h3>''';'
+              <h3 className='text-lg font-semibold text-gray-900 dark: text-white'>Performance Analytics</h3>''''
               ''''
               <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>''''
                 <div className='bg-gray-50 dark:bg-gray-800 p-4 rounded-lg'>''''
@@ -554,7 +554,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                         </div>
                       </div>) ) }
                   </div>
-                </div>''';'
+                </div>''''
                 ''''
                 <div className='bg-gray-50 dark: bg-gray-800 p-4 rounded-lg'>''''
                   <h4 className='font-medium text-gray-900 dark:text-white mb-3'>Prediction Metrics</h4>''''
@@ -562,7 +562,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     <div className='flex justify-between'>''''
                       <span className='text-sm text-gray-600 dark:text-gray-400'>Success Rate</span>''''
                       <span className='font-medium text-gray-900 dark:text-white'>
-                        {metrics.totalPredictions > 0;
+                        {metrics.totalPredictions > 0
                 ? ( (metrics.successfulPredictions / metrics.totalPredictions) * 100) .toFixed (1) : 0}%
                       </span>''''
                     </div>''''
@@ -584,5 +584,5 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             </motion.div>) }
         </AnimatePresence>
       </div>
-    </div>)}''`;
+    </div>)}''`
 ''`''`

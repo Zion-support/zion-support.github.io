@@ -269,4 +269,4 @@ const AIDevelopment: NextPage = () => {
     </Layout>
   );
 };
-export default AIDevelopment;
+export default AIDevelopment

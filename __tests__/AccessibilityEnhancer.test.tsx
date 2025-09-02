@@ -12,7 +12,7 @@ describe(
       <AccessibilityEnhancer>
         <div data-testid='test-child'>Test Content</div>
       </AccessibilityEnhancer>
-    );
+    )
     expect(screen.getByTestId(
   'test-child')).toBeInTheDocument()
     expect(screen.getByText(
@@ -31,7 +31,7 @@ describe(
     const element = screen.getByRole(
   'button');
     expect(element).toHaveAttribute(
-  'aria-label''Test Button');
+  'aria-label''Test Button')
     expect(element).toHaveAttribute(
   'tabindex''0')})
   it(
@@ -43,7 +43,7 @@ describe(
       </AccessibilityEnhancer>
     );
     const element = screen.getByRole(
-  'button');
+  'button')
     fireEvent.keyDown(element, { key: 'Enter })
     expect(handleClick).toHaveBeenCalledTimes(1)
     fireEvent.keyDown(element, { key:' })
@@ -57,7 +57,7 @@ describe(
         className='focus: outline-none focus:ring-2 focus:ring-blue-500'>
         <span>Focusable Element</span>
       </AccessibilityEnhancer>
-    );
+    )
     const element = screen.getByRole(
   'button')
     expect(element).toHaveClass(
@@ -72,7 +72,7 @@ describe(
       <AccessibilityEnhancer role='button' tabIndex={-1}>
         <span>Non-focusable Element</span>
       </AccessibilityEnhancer>
-    );
+    )
     const element = screen.getByRole(
   'button')
     expect(element).toHaveAttribute(

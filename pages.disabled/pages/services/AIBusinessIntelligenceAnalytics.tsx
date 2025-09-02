@@ -33,7 +33,7 @@ import {}
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white'>'
       <SEO'';
         title='AI Business Intelligence Analytics | Zion Tech Group''';
-        description='Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.''        keywords='AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group'/>';
+        description='Revolutionary AI-powered business intelligence and analytics platform that transforms data into actionable insights and predictive business intelligence.''        keywords='AI business intelligence, analytics platform, data insights, predictive analytics, business analytics, Zion Tech Group'/>'
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900 text-white'>
       <SEO''
@@ -50,7 +50,7 @@ import {}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}'';
             className='text-center''>''
-            <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl mb-8 border border-green-400/30'>'';
+            <div className='inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-2xl mb-8 border border-green-400/30'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
               <Brain className='w-10 h-10 text-green-400'  />'
             </div>''
@@ -65,7 +65,7 @@ import {}
             <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
               Transform your business data into actionable intelligence with our;
               AI-powered analytics platform. Get real-time insights, predictive;
-              analytics, and intelligent recommendations that drive growth and;
+              analytics, and intelligent recommendations that drive growth and
               efficiency.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -82,13 +82,13 @@ import {}
             <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto'>
               Transform your business data into actionable intelligence with our;
               AI-powered analytics platform. Get real-time insights, predictive;
-              analytics, and intelligent recommendations that drive growth and;
+              analytics, and intelligent recommendations that drive growth and
               efficiency.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <a'';
                 href='tel:+13024640950'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
                 <Phone className='w-5 h-5 mr-2'  />                Get Started Today
               </a>'
@@ -96,7 +96,7 @@ import {}
               </a>
               <a'';
                 href='mailto:kleber@ziontechgroup.com'';
-                className='inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
                 <Mail className='w-5 h-5 mr-2'  />                Contact Us
                 <Mail className='w-5 h-5 mr-2'  />                Contact Us
@@ -120,11 +120,11 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Revolutionary Features';
+              Revolutionary Features'
               Revolutionary Features
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Experience the power of AI-driven business intelligence and;
+              Experience the power of AI-driven business intelligence and
               analytics
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
@@ -142,7 +142,7 @@ import {}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}'';
                 className='bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-2xl p-6 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300''>''
-                <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6 border border-green-400/30'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6 border border-green-400/30'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
                   <BarChart3 className='w-8 h-8 text-green-400' />'
                   <BarChart3 className='w-8 h-8 text-green-400' />
@@ -170,7 +170,7 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Transformative Benefits';
+              Transformative Benefits'
               Transformative Benefits
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -191,7 +191,7 @@ import {}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}'';
                 className='flex items-start space-x-4''>''
-                <div className='w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>'';
+                <div className='w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
                   <CheckCircle className='w-5 h-5 text-white'  />'
                   <CheckCircle className='w-5 h-5 text-white'  />
@@ -216,11 +216,11 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Comprehensive Capabilities';
+              Comprehensive Capabilities'
               Comprehensive Capabilities
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              End-to-end AI-powered business intelligence and analytics;
+              End-to-end AI-powered business intelligence and analytics
               solutions
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
@@ -238,7 +238,7 @@ import {}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}'';
                 className='bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-2xl p-8 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300''>''
-                <div className='flex items-center mb-6'>'';
+                <div className='flex items-center mb-6'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
                   <div className='w-12 h-12 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mr-4 border border-green-400/30'>'{index === 0 && (''
                       <BarChart3 className='w-6 h-6 text-green-400' />
@@ -303,7 +303,7 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Business Applications';
+              Business Applications'
               Business Applications
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -324,7 +324,7 @@ import {}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}'';
                 className='bg-white/5 backdrop-blur-sm border border-green-400/20 rounded-xl p-6 hover:bg-white/10 hover:border-green-400/40 transition-all duration-300 text-center''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 border border-emerald-400/30'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-emerald-500/20 to-green-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 border border-emerald-400/30'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
                   <Target className='w-6 h-6 text-emerald-400'  />'
                   <Target className='w-6 h-6 text-emerald-400'  />
@@ -349,7 +349,7 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Investment Plans';
+              Investment Plans'
               Investment Plans
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -376,7 +376,7 @@ import {}
               >'';
                 className={`bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${}
                   plan.name === 'Professional'';
-                    ? 'border-green-400/50 bg-gradient-to-b from-green-500/10 to-transparent'';
+                    ? 'border-green-400/50 bg-gradient-to-b from-green-500/10 to-transparent''
                     : 'border-green-400/20'`} hover:border-green-400/40 transition-all duration-300`}
               >{plan.name === 'Professional' && (''
                   <div className='text-center mb-4'>''
@@ -446,11 +446,11 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
-              Ready to Transform Your Business?';
+              Ready to Transform Your Business?'
               Ready to Transform Your Business?
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Contact us today to learn how our AI business intelligence;
+              Contact us today to learn how our AI business intelligence
               platform can drive growth and efficiency
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
@@ -466,7 +466,7 @@ import {}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}'';
               className='text-center''>''
-              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>'';
+              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
                 <Phone className='w-8 h-8 text-green-400'  />'
               </div>''
@@ -494,7 +494,7 @@ import {}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}'';
               className='text-center''>''
-              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>'';
+              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
                 <Mail className='w-8 h-8 text-green-400'  />'
               </div>''
@@ -522,7 +522,7 @@ import {}
               transition={{ duration: 0.5, delay: 0.3 }}
               viewport={{ once: true }}'';
               className='text-center''>''
-              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>'';
+              <div className='w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-4 border border-green-400/30'>''
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
                 <MapPin className='w-8 h-8 text-green-400'  />'
               </div>''
@@ -555,5 +555,5 @@ import {}
   )}
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx;
 export default AIBusinessIntelligenceAnalytics''`;
-''`''`;
+''`''`
 export default AIBusinessIntelligenceAnalytics''`

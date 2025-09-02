@@ -14,7 +14,7 @@ import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucid
     // Simulate API call;
     await new Promise(resolve => setTimeout(resolve, 2000));
 setSubmitStatus(,
-  success;
+  success
   ')'    setIsSubmitting(false)'    setFormData({ name: ', email:,
   ', subject: ', message: '' })'  }'
   return(
@@ -63,5 +63,5 @@ type='submit''            disabled={isSubmitting}'            whileHover={{ scal
       </motion.div>
     </div>
   )}
-;
+
 export default ContactFormEnhanced

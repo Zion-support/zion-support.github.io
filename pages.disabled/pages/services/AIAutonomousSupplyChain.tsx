@@ -101,7 +101,7 @@ import { Truck,
   ]{'
       title: 'Food & Beverage',';
       description: 'Manage perishable inventory, optimize delivery routes, and reduce food waste',
-      icon: Leaf,';
+      icon: Leaf,'
       color: 'from-green-500 to-emerald-500'}
   ]
   return (''
@@ -130,7 +130,7 @@ import { Truck,
             <div className='flex items-center justify-center mb-6'>''
               <Truck className='w-12 h-12 text-blue-400 mr-3'  />'              <h1 className='text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-clip-text text-transparent'>
                 AI Autonomous Supply Chain
-              </h1>';
+              </h1>'
   y: 0}}
             transition={{ duration: 0.8 }}
           >''
@@ -140,7 +140,7 @@ import { Truck,
               </h1>
             </div>''
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx;
+:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
               Transform your supply chain with AI-powered automation. Optimize operations, reduce costs,
               and gain unprecedented visibility across your entire network.
             </p>''
@@ -154,7 +154,7 @@ import { Truck,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <a'';
                 href='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>'
                 Optimize Supply Chain''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
               <a''
@@ -200,7 +200,7 @@ import { Truck,
             className='text-center mb-16''>''
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx;
-              Intelligent Supply Chain Solutions';
+              Intelligent Supply Chain Solutions'
               Intelligent Supply Chain Solutions
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -208,7 +208,7 @@ import { Truck,
               autonomous optimization, and real-time visibility.
             </p>
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -245,7 +245,7 @@ import { Truck,
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>''
                   <feature.icon className='w-8 h-8 text-white' />';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-2xl border border-slate-600 hover:border-blue-400 transition-all duration-300 hover:transform hover:scale-105''
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>''
@@ -284,14 +284,14 @@ import { Truck,
             className='text-center mb-16''>''
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx;
-              Industry Solutions';
+              Industry Solutions'
               Industry Solutions
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our platform is designed to meet the unique challenges of various industries.
             </p>
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -330,7 +330,7 @@ import { Truck,
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='text-center'`>`'`
                 <div className={`w-20 h-20 bg-gradient-to-r ${useCase.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>''
                   <useCase.icon className='w-10 h-10 text-white' />'
@@ -370,14 +370,14 @@ import { Truck,
             className='text-center mb-16''>''
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx;
-              Proven Results & Benefits';
+              Proven Results & Benefits'
               Proven Results & Benefits
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our platform has delivered exceptional results for companies across industries.
             </p>
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -413,10 +413,10 @@ import { Truck,
                 <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>';
   delay: index * 0.1}}';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='text-center''>''
                 <div className='text-4xl font-bold text-blue-400 mb-4'>{benefit.metric}</div>''
-                <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>'';
+                <h3 className='text-xl font-semibold text-white mb-2'>{benefit.title}</h3>''
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
                 <p className='text-gray-300'>{benefit.description}</p>
               </motion.div>
@@ -450,14 +450,14 @@ import { Truck,
             className='text-center mb-16''>''
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx;
-              Competitive Pricing Plans';
+              Competitive Pricing Plans'
               Competitive Pricing Plans
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the plan that best fits your supply chain needs and budget.
             </p>
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 lg: anygrid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -503,7 +503,7 @@ import { Truck,
                   plan.popular ';
                     ? 'border-blue-400 shadow-2xl shadow-blue-500/20' ';
                     : 'border-slate-600'`>                  plan.popular '';
-                    ? 'border-blue-400 shadow-2xl shadow-blue-500/20' ''`;
+                    ? 'border-blue-400 shadow-2xl shadow-blue-500/20' ''`
                     : 'border-slate-600'``}`}
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx>'>{plan.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -518,14 +518,14 @@ import { Truck,
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>
                   <div className='flex items-baseline justify-center'>
                     <span className='text-5xl font-bold text-blue-400'>{plan.price}</span>
-=;
+=
                 '
                 <div className='text-center mb-8'>'
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
                   <div className='flex items-baseline justify-center'>'
                     <span className='text-5xl font-bold text-blue-400'>{plan.price}</span>'
 >                    <span className='text-gray-400 ml-1'>{plan.period}</span>
-                  </div>')}';
+                  </div>')}'
                 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
@@ -534,9 +534,9 @@ import { Truck,
                     <span className='text-gray-400 ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-gray-300 mt-2'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
-                <ul className='space-y-4 mb-8'>';
+                <ul className='space-y-4 mb-8'>'
                 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
@@ -607,9 +607,9 @@ import { Truck,
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <a'';
                 href='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-green-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-green-600 transition-all duration-300 transform hover:scale-105'>'
                 Start Free Trial''
-                <ArrowRight className='ml-2 w-5 h-5'  />              </a>';
+                <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
   y: 0}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -628,7 +628,7 @@ import { Truck,
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>
               <a'';
                 href='tel:+13024640950'';
-                className='inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
                 <Phone className='mr-2 w-5 h-5'  />                Call Now
                 <Phone className='mr-2 w-5 h-5'  />                Call Now
@@ -648,9 +648,9 @@ import { Truck,
               <Phone className='w-8 h-8 text-blue-400 mb-4'  />''
               <p className='text-gray-300'>Phone</p>''
               <a href='tel:+13024640950' className='text-white hover:text-blue-400 transition-colors'>
-:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx;
+:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
                 +1 302 464 0950
-              </a>';
+              </a>'
                 +1 302 464 0950
               </a>
             </div>''
@@ -658,9 +658,9 @@ import { Truck,
               <Mail className='w-8 h-8 text-blue-400 mb-4'  />''
               <p className='text-gray-300'>Email</p>''
               <a href='mailto:kleber@ziontechgroup.com' className='text-white hover:text-blue-400 transition-colors'>
-:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx;
+:pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
                 kleber@ziontechgroup.com
-              </a>';
+              </a>'
                 kleber@ziontechgroup.com
               </a>
             </div>''
@@ -674,5 +674,5 @@ import { Truck,
     </div>
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx)}''`;
 export default AIAutonomousSupplyChain''`;''`)}
-;
+
 export default AIAutonomousSupplyChain''`

@@ -17,5 +17,5 @@ export default function TalentRoutes() {
       <Route path="create" element={<CreateTalentProfile />} />
       <Route path="profile" element={<ProfilePage />} />
     </Routes>
-  );
+  )
 }

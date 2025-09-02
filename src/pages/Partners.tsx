@@ -6,54 +6,44 @@ import {
 } from 'lucide-react';
 export default function Partners() {
   const partners = [
-    {
-      id: 1, name: "Microsoft",
+    { id: 1, name: "Microsoft",
       category: "Technology Partner", description: "Strategic partnership in cloud computing and AI solutions",
       logo: "/api/placeholder/200/100", website: "https://microsoft.com",
       benefits: ["Azure Integration", "AI Services", "Enterprise Solutions"]
-    }, {
-      id: 2,
+    }, { id: 2,
       name: "Google Cloud", category: "Cloud Partner",
       description: "Advanced cloud infrastructure and machine learning platforms", logo: "/api/placeholder/200/100",
       website: "https://cloud.google.com", benefits: ["GCP Services", "ML Platforms", "Data Analytics"]
-    }, {
-      id: 3,
+    }, { id: 3,
       name: "IBM", category: "Quantum Computing Partner",
       description: "Quantum computing research and development collaboration", logo: "/api/placeholder/200/100",
       website: "https://ibm.com", benefits: ["Quantum Systems", "Research Collaboration", "Enterprise AI"]
-    }, {
-      id: 4,
+    }, { id: 4,
       name: "Amazon Web Services", category: "Cloud Infrastructure Partner",
       description: "Comprehensive cloud services and infrastructure solutions", logo: "/api/placeholder/200/100",
       website: "https://aws.amazon.com", benefits: ["AWS Services", "Infrastructure", "Global Reach"]
-    }, {
-      id: 5,
+    }, { id: 5,
       name: "NVIDIA", category: "AI Hardware Partner",
       description: "Advanced GPU solutions for AI and machine learning workloads", logo: "/api/placeholder/200/100",
       website: "https://nvidia.com", benefits: ["GPU Solutions", "AI Acceleration", "Deep Learning"]
-    }, {
-      id: 6,
+    }, { id: 6,
       name: "Intel", category: "Technology Partner",
       description: "Advanced processor technologies and AI optimization", logo: "/api/placeholder/200/100",
       website: "https://intel.com", benefits: ["Processor Tech", "AI Optimization", "Performance"]
     }
   ];
   const partnershipTypes = [
-    {
-      title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions",
+    { title: "Technology Partners", description: "Leading technology companies providing cutting-edge solutions",
       icon: Building, count: 12,
       color: "from-blue-500 to-cyan-500"
-    }, {
-      title: "Cloud Partners",
+    }, { title: "Cloud Partners",
       description: "Global cloud providers enabling scalable infrastructure", icon: Globe,
       count: 8, color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Research Partners", description: "Academic institutions and research organizations",
+    { title: "Research Partners", description: "Academic institutions and research organizations",
       icon: Award, count: 15,
       color: "from-purple-500 to-pink-500"
-    }, {
-      title: "Channel Partners",
+    }, { title: "Channel Partners",
       description: "Distribution and implementation partners worldwide", icon: Handshake,
       count: 25, color: "from-orange-500 to-red-500"
     }
@@ -78,7 +68,7 @@ export default function Partners() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -101,7 +91,7 @@ export default function Partners() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Partnership Categories</h2>
@@ -137,7 +127,7 @@ export default function Partners() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Our Strategic Partners</h2>
@@ -201,7 +191,7 @@ export default function Partners() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Partnership Benefits</h2>
@@ -235,7 +225,7 @@ export default function Partners() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -266,5 +256,5 @@ export default function Partners() {
         </section>
       </div>
 </>
-  );
+  )
 }

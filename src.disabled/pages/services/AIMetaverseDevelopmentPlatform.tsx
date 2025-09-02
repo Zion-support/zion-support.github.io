@@ -65,7 +65,7 @@ export default function AIMetaverseDevelopmentPlatform() {
               AI-Powered Metaverse Development Platform
             </h1>
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Build the future of digital experiences with our cutting-edge metaverse platform.;
+              Build the future of digital experiences with our cutting-edge metaverse platform.
               AI-driven 3D generation, intelligent avatars, and immersive virtual worlds.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

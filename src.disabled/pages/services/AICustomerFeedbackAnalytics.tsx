@@ -210,7 +210,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
               </span>
             </h1>
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
-              Transform customer feedback into actionable insights with advanced AI analytics.;
+              Transform customer feedback into actionable insights with advanced AI analytics.
               Understand sentiment, predict churn, and optimize customer experience across all touchpoints.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -533,7 +533,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
               Ready to Transform Your Customer Feedback?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of businesses already using AI-powered feedback analytics;
+              Join thousands of businesses already using AI-powered feedback analytics
               to improve customer satisfaction and drive growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

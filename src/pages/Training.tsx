@@ -6,27 +6,23 @@ import {
 } from 'lucide-react';
 export default function Training() {
   const courses = [
-    {
-      id: 1, title: "AI Fundamentals",
+    { id: 1, title: "AI Fundamentals",
       description: "Learn the basics of artificial intelligence and machine learning", duration: "8 hours",
       level: "Beginner", rating: 4.8,
       students: 1250, price: "$199",
       featured: true
-    }, {
-      id: 2,
+    }, { id: 2,
       title: "Quantum Computing Masterclass", description: "Advanced quantum computing concepts and applications",
       duration: "12 hours", level: "Advanced",
       rating: 4.9, students: 456,
       price: "$399", featured: true
     },
-    {
-      id: 3, title: "Micro SaaS Development",
+    { id: 3, title: "Micro SaaS Development",
       description: "Build and launch successful micro SaaS applications", duration: "10 hours",
       level: "Intermediate", rating: 4.7,
       students: 892, price: "$299",
       featured: false
-    }, {
-      id: 4,
+    }, { id: 4,
       title: "Cybersecurity Essentials", description: "Essential cybersecurity practices for modern applications",
       duration: "6 hours", level: "Beginner",
       rating: 4.6, students: 678,
@@ -34,21 +30,17 @@ export default function Training() {
     }
   ];
   const trainingTypes = [
-    {
-      title: "Online Courses", description: "Self-paced learning with video content and exercises",
+    { title: "Online Courses", description: "Self-paced learning with video content and exercises",
       icon: Video, count: 25,
       color: "from-blue-500 to-cyan-500"
-    }, {
-      title: "Live Workshops",
+    }, { title: "Live Workshops",
       description: "Interactive sessions with expert instructors", icon: Users,
       count: 12, color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Certification Programs", description: "Comprehensive programs with industry-recognized certificates",
+    { title: "Certification Programs", description: "Comprehensive programs with industry-recognized certificates",
       icon: Award, count: 8,
       color: "from-purple-500 to-pink-500"
-    }, {
-      title: "Corporate Training",
+    }, { title: "Corporate Training",
       description: "Customized training solutions for enterprise teams", icon: GraduationCap,
       count: 15, color: "from-orange-500 to-red-500"
     }
@@ -68,7 +60,7 @@ export default function Training() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -91,7 +83,7 @@ export default function Training() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Training Programs</h2>
@@ -127,7 +119,7 @@ export default function Training() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Featured Courses</h2>
@@ -198,7 +190,7 @@ export default function Training() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -229,5 +221,5 @@ export default function Training() {
         </section>
       </div>
 </>
-  );
+  )
 }

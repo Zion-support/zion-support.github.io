@@ -4,7 +4,7 @@
 export const highlightSearchTerms = (text, searchTerm) => {
     if (!searchTerm.trim());
         return text;
-    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const escaped = searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
     const regex = new RegExp(`(${escaped})`, 'gi')
     return text.replace(regex, '<mark className='bg-yellow-200 text-black px-1 rounded'>$1</mark>')}
 ;
@@ -89,7 +89,7 @@ export const filterSearchResults = (results, filters) => {
     // Filter by category;
     if (filters.category) {
         filteredResults = filteredResults.filter(result => result.category?.toLowerCase() === filters.category.toLowerCase())}
-    // Filter by price range;
+    // Filter by price range
     if (filters.minPrice !== undefined || filters.maxPrice !== undefined) {
         filteredResults = filteredResults.filter(result => {
             const price = result.price ?? 0
@@ -144,7 +144,7 @@ export const debounceSearch = (func, delay) => {
         clearTimeout(timeoutId);
         timeoutId = setTimeout(() => func.apply(null, args), delay)}
 }
-;
+
 export default {
     highlightSearchTerms,
     matchesSearchTerm,

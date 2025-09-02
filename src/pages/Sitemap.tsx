@@ -7,51 +7,43 @@ import {
 } from 'lucide-react';
 export default function Sitemap() {
   const siteStructure = [
-    {
-      title: "Main Pages", pages: [
+    { title: "Main Pages", pages: [
         { name: "Home", url: "/", description: "Welcome to Zion Tech Group" },
         { name: "About", url: "/about", description: "Learn about our company and mission" }, { name: "Services", url: "/services", description: "Our comprehensive technology services" },
         { name: "Contact", url: "/contact", description: "Get in touch with our team" }
       ]
-    }, {
-      title: "AI Services",
+    }, { title: "AI Services",
       pages: [
         { name: "AI Services Overview", url: "/ai-services", description: "Comprehensive AI solutions" }, { name: "AI Content Generator", url: "/services/ai-content-generator", description: "AI-powered content creation" },
         { name: "AI Project Management", url: "/services/ai-project-management", description: "AI-driven project optimization" }, { name: "AI Business Intelligence", url: "/services/ai-business-intelligence", description: "Advanced analytics & ML insights" }
       ]
-    }, {
-      title: "Quantum Computing",
+    }, { title: "Quantum Computing",
       pages: [
         { name: "Quantum Computing Solutions", url: "/services/quantum-computing", description: "Next-generation computing power" }, { name: "Quantum AI Platform", url: "/services/quantum-ai-hybrid-platform", description: "Revolutionary quantum-AI computing" },
         { name: "Quantum Financial Trading", url: "/services/ai-quantum-financial-trading-platform", description: "Advanced quantum trading" }, { name: "Quantum Machine Learning", url: "/services/quantum-machine-learning", description: "Quantum-enhanced ML algorithms" }
       ]
-    }, {
-      title: "Cybersecurity",
+    }, { title: "Cybersecurity",
       pages: [
         { name: "AI Cybersecurity Platform", url: "/services/ai-cybersecurity-platform", description: "Advanced AI-powered security" }, { name: "Security Headers & CSP", url: "/services/security-headers-csp", description: "Web security hardening" },
         { name: "DSR Privacy Portal", url: "/services/dsr-portal", description: "GDPR/CCPA compliance" }, { name: "Zero Trust Network Access", url: "/services/zero-trust-network-access", description: "Modern security architecture" }
       ]
-    }, {
-      title: "Company",
+    }, { title: "Company",
       pages: [
         { name: "Our Team", url: "/team", description: "Meet our expert professionals" }, { name: "Partners", url: "/partners", description: "Strategic partnerships" },
         { name: "Careers", url: "/careers", description: "Join our growing team" }, { name: "News", url: "/news", description: "Company announcements" }
       ]
-    }, {
-      title: "Resources",
+    }, { title: "Resources",
       pages: [
         { name: "Blog", url: "/blog", description: "Latest insights and updates" }, { name: "Documentation", url: "/documentation", description: "Technical guides and API reference" },
         { name: "Help Center", url: "/help", description: "Find answers and solutions" }, { name: "Webinars", url: "/webinars", description: "Educational sessions" },
         { name: "Training", url: "/training", description: "Skill development programs" }, { name: "Research", url: "/research", description: "Our research initiatives" }
       ]
-    }, {
-      title: "Marketplace",
+    }, { title: "Marketplace",
       pages: [
         { name: "Marketplace", url: "/marketplace", description: "Explore products and services" }, { name: "AI Tools", url: "/marketplace/ai-tools", description: "AI-powered applications" },
         { name: "Micro SaaS", url: "/micro-saas", description: "Curated micro SaaS solutions" }, { name: "IT Services", url: "/it-services", description: "Enterprise IT offerings" }
       ]
-    }, {
-      title: "Legal & Support",
+    }, { title: "Legal & Support",
       pages: [
         { name: "Privacy Policy", url: "/privacy", description: "How we protect your data" }, { name: "Terms of Service", url: "/terms", description: "Terms and conditions" },
         { name: "Cookie Policy", url: "/cookies", description: "Cookie usage information" }, { name: "FAQ", url: "/faq", description: "Frequently asked questions" },
@@ -78,7 +70,7 @@ export default function Sitemap() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -101,7 +93,7 @@ export default function Sitemap() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Quick Links</h2>
@@ -136,7 +128,7 @@ export default function Sitemap() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Complete Site Structure</h2>
@@ -187,7 +179,7 @@ export default function Sitemap() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-2xl mx-auto"
             >
               <h2 className="text-3xl font-bold text-white mb-6">
@@ -210,5 +202,5 @@ export default function Sitemap() {
         </section>
       </div>
 </>
-  );
+  )
 }

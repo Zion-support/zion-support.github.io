@@ -79,7 +79,7 @@ url: string;
   status: 'working,
           page: pagePath})}}
     return links}
-:pages.disabled/utils/linkChecker.tsx;
+:pages.disabled/utils/linkChecker.tsx
   // Check if a page exists
   async checkPageExists (url: string: any): Promise < any> {
     try {
@@ -125,6 +125,6 @@ url: string;
   // Get all broken links;
   getBrokenLinks () : LinkInfo[] {
     return this.brokenLinks}
-  // Get all missing pages;
+  // Get all missing pages
   getMissingPages () : string[] {return this.missingPages}}
 '`

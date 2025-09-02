@@ -6,38 +6,31 @@ import {
 } from 'lucide-react';
 export default function Research() {
   const researchAreas = [
-    {
-      title: "Artificial Intelligence", description: "Advancing AI research in machine learning, natural language processing, and computer vision",
+    { title: "Artificial Intelligence", description: "Advancing AI research in machine learning, natural language processing, and computer vision",
       publications: 45, researchers: 12,
       color: "from-purple-500 to-pink-500"
-    }, {
-      title: "Quantum Computing",
+    }, { title: "Quantum Computing",
       description: "Pioneering quantum algorithms and quantum machine learning applications", publications: 28,
       researchers: 8, color: "from-orange-500 to-red-500"
     },
-    {
-      title: "Cybersecurity", description: "Developing next-generation security solutions and threat detection systems",
+    { title: "Cybersecurity", description: "Developing next-generation security solutions and threat detection systems",
       publications: 32, researchers: 10,
       color: "from-green-500 to-emerald-500"
-    }, {
-      title: "Edge Computing",
+    }, { title: "Edge Computing",
       description: "Optimizing computing at the edge for IoT and real-time applications", publications: 18,
       researchers: 6, color: "from-blue-500 to-cyan-500"
     }
   ];
   const recentPublications = [
-    {
-      id: 1, title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment",
+    { id: 1, title: "Quantum-Enhanced Machine Learning for Financial Risk Assessment",
       authors: ["Dr. Sarah Chen", "Prof. Michael Rodriguez"], journal: "Nature Quantum Information",
       date: "2025-01-10", citations: 23,
       featured: true
-    }, {
-      id: 2,
+    }, { id: 2,
       title: "AI-Driven Cybersecurity: Autonomous Threat Detection Systems", authors: ["Lisa Park", "David Kumar"], journal: "IEEE Security & Privacy",
       date: "2025-01-05", citations: 18,
       featured: true
-    }, {
-      id: 3,
+    }, { id: 3,
       title: "Edge Computing Optimization for IoT Applications", authors: ["Maria Santos", "Alex Thompson"], journal: "ACM Computing Surveys",
       date: "2024-12-28", citations: 15,
       featured: false
@@ -58,7 +51,7 @@ export default function Research() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -90,7 +83,7 @@ export default function Research() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Research Areas</h2>
@@ -135,7 +128,7 @@ export default function Research() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Recent Publications</h2>
@@ -206,7 +199,7 @@ export default function Research() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -238,5 +231,5 @@ export default function Research() {
         </section>
       </div>
 </>
-  );
+  )
 }

@@ -182,5 +182,5 @@ export default function Solutions() {
         </section>
       </div>
     </Layout>
-  );
+  )
 }

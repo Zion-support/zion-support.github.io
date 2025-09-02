@@ -9,7 +9,7 @@ import { getCartKey } from '@/utils/cartUtils';
 
 vi.mock(
   'next/router', () => ({
-  useRouter: () => ({ push: vi.fn() })}));
+  useRouter: () => ({ push: vi.fn() })}))
 const item = { id:,
   1', name: 'Test Item, price: 10, quantity: 1 }
 
@@ -32,7 +32,7 @@ describe(
   'shows item added before login after logging in', () => {
     safeStorage.setItem(
   'guestCart', JSON.stringify([item]));
-    const { rerender } = renderCart(null);
+    const { rerender } = renderCart(null)
     expect(screen.getByText(/Test Item/i)).toBeInTheDocument()
     rerender(
       <AuthContext.Provider value={{ user: { id:

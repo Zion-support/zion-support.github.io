@@ -9,22 +9,33 @@ interface SEOProps {
   keywords?: string[];
   author?: string}
 const defaultSEO = {
-  title: 'Zion Tech Group - Leading Technology Solutions Provider', description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', image: '/images/og-image.jpg',
-  type: 'website', keywords: [;
-    'AI solutions', 'quantum computing',
-    'blockchain', 'cloud infrastructure',
-    'software development', 'technology consulting';
-  ], author: 'Zion Tech Group'}
-;
+  title: 'Zion Tech Group - Leading Technology Solutions Provider',
+  description: 'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.',
+  image: '/images/og-image.jpg',
+  type: 'website',
+  keywords: [
+    'AI solutions',
+    'quantum computing',
+    'blockchain',
+    'cloud infrastructure',
+    'software development',
+    'technology consulting'
+  ],
+  author: 'Zion Tech Group'
+};
 const EnhancedSEO: React.FC<SEOProps> = ({
-  title = defaultSEO.title, description = defaultSEO.description,
-  image = defaultSEO.image, url,
-  type = defaultSEO.type, keywords = defaultSEO.keywords,
-  author = defaultSEO.author}) => {
+  title = defaultSEO.title,
+  description = defaultSEO.description,
+  image = defaultSEO.image,
+  url,
+  type = defaultSEO.type,
+  keywords = defaultSEO.keywords,
+  author = defaultSEO.author
+}) => {
   const router = useRouter();
-  const currentUrl = url || `https: //ziontechgroup.com${router.asPath}`;
-  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
-  return(
+  const currentUrl = url || `https://ziontechgroup.com${router.asPath}`;
+  const fullImageUrl = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
+  return (
     <Head>
       <title>{title}</title>
       <meta name='description' content={description} />
@@ -48,7 +59,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <link rel='canonical' href={currentUrl} />
       {/* Structured Data */}
       <script
-        type='application/ld+json';
+        type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org', '@type': 'Organization',
@@ -61,9 +72,11 @@ const EnhancedSEO: React.FC<SEOProps> = ({
             'contactPoint': {
               '@type': 'ContactPoint', 'telephone': '+1-302-464-0950',
               'contactType': 'customer service', 'email': 'kleber@ziontechgroup.com'}
-          })}}
+          })
+        }}
       />
     </Head>
-  )}
-;
-export default EnhancedSEO
+  );
+};
+
+export default EnhancedSEO;

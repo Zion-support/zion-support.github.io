@@ -86,7 +86,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         }
       }
 ;
-      document.addEventListener('keydown', handleKeyboardNavigation);
+      document.addEventListener('keydown', handleKeyboardNavigation)
       return () => document.removeEventListener('keydown', handleKeyboardNavigation)}
   }, [keyboardNavigation])
   return(
@@ -119,5 +119,5 @@ export const announceToScreenReader = (message: string, priority: 'polite' | 'as
   document.body.appendChild(announcement);
   setTimeout(() => {
     document.body.removeChild(announcement)}, 1000)}
-;
+
 export default AccessibilityEnhancer

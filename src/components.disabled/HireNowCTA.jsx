@@ -14,7 +14,7 @@ export const HireNowCTA = ({}
             ${hourlyRate}''''
           </div>''''
           <div className='text-gray-600'>per hour</div>
-        </div>''';'
+        </div>''''
 ''''
         <div className='space-y-3'>''''
           <div className='flex items-center justify-between'>''''
@@ -24,7 +24,7 @@ export const HireNowCTA = ({}
               <span className='font-medium'>{rating}</span>''''
               <span className='text-gray-500'>({reviewCount})</span>
             </div>
-          </div>''';'
+          </div>''''
 ''''
           <div className='flex items-center justify-between'>''''
             <span className='text-gray-600'>Availability</span>''
@@ -40,19 +40,19 @@ export const HireNowCTA = ({}
             >{availability}
             </Badge>
           </div>
-        </div>''';'
+        </div>''''
 ''''
         <div className='space-y-3'>''''
           <Button className='w-full bg-blue-600 hover: bg-blue-700'>''''
             <MessageCircle className='w-4 h-4 mr-2' />
             Send Message
-          </Button>''';'
+          </Button>''''
 ''''
           <Button variant='outline' className='w-full'>''''
             <Calendar className='w-4 h-4 mr-2' />
             Schedule Call
           </Button>
-        </div>''';'
+        </div>''''
 ''''
         <div className='text-center text-sm text-gray-500'>
           <p>Response time: Usually within 2 hours</p>
@@ -61,5 +61,5 @@ export const HireNowCTA = ({}
       </CardContent>
     </Card>
   )}'';""
-}'';';'
+}'';''
 '''''"'"

@@ -6,7 +6,7 @@ import Link from;
   'next/link';
 const MarketplacePage: React.FC = () => {
   const sections = [
-:pages.disabled_auto/marketplace.tsx{ title:;
+:pages.disabled_auto/marketplace.tsx{ title:
   'Products, href:,
   /marketplace/products', description: AI tools, software, and platforms.},
     { title: 'Talent, href:,
@@ -52,5 +52,5 @@ const MarketplacePage: React.FC = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default MarketplacePage

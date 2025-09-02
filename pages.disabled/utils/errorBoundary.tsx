@@ -47,7 +47,7 @@ class ErrorBoundary extends Component<Props, State> {}
 ;
   handleReload = () => {}
     window.location.reload () }
-:pages.disabled/utils/errorBoundary.tsx;
+:pages.disabled/utils/errorBoundary.tsx
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {return this.props.fallback}      return()
@@ -76,14 +76,14 @@ class ErrorBoundary extends Component<Props, State> {}
               <h2 className='text-2xl font-bold text-white mb-4'>
                 Oops! Something went wrong
               </h2>'''              <p className='text-gray-300 mb-6'>
-                We encountered an unexpected error. This might be due to a;
+                We encountered an unexpected error. This might be due to a
                 temporary issue with asset loading or MIME type configuration.
               </p>
 :pages.disabled/utils/errorBoundary.tsx{/* Error Details (Development Only) */}''{process.env.NODE_ENV === 'development' && this.state.error && (''
                 <details className='text-left mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30'>''
                   <summary className='cursor-pointer text-red-400 font-medium mb-2'>
                     Error Details (Development)'{/* Error Details (Development Only) */}
-  ''{process.env.NODE_ENV === 'development;
+  ''{process.env.NODE_ENV === 'development
   ' && this.state.error && (''
                 <details className='text-left mb-6 p-4 bg-red-900/20 rounded-lg border border-red-500/30'>''
                   <summary className='cursor-pointer text-red-400 font-medium mb-2'>
@@ -116,7 +116,7 @@ class ErrorBoundary extends Component<Props, State> {}
                   className='w-full bg-gray-600 hover:bg-gray-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200'>                  Reload Page
                 </motion.button>
               </div>
-:pages.disabled/utils/errorBoundary.tsx;
+:pages.disabled/utils/errorBoundary.tsx
 '{/* Contact Information */}''
               <div className='mt-6 pt-6 border-t border-white/20'>''
                 <p className='text-sm text-gray-400 mb-2'>
@@ -131,4 +131,4 @@ class ErrorBoundary extends Component<Props, State> {}
     return this.props.children}
 }
 :pages.disabled/utils/errorBoundary.tsx;
-export { ErrorBoundary }'';'''
+export { ErrorBoundary }'''''

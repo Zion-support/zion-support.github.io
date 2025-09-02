@@ -4,8 +4,7 @@
    enableScreenReaderSupport?: boolean;
    enableHighContrast?: boolean;
    enableReducedMotion?: boolean;
-   enableLargeText?: boolean} interface AccessibilityFeatures {
-  isHighContrast: boolean;
+   enableLargeText?: boolean} interface AccessibilityFeatures { isHighContrast: boolean;
    isReducedMotion: boolean;
    isLargeText: boolean;
-   isScreenReader: boolean} :src/hooks/useAccessibility.tsx export export enableKeyboardNavigation = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrast = true, enableReducedMotion = true, enableLargeText = true} = options;
+   isScreenReader: boolean  } :src/hooks/useAccessibility.tsx export export enableKeyboardNavigation = true, enableFocusManagement = true, enableScreenReaderSupport = true, enableHighContrast = true, enableReducedMotion = true, enableLargeText = true} = options;

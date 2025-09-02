@@ -30,7 +30,7 @@ document.addEventListener(,
           summarizeButton.nextSibling)}
       summaryArea.innerHTML = `<p><i>Generating AI summary for '${lessonTitle}'... please wait.</i></p>`;
       summarizeButton.disabled = true;
-      // Fetch API call to the backend;
+      // Fetch API call to the backend
       fetch(,
   /api/summarize_lesson', {
         method: 'POST,

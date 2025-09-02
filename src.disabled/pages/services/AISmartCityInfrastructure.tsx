@@ -25,7 +25,7 @@ import React from;
   Waste Management',
   'Water Conservation',
   'Green Infrastructure'], efficiency: '78%, icon: Leaf }, { category:,
-  Public Safety', services: [;
+  Public Safety', services: [
   'Surveillance Systems,
 ,
   Emergency Response',

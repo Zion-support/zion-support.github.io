@@ -49,7 +49,7 @@ import {
 } from '../data/comprehensive-2026-expanded-services';
 export default function ComprehensiveServicesShowcase2026() {
   const title = 'Comprehensive Services Showcase 2026 — Zion Tech Group';
-  const description =;
+  const description =
     'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.'
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
@@ -62,7 +62,7 @@ export default function ComprehensiveServicesShowcase2026() {
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesCategory && matchesSearch})
   const popularServices = comprehensiveExpandedServices.filter(
-    service => service.popular);
+    service => service.popular)
 :pages.disabled_auto/comprehensive-services-showcase-2026.tsx
 	return(
 		<PageTransition>
@@ -109,7 +109,7 @@ export default function ComprehensiveServicesShowcase2026() {
             </h1>
             <p className='mt-6 text-lg leading-8 text-gray-600'>
               Discover our expanded suite of AI-powered solutions, cloud;
-              infrastructure, and emerging technology platforms designed to;
+              infrastructure, and emerging technology platforms designed to
               accelerate your digital transformation.
             </p>
             <div className='mt-10 flex items-center justify-center gap-x-6'>
@@ -166,7 +166,7 @@ export default function ComprehensiveServicesShowcase2026() {
 								className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
 									selectedCategory === 'all;
   ';
-										? 'bg-blue-600 text-white;
+										? 'bg-blue-600 text-white
   ': 'bg-gray-100 text-gray-700 hover:bg-gray-200}`}
 							>
 								All Services
@@ -176,7 +176,7 @@ export default function ComprehensiveServicesShowcase2026() {
 									key={category.name}
 									onClick={() => setSelectedCategory(category.name)}
 									className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-										selectedCategory === category.name;
+										selectedCategory === category.name
 											?,
   bg-blue-600 text-white
   ': 'bg-gray-100 text-gray-700 hover:bg-gray-200}`}
@@ -193,7 +193,7 @@ export default function ComprehensiveServicesShowcase2026() {
                 onClick={() => setSelectedCategory('all')}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                   selectedCategory === 'all';
-                    ? 'bg-blue-600 text-white';
+                    ? 'bg-blue-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
               >
                 All Services
@@ -203,7 +203,7 @@ export default function ComprehensiveServicesShowcase2026() {
                   key={category.name}
                   onClick={() => setSelectedCategory(category.name)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                    selectedCategory === category.name;
+                    selectedCategory === category.name
                       ? 'bg-blue-600 text-white'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
                 >{category.icon} {category.name}
@@ -222,7 +222,7 @@ export default function ComprehensiveServicesShowcase2026() {
                 Most Popular Services
               </h2>
               <p className='mt-4 text-lg text-gray-600'>
-                Our most requested solutions that are transforming businesses;
+                Our most requested solutions that are transforming businesses
                 across industries
               </p>
             </div>
@@ -294,14 +294,14 @@ export default function ComprehensiveServicesShowcase2026() {
               Complete Service Portfolio
             </h2>
             <p className='mt-4 text-lg text-gray-600'>
-              Explore our comprehensive range of solutions designed to meet;
+              Explore our comprehensive range of solutions designed to meet
               every business need
             </p>
           </div>
           {/* Services by Category */}
           {serviceCategories.map(category => {
             const categoryServices = filteredServices.filter(
-              service => service.category === category.name);
+              service => service.category === category.name)
             if (categoryServices.length === 0) return null
             return(
               <div key={category.name} className='mb-16'>
@@ -339,7 +339,7 @@ export default function ComprehensiveServicesShowcase2026() {
                           Key Features:{' '}
                         </h5>
                         <ul className='space-y-1'>
-                          {service.features;
+                          {service.features
                             .slice(0, 3)
                             .map((feature, index) => (
                               <li
@@ -437,7 +437,7 @@ export default function ComprehensiveServicesShowcase2026() {
               Ready to Transform Your Business?
             </h2>
             <p className='mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300'>
-              Our team of experts is ready to help you implement the right;
+              Our team of experts is ready to help you implement the right
               solutions for your business needs.
             </p>
             {/* Contact Details */}

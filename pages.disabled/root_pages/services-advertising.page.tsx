@@ -90,7 +90,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
   function ext(...args[]):  {
     return();
       <a className = 'text-cyan-400 underline' href={url} target='_blank' rel='noopener noreferrer'>{new URL(url).host}/pricing</a>
-    )}';
+    )}'
   return (''
     <div className = 'min-h-screen bg-black'>
       <Helmet>'
@@ -187,7 +187,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
           </section>'
           <section>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6 text-center'>New in Q2 2025</h2>''
-            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>'{[''{ name: 'AI Sales Playbook Generator', price: '$99/mo', href: '/services/ai-sales-playbook-generator' },'{ name: 'Customer Journey Analytics Starter', price: '$79/mo', href: '/services/customer-journey-analytics-starter' },'{ name: 'Incident Postmortem AI Scribe', price: '$39/mo', href: '/services/incident-postmortem-ai-scribe' },'{ name: 'SLO Burn Rate Coach', price: '$49/mo', href: '/services/slo-burn-rate-coach' },'{ name: 'API Changelog & SDK Publisher', price: '$59/mo', href: '/services/api-changelog-sdk-publisher' },'{ name: 'Browser Performance Optimizer', price: '$69/mo', href: '/services/browser-performance-optimizer' },'{ name: 'Secret Rotation Orchestrator', price: '$129/mo', href: '/services/secret-rotation-orchestrator' },'{ name: 'SaaS Billing Anomaly Guard', price: '$119/mo', href: '/services/saas-billing-anomaly-guard' },'{ name: 'ML Feature Store Starter', price: '$149/mo', href: '/services/ml-feature-store-starter' },'{ name: 'Edge Cron Orchestrator', price: '$59/mo', href: '/services/edge-cron-orchestrator' },'{ name: 'GDPR DSAR Portal', price: '$129/mo', href: '/services/gdpr-dsar-portal' },'{ name: 'SOC 2 Evidence Collector', price: '$149/mo', href: '/services/soc2-evidence-collector' },'{ name: 'SEO Change Monitor', price: '$69/mo', href: '/services/seo-change-monitor' },'{ name: 'CI/CD Flaky Test Detector', price: '$59/mo', href: '/services/cicd-flaky-test-detector' },'{ name: 'Cloud Cost Anomaly Guard', price: '$79/mo', href: '/services/cloud-cost-anomaly-guard' },'{ name: 'Data Pipeline SLA Tracker', price: '$89/mo', href: '/services/data-pipeline-sla-tracker' },'{ name: 'Edge Image Optimizer', price: '$39/mo', href: '/services/edge-image-optimizer' },'{ name: 'Managed Kubernetes SRE', price: '$2,500/mo', href: '/services/managed-kubernetes-sre' },'{ name: 'Zero Trust Rollout Coaching', price: '$4,000/engagement', href: '/services/zero-trust-rollout-coaching' },'{ name: 'PDF Render API', price: '$29/mo', href: '/services/pdf-render-api' },'{ name: 'Email Deliverability Monitor', price: '$39/mo', href: '/services/email-deliverability-monitor' },'{ name: 'Synthetic Data Generator', price: '$119/mo', href: '/services/synthetic-data-generator' },'{ name: 'AI Meeting Notes Agent', price: '$69/mo', href: '/services/ai-meeting-notes-agent' }';
+            <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>'{[''{ name: 'AI Sales Playbook Generator', price: '$99/mo', href: '/services/ai-sales-playbook-generator' },'{ name: 'Customer Journey Analytics Starter', price: '$79/mo', href: '/services/customer-journey-analytics-starter' },'{ name: 'Incident Postmortem AI Scribe', price: '$39/mo', href: '/services/incident-postmortem-ai-scribe' },'{ name: 'SLO Burn Rate Coach', price: '$49/mo', href: '/services/slo-burn-rate-coach' },'{ name: 'API Changelog & SDK Publisher', price: '$59/mo', href: '/services/api-changelog-sdk-publisher' },'{ name: 'Browser Performance Optimizer', price: '$69/mo', href: '/services/browser-performance-optimizer' },'{ name: 'Secret Rotation Orchestrator', price: '$129/mo', href: '/services/secret-rotation-orchestrator' },'{ name: 'SaaS Billing Anomaly Guard', price: '$119/mo', href: '/services/saas-billing-anomaly-guard' },'{ name: 'ML Feature Store Starter', price: '$149/mo', href: '/services/ml-feature-store-starter' },'{ name: 'Edge Cron Orchestrator', price: '$59/mo', href: '/services/edge-cron-orchestrator' },'{ name: 'GDPR DSAR Portal', price: '$129/mo', href: '/services/gdpr-dsar-portal' },'{ name: 'SOC 2 Evidence Collector', price: '$149/mo', href: '/services/soc2-evidence-collector' },'{ name: 'SEO Change Monitor', price: '$69/mo', href: '/services/seo-change-monitor' },'{ name: 'CI/CD Flaky Test Detector', price: '$59/mo', href: '/services/cicd-flaky-test-detector' },'{ name: 'Cloud Cost Anomaly Guard', price: '$79/mo', href: '/services/cloud-cost-anomaly-guard' },'{ name: 'Data Pipeline SLA Tracker', price: '$89/mo', href: '/services/data-pipeline-sla-tracker' },'{ name: 'Edge Image Optimizer', price: '$39/mo', href: '/services/edge-image-optimizer' },'{ name: 'Managed Kubernetes SRE', price: '$2,500/mo', href: '/services/managed-kubernetes-sre' },'{ name: 'Zero Trust Rollout Coaching', price: '$4,000/engagement', href: '/services/zero-trust-rollout-coaching' },'{ name: 'PDF Render API', price: '$29/mo', href: '/services/pdf-render-api' },'{ name: 'Email Deliverability Monitor', price: '$39/mo', href: '/services/email-deliverability-monitor' },'{ name: 'Synthetic Data Generator', price: '$119/mo', href: '/services/synthetic-data-generator' },'{ name: 'AI Meeting Notes Agent', price: '$69/mo', href: '/services/ai-meeting-notes-agent' }'
               ].map((o) => (''
                 <a key={o.name} href={o.href} className='block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover:border-cyan-500/40'>''
                   <div className='text-sm text-gray-400 mb-1'>From</div>''
@@ -323,7 +323,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>Typical SMB budget: $0–$500/mo</li>'
               <li>References: {ext('https://openai.com/safety')}, {ext('https://github.com/guardrails-ai/guardrails')}</li>
             </ul>
-          </section>';
+          </section>'
 ''
           <section className='space-y-6'>''
             <h2 className='text-2xl font-semibold text-white'>Identity & SSO/SCIM</h2>''
@@ -332,7 +332,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>Typical SMB budget: $100–$1,500/mo</li>'
               <li>References: {ext('https://auth0.com/pricing')}, {ext('https://workos.com/pricing')}, {ext('https://www.okta.com/pricing/')}</li>
             </ul>
-          </section>';
+          </section>'
 ''
           <section className='space-y-6'>''
             <h2 className='text-2xl font-semibold text-white'>Status Page & SLO Monitor</h2>''
@@ -365,7 +365,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>Typical SMB budget: $100–$300/mo</li>'
               <li>References: {ext('https://stripe.com/pricing')}, {ext('https://pay.google.com/about/business/')}, {ext('https://partnerstack.com/')}</li>
             </ul>
-          </section>';
+          </section>'
 ''
           <section className='space-y-6'>''
             <h2 className='text-2xl font-semibold text-white'>API Security Scanner</h2>''
@@ -422,7 +422,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
               <li>Typical SMB budget: $20–$100/mo</li>'
               <li>References: {ext('https://mailshake.com/pricing')}, {ext('https://www.gmass.co/pricing')}</li>
             </ul>
-          </section>';
+          </section>'
 ''
           <div className='pt-4 text-slate-400 text-sm'>See also: <a className='text-cyan-400 underline' href='/market-pricing'>Market Pricing</a> for a broader list of benchmarks and links.</div>''
           <section id='ai-email-responder' className='space-y-6'>''
@@ -458,5 +458,5 @@ export default function ServicesAdvertisingPage(...args[]):  {
         </div>
       </div>
     </div>
-  )}'';
+  )}''
 ''''

@@ -13,7 +13,7 @@ const AIServices: React.FC = () => {
         <li><Link className='text-blue-400' to='/services/ai-seo-optimizer'>AI SEO Optimizer</Link></li>
       </ul>
     </div>
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 const AIServices: React.FC = () => {
@@ -28,5 +28,5 @@ const AIServices: React.FC = () => {
     </div>
   )}
 ;
-export default AIServices;
+export default AIServices
 '

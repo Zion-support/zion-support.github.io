@@ -57,7 +57,7 @@ export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({
   ';
       case 'floating;
   ':;
-      default:;
+      default:
         return 'bottom-4 right-4}
   }
 

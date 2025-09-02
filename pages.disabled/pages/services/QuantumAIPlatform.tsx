@@ -142,14 +142,14 @@ import { Atom,
       title: 'Quantum Entanglement',';
       description: 'Leverage quantum correlations for secure communication',
       icon: Network,';
-      metric: '100%'}  ];
+      metric: '100%'}  ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
 <:pages.disabled/pages/services/QuantumAIPlatform.tsx;
       <SEO;
 =;
-      <SEO '>        title='Quantum AI Platform - Zion Tech Group';
+      <SEO '>        title='Quantum AI Platform - Zion Tech Group'
         description='Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning.'/>        title='Quantum AI Platform - Zion Tech Group''        description='Revolutionize your business with quantum computing and AI. Access unprecedented computational power for optimization, cryptography, and machine learning.'/>'
       <SEO ''
         title='Quantum AI Platform - Zion Tech Group'';
@@ -189,7 +189,7 @@ import { Atom,
 <:pages.disabled/pages/services/QuantumAIPlatform.tsx;
               <a;
 =;
-              <a '>                href='tel:+13024640950';
+              <a '>                href='tel:+13024640950'
                 className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105'
               <a ''
                 href='tel:+13024640950'';
@@ -203,12 +203,12 @@ import { Atom,
               <a '>                href='/request-quote';
   y: 0}}';
             transition={{ duration: 0.8 }}'';
-            className='text-center'';
+            className='text-center''
 ''
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-sm font-medium mb-6'>''
               <Atom className='w-4 h-4 mr-2'  />              Next-Generation Quantum Technology'
             </div>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Quantum AI Platform''
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'> Revolution</span>'
             </h1>''
@@ -269,17 +269,17 @@ import { Atom,
               Quantum Computing Advantages';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Quantum Computing Advantages
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Experience computational power that transcends classical computing limitations;
+              Experience computational power that transcends classical computing limitations
               and opens new frontiers in problem-solving.
             </p>
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {quantumAdvantages.map(advantage: unknown, index: unknown()
@@ -314,9 +314,9 @@ import { Atom,
                 <div className='p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit'>';
   delay: index * 0.1 ';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 text-center''
 ''
-                <div className='p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit'>'';
+                <div className='p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mx-auto mb-4 w-fit'>''
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
                   <advantage.icon className='w-8 h-8 text-white' />
                 </div>'
@@ -360,13 +360,13 @@ import { Atom,
               Revolutionary Quantum Capabilities';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Revolutionary Quantum Capabilities
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our Quantum AI Platform combines cutting-edge quantum computing with advanced;
+              Our Quantum AI Platform combines cutting-edge quantum computing with advanced
               artificial intelligence to deliver unprecedented computational power.
             </p>
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
@@ -401,7 +401,7 @@ import { Atom,
                 <div className='flex items-center mb-4'>'
                   <div className='p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mr-4'>';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300''
 ''
                 <div className='flex items-center mb-4'>''
                   <div className='p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mr-4'>''
@@ -415,7 +415,7 @@ import { Atom,
 :pages.disabled/pages/services/QuantumAIPlatform.tsx{feature.benefits.map((benefit, idx) => ('
                     <li key={idx} className='text-gray-300 flex items-center'>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-8 border border-slate-700 hover:border-blue-500 transition-all duration-300''
 ''
                 <div className='flex items-center mb-4'>''
                   <div className='p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg mr-4'>''
@@ -466,17 +466,17 @@ import { Atom,
               Quantum Computing Pricing';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Quantum Computing Pricing
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Access the future of computing with our flexible quantum platform pricing.;
+              Access the future of computing with our flexible quantum platform pricing.
               Scale from research to enterprise deployment.
             </p>
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -602,13 +602,13 @@ import { Atom,
               Industry Applications';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Industry Applications
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our Quantum AI Platform is revolutionizing industries by solving previously;
+              Our Quantum AI Platform is revolutionizing industries by solving previously
               intractable problems with unprecedented speed and accuracy.
             </p>
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
@@ -645,7 +645,7 @@ import { Atom,
                   {useCase.applications.map((application, appIndex) => ('
                     <li key={appIndex} className='text-gray-300 text-sm flex items-center'>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300''
 ''
                 <h3 className='text-xl font-semibold text-white mb-4'>{useCase.industry}</h3>''
                 <ul className='space-y-2'>'{useCase.applications.map((application, appIndex) => (''
@@ -656,7 +656,7 @@ import { Atom,
                 </div>''
                 <p className='text-gray-300 mb-4'>'{testimonial.content}'</p>';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300''
 ''
                 <h3 className='text-xl font-semibold text-white mb-4'>{useCase.industry}</h3>''
                 <ul className='space-y-2'>
@@ -698,7 +698,7 @@ import { Atom,
             transition={{ duration: 0.8 }}';
 '';
             <h2 className='text-4xl font-bold text-white mb-6'>
-              Ready for the Quantum Revolution?';
+              Ready for the Quantum Revolution?'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -707,9 +707,9 @@ import { Atom,
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Join the quantum computing revolution and unlock computational capabilities;
-              that will transform your industry and accelerate innovation.;
+              that will transform your industry and accelerate innovation.
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button
@@ -746,5 +746,5 @@ import { Atom,
 ;
 :pages.disabled/pages/services/QuantumAIPlatform.tsx;
 export { QuantumAIPlatform }export default QuantumAIPlatform''`;
-''`''`;
+''`''`
 export { QuantumAIPlatform }export default QuantumAIPlatform''`

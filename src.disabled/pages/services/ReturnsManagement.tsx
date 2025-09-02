@@ -11,7 +11,7 @@ function ReturnsManagement() {
         <h1 className='heading-responsive text-gradient'>E‑commerce Returns Management</h1>
         <p className='mt-4 max-w-3xl text-zion-slate-light text-responsive'>
           Reduce support workload and increase customer satisfaction with a self‑serve, branded;
-          returns portal that automates labels, RMAs, inspections, and refunds while syncing;
+          returns portal that automates labels, RMAs, inspections, and refunds while syncing
           with your e‑commerce and shipping providers.
         </p>
         <div className='grid-futuristic mt-10'>
@@ -66,5 +66,5 @@ export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
-export default ReturnsManagement;
+export default ReturnsManagement
 export default ReturnsManagement

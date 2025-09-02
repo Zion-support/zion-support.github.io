@@ -72,7 +72,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
       popular: false}
   ]}
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
-  ]}  ];
+  ]}  ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
@@ -89,7 +89,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
         description='Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management.'/>{/* Hero Section */}'
       <div className='relative overflow-hidden'>'
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>'
-          <div className='text-center'>'>  ]}  ]';
+          <div className='text-center'>'>  ]}  ]'
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'
       <SEO '';
@@ -99,7 +99,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
         description='Revolutionize your supply chain with AI-powered optimization. Reduce costs, improve efficiency, and enhance customer satisfaction with intelligent logistics management.''/>{/* Hero Section */}''
       <div className='relative overflow-hidden'>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>''
-          <div className='text-center'>'';
+          <div className='text-center'>''
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
             <GradientHeading className='text-5xl md:text-6xl font-bold mb-6'>
               AI-Powered Supply Chain Optimization Platform'
@@ -109,10 +109,10 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
               Revolutionize your supply chain with cutting-edge AI technology. Optimize logistics, reduce costs,
-              and enhance customer satisfaction with intelligent supply chain management.;
+              and enhance customer satisfaction with intelligent supply chain management.
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
             </p>'
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               Revolutionize your supply chain with cutting-edge AI technology. Optimize logistics, reduce costs,
               and enhance customer satisfaction with intelligent supply chain management.'
             </p>''
@@ -146,7 +146,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
           {benefits.map((benefit, index)   => ('
             <div key={index} className='text-center'>'
               <div className='text-4xl font-bold text-zion-cyan mb-2'>{benefit.metric}</div>'
-        </div>';
+        </div>'
         ''
         <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8'>'{benefits.map((benefit, index)   => (''
             <div key={index} className='text-center'>''
@@ -154,7 +154,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
               <p className='text-gray-300'>{benefit.description}</p>
             </div>
           </div>
-        </section>';
+        </section>'
         ''
         <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8'>
           {benefits.map((benefit, index)   => (''
@@ -181,7 +181,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
               <CardHeader>''
                 <div className='flex items-center gap-3'>
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx{feature.icon}'
-        </div>';
+        </div>'
         ''
         <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>'{features.map((feature, index)   => (''
             <Card key={index} className='bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors'>'
@@ -218,7 +218,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
             <Card key={index} className='bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors'>
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
               <CardHeader>'
-        </div>';
+        </div>'
         ''
         <div className='grid grid-cols-1 md: anygrid-cols-2 gap-8'>'{useCases.map((useCase, index)   => (''
             <Card key={index} className='bg-slate-800/50 border-slate-700 hover:border-zion-cyan transition-colors'>'
@@ -247,14 +247,14 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
 <:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
 =;
-        '>        </div>';
+        '>        </div>'
         ''
         <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
           {pricingTiers.map((tier, index)   => (''
             <Card key={index} className={`relative ${tier.popular ? 'border-zion-cyan ring-2 ring-zion-cyan' : 'border-slate-700'} bg-slate-800/50`}>'{tier.popular && (''
                 <Badge className='absolute -top-3 left-1/2 transform -translate-x-1/2 bg-zion-cyan text-slate-900'>
                   Most Popular
-                </Badge>';
+                </Badge>'
         ''
         <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
           {pricingTiers.map((tier, index)   => ('
@@ -267,7 +267,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
               <CardHeader className='text-center'>''
                 <CardTitle className='text-white text-2xl'>{tier.name}</CardTitle>''
                 <div className='flex items-baseline justify-center gap-1'>''
-                  <span className='text-4xl font-bold text-zion-cyan'>{tier.price}</span>'';
+                  <span className='text-4xl font-bold text-zion-cyan'>{tier.price}</span>''
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
                   <span className='text-gray-400'>{tier.period}</span>'
                 </div>''
@@ -302,12 +302,12 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
         <div className='text-center'>''
           <h2 className='text-3xl font-bold text-white mb-4'>Ready to Optimize Your Supply Chain?</h2>''
           <p className='text-gray-300 text-lg mb-8'>
-:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
+:pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
             Join industry leaders who have already transformed their logistics operations'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
             <Button size='lg' className='bg-zion-purple hover:bg-zion-purple/90'>
-              Start Free Trial';
+              Start Free Trial'
             Join industry leaders who have already transformed their logistics operations
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -329,14 +329,14 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>''
             <div className='text-center'>''
               <Clock className='h-12 w-12 text-zion-cyan mx-auto mb-4'  />''
-              <h4 className='text-white font-semibold mb-2'>24/7 Support</h4>'';
+              <h4 className='text-white font-semibold mb-2'>24/7 Support</h4>''
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
               <p className='text-gray-300'>Round-the-clock assistance for all your needs</p>'
               <p className='text-gray-300'>Round-the-clock assistance for all your needs</p>
             </div>''
             <div className='text-center'>''
               <Users className='h-12 w-12 text-zion-cyan mx-auto mb-4'  />''
-              <h4 className='text-white font-semibold mb-2'>Expert Consultation</h4>'';
+              <h4 className='text-white font-semibold mb-2'>Expert Consultation</h4>''
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
               <p className='text-gray-300'>Get personalized guidance from our supply chain experts</p>'
               <p className='text-gray-300'>Get personalized guidance from our supply chain experts</p>
@@ -365,5 +365,5 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
     </div>
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx)}''`;
 export default AISupplyChainOptimizationPlatform''`;''`)}
-;
+
 export default AISupplyChainOptimizationPlatform'"`

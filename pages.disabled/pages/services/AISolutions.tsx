@@ -101,7 +101,7 @@ export function AISolutions(...args: unknown[]): unknown {
               <h1 className='text-5xl font-bold'>AI Solutions</h1>
             </div>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Transform your business with cutting-edge artificial intelligence;
+              Transform your business with cutting-edge artificial intelligence
               solutions. From machine learning to natural language processing,
               we deliver intelligent systems that drive innovation and growth.
             </p>'
@@ -134,7 +134,7 @@ export function AISolutions(...args: unknown[]): unknown {
             <h2 className='text-4xl font-bold text-white mb-4'>
               Comprehensive AI Capabilities
             </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              Our AI solutions cover the full spectrum of artificial;
-              intelligence technologies, enabling businesses to harness the;
+              intelligence technologies, enabling businesses to harness the
               power of machine learning and automation.
             </p>
           </motion.div>
@@ -182,7 +182,7 @@ export function AISolutions(...args: unknown[]): unknown {
             className='text-center mb-16'>'
             <h2 className='text-4xl font-bold text-white mb-4'>
               Industry Applications
-            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              Discover how AI solutions are transforming industries and creating;
+            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              Discover how AI solutions are transforming industries and creating
               new opportunities for innovation and growth.
             </p>
           </motion.div>
@@ -231,7 +231,7 @@ export function AISolutions(...args: unknown[]): unknown {
             className='text-center mb-16'>'
             <h2 className='text-4xl font-bold text-white mb-4'>
               Cutting-Edge Technologies
-            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              We leverage the latest AI technologies and frameworks to deliver;
+            </h2>'<p className='text-xl text-gray-400 max-w-3xl mx-auto'>              We leverage the latest AI technologies and frameworks to deliver
               robust, scalable, and efficient solutions for our clients.
             </p>
           </motion.div>
@@ -267,7 +267,7 @@ export function AISolutions(...args: unknown[]): unknown {
               Ready to Transform Your Business with AI?
             </h2>'
             <p className='text-xl text-cyan-100 mb-8'>
-  ';
+  '
               Let's discuss how our AI solutions can drive innovation,
               efficiency, and growth for your organization.
             </p>'

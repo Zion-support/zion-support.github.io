@@ -168,7 +168,7 @@ return a.title.localeCompare(b.title)'      case;
         return 0}
   })
     return categoryData ? categoryData.icon : Globe}
-;
+
     return categoryData ? categoryData.color :,
   from-gray-500 to-slate-600'}
 
@@ -261,7 +261,7 @@ return a.title.localeCompare(b.title)'      case;
             </h1>'
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               Discover our cutting-edge AI-powered micro SAAS solutions designed;
-              to transform your business. From quantum computing to zero trust;
+              to transform your business. From quantum computing to zero trust
               security, we offer innovative services that drive growth,
               efficiency, and competitive advantage.
             </p>'
@@ -298,14 +298,14 @@ return a.title.localeCompare(b.title)'      case;
               <input';
                 type='text''                placeholder='Search services...';
                 value={searchTerm}
-                onChange={e => setSearchTerm(e.target.value)}';
+                onChange={e => setSearchTerm(e.target.value)}'
                 className='w-full pl-10 pr-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
               />
             </div>
             {/* Category Filter */}
             <select;
               value={selectedCategory}
-              onChange={e => setSelectedCategory(e.target.value)}';
+              onChange={e => setSelectedCategory(e.target.value)}'
               className='px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
             >{categories.map(category => (
                 <option key={category.id} value={category.id}>
@@ -315,7 +315,7 @@ return a.title.localeCompare(b.title)'      case;
             {/* Price Range Filter */}
             <select;
               value={priceRange}
-              onChange={e => setPriceRange(e.target.value)}';
+              onChange={e => setPriceRange(e.target.value)}'
               className='px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
             >{priceRanges.map(range => (
                 <option key={range.id} value={range.id}>
@@ -325,7 +325,7 @@ return a.title.localeCompare(b.title)'      case;
             {/* Sort By */}
             <select;
               value={sortBy}
-              onChange={e => setSortBy(e.target.value)}';
+              onChange={e => setSortBy(e.target.value)}'
               className='px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-white focus: anyoutline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
             >{sortOptions.map(option => (
                 <option key={option.id} value={option.id}>
@@ -361,7 +361,7 @@ return a.title.localeCompare(b.title)'      case;
   'Affordable'': getPriceRange(service.price) ===;
   'medium'';
                           ?;
-  'Premium'';
+  'Premium''
                           :
   'Enterprise}
                     </div>
@@ -481,7 +481,7 @@ return a.title.localeCompare(b.title)'      case;
               Special Pricing Packages
             </h2>'
             <p className='text-gray-400 max-w-2xl mx-auto'>
-              Get more value with our bundled packages designed for different;
+              Get more value with our bundled packages designed for different
               business needs and sizes.
             </p>
           </div>
@@ -502,7 +502,7 @@ return a.title.localeCompare(b.title)'      case;
                     {package_.description}
                   </p>
                 </div>
-                {package_.pricing ===;
+                {package_.pricing ===
   'Custom pricing based on requirements' ? ('
                   <div className='text-center mb-6'>'
                     <div className='text-2xl font-bold text-cyan-400 mb-2'>
@@ -528,7 +528,7 @@ return a.title.localeCompare(b.title)'      case;
 '
                 <div className='mb-6'>'
                   <h4 className='text-sm font-semibold text-gray-300 mb-3'>
-                    What;
+                    What
   's Included:
                   </h4>'
                   <div className='space-y-2'>
@@ -559,7 +559,7 @@ return a.title.localeCompare(b.title)'      case;
             </h2>'
             <p className='text-gray-400 max-w-2xl mx-auto'>
               Contact our team of experts to discuss your needs and discover how;
-              our revolutionary AI-powered services can drive your business;
+              our revolutionary AI-powered services can drive your business
               forward.
             </p>
           </div>

@@ -6,7 +6,7 @@ const AIServices = () => {
 ';
 '';
             id: 'ai-strategy','';
-            title: 'AI Strategy & Consulting','';
+            title: 'AI Strategy & Consulting',''
             description: 'Comprehensive AI strategy development and implementation for digital transformation.',''
             icon: <Brain className='h-8 w-8 text-pink-500'/>,';
             price: 150,'';
@@ -36,7 +36,7 @@ const AIServices = () => {
 ';
 '';
             id: 'machine-learning','';
-            title: 'Machine Learning Solutions','';
+            title: 'Machine Learning Solutions',''
             description: 'Custom ML models and algorithms for business automation and predictive analytics.',''
             icon: <Cpu className='h-8 w-8 text-blue-500'/>,';
             price: 5000,'';
@@ -66,7 +66,7 @@ const AIServices = () => {
 ';
 '';
             id: 'natural-language-processing','';
-            title: 'NLP & Text Analytics','';
+            title: 'NLP & Text Analytics',''
             description: 'Advanced natural language processing for document analysis, chatbots, and content generation.',''
             icon: <MessageSquare className='h-8 w-8 text-green-500'/>,';
             price: 8000,'';
@@ -96,7 +96,7 @@ const AIServices = () => {
 ';
 '';
             id: 'computer-vision','';
-            title: 'Computer Vision & Image AI','';
+            title: 'Computer Vision & Image AI',''
             description: 'Visual AI solutions for image recognition, object detection, and video analysis.',''
             icon: <Eye className='h-8 w-8 text-purple-500'/>,';
             price: 12000,'';
@@ -126,7 +126,7 @@ const AIServices = () => {
 ';
 '';
             id: 'predictive-analytics','';
-            title: 'Predictive Analytics & Forecasting','';
+            title: 'Predictive Analytics & Forecasting',''
             description: 'AI-powered predictive models for business forecasting and trend analysis.',''
             icon: <TrendingUp className='h-8 w-8 text-orange-500'/>,';
             price: 6000,'';
@@ -156,7 +156,7 @@ const AIServices = () => {
 ';
 '';
             id: 'ai-automation','';
-            title: 'AI Process Automation','';
+            title: 'AI Process Automation',''
             description: 'Intelligent automation solutions for business process optimization and workflow management.',''
             icon: <Zap className='h-8 w-8 text-yellow-500'/>,';
             price: 4000,'';
@@ -186,7 +186,7 @@ const AIServices = () => {
 ';
 '';
             id: 'ai-ethics','';
-            title: 'AI Ethics & Governance','';
+            title: 'AI Ethics & Governance',''
             description: 'Responsible AI development and governance frameworks for ethical AI deployment.',''
             icon: <Shield className='h-8 w-8 text-red-500'/>,';
             price: 200,'';
@@ -216,7 +216,7 @@ const AIServices = () => {
 ';
 '';
             id: 'ai-infrastructure','';
-            title: 'AI Infrastructure & MLOps','';
+            title: 'AI Infrastructure & MLOps',''
             description: 'Scalable AI infrastructure and machine learning operations for enterprise AI deployment.',''
             icon: <Server className='h-8 w-8 text-indigo-500'/>,';
             price: 15000,'';
@@ -246,7 +246,7 @@ const AIServices = () => {
 ';
 '';
             id: 'ai-integration','';
-            title: 'AI Integration Services','';
+            title: 'AI Integration Services',''
             description: 'Seamless integration of AI solutions with existing business systems and workflows.',''
             icon: <Code className='h-8 w-8 text-cyan-500'/>,';
             price: 3000,'';
@@ -276,7 +276,7 @@ const AIServices = () => {
 ';
 '';
             id: 'ai-training','';
-            title: 'AI Training & Workshops','';
+            title: 'AI Training & Workshops',''
             description: 'Comprehensive training programs for AI adoption and team skill development.',''
             icon: <Users className='h-8 w-8 text-teal-500'/>,';
             price: 500,'';
@@ -304,7 +304,7 @@ const AIServices = () => {
             reviewCount: 223}
     ]';';
     const categories = ['All Services', 'Strategy', 'ML', 'NLP', 'Vision', 'Analytics', 'Automation', 'Ethics', 'Infrastructure', 'Integration', 'Training']
-:pages.disabled/pages/services/AIServices.jsx;
+:pages.disabled/pages/services/AIServices.jsx
     return ('
         <div className='min-h-screen bg-background'>
 <:pages.disabled/pages/services/AIServices.jsx;
@@ -313,7 +313,7 @@ const AIServices = () => {
             <SEO '>                title='AI Services - Zion Tech Group';
                 description='Transform your business with cutting-edge AI services including machine learning, data analytics, and AI strategy.';
                 keywords='AI services, machine learning, artificial intelligence, data analytics, AI strategy, AI ethics';
-';
+'
     return (''
         <div className='min-h-screen bg-background'>'
             <SEO ''
@@ -325,17 +325,17 @@ const AIServices = () => {
             <section className='relative bg-gradient-to-br from-pink-900 via-pink-800 to-rose-900 text-white py-20'>''
                 <div className='absolute inset-0 bg-black/20'></div>''
                 <div className='relative container mx-auto px-4 text-center'>''
-                    <h1 className='text-5xl md:text-6xl font-bold mb-6'>';
+                    <h1 className='text-5xl md:text-6xl font-bold mb-6'>'
                         AI Services for''
                         <span className='text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-rose-400'>''{' '}Innovation
                         </span>'
                     </h1>''
                     <p className='text-xl md:text-2xl text-pink-100 max-w-4xl mx-auto leading-relaxed mb-8'>
-:pages.disabled/pages/services/AIServices.jsx;
+:pages.disabled/pages/services/AIServices.jsx
                         Harness the power of artificial intelligence to transform your business operations,
                         enhance customer experiences, and drive innovation across all departments.
                     </p>'
-                    <div className='flex flex-wrap justify-center gap-4'>';
+                    <div className='flex flex-wrap justify-center gap-4'>'
                         Harness the power of artificial intelligence to transform your business operations,
                         enhance customer experiences, and drive innovation across all departments.'
                     </p>''
@@ -376,7 +376,7 @@ const AIServices = () => {
                         <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
                             Comprehensive AI solutions designed to meet your business challenges and drive innovation
                         </p>
-                    </div>';
+                    </div>'
 ''
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{aiServices.map((service) => (''
                             <div key={service.id} className='group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200 hover:border-pink-300'>''
@@ -397,7 +397,7 @@ const AIServices = () => {
                                     <p className='text-gray-600 mb-4'>{service.description}</p>
                                     <div className='mb-4'>
                                         <p className='text-sm text-gray-500 mb-3'>{service.details}</p>
-=;
+=
                                     '
                                     <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>
                                         {service.title}
@@ -410,13 +410,13 @@ const AIServices = () => {
 >                                        <div className='grid grid-cols-2 gap-2 mb-4'>
                                             {service.features.slice(0, 4).map((feature, index) => ('
                                                 <div key={index} className='flex items-center text-xs text-pink-600'>'
-                                    </div>';
+                                    </div>'
                                     ''
                                     <h3 className='text-xl font-semibold text-gray-900 mb-2 group-hover:text-pink-600 transition-colors'>
                                         {service.title}
-                                    </h3>';
+                                    </h3>'
                                     ''
-                                    <p className='text-gray-600 mb-4'>{service.description}</p>';
+                                    <p className='text-gray-600 mb-4'>{service.description}</p>'
                                     ''
                                     <div className='mb-4'>''
                                         <p className='text-sm text-gray-500 mb-3'>{service.details}</p>''
@@ -431,7 +431,7 @@ const AIServices = () => {
 <:pages.disabled/pages/services/AIServices.jsx
                                         <div className='mb-4'>
                                             <h4 className='text-sm font-semibold text-gray-700 mb-2'>Pricing:</h4>
-=;
+=
                                         '
                                         <div className='mb-4'>'
                                             <h4 className='text-sm font-semibold text-gray-700 mb-2'>Pricing:</h4>'
@@ -439,7 +439,7 @@ const AIServices = () => {
                                                 {Object.entries(service.pricing).map(([plan, price]) => ('
                                                     <div key={plan} className='flex justify-between text-xs'>'
                                                         <span className='text-gray-600 capitalize'>{plan}:</span>'
-                                        </div>';
+                                        </div>'
                                         ''
                                         <div className='mb-4'>''
                                             <h4 className='text-sm font-semibold text-gray-700 mb-2'>Pricing:</h4>''
@@ -470,7 +470,7 @@ const AIServices = () => {
 <:pages.disabled/pages/services/AIServices.jsx
                                     <div className='text-center mb-4'>
                                         <span className='text-3xl font-bold text-pink-600'>
-=;
+=
                                     '
                                     <div className='text-center mb-4'>'
                                         <span className='text-3xl font-bold text-pink-600'>'`
@@ -483,29 +483,29 @@ const AIServices = () => {
 <:pages.disabled/pages/services/AIServices.jsx
                                     <button className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105'>
                                         <a href={service.link} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center'>
-=;
+=
                                     '
                                     <button className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105'>'
                                         <a href={service.link} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center'>'
->                                        </div>';
+>                                        </div>'
                                         ''
                                         <div className='flex items-center justify-between text-sm text-gray-500 mb-3'>'
                                             <span>Free Trial:</span>''
                                             <span className='text-pink-600 font-semibold'>{service.freeTrial}</span>
-                                        </div>';
+                                        </div>'
                                         ''
                                         <div className='flex items-center justify-center gap-1 mb-4'>'{[...Array(5)].map((_, i) => (''
                                                 <Star key={i} className={`w-4 h-4 ${i < Math.floor(service.rating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}/>'))}''
                                             <span className='text-sm text-gray-500 ml-2'>({service.reviewCount})</span>
                                         </div>
-                                    </div>';
+                                    </div>'
                                     ''
                                     <div className='text-center mb-4'>'''`
                                         <span className='text-3xl font-bold text-pink-600'>'`'`{service.price === 0 ? 'Free' : `${service.currency}${service.price}`}'
                                         </span>''
                                         <span className='text-gray-500'>'{service.price === 0 ? '' : service.price < 1000 ? '/hour' : '/project'}
                                         </span>
-                                    </div>';
+                                    </div>'
                                     ''
                                     <button className='w-full bg-gradient-to-r from-pink-600 to-rose-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300 transform hover:scale-105'>''
                                         <a href={service.link} target='_blank' rel='noopener noreferrer' className='flex items-center justify-center'>''
@@ -526,12 +526,12 @@ const AIServices = () => {
                         Ready to Transform Your Business with AI?'
                     </h2>''
                     <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-:pages.disabled/pages/services/AIServices.jsx;
+:pages.disabled/pages/services/AIServices.jsx
                         Start with a consultation and see how our AI services can streamline your operations,
                         improve productivity, and drive growth. No long-term contracts, cancel anytime.
                     </p>'
                     <div className='flex flex-wrap justify-center gap-4'>'
-                        <button className='bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300'>';
+                        <button className='bg-gradient-to-r from-pink-600 to-rose-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all duration-300'>'
                         Start with a consultation and see how our AI services can streamline your operations,
                         improve productivity, and drive growth. No long-term contracts, cancel anytime.'
                     </p>''
@@ -549,6 +549,6 @@ const AIServices = () => {
             </section>
         </div>
     )}
-;
+
 export { AIServices }
 export default AIServices''`}}''`''`

@@ -1,5 +1,4 @@
- export interface EmergingTechService {
-  id: string;
+ export interface EmergingTechService { id: string;
    title: string;
    description: string;
    category: string;
@@ -19,4 +18,4 @@
    innovationLevel: string;
    contactInfo: { phone: string;
    email: string;
-   website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]} competitors?: string[] marketSize?: string}export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [
+   website: string  } technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string}export const EMERGING_TECH_SERVICES_2025: EmergingTechService[] = [

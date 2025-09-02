@@ -119,7 +119,7 @@ const AIQuantumFinancialTrading = () => {
     'Blockchain Security',
     'Real-time Analytics',
     'Cloud Infrastructure',
-    'API Integration',';Predictive Modeling';
+    'API Integration',';Predictive Modeling'
   ]
   return(
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -151,7 +151,7 @@ const AIQuantumFinancialTrading = () => {
               </button>
   const benefits = [
     {
-:pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
+:pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
       title: 'Increased Trading Speed',
       description: 'Quantum computing reduces execution time from milliseconds to microseconds',
       metric: '1000x faster'},
@@ -186,7 +186,7 @@ const AIQuantumFinancialTrading = () => {
             </div>
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionize your trading with the world;
-  's first AI-powered quantum computing platform.;
+  's first AI-powered quantum computing platform.
               Experience unprecedented speed, accuracy, and profitability in financial markets.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -211,7 +211,7 @@ const AIQuantumFinancialTrading = () => {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.8 }}
-:pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
+:pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
@@ -229,7 +229,7 @@ const AIQuantumFinancialTrading = () => {
             className='text-center mb-16'>
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
               Revolutionary Trading Technology
-            </h2><p className='text-xl text-gray-300 max-w-3xl mx-auto'>              Our platform combines cutting-edge quantum computing with advanced AI algorithms;
+            </h2><p className='text-xl text-gray-300 max-w-3xl mx-auto'>              Our platform combines cutting-edge quantum computing with advanced AI algorithms
               to deliver unprecedented trading performance and profitability.
             </p>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
@@ -277,7 +277,7 @@ const AIQuantumFinancialTrading = () => {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.8 }}
-:pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
+:pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center mb-16'
@@ -411,7 +411,7 @@ const AIQuantumFinancialTrading = () => {
   { opacity: 1,
   y: 0}}
             transition={{ duration: 0.8 }}
-:pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;
+:pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className='text-center'
@@ -498,5 +498,5 @@ const AIQuantumFinancialTrading = () => {
       </section>
     </div>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx)}
-;
+
 export default AIQuantumFinancialTrading

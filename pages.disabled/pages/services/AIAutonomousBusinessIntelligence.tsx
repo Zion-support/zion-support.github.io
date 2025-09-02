@@ -78,10 +78,10 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
               AI Autonomous Business Intelligence'
             </h1>''
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx;
+:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx
               Transform your business with autonomous AI systems that make intelligent decisions,
               predict market trends, and optimize operations 24/7 without human intervention.
-            </p>';
+            </p>'
               Transform your business with autonomous AI systems that make intelligent decisions,
               predict market trends, and optimize operations 24/7 without human intervention.'
             </p>''
@@ -128,7 +128,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
           </motion.div>
 <:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -155,7 +155,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-blue-500 transition-all duration-300''>''
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -193,7 +193,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
           </motion.div>
 <:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -220,7 +220,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-3'>{benefit.title}</h3>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10''>''
                 <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4'>''
                   <benefit.icon className='w-6 h-6 text-white' />'
@@ -258,7 +258,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
           </motion.div>
 <:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {intelligenceTypes.map(type: unknown, index: unknown()
@@ -285,7 +285,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-3'>{type.title}</h3>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300''>''
                 <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4'>''
                   <type.icon className='w-6 h-6 text-white' />'
@@ -323,7 +323,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
           </motion.div>
 <:pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -350,7 +350,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='bg-white/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-blue-500 transition-all duration-300''>''
                 <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4'>''
                   <useCase.icon className='w-6 h-6 text-white' />'
@@ -382,10 +382,10 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
 :pages.disabled/pages/services/AIAutonomousBusinessIntelligence.tsx;
-              Join the future of autonomous business intelligence. Our AI systems will revolutionize;
+              Join the future of autonomous business intelligence. Our AI systems will revolutionize
               how you make decisions and optimize your operations.
             </p>';
-              Join the future of autonomous business intelligence. Our AI systems will revolutionize;
+              Join the future of autonomous business intelligence. Our AI systems will revolutionize
               how you make decisions and optimize your operations.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

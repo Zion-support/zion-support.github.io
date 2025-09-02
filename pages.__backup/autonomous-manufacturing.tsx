@@ -11,7 +11,7 @@ import { enhancedRealMicroSaasServices } from;
 export default function AutonomousManufacturingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith(
   '/autonomous-manufacturing'));
-  if (!service) return null;
+  if (!service) return null
   const contactInfo = service.contactInfo
 <Layout>
       <Head>

@@ -86,18 +86,18 @@ export const AICodeGenerator = () => {
     // Clear history;
     const handleClearHistory = useCallback(() => {}
         clearHistory()'';';'
-        trackEvent('ai_code_generator', history_cleared',manual')}, [clearHistory, trackEvent])';'''
+        trackEvent('ai_code_generator', history_cleared',manual')}, [clearHistory, trackEvent])''''
     return (<div className='bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>'''{/* Header */}'''''
       <div className='bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white'>''''
         <div className='flex items-center justify-between'>''''
           <h2 className='text-2xl font-bold flex items-center gap-3'>''''
-            <Code className='w-8 h-8'/>''';'
+            <Code className='w-8 h-8'/>''''
             AI Code Generator''''
             <div className='flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm'>''''
               <Sparkles className='w-4 h-4'/>
               Powered by AI
             </div>
-          </h2>''';'
+          </h2>''''
           ''''''
           <div className='flex items-center gap-2'>''''''
             <button onClick={() => exportCode('json')} className='px-4 py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2'>''''
@@ -111,7 +111,7 @@ export const AICodeGenerator = () => {
       <div className='border-b border-gray-200 dark:border-gray-700'>''''
         <nav className='flex space-x-8 px-6'>'{[''{ id: 'generate', label: 'Generate', icon: Sparkles }, '{ id: 'analyze', label: 'Analyze', icon: Eye },'{ id: 'optimize', label: 'Optimize', icon: Zap }, '{ id: 'tests', label: 'Tests', icon: TestTube },'{ id: 'docs', label: 'Docs', icon: FileText }'
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
-                ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`;'
+                ? 'border-purple-500 text-purple-600 dark: text-purple-400''`''`'
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>''''
               <Icon className='w-4 h-4'/>
               {label}
@@ -142,7 +142,7 @@ export const AICodeGenerator = () => {
                       Language
                     </label>
                     <select value={form.language} onChange = {}
-  (e) => setForm(prev => ({ ...prev, language: e.target.value ''';'
+  (e) => setForm(prev => ({ ...prev, language: e.target.value ''''
 ''''}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
                       <option value='typescript'>TypeScript</option>''''
                       <option value='javascript'>JavaScript</option>''''
@@ -160,7 +160,7 @@ export const AICodeGenerator = () => {
                       Framework
                     </label>''
                     <select value={form.framework || ''} onChange = {}
-  (e) => setForm(prev => ({ ...prev, framework: e.target.value || null ''';'
+  (e) => setForm(prev => ({ ...prev, framework: e.target.value || null ''''
 ''''}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
                       <option value=''>None</option>''''
                       <option value='react'>React</option>''''
@@ -179,7 +179,7 @@ export const AICodeGenerator = () => {
                       Style
                     </label>
                     <select value={form.style} onChange = {}
-  (e) => setForm(prev => ({ ...prev, style: e.target.value ''';'
+  (e) => setForm(prev => ({ ...prev, style: e.target.value ''''
 ''''}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
                       <option value='functional'>Functional</option>''''
                       <option value='oop'>OOP</option>''''
@@ -193,7 +193,7 @@ export const AICodeGenerator = () => {
                       Quality
                     </label>
                     <select value={form.quality} onChange = {}
-  (e) => setForm(prev => ({ ...prev, quality: e.target.value ''';'
+  (e) => setForm(prev => ({ ...prev, quality: e.target.value ''''
 ''''}))} className='w-full p-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
                       <option value='prototype'>Prototype</option>''''
                       <option value='development'>Development</option>''''
@@ -214,12 +214,12 @@ export const AICodeGenerator = () => {
 ''''}} className='grid grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg'>'{[''{ key: 'includeTests', label: 'Tests', icon: TestTube }, '{ key: 'includeDocs', label: 'Docs', icon: FileText },'{ key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle }, '{ key: 'includeLogging', label: 'Logging', icon: Info },''''{ key: 'includeMetrics', label: 'Metrics', icon: Gauge }''''
                 ].map(({ key, label, icon: Icon }) => (<label key={key} className='flex items-center gap-2 cursor-pointer'>''''
                         <input type='checkbox' checked={form[key]} onChange = {}
-  (e) => setForm(prev => ({ ...prev, [key]: e.target.checked ''';'
+  (e) => setForm(prev => ({ ...prev, [key]: e.target.checked ''''
 ''''}))} className='w-4 h-4 text-purple-600 bg-gray-100 border-gray-300 rounded focus: ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600'/>''''
                         <Icon className='w-4 h-4 text-gray-600 dark:text-gray-400'/>''''
                         <span className='text-sm text-gray-700 dark:text-gray-300'>{label}</span>
                       </label>))}
-                  </motion.div>)}''';'
+                  </motion.div>)}''''
 ''''
                 <button type='submit' disabled={isGenerating || !form.prompt.trim()} className='w-full py-3 px-6 bg-purple-600 hover: bg-purple-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>'''{isGenerating ? (<>'''''
                       <Loader2 className='w-5 h-5 animate-spin'/>
@@ -248,7 +248,7 @@ export const AICodeGenerator = () => {
                         Export
                       </button>
                     </div>
-                  </div>''';'
+                  </div>''''
                   ''''
                   <div className='bg-gray-900 text-gray-100 p-4 rounded-lg overflow-x-auto'>''''
                     <pre className='text-sm font-mono'>
@@ -268,7 +268,7 @@ export const AICodeGenerator = () => {
                   Paste code to analyze''''
                 </label>''''
                 <textarea value={customCode} onChange={(e) => setCustomCode(e.target.value)} placeholder='Paste your code here for AI-powered analysis...' className='w-full h-48 p-4 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none font-mono text-sm'/>
-              </div>''';'
+              </div>''''
 ''''
               <button onClick={handleAnalyzeCustomCode} disabled={isAnalyzing || !customCode.trim()} className='w-full py-3 px-6 bg-blue-600 hover: bg-blue-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>'''{isAnalyzing ? (<>'''''
                     <Loader2 className='w-5 h-5 animate-spin'/>
@@ -288,7 +288,7 @@ export const AICodeGenerator = () => {
                 ].map(({ key, label, icon: Icon, color }) => {}
                     const value = codeAnalysis[key]';'
                     if (typeof value === 'number') {}
-''';'
+''''
 ''`
                         return (<div key={key} className='text-center p-4 bg-gray-50 dark: bg-gray-700 rounded-lg'>`'`'
                             <Icon className={`w-8 h-8 mx-auto mb-2 text-${color}-500`}/>''''
@@ -340,11 +340,11 @@ export const AICodeGenerator = () => {
                 <p className='text-gray-600 dark:text-gray-400'>
                   Select an optimization focus area to improve your code
                 </p>
-              </div>''';'
+              </div>''''
 ''''
               <div className='grid grid-cols-2 md: grid-cols-4 gap-4'>'{[''{ key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' },'{ key: 'security', label: 'Security', icon: Shield, color: 'green' },'{ key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple' },'`{ key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'indigo' }`'`'
             ].map(({ key, label, icon: Icon, color }) => (<button key={key} onClick={() => handleOptimizeCode(key)} disabled={!generatedCode && !customCode} className={`p-6 text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode''`;
-                    ? 'border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed''`'`;
+                    ? 'border-gray-200 dark: border-gray-600 bg-gray-50 dark:bg-gray-700 cursor-not-allowed''`'`
                     : 'border-gray-200 dark:border-gray-600 hover:border-purple-500 hover:bg-purple-50 dark:hover:bg-purple-900/20 cursor-pointer'}`}>`'`'
                     <Icon className={`w-12 h-12 mx-auto mb-3 text-${color}-500`}/>''''
                     <div className='font-medium text-gray-900 dark:text-white'>{label}</div>
@@ -365,7 +365,7 @@ export const AICodeGenerator = () => {
                 <p className='text-gray-600 dark:text-gray-400'>
                   Automatically generate comprehensive test suites for your code
                 </p>
-              </div>''';'
+              </div>''''
 ''''
               <button onClick={handleGenerateTests} disabled={!generatedCode && !customCode} className='w-full py-4 px-6 bg-green-600 hover: bg-green-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>''''
                 <TestTube className='w-5 h-5'/>
@@ -386,7 +386,7 @@ export const AICodeGenerator = () => {
                 <p className='text-gray-600 dark:text-gray-400'>
                   Create comprehensive documentation for your code
                 </p>
-              </div>''';'
+              </div>''''
 ''''
               <button onClick={handleGenerateDocs} disabled={!generatedCode && !customCode} className='w-full py-4 px-6 bg-indigo-600 hover: bg-indigo-700 disabled:bg-gray-400 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2 disabled:cursor-not-allowed'>''''
                 <FileText className='w-5 h-5'/>
@@ -424,18 +424,18 @@ export const AICodeGenerator = () => {
                     <span className='text-sm text-gray-500'>
                       {Math.round(suggestion.confidence * 100)}% confidence
                     </span>
-                  </div>''';'
+                  </div>''''
                   ''''
                   <h4 className='font-medium text-gray-900 dark: text-white mb-2'>
                     {suggestion.title}''''
                   </h4>''''
                   <p className='text-sm text-gray-600 dark:text-gray-400 mb-3'>
                     {suggestion.explanation}
-                  </p>''';'
+                  </p>''''
                   ''''
                   <div className='bg-gray-900 text-gray-100 p-3 rounded text-sm font-mono mb-3'>
                     <code>{suggestion.code}</code>
-                  </div>''';'
+                  </div>''''
                   ''''
                   <div className='flex items-center gap-2'>''''
                     <button onClick={() => handleApplySuggestion(suggestion)} className='px-3 py-1 bg-purple-600 hover: bg-purple-700 text-white text-sm rounded transition-colors'>
@@ -462,7 +462,7 @@ export const AICodeGenerator = () => {
                 <Trash2 className='w-4 h-4'/>
                 Clear History
               </button>
-            </div>''';'
+            </div>''''
             ''''
             <div className='space-y-3 max-h-64 overflow-y-auto'>''''{history.slice(0, 10).map((item) => (<div key={item.id} className='p-3 bg-gray-50 dark: bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600'>''''
                   <div className='flex items-center justify-between mb-2'>''''
@@ -478,7 +478,7 @@ export const AICodeGenerator = () => {
                     <span className='text-xs text-gray-500'>
                       {item.timestamp.toLocaleTimeString()}
                     </span>
-                  </div>''';'
+                  </div>''''
                   ''''
                   <div className='flex items-center gap-2'>''''
                     <button onClick={() => copyToClipboard(item.code)} className='px-2 py-1 bg-gray-100 hover: bg-gray-200 dark:bg-gray-600 dark:hover:bg-gray-500 text-gray-700 dark:text-gray-300 text-xs rounded transition-colors'>
@@ -492,5 +492,5 @@ export const AICodeGenerator = () => {
             </div>
           </motion.div>) }
       </div>
-    </div>)}''`;
+    </div>)}''`
 ''`''`

@@ -3,7 +3,7 @@
   Award,
   ArrowRight;
 const ResearchDevelopment: React.FC = (): JSX.Element => {
-  const [selectedArea, setSelectedArea] = useState('all');
+  const [selectedArea, setSelectedArea] = useState('all')
   const [selectedStatus, setSelectedStatus] = useState('all')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const researchAreas = [
@@ -311,7 +311,7 @@ const ResearchDevelopment: React.FC = (): JSX.Element => {
       return `$${(amount / 1000).toFixed(0)}K`}
     return `$${amount}`}
 ;
-  ];
+  ]
 import React from 'react.ts'
 
 export default function ResearchDevelopment(...args: any[]): any {
@@ -437,7 +437,7 @@ export default function ResearchDevelopment(...args: any[]): any {
               <button;
                 onClick={() => setViewMode('grid')}
                 className={`flex-1 px-4 py-3 rounded-lg transition-colors ${
-                  viewMode === 'grid';
+                  viewMode === 'grid'
                     ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
                     : 'bg-zinc-700/50 text-zinc-400 border border-zinc-600 hover:bg-zinc-700/70'}`}
               >
@@ -446,7 +446,7 @@ export default function ResearchDevelopment(...args: any[]): any {
               <button;
                 onClick={() => setViewMode('list')}
                 className={`flex-1 px-4 py-3 rounded-lg transition-colors ${
-                  viewMode === 'list';
+                  viewMode === 'list'
                     ? 'bg-zion-cyan/20 text-zion-cyan border border-zion-cyan/30'
                     : 'bg-zinc-700/50 text-zinc-400 border border-zinc-600 hover:bg-zinc-700/70'}`}
               >
@@ -755,7 +755,7 @@ export default function ResearchDevelopment(...args: any[]): any {
             <button;
               onClick={() => {
                 setSearchQuery('');
-                setSelectedArea('all');
+                setSelectedArea('all')
                 setSelectedStatus('all')}}
               className='bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors'>
               Clear Filters

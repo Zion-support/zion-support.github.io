@@ -74,18 +74,18 @@ import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
 ,
   answer: Yes, we provide comprehensive training for all our solutions. This includes user training, administrator training, and documentation to ensure your team can effectively use and maintain the systems we implement.,
   '        },'        {
-          question: 'What technologies do you work with?, answer:;
+          question: 'What technologies do you work with?, answer:
   'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.''        }
   '      ]}
   ]
   return(
     <MainLayout;
-      title='Frequently Asked Questions - Zion Tech Group''      description='Find answers to common questions about Zion Tech Group&apos;s services, pricing, and support. Get the information you need to make informed decisions about your technology needs.'''      keywords='FAQ, frequently asked questions, support, help, services, pricing, technical support''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Frequently Asked Questions</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Find answers to common questions about our services, pricing, and support. '              Can&apos;t find what you&apos;re looking for? Contact us directly.
+      title='Frequently Asked Questions - Zion Tech Group''      description='Find answers to common questions about Zion Tech Group&apos;s services, pricing, and support. Get the information you need to make informed decisions about your technology needs.'''      keywords='FAQ, frequently asked questions, support, help, services, pricing, technical support''    >'      <div className='min-h-screen bg-gray-50'>'        {/* Hero Section */}'        <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'          <div className='container mx-auto px-4 text-center'>'            <h1 className='text-4xl md: text-5xl font-bold mb-6'>Frequently Asked Questions</h1>'            <p className='text-xl text-gray-200 max-w-3xl mx-auto'>'              Find answers to common questions about our services, pricing, and support. '              Can&apos;t find what you&aposre looking for? Contact us directly.
             </p>
           </div>
         </section>
         {/* FAQ Categories */}
-        <section className='py-16 bg-white'>'          <div className='container mx-auto px-4 max-w-4xl'>'            {faqCategories.map((category, categoryIndex) => ('              <div key={categoryIndex} className='mb-12'>'                <h2 className='text-2xl font-bold text-gray-900 mb-6'>{category.title}</h2>'                <div className='space-y-4'>'                  {category.questions.map((item, itemIndex) => {'                    const globalIndex = categoryIndex * 100 + itemIndex;
+        <section className='py-16 bg-white'>'          <div className='container mx-auto px-4 max-w-4xl'>'            {faqCategories.map((category, categoryIndex) => ('              <div key={categoryIndex} className='mb-12'>'                <h2 className='text-2xl font-bold text-gray-900 mb-6'>{category.title}</h2>'                <div className='space-y-4'>'                  {category.questions.map((item, itemIndex) => {'                    const globalIndex = categoryIndex * 100 + itemIndex
                     const isOpen = openItems.includes(globalIndex)
                     return(
                       <div key={itemIndex} className='border border-gray-200 rounded-lg'>'                        <button'                          className='w-full px-6 py-4 text-left flex justify-between items-center hover: bg-gray-50 transition-colors                           onClick={() => toggleItem(globalIndex)}'>
@@ -128,5 +128,5 @@ import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
       </div>
     </MainLayout>
   )}
-;
+
 export default FAQ

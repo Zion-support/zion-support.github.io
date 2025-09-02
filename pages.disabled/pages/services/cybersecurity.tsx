@@ -19,7 +19,7 @@ import { Shield,
 >  Clock,
   BarChart3,
   AlertTriangle,
-  Eye'} from 'lucide-react.ts';
+  Eye'} from 'lucide-react.ts'
 export { function }
 export default function Cybersecurity(...args: unknown[]): unknown {}
 export default function Cybersecurity(...args: any[]): any {}
@@ -39,7 +39,7 @@ export default function Cybersecurity(...args: any[]): any {}
             animate = {}
   { opacity: 1,
 :pages.disabled/pages/services/cybersecurity.tsx;
-  y: 0;
+  y: 0
   y: 0}}
             transition={{ duration: 0.6 }}
           >''
@@ -50,7 +50,7 @@ export default function Cybersecurity(...args: any[]): any {}
               </span>
             </h1>''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-              Protect your business with enterprise-grade cybersecurity solutions. From threat detection;
+              Protect your business with enterprise-grade cybersecurity solutions. From threat detection
               to compliance management, we secure your digital assets.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -63,7 +63,7 @@ export default function Cybersecurity(...args: any[]): any {}
               <button className='inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>''
                 <Play className='mr-2 h-5 w-5'  />
 :pages.disabled/pages/services/cybersecurity.tsx;
-                Watch Demo;
+                Watch Demo
                 Watch Demo
               </button>
             </div>
@@ -83,7 +83,7 @@ export default function Cybersecurity(...args: any[]): any {}
         <div className='max-w-7xl mx-auto'>''
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/cybersecurity.tsx;
+:pages.disabled/pages/services/cybersecurity.tsx
               Our Cybersecurity Services'
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
@@ -106,7 +106,7 @@ export default function Cybersecurity(...args: any[]): any {}
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'';
 '';
                 <div className='flex items-center mb-6'>''
-                  <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>'';
+                  <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>''
 :pages.disabled/pages/services/cybersecurity.tsx
                     <service.icon className='h-8 w-8 text-white' />'
                     <service.icon className='h-8 w-8 text-white' />
@@ -160,7 +160,7 @@ export default function Cybersecurity(...args: any[]): any {}
         <div className='max-w-7xl mx-auto'>''
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/cybersecurity.tsx;
+:pages.disabled/pages/services/cybersecurity.tsx
               Advanced Security Technologies'
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
@@ -182,7 +182,7 @@ export default function Cybersecurity(...args: any[]): any {}
                 key={index}'';
                 className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300'';
 '';
-                <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center'>'';
+                <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center'>''
 :pages.disabled/pages/services/cybersecurity.tsx
                   <tech.icon className='h-8 w-8 text-white' />'
                   <tech.icon className='h-8 w-8 text-white' />
@@ -201,7 +201,7 @@ export default function Cybersecurity(...args: any[]): any {}
         <div className='max-w-7xl mx-auto'>''
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/cybersecurity.tsx;
+:pages.disabled/pages/services/cybersecurity.tsx
               Compliance & Certifications'
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
@@ -214,7 +214,7 @@ export default function Cybersecurity(...args: any[]): any {}
                 key={index}'';
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300'';
                 <div className={`p-3 bg-gradient-to-r ${framework.color} rounded-lg w-12 h-12 mb-4 flex items-center justify-center`}>''
-                  <framework.icon className='h-6 w-6 text-white' />';
+                  <framework.icon className='h-6 w-6 text-white' />'
               Compliance & Certifications
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
@@ -243,13 +243,13 @@ export default function Cybersecurity(...args: any[]): any {}
         <div className='max-w-4xl mx-auto text-center'>''
           <div className='bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/cybersecurity.tsx;
+:pages.disabled/pages/services/cybersecurity.tsx
               Ready to Secure Your Business?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
               Let's discuss how our cybersecurity solutions can protect your organization'
             </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               Ready to Secure Your Business?
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>

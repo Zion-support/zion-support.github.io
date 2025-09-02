@@ -17,5 +17,5 @@ import React, { useState } from;
   from-yellow-500 to-orange-500' }, { id: 'ai-analytics, name:;
   'AI Analytics', icon: BarChart3, color:,
   from-red-500 to-pink-500' }, { id: 'ai-infrastructure, name:
-  'AI Infrastructure', icon: Server, color:;
+  'AI Infrastructure', icon: Server, color:
   'from-gray-500 to-blue-500' } ]  const aiServices = ['

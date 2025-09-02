@@ -148,7 +148,7 @@ const AIAutonomousSalesPlatform: React.FC = () => {
                     'Multi-channel outreach',
                     'Sales forecasting',
                     'Priority support',
-                    'Custom integrations';
+                    'Custom integrations'
                   ],
                   popular: true},
                 {
@@ -228,7 +228,7 @@ const AIAutonomousSalesPlatform: React.FC = () => {
               <div>
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
-                  {[;
+                  {[
                     'Increase sales conversion rates by 200% with AI optimization',
                     'Reduce sales cycle time by 60% through intelligent automation',
                     'Improve lead qualification accuracy by 85% with AI scoring',
@@ -306,5 +306,5 @@ const AIAutonomousSalesPlatform: React.FC = () => {
       </div>
     </>
   )}
-;
+
 export default AIAutonomousSalesPlatform

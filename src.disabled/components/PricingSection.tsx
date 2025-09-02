@@ -87,7 +87,7 @@ export const PricingSection: React.FC = () => {
       popular: false,
       color:;
   'from-yellow-500 to-orange-500'}
-  ];
+  ]
 ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx
   return(
     <section className='py-24 bg-gradient-to-b from-zion-blue to-zion-blue-light relative overflow-hidden'>
@@ -110,7 +110,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
             </span>
           </h2>
           <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
-            Choose the plan that best fits your business needs. All plans include our core features;
+            Choose the plan that best fits your business needs. All plans include our core features
             with no hidden fees or surprises.
           </p>
           {/* Billing Toggle */}
@@ -122,7 +122,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
             </span>
             <button;
               onClick={() => setBillingCycle(billingCycle ===,
-  monthly' ?;
+  monthly' ?
   'annual': 'monthly)}
               className='relative w-16 h-8 bg-zion-purple/20 rounded-full p-1 transition-colors duration-200'
             >
@@ -245,7 +245,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
               Need a Custom Solution?
             </h3>
             <p className='text-zion-slate-light mb-6 max-w-2xl mx-auto'>
-              We understand that every business is unique. Contact us to discuss custom pricing;
+              We understand that every business is unique. Contact us to discuss custom pricing
               and solutions tailored to your specific requirements.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -272,7 +272,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
   )}
 
 import { Link } from 'react - router - dom';
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 export const PricingSection: React.FC = () => {
 import { motion } from 'framer - motion'
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'> ('annual') ;
@@ -294,7 +294,7 @@ import { motion } from 'framer - motion'
       originalPrice: null, features: [';Everything in Professional',';Custom AI model training', 'Dedicated account manager',';24 / 7 phone & chat support', 'SOC 2 compliance',';Unlimited team members', 'Custom SLA guarantees',';On - premise deployment options', 'White - label solutions';
       ], cta: 'Contact Sales',
       popular: false, color: 'from - yellow - 500 to - orange - 500'}
-  ];
+  ]
   const savings = billingCycle === 'annual' ? 25 : 0
   return(
     <section className='py - 24 bg - gradient - to - b from - zion - blue to - zion - blue - light relative overflow - hidden'>
@@ -318,7 +318,7 @@ import { motion } from 'framer - motion'
             </span>
           </h2>'
           <p className='text - xl text - zion - slate - light max - w-3xl mx - auto mb - 8'>
-            Choose the plan that best fits your business needs. All plans include our core features;
+            Choose the plan that best fits your business needs. All plans include our core features
             with no hidden fees or surprises.
           </p>
           {/* Billing Toggle */}'
@@ -327,7 +327,7 @@ import { motion } from 'framer - motion'
               Monthly
             </span>
             <button;
-              onClick={ () => setBillingCycle (billingCycle === 'monthly' ? 'annual' : 'monthly') }';
+              onClick={ () => setBillingCycle (billingCycle === 'monthly' ? 'annual' : 'monthly') }'
               className='relative w - 16 h - 8 bg - zion - purple / 20 rounded - full p - 1 transition - colors duration - 200'
             >
               <motion.div
@@ -432,7 +432,7 @@ import { motion } from 'framer - motion'
               Need a Custom Solution?
             </h3>'
             <p className='text - zion - slate - light mb - 6 max - w-2xl mx - auto'>
-              We understand that every business is unique. Contact us to discuss custom pricing;
+              We understand that every business is unique. Contact us to discuss custom pricing
               and solutions tailored to your specific requirements.
             </p>'
             <div role='button' className='flex flex - col sm:flex - row gap - 4 justify - center'>'
@@ -455,4 +455,4 @@ import { motion } from 'framer - motion'
           </div>
         </motion.div>
       </div>
-    </section>) }';
+    </section>) }'

@@ -64,7 +64,7 @@ const MicroSAAS: React.FC = ($2) => {
       icon: Globe,
       features: ['Cloud platforms', 'Containerization', 'Auto-scaling', 'Load balancing']
     }
-  ];
+  ]
   const industries = [
     {
       title: 'Healthcare',
@@ -98,7 +98,7 @@ const MicroSAAS: React.FC = ($2) => {
               <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> SAAS Empire</span>
             </h1>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              We help entrepreneurs and businesses build scalable, profitable software-as-a-service;
+              We help entrepreneurs and businesses build scalable, profitable software-as-a-service
               applications that generate recurring revenue and scale globally.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -154,7 +154,7 @@ const MicroSAAS: React.FC = ($2) => {
               Technologies We Use
             </h2>
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Modern, scalable technologies to build robust and efficient;
+              Modern, scalable technologies to build robust and efficient
               SAAS applications.
             </p>
           </div>
@@ -186,7 +186,7 @@ const MicroSAAS: React.FC = ($2) => {
               Industries We Serve
             </h2>
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Specialized SAAS solutions for various industries with;
+              Specialized SAAS solutions for various industries with
               domain-specific expertise and compliance requirements.
             </p>
           </div>
@@ -212,7 +212,7 @@ const MicroSAAS: React.FC = ($2) => {
                 Why Choose MicroSAAS?
               </h2>
               <p className='text-lg text-gray-300 mb-6'>
-                MicroSAAS solutions offer entrepreneurs and businesses a proven path;
+                MicroSAAS solutions offer entrepreneurs and businesses a proven path
                 to building profitable, scalable software businesses with recurring revenue.
               </p>
               <ul className='space-y-3'>
@@ -229,7 +229,7 @@ const MicroSAAS: React.FC = ($2) => {
                 <Rocket className='w-24 h-24 text-indigo-400 mx-auto mb-4'/>
                 <h3 className='text-2xl font-bold text-white mb-2'>SAAS Success</h3>
                 <p className='text-gray-300 mb-6'>
-                  We've helped numerous entrepreneurs build successful SAAS businesses;
+                  We've helped numerous entrepreneurs build successful SAAS businesses
                   that generate millions in recurring revenue.
                 </p>
                 <div className='text-sm text-gray-400'>

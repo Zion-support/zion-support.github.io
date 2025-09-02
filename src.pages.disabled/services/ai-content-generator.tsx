@@ -18,7 +18,7 @@ const AIContentGenerator: React.FC = () => {
             AI Content Generator
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Create high-quality content 10x faster with our AI-powered platform.;
+            Create high-quality content 10x faster with our AI-powered platform.
             Generate blogs, social media posts, emails, and more with 95% accuracy.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4 mb-12'>
@@ -267,5 +267,5 @@ const AIContentGenerator: React.FC = () => {
       </section>
     </Layout>
   )}
-;
+
 export default AIContentGenerator

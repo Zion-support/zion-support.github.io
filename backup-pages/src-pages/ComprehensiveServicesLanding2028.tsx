@@ -25,7 +25,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
     return colors[Math.abs (category.length) % colors.length]}
 ;
     setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) }
-;
+
     setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) }
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple'>
@@ -78,7 +78,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             <Button';
               size='lg';
               className='bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors',
-  onClick={() => document.getElementById('services-section;
+  onClick={() => document.getElementById('services-section
   ')?.scrollIntoView({ behavior: 'smooth })}
               Explore Services
             </Button>
@@ -224,7 +224,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               variant='outline';
               className='border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors';
   ';
-              onClick={() => window.location.href = '/innovative-services-showcase-2028;
+              onClick={() => window.location.href = '/innovative-services-showcase-2028
   '}
               View All Services
             </Button>
@@ -266,7 +266,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                   <Star key={i} className='w-6 h-6 text-yellow-400 fill-current'  />                ))}
               </div>
 '
-              <blockquote className='text-xl text-white mb-6 italic'>';
+              <blockquote className='text-xl text-white mb-6 italic'>'
                 '{testimonials[currentTestimonial].content}'
               </blockquote>
 '
@@ -295,7 +295,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
                 {testimonials.map((_, index) => (
                   <button;
                     key={index}
-                    onClick={() => setCurrentTestimonial(index)}`;
+                    onClick={() => setCurrentTestimonial(index)}`
                     className={`w-3 h-3 rounded-full transition-colors ${
                       index === currentTestimonial ?,
   bg-zion-cyan
@@ -674,7 +674,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
             <Button';
               size='lg';
               className='bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white px-8 py-3 rounded-lg font-semibold transition-colors'';
-              onClick={() => window.location.href =;
+              onClick={() => window.location.href =
   '/contact'}
               Schedule a Consultation
             </Button>

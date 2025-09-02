@@ -27,7 +27,7 @@ const AIContentGenerator: NextPage = () => {
   const features = [
     {
 :pages.disabled_auto/services/ai-content-generator.tsx;
-      title:;
+      title:
   'Multi-Language Support,
       description:
   'Generate content in over 50 languages with native-level quality',
@@ -135,7 +135,7 @@ const AIContentGenerator: NextPage = () => {
         'Advanced analytics;
   ',
         'Custom integrations;
-  ';
+  '
         'Unlimited words',
         'All languages supported',
         'Custom AI models',
@@ -155,7 +155,7 @@ const AIContentGenerator: NextPage = () => {
             AI Content <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>Generator</span>
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Transform your content creation process with our advanced AI-powered platform.;
+            Transform your content creation process with our advanced AI-powered platform.
             Generate high-quality, SEO-optimized content in minutes, not hours.
           </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4 mb-12'>
@@ -285,5 +285,5 @@ const AIContentGenerator: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default AIContentGenerator

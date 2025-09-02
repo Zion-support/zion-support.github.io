@@ -161,7 +161,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
     const handleExport = useCallback((format) => {}
         let exportContent = editorState.content';'
         if (format === 'html') {}
-`;
+`
 ``
             exportContent = `<html><body><pre>${editorState.content}</pre></body></html>`}';'
         else if (format === 'md') {}
@@ -220,7 +220,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         const debounceTimer = setTimeout(() => {}
             if(editorState.content.length > 100) {}
                 generateAISuggestions()}
-        }, 3000)`;
+        }, 3000)`
         return () => clearTimeout(debounceTimer)}, [editorState.content, enableAI, generateAISuggestions])`
     return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>'''{/* Header */}'''''
       <div className='bg-gradient-to-r from-blue-500 to-purple-500 p-4 text-white'>''''
@@ -231,7 +231,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                 <div className='w-2 h-2 bg-green-400 rounded-full'></div>
                 Live
               </div>)}
-          </h3>''';'
+          </h3>''''
           ''''
           <div className='flex items-center gap-2'>'''{/* Collaboration Status */}''''{enableCollaboration && (<button onClick={() => setShowCollaborators(!showCollaborators)} className='px-3 py-1 bg-white/20 hover: bg-white/30 rounded text-sm transition-colors flex items-center gap-2'>'''''
                 <Users className='w-4 h-4'/>
@@ -267,7 +267,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>''''
                 <Sparkles className='w-4 h-4'/>
                 AI Suggestions
-              </h4>''';'
+              </h4>''''
               ''''
               <div className='space-y-3'>
                 {editorState.suggestions.map(suggestion => (<motion.div key={suggestion.id} initial = {}
@@ -283,15 +283,15 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
                       <span className='text-xs text-gray-500'>
                         {Math.round(suggestion.confidence * 100)}%
                       </span>
-                    </div>''';'
+                    </div>''''
                     ''''
                     <p className='text-sm text-gray-700 dark: text-gray-300 mb-2'>
                       {suggestion.reason}
-                    </p>''';'
+                    </p>''''
                     ''''
                     <div className='text-sm font-medium text-gray-900 dark: text-white mb-2'>
                       {suggestion.text}
-                    </div>''';'
+                    </div>''''
                     ''''
                     <button onClick={() => applySuggestion(suggestion)} className='w-full px-2 py-1 bg-blue-500 hover: bg-blue-600 text-white text-xs rounded transition-colors'>
                       Apply Suggestion
@@ -305,7 +305,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
               <h4 className='font-medium text-gray-900 dark:text-white mb-3 flex items-center gap-2'>''''
                 <Users className='w-4 h-4'/>
                 Collaborators ({collaboration.onlineUsers.length})
-              </h4>''';'
+              </h4>''''
               ''''
               <div className='space-y-2'>''''{collaboration.onlineUsers.map(user => (<div key={user.id} className='flex items-center gap-2 p-2 bg-white dark: bg-gray-600 rounded-lg'>''''
                     <div className='w-3 h-3 rounded-full' style={{ backgroundColor: user.color }}></div>''''
@@ -327,18 +327,18 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
             </div>) }
 '''{/* Actions */}'''''
           <div className='p-4'>''''
-            <h4 className='font-medium text-gray-900 dark: text-white mb-3'>Actions</h4>''';'
+            <h4 className='font-medium text-gray-900 dark: text-white mb-3'>Actions</h4>''''
             ''''''
             <div className='space-y-2'>''''''
               <button onClick={() => handleExport('txt')} className='w-full px-3 py-2 bg-gray-500 hover: bg-gray-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>''''
                 <Download className='w-4 h-4'/>
                 Export as TXT
-              </button>'''';
+              </button>''''
               ''''''
               <button onClick={() => handleExport('md')} className='w-full px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>''''
                 <Download className='w-4 h-4'/>
                 Export as MD
-              </button>'''';
+              </button>''''
               ''''''
               <button onClick={() => handleExport('html')} className='w-full px-3 py-2 bg-purple-500 hover: bg-purple-600 text-white text-sm rounded transition-colors flex items-center justify-center gap-2'>''''
                 <Download className='w-4 h-4'/>
@@ -358,12 +358,12 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
   {}
                     left: x, top: y,';'
                     transform: 'translate(-50%, '
-  -50%)';'}}>';'''
+  -50%)';'}}>''''
               <div className='w-full h-full rounded-full border-2 border-white shadow-lg' style={{ backgroundColor: user.color }}></div>''''
               <div className='absolute top-5 left-0 bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap'>
                 {user.name}
               </div>
             </motion.div>))}
         </div>)}
-    </div>)}''`;
+    </div>)}''`
 ''`''`

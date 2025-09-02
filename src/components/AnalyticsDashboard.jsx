@@ -52,7 +52,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         if (performanceMetrics.cumulativeLayoutShift > 0.1);
             score -= 25;
         else if (performanceMetrics.cumulativeLayoutShift > 0.05);
-            score -= 10;
+            score -= 10
         return Math.max(0, score)}
     // Format duration
     const formatDuration = (seconds) => {
@@ -65,7 +65,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
     const formatNumber = (num) => {
         if (num >= 1000000);
             return `${(num / 1000000).toFixed(1)}M`;
-        if (num >= 1000);
+        if (num >= 1000)
             return `${(num / 1000).toFixed(1)}K`
         return num.toString()}
     return (<div className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>      {/* Header */}
@@ -90,7 +90,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               onChange={e => {}
                 setSelectedTimeRange(e.target.value)';'
                 handleDashboardInteraction('time_range_changed', {}
-                  timeRange: e.target.value})';'}}'''';
+                  timeRange: e.target.value})';'}}''''
               className='px-2 py-1 bg-white/20 rounded text-xs focus: outline-none focus:ring-2 focus:ring-white/50''''>'''''
               <option value='1h'>1 Hour</option>''''
               <option value='24h'>24 Hours</option>''''
@@ -103,7 +103,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
               aria-label={}
 ';'
 '';
-''';'
+''''
                 isExpanded ? 'Collapse dashboard' : 'Expand dashboard''}'''
             >'''{isExpanded ? '−' : '+'}'
             </button>
@@ -119,7 +119,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             </div>''''
             <div className='text-2xl font-bold text-gray-900 dark:text-white'>
               {analyticsSummary;
-                ? formatDuration(analyticsSummary.sessionDuration)';'
+                ? formatDuration(analyticsSummary.sessionDuration)''
                 : 'N/A'}''''
             </div>''''
             <div className='text-xs text-gray-600 dark:text-gray-400'>
@@ -171,11 +171,11 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           Real-time Events'''{showRealTime && ('''''
             <div className='w-2 h-2 bg-green-500 rounded-full animate-pulse'></div>
           )}
-        </h4>''';'
+        </h4>''''
 ''''
         <div className='space-y-2 max-h-32 overflow-y-auto'>
           {events;
-            .slice(-5);
+            .slice(-5)
             .reverse()
             .map(event => (
               <div''';'
@@ -336,7 +336,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             onClick={() => {}
 ';'
               handleDashboardInteraction('refresh_clicked');
-              updateAnalyticsSummary()';'}}'''';
+              updateAnalyticsSummary()';'}}''''
             className='flex-1 px-3 py-2 bg-blue-500 hover: bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2''''>'''''
             <RefreshCw className='w-4 h-4' />
             Refresh Data
@@ -344,7 +344,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
           <button;
             onClick={() => {}
               handleTrackConversion()';'
-              handleDashboardInteraction('conversion_tracked')';'}}'''';
+              handleDashboardInteraction('conversion_tracked')';'}}''''
             className='px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2''''>'''''
             <Target className='w-4 h-4' />
             Track Goal
@@ -352,5 +352,5 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
         </div>
       </div>
     </div>
-  )}''`;
+  )}''`
 ''`''`

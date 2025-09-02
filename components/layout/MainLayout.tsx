@@ -40,5 +40,5 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           <Footer />
         </div></AccessibilityEnhancer>
 </>)}
-;
+
 export default MainLayout

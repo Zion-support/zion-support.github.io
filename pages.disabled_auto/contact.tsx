@@ -14,7 +14,7 @@ const ContactPage: NextPage = () => {
     phone: ',
     service:,
   ',
-    message: ';
+    message: '
     name: '', email: '',
     company: '', phone: '',
     service: '', message: ''})
@@ -49,7 +49,7 @@ const ContactPage: NextPage = () => {
         name: '', email: '',
         company: '', phone: '',
         service: '', message: ''})}, 2000)}
-;
+
   const contactInfo = [
     {
 :pages.disabled_auto/contact.tsx
@@ -252,7 +252,7 @@ const ContactPage: NextPage = () => {
     'AI Legal Research & Analysis Platform', 'AI Sports Analytics & Performance Platform',
     'AI Education Personalization Platform', 'AI Energy Optimization & Smart Grid',
     'AI Cybersecurity Threat Intelligence', 'AI Augmented Reality Solutions',
-    'Other';
+    'Other'
   ]
   return(
     <MainLayout
@@ -267,10 +267,10 @@ const ContactPage: NextPage = () => {
             <h1 className='text-5xl md: text-6xl font-bold mb-6 leading-tight'>
 :pages.disabled_auto/contact.tsx;
               Lets Build Something Amazing Together;
-              Let&apos;s Build Something Amazing Together'
+              Let&aposs Build Something Amazing Together'
             </h1>
             <p className='text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed'>
-              Ready to transform your business with cutting-edge technology?;
+              Ready to transform your business with cutting-edge technology?
               Get in touch with our expert team today.
             </p>
           </div>
@@ -317,10 +317,10 @@ const ContactPage: NextPage = () => {
 :pages.disabled_auto/contact.tsx;
                   Thank you for your message! We;
   'll get back to you within 24 hours.;
-                  Thank you for your message! We&apos;ll get back to you within 24 hours.'
+                  Thank you for your message! We&aposll get back to you within 24 hours.'
                 </div>
               )}
-              {submitStatus === 'error';
+              {submitStatus === 'error'
   ' && ('
                 <div className='bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6'>
                   There was an error sending your message. Please try again or contact us directly.
@@ -437,11 +437,11 @@ const ContactPage: NextPage = () => {
               <div>
                 <h2 className='text-3xl font-bold text-gray-900 mb-6'>Get in Touch</h2>
                 <p className='text-lg text-gray-600 mb-6'>
-                  We&aposre here to help you transform your business with cutting-edge technology solutions. '';
+                  We&aposre here to help you transform your business with cutting-edge technology solutions. ''
                   Whether you need a custom AI solution, cloud migration, or a complete digital transformation, our expert team is ready to assist you.
                 </p>
                 <p className='text-gray-600'>
-                  Contact us today to schedule a free consultation and discover how we can help;
+                  Contact us today to schedule a free consultation and discover how we can help
                   you achieve your business goals.
                 </p>
               </div>
@@ -476,7 +476,7 @@ const ContactPage: NextPage = () => {
 :pages.disabled_auto/contact.tsx;
                   We understand that time is valuable. That;
   's why we guarantee a response within 24 hours;
-                  We understand that time is valuable. That&apos;s why we guarantee a response within 24 hours ';
+                  We understand that time is valuable. That&apos;s why we guarantee a response within 24 hours '
                   for all inquiries.
                 </p>
                 <div className='flex items-center text-blue-600'>
@@ -515,7 +515,7 @@ const ContactPage: NextPage = () => {
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Get Started?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
-            Don&apos;t wait to transform your business. Contact us today and let&apos;s discuss how we can help;
+            Don&apos;t wait to transform your business. Contact us today and let&apos;s discuss how we can help
             you achieve your technology goals.
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -536,5 +536,5 @@ const ContactPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default ContactPage

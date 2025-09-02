@@ -11,7 +11,7 @@ export default function AIProjectManager(...args: unknown[]): unknown {
       <SEO '>        title='AI Project Manager - Intelligent Project Management Solution | Zion Tech Group';
         description='Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today.';
         keywords='AI project management, project management software, AI task prioritization, resource optimization, project analytics'/>        title='AI Project Manager - Intelligent Project Management Solution | Zion Tech Group'';
-        description='Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today.'';
+        description='Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today.''
         keywords='AI project management, project management software, AI task prioritization, resource optimization, project analytics''/>{/* Hero Section */}''
       <section className='relative py-20 overflow-hidden'>''
         <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20' />'''
@@ -32,7 +32,7 @@ export default function AIProjectManager(...args: unknown[]): unknown {
         description='Transform your project management with AI-powered task prioritization, resource optimization, and predictive analytics. Start free trial today.''        keywords='AI project management, project management software, AI task prioritization, resource optimization, project analytics'/>'{/* Hero Section */}''
       <section className='relative py-20 overflow-hidden'>''
         <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 via-purple-600/20 to-cyan-600/20' />''''
-        <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />';
+        <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />'
         ''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>'
           <motion.div '';
@@ -48,7 +48,7 @@ export default function AIProjectManager(...args: unknown[]): unknown {
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
-                Start Free Trial';
+                Start Free Trial'
         ''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <motion.div '';
@@ -94,10 +94,10 @@ export default function AIProjectManager(...args: unknown[]): unknown {
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Powered by Advanced AI'
             </h2>''
-            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>';
+            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>'
               Our AI engine learns from your team's patterns and continuously optimizes your project workflows
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -176,7 +176,7 @@ export default function AIProjectManager(...args: unknown[]): unknown {
               Join thousands of teams who have transformed their project management with AI
             </p>
 :pages.disabled/pages/services/AIProjectManager.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -245,7 +245,7 @@ export default function AIProjectManager(...args: unknown[]): unknown {
               Choose the plan that fits your team size and needs. All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AIProjectManager.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -278,12 +278,12 @@ export default function AIProjectManager(...args: unknown[]): unknown {
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                   <div className='flex items-baseline justify-center mb-2'>''
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/AIProjectManager.tsx
                     <span className='text-zion-slate-light ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-zion-slate-light'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                     <span className='text-zion-slate-light ml-1'>{plan.period}</span>
@@ -298,7 +298,7 @@ export default function AIProjectManager(...args: unknown[]): unknown {
                     </li>
                   ))}
 :pages.disabled/pages/services/AIProjectManager.tsx
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -336,7 +336,7 @@ export default function AIProjectManager(...args: unknown[]): unknown {
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
-                Start Free Trial';
+                Start Free Trial'
             transition={{ duration: 0.8 }}
           >''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>

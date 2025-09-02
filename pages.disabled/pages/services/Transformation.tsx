@@ -29,21 +29,21 @@ const DigitalTransformation = () => {
     'Faster time to market for new products',';Better competitive positioning in the market';
   ];
 :pages.disabled/pages/services/Transformation.tsx;
-';
+'
   return (''
     <div className = 'min-h-screen bg-slate-900 text-white'>'{/* Hero Section */}''      <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
           <div className='mb-8'>''
-            <div className='inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/Transformation.tsx
               <RefreshCw className='w-4 h-4 mr-2' />              Digital Transformation'
             </div>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Digital''
               <span className='bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent'> Transformation</span>'
             </h1>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Modernize your business processes and operations with cutting-edge;
+              Modernize your business processes and operations with cutting-edge
               technology solutions that drive growth and innovation.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -62,18 +62,18 @@ const DigitalTransformation = () => {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/Transformation.tsx
               Our Transformation Services'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Comprehensive digital transformation solutions designed to modernize;
+              Comprehensive digital transformation solutions designed to modernize
               your business and drive sustainable growth.
             </p>
 :pages.disabled/pages/services/Transformation.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{transformationServices.map((service, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
                   <service.icon className='w-8 h-8 text-white'/>'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
                 <p className='text-gray-300 mb-4'>{service.description}</p>''
-                <p className='text-lg font-semibold text-indigo-400 mb-4'>{service.price}</p>'';
+                <p className='text-lg font-semibold text-indigo-400 mb-4'>{service.price}</p>''
 :pages.disabled/pages/services/Transformation.tsx
                 <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='text-sm text-gray-400 flex items-start'>''
                       <div className='w-1.5 h-1.5 bg-indigo-400 rounded-full mr-2 mt-2 flex-shrink-0'></div>
@@ -93,11 +93,11 @@ const DigitalTransformation = () => {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/Transformation.tsx
               Areas of Transformation'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              We help transform every aspect of your business to create a;
+              We help transform every aspect of your business to create a
               comprehensive digital-first organization.
             </p>
 :pages.disabled/pages/services/Transformation.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{transformationAreas.map((area, index) => (''
               <div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-indigo-500/50 transition-all duration-300'>''
@@ -116,7 +116,7 @@ const DigitalTransformation = () => {
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/Transformation.tsx;
+:pages.disabled/pages/services/Transformation.tsx
 '{/* Benefits Section */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
@@ -126,7 +126,7 @@ const DigitalTransformation = () => {
                 Why Choose Digital Transformation?'
               </h2>''
               <p className='text-lg text-gray-300 mb-6'>
-                Digital transformation is essential for businesses to remain;
+                Digital transformation is essential for businesses to remain
                 competitive and meet evolving customer expectations.'
               </p>''
               <ul className='space-y-3'>'{benefits.map((benefit, index) => (''                  <li key={index} className='flex items-center text-gray-300'>''
@@ -139,7 +139,7 @@ const DigitalTransformation = () => {
               <div className='text-center'>''
                 <Lightbulb className='w-24 h-24 text-indigo-400 mx-auto mb-4' />''
                 <h3 className='text-2xl font-bold text-white mb-2'>Transformation Expertise</h3>'                <p className='text-gray-300 mb-6'>
-:pages.disabled/pages/services/Transformation.tsx;
+:pages.disabled/pages/services/Transformation.tsx
                   Our team has successfully guided hundreds of organizations
                   through their digital transformation journey.'</p>''                <div className='text-sm text-gray-400'>
                   <p>• Proven methodologies</p>
@@ -155,11 +155,11 @@ const DigitalTransformation = () => {
 '{/* CTA Section */}''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-4xl mx-auto text-center'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/Transformation.tsx;
+:pages.disabled/pages/services/Transformation.tsx
             Transform Your Business'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
-            Ready to modernize your business and unlock new opportunities;
+            Ready to modernize your business and unlock new opportunities
             for growth and innovation?'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -173,6 +173,6 @@ const DigitalTransformation = () => {
     </div>
   )}
 :pages.disabled/pages/services/Transformation.tsx;
-';
+'
 export default DigitalTransformation}}}
   '''"

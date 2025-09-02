@@ -15,7 +15,7 @@ export default function Skeleton({ className, lines = 1 }: SkeletonProps) {
 
   return (
     <div className="space-y-2">
-      {Array.from({ length: lines }).map((_, i) => (
+      {Array.from({ length: lines   }).map((_, i) => (
         <div
           key={i}
           className={cn(

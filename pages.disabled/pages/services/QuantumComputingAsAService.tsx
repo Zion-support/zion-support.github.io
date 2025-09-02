@@ -32,14 +32,14 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
       icon: Clock,';
       title: 'Immediate Access',';
       description: 'Start using quantum computing today with our cloud-based platform'}  ];
-  return();
+  return()
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <:pages.disabled/pages/services/QuantumComputingAsAService.tsx;
       <SEO;
 =;
-      <SEO '>        title='Quantum Computing as a Service - Zion Tech Group';
+      <SEO '>        title='Quantum Computing as a Service - Zion Tech Group'
         description='Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.'/>        title='Quantum Computing as a Service - Zion Tech Group''        description='Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support.'/>'
       <SEO ''
         title='Quantum Computing as a Service - Zion Tech Group'';
@@ -71,7 +71,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
             </div>';
   y: 0}}';
             transition={{ duration: 0.6 }}'';
-            className='text-center max-w-4xl mx-auto'';
+            className='text-center max-w-4xl mx-auto''
 ''
             <div className='flex justify-center mb-6'>''
               <div className='w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>''
@@ -121,7 +121,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-              Transform Your Computing Power';
+              Transform Your Computing Power'
               Transform Your Computing Power
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
@@ -132,7 +132,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <:pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 =;
-          '>          </div>';
+          '>          </div>'
           ''
           <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map((benefit, index()
@@ -167,14 +167,14 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
                 </div>'
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>';
   delay: index * 0.1 '}}'';
-                className='text-center p-6'';
+                className='text-center p-6''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>''
                 <h3 className='text-2xl font-bold text-white mb-2'>{benefit.title}</h3>'';
   delay: index * 0.1}}'';
-                className='text-center p-6'';
+                className='text-center p-6''
 ''
                 <div className='w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
                   <benefit.icon className='w-8 h-8 text-white' />
@@ -315,7 +315,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <:pages.disabled/pages/services/QuantumComputingAsAService.tsx
           <div className='grid md: grid-cols-3 gap-8'>{useCases.map((useCase, index)  => (
-=;
+=
           '
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown(
@@ -349,7 +349,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
   delay: index * 0.1}}';
                 className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200';
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                 className='bg-slate-800 rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-200''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''
                   <feature.icon className='w-6 h-6 text-white' />
@@ -464,7 +464,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Everything you need to harness the power of quantum computing for your business
             </p>
-          </div>';
+          </div>'
           ''
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -498,7 +498,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Choose the plan that fits your quantum computing needs. All plans include a 14-day free trial.
             </p>
-          </div>';
+          </div>'
           ''
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -523,7 +523,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
                       Most Popular
                     </span>
                   </div>
-                )}';
+                )}'
 ''
                 <div className='text-center mb-6'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
@@ -532,7 +532,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
                     <span className='text-slate-400'>{plan.period}</span>'
                   </div>''
                   <p className='text-slate-300'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center text-slate-300'>''
@@ -563,7 +563,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-              Proven Results Across Industries';
+              Proven Results Across Industries'
               Proven Results Across Industries
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
@@ -595,7 +595,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
                 className='bg-slate-800 rounded-xl p-6 border border-slate-700'';
 '';
                 <h3 className='text-xl font-semibold text-white mb-3'>{useCase.title}</h3>''
-                <p className='text-slate-300 mb-4'>{useCase.description}</p>'';
+                <p className='text-slate-300 mb-4'>{useCase.description}</p>''
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
                 <ul className='space-y-2'>'
                 <ul className='space-y-2'>
@@ -619,7 +619,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-              Seamless Integrations';
+              Seamless Integrations'
               Seamless Integrations
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
@@ -630,7 +630,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx
 <:pages.disabled/pages/services/QuantumComputingAsAService.tsx;
 =;
-          '>          </div>';
+          '>          </div>'
           ''
           <div className='grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6'>
             {integrations.map(integration: unknown, index: unknown()
@@ -680,7 +680,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx;
-              Enterprise-Grade Security & Compliance';
+              Enterprise-Grade Security & Compliance'
               Enterprise-Grade Security & Compliance
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
@@ -714,7 +714,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
               </div>';
   y: 0}}';
               transition={{ duration: 0.6 }}'';
-              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center'';
+              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center''
 ''
               <div className='w-16 h-16 bg-gradient-to-br from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
                 <Lock className='w-8 h-8 text-white'  />'
@@ -752,7 +752,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
                 <Shield className='w-8 h-8 text-white'  />
               </div>';
   delay: 0.2 '}}'';
-              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center'';
+              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center''
 ''
               <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
                 <Shield className='w-8 h-8 text-white'  />'
@@ -795,13 +795,13 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
                 <Activity className='w-8 h-8 text-white'  />
               </div>';
   delay: 0.4 '}}'';
-              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center'';
+              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center''
 ''
               <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
                 <Activity className='w-8 h-8 text-white'  />'
               </div>'';
   delay: 0.4}}'';
-              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center'';
+              className='bg-slate-800 rounded-xl p-6 border border-slate-700 text-center''
 ''
               <div className='w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
                 <Activity className='w-8 h-8 text-white'  />
@@ -841,12 +841,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
               Join forward-thinking companies already using quantum computing to solve impossible problems
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='max-w-4xl mx-auto'';
+            className='max-w-4xl mx-auto''
 ''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
               Ready to Harness Quantum Power?
@@ -908,9 +908,9 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
                 <Phone className='w-8 h-8 text-purple-500 mb-4'  />''
                 <h3 className='text-xl font-semibold text-white mb-2'>Phone</h3>''
                 <a href='tel:+13024640950' className='text-slate-300 hover:text-white transition-colors'>
-:pages.disabled/pages/services/QuantumComputingAsAService.tsx;
+:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                   +1 302 464 0950
-                </a>';
+                </a>'
                   +1 302 464 0950
                 </a>
               </div>''
@@ -918,9 +918,9 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
                 <Mail className='w-8 h-8 text-purple-500 mb-4'  />''
                 <h3 className='text-xl font-semibold text-white mb-2'>Email</h3>''
                 <a href='mailto:kleber@ziontechgroup.com' className='text-slate-300 hover:text-white transition-colors'>
-:pages.disabled/pages/services/QuantumComputingAsAService.tsx;
+:pages.disabled/pages/services/QuantumComputingAsAService.tsx
                   kleber@ziontechgroup.com
-                </a>';
+                </a>'
                   kleber@ziontechgroup.com
                 </a>
               </div>''
@@ -938,5 +938,5 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {}
     </div>
 :pages.disabled/pages/services/QuantumComputingAsAService.tsx)}''`;
 export default QuantumComputingAsAService}}}}}''`''`)}
-;
+
 export default QuantumComputingAsAService}}}}}''`

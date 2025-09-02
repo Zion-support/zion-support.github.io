@@ -222,7 +222,7 @@ const CustomDevelopment: NextPage = () => {
       step: '06',
       title: 'Maintenance & Support',
       description:;
-        'Ongoing support and maintenance to keep your solution running smoothly.'}];
+        'Ongoing support and maintenance to keep your solution running smoothly.'}]
   const technologies = [
     { name: 'React', category: 'Frontend' },
     { name: 'Vue.js', category: 'Frontend' },
@@ -247,7 +247,7 @@ const CustomDevelopment: NextPage = () => {
           <div className='container mx-auto px-4 text-center'>
             <h1 className='text-4xl md: text-5xl font-bold mb-6'>Custom Development Solutions</h1>
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
-              Transform your ideas into powerful digital solutions with our expert development team.;
+              Transform your ideas into powerful digital solutions with our expert development team.
               We build scalable, secure, and innovative applications tailored to your business needs.
             </p>
           </div>
@@ -373,5 +373,5 @@ const CustomDevelopment: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
+
 export default CustomDevelopment

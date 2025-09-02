@@ -148,7 +148,7 @@ const AIAutonomousContentMarketingPlatform: React.FC = () => {
                     'Advanced personalization',
                     'Real-time analytics',
                     'Priority support',
-                    'A/B testing';
+                    'A/B testing'
                   ],
                   popular: true},
                 {
@@ -228,7 +228,7 @@ const AIAutonomousContentMarketingPlatform: React.FC = () => {
               <div>
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
-                  {[;
+                  {[
                     'Increase content production by 500% while maintaining quality',
                     'Reduce marketing costs by up to 60% through automation',
                     'Improve engagement rates by 300% with personalized content',
@@ -306,5 +306,5 @@ const AIAutonomousContentMarketingPlatform: React.FC = () => {
       </div>
     </>
   )}
-;
+
 export default AIAutonomousContentMarketingPlatform

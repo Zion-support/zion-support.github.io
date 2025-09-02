@@ -54,9 +54,9 @@ import {}
             transition={{ duration: 0.8 }}'>''
             <div className='inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-6'>''
               <Shield className='w-4 h-4 mr-2'  />              AI-Powered Financial Compliance
-            </div>';
+            </div>'
 ''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO''
@@ -89,14 +89,14 @@ import {}
             <p className='text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto mb-8 leading-relaxed'>
               Stay compliant with financial regulations using AI-powered;
               monitoring and automated reporting. Reduce compliance costs while;
-              ensuring regulatory adherence across all financial operations.;
+              ensuring regulatory adherence across all financial operations.
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <a'';
                 href='#pricing'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-semibold rounded-xl hover:from-emerald-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl'>'
                 View Pricing''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
               <a''
@@ -148,7 +148,7 @@ import {}
               Leverage cutting-edge AI technology to ensure financial compliance
             </p>
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -214,11 +214,11 @@ import {}
               Comprehensive Compliance Coverage
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Monitor all critical areas of financial compliance with our AI;
+              Monitor all critical areas of financial compliance with our AI
               platform
             </p>
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {complianceAreas.map(area: unknown, index: unknown()
@@ -287,7 +287,7 @@ import {}
               Transform your compliance operations with AI-powered automation
             </p>
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -353,11 +353,11 @@ import {}
               Industry Applications
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Our platform serves diverse financial institutions and fintech;
+              Our platform serves diverse financial institutions and fintech
               companies
             </p>
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -423,11 +423,11 @@ import {}
               Transparent Pricing
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Choose the plan that fits your compliance needs and transaction;
+              Choose the plan that fits your compliance needs and transaction
               volume
             </p>
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -458,7 +458,7 @@ import {}
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/ai-financial-compliance-assistant.tsx)}';
+:pages.disabled/pages/services/ai-financial-compliance-assistant.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -471,7 +471,7 @@ import {}
                     <span className='text-slate-300 ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-slate-300 mt-2'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>')}
 ''
@@ -544,11 +544,11 @@ import {}
               Ready to Transform Your Compliance?
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Contact us today to learn how AI compliance can protect your;
+              Contact us today to learn how AI compliance can protect your
               business
             </p>
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'
             <motion.div'';
@@ -661,5 +661,5 @@ import {}
   )}
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx;
 export default AIFinancialComplianceAssistant''`;
-''`''`;
+''`''`
 export default AIFinancialComplianceAssistant'"`

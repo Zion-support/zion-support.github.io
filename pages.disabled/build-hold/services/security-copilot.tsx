@@ -17,7 +17,7 @@ const SecurityCopilot: NextPage = () => (
         </h1>
         <p className='text-lg text-gray-200 mb-6'>
           AI-driven detections and playbooks across Okta, M365, GCP/AWS/Azure,
-          CrowdStrike, and more. Reduce mean-time-to-detect and standardize;
+          CrowdStrike, and more. Reduce mean-time-to-detect and standardize
           response.
         </p>
         <div className='flex flex-wrap gap-3'>
@@ -85,7 +85,7 @@ const SecurityCopilot: NextPage = () => (
           </li>
         </ul>
         <div className='mt-6 text-sm text-gray-600'>
-          Benchmarked vs Snyk, Wiz, Panther, and Microsoft Security Copilot;
+          Benchmarked vs Snyk, Wiz, Panther, and Microsoft Security Copilot
           pricing tiers.
         </div>
         <div className='mt-4'>
@@ -98,5 +98,5 @@ const SecurityCopilot: NextPage = () => (
       </div>
     </section>
   </MainLayout>
-);
+)
 export default SecurityCopilot

@@ -67,12 +67,12 @@ const NotFound: React.FC = () => {
             className='mb-8'>
             <h2 className='text-4xl font-bold text-white mb-4'>Page Not Found</h2>
             <p className='text-xl text-gray-300 mb-6'>
-              Sorry, the page you;
+              Sorry, the page you
   're looking for doesn't exist or has been moved.
             </p>
             <p className='text-gray-400'>
               Don;
-  't worry, we'll help you find what you;
+  't worry, we'll help you find what you
   're looking for.
             </p>
           </motion.div>
@@ -157,5 +157,5 @@ const NotFound: React.FC = () => {
       </div>
     </div>
   )}
-;
+
 export default NotFound

@@ -8,28 +8,18 @@ const FAQ: React.FC = () => {
         ? prev.filter(i => i !== index);
         : [...prev, index]
     )}
-;
+
   const faqs = [
-    {
-      question: 'What services does Zion Tech Group offer?', answer: 'We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains.'},
-    {
-      question: 'How can I get started with your services?', answer: 'You can get started by contacting us through our contact form, calling us at +1 302 464 0950, or emailing us at kleber@ziontechgroup.com. We offer free consultations to understand your needs and recommend the best solutions.'},
-    {
-      question: 'Do you offer custom AI solutions?', answer: 'Yes, we specialize in custom AI solutions tailored to your specific business needs. Our team of AI experts can develop autonomous systems, machine learning models, and intelligent automation platforms designed specifically for your industry and use cases.'}, {
-      question: 'What is your pricing structure?',
-      answer: 'Our pricing varies based on the complexity and scope of the project. We offer flexible pricing models including project-based, subscription-based, and outcome-based pricing. Contact us for a detailed quote tailored to your specific requirements.'}, {
-      question: 'Do you provide ongoing support and maintenance?',
-      answer: 'Yes, we provide comprehensive 24/7 support and maintenance services for all our solutions. Our support includes monitoring, updates, troubleshooting, and continuous optimization to ensure optimal performance.'}, {
-      question: 'What industries do you serve?',
-      answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and technology. Our solutions are designed to be adaptable across different sectors and use cases.'}, {
-      question: 'How long does a typical project take?',
+    { question: 'What services does Zion Tech Group offer?', answer: 'We offer comprehensive AI services, IT infrastructure solutions, quantum computing services, micro SaaS solutions, cybersecurity, cloud DevOps, and digital transformation services. Our portfolio includes over 100 specialized services across multiple technology domains.'},
+    { question: 'How can I get started with your services?', answer: 'You can get started by contacting us through our contact form, calling us at +1 302 464 0950, or emailing us at kleber@ziontechgroup.com. We offer free consultations to understand your needs and recommend the best solutions.'},
+    { question: 'Do you offer custom AI solutions?', answer: 'Yes, we specialize in custom AI solutions tailored to your specific business needs. Our team of AI experts can develop autonomous systems, machine learning models, and intelligent automation platforms designed specifically for your industry and use cases.'}, { question: 'What is your pricing structure?',
+      answer: 'Our pricing varies based on the complexity and scope of the project. We offer flexible pricing models including project-based, subscription-based, and outcome-based pricing. Contact us for a detailed quote tailored to your specific requirements.'}, { question: 'Do you provide ongoing support and maintenance?',
+      answer: 'Yes, we provide comprehensive 24/7 support and maintenance services for all our solutions. Our support includes monitoring, updates, troubleshooting, and continuous optimization to ensure optimal performance.'}, { question: 'What industries do you serve?',
+      answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and technology. Our solutions are designed to be adaptable across different sectors and use cases.'}, { question: 'How long does a typical project take?',
       answer: 'Project timelines vary depending on complexity and scope. Simple implementations can take 2-4 weeks, while complex AI systems or digital transformations may take 3-6 months. We provide detailed timelines during the consultation phase.'},
-    {
-      question: 'Do you offer training for your solutions?', answer: 'Yes, we provide comprehensive training programs for all our solutions. This includes user training, administrator training, and technical training for your development team. We also offer ongoing educational resources and documentation.'}, {
-      question: 'What makes Zion Tech Group different?',
+    { question: 'Do you offer training for your solutions?', answer: 'Yes, we provide comprehensive training programs for all our solutions. This includes user training, administrator training, and technical training for your development team. We also offer ongoing educational resources and documentation.'}, { question: 'What makes Zion Tech Group different?',
       answer: 'We combine cutting-edge AI technology with deep industry expertise. Our focus on autonomous systems, quantum computing, and innovative micro SaaS solutions sets us apart. We're committed to delivering measurable business outcomes and long-term partnerships.'}, '
-    {
-      question: 'Do you have case studies or references?',
+    { question: 'Do you have case studies or references?',
       answer: 'Yes, we have numerous case studies showcasing successful implementations across various industries. We can provide references from satisfied clients and detailed case studies demonstrating ROI and business impact.'}
   ]
   return(
@@ -55,7 +45,7 @@ const FAQ: React.FC = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1   }}
               className='bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden'>
               <button;
                 onClick={() => toggleItem(index)}
@@ -87,7 +77,7 @@ const FAQ: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.5   }}
           className='mt-16 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <div className='text-center'>
             <h2 className='text-2xl font-bold text-gray-900 mb-4'>
@@ -121,5 +111,5 @@ const FAQ: React.FC = () => {
       </div>
     </div>
   )}
-;
+
 export default FAQ

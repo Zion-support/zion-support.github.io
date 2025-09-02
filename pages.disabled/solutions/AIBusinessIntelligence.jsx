@@ -47,22 +47,22 @@ const AIBusinessIntelligence = () => {
             phase: 'Deployment & Training','';
             description: 'Deploy system and train users','';
             duration: '2-4 weeks';
-';
+'
     ]'
     return (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'{/* Hero Section */}''      <section className='relative pt-24 pb-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>''
           <div className='mb-8'>''
             <div className='inline-flex items-center px-4 py-2 bg-violet-500/10 text-violet-400 rounded-full text-sm font-medium mb-6'>''
               <BarChart3 className='w-4 h-4 mr-2'/>
-:pages.disabled/solutions/AIBusinessIntelligence.jsx;
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
               AI BI Solution'
             </div>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               AI''
               <span className='bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent'> Business Intelligence</span>'
             </h1>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Transform your business with AI-powered analytics and insights;
+              Transform your business with AI-powered analytics and insights
               that drive intelligent decision making and growth.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -81,12 +81,12 @@ const AIBusinessIntelligence = () => {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
               Business Intelligence Features'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our AI-powered BI platform provides comprehensive analytics;
+              Our AI-powered BI platform provides comprehensive analytics
               and insights for informed decision making.
             </p>
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''{biFeatures.map((feature, index) => (<div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300'>''
-                <div className='w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
                   <feature.icon className='w-8 h-8 text-white'/>'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>''
                 <p className='text-gray-300 mb-4'>{feature.description}</p>''
@@ -106,12 +106,12 @@ const AIBusinessIntelligence = () => {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
               BI Solutions'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Comprehensive business intelligence solutions covering all;
+              Comprehensive business intelligence solutions covering all
               aspects of your business operations.
             </p>
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
           </div>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''{biSolutions.map((solution, index) => (<div key={index} className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300'>''
-                <div className='w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
                   <solution.icon className='w-8 h-8 text-white'/>'</div>''                <h3 className='text-xl font-semibold text-white mb-3'>{solution.title}</h3>''
                 <p className='text-gray-300 mb-4'>{solution.description}</p>''
@@ -124,7 +124,7 @@ const AIBusinessIntelligence = () => {
           </div>
         </div>
       </section>
-:pages.disabled/solutions/AIBusinessIntelligence.jsx;
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
 '{/* Benefits Section */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
@@ -145,7 +145,7 @@ const AIBusinessIntelligence = () => {
                 <Lightbulb className='w-24 h-24 text-violet-400 mx-auto mb-4'/>''
                 <h3 className='text-2xl font-bold text-white mb-2'>Data Intelligence</h3>''
                 <p className='text-gray-300 mb-6'>
-:pages.disabled/solutions/AIBusinessIntelligence.jsx;
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
                   Transform your data into intelligent insights that drive
                   better decisions and business outcomes.'</p>''                <div className='text-sm text-gray-400'>
                   <p>• AI-powered analytics</p>
@@ -164,7 +164,7 @@ const AIBusinessIntelligence = () => {
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
             Implementation Process'</h2>''          <p className='text-xl text-gray-300 mb-8'>
             A structured approach to implementing AI-powered business;
-            intelligence in your organization.;
+            intelligence in your organization.
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
           </p>'''          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''{implementation.map((phase, index) => (<div key={index} className='text-center'>''
                 <div className='w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white'>
@@ -179,11 +179,11 @@ const AIBusinessIntelligence = () => {
 '{/* CTA Section */}''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-4xl mx-auto text-center'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/solutions/AIBusinessIntelligence.jsx;
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
             Ready to Transform Your Business Intelligence?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
-            Start making data-driven decisions with AI-powered business;
+            Start making data-driven decisions with AI-powered business
             intelligence and analytics.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -196,6 +196,6 @@ const AIBusinessIntelligence = () => {
       </section>
     </div>)}
 export { AIBusinessIntelligence }
-:pages.disabled/solutions/AIBusinessIntelligence.jsx;
+:pages.disabled/solutions/AIBusinessIntelligence.jsx
 export default AIBusinessIntelligence''}}}}
   ''''

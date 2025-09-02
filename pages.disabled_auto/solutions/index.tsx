@@ -35,7 +35,7 @@ const Solutions: NextPage = () => {
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'> Solutions</span>
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Tailored technology solutions for businesses of all sizes and industries.;
+            Tailored technology solutions for businesses of all sizes and industries.
             From startups to enterprises, we have the expertise to transform your operations.
           </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4'>
@@ -124,7 +124,7 @@ const Solutions: NextPage = () => {
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Solutions by Business Type</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We understand that different business types have unique needs.;
+              We understand that different business types have unique needs.
               Our solutions are tailored to meet your specific requirements and challenges.
             </p>
           </div>
@@ -198,7 +198,7 @@ const Solutions: NextPage = () => {
           <div className='text-center mb-16'>
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>Industry-Specific Solutions</h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-              We understand the unique challenges and requirements of different industries.;
+              We understand the unique challenges and requirements of different industries.
               Our solutions are tailored to meet industry-specific needs and compliance requirements.
             </p>
           </div>
@@ -422,5 +422,5 @@ const Solutions: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default Solutions

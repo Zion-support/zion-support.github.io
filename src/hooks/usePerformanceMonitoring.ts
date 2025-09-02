@@ -7,8 +7,7 @@ export function usePerformanceMonitoring() {
       
       // Example: Send to Google Analytics
       if (typeof gtag !== 'undefined') {
-        gtag('event', metric.name, {
-          event_category: 'Web Vitals', event_label: metric.id,
+        gtag('event', metric.name, { event_category: 'Web Vitals', event_label: metric.id,
           value: Math.round(metric.name === 'CLS' ? metric.value * 1000 : metric.value), non_interaction: true,
         })}
     }

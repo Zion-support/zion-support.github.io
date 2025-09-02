@@ -7,25 +7,25 @@ export { function }export default function AIEnterpriseOrchestrator(...args: [])
         <meta name = 'description' content='Transform your enterprise with AI-powered workflow orchestration, multi-agent coordination, and intelligent process automation.' />''
         <meta name='keywords' content='AI enterprise orchestrator, workflow automation, multi-agent AI, business process automation, enterprise AI' />
 :pages.disabled/pages/services/ai-enterprise-orchestrator.tsx
-      </Helmet>';
+      </Helmet>'
 ''
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'{/* Hero Section */}''        <section className='relative pt-32 pb-20 overflow-hidden'>''
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-600/10'></div>''
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>''
             <div className='text-center'>''
-              <div className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8'>'';
+              <div className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8'>''
 :pages.disabled/pages/services/ai-enterprise-orchestrator.tsx
                 <Brain className='w-4 h-4 mr-2'  />                AI-Powered Enterprise Orchestration
-              </div>';
+              </div>'
 ''
-              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
                 AI Enterprise''
                 <span className='bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'> Orchestrator</span>
               </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
                 Orchestrate your entire enterprise with intelligent AI agents that coordinate workflows,
-                automate processes, and optimize operations across all departments and systems.;
+                automate processes, and optimize operations across all departments and systems.
 :pages.disabled/pages/services/ai-enterprise-orchestrator.tsx
-              </p>';
+              </p>'
 ''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
                 <Link'';
@@ -51,7 +51,7 @@ export { function }export default function AIEnterpriseOrchestrator(...args: [])
                 making your enterprise more efficient, responsive, and intelligent.
               </p>
 :pages.disabled/pages/services/ai-enterprise-orchestrator.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[{
@@ -83,7 +83,7 @@ export { function }export default function AIEnterpriseOrchestrator(...args: [])
 ';
                   icon: Shield,'';
                   title: 'Security & Compliance','';
-                  description: 'Enterprise-grade security with built-in compliance monitoring and audit trails.'}';
+                  description: 'Enterprise-grade security with built-in compliance monitoring and audit trails.'}'
               ].map((feature, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
@@ -101,11 +101,11 @@ export { function }export default function AIEnterpriseOrchestrator(...args: [])
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ai-enterprise-orchestrator.tsx
                 How AI Enterprise Orchestration Works'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-                Our intelligent orchestration platform follows a systematic approach to;
+                Our intelligent orchestration platform follows a systematic approach to
                 transform your enterprise operations.
               </p>
 :pages.disabled/pages/services/ai-enterprise-orchestrator.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
               {[{
@@ -131,7 +131,7 @@ export { function }export default function AIEnterpriseOrchestrator(...args: [])
 '';
                   step: '04','';
                   title: 'Continuous Learning','';
-                  description: 'The system continuously learns and improves based on performance data and outcomes.'}';
+                  description: 'The system continuously learns and improves based on performance data and outcomes.'}'
               ].map((step, index)  => (''
                 <div key={index} className='text-center'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -152,7 +152,7 @@ export { function }export default function AIEnterpriseOrchestrator(...args: [])
                 Experience unprecedented efficiency and intelligence across your entire organization.
               </p>
 :pages.disabled/pages/services/ai-enterprise-orchestrator.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>'
               <div>''
@@ -161,7 +161,7 @@ export { function }export default function AIEnterpriseOrchestrator(...args: [])
                     'Enable real-time decision making across all business units','';
                     'Seamlessly integrate with existing enterprise systems','';
                     'Provide comprehensive audit trails and compliance monitoring','';
-                    'Scale operations without proportional cost increases'';
+                    'Scale operations without proportional cost increases''
                   ].map((benefit, index) => (''
                     <div key={index} className='flex items-start space-x-3'>''
                       <CheckCircle className='w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>
@@ -169,7 +169,7 @@ export { function }export default function AIEnterpriseOrchestrator(...args: [])
                   ))}
                 </div>
 :pages.disabled/pages/services/ai-enterprise-orchestrator.tsx
-              </div>';
+              </div>'
 ''
               <div className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8'>''
                 <h3 className='text-2xl font-semibold text-white mb-4'>Key Metrics</h3>''
@@ -188,7 +188,7 @@ export { function }export default function AIEnterpriseOrchestrator(...args: [])
 '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10'>'
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/ai-enterprise-orchestrator.tsx;
+:pages.disabled/pages/services/ai-enterprise-orchestrator.tsx
               Ready to Orchestrate Your Enterprise?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>

@@ -30,7 +30,7 @@ export default function TalentProfilePage() {}
   'setError('Profile not found);
             finally {}
                 setLoading(false)}
-        fetchProfile()}, [id]);
+        fetchProfile()}, [id])
     if (loading)
         return <ProfileLoadingState />
     if (error || !profile)'
@@ -65,7 +65,7 @@ export default function TalentProfilePage() {}
 export { TalentProfilePage }
 ;
 export { TalentProfilePage }
-;
+
 export { TalentProfilePage }
 
 export { TalentProfilePage }

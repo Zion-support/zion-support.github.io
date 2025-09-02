@@ -49,7 +49,7 @@ export const SEO: React.FC<SEOProps> = ({
           'url': 'https://ziontechgroup.com',
           'logo': 'https://ziontechgroup.com/logo.svg',
           'description': description,
-          'sameAs': [;
+          'sameAs': [
             'https://linkedin.com/company/zion-tech-group',
             'https://twitter.com/ziontechgroup'
           ],

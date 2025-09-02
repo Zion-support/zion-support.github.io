@@ -148,7 +148,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                     'Employee engagement',
                     'Workforce planning',
                     'Priority support',
-                    'Custom integrations';
+                    'Custom integrations'
                   ],
                   popular: true},
                 {
@@ -228,7 +228,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
               <div>
                 <h3 className='text-3xl font-bold text-white mb-6'>Revolutionary Benefits</h3>
                 <div className='space-y-6'>
-                  {[;
+                  {[
                     'Reduce recruitment time by 70% with AI automation',
                     'Improve employee retention by 45% through predictive analytics',
                     'Increase hiring quality by 80% with intelligent matching',
@@ -306,5 +306,5 @@ const AIAutonomousHRPlatform: React.FC = () => {
       </div>
     </>
   )}
-;
+
 export default AIAutonomousHRPlatform

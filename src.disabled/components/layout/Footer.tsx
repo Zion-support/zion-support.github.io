@@ -22,7 +22,7 @@ import React from;
   /careers' }, { name: 'Partners, href:,
   /partners' }, { name: 'Press, href:,
   /press' }, { name: 'Case Studies, href:,
-  /case-studies' } ], resources: [ { name:;
+  /case-studies' } ], resources: [ { name:
   'Blog, href:,
   /blog' }, { name: 'Documentation, href:,
   /docs' }, { name: 'API Reference, href:,

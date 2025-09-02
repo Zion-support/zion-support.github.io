@@ -135,5 +135,5 @@ import {
       </section>
     </div>
   )}
-;
+
 export default WhitePapers

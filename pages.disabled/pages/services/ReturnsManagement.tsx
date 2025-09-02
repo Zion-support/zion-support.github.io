@@ -11,7 +11,7 @@ function ReturnsManagement(function ReturnsManagement() {): any {}
         <h1 className='heading-responsive text-gradient'>E‑commerce Returns Management</h1>''
         <p className='mt-4 max-w-3xl text-zion-slate-light text-responsive'>
           Reduce support workload and increase customer satisfaction with a self‑serve, branded;
-          returns portal that automates labels, RMAs, inspections, and refunds while syncing;
+          returns portal that automates labels, RMAs, inspections, and refunds while syncing
           with your e‑commerce and shipping providers.
         </p>
 ''
@@ -49,7 +49,7 @@ function ReturnsManagement(function ReturnsManagement() {): any {}
 ';
             plan: 'Growth', price: '$299/mo', features: ['Up to 5,000 returns',3 brand portals',All major carriers']
           },{
-';
+'
             plan: 'Scale', price: 'Custom', features: ['Unlimited returns',SLA + SSO',Dedicated success manager']'},{}
             plan: 'Growth', price: '$299/mo', features: ['Up to 5,000 returns',3 brand portals',All major carriers']
           },{}
@@ -75,7 +75,7 @@ function ReturnsManagement(function ReturnsManagement() {): any {}
     </div>
   );
 export { ReturnsManagement }
-export default ReturnsManagement;
+export default ReturnsManagement
 :pages.disabled/pages/services/ReturnsManagement.tsx
 <:pages.disabled/pages/services/ReturnsManagement.tsx;
 =>export default ReturnsManagement;
@@ -85,5 +85,5 @@ export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
 :pages.disabled/pages/services/ReturnsManagement.tsx;
-export default ReturnsManagement'';''";
+export default ReturnsManagement'';''"
 export default ReturnsManagement''

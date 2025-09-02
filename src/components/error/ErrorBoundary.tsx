@@ -1,20 +1,18 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-interface Props {
-  children: ReactNode;
+interface Props { children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
-interface State {
-  hasError: boolean;
+interface State { hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-}
+  errorInfo?: ErrorInfo
+  }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false   };
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -43,7 +41,7 @@ export class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback
       }
 
       return (
@@ -114,4 +112,4 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

@@ -91,7 +91,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
 <:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
       <SEO;
 =;
-      <SEO '>        title = 'Uptime SLA Monitor - Zion Tech Group';
+      <SEO '>        title = 'Uptime SLA Monitor - Zion Tech Group'
         description='Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure with real-time alerts and comprehensive reporting.'
     <>'
       <SEO '';
@@ -127,7 +127,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
                   </span>'
                 </h1>''
                 <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-                  Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure;
+                  Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure
                   with real-time alerts and comprehensive reporting.'
                 </p>''
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -149,7 +149,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
                   </span>
                 </h1>''
                 <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-                  Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure;
+                  Professional uptime monitoring and SLA tracking platform. Monitor websites, APIs, servers, and infrastructure
                   with real-time alerts and comprehensive reporting.
                 </p>''
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -168,14 +168,14 @@ export default function UptimeSLAMonitor(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx
 '{/* Features Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-                Comprehensive Monitoring Features';
+                Comprehensive Monitoring Features'
                 Comprehensive Monitoring Features
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -186,7 +186,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
 <:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map((feature, index()
@@ -216,7 +216,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -228,14 +228,14 @@ export default function UptimeSLAMonitor(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx
 '{/* Monitoring Types Section */}''
         <section className='py-20 bg-slate-800/30'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-                Monitor Everything That Matters';
+                Monitor Everything That Matters'
                 Monitor Everything That Matters
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -246,7 +246,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
 <:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {monitoringTypes.map(type: unknown, index: unknown()
@@ -276,7 +276,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
                     <type.icon className='w-6 h-6 text-white' />'
                     <type.icon className='w-6 h-6 text-white' />
@@ -288,14 +288,14 @@ export default function UptimeSLAMonitor(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx
 '{/* Benefits Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-                Why Choose Our Uptime Monitor?';
+                Why Choose Our Uptime Monitor?'
                 Why Choose Our Uptime Monitor?
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -306,7 +306,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
 <:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefit: unknown, index: unknown()
@@ -350,14 +350,14 @@ export default function UptimeSLAMonitor(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx
 '{/* Pricing Section */}''
         <section className='py-20 bg-slate-800/30'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx;
-                Transparent Pricing Plans';
+                Transparent Pricing Plans'
                 Transparent Pricing Plans
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -368,7 +368,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
 <:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(plan: unknown, index: unknown()
@@ -412,12 +412,12 @@ export default function UptimeSLAMonitor(...args: []):  {}
                   <div className='text-center mb-6'>''
                     <h3 className='text-2xl font-bold mb-2 text-white'>{plan.name}</h3>''
                     <div className='mb-4'>''
-                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/UptimeSLAMonitor.tsx
                       <span className='text-gray-400'>{plan.period}</span>'
                     </div>''
                     <p className='text-gray-300'>{plan.description}</p>
-                  </div>';
+                  </div>'
 ''
                   <ul className='space-y-3 mb-8'>'
                       <span className='text-gray-400'>{plan.period}</span>
@@ -432,7 +432,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
                       </li>
                     ))}
                   </ul>
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx
 '
                   <Link''`
                     to='/request-quote'``;
@@ -454,7 +454,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/UptimeSLAMonitor.tsx;
+:pages.disabled/pages/services/UptimeSLAMonitor.tsx
 '{/* CTA Section */}''
         <section className='py-20 bg-gradient-to-r from-green-600/20 to-blue-600/20'>'
           <div className='max-w-4xl mx-auto text-center px-6'>

@@ -9,14 +9,14 @@ jest.mock('../pages/Index', () => {}
 })';'
 jest.mock('../pages/About', () => {}
   return function MockAbout() {}
-''';'
+''''
 ''''
     return <div data-testid='about-page'>About Page</div>
   }
 })';'
 jest.mock('../pages/Contact', () => {}
   return function MockContact() {}
-''';'
+''''
 ''''
     return <div data-testid='contact-page'>Contact Page</div>
   }
@@ -48,7 +48,7 @@ export { MockIndex, MockAbout, MockContact }
 export { MockIndex, MockAbout, MockContact }
 ;
 export { MockIndex, MockAbout, MockContact }
-;
+
 export { MockIndex, MockAbout, MockContact }
 
 export { MockIndex, MockAbout, MockContact, MockIndex, MockAbout, MockContact }

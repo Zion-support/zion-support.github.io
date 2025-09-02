@@ -52,7 +52,7 @@ import { Heart,
   TestTube'} from 'lucide-react';
 export { function }
 export default function AIHealthcarePredictiveAnalytics(...args[]): {
-  ;
+  
   website: 'https://ziontechgroup.com'
 <:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
 }
@@ -130,7 +130,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
     'SOC 2 Type II Certified',';
     'GDPR Compliance',';
     'FDA Guidelines Adherence',';Clinical Trial Compliance';
-  ];
+  ]
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>
@@ -138,7 +138,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
       <SEO;
 =;
       <SEO '>        title='AI Healthcare Predictive Analytics Platform | Zion Tech Group';
-        description='Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy.';
+        description='Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy.'
         keywords='AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI'/>        description='Revolutionize healthcare with AI-powered predictive analytics. Predict diseases, optimize treatments, and improve patient outcomes with 94% accuracy.''        keywords='AI healthcare analytics, predictive medicine, disease prediction, patient risk assessment, clinical analytics, healthcare AI'/>'{/* Hero Section */}''
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>
@@ -157,19 +157,19 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
 '';
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-red-100/10 border border-red-200/20 text-red-200 text-sm font-medium mb-6'>''
               <Heart className='w-4 h-4 mr-2'  />              AI-Powered Healthcare Analytics
-            </div>';
+            </div>'
 ''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               AI Healthcare''
               <span className='block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400'>
                 Predictive Analytics
               </span>
-            </h1>';
+            </h1>'
 ''
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Transform healthcare with AI-powered predictive analytics. Predict diseases with 94% accuracy,
               optimize treatments, and improve patient outcomes through intelligent data analysis.
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>
@@ -209,7 +209,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
           </motion.div>
 <:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -238,7 +238,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                 <h3 className='text-xl font-semibold text-white mb-2'>{feature.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-white' />'
@@ -277,7 +277,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
           </motion.div>
 <:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {clinicalApplications.map(application: unknown, index: unknown()
@@ -306,7 +306,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                 <h3 className='text-xl font-semibold text-white mb-2'>{application.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-red-500/50 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-lg flex items-center justify-center mb-4'>''
                   <application.icon className='w-6 h-6 text-white' />'
@@ -345,7 +345,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
           </motion.div>
 <:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -405,7 +405,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
           </motion.div>
 <:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6'>
             {complianceFeatures.map(feature: unknown, index: unknown()
@@ -465,7 +465,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
           </motion.div>
 <:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -494,7 +494,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                 <h3 className='text-xl font-semibold text-white mb-2'>{useCase.title}</h3>';
   delay: index * 0.1}}';
                 viewport={{ once: true }}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4'>''
                   <useCase.icon className='w-8 h-8 text-white' />'
@@ -533,7 +533,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
           </motion.div>
 <:pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx;
 =;
-          '>          </motion.div>';
+          '>          </motion.div>'
           ''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -565,7 +565,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                       Most Popular
                     </span>
                   </div>
-                )}';
+                )}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
@@ -574,14 +574,14 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                     <span className='text-slate-400 ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-slate-300'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'{plan.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-start space-x-3'>''
                       <CheckCircle className='w-5 h-5 text-green-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{feature}</span>
                     </li>
                   ))}
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -615,7 +615,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
               Join hundreds of healthcare organizations who have already improved patient care with AI
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-red-600 to-pink-600 text-white font-semibold rounded-lg hover:from-red-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105'>
@@ -624,7 +624,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
               <button className='px-8 py-4 border border-red-200/20 text-red-200 font-semibold rounded-lg hover:bg-red-200/10 transition-all duration-300'>
                 Schedule Demo
               </button>
-            </div>';
+            </div>'
 ''
             <p className='text-slate-400 mt-6'>
               No credit card required • 14-day free trial • Cancel time
@@ -653,7 +653,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
               Our healthcare experts are here to help you get started and answer  questions
-            </p>';
+            </p>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-8'>''
               <div className='flex flex-col items-center'>''
@@ -680,5 +680,5 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
         </div>
       </section>
     </div>
-  )}''`;
+  )}''`
 ''`''`

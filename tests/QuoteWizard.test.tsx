@@ -4,7 +4,7 @@ import { vi } from 'vitest';
 
 beforeEach(() => {
   global.fetch = vi.fn((url) => {
-    if (url ===;
+    if (url ===
   '/api/services?type=quote') {
       return Promise.resolve({
         ok: true,
@@ -97,7 +97,7 @@ test(
     expect.objectContaining({
       method: 'POST,
       body: JSON.stringify({ service_id:,
-  1', user_message: 'hi })}));
+  1', user_message: 'hi })}))
   // Also ensure the service fetch was called
   expect(global.fetch).toHaveBeenCalledWith(
   '/api/services?type=quote')})

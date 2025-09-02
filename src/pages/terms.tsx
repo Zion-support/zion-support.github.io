@@ -11,4 +11,3 @@ const Terms: React.FC = () => {
       </div>
 </>
   )}
-;

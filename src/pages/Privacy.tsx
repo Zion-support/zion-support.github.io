@@ -2,44 +2,38 @@ import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, UserCheck, FileText } from 'lucide-react';
 const Privacy: React.FC = () => {
   const sections = [
-    {
-      title: 'Information We Collect', icon: Database,
+    { title: 'Information We Collect', icon: Database,
       content: [;
         'Personal information you provide (name, email, phone number)', 'Business information for service delivery',
         'Technical information (IP address, browser type, device information)', 'Usage data and analytics to improve our services',
         'Communication records and support interactions';
-      ]}, {
-      title: 'How We Use Your Information',
+      ]}, { title: 'How We Use Your Information',
       icon: Eye, content: [
         'To provide and improve our services',
         'To communicate with you about our services', 'To process payments and manage accounts',
         'To provide customer support', 'To comply with legal obligations',
         'To protect our rights and prevent fraud';
-      ]}, {
-      title: 'Information Sharing',
+      ]}, { title: 'Information Sharing',
       icon: UserCheck, content: [
         'We do not sell your personal information',
         'We may share information with trusted service providers', 'We may disclose information if required by law',
         'We may share information in case of business transfers', 'We may share aggregated, non-personal information';
-      ]}, {
-      title: 'Data Security',
+      ]}, { title: 'Data Security',
       icon: Lock, content: [
         'We use industry-standard encryption to protect your data',
         'We implement access controls and authentication', 'We regularly update our security measures',
         'We conduct security audits and assessments', 'We train our staff on data protection practices';
-      ]}, {
-      title: 'Your Rights',
+      ]}, { title: 'Your Rights',
       icon: Shield, content: [
         'Right to access your personal information',
         'Right to correct inaccurate information', 'Right to delete your personal information',
         'Right to restrict processing of your information', 'Right to data portability',
         'Right to object to processing';
-      ]}, {
-      title: 'Cookies and Tracking',
+      ]}, { title: 'Cookies and Tracking',
       icon: FileText, content: [
         'We use cookies to improve website functionality',
         'We use analytics cookies to understand usage', 'We use marketing cookies for targeted advertising',
-        'You can control cookie settings in your browser', 'Some features may not work without cookies';
+        'You can control cookie settings in your browser', 'Some features may not work without cookies'
       ]}
   ]
   return(
@@ -65,13 +59,13 @@ const Privacy: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.1   }}
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Introduction</h2>
           <p className='text-gray-600 leading-relaxed'>
             Zion Tech Group ('we, ' 'our,' or 'us') is committed to protecting your privacy. This Privacy Policy;
             explains how we collect, use, disclose, and safeguard your information when you visit our website;
-            or use our services. Please read this privacy policy carefully. If you do not agree with the terms;
+            or use our services. Please read this privacy policy carefully. If you do not agree with the terms
             of this privacy policy, please do not access the site or use our services.
           </p>
         </motion.div>
@@ -82,7 +76,7 @@ const Privacy: React.FC = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * (index + 2) }}
+              transition={{ delay: 0.1 * (index + 2)   }}
               className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
               <div className='flex items-center mb-4'>
                 <section.icon className='h-6 w-6 text-blue-600 mr-3' />
@@ -103,7 +97,7 @@ const Privacy: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.8   }}
           className='mt-12 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Contact Us</h2>
           <p className='text-gray-600 mb-4'>
@@ -134,17 +128,17 @@ const Privacy: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9 }}
+          transition={{ delay: 0.9   }}
           className='mt-8 bg-blue-50 rounded-lg border border-blue-200 p-6'>
           <h3 className='text-lg font-semibold text-blue-900 mb-2'>Policy Updates</h3>
           <p className='text-blue-800'>
             We may update this Privacy Policy from time to time. We will notify you of any changes by posting;
-            the new Privacy Policy on this page and updating the 'Last updated' date. You are advised to review;
+            the new Privacy Policy on this page and updating the 'Last updated' date. You are advised to review
             this Privacy Policy periodically for any changes.
           </p>
         </motion.div>
       </div>
     </div>
   )}
-;
+
 export default Privacy

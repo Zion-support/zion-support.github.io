@@ -8,7 +8,7 @@ export { function }export default function CustomerFeedbackSurveys(...args[]):  
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx
           Mobile-First Feedback Surveys'</h1>''        <p className='text-zion-slate-light max-w-3xl'>
           Launch engaging surveys across web, SMS, and email with real-time dashboards.;
-          AI highlights themes, predicts churn risk, and recommends actions.;
+          AI highlights themes, predicts churn risk, and recommends actions.
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx
         </p>'''        <div className='grid gap-8 md:grid-cols-2 mt-10'>'
           <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>'
@@ -42,5 +42,5 @@ export { function }export default function CustomerFeedbackSurveys(...args[]):  
     </div>
   )}
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx;
-';
+'
   '''"

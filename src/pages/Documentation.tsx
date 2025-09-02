@@ -6,41 +6,33 @@ import {
 } from 'lucide-react';
 export default function Documentation() {
   const docCategories = [
-    {
-      title: "Getting Started", description: "Quick start guides and setup instructions",
+    { title: "Getting Started", description: "Quick start guides and setup instructions",
       icon: BookOpen, articles: 12,
       color: "from-blue-500 to-cyan-500"
-    }, {
-      title: "API Reference",
+    }, { title: "API Reference",
       description: "Complete API documentation and examples", icon: Code,
       articles: 45, color: "from-green-500 to-emerald-500"
     },
-    {
-      title: "Guides & Tutorials", description: "Step-by-step tutorials and best practices",
+    { title: "Guides & Tutorials", description: "Step-by-step tutorials and best practices",
       icon: FileText, articles: 28,
       color: "from-purple-500 to-pink-500"
-    }, {
-      title: "Video Tutorials",
+    }, { title: "Video Tutorials",
       description: "Visual learning resources and demos", icon: Video,
       articles: 15, color: "from-orange-500 to-red-500"
     }
   ];
   const popularDocs = [
-    {
-      title: "Quick Start Guide", description: "Get up and running with Zion Tech Group services in minutes",
+    { title: "Quick Start Guide", description: "Get up and running with Zion Tech Group services in minutes",
       category: "Getting Started", readTime: "5 min read",
       views: 1250
-    }, {
-      title: "API Authentication",
+    }, { title: "API Authentication",
       description: "Learn how to authenticate and secure your API requests", category: "API Reference",
       readTime: "8 min read", views: 980
     },
-    {
-      title: "AI Model Integration", description: "Integrate our AI models into your applications",
+    { title: "AI Model Integration", description: "Integrate our AI models into your applications",
       category: "Guides & Tutorials", readTime: "12 min read",
       views: 756
-    }, {
-      title: "Quantum Computing Basics",
+    }, { title: "Quantum Computing Basics",
       description: "Introduction to quantum computing concepts and applications", category: "Guides & Tutorials",
       readTime: "15 min read", views: 634
     }
@@ -60,7 +52,7 @@ export default function Documentation() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -92,7 +84,7 @@ export default function Documentation() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Browse Documentation</h2>
@@ -131,7 +123,7 @@ export default function Documentation() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Popular Documentation</h2>
@@ -181,7 +173,7 @@ export default function Documentation() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center mb-12"
             >
               <h2 className="text-4xl font-bold text-white mb-4">Additional Resources</h2>
@@ -254,7 +246,7 @@ export default function Documentation() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8   }}
               className="text-center max-w-4xl mx-auto"
             >
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -285,5 +277,5 @@ export default function Documentation() {
         </section>
       </div>
 </>
-  );
+  )
 }

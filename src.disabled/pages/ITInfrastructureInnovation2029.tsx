@@ -17,5 +17,5 @@ import React, { useState } from;
   from-yellow-500 to-orange-500' }, { id: 'edge-computing, name:;
   'Edge Computing', icon: Cpu, color:,
   from-gray-500 to-blue-500' }, { id: 'quantum-ready, name:
-  'Quantum Ready', icon: Atom, color:;
+  'Quantum Ready', icon: Atom, color:
   'from-purple-500 to-indigo-500' } ]  const itInfrastructureServices = ['

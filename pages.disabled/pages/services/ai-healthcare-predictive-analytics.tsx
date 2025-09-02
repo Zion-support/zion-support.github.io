@@ -66,9 +66,9 @@ import {}
             transition={{ duration: 0.8 }}'>''
             <div className='inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6'>''
               <Heart className='w-4 h-4 mr-2'  />              AI-Powered Healthcare Analytics
-            </div>';
+            </div>'
 ''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO''
@@ -102,14 +102,14 @@ import {}
               Transform healthcare delivery with AI-powered predictive analytics;
               and patient monitoring. Improve patient outcomes, optimize;
               treatments, and reduce healthcare costs through intelligent;
-              insights.;
+              insights.
 :pages.disabled/pages/services/ai-healthcare-predictive-analytics.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <a'';
                 href='#pricing'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-purple-600 transition-all duration-200 shadow-lg hover:shadow-xl'>'
                 View Pricing''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
               <a''
@@ -161,7 +161,7 @@ import {}
               Leverage cutting-edge AI technology to transform patient care
             </p>
 :pages.disabled/pages/services/ai-healthcare-predictive-analytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -230,7 +230,7 @@ import {}
               Monitor all aspects of healthcare operations with our AI platform
             </p>
 :pages.disabled/pages/services/ai-healthcare-predictive-analytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {analyticsTypes.map(type: unknown, index: unknown()
@@ -299,7 +299,7 @@ import {}
               Transform your healthcare operations with AI-powered insights
             </p>
 :pages.disabled/pages/services/ai-healthcare-predictive-analytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -365,11 +365,11 @@ import {}
               Healthcare Industry Applications
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Our platform serves diverse healthcare organizations and;
+              Our platform serves diverse healthcare organizations and
               institutions
             </p>
 :pages.disabled/pages/services/ai-healthcare-predictive-analytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -435,11 +435,11 @@ import {}
               Transparent Pricing
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Choose the plan that fits your healthcare organization size and;
+              Choose the plan that fits your healthcare organization size and
               needs
             </p>
 :pages.disabled/pages/services/ai-healthcare-predictive-analytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -470,7 +470,7 @@ import {}
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/ai-healthcare-predictive-analytics.tsx)}';
+:pages.disabled/pages/services/ai-healthcare-predictive-analytics.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -483,7 +483,7 @@ import {}
                     <span className='text-slate-300 ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-slate-300 mt-2'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>')}
 ''
@@ -556,11 +556,11 @@ import {}
               Ready to Transform Healthcare?
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Contact us today to learn how AI analytics can improve patient;
+              Contact us today to learn how AI analytics can improve patient
               care
             </p>
 :pages.disabled/pages/services/ai-healthcare-predictive-analytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'
             <motion.div'';
@@ -673,5 +673,5 @@ import {}
   )}
 :pages.disabled/pages/services/ai-healthcare-predictive-analytics.tsx;
 export default AIHealthcarePredictiveAnalytics''`;
-''`''`;
+''`''`
 export default AIHealthcarePredictiveAnalytics'"`

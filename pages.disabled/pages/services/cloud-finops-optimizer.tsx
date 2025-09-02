@@ -53,22 +53,22 @@ export default function CloudFinOpsOptimizer() {
             <div className='inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6'>''
               <Cloud className='w-4 h-4'  />              <span>Cloud Financial Operations</span>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-            </div>';
+            </div>'
 ''
             <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>
               Cloud FinOps Optimizer
             </h1>'''            <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
               Master cloud cost management with intelligent FinOps automation,
               real-time monitoring, and AI-driven optimization strategies that;
-              maximize your cloud investment.;
+              maximize your cloud investment.
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
-                className='bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300'>';
+                className='bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300'>'
                 Start Free Trial''
                 <ArrowRight className='inline ml-2 w-5 h-5'  />              </motion.button>
               <motion.button;
@@ -95,11 +95,11 @@ export default function CloudFinOpsOptimizer() {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
               Comprehensive FinOps Features'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
-              Everything you need to optimize cloud costs and maximize financial;
+              Everything you need to optimize cloud costs and maximize financial
               efficiency
             </p>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -107,7 +107,7 @@ export default function CloudFinOpsOptimizer() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
@@ -131,7 +131,7 @@ export default function CloudFinOpsOptimizer() {
               Experience significant cost savings and improved financial control
             </p>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''
             <div className='space-y-6'>
@@ -146,7 +146,7 @@ export default function CloudFinOpsOptimizer() {
                   </span>                </motion.div>
               ))}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-            </div>';
+            </div>'
 ''
             <div className='space-y-6'>
               {benefits.slice(3).map(benefit: unknown, index: unknown()
@@ -173,11 +173,11 @@ export default function CloudFinOpsOptimizer() {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
               Intelligent Optimization Strategies'</h2>''            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
-              AI-powered strategies that automatically optimize your cloud;
+              AI-powered strategies that automatically optimize your cloud
               infrastructure
             </p>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {optimizationStrategies.map(strategy: unknown, index: unknown()
@@ -186,7 +186,7 @@ export default function CloudFinOpsOptimizer() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300''>''
                 <div className='flex items-start space-x-4'>''
-                  <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0'>''
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
                     <Target className='w-6 h-6 text-white'  />                  </div>'
                   <div>''
@@ -209,15 +209,15 @@ export default function CloudFinOpsOptimizer() {
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/cloud-finops-optimizer.tsx;
+:pages.disabled/pages/services/cloud-finops-optimizer.tsx
               Perfect For Your Organization'
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
   ';
-              Whether you're a startup or enterprise, our FinOps solution scales;
+              Whether you're a startup or enterprise, our FinOps solution scales
               with your needs
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -225,7 +225,7 @@ export default function CloudFinOpsOptimizer() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300''>''
-                <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
                   <Cloud className='w-8 h-8 text-white'  />'
                 </div>''
@@ -249,15 +249,15 @@ export default function CloudFinOpsOptimizer() {
               Ready to Optimize Your Cloud Costs?'
             </h2>''
             <p className='text-xl text-zion-slate-light mb-8'>
-              Join organizations already saving millions with intelligent FinOps;
+              Join organizations already saving millions with intelligent FinOps
               automation
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
                 whileHover={{ scale: 1.05 }}';
                 whileTap={{ scale: 0.95 }}'';
-                className='bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300'>';
+                className='bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300'>'
                 Start Optimizing Today''
                 <Rocket className='inline ml-2 w-5 h-5'  />              </motion.button>
               <motion.button;
@@ -270,5 +270,5 @@ export default function CloudFinOpsOptimizer() {
       </section>
     </div>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx)}
-  '';
+  ''
 ''''

@@ -138,7 +138,7 @@ export default function AIEducationPlatform(...args[]):  {}
       ],';
       cta: 'Contact Sales',
       popular: false}
-:pages.disabled/pages/services/AIEducationPlatform.tsx;
+:pages.disabled/pages/services/AIEducationPlatform.tsx
   ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -146,7 +146,7 @@ export default function AIEducationPlatform(...args[]):  {}
 <:pages.disabled/pages/services/AIEducationPlatform.tsx;
       <SEO;
 =;
-      <SEO '>        title='AI Education Platform - Zion Tech Group';
+      <SEO '>        title='AI Education Platform - Zion Tech Group'
         description='Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student.'/>        title='AI Education Platform - Zion Tech Group''        description='Transform education with AI-powered personalized learning, intelligent content, and adaptive teaching. Improve outcomes and engage every student.'/>'
       <SEO ''
         title='AI Education Platform - Zion Tech Group'';
@@ -172,13 +172,13 @@ export default function AIEducationPlatform(...args[]):  {}
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-teal-600 to-cyan-600 text-white text-sm font-medium mb-6'>''
               <Brain className='w-4 h-4 mr-2'  />              AI-Powered Education'
             </div>''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               AI Education''
               <span className='bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent'>''{' '}Platform
               </span>'
             </h1>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Revolutionize education with AI that personalizes learning, adapts to each student, and empowers teachers.;
+              Revolutionize education with AI that personalizes learning, adapts to each student, and empowers teachers.
               Improve outcomes, increase engagement, and scale quality education globally.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -205,7 +205,7 @@ export default function AIEducationPlatform(...args[]):  {}
               </span>
             </h1>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Revolutionize education with AI that personalizes learning, adapts to each student, and empowers teachers.;
+              Revolutionize education with AI that personalizes learning, adapts to each student, and empowers teachers.
               Improve outcomes, increase engagement, and scale quality education globally.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -254,7 +254,7 @@ export default function AIEducationPlatform(...args[]):  {}
               Comprehensive Educational Intelligence';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Comprehensive Educational Intelligence
@@ -263,7 +263,7 @@ export default function AIEducationPlatform(...args[]):  {}
               Everything you need to create engaging, personalized learning experiences
             </p>
 :pages.disabled/pages/services/AIEducationPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -297,12 +297,12 @@ export default function AIEducationPlatform(...args[]):  {}
 ';
                 <div className='w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4'>';
   delay: index * 0.1}}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4'>''
                   <CheckCircle className='w-6 h-6 text-white'  />
   delay: index * 0.1 '}}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mb-4'>''
                   <CheckCircle className='w-6 h-6 text-white'  />'
@@ -341,7 +341,7 @@ export default function AIEducationPlatform(...args[]):  {}
               Transform Educational Outcomes';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Transform Educational Outcomes
@@ -350,7 +350,7 @@ export default function AIEducationPlatform(...args[]):  {}
               See measurable improvements in student learning and teacher effectiveness
             </p>
 :pages.disabled/pages/services/AIEducationPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -384,12 +384,12 @@ export default function AIEducationPlatform(...args[]):  {}
 ';
                 <div className='w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4'>';
   delay: index * 0.1}}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <div className='w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
                   <TrendingUp className='w-10 h-10 text-white'  />
   delay: index * 0.1 '}}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <div className='w-20 h-20 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
                   <TrendingUp className='w-10 h-10 text-white'  />'
@@ -428,7 +428,7 @@ export default function AIEducationPlatform(...args[]):  {}
               Industry-Leading Solutions';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Industry-Leading Solutions
@@ -437,7 +437,7 @@ export default function AIEducationPlatform(...args[]):  {}
               Proven solutions across diverse educational institutions and programs
             </p>
 :pages.disabled/pages/services/AIEducationPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -471,12 +471,12 @@ export default function AIEducationPlatform(...args[]):  {}
 ';
                 <div className='w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4'>';
   delay: index * 0.1}}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-teal-500 transition-all duration-300'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-teal-500 transition-all duration-300''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''
                   <GraduationCap className='w-8 h-8 text-white'  />
   delay: index * 0.1 '}}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-teal-500 transition-all duration-300'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-teal-500 transition-all duration-300''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-teal-600 to-cyan-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''
                   <GraduationCap className='w-8 h-8 text-white'  />'
@@ -515,7 +515,7 @@ export default function AIEducationPlatform(...args[]):  {}
               Flexible Pricing for Every Institution';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Flexible Pricing for Every Institution
@@ -524,7 +524,7 @@ export default function AIEducationPlatform(...args[]):  {}
               Scale your educational platform as your institution grows
             </p>
 :pages.disabled/pages/services/AIEducationPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricing.map(plan: unknown, index: unknown()
@@ -580,7 +580,7 @@ export default function AIEducationPlatform(...args[]):  {}
                     <span className='text-gray-400 ml-1'>{plan.period}</span>
                   </div>
 :pages.disabled/pages/services/AIEducationPlatform.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                 </div>
@@ -654,7 +654,7 @@ export default function AIEducationPlatform(...args[]):  {}
                 whileTap={{ scale: 0.95 }}'';
                 className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200';
                 Schedule Demo;
-              </motion.button>';
+              </motion.button>'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -691,7 +691,7 @@ export default function AIEducationPlatform(...args[]):  {}
         <div className='max-w-4xl mx-auto text-center'>''
           <p className='text-gray-400 mb-4'>
 :pages.disabled/pages/services/AIEducationPlatform.tsx;
-            Need help choosing the right plan? Contact our sales team';
+            Need help choosing the right plan? Contact our sales team'
             Need help choosing the right plan? Contact our sales team
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400'>
@@ -702,6 +702,6 @@ export default function AIEducationPlatform(...args[]):  {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AIEducationPlatform.tsx)}''`;
+:pages.disabled/pages/services/AIEducationPlatform.tsx)}''`
 ''`''`)}
 '"`

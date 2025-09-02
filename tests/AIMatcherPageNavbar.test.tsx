@@ -11,7 +11,7 @@ test(
         <AIMatcherPage />
       </AppLayout>
     </MemoryRouter>
-  );
+  )
   expect(container.querySelectorAll(
   '.navbar')).toHaveLength(1)
   expect(asFragment()).toMatchSnapshot()})

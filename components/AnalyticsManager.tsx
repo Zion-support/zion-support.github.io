@@ -12,8 +12,8 @@ interface AnalyticsEvent {
   category: string;
   action?: string;
   label?: string;
-  value?: number;
-  custom_parameters?: Record<string, any>;
+  value?: number
+  custom_parameters?: Record<string, any>
 }
 
 interface PerformanceMetrics {
@@ -33,7 +33,7 @@ interface UserBehavior {
 }
 
 const AnalyticsManager: React.FC = () => {
-  const [isInitialized, setIsInitialized] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false)
   const [userBehavior, setUserBehavior] = useState<UserBehavior>({
     pageViews: 0,
     sessionDuration: 0,
@@ -159,7 +159,7 @@ const AnalyticsManager: React.FC = () => {
         body: JSON.stringify(eventData),
       });
     } catch (error) {}
-  }, []);
+  }, [])
   const trackUserProperties = useCallback((properties: Record<string, any>) => {
     if (typeof gtag !== 'undefined') {
       gtag('config', 'GA_MEASUREMENT_ID', {
@@ -308,4 +308,4 @@ const AnalyticsManager: React.FC = () => {
   }, [trackEvent, trackConversion, trackPerformance, trackUserProperties]);
   return null; // This component doesn't render anything'
 };
-export default AnalyticsManager;
+export default AnalyticsManager

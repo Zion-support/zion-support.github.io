@@ -21,7 +21,7 @@ import {}
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent'>
               AI Customer Experience Platform';
   Headphones,
-  ShoppingBag} from 'lucide-react.ts';
+  ShoppingBag} from 'lucide-react.ts'
 const AICustomerExperience: React.FC = (): JSX.Element => {}
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -41,11 +41,11 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
               Transform customer interactions with AI that personalizes;
               experiences, predicts needs, and delivers exceptional service.;
-              Achieve 95% customer satisfaction and 300% increase in customer;
+              Achieve 95% customer satisfaction and 300% increase in customer
               lifetime value.
             </p>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-          </div>';
+          </div>'
 ''
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'
             <Button''
@@ -80,14 +80,14 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-            Why Choose AI Customer Experience?;
+            Why Choose AI Customer Experience?
 :pages.disabled/pages/services/AICustomerExperience.tsx
           </h2>'
           </h2>
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>''
             <Card className='bg-slate-800/50 border-slate-700 p-6 text-center'>''
-              <div className='w-16 h-16 bg-pink-600/20 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+              <div className='w-16 h-16 bg-pink-600/20 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/AICustomerExperience.tsx
                 <Heart className='w-8 h-8 text-pink-400'  />'
               </div>''
@@ -99,11 +99,11 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 95% Customer Satisfaction
               </h3>''
               <p className='text-gray-300'>
-                AI-powered personalization and proactive service exceed customer;
+                AI-powered personalization and proactive service exceed customer
                 expectations
               </p>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6 text-center'>''
               <div className='w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -121,11 +121,11 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 300% CLV Increase
               </h3>''
               <p className='text-gray-300'>
-                Personalized experiences and predictive insights boost customer;
+                Personalized experiences and predictive insights boost customer
                 lifetime value
               </p>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6 text-center'>''
               <div className='w-16 h-16 bg-indigo-600/20 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -143,11 +143,11 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 80% Faster Resolution
               </h3>''
               <p className='text-gray-300'>
-                AI-powered routing and knowledge base automation resolve issues;
+                AI-powered routing and knowledge base automation resolve issues
                 quickly
               </p>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6 text-center'>''
               <div className='w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -165,7 +165,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 24/7 Availability
               </h3>''
               <p className='text-gray-300'>
-                AI chatbots and automated systems provide round-the-clock;
+                AI chatbots and automated systems provide round-the-clock
                 customer support
               </p>            </Card>
           </div>
@@ -177,15 +177,15 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx
             Advanced AI Features
-          </h2>';
+          </h2>'
             Advanced AI Features
           </h2>
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''
             <div className='space-y-6'>''
-              <div className='flex items-start space-x-4'>'';
+              <div className='flex items-start space-x-4'>''
 :pages.disabled/pages/services/AICustomerExperience.tsx
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
                 <div>''
@@ -197,12 +197,12 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                     AI-Powered Personalization
                   </h3>''
                   <p className='text-gray-300'>
-                    Machine learning algorithms create personalized experiences;
+                    Machine learning algorithms create personalized experiences
                     based on customer behavior and preferences
                   </p>
                 </div>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -218,12 +218,12 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                     Predictive Customer Analytics
                   </h3>''
                   <p className='text-gray-300'>
-                    AI predicts customer needs, churn risk, and opportunities;
+                    AI predicts customer needs, churn risk, and opportunities
                     for upselling
                   </p>
                 </div>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -239,12 +239,12 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                     Intelligent Chatbots
                   </h3>''
                   <p className='text-gray-300'>
-                    Natural language processing chatbots handle 80% of customer;
+                    Natural language processing chatbots handle 80% of customer
                     inquiries automatically
                   </p>
                 </div>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -260,13 +260,13 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                     Sentiment Analysis
                   </h3>''
                   <p className='text-gray-300'>
-                    Real-time emotion detection and sentiment tracking across;
+                    Real-time emotion detection and sentiment tracking across
                     all customer touchpoints
                   </p>
                 </div>
               </div>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-            </div>';
+            </div>'
 ''
             <div className='space-y-6'>''
               <div className='flex items-start space-x-4'>''
@@ -284,12 +284,12 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                     Omnichannel Integration
                   </h3>''
                   <p className='text-gray-300'>
-                    Seamless customer experience across web, mobile, social;
+                    Seamless customer experience across web, mobile, social
                     media, and contact centers
                   </p>
                 </div>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -305,12 +305,12 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                     Proactive Customer Service
                   </h3>''
                   <p className='text-gray-300'>
-                    AI identifies and resolves issues before customers even;
+                    AI identifies and resolves issues before customers even
                     notice them
                   </p>
                 </div>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -326,12 +326,12 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                     Customer Journey Mapping
                   </h3>''
                   <p className='text-gray-300'>
-                    Visual mapping of customer touchpoints with optimization;
+                    Visual mapping of customer touchpoints with optimization
                     recommendations
                   </p>
                 </div>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-              </div>';
+              </div>'
 ''
               <div className='flex items-start space-x-4'>''
                 <CheckCircle className='w-6 h-6 text-green-400 mt-1 flex-shrink-0'  />'
@@ -347,7 +347,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                     Voice & Video Analytics
                   </h3>''
                   <p className='text-gray-300'>
-                    Advanced speech recognition and video analysis for deeper;
+                    Advanced speech recognition and video analysis for deeper
                     customer insights
                   </p>                </div>
               </div>
@@ -361,15 +361,15 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx
             Industry Applications
-          </h2>';
+          </h2>'
             Industry Applications
           </h2>
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
-              <div className='w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4'>'';
+              <div className='w-12 h-12 bg-pink-600/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AICustomerExperience.tsx
                 <ShoppingBag className='w-6 h-6 text-pink-400'  />'
               </div>''
@@ -381,11 +381,11 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 E-commerce & Retail
               </h3>''
               <p className='text-gray-300'>
-                Personalized shopping experiences, product recommendations, and;
+                Personalized shopping experiences, product recommendations, and
                 customer support
               </p>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
               <div className='w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-4'>''
@@ -403,11 +403,11 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 Contact Centers
               </h3>''
               <p className='text-gray-300'>
-                AI-powered call routing, sentiment analysis, and automated issue;
+                AI-powered call routing, sentiment analysis, and automated issue
                 resolution
               </p>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
               <div className='w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center mb-4'>''
@@ -425,11 +425,11 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 Social Media
               </h3>''
               <p className='text-gray-300'>
-                Social listening, automated responses, and brand sentiment;
+                Social listening, automated responses, and brand sentiment
                 monitoring
               </p>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
               <div className='w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4'>''
@@ -447,11 +447,11 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 Financial Services
               </h3>''
               <p className='text-gray-300'>
-                Personalized banking experiences, fraud detection, and customer;
+                Personalized banking experiences, fraud detection, and customer
                 support
               </p>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
               <div className='w-12 h-12 bg-green-600/20 rounded-lg flex items-center justify-center mb-4'>''
@@ -461,9 +461,9 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 Healthcare'
               </h3>''
               <p className='text-gray-300'>
-                Patient experience optimization, appointment scheduling, and;
+                Patient experience optimization, appointment scheduling, and
                 health monitoring
-              </p>            </Card>';
+              </p>            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-6'>''
               <div className='w-12 h-12 bg-orange-600/20 rounded-lg flex items-center justify-center mb-4'>''
@@ -481,7 +481,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 Healthcare
               </h3>''
               <p className='text-gray-300'>
-                Patient experience optimization, appointment scheduling, and;
+                Patient experience optimization, appointment scheduling, and
                 health monitoring
               </p>            </Card>
 ''
@@ -493,7 +493,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 Travel & Hospitality
               </h3>''
               <p className='text-gray-300'>
-                Personalized travel recommendations, booking assistance, and;
+                Personalized travel recommendations, booking assistance, and
                 customer service
               </p>
             </Card>
@@ -506,15 +506,15 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
       <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx
             Competitive Pricing
-          </h2>';
+          </h2>'
             Competitive Pricing
           </h2>
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>''
             <Card className='bg-slate-800/50 border-slate-700 p-8 text-center relative'>''
-              <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
+              <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
 :pages.disabled/pages/services/AICustomerExperience.tsx
                 <Badge variant='secondary'>Starter</Badge>'
               </div>''
@@ -536,7 +536,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
               <ul className='space-y-3 mb-8 text-left'>''
                 <li className='flex items-center text-gray-300'>''
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3'  />
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx
                   Up to 10,000 customers'
                 </li>''
                 <li className='flex items-center text-gray-300'>''
@@ -549,7 +549,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 </li>''
                 <li className='flex items-center text-gray-300'>''
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3'  />                  Email support
-                </li>';
+                </li>'
                   Up to 10,000 customers
                 </li>''
                 <li className='flex items-center text-gray-300'>''
@@ -574,15 +574,15 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
             <Card className='bg-gradient-to-br from-pink-600 to-purple-600 p-8 text-center relative transform scale-105'>''
               <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
                 <Badge variant='secondary' className='bg-white text-pink-600'>
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx
                   Most Popular
-                </Badge>';
+                </Badge>'
                   Most Popular
                 </Badge>
               </div>''
               <h3 className='text-2xl font-bold text-white mb-4'>Enterprise</h3>''
               <div className='mb-6'>''
-                <span className='text-4xl font-bold text-white'>$999</span>'';
+                <span className='text-4xl font-bold text-white'>$999</span>''
 :pages.disabled/pages/services/AICustomerExperience.tsx
                 <span className='text-pink-100'>/month</span>'
                 <span className='text-pink-100'>/month</span>
@@ -590,7 +590,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
               <ul className='space-y-3 mb-8 text-left'>''
                 <li className='flex items-center text-white'>''
                   <CheckCircle className='w-5 h-5 text-white mr-3'  />
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx
                   Up to 100,000 customers'
                 </li>''
                 <li className='flex items-center text-white'>''
@@ -607,7 +607,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 </li>''
                 <li className='flex items-center text-white'>''
                   <CheckCircle className='w-5 h-5 text-white mr-3'  />                  API access
-                </li>';
+                </li>'
                   Up to 100,000 customers
                 </li>''
                 <li className='flex items-center text-white'>''
@@ -630,7 +630,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 Get Started
               </Button>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-            </Card>';
+            </Card>'
 ''
             <Card className='bg-slate-800/50 border-slate-700 p-8 text-center relative'>''
               <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -643,7 +643,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
               </div>''
               <h3 className='text-2xl font-bold text-white mb-4'>Ultimate</h3>''
               <div className='mb-6'>''
-                <span className='text-4xl font-bold text-white'>$2,499</span>'';
+                <span className='text-4xl font-bold text-white'>$2,499</span>''
 :pages.disabled/pages/services/AICustomerExperience.tsx
                 <span className='text-gray-400'>/month</span>'
                 <span className='text-gray-400'>/month</span>
@@ -651,7 +651,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
               <ul className='space-y-3 mb-8 text-left'>''
                 <li className='flex items-center text-gray-300'>''
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3'  />
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx
                   Unlimited customers'
                 </li>''
                 <li className='flex items-center text-gray-300'>''
@@ -668,7 +668,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
                 </li>''
                 <li className='flex items-center text-gray-300'>''
                   <CheckCircle className='w-5 h-5 text-green-400 mr-3'  />                  White-label options
-                </li>';
+                </li>'
                   Unlimited customers
                 </li>''
                 <li className='flex items-center text-gray-300'>''
@@ -700,16 +700,16 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx
             Market Analysis & ROI
-          </h2>';
+          </h2>'
             Market Analysis & ROI
           </h2>
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>''
             <div className='text-center'>''
               <div className='text-4xl font-bold text-pink-400 mb-2'>
-:pages.disabled/pages/services/AICustomerExperience.tsx;
+:pages.disabled/pages/services/AICustomerExperience.tsx
                 $109.5B'
               </div>''
               <div className='text-gray-300'>Global CX Market (2026)</div>'
@@ -722,7 +722,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
             </div>''
             <div className='text-center'>''
               <div className='text-4xl font-bold text-indigo-400 mb-2'>95%</div>''
-              <div className='text-gray-300'>Customer Satisfaction</div>';
+              <div className='text-gray-300'>Customer Satisfaction</div>'
                 $109.5B
               </div>''
               <div className='text-gray-300'>Global CX Market (2026)</div>
@@ -751,12 +751,12 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
         <div className='max-w-4xl mx-auto text-center'>''
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-8'>
 :pages.disabled/pages/services/AICustomerExperience.tsx;
-            Ready to Transform Customer Experience?';
+            Ready to Transform Customer Experience?'
             Ready to Transform Customer Experience?
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
             Join industry leaders already using AI to revolutionize customer;
-            interactions.;
+            interactions.
 :pages.disabled/pages/services/AICustomerExperience.tsx
           </p>'
           </p>
@@ -780,7 +780,7 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
               <Globe className='w-5 h-5 text-pink-400'  />              <span>ziontechgroup.com</span>
             </div>
 :pages.disabled/pages/services/AICustomerExperience.tsx
-          </div>';
+          </div>'
 ''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
             <Button''
@@ -824,5 +824,5 @@ const AICustomerExperience: React.FC = (): JSX.Element => {}
     </div>
   )}
 :pages.disabled/pages/services/AICustomerExperience.tsx;
-export default AICustomerExperience'';''";
+export default AICustomerExperience'';''"
 export default AICustomerExperience''

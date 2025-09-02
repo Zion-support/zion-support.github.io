@@ -39,7 +39,7 @@ import {}
 export default function QuantumAITradingPlatform(...args: any[]): any {const [activeTab, setActiveTab] = useState('overview;
   ')  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {}
-    setIsVisible(true)}, []);
+    setIsVisible(true)}, [])
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
   return()    <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden'>'{/* Futuristic Animated Background */}''
       <div className='fixed inset-0 overflow-hidden pointer-events-none'>'{/* Animated grid with neon effect */}''
@@ -73,7 +73,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
 ,
   ease: 'easeInOut}}
         />
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
 '
         <motion.div''
           className='absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl';
@@ -93,7 +93,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8 }}''            className='mb-8''>''
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 text-purple-400 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 text-purple-400 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
               <Atom className='w-4 h-4 mr-2'  />              Revolutionary Quantum Trading Platform'
             </div>''
@@ -101,7 +101,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
               Quantum AI Hybrid Trading Platform'
             </h1>''
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-  ';
+  '
               The world's first quantum-powered trading platform combining
               quantum computing with AI algorithms for ultra-fast, intelligenttrading decisions and market prediction.            </p>
           </motion.div>
@@ -112,7 +112,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.2 }}''            className='grid grid-cols-1 md:grid-cols-4 gap-6 mb-12''>''
             <div className='bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-2xl p-6 backdrop-blur-sm'>''
               <div className='text-3xl font-bold text-purple-400 mb-2'>
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                 1000x'
               </div>''
               <div className='text-gray-300'>Faster Analysis</div>'
@@ -137,21 +137,21 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.4 }}''            className='flex flex-col sm:flex-row gap-4 justify-center items-center''>''
             <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center'>''
               <Rocket className='w-5 h-5 mr-2'  />
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
               Start Trading Today'
             </button>''
             <button className='px-8 py-4 border-2 border-purple-400/50 hover:border-purple-400 rounded-2xl font-semibold text-purple-400 hover:bg-purple-400/10 transition-all duration-300 flex items-center'>''
               <Eye className='w-5 h-5 mr-2'  />              Watch Demo</button>          </motion.div>
         </div>
       </section>
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
 '{/* Navigation Tabs */}''
       <section className='relative py-8 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
           <div className='flex flex-wrap justify-center gap-2 mb-8'>,
   {['overview;
   ',features',pricing;
-  ',technical',contact;
+  ',technical',contact
   '].map()
               tab => (
                 <button;
@@ -159,7 +159,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                   onClick={() => setActiveTab(tab)}``;
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
 '                    activeTab === tab';
-  ';
+  '
                       ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25''
   '`: 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white``}`}                >{tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
@@ -167,11 +167,11 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
 '{/* Content Sections */}''
       <section className='relative py-12 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
-          <AnimatePresence mode='wait'>'{activeTab ===;
+          <AnimatePresence mode='wait'>'{activeTab ===
   'overview' && ('
               <motion.div'';
                 key='overview';
@@ -188,7 +188,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                     Our Quantum AI Hybrid Trading Platform represents the;
                     pinnacle of financial technology. By combining quantum;
                     computing power with advanced AI algorithms, we deliver;
-                    unprecedented speed and accuracy in market analysis and;
+                    unprecedented speed and accuracy in market analysis and
                     trading decisions.'
                   </p>''
                   <div className='space-y-4'>''
@@ -227,13 +227,13 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                     <div className='text-center'>''
                       <Atom className='w-24 h-24 text-purple-400 mx-auto mb-6'  />''
                       <h3 className='text-2xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         Quantum Trading Revolution'
                       </h3>'                      <p className='text-gray-300 mb-6'>
                         Experience the future of algorithmic trading'</p>''                      <div className='grid grid-cols-2 gap-4 text-sm'>''
                         <div className='text-center'>''
                           <div className='text-2xl font-bold text-purple-400'>
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                             50+'
                           </div>''
                           <div className='text-gray-400'>Trading Pairs</div>'
@@ -248,7 +248,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                 </div>
               </motion.div>
             )}
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
   '{activeTab === 'features
   ' && ('              <motion.div'';
                 key='features';
@@ -259,7 +259,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                   <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                     Advanced Trading Features'</h2>''                  <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                    Discover the cutting-edge capabilities that make our quantum;
+                    Discover the cutting-edge capabilities that make our quantum
                     trading platform the most advanced in the world
                   </p>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -270,12 +270,12 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                       initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
                       animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.5, delay: index * 0.1 }}''                      className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-400/40 transition-all duration-300 group''>''
-                      <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>'';
+                      <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         <Sparkles className='w-6 h-6 text-white'  />'</div>''                      <h3 className='text-lg font-semibold text-white mb-2'>
                         {feature}'
                       </h3>'                      <p className='text-gray-400 text-sm'>
-                        Revolutionary quantum-powered capability that transforms;
+                        Revolutionary quantum-powered capability that transforms
                         trading methodology
                       </p>
                     </motion.div>
@@ -284,7 +284,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
               </motion.div>
             )}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
-'{activeTab ===;
+'{activeTab ===
   'pricing' && ('
               <motion.div'';
                 key='pricing';
@@ -295,16 +295,16 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                   <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                     Premium Pricing'</h2>''                  <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                    Choose the perfect plan for your trading needs with our;
+                    Choose the perfect plan for your trading needs with our
                     competitive pricing structure
                   </p>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
-                </div>';
+                </div>'
 ''
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'{/* Monthly Plan */}''                  <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm relative'>''
                     <div className='text-center'>''
                       <h3 className='text-2xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         Monthly'
                       </h3>''
                       <div className='text-5xl font-bold text-purple-400 mb-2'>
@@ -324,7 +324,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
 '{/* Yearly Plan */}''                  <div className='bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400 rounded-3xl p-8 backdrop-blur-sm relative transform scale-105'>''
                     <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
                       <div className='bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold'>
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         Most Popular
                       </div>'
                     </div>''
@@ -352,7 +352,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
 '{/* Enterprise Plan */}''                  <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-blue-400/30 rounded-3xl p-8 backdrop-blur-sm relative'>''
                     <div className='text-center'>''
                       <h3 className='text-2xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         Enterprise'
                       </h3>''
                       <div className='text-5xl font-bold text-blue-400 mb-2'>
@@ -360,7 +360,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                       <ul className='space-y-3 mb-8 text-left'>''
                         <li className='flex items-center text-gray-300'>''
                           <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                           All features included'
                         </li>''
                         <li className='flex items-center text-gray-300'>''
@@ -381,7 +381,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                 </div>
               </motion.div>
             )}
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
+:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
   '{activeTab === 'technical
   ' && ('              <motion.div'';
                 key='technical';
@@ -392,14 +392,14 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                   <h2 className='text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                     Technical Specifications'</h2>''                  <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-                    Built with cutting-edge quantum and AI technology to ensure;
+                    Built with cutting-edge quantum and AI technology to ensure
                     maximum performance, security, and reliability
                   </p>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                 </div>'''                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>''
                   <div className='space-y-6'>''
                     <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm'>''
-                      <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>'';
+                      <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>''
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         <Cpu className='w-6 h-6 text-purple-400 mr-3'  />                        Technology Stack'
                       </h3>''
@@ -412,12 +412,12 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                         ))}
                       </div>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
-                    </div>';
+                    </div>'
 ''
                     <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm'>''
                       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>''
                         <Network className='w-6 h-6 text-purple-400 mr-3'  />                        Integrations'</h3>''                      <div className='space-y-2'>
-                        {technicalSpecs.integrations.map();
+                        {technicalSpecs.integrations.map()
                           (integration, index) => (
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                             <div'key={index}''                              className='flex items-center text-gray-300''>''
@@ -430,13 +430,13 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                   </div>'''                  <div className='space-y-6'>''
                     <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm'>''
-                      <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>'';
+                      <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>''
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         <Shield className='w-6 h-6 text-purple-400 mr-3'  />                        Security & Performance'</h3>''                      <div className='space-y-4'>''
                         <div className='flex justify-between items-center'>''
                           <span className='text-gray-300'>API Endpoints:</span>''
                           <span className='text-purple-400 font-semibold'>
-                            {technicalSpecs.apiEndpoints}+;
+                            {technicalSpecs.apiEndpoints}+
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                           </span>'</div>''                        <div className='flex justify-between items-center'>''
                           <span className='text-gray-300'>Uptime:</span>''
@@ -451,7 +451,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                         </div>
                       </div>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
-                    </div>';
+                    </div>'
 ''
                     <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm'>''
                       <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>''
@@ -470,7 +470,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
               </motion.div>
             )}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
-'{activeTab ===;
+'{activeTab ===
   'contact' && ('
               <motion.div'';
                 key='contact';
@@ -482,7 +482,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                     Get Started Today'</h2>''                  <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
                     Ready to revolutionize your trading capabilities? Contact;
-                    our team to learn more about implementing the Quantum AI;
+                    our team to learn more about implementing the Quantum AI
                     Hybrid Trading Platform for your organization.
                   </p>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -511,7 +511,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
                         </span>                      </div>
                     </div>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
-                  </div>';
+                  </div>'
 ''
                   <div className='bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-8 backdrop-blur-sm'>''
                     <h3 className='text-2xl font-semibold text-white mb-6'>
@@ -535,5 +535,5 @@ export default function QuantumAITradingPlatform(...args: any[]): any {const [ac
       </section>
     </div>
   )}
-  ''`;
+  ''`
 ''`''`

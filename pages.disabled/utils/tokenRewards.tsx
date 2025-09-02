@@ -14,7 +14,7 @@ export async function rewardOnboarding (...args: any[]) : any {
   ';
       method: 'POST,
       body: JSON.stringify ({
-        userId,';
+        userId,'
         action:
   'purchase',
         amount: purchaseAmount,
@@ -22,7 +22,7 @@ export async function rewardOnboarding (...args: any[]) : any {
       referredUserId: string) : Promise < any> {,
   await apiClient ('/functions / v1 / token - manager / earn;
   ', {
-';
+'
         method: 'POST,
         body: JSON.stringify ({
           userId,'

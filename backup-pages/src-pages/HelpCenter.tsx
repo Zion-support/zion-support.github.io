@@ -312,7 +312,7 @@ const faqData: FAQItem[] = [
 ];
 export function HelpCenter() {
   const [searchQuery, setSearchQuery] = useState('');
-  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set([;
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set([
   'getting-started']))
   const [selectedCategory, setSelectedCategory] = useState<string>(
   'All');
@@ -323,7 +323,7 @@ setSearchQuery(query)'    if (query.trim() === ';
       setFilteredFAQs(faqData);
       return;
     setFilteredFAQs (filtered) }
-;
+
   return()
     <div className='min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24'>'      <div className='container-responsive'>
         {/* Header */}
@@ -350,7 +350,7 @@ setSearchQuery(query)'    if (query.trim() === ';
               type='text';
               placeholder='Search for help articles, FAQs, or guides...';
               value={searchQuery}
-              onChange={(e) => handleSearch(e.target.value)}';
+              onChange={(e) => handleSearch(e.target.value)}'
               className='w-full bg-white/10 backdrop-blur-xl border border-zion-cyan/30 rounded-2xl px-6 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent transition-all duration-300 text-lg'/>'
             <Search className='absolute right-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light h-6 w-6'  />          </div>
         </motion.div>
@@ -432,14 +432,14 @@ setSearchQuery(query)'    if (query.trim() === ';
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                   selectedCategory ===;
   'all'';
-                    ?;
+                    ?
   'bg-zion-cyan text-white'': 'bg-white/10 text-zion-slate-light hover:bg-white/20`}`}
                 All Categories
               </button>
               {helpCategories.map(category => (
                 <button;
                   key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}`;
+                  onClick={() => setSelectedCategory(category.id)}`
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id,
   ? 'bg-zion-cyan text-white'
@@ -471,7 +471,7 @@ setSearchQuery(query)'    if (query.trim() === ';
                     transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}';
                     className='bg-zion-slate-dark/50 backdrop-blur-sm border border-cyan-400/20 rounded-xl overflow-hidden'>
                     <button;
-                      onClick={() => toggleSection(section.id)}';
+                      onClick={() => toggleSection(section.id)}'
                       className='w-full p-6 text-left hover:bg-zion-slate-dark/70 transition-colors'>'
                       <div className='flex items-center justify-between'>'
                         <div className='flex items-center space-x-4'>'

@@ -4,7 +4,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [solutionsOpen, setSolutionsOpen] = useState(false)
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -334,4 +334,4 @@ const EnhancedNavigation: React.FC = () => {
     </nav>
   );
 };
-export default EnhancedNavigation;
+export default EnhancedNavigation

@@ -45,7 +45,7 @@ const Header: React.FC = () => {
     { name: 'Pricing', href: '/pricing-guide' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-  ];
+  ]
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -221,4 +221,4 @@ const Header: React.FC = () => {
     </header>
   );
 };
-export default Header;
+export default Header

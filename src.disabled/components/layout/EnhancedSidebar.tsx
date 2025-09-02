@@ -32,7 +32,7 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
     { label: 'About', href: '/about' },
     { label: 'Contact', href: '/contact' }
   ];
-  if (!isOpen) return null;
+  if (!isOpen) return null
 :src.disabled/components/layout/EnhancedSidebar.tsx
   return(
     <aside className='fixed inset-y-0 left-0 z-40 w-72 bg-white border-r border-gray-200 shadow-lg'>
@@ -73,4 +73,4 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
       </nav>
     </aside>
   )}
-export default EnhancedSidebar";
+export default EnhancedSidebar"

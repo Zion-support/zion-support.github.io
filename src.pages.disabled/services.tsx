@@ -381,7 +381,7 @@ const Services: React.FC = (): JSX.Element => {
       icon: Shield,
       color: 'from-red-500 to-orange-500'}
   ];
-  const filteredServices = activeCategory === 'all';
+  const filteredServices = activeCategory === 'all'
     ? coreServices: anyanyanyanyanyanyanyanyanyanyanyanyanycoreServices.filter(service              => service.category === activeCategory)
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>

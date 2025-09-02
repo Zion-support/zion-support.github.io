@@ -31,7 +31,7 @@ const TestimonialsSection: React.FC = () => {
       rating: 5,
       avatar: '/api/placeholder/64/64',
     },
-  ];
+  ]
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">
@@ -92,4 +92,4 @@ const TestimonialsSection: React.FC = () => {
     </section>
   );
 };
-export default TestimonialsSection;
+export default TestimonialsSection

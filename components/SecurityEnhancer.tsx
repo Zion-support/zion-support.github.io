@@ -65,7 +65,7 @@ const SecurityEnhancer: React.FC = () => {
       const forms = document.querySelectorAll('form');
       forms.forEach(form => {
         form.addEventListener('submit', e => {
-          const formData = new FormData(form);
+          const formData = new FormData(form)
           const suspiciousPatterns = [
             /<script/i,
             /javascript: /i,
@@ -100,7 +100,7 @@ const SecurityEnhancer: React.FC = () => {
     return () => {
       clearInterval(securityInterval);
     };
-  }, []);
+  }, [])
   return (
     <Head>
       {/* Security Headers */}
@@ -131,4 +131,4 @@ const SecurityEnhancer: React.FC = () => {
     </Head>
   );
 };
-export default SecurityEnhancer;
+export default SecurityEnhancer

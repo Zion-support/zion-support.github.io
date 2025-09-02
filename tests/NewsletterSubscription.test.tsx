@@ -9,7 +9,7 @@ vi.mock(
     success: vi.fn(),
     error: vi.fn()}}));
 beforeEach(() => {
-  vi.clearAllMocks();
+  vi.clearAllMocks()
   // @ts-ignore
   delete global.fetch})
 test('invalid email shows error'', () => {
@@ -24,7 +24,7 @@ test('invalid email shows error'', () => {
 test(
   'valid email triggers fetch', async () => {
   const fetchMock = vi;
-    .fn();
+    .fn()
     .mockResolvedValue({ ok: true, json: async () => ({})})
   global.fetch = fetchMock as any
   render(<EnhancedNewsletterForm />);
@@ -32,7 +32,7 @@ test(
     target: { value:;
   'user@example.com' }})
   fireEvent.submit(screen.getByRole(
-  'button', { name: /subscribe/i }));
+  'button', { name: /subscribe/i }))
   await vi.waitFor(() => {
     expect(fetchMock).toHaveBeenCalledWith(,
   /api/newsletter/subscribe',

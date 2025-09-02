@@ -140,6 +140,6 @@ import React, { useState } from;
   Leading provider of cutting-edge AI services, IT solutions, and innovative technology services.;
   ', address: 123 Innovation Drive, Tech City, CA 90210,
   , phone: '+1-555-123-4567, email:,
-  contact@ziontechgroup.com;
+  contact@ziontechgroup.com
   ', hours: 'Monday - Friday: 9:00 AM - 6:00 PM PST, social: { linkedin:,
   https: ''

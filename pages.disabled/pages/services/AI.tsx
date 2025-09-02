@@ -145,15 +145,15 @@ export default function AIServices(...args[]):  {}
   ]';
   return ('';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
-  ];
+  ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       {/* Hero Section */}''
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
-          <div className='text-center'>'';
+          <div className='text-center'>''
 :pages.disabled/pages/services/AI.tsx
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               AI & Machine Learning''
               <span className='block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
                 Solutions
@@ -211,14 +211,14 @@ export default function AIServices(...args[]):  {}
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AI.tsx;
-              Our AI Services';
+              Our AI Services'
               Our AI Services
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Comprehensive AI solutions designed to accelerate your digital transformation journey
             </p>
 :pages.disabled/pages/services/AI.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8'>
             {aiServices.map((service, index
@@ -232,7 +232,7 @@ export default function AIServices(...args[]):  {}
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105'';
 '';
                 <div className='flex items-center mb-6'>''
-                  <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>'';
+                  <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg'>''
 :pages.disabled/pages/services/AI.tsx
                     <service.icon className='h-8 w-8 text-white' />'
                     <service.icon className='h-8 w-8 text-white' />
@@ -242,7 +242,7 @@ export default function AIServices(...args[]):  {}
                     <p className='text-slate-400'>{service.description}</p>
                   </div>
 :pages.disabled/pages/services/AI.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3 mb-6'>'
                 </div>
@@ -254,7 +254,7 @@ export default function AIServices(...args[]):  {}
                     </li>
                   ))}
 :pages.disabled/pages/services/AI.tsx
-                </ul>';
+                </ul>'
 ''
                 <div className='flex items-center justify-between'>'
                   <div>''
@@ -291,14 +291,14 @@ export default function AIServices(...args[]):  {}
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AI.tsx;
-              Cutting-Edge AI Technologies';
+              Cutting-Edge AI Technologies'
               Cutting-Edge AI Technologies
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               We leverage the latest AI frameworks and tools to deliver exceptional results
             </p>
 :pages.disabled/pages/services/AI.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8'>
             {aiTechnologies.map(tech: unknown, index: unknown()
@@ -311,7 +311,7 @@ export default function AIServices(...args[]):  {}
                 key={index}'';
                 className='text-center p-6 bg-slate-800/50 border border-slate-700/50 rounded-xl hover:border-cyan-500/50 transition-all duration-300'';
 '';
-                <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center'>'';
+                <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-16 h-16 mx-auto mb-4 flex items-center justify-center'>''
 :pages.disabled/pages/services/AI.tsx
                   <tech.icon className='h-8 w-8 text-white' />'
                   <tech.icon className='h-8 w-8 text-white' />
@@ -331,14 +331,14 @@ export default function AIServices(...args[]):  {}
           <div className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AI.tsx;
-              AI Across Industries';
+              AI Across Industries'
               AI Across Industries
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Discover how AI is transforming various sectors and creating new opportunities
             </p>
 :pages.disabled/pages/services/AI.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {useCases.map(useCase: unknown, index: unknown
@@ -351,7 +351,7 @@ export default function AIServices(...args[]):  {}
                 key={index}'';
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300'';
 '';
-                <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-12 h-12 mb-4 flex items-center justify-center'>'';
+                <div className='p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg w-12 h-12 mb-4 flex items-center justify-center'>''
 :pages.disabled/pages/services/AI.tsx
                   <useCase.icon className='h-6 w-6 text-white' />'
                 </div>''
@@ -380,13 +380,13 @@ export default function AIServices(...args[]):  {}
         <div className='max-w-4xl mx-auto text-center'>''
           <div className='bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AI.tsx;
+:pages.disabled/pages/services/AI.tsx
               Ready to Harness the Power of AI?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
               Let's discuss how AI can transform your business operations and drive growth'
             </p>''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>';
+            <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               Ready to Harness the Power of AI?
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
@@ -414,6 +414,6 @@ export default function AIServices(...args[]):  {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AI.tsx)}'';
+:pages.disabled/pages/services/AI.tsx)}''
 '''')}
 '''

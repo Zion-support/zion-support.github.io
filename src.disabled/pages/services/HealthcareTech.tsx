@@ -177,7 +177,7 @@ export default function HealthcareTech(...args: []):  {
               Our Healthcare Technology Services
             </h2>
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Comprehensive healthcare technology solutions designed to meet the unique;
+              Comprehensive healthcare technology solutions designed to meet the unique
               needs of healthcare providers and patients
             </p>
           </motion.div>
@@ -233,7 +233,7 @@ export default function HealthcareTech(...args: []):  {
               Healthcare Technology Applications
             </h2>
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Discover how modern technology is transforming various aspects of healthcare;
+              Discover how modern technology is transforming various aspects of healthcare
               and patient care delivery
             </p>
           </motion.div>

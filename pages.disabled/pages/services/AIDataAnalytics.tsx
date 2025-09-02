@@ -11,7 +11,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
       <SEO '>        title='AI Data Analytics - Intelligent Business Intelligence Platform | Zion Tech Group';
         description='Transform your business with AI-powered data analytics, predictive insights, and automated reporting. Start free trial today.';
         keywords='AI data analytics, business intelligence, predictive analytics, data insights, AI analytics platform'/>        title='AI Data Analytics - Intelligent Business Intelligence Platform | Zion Tech Group'';
-        description='Transform your business with AI-powered data analytics, predictive insights, and automated reporting. Start free trial today.'';
+        description='Transform your business with AI-powered data analytics, predictive insights, and automated reporting. Start free trial today.''
         keywords='AI data analytics, business intelligence, predictive analytics, data insights, AI analytics platform''/>{/* Hero Section */}''
       <section className='relative py-20 overflow-hidden'>''
         <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 via-blue-600/20 to-purple-600/20' />'''
@@ -32,7 +32,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
         description='Transform your business with AI-powered data analytics, predictive insights, and automated reporting. Start free trial today.''        keywords='AI data analytics, business intelligence, predictive analytics, data insights, AI analytics platform'/>'{/* Hero Section */}''
       <section className='relative py-20 overflow-hidden'>''
         <div className='absolute inset-0 bg-gradient-to-r from-emerald-600/20 via-blue-600/20 to-purple-600/20' />''''
-        <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />';
+        <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />'
         ''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>'
           <motion.div '';
@@ -48,7 +48,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-blue-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
-                Start Free Trial';
+                Start Free Trial'
         ''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <motion.div '';
@@ -107,7 +107,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
               Our AI engine processes massive amounts of data to uncover hidden patterns and predict future outcomes
             </p>
 :pages.disabled/pages/services/AIDataAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -173,7 +173,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
               From customer insights to financial forecasting, our AI analytics cover every aspect of your business
             </p>
 :pages.disabled/pages/services/AIDataAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -241,7 +241,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
               Join thousands of businesses who have transformed their decision-making with AI analytics
             </p>
 :pages.disabled/pages/services/AIDataAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -310,7 +310,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
               Connect with your existing tools and data sources without disruption
             </p>
 :pages.disabled/pages/services/AIDataAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {integrations.map(integration: unknown, index: unknown()
@@ -378,7 +378,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
               Choose the plan that fits your data analytics needs. All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AIDataAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -411,12 +411,12 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                   <div className='flex items-baseline justify-center mb-2'>''
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/AIDataAnalytics.tsx
                     <span className='text-zion-slate-light ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-zion-slate-light'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                     <span className='text-zion-slate-light ml-1'>{plan.period}</span>
@@ -431,7 +431,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
                     </li>
                   ))}
 :pages.disabled/pages/services/AIDataAnalytics.tsx
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -469,7 +469,7 @@ export default function AIDataAnalytics(...args: unknown[]): unknown {
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-emerald-600 to-blue-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105'>
-                Start Free Trial';
+                Start Free Trial'
             transition={{ duration: 0.8 }}
           >''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>

@@ -4,5 +4,5 @@ import Head from,
    data?: any} export const StructuredData: React.FC<StructuredDataProps> = ({ type =,
   Organization', data}) => { const getDefaultData = () => { switch (type) { case;
   'Organization': return {
-  '@context':;
+  '@context':
   'https:''

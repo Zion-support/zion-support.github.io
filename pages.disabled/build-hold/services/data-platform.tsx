@@ -16,7 +16,7 @@ const DataPlatform: NextPage = () => (
           Modern Data Platform
         </h1>
         <p className='text-lg text-gray-200 mb-6'>
-          Pre-integrated ELT connectors, data quality checks, warehouse;
+          Pre-integrated ELT connectors, data quality checks, warehouse
           modeling, and semantic layers for fast BI and AI-readiness.
         </p>
         <div className='flex flex-wrap gap-3'>
@@ -124,5 +124,5 @@ const DataPlatform: NextPage = () => (
       </div>
     </section>
   </MainLayout>
-);
+)
 export default DataPlatform

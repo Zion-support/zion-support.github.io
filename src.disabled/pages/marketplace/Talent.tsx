@@ -6,5 +6,5 @@ const Talent: React.FC = () => (
 			<p className='text-xl text-gray-300'>Find experts.</p>
 		</div>
 	</div>
-);
+)
 export default Talent

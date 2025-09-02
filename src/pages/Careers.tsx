@@ -11,4 +11,3 @@ const Careers: React.FC = () => {
       </div>
 </>
   )}
-;

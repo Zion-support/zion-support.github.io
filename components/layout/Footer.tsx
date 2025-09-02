@@ -102,7 +102,7 @@ const Footer: React.FC = () => {
     email: 'kleber@ziontechgroup.com',
     phone: '+1 302 464 0950',
     address: '364 E Main St STE 1008, Middletown DE 19709',
-  };
+  }
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
       {/* Main Footer Content */}
@@ -290,4 +290,4 @@ const Footer: React.FC = () => {
     </footer>
   );
 };
-export default Footer;
+export default Footer

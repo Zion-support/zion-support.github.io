@@ -151,7 +151,7 @@ export default function ServicesAdvertisingPage() {
   New Relic;
   ', href: 'https://newrelic.com/pricing }
       ],
-      note: 'SMB: $100–$2,000/mo based on ingest and hosts.;
+      note: 'SMB: $100–$2,000/mo based on ingest and hosts.
   '}
   ]
   return(
@@ -229,7 +229,7 @@ export default function ServicesAdvertisingPage() {
   ', price: $2,499/mo,
   , href: '/ai-multimodal-fusion-platform },
                 { name:,
-  Zero Trust Architecture;
+  Zero Trust Architecture
   ', price: $4,999/mo,
   , href: '/zero-trust-network-architecture },
                 { name:,
@@ -283,7 +283,7 @@ export default function ServicesAdvertisingPage() {
                 { name:,
   ML Feature Store Starter;
   ', price: '$149/mo, href:,
-  /services/ml-feature-store-starter;
+  /services/ml-feature-store-starter
   ' },
                 { name: 'Edge Cron Orchestrator, price:,
   $59/mo
@@ -319,7 +319,7 @@ export default function ServicesAdvertisingPage() {
                 { name:,
   Cookie Consent Manager;
   ', price: '$10/mo, href:,
-  /services/cookie-consent-manager;
+  /services/cookie-consent-manager
   ' },
                 { name: 'SMB Website Analytics, price:,
   $14/mo

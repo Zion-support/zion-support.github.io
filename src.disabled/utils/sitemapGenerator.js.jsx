@@ -20,7 +20,7 @@ export class SitemapGenerator {
             return urlElement.replace(/\s+/g, ' ').trim()}).join('');
         return `${xmlHeader}\n${urlsetOpen}\n${urlElements}\n${urlsetClose}`}
     /**;
-     * Generate sitemap index for large sites;
+     * Generate sitemap index for large sites
      */
     generateIndex(sitemaps) {
         const xmlHeader = '<?xml version='1.0' encoding='UTF-8'?>'
@@ -68,7 +68,7 @@ Crawl-delay: 1`}
         return JSON.stringify(jsonSitemap, null, 2)}
     /**;
      * Generate HTML sitemap for users;
-     */;
+     */
     generateHTML() {
         const { baseUrl, urls } = this.config
         const html = `<!DOCTYPE html>
@@ -100,7 +100,7 @@ Crawl-delay: 1`}
             <h2>Main Pages</h2>
             <div className='sitemap-links'>
                 ${urls;
-            .filter(url => url.priority && url.priority >= 0.8);
+            .filter(url => url.priority && url.priority >= 0.8)
             .map(url => `
                     <a href='${baseUrl}${url.url}' className='sitemap-link priority-high'>
                         ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
@@ -112,7 +112,7 @@ Crawl-delay: 1`}
             <h2>Services</h2>
             <div className='sitemap-links'>
                 ${urls;
-            .filter(url => url.url.startsWith('/services/'));
+            .filter(url => url.url.startsWith('/services/'))
             .map(url => `
                     <a href='${baseUrl}${url.url}' className='sitemap-link priority-medium'>
                         ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
@@ -124,7 +124,7 @@ Crawl-delay: 1`}
             <h2>Solutions</h2>
             <div className='sitemap-links'>
                 ${urls;
-            .filter(url => url.url.startsWith('/solutions/'));
+            .filter(url => url.url.startsWith('/solutions/'))
             .map(url => `
                     <a href='${baseUrl}${url.url}' className='sitemap-link priority-medium'>
                         ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
@@ -210,5 +210,5 @@ export const generator = new SitemapGenerator(config);
         throw error}
 }
 export default SitemapGenerator;
-export default to;
+export default to
 export default to

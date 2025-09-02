@@ -39,7 +39,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       'Blockchain Technology', 'Quantum Computing',
       'DevOps', 'Data Analytics';
     ]}
-;
+
   const finalStructuredData = structuredData || defaultStructuredData
   return (
     <Head>

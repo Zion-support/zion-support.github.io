@@ -19,7 +19,7 @@ const ContactFormEnhanced: React.FC = () => {
     try {
       // Simulate API call;
       await new Promise(resolve => setTimeout(resolve, 2000));
-      setSubmitStatus('success');
+      setSubmitStatus('success')
       setFormData({ name: '', email: '', subject: '', message: '' })} catch (error) {
       setSubmitStatus('error')} finally {
       setIsSubmitting(false)}
@@ -47,13 +47,13 @@ const ContactFormEnhanced: React.FC = () => {
               <div className='relative'>
                 <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
                 <input
-                  type='text';
-                  id='name';
-                  name='name';
+                  type='text'
+                  id='name'
+                  name='name'
                   value={formData.name}
                   onChange={handleChange}
-                  required;
-                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
+                  required
+                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                   placeholder='Your full name'/>
               </div>
             </div>
@@ -64,13 +64,13 @@ const ContactFormEnhanced: React.FC = () => {
               <div className='relative'>
                 <Mail className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
                 <input
-                  type='email';
-                  id='email';
-                  name='email';
+                  type='email'
+                  id='email'
+                  name='email'
                   value={formData.email}
                   onChange={handleChange}
-                  required;
-                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
+                  required
+                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                   placeholder='your@email.com'/>
               </div>
             </div>
@@ -80,13 +80,13 @@ const ContactFormEnhanced: React.FC = () => {
               Subject *
             </label>
             <input
-              type='text';
-              id='subject';
-              name='subject';
+              type='text'
+              id='subject'
+              name='subject'
               value={formData.subject}
               onChange={handleChange}
-              required;
-              className='w-full px-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
+              required
+              className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
               placeholder='What can we help you with?'/>
           </div>
           <div>
@@ -96,18 +96,18 @@ const ContactFormEnhanced: React.FC = () => {
             <div className='relative'>
               <MessageSquare className='absolute left-3 top-3 text-gray-400 w-5 h-5' />
               <textarea
-                id='message';
-                name='message';
+                id='message'
+                name='message'
                 value={formData.message}
                 onChange={handleChange}
-                required;
+                required
                 rows={5}
-                className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent';
+                className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 placeholder='Tell us about your project or requirements...'/>
             </div>
           </div>
           <motion.button
-            type='submit';
+            type='submit'
             disabled={isSubmitting}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
@@ -145,5 +145,5 @@ const ContactFormEnhanced: React.FC = () => {
       </motion.div>
     </div>
   )}
-;
+
 export default ContactFormEnhanced

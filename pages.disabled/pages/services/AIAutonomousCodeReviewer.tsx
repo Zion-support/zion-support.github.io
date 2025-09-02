@@ -50,7 +50,7 @@ import {}
   Github,
   Gitlab,
   Bitbucket''} from 'lucide-react';
-;
+
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -64,7 +64,7 @@ import {}
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
             transition={{ duration: 0.8 }}'>''
             <div className='inline-flex items-center px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-blue-400 text-sm font-medium mb-6'>''
-              <Code className='w-4 h-4 mr-2'  />              AI-Powered Code Review;
+              <Code className='w-4 h-4 mr-2'  />              AI-Powered Code Review
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
             </div>
 <:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
@@ -82,17 +82,17 @@ import {}
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
 <:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               AI Autonomous''
               <span className='bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent'> Code Reviewer</span>
             </h1>';
-            '';
+            ''
             ''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
               Revolutionize your code review process with AI-powered analysis that catches bugs,
-              improves security, and maintains code quality automatically.;
+              improves security, and maintains code quality automatically.
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
             </p>
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
@@ -100,7 +100,7 @@ import {}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center'>
                 <Play className='w-5 h-5 mr-2' />
-=;
+=
             '
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center'>'
@@ -108,7 +108,7 @@ import {}
 >                Start Free Trial
               </button>'
               <button className='px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200 flex items-center justify-center'>'
-            </p>';
+            </p>'
             ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center'>''
@@ -116,7 +116,7 @@ import {}
                 Start Free Trial'
               </button>''
               <button className='px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200 flex items-center justify-center'>''
-                <Settings className='w-5 h-5 mr-2'  />                Schedule Demo;
+                <Settings className='w-5 h-5 mr-2'  />                Schedule Demo
             ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center'>''
@@ -130,7 +130,7 @@ import {}
           </motion.div>
         </div>
       </section>
-:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
+:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
 '{/* Features Section */}''
       <section className='py-20'>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -143,7 +143,7 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
-              Intelligent Code Review Features';
+              Intelligent Code Review Features'
               Intelligent Code Review Features
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
@@ -151,7 +151,7 @@ import {}
               and quality improvement recommendations.
             </p>
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -169,7 +169,7 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}'';
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/30 transition-all duration-200''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                   <feature.icon className='w-6 h-6 text-white' />
@@ -181,7 +181,7 @@ import {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
+:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
 '{/* Services Section */}''
       <section className='py-20 bg-slate-800/30'>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -193,14 +193,14 @@ import {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
+:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
               Comprehensive Code Review Services'
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              From static analysis to security scanning, we provide end-to-end code review;
+              From static analysis to security scanning, we provide end-to-end code review
               solutions for modern development teams.
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {services.map(service: unknown, index: unknown()
@@ -211,7 +211,7 @@ import {}
               Comprehensive Code Review Services;
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              From static analysis to security scanning, we provide end-to-end code review;
+              From static analysis to security scanning, we provide end-to-end code review
               solutions for modern development teams.
             </p>
           </motion.div>
@@ -240,7 +240,7 @@ import {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
+:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
 '{/* Benefits Section */}''
       <section className='py-20'>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -253,14 +253,14 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
-              Transform Your Development Process';
+              Transform Your Development Process'
               Transform Your Development Process
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
               Experience measurable improvements in code quality, security, and development efficiency.
             </p>
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''
             <div className='space-y-6'>
@@ -306,7 +306,7 @@ import {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
+:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
 '{/* Pricing Section */}''
       <section className='py-20 bg-slate-800/30'>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -319,15 +319,15 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
-              Transparent Pricing';
+              Transparent Pricing'
               Transparent Pricing
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Choose the plan that fits your team size and development needs.;
+              Choose the plan that fits your team size and development needs.
               All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricing.map(plan: unknown, index: unknown()
@@ -354,7 +354,7 @@ import {}
                     ? 'border-blue-500/50 bg-blue-500/5' ';
                     : 'border-slate-700/50'`>';
                   plan.popular '';
-                    ? 'border-blue-500/50 bg-blue-500/5' ''`;
+                    ? 'border-blue-500/50 bg-blue-500/5' ''`
                     : 'border-slate-700/50'``}`}
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx>'>{plan.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -370,23 +370,23 @@ import {}
                   <p className='text-gray-400 mb-4'>{plan.description}</p>
                   <div className='mb-4'>
                     <span className='text-4xl font-bold text-white'>{plan.price}</span>
-=;
+=
                 '
                 <div className='text-center mb-8'>'
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>'
                   <p className='text-gray-400 mb-4'>{plan.description}</p>'
                   <div className='mb-4'>'
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'>                )}';
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'>                )}'
                 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                   <p className='text-gray-400 mb-4'>{plan.description}</p>''
                   <div className='mb-4'>''
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
                     <span className='text-gray-400'>{plan.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3 mb-8'>'
                     <span className='text-gray-400'>{plan.period}</span>
@@ -400,7 +400,7 @@ import {}
                     </li>
                   ))}
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-200 ${
 ';
@@ -419,7 +419,7 @@ import {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
+:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
 '{/* Use Cases Section */}''
       <section className='py-20'>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -431,14 +431,14 @@ import {}
             transition={{ duration: 0.8 }}'';
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
+:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
               Industry Applications'
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our AI code review solutions adapt to various industries, providing tailored;
+              Our AI code review solutions adapt to various industries, providing tailored
               analysis and recommendations for your specific development needs.
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -449,7 +449,7 @@ import {}
               Industry Applications;
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our AI code review solutions adapt to various industries, providing tailored;
+              Our AI code review solutions adapt to various industries, providing tailored
               analysis and recommendations for your specific development needs.
             </p>
           </motion.div>
@@ -462,7 +462,7 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}'';
                 className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200''>''
-                <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
                   <Target className='w-8 h-8 text-white'  />'
                   <Target className='w-8 h-8 text-white'  />
@@ -473,7 +473,7 @@ import {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
+:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
 '{/* Market Information Section */}''
       <section className='py-20 bg-slate-800/30'>''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -486,7 +486,7 @@ import {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
-              Market Insights & ROI';
+              Market Insights & ROI'
               Market Insights & ROI
             </h2>''
             <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
@@ -547,7 +547,7 @@ import {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
+:pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
 '{/* CTA Section */}''
       <section className='py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10'>''
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -561,14 +561,14 @@ import {}
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx;
-              Join thousands of development teams worldwide that use our AI-powered;
+              Join thousands of development teams worldwide that use our AI-powered
             transition={{ duration: 0.8 }}
           >''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Start Your AI Code Review Journey Today
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Join thousands of development teams worldwide that use our AI-powered;
+              Join thousands of development teams worldwide that use our AI-powered
               code review platform to improve code quality and accelerate development.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -584,25 +584,25 @@ import {}
             <div className='mt-8 text-center'>
               <p className='text-gray-400 mb-4'>Ready to get started? Contact our team:</p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300'>
-=;
+=
             '
             <div className='mt-8 text-center'>'
               <p className='text-gray-400 mb-4'>Ready to get started? Contact our team:</p>'
-              <div className='flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300'>'>              Join thousands of development teams worldwide that use our AI-powered;
+              <div className='flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300'>'>              Join thousands of development teams worldwide that use our AI-powered
               code review platform to improve code quality and accelerate development.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center'>';
+              <button className='px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center'>'
                 Start Free Trial''
                 <ArrowRight className='w-5 h-5 ml-2'  />'
               </button>'              <button className='px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200'>
                 Contact Sales
               </button>
-            </div>';
+            </div>'
             ''
             <div className='mt-8 text-center'>''
               <p className='text-gray-400 mb-4'>Ready to get started? Contact our team:</p>''
-              <div className='flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300'>'';
+              <div className='flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300'>''
 :pages.disabled/pages/services/AIAutonomousCodeReviewer.tsx
                 <div className='flex items-center justify-center space-x-2'>
                   <span>📱</span>
@@ -629,5 +629,5 @@ import {}
         </div>
       </section>
     </div>
-  )}''`;
+  )}''`
 export default AIAutonomousCodeReviewer}}}}''`'"`

@@ -152,7 +152,7 @@ const navigation = {
   https: //twitter.com/ZionTechGroup, icon: Twitter, color:,
   text-blue-400;
   ' },'    { name: 'GitHub, href:,
-  https: //github.com/ziontechgroup, icon: Code, color:;
+  https: //github.com/ziontechgroup, icon: Code, color:
   'text-gray-400' },
   '  ]'
   const renderNavSection = (title: anyanyanyanyanyanyanyanyanyanyanyanyanystring, items[], sectionKey: string)               => (
@@ -216,7 +216,7 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
   'Solutions', navigation.solutions,
   'solutions')}';
   '          {/* Resources Section */}
-          {renderNavSection('Resources;
+          {renderNavSection('Resources
   ', navigation.resources, 'resources
   ')}''          {/* Comp Section */}
           {renderNavSection(
@@ -246,5 +246,5 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
         </div>
       </div>
 </>)}
-;
+
 export default MainSidebar

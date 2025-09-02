@@ -119,7 +119,7 @@ export default function Services2024Page() {
                            service.category.toLowerCase().includes(selectedCategory.toLowerCase());
     const matchesPrice = priceRange === 'all;
   ' ||;
-                        (priceRange === 'low;
+                        (priceRange === 'low
   ' && parseInt(service.price.replace('$
   ', '')) < 200) ||;
                         (priceRange ===;
@@ -210,7 +210,7 @@ const categories = [
   ';
     if (variant.includes('customer;
   ')) return 'from-pink-500 to-rose-500;
-  ';
+  '
     return 'from-gray-500 to-slate-500
   '}return (    <>
       <Head>
@@ -248,7 +248,7 @@ const categories = [
               </h1>
               <p className='text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed'>
                 Experience the next generation of AI, quantum security, and;
-                enterprise IT solutions. Transform your business with our;
+                enterprise IT solutions. Transform your business with our
                 revolutionary 2024 service portfolio.
               </p>
               {/* Stats */}
@@ -329,7 +329,7 @@ const categories = [
   asc;
   ' ? 'desc;
   ': 'asc)} className='px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200'>{sortOrder ===,
-  asc;
+  asc
   ' ? '↑
   ': '↓}                  </button>
                 </div>
@@ -388,7 +388,7 @@ const categories = [
                           Key Features
                         </h4>
                         <div className='space-y-2'>
-                          {service.features;
+                          {service.features
                             .slice(0, 3)
                             .map((feature, featureIndex) => (
                               <div
@@ -466,7 +466,7 @@ const categories = [
               </h2>
               <p className='text-xl text-gray-300 mb-8 leading-relaxed'>
                 Join thousands of businesses already leveraging our;
-                revolutionary 2024 services. Get started today and experience;
+                revolutionary 2024 services. Get started today and experience
                 the future of technology.
               </p>
               <div className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6'>

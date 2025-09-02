@@ -11,14 +11,14 @@ const AuthRoutes: any = () => {}
         element={<ProtectedRoute>            <div>Profile Page</div>
           </ProtectedRoute>
       />
-:pages.disabled/routes/AuthRoutes.tsx;
+:pages.disabled/routes/AuthRoutes.tsx
 '
       <Route'';
         path='/dashboard';
         element={<ProtectedRoute>            <div>Dashboard</div>
           </ProtectedRoute>
       />
-:pages.disabled/routes/AuthRoutes.tsx;
+:pages.disabled/routes/AuthRoutes.tsx
 '
       <Route''
         path='/settings'element={          <ProtectedRoute>            <div>Settings</div>
@@ -27,6 +27,6 @@ const AuthRoutes: any = () => {}
     </Routes>
   )}
 :pages.disabled/routes/AuthRoutes.tsx;
-';
+'
 export default AuthRoutes}}}
   ''''

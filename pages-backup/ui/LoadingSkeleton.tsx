@@ -32,7 +32,7 @@ if (animated) {
         />))}
     </>
   )}
-;
+
 export const CardSkeleton: React.FC = (): JSX.Element => ('
   <div className='bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 animate-pulse'>'
     <div className='flex items-center space-x-4 mb-4'>'
@@ -46,7 +46,7 @@ export const CardSkeleton: React.FC = (): JSX.Element => ('
     <Skeleton height='h-4' width='w-5/6' className='mb-2'  />'
     <Skeleton height='h-4' width='w-4/6'  />
   </div>
-);
+)
 export const HeroSkeleton: React.FC = (): JSX.Element => ('
   <div className='animate-pulse'>'
     <div className='h-96 bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded-lg mb-8'></div>'
@@ -58,7 +58,7 @@ export const HeroSkeleton: React.FC = (): JSX.Element => ('
         <Skeleton height='h-12' width='w-32' rounded='rounded-lg'  />      </div>
     </div>
   </div>
-);
+)
 export const ServiceCardSkeleton: React.FC = (): JSX.Element => ('
   <div className='bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 animate-pulse'>'
     <div className='w-16 h-16 bg-gray-300 rounded-lg mb-4'></div>'
@@ -72,7 +72,7 @@ export const ServiceCardSkeleton: React.FC = (): JSX.Element => ('
 )
 interface TableSkeletonProps extends React.PropsWithChildren<{}> {
   rows?: number;
-  columns?: number;
+  columns?: number
   className?: string}
 export function TableSkeleton(...args: any[]): any {
   return()`
@@ -102,7 +102,7 @@ export function TableSkeleton(...args: any[]): any {
   )}
 interface ListSkeletonProps extends React.PropsWithChildren<{}> {
   items?: number;
-  className?: string;
+  className?: string
   showAvatar?: boolean}
 export function ListSkeleton(...args: any[]): any {
   return()`
@@ -122,7 +122,7 @@ export function ListSkeleton(...args: any[]): any {
 interface GridSkeletonProps extends React.PropsWithChildren<{}> {
   items?: number;
   columns?: number;
-  className?: string;
+  className?: string
   showImage?: boolean}
 export function GridSkeleton(...args: any[]): any {
   return()`

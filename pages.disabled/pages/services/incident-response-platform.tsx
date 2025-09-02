@@ -27,7 +27,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
         title='Incident Response Platform | Zion Tech Group'';
         description='Advanced cybersecurity incident response platform with AI-powered detection, automated response workflows, and expert incident management.'/>
 '{/* Hero Section */}''
-      <section className='relative py-20 overflow-hidden'>';
+      <section className='relative py-20 overflow-hidden'>'
   ''
         <div className='absolute inset-0 bg-gradient-to-br from-slate-900 via-red-900/20 to-orange-900/20'></div>''        <div className='absolute inset-0 bg-[url(
   'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30'></div>'''        <div className='container-responsive relative z-10'>
@@ -39,16 +39,16 @@ export default function IncidentResponsePlatform(...args: any[]): any {
               <div className='w-20 h-20 bg-gradient-to-br from-red-400 via-orange-500 to-yellow-400 rounded-2xl flex items-center justify-center'>''
                 <Shield className='w-10 h-10 text-white'  />              </div>
 :pages.disabled/pages/services/incident-response-platform.tsx
-            </div>';
+            </div>'
 ''
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-red-400 via-orange-500 to-yellow-400 bg-clip-text text-transparent mb-6'>
               Incident Response Platform
             </h1>'''            <p className='text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto'>
               Advanced cybersecurity incident response platform with AI-powered;
               detection, automated response workflows, and expert incident;
-              management to protect your organization.;
+              management to protect your organization.
 :pages.disabled/pages/services/incident-response-platform.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-wrap justify-center gap-4'>
               <motion.button;
@@ -77,7 +77,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
 :pages.disabled/pages/services/incident-response-platform.tsx
               Comprehensive Incident Response'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our platform provides end-to-end incident response capabilities,
-              from initial detection through resolution and recovery, ensuring;
+              from initial detection through resolution and recovery, ensuring
               your organization stays protected.
             </p>
 :pages.disabled/pages/services/incident-response-platform.tsx
@@ -88,7 +88,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/incident-response-platform.tsx
                   <feature.icon className='w-8 h-8 text-red-400' />'
                 </div>''
@@ -118,7 +118,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
 :pages.disabled/pages/services/incident-response-platform.tsx
               Platform Capabilities'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Comprehensive incident response capabilities that cover the entire;
-              incident lifecycle, from initial detection through recovery and;
+              incident lifecycle, from initial detection through recovery and
               lessons learned.
             </p>
 :pages.disabled/pages/services/incident-response-platform.tsx
@@ -129,7 +129,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/incident-response-platform.tsx;
                 whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8''>''
-                <h3 className='text-2xl font-semibold text-white mb-6 flex items-center'>'';
+                <h3 className='text-2xl font-semibold text-white mb-6 flex items-center'>''
 :pages.disabled/pages/services/incident-response-platform.tsx
                   <Target className='w-6 h-6 text-red-400 mr-3'  />                  {capability.category}'
                 </h3>''
@@ -155,7 +155,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
 :pages.disabled/pages/services/incident-response-platform.tsx
               Advanced Technologies'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our platform leverages cutting-edge technologies including AI,
-              automation, and cloud-native architecture to deliver superior;
+              automation, and cloud-native architecture to deliver superior
               incident response capabilities.
             </p>
 :pages.disabled/pages/services/incident-response-platform.tsx
@@ -167,7 +167,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
 :pages.disabled/pages/services/incident-response-platform.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-2xl p-6 hover:border-red-400/30 transition-all duration-300''>''
                 <div className='flex items-center mb-4'>''
-                  <div className='w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mr-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-xl flex items-center justify-center mr-4'>''
 :pages.disabled/pages/services/incident-response-platform.tsx
                     <tech.icon className='w-6 h-6 text-red-400' />'
                   </div>''
@@ -190,7 +190,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
 :pages.disabled/pages/services/incident-response-platform.tsx
               Performance Metrics'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our platform consistently delivers superior performance metrics,
-              significantly improving incident response times and reducing the;
+              significantly improving incident response times and reducing the
               impact of security incidents.
             </p>
 :pages.disabled/pages/services/incident-response-platform.tsx
@@ -222,12 +222,12 @@ export default function IncidentResponsePlatform(...args: any[]): any {
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center''>''
             <div className='bg-gradient-to-r from-red-900/50 to-orange-900/50 border border-red-400/30 rounded-3xl p-12'>''
               <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/incident-response-platform.tsx;
+:pages.disabled/pages/services/incident-response-platform.tsx
                 Ready to Enhance Your Incident Response?'
               </h2>''
               <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
                 Protect your organization with our advanced incident response;
-                platform and ensure rapid, effective response to security;
+                platform and ensure rapid, effective response to security
                 incidents.'
               </p>''
               <div className='flex flex-wrap justify-center gap-4'>
@@ -252,7 +252,7 @@ export default function IncidentResponsePlatform(...args: any[]): any {
         <div className='container-responsive'>''
           <div className='text-center'>''
             <h3 className='text-2xl font-semibold text-white mb-4'>
-:pages.disabled/pages/services/incident-response-platform.tsx;
+:pages.disabled/pages/services/incident-response-platform.tsx
               Contact Our Incident Response Team'
             </h3>''
             <p className='text-slate-300 mb-6'>
@@ -274,5 +274,5 @@ export default function IncidentResponsePlatform(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/incident-response-platform.tsx)}
-  '';
+  ''
 '''"

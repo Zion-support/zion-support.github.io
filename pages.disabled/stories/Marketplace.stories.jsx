@@ -10,14 +10,14 @@ const meta = {
     ]}
 export { meta }
 export default meta;
-:pages.disabled/stories/Marketplace.stories.jsx;
+:pages.disabled/stories/Marketplace.stories.jsx
 export const Grid = {
   render: () => {,
   localStorage.setItem(
   'marketplaceView',grid
   ')        return <Marketplace />
 }
-}: pages.disabled/stories/Marketplace.stories.jsx;
+}: pages.disabled/stories/Marketplace.stories.jsx
 export const List = {
   render: () => {
 'localStorage.setItem(

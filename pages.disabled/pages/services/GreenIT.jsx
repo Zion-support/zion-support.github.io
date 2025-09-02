@@ -164,7 +164,7 @@ export default function GreenIT() {
             </h1>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto mb-8'>
               Sustainable technology solutions that reduce environmental impact;
-              while improving efficiency and reducing costs. Building a greener;
+              while improving efficiency and reducing costs. Building a greener
               digital future.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -192,7 +192,7 @@ export default function GreenIT() {
 :pages.disabled/pages/services/GreenIT.jsx
               Green IT Services'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
               Comprehensive sustainable technology solutions designed to;
-              minimize environmental impact while maximizing efficiency and;
+              minimize environmental impact while maximizing efficiency and
               performance.
             </p>
 :pages.disabled/pages/services/GreenIT.jsx
@@ -203,7 +203,7 @@ export default function GreenIT() {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-green-400/50 transition-all duration-300''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/GreenIT.jsx
                   <service.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -233,7 +233,7 @@ export default function GreenIT() {
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/GreenIT.jsx
               Benefits of Green IT'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-              Adopting sustainable technology solutions delivers multiple;
+              Adopting sustainable technology solutions delivers multiple
               benefits for your business and the environment.
             </p>
 :pages.disabled/pages/services/GreenIT.jsx
@@ -244,7 +244,7 @@ export default function GreenIT() {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='text-center''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/GreenIT.jsx
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -265,7 +265,7 @@ export default function GreenIT() {
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/GreenIT.jsx
               Green Technologies'</h2>''            <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-              Leveraging cutting-edge technologies to create sustainable and;
+              Leveraging cutting-edge technologies to create sustainable and
               energy-efficient IT infrastructure.
             </p>
 :pages.disabled/pages/services/GreenIT.jsx
@@ -276,7 +276,7 @@ export default function GreenIT() {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/GreenIT.jsx
                   <tech.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -299,7 +299,7 @@ export default function GreenIT() {
               Ready to Go Green?'
             </h2>''
             <p className='text-xl text-slate-300 max-w-2xl mx-auto mb-8'>
-              Transform your IT infrastructure with sustainable solutions that;
+              Transform your IT infrastructure with sustainable solutions that
               benefit both your business and the planet.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -318,5 +318,5 @@ export default function GreenIT() {
       </section>
     </div>
   );
-:pages.disabled/pages/services/GreenIT.jsx}'';
+:pages.disabled/pages/services/GreenIT.jsx}''
   '''"

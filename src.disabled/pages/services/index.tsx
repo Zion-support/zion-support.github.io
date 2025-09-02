@@ -17,7 +17,7 @@ const ServicesIndex: React.FC = () => {
   Automated Follow-Ups' },
     { to: '/services/ai-seo-optimizer, label:;
   'AI SEO Optimizer' },
-import React from 'react';
+import React from 'react'
 import { Link } from 'react-router-dom'
 
 const ServicesIndex: React.FC = () => {

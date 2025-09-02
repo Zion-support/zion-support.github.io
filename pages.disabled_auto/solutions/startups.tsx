@@ -12,7 +12,7 @@ const Startups: NextPage = () => {
   const solutions = [
     {
 :pages.disabled_auto/solutions/startups.tsx;
-      title:;
+      title:
   'MVP Development,
       description:
   'Rapid development of minimum viable products to validate your ideas',
@@ -21,7 +21,7 @@ const Startups: NextPage = () => {
   Agile development methodology',
   'Rapid prototyping',
   'User feedback integration',
-  'Scalable architecture';
+  'Scalable architecture'
       ]},
     {
       title: 'AI-Powered Analytics,
@@ -32,7 +32,7 @@ const Startups: NextPage = () => {
   Real-time analytics dashboard',
   'Predictive modeling',
   'Customer behavior analysis',
-  'Performance optimization';
+  'Performance optimization'
       ]},
     {
       title: 'Cloud Infrastructure,
@@ -43,7 +43,7 @@ const Startups: NextPage = () => {
   Auto-scaling infrastructure',
   'Cost optimization',
   'High availability',
-  'Global deployment';
+  'Global deployment'
       ]},
     {
       title: 'Digital Marketing Automation,
@@ -56,7 +56,7 @@ const Startups: NextPage = () => {
   'Social media management',
   'Conversion optimization'
       title: 'MVP Development', description: 'Rapid development of minimum viable products to validate your ideas',
-      icon: <Rocket className='w-8 h-8' />, features: [;
+      icon: <Rocket className='w-8 h-8' />, features: [
         'Agile development methodology',
         'Rapid prototyping', 'User feedback integration',
         'Scalable architecture'
@@ -79,7 +79,7 @@ const Startups: NextPage = () => {
         'Lead generation automation', 'Email marketing campaigns',
         'Social media management', 'Conversion optimization';
       ]}
-  ];
+  ]
   const benefits = [
     {
 :pages.disabled_auto/solutions/startups.tsx
@@ -177,7 +177,7 @@ const Startups: NextPage = () => {
         'Custom development timeline',
         'Enterprise-grade infrastructure', 'Advanced AI solutions',
         'Dedicated team', '24/7 support',
-        'Custom integrations', 'Ongoing optimization';
+        'Custom integrations', 'Ongoing optimization'
       ], popular: false}
   ]
   return(
@@ -195,7 +195,7 @@ const Startups: NextPage = () => {
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
 :pages.disabled_auto/solutions/startups.tsx;
             Accelerate your startups growth with our comprehensive technology solutions.;
-            Accelerate your startup&apos;s growth with our comprehensive technology solutions. ';
+            Accelerate your startup&apos;s growth with our comprehensive technology solutions. '
             From MVP development to scaling infrastructure, we help startups succeed.
           </p>
           <div className='flex flex-col sm: flex-row justify-center gap-4 mb-12'>
@@ -288,7 +288,7 @@ const Startups: NextPage = () => {
 :pages.disabled_auto/solutions/startups.tsx;
               Choose the package that fits your startup;
   's current stage and needs.;
-              Choose the package that fits your startup&apos;s current stage and needs.'
+              Choose the package that fits your startup&aposs current stage and needs.'
             </p>
           </div>
           <div className='grid md: grid-cols-3 gap-8 max-w-6xl mx-auto'>
@@ -352,7 +352,7 @@ const Startups: NextPage = () => {
                 ))}
               </div>
               <p className='text-gray-600 mb-4'>
-                'Zion Tech Group helped us launch our MVP in just 6 weeks. Their expertise and ';
+                'Zion Tech Group helped us launch our MVP in just 6 weeks. Their expertise and '
                 startup-friendly approach made all the difference.''
               </p>
               <div className='font-semibold text-gray-900'>Sarah Chen</div>
@@ -365,7 +365,7 @@ const Startups: NextPage = () => {
                 ))}
               </div>
               <p className='text-gray-600 mb-4'>
-                'The scalability of their solutions allowed us to grow from 100 to 10, 000 users ';
+                'The scalability of their solutions allowed us to grow from 100 to 10, 000 users '
                 without any major infrastructure changes.''
               </p>
               <div className='font-semibold text-gray-900'>Michael Rodriguez</div>
@@ -378,7 +378,7 @@ const Startups: NextPage = () => {
                 ))}
               </div>
               <p className='text-gray-600 mb-4'>
-                'Their AI-powered analytics gave us insights we never had before. It completely ';
+                'Their AI-powered analytics gave us insights we never had before. It completely '
                 transformed our decision-making process.''
               </p>
               <div className='font-semibold text-gray-900'>Emily Johnson</div>
@@ -403,5 +403,5 @@ const Startups: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default Startups

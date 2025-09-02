@@ -6,7 +6,7 @@
           <h1 className='text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-fuchsia-400 to-cyan-400 bg-clip-text text-transparent'>
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
             Mobile-First Survey Platform'</h1>''          <p className='mt-4 text-lg text-slate-300 max-w-3xl'>
-            Launch beautiful, high-converting surveys optimized for mobile with;
+            Launch beautiful, high-converting surveys optimized for mobile with
             real-time analytics and multi-language support.
           </p>
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
@@ -16,7 +16,7 @@
               <h2 className='text-2xl font-semibold mb-3'>Highlights</h2>''
               <ul className='grid sm:grid-cols-2 gap-3 text-slate-300'>''
                 <li className='p-3 rounded-lg bg-slate-800/50'>
-:pages.disabled/pages/services/MobileFirstSurveyTool.tsx;
+:pages.disabled/pages/services/MobileFirstSurveyTool.tsx
                   Responsive templates with A/B testing'
                 </li>''
                 <li className='p-3 rounded-lg bg-slate-800/50'>
@@ -34,7 +34,7 @@
                 </li>
               </ul>
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
-            </div>';
+            </div>'
 ''
             <div className='rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6'>''
               <h2 className='text-2xl font-semibold mb-3'>
@@ -76,7 +76,7 @@
               </ul>
             </div>
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
-          </div>';
+          </div>'
 ''
           <aside className='space-y-6'>''
             <div className='rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6'>''
@@ -92,4 +92,4 @@
     </div>
   )}
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx;
-export default MobileFirstSurveyTool';''"
+export default MobileFirstSurveyTool'''"

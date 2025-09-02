@@ -192,7 +192,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
             </h1>
             <p className='text-xl text-slate-300 max-w-3xl mx-auto mb-8'>
               Revolutionize your content creation with our advanced AI platform. Generate high-quality text, images,
-              videos, and multimedia content in minutes, not hours. Scale your content production while maintaining;
+              videos, and multimedia content in minutes, not hours. Scale your content production while maintaining
               exceptional quality and brand consistency.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -260,7 +260,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
               </span>
             </h2>
             <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-              Our AI content generation platform combines cutting-edge technology with intuitive design;
+              Our AI content generation platform combines cutting-edge technology with intuitive design
               to deliver exceptional content creation capabilities.
             </p>
           </motion.div>
@@ -535,7 +535,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
               </span>
             </h2>
             <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of content creators who have already revolutionized their workflow;
+              Join thousands of content creators who have already revolutionized their workflow
               with our AI-powered content generation platform.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

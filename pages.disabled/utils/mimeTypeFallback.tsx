@@ -82,7 +82,7 @@ class MimeTypeFallback {
     return this.mimeTypes[ext] ||;
   'application / octet - stream}
   private getFileExtension (filename: string) : string {
-  ';
+  '
     if (lastDot === -1) return ''
     return filename.substring (lastDot) .toLowerCase () }
   async checkAndFixMimeType (url: string: any): Promise < any> {
@@ -101,7 +101,7 @@ class MimeTypeFallback {
         return true // MIME type is correct or generic}`;
       console.warn (`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`) ;
 :pages.disabled/utils/mimeTypeFallback.tsx;
-      // Try to fix with fallback URL;
+      // Try to fix with fallback URL
       return await this.tryFallbackUrl (url) } catch (error) {
 `console.error (`Error checking MIME type for ${url}:`, error)       return await this.tryFallbackUrl (url) }
   }
@@ -124,7 +124,7 @@ class MimeTypeFallback {
     // Replace script tags;
     scripts.forEach (script => { (script as HTMLScriptElement) .src = fallbackUrl`;
       console.log (`Replaced script source: ${originalUrl} -> ${fallbackUrl}`) })
-    // Replace stylesheet links;
+    // Replace stylesheet links
     links.forEach (link => { (link as HTMLLinkElement) .href = fallbackUrl`
       console.log (`Replaced stylesheet href: ${originalUrl} -> ${fallbackUrl}`) })}
   async preloadCriticalResources () : Promise < any> {
@@ -159,7 +159,7 @@ class MimeTypeFallback {
   'text / css';
       return link}
   }: pages.disabled/utils/mimeTypeFallback.tsx;
-  injectResource (url: anystring, type: 'script;
+  injectResource (url: anystring, type: 'script
   ' | 'stylesheet
   ': any): Promise < any> {
     return new Promise ( (resolve, reject) => {
@@ -176,5 +176,5 @@ class MimeTypeFallback {
   'script') {
         document.head.appendChild (element) } else {document.head.appendChild (element) }
     })}
-}: pages.disabled/utils/mimeTypeFallback.tsx;
+}: pages.disabled/utils/mimeTypeFallback.tsx
 // Create singleton instance`

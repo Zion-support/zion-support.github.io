@@ -27,18 +27,18 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
   ]';Security operations optimization',';Security monitoring and alerting',';Incident detection and response',';Security orchestration and automation',';Security analytics and insights',';Security scaling and management';
   ]';Improve security operations performance by 50-80%',';Reduce incident response time by 40-70%',';Cut security operational costs by 35-65%',';Enhance security operations reliability and scalability',';Optimize resource utilization',';Scale security operations efficiently';
   ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-slate-500 via-blue-500 to-indigo-500 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AISecurityOperations.tsx
             <Database className='w-4 h-4 mr-2'  /> AI-Powered Security Operations Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Security Operations Platform</h1>'          <p className='text-slate-100 text-xl'>Transform your security operations with AI-powered tools that optimize performance, enhance scalability, and maximize efficiency.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           </div>
 :pages.disabled/pages/services/AISecurityOperations.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </div>
           ))}
 :pages.disabled/pages/services/AISecurityOperations.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
 :pages.disabled/pages/services/AISecurityOperations.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-slate-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Security Operations Impact</h3>''
@@ -146,7 +146,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             ))}
           </div>
 :pages.disabled/pages/services/AISecurityOperations.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your security operations with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-slate-600 text-white rounded-lg hover:bg-slate-700 transition-colors'>''
 :pages.disabled/pages/services/AISecurityOperations.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

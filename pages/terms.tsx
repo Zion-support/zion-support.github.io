@@ -340,4 +340,4 @@ const Terms: NextPage = () => {
     </Layout>
   );
 };
-export default Terms;
+export default Terms

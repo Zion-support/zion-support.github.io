@@ -25,7 +25,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-computing-solutions.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center max-w-4xl mx-auto''>''
-            <div className='inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-400/30 rounded-full text-purple-300 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
               <Atom className='w-4 h-4 mr-2'  />              Next-Generation Computing'
             </div>''
@@ -34,7 +34,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
             </h1>''
             <p className='text-xl text-slate-300 mb-8 leading-relaxed'>
               Harness the power of quantum computing to solve previously;
-              intractable problems, enhance machine learning capabilities, and;
+              intractable problems, enhance machine learning capabilities, and
               gain competitive advantages in your industry.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -57,7 +57,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
               Quantum Computing Capabilities'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our quantum computing solutions leverage cutting-edge quantum;
-              technologies to deliver unprecedented computational power and;
+              technologies to deliver unprecedented computational power and
               problem-solving capabilities.
             </p>
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
@@ -68,7 +68,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/quantum-computing-solutions.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-400/30 transition-all duration-200 hover:scale-105''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
                   <feature.icon className='w-6 h-6 text-purple-400' />'
                 </div>''
@@ -92,7 +92,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
               Comprehensive Quantum Solutions'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               From algorithm development to cloud access, we provide end-to-end;
-              quantum computing solutions tailored to your specific needs and;
+              quantum computing solutions tailored to your specific needs and
               industry requirements.
             </p>
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
@@ -103,7 +103,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/quantum-computing-solutions.tsx;
                 whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-purple-400/30 transition-all duration-200''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
                   <solution.icon className='w-8 h-8 text-purple-400' />'
                 </div>''
@@ -133,7 +133,7 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               </h2>''
               <p className='text-lg text-slate-300 mb-8 leading-relaxed'>
                 Quantum computing offers unprecedented capabilities that can;
-                transform how you approach complex problems and gain competitive;
+                transform how you approach complex problems and gain competitive
                 advantages in your industry.'
               </p>''
               <div className='grid grid-cols-1 gap-4'>'{benefits.map((benefit, index) => (''                  <div key={index} className='flex items-center space-x-3'>''
@@ -148,12 +148,12 @@ export default function QuantumComputingSolutions(...args: any[]): any {
               whileInView={{ opacity: 1, x: 0 }}'transition={{ duration: 0.6 }}''              className='relative''>''
               <div className='bg-gradient-to-br from-purple-500/20 to-indigo-500/20 rounded-2xl p-8 border border-purple-400/30'>''
                 <div className='text-center'>''
-                  <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6'>'';
+                  <div className='w-20 h-20 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6'>''
 :pages.disabled/pages/services/quantum-computing-solutions.tsx
                     <Zap className='w-10 h-10 text-white'  />'</div>''                  <h3 className='text-2xl font-bold text-white mb-4'>
                     Quantum Ready?'
                   </h3>'                  <p className='text-slate-300 mb-6'>
-:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
                     Discover how quantum computing can transform your business
                     operations.'</p>''                  <button className='w-full px-6 py-3 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-400 hover:to-indigo-500 transition-all duration-200'>
                     Get Assessment
@@ -172,11 +172,11 @@ export default function QuantumComputingSolutions(...args: any[]): any {
 :pages.disabled/pages/services/quantum-computing-solutions.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='max-w-3xl mx-auto''>''
             <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/quantum-computing-solutions.tsx;
+:pages.disabled/pages/services/quantum-computing-solutions.tsx
               Ready for the Quantum Future?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>
-              Join the quantum computing revolution and gain access to;
+              Join the quantum computing revolution and gain access to
               computational power that was previously unimaginable.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -190,5 +190,5 @@ export default function QuantumComputingSolutions(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/quantum-computing-solutions.tsx)}
-  '';
+  ''
 ''''

@@ -46,25 +46,25 @@ export default function AISupplyChainOptimization() {
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6 }}''            className='text-center max-w-4xl mx-auto''>''
-            <div className='inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
               <Truck className='w-4 h-4 mr-2'  />              AI-Powered Optimization'
             </div>''
-            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>'
               AI Supply Chain''
               <span className='bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent'>
-  '{';
+  '{'
   '}
                 Optimization
               </span>'
             </h1>''
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
-              Transform your supply chain with AI-powered optimization. Reduce;
+              Transform your supply chain with AI-powered optimization. Reduce
               costs, improve efficiency, and enhance customer satisfaction with
               intelligent supply chain management.'</p>''            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center'>''
                 <Play className='w-5 h-5 mr-2'  />
-:pages.disabled/pages/services/AISupplyChainOptimization.tsx;
+:pages.disabled/pages/services/AISupplyChainOptimization.tsx
                 Start Free Trial'
               </button>''
               <button className='border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg'>''
@@ -109,7 +109,7 @@ export default function AISupplyChainOptimization() {
               Join industry leaders who have revolutionized their supply chain operations with AI-powered optimization.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -188,7 +188,7 @@ export default function AISupplyChainOptimization() {
               See how AI Supply Chain Optimization transforms different industries and business operations.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -231,7 +231,7 @@ export default function AISupplyChainOptimization() {
               Choose the plan that best fits your business needs. All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -249,7 +249,7 @@ export default function AISupplyChainOptimization() {
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AISupplyChainOptimization.tsx)}';
+:pages.disabled/pages/services/AISupplyChainOptimization.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -262,7 +262,7 @@ export default function AISupplyChainOptimization() {
                   </div>'
                   <p className='text-gray-300'>{plan.description}</p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>
                   {plan.features.map((feature, featureIndex) => (
@@ -271,7 +271,7 @@ export default function AISupplyChainOptimization() {
                     </li>
                   ))}
                 </ul>
-:pages.disabled/pages/services/AISupplyChainOptimization.tsx;
+:pages.disabled/pages/services/AISupplyChainOptimization.tsx
 `
                 <button``
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
@@ -297,11 +297,11 @@ export default function AISupplyChainOptimization() {
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
               Industry Use Cases'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              See how organizations across industries leverage our AI supply;
+              See how organizations across industries leverage our AI supply
               chain optimization to improve efficiency.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -341,7 +341,7 @@ export default function AISupplyChainOptimization() {
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
               Seamless Integrations'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Connect with your existing supply chain and logistics tools for a;
+              Connect with your existing supply chain and logistics tools for a
               unified optimization experience.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
@@ -382,7 +382,7 @@ export default function AISupplyChainOptimization() {
               Ready to Optimize Your Supply Chain?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of businesses already using AI-powered supply chain;
+              Join thousands of businesses already using AI-powered supply chain
               optimization to reduce costs and improve operational efficiency.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -396,5 +396,5 @@ export default function AISupplyChainOptimization() {
         </div>
       </section>
     </div>
-  )}''`;
+  )}''`
   ''`'"`

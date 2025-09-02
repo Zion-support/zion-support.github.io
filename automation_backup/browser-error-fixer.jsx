@@ -65,7 +65,7 @@ class BrowserErrorFixer {
 ;
   async analyzeError(error) {
     // console.log(`🔍 Analyzing error: ${error.message}`);
-    const fixStrategy = this.identifyFixStrategy(error);
+    const fixStrategy = this.identifyFixStrategy(error)
     if (fixStrategy) {
       // console.log(`🔧 Identified fix strategy: ${fixStrategy.type}`)
       await this.applyFixStrategy(fixStrategy, error)} else {
@@ -88,7 +88,7 @@ class BrowserErrorFixer {
   ');
         const fixes = await this.applyFixesToFile(strategy, fileContent, filePath);
         if (fixes.length > 0) {
-          await this.createBackup(filePath);
+          await this.createBackup(filePath)
           await this.applyFixes(filePath, fileContent, fixes)
           this.fixesApplied.push({
             file: filePath,
@@ -278,7 +278,7 @@ class BrowserErrorFixer {
       // console.log(`📄 Auto-fix report generated: ${reportPath}`);
       return report} catch (error) {
       console.error(
-  '❌ Failed to generate fix report:', error);
+  '❌ Failed to generate fix report:', error)
       return null
   async cleanupBackups(keepRecent = 5) {
     try {
@@ -317,7 +317,7 @@ if (require.main === module) {
   ];
   fixer.runFixCycle(sampleErrors).then(() => {
     // console.log(
-  'Auto-fix cycle completed successfully');
+  'Auto-fix cycle completed successfully')
     process.exit(0)}).catch((error) => {
     console.error(
   'Auto-fix cycle failed:', error)

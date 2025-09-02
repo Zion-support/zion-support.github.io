@@ -11,4 +11,3 @@ const CybersecurityServices: React.FC = () => {
       </div>
 </>
   )}
-;

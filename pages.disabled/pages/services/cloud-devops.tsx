@@ -7,25 +7,25 @@ export { function }export default function CloudDevOps(...args: []):  {}
         <meta name = 'description' content='Streamline your development and operations with cloud-native DevOps solutions. Automate deployments, improve collaboration, and accelerate delivery.' />''
         <meta name='keywords' content='cloud devops, CI/CD, cloud infrastructure, automation, containerization, kubernetes, aws, azure, google cloud' />
 :pages.disabled/pages/services/cloud-devops.tsx
-      </Helmet>';
+      </Helmet>'
 ''
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'{/* Hero Section */}''        <section className='relative pt-32 pb-20 overflow-hidden'>''
           <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-600/10'></div>''
           <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>''
             <div className='text-center'>''
-              <div className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8'>'';
+              <div className='inline-flex items-center px-4 py-2 bg-cyan-500/10 border border-cyan-500/20 rounded-full text-cyan-400 text-sm font-medium mb-8'>''
 :pages.disabled/pages/services/cloud-devops.tsx
                 <Cloud className='w-4 h-4 mr-2'  />                Cloud-Native DevOps
-              </div>';
+              </div>'
 ''
-              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+              <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
                 Cloud''
                 <span className='bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent'> DevOps</span>
               </h1>'''              <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
                 Streamline your development and operations with cloud-native DevOps solutions. Automate deployments,
-                improve collaboration, and accelerate delivery with modern cloud infrastructure.;
+                improve collaboration, and accelerate delivery with modern cloud infrastructure.
 :pages.disabled/pages/services/cloud-devops.tsx
-              </p>';
+              </p>'
 ''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
                 <Link'';
@@ -47,11 +47,11 @@ export { function }export default function CloudDevOps(...args: []):  {}
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/cloud-devops.tsx
                 Comprehensive Cloud DevOps Solutions'</h2>''              <p className='text-xl text-slate-300 max-w-2xl mx-auto'>
-                Our cloud DevOps platform provides end-to-end solutions for modern software development;
+                Our cloud DevOps platform provides end-to-end solutions for modern software development
                 and deployment workflows.
               </p>
 :pages.disabled/pages/services/cloud-devops.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[{
@@ -83,7 +83,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
 ';
                   icon: TrendingUp,'';
                   title: 'Monitoring & Analytics','';
-                  description: 'Real-time monitoring and analytics for application performance.'}';
+                  description: 'Real-time monitoring and analytics for application performance.'}'
               ].map((feature, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
@@ -105,7 +105,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
                 Comprehensive DevOps services covering all aspects of modern software delivery.
               </p>
 :pages.disabled/pages/services/cloud-devops.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[
@@ -155,7 +155,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
                   description: 'Built-in security scanning and compliance automation.',';
                   icon: Shield,'';
                   benefits: ['Vulnerability scanning', 'Compliance checks', 'Security policies']
-                }';
+                }'
               ].map((area, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
@@ -186,7 +186,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
                 Leverage industry-leading tools and technologies for your DevOps implementation.
               </p>
 :pages.disabled/pages/services/cloud-devops.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {[
@@ -236,7 +236,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
                   description: 'Security scanning, compliance, and vulnerability management.',';
                   icon: Shield,'';
                   features: ['Vulnerability scanning', 'Compliance automation', 'Security policies']
-                }';
+                }'
               ].map((tech, index)  => (''
                 <div key={index} className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300'>''
                   <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-4'>''
@@ -274,7 +274,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
                 Transform your software delivery process with measurable improvements and efficiency gains.
               </p>
 :pages.disabled/pages/services/cloud-devops.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>'
               <div>''
@@ -283,7 +283,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
                     '40-70% improvement in recovery time','';
                     'Enhanced team collaboration and communication','';
                     'Improved code quality and reliability','';
-                    'Better resource utilization and cost optimization'';
+                    'Better resource utilization and cost optimization''
                   ].map((benefit, index) => (''
                     <div key={index} className='flex items-start space-x-3'>''
                       <CheckCircle className='w-6 h-6 text-cyan-400 mt-0.5 flex-shrink-0'  />'                      <span className='text-slate-300'>{benefit}</span>
@@ -291,7 +291,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
                   ))}
                 </div>
 :pages.disabled/pages/services/cloud-devops.tsx
-              </div>';
+              </div>'
 ''
               <div className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8'>''
                 <h3 className='text-2xl font-semibold text-white mb-4'>DevOps Metrics</h3>''
@@ -318,7 +318,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
                 Our systematic approach ensures successful DevOps implementation and transformation.
               </p>
 :pages.disabled/pages/services/cloud-devops.tsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
               {[{
@@ -344,7 +344,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
 '';
                   step: '04','';
                   title: 'Optimization','';
-                  description: 'Continuously monitor, optimize, and improve processes.'}';
+                  description: 'Continuously monitor, optimize, and improve processes.'}'
               ].map((step, index)  => (''
                 <div key={index} className='text-center'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
@@ -360,7 +360,7 @@ export { function }export default function CloudDevOps(...args: []):  {}
 '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-cyan-500/10 to-blue-600/10'>'
           <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/cloud-devops.tsx;
+:pages.disabled/pages/services/cloud-devops.tsx
               Ready to Transform Your DevOps?'
             </h2>''
             <p className='text-xl text-slate-300 mb-8'>

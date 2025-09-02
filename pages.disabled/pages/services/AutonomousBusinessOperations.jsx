@@ -18,7 +18,7 @@ const $service = () => {}
           <h1 className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>
             $service'</h1>''          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
             This service page is under development. Contact us for more;
-            information.;
+            information.
 :pages.disabled/pages/services/AutonomousBusinessOperations.jsx
           </p>'
           <Link'';
@@ -30,4 +30,4 @@ const $service = () => {}
     </div>
   )}
 :pages.disabled/pages/services/AutonomousBusinessOperations.jsx;
-export default $service'';'''
+export default $service'''''

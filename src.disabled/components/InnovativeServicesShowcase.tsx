@@ -9,5 +9,5 @@ import React, { useState, useMemo } from;
   ' | 'price;
   ' | 'innovation;
   ' | 'roi;
-  '>('innovation;
+  '>('innovation
   ')'

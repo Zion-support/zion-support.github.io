@@ -10,7 +10,7 @@ interface TabsProps extends React.PropsWithChildren<{}> {
   onValueChange?: (value: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => void;
   className?: string}
 export function Tabs(...args: any[]): any {
-  const [activeTab, setActiveTab] = useState(value || defaultValue || '');
+  const [activeTab, setActiveTab] = useState(value || defaultValue || '')
   const handleTabChange = (tab: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setActiveTab(tab)
     if (onValueChange) {
@@ -29,7 +29,7 @@ export function Tabs(...args: any[]): any {
   children: ReactNode;
   className?: string}
 }
-  children: ReactNode;
+  children: ReactNode
   value: string
   className?: string}
       } ${className}`}
@@ -37,7 +37,7 @@ export function Tabs(...args: any[]): any {
     >{children}
     </button>
   )}
-  children: ReactNode;
+  children: ReactNode
   value: string
   className?: string}
     return null}

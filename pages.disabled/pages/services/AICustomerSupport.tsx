@@ -11,7 +11,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
       <SEO '>        title='AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group';
         description='Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.';
         keywords='AI customer support, chatbot, customer service automation, AI support, customer service software'/>        title='AI Customer Support - Intelligent Customer Service Automation | Zion Tech Group'';
-        description='Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.'';
+        description='Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.''
         keywords='AI customer support, chatbot, customer service automation, AI support, customer service software''/>{/* Hero Section */}''
       <section className='relative py-20 overflow-hidden'>''
         <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20' />'''
@@ -32,7 +32,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
         description='Transform your customer support with AI-powered chatbots, 24/7 availability, and intelligent ticket routing. Start free trial today.''        keywords='AI customer support, chatbot, customer service automation, AI support, customer service software'/>'{/* Hero Section */}''
       <section className='relative py-20 overflow-hidden'>''
         <div className='absolute inset-0 bg-gradient-to-r from-indigo-600/20 via-purple-600/20 to-pink-600/20' />''''
-        <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />';
+        <div className='absolute inset-0 bg-[url('/images/grid-pattern.svg')] bg-center opacity-10' />'
         ''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>'
           <motion.div '';
@@ -43,12 +43,12 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
               AI Customer Support'
             </h1>''
-            <p className='text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8'>';
+            <p className='text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto mb-8'>'
               Revolutionize your customer service with AI-powered support that's available 24/7, speaks 50+ languages, and never gets tired.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
-                Start Free Trial';
+                Start Free Trial'
         ''
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
           <motion.div '';
@@ -107,7 +107,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
               Our AI understands context, learns from interactions, and provides human-like support experiences
             </p>
 :pages.disabled/pages/services/AICustomerSupport.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -173,7 +173,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
               Join thousands of businesses who have transformed their customer support with AI
             </p>
 :pages.disabled/pages/services/AICustomerSupport.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -242,7 +242,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
               Connect with your existing tools and workflows without disruption
             </p>
 :pages.disabled/pages/services/AICustomerSupport.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {integrations.map(integration: unknown, index: unknown()
@@ -310,7 +310,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
               Choose the plan that fits your support volume. All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AICustomerSupport.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -343,12 +343,12 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                   <div className='flex items-baseline justify-center mb-2'>''
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/AICustomerSupport.tsx
                     <span className='text-zion-slate-light ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-zion-slate-light'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                     <span className='text-zion-slate-light ml-1'>{plan.period}</span>
@@ -363,7 +363,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
                     </li>
                   ))}
 :pages.disabled/pages/services/AICustomerSupport.tsx
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -401,7 +401,7 @@ export default function AICustomerSupport(...args: unknown[]): unknown {
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105'>
-                Start Free Trial';
+                Start Free Trial'
             transition={{ duration: 0.8 }}
           >''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>

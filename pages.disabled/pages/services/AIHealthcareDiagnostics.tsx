@@ -48,7 +48,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
             </div>''
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionize healthcare with AI-powered diagnostics, medical;
-              imaging analysis, and clinical decision support for accurate and;
+              imaging analysis, and clinical decision support for accurate and
               timely patient care.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -78,7 +78,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Advanced AI Diagnostic Capabilities'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI platform combines cutting-edge machine learning with;
-              medical expertise to deliver unprecedented diagnostic accuracy and;
+              medical expertise to deliver unprecedented diagnostic accuracy and
               speed.
             </p>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
@@ -89,7 +89,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-green-400/50 transition-all duration-300 group''>''
-                <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'>''
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -110,7 +110,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Specialized Diagnostic Services'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Comprehensive AI-powered diagnostics across all major medical;
+              Comprehensive AI-powered diagnostics across all major medical
               specialties with industry-leading accuracy rates.
             </p>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
@@ -136,7 +136,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                     </div>
                   </div>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3'>'{capability.services.map((service, serviceIndex) => (''                    <li key={serviceIndex} className='flex items-center'>''
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />'                      <span className='text-gray-300'>{service}</span>
@@ -158,7 +158,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Transform Healthcare Delivery'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI diagnostics platform delivers measurable improvements in;
+              Our AI diagnostics platform delivers measurable improvements in
               healthcare outcomes, efficiency, and cost reduction.
             </p>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
@@ -185,7 +185,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Enterprise-Grade Security & Compliance'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Built with healthcare-grade security and compliance standards to;
+              Built with healthcare-grade security and compliance standards to
               protect patient data and ensure regulatory adherence.
             </p>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
@@ -212,12 +212,12 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center mb-16''>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx;
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
               Flexible Pricing Plans'
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
   ';
-              Choose the plan that fits your healthcare facility's needs. All;
+              Choose the plan that fits your healthcare facility's needs. All
               plans include our core AI diagnostic capabilities.
             </p>
           </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
@@ -238,7 +238,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx)}';
+:pages.disabled/pages/services/AIHealthcareDiagnostics.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -250,7 +250,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
                     </span>''
                     <span className='text-gray-400 ml-2'>{plan.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'{plan.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='flex items-center'>''
                       <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0'  />'                      <span className='text-gray-300'>{feature}</span>
@@ -287,7 +287,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
               Join leading healthcare facilities worldwide in adopting;
-              AI-powered diagnostics for better patient outcomes and operational;
+              AI-powered diagnostics for better patient outcomes and operational
               efficiency.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -307,5 +307,5 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
         </div>
       </section>
     </div>
-  )}''`;
+  )}''`
   ''`''`

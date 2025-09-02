@@ -32,7 +32,7 @@ const projectBriefSchema = z.object({
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 ;
 // const TeamBuilderPage: React.FC = (): JSX.Element => { // New, or remove type for inference;
-  const [currentStep, setCurrentStep] = useState(0);
+  const [currentStep, setCurrentStep] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
   const [teamRecommendation, setTeamRecommendation] = useState<any>(null)
   const [projectBriefSubmitted, setProjectBriefSubmitted] = useState<any>(null)
@@ -59,7 +59,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
     if (isValid) {
       setCurrentStep((prev) => prev + 1)}
   }
-;
+
   const handlePreviousStep: React.FC = ($2) => {
     setCurrentStep((prev) => prev - 1)}
 
@@ -126,7 +126,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       console.error('Error sending invite:', error);
       toast.error(`Failed to send invite: ${error.message}`)}
   }
-;
+
   const renderRecommendation: React.FC = ($2) => {
     if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available
     return (
@@ -137,7 +137,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       />)}
 ;
   // In the main return of TeamBuilderPage:;
-  // Remove the step-based rendering for the last step (results view);
+  // Remove the step-based rendering for the last step (results view)
   // Instead, conditionally render the form or the recommendation display:
   return(
     <AppLayout>
@@ -312,5 +312,5 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       </div>
     </AppLayout>
   )}
-;
+
 export default TeamBuilderPage

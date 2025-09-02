@@ -34,12 +34,12 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
             transition={{ duration: 0.8 }}'>''
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-blue-500/20 border border-indigo-500/30 text-indigo-400 text-sm font-medium mb-6'>''
               <Search className='w-4 h-4 mr-2'  />              AI-Powered Autonomous Forensics
-            </div>';
+            </div>'
 ''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Revolutionize Digital Forensics with''
               <span className='bg-gradient-to-r from-indigo-400 to-blue-500 bg-clip-text text-transparent'>
-  '{';
+  '{'
   '}
                 AI Intelligence
               </span>
@@ -47,9 +47,9 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
             </h1>'''            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Transform your digital forensics capabilities with our AI-powered;
               autonomous platform. Conduct investigations faster, discover;
-              evidence more effectively, and maintain chain of custody.;
+              evidence more effectively, and maintain chain of custody.
 :pages.disabled/pages/services/AIAutonomousForensics.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-500 text-white rounded-lg font-semibold hover:from-indigo-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105'>
@@ -71,7 +71,7 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIAutonomousForensics.tsx
               Advanced Forensics Features'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our AI platform provides comprehensive digital forensics;
+              Our AI platform provides comprehensive digital forensics
               capabilities for modern investigations
             </p>
 :pages.disabled/pages/services/AIAutonomousForensics.tsx
@@ -83,7 +83,7 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIAutonomousForensics.tsx;
                 transition={{ duration: 0.6, delay: index * 0.1 }}'viewport={{ once: true }}''                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-indigo-500/30 transition-all duration-300''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIAutonomousForensics.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
@@ -105,7 +105,7 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AIAutonomousForensics.tsx
               Why Choose AI Autonomous Forensics?'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Experience measurable improvements in investigation efficiency and;
+              Experience measurable improvements in investigation efficiency and
               evidence discovery
             </p>
 :pages.disabled/pages/services/AIAutonomousForensics.tsx
@@ -131,7 +131,7 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
 :pages.disabled/pages/services/AIAutonomousForensics.tsx;
               transition={{ duration: 0.8 }}'viewport={{ once: true }}''              className='bg-gradient-to-br from-indigo-500/10 to-blue-500/10 border border-indigo-500/20 rounded-xl p-8''>''
               <h3 className='text-2xl font-semibold text-white mb-6'>
-:pages.disabled/pages/services/AIAutonomousForensics.tsx;
+:pages.disabled/pages/services/AIAutonomousForensics.tsx
                 Ready to Transform Forensics?'
               </h3>''
               <p className='text-gray-300 mb-6'>
@@ -156,7 +156,7 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
               Ready to Revolutionize Digital Forensics?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Start your journey to AI-powered forensics with our comprehensive;
+              Start your journey to AI-powered forensics with our comprehensive
               platform.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -172,4 +172,4 @@ const AIAutonomousForensics: React.FC = (): JSX.Element => {
   )}
 ;
 :pages.disabled/pages/services/AIAutonomousForensics.tsx;
-export default AIAutonomousForensics'';'''
+export default AIAutonomousForensics'''''

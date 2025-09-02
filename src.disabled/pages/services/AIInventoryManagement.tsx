@@ -238,7 +238,7 @@ export default function AIInventoryManagement(...args: unknown[]): unknown {
               </span>
             </h1>
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
-              Transform your inventory management with AI-powered forecasting, real-time tracking, and automated optimization.;
+              Transform your inventory management with AI-powered forecasting, real-time tracking, and automated optimization.
               Reduce costs, prevent stockouts, and improve operational efficiency.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -593,7 +593,7 @@ export default function AIInventoryManagement(...args: unknown[]): unknown {
               Ready to Optimize Your Inventory?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of businesses already using AI-powered inventory management;
+              Join thousands of businesses already using AI-powered inventory management
               to reduce costs and improve operational efficiency.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

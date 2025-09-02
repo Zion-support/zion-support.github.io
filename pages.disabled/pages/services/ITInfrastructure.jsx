@@ -83,7 +83,7 @@ import { Helmet } from;
   solutions: ['';
   'Storage arrays,Backup systems;
   ',Cloud storage',Data protection;
-  ']}];
+  ']}]
   return()
     <>
       <Helmet>
@@ -106,12 +106,12 @@ import { Helmet } from;
         <link''
           rel='canonical'';
           href='https://ziontechgroup.com/services/it-infrastructure'/>
-      </Helmet>';
+      </Helmet>'
 ''
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20'>'{/* Hero Section */}''
         <section className='py-20 px-4 sm:px-6 lg:px-8'>''
           <div className='max-w-7xl mx-auto text-center'>''
-            <h1 className='text-4xl md:text-6xl font-bold mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold mb-6'>'
               IT''
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400'>'{
   ' '}
@@ -119,7 +119,7 @@ import { Helmet } from;
               </span>'</h1>''            <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Build a solid foundation for your business with enterprise-grade;
               IT infrastructure. Our comprehensive services ensure reliability,
-:pages.disabled/pages/services/ITInfrastructure.jsx;
+:pages.disabled/pages/services/ITInfrastructure.jsx
               scalability, and security.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -145,7 +145,7 @@ import { Helmet } from;
                 Comprehensive IT infrastructure services for modern businesses
               </p>
 :pages.disabled/pages/services/ITInfrastructure.jsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
               {features.map((feature, index) => (
@@ -176,7 +176,7 @@ import { Helmet } from;
                 Multi-layered approach to building robust IT infrastructure
               </p>
 :pages.disabled/pages/services/ITInfrastructure.jsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
               {infrastructureAreas.map((area, index) => (
@@ -202,11 +202,11 @@ import { Helmet } from;
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/ITInfrastructure.jsx
                 Why Choose Our Infrastructure Services?'</h2>''              <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-                Proven expertise and cutting-edge technology for reliable;
+                Proven expertise and cutting-edge technology for reliable
                 infrastructure
               </p>
 :pages.disabled/pages/services/ITInfrastructure.jsx
-            </div>';
+            </div>'
 ''
             <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>''
               <div className='text-center'>''
@@ -226,7 +226,7 @@ import { Helmet } from;
                   99.9% uptime guarantee with redundant systems
                 </p>
 :pages.disabled/pages/services/ITInfrastructure.jsx
-              </div>';
+              </div>'
 ''
               <div className='text-center'>''
                 <div className='w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4'>'<svg''                    className='w-8 h-8 text-white'';
@@ -245,7 +245,7 @@ import { Helmet } from;
                   Grow your infrastructure as your business expands
                 </p>
 :pages.disabled/pages/services/ITInfrastructure.jsx
-              </div>';
+              </div>'
 ''
               <div className='text-center'>''
                 <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>'<svg''                    className='w-8 h-8 text-white'';
@@ -271,12 +271,12 @@ import { Helmet } from;
 '{/* CTA Section */}''        <section className='py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50'>''
           <div className='max-w-4xl mx-auto text-center'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/ITInfrastructure.jsx;
+:pages.disabled/pages/services/ITInfrastructure.jsx
               Ready to Build Your Infrastructure?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
   ';
-              Let's discuss how our infrastructure services can support your;
+              Let's discuss how our infrastructure services can support your
               business growth
             </p>'
             <Link'';
@@ -290,4 +290,4 @@ import { Helmet } from;
   )}
 ;
 :pages.disabled/pages/services/ITInfrastructure.jsx;
-export default ITInfrastructure'';'''
+export default ITInfrastructure'''''

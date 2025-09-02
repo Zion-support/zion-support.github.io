@@ -63,7 +63,7 @@ import {}
 const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTab] = useState('overview;
   ')  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {}
-    setIsVisible(true)}, []);
+    setIsVisible(true)}, [])
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
   return()    <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>'{/* Hero Section */}''      <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto text-center'>
@@ -71,14 +71,14 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8 }}''            className='mb-8''>''
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-300 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
               <Truck className='w-4 h-4 mr-2'  />              Supply Chain Innovation'
             </div>''
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>
               AI-Powered Supply Chain Optimization'</h1>''            <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
               Revolutionary supply chain technology that combines artificial;
-              intelligence with logistics expertise to deliver unprecedented;
+              intelligence with logistics expertise to deliver unprecedented
               efficiency, cost savings, and operational excellence.
             </p>
           </motion.div>
@@ -88,11 +88,11 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}';
             transition={{ duration: 0.8, delay: 0.2 }}'';
             className='flex flex-col sm:flex-row gap-4 justify-center items-center'>'<Link''              to='/contact'';
-              className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105''>'';
+              className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
               <Truck className='w-5 h-5 mr-2'  />              Optimize Your Supply Chain
             </Link>'<Link''              to='#demo'';
-              className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300''>'';
+              className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
               <Eye className='w-5 h-5 mr-2'  />              Watch Demo
             </Link>
@@ -133,11 +133,11 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
               Advanced Supply Chain Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Comprehensive supply chain solutions powered by cutting-edge AI;
+              Comprehensive supply chain solutions powered by cutting-edge AI
               technology
             </p>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -145,7 +145,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}''                className='bg-gradient-to-br from-blue-900/50 to-cyan-900/50 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300 hover:transform hover:scale-105''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
                   <feature.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -168,7 +168,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
               Comprehensive Supply Chain Modules'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Modular supply chain solutions that adapt to your specific;
+              Modular supply chain solutions that adapt to your specific
               business needs
             </p>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
@@ -179,7 +179,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}'transition={{ duration: 0.8, delay: 0.1 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20''>''
-                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>'';
+                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
                   <Truck className='w-6 h-6 mr-3 text-blue-400'  />                  {module.name}'
                 </h3>''
@@ -208,7 +208,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
               Tailored supply chain optimization for your specific industry
             </p>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {industries.map(industry: unknown, index: unknown()
@@ -218,7 +218,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}'transition={{ duration: 0.8, delay: 0.2 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-blue-800/80 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20''>''
                 <div className='flex items-center mb-6'>''
-                  <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4'>'';
+                  <div className='w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mr-4'>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
                     <industry.icon className='w-8 h-8 text-white' />'
                   </div>''
@@ -242,7 +242,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
               Supply Chain Applications'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Transform your supply chain operations across all business;
+              Transform your supply chain operations across all business
               functions
             </p>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
@@ -255,7 +255,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}'transition={{ duration: 0.8, delay: 0.2 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20''>''
-                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>'';
+                <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
                   <Target className='w-6 h-6 mr-3 text-cyan-400'  />                  {useCase.industry}'
                 </h3>''
@@ -284,7 +284,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
               Access advanced supply chain AI technology at competitive prices
             </p>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingTiers.map(tier: unknown, index: unknown()
@@ -301,7 +301,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx)}';
+:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-4'>
@@ -322,7 +322,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
                     </span>
                   </div>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>
                   {tier.features.map((feature, featureIndex) => (
@@ -331,7 +331,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
                     </li>
                   ))}
                 </ul>
-:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
+:pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
 '
                 <Link''`
                   to='/contact'``;
@@ -358,11 +358,11 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
               Why Choose Our Supply Chain Platform?'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Transform your supply chain with AI-powered optimization;
+              Transform your supply chain with AI-powered optimization
               technology
             </p>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -371,7 +371,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}'transition={{ duration: 0.8, delay: 0.2 * index }}''                className='bg-gradient-to-br from-slate-800/80 to-cyan-800/80 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -396,7 +396,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
               Ready to Optimize Your Supply Chain?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Join the supply chain revolution with AI-powered optimization;
+              Join the supply chain revolution with AI-powered optimization
               technology
             </p>'''            <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>''
               <div className='flex items-center text-gray-300'>''
@@ -410,14 +410,14 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
                 <MapPin className='w-5 h-5 mr-2 text-blue-400'  />                <span>364 E Main St STE 1008, Middletown DE 19709</span>
               </div>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
-            </div>';
+            </div>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<Link''                to='/contact'';
-                className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
                 <Truck className='w-5 h-5 mr-2'  />                Schedule Supply Chain Demo
               </Link>'<Link''                to='https://ziontechgroup.com'';
-                className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 rounded-lg border-2 border-blue-500 text-blue-300 font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
                 <Globe className='w-5 h-5 mr-2'  />                Visit Our Website</Link>            </div>
           </motion.div>
@@ -426,5 +426,5 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
     </div>
   )}
 ;
-export default AISupplyChainOptimization''`;
+export default AISupplyChainOptimization''`
   ''`''`

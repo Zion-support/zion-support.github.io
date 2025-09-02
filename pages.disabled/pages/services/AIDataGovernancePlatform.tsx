@@ -34,7 +34,7 @@ const AIDataGovernancePlatform: React.FC = props {
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center text-white''>''
             <div className='flex justify-center mb-6'>''
-              <div className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full'>'';
+              <div className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full'>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
                 <Shield className='w-8 h-8 text-white'  />              </div>'
             </div>''
@@ -43,15 +43,15 @@ const AIDataGovernancePlatform: React.FC = props {
             </h1>''
             <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-300'>
               Intelligent data governance platform that automatically discovers,
-              classifies, and protects your sensitive data while ensuring;
+              classifies, and protects your sensitive data while ensuring
               compliance with global regulations.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<Link''                to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
                 <Play className='w-5 h-5 mr-2'  />                Start Free Trial
               </Link>'<Link''                to='/demo'';
-                className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
                 <ArrowRight className='w-5 h-5 mr-2'  />                Watch Demo</Link>            </div>
           </motion.div>
@@ -67,11 +67,11 @@ const AIDataGovernancePlatform: React.FC = props {
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
               Comprehensive Data Governance Features'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI-powered platform provides end-to-end data governance;
+              Our AI-powered platform provides end-to-end data governance
               capabilities to protect your data and ensure compliance.
             </p>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -79,7 +79,7 @@ const AIDataGovernancePlatform: React.FC = props {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300''>''
-                <div className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg w-fit mb-6'>'';
+                <div className='p-3 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg w-fit mb-6'>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
@@ -100,11 +100,11 @@ const AIDataGovernancePlatform: React.FC = props {
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
               Global Compliance Framework Support'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Automatically maintain compliance with major global data;
+              Automatically maintain compliance with major global data
               protection and security regulations.
             </p>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto'>
             {complianceFrameworks.map(framework: unknown, index: unknown()
@@ -112,7 +112,7 @@ const AIDataGovernancePlatform: React.FC = props {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-white/10 text-center''>''
-                <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>'';
+                <div className='p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
                   <CheckCircle className='w-6 h-6 text-white'  />'</div>'                <p className='text-white font-medium text-sm'>{framework}</p>              </motion.div>
             ))}
@@ -129,11 +129,11 @@ const AIDataGovernancePlatform: React.FC = props {
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
               Transparent Pricing'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the plan that best fits your data governance needs. All;
+              Choose the plan that best fits your data governance needs. All
               plans include our core AI discovery and compliance features.
             </p>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
             {pricingTiers.map(tier: unknown, index: unknown()
@@ -151,7 +151,7 @@ const AIDataGovernancePlatform: React.FC = props {
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AIDataGovernancePlatform.tsx)}';
+:pages.disabled/pages/services/AIDataGovernancePlatform.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -162,7 +162,7 @@ const AIDataGovernancePlatform: React.FC = props {
                     </span>''
                     <span className='text-gray-400 ml-1'>{tier.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>
                   {tier.features.map((feature, featureIndex) => (
@@ -199,11 +199,11 @@ const AIDataGovernancePlatform: React.FC = props {
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
               Why Choose AI Data Governance Platform?'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Protect your data, ensure compliance, and build trust with;
+              Protect your data, ensure compliance, and build trust with
               intelligent governance automation.
             </p>
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -211,7 +211,7 @@ const AIDataGovernancePlatform: React.FC = props {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8, delay: index * 0.1 }}''                className='text-center''>''
-                <div className='p-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-fit mx-auto mb-6'>'';
+                <div className='p-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full w-fit mx-auto mb-6'>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
                   <benefit.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -230,19 +230,19 @@ const AIDataGovernancePlatform: React.FC = props {
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='max-w-4xl mx-auto''>''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIDataGovernancePlatform.tsx;
+:pages.disabled/pages/services/AIDataGovernancePlatform.tsx
               Ready to Govern Your Data with AI?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Join organizations worldwide that trust our platform to protect;
+              Join organizations worldwide that trust our platform to protect
               their data and ensure compliance.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<Link''                to='/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105''>'';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105''>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
                 <Rocket className='w-5 h-5 mr-2'  />                Start Free Trial
               </Link>'<Link''                to='/demo'';
-                className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 border-2 border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300''>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
                 <Play className='w-5 h-5 mr-2'  />                Schedule Demo</Link>            </div>
           </motion.div>
@@ -254,11 +254,11 @@ const AIDataGovernancePlatform: React.FC = props {
           <div className='grid md:grid-cols-3 gap-8 text-center'>''
             <div className='flex flex-col items-center'>''
               <Phone className='w-8 h-8 text-blue-400 mb-4'  />''
-              <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>'';
+              <h3 className='text-xl font-bold text-white mb-2'>Phone</h3>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
               <p className='text-gray-300'>+1 302 464 0950</p>'</div>''            <div className='flex flex-col items-center'>''
               <Mail className='w-8 h-8 text-blue-400 mb-4'  />''
-              <h3 className='text-xl font-bold text-white mb-2'>Email</h3>'';
+              <h3 className='text-xl font-bold text-white mb-2'>Email</h3>''
 :pages.disabled/pages/services/AIDataGovernancePlatform.tsx
               <p className='text-gray-300'>kleber@ziontechgroup.com</p>'</div>''            <div className='flex flex-col items-center'>''
               <MapPin className='w-8 h-8 text-blue-400 mb-4'  />''
@@ -274,5 +274,5 @@ const AIDataGovernancePlatform: React.FC = props {
     </div>
   )}
 ;
-export default AIDataGovernancePlatform''`;
+export default AIDataGovernancePlatform''`
   ''`''`

@@ -110,7 +110,7 @@ items: [';Quantum Computing - Next-gen computational power,
             </h1>'
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
               Experience the future of business technology with our revolutionary platform enhancements.;
-              From advanced AI services to cutting - edge performance analytics, discover how Zion Tech Group;
+              From advanced AI services to cutting - edge performance analytics, discover how Zion Tech Group
               is transforming the digital landscape.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -146,7 +146,7 @@ items: [';Quantum Computing - Next-gen computational power,
               Platform Enhancements
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Discover the cutting-edge improvements that make our platform the most advanced;
+              Discover the cutting-edge improvements that make our platform the most advanced
               business technology solution available today.
             </p>
           </motion.div>
@@ -210,7 +210,7 @@ items: [';Quantum Computing - Next-gen computational power,
               Key Features
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our platform enhancements deliver cutting-edge features that set new standards;
+              Our platform enhancements deliver cutting-edge features that set new standards
               for business technology solutions.
             </p>
           </motion.div>
@@ -268,7 +268,7 @@ items: [';Quantum Computing - Next-gen computational power,
               Platform Benefits
             </h2>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Experience the tangible benefits of our comprehensive platform improvements;
+              Experience the tangible benefits of our comprehensive platform improvements
               that drive business success and user satisfaction.
             </p>
           </motion.div>
@@ -326,7 +326,7 @@ items: [';Quantum Computing - Next-gen computational power,
               Ready to Experience the Future?
             </h2>'
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of businesses already leveraging our revolutionary platform;
+              Join thousands of businesses already leveraging our revolutionary platform
               enhancements to drive growth and innovation.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>

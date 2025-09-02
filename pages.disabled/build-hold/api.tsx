@@ -52,7 +52,7 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
   1.2.0;
   ', icon: '🐹 }, { name:,
   Ruby;
-  ', version: '1.1.0, icon: '💎;
+  ', version: '1.1.0, icon: '💎
   ' }'  ]'
   return(
     <MainLayout;
@@ -158,5 +158,5 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
       </section>
     </MainLayout>
   )}
-;
+
 export default API

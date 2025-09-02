@@ -97,7 +97,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
       <SEO;
 =;
-      <SEO '>        title = 'Employee Scheduling SaaS - Zion Tech Group';
+      <SEO '>        title = 'Employee Scheduling SaaS - Zion Tech Group'
         description='Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools.'
     <>'
       <SEO '';
@@ -133,7 +133,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                   </span>'
                 </h1>''
                 <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-                  Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive;
+                  Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive
                   workforce management tools. Streamline your scheduling process and optimize labor costs.'
                 </p>''
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -155,7 +155,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                   </span>
                 </h1>''
                 <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
-                  Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive;
+                  Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive
                   workforce management tools. Streamline your scheduling process and optimize labor costs.
                 </p>''
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -174,14 +174,14 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 '{/* Features Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-                Powerful Scheduling Features';
+                Powerful Scheduling Features'
                 Powerful Scheduling Features
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -192,7 +192,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {features.map((feature, index()
@@ -222,7 +222,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
                     <feature.icon className='w-6 h-6 text-white' />'
                     <feature.icon className='w-6 h-6 text-white' />
@@ -234,14 +234,14 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 '{/* Scheduling Capabilities Section */}''
         <section className='py-20 bg-slate-800/30'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-                Advanced Scheduling Capabilities';
+                Advanced Scheduling Capabilities'
                 Advanced Scheduling Capabilities
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -252,7 +252,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {schedulingCapabilities.map(capability: unknown, index: unknown()
@@ -282,7 +282,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-red-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
                     <capability.icon className='w-6 h-6 text-white' />'
                     <capability.icon className='w-6 h-6 text-white' />
@@ -294,14 +294,14 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 '{/* Industries Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-                Designed for Every Industry';
+                Designed for Every Industry'
                 Designed for Every Industry
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -312,7 +312,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>
               {industries.map(industry: unknown, index: unknown()
@@ -342,7 +342,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
   delay: index * 0.1}}'';
                   className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-orange-500 transition-all duration-300'';
 '';
-                  <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>'';
+                  <div className='w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
                     <industry.icon className='w-6 h-6 text-white' />'
                     <industry.icon className='w-6 h-6 text-white' />
@@ -354,14 +354,14 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 '{/* Benefits Section */}''
         <section className='py-20 bg-slate-800/30'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-                Why Choose Our Scheduling Platform?';
+                Why Choose Our Scheduling Platform?'
                 Why Choose Our Scheduling Platform?
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -372,7 +372,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-2 gap-8'>
               {benefits.map(benefit: unknown, index: unknown()
@@ -416,14 +416,14 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 '{/* Pricing Section */}''
         <section className='py-20'>'
           <div className='max-w-7xl mx-auto px-6'>''
             <div className='text-center mb-16'>''
               <h2 className='text-4xl font-bold mb-6 text-white'>
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
-                Transparent Pricing Plans';
+                Transparent Pricing Plans'
                 Transparent Pricing Plans
               </h2>''
               <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -434,7 +434,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 <:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
 =;
-            '>            </div>';
+            '>            </div>'
             ''
             <div className='grid md: grid-cols-3 gap-8'>
               {pricingPlans.map(plan: unknown, index: unknown()
@@ -478,12 +478,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                   <div className='text-center mb-6'>''
                     <h3 className='text-2xl font-bold mb-2 text-white'>{plan.name}</h3>''
                     <div className='mb-4'>''
-                      <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                      <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
                       <span className='text-gray-400'>{plan.period}</span>'
                     </div>''
                     <p className='text-gray-300'>{plan.description}</p>
-                  </div>';
+                  </div>'
 ''
                   <ul className='space-y-3 mb-8'>'
                       <span className='text-gray-400'>{plan.period}</span>
@@ -498,7 +498,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                       </li>
                     ))}
                   </ul>
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 '
                   <Link''`
                     to='/request-quote'``;
@@ -520,7 +520,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
             </div>
           </div>
         </section>
-:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;
+:pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
 '{/* CTA Section */}''
         <section className='py-20 bg-gradient-to-r from-orange-600/20 to-red-600/20'>'
           <div className='max-w-4xl mx-auto text-center px-6'>

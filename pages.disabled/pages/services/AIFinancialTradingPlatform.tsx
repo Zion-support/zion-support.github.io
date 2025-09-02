@@ -135,7 +135,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
       ],';
       cta: 'Contact Sales',
       popular: false}
-:pages.disabled/pages/services/AIFinancialTradingPlatform.tsx;
+:pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
   ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -143,7 +143,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
 <:pages.disabled/pages/services/AIFinancialTradingPlatform.tsx;
       <SEO;
 =;
-      <SEO '>        title='AI Financial Trading Platform - Zion Tech Group';
+      <SEO '>        title='AI Financial Trading Platform - Zion Tech Group'
         description='Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks.'/>        title='AI Financial Trading Platform - Zion Tech Group''        description='Revolutionize your trading with AI-powered market analysis, algorithmic trading, and risk management. Increase returns and reduce risks.'/>'
       <SEO ''
         title='AI Financial Trading Platform - Zion Tech Group'';
@@ -169,13 +169,13 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
             <div className='inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-600 to-emerald-600 text-white text-sm font-medium mb-6'>''
               <Brain className='w-4 h-4 mr-2'  />              AI-Powered Trading'
             </div>''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               AI Financial''
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>''{' '}Trading Platform
               </span>'
             </h1>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Transform your trading with AI that analyzes markets, executes trades, and manages risk automatically.;
+              Transform your trading with AI that analyzes markets, executes trades, and manages risk automatically.
               Increase returns, reduce risks, and trade with institutional-grade technology.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -202,7 +202,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
               </span>
             </h1>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Transform your trading with AI that analyzes markets, executes trades, and manages risk automatically.;
+              Transform your trading with AI that analyzes markets, executes trades, and manages risk automatically.
               Increase returns, reduce risks, and trade with institutional-grade technology.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -251,7 +251,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
               Advanced Trading Intelligence';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Advanced Trading Intelligence
@@ -260,7 +260,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
               Everything you need to trade like a professional with AI-powered insights and automation
             </p>
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -294,12 +294,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
 ';
                 <div className='w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4'>';
   delay: index * 0.1}}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4'>''
                   <CheckCircle className='w-6 h-6 text-white'  />
   delay: index * 0.1 '}}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-green-500 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mb-4'>''
                   <CheckCircle className='w-6 h-6 text-white'  />'
@@ -338,7 +338,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
               Transform Your Trading Results';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Transform Your Trading Results
@@ -347,7 +347,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
               See measurable improvements in your trading performance and profitability
             </p>
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -381,12 +381,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
 ';
                 <div className='w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4'>';
   delay: index * 0.1}}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <div className='w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
                   <TrendingUp className='w-10 h-10 text-white'  />
   delay: index * 0.1 '}}'';
-                className='text-center'';
+                className='text-center''
 ''
                 <div className='w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4'>''
                   <TrendingUp className='w-10 h-10 text-white'  />'
@@ -425,7 +425,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
               Perfect for Every Trader';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Perfect for Every Trader
@@ -434,7 +434,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
               From beginners to institutional investors, our platform adapts to your trading needs
             </p>
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -468,12 +468,12 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
 ';
                 <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4'>';
   delay: index * 0.1}}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-green-500 transition-all duration-300'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-green-500 transition-all duration-300''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''
                   <Target className='w-8 h-8 text-white'  />
   delay: index * 0.1 '}}'';
-                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-green-500 transition-all duration-300'';
+                className='bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 text-center hover:border-green-500 transition-all duration-300''
 ''
                 <div className='w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''
                   <Target className='w-8 h-8 text-white'  />'
@@ -512,7 +512,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
               Competitive Pricing for Every Trader';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Competitive Pricing for Every Trader
@@ -521,7 +521,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
               Choose the plan that fits your trading style and scale as you grow
             </p>
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricing.map(plan: unknown, index: unknown()
@@ -577,7 +577,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
                     <span className='text-gray-400 ml-1'>{plan.period}</span>
                   </div>
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                 </div>
@@ -651,7 +651,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
                 whileTap={{ scale: 0.95 }}'';
                 className='px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-200';
                 Schedule Demo;
-              </motion.button>';
+              </motion.button>'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -688,7 +688,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
         <div className='max-w-4xl mx-auto text-center'>''
           <p className='text-gray-400 mb-4'>
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx;
-            Need help choosing the right plan? Contact our sales team';
+            Need help choosing the right plan? Contact our sales team'
             Need help choosing the right plan? Contact our sales team
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-400'>
@@ -699,6 +699,6 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AIFinancialTradingPlatform.tsx)}''`;
+:pages.disabled/pages/services/AIFinancialTradingPlatform.tsx)}''`
 ''`''`)}
 '"`

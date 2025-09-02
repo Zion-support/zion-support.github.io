@@ -161,7 +161,7 @@ export default function AIBusinessIntelligence() {
               AI Business Intelligence
             </h1>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8&quot>
-              Transform your business with intelligent analytics, predictive insights, and;
+              Transform your business with intelligent analytics, predictive insights, and
               data-driven decision making powered by advanced AI algorithms.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center&quot>
@@ -194,7 +194,7 @@ export default function AIBusinessIntelligence() {
               Powerful Features
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto&quot>
-              Comprehensive AI-powered business intelligence tools designed to drive;
+              Comprehensive AI-powered business intelligence tools designed to drive
               better decisions and accelerate growth.
             </p>
           </div>
@@ -248,7 +248,7 @@ export default function AIBusinessIntelligence() {
               Types of Analytics
             </h2>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto&quot>
-              From descriptive to prescriptive analytics, our AI platform covers the;
+              From descriptive to prescriptive analytics, our AI platform covers the
               complete spectrum of business intelligence.
             </p>
           </div>
@@ -328,7 +328,7 @@ export default function AIBusinessIntelligence() {
               Ready to Transform Your Business?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto&quot>
-              Start leveraging the power of AI business intelligence today and see;
+              Start leveraging the power of AI business intelligence today and see
               immediate improvements in your decision-making and business performance.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center&quot>

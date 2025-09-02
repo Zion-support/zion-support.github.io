@@ -80,27 +80,27 @@ import {}
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/SpaceTech.tsx;
             animate={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center''>''
-            <div className='inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/SpaceTech.tsx
               <Rocket className='w-4 h-4 mr-2'  />              Space Technology Solutions
-            </div>';
+            </div>'
 ''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               Space''
               <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
-  '{';
+  '{'
   '}
                 Technology
               </span>
 :pages.disabled/pages/services/SpaceTech.tsx
             </h1>'''            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Pioneer the future with our cutting-edge space technology;
+              Pioneer the future with our cutting-edge space technology
               solutions that enable satellite operations, space communications,
 :pages.disabled/pages/services/SpaceTech.tsx
               and Earth observation.'</p>''            <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center'>''
                 <Play className='w-5 h-5 mr-2'  />
-:pages.disabled/pages/services/SpaceTech.tsx;
+:pages.disabled/pages/services/SpaceTech.tsx
                 Launch Space Project'
               </button>''
               <button className='px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200 flex items-center justify-center'>''
@@ -118,11 +118,11 @@ import {}
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/SpaceTech.tsx
               Advanced Space Technology Features'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              Our platform provides cutting-edge space technology capabilities;
+              Our platform provides cutting-edge space technology capabilities
               for modern space missions and satellite operations.
             </p>
 :pages.disabled/pages/services/SpaceTech.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -130,7 +130,7 @@ import {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.5, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/SpaceTech.tsx
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
@@ -151,11 +151,11 @@ import {}
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/SpaceTech.tsx
               Core Space Technology Services'</h2>''            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              From satellite operations to space communications, we provide;
+              From satellite operations to space communications, we provide
               comprehensive space technology solutions.
             </p>
 :pages.disabled/pages/services/SpaceTech.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {services.map(service: unknown, index: unknown()
@@ -192,7 +192,7 @@ import {}
               monitoring, and space exploration capabilities.
             </p>
 :pages.disabled/pages/services/SpaceTech.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>''
             <div className='space-y-6'>
@@ -232,7 +232,7 @@ import {}
               providing innovative solutions for global challenges.
             </p>
 :pages.disabled/pages/services/SpaceTech.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -240,7 +240,7 @@ import {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.5, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200''>''
-                <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/SpaceTech.tsx
                   <Target className='w-8 h-8 text-white'  />'</div>''                <h3 className='text-xl font-semibold text-white mb-2'>
                   {useCase.industry}'
@@ -250,7 +250,7 @@ import {}
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/SpaceTech.tsx;
+:pages.disabled/pages/services/SpaceTech.tsx
 '{/* Benefits Section */}''
       <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
@@ -260,7 +260,7 @@ import {}
                 Why Choose Space Technology?'
               </h2>''
               <p className='text-lg text-gray-300 mb-6'>
-                Space technology provides unprecedented opportunities to;
+                Space technology provides unprecedented opportunities to
                 explore, monitor, and understand our world and beyond.'
               </p>''
               <ul className='space-y-3'>'{benefits.map((benefit, index) => (''                  <li key={index} className='flex items-center text-gray-300'>''
@@ -273,7 +273,7 @@ import {}
               <div className='text-center'>''
                 <Zap className='w-24 h-24 text-purple-400 mx-auto mb-4'  />''
                 <h3 className='text-2xl font-bold text-white mb-2'>
-:pages.disabled/pages/services/SpaceTech.tsx;
+:pages.disabled/pages/services/SpaceTech.tsx
                   Space Innovation'
                 </h3>'                <p className='text-gray-300 mb-6'>
                   Our team has deep expertise in space technology and is
@@ -299,11 +299,11 @@ import {}
               Launch Your Space Project Today'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Join organizations worldwide that use our space technology;
+              Join organizations worldwide that use our space technology
               solutions to explore new frontiers and solve global challenges.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-              <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center'>';
+              <button className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center'>'
                 Get Started Today''
                 <ArrowRight className='w-5 h-5 ml-2'  />'</button>'              <button className='px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200'>                Contact Sales
               </button>
@@ -315,4 +315,4 @@ import {}
   )}
 ;
 :pages.disabled/pages/services/SpaceTech.tsx;
-export { SpaceTech }export default SpaceTech'';'''
+export { SpaceTech }export default SpaceTech'''''

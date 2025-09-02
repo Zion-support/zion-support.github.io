@@ -20,7 +20,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       gridCanvas.width = canvas.width;
       gridCanvas.height = canvas.height;
       // Draw enhanced grid;
-      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
+      gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1)'
       gridCtx.lineWidth = 1
       for (let x = 0 x < gridCanvas.width x += 40) {
         gridCtx.beginPath();
@@ -67,7 +67,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       time += 0.01;
       // Clear canvas with fade effect;
       ctx.fillStyle = 'rgba(2, 6, 23, 0.1)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
       // Create new particles
       if (particles.length < 100) {
         createParticle();
@@ -104,7 +104,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       ctx.lineWidth = 1;
       ctx.globalAlpha = 0.3;
       const gridSize = 50;
-      const offsetY = (time * 5) % gridSize;
+      const offsetY = (time * 5) % gridSize
       // Vertical lines
       for (let x = offsetX x < canvas.width x += gridSize) {
         ctx.beginPath();
@@ -157,7 +157,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
 ;
     animate();
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', resizeCanvas)
       cancelAnimationFrame(animationId)}
   }, [])
   return(

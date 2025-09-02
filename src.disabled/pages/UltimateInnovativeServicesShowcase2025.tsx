@@ -8,5 +8,5 @@ import React, { useState, useMemo } from;
   'all') const [searchTerm, setSearchTerm] = useState<any>('
   ') const [sortBy, setSortBy] = useState<any>('innovation;
   ')  const filtered = ULTIMATE_INNOVATIVE_SERVICES_2025  if (selectedCategory !== 'all;
-  ') { filtered = filtered.filter(service => service.category === selectedCategory)} if (selectedSubcategory !== 'all;
+  ') { filtered = filtered.filter(service => service.category === selectedCategory)} if (selectedSubcategory !== 'all
   ') { filtered = filtered.filter(service => service.subcategory === selectedSubcategory)} if (searchTerm) { filtered = filtered.filter(service => service.title.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase()) || service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) ) }'

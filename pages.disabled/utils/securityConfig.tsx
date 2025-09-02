@@ -71,7 +71,7 @@ export;
       sameSite: 'strict'}}}
 ;
 // Input sanitization functions;
-  // Remove potentially dangerous HTML tags;
+  // Remove potentially dangerous HTML tags
   html: (input: string) : string => {
     return input
       .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi,) .replace (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi,) .replace (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi,) .replace (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi,) },
@@ -79,7 +79,7 @@ export;
   sql: (input: string) : string => {
 '';
     return input.replace (/['';\\]/g,) },
-  // Remove XSS patterns;
+  // Remove XSS patterns
   xss: (input: string) : string => {
     return input
       .replace (/javascript:/gi,) .replace (/on\w+\s*=/gi,) .replace (/<script / gi,) .replace (/<\/script>/gi,) },
@@ -107,14 +107,14 @@ export;
 }
 ;
 // Input sanitization functions;
-  // Remove potentially dangerous HTML tags;
+  // Remove potentially dangerous HTML tags
   html: (input: string) : string => {}
     return input
       .replace (/<script\b[^<]* (?: (?!<\/script>) <[^<]*) *<\/script>/gi,) .replace (/<iframe\b[^<]* (?: (?!<\/iframe>) <[^<]*) *<\/iframe>/gi,) .replace (/<object\b[^<]* (?: (?!<\/object>) <[^<]*) *<\/object>/gi,) .replace (/<embed\b[^<]* (?: (?!<\/embed>) <[^<]*) *<\/embed>/gi,) },
   // Remove SQL injection patterns;
   sql: (input: string) : string => {}
     return input.replace (/['';\\]/g,) },
-  // Remove XSS patterns;
+  // Remove XSS patterns
   xss: (input: string) : string => {}
     return input
       .replace (/javascript:/gi,) .replace (/on\w+\s*=/gi,) .replace (/<script / gi,) .replace (/<\/script>/gi,) },
@@ -182,6 +182,6 @@ export;
     headers: true,
     rateLimit: false,
     session: false,
-:pages.disabled/utils/securityConfig.tsx;
+:pages.disabled/utils/securityConfig.tsx
     validation: true})}
     validation: true})}''`

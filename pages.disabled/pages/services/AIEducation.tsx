@@ -27,18 +27,18 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
   ]';K-12 personalized learning and tutoring',';Higher education course optimization',';Corporate training and skill development',';Language learning and proficiency testing',';Special education and accessibility',';Professional certification and licensing';
   ]';Improve student performance by 25-40%',';Reduce learning time by 30-50%',';Increase engagement and retention by 40-60%',';Optimize curriculum and teaching methods',';Provide personalized learning experiences',';Scale educational programs without additional staff';
   ]';K-12 Education',';Higher Education',';Corporate Training',';Online Learning',';Special Education',';Professional Development';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIEducation.tsx
             <GraduationCap className='w-4 h-4 mr-2'  /> AI-Powered Educational Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Education Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform education with AI-powered learning that personalizes instruction, optimizes curriculum, and accelerates student achievement.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
             </div>
           </div>
 :pages.disabled/pages/services/AIEducation.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
             </div>
           ))}
 :pages.disabled/pages/services/AIEducation.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
             ))}
           </div>
 :pages.disabled/pages/services/AIEducation.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-blue-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Educational Impact</h3>''
@@ -146,7 +146,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
             ))}
           </div>
 :pages.disabled/pages/services/AIEducation.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { GraduationCap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Tar
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform education with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>''
 :pages.disabled/pages/services/AIEducation.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

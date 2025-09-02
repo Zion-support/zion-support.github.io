@@ -2,28 +2,24 @@ import { motion } from 'framer-motion';
 import { Accessibility as AccessibilityIcon, Eye, Ear, MousePointer, Keyboard, Smartphone } from 'lucide-react';
 const Accessibility: React.FC = () => {
   const features = [
-    {
-      title: 'Visual Accessibility', icon: Eye,
+    { title: 'Visual Accessibility', icon: Eye,
       description: 'Support for users with visual impairments', features: [;
         'High contrast mode support', 'Screen reader compatibility',
         'Text scaling and zoom functionality', 'Alternative text for images',
         'Keyboard navigation support';
-      ]}, {
-      title: 'Motor Accessibility',
+      ]}, { title: 'Motor Accessibility',
       icon: MousePointer, description: 'Support for users with motor impairments',
       features: [
         'Keyboard-only navigation', 'Voice control compatibility',
         'Large click targets', 'Customizable interaction timeouts',
         'Switch control support';
-      ]}, {
-      title: 'Cognitive Accessibility',
+      ]}, { title: 'Cognitive Accessibility',
       icon: AccessibilityIcon, description: 'Support for users with cognitive differences',
       features: [
         'Clear and simple language', 'Consistent navigation patterns',
         'Error prevention and recovery', 'Progress indicators',
         'Help and support resources';
-      ]}, {
-      title: 'Auditory Accessibility',
+      ]}, { title: 'Auditory Accessibility',
       icon: Ear, description: 'Support for users with hearing impairments',
       features: [
         'Visual indicators for audio content', 'Captions and transcripts',
@@ -34,7 +30,7 @@ const Accessibility: React.FC = () => {
   const standards = [
     'WCAG 2.1 AA compliance', 'Section 508 compliance',
     'ADA compliance', 'EN 301 549 compliance',
-    'ISO/IEC 40500 compliance';
+    'ISO/IEC 40500 compliance'
   ]
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>
@@ -59,16 +55,16 @@ const Accessibility: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.1   }}
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Our Accessibility Commitment</h2>
           <p className='text-gray-600 leading-relaxed mb-4'>
             Zion Tech Group is committed to ensuring digital accessibility for people with disabilities.;
-            We are continually improving the user experience for everyone and applying the relevant;
+            We are continually improving the user experience for everyone and applying the relevant
             accessibility standards to ensure we provide equal access to all users.
           </p>
           <p className='text-gray-600 leading-relaxed'>
-            Our goal is to make our website and services accessible to all users, regardless of their;
+            Our goal is to make our website and services accessible to all users, regardless of their
             abilities or the technology they use to access the internet.
           </p>
         </motion.div>
@@ -76,7 +72,7 @@ const Accessibility: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          transition={{ delay: 0.2   }}
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-6'>Accessibility Features</h2>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -105,7 +101,7 @@ const Accessibility: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.3   }}
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Standards Compliance</h2>
           <p className='text-gray-600 mb-4'>
@@ -124,7 +120,7 @@ const Accessibility: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
+          transition={{ delay: 0.4   }}
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
           <div className='flex items-center mb-4'>
             <Keyboard className='h-6 w-6 text-blue-600 mr-3' />
@@ -182,7 +178,7 @@ const Accessibility: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.5   }}
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
           <div className='flex items-center mb-4'>
             <Smartphone className='h-6 w-6 text-blue-600 mr-3' />
@@ -218,11 +214,11 @@ const Accessibility: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.6   }}
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Feedback and Support</h2>
           <p className='text-gray-600 mb-4'>
-            We welcome your feedback on the accessibility of our website. If you encounter any;
+            We welcome your feedback on the accessibility of our website. If you encounter any
             accessibility barriers or have suggestions for improvement, please contact us: </p>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
             <div>
@@ -246,5 +242,5 @@ const Accessibility: React.FC = () => {
       </div>
     </div>
   )}
-;
+
 export default Accessibility

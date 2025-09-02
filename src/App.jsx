@@ -16,13 +16,13 @@ const Careers = lazy(() => import('./pages/Careers.tsx'));
 const Sitemap = lazy(() => import('./pages/Sitemap.jsx'));
 // Services pages;
 const ComprehensivePricing = lazy(() =>
-  import('./pages/ComprehensivePricing2025.tsx'));
+  import('./pages/ComprehensivePricing2025.tsx'))
 // Loading component
 const LoadingSpinner = () => (
   <div className='flex items-center justify-center min-h-screen'>
     <div className='animate-spin rounded-full h-32 w-32 border-b-2 border-zion-cyan'></div>
   </div>
-);
+)
 // Simple Services page component
 const ServicesPage = () => (
   <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-24'>
@@ -45,14 +45,14 @@ const ServicesPage = () => (
             AI & Machine Learning
           </h3>
           <p className='text-gray-300'>
-            Cutting-edge artificial intelligence solutions for business;
+            Cutting-edge artificial intelligence solutions for business
             automation and insights.
           </p>
         </div>
         <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20'>
           <h3 className='text-xl font-bold text-white mb-4'>Cybersecurity</h3>
           <p className='text-gray-300'>
-            Advanced security solutions with zero-trust architecture and threat;
+            Advanced security solutions with zero-trust architecture and threat
             detection.
           </p>
         </div>
@@ -121,5 +121,5 @@ export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Site
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
 ;
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }
-;
+
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App }

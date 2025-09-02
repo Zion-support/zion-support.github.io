@@ -12,12 +12,11 @@ import {
   ArrowUp, ArrowDown,
   ArrowLeft, ArrowRight
 } from 'lucide-react';
-interface TouchGesture {
-  type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
+interface TouchGesture { type: 'swipe' | 'pinch' | 'rotate' | 'tap' | 'longpress';
   direction?: 'up' | 'down' | 'left' | 'right';
   distance?: number;
   duration?: number;
-}
+  }
 
 interface MobileExperienceEnhancerProps {
   enabled?: boolean;
@@ -30,10 +29,10 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
   enableSwipeNavigation = true
 }) => {
   const [isMobile, setIsMobile] = useState(false);
-  const [isTablet, setIsTablet] = useState(false);
-  const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait');
-  const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number } | null>(null);
-  const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number } | null>(null);
+  const [isTablet, setIsTablet] = useState(false)
+  const [deviceOrientation, setDeviceOrientation] = useState<'portrait' | 'landscape'>('portrait')
+  const [touchStart, setTouchStart] = useState<{ x: number; y: number; time: number   } | null>(null)
+  const [touchEnd, setTouchEnd] = useState<{ x: number; y: number; time: number   } | null>(null)
   const [gestureHistory, setGestureHistory] = useState<TouchGesture[]>([]);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [showGestureGuide, setShowGestureGuide] = useState(false);
@@ -78,8 +77,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     if (!enabled || !enableSwipeNavigation) return;
     const handleTouchStart = (e: TouchEvent) => {
       const touch = e.touches[0];
-      setTouchStart({
-        x: touch.clientX, y: touch.clientY,
+      setTouchStart({ x: touch.clientX, y: touch.clientY,
         time: Date.now()
       });
     };
@@ -89,8 +87,7 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
     const handleTouchEnd = (e: TouchEvent) => {
       if (!touchStart) return;
       const touch = e.changedTouches[0];
-      const touchEndData = {
-        x: touch.clientX, y: touch.clientY,
+      const touchEndData = { x: touch.clientX, y: touch.clientY,
         time: Date.now()
       };
       setTouchEnd(touchEndData);
@@ -98,11 +95,10 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       const deltaX = touchEndData.x - touchStart.x;
       const deltaY = touchEndData.y - touchStart.y;
       const deltaTime = touchEndData.time - touchStart.time;
-      const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+      const distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY)
       // Minimum distance and time for gesture recognition
       if (distance > 50 && deltaTime < 500) {
-        const gesture: TouchGesture = {
-          type: 'swipe', distance,
+        const gesture: TouchGesture = { type: 'swipe', distance,
           duration: deltaTime
         };
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
@@ -142,9 +138,9 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       setTouchStart(null);
       setTouchEnd(null);
     };
-    document.addEventListener('touchstart', handleTouchStart, { passive: false });
-    document.addEventListener('touchmove', handleTouchMove, { passive: false });
-    document.addEventListener('touchend', handleTouchEnd, { passive: false });
+    document.addEventListener('touchstart', handleTouchStart, { passive: false   });
+    document.addEventListener('touchmove', handleTouchMove, { passive: false   });
+    document.addEventListener('touchend', handleTouchEnd, { passive: false   });
     return () => {
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchmove', handleTouchMove);
@@ -211,14 +207,14 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
       }
     };
   }, [enabled, isMobile]);
-  if (!enabled) return null;
+  if (!enabled) return null
   return (
     <>
       {/* Mobile Navigation Bar */}
       {isMobile && (
         <motion.div
-          initial={{ y: -100 }}
-          animate={{ y: 0 }}
+          initial={{ y: -100   }}
+          animate={{ y: 0   }}
           className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 shadow-lg"
         >
           <div className="flex items-center justify-between px-4 py-3">
@@ -317,8 +313,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
         <motion.button
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
+          whileHover={{ scale: 1.1   }}
+          whileTap={{ scale: 0.9   }}
           onClick={() => setShowGestureGuide(!showGestureGuide)}
           className="fixed bottom-6 right-6 z-50 p-4 bg-blue-600 text-white rounded-full shadow-lg hover: bg-blue-700 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
           aria-label="Show gesture guide"
@@ -339,8 +335,8 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
             onClick={() => setShowGestureGuide(false)}
           >
             <motion.div
-              initial={{ y: 20 }}
-              animate={{ y: 0 }}
+              initial={{ y: 20   }}
+              animate={{ y: 0   }}
               className="bg-white dark:bg-slate-800 rounded-lg p-6 max-w-sm w-full"
               onClick={(e) => e.stopPropagation()}
             >
@@ -443,4 +439,4 @@ export const MobileExperienceEnhancer: React.FC<MobileExperienceEnhancerProps> =
 </>
   );
 };
-export default MobileExperienceEnhancer;
+export default MobileExperienceEnhancer

@@ -99,7 +99,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
               </span>
             </h1>
             <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>
-              Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.;
+              Unlock the potential of distributed ledger technology with our enterprise blockchain solutions.
               Build trust, transparency, and efficiency into your business processes.
             </p>
             <div className='flex flex-wrap justify-center gap-4'>
@@ -135,7 +135,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
               Why Choose Blockchain Technology?
             </h2>
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Blockchain offers unprecedented opportunities for businesses to create;
+              Blockchain offers unprecedented opportunities for businesses to create
               secure, transparent, and efficient systems that build trust with stakeholders.
             </p>
           </motion.div>
@@ -234,7 +234,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
               Blockchain Use Cases
             </h2>
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Discover how blockchain technology can transform various industries;
+              Discover how blockchain technology can transform various industries
               and business processes
             </p>
           </motion.div>

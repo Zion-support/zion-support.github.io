@@ -76,7 +76,7 @@ import { Handshake, Award, Users, Globe, Star, CheckCircle } from;
   ','      description: 'Leverage the latest innovations and technologies from our partners.'    }, {
   '      icon: Users,
       title:,
-  Expanded Market Reach;
+  Expanded Market Reach
   ', description: 'Tap into new markets and customer segments through our partner network.'    },'    {
       icon: Award, title:,
   Enhanced Credibility',
@@ -141,5 +141,5 @@ import { Handshake, Award, Users, Globe, Star, CheckCircle } from;
       </div>
     </MainLayout>
   )}
-;
+
 export default Partners

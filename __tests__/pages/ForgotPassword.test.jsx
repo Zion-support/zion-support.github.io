@@ -8,7 +8,7 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
 // jest.mock(
   '../../src/services/auth', () => ({
 //   forgotPassword: jest.fn(),
-// }));
+// }))
 describe(
   'ForgotPassword Page', () => {
   beforeEach(() => {
@@ -21,7 +21,7 @@ describe(
       <Router>
         <ForgotPassword />
       </Router>
-    );
+    )
     expect(screen.getByLabelText(/email address/i)).toBeInTheDocument()
     expect(
       screen.getByRole(
@@ -32,7 +32,7 @@ describe(
         <ForgotPassword />
       </Router>
     );
-    const emailInput = screen.getByLabelText(/email address/i);
+    const emailInput = screen.getByLabelText(/email address/i)
     fireEvent.change(emailInput, { target: { value:
   'test@example.com } })
     expect(emailInput.value).toBe(,
@@ -59,7 +59,7 @@ describe(
   'success@example.com');
     console.log(
   'Mock test: Simulating successful submission message check.);
-    // For now, the component directly sets a message:;
+    // For now, the component directly sets a message:
     await waitFor(() => {
       expect(
         screen.getByText(
@@ -86,7 +86,7 @@ describe(
     //   expect(screen.getByText(/failed to send link/i)).toBeInTheDocument();
     // })
     // expect(require('../../src/services/auth;
-  ').forgotPassword).toHaveBeenCalledWith('error@example.com;
+  ').forgotPassword).toHaveBeenCalledWith('error@example.com
   ')
     console.log(
       'Mock test: Simulating error message check (currently not implemented in component this way).)})})

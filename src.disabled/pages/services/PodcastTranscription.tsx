@@ -45,5 +45,5 @@ export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;
 export default PodcastTranscription;
-export default PodcastTranscription;
+export default PodcastTranscription
 export default PodcastTranscription

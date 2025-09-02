@@ -15,7 +15,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage = 'https: //ziontechgroup.com/og-image.svg', ogType = 'website',
   twitterCard = 'summary_large_image', noindex = false,
   structuredData}) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
   const canonicalUrl = canonical || 'https: //ziontechgroup.com'
   return (
     <Head>
@@ -97,5 +97,5 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         />)}
     </Head>
   )}
-;
+
 export default SEOHead

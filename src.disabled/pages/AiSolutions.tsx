@@ -19,7 +19,7 @@ export default function AiSolutions(...args: unknown[]): unknown {
               <span className='text-transparent bg-clip-text bg-gradient-to-r from-zion-cyan to-zion-purple'> Future</span>
             </h1>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Transform your business with cutting-edge artificial intelligence solutions.;
+              Transform your business with cutting-edge artificial intelligence solutions.
               From predictive analytics to intelligent automation, we deliver results that drive growth.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -99,7 +99,7 @@ export default function AiSolutions(...args: unknown[]): unknown {
                 key={industry.id}
                 onClick={() => setSelectedIndustry(industry.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  selectedIndustry === industry.id;
+                  selectedIndustry === industry.id
                     ? 'bg-zion-cyan text-white shadow-lg shadow-zion-cyan/25'
                     : 'bg-zion-blue-dark/50 text-gray-300 hover:bg-zion-blue-dark/70 border border-zion-cyan/20'}`}
               >

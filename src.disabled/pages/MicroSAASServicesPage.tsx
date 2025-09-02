@@ -46,7 +46,7 @@ const MicroSAASServicesPage: React.FC = ($2) => {
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`${
-                  selectedCategory === category;
+                  selectedCategory === category
                     ? 'bg-zion-purple text-white'
                     : 'border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10'}`}
               >{category}

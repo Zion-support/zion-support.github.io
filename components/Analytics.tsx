@@ -89,4 +89,4 @@ export const trackPageView = (url: string, title: string) => {
     });
   }
 };
-export default Analytics;
+export default Analytics

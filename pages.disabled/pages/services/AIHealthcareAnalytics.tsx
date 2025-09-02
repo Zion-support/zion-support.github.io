@@ -17,17 +17,17 @@ import {}
     <div className='min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
             <Heart className='w-4 h-4 mr-2'  /> AI-Powered Healthcare Analytics'
           </div>'          <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>
             AI Healthcare Analytics Platform'</h1>''          <p className='text-zion-slate-light text-xl'>
-            Transform healthcare delivery with AI-powered analytics, predictive;
+            Transform healthcare delivery with AI-powered analytics, predictive
             insights, and clinical decision support.
           </p>
         </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -53,7 +53,7 @@ import {}
             </ul>
           </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12'>''
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>
@@ -69,7 +69,7 @@ import {}
             ))}
           </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16'>''
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>
@@ -92,7 +92,7 @@ import {}
             ))}
           </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16'>''
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>
@@ -112,7 +112,7 @@ import {}
             ))}
           </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16'>''
           <h2 className='text-3xl font-bold text-zion-slate-dark mb-6 text-center'>
@@ -185,14 +185,14 @@ import {}
             </div>
           </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-zion-slate-light mb-2'>
             Ready to transform healthcare with AI?'
           </div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<a''              href='tel:+13024640950'';
-              className='inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg''>'';
+              className='inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg''>''
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
               <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950
             </a>'
@@ -213,4 +213,4 @@ import {}
   )}
 ;
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx;
-export { AIHealthcareAnalytics }export default AIHealthcareAnalytics'';'''
+export { AIHealthcareAnalytics }export default AIHealthcareAnalytics'''''

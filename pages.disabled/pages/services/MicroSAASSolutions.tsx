@@ -9,7 +9,7 @@ export default function MicroSAASSolutions() {
           <h1 className='text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6'>
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
             Micro SaaS Solutions'</h1>''          <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-            Scalable, focused software solutions designed to solve specific;
+            Scalable, focused software solutions designed to solve specific
             business challenges with transparent pricing and rapid deployment.
           </p>
         </motion.div>
@@ -86,20 +86,20 @@ export default function MicroSAASSolutions() {
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>Transparent Pricing</h3>'
               <p className='text-gray-600'>No hidden fees or surprise costs. Clear, predictable pricing that scales with your business.</p>
             </div>
-:pages.disabled/pages/services/MicroSAASSolutions.tsx;
+:pages.disabled/pages/services/MicroSAASSolutions.tsx
 '
             <div className='text-center'>'
               <div className='w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center'>'
                 <Target className='w-8 h-8 text-white'  />
-              </div>';
+              </div>'
 ''
               <h3 className='text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors'>
                 {solution.name}
-              </h3>';
+              </h3>'
 ''
               <p className='text-slate-300 mb-4 text-sm'>
                 {solution.description}
-              </p>';
+              </p>'
 ''
               <div className='space-y-2'>
                 {solution.features.map((feature, featureIndex) => (
@@ -122,12 +122,12 @@ export default function MicroSAASSolutions() {
           animate={{ opacity: 1, y: 0 }}'transition={{ delay: 0.4 }}''          className='text-center''>''
           <div className='bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8'>''
             <h2 className='text-2xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/MicroSAASSolutions.tsx;
+:pages.disabled/pages/services/MicroSAASSolutions.tsx
               Ready to Transform Your Business?'
             </h2>''
             <p className='text-slate-300 mb-6 max-w-2xl mx-auto'>
               Our micro SaaS solutions are designed for rapid deployment and;
-              immediate impact. Get started with a free consultation and see how;
+              immediate impact. Get started with a free consultation and see how
               we can help.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -140,5 +140,5 @@ export default function MicroSAASSolutions() {
         </div>
       </div>
     </div>
-:pages.disabled/pages/services/MicroSAASSolutions.tsx)}';
+:pages.disabled/pages/services/MicroSAASSolutions.tsx)}'
   '''"

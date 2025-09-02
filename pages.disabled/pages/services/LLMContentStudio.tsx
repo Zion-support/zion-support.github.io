@@ -8,7 +8,7 @@ export { function }export default function LLMContentStudio(...args: []):  {}
 :pages.disabled/pages/services/LLMContentStudio.tsx
           LLM Content Studio'</h1>''        <p className='text-zion-slate-light max-w-3xl'>
           A collaborative content workspace with AI-assisted briefs, long-form drafting, SEO optimization, and;
-          brand style guardrails. Publish to blog, email, LinkedIn, and X with one click.;
+          brand style guardrails. Publish to blog, email, LinkedIn, and X with one click.
 :pages.disabled/pages/services/LLMContentStudio.tsx
         </p>'''        <div className='grid gap-8 md:grid-cols-2 mt-10'>''
           <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>''

@@ -36,14 +36,12 @@ export function Footer(...args: any[]): any {
   const currentYear = new Date().getFullYear();
   const [activeSection, setActiveSection] = useState<any>(null);
   const footerSections = [
-    {
-      title: 'Comp', icon: Building,
+    { title: 'Comp', icon: Building,
       links: [{ name: 'About Us', path: '/about', icon: Users }, { name: 'Our Story', path: '/about/story', icon: FileText },
         { name: 'Team', path: '/about/team', icon: Users }, { name: 'Careers', path: '/careers', icon: Briefcase },
         { name: 'Partners', path: '/partners', icon: Network }, { name: 'Press', path: '/press', icon: Newspaper },
         { name: 'Contact', path: '/contact', icon: Phone }
-      ]}, {
-      title: 'AI & Quantum Solutions',
+      ]}, { title: 'AI & Quantum Solutions',
       icon: Brain, category: 'Core Services',
       services: [
         { name: 'AI Customer Success Automation', href: '/services/ai-customer-success-automation', badge: 'Popular' }, { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', badge: 'New' },
@@ -54,23 +52,20 @@ export function Footer(...args: any[]): any {
         { name: 'AI Space Technology', href: '/services/ai-space-technology-platform', badge: 'Space Tech' }, { name: 'AI Carbon Footprint Management', href: '/services/ai-carbon-footprint-management-platform', badge: 'Green Tech' },
         { name: 'AI Autonomous Manufacturing', href: '/services/ai-autonomous-manufacturing-platform', badge: 'Manufacturing' }, { name: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning', badge: 'ERP' },
         { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', badge: 'Automation' }, { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics-platform', badge: 'Analytics' }
-      ]}, {
-      title: 'AI Cybersecurity & Infrastructure',
+      ]}, { title: 'AI Cybersecurity & Infrastructure',
       icon: Shield, category: 'Security & Infrastructure',
       services: [
         { name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', badge: 'New' }, { name: 'AI-Powered Cybersecurity Suite', href: '/services/ai-powered-cybersecurity-suite', badge: 'Security' },
         { name: 'Enterprise IT Infrastructure Management', href: '/services/enterprise-it-infrastructure-management', badge: 'Infrastructure' }, { name: 'Cloud Migration & Optimization', href: '/services/cloud-migration-and-optimization', badge: 'Cloud' },
         { name: 'AI Data Analytics Platform', href: '/services/ai-data-analytics-platform', badge: 'Analytics' }, { name: 'AI DevOps Automation', href: '/services/ai-devops-automation', badge: 'DevOps' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', badge: 'Edge' }
-      ]}, {
-      title: 'Micro SaaS Solutions',
+      ]}, { title: 'Micro SaaS Solutions',
       icon: Code, category: 'Micro SaaS',
       services: [
         { name: 'AI Email Automation Suite', href: '/services/ai-email-automation-suite', badge: 'New' }, { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler', badge: 'New' },
         { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', badge: 'New' }, { name: 'Micro CRM', href: '/services/micro-crm', badge: 'Popular' },
         { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', badge: 'Support' }, { name: 'Website Analytics', href: '/services/website-analytics', badge: 'Analytics' }
-      ]}, {
-      title: 'Solutions',
+      ]}, { title: 'Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/enterprise' },
         { name: 'Healthcare Tech', href: '/solutions/healthcare' },
@@ -78,8 +73,7 @@ export function Footer(...args: any[]): any {
         { name: 'Manufacturing', href: '/manufacturing-solutions' },
         { name: 'Industry Solutions', href: '/industry-solutions' },
         { name: 'Emerging Tech', href: '/emerging-tech' }
-      ]}, {
-      title: 'Company',
+      ]}, { title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/about/team' },
@@ -87,12 +81,10 @@ export function Footer(...args: any[]): any {
         { name: 'Partners', href: '/partners' },
         { name: 'News & Updates', href: '/news' },
         { name: 'Case Studies', href: '/case-studies' }
-      ]}, {
-      title: 'Quantum Computing & Emerging Tech',
+      ]}, { title: 'Quantum Computing & Emerging Tech',
       icon: Atom, services: [
         { name: 'AI-Quantum Hybrid Computing Platform', href: '/services/ai-quantum-hybrid-platform' }, { name: 'Quantum Computing as a Service', href: '/services/quantum-computing-as-a-service' }, { name: 'AI Space Technology Platform', href: '/services/ai-space-technology-platform' }, { name: 'AI IoT Edge Computing Platform', href: '/services/ai-iot-edge-computing-platform' }
-      ]}, {
-      title: 'Resources',
+      ]}, { title: 'Resources',
       links: [
         { name: 'Documentation', href: '/docs' },
         { name: 'White Papers', href: '/white-papers' },
@@ -101,7 +93,7 @@ export function Footer(...args: any[]): any {
         { name: 'Blog', href: '/blog' },
         { name: 'Research', href: '/research-development' }
       ]}
-  ];
+  ]
   const solutions = [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Healthcare Solutions', href: '/solutions/healthcare' },
@@ -126,7 +118,7 @@ export function Footer(...args: any[]): any {
               <span className='text-xl font-bold text-white'>Zion Tech Group</span>
             </div>
             <p className='text-zion-slate-light text-sm leading-relaxed'>
-              Leading provider of innovative AI, IT, and Micro SAAS solutions.;
+              Leading provider of innovative AI, IT, and Micro SAAS solutions.
               Transforming businesses through cutting-edge technology and expert consulting.
             </p>
             <div className='space-y-3'>
@@ -185,7 +177,7 @@ export function Footer(...args: any[]): any {
               <motion.div
                 initial={false}
                 animate={{ height: activeSection === section.title ? 'auto' : 0, opacity: activeSection === section.title ? 1 : 0 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.3   }}
                 className='overflow-hidden'>
                 <div className='space-y-2'>
                   {section.links.map((link) => (

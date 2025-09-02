@@ -21,7 +21,7 @@ const Enterprise: React.FC = () => {
   )}
 ;
 import React from 'react';
-export default Enterprise;
+export default Enterprise
 
 const Enterprise: React.FC = () => {
   return (
@@ -40,5 +40,5 @@ const Enterprise: React.FC = () => {
         Talk to an expert
       </a>
     </div>) }
-;
+
 "

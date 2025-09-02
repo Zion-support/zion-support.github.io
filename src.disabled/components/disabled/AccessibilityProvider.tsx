@@ -11,7 +11,7 @@ import React, { createContext, useContext, useEffect, useState, ReactNode } from
    decreaseFontSize: () => void;
    resetFontSize: () => void;
    showSkipLinks: boolean;
-   setShowSkipLinks: (show: boolean) => void;
+   setShowSkipLinks: (show: boolean) => void
    voiceNavigation: boolean
    toggleVoiceNavigation: () => void} const AccessibilityContext = createContext<AccessibilityContextType | null>(null)  export const useAccessibility = () => { const context = useContext(AccessibilityContext) if (!context) { throw new Error(
   'useAccessibility must be used within an AccessibilityProvider') } return context }  interface AccessibilityProviderProps {

@@ -37,7 +37,7 @@ target.style.backgroundImage = `url(${target.dataset.src})`              target.
         })}, { rootMargin: '50px }
   '    )';// Observe lazy load elements;
     const lazyElements = document.querySelectorAll(
-  '[data-src]')'    lazyElements.forEach(el => observer.observe(el))';return () => {
+  '[data-src]')'    lazyElements.forEach(el => observer.observe(el))'return () => {
       observer.disconnect()}
   }, [])
   return <>{children}</>

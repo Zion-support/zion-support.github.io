@@ -27,8 +27,8 @@ import React from,
   text-2xl',3xl;
   ': 'text-3xl, 4xl':,
   text-4xl',5xl;
-  ': 'text-5xl, 6xl':;
+  ': 'text-5xl, 6xl':
   'text-6xl'} return sizes[size] }' return()'' <h1''
   ' className={cn(''';
   ';font-bold leading-tight;
-  ', getSizeClasses(), getGradientClasses(), className )} > {children} </h1> ) }';'
+  ', getSizeClasses(), getGradientClasses(), className )} > {children} </h1> ) }''

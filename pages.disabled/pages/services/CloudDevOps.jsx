@@ -120,7 +120,7 @@ const CloudDevOps = () => {
 ,
   tools: ['Vault,AWS IAM',Azure AD;
   ',Google IAM',Prisma Cloud;
-  ']}];
+  ']}]
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'
       <SEO'''
@@ -135,16 +135,16 @@ const CloudDevOps = () => {
           <div className='mb-8'>''
             <div className='inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6'>''
               <Cloud className='w-4 h-4 mr-2' />
-:pages.disabled/pages/services/CloudDevOps.jsx;
+:pages.disabled/pages/services/CloudDevOps.jsx
               Cloud & DevOps'
             </div>''
-            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-6xl font-bold text-white mb-6'>'
               Transform Your Infrastructure with''
               <span className='bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent'>'{
   ' '}
                 Modern DevOps
               </span>'</h1>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Expert cloud migration and DevOps implementation services for;
+              Expert cloud migration and DevOps implementation services for
               modern, scalable, and secure infrastructure.
             </p>
           </div>
@@ -154,13 +154,13 @@ const CloudDevOps = () => {
 '{/* Services Overview */}''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/CloudDevOps.jsx;
+:pages.disabled/pages/services/CloudDevOps.jsx
             Our Cloud & DevOps Services'
           </h2>''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {cloudServices.map((service, index) => (
               <div'key={index}''                className='bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all''>''
-                <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/CloudDevOps.jsx
                   <service.icon className='w-6 h-6 text-white' />'
                 </div>''
@@ -187,7 +187,7 @@ const CloudDevOps = () => {
 '{/* Cloud Platforms */}''      <section className='py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/CloudDevOps.jsx;
+:pages.disabled/pages/services/CloudDevOps.jsx
             Cloud Platforms We Support'
           </h2>''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -205,7 +205,7 @@ const CloudDevOps = () => {
 '{/* DevOps Tools */}''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>''
           <h2 className='text-3xl font-bold text-white text-center mb-12'>
-:pages.disabled/pages/services/CloudDevOps.jsx;
+:pages.disabled/pages/services/CloudDevOps.jsx
             DevOps Tools & Technologies'
           </h2>''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -231,13 +231,13 @@ const CloudDevOps = () => {
 '{/* CTA Section */}''      <section className='py-16 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-4xl mx-auto text-center'>''
           <h2 className='text-3xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/CloudDevOps.jsx;
+:pages.disabled/pages/services/CloudDevOps.jsx
             Ready to Transform Your Infrastructure?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
   ';
             Let's discuss how our cloud migration and DevOps services can help;
-            you achieve faster deployments, better scalability, and improved;
+            you achieve faster deployments, better scalability, and improved
             security.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -258,4 +258,4 @@ const CloudDevOps = () => {
 ;
 export { CloudDevOps }
 :pages.disabled/pages/services/CloudDevOps.jsx;
-export default CloudDevOps'';''"
+export default CloudDevOps''''"

@@ -111,7 +111,7 @@ const Team: React.FC = () => {
       title: 'Innovation First',
       description: 'We push the boundaries of what;
   's possible with AI and technology',
-      title: 'Innovation First', description: 'We push the boundaries of what&apos;s possible with AI and technology', ';
+      title: 'Innovation First', description: 'We push the boundaries of what&apos;s possible with AI and technology', '
       icon: Brain},
     {
       title: 'Client Success', description: 'Our success is measured by the success of our clients',
@@ -350,7 +350,7 @@ const Team: React.FC = () => {
               Join Our Team
             </h2>
             <p className='text-xl text-gray-300 mb-8'>
-              We&apos;re always looking for talented individuals who share our passion for AI and innovation. '';
+              We&apos;re always looking for talented individuals who share our passion for AI and innovation. ''
               Join us in building the future of technology.
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -368,5 +368,5 @@ const Team: React.FC = () => {
       </section>
     </div>
   )}
-;
+
 export default Team

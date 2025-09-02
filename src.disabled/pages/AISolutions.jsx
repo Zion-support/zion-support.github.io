@@ -61,7 +61,7 @@ import React from;
 ,
    title: 'Data-Driven Decisions, ,
    description: ';
-  ';Make better business decisions with AI-powered insights and analytics}, {} icon: Globe, ,
+  'Make better business decisions with AI-powered insights and analytics}, {} icon: Globe, ,
    title: 'Global Scalability,
 ,
    description: ''Scale your operations globally with AI automation and optimization} ] return() <div className='min-h-screen bg-background pt-20'>'''' <SEO'''' title='AI Solutions - Zion Tech Group'''' description='Discover cutting-edge AI solutions including autonomous systems, research assistance, cybersecurity, and business intelligence from Zion Tech Group.'''' keywords='AI solutions, artificial intelligence, autonomous systems, AI research, cybersecurity, business intelligence'''' canonical='https:''';

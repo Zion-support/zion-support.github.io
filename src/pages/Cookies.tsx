@@ -1,29 +1,25 @@
 import { motion } from 'framer-motion';
 import { Cookie, Settings, Shield, Eye, BarChart3 } from 'lucide-react';
 const Cookies: React.FC = () => {
-  const cookieTypes = [{
-      name: 'Essential Cookies', icon: Shield,
+  const cookieTypes = [{ name: 'Essential Cookies', icon: Shield,
       description: 'These cookies are necessary for the website to function properly.', examples: [;
         'Authentication and login status', 'Shopping cart functionality',
         'Security and fraud prevention', 'Load balancing and performance';
       ], required: true},
-    {
-      name: 'Analytics Cookies', icon: BarChart3,
+    { name: 'Analytics Cookies', icon: BarChart3,
       description: 'These cookies help us understand how visitors interact with our website.', examples: [;
         'Page views and user behavior', 'Traffic sources and referrals',
         'Popular content and features', 'Performance metrics and errors';
       ], required: false},
-    {
-      name: 'Marketing Cookies', icon: Eye,
+    { name: 'Marketing Cookies', icon: Eye,
       description: 'These cookies are used to deliver relevant advertisements and track campaign performance.', examples: [;
         'Ad targeting and personalization', 'Campaign effectiveness measurement',
         'Social media integration', 'Retargeting and remarketing';
       ], required: false},
-    {
-      name: 'Preference Cookies', icon: Settings,
+    { name: 'Preference Cookies', icon: Settings,
       description: 'These cookies remember your preferences and settings.', examples: [;
         'Language and region settings', 'Theme and display preferences',
-        'Accessibility options', 'Customized content delivery';
+        'Accessibility options', 'Customized content delivery'
       ], required: false}
   ]
   return(
@@ -49,17 +45,17 @@ const Cookies: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.1   }}
           className='bg-white rounded-lg shadow-sm border border-gray-200 p-8 mb-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>What Are Cookies?</h2>
           <p className='text-gray-600 leading-relaxed mb-4'>
             Cookies are small text files that are stored on your device when you visit our website.;
-            They help us provide you with a better experience by remembering your preferences and;
+            They help us provide you with a better experience by remembering your preferences and
             understanding how you use our site.
           </p>
           <p className='text-gray-600 leading-relaxed'>
             We use cookies to improve functionality, analyze usage patterns, and personalize content.;
-            You can control cookie settings through your browser, but some features may not work;
+            You can control cookie settings through your browser, but some features may not work
             properly if cookies are disabled.
           </p>
         </motion.div>
@@ -70,7 +66,7 @@ const Cookies: React.FC = () => {
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 * (index + 2) }}
+              transition={{ delay: 0.1 * (index + 2)   }}
               className='bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
               <div className='flex items-start mb-4'>
                 <cookie.icon className='h-6 w-6 text-blue-600 mr-3 mt-1' />
@@ -104,7 +100,7 @@ const Cookies: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.6   }}
           className='mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Managing Your Cookie Preferences</h2>
           <div className='space-y-4'>
@@ -136,7 +132,7 @@ const Cookies: React.FC = () => {
               <h3 className='text-lg font-semibold text-gray-900 mb-2'>Cookie Consent</h3>
               <p className='text-gray-600'>
                 When you first visit our website, you'll see a cookie consent banner. You can choose;'
-                which types of cookies to accept. You can change your preferences at any time by;
+                which types of cookies to accept. You can change your preferences at any time by
                 clicking the cookie settings link in our footer.
               </p>
             </div>
@@ -146,7 +142,7 @@ const Cookies: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
+          transition={{ delay: 0.7   }}
           className='mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Third-Party Cookies</h2>
           <p className='text-gray-600 mb-4'>
@@ -175,7 +171,7 @@ const Cookies: React.FC = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
+          transition={{ delay: 0.8   }}
           className='mt-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8'>
           <h2 className='text-2xl font-bold text-gray-900 mb-4'>Questions About Cookies?</h2>
           <p className='text-gray-600 mb-4'>
@@ -194,5 +190,5 @@ const Cookies: React.FC = () => {
       </div>
     </div>
   )}
-;
+
 export default Cookies

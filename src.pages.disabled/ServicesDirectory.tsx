@@ -79,7 +79,7 @@ const ServicesDirectory = () => {
           name: 'Business Intelligence',
           description: 'Strategic insights and decision support', path: '/services/business-intelligence'}
       ]}
-  ];
+  ]
   const stats = [
     { number: '500+', label: 'Services Delivered' },
     { number: '99.9%', label: 'Success Rate' },
@@ -103,7 +103,7 @@ const ServicesDirectory = () => {
               </span>
             </h1>
             <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-              Comprehensive technology solutions designed to accelerate your digital transformation;
+              Comprehensive technology solutions designed to accelerate your digital transformation
               and drive business innovation forward.
             </p>
           </motion.div>
@@ -195,7 +195,7 @@ const ServicesDirectory = () => {
               Need a Custom Solution?
             </h2>
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Don&apos;t see exactly what you&apos;re looking for? Our expert team can create;
+              Don&apos;t see exactly what you&apos;re looking for? Our expert team can create
               tailored solutions designed specifically for your unique business needs.
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -217,5 +217,5 @@ const ServicesDirectory = () => {
       </section>
     </div>
   )}
-;
+
 export default ServicesDirectory

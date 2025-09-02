@@ -21,7 +21,7 @@ export default function AIESGCompliancePlatform() {
   return();
     <div className='min-h-screen bg-white'>'{/* Hero Section */}''      <section className='bg-gradient-to-br from-green-600 via-emerald-600 to-teal-800 py-20 text-center text-white'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
             <Leaf className='w-4 h-4 mr-2'  /> AI-Powered ESG Compliance Platform'
           </div>''
@@ -30,7 +30,7 @@ export default function AIESGCompliancePlatform() {
           </h1>'          <p className='text-xl text-green-100 mb-8 max-w-3xl mx-auto'>
             Streamline your ESG compliance with AI-driven data collection,
             automated reporting, and real-time sustainability monitoring. Meet;
-            regulatory requirements while driving positive environmental and;
+            regulatory requirements while driving positive environmental and
             social impact.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -53,11 +53,11 @@ export default function AIESGCompliancePlatform() {
           <h2 className='text-3xl font-bold text-gray-900 mb-4'>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
             Comprehensive ESG Intelligence'</h2>''          <p className='text-xl text-gray-600'>
-            End-to-end ESG compliance and sustainability management powered by;
+            End-to-end ESG compliance and sustainability management powered by
             AI
           </p>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='grid md:grid-cols-2 gap-8'>'
           <div>''
@@ -70,7 +70,7 @@ export default function AIESGCompliancePlatform() {
               ))}
             </ul>
           </div>
-:pages.disabled/pages/services/AIESGCompliancePlatform.tsx;
+:pages.disabled/pages/services/AIESGCompliancePlatform.tsx
 '
           <div>''
             <h3 className='text-2xl font-semibold text-gray-900 mb-6'>
@@ -93,16 +93,16 @@ export default function AIESGCompliancePlatform() {
             <h2 className='text-3xl font-bold text-gray-900 mb-4'>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
               Why Choose AI ESG Compliance Platform?'</h2>''            <p className='text-xl text-gray-600'>
-              Transform your sustainability reporting and compliance with;
+              Transform your sustainability reporting and compliance with
               intelligent automation
             </p>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map((benefit, index) => (
               <div'key={index}''                className='bg-white p-6 rounded-xl shadow-sm border border-gray-100''>''
-                <div className='w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
                   <TrendingUp className='w-6 h-6 text-green-600'  />'</div>'                <p className='text-gray-700 font-medium'>{benefit}</p>              </div>
             ))}
@@ -118,12 +118,12 @@ export default function AIESGCompliancePlatform() {
             Trusted by leading organizations across industries
           </p>
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {useCases.map((useCase, index) => (
             <div'key={index}''              className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow''>''
-              <div className='w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4'>'';
+              <div className='w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
                 <Database className='w-5 h-5 text-green-600'  />'</div>'              <h3 className='font-semibold text-gray-900 mb-2'>{useCase}</h3>            </div>
           ))}
@@ -153,7 +153,7 @@ export default function AIESGCompliancePlatform() {
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AIESGCompliancePlatform.tsx)}';
+:pages.disabled/pages/services/AIESGCompliancePlatform.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-gray-900 mb-2'>
@@ -163,14 +163,14 @@ export default function AIESGCompliancePlatform() {
                     {plan.price}'
                   </div>''
                   <p className='text-gray-600'>per month</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='flex items-start'>''
                       <CheckCircle className='w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-700'>{feature}</span>
                     </li>
                   ))}
                 </ul>
-:pages.disabled/pages/services/AIESGCompliancePlatform.tsx;
+:pages.disabled/pages/services/AIESGCompliancePlatform.tsx
 `
                 <button``
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${,
@@ -184,7 +184,7 @@ export default function AIESGCompliancePlatform() {
               </div>
             ))}
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='text-center mt-12'>''
             <p className='text-gray-600 mb-4'>
@@ -204,7 +204,7 @@ export default function AIESGCompliancePlatform() {
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
             Proven Results'</h2>''          <div className='grid md:grid-cols-3 gap-8'>''
             <div className='bg-white rounded-lg p-6 shadow-sm'>''
-              <div className='text-3xl font-bold text-green-600 mb-2'>85%</div>'';
+              <div className='text-3xl font-bold text-green-600 mb-2'>85%</div>''
 :pages.disabled/pages/services/AIESGCompliancePlatform.tsx
               <p className='text-gray-700'>Faster ESG reporting time</p>'
             </div>''
@@ -221,11 +221,11 @@ export default function AIESGCompliancePlatform() {
 '{/* CTA Section */}''      <section className='py-16 bg-gray-900 text-white'>''
         <div className='max-w-4xl mx-auto px-6 text-center'>''
           <h2 className='text-3xl font-bold mb-6'>
-:pages.disabled/pages/services/AIESGCompliancePlatform.tsx;
+:pages.disabled/pages/services/AIESGCompliancePlatform.tsx
             Ready to Transform Your ESG Compliance?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
-            Join hundreds of organizations already using AI ESG Compliance;
+            Join hundreds of organizations already using AI ESG Compliance
             Platform to meet sustainability goals.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -241,16 +241,16 @@ export default function AIESGCompliancePlatform() {
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIESGCompliancePlatform.tsx;
+:pages.disabled/pages/services/AIESGCompliancePlatform.tsx
 '{/* Contact Section */}''
       <section className='py-16 max-w-4xl mx-auto px-6 text-center'>''
-        <h2 className='text-3xl font-bold text-gray-900 mb-8'>';
+        <h2 className='text-3xl font-bold text-gray-900 mb-8'>'
           Questions? We
   're Here to Help'</h2>''        <div className='grid md:grid-cols-2 gap-8'>''
           <div className='bg-white border border-gray-200 rounded-xl p-6 shadow-sm'>''
             <Phone className='w-8 h-8 text-green-500 mx-auto mb-4'  />''
             <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-:pages.disabled/pages/services/AIESGCompliancePlatform.tsx;
+:pages.disabled/pages/services/AIESGCompliancePlatform.tsx
               Call Us'
             </h3>''
             <p className='text-gray-600 mb-4'>
@@ -265,7 +265,7 @@ export default function AIESGCompliancePlatform() {
           </div>'''          <div className='bg-white border border-gray-200 rounded-xl p-6 shadow-sm'>''
             <Mail className='w-8 h-8 text-green-500 mx-auto mb-4'  />''
             <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-:pages.disabled/pages/services/AIESGCompliancePlatform.tsx;
+:pages.disabled/pages/services/AIESGCompliancePlatform.tsx
               Email Us'
             </h3>''
             <p className='text-gray-600 mb-4'>
@@ -276,7 +276,7 @@ export default function AIESGCompliancePlatform() {
               className='text-green-600 hover:text-green-700 font-semibold'>              kleber@ziontechgroup.com
             </a>
           </div>
-        </div>';
+        </div>'
 ''
         <div className='mt-12 p-6 bg-gray-50 rounded-xl'>''
           <h3 className='text-lg font-semibold text-gray-900 mb-2'>
@@ -292,5 +292,5 @@ export default function AIESGCompliancePlatform() {
         </div>
       </section>
     </div>
-  )}''`;
+  )}''`
   ''`''`

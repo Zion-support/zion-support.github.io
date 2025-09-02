@@ -118,7 +118,7 @@ const PricingGuide: React.FC = () => {
       price: '$15,000 - $35,000',
       timeline: '8-12 weeks',
       roi: '400% ROI within 8 months'}
-  ];
+  ]
   const costSavingTips = [
     {
       tip: 'Start with MVP',
@@ -330,5 +330,5 @@ const PricingGuide: React.FC = () => {
       </section>
     </div>
   )}
-;
+
 export default PricingGuide

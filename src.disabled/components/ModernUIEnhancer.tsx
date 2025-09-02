@@ -243,7 +243,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
     setIsDarkMode(prev => !prev)}, []);
   // Update accent color;
   const updateAccentColor = useCallback((color: string) => {
-    setAccentColor(color);
+    setAccentColor(color)
     document.documentElement.style.setProperty('--color-primary', color)}, [])
   return (
     <div className='modern-ui-enhancer'>

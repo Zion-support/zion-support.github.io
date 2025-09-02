@@ -27,18 +27,18 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
   ]';Automated underwriting and risk assessment',';Claims processing and fraud detection',';Customer service and policy management',';Risk modeling and pricing optimization',';Compliance monitoring and reporting',';Customer retention and cross-selling';
   ]';Reduce claims processing time by 60-80%',';Improve fraud detection accuracy by 40-60%',';Cut operational costs by 25-40%',';Optimize pricing for maximum profitability',';Enhance customer experience and satisfaction',';Scale insurance operations efficiently';
   ]';Property & Casualty Insurance',';Life & Health Insurance',';Auto Insurance',';Commercial Insurance',';Reinsurance',';Insurance Brokers';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIInsurance.tsx
             <Shield className='w-4 h-4 mr-2'  /> AI-Powered Insurance Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Insurance Platform</h1>'          <p className='text-indigo-100 text-xl'>Transform your insurance business with AI-powered tools that enhance risk assessment, automate claims processing, and optimize customer experience.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </div>
           </div>
 :pages.disabled/pages/services/AIInsurance.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </div>
           ))}
 :pages.disabled/pages/services/AIInsurance.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             ))}
           </div>
 :pages.disabled/pages/services/AIInsurance.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-blue-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Insurance Impact</h3>''
@@ -146,7 +146,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             ))}
           </div>
 :pages.disabled/pages/services/AIInsurance.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your insurance business with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'>''
 :pages.disabled/pages/services/AIInsurance.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

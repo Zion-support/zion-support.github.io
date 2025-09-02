@@ -38,7 +38,7 @@ export default function AIPoweredSEO(...args: any[]): any {
             <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6'>''
               <Search className='w-5 h-5 text-cyan-400 mr-2'  />'              <span className='text-cyan-300 font-medium'>AI-Powered SEO</span>
 :pages.disabled/pages/services/ai-powered-seo.tsx
-            </div>';
+            </div>'
 ''
             <h1 className='text-5xl lg:text-7xl font-bold text-white mb-6'>''
               <span className='bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
@@ -49,9 +49,9 @@ export default function AIPoweredSEO(...args: any[]): any {
             </h1>'''            <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Revolutionize your search engine optimization with cutting-edge AI;
               technology. Our machine learning algorithms predict trends,
-              optimize content, and drive unprecedented organic growth.;
+              optimize content, and drive unprecedented organic growth.
 :pages.disabled/pages/services/ai-powered-seo.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button;
@@ -76,14 +76,14 @@ export default function AIPoweredSEO(...args: any[]): any {
 :pages.disabled/pages/services/ai-powered-seo.tsx;
             whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.8 }}''            className='text-center mb-16''>''
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/ai-powered-seo.tsx;
+:pages.disabled/pages/services/ai-powered-seo.tsx
               Powered by Advanced AI Technology'
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Our AI-powered SEO platform combines machine learning, natural;
   ';
               language processing, and predictive analytics to deliver results'';
-              that traditional SEO methods can;
+              that traditional SEO methods can
   't match.
             </p>
           </motion.div>'''          <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
@@ -93,7 +93,7 @@ export default function AIPoweredSEO(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx;
                 whileInView={{ opacity: 1, y: 0 }}'transition={{ duration: 0.6, delay: index * 0.1 }}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 group''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-300'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-300'>''
 :pages.disabled/pages/services/ai-powered-seo.tsx
                   <feature.icon className='w-6 h-6 text-cyan-400' />'
                 </div>''
@@ -114,7 +114,7 @@ export default function AIPoweredSEO(...args: any[]): any {
             <h2 className='text-4xl lg:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/ai-powered-seo.tsx
               Proven Results & Benefits'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our AI-powered SEO services deliver measurable results that;
+              Our AI-powered SEO services deliver measurable results that
               directly impact your bottom line and competitive position.
             </p>
 :pages.disabled/pages/services/ai-powered-seo.tsx
@@ -142,7 +142,7 @@ export default function AIPoweredSEO(...args: any[]): any {
 :pages.disabled/pages/services/ai-powered-seo.tsx
               Flexible Service Packages'</h2>''            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Choose the AI-powered SEO solution that fits your business needs;
-              and budget. All packages include our advanced AI technology and;
+              and budget. All packages include our advanced AI technology and
               expert support.
             </p>
 :pages.disabled/pages/services/ai-powered-seo.tsx
@@ -178,7 +178,7 @@ export default function AIPoweredSEO(...args: any[]): any {
               Ready to Dominate Search Rankings?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Join the AI revolution in SEO and leave your competitors behind.;
+              Join the AI revolution in SEO and leave your competitors behind.
               Our technology gives you the edge you need to succeed.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -197,5 +197,5 @@ export default function AIPoweredSEO(...args: any[]): any {
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/ai-powered-seo.tsx)}'';
+:pages.disabled/pages/services/ai-powered-seo.tsx)}''
   ''''

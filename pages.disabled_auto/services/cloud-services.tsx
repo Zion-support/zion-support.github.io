@@ -114,5 +114,5 @@ export default function CloudServices() {
         </div>
       </section>
     </div>
-  );
+  )
 }

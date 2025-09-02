@@ -27,18 +27,18 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
   ]';Fleet management and route optimization',';Public transportation optimization',';Logistics and supply chain management',';Traffic management and smart cities',';Ride-sharing and mobility services',';Freight and cargo transportation';
   ]';Reduce fuel costs by 15-30%',';Improve delivery efficiency by 25-40%',';Cut maintenance costs by 20-35%',';Optimize routes for maximum productivity',';Enhance driver safety and compliance',';Scale transportation operations efficiently';
   ]';Logistics & Freight',';Public Transportation',';Ride-sharing & Mobility',';E-commerce Delivery',';Construction & Heavy Equipment',';Emergency Services';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-orange-600 via-amber-600 to-yellow-600 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AITransportation.tsx
             <Truck className='w-4 h-4 mr-2'  /> AI-Powered Transportation Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Transportation Platform</h1>'          <p className='text-amber-100 text-xl'>Transform your transportation operations with AI-powered insights that optimize routes, enhance efficiency, and reduce costs.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           </div>
 :pages.disabled/pages/services/AITransportation.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           ))}
 :pages.disabled/pages/services/AITransportation.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
 :pages.disabled/pages/services/AITransportation.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-orange-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Transportation Impact</h3>''
@@ -146,7 +146,7 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
 :pages.disabled/pages/services/AITransportation.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform your transportation with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors'>''
 :pages.disabled/pages/services/AITransportation.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

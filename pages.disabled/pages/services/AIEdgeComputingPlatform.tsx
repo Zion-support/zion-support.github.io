@@ -22,7 +22,7 @@ export default function AIEdgeComputingPlatform() {
   return();
     <div className='min-h-screen bg-white'>'{/* Hero Section */}''      <section className='bg-gradient-to-br from-teal-600 via-cyan-600 to-blue-800 py-20 text-center text-white'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
             <Wifi className='w-4 h-4 mr-2'  /> AI-Powered Edge Computing Platform'
           </div>''
@@ -30,7 +30,7 @@ export default function AIEdgeComputingPlatform() {
             AI Edge Computing Platform'
           </h1>'          <p className='text-xl text-teal-100 mb-8 max-w-3xl mx-auto'>
             Bring AI processing to the edge with intelligent device management,
-            real-time data processing, and distributed computing capabilities.;
+            real-time data processing, and distributed computing capabilities.
             Transform your IoT infrastructure with edge intelligence.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -56,7 +56,7 @@ export default function AIEdgeComputingPlatform() {
             Comprehensive edge computing solutions powered by AI
           </p>
 :pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='grid md:grid-cols-2 gap-8'>'
           <div>''
@@ -69,7 +69,7 @@ export default function AIEdgeComputingPlatform() {
               ))}
             </ul>
           </div>
-:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx;
+:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
 '
           <div>''
             <h3 className='text-2xl font-semibold text-gray-900 mb-6'>
@@ -95,12 +95,12 @@ export default function AIEdgeComputingPlatform() {
               Transform your IoT infrastructure with intelligent edge computing
             </p>
 :pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map((benefit, index) => (
               <div'key={index}''                className='bg-white p-6 rounded-xl shadow-sm border border-gray-100''>''
-                <div className='w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
                   <TrendingUp className='w-6 h-6 text-teal-600'  />'</div>'                <p className='text-gray-700 font-medium'>{benefit}</p>              </div>
             ))}
@@ -116,12 +116,12 @@ export default function AIEdgeComputingPlatform() {
             Trusted by leading organizations across industries
           </p>
 :pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
-        </div>';
+        </div>'
 ''
         <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
           {useCases.map((useCase, index) => (
             <div'key={index}''              className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow''>''
-              <div className='w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4'>'';
+              <div className='w-10 h-10 bg-teal-100 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
                 <Monitor className='w-5 h-5 text-teal-600'  />'</div>'              <h3 className='font-semibold text-gray-900 mb-2'>{useCase}</h3>            </div>
           ))}
@@ -151,7 +151,7 @@ export default function AIEdgeComputingPlatform() {
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx)}';
+:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-gray-900 mb-2'>
@@ -161,14 +161,14 @@ export default function AIEdgeComputingPlatform() {
                     {plan.price}'
                   </div>''
                   <p className='text-gray-600'>per month</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3 mb-8'>'{plan.features.map((feature, featureIndex) => (''                    <li key={featureIndex} className='flex items-start'>''
                       <CheckCircle className='w-5 h-5 text-teal-500 mr-3 mt-0.5 flex-shrink-0'  />'                      <span className='text-gray-700'>{feature}</span>
                     </li>
                   ))}
                 </ul>
-:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx;
+:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
 `
                 <button``
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${,
@@ -182,7 +182,7 @@ export default function AIEdgeComputingPlatform() {
               </div>
             ))}
 :pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
-          </div>';
+          </div>'
 ''
           <div className='text-center mt-12'>''
             <p className='text-gray-600 mb-4'>
@@ -203,7 +203,7 @@ export default function AIEdgeComputingPlatform() {
             Proven Results'</h2>''          <div className='grid md:grid-cols-3 gap-8'>''
             <div className='bg-white rounded-lg p-6 shadow-sm'>''
               <div className='text-3xl font-bold text-teal-600 mb-2'>
-:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx;
+:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
                 80-90%'
               </div>''
               <p className='text-gray-700'>Reduction in latency</p>'
@@ -225,11 +225,11 @@ export default function AIEdgeComputingPlatform() {
 '{/* CTA Section */}''      <section className='py-16 bg-gray-900 text-white'>''
         <div className='max-w-4xl mx-auto px-6 text-center'>''
           <h2 className='text-3xl font-bold mb-6'>
-:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx;
+:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
             Ready to Transform Your Edge Computing?'
           </h2>''
           <p className='text-xl text-gray-300 mb-8'>
-            Join hundreds of organizations already using AI Edge Computing;
+            Join hundreds of organizations already using AI Edge Computing
             Platform to optimize IoT infrastructure.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -245,16 +245,16 @@ export default function AIEdgeComputingPlatform() {
           </div>
         </div>
       </section>
-:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx;
+:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
 '{/* Contact Section */}''
       <section className='py-16 max-w-4xl mx-auto px-6 text-center'>''
-        <h2 className='text-3xl font-bold text-gray-900 mb-8'>';
+        <h2 className='text-3xl font-bold text-gray-900 mb-8'>'
           Questions? We
   're Here to Help'</h2>''        <div className='grid md:grid-cols-2 gap-8'>''
           <div className='bg-white border border-gray-200 rounded-xl p-6 shadow-sm'>''
             <Phone className='w-8 h-8 text-teal-500 mx-auto mb-4'  />''
             <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx;
+:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
               Call Us'
             </h3>''
             <p className='text-gray-600 mb-4'>
@@ -269,7 +269,7 @@ export default function AIEdgeComputingPlatform() {
           </div>'''          <div className='bg-white border border-gray-200 rounded-xl p-6 shadow-sm'>''
             <Mail className='w-8 h-8 text-teal-500 mx-auto mb-4'  />''
             <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx;
+:pages.disabled/pages/services/AIEdgeComputingPlatform.tsx
               Email Us'
             </h3>''
             <p className='text-gray-600 mb-4'>
@@ -280,7 +280,7 @@ export default function AIEdgeComputingPlatform() {
               className='text-teal-600 hover:text-teal-700 font-semibold'>              kleber@ziontechgroup.com
             </a>
           </div>
-        </div>';
+        </div>'
 ''
         <div className='mt-12 p-6 bg-gray-50 rounded-xl'>''
           <h3 className='text-lg font-semibold text-gray-900 mb-2'>
@@ -296,5 +296,5 @@ export default function AIEdgeComputingPlatform() {
         </div>
       </section>
     </div>
-  )}''`;
+  )}''`
   ''`'"`

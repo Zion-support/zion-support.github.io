@@ -59,7 +59,7 @@ import React, { useState, useEffect, useCallback, useMemo } from;
   'Connected devices and edge processing solutions', popularity: 68, growthRate: 82, averageRating: 4.3, priceRange:,
   $40K - $400K', implementationTime: '3-6 months, roi:,
   200-450%' }, { id: 'digital-twin, name:;
-  'Digital Twin Platform', icon: Eye, description:;
+  'Digital Twin Platform', icon: Eye, description:
   'Virtual representations of physical systems', popularity: 65, growthRate: 94, averageRating: 4.6, priceRange:,
   $150K - $1.5M', implementationTime: '6-10 months, roi:
   '400-800%' } ]  export function AIServiceRecommendationEngine() { const [isOpen, setIsOpen] = useState(false) const [isAnalyzing, setIsAnalyzing] = useState(false) const [userBehavior, setUserBehavior] = useState<UserBehavior>({ pageViews: [], timeSpent: 0, interactions: [], interests: [], companySize:,

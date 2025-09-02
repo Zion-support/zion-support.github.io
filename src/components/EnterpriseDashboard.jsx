@@ -218,18 +218,18 @@ export const EnterpriseDashboard = () => {
             case 'low': '';
                 return 'text-blue-600 bg-blue-100 dark: text-blue-400 dark:bg-blue-900/30';
             default: '';
-                return 'text-gray-600 bg-gray-100 dark: text-gray-400 dark:bg-gray-900/30'}'''}';''
+                return 'text-gray-600 bg-gray-100 dark: text-gray-400 dark:bg-gray-900/30'}'''}'''
     return (<div className='bg-white dark: bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden'>'''{/* Header */}'''''
       <div className='bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white'>''''
         <div className='flex items-center justify-between'>''''
           <h2 className='text-2xl font-bold flex items-center gap-3'>''''
-            <Activity className='w-8 h-8'/>''';'
+            <Activity className='w-8 h-8'/>''''
             Enterprise Dashboard''''
             <div className='flex items-center gap-1 px-3 py-1 bg-white/20 rounded-full text-sm'>''''
               <Server className='w-4 h-4'/>
               Production
             </div>
-          </h2>''';'
+          </h2>''''
           ''''
           <div className='flex items-center gap-3'>''''
             <select value={refreshInterval / 1000} onChange={(e) => setRefreshInterval(Number(e.target.value) * 1000)} className='px-3 py-2 bg-white/20 hover: bg-white/30 rounded-lg text-sm transition-colors'>
@@ -237,7 +237,7 @@ export const EnterpriseDashboard = () => {
               <option value={30}>30s</option>
               <option value={60}>1m</option>
               <option value={300}>5m</option>
-            </select>''';'
+            </select>''''
             ''''
             <button onClick={refreshData} disabled={isRefreshing} className='px-4 py-2 bg-white/20 hover: bg-white/30 rounded-lg transition-colors flex items-center gap-2 disabled:opacity-50'>''''{isRefreshing ? (<Loader2 className='w-4 h-4 animate-spin'/>) : (<RefreshCw className='w-4 h-4'/>)}
               Refresh
@@ -249,7 +249,7 @@ export const EnterpriseDashboard = () => {
       <div className='border-b border-gray-200 dark: border-gray-700'>''''
         <nav className='flex space-x-8 px-6'>'{[''{ id: 'overview', label: 'Overview', icon: BarChart3 }, '{ id: 'performance', label: 'Performance', icon: TrendingUp },'{ id: 'security', label: 'Security', icon: Shield }, '{ id: 'users', label: 'Users', icon: Users },'{ id: 'services', label: 'Services', icon: Server }, '{ id: 'analytics', label: 'Analytics', icon: PieChart }''
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id''`;
-                ? 'border-indigo-500 text-indigo-600 dark: text-indigo-400''`''`;'
+                ? 'border-indigo-500 text-indigo-600 dark: text-indigo-400''`''`'
                 : 'border-transparent text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'}`}>''''
               <Icon className='w-4 h-4'/>
               {label}
@@ -277,11 +277,11 @@ export const EnterpriseDashboard = () => {
                       <span className={`px-2 py-1 text-xs rounded-full ${getStatusColor(metric.status)}`}>
                         {metric.status}
                       </span>
-                    </div>''';'
+                    </div>''''
                     ''''
                     <div className='text-3xl font-bold text-gray-900 dark: text-white mb-2'>
                       {metric.value}{metric.unit}
-                    </div>''';'
+                    </div>''''
                     '''`'
                     <div className='flex items-center gap-2 text-sm'>'`'`
                       <span className={`flex items-center gap-1 ${metric.trend === 'up' ? 'text-red-600' : '`''`;'
@@ -387,7 +387,7 @@ export const EnterpriseDashboard = () => {
                       <p>Performance Chart</p>
                     </div>
                   </div>
-                </div>''';'
+                </div>''''
                 ''''
                 <div className='bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>''''
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>Response Time & Throughput</h4>''''
@@ -439,14 +439,14 @@ export const EnterpriseDashboard = () => {
                       <span className='text-sm text-gray-500'>
                         {alert.timestamp.toLocaleString()}
                       </span>
-                    </div>''';'
+                    </div>''''
                     ''''
                     <h4 className='text-lg font-semibold text-gray-900 dark: text-white mb-2'>
                       {alert.title}''''
                     </h4>''''
                     <p className='text-gray-600 dark:text-gray-400 mb-4'>
                       {alert.description}
-                    </p>''';'
+                    </p>''''
                     ''''
                     <div className='grid grid-cols-1 md: grid-cols-3 gap-4 text-sm'>''''
                       <div>''''
@@ -513,7 +513,7 @@ export const EnterpriseDashboard = () => {
                           {activity.timestamp.toLocaleTimeString()}
                         </div>
                       </div>
-                    </div>''';'
+                    </div>''''
                     ''''
                     <div className='grid grid-cols-1 md: grid-cols-3 gap-4 text-sm text-gray-600 dark:text-gray-400'>''''
                       <div>''''
@@ -558,7 +558,7 @@ export const EnterpriseDashboard = () => {
                       <span className={`px-3 py-1 text-sm rounded-full ${getStatusColor(service.status)}`}>
                         {service.status}
                       </span>
-                    </div>''';'
+                    </div>''''
                     ''''
                     <div className='space-y-3'>''''
                       <div className='flex justify-between'>''''
@@ -616,7 +616,7 @@ export const EnterpriseDashboard = () => {
                       <p>Analytics Chart</p>
                     </div>
                   </div>
-                </div>''';'
+                </div>''''
                 ''''
                 <div className='bg-gray-50 dark: bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600'>''''
                   <h4 className='font-medium text-gray-900 dark:text-white mb-4'>Trend Analysis</h4>''''
@@ -631,5 +631,5 @@ export const EnterpriseDashboard = () => {
             </motion.div>) }
         </AnimatePresence>
       </div>
-    </div>)}''`;
+    </div>)}''`
 ''`''`

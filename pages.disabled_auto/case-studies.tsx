@@ -189,7 +189,7 @@ const CaseStudies: React.FC = () => {
     { name: 'Retail', count: 3, active: false },
     { name: 'Energy', count: 3, active: false },
     { name: 'Education', count: 2, active: false },
-    { name: 'Other', count: 1, active: false }];
+    { name: 'Other', count: 1, active: false }]
   const featuredCaseStudy = caseStudies.find(study => study.featured)
   return(
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -214,7 +214,7 @@ const CaseStudies: React.FC = () => {
 :pages.disabled_auto/case-studies.tsx;
               Discover how we;
   've helped businesses across industries achieve remarkable results with AI-powered solutions.;
-              Discover how we&apos;ve helped businesses across industries;
+              Discover how we&apos;ve helped businesses across industries
               achieve remarkable results with AI-powered solutions.'
             </p>
           </motion.div>
@@ -316,7 +316,7 @@ const CaseStudies: React.FC = () => {
                   </div>
                 </div>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-                  {caseStudies;
+                  {caseStudies
                     .filter(study => !study.featured)
                     .map((study, index) => (
                       <motion.div
@@ -361,7 +361,7 @@ const CaseStudies: React.FC = () => {
                               </div>
                             </div>
                             <div className='flex flex-wrap gap-2 mb-4'>
-                              {study.technologies;
+                              {study.technologies
                                 .slice(0, 3)
                                 .map((tech, techIndex) => (
                                   <Badge
@@ -463,7 +463,7 @@ const CaseStudies: React.FC = () => {
                     Ready to Start Your Success Story?
                   </h3>
                   <p className='text-gray-300 mb-4 text-sm'>
-                    Let us help you achieve similar results with our AI-powered;
+                    Let us help you achieve similar results with our AI-powered
                     solutions.
                   </p>
                   <Button className='w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white'>
@@ -488,7 +488,7 @@ const CaseStudies: React.FC = () => {
               Ready to Write Your Success Story?
             </h2>
             <p className='text-xl text-gray-300 mb-8'>
-              Join the ranks of successful businesses that have transformed;
+              Join the ranks of successful businesses that have transformed
               their operations with our AI solutions.
             </p>
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -508,5 +508,5 @@ const CaseStudies: React.FC = () => {
       </section>
     </div>
   )}
-;
+
 export default CaseStudies

@@ -27,5 +27,5 @@ const ITServices: React.FC = () => {
     </div>
   )}
 ;
-export default ITServices;
+export default ITServices
 '

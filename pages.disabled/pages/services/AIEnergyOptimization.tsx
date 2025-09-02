@@ -27,18 +27,18 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
   ]';Commercial building energy optimization',';Manufacturing facility energy management',';Data center power efficiency',';Retail chain energy optimization',';Healthcare facility energy management',';Educational campus energy systems';
   ]';Reduce energy costs by 20-40%',';Improve energy efficiency by 25-45%',';Cut carbon emissions by 30-50%',';Optimize renewable energy utilization',';Enhance equipment lifespan and reliability',';Achieve sustainability and ESG goals';
   ]';Commercial Real Estate',';Manufacturing & Industrial',';Data Centers & IT',';Healthcare & Hospitals',';Retail & Shopping Centers',';Education & Universities';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-green-600 via-emerald-600 to-teal-600 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIEnergyOptimization.tsx
             <Zap className='w-4 h-4 mr-2'  /> AI-Powered Energy Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Energy Optimization Platform</h1>'          <p className='text-emerald-100 text-xl'>Transform your energy management with AI-powered optimization that reduces costs, improves efficiency, and accelerates your journey to sustainability.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
             </div>
           </div>
 :pages.disabled/pages/services/AIEnergyOptimization.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
             </div>
           ))}
 :pages.disabled/pages/services/AIEnergyOptimization.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
             ))}
           </div>
 :pages.disabled/pages/services/AIEnergyOptimization.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-green-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Business Impact</h3>''
@@ -146,7 +146,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
             ))}
           </div>
 :pages.disabled/pages/services/AIEnergyOptimization.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to optimize your energy consumption?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors'>''
 :pages.disabled/pages/services/AIEnergyOptimization.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

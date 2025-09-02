@@ -27,18 +27,18 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
   ]';Medical imaging and radiology analysis',';Patient diagnosis and treatment planning',';Electronic health record optimization',';Drug discovery and clinical trials',';Population health management',';Medical research and data analysis';
   ]';Improve diagnostic accuracy by 20-35%',';Reduce medical errors by 30-50%',';Cut administrative costs by 25-40%',';Accelerate treatment decisions by 40-60%',';Enhance patient outcomes and satisfaction',';Scale healthcare operations efficiently';
   ]';Hospitals & Health Systems',';Medical Practices & Clinics',';Radiology & Imaging Centers',';Pharmaceutical Companies',';Research Institutions',';Health Insurance Providers';
-  ];
+  ]
   return()
     <div className = 'min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-red-600 via-pink-600 to-rose-600 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AIHealthcare.tsx
             <Heart className='w-4 h-4 mr-2'  /> AI-Powered Healthcare Intelligence'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>AI Healthcare Platform</h1>'          <p className='text-pink-100 text-xl'>Transform healthcare delivery with AI-powered tools that enhance diagnosis, optimize treatment, and improve patient outcomes.</p>
         </div>
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -100,7 +100,7 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           </div>
 :pages.disabled/pages/services/AIHealthcare.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-3 gap-6'>''
         </div>
@@ -112,7 +112,7 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </div>
           ))}
 :pages.disabled/pages/services/AIHealthcare.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-gray-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Popular Use Cases</h3>''
@@ -129,7 +129,7 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
 :pages.disabled/pages/services/AIHealthcare.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-red-50 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Measurable Healthcare Impact</h3>''
@@ -146,7 +146,7 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             ))}
           </div>
 :pages.disabled/pages/services/AIHealthcare.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-16 bg-white border border-gray-200 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-gray-900 mb-6 text-center'>Industries We Serve</h3>''
@@ -169,7 +169,7 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
         <div className='mt-14 text-center'>''
           <div className='text-sm text-gray-600 mb-2'>Ready to transform healthcare with AI?</div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
-            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors'>'';
+            <a href='tel:+13024640950' className='inline-flex items-center px-5 py-3 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors'>''
 :pages.disabled/pages/services/AIHealthcare.tsx
               <Phone className='w-4 h-4 mr-2' /> +1 302 464 0950'
             </a>''

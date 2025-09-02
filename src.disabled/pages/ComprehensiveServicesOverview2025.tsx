@@ -7,5 +7,5 @@ import React, { useState, useEffect } from;
   'all') const [searchTerm, setSearchTerm] = useState<string>('
   ') const [viewMode, setViewMode] = useState<'grid;
   ' | 'list;
-  '>('grid;
+  '>('grid
   ') '

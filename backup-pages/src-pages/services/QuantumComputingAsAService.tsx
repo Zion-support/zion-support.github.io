@@ -45,7 +45,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       title:,
   Immediate Access;
   ',
-      description: 'Start using quantum computing today with our cloud-based platform}  ];
+      description: 'Start using quantum computing today with our cloud-based platform}  ]
   return()
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 <=
@@ -556,5 +556,5 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
     </div>
   )}
-;
+
 export default QuantumComputingAsAService}}}}}''`

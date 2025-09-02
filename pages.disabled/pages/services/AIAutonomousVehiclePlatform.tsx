@@ -28,17 +28,17 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
   ];
   return();
     <>
-:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx;
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
 :pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
 <:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx;
       <SEO;
 =;
-      <SEO '>        title = 'AI Autonomous Vehicle Platform | Zion Tech Group';
+      <SEO '>        title = 'AI Autonomous Vehicle Platform | Zion Tech Group'
         description='Revolutionary AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management.'
       <SEO '';
         title = 'AI Autonomous Vehicle Platform | Zion Tech Group'';
         description='Revolutionary AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management.'';
-        keywords='AI autonomous vehicles, self-driving cars, autonomous fleet management, computer vision, sensor fusion, transportation automation'/>';
+        keywords='AI autonomous vehicles, self-driving cars, autonomous fleet management, computer vision, sensor fusion, transportation automation'/>'
 ''
       <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>'
       <SEO ''
@@ -51,7 +51,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
         <section className='relative py-20 px-4 sm:px-6 lg:px-8'>''
           <div className='max-w-7xl mx-auto text-center'>''
             <div className='flex justify-center mb-6'>''
-              <div className='p-3 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 rounded-full'>'';
+              <div className='p-3 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 rounded-full'>''
 :pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 <Car className='w-8 h-8 text-white'  />              </div>'
             </div>''
@@ -59,7 +59,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
               AI-Powered Autonomous Vehicle Platform'
             </h1>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Revolutionize transportation with our cutting-edge autonomous vehicle platform.;
+              Revolutionize transportation with our cutting-edge autonomous vehicle platform.
               Advanced AI algorithms ensure safety, efficiency, and intelligent fleet management.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -69,7 +69,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
               AI-Powered Autonomous Vehicle Platform
             </h1>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-              Revolutionize transportation with our cutting-edge autonomous vehicle platform.;
+              Revolutionize transportation with our cutting-edge autonomous vehicle platform.
               Advanced AI algorithms ensure safety, efficiency, and intelligent fleet management.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -101,7 +101,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
           <div className='max-w-7xl mx-auto'>''
             <div className='text-center mb-16'>''
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx;
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 Revolutionary Autonomous Vehicle Features'
               </h2>''
               <p className='text-xl text-gray-300'>
@@ -111,7 +111,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>'{features.map((feature, index) => (''
                 <div key={index} className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300'>''
                   <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4'>''
-                    <Brain className='w-6 h-6 text-white'  />';
+                    <Brain className='w-6 h-6 text-white'  />'
                 Revolutionary Autonomous Vehicle Features
               </h2>''
               <p className='text-xl text-gray-300'>
@@ -136,7 +136,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
           <div className='max-w-7xl mx-auto'>''
             <div className='text-center mb-16'>''
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx;
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 Autonomous Vehicle Platform Pricing'
               </h2>''
               <p className='text-xl text-gray-300'>
@@ -150,7 +150,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                   index === 1 ? 'border-blue-400/50 scale-105' : 'border-white/10'``} hover:border-blue-400/50 transition-all duration-300`}>'{index === 1 && (''
                     <div className='bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4'>
                       Most Popular
-                    </div>';
+                    </div>'
                 Autonomous Vehicle Platform Pricing
               </h2>''
               <p className='text-xl text-gray-300'>
@@ -168,7 +168,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
                   )}''
                   <h3 className='text-2xl font-bold text-white mb-2'>{tier.name}</h3>''
                   <p className='text-gray-300 mb-4'>{tier.description}</p>''
-                  <div className='text-4xl font-bold text-white mb-6'>{tier.price}</div>'';
+                  <div className='text-4xl font-bold text-white mb-6'>{tier.price}</div>''
 :pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                   <ul className='space-y-3 mb-8'>'
                   <ul className='space-y-3 mb-8'>
@@ -201,7 +201,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
           <div className='max-w-7xl mx-auto'>''
             <div className='text-center mb-16'>''
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx;
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 Transform Transportation with Autonomous Vehicles'
               </h2>''
               <p className='text-xl text-gray-300'>
@@ -211,7 +211,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>'{useCases.map((useCase, index) => (''
                 <div key={index} className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300'>''
                   <div className='w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4'>''
-                    <TrendingUp className='w-5 h-5 text-white'  />';
+                    <TrendingUp className='w-5 h-5 text-white'  />'
                 Transform Transportation with Autonomous Vehicles
               </h2>''
               <p className='text-xl text-gray-300'>
@@ -236,7 +236,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
           <div className='max-w-7xl mx-auto'>''
             <div className='text-center mb-16'>''
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx;
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 Why Choose Our Autonomous Platform?'
               </h2>''
               <p className='text-xl text-gray-300'>
@@ -246,7 +246,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>'{benefits.map((benefit, index) => (''
                 <div key={index} className='flex items-start space-x-4'>''
                   <div className='w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1'>''
-                    <Star className='w-4 h-4 text-white'  />';
+                    <Star className='w-4 h-4 text-white'  />'
                 Why Choose Our Autonomous Platform?
               </h2>''
               <p className='text-xl text-gray-300'>
@@ -271,7 +271,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
           <div className='max-w-7xl mx-auto'>''
             <div className='text-center mb-16'>''
               <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx;
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                 Industries We Serve'
               </h2>''
               <p className='text-xl text-gray-300'>
@@ -281,7 +281,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
             <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>'{industries.map((industry, index) => (''
                 <div key={index} className='text-center'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4'>''
-                    <Globe className='w-8 h-8 text-white'  />';
+                    <Globe className='w-8 h-8 text-white'  />'
                 Industries We Serve
               </h2>''
               <p className='text-xl text-gray-300'>
@@ -305,11 +305,11 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
         <section className='py-20 px-4 sm:px-6 lg:px-8'>'
           <div className='max-w-4xl mx-auto text-center'>''
             <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx;
+:pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
               Ready to Go Autonomous?'
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
-              Contact us today to learn how our AI-powered autonomous vehicle platform can transform your transportation business';
+              Contact us today to learn how our AI-powered autonomous vehicle platform can transform your transportation business'
               Ready to Go Autonomous?
             </h2>''
             <p className='text-xl text-gray-300 mb-8'>
@@ -317,7 +317,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
             </p>''
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>''
               <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10'>''
-                <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
                   <Users className='w-6 h-6 text-white'  />'
                 </div>''

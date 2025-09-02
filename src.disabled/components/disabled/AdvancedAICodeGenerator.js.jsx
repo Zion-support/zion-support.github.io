@@ -48,4 +48,4 @@ import React, { useState, useEffect } from,
   ', 'high;
   ']  const filteredSnippets = snippets.filter(snippet => { const matchesSearch = snippet.title.toLowerCase().includes(searchTerm.toLowerCase()) || snippet.description.toLowerCase().includes(searchTerm.toLowerCase()) || snippet.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())) const matchesLanguage = filterLanguage === 'all;
   ' || snippet.language === filterLanguage const matchesComplexity = filterComplexity === 'all;
-  ' || snippet.complexity === filterComplexity return matchesSearch && matchesLanguage && matchesComplexity })  const copyToClipboard = async (code) => { try { await navigator.clipboard.writeText(code)';`
+  ' || snippet.complexity === filterComplexity return matchesSearch && matchesLanguage && matchesComplexity })  const copyToClipboard = async (code) => { try { await navigator.clipboard.writeText(code)'`

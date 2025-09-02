@@ -8,31 +8,25 @@ import {
   ChevronRight} from 'lucide-react';
 export const Sidebar: React.FC = () => {
   const serviceCategories = [
-    {
-      title: 'AI & Machine Learning', icon: Brain,
+    { title: 'AI & Machine Learning', icon: Brain,
       links: [{ name: 'AI Services Overview', href: '/ai-services' },
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'AI Project Management', href: '/services/ai-project-management' },
         { name: 'AI Customer Support', href: '/services/ai-customer-support-automation' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' }
-      ]}, {
-      title: 'Cloud & Infrastructure',
+      ]}, { title: 'Cloud & Infrastructure',
       icon: Cloud, links: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops' }, { name: 'IT Infrastructure', href: '/it-services' }, { name: 'Cloud Migration', href: '/services/cloud-migration-services' }, { name: 'FinOps Advisor', href: '/services/finops-advisor' }
-      ]}, {
-      title: 'Cybersecurity',
+      ]}, { title: 'Cybersecurity',
       icon: Shield, links: [
         { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' }, { name: 'Security Headers & CSP', href: '/services/security-headers-csp' }, { name: 'Zero Trust Network', href: '/services/zero-trust-network-access' }, { name: 'DSR Privacy Portal', href: '/services/dsr-portal' }
-      ]}, {
-      title: 'Development',
+      ]}, { title: 'Development',
       icon: Code, links: [
         { name: 'Micro SaaS Solutions', href: '/micro-saas' }, { name: 'Custom Development', href: '/services/custom-development' }, { name: 'API Development', href: '/services/api-development' }, { name: 'Mobile Apps', href: '/services/mobile-development' }
-      ]}, {
-      title: 'Data & Analytics',
+      ]}, { title: 'Data & Analytics',
       icon: Database, links: [
         { name: 'Data Analytics', href: '/services/data-analytics' }, { name: 'Business Intelligence', href: '/services/business-intelligence' }, { name: 'Data Governance', href: '/services/ai-data-governance-platform' }, { name: 'Predictive Analytics', href: '/services/ai-predictive-maintenance' }
-      ]}, {
-      title: 'Infrastructure',
+      ]}, { title: 'Infrastructure',
       icon: Network, links: [
         { name: 'Network Solutions', href: '/services/network-solutions' }, { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' }, { name: 'Digital Twin Platform', href: '/services/digital-twin' }, { name: 'Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management' }
       ]}
@@ -41,7 +35,7 @@ export const Sidebar: React.FC = () => {
     { name: 'About Us', href: '/about', icon: Users }, { name: 'Our Team', href: '/team', icon: Award },
     { name: 'Careers', href: '/careers', icon: Users }, { name: 'Partners', href: '/partners', icon: Award },
     { name: 'Contact', href: '/contact', icon: HelpCircle }
-  ];
+  ]
   const marketplaceLinks = [
     { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart }, { name: 'Products', href: '/marketplace/products', icon: ShoppingCart },
     { name: 'Talent', href: '/marketplace/talent', icon: Users }, { name: 'Equipment', href: '/marketplace/equipment', icon: Network }

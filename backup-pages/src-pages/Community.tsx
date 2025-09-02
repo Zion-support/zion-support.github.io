@@ -47,7 +47,7 @@ interface CommunityCategory {
    icon: unknown;
    color: string;
    postCount: number;
-   topics: string[];
+   topics: string[]
    const Community: React.FC = () => { const [searchQuery, setSearchQuery] = useState(, ')
    const [selectedCategory, setSelectedCategory] = useState<string>( 'all')
    const [sortBy, setSortBy] = useState<string>( 'latest');
@@ -265,7 +265,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
   })
     return category ? category.color :,
   from-gray-500 to-gray-600'}
-;
+
     return category ? category.name: 'Unknown}
   return ('
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>
@@ -284,7 +284,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
               Community
             </h1>'
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Connect with fellow developers, share knowledge, and get support from the;
+              Connect with fellow developers, share knowledge, and get support from the
               Zion Tech Group community of technology professionals.
             </p>
             <div className='flex flex-wrap justify-center gap-4'>
@@ -456,7 +456,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
                 <input';
                   type='text''                  placeholder='Search community posts...';
                   value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}';
+                  onChange={(e) => setSearchQuery(e.target.value)}'
                   className='w-full pl-10 pr-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
                 />
               </div>
@@ -465,7 +465,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
             <div className='lg:w-48'>
               <select;
                 value={selectedCategory}
-                onChange={(e) => setSelectedCategory(e.target.value)}';
+                onChange={(e) => setSelectedCategory(e.target.value)}'
                 className='w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'>'
                 <option value='all' className='bg-slate-800 text-white'>All Categories</option>
                 {communityCategories.map((category) => ('
@@ -478,7 +478,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
             <div className='lg:w-48'>
               <select;
                 value={sortBy}
-                onChange={(e) => setSortBy(e.target.value)}';
+                onChange={(e) => setSortBy(e.target.value)}'
                 className='w-full px-4 py-3 bg-white/20 border border-white/30 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'>'
                 <option value='latest' className='bg-slate-800 text-white'>Latest</option>'
                 <option value='popular' className='bg-slate-800 text-white'>Most Popular</option>'
@@ -629,7 +629,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      c
             Share Your Knowledge
           </h2>'
           <p className='text-gray-300 mb-8 max-w-2xl mx-auto'>
-            Have a question, want to share your experience, or contribute to the community?;
+            Have a question, want to share your experience, or contribute to the community?
             Create a new post and start a discussion!
           </p>
           '

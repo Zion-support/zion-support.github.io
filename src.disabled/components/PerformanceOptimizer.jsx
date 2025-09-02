@@ -8,12 +8,12 @@ export const PerformanceOptimizer = ({ children }) => {
       requestIdleCallback(() => {
         if ('startViewTransition' in document) {
           try {
-            // @ts-ignore - experimental API;
+            // @ts-ignore - experimental API
             document.startViewTransition?.(() => {})} catch {}
         }
       })}
   }, [location.pathname])
   return <>{children}</>
 }
-;
+
 export default PerformanceOptimizer

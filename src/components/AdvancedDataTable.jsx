@@ -48,7 +48,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         // Apply sorting;
         if(sortConfig) {}
             result.sort((a, b) => {}
-                const aVal = a[sortConfig.key];
+                const aVal = a[sortConfig.key]
                 const bVal = b[sortConfig.key]
                 if (aVal < bVal)';'
                     return sortConfig.direction === 'asc' ? -1 : 1;
@@ -143,9 +143,9 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     // Get sort icon;
     const getSortIcon = (key) => {}
         if(!enableSorting || sortConfig?.key !== key) {}
-''';'
 ''''
-            return <ArrowUpDown className='w-4 h-4 text-gray-400'/>}'''';
+''''
+            return <ArrowUpDown className='w-4 h-4 text-gray-400'/>}''''
         return sortConfig.direction === 'asc'''''
             ? <ChevronUp className='w-4 h-4 text-blue-500'/>''''
             : <ChevronDown className='w-4 h-4 text-blue-500'/>}
@@ -153,7 +153,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
     const renderCell = (column, item, index) => {}
         const value = item[column.key];
         if (column.render) {}
-'`;'
+'`'
             return column.render(value, item, index)}'`'`
         return (<span className={`truncate ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>
         {value}`
@@ -164,15 +164,15 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         <div className='flex items-center justify-between mb-4'>''''
           <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
             Data Table ({processedData.length} items)
-          </h3>''';'
+          </h3>''''
           ''''
           <div className='flex items-center gap-2'>''''{enableExport && (<button onClick={handleExport} className='px-3 py-2 bg-green-500 hover: bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2'>''''
                 <Download className='w-4 h-4'/>
                 Export
-              </button>)}`;
+              </button>)}`
             `'`'
             <button onClick={() => setShowFilters(!showFilters)} className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${showFilters''`;
-            ? 'bg-blue-500 text-white''`''`;'
+            ? 'bg-blue-500 text-white''`''`'
             : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500'}`}>''''
               <Filter className='w-4 h-4'/>
               Filters
@@ -198,7 +198,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                     </label>
                     <select onChange = {}
 ';'
-  (e) => handleFilterChange(column.key, e.target.value,contains')''';
+  (e) => handleFilterChange(column.key, e.target.value,contains')'''
 ''''} className='w-full px-3 py-2 border border-gray-300 dark: border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100'>''''
                       <option value=''>No filter</option>''''
                       <option value='contains'>Contains</option>''''
@@ -266,11 +266,11 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
           <div className='flex items-center justify-between'>''''
             <div className='text-sm text-gray-700 dark:text-gray-300'>
               Showing {((currentPage - 1) * pageSize) + 1} to {Math.min(currentPage * pageSize, processedData.length)} of {processedData.length} results
-            </div>''';'
+            </div>''''
             ''''
             <div className='flex items-center gap-2'>
               <button onClick = {}
-  () => setCurrentPage(prev => Math.max(1, prev - 1))''';'
+  () => setCurrentPage(prev => Math.max(1, prev - 1))''''
 ''''} disabled={currentPage === 1} className='px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'>
                 Previous
               </button>
@@ -278,18 +278,18 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 `;
 `'`;'
 `'`'`;
-                const page = i + 1`;'`'`'`'
-                return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page''`'`'`;
+                const page = i + 1`'`'`'`'
+                return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page''`'`'`
                         ? 'bg-blue-500 text-white''`'`'`'`
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>{page}
                   </button>)})}
               <button onClick = {}
-  () => setCurrentPage(prev => Math.min(totalPages, prev + 1))''';'
+  () => setCurrentPage(prev => Math.min(totalPages, prev + 1))''''
 ''''} disabled={currentPage === totalPages} className='px-3 py-1 text-sm border border-gray-300 dark: border-gray-600 rounded hover:bg-gray-100 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors'>
                 Next
               </button>
             </div>
           </div>
         </div>)}
-    </div>)}''`;
+    </div>)}''`
 ''`'"`'"

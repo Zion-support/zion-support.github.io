@@ -97,7 +97,7 @@ const FAQ: NextPage = () => {
         {
           question: 'What technologies do you work with?,
           answer:;
-  'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.';
+  'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
           question: 'How long has Zion Tech Group been in business?', answer: 'Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'}, {
           question: 'What industries do you serve?',
           answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet the specific needs and challenges of each industry.'}, {
@@ -153,7 +153,7 @@ const FAQ: NextPage = () => {
             <h1 className='text-4xl md: text-5xl font-bold mb-6'>Frequently Asked Questions</h1>
             <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
               Find answers to common questions about our services, pricing, and support.;
-              Can&apos;t find what you&apos;re looking for? Contact us directly.
+              Can&apos;t find what you&aposre looking for? Contact us directly.
             </p>
           </div>
         </section>
@@ -165,7 +165,7 @@ const FAQ: NextPage = () => {
                 <h2 className='text-2xl font-bold text-gray-900 mb-6'>{category.title}</h2>
                 <div className='space-y-4'>
                   {category.questions.map((item, itemIndex) => {
-                    const globalIndex = categoryIndex * 100 + itemIndex;
+                    const globalIndex = categoryIndex * 100 + itemIndex
                     const isOpen = openItems.includes(globalIndex)
                     return(
                       <div key={itemIndex} className='border border-gray-200 rounded-lg'>
@@ -277,5 +277,5 @@ const FAQ: NextPage = () => {
       </div>
     </MainLayout>
   )}
-;
+
 export default FAQ

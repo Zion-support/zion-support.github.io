@@ -73,7 +73,7 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
         'Employee engagement automation',
         'Workforce planning AI',
         'Learning & development automation',
-        'Comprehensive HR analytics';
+        'Comprehensive HR analytics'
       ],
       pricing: 'Starting at $99/month',
       link: '/services/ai-autonomous-hr-platform',
@@ -278,5 +278,5 @@ const NewAutonomousAIServicesShowcase2025: React.FC = () => {
       </div>
     </>
   )}
-;
+
 export default NewAutonomousAIServicesShowcase2025

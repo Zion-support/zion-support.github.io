@@ -48,9 +48,9 @@ import {}
             transition={{ duration: 0.8 }}'>''
             <div className='inline-flex items-center px-4 py-2 bg-green-500/10 border border-green-500/20 rounded-full text-green-400 text-sm font-medium mb-6'>''
               <Shield className='w-4 h-4 mr-2'  />              AI-Powered Risk Management
-            </div>';
+            </div>'
 ''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
   return()
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
       <SEO''
@@ -84,14 +84,14 @@ import {}
               Protect your business with AI-powered supply chain risk detection;
               and predictive analytics. Identify vulnerabilities, monitor;
               suppliers, and prevent disruptions before they impact your;
-              operations.;
+              operations.
 :pages.disabled/pages/services/ai-supply-chain-risk-management.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <a'';
                 href='#pricing'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-xl hover:from-green-600 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl'>'
                 View Pricing''
                 <ArrowRight className='ml-2 w-5 h-5'  />              </a>'
               <a''
@@ -143,7 +143,7 @@ import {}
               Leverage cutting-edge AI technology to protect your supply chain
             </p>
 :pages.disabled/pages/services/ai-supply-chain-risk-management.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -209,11 +209,11 @@ import {}
               Comprehensive Risk Coverage
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Monitor all types of supply chain risks with our AI-powered;
+              Monitor all types of supply chain risks with our AI-powered
               platform
             </p>
 :pages.disabled/pages/services/ai-supply-chain-risk-management.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {riskTypes.map(risk: unknown, index: unknown()
@@ -279,11 +279,11 @@ import {}
               Industry Applications
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Our platform serves diverse industries with unique supply chain;
+              Our platform serves diverse industries with unique supply chain
               challenges
             </p>
 :pages.disabled/pages/services/ai-supply-chain-risk-management.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -349,11 +349,11 @@ import {}
               Transparent Pricing
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Choose the plan that fits your supply chain complexity and;
+              Choose the plan that fits your supply chain complexity and
               business size
             </p>
 :pages.disabled/pages/services/ai-supply-chain-risk-management.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -384,7 +384,7 @@ import {}
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/ai-supply-chain-risk-management.tsx)}';
+:pages.disabled/pages/services/ai-supply-chain-risk-management.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -397,7 +397,7 @@ import {}
                     <span className='text-slate-300 ml-1'>{plan.period}</span>'
                   </div>''
                   <p className='text-slate-300 mt-2'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>')}
 ''
@@ -470,11 +470,11 @@ import {}
               Ready to Protect Your Supply Chain?
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Contact us today to learn how AI risk management can safeguard;
+              Contact us today to learn how AI risk management can safeguard
               your business
             </p>
 :pages.disabled/pages/services/ai-supply-chain-risk-management.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>'
             <motion.div'';
@@ -587,5 +587,5 @@ import {}
   )}
 :pages.disabled/pages/services/ai-supply-chain-risk-management.tsx;
 export default AISupplyChainRiskManagement''`;
-''`''`;
+''`''`
 export default AISupplyChainRiskManagement''`

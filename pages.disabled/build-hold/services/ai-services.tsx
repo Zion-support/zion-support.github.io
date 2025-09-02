@@ -20,7 +20,7 @@ import Link from;
   Expert Team
   ','      description: 'AI specialists with deep expertise in machine learning and data science.'    }, {
   '      icon: <Shield className='w-8 h-8' />,'      title:,
-  Scalable Solutions;
+  Scalable Solutions
   ', description: 'AI solutions that grow with your business and adapt to changing needs.'    }'  ]
   return(
     <MainLayout;
@@ -130,7 +130,7 @@ import Link from;
         </div>
       </section>
       {/* CTA Section */}
-      <section className='py-20 bg-blue-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Harness the Power of AI?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>'            Let&apos;s discuss how our AI services can help automate your processes, '
+      <section className='py-20 bg-blue-900 text-white'>'        <div className='container mx-auto px-4 text-center'>'          <h2 className='text-4xl font-bold mb-6'>Ready to Harness the Power of AI?</h2>'          <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>'            Let&aposs discuss how our AI services can help automate your processes, '
   '            gain insights, and create competitive advantages for your business.'          </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>'            <Link href='/contact'>'              <span className='bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center'>'                Schedule Consultation'                <ArrowRight className='ml-2 w-5 h-5' />'              </span>'            </Link>
             <Link href='tel:+13024640950'>'              <span className='bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer'>'                Call +1 302 464 0950"              </span>
@@ -140,5 +140,5 @@ import Link from;
       </section>
     </MainLayout>
   )}
-;
+
 export default AIServicesPage

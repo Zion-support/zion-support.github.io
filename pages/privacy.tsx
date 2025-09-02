@@ -271,4 +271,4 @@ const Privacy: NextPage = () => {
     </Layout>
   );
 };
-export default Privacy;
+export default Privacy

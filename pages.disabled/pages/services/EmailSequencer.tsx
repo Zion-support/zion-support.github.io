@@ -22,26 +22,26 @@ export default function EmailSequencer() {
 		<div className = 'min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950'>''
 			<section className='max-w-7xl mx-auto px-6 py-20'>''
 				<div className='text-center mb-12'>''
-					<div className='mx-auto w-16 h-16 rounded-2xl bg-zion-cyan/20 flex items-center justify-center mb-4'>'';
+					<div className='mx-auto w-16 h-16 rounded-2xl bg-zion-cyan/20 flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/EmailSequencer.tsx
 						<Mail className='w-8 h-8 text-zion-cyan'  />'</div>''					<h1 className='text-4xl md:text-5xl font-bold text-white'>Email Sequencer</h1>'					<p className='mt-4 text-lg text-zion-slate-light max-w-2xl mx-auto'>
 						Automate multi-step outreach with AI-assisted copy, throttling, and deep CRM/webhook integrations.
 					</p>
 :pages.disabled/pages/services/EmailSequencer.tsx
-				</div>';
+				</div>'
 ''
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-16'>'{features.map((f) => (''						<div key={f} className='p-6 rounded-xl border border-white/10 bg-white/5 backdrop-blur-lg'>''
 							<Check className='w-5 h-5 text-zion-cyan mb-3'  />'							<p className='text-white text-sm'>{f}</p>
 						</div>
 					))}
 :pages.disabled/pages/services/EmailSequencer.tsx
-				</div>';
+				</div>'
 ''
 				<div className='mb-16'>''
 					<h2 className='text-2xl font-semibold text-white mb-6'>Plans</h2>''
 					<div className='grid grid-cols-1 md:grid-cols-3 gap-6'>'{plans.map((p) => (''							<div key={p.name} className='p-6 rounded-2xl border border-white/10 bg-white/5'>''
 								<div className='flex items-center justify-between mb-2'>''
-									<h3 className='text-white font-bold'>{p.name}</h3>'';
+									<h3 className='text-white font-bold'>{p.name}</h3>''
 :pages.disabled/pages/services/EmailSequencer.tsx
 									<span className='text-zion-cyan font-semibold'>{p.price}</span>'
 								</div>''
@@ -53,7 +53,7 @@ export default function EmailSequencer() {
 						))}
 					</div>
 				</div>
-:pages.disabled/pages/services/EmailSequencer.tsx;
+:pages.disabled/pages/services/EmailSequencer.tsx
 '
 				<div>''
 					<h2 className='text-2xl font-semibold text-white mb-4'>Market reference links</h2>''

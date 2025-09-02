@@ -20,7 +20,7 @@ interface InteractiveButtonProps {
   variant?: ButtonVariant;
   size?: ButtonSize;
   disabled?: boolean;
-  loading?: boolean;
+  loading?: boolean
   icon?: React.ReactNode
   className?: string}
 
@@ -52,7 +52,7 @@ export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
       className={buttonClasses}
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
 ursor/automate-test-fix-improve-and-merge-code-48f3}) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false)
   const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden'
   const variantClasses: Record<ButtonVariant, string> = {
     primary:,
@@ -65,9 +65,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3}) => {
   px-3 py-2 text-sm;
   ', '
     md: 'px-4 py-2 text-base,'
-    lg: 'px-6 py-3 text-lg;'
+    lg: 'px-6 py-3 text-lg'
   '}'
-;
+
 ursor/automate-test-fix-improve-and-merge-code-48f3
   return(
     <motion.button;
@@ -116,7 +116,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       />
       <div className='relative flex items-center gap-2'>
         {loading ? (
-          <motion.div className='w-4 h-4 border-2 border-current border-t-transparent rounded-full' animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear;'
+          <motion.div className='w-4 h-4 border-2 border-current border-t-transparent rounded-full' animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear'
   ' }} />        ) : ('
           icon && <span className='flex-shrink-0'>{icon}</span>
         )}
@@ -126,7 +126,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   )}
 ;
 interface AnimatedCardProps {
-  children: React.ReactNode;
+  children: React.ReactNode
   className?: string
   delay?: number}
 
@@ -136,7 +136,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' })
-  const controls = useAnimation();
+  const controls = useAnimation()
   useEffect(() => {
     if (isInView) {
       controls.start('visible')}
@@ -168,7 +168,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className 
   const controls = useAnimation();
   useEffect(() => {
     if (isInView) controls.start(
-  'visible')}, [isInView, controls]);
+  'visible')}, [isInView, controls])
   const directionVariants = {
     up: { hidden: { y: 50, opacity: 0 }, visible: { y: 0, opacity: 1 } },
     down: { hidden: { y: -50, opacity: 0 }, visible: { y: 0, opacity: 1 } },
@@ -188,7 +188,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className 
   )}
 
 interface HoverEffectProps {
-  children: React.ReactNode;
+  children: React.ReactNode
   className?: string
   scale?: number}
 
@@ -230,7 +230,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
 interface FadeInProps {
   children: React.ReactNode;
-  delay?: number;
+  delay?: number
   duration?: number
   className?: string}
 
@@ -240,7 +240,7 @@ export const FadeIn: React.FC<FadeInProps> = ({
 }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-50px' })
-  const controls = useAnimation();
+  const controls = useAnimation()
   useEffect(() => {
     if (isInView) {
       controls.start('visible')}
@@ -304,10 +304,10 @@ export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => 
 interface FloatingActionButtonProps {
   icon: React.ReactNode;
    onClick: () => void;
-   tooltip?: string;
+   tooltip?: string
    position?:, bottom-right' | 'bottom-left' | 'top-right' | 'top-left''
    color?: 'blue' | 'green' | 'purple' | 'red}'
-export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position =, bottom-right', color =;'
+export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon, onClick, tooltip, position =, bottom-right', color ='
   'blue' }) => {
   const [showTooltip, setShowTooltip] = useState(false)
   const positionClasses: Record<NonNullable<FloatingActionButtonProps[;
@@ -348,4 +348,3 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
       )}
     </div>
   )}
-;

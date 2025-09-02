@@ -6,5 +6,5 @@ const Equipment: React.FC = () => (
 			<p className='text-xl text-gray-300'>Browse equipment.</p>
 		</div>
 	</div>
-);
+)
 export default Equipment

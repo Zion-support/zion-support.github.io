@@ -32,6 +32,6 @@ import React, { useState, useEffect, useCallback } from;
   color-contrast', name: 'Color Contrast, description:;
   'High contrast ratios for better readability', enabled: true, category:,
   visual', impact: 'high }, { id:,
-  keyboard-shortcuts', name: 'Keyboard Shortcuts, description:;
+  keyboard-shortcuts', name: 'Keyboard Shortcuts, description:
   'Alternative navigation methods', enabled: false, category:,
   motor', impact: 'medium } ]) '

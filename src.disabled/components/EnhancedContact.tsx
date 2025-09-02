@@ -20,7 +20,7 @@ export function EnhancedContact(...args[]: any):  {
     message: ''})
   const [errors, setErrors] = useState<any>({})
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const services = [
     { value: 'general', label: 'General Inquiry' },
     { value: 'ai-solutions', label: 'AI Solutions' },
@@ -146,7 +146,7 @@ export function EnhancedContact(...args[]: any):  {
             Get in Touch
           </h1>
           <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
-            Ready to transform your business? Let's discuss how our AI-powered solutions;
+            Ready to transform your business? Let's discuss how our AI-powered solutions
             can help you achieve your goals.
           </p>
         </motion.div>
@@ -242,7 +242,7 @@ export function EnhancedContact(...args[]: any):  {
   e.target.value)}
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.name;
-                      ? 'border-red-500 focus:ring-red-500';
+                      ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'} text-white placeholder-zion-slate-light`}
                   placeholder='Enter your full name'
                 />
@@ -279,7 +279,7 @@ export function EnhancedContact(...args[]: any):  {
   e.target.value)}
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan ${
                     errors.email;
-                      ? 'border-red-500 focus:ring-red-500';
+                      ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'} text-white placeholder-zion-slate-light`}
                   placeholder='Enter your email address'
                 />
@@ -315,7 +315,7 @@ export function EnhancedContact(...args[]: any):  {
                     onChange = {
   (e) => handleInputChange('phone',
   e.target.value)}
-                    className='w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light';
+                    className='w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light'
                     placeholder='Enter your phone number'
                   />
                 </div>
@@ -329,7 +329,7 @@ export function EnhancedContact(...args[]: any):  {
                     onChange = {
   (e) => handleInputChange('comp',
   e.target.value)}
-                    className='w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light';
+                    className='w-full px-4 py-3 rounded-lg bg-zion-slate-dark border border-zion-slate-light transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-zion-cyan text-white placeholder-zion-slate-light'
                     placeholder='Enter your comp name'
                   />
                 </div>
@@ -367,7 +367,7 @@ export function EnhancedContact(...args[]: any):  {
   e.target.value)}
                   className={`w-full px-4 py-3 rounded-lg bg-zion-slate-dark border transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-zion-cyan resize-none ${
                     errors.message;
-                      ? 'border-red-500 focus:ring-red-500';
+                      ? 'border-red-500 focus:ring-red-500'
                       : 'border-zion-slate-light focus:border-zion-cyan'} text-white placeholder-zion-slate-light`}
                   placeholder='Tell us about your project or inquiry...'
                 />

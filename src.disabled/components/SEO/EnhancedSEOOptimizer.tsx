@@ -17,5 +17,5 @@ import React from,
    url: string}[] noindex?: boolean nofollow?: boolean canonical?: string structuredData?: any } const EnhancedSEOOptimizer: React.FC<SEOProps> = ({ title =,
   Zion Tech Group - Leading Technology Solutions Provider', description =;
   'Transform your business with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. Trusted by 500+ companies worldwide.', keywords =;
-  'technology solutions, AI services, quantum computing, blockchain, software development, digital transformation, enterprise solutions', image =;
+  'technology solutions, AI services, quantum computing, blockchain, software development, digital transformation, enterprise solutions', image =
   'https: ''

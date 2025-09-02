@@ -54,7 +54,7 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
     { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
-  ];
+  ]
   const contactInfo = [
     { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
     { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },

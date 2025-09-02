@@ -126,9 +126,9 @@ import {}
         canonical='https://ziontechgroup.com/services/micro-saas-solutions'/>
 '{/* Hero Section */}''      <section className='relative overflow-hidden'>''
         <div className='absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80'></div>''
-        <div className='relative z-10 container mx-auto px-4 py-24 text-center'>'';
+        <div className='relative z-10 container mx-auto px-4 py-24 text-center'>''
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-          <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+          <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
             Micro SAAS Solutions''
             <span className='block text-3xl md:text-4xl text-zion-cyan mt-2'>
               Rapid Deployment, Maximum Impact
@@ -136,7 +136,7 @@ import {}
           </h1>''
           <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
             Transform your business ideas into powerful, scalable software;
-            solutions with our micro SAAS development services designed for;
+            solutions with our micro SAAS development services designed for
             rapid deployment and growth.'
           </p>''
           <div className='flex flex-wrap justify-center gap-4'>''
@@ -155,16 +155,16 @@ import {}
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
               Comprehensive SAAS Development Services'</h2>''            <p className='text-xl text-zion-slate max-w-3xl mx-auto'>
               From concept to deployment, we provide end-to-end micro SAAS;
-              development services that accelerate your business growth and;
+              development services that accelerate your business growth and
               digital transformation.
             </p>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {services.map((service, index) => (
               <div'key={index}''                className='bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
                   <service.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -191,11 +191,11 @@ import {}
             <h2 className='text-4xl font-bold text-zion-blue-dark mb-4'>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
               Why Choose Our Micro SAAS Solutions?'</h2>''            <p className='text-xl text-zion-slate max-w-3xl mx-auto'>
-              Experience the advantages of rapid development, scalability, and;
+              Experience the advantages of rapid development, scalability, and
               cost-effective solutions designed for modern business needs.
             </p>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>'{benefits.map((benefit, index) => (''
               <div key={index} className='text-center'>''
@@ -216,16 +216,16 @@ import {}
             <h2 className='text-4xl font-bold text-zion-blue-dark mb-4'>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
               Industry-Specific Solutions'</h2>''            <p className='text-xl text-zion-slate max-w-3xl mx-auto'>
-              Tailored micro SAAS solutions designed for the unique requirements;
+              Tailored micro SAAS solutions designed for the unique requirements
               and compliance needs of different industries.
             </p>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-          </div>';
+          </div>'
 ''
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {industries.map((industry, index) => (
               <div'key={index}''                className='bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4'>''
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
                   <industry.icon className='w-8 h-8 text-white' />'
                 </div>''
@@ -242,7 +242,7 @@ import {}
 '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple'>''
         <div className='container mx-auto px-4 text-center'>''
           <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/MicroSAASSolutions.jsx;
+:pages.disabled/pages/services/MicroSAASSolutions.jsx
             Ready to Build Your Micro SAAS Solution?'
           </h2>''
           <p className='text-xl text-zion-slate-light max-w-3xl mx-auto mb-8'>
@@ -259,5 +259,5 @@ import {}
       </section>
     </div>
   );
-:pages.disabled/pages/services/MicroSAASSolutions.jsx}'';
+:pages.disabled/pages/services/MicroSAASSolutions.jsx}''
   ''''

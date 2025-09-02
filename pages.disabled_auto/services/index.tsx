@@ -43,7 +43,7 @@ const ServicesPage: NextPage = () => {
   'ai-services');
   const stats = [
     { number:;
-  '80+, label:;
+  '80+, label:
   'Micro SaaS Solutions', icon: Zap },
     { number:,
   35+', label: 'IT Services, icon: Shield },
@@ -89,7 +89,7 @@ const ServicesPage: NextPage = () => {
     {
       icon: <Award className='w-8 h-8' />,
       title: 'Expert Support',
-      description:;
+      description:
         '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'}]
   return(
     <MainLayout
@@ -446,5 +446,5 @@ const ServicesPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default ServicesPage

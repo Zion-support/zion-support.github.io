@@ -15,5 +15,5 @@
     </div>
   );
 :pages.disabled/pages/Healthcare.tsx;
-';
+'
   '''"

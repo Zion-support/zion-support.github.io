@@ -18,7 +18,7 @@ const ContactForm: React.FC = () => {
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false)
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const services = [
     'AI & Machine Learning',
@@ -29,7 +29,7 @@ const ContactForm: React.FC = () => {
     'Data Analytics',
     'Digital Transformation',
     'Other',
-  ];
+  ]
   const validateForm = (): boolean => {
     const newErrors: Partial<FormData> = {};
     if (!formData.name.trim()) {
@@ -71,7 +71,7 @@ const ContactForm: React.FC = () => {
         message: '',
       });
     }, 3000);
-  };
+  }
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -83,7 +83,7 @@ const ContactForm: React.FC = () => {
     if (errors[name as keyof FormData]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
-  };
+  }
   if (isSubmitted) {
     return (
       <motion.div
@@ -99,7 +99,7 @@ const ContactForm: React.FC = () => {
           Thank you for reaching out. We'll get back to you within 24 hours.'
         </p>
       </motion.div>
-    );
+    )
   }
 
   return (
@@ -287,4 +287,4 @@ const ContactForm: React.FC = () => {
     </div>
   );
 };
-export default ContactForm;
+export default ContactForm

@@ -42,15 +42,15 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
             </h1>''
             <p className='text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto'>
               Protect your business with the most advanced AI-powered;
-              cybersecurity platform. Real-time threat detection, automated;
+              cybersecurity platform. Real-time threat detection, automated
               response, and 24/7 protection against evolving cyber threats.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <a'';
                 href='https://ziontechgroup.com/contact'';
-                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105'>';
+                className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-300 transform hover:scale-105'>'
                 Secure Your Business''
-                <ArrowRight className='ml-2 h-5 w-5'  />              </a>';
+                <ArrowRight className='ml-2 h-5 w-5'  />              </a>'
             transition={{ duration: 0.8 }}
           >''
             <div className='flex justify-center mb-6'>''
@@ -62,7 +62,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
             </h1>''
             <p className='text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto'>
               Protect your business with the most advanced AI-powered;
-              cybersecurity platform. Real-time threat detection, automated;
+              cybersecurity platform. Real-time threat detection, automated
               response, and 24/7 protection against evolving cyber threats.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
@@ -73,7 +73,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                 <ArrowRight className='ml-2 h-5 w-5'  />              </a>
               <a'';
                 href='tel:+13024640950'';
-                className='inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300''>'';
+                className='inline-flex items-center px-8 py-4 bg-zion-slate text-white font-semibold rounded-lg hover:bg-zion-slate-light transition-all duration-300''>''
 :pages.disabled/pages/services/AICybersecurityElite.tsx
                 <Phone className='mr-2 h-5 w-5'  />                Call Security Team
                 <Phone className='mr-2 h-5 w-5'  />                Call Security Team
@@ -97,12 +97,12 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-              Military-Grade Security Features';
+              Military-Grade Security Features'
               Military-Grade Security Features
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our AI-powered cybersecurity platform combines cutting-edge;
-              technology with proven security practices to provide comprehensive;
+              technology with proven security practices to provide comprehensive
               protection for your digital assets.
             </p>
 :pages.disabled/pages/services/AICybersecurityElite.tsx
@@ -120,7 +120,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}'';
                 className='bg-zion-slate p-8 rounded-xl border border-zion-slate-light hover:border-red-500 transition-all duration-300''>''
-                <div className='p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mb-6'>'';
+                <div className='p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mb-6'>''
 :pages.disabled/pages/services/AICybersecurityElite.tsx
                   <feature.icon className='h-8 w-8 text-white' />'
                 </div>''
@@ -152,12 +152,12 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-              Advanced Security Capabilities';
+              Advanced Security Capabilities'
               Advanced Security Capabilities
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Go beyond basic security with our advanced AI-powered;
-              cybersecurity features designed to protect against the most;
+              cybersecurity features designed to protect against the most
               sophisticated threats.
             </p>
 :pages.disabled/pages/services/AICybersecurityElite.tsx
@@ -199,12 +199,12 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-              Industry Compliance & Standards';
+              Industry Compliance & Standards'
               Industry Compliance & Standards
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Our platform meets and exceeds the highest industry standards for;
-              cybersecurity, ensuring your business remains compliant with;
+              cybersecurity, ensuring your business remains compliant with
               regulatory requirements.
             </p>
 :pages.disabled/pages/services/AICybersecurityElite.tsx
@@ -222,7 +222,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}'';
                 className='bg-zion-slate p-6 rounded-xl border border-zion-slate-light text-center''>''
-                <div className='p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mx-auto mb-4'>'';
+                <div className='p-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-lg w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/AICybersecurityElite.tsx
                   <Award className='h-6 w-6 text-white'  />'
                   <Award className='h-6 w-6 text-white'  />
@@ -247,12 +247,12 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-              Comprehensive Security Plans';
+              Comprehensive Security Plans'
               Comprehensive Security Plans
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Choose the security plan that fits your business needs. All plans;
-              include our core AI cybersecurity engine and 24/7 threat;
+              include our core AI cybersecurity engine and 24/7 threat
               monitoring.
             </p>
 :pages.disabled/pages/services/AICybersecurityElite.tsx
@@ -276,7 +276,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
               >';
                 className={`relative bg-zion-slate-dark p-8 rounded-xl border-2 ${}
                   plan.popular';
-                    ? 'border-red-500 shadow-2xl shadow-red-500/25'';
+                    ? 'border-red-500 shadow-2xl shadow-red-500/25''
                     : 'border-zion-slate-light'`}`}
               >{plan.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -284,7 +284,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                       Most Popular
                     </span>
                   </div>
-:pages.disabled/pages/services/AICybersecurityElite.tsx)}';
+:pages.disabled/pages/services/AICybersecurityElite.tsx)}'
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -314,7 +314,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                     {plan.description}
                   </p>
 :pages.disabled/pages/services/AICybersecurityElite.tsx
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                 </div>
@@ -356,12 +356,12 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
             className='text-center mb-16''>''
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
-              Ready to Secure Your Business?';
+              Ready to Secure Your Business?'
               Ready to Secure Your Business?
             </h2>''
             <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
               Get in touch with our cybersecurity experts to discuss how AI;
-              Cybersecurity Elite can protect your organization from evolving;
+              Cybersecurity Elite can protect your organization from evolving
               cyber threats.
             </p>
 :pages.disabled/pages/services/AICybersecurityElite.tsx
@@ -370,7 +370,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
 ''
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>''
             <div className='text-center'>''
-              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4'>'';
+              <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4'>''
 :pages.disabled/pages/services/AICybersecurityElite.tsx
                 <Phone className='h-8 w-8 text-white'  />'
               </div>''
@@ -390,7 +390,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                 +1 (302) 464-0950
               </a>
 :pages.disabled/pages/services/AICybersecurityElite.tsx
-            </div>';
+            </div>'
 ''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4'>''
@@ -416,7 +416,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
                 kleber@ziontechgroup.com
               </a>
 :pages.disabled/pages/services/AICybersecurityElite.tsx
-            </div>';
+            </div>'
 ''
             <div className='text-center'>''
               <div className='p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-full w-fit mx-auto mb-4'>''
@@ -439,7 +439,7 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
               </p>
             </div>
 :pages.disabled/pages/services/AICybersecurityElite.tsx
-          </div>';
+          </div>'
 ''
           <div className='text-center'>'
             <a'';
@@ -462,13 +462,13 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
       <footer className='py-12 px-4 sm:px-6 lg:px-8 border-t border-zion-slate-light'>''
         <div className='max-w-7xl mx-auto text-center'>''
           <p className='text-zion-slate-light mb-4'>
-:pages.disabled/pages/services/AICybersecurityElite.tsx;
+:pages.disabled/pages/services/AICybersecurityElite.tsx
             © 2024 Zion Tech Group. All rights reserved.'
           </p>''
           <div className='flex justify-center space-x-6'>'
             <a'';
               href='https://ziontechgroup.com'';
-              className='text-zion-slate-light hover:text-white transition-colors duration-300'>';
+              className='text-zion-slate-light hover:text-white transition-colors duration-300'>'
               Visit Website''
               <ExternalLink className='inline ml-1 h-4 w-4'  />            </a>'
             <a''
@@ -504,5 +504,5 @@ const AICybersecurityElite: React.FC = (): JSX.Element => {}
   )}
 :pages.disabled/pages/services/AICybersecurityElite.tsx;
 export default AICybersecurityElite''`;
-''`''`;
+''`''`
 export default AICybersecurityElite'"`

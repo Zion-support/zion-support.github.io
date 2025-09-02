@@ -33,7 +33,7 @@ export default function HealthcareTech(...args: []):  {}
 <:pages.disabled/pages/services/HealthcareTech.tsx;
       <SEO;
 =;
-      <SEO '>        title='Healthcare Technology Services - Zion Tech Group';
+      <SEO '>        title='Healthcare Technology Services - Zion Tech Group'
         description='Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care.'/>        title='Healthcare Technology Services - Zion Tech Group''        description='Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care.'/>'
       <SEO ''
         title='Healthcare Technology Services - Zion Tech Group'';
@@ -67,13 +67,13 @@ export default function HealthcareTech(...args: []):  {}
               Healthcare';
   y: 0}}';
             transition={{ duration: 0.6 }}'';
-            className='text-center max-w-4xl mx-auto'';
+            className='text-center max-w-4xl mx-auto''
 ''
             <div className='flex justify-center mb-6'>''
               <div className='w-20 h-20 bg-gradient-to-br from-red-500 to-pink-500 rounded-2xl flex items-center justify-center'>''
                 <Heart className='w-10 h-10 text-white'  />              </div>'
             </div>''
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>';
+            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'
               Healthcare''
               <span className='block bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent'>
                 Technology
@@ -150,7 +150,7 @@ export default function HealthcareTech(...args: []):  {}
               Why Choose Healthcare Technology?';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Why Choose Healthcare Technology?
@@ -160,7 +160,7 @@ export default function HealthcareTech(...args: []):  {}
               and enhances the overall quality of care delivery.
             </p>
 :pages.disabled/pages/services/HealthcareTech.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index()
@@ -195,13 +195,13 @@ export default function HealthcareTech(...args: []):  {}
                   <feature.icon className='w-6 h-6 text-white' />
                 </div>'
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>';
-  delay: index * 0.1 '}}'';
+  delay: index * 0.1 '}}''
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''
                   <feature.icon className='w-6 h-6 text-white' />'
                 </div>''
                 <h3 className='text-xl font-semibold text-white mb-3'>{feature.title}</h3>'';
-  delay: index * 0.1}}'';
+  delay: index * 0.1}}''
                 className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
                 <div className={`w-12 h-12 bg-gradient-to-br ${feature.color} rounded-lg flex items-center justify-center mb-4`}>''
                   <feature.icon className='w-6 h-6 text-white' />
@@ -242,13 +242,13 @@ export default function HealthcareTech(...args: []):  {}
               Our Healthcare Technology Services';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Our Healthcare Technology Services
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Comprehensive healthcare technology solutions designed to meet the unique;
+              Comprehensive healthcare technology solutions designed to meet the unique
               needs of healthcare providers and patients
             </p>
 :pages.disabled/pages/services/HealthcareTech.tsx
@@ -287,7 +287,7 @@ export default function HealthcareTech(...args: []):  {}
                   {service.features.map((feature, featureIndex) => ('
                     <li key={featureIndex} className='flex items-center text-sm text-slate-300'>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
 ''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
                 <p className='text-slate-300 mb-4'>{service.description}</p>''
@@ -295,7 +295,7 @@ export default function HealthcareTech(...args: []):  {}
                 <ul className='space-y-2'>'{service.features.map((feature, featureIndex) => (''
                     <li key={featureIndex} className='flex items-center text-sm text-slate-300'>'';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-slate-600 transition-all duration-300''
 ''
                 <h3 className='text-xl font-semibold text-white mb-3'>{service.title}</h3>''
                 <p className='text-slate-300 mb-4'>{service.description}</p>''
@@ -354,17 +354,17 @@ export default function HealthcareTech(...args: []):  {}
               Healthcare Technology Applications';
   y: 0}}
             transition={{ duration: 0.6 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl font-bold text-white mb-4'>
               Healthcare Technology Applications
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Discover how modern technology is transforming various aspects of healthcare;
+              Discover how modern technology is transforming various aspects of healthcare
               and patient care delivery
             </p>
 :pages.disabled/pages/services/HealthcareTech.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-8'>
             {applications.map(app: unknown, index: unknown()
@@ -401,14 +401,14 @@ export default function HealthcareTech(...args: []):  {}
                 </div>'
                 <h3 className='text-lg font-semibold text-white mb-2'>{app.name}</h3>';
   delay: index * 0.1 '}}'';
-                className='text-center group'';
+                className='text-center group''
 ''
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>''
                   <app.icon className='w-8 h-8 text-pink-400' />'
                 </div>''
                 <h3 className='text-lg font-semibold text-white mb-2'>{app.name}</h3>'';
   delay: index * 0.1}}'';
-                className='text-center group'';
+                className='text-center group''
 ''
                 <div className='w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300'>''
                   <app.icon className='w-8 h-8 text-pink-400' />
@@ -444,7 +444,7 @@ export default function HealthcareTech(...args: []):  {}
             <h2 className='text-4xl font-bold text-white mb-6'>
               Ready to Transform Healthcare?'
             </h2>''
-            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>';
+            <p className='text-xl text-slate-300 mb-8 max-w-3xl mx-auto'>'
               Let's discuss how healthcare technology can improve patient outcomes,
               streamline operations, and create a better healthcare experience for everyone.'
             </p>''

@@ -35,18 +35,18 @@ export default function MicroCRM(...args: any[]): any {
             <div className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6'>''
               <Users className='w-5 h-5 text-cyan-400 mr-2'  />''
               <span className='text-cyan-300 text-sm font-medium'>
-:pages.disabled/pages/services/micro-crm.tsx;
+:pages.disabled/pages/services/micro-crm.tsx
                 Customer Relationship Management
-              </span>            </div>';
+              </span>            </div>'
 ''
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>
               Micro CRM
             </h1>'''            <p className='text-xl text-slate-300 mb-8 leading-relaxed'>
               Streamline your customer relationships with our lightweight,
               powerful CRM solution designed for small businesses and growing;
-              teams.;
+              teams.
 :pages.disabled/pages/services/micro-crm.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25'>
@@ -65,16 +65,16 @@ export default function MicroCRM(...args: any[]): any {
 :pages.disabled/pages/services/micro-crm.tsx
               Essential CRM Features'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Our Micro CRM provides all the essential features you need to;
-              manage customer relationships without the complexity of enterprise;
+              manage customer relationships without the complexity of enterprise
               solutions.
             </p>
 :pages.disabled/pages/services/micro-crm.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid md: anygrid-cols-2 lg:grid-cols-4 gap-8'>
             {features.map((feature, index) => (
               <div'key={index}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 hover:scale-105''>''
-                <div className='w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4'>'';
+                <div className='w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4'>''
 :pages.disabled/pages/services/micro-crm.tsx
                   <feature.icon className='w-6 h-6 text-cyan-400' />'
                 </div>''
@@ -92,11 +92,11 @@ export default function MicroCRM(...args: any[]): any {
             <h2 className='text-4xl font-bold text-white mb-4'>
 :pages.disabled/pages/services/micro-crm.tsx
               Why Choose Micro CRM?'</h2>''            <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
-              Experience the benefits of professional CRM software without the;
+              Experience the benefits of professional CRM software without the
               complexity and cost of enterprise solutions.
             </p>
 :pages.disabled/pages/services/micro-crm.tsx
-          </div>';
+          </div>'
 ''
           <div className='grid md: anygrid-cols-2 lg:grid-cols-3 gap-6'>'{benefits.map((benefit, index) => (''              <div key={index} className='flex items-start space-x-3'>''
                 <CheckCircle className='w-6 h-6 text-cyan-400 flex-shrink-0 mt-1'  />'                <span className='text-slate-300 text-lg'>{benefit}</span>
@@ -110,20 +110,20 @@ export default function MicroCRM(...args: any[]): any {
         <div className='container mx-auto px-4'>''
           <div className='text-center mb-16'>''
             <h2 className='text-4xl font-bold text-white mb-4'>
-:pages.disabled/pages/services/micro-crm.tsx;
+:pages.disabled/pages/services/micro-crm.tsx
               Perfect For Your Business'
             </h2>''
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
   ';
-              Whether you're a small business owner or managing a growing sales;
+              Whether you're a small business owner or managing a growing sales
               team, our Micro CRM adapts to your needs.
             </p>
-          </div>';
+          </div>'
 ''
           <div className='grid md: anygrid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <div'key={index}''                className='bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-cyan-400/30 transition-all duration-300''>''
-                <div className='w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6'>'';
+                <div className='w-16 h-16 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-xl flex items-center justify-center mb-6'>''
 :pages.disabled/pages/services/micro-crm.tsx
                   <useCase.icon className='w-8 h-8 text-cyan-400' />'
                 </div>''
@@ -140,11 +140,11 @@ export default function MicroCRM(...args: any[]): any {
 '{/* CTA Section */}''      <section className='py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10'>''
         <div className='container mx-auto px-4 text-center'>''
           <h2 className='text-4xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/micro-crm.tsx;
+:pages.disabled/pages/services/micro-crm.tsx
             Ready to Transform Your Customer Relationships?'
           </h2>''
           <p className='text-xl text-slate-300 mb-8 max-w-2xl mx-auto'>
-            Join thousands of businesses that have improved their customer;
+            Join thousands of businesses that have improved their customer
             management with our Micro CRM solution.'
           </p>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -157,5 +157,5 @@ export default function MicroCRM(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/micro-crm.tsx)}
-  '';
+  ''
 '''"

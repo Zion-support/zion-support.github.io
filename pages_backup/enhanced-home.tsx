@@ -92,7 +92,7 @@ const EnhancedHome: React.FC = () => {
         'Their DevOps practices reduced our deployment time from hours to minutes. Outstanding work!',
       rating: 5,
     },
-  ];
+  ]
 
   return (
     <>
@@ -244,7 +244,7 @@ const EnhancedHome: React.FC = () => {
                     ))}
                   </div>
                   <p className="text-gray-600 mb-6 italic">
-                    &quot;{testimonial.content}&quot;
+                    &quot;{testimonial.content}&quot
                   </p>
                   <div>
                     <div className="font-semibold text-gray-900">
@@ -265,9 +265,9 @@ const EnhancedHome: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              ;
+              
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Transform Your Business?;
+                Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
                 Let us discuss how our technology solutions can drive your
@@ -295,4 +295,4 @@ const EnhancedHome: React.FC = () => {
     </>
   );
 };
-export default EnhancedHome;
+export default EnhancedHome

@@ -19,7 +19,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md,
   color = 'primary;
   ',
-  text = 'Loading...;
+  text = 'Loading...
   ',
   showText = true,
   className = ''}) => {
@@ -38,7 +38,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             repeat: Infinity,';
   ease: 'linear'}}
         />{/* Center dot for larger sizes */}
-        {size ===;
+        {size ===
   'xl' && ('
           <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>'
             <div className='w-8 h-8 bg-cyan-400 rounded-full animate-pulse'></div>
@@ -70,7 +70,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   'md className?: string }> = ({
   size =,
   sm',
-  className = ';
+  className = '
   '}) => ('`
   <div className={`inline-flex items-center ${className}`} role='status' aria-label='Loading'>
     <motion.div'`;
@@ -87,7 +87,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     />'
     <span className='sr-only'>Loading</span>
   </div>
-);
+)
 // Full-screen loading overlay
 export const FullScreenLoader: React.FC<{
   text?: string;
@@ -96,7 +96,7 @@ export const FullScreenLoader: React.FC<{
   '  text = 'Loading amazing experiences...;
   ',
   showLogo = true,';
-  className = ';
+  className = '
   '}) => (`
   <div className={`fixed inset-0 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light flex items-center justify-center z-50 ${className}`}>'
     <div className='relative text-center'>
@@ -112,12 +112,12 @@ export const FullScreenLoader: React.FC<{
       '
       <LoadingSpinner size='lg' color='cyan' text={text}  />    </div>
   </div>
-);
+)
 // Skeleton loading component
 export const SkeletonLoader: React.FC<{
   className?: string;
   lines?: number}> = ({
-'  className = ';
+'  className = '
   ',
   lines = 3}) => (`
   <div className={`animate-pulse ${className}`}>
@@ -129,5 +129,5 @@ export const SkeletonLoader: React.FC<{
   w-3/4;
   ': 'w-full`}`}      />))}
   </div>
-);
+)
 export default LoadingSpinner</motion.div></motion.div>}''`

@@ -36,58 +36,48 @@ export function EnhancedHeader() {
     { name: 'Contact', href: '/contact', current: false }];
   // Organized services by category;
   const servicesCategories = [
-    {
-      title: 'AI & Machine Learning', icon: Brain,
+    { title: 'AI & Machine Learning', icon: Brain,
       color: 'from-blue-500 to-indigo-500', services: [{ name: 'AI Autonomous Business Manager', href: '/services/ai-autonomous-business-manager', description: 'Fully autonomous business operations' },
         { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence', description: 'Advanced analytics & ML insights' }, { name: 'AI Compliance Assistant', href: '/services/ai-compliance-assistant', description: 'Automated regulatory compliance' },
         { name: 'AI Sales Copilot', href: '/services/ai-sales-copilot', description: 'Intelligent sales optimization' }, { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', description: 'Machine learning SEO optimization' },
         { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite', description: 'AI-powered content creation & optimization' }, { name: 'AI Customer Support', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
-        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'AI-driven project optimization' }, { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Intelligent financial insights' }]}, {
-      title: 'Quantum Computing',
+        { name: 'AI Project Management', href: '/services/ai-project-management', description: 'AI-driven project optimization' }, { name: 'AI Financial Analytics', href: '/services/ai-financial-analytics', description: 'Intelligent financial insights' }]}, { title: 'Quantum Computing',
       icon: Atom, color: 'from-indigo-500 to-purple-500',
       services: [
         { name: 'Quantum AI Hybrid Platform', href: '/services/quantum-ai-hybrid-platform', description: 'Revolutionary quantum-AI computing' }, { name: 'Quantum Computing Solutions', href: '/services/quantum-computing', description: 'Next-generation computing power' },
         { name: 'Quantum Financial Trading', href: '/services/ai-quantum-financial-trading-platform', description: 'Advanced quantum trading' }, { name: 'Quantum Machine Learning', href: '/services/quantum-machine-learning', description: 'Quantum-enhanced ML algorithms' },
-        { name: 'AI Quantum Financial Analytics', href: '/services/ai-quantum-financial-analytics-platform', description: 'Revolutionary quantum AI financial platform' }]}, {
-      title: 'Cloud & Infrastructure',
+        { name: 'AI Quantum Financial Analytics', href: '/services/ai-quantum-financial-analytics-platform', description: 'Revolutionary quantum AI financial platform' }]}, { title: 'Cloud & Infrastructure',
       icon: Cloud, color: 'from-cyan-500 to-blue-500',
       services: [
         { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation & scaling' }, { name: 'IT Infrastructure', href: '/services/it-infrastructure', description: 'Enterprise infrastructure solutions' },
-        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Cloud cost optimization' }, { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Financial operations automation' }]}, {
-      title: 'Cybersecurity',
+        { name: 'FinOps Advisor', href: '/services/finops-advisor', description: 'Cloud cost optimization' }, { name: 'Cloud FinOps Optimizer', href: '/services/cloud-finops-optimizer', description: 'Financial operations automation' }]}, { title: 'Cybersecurity',
       icon: Shield, color: 'from-red-500 to-orange-500',
       services: [
         { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform', description: 'Advanced AI-powered security' }, { name: 'AI Cybersecurity Operations', href: '/services/ai-cybersecurity-operations-center', description: 'Autonomous security operations center' },
         { name: 'Security Headers & CSP', href: '/services/security-headers-csp', description: 'Web security hardening' }, { name: 'DSR Privacy Portal', href: '/services/dsr-portal', description: 'GDPR/CCPA compliance' },
-        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', description: 'Modern security architecture' }]}, {
-      title: 'Supply Chain & Logistics',
+        { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access', description: 'Modern security architecture' }]}, { title: 'Supply Chain & Logistics',
       icon: Truck, color: 'from-green-500 to-blue-600',
       services: [
-        { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain-management-platform', description: 'Self-learning supply chain management' }, { name: 'Autonomous Logistics', href: '/services/autonomous-logistics', description: 'Smart supply chain automation' }]}, {
-      title: 'Emerging Technologies',
+        { name: 'AI Autonomous Supply Chain', href: '/services/ai-autonomous-supply-chain-management-platform', description: 'Self-learning supply chain management' }, { name: 'Autonomous Logistics', href: '/services/autonomous-logistics', description: 'Smart supply chain automation' }]}, { title: 'Emerging Technologies',
       icon: Rocket, color: 'from-purple-500 to-pink-500',
       services: [
         { name: 'AI Smart City Infrastructure', href: '/services/ai-smart-city-infrastructure-management', description: 'Intelligent urban management' }, { name: 'AI Autonomous Vehicles', href: '/services/ai-autonomous-vehicle-management-platform', description: 'Autonomous fleet management' },
         { name: 'IoT Edge Computing', href: '/services/iot-edge-computing', description: 'Connected device intelligence' }, { name: 'Digital Twin Platform', href: '/services/digital-twin', description: 'Virtual replica technology' },
-        { name: 'Space Technology', href: '/space-tech', description: 'Innovative space solutions' }]}, {
-      title: 'Smart City & Infrastructure',
+        { name: 'Space Technology', href: '/space-tech', description: 'Innovative space solutions' }]}, { title: 'Smart City & Infrastructure',
       icon: Building2, color: 'from-green-500 to-emerald-500',
       services: [
         { name: 'AI Smart City Management', href: '/services/ai-smart-city-infrastructure-management', description: 'Intelligent urban infrastructure' }, { name: 'Traffic Management', href: '/services/traffic-management', description: 'AI-powered traffic optimization' },
-        { name: 'Energy Grid Management', href: '/services/energy-grid', description: 'Smart energy distribution' }, { name: 'Environmental Monitoring', href: '/services/environmental-monitoring', description: 'Real-time environmental tracking' }]}, {
-      title: 'Autonomous Systems',
+        { name: 'Energy Grid Management', href: '/services/energy-grid', description: 'Smart energy distribution' }, { name: 'Environmental Monitoring', href: '/services/environmental-monitoring', description: 'Real-time environmental tracking' }]}, { title: 'Autonomous Systems',
       icon: Car, color: 'from-blue-500 to-cyan-500',
       services: [
         { name: 'AI Autonomous Vehicle Platform', href: '/services/ai-autonomous-vehicle-management-platform', description: 'Fleet management & safety' }, { name: 'Drone Management', href: '/services/drone-management', description: 'Autonomous drone operations' },
-        { name: 'Robotics Automation', href: '/services/robotics-automation', description: 'Industrial robotics solutions' }]}, {
-      title: 'Micro SaaS Solutions',
+        { name: 'Robotics Automation', href: '/services/robotics-automation', description: 'Industrial robotics solutions' }]}, { title: 'Micro SaaS Solutions',
       icon: Code, color: 'from-green-500 to-emerald-500',
       services: [
         { name: 'AI Email Automation Suite', href: '/services/ai-email-automation-suite', description: 'Intelligent email management & automation' }, { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler', description: 'AI-powered social media automation' },
         { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', description: 'Advanced customer analytics & insights' }, { name: 'Micro CRM', href: '/services/micro-crm', description: 'Lightweight customer management' },
         { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', description: 'Efficient support system' }, { name: 'AI Content Marketing', href: '/services/ai-content-marketing-suite', description: 'AI-powered content creation' },
-        { name: 'Customer Support Automation', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' }, { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance insights' }]}, {
-      title: 'DevOps & Automation',
+        { name: 'Customer Support Automation', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' }, { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance insights' }]}, { title: 'DevOps & Automation',
       icon: Workflow, color: 'from-blue-500 to-indigo-500',
       services: [
         { name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', description: 'Intelligent CI/CD & infrastructure automation' }, { name: 'Cloud DevOps', href: '/services/cloud-devops', description: 'Infrastructure automation & scaling' },
@@ -95,54 +85,42 @@ export function EnhancedHeader() {
   ];
   // Featured services for quick access;
   const services = [
-    {
-      name: 'AI Email Automation Suite', description: 'Intelligent email management & automation',
+    { name: 'AI Email Automation Suite', description: 'Intelligent email management & automation',
       href: '/services/ai-email-automation-suite', icon: Mail,
       color: 'from-blue-500 to-indigo-500', featured: true},
-    {
-      name: 'AI Social Media Scheduler', description: 'AI-powered social media automation',
+    { name: 'AI Social Media Scheduler', description: 'AI-powered social media automation',
       href: '/services/ai-social-media-scheduler', icon: Share2,
       color: 'from-purple-500 to-pink-500', featured: true},
-    {
-      name: 'AI Customer Insights Platform', description: 'Advanced customer analytics & insights',
+    { name: 'AI Customer Insights Platform', description: 'Advanced customer analytics & insights',
       href: '/services/ai-customer-insights-platform', icon: Users,
       color: 'from-green-500 to-emerald-500', featured: true},
-    {
-      name: 'AI-Powered DevOps Automation', description: 'Intelligent CI/CD & infrastructure automation',
+    { name: 'AI-Powered DevOps Automation', description: 'Intelligent CI/CD & infrastructure automation',
       href: '/services/ai-powered-devops-automation', icon: Workflow,
       color: 'from-blue-500 to-indigo-500', featured: true},
-    {
-      name: 'AI Content Creation Studio Pro', description: 'Advanced AI-powered content creation platform',
+    { name: 'AI Content Creation Studio Pro', description: 'Advanced AI-powered content creation platform',
       href: '/services/AI-Content-Creation-Studio-Pro', icon: PenTool,
       color: 'from-purple-500 to-pink-500', featured: true},
-    {
-      name: 'Quantum AI Trading Platform', description: 'Revolutionary quantum-enhanced trading system',
+    { name: 'Quantum AI Trading Platform', description: 'Revolutionary quantum-enhanced trading system',
       href: '/services/Quantum-AI-Trading-Platform', icon: BarChart3,
       color: 'from-orange-500 to-red-500', featured: true},
-    {
-      name: 'AI Quantum Financial Analytics', description: 'Revolutionary quantum AI financial platform',
+    { name: 'AI Quantum Financial Analytics', description: 'Revolutionary quantum AI financial platform',
       href: '/services/ai-quantum-financial-analytics-platform', icon: BarChart3,
       color: 'from-blue-500 to-purple-600', featured: true},
-    {
-      name: 'AI Autonomous Supply Chain', description: 'Self-learning supply chain management',
+    { name: 'AI Autonomous Supply Chain', description: 'Self-learning supply chain management',
       href: '/services/ai-autonomous-supply-chain-management-platform', icon: Truck,
       color: 'from-green-500 to-blue-600', featured: true},
-    {
-      name: 'AI Cybersecurity Operations', description: 'Autonomous security operations center',
+    { name: 'AI Cybersecurity Operations', description: 'Autonomous security operations center',
       href: '/services/ai-cybersecurity-operations-center', icon: Shield,
       color: 'from-red-500 to-orange-600', featured: true},
-    {
-      name: '2026 Services Showcase', description: 'Latest innovative services showcase',
+    { name: '2026 Services Showcase', description: 'Latest innovative services showcase',
       href: '/innovative-services-showcase-2026', icon: Sparkles,
       color: 'from-yellow-500 to-orange-500', featured: true}
   ];
   const solutionsCategories = [
-    {
-      title: 'Industry Solutions', icon: Building,
+    { title: 'Industry Solutions', icon: Building,
       color: 'from-blue-500 to-purple-500', solutions: [{ name: 'Enterprise Solutions', href: '/solutions/enterprise', description: 'Large-scale business transformation' },
         { name: 'Healthcare Solutions', href: '/solutions/healthcare', description: 'Medical technology innovation' }, { name: 'Financial Solutions', href: '/financial-solutions', description: 'Fintech and banking solutions' },
-        { name: 'Manufacturing Solutions', href: '/manufacturing-solutions', description: 'Industry 4.0 automation' }]}, {
-      title: 'Technology Solutions',
+        { name: 'Manufacturing Solutions', href: '/manufacturing-solutions', description: 'Industry 4.0 automation' }]}, { title: 'Technology Solutions',
       icon: Cpu, color: 'from-cyan-500 to-blue-500',
       solutions: [
         { name: 'AI Solutions', href: '/ai-solutions', description: 'Artificial intelligence integration' }, { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
@@ -164,7 +142,7 @@ export function EnhancedHeader() {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)}
 ;
 export const EnhancedHeader: React.FC = () => {
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false)
   const navLinks = [
     { label: 'Home', href: '/' },
     { label: 'Services', href: '/services' },
@@ -191,8 +169,8 @@ export const EnhancedHeader: React.FC = () => {
               </a>
             ))}
           </nav>
-          <button;
-            aria-label='Toggle navigation';
+          <button
+            aria-label='Toggle navigation'
             onClick={() => setMobileOpen((v) => !v)}
             className='md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
           >

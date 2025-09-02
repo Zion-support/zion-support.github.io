@@ -9,7 +9,7 @@ export { function }export default function AIAutoEmailResponder(...args[]):  {}
           AI Auto Email Responder'</h1>''        <p className='text-zion-slate-light max-w-3xl'>
           Reduce response times and improve CSAT with an AI responder that drafts context-aware replies,
           classifies priority, detects sentiment, and logs to your CRM. Privacy-first deployment options;
-          (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.;
+          (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
         </p>'''        <div className='grid gap-8 md:grid-cols-2 mt-10'>'
           <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>'
@@ -38,7 +38,7 @@ export { function }export default function AIAutoEmailResponder(...args[]):  {}
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
         </div>''        <div className='mt-10 grid gap-8 md:grid-cols-3'>'
           <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>'
-            <h3 className='font-semibold mb-2'>Time-to-Value</h3>';
+            <h3 className='font-semibold mb-2'>Time-to-Value</h3>'
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
             <p className='text-sm text-zion-slate-light'>Deploy pilot in 7 days typical 35–60% faster responses.</p>'
           </div>''
@@ -53,5 +53,5 @@ export { function }export default function AIAutoEmailResponder(...args[]):  {}
     </div>
   )}
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx;
-';
+'
   '''"

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-interface AccessibilityMetrics {
-  contrastRatio: number;
+interface AccessibilityMetrics { contrastRatio: number;
   fontSize: number;
   focusVisible: boolean;
   altTexts: number;
   headings: number;
-}
+  }
 
 export const AccessibilityEnhancer: React.FC = () => {
   const [metrics, setMetrics] = useState<AccessibilityMetrics | null>(null);
@@ -27,8 +26,7 @@ export const AccessibilityEnhancer: React.FC = () => {
         const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6').length;
         // Check font size
         const fontSize = parseFloat(bodyStyles.fontSize);
-        setMetrics({
-          contrastRatio: 4.5, // Simplified - would need actual contrast calculation
+        setMetrics({ contrastRatio: 4.5, // Simplified - would need actual contrast calculation
           fontSize,
           focusVisible: true, altTexts,
           headings
@@ -81,7 +79,7 @@ export const AccessibilityEnhancer: React.FC = () => {
     if (typeof document !== 'undefined') {
       document.documentElement.classList.toggle('large-text', !largeText);
     }
-  };
+  }
   return (
     <div className="fixed bottom-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50">
       <div className="flex items-center justify-between mb-2">
@@ -143,4 +141,4 @@ export const AccessibilityEnhancer: React.FC = () => {
     </div>
   );
 };
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer

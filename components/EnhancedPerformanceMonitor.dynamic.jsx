@@ -5,4 +5,4 @@ const EnhancedPerformanceMonitor = dynamic(
     loading: () => <p>Loading...</p>,
   }
 );
-export default EnhancedPerformanceMonitor;
+export default EnhancedPerformanceMonitor

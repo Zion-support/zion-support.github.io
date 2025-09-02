@@ -77,7 +77,7 @@ const ServiceCard = ({ service, index, isVisible }) => {    const [isHovered, se
                   <span className='text-sm text-gray-400 font-normal'>/{service.pricingModel}</span>''''
                 </div>''''
                 <div className='text-xs text-gray-500'>{service.marketPrice}</div>
-              </div>''';'
+              </div>''''
               ''''
               <button className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-medium hover: from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30'>
                 Get Started
@@ -131,7 +131,7 @@ export const FuturisticServicesShowcase = () => {}
     // Set all services as visible initially for better UX;
     useEffect(() => {}
         const allIndices = new Set(filteredServices.map((_, index) => index))';';
-        setVisibleServices(allIndices)}, [filteredServices])';'''
+        setVisibleServices(allIndices)}, [filteredServices])''''
     return (<div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 py-20'>'''{/* Animated Background */}'''''
       <div className='absolute inset-0 overflow-hidden'>''''
         <div className='absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5'></div>''''{[...Array(20)].map((_, i) => (<div key={i} className='absolute w-2 h-2 bg-cyan-400/20 rounded-full animate-float' style={{}
@@ -141,7 +141,7 @@ export const FuturisticServicesShowcase = () => {}
                 top: `${Math.random() * 100}%`, ``;
                 animationDelay: `${Math.random() * 5}s`, ``;
                 animationDuration: `${3 + Math.random() * 4}s`}}/>))}
-      </div>''';'
+      </div>''''
 ''''
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>
         {/* Header Section */}
@@ -167,7 +167,7 @@ export const FuturisticServicesShowcase = () => {}
               </div>
             </div>
 '''{/* Category Filter */}''`'
-            <div className='flex flex-wrap justify-center gap-2'>`'`{categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover: scale-105 ${selectedCategory === category''`;'
+            <div className='flex flex-wrap justify-center gap-2'>`'`{categories.map((category) => (<button key={category} onClick={() => setSelectedCategory(category)} className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 transform hover: scale-105 ${selectedCategory === category''`'
                 ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30''`'`
                 : 'bg-black/50 border border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/20'}`}>'{category === 'all' ? 'All Services' : category}'
                 </button>) ) }
@@ -205,5 +205,5 @@ export const FuturisticServicesShowcase = () => {}
           </div>
         </motion.div>
       </div>
-    </div>)}''`;
+    </div>)}''`
 ''`'"`'"

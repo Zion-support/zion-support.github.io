@@ -16,17 +16,17 @@ import {}
 export default function AICybersecurityThreatHunter(...args: any[]): any {return()    <div className='min-h-screen bg-white'>''
       <section className='bg-gradient-to-br from-red-900 via-red-800 to-red-700 py-20 text-center'>''
         <div className='max-w-5xl mx-auto px-6'>''
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>'';
+          <div className='inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6'>''
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
             <Shield className='w-4 h-4 mr-2'  /> AI-Powered Cybersecurity'
           </div>''
           <h1 className='text-4xl md:text-6xl font-bold text-white mb-4'>
             AI Cybersecurity Threat Hunter'</h1>''          <p className='text-red-100 text-xl'>
-            Stay ahead of cyber threats with intelligent AI-powered security;
+            Stay ahead of cyber threats with intelligent AI-powered security
             detection and automated response.
           </p>        </div>
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-      </section>';
+      </section>'
 ''
       <section className='py-16 max-w-6xl mx-auto px-6'>''
         <div className='grid md:grid-cols-2 gap-10'>'
@@ -39,7 +39,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
                 </li>
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx))}'</ul>''            <div className='mt-6 text-sm text-zion-slate-light'>
               SOC 2 Type II, ISO 27001, GDPR, HIPAA compliant. 99.99% uptime;
-              SLA.;
+              SLA.
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
             </div>'
           </div>''
@@ -72,7 +72,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             </div>
           </div>
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 grid md:grid-cols-2 gap-8'>'
           <div>''
@@ -97,7 +97,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             </ul>
           </div>
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12'>''
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-6 text-center'>
@@ -111,7 +111,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             ))}
           </div>
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-12 bg-gradient-to-r from-red-50 to-red-100 rounded-xl p-8'>''
           <h3 className='text-2xl font-bold text-zion-slate-dark mb-4 text-center'>
@@ -119,7 +119,7 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
             <div className='text-center'>''
               <AlertTriangle className='w-12 h-12 text-red-600 mx-auto mb-3'  />''
               <h4 className='font-semibold text-zion-slate-dark mb-2'>
-:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx;
+:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
                 Traditional Security'
               </h4>''
               <p className='text-sm text-zion-slate-light'>
@@ -133,18 +133,18 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
               </p>            </div>
           </div>
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
-        </div>';
+        </div>'
 ''
         <div className='mt-14 text-center'>''
           <div className='text-sm text-zion-slate-light mb-2'>
             Ready to secure your digital assets?'
           </div>''
           <div className='flex flex-col sm:flex-row gap-4 justify-center'>'<a''              href='tel:+13024640950'';
-              className='inline-flex items-center px-5 py-3 bg-red-600 text-white rounded-lg''>'';
+              className='inline-flex items-center px-5 py-3 bg-red-600 text-white rounded-lg''>''
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
               <Phone className='w-4 h-4 mr-2'  /> +1 302 464 0950
             </a>'<a''              href='mailto:kleber@ziontechgroup.com'';
-              className='inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg''>'';
+              className='inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg''>''
 :pages.disabled/pages/services/AICybersecurityThreatHunter.tsx
               <Mail className='w-4 h-4 mr-2'  /> kleber@ziontechgroup.com
             </a>'
@@ -159,5 +159,5 @@ export default function AICybersecurityThreatHunter(...args: any[]): any {return
         </div>
       </section>
     </div>
-:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx)}'';
+:pages.disabled/pages/services/AICybersecurityThreatHunter.tsx)}''
   '''"

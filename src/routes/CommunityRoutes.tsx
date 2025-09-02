@@ -17,5 +17,5 @@ export default function CommunityRoutes() {
       <Route path="edit/:postId" element={<EditPostPage />} />
       <Route path="profile/:userId" element={<CommunityProfilePage />} />
     </Routes>
-  );
+  )
 }

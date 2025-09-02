@@ -128,7 +128,7 @@ export default function FinancialSolutions() {}
   y: 0}} transition={{ duration: 0.8 }}>'
             <div className='flex justify-center mb-6'>'
               <div className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center'>';
-  y: 0;
+  y: 0
 '}} transition={{ duration: 0.8 }}>''
             <div className='flex justify-center mb-6'>''
               <div className='w-20 h-20 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-2xl flex items-center justify-center'>''
@@ -144,7 +144,7 @@ export default function FinancialSolutions() {}
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105'>
-                Get Started';
+                Get Started'
   y: 20}} animate = {}
   { opacity: 1,
   y: 0}} transition={{ duration: 0.8 }}>''
@@ -171,7 +171,7 @@ export default function FinancialSolutions() {}
           </motion.div>
         </div>
       </section>
-:pages.disabled/solutions/FinancialSolutions.jsx;
+:pages.disabled/solutions/FinancialSolutions.jsx
 '{/* Features Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>
@@ -184,10 +184,10 @@ export default function FinancialSolutions() {}
   y: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>
 =;
   y: 0;
-';
+'
 :pages.disabled/solutions/FinancialSolutions.jsx}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>'>''}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-              AI-Powered Financial Technology';
+              AI-Powered Financial Technology'
   y: 20}} whileInView = {}
   { opacity: 1,
   y: 0'}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>''
@@ -195,7 +195,7 @@ export default function FinancialSolutions() {}
               AI-Powered Financial Technology
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our comprehensive financial solutions combine advanced AI with industry expertise;
+              Our comprehensive financial solutions combine advanced AI with industry expertise
               to revolutionize how financial institutions operate and serve their customers.
             </p>
 :pages.disabled/solutions/FinancialSolutions.jsx
@@ -215,17 +215,17 @@ export default function FinancialSolutions() {}
                 <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>
 =;
   delay: index * 0.1;
-';
+'
 :pages.disabled/solutions/FinancialSolutions.jsx}} viewport={{ once: true }} className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300'>'
                 <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>'
 >                  <feature.icon className='w-6 h-6 text-white'/>
                 </div>'
-                <h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>';
+                <h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>'
 ''}} viewport={{ once: true }} className='bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300'>''
                 <div className='w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4'>''
                   <feature.icon className='w-6 h-6 text-white'/>'
                 </div>''
-                <h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>'';
+                <h3 className='text-xl font-semibold mb-3'>{feature.title}</h3>''
   y: 20}} whileInView = {}
   { opacity: 1,
   y: 0}} transition = {}
@@ -240,7 +240,7 @@ export default function FinancialSolutions() {}
           </div>
         </div>
       </section>
-:pages.disabled/solutions/FinancialSolutions.jsx;
+:pages.disabled/solutions/FinancialSolutions.jsx
 '{/* Benefits Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30'>''
         <div className='max-w-7xl mx-auto'>
@@ -253,10 +253,10 @@ export default function FinancialSolutions() {}
   y: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>
 =;
   y: 0;
-';
+'
 :pages.disabled/solutions/FinancialSolutions.jsx}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>'>''}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-              Why Choose Our Financial Solutions?';
+              Why Choose Our Financial Solutions?'
   y: 20}} whileInView = {}
   { opacity: 1,
   y: 0'}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>''
@@ -282,13 +282,13 @@ export default function FinancialSolutions() {}
               <div className='space-y-4'>'{benefits.map((benefit, index) => (<div key={index} className='flex items-center space-x-3'>'
                     <CheckCircle className='w-5 h-5 text-cyan-500 flex-shrink-0'/>';
   x: 0;
-';
+'
   x: -20}} whileInView = {}
   { opacity: 1,
   x: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }}>''
               <h3 className='text-2xl font-semibold mb-6'>Key Benefits</h3>''
               <div className='space-y-4'>''{benefits.map((benefit, index) => (<div key={index} className='flex items-center space-x-3'>''
-                    <CheckCircle className='w-5 h-5 text-cyan-500 flex-shrink-0'/>'';
+                    <CheckCircle className='w-5 h-5 text-cyan-500 flex-shrink-0'/>''
 :pages.disabled/solutions/FinancialSolutions.jsx
                     <span className='text-gray-300'>{benefit}</span>
                   </div>))}
@@ -305,13 +305,13 @@ export default function FinancialSolutions() {}
               <div className='space-y-4'>'{solutions.map((solution, index) => (<div key={index} className='bg-gray-800/50 border border-gray-700 rounded-lg p-4'>'
                     <h4 className='font-semibold text-cyan-400 mb-2'>{solution.title}</h4>';
   x: 0;
-';
+'
   x: 20}} whileInView = {}
   { opacity: 1,
   x: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }}>''
               <h3 className='text-2xl font-semibold mb-6'>Solutions</h3>''
               <div className='space-y-4'>''{solutions.map((solution, index) => (<div key={index} className='bg-gray-800/50 border border-gray-700 rounded-lg p-4'>''
-                    <h4 className='font-semibold text-cyan-400 mb-2'>{solution.title}</h4>'';
+                    <h4 className='font-semibold text-cyan-400 mb-2'>{solution.title}</h4>''
 :pages.disabled/solutions/FinancialSolutions.jsx
                     <p className='text-gray-300 text-sm'>{solution.description}</p>
                   </div>))}
@@ -320,7 +320,7 @@ export default function FinancialSolutions() {}
           </div>
         </div>
       </section>
-:pages.disabled/solutions/FinancialSolutions.jsx;
+:pages.disabled/solutions/FinancialSolutions.jsx
 '{/* Industries Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-7xl mx-auto'>
@@ -333,10 +333,10 @@ export default function FinancialSolutions() {}
   y: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>
 =;
   y: 0;
-';
+'
 :pages.disabled/solutions/FinancialSolutions.jsx}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>'>''}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
-              Industry Solutions';
+              Industry Solutions'
   y: 20}} whileInView = {}
   { opacity: 1,
   y: 0'}} transition={{ duration: 0.8 }} viewport={{ once: true }} className='text-center mb-16'>''
@@ -344,7 +344,7 @@ export default function FinancialSolutions() {}
               Industry Solutions
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our financial solutions are tailored to meet the unique challenges and requirements;
+              Our financial solutions are tailored to meet the unique challenges and requirements
               of various financial sectors.
             </p>
 :pages.disabled/solutions/FinancialSolutions.jsx
@@ -364,10 +364,10 @@ export default function FinancialSolutions() {}
                 <CreditCard className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>
 =;
   delay: index * 0.1;
-';
+'
 :pages.disabled/solutions/FinancialSolutions.jsx}} viewport={{ once: true }} className='bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300'>'
                 <CreditCard className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>'>''}} viewport={{ once: true }} className='bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300'>''
-                <CreditCard className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>'';
+                <CreditCard className='w-8 h-8 text-cyan-500 mx-auto mb-3'/>''
   y: 20}} whileInView = {}
   { opacity: 1,
   y: 0}} transition = {}
@@ -379,7 +379,7 @@ export default function FinancialSolutions() {}
           </div>
         </div>
       </section>
-:pages.disabled/solutions/FinancialSolutions.jsx;
+:pages.disabled/solutions/FinancialSolutions.jsx
 '{/* CTA Section */}''
       <section className='py-20 px-4 sm:px-6 lg:px-8'>''
         <div className='max-w-4xl mx-auto text-center'>
@@ -390,7 +390,7 @@ export default function FinancialSolutions() {}
   { opacity: 1,
 :pages.disabled/solutions/FinancialSolutions.jsx;
   y: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }}>';
-  y: 0;
+  y: 0
 '}} transition={{ duration: 0.8 }} viewport={{ once: true }}>''
             <h2 className='text-3xl md:text-4xl font-bold mb-6'>
               Ready to Transform Your Financial Services?'
@@ -401,7 +401,7 @@ export default function FinancialSolutions() {}
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 transform hover:scale-105 flex items-center justify-center space-x-2'>'
                 <span>Get Started Today</span>''
-                <ArrowRight className='w-5 h-5'/>';
+                <ArrowRight className='w-5 h-5'/>'
   y: 20}} whileInView = {}
   { opacity: 1,
   y: 0}} transition={{ duration: 0.8 }} viewport={{ once: true }}>''

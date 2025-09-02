@@ -66,7 +66,7 @@ const MicroSaasPage: NextPage = () => {
     {
       icon: <Star className='w-8 h-8' />,
       title: 'Proven Results',
-      description:;
+      description:
         'Track record of successful implementations with measurable ROI for our clients.'}]
   return(
     <MainLayout
@@ -79,7 +79,7 @@ const MicroSaasPage: NextPage = () => {
               Micro SaaS Solutions
             </h1>
             <p className='text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed'>
-              Powerful, affordable SaaS applications designed to solve specific business challenges;
+              Powerful, affordable SaaS applications designed to solve specific business challenges
               and streamline your operations.
             </p>
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -373,7 +373,7 @@ const MicroSaasPage: NextPage = () => {
         <div className='container mx-auto px-4 text-center'>
           <h2 className='text-4xl font-bold mb-6'>Ready to Transform Your Business?</h2>
           <p className='text-xl mb-8 text-gray-200 max-w-3xl mx-auto'>
-            Let&aposs discuss how our micro SaaS solutions can help streamline your operations '';
+            Let&aposs discuss how our micro SaaS solutions can help streamline your operations ''
             and drive growth for your business.
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>
@@ -393,5 +393,5 @@ const MicroSaasPage: NextPage = () => {
       </section>
     </MainLayout>
   )}
-;
+
 export default MicroSaasPage

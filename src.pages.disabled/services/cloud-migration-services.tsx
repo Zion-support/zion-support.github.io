@@ -18,7 +18,7 @@ const CloudMigrationServices: React.FC = () => {
             Cloud Migration Services
           </h1>
           <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>
-            Seamlessly migrate to the cloud with zero downtime. Our expert team reduces costs by 30%;
+            Seamlessly migrate to the cloud with zero downtime. Our expert team reduces costs by 30%
             and improves performance by 50% with proven migration strategies.
           </p>
           <div className='flex flex-col sm:flex-row justify-center gap-4 mb-12'>
@@ -267,5 +267,5 @@ const CloudMigrationServices: React.FC = () => {
       </section>
     </Layout>
   )}
-;
+
 export default CloudMigrationServices

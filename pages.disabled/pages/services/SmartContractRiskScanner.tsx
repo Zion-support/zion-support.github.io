@@ -82,7 +82,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
   ;
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx;
   roi: '300-500% within 6 months'}}
-;
+
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
 <:pages.disabled/pages/services/SmartContractRiskScanner.tsx}
 ;
@@ -102,14 +102,14 @@ export default function SmartContractRiskScanner(...args: []):  {}
     'ISO 27001 Compliance',';SOC 2 Type II';Base';
   ]';OWASP Top 10',';Smart Contract Security Verification Standard',';Ethereum Security Best Practices',';DeFi Security Guidelines',';ISO 27001 Compliance',';SOC 2 Type II';
   ];
-:pages.disabled/pages/services/SmartContractRiskScanner.tsx;
+:pages.disabled/pages/services/SmartContractRiskScanner.tsx
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
 <:pages.disabled/pages/services/SmartContractRiskScanner.tsx;
       <SEO;
 =;
-      <SEO '>        title='Smart Contract Risk Scanner - Zion Tech Group';
+      <SEO '>        title='Smart Contract Risk Scanner - Zion Tech Group'
         description='AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats.'/>        title='Smart Contract Risk Scanner - Zion Tech Group''        description='AI-powered smart contract security scanner with automated vulnerability detection, multi-chain support, and comprehensive risk assessment. Protect your DeFi projects from security threats.'/>'
       <SEO ''
         title='Smart Contract Risk Scanner - Zion Tech Group'';
@@ -137,12 +137,12 @@ export default function SmartContractRiskScanner(...args: []):  {}
   y: 0}}';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center'';
+            className='text-center''
 ''
-            <div className='inline-flex items-center space-x-2 bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6'>'';
+            <div className='inline-flex items-center space-x-2 bg-red-600/20 text-red-400 px-4 py-2 rounded-full text-sm font-medium mb-6'>''
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
               <Shield className='w-4 h-4'  />              <span>Blockchain Security Solution</span>
-            </div>';
+            </div>'
 ''
             <h1 className='text-5xl md:text-7xl font-bold text-white mb-6'>''
               <span className='bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent'>
@@ -164,9 +164,9 @@ export default function SmartContractRiskScanner(...args: []):  {}
 ''
             <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Protect your DeFi projects with AI-powered smart contract security scanning.;
-              Detect vulnerabilities, assess risks, and secure your blockchain applications.;
+              Detect vulnerabilities, assess risks, and secure your blockchain applications.
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button
@@ -226,7 +226,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
                 <div className='text-sm text-gray-400 capitalize'>
   y: 0}}';
                 transition={{ duration: 0.6 }}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center''
 ''
                 <div className='text-2xl font-bold text-red-400 mb-2'>{value}</div>''
                 <div className='text-sm text-gray-400 capitalize'>'{key.replace(/([A-Z])/g, $1').trim()}
@@ -265,13 +265,13 @@ export default function SmartContractRiskScanner(...args: []):  {}
               Advanced Security Features';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Advanced Security Features
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our smart contract risk scanner provides comprehensive security analysis;
+              Our smart contract risk scanner provides comprehensive security analysis
               with AI-powered vulnerability detection and risk assessment.
             </p>
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
@@ -306,7 +306,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
                 <div className='flex items-start space-x-4'>'
                   <div className='w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0'>';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300''
 ''
                 <div className='flex items-start space-x-4'>''
                   <div className='w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0'>''
@@ -319,7 +319,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx{feature.benefits.map((benefit, idx) => ('
                         <li key={idx} className='flex items-center space-x-2 text-sm text-gray-400'>';
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300''
 ''
                 <div className='flex items-start space-x-4'>''
                   <div className='w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0'>''
@@ -371,13 +371,13 @@ export default function SmartContractRiskScanner(...args: []):  {}
               Comprehensive Vulnerability Detection';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Comprehensive Vulnerability Detection
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our scanner detects a wide range of smart contract vulnerabilities;
+              Our scanner detects a wide range of smart contract vulnerabilities
               and provides detailed analysis and remediation guidance.
             </p>
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
@@ -413,10 +413,10 @@ export default function SmartContractRiskScanner(...args: []):  {}
                   <div className='w-16 h-16 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center'>';
   delay: index * 0.1 ';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-8 hover:border-red-400/50 transition-all duration-300''
 ''
                 <div className='flex items-center space-x-4 mb-6'>''
-                  <div className='w-16 h-16 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center'>'';
+                  <div className='w-16 h-16 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center'>''
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
                     <capability.icon className='w-8 h-8 text-white' />
                   </div>'
@@ -474,17 +474,17 @@ export default function SmartContractRiskScanner(...args: []):  {}
               Multi-Chain Support';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Multi-Chain Support
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our scanner supports major blockchain networks and provides;
+              Our scanner supports major blockchain networks and provides
               consistent security analysis across different platforms.
             </p>
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>
             {supportedNetworks.map(network: unknown, index: unknown()
@@ -518,12 +518,12 @@ export default function SmartContractRiskScanner(...args: []):  {}
 ';
                 <div className='w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''
                   <Globe className='w-6 h-6 text-white'  />
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''
                   <Globe className='w-6 h-6 text-white'  />'
@@ -562,17 +562,17 @@ export default function SmartContractRiskScanner(...args: []):  {}
               Industry Security Standards';
   y: 0}}
             transition={{ duration: 0.8 }}'';
-            className='text-center mb-16'';
+            className='text-center mb-16''
 ''
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Industry Security Standards
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Our security scanner adheres to industry best practices and;
+              Our security scanner adheres to industry best practices and
               compliance standards for comprehensive protection.
             </p>
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>
             {securityStandards.map(standard: unknown, index: unknown()
@@ -606,12 +606,12 @@ export default function SmartContractRiskScanner(...args: []):  {}
 ';
                 <div className='w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>';
   delay: index * 0.1}}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''
                   <Award className='w-6 h-6 text-white'  />
   delay: index * 0.1 '}}'';
-                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300'';
+                className='bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg p-6 text-center hover:border-red-400/50 transition-all duration-300''
 ''
                 <div className='w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4'>''
                   <Award className='w-6 h-6 text-white'  />'
@@ -650,10 +650,10 @@ export default function SmartContractRiskScanner(...args: []):  {}
               Transparent Security Pricing'
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
-              Choose the security plan that best fits your project's needs.;
+              Choose the security plan that best fits your project's needs.
               All plans include comprehensive vulnerability scanning and reporting.
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             {pricing.map(plan: unknown, index: unknown()
@@ -666,7 +666,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
               Transparent Security Pricing
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-              Choose the security plan that best fits your project's needs.;
+              Choose the security plan that best fits your project's needs.
               All plans include comprehensive vulnerability scanning and reporting.
             </p>
           </motion.div>
@@ -716,12 +716,12 @@ export default function SmartContractRiskScanner(...args: []):  {}
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
                   <div className='flex items-baseline justify-center space-x-1 mb-4'>''
-                    <span className='text-4xl font-bold text-white'>{plan.price}</span>'';
+                    <span className='text-4xl font-bold text-white'>{plan.price}</span>''
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
                     <span className='text-gray-400'>{plan.period}</span>'
                   </div>''
                   <p className='text-gray-400'>{plan.description}</p>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-3 mb-8'>'
                     <span className='text-gray-400'>{plan.period}</span>
@@ -781,7 +781,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
             transition={{ duration: 0.8 }}';
 '';
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-              Ready to Secure Your Smart Contracts?';
+              Ready to Secure Your Smart Contracts?'
   y: 0}}
             transition={{ duration: 0.8 }}
 ''
@@ -790,9 +790,9 @@ export default function SmartContractRiskScanner(...args: []):  {}
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
               Join leading DeFi projects that are already using our smart contract;
-              risk scanner to protect their applications and users.;
+              risk scanner to protect their applications and users.
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
-            </p>';
+            </p>'
 ''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
               <motion.button

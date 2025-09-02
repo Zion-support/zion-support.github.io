@@ -320,7 +320,7 @@ export default function InnovativeServicesShowcase2027() {
           pricing: 'Starting at $599/month',
           icon: Truck}
       ]}
-  ];
+  ]
   return(
                   className='appearance-none bg-zion-blue-light/20 border border-zion-purple/20 rounded-lg px-4 py-3 text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent pr-10'
                 >{categories.map(category               => (
@@ -355,7 +355,7 @@ export default function InnovativeServicesShowcase2027() {
               </h1>
               <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
                 Experience the future of technology with our comprehensive suite of AI-powered solutions,
-                quantum computing platforms, and autonomous operations systems designed to transform;
+                quantum computing platforms, and autonomous operations systems designed to transform
                 industries and drive unprecedented growth.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -388,7 +388,7 @@ export default function InnovativeServicesShowcase2027() {
                 Featured Revolutionary Services
               </h2>
               <p className='text-lg text-gray-300 max-w-3xl mx-auto'>
-                Our flagship AI services that are transforming industries and setting new standards;
+                Our flagship AI services that are transforming industries and setting new standards
                 for innovation and performance.
               </p>
             </motion.div>
@@ -450,7 +450,7 @@ export default function InnovativeServicesShowcase2027() {
                 Comprehensive Service Categories
               </h2>
               <p className='text-lg text-gray-300 max-w-3xl mx-auto'>
-                Explore our complete range of AI-powered solutions organized by industry;
+                Explore our complete range of AI-powered solutions organized by industry
                 and technology specialization.
               </p>
             </motion.div>
@@ -499,7 +499,7 @@ export default function InnovativeServicesShowcase2027() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className='text-lg text-gray-300 max-w-3xl mx-auto'>
-                Experience the future of technology with our AI-powered solutions that deliver;
+                Experience the future of technology with our AI-powered solutions that deliver
                 unprecedented results and competitive advantages.
               </p>
             </motion.div>
@@ -571,7 +571,7 @@ export default function InnovativeServicesShowcase2027() {
                 Ready to Transform Your Business?
               </h2>
               <p className='text-xl text-gray-400 mb-8 max-w-3xl mx-auto'>
-                Join leading organizations that have already revolutionized their operations;
+                Join leading organizations that have already revolutionized their operations
                 with our AI-powered solutions and autonomous systems.
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center items-center mb-8'>
@@ -749,7 +749,7 @@ export default function InnovativeServicesShowcase2027() {
                             </div>
                             <button;
                               onClick={() => window.open(service.website, '_blank')}
-                              className='bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2';
+                              className='bg-gradient-to-r from-zion-cyan to-zion-blue text-black font-semibold py-2 px-4 rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-300 flex items-center gap-2'
                               View Details
                               <ArrowRight className='w-4 h-4' />
                             </button>

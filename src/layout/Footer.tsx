@@ -2,18 +2,15 @@ import { Link } from 'react-router-dom';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const footerSections = [
-    {
-      title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
-      ]}, {
-      title: 'Solutions',
+    { title: 'Services', links: [{ name: 'AI & Machine Learning', href: '/services/ai-machine-learning' }, { name: 'Cloud & DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' }, { name: 'Digital Transformation', href: '/services/digital-transformation' }, { name: 'Financial Solutions', href: '/services/financial-solutions' }, { name: 'Manufacturing Solutions', href: '/services/manufacturing-solutions' }
+      ]}, { title: 'Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
         { name: 'Startup Solutions', href: '/solutions/startup' },
         { name: 'Space Technology', href: '/solutions/space-tech' },
         { name: 'Supply Chain', href: '/solutions/supply-chain' },
         { name: 'Industry Solutions', href: '/solutions/industry' }
-      ]}, {
-      title: 'Company',
+      ]}, { title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
         { name: 'Our Story', href: '/about/story' },
@@ -21,8 +18,7 @@ export default function Footer() {
         { name: 'Careers', href: '/careers' },
         { name: 'Partners', href: '/partners' },
         { name: 'Contact', href: '/contact' }
-      ]}, {
-      title: 'Resources',
+      ]}, { title: 'Resources',
       links: [
         { name: 'Blog', href: '/blog' },
         { name: 'Case Studies', href: '/case-studies' },
@@ -30,8 +26,7 @@ export default function Footer() {
         { name: 'Webinars', href: '/webinars' },
         { name: 'Training', href: '/training' },
         { name: 'Documentation', href: '/docs' }
-      ]}, {
-      title: 'Support',
+      ]}, { title: 'Support',
       links: [
         { name: 'Help Center', href: '/help' },
         { name: 'FAQ', href: '/faq' },

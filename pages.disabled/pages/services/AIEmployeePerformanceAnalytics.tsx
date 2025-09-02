@@ -190,7 +190,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
       category: 'Collaboration Metrics',';
       indicators: ['Team Participation', 'Knowledge Sharing', 'Cross-functional Projects', 'Mentoring']},
     {'
-      category: 'Growth Metrics',';
+      category: 'Growth Metrics','
       indicators: ['Skill Development', 'Learning Progress', 'Career Advancement', 'Certifications']}  ]
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -202,7 +202,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
       {/* Hero Section */}
       <section className='relative overflow-hidden py-20 lg:py-32'>
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20'></div>
-=;
+=
         title='AI Employee Performance Analytics - Zion Tech Group''        description='Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance.'/>{/* Hero Section */}'
       <section className='relative overflow-hidden py-20 lg:py-32'>'
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20'></div>
@@ -210,13 +210,13 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
       category: 'Collaboration Metrics',';
       indicators: ['Team Participation', 'Knowledge Sharing', 'Cross-functional Projects', 'Mentoring']},'{'
       category: 'Growth Metrics',';
-      indicators: ['Skill Development', 'Learning Progress', 'Career Advancement', 'Certifications']}  ]';
+      indicators: ['Skill Development', 'Learning Progress', 'Career Advancement', 'Certifications']}  ]'
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'
       <SEO'';
         title='AI Employee Performance Analytics - Zion Tech Group''        description='Transform employee performance management with AI-powered analytics. Track productivity, predict retention, and optimize team performance.'/>'{/* Hero Section */}''
       <section className='relative overflow-hidden py-20 lg:py-32'>''
-        <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20'></div>';
+        <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20'></div>'
         ''{/* Hero Section */}''
       <section className='relative overflow-hidden py-20 lg:py-32'>''
         <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20'></div>
@@ -240,11 +240,11 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
             <div className='inline-flex items-center px-4 py-2 bg-purple-600/20 text-purple-400 rounded-full text-sm font-medium mb-6'>''
               <Users className='w-4 h-4 mr-2'  />              AI-Powered Analytics'
             </div>''
-            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>';
+            <h1 className='text-4xl md:text-7xl font-bold text-white mb-6'>'
               AI Employee Performance''
               <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                 {' '}Analytics
-              </span>';
+              </span>'
   y: 0}}
             transition={{ duration: 0.8 }}
           >''
@@ -260,12 +260,12 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
             <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-8'>
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
               Transform employee performance management with AI-powered analytics.;
-              Track productivity, predict retention, and optimize team performance with data-driven insights.;
+              Track productivity, predict retention, and optimize team performance with data-driven insights.
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
               <button className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center'>';
-              Transform employee performance management with AI-powered analytics.;
+              Transform employee performance management with AI-powered analytics.
               Track productivity, predict retention, and optimize team performance with data-driven insights.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
@@ -320,7 +320,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
                 viewport={{ once: true }}';
                 className='text-center'>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='text-center''>''
                 <div className='text-4xl md:text-5xl font-bold text-purple-400 mb-2'>
                   {metric.metric}'
@@ -328,7 +328,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
                 <div className='text-lg font-semibold text-white mb-2'>
                   {metric.label}';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='text-center''>''
                 <div className='text-4xl md:text-5xl font-bold text-purple-400 mb-2'>
                   {metric.metric}
@@ -370,14 +370,14 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
-              Powerful Features';
+              Powerful Features'
               Powerful Features
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Advanced AI capabilities designed to revolutionize employee performance management and HR analytics.
             </p>
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map(feature: unknown, index: unknown()
@@ -412,7 +412,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50'>';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50''>{/* Icon */}''
                 <div className='mb-6'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
@@ -466,7 +466,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
-              Performance Indicators';
+              Performance Indicators'
               Performance Indicators
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -502,14 +502,14 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
                 viewport={{ once: true }}';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50'>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50''>''
                 <h3 className='text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300'>
                   {category.category}'
                 </h3>''
                 <ul className='space-y-2'>';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50''>''
                 <h3 className='text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300'>
                   {category.category}
@@ -552,14 +552,14 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
-              Business Benefits';
+              Business Benefits'
               Business Benefits
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Discover how AI-powered performance analytics can transform your HR operations and drive business growth.
             </p>
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {benefits.map(benefit: unknown, index: unknown()
@@ -594,7 +594,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50'>';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50''>{/* Icon */}''
                 <div className='mb-6'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
@@ -647,13 +647,13 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
             viewport={{ once: true }}'';
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
-:pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
+:pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
               Transparent Pricing'
             </h2>''
-            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>';
+            <p className='text-xl text-gray-300 max-w-3xl mx-auto'>'
               Choose the plan that fits your organization's needs. All plans include a 14-day free trial.
             </p>
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-3 gap-8'>
             {pricingPlans.map(plan: unknown, index: unknown()
@@ -705,7 +705,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
 ';
                   plan.popular '';
-                    ? 'border-purple-500/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' ''`;
+                    ? 'border-purple-500/50 bg-gradient-to-br from-purple-500/10 to-pink-500/10' ''`
                     : 'border-white/10 hover:border-purple-500/50'``}`}
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx>'>{plan.popular && (''
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>''
@@ -717,12 +717,12 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
 ''
                 <div className='text-center mb-8'>''
                   <h3 className='text-2xl font-bold text-white mb-2'>{plan.name}</h3>''
-                  <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>'';
+                  <p className='text-gray-400 text-sm mb-4'>{plan.description}</p>''
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
                   <div className='text-4xl font-bold text-white mb-2'>'{plan.price}''
                     <span className='text-lg text-gray-400'>{plan.period}</span>
                   </div>
-                </div>';
+                </div>'
 ''
                 <ul className='space-y-4 mb-8'>'
                   <div className='text-4xl font-bold text-white mb-2'>
@@ -738,7 +738,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
                     </li>
                   ))}
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
-                </ul>`;
+                </ul>`
 ``
                 <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 ';
@@ -783,14 +783,14 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
-              Industry Use Cases';
+              Industry Use Cases'
               Industry Use Cases
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               See how organizations across industries leverage our AI performance analytics to optimize team performance.
             </p>
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
-          </motion.div>';
+          </motion.div>'
 ''
           <div className='grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8'>
             {useCases.map(useCase: unknown, index: unknown()
@@ -825,7 +825,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
                 viewport={{ once: true }}'';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50'>';
   delay: index * 0.1}}
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50''>{/* Icon */}''
                 <div className='mb-6'>''
                   <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'>''
@@ -879,7 +879,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
             className='text-center mb-16''>''
             <h2 className='text-3xl md:text-5xl font-bold text-white mb-6'>
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
-              Seamless Integrations';
+              Seamless Integrations'
               Seamless Integrations
             </h2>''
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
@@ -915,7 +915,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
                 viewport={{ once: true }}';
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50'>';
   delay: index * 0.1}}';
-                viewport={{ once: true }}'';
+                viewport={{ once: true }}''
                 className='group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50''>''
                 <h3 className='text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300'>
                   {integration.name}'
@@ -970,7 +970,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
-              Join thousands of organizations already using AI-powered performance analytics;
+              Join thousands of organizations already using AI-powered performance analytics
               to optimize team performance and drive business success.
             </p>'
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>'
@@ -978,14 +978,14 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
                 <Star className='w-5 h-5 mr-2'  />                Start Free Trial
               </button>'
               <button className='border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg'>';
-              Join thousands of organizations already using AI-powered performance analytics;
+              Join thousands of organizations already using AI-powered performance analytics
               to optimize team performance and drive business success.'
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''
               <button className='bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg flex items-center justify-center'>''
                 <Star className='w-5 h-5 mr-2'  />                Start Free Trial'
               </button>''
-              <button className='border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg'>'';
+              <button className='border border-purple-500 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition-all duration-300 text-lg'>''
   y: 0}}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -994,7 +994,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
               Ready to Transform Employee Performance?
             </h2>''
             <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Join thousands of organizations already using AI-powered performance analytics;
+              Join thousands of organizations already using AI-powered performance analytics
               to optimize team performance and drive business success.
             </p>''
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>''

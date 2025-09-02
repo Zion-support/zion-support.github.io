@@ -25,5 +25,5 @@ import React, { useState, useEffect, useCallback, useMemo } from,
   'unknown' as;
   'slow' |;
   'medium' |;
-  'fast' |;
+  'fast' |
   'unknown' }) '

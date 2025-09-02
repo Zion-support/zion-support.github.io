@@ -21,7 +21,7 @@ it(
       updatedAt: ',
       upvotes: 0,
       downvotes: 0,
-      replyCount: 0}]);
+      replyCount: 0}])
   const queryClient = new QueryClient()
   const wrapper = ({ children }: { children: React.ReactNode }) => (
     <div />

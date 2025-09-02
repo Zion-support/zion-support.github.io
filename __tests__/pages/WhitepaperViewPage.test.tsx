@@ -16,7 +16,7 @@ interface MockUseAuthReturn {
 type WhitepaperViewPageProps = Record<string never>
 ;
 // Mock dependencies;
-jest.mock('react-router-dom;
+jest.mock('react-router-dom
   ', () => ({
   ...jest.requireActual('react-router-dom
   '),
@@ -29,7 +29,7 @@ jest.mock('@/lib/supabaseClient;
   ', () => ({
   supabase: {
     functions: {
-      invoke: jest.fn()}}}));
+      invoke: jest.fn()}}}))
 jest.mock('@/components/WhitepaperPreviewPanel
   ', () =>
   jest.fn(() => <div data-testid='mock-preview-panel'>Preview Panel</div>));
@@ -52,7 +52,7 @@ jest.mock('@/pages/WhitepaperViewPage;
       // This setup is a bit complex due to mocking a hook used internally by the component being tested.;
       // It;
   's generally easier to mock the hook at the module level where it's defined.;
-      // For this specific setup, we;
+      // For this specific setup, we
   'll assume useAuth is mocked effectively for the component's context.
       return <ActualPageDefault {...props} />
     }),
@@ -80,7 +80,7 @@ describe(
   Intro', content: 'Hello }],
     distributionChartData: [{ name:;
   'Team', value: 50 }]}
-;
+
   test('displays loading state initially'', () => {
     mockUseParams.mockReturnValue({ id: 'test-id })
     (mockUseAuth as jest.Mock).mockReturnValue({ isAdmin: false }) // Setup mock for useAuth
@@ -105,7 +105,7 @@ describe(
     await waitFor(() =>
       expect(screen.getByTestId(
   'mock-preview-panel')).toBeInTheDocument());
-    // Check props passed to the mocked WhitepaperPreviewPanel;
+    // Check props passed to the mocked WhitepaperPreviewPanel
     expect(mockPreviewPanel).toHaveBeenCalledWith(
       expect.objectContaining({
         tokenName: mockWhitepaperData.tokenName,
@@ -148,7 +148,7 @@ describe(
         error: null})
       render(<OriginalWhitepaperViewPage />);
       await waitFor(() =>
-        expect(screen.getByText(/Access Denied/i)).toBeInTheDocument());
+        expect(screen.getByText(/Access Denied/i)).toBeInTheDocument())
       expect(
         screen.getByText(/This whitepaper is not public/i)).toBeInTheDocument()
       expect(
@@ -164,7 +164,7 @@ describe(
           is_public: false,
           created_at: new Date().toISOString()},
         error: null})
-      render(<OriginalWhitepaperViewPage />);
+      render(<OriginalWhitepaperViewPage />)
       await waitFor(() =>
         expect(screen.getByTestId(,
   mock-preview-panel')).toBeInTheDocument())
@@ -182,7 +182,7 @@ describe(
           is_public: true,
           created_at: new Date().toISOString()},
         error: null})
-      render(<OriginalWhitepaperViewPage />);
+      render(<OriginalWhitepaperViewPage />)
       await waitFor(() =>
         expect(screen.getByTestId(
   'mock-preview-panel')).toBeInTheDocument())
