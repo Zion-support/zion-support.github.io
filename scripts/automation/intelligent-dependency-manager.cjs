@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Intelligent Dependency Manager - PM2 Automation
@@ -13,23 +13,19 @@ class IntelligentDependencyManager {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'intelligent-dependency-manager.log'
     );
     this.dependencyAnalysis = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'dependency-analysis.json'
     );
     this.vulnerabilityReport = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'vulnerability-report.json'
     );
     this.updateRecommendations = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'update-recommendations.json'
     );
     this.ensureLogsDirectory();
@@ -58,8 +54,7 @@ class IntelligentDependencyManager {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async analyzeDependencies() {
@@ -83,13 +78,11 @@ class IntelligentDependencyManager {
       // Save analysis
       await this.saveDependencyAnalysis(analysis);
 
-      this.log(
-        `Dependency analysis completed. Found ${analysis.vulnerabilities.length} vulnerabilities, ${analysis.conflicts.length} conflicts`
+      this.log(Dependency analysis completed. Found ${analysis.vulnerabilities.length} vulnerabilities, ${analysis.conflicts.length} conflicts'
       );
 
       return analysis;
-    } catch (error) {
-      this.log(`Dependency analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Dependency analysis failed: ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -128,8 +121,7 @@ class IntelligentDependencyManager {
       );
 
       return analysis;
-    } catch (error) {
-      this.log(`Package.json analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Package.json analysis failed: ${error.message}`, 'ERROR');
       return null;
     }
   }
@@ -139,19 +131,14 @@ class IntelligentDependencyManager {
 
     try {
       const lockFiles = [];
-      const lockFileTypes = [
-        'package-lock.json',
-        'yarn.lock',
-        'pnpm-lock.yaml',
-      ];
+      const lockFileTypes = ['package-lock.json'', 'yarn.lock', 'pnpm-lock.yaml'', ''];
 
       for (const lockFile of lockFileTypes) {
-        const lockPath = path.join(this.projectRoot, lockFile);
+        const lockPath = path.join(this.projectRoot, 'lockFile);
         if (fs.existsSync(lockPath)) {
           const stats = fs.statSync(lockPath);
           lockFiles.push({
-            name: lockFile,
-            size: stats.size,
+            name: lockFile', size: stats.size,
             sizeKB: Math.round(stats.size / 1024),
             lastModified: stats.mtime,
             exists: true,
@@ -165,8 +152,7 @@ class IntelligentDependencyManager {
       }
 
       return lockFiles;
-    } catch (error) {
-      this.log(`Lock file analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Lock file analysis failed: ${error.message}`, 'ERROR');
       return [];
     }
   }
@@ -191,8 +177,7 @@ class IntelligentDependencyManager {
         packageCount,
         lastModified: stats.mtime,
       };
-    } catch (error) {
-      this.log(`Node modules analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Node modules analysis failed: ${error.message}`, 'ERROR');
       return { exists: false, size: 0, packageCount: 0 };
     }
   }
@@ -212,7 +197,7 @@ class IntelligentDependencyManager {
       const vulnerabilities = [];
 
       if (auditData.vulnerabilities) {
-        for (const [packageName, vulnData] of Object.entries(
+        for (const ['packageName', 'vulnData'] of Object.entries(
           auditData.vulnerabilities
         )) {
           for (const vuln of vulnData.via) {
@@ -238,8 +223,7 @@ class IntelligentDependencyManager {
       vulnerabilities.sort((a, b) => b.riskScore - a.riskScore);
 
       return vulnerabilities;
-    } catch (error) {
-      this.log(`Vulnerability scan failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Vulnerability scan failed: ${error.message}`, 'ERROR');
       return [];
     }
   }
@@ -277,8 +261,7 @@ class IntelligentDependencyManager {
       conflicts.push(...versionConflicts);
 
       return conflicts;
-    } catch (error) {
-      this.log(`Conflict detection failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Conflict detection failed: ${error.message}`, 'ERROR');
       return [];
     }
   }
@@ -296,7 +279,7 @@ class IntelligentDependencyManager {
       const outdatedData = JSON.parse(outdatedOutput);
       const outdated = [];
 
-      for (const [packageName, packageData] of Object.entries(outdatedData)) {
+      for (const ['packageName', 'packageData'] of Object.entries(outdatedData)) {
         const current = packageData.current;
         const latest = packageData.latest;
         const major = packageData.latest;
@@ -323,8 +306,7 @@ class IntelligentDependencyManager {
       outdated.sort((a, b) => b.priority - a.priority);
 
       return outdated;
-    } catch (error) {
-      this.log(`Outdated check failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Outdated check failed: ${error.message}`, 'ERROR');
       return [];
     }
   }
@@ -343,7 +325,7 @@ class IntelligentDependencyManager {
         const packageVersions = {};
 
         if (lockData.dependencies) {
-          for (const [packageName, packageData] of Object.entries(
+          for (const ['packageName', 'packageData'] of Object.entries(
             lockData.dependencies
           )) {
             if (!packageVersions[packageName]) {
@@ -353,7 +335,7 @@ class IntelligentDependencyManager {
           }
         }
 
-        for (const [packageName, versions] of Object.entries(packageVersions)) {
+        for (const ['packageName', 'versions'] of Object.entries(packageVersions)) {
           if (versions.length > 1 && new Set(versions).size > 1) {
             conflicts.push({
               type: 'VERSION_CONFLICT',
@@ -365,8 +347,7 @@ class IntelligentDependencyManager {
           }
         }
       }
-    } catch (error) {
-      this.log(`Version conflict detection failed: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Version conflict detection failed: ${error.message}`, 'WARN');
     }
 
     return conflicts;
@@ -459,8 +440,7 @@ class IntelligentDependencyManager {
           }
         }
       }
-    } catch (error) {
-      this.log(`Error counting packages: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Error counting packages: ${error.message}`, 'WARN');
     }
 
     return count;
@@ -481,8 +461,7 @@ class IntelligentDependencyManager {
       if (criticalVulns.length > 0) {
         recommendations.push({
           priority: 'CRITICAL',
-          type: 'SECURITY',
-          message: `Immediate action required: ${criticalVulns.length} critical vulnerabilities detected`,
+          type: 'SECURITY',message: `Immediate action required: ${criticalVulns.length} critical vulnerabilities detected`,
           action: 'UPDATE_IMMEDIATE',
           packages: criticalVulns.map(v => v.package),
         });
@@ -491,8 +470,7 @@ class IntelligentDependencyManager {
       if (highVulns.length > 0) {
         recommendations.push({
           priority: 'HIGH',
-          type: 'SECURITY',
-          message: `Urgent action required: ${highVulns.length} high-severity vulnerabilities detected`,
+          type: 'SECURITY',message: `Urgent action required: ${highVulns.length} high-severity vulnerabilities detected`,
           action: 'UPDATE_URGENT',
           packages: highVulns.map(v => v.package),
         });
@@ -511,8 +489,7 @@ class IntelligentDependencyManager {
       if (majorUpdates.length > 0) {
         recommendations.push({
           priority: 'MEDIUM',
-          type: 'UPDATES',
-          message: `${majorUpdates.length} major updates available. Review for breaking changes.`,
+          type: 'UPDATES',message: `${majorUpdates.length} major updates available. Review for breaking changes.`,
           action: 'REVIEW_AND_UPDATE',
           packages: majorUpdates.map(p => p.package),
         });
@@ -521,8 +498,7 @@ class IntelligentDependencyManager {
       if (minorUpdates.length > 0) {
         recommendations.push({
           priority: 'LOW',
-          type: 'UPDATES',
-          message: `${minorUpdates.length} minor updates available. Safe to update.`,
+          type: 'UPDATES',message: `${minorUpdates.length} minor updates available. Safe to update.`,
           action: 'UPDATE_SAFE',
           packages: minorUpdates.map(p => p.package),
         });
@@ -533,8 +509,7 @@ class IntelligentDependencyManager {
     if (analysis.conflicts.length > 0) {
       recommendations.push({
         priority: 'HIGH',
-        type: 'CONFLICTS',
-        message: `${analysis.conflicts.length} dependency conflicts detected. Resolve to prevent issues.`,
+        type: 'CONFLICTS',message: `${analysis.conflicts.length} dependency conflicts detected. Resolve to prevent issues.`,
         action: 'RESOLVE_CONFLICTS',
         conflicts: analysis.conflicts,
       });
@@ -550,8 +525,7 @@ class IntelligentDependencyManager {
         JSON.stringify(analysis, null, 2)
       );
       this.log('Dependency analysis saved');
-    } catch (error) {
-      this.log(`Failed to save dependency analysis: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to save dependency analysis: ${error.message}`, 'ERROR');
     }
   }
 
@@ -650,20 +624,13 @@ class IntelligentDependencyManager {
       // Generate comprehensive report
       const report = await this.generateReport();
 
-      if (report) {
-        this.log(`Dependency Management Report:`);
-        this.log(`  - Total Dependencies: ${report.summary.totalDependencies}`);
-        this.log(`  - Vulnerabilities: ${report.summary.vulnerabilities}`);
-        this.log(`  - Conflicts: ${report.summary.conflicts}`);
-        this.log(`  - Outdated: ${report.summary.outdated}`);
-        this.log(`  - Overall Risk: ${report.summary.riskLevel}`);
+      if (report) {this.log(`Dependency Management Report:`);this.log(`  - Total Dependencies: ${report.summary.totalDependencies}`);this.log(`  - Vulnerabilities: ${report.summary.vulnerabilities}`);this.log(`  - Conflicts: ${report.summary.conflicts}`);this.log(`  - Outdated: ${report.summary.outdated}`);this.log(`  - Overall Risk: ${report.summary.riskLevel}`);
 
         // Display top recommendations
         const topRecommendations = report.recommendations.slice(0, 3);
         if (topRecommendations.length > 0) {
           this.log('Top Recommendations:');
-          topRecommendations.forEach((rec, index) => {
-            this.log(`  ${index + 1}. ${rec.message} (${rec.priority})`);
+          topRecommendations.forEach((rec, index) => {this.log(`  ${index + 1}. ${rec.message} (${rec.priority})');
           });
         }
       }
@@ -671,8 +638,7 @@ class IntelligentDependencyManager {
       // Schedule next analysis
       setTimeout(() => this.run(), 7200000); // 2 hours
     } catch (error) {
-      this.log(
-        `Intelligent Dependency Manager failed: ${error.message}`,
+      this.log(Intelligent Dependency Manager failed: ${error.message}',
         'ERROR'
       );
       setTimeout(() => this.run(), 1800000); // 30 minutes on error

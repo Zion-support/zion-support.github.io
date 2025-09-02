@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -46,9 +46,7 @@ class BuildMonitor {
     if (result.success) {
       this.log('Build completed successfully', 'success');
       return true;
-    } else {
-      this.log(`Build failed: ${result.output}`, 'error');
-      this.errorsFound.push(`Build failed: ${result.output}`);
+    } else {this.log(`Build failed: ${result.output}`, 'error');this.errorsFound.push(`Build failed: ${result.output}`);
       return false;
     }
   }
@@ -95,7 +93,7 @@ class BuildMonitor {
     
     // This would typically involve parsing files and checking syntax
     // For now, we'll just run a basic check
-    const result = await this.runCommand('node -c src/main.jsx 2>&1 || true');
+    const result = await this.runCommand('node -c ''src/main.jsx'' 2>&1 || true');
     if (result.success) {
       this.log('No obvious syntax errors detected', 'success');
     }
@@ -108,8 +106,7 @@ class BuildMonitor {
     if (result.success) {
       this.log('No TypeScript type errors detected', 'success');
     } else {
-      this.log('TypeScript type errors detected', 'warn');
-      this.errorsFound.push(`TypeScript errors: ${result.output}`);
+      this.log('TypeScript type errors detected', 'warn');this.errorsFound.push(`TypeScript errors: ${result.output}`);
     }
   }
 
@@ -130,7 +127,6 @@ class BuildMonitor {
 
     await this.ensureDirectoryExists(path.dirname(this.logFile));
     fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2));
-    
     this.log(`Build monitor report generated: ${this.logFile}`);
   }
 
@@ -150,9 +146,7 @@ class BuildMonitor {
       await this.generateReport();
       
       this.log('Build monitoring completed', 'success');
-    } catch (error) {
-      this.log(`Error during build monitoring: ${error.message}`, 'error');
-      this.errorsFound.push(`Process error: ${error.message}`);
+    } catch (error) {this.log(`Error during build monitoring: ${error.message}`, 'error');this.errorsFound.push(`Process error: ${error.message}`);
       await this.generateReport();
     }
   }

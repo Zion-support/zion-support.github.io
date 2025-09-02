@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -33,7 +33,7 @@ function cleanContent(content) {
     // Comma followed by stray apostrophe (e.g., "Shield,'")
     .replace(/,\s*'/g, ',')
     // Remove apostrophe after closing tokens if followed by punctuation or end
-    .replace(/([)}>])\s*'\s*(?=\s*[,;)}\]]|\s*$)/g, '$1')
+    .replace(/([)}>])\s*'\s*(?=\s*['', ';)}\]']|\s*$)/g, '$1')
     // JSX: >'< to ><
     .replace(/>\s*'\s*</g, '><');
 
@@ -44,9 +44,9 @@ function walk(dir, files = []) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
     if (entry.name === 'node_modules' || entry.name.startsWith('.git'))
       continue;
-    const p = path.join(dir, entry.name);
+    const p = path.join(dir, 'entry.name);
     if (entry.isDirectory()) {
-      walk(p, files);
+      walk(p', files);
     } else if (shouldProcess(p)) {
       files.push(p);
     }

@@ -1,26 +1,26 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('🔧 Starting JSX error fixer automation...');
+console.log(`'🔧 Starting JSX error fixer automation...');
 
 // Get automation interval from environment variable (default: 40 minutes)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 2400000; // 40 minutes
 
 async function runJSXErrorFixer() {
   try {
-    console.log(`🔧 Running JSX error fixer at ${new Date().toISOString()}`);
+    console.log(`🔧 Running JSX error fixer at ${new Date().toISOString()});
     
     let fixesApplied = 0;
     
     // 1. Fix JSX closing tag errors
-    console.log('🔧 Fixing JSX closing tag errors...');
+    console.log(`'🔧 Fixing JSX closing tag errors...');
     fixesApplied += await fixJSXClosingTags();
     
     // 2. Fix JSX expression errors
-    console.log('🔧 Fixing JSX expression errors...');
+    console.log('🔧 Fixing JSX expression errors...'`);
     fixesApplied += await fixJSXExpressions();
     
     // 3. Fix JSX parent element errors
@@ -45,10 +45,8 @@ async function runJSXErrorFixer() {
     };
     
     const reportPath = path.join(process.cwd(), 'jsx-error-fixer-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`✅ JSX error fixer report saved to ${reportPath}`);
-    
-    console.log(`✅ JSX error fixer completed successfully. Applied ${fixesApplied} fixes.`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(✅ JSX error fixer report saved to ${reportPath});
+    console.log(✅ JSX error fixer completed successfully. Applied ${fixesApplied} fixes.``);
     
   } catch (error) {
     console.error('❌ JSX error fixer failed:', error.message);
@@ -59,15 +57,7 @@ async function fixJSXClosingTags() {
   let fixes = 0;
   
   // Fix files with JSX closing tag errors
-  const filesToFix = [
-    'src/components/ScrollToTop.jsx',
-    'src/components/home/ServicesShowcase.jsx',
-    'src/layout/PrimaryNav.jsx',
-    'src/layout/Header.jsx',
-    'src/pages/EnterpriseDemo.jsx',
-    'src/pages/services/Cybersecurity.tsx',
-    'src/pages/services/DigitalTransformation.tsx'
-  ];
+  const filesToFix = ['''src/components/ScrollToTop.jsx'''', '''src/components/home/ServicesShowcase.jsx''', '''src/layout/PrimaryNav.jsx'''', '''src/layout/Header.jsx''', '''src/pages/EnterpriseDemo.jsx'''', '''src/pages/services/Cybersecurity.tsx''', '''src/pages/services/DigitalTransformation.tsx''''];
   
   for (const filePath of filesToFix) {
     if (fs.existsSync(filePath)) {
@@ -84,18 +74,16 @@ async function fixJSXClosingTags() {
         content = content.replace(/<\/>motion\.h1>/g, '</motion.h1>');
         
         // Fix missing closing tags
-        content = content.replace(/<div\s+className="max-w-4xl mx-auto space-y-8">\s*<div/g, '<div className="max-w-4xl mx-auto space-y-8"><div');
+        content = content.replace(/<div\s+className="max-w-4xl mx-auto space-y-8">\s*<''div/g'', '<div className="max-w-4xl mx-auto space-y-8"><div');
         
         // Fix specific JSX structure issues
         content = content.replace(/<\/Button>\s*<\/div>\s*<\/div>/g, '</Button>\n                </div>\n              </div>');
         
         if (content !== originalContent) {
           fs.writeFileSync(filePath, content);
-          fixes++;
-          console.log(`  ✅ Fixed JSX closing tags in ${filePath}`);
+          fixes++;console.log(`  ✅ Fixed JSX closing tags in ${filePath}`);
         }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
+      } catch (error) {console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}');
       }
     }
   }
@@ -107,13 +95,7 @@ async function fixJSXExpressions() {
   let fixes = 0;
   
   // Fix files with JSX expression errors
-  const filesToFix = [
-    'src/components/MobileExperienceEnhancer.tsx',
-    'src/components/UltimateServicesShowcase2025.tsx',
-    'src/components/home/HeroFeatures.tsx',
-    'src/components/ServicesOverview.tsx',
-    'src/components/UltimateServicesShowcase.tsx'
-  ];
+  const filesToFix = ['''src/components/MobileExperienceEnhancer.tsx'''', '''src/components/UltimateServicesShowcase2025.tsx''', '''src/components/home/HeroFeatures.tsx'''', '''src/components/ServicesOverview.tsx''', '''src/components/UltimateServicesShowcase.tsx''''];
   
   for (const filePath of filesToFix) {
     if (fs.existsSync(filePath)) {
@@ -138,8 +120,7 @@ async function fixJSXExpressions() {
           fixes++;
           console.log(`  ✅ Fixed JSX expressions in ${filePath}`);
         }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
+      } catch (error) {console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}');
       }
     }
   }
@@ -151,10 +132,7 @@ async function fixJSXParentElements() {
   let fixes = 0;
   
   // Fix files with JSX parent element errors
-  const filesToFix = [
-    'src/legal/TermsOfService.tsx',
-    'src/pages/admin/SupportRequests.tsx'
-  ];
+  const filesToFix = ['''src/legal/TermsOfService.tsx'''', '''src/pages/admin/SupportRequests.tsx'''];
   
   for (const filePath of filesToFix) {
     if (fs.existsSync(filePath)) {
@@ -173,10 +151,8 @@ async function fixJSXParentElements() {
             const jsxContent = content.substring(jsxStart, jsxEnd + 6);
             const afterJSX = content.substring(jsxEnd + 6);
             
-            content = beforeJSX + 
-                     '<div className="terms-of-service-container">\n' +
-                     jsxContent + '\n' +
-                     '</div>\n' +
+            content = beforeJSX + <div className='terms-of-service-container">\n' +
+                     jsxContent + '\n' +</div>\n' +
                      afterJSX;
           }
         }
@@ -184,13 +160,11 @@ async function fixJSXParentElements() {
         if (filePath.includes('SupportRequests.tsx')) {
           // Fix the JSX structure by ensuring proper wrapping
           content = content.replace(
-            /<SEO\s+title="Support Requests \| Admin Dashboard"/g,
-            '<div className="support-requests-container">\n        <SEO\n          title="Support Requests | Admin Dashboard"'
+            /<SEO\s+title="Support Requests \| Admin Dashboard'/g,<div className='support-requests-container">\n        <SEO\n          title="Support Requests | Admin Dashboard"'
           );
           
           content = content.replace(
-            /<\/Tabs>\s*<\/div>\s*$/g,
-            '</Tabs>\n        </div>\n      </div>'
+            /<\/Tabs>\s*<\/div>\s*$/g,</Tabs>\n        </div>\n      </div>'
           );
         }
         
@@ -199,8 +173,7 @@ async function fixJSXParentElements() {
           fixes++;
           console.log(`  ✅ Fixed JSX parent elements in ${filePath}`);
         }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
+      } catch (error) {console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}');
       }
     }
   }
@@ -212,8 +185,7 @@ async function fixJSXAttributes() {
   let fixes = 0;
   
   // Fix files with JSX attribute errors
-  const filesToFix = [
-    'src/pages/ForgotPassword.tsx'
+  const filesToFix = [''src/pages/ForgotPassword.tsx'''
   ];
   
   for (const filePath of filesToFix) {
@@ -224,14 +196,12 @@ async function fixJSXAttributes() {
         
         // Fix JSX attribute issues
         content = content.replace(
-          /bg-\[url\('data:image\/svg\+xml,%3Csvg[^>]+%3E'\)/g,
-          'bg-[url("data:image/svg+xml,%3Csvg width=\\"60\\" height=\\"60\\" viewBox=\\"0 0 60 60\\" xmlns=\\"http://www.w3.org/2000/svg\\"%3E%3Cg fill=\\"none\\" fill-rule=\\"evenodd\\"%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\"0.05\\"%3E%3Ccircle cx=\\"30\\" cy=\\"30\\" r=\\"2\\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")]'
+          /bg-\['url\('data:image\/svg\+xml', '%3Csvg[^>']+%3E'\)/g,bg-['url('data:''image/svg''+xml', '%3Csvg width=\\"60\\" height=\\"60\\" viewBox=\\"0 0 60 60\\" xmlns=\\"http://www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\" fill-rule=\\"evenodd\\"%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\"0.05\\"%3E%3Ccircle cx=\\"30\\" cy=\\"30\\" r=\\"2\\"/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg''%3E")']'
         );
         
         // Fix JSX structure
         content = content.replace(
-          /<div\s+className="absolute inset-0[^>]+>\s*<\/div>/g,
-          '<div className="absolute inset-0 bg-[url(\"data:image/svg+xml,%3Csvg width=\\"60\\" height=\\"60\\" viewBox=\\"0 0 60 60\\" xmlns=\\"http://www.w3.org/2000/svg\\"%3E%3Cg fill=\\"none\\" fill-rule=\\"evenodd\\"%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\"0.05\\"%3E%3Ccircle cx=\\"30\\" cy=\\"30\\" r=\\"2\\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")] opacity-50"></div>'
+          /<div\s+className='absolute inset-0[^>]+>\s*<\/div>/g,<div className='absolute inset-0 bg-['url(\"data:''image/svg''+xml', '%3Csvg width=\\"60\\" height=\\"60\\" viewBox=\\"0 0 60 60\\" xmlns=\\"http://www.w3.''org/2000/svg''\\"%3E%3Cg fill=\\"none\\" fill-rule=\\"evenodd\\"%3E%3Cg fill=\\"%23ffffff\\" fill-opacity=\\"0.05\\"%3E%3Ccircle cx=\\"30\\" cy=\\"30\\" r=\\"2\\"/%3E%3''C/g''%3E%3''C/g''%3E%3''C/svg''%3E\")'] opacity-50"></div>'
         );
         
         if (content !== originalContent) {
@@ -239,8 +209,7 @@ async function fixJSXAttributes() {
           fixes++;
           console.log(`  ✅ Fixed JSX attributes in ${filePath}`);
         }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
+      } catch (error) {console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}');
       }
     }
   }
@@ -252,8 +221,7 @@ async function fixJSXFragments() {
   let fixes = 0;
   
   // Fix files with JSX fragment errors
-  const filesToFix = [
-    'src/components/header/Header.jsx'
+  const filesToFix = [''src/components/header/Header.jsx'''
   ];
   
   for (const filePath of filesToFix) {
@@ -269,8 +237,7 @@ async function fixJSXFragments() {
         
         // Fix specific JSX fragment issues
         content = content.replace(
-          /<>\s*<div\s+className="[^"]*">\s*<\/div>\s*<\/>/g,
-          '<div className="header-container">\n        </div>'
+          /<>\s*<div\s+className="[^"]*'>\s*<\/div>\s*<\/>/g,<div className='header-container">\n        </div>'
         );
         
         if (content !== originalContent) {
@@ -278,8 +245,7 @@ async function fixJSXFragments() {
           fixes++;
           console.log(`  ✅ Fixed JSX fragments in ${filePath}`);
         }
-      } catch (error) {
-        console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
+      } catch (error) {console.log(`  ⚠️  Could not fix ${filePath}: ${error.message}`);
       }
     }
   }
@@ -288,8 +254,7 @@ async function fixJSXFragments() {
 }
 
 // Main continuous loop
-async function runContinuous() {
-  console.log(`🚀 Starting JSX error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+async function runContinuous() {console.log(`🚀 Starting JSX error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   
   // Run initial error fixer
   await runJSXErrorFixer();
@@ -298,7 +263,6 @@ async function runContinuous() {
   setInterval(async () => {
     await runJSXErrorFixer();
   }, AUTOMATION_INTERVAL);
-  
   console.log(`✅ JSX error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 }
 

@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
-console.log('📚 Starting Smart Documentation Generator...');
+console.log(`'📚 Starting Smart Documentation Generator...');
 
 // Get automation interval from environment variable (default: 24 hours)
 const AUTOMATION_INTERVAL =
@@ -35,8 +35,7 @@ class SmartDocumentationGenerator {
 
   async generateDocumentation() {
     try {
-      console.log(
-        `📚 Running smart documentation generation at ${new Date().toISOString()}`
+      console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}'
       );
 
       // Analyze codebase structure
@@ -63,7 +62,7 @@ class SmartDocumentationGenerator {
       // Generate report
       await this.generateReport();
 
-      console.log('✅ Smart documentation generation completed successfully');
+      console.log(`'✅ Smart documentation generation completed successfully');
     } catch (error) {
       console.error('❌ Smart documentation generation failed:', error.message);
     }
@@ -149,18 +148,12 @@ class SmartDocumentationGenerator {
     }
 
     // Analyze config files
-    const configFiles = [
-      'package.json',
-      'vite.config.ts',
-      'tsconfig.json',
-      'tailwind.config.js',
-    ];
+    const configFiles = ['package.json'', 'vite.config.ts', 'tsconfig.json'', 'tailwind.config.js', ''];
     for (const configFile of configFiles) {
-      const configPath = path.join(process.cwd(), configFile);
+      const configPath = path.join(process.cwd(), 'configFile);
       if (fs.existsSync(configPath)) {
         structure.configs.push({
-          path: configFile,
-          name: configFile,
+          path: configFile', name: configFile,
           hasDocs: this.hasExistingDocs(configPath),
         });
       }
@@ -225,8 +218,7 @@ class SmartDocumentationGenerator {
     }
 
     this.documentationMetrics.missingDocs = missingDocs;
-    console.log(
-      `📊 Found ${missingDocs.length} categories of missing documentation`
+    console.log(📊 Found ${missingDocs.length} categories of missing documentation'
     );
   }
 
@@ -247,9 +239,8 @@ class SmartDocumentationGenerator {
 
         const apiDoc = this.generateServiceDocumentation(service, content);
         const docPath = path.join(
-          this.docsDir,
-          'api',
-          `${service.name.toLowerCase()}.md`
+          this.docsDir,api',
+          ${service.name.toLowerCase()}.md
         );
 
         // Ensure API docs directory exists
@@ -266,19 +257,17 @@ class SmartDocumentationGenerator {
           service: service.name,
           timestamp: new Date().toISOString(),
         });
-
-        console.log(`✅ Generated API documentation for ${service.name}`);
+console.log(✅ Generated API documentation for ${service.name}');
       } catch (error) {
-        console.log(
-          `⚠️ Failed to generate API docs for ${service.name}:`,
+        console.log(⚠️ Failed to generate API docs for ${service.name}:',
           error.message
-        );
+        `);
       }
     }
   }
 
   async generateComponentDocumentation() {
-    console.log('⚛️ Generating component documentation...');
+    console.log(`'⚛️ Generating component documentation...');
 
     const structure = this.documentationMetrics.docPatterns.get('structure');
     if (!structure) return;
@@ -292,9 +281,8 @@ class SmartDocumentationGenerator {
 
         const componentDoc = this.generateComponentDoc(component, content);
         const docPath = path.join(
-          this.docsDir,
-          'components',
-          `${component.name.toLowerCase()}.md`
+          this.docsDir,components',
+          ${component.name.toLowerCase()}.md
         );
 
         // Ensure components docs directory exists
@@ -312,20 +300,18 @@ class SmartDocumentationGenerator {
           timestamp: new Date().toISOString(),
         });
 
-        console.log(
-          `✅ Generated component documentation for ${component.name}`
+        console.log(`✅ Generated component documentation for ${component.name}'
         );
       } catch (error) {
-        console.log(
-          `⚠️ Failed to generate component docs for ${component.name}:`,
+        console.log( ⚠️ Failed to generate component docs for ${component.name}:,
           error.message
-        );
+        `);
       }
     }
   }
 
   async generateSetupGuides() {
-    console.log('📋 Generating setup guides...');
+    console.log(`'📋 Generating setup guides...');
 
     // Generate installation guide
     const installationGuide = this.generateInstallationGuide();
@@ -363,11 +349,11 @@ class SmartDocumentationGenerator {
       }
     );
 
-    console.log('✅ Generated setup guides');
+    console.log('✅ Generated setup guides'`);
   }
 
   async updateREADME() {
-    console.log('📝 Updating README...');
+    console.log(`'📝 Updating README...');
 
     try {
       const readmePath = path.join(process.cwd(), 'README.md');
@@ -414,8 +400,7 @@ class SmartDocumentationGenerator {
     this.documentationMetrics.documentationCoverage =
       totalItems > 0 ? (documentedItems / totalItems) * 100 : 0;
 
-    console.log(
-      `📊 Documentation coverage: ${this.documentationMetrics.documentationCoverage.toFixed(1)}%`
+    console.log(📊 Documentation coverage: ${this.documentationMetrics.documentationCoverage.toFixed(1)}%'
     );
   }
 
@@ -425,8 +410,7 @@ class SmartDocumentationGenerator {
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
-        totalFilesAnalyzed: this.documentationMetrics.docPatterns.get(
-          'structure'
+        totalFilesAnalyzed: this.documentationMetrics.docPatterns.get(structure'
         )
           ? Object.values(
               this.documentationMetrics.docPatterns.get('structure')
@@ -442,8 +426,7 @@ class SmartDocumentationGenerator {
     };
 
     const reportPath = path.join(
-      this.reportDir,
-      `documentation-${Date.now()}.json`
+      this.reportDir,documentation-${Date.now()}.json'
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
@@ -453,8 +436,7 @@ class SmartDocumentationGenerator {
       'documentation-report.json'
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
-
-    console.log(`📊 Documentation report saved to ${reportPath}`);
+console.log(📊 Documentation report saved to ${reportPath});
   }
 
   findFiles(dir, extensions) {
@@ -527,8 +509,7 @@ class SmartDocumentationGenerator {
     return match ? match[1] : 'UnknownPage';
   }
 
-  generateServiceDocumentation(service, content) {
-    return `# ${service.name}
+  generateServiceDocumentation(service, content) {return # ${service.name}
 
 ## Overview
 
@@ -540,12 +521,11 @@ ${this.extractServiceFunctions(content)}
 
 ## Usage
 
-\`\`\`typescript
+\\`\`typescript
 import { ${service.name} } from './${service.path}';
 
 // Example usage
-const result = await ${service.name}.methodName(params);
-\`\`\`
+const result = await ${service.name}.methodName(params`);\`\`\'
 
 ## Parameters
 
@@ -564,12 +544,11 @@ ${this.extractServiceErrors(content)}
 ${this.generateServiceExamples(service.name)}
 
 ---
-*Generated automatically by Smart Documentation Generator*
-`;
+*Generated automatically by Smart Documentation Generator*;
   }
 
   generateComponentDoc(component, content) {
-    return `# ${component.name}
+    return '# ${component.name}
 
 ## Overview
 
@@ -580,7 +559,6 @@ ${component.name} is a React component that ${this.extractComponentPurpose(conte
 ${this.extractComponentProps(content)}
 
 ## Usage
-
 \`\`\`tsx
 import { ${component.name} } from './${component.path}';
 
@@ -590,8 +568,7 @@ function App() {
       // Add your props here
     />
   );
-}
-\`\`\`
+}\`\`\'
 
 ## Examples
 
@@ -602,12 +579,11 @@ ${this.generateComponentExamples(component.name)}
 ${this.extractComponentStyling(content)}
 
 ---
-*Generated automatically by Smart Documentation Generator*
-`;
+*Generated automatically by Smart Documentation Generator*;
   }
 
   generateInstallationGuide() {
-    return `# Installation Guide
+    return '# Installation Guide
 
 ## Prerequisites
 
@@ -617,48 +593,32 @@ ${this.extractComponentStyling(content)}
 
 ## Quick Start
 
-1. Clone the repository:
-\`\`\`bash
+1. Clone the repository:\`\`\`bash
 git clone <repository-url>
-cd zion-app
-\`\`\`
+cd zion-app\`\`\`
 
-2. Install dependencies:
-\`\`\`bash
-npm install
-\`\`\`
+2. Install dependencies:\`\`\`bash
+npm install\`\`\`
 
-3. Start the development server:
-\`\`\`bash
-npm run dev
-\`\`\`
-
+3. Start the development server:\`\`\`bash
+npm run dev\`\`\`
 4. Open your browser and navigate to \`http://localhost:5173\`
 
 ## Environment Setup
-
 Create a \`.env\` file in the root directory:
-
 \`\`\`env
 VITE_API_URL=your_api_url_here
-VITE_APP_ENV=development
-\`\`\`
+VITE_APP_ENV=development\`\`\`
 
 ## Available Scripts
-
-- \`npm run dev\` - Start development server
-- \`npm run build\` - Build for production
-- \`npm run preview\` - Preview production build
-- \`npm run lint\` - Run ESLint
-- \`npm run type-check\` - Run TypeScript type checking
+- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\' - Run TypeScript type checking
 
 ---
-*Generated automatically by Smart Documentation Generator*
-`;
+*Generated automatically by Smart Documentation Generator*;
   }
 
   generateDevelopmentGuide() {
-    return `# Development Guide
+    return '# Development Guide
 
 ## Project Structure
 
@@ -670,15 +630,13 @@ src/
 ├── hooks/         # Custom React hooks
 ├── services/      # API services
 ├── types/         # TypeScript type definitions
-└── styles/        # CSS and styling files
-\`\`\`
+└── styles/        # CSS and styling files\`\`\`
 
 ## Development Workflow
 
 1. Create a feature branch from main
-2. Make your changes
-3. Run tests: \`npm test\`
-4. Run linting: \`npm run lint\`
+2. Make your changes3. Run tests: \`npm test\`
+4. Run linting: \`npm run lint\'
 5. Submit a pull request
 
 ## Code Style
@@ -701,52 +659,42 @@ src/
 - Optimize bundle size with code splitting
 
 ---
-*Generated automatically by Smart Documentation Generator*
-`;
+*Generated automatically by Smart Documentation Generator*;
   }
 
   generateDeploymentGuide() {
-    return `# Deployment Guide
+    return '# Deployment Guide
 
 ## Production Build
 
-1. Build the application:
-\`\`\`bash
-npm run build
-\`\`\`
-
+1. Build the application:\`\`\`bash
+npm run build\`\`\`
 2. The build output will be in the \`dist\` directory
 
 ## Deployment Options
 
 ### Netlify (Recommended)
 
-1. Connect your repository to Netlify
-2. Set build command: \`npm run build\`
+1. Connect your repository to Netlify2. Set build command: \`npm run build\`
 3. Set publish directory: \`dist\`
 4. Deploy automatically on push to main branch
 
 ### Vercel
 
-1. Import your repository to Vercel
-2. Set build command: \`npm run build\`
+1. Import your repository to Vercel2. Set build command: \`npm run build\`
 3. Set output directory: \`dist\`
 4. Deploy
 
 ### Manual Deployment
-
-1. Upload the contents of \`dist\` directory to your web server
-2. Configure your server to serve \`index.html\` for all routes
+1. Upload the contents of \`dist\` directory to your web server2. Configure your server to serve \`index.html\` for all routes
 3. Set up proper caching headers
 
 ## Environment Variables
 
 Set the following environment variables in production:
-
 \`\`\`env
 VITE_API_URL=https://your-production-api.com
-VITE_APP_ENV=production
-\`\`\`
+VITE_APP_ENV=production\`\`\'
 
 ## Monitoring
 
@@ -755,14 +703,12 @@ VITE_APP_ENV=production
 - Set up uptime monitoring
 
 ---
-*Generated automatically by Smart Documentation Generator*
-`;
+*Generated automatically by Smart Documentation Generator*;
   }
 
   generateUpdatedREADME(originalContent) {
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
-
-    return `# ${packageJson.name}
+return `# ${packageJson.name}
 
 ${packageJson.description || 'A modern React application built with Vite and TypeScript.'}
 
@@ -770,16 +716,15 @@ ${packageJson.description || 'A modern React application built with Vite and Typ
 
 \`\`\`bash
 npm install
-npm run dev
-\`\`\`
+npm run dev\`\`\`
 
 ## 📚 Documentation
 
-- [Installation Guide](./docs/installation.md)
-- [Development Guide](./docs/development.md)
-- [Deployment Guide](./docs/deployment.md)
-- [API Documentation](./docs/api/)
-- [Component Documentation](./docs/components/)
+- [Installation Guide](./''docs/installation.md'')
+- [Development Guide](./''docs/development.md'')
+- [Deployment Guide](./''docs/deployment.md'')
+- [API Documentation](./''docs/api/'')
+- [Component Documentation](./''docs/components/'')
 
 ## 🛠️ Tech Stack
 
@@ -792,13 +737,7 @@ npm run dev
 - **Routing**: React Router DOM
 
 ## 📦 Available Scripts
-
-- \`npm run dev\` - Start development server
-- \`npm run build\` - Build for production
-- \`npm run preview\` - Preview production build
-- \`npm run lint\` - Run ESLint
-- \`npm run type-check\` - Run TypeScript type checking
-- \`npm test\` - Run tests
+- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\` - Run TypeScript type checking- \`npm test\` - Run tests
 
 ## 🤖 Automation
 
@@ -813,12 +752,7 @@ This project uses intelligent PM2 automations for continuous improvement:
 
 ## 📊 Reports
 
-View automation reports in the project root:
-- \`ai-analysis-report.json\` - AI code analysis results
-- \`deployment-optimization-report.json\` - Deployment optimization metrics
-- \`test-generation-report.json\` - Test generation statistics
-- \`refactoring-report.json\` - Code refactoring progress
-- \`documentation-report.json\` - Documentation coverage
+View automation reports in the project root:- \`ai-analysis-report.json\` - AI code analysis results- \`deployment-optimization-report.json\` - Deployment optimization metrics- \`test-generation-report.json\` - Test generation statistics- \`refactoring-report.json\` - Code refactoring progress- \`documentation-report.json\' - Documentation coverage
 
 ## 🤝 Contributing
 
@@ -833,8 +767,7 @@ View automation reports in the project root:
 This project is licensed under the MIT License.
 
 ---
-*README updated automatically by Smart Documentation Generator*
-`;
+*README updated automatically by Smart Documentation Generator*;
   }
 
   extractServiceFunctions(content) {
@@ -863,8 +796,7 @@ This project is licensed under the MIT License.
   }
 
   extractServiceParameters(content) {
-    // Simplified parameter extraction
-    return '- `params` - Parameters object\n- `options` - Optional configuration';
+    // Simplified parameter extractionreturn '- `params` - Parameters object\n- `options` - Optional configuration';
   }
 
   extractServiceReturns(content) {
@@ -875,8 +807,7 @@ This project is licensed under the MIT License.
     return '- Network errors are handled automatically\n- API errors are thrown with descriptive messages';
   }
 
-  generateServiceExamples(serviceName) {
-    return `\`\`\`typescript
+  generateServiceExamples(serviceName) {return `\`\`\`typescript
 // Basic usage
 const data = await ${serviceName}.fetchData();
 
@@ -884,8 +815,7 @@ const data = await ${serviceName}.fetchData();
 const result = await ${serviceName}.createItem({
   name: 'Example',
   description: 'Test item'
-});
-\`\`\``;
+});\`\`\``;
   }
 
   extractComponentPurpose(content) {
@@ -894,24 +824,20 @@ const result = await ${serviceName}.createItem({
   }
 
   extractComponentProps(content) {
-    // Simplified props extraction
-    return '- `children` - React children\n- `className` - Additional CSS classes\n- `...props` - Additional HTML attributes';
+    // Simplified props extractionreturn '- `children` - React children\n- `className` - Additional CSS classes\n- `...props` - Additional HTML attributes';
   }
 
-  generateComponentExamples(componentName) {
-    return `\`\`\`tsx
+  generateComponentExamples(componentName) {return `\`\`\`tsx
 // Basic usage
 <${componentName}>Content</${componentName}>
 
 // With props
 <${componentName} className="custom-class">
   <p>Custom content</p>
-</${componentName}>
-\`\`\``;
+</${componentName}>\`\`\``;
   }
 
-  extractComponentStyling(content) {
-    return 'This component uses Tailwind CSS classes for styling. Custom styles can be added via the `className` prop.';
+  extractComponentStyling(content) {return 'This component uses Tailwind CSS classes for styling. Custom styles can be added via the `className` prop.';
   }
 
   generateFunctionDescription(funcName) {
@@ -927,7 +853,7 @@ const result = await ${serviceName}.createItem({
       format: 'Formats data for display',
     };
 
-    for (const [key, description] of Object.entries(descriptions)) {
+    for (const ['key', 'description'] of Object.entries(descriptions)) {
       if (funcName.toLowerCase().includes(key)) {
         return description;
       }
@@ -939,8 +865,7 @@ const result = await ${serviceName}.createItem({
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(
-    `📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
   );
 
   const generator = new SmartDocumentationGenerator();
@@ -953,9 +878,8 @@ async function runContinuous() {
     await generator.generateDocumentation();
   }, AUTOMATION_INTERVAL);
 
-  console.log(
-    `✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
-  );
+  console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+  `);
 }
 
 // Handle graceful shutdown

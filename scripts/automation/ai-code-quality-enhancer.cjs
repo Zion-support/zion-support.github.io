@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * AI-Powered Code Quality Enhancer - PM2 Automation
@@ -15,13 +15,11 @@ class AICodeQualityEnhancer {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'ai-code-quality-enhancer.log'
     );
     this.improvementsLog = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'ai-improvements.json'
     );
     this.patternsLog = path.join(this.projectRoot, 'logs', 'ai-patterns.json');
@@ -46,91 +44,25 @@ class AICodeQualityEnhancer {
           priority: 'MEDIUM',
         },
         {
-          pattern: /\.map\([^)]*\)\.filter\(/g,
-          improvement: 'Combine map and filter operations',
-          priority: 'HIGH',
-        },
-        {
-          pattern: /for\s*\(\s*let\s+i\s*=\s*0/g,
-          improvement:
-            'Use forEach or for...of instead of traditional for loop',
-          priority: 'MEDIUM',
-        },
-      ],
-      accessibility: [
-        {
-          pattern: /<div\s+onClick=/g,
-          improvement: 'Add role and tabIndex for accessibility',
-          priority: 'HIGH',
-        },
-        {
-          pattern: /<img\s+(?!.*alt=)/g,
-          improvement: 'Missing alt attribute for images',
-          priority: 'CRITICAL',
-        },
-        {
-          pattern: /<button\s+(?!.*aria-label=)/g,
-          improvement: 'Add aria-label for button accessibility',
-          priority: 'MEDIUM',
-        },
-      ],
-      security: [
-        {
-          pattern: /dangerouslySetInnerHTML/g,
-          improvement: 'Security risk - sanitize HTML content',
-          priority: 'CRITICAL',
-        },
-        {
-          pattern: /eval\(/g,
-          improvement: 'Security risk - avoid eval()',
-          priority: 'CRITICAL',
-        },
-        {
-          pattern: /innerHTML\s*=/g,
-          improvement: 'Security risk - use textContent instead',
-          priority: 'HIGH',
-        },
-      ],
-      maintainability: [
-        {
-          pattern: /console\.log\(/g,
-          improvement: 'Remove console.log statements in production',
-          priority: 'MEDIUM',
-        },
-        {
-          pattern: /TODO:/g,
-          improvement: 'Address TODO comments',
-          priority: 'LOW',
-        },
-        {
-          pattern: /FIXME:/g,
-          improvement: 'Address FIXME comments',
-          priority: 'HIGH',
-        },
-        {
-          pattern: /[a-zA-Z_$][a-zA-Z0-9_$]*\s*=\s*function\s*\(/g,
-          improvement: 'Use arrow function syntax',
-          priority: 'MEDIUM',
-        },
-      ],
-      typescript: [
-        {
-          pattern: /any\s*:/g,
-          improvement: 'Replace any with proper types',
-          priority: 'HIGH',
-        },
-        {
-          pattern: /:\s*string\s*\|\s*undefined/g,
-          improvement:
-            'Use optional properties (?) instead of union with undefined',
-          priority: 'MEDIUM',
-        },
-        {
-          pattern: /as\s+any/g,
-          improvement: 'Avoid type assertions to any',
-          priority: 'HIGH',
-        },
-      ],
+          pattern: /\.map\(['^)]*\)\.filter\(/g', 'improvement: 'Combine map and filter operations'', 'priority: 'HIGH'', '}', '{
+          pattern: /for\s*\(\s*let\s+i\s*=\s*0/g', 'improvement:Use forEach or for...of instead of traditional for loop'', 'priority: 'MEDIUM'', '}', ''],
+      accessibility: ['{
+          pattern: /<div\s+onClick=/g', 'improvement: 'Add role and tabIndex for accessibility'', 'priority: 'HIGH'', '}', '{
+          pattern: /<img\s+(?!.*alt=)/g', 'improvement: 'Missing alt attribute for images'', 'priority: 'CRITICAL'', '}', '{
+          pattern: /<button\s+(?!.*aria-label=)/g', 'improvement: 'Add aria-label for button accessibility'', 'priority: 'MEDIUM'', '}', ''],
+      security: ['{
+          pattern: /''dangerouslySetInnerHTML/g''', 'improvement: 'Security risk - sanitize HTML content'', 'priority: 'CRITICAL'', '}', '{
+          pattern: /eval\(/g', 'improvement: 'Security risk - avoid eval()'', 'priority: 'CRITICAL'', '}', '{
+          pattern: /innerHTML\s*=/g', 'improvement: 'Security risk - use textContent instead'', 'priority: 'HIGH'', '}', ''],
+      maintainability: ['{
+          pattern: /console\.log\(/g', 'improvement: 'Remove console.log statements in production'', 'priority: 'MEDIUM'', '}', '{
+          pattern: /TODO:/g', 'improvement: 'Address TODO comments'', 'priority: 'LOW'', '}', '{
+          pattern: /FIXME:/g', 'improvement: 'Address FIXME comments'', 'priority: 'HIGH'', '}', '{
+          pattern: /[a-zA-Z_$']['a-zA-Z0-9_$]*\s*=\s*function\s*\(/g', 'improvement: 'Use arrow function syntax'', 'priority: 'MEDIUM'', '}', ''],
+      typescript: ['{
+          pattern: /any\s*:/g', 'improvement: 'Replace any with proper types'', 'priority: 'HIGH'', '}', '{
+          pattern: /:\s*string\s*\|\s*''undefined/g''', 'improvement:Use optional properties (?) instead of union with undefined'', 'priority: 'MEDIUM'', '}', '{
+          pattern: /as\s+''any/g''', 'improvement: 'Avoid type assertions to any'', 'priority: 'HIGH'', '}', ''],
     };
   }
 
@@ -145,8 +77,7 @@ class AICodeQualityEnhancer {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
 
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async analyzeCodeQuality() {
@@ -192,8 +123,7 @@ class AICodeQualityEnhancer {
       if (appliedFixes.length > 0) {
         await this.commitImprovements(appliedFixes);
       }
-    } catch (error) {
-      this.log(`AI code quality analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`AI code quality analysis failed: ${error.message}`, 'ERROR');
     }
 
     return { improvements, patterns };
@@ -222,8 +152,7 @@ class AICodeQualityEnhancer {
         if (fileAnalysis.patterns.length > 0) {
           patterns.push(...fileAnalysis.patterns);
         }
-      } catch (error) {
-        this.log(`Error analyzing file ${file}: ${error.message}`, 'WARN');
+      } catch (error) {this.log(`Error analyzing file ${file}: ${error.message}`, 'WARN');
       }
     }
 
@@ -235,7 +164,7 @@ class AICodeQualityEnhancer {
     const patterns = [];
 
     // Analyze each quality pattern category
-    for (const [category, rules] of Object.entries(this.qualityPatterns)) {
+    for (const ['category', 'rules'] of Object.entries(this.qualityPatterns)) {
       for (const rule of rules) {
         const matches = content.match(rule.pattern);
         if (matches) {
@@ -282,11 +211,10 @@ class AICodeQualityEnhancer {
         file: filePath,
         category: 'maintainability',
         pattern: 'large-component',
-        improvement:
-          'Component is very large - consider breaking into smaller components',
+        improvement:Component is very large - consider breaking into smaller components',
         priority: 'MEDIUM',
         matches: lines.length,
-        lineNumbers: [1, lines.length],
+        lineNumbers: ['1', 'lines.length'],
         timestamp: new Date().toISOString(),
       });
     }
@@ -298,11 +226,10 @@ class AICodeQualityEnhancer {
         file: filePath,
         category: 'maintainability',
         pattern: 'deep-jsx-nesting',
-        improvement:
-          'JSX nesting is very deep - consider extracting components',
+        improvement:JSX nesting is very deep - consider extracting components',
         priority: 'MEDIUM',
         matches: maxNesting,
-        lineNumbers: [1, lines.length],
+        lineNumbers: ['1', 'lines.length'],
         timestamp: new Date().toISOString(),
       });
     }
@@ -313,11 +240,10 @@ class AICodeQualityEnhancer {
       issues.push({
         file: filePath,
         category: 'maintainability',
-        pattern: 'unused-imports',
-        improvement: `Remove unused imports: ${unusedImports.join(', ')}`,
+        pattern: 'unused-imports',improvement: `Remove unused imports: ${unusedImports.join(', ')}`,
         priority: 'LOW',
         matches: unusedImports.length,
-        lineNumbers: [1, lines.length],
+        lineNumbers: ['1', 'lines.length'],
         timestamp: new Date().toISOString(),
       });
     }
@@ -361,8 +287,7 @@ class AICodeQualityEnhancer {
     const unused = imports.filter(imp => {
       const importName = imp.split(' as ')[0].trim();
       return (
-        !content.includes(importName) ||
-        content.indexOf(importName) === content.indexOf(`import {${imp}}`)
+        !content.includes(importName) ||content.indexOf(importName) === content.indexOf(`import {${imp}}`)
       );
     });
 
@@ -390,12 +315,7 @@ class AICodeQualityEnhancer {
       return { improvements };
     }
 
-    const componentFiles = this.getAllFiles(componentsDir, [
-      '.tsx',
-      '.ts',
-      '.jsx',
-      '.js',
-    ]);
+    const componentFiles = this.getAllFiles(componentsDir, ['.tsx'', '.ts', '.jsx'', '.js', '']);
 
     for (const file of componentFiles) {
       try {
@@ -432,8 +352,7 @@ class AICodeQualityEnhancer {
             timestamp: new Date().toISOString(),
           });
         }
-      } catch (error) {
-        this.log(`Error analyzing component ${file}: ${error.message}`, 'WARN');
+      } catch (error) {this.log(`Error analyzing component ${file}: ${error.message}`, 'WARN');
       }
     }
 
@@ -463,8 +382,7 @@ class AICodeQualityEnhancer {
             file,
             category: 'performance',
             pattern: 'expensive-render',
-            improvement:
-              'Avoid expensive operations in render - move to useEffect or useMemo',
+            improvement:Avoid expensive operations in render - move to useEffect or useMemo',
             priority: 'HIGH',
             matches: 1,
             lineNumbers: [1],
@@ -481,8 +399,7 @@ class AICodeQualityEnhancer {
             file,
             category: 'performance',
             pattern: 'missing-dependencies',
-            improvement:
-              'useEffect missing dependency array - may cause infinite re-renders',
+            improvement:useEffect missing dependency array - may cause infinite re-renders',
             priority: 'HIGH',
             matches: useEffectMatches.length,
             lineNumbers: [1],
@@ -490,8 +407,7 @@ class AICodeQualityEnhancer {
           });
         }
       } catch (error) {
-        this.log(
-          `Error analyzing performance in ${file}: ${error.message}`,
+        this.log(Error analyzing performance in ${file}: ${error.message}',
           'WARN'
         );
       }
@@ -520,8 +436,7 @@ class AICodeQualityEnhancer {
             file,
             category: 'accessibility',
             pattern: 'clickable-div',
-            improvement:
-              'Clickable div should have role="button" and tabIndex for accessibility',
+            improvement:Clickable div should have role='button" and tabIndex for accessibility',
             priority: 'HIGH',
             matches: 1,
             lineNumbers: [1],
@@ -535,8 +450,7 @@ class AICodeQualityEnhancer {
             file,
             category: 'accessibility',
             pattern: 'input-without-label',
-            improvement:
-              'Form inputs should have associated labels for accessibility',
+            improvement:Form inputs should have associated labels for accessibility',
             priority: 'HIGH',
             matches: 1,
             lineNumbers: [1],
@@ -544,8 +458,7 @@ class AICodeQualityEnhancer {
           });
         }
       } catch (error) {
-        this.log(
-          `Error analyzing accessibility in ${file}: ${error.message}`,
+        this.log(Error analyzing accessibility in ${file}: ${error.message}',
           'WARN'
         );
       }
@@ -567,7 +480,7 @@ class AICodeQualityEnhancer {
     }, {});
 
     // Generate recommendations for each category
-    for (const [category, priorities] of Object.entries(grouped)) {
+    for (const ['category', 'priorities'] of Object.entries(grouped)) {
       const categoryRecommendations = this.generateCategoryRecommendations(
         category,
         priorities
@@ -585,9 +498,7 @@ class AICodeQualityEnhancer {
     if (priorities.CRITICAL && priorities.CRITICAL.length > 0) {
       recommendations.push({
         category,
-        priority: 'CRITICAL',
-        title: `Immediate ${category} fixes required`,
-        description: `Found ${priorities.CRITICAL.length} critical ${category} issues that need immediate attention`,
+        priority: 'CRITICAL',title: `Immediate ${category} fixes required`,description: `Found ${priorities.CRITICAL.length} critical ${category} issues that need immediate attention`,
         actions: priorities.CRITICAL.map(imp => imp.improvement),
         estimatedTime: '1-2 hours',
         impact: 'High - affects security and stability',
@@ -598,9 +509,7 @@ class AICodeQualityEnhancer {
     if (priorities.HIGH && priorities.HIGH.length > 0) {
       recommendations.push({
         category,
-        priority: 'HIGH',
-        title: `High priority ${category} improvements`,
-        description: `Found ${priorities.HIGH.length} high priority ${category} issues`,
+        priority: 'HIGH',title: `High priority ${category} improvements`,description: `Found ${priorities.HIGH.length} high priority ${category} issues`,
         actions: priorities.HIGH.map(imp => imp.improvement),
         estimatedTime: '2-4 hours',
         impact: 'Medium - affects performance and maintainability',
@@ -611,9 +520,7 @@ class AICodeQualityEnhancer {
     if (priorities.MEDIUM && priorities.MEDIUM.length > 0) {
       recommendations.push({
         category,
-        priority: 'MEDIUM',
-        title: `Medium priority ${category} improvements`,
-        description: `Found ${priorities.MEDIUM.length} medium priority ${category} issues`,
+        priority: 'MEDIUM',title: `Medium priority ${category} improvements`,description: `Found ${priorities.MEDIUM.length} medium priority ${category} issues`,
         actions: priorities.MEDIUM.map(imp => imp.improvement),
         estimatedTime: '4-8 hours',
         impact: 'Low - affects code quality and developer experience',
@@ -642,8 +549,7 @@ class AICodeQualityEnhancer {
           appliedFixes.push(fix);
         }
       } catch (error) {
-        this.log(
-          `Failed to apply fix for ${fix.file}: ${error.message}`,
+        this.log(Failed to apply fix for ${fix.file}: ${error.message}',
           'ERROR'
         );
       }
@@ -672,8 +578,7 @@ class AICodeQualityEnhancer {
 
       if (newContent !== content) {
         fs.writeFileSync(improvement.file, newContent);
-        this.log(
-          `Applied fix to ${improvement.file}: ${improvement.improvement}`,
+        this.log(Applied fix to ${improvement.file}: ${improvement.improvement}',
           'INFO'
         );
         return true;
@@ -681,8 +586,7 @@ class AICodeQualityEnhancer {
 
       return false;
     } catch (error) {
-      this.log(
-        `Error applying fix to ${improvement.file}: ${error.message}`,
+      this.log(Error applying fix to ${improvement.file}: ${error.message}',
         'ERROR'
       );
       return false;
@@ -722,8 +626,7 @@ class AICodeQualityEnhancer {
     // Save patterns data
     fs.writeFileSync(this.patternsLog, JSON.stringify(patterns, null, 2));
 
-    this.log(
-      `Quality report generated: ${improvements.length} improvements, ${recommendations.length} recommendations`
+    this.log(Quality report generated: ${improvements.length} improvements, ${recommendations.length} recommendations'
     );
   }
 
@@ -741,16 +644,12 @@ class AICodeQualityEnhancer {
       // Stage all changes
       execSync('git add .', { cwd: this.projectRoot, stdio: 'pipe' });
 
-      // Commit with descriptive message
-      const commitMessage = `🤖 AI Code Quality Improvements: ${appliedFixes.length} automatic fixes applied`;
-      execSync(`git commit -m "${commitMessage}"`, {
+      // Commit with descriptive messageconst commitMessage = `🤖 AI Code Quality Improvements: ${appliedFixes.length} automatic fixes applied`;execSync(`git commit -m "${commitMessage}"`, {
         cwd: this.projectRoot,
         stdio: 'pipe',
       });
-
-      this.log(`Committed ${appliedFixes.length} AI improvements`, 'INFO');
-    } catch (error) {
-      this.log(`Failed to commit improvements: ${error.message}`, 'ERROR');
+this.log(`Committed ${appliedFixes.length} AI improvements`, 'INFO');
+    } catch (error) {this.log(`Failed to commit improvements: ${error.message}`, 'ERROR');
     }
   }
 
@@ -762,11 +661,11 @@ class AICodeQualityEnhancer {
     const items = fs.readdirSync(dir);
 
     for (const item of items) {
-      const fullPath = path.join(dir, item);
+      const fullPath = path.join(dir, 'item);
       const stat = fs.statSync(fullPath);
 
       if (stat.isDirectory()) {
-        files.push(...this.getAllFiles(fullPath, extensions));
+        files.push(...this.getAllFiles(fullPath', extensions));
       } else if (stat.isFile()) {
         const ext = path.extname(item);
         if (extensions.includes(ext)) {
@@ -782,8 +681,7 @@ class AICodeQualityEnhancer {
     try {
       await this.analyzeCodeQuality();
       this.log('🤖 AI Code Quality Enhancement completed successfully');
-    } catch (error) {
-      this.log(`AI Code Quality Enhancement failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`AI Code Quality Enhancement failed: ${error.message}`, 'ERROR');
     }
   }
 }

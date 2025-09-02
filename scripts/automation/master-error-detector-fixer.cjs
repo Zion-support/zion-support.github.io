@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Master Error Detector & Fixer
@@ -17,8 +17,8 @@ const appendFile = promisify(fs.appendFile);
 class MasterErrorDetectorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logDir = path.join(this.projectRoot, 'automation/logs');
-    this.reportsDir = path.join(this.projectRoot, 'automation/reports');
+    this.logDir = path.join(this.projectRoot, '''automation/logs'');
+    this.reportsDir = path.join(this.projectRoot, ''automation/reports''');
     this.errors = [];
     this.fixes = [];
     this.startTime = new Date();
@@ -26,13 +26,12 @@ class MasterErrorDetectorFixer {
     // Ensure directories exist
     this.ensureDirectories();
     
-    console.log('🚀 Master Error Detector & Fixer Started');
-    console.log(`📁 Project Root: ${this.projectRoot}`);
-    console.log(`📊 Log Directory: ${this.logDir}`);
+    console.log(`'🚀 Master Error Detector & Fixer Started');
+    console.log(`📁 Project Root: ${this.projectRoot});console.log(📊 Log Directory: ${this.logDir}``);
   }
 
   ensureDirectories() {
-    [this.logDir, this.reportsDir].forEach(dir => {
+    ['this.logDir', 'this.reportsDir'].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -40,9 +39,8 @@ class MasterErrorDetectorFixer {
   }
 
   async log(message, type = 'INFO') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type}] ${message}`;
-    console.log(logMessage);
+    const timestamp = new Date().toISOString();const logMessage = `[${timestamp}] [${type}] ${message}`;
+    console.log(`logMessage);
     
     const logFile = path.join(this.logDir, 'master-error-detector.log');
     await appendFile(logFile, logMessage + '\n');
@@ -79,8 +77,7 @@ class MasterErrorDetectorFixer {
         details: errors,
         severity: 'high'
       });
-      
-      await this.log(`❌ Found ${errors.length} TypeScript errors`, 'ERROR');
+      await this.log(❌ Found ${errors.length} TypeScript errors, 'ERROR'`);
       return errors;
     }
     
@@ -132,7 +129,6 @@ class MasterErrorDetectorFixer {
         details: errors,
         severity: 'medium'
       });
-      
       await this.log(`❌ Found ${errors.length} ESLint errors`, 'ERROR');
       return errors;
     }
@@ -175,7 +171,6 @@ class MasterErrorDetectorFixer {
         details: errors,
         severity: 'critical'
       });
-      
       await this.log(`❌ Found ${errors.length} build errors`, 'ERROR');
       return errors;
     }
@@ -218,7 +213,6 @@ class MasterErrorDetectorFixer {
             details: audit,
             severity: 'high'
           });
-          
           await this.log(`⚠️ Found ${totalVulnerabilities} security vulnerabilities`, 'WARN');
           return audit;
         }
@@ -240,8 +234,7 @@ class MasterErrorDetectorFixer {
     for (const error of typescriptErrors.details) {
       try {
         await this.fixTypeScriptError(error);
-      } catch (e) {
-        await this.log(`Failed to fix TypeScript error in ${error.file}: ${e.message}`, 'ERROR');
+      } catch (e) {await this.log(`Failed to fix TypeScript error in ${error.file}: ${e.message}`, 'ERROR');
       }
     }
   }
@@ -260,15 +253,13 @@ class MasterErrorDetectorFixer {
         // Add proper type annotation or fix import
         if (lines[lineIndex].includes('import')) {
           // Fix import statement
-          lines[lineIndex] = lines[lineIndex].replace(/from ['"]\.\/pages\/([^'"]+)['"]/, (match, pageName) => {
-            return `from './pages/${pageName}.tsx'`;
+          lines[lineIndex] = lines[lineIndex].replace(/from ['"]\.\/pages\/([^'"]+)['"]/, (match, pageName) => {return `from './pages/${pageName}.tsx'`;
           });
         }
       }
     }
     
-    await writeFile(error.file, lines.join('\n'));
-    await this.log(`Fixed TypeScript error in ${error.file}`);
+    await writeFile(error.file, lines.join('\n'));await this.log(`Fixed TypeScript error in ${error.file}`);
   }
 
   async fixLintingErrors() {
@@ -299,14 +290,12 @@ class MasterErrorDetectorFixer {
 
   async fixServicesPageError() {
     // Fix the ServicesPage import error
-    const appFile = path.join(this.projectRoot, 'src/App.tsx');
+    const appFile = path.join(this.projectRoot, ''src/App.tsx'');
     if (fs.existsSync(appFile)) {
       let content = await readFile(appFile, 'utf8');
       
       // Fix the ServicesPage import
-      content = content.replace(
-        /const ServicesPage = lazy\(\(\) => import\('\.\/pages\/ServicesPage'\)\.then\(module => \(\{ default: module\.ServicesPage \}\)\)\);/,
-        `const ServicesPage = lazy(() => import('./pages/ServicesPage').then(module => ({ default: module.default })));`
+      content = content.replace(/const ServicesPage = lazy\(\(\) => import\('\.\/pages\/ServicesPage'\)\.then\(module => \(\{ default: module\.ServicesPage \}\)\)\);/,const ServicesPage = lazy(() => import('./''pages/ServicesPage''').then(module => ({ default: module.default })));`
       );
       
       await writeFile(appFile, content);
@@ -346,9 +335,8 @@ class MasterErrorDetectorFixer {
       }
     };
     
-    const reportFile = path.join(this.reportsDir, `error-report-${Date.now()}.json`);
-    await writeFile(reportFile, JSON.stringify(report, null, 2));
-    
+    const reportFile = path.join(this.reportsDir, '`error-report-${Date.now()}.json`);
+    await writeFile(reportFile', JSON.stringify(report, null, 2));
     await this.log(`📊 Report generated: ${reportFile}`);
     return report;
   }
@@ -371,29 +359,22 @@ class MasterErrorDetectorFixer {
       
       // Generate report
       const report = await this.generateReport();
-      
-      await this.log(`✅ Error detection and fixing completed!`);
-      await this.log(`📊 Total errors found: ${report.totalErrors}`);
-      await this.log(`🔧 Errors fixed: ${this.fixes.length}`);
+      await this.log(`✅ Error detection and fixing completed!`);await this.log(`📊 Total errors found: ${report.totalErrors}`);await this.log(`🔧 Errors fixed: ${this.fixes.length}`);
       
       return report;
       
-    } catch (error) {
-      await this.log(`❌ Error in master error detector: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`❌ Error in master error detector: ${error.message}`, 'ERROR');
       throw error;
     }
   }
 
-  async runContinuous(interval = 300000) { // 5 minutes default
-    await this.log(`🔄 Starting continuous error detection (interval: ${interval}ms)`);
+  async runContinuous(interval = 300000) { // 5 minutes defaultawait this.log(`🔄 Starting continuous error detection (interval: ${interval}ms)`);
     
     while (true) {
       try {
-        await this.run();
-        await this.log(`⏰ Waiting ${interval}ms before next check...`);
+        await this.run();await this.log(`⏰ Waiting ${interval}ms before next check...`);
         await new Promise(resolve => setTimeout(resolve, interval));
-      } catch (error) {
-        await this.log(`❌ Error in continuous run: ${error.message}`, 'ERROR');
+      } catch (error) {await this.log(`❌ Error in continuous run: ${error.message}`, 'ERROR');
         await new Promise(resolve => setTimeout(resolve, 60000)); // Wait 1 minute on error
       }
     }

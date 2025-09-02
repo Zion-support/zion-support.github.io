@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs').promises;
@@ -7,7 +7,7 @@ const path = require('path');
 class BuildErrorFixer {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'automation/logs/build-error-fixer.log');
+    this.logFile = path.join(this.projectRoot, ''automation/logs/build-error-fixer.log'');
     this.fixesApplied = [];
     this.startTime = new Date();
   }
@@ -15,7 +15,7 @@ class BuildErrorFixer {
   async log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
+    console.log(`logMessage);
     await fs.appendFile(this.logFile, logMessage + '\n');
   }
 
@@ -68,8 +68,7 @@ class BuildErrorFixer {
         nextConfig = await fs.readFile(nextConfigPath, 'utf8');
       }
       
-      // Create or update Next.js config
-      const fixedConfig = `/** @type {import('next').NextConfig} */
+      // Create or update Next.js configconst fixedConfig = /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -88,17 +87,16 @@ const nextConfig = {
   }
 };
 
-module.exports = nextConfig;`;
+module.exports = nextConfig;;
       
-      await fs.writeFile(nextConfigPath, fixedConfig);
+      await fs.writeFile(nextConfigPath, fixedConfig`);
       await this.log('✅ Next.js configuration fixed');
       this.fixesApplied.push({
         type: 'next-config-fix',
         file: 'next.config.js',
         timestamp: new Date().toISOString()
       });
-    } catch (error) {
-      await this.log(`❌ Error fixing Next.js config: ${error.message}`);
+    } catch (error) {await this.log(`❌ Error fixing Next.js config: ${error.message}`);
     }
   }
 
@@ -144,8 +142,7 @@ module.exports = nextConfig;`;
         file: 'tsconfig.json',
         timestamp: new Date().toISOString()
       });
-    } catch (error) {
-      await this.log(`❌ Error fixing TypeScript config: ${error.message}`);
+    } catch (error) {await this.log(`❌ Error fixing TypeScript config: ${error.message}`);
     }
   }
 
@@ -166,8 +163,7 @@ module.exports = nextConfig;`;
         dev: 'next dev',
         build: 'next build',
         start: 'next start',
-        lint: 'next lint',
-        'type-check': 'tsc --noEmit'
+        lint: 'next lint',type-check': 'tsc --noEmit'
       };
       
       await fs.writeFile(packageJsonPath, JSON.stringify(packageJson, null, 2));
@@ -177,8 +173,7 @@ module.exports = nextConfig;`;
         file: 'package.json',
         timestamp: new Date().toISOString()
       });
-    } catch (error) {
-      await this.log(`❌ Error fixing package.json: ${error.message}`);
+    } catch (error) {await this.log(`❌ Error fixing package.json: ${error.message}`);
     }
   }
 
@@ -194,8 +189,7 @@ module.exports = nextConfig;`;
         timestamp: new Date().toISOString()
       });
     } else {
-      await this.log('❌ Build test failed');
-      await this.log(`Build error: ${buildResult.output}`);
+      await this.log('❌ Build test failed');await this.log(`Build error: ${buildResult.output}`);
     }
   }
 
@@ -211,9 +205,7 @@ module.exports = nextConfig;`;
       
       const endTime = new Date();
       const duration = endTime - this.startTime;
-      
-      await this.log(`✅ Build Error Fixer completed in ${duration.getTime()}ms`);
-      await this.log(`📈 Fixes applied: ${this.fixesApplied.length}`);
+      await this.log(`✅ Build Error Fixer completed in ${duration.getTime()}ms`);await this.log(`📈 Fixes applied: ${this.fixesApplied.length}`);
       
       return {
         success: true,
@@ -221,8 +213,7 @@ module.exports = nextConfig;`;
         duration: duration.getTime()
       };
       
-    } catch (error) {
-      await this.log(`❌ Build Error Fixer failed: ${error.message}`);
+    } catch (error) {await this.log(`❌ Build Error Fixer failed: ${error.message}`);
       throw error;
     }
   }

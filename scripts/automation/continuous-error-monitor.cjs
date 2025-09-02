@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -16,15 +16,14 @@ class ContinuousErrorMonitor {
   }
 
   log(message) {
-    console.log(
-      `[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}`
+    console.log(`[${new Date().toISOString()}] [ContinuousErrorMonitor] ${message}'
     );
   }
 
   async start() {
     this.log(
-      `Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals`
-    );
+      Starting continuous error monitoring with ${this.automationInterval / 1000 / 60} minute intervals
+    `);
 
     // Run initial check
     await this.runErrorFixer();
@@ -46,15 +45,13 @@ class ContinuousErrorMonitor {
     this.isRunning = true;
     this.runCount++;
 
-    try {
-      this.log(`Running error fixer (run #${this.runCount})`);
+    try {this.log(`Running error fixer (run #${this.runCount})');
 
       // Run the comprehensive error fixer
       const result = await this.executeErrorFixer();
 
       if (result.success) {
-        this.log(
-          `Error fixer completed successfully. Applied ${result.fixesApplied} fixes.`
+        this.log(Error fixer completed successfully. Applied ${result.fixesApplied} fixes.'
         );
         this.lastRun = new Date();
       } else {
@@ -62,8 +59,7 @@ class ContinuousErrorMonitor {
         this.log(`Error fixer failed: ${result.error}`);
       }
     } catch (error) {
-      this.errorCount++;
-      this.log(`Error during error fixer execution: ${error.message}`);
+      this.errorCount++;this.log(`Error during error fixer execution: ${error.message}');
     } finally {
       this.isRunning = false;
     }
@@ -72,10 +68,8 @@ class ContinuousErrorMonitor {
   async executeErrorFixer() {
     return new Promise(resolve => {
       const errorFixerPath = path.join(
-        this.projectRoot,
-        'scripts',
-        'automation',
-        'comprehensive-error-fixer.cjs'
+        this.projectRoot,scripts',
+        'automation',comprehensive-error-fixer.cjs'
       );
 
       const child = spawn('node', [errorFixerPath], {
@@ -145,8 +139,7 @@ class ContinuousErrorMonitor {
     };
 
     const reportPath = path.join(
-      this.projectRoot,
-      'error-reports',
+      this.projectRoot,error-reports',
       'continuous-monitor-status.json'
     );
 
@@ -156,8 +149,7 @@ class ContinuousErrorMonitor {
       fs.mkdirSync(dir, { recursive: true });
     }
 
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    this.log(`Status report saved to: ${reportPath}`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));this.log(`Status report saved to: ${reportPath}`);
   }
 
   // Generate status report every hour

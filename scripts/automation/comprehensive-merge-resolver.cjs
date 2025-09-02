@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -19,7 +19,7 @@ class ComprehensiveMergeResolver {
   }
 
   ensureDirectories() {
-    [this.logsDir, this.backupsDir].forEach(dir => {
+    ['this.logsDir', 'this.backupsDir'].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -29,7 +29,7 @@ class ComprehensiveMergeResolver {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log(logEntry);
+    console.log(`logEntry);
 
     // Write to log file
     const logFile = path.join(this.logsDir, 'merge-resolver.log');
@@ -44,8 +44,7 @@ class ComprehensiveMergeResolver {
       await this.ensureMainBranch();
 
       // Step 2: Get all remote branches
-      const branches = await this.getRemoteBranches();
-      this.log(`Found ${branches.length} remote branches to process`);
+      const branches = await this.getRemoteBranches();this.log(Found ${branches.length} remote branches to process`);
 
       // Step 3: Process each branch
       for (const branch of branches) {
@@ -54,8 +53,7 @@ class ComprehensiveMergeResolver {
 
       // Step 4: Final cleanup and summary
       await this.finalizeMerges();
-    } catch (error) {
-      this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
       this.mergeStats.errors++;
     }
 
@@ -71,16 +69,14 @@ class ComprehensiveMergeResolver {
         encoding: 'utf8',
       }).trim();
 
-      if (currentBranch !== 'main') {
-        this.log(`Switching from ${currentBranch} to main...`);
+      if (currentBranch !== 'main') {this.log(`Switching from ${currentBranch} to main...`);
         execSync('git checkout main', { stdio: 'inherit' });
       }
 
       // Pull latest changes
       this.log('Pulling latest changes from main...');
       execSync('git pull origin main', { stdio: 'inherit' });
-    } catch (error) {
-      throw new Error(`Failed to ensure main branch: ${error.message}`);
+    } catch (error) {throw new Error(`Failed to ensure main branch: ${error.message}`);
     }
   }
 
@@ -100,16 +96,13 @@ class ComprehensiveMergeResolver {
           line => line && !line.includes('HEAD') && !line.includes('main')
         )
         .map(line => line.replace('origin/', ''));
-
-      this.log(`Found ${branches.length} remote branches`);
+this.log(`Found ${branches.length} remote branches`);
       return branches;
-    } catch (error) {
-      throw new Error(`Failed to get remote branches: ${error.message}`);
+    } catch (error) {throw new Error(`Failed to get remote branches: ${error.message}`);
     }
   }
 
-  async processBranch(branchName) {
-    this.log(`🔄 Processing branch: ${branchName}`);
+  async processBranch(branchName) {this.log(`🔄 Processing branch: ${branchName}`);
     this.mergeStats.branchesProcessed++;
 
     try {
@@ -120,14 +113,11 @@ class ComprehensiveMergeResolver {
       const mergeResult = await this.attemptMerge(branchName);
 
       if (mergeResult.success) {
-        this.mergeStats.mergesSuccessful++;
-        this.log(`✅ Successfully merged ${branchName}`);
-      } else {
-        this.log(`⚠️ Merge failed for ${branchName}: ${mergeResult.error}`);
+        this.mergeStats.mergesSuccessful++;this.log(`✅ Successfully merged ${branchName}`);
+      } else {this.log(`⚠️ Merge failed for ${branchName}: ${mergeResult.error}');
       }
     } catch (error) {
-      this.log(
-        `❌ Error processing branch ${branchName}: ${error.message}`,
+      this.log(❌ Error processing branch ${branchName}: ${error.message}',
         'ERROR'
       );
       this.mergeStats.errors++;
@@ -136,15 +126,12 @@ class ComprehensiveMergeResolver {
 
   async createBackup(branchName) {
     const backupName = `backup-${branchName}-${Date.now()}`;
-    const backupPath = path.join(this.backupsDir, backupName);
+    const backupPath = path.join(this.backupsDir, 'backupName);
 
     try {
-      // Create backup of current working directory
-      execSync(`cp -r . ${backupPath}`, { stdio: 'pipe' });
-      this.log(`📦 Created backup: ${backupName}`);
+      // Create backup of current working directoryexecSync(`cp -r . ${backupPath}`', { stdio: 'pipe' });this.log(`📦 Created backup: ${backupName}');
     } catch (error) {
-      this.log(
-        `⚠️ Failed to create backup for ${branchName}: ${error.message}`,
+      this.log(⚠️ Failed to create backup for ${branchName}: ${error.message}',
         'WARN'
       );
     }
@@ -154,8 +141,7 @@ class ComprehensiveMergeResolver {
     try {
       this.log(`🔄 Attempting to merge ${branchName} into main...`);
 
-      // Try to merge the branch
-      execSync(`git merge origin/${branchName} --no-edit`, {
+      // Try to merge the branchexecSync(`git merge origin/${branchName} --no-edit`, {
         stdio: 'pipe',
         timeout: 300000, // 5 minutes timeout
       });
@@ -164,8 +150,7 @@ class ComprehensiveMergeResolver {
     } catch (error) {
       // Check if there are merge conflicts
       if (error.status === 1) {
-        this.log(
-          `⚠️ Merge conflicts detected in ${branchName}, attempting to resolve...`
+        this.log(⚠️ Merge conflicts detected in ${branchName}, attempting to resolve...'
         );
         return await this.resolveMergeConflicts(branchName);
       } else {
@@ -178,8 +163,7 @@ class ComprehensiveMergeResolver {
     try {
       // Get list of conflicted files
       const conflictedFiles = this.getConflictedFiles();
-      this.log(
-        `Found ${conflictedFiles.length} conflicted files in ${branchName}`
+      this.log( `Found ${conflictedFiles.length} conflicted files in ${branchName}`
       );
 
       if (conflictedFiles.length === 0) {
@@ -205,13 +189,11 @@ class ComprehensiveMergeResolver {
       // If resolution fails, abort the merge
       try {
         execSync('git merge --abort', { stdio: 'pipe' });
-      } catch (abortError) {
-        this.log(`⚠️ Failed to abort merge: ${abortError.message}`, 'WARN');
+      } catch (abortError) {this.log(`⚠️ Failed to abort merge: ${abortError.message}`, 'WARN');
       }
 
       return {
-        success: false,
-        error: `Failed to resolve conflicts: ${error.message}`,
+        success: false,error: `Failed to resolve conflicts: ${error.message}`,
       };
     }
   }
@@ -235,8 +217,7 @@ class ComprehensiveMergeResolver {
     }
   }
 
-  async resolveFileConflicts(filePath) {
-    this.log(`🔧 Resolving conflicts in: ${filePath}`);
+  async resolveFileConflicts(filePath) {this.log(`🔧 Resolving conflicts in: ${filePath}`);
 
     try {
       const content = fs.readFileSync(filePath, 'utf8');
@@ -258,11 +239,9 @@ class ComprehensiveMergeResolver {
 
       // Write resolved content
       fs.writeFileSync(filePath, resolvedContent);
-
-      this.log(`✅ Resolved conflicts in: ${filePath}`);
+this.log(`✅ Resolved conflicts in: ${filePath}');
     } catch (error) {
-      this.log(
-        `❌ Failed to resolve conflicts in ${filePath}: ${error.message}`,
+      this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}',
         'ERROR'
       );
       throw error;
@@ -397,14 +376,8 @@ class ComprehensiveMergeResolver {
     const reportPath = path.join(this.logsDir, 'merge-resolution-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log('📋 Merge Resolution Summary:');
-    this.log(`   Branches Processed: ${report.summary.branchesProcessed}`);
-    this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);
-    this.log(`   Successful Merges: ${report.summary.mergesSuccessful}`);
-    this.log(`   Errors: ${report.summary.errors}`);
-    this.log(`   Success Rate: ${report.successRate}%`);
-
-    this.log(`📄 Detailed report saved to: ${reportPath}`);
+    this.log('📋 Merge Resolution Summary:');this.log(`   Branches Processed: ${report.summary.branchesProcessed}`);this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);this.log(`   Successful Merges: ${report.summary.mergesSuccessful}`);this.log(`   Errors: ${report.summary.errors}`);this.log(`   Success Rate: ${report.successRate}%`);
+this.log(`📄 Detailed report saved to: ${reportPath}`);
   }
 }
 

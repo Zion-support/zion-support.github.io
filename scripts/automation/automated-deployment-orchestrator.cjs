@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Automated Deployment Orchestrator
@@ -33,7 +33,7 @@ const CONFIG = {
     development: {
       name: 'development',
       branch: 'develop',
-      path: '/workspace/development',
+      path: '/''workspace/development''',
       autoDeploy: true,
       healthChecks: ['build', 'test', 'lint'],
       rollbackThreshold: 2
@@ -41,7 +41,7 @@ const CONFIG = {
     staging: {
       name: 'staging',
       branch: 'staging',
-      path: '/workspace/staging',
+      path: '/''workspace/staging''',
       autoDeploy: true,
       healthChecks: ['build', 'test', 'lint', 'type-check'],
       rollbackThreshold: 1
@@ -49,7 +49,7 @@ const CONFIG = {
     production: {
       name: 'production',
       branch: 'main',
-      path: '/workspace/production',
+      path: '/''workspace/production''',
       autoDeploy: false, // Manual approval required
       healthChecks: ['build', 'test', 'lint', 'type-check', 'security-scan'],
       rollbackThreshold: 0
@@ -72,13 +72,11 @@ const CONFIG = {
       command: 'npm run lint',
       timeout: 60000, // 1 minute
       retries: 1
-    },
-    'type-check': {
+    },type-check': {
       command: 'npm run type-check',
       timeout: 120000, // 2 minutes
       retries: 1
-    },
-    'security-scan': {
+    },security-scan': {
       command: 'npm audit',
       timeout: 120000, // 2 minutes
       retries: 1
@@ -97,7 +95,7 @@ const CONFIG = {
 const log = (message, level = 'INFO') => {
   const timestamp = new Date().toISOString();
   const logMessage = `[${timestamp}] [${level}] ${message}`;
-  console.log(logMessage);
+  console.log(`logMessage);
   
   // Ensure log directory exists
   if (!fs.existsSync(CONFIG.LOG_DIR)) {
@@ -122,12 +120,10 @@ const executeCommand = (command, options = {}) => {
   }
 };
 
-const gitCommand = (command, options = {}) => {
-  return executeCommand(`git ${command}`, options);
+const gitCommand = (command, options = {}) => {return executeCommand(git ${command}, options`);
 };
 
-const npmCommand = (command, options = {}) => {
-  return executeCommand(`npm ${command}`, options);
+const npmCommand = (command, options = {}) => {return executeCommand(`npm ${command}`, options);
 };
 
 // Deployment State Management
@@ -142,8 +138,7 @@ class DeploymentState {
       if (fs.existsSync(this.stateFile)) {
         return JSON.parse(fs.readFileSync(this.stateFile, 'utf8'));
       }
-    } catch (error) {
-      log(`Failed to load deployment state: ${error.message}`, 'ERROR');
+    } catch (error) {log(`Failed to load deployment state: ${error.message}`, 'ERROR');
     }
     
     return {
@@ -158,8 +153,7 @@ class DeploymentState {
     try {
       this.state.lastUpdated = new Date().toISOString();
       fs.writeFileSync(this.stateFile, JSON.stringify(this.state, null, 2));
-    } catch (error) {
-      log(`Failed to save deployment state: ${error.message}`, 'ERROR');
+    } catch (error) {log(`Failed to save deployment state: ${error.message}`, 'ERROR');
     }
   }
   
@@ -193,8 +187,7 @@ class HealthCheckSystem {
     this.healthChecks = CONFIG.HEALTH_CHECKS;
   }
   
-  async runHealthChecks(environment) {
-    log(`Running health checks for ${environment.name} environment`);
+  async runHealthChecks(environment) {log(`Running health checks for ${environment.name} environment`);
     
     const results = {
       environment: environment.name,
@@ -208,11 +201,9 @@ class HealthCheckSystem {
     
     for (const checkName of requiredChecks) {
       const checkConfig = this.healthChecks[checkName];
-      if (!checkConfig) {
-        log(`Health check configuration not found for: ${checkName}`, 'WARN');
+      if (!checkConfig) {log(`Health check configuration not found for: ${checkName}`, 'WARN');
         continue;
       }
-      
       log(`Running health check: ${checkName}`);
       const checkResult = await this.runHealthCheck(checkName, checkConfig);
       
@@ -227,7 +218,6 @@ class HealthCheckSystem {
     // Calculate overall score
     results.overall.score = Math.round((passedChecks / results.overall.totalChecks) * 100);
     results.overall.passed = results.overall.score >= 80; // 80% threshold
-    
     log(`Health checks completed for ${environment.name}. Score: ${results.overall.score}%`);
     
     return results;
@@ -247,8 +237,7 @@ class HealthCheckSystem {
     const startTime = Date.now();
     
     for (let attempt = 0; attempt <= checkConfig.retries; attempt++) {
-      try {
-        log(`Running ${checkName} (attempt ${attempt + 1}/${checkConfig.retries + 1})`);
+      try {log(`Running ${checkName} (attempt ${attempt + 1}/${checkConfig.retries + 1})`);
         
         const checkResult = executeCommand(checkConfig.command, { 
           silent: true, 
@@ -259,30 +248,25 @@ class HealthCheckSystem {
           result.passed = true;
           result.output = checkResult.output;
           result.duration = Date.now() - startTime;
-          result.retries = attempt;
-          log(`Health check ${checkName} passed on attempt ${attempt + 1}`);
+          result.retries = attempt;log(`Health check ${checkName} passed on attempt ${attempt + 1}`);
           break;
         } else {
           result.error = checkResult.error;
           result.output = checkResult.output;
           result.retries = attempt;
           
-          if (attempt < checkConfig.retries) {
-            log(`Health check ${checkName} failed on attempt ${attempt + 1}, retrying...`, 'WARN');
+          if (attempt < checkConfig.retries) {log(`Health check ${checkName} failed on attempt ${attempt + 1}, retrying...`, 'WARN');
             await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds before retry
-          } else {
-            log(`Health check ${checkName} failed after ${checkConfig.retries + 1} attempts`, 'ERROR');
+          } else {log(`Health check ${checkName} failed after ${checkConfig.retries + 1} attempts`, 'ERROR');
           }
         }
       } catch (error) {
         result.error = error.message;
         result.retries = attempt;
         
-        if (attempt < checkConfig.retries) {
-          log(`Health check ${checkName} error on attempt ${attempt + 1}, retrying...`, 'WARN');
+        if (attempt < checkConfig.retries) {log(`Health check ${checkName} error on attempt ${attempt + 1}, retrying...`, 'WARN');
           await new Promise(resolve => setTimeout(resolve, 2000));
-        } else {
-          log(`Health check ${checkName} error after ${checkConfig.retries + 1} attempts`, 'ERROR');
+        } else {log(`Health check ${checkName} error after ${checkConfig.retries + 1} attempts`, 'ERROR');
         }
       }
     }
@@ -301,15 +285,12 @@ class DeploymentSystem {
   
   async deploy(environmentName, options = {}) {
     const environment = CONFIG.ENVIRONMENTS[environmentName];
-    if (!environment) {
-      throw new Error(`Unknown environment: ${environmentName}`);
+    if (!environment) {throw new Error(`Unknown environment: ${environmentName}`);
     }
-    
     log(`Starting deployment to ${environment.name} environment`);
     
     // Check if auto-deploy is enabled
-    if (!environment.autoDeploy && !options.force) {
-      log(`Auto-deploy is disabled for ${environment.name}. Manual approval required.`, 'WARN');
+    if (!environment.autoDeploy && !options.force) {log(`Auto-deploy is disabled for ${environment.name}. Manual approval required.`, 'WARN');
       return {
         success: false,
         error: 'Auto-deploy disabled for this environment',
@@ -322,8 +303,7 @@ class DeploymentSystem {
       log('Running pre-deployment health checks');
       const preDeploymentHealth = await this.healthChecker.runHealthChecks(environment);
       
-      if (!preDeploymentHealth.overall.passed) {
-        log(`Pre-deployment health checks failed. Score: ${preDeploymentHealth.overall.score}%`, 'ERROR');
+      if (!preDeploymentHealth.overall.passed) {log(`Pre-deployment health checks failed. Score: ${preDeploymentHealth.overall.score}%`, 'ERROR');
         return {
           success: false,
           error: 'Pre-deployment health checks failed',
@@ -359,8 +339,7 @@ class DeploymentSystem {
         log('Running post-deployment health checks');
         const postDeploymentHealth = await this.healthChecker.runHealthChecks(environment);
         
-        if (!postDeploymentHealth.overall.passed) {
-          log(`Post-deployment health checks failed. Score: ${postDeploymentHealth.overall.score}%`, 'WARN');
+        if (!postDeploymentHealth.overall.passed) {log(`Post-deployment health checks failed. Score: ${postDeploymentHealth.overall.score}%`, 'WARN');
           
           // Consider automatic rollback
           if (this.shouldAutoRollback(environment, postDeploymentHealth)) {
@@ -375,12 +354,10 @@ class DeploymentSystem {
         deployment.postDeploymentHealth = postDeploymentHealth;
         this.state.saveState();
       }
-      
       log(`Deployment to ${environment.name} ${deploymentResult.success ? 'completed successfully' : 'failed'}`);
       return deploymentResult;
       
-    } catch (error) {
-      log(`Deployment to ${environment.name} failed: ${error.message}`, 'ERROR');
+    } catch (error) {log(`Deployment to ${environment.name} failed: ${error.message}`, 'ERROR');
       
       // Update deployment record
       if (deployment) {
@@ -398,8 +375,7 @@ class DeploymentSystem {
   }
   
   async executeDeployment(environment, deployment) {
-    try {
-      log(`Executing deployment to ${environment.name}`);
+    try {log(`Executing deployment to ${environment.name}`);
       
       // Step 1: Update source code
       log('Step 1: Updating source code');
@@ -445,8 +421,7 @@ class DeploymentSystem {
         deploymentId: deployment.id
       };
       
-    } catch (error) {
-      log(`Deployment execution failed: ${error.message}`, 'ERROR');
+    } catch (error) {log(`Deployment execution failed: ${error.message}`, 'ERROR');
       return {
         success: false,
         error: error.message
@@ -455,35 +430,29 @@ class DeploymentSystem {
   }
   
   async updateSourceCode(environment) {
-    try {
-      log(`Updating source code from ${environment.branch} branch`);
+    try {log(`Updating source code from ${environment.branch} branch`);
       
       // Fetch latest changes
       const fetchResult = gitCommand('fetch origin', { silent: true });
       if (!fetchResult.success) {
         return {
-          success: false,
-          error: `Failed to fetch from origin: ${fetchResult.error}`,
+          success: false,error: `Failed to fetch from origin: ${fetchResult.error}`,
           step: 'fetch'
         };
       }
       
-      // Checkout target branch
-      const checkoutResult = gitCommand(`checkout ${environment.branch}`, { silent: true });
+      // Checkout target branchconst checkoutResult = gitCommand(`checkout ${environment.branch}`, { silent: true });
       if (!checkoutResult.success) {
         return {
-          success: false,
-          error: `Failed to checkout ${environment.branch}: ${checkoutResult.error}`,
+          success: false,error: `Failed to checkout ${environment.branch}: ${checkoutResult.error}`,
           step: 'checkout'
         };
       }
       
-      // Pull latest changes
-      const pullResult = gitCommand(`pull origin ${environment.branch}`, { silent: true });
+      // Pull latest changesconst pullResult = gitCommand(`pull origin ${environment.branch}`, { silent: true });
       if (!pullResult.success) {
         return {
-          success: false,
-          error: `Failed to pull latest changes: ${pullResult.error}`,
+          success: false,error: `Failed to pull latest changes: ${pullResult.error}`,
           step: 'pull'
         };
       }
@@ -491,7 +460,6 @@ class DeploymentSystem {
       // Get current commit hash
       const commitResult = gitCommand('rev-parse HEAD', { silent: true });
       const commitHash = commitResult.success ? commitResult.output.trim() : 'unknown';
-      
       log(`Source code updated successfully. Commit: ${commitHash}`);
       
       return {
@@ -516,8 +484,7 @@ class DeploymentSystem {
       const installResult = npmCommand('install', { silent: true });
       if (!installResult.success) {
         return {
-          success: false,
-          error: `Failed to install dependencies: ${installResult.error}`,
+          success: false,error: `Failed to install dependencies: ${installResult.error}`,
           step: 'install'
         };
       }
@@ -545,8 +512,7 @@ class DeploymentSystem {
       const buildResult = npmCommand('run build', { silent: true });
       if (!buildResult.success) {
         return {
-          success: false,
-          error: `Build failed: ${buildResult.error}`,
+          success: false,error: `Build failed: ${buildResult.error}`,
           step: 'build'
         };
       }
@@ -571,22 +537,18 @@ class DeploymentSystem {
     try {
       log('Deploying with PM2');
       
-      // Check if PM2 is running
-      const pm2StatusResult = executeCommand(`${CONFIG.PM2_PATH} status`, { silent: true });
+      // Check if PM2 is runningconst pm2StatusResult = executeCommand(`${CONFIG.PM2_PATH} status`, { silent: true });
       if (!pm2StatusResult.success) {
         return {
-          success: false,
-          error: `PM2 not running: ${pm2StatusResult.error}`,
+          success: false,error: `PM2 not running: ${pm2StatusResult.error}`,
           step: 'pm2-status'
         };
       }
       
-      // Reload PM2 ecosystem
-      const reloadResult = executeCommand(`${CONFIG.PM2_PATH} reload ecosystem-intelligent-enhanced.config.cjs --env ${environment.name}`, { silent: true });
+      // Reload PM2 ecosystemconst reloadResult = executeCommand(`${CONFIG.PM2_PATH} reload ecosystem-intelligent-enhanced.config.cjs --env ${environment.name}`, { silent: true });
       if (!reloadResult.success) {
         return {
-          success: false,
-          error: `PM2 reload failed: ${reloadResult.error}`,
+          success: false,error: `PM2 reload failed: ${reloadResult.error}`,
           step: 'pm2-reload'
         };
       }
@@ -661,10 +623,8 @@ class DeploymentSystem {
   
   async rollback(environmentName, options = {}) {
     const environment = CONFIG.ENVIRONMENTS[environmentName];
-    if (!environment) {
-      throw new Error(`Unknown environment: ${environmentName}`);
+    if (!environment) {throw new Error(`Unknown environment: ${environmentName}`);
     }
-    
     log(`Initiating rollback for ${environment.name} environment`);
     
     try {
@@ -688,12 +648,10 @@ class DeploymentSystem {
       rollback.completedAt = new Date().toISOString();
       
       this.state.saveState();
-      
       log(`Rollback for ${environment.name} ${rollbackResult.success ? 'completed successfully' : 'failed'}`);
       return rollbackResult;
       
-    } catch (error) {
-      log(`Rollback for ${environment.name} failed: ${error.message}`, 'ERROR');
+    } catch (error) {log(`Rollback for ${environment.name} failed: ${error.message}`, 'ERROR');
       
       if (rollback) {
         rollback.status = 'failed';
@@ -710,8 +668,7 @@ class DeploymentSystem {
   }
   
   async executeRollback(environment, rollback) {
-    try {
-      log(`Executing rollback for ${environment.name}`);
+    try {log(`Executing rollback for ${environment.name}`);
       
       // Step 1: Revert to previous commit
       log('Step 1: Reverting to previous commit');
@@ -757,8 +714,7 @@ class DeploymentSystem {
         rollbackId: rollback.id
       };
       
-    } catch (error) {
-      log(`Rollback execution failed: ${error.message}`, 'ERROR');
+    } catch (error) {log(`Rollback execution failed: ${error.message}`, 'ERROR');
       return {
         success: false,
         error: error.message
@@ -774,8 +730,7 @@ class DeploymentSystem {
       const currentCommitResult = gitCommand('rev-parse HEAD', { silent: true });
       if (!currentCommitResult.success) {
         return {
-          success: false,
-          error: `Failed to get current commit: ${currentCommitResult.error}`,
+          success: false,error: `Failed to get current commit: ${currentCommitResult.error}`,
           step: 'get-current-commit'
         };
       }
@@ -786,24 +741,20 @@ class DeploymentSystem {
       const previousCommitResult = gitCommand('rev-parse HEAD~1', { silent: true });
       if (!previousCommitResult.success) {
         return {
-          success: false,
-          error: `Failed to get previous commit: ${previousCommitResult.error}`,
+          success: false,error: `Failed to get previous commit: ${previousCommitResult.error}`,
           step: 'get-previous-commit'
         };
       }
       
       const previousCommit = previousCommitResult.output.trim();
       
-      // Reset to previous commit
-      const resetResult = gitCommand(`reset --hard ${previousCommit}`, { silent: true });
+      // Reset to previous commitconst resetResult = gitCommand(`reset --hard ${previousCommit}`, { silent: true });
       if (!resetResult.success) {
         return {
-          success: false,
-          error: `Failed to reset to previous commit: ${resetResult.error}`,
+          success: false,error: `Failed to reset to previous commit: ${resetResult.error}`,
           step: 'reset-commit'
         };
       }
-      
       log(`Successfully reverted from ${currentCommit} to ${previousCommit}`);
       
       return {
@@ -822,12 +773,10 @@ class DeploymentSystem {
     }
   }
   
-  generateDeploymentId() {
-    return `deploy-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  generateDeploymentId() {return `deploy-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
   
-  generateRollbackId() {
-    return `rollback-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  generateRollbackId() {return `rollback-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
   
   getDeploymentStatus(environmentName) {
@@ -854,28 +803,22 @@ const main = async () => {
     // Check for deployment requests
     const deploymentRequests = await checkDeploymentRequests();
     
-    for (const request of deploymentRequests) {
-      log(`Processing deployment request for ${request.environment}`);
+    for (const request of deploymentRequests) {log(`Processing deployment request for ${request.environment}`);
       
       try {
         const result = await deploymentSystem.deploy(request.environment, request.options);
         
-        if (result.success) {
-          log(`Deployment to ${request.environment} completed successfully`);
-        } else {
-          log(`Deployment to ${request.environment} failed: ${result.error}`, 'ERROR');
+        if (result.success) {log(`Deployment to ${request.environment} completed successfully`);
+        } else {log(`Deployment to ${request.environment} failed: ${result.error}`, 'ERROR');
           
           // Consider automatic rollback
-          if (CONFIG.ROLLBACK_ENABLED && request.environment !== 'production') {
-            log(`Initiating automatic rollback for ${request.environment}`);
-            await deploymentSystem.rollback(request.environment, {
-              reason: `Automatic rollback due to failed deployment: ${result.error}`
+          if (CONFIG.ROLLBACK_ENABLED && request.environment !== 'production') {log(`Initiating automatic rollback for ${request.environment}`);
+            await deploymentSystem.rollback(request.environment, {reason: `Automatic rollback due to failed deployment: ${result.error}`
             });
           }
         }
         
-      } catch (error) {
-        log(`Error processing deployment request for ${request.environment}: ${error.message}`, 'ERROR');
+      } catch (error) {log(`Error processing deployment request for ${request.environment}: ${error.message}`, 'ERROR');
       }
     }
     
@@ -885,9 +828,7 @@ const main = async () => {
     log('Automated Deployment Orchestrator completed successfully');
     return report;
     
-  } catch (error) {
-    log(`Automated Deployment Orchestrator failed: ${error.message}`, 'ERROR');
-    log(`Stack trace: ${error.stack}`, 'ERROR');
+  } catch (error) {log(`Automated Deployment Orchestrator failed: ${error.message}`, 'ERROR');log(`Stack trace: ${error.stack}`, 'ERROR');
     throw error;
   }
 };
@@ -913,7 +854,6 @@ const generateDeploymentReport = async (deploymentSystem) => {
   // Save report
   const reportPath = path.join(CONFIG.LOG_DIR, 'deployment-report.json');
   fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-  
   log(`Deployment report generated: ${reportPath}`);
   return report;
 };
@@ -936,8 +876,7 @@ if (require.main === module) {
       log('Automated Deployment Orchestrator completed successfully');
       process.exit(0);
     })
-    .catch(error => {
-      log(`Automated Deployment Orchestrator failed: ${error.message}`, 'ERROR');
+    .catch(error => {log(`Automated Deployment Orchestrator failed: ${error.message}`, 'ERROR');
       process.exit(1);
     });
 }

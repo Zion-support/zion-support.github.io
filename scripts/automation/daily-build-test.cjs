@@ -1,10 +1,10 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-console.log('🏗️ Starting continuous build and test automation...');
+console.log(`'🏗️ Starting continuous build and test automation...');
 
 // Get automation interval from environment variable (default: 1 hour)
 const AUTOMATION_INTERVAL =
@@ -12,15 +12,15 @@ const AUTOMATION_INTERVAL =
 
 async function runDailyBuildTest() {
   try {
-    console.log(`🏗️ Running build and test at ${new Date().toISOString()}`);
+    console.log(`🏗️ Running build and test at ${new Date().toISOString()});
 
     // Install dependencies
-    console.log('📦 Installing dependencies...');
+    console.log(`'📦 Installing dependencies...');
     try {
       execSync('npm ci', { stdio: 'inherit' });
-      console.log('✅ Dependencies installed');
+      console.log('✅ Dependencies installed'`);
     } catch (error) {
-      console.log('⚠️  Dependency installation failed but continuing...');
+      console.log(`'⚠️  Dependency installation failed but continuing...');
     }
 
     // Run linting
@@ -92,8 +92,7 @@ async function runDailyBuildTest() {
     };
 
     const reportPath = path.join(process.cwd(), 'daily-build-test-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    console.log(`📊 Report saved to ${reportPath}`);
+    fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(📊 Report saved to ${reportPath});
 
     console.log('✅ Continuous build and test completed successfully');
   } catch (error) {
@@ -104,8 +103,7 @@ async function runDailyBuildTest() {
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(
-    `🚀 Starting continuous build and test with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  console.log(🚀 Starting continuous build and test with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
   );
 
   // Run initial build and test
@@ -116,9 +114,8 @@ async function runContinuous() {
     await runDailyBuildTest();
   }, AUTOMATION_INTERVAL);
 
-  console.log(
-    `✅ Continuous build and test running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
-  );
+  console.log( ✅ Continuous build and test running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+  `);
 }
 
 // Handle graceful shutdown

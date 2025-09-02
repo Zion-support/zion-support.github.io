@@ -33,8 +33,7 @@ class HealthChecker {
         name,
         status: 'fail',
         error: error.message
-      });
-      console.log(`❌ ${name}: ${error.message}`);
+      });console.log(`❌ ${name}: ${error.message}`);
       this.results.overall = 'unhealthy';
     }
   }
@@ -45,8 +44,7 @@ class HealthChecker {
       throw new Error('package.json not found');
     }
     
-    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
-    return `Package: ${packageJson.name} v${packageJson.version}`;
+    const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));return `Package: ${packageJson.name} v${packageJson.version}`;
   }
 
   async checkDependencies() {
@@ -55,7 +53,6 @@ class HealthChecker {
     
     const totalDeps = Object.keys(packageJson.dependencies || {}).length;
     const totalDevDeps = Object.keys(packageJson.devDependencies || {}).length;
-    
     return `Dependencies: ${totalDeps} prod, ${totalDevDeps} dev`;
   }
 
@@ -84,13 +81,11 @@ class HealthChecker {
     await this.runCheck('Dependencies', () => this.checkDependencies());
     await this.runCheck('TypeScript', () => this.checkTypeScript());
     await this.runCheck('Code Formatting', () => this.checkLinting());
-    
     console.log(`\n📊 Overall Status: ${this.results.overall.toUpperCase()}`);
     
     // Save results
     const reportPath = path.join(process.cwd(), 'health-check-report.json');
-    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    console.log(`📄 Report saved to: ${reportPath}`);
+    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));console.log(`📄 Report saved to: ${reportPath}`);
     
     return this.results;
   }

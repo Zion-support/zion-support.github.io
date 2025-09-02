@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -21,8 +21,7 @@ class IntelligentConflictResolver {
   setupLogging() {
     this.logFile = path.join(this.logsDir, 'intelligent-conflict-resolver.log');
     this.errorFile = path.join(
-      this.logsDir,
-      'intelligent-conflict-resolver-error.log'
+      this.logsDir,intelligent-conflict-resolver-error.log'
     );
   }
 
@@ -30,7 +29,7 @@ class IntelligentConflictResolver {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
 
-    console.log(logMessage);
+    console.log(`logMessage);
 
     // Write to log file
     fs.appendFileSync(this.logFile, logMessage + '\n');
@@ -56,17 +55,14 @@ class IntelligentConflictResolver {
         this.log('No merge conflicts detected');
         return [];
       }
-
-      this.log(`Found ${conflictFiles.length} files with merge conflicts`);
+this.log(Found ${conflictFiles.length} files with merge conflicts`);
       return conflictFiles;
-    } catch (error) {
-      this.log(`Failed to check for conflicts: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to check for conflicts: ${error.message}`, 'ERROR');
       return [];
     }
   }
 
-  async analyzeConflictFile(filePath) {
-    this.log(`Analyzing conflict in ${filePath}`);
+  async analyzeConflictFile(filePath) {this.log(`Analyzing conflict in ${filePath}`);
 
     try {
       const content = fs.readFileSync(filePath, 'utf8');
@@ -93,8 +89,7 @@ class IntelligentConflictResolver {
       }
 
       return analysis;
-    } catch (error) {
-      this.log(`Failed to analyze ${filePath}: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to analyze ${filePath}: ${error.message}`, 'ERROR');
       return { type: 'error', resolvable: false, error: error.message };
     }
   }
@@ -232,21 +227,18 @@ class IntelligentConflictResolver {
 
       switch (type) {
         case 'package-json':
-          strategies.push(
-            'Merge dependencies from both branches, keeping latest versions'
+          strategies.push(Merge dependencies from both branches, keeping latest versions'
           );
           break;
         case 'lock-file':
           strategies.push('Regenerate lock file by running npm install');
           break;
         case 'config-file':
-          strategies.push(
-            'Merge configuration options, preferring development settings'
+          strategies.push(Merge configuration options, preferring development settings'
           );
           break;
         case 'component':
-          strategies.push(
-            'Manual review required - merge component logic carefully'
+          strategies.push(Manual review required - merge component logic carefully'
           );
           break;
         case 'import':
@@ -263,8 +255,7 @@ class IntelligentConflictResolver {
     return strategies;
   }
 
-  async autoResolveConflict(filePath, analysis) {
-    this.log(`Attempting to auto-resolve conflict in ${filePath}`);
+  async autoResolveConflict(filePath, analysis) {this.log(`Attempting to auto-resolve conflict in ${filePath}`);
 
     try {
       const content = fs.readFileSync(filePath, 'utf8');
@@ -292,20 +283,17 @@ class IntelligentConflictResolver {
               marker
             );
             break;
-          default:
-            this.log(`Cannot auto-resolve ${type} conflict in ${filePath}`);
+          default:this.log(`Cannot auto-resolve ${type} conflict in ${filePath}`);
         }
       });
 
       if (resolvedContent !== content) {
-        fs.writeFileSync(filePath, resolvedContent);
-        this.log(`Auto-resolved conflict in ${filePath}`);
+        fs.writeFileSync(filePath, resolvedContent);this.log(`Auto-resolved conflict in ${filePath}`);
         return true;
       }
 
       return false;
-    } catch (error) {
-      this.log(`Failed to auto-resolve ${filePath}: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to auto-resolve ${filePath}: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -340,8 +328,7 @@ class IntelligentConflictResolver {
         this.getConflictRange(content, marker),
         JSON.stringify(merged, null, 2)
       );
-    } catch (error) {
-      this.log(`Failed to parse package.json: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to parse package.json: ${error.message}`, 'WARN');
       return content;
     }
   }
@@ -402,15 +389,12 @@ class IntelligentConflictResolver {
       };
 
       const reportPath = path.join(
-        this.projectRoot,
-        'conflict-resolution-report.json'
+        this.projectRoot,conflict-resolution-report.json'
       );
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-
-      this.log(`Conflict resolution report saved to ${reportPath}`);
+this.log(`Conflict resolution report saved to ${reportPath}`);
       return report;
-    } catch (error) {
-      this.log(`Failed to generate report: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to generate report: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -427,26 +411,22 @@ class IntelligentConflictResolver {
     const manualReview = conflicts.filter(c => !c.resolvable);
 
     if (autoResolvable.length > 0) {
-      recommendations.push(
-        `Auto-resolve ${autoResolvable.length} conflicts using intelligent resolution`
+      recommendations.push(Auto-resolve ${autoResolvable.length} conflicts using intelligent resolution'
       );
     }
 
     if (manualReview.length > 0) {
-      recommendations.push(
-        `Manually review ${manualReview.length} conflicts that require human intervention`
+      recommendations.push( `Manually review ${manualReview.length} conflicts that require human intervention`
       );
     }
 
     if (conflicts.some(c => c.type === 'lock-file')) {
-      recommendations.push(
-        'Regenerate lock files after resolving package.json conflicts'
+      recommendations.push(Regenerate lock files after resolving package.json conflicts'
       );
     }
 
     if (conflicts.some(c => c.type === 'package-json')) {
-      recommendations.push(
-        'Run npm install after resolving package.json conflicts'
+      recommendations.push(Run npm install after resolving package.json conflicts'
       );
     }
 
@@ -483,12 +463,10 @@ class IntelligentConflictResolver {
       // Generate report
       await this.generateConflictReport(conflicts);
 
-      this.log(
-        `Conflict resolution completed: ${resolvedCount}/${conflicts.length} conflicts resolved`
+      this.log(Conflict resolution completed: ${resolvedCount}/${conflicts.length} conflicts resolved'
       );
       return { resolved: resolvedCount, total: conflicts.length };
-    } catch (error) {
-      this.log(`Conflict resolution failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Conflict resolution failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -506,8 +484,7 @@ class IntelligentConflictResolver {
           try {
             await this.runConflictResolution();
           } catch (error) {
-            this.log(
-              `Periodic conflict resolution failed: ${error.message}`,
+            this.log(Periodic conflict resolution failed: ${error.message}',
               'ERROR'
             );
           }
@@ -521,8 +498,7 @@ class IntelligentConflictResolver {
       setInterval(() => {
         this.log('Conflict resolver heartbeat...');
       }, 60000); // Every minute
-    } catch (error) {
-      this.log(`Failed to start conflict resolver: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to start conflict resolver: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -543,8 +519,7 @@ if (require.main === module) {
     process.exit(0);
   });
 
-  resolver.start().catch(error => {
-    resolver.log(`Fatal error: ${error.message}`, 'ERROR');
+  resolver.start().catch(error => {resolver.log(`Fatal error: ${error.message}`, 'ERROR');
     process.exit(1);
   });
 }

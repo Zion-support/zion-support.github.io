@@ -33,59 +33,49 @@ function fixFile(filePath) {
     const unterminatedStringStartRegex = /^(['"])([^'"]*?)(?:\n|$)/;
     if (unterminatedStringStartRegex.test(content)) {
       content = content.replace(unterminatedStringStartRegex, '$1$2$1');
-      fixed = true;
-      log(`Fixed unterminated string at start in ${filePath}`, 'yellow');
+      fixed = true;log(`Fixed unterminated string at start in ${filePath}`, 'yellow');
     }
 
     // Fix 2: Fix missing semicolons after import statements
     const missingSemicolonAfterImportRegex = /(import\s+[^;]+?)(\n)/g;
     if (missingSemicolonAfterImportRegex.test(content)) {
       content = content.replace(missingSemicolonAfterImportRegex, '$1;$2');
-      fixed = true;
-      log(`Fixed missing semicolons after imports in ${filePath}`, 'yellow');
+      fixed = true;log(`Fixed missing semicolons after imports in ${filePath}`, 'yellow');
     }
 
     // Fix 3: Fix unterminated string literals in TypeScript files
     const unterminatedStringLiteralRegex = /(['"])([^'"]*?)(?:\n|$)/g;
     if (unterminatedStringLiteralRegex.test(content)) {
       content = content.replace(unterminatedStringLiteralRegex, '$1$2$1');
-      fixed = true;
-      log(`Fixed unterminated string literals in ${filePath}`, 'yellow');
+      fixed = true;log(`Fixed unterminated string literals in ${filePath}`, 'yellow');
     }
 
     // Fix 4: Fix missing semicolons in object properties
     const missingSemicolonInObjectRegex = /(\w+):\s*([^;]+?)(\n\s*\w+:)/g;
     if (missingSemicolonInObjectRegex.test(content)) {
       content = content.replace(missingSemicolonInObjectRegex, '$1: $2;$3');
-      fixed = true;
-      log(`Fixed missing semicolons in objects in ${filePath}`, 'yellow');
+      fixed = true;log(`Fixed missing semicolons in objects in ${filePath}`, 'yellow');
     }
 
     // Fix 5: Fix unterminated comments
     const unterminatedCommentRegex = /\/\*([^*]*?)(?:\n|$)/g;
     if (unterminatedCommentRegex.test(content)) {
       content = content.replace(unterminatedCommentRegex, '/*$1*/');
-      fixed = true;
-      log(`Fixed unterminated comments in ${filePath}`, 'yellow');
+      fixed = true;log(`Fixed unterminated comments in ${filePath}`, 'yellow');
     }
 
     // Fix 6: Fix missing semicolons before export statements
     const missingSemicolonBeforeExportRegex = /(\w+)\s*\nexport\s+/g;
     if (missingSemicolonBeforeExportRegex.test(content)) {
       content = content.replace(
-        missingSemicolonBeforeExportRegex,
-        '$1;\nexport '
+        missingSemicolonBeforeExportRegex,$1;\nexport '
       );
-      fixed = true;
-      log(`Fixed missing semicolon before export in ${filePath}`, 'yellow');
+      fixed = true;log(`Fixed missing semicolon before export in ${filePath}`, 'yellow');
     }
 
-    // Fix 7: Fix unterminated template literals
-    const unterminatedTemplateLiteralRegex = /`([^`]*?)(?:\n|$)/g;
-    if (unterminatedTemplateLiteralRegex.test(content)) {
-      content = content.replace(unterminatedTemplateLiteralRegex, '`$1`');
-      fixed = true;
-      log(`Fixed unterminated template literals in ${filePath}`, 'yellow');
+    // Fix 7: Fix unterminated template literalsconst unterminatedTemplateLiteralRegex = /`([^`]*?)(?:\n|$)/g;
+    if (unterminatedTemplateLiteralRegex.test(content)) {content = content.replace(unterminatedTemplateLiteralRegex, '`$1`');
+      fixed = true;log(`Fixed unterminated template literals in ${filePath}`, 'yellow');
     }
 
     // Fix 8: Fix missing semicolons in function calls
@@ -93,8 +83,7 @@ function fixFile(filePath) {
     if (missingSemicolonInFunctionCallRegex.test(content)) {
       content = content.replace(missingSemicolonInFunctionCallRegex, '$1;\n');
       fixed = true;
-      log(
-        `Fixed missing semicolons in function calls in ${filePath}`,
+      log(Fixed missing semicolons in function calls in ${filePath}',
         'yellow'
       );
     }
@@ -103,8 +92,7 @@ function fixFile(filePath) {
     const unterminatedJSXAttributeRegex = /(\w+)=["']([^"']*?)(?:\n|$)/g;
     if (unterminatedJSXAttributeRegex.test(content)) {
       content = content.replace(unterminatedJSXAttributeRegex, '$1="$2"');
-      fixed = true;
-      log(`Fixed unterminated JSX attributes in ${filePath}`, 'yellow');
+      fixed = true;log(`Fixed unterminated JSX attributes in ${filePath}`, 'yellow');
     }
 
     // Fix 10: Fix missing semicolons in variable declarations
@@ -112,13 +100,10 @@ function fixFile(filePath) {
       /(const|let|var)\s+(\w+)\s*=\s*([^;]+?)(\n)/g;
     if (missingSemicolonInVarDeclRegex.test(content)) {
       content = content.replace(
-        missingSemicolonInVarDeclRegex,
-        '$1 $2 = $3;$4'
+        missingSemicolonInVarDeclRegex,$1 $2 = $3;$4'
       );
       fixed = true;
-      log(
-        `Fixed missing semicolons in variable declarations in ${filePath}`,
-        'yellow'
+      log( `Fixed missing semicolons in variable declarations in ${filePath}',yellow'
       );
     }
 
@@ -129,8 +114,7 @@ function fixFile(filePath) {
     }
 
     return false;
-  } catch (error) {
-    log(`❌ Error fixing ${filePath}: ${error.message}`, 'red');
+  } catch (error) {log(`❌ Error fixing ${filePath}: ${error.message}`, 'red');
     return false;
   }
 }
@@ -168,8 +152,7 @@ function scanAndFixDirectory(
         }
       }
     } catch (error) {
-      log(
-        `❌ Error processing directory ${currentPath}: ${error.message}`,
+      log(❌ Error processing directory ${currentPath}: ${error.message}',
         'red'
       );
     }
@@ -187,25 +170,17 @@ function main() {
   let totalFixed = 0;
 
   for (const dir of sourceDirs) {
-    if (fs.existsSync(dir)) {
-      log(`\n📁 Processing directory: ${dir}`, 'blue');
+    if (fs.existsSync(dir)) {log(`\n📁 Processing directory: ${dir}`, 'blue');
       const { totalFiles, fixedFiles } = scanAndFixDirectory(dir);
       totalProcessed += totalFiles;
       totalFixed += fixedFiles;
     }
   }
+log(`\n🎯 Summary:`, 'cyan');log(`   Total files processed: ${totalProcessed}`, 'white');log(`   Files fixed: ${totalFixed}`, 'green');log(`   Files unchanged: ${totalProcessed - totalFixed}`, 'white');
 
-  log(`\n🎯 Summary:`, 'cyan');
-  log(`   Total files processed: ${totalProcessed}`, 'white');
-  log(`   Files fixed: ${totalFixed}`, 'green');
-  log(`   Files unchanged: ${totalProcessed - totalFixed}`, 'white');
-
-  if (totalFixed > 0) {
-    log(`\n✅ Final syntax fixing completed!`, 'green');
-    log(`   Run 'npm run lint' again to check for remaining issues.`, 'yellow');
+  if (totalFixed > 0) {log(`\n✅ Final syntax fixing completed!`, 'green');log(`   Run 'npm run lint' again to check for remaining issues.`, 'yellow');
   } else {
-    log(
-      `\nℹ️  No syntax issues found that could be automatically fixed.`,
+    log(\nℹ️  No syntax issues found that could be automatically fixed.',
       'blue'
     );
   }

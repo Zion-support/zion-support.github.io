@@ -46,13 +46,11 @@ class BuildHealthCheck {
         Object.keys(packageJson.dependencies || {}).length +
         Object.keys(packageJson.devDependencies || {}).length;
 
-      await this.log(
-        `Dependencies check passed: ${totalDeps} packages expected`,
+      await this.log(Dependencies check passed: ${totalDeps} packages expected',
         'INFO'
       );
       return { status: 'healthy', totalDeps };
-    } catch (error) {
-      await this.log(`Dependencies check failed: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Dependencies check failed: ${error.message}`, 'ERROR');
 
       // Auto-fix: run npm install
       try {
@@ -61,8 +59,7 @@ class BuildHealthCheck {
         await this.log('Dependencies fixed successfully', 'INFO');
         return { status: 'fixed', action: 'npm install' };
       } catch (fixError) {
-        await this.log(
-          `Failed to fix dependencies: ${fixError.message}`,
+        await this.log(Failed to fix dependencies: ${fixError.message}',
           'ERROR'
         );
         return { status: 'failed', error: error.message };
@@ -71,12 +68,9 @@ class BuildHealthCheck {
   }
 
   async checkConfigFiles() {
-    const configs = [
-      'package.json',
-      'tsconfig.json',
-      'vite.config.ts',
-      'eslint.config.js',
-      'tailwind.config.js',
+    const configs = [package.json',
+      'tsconfig.json',vite.config.ts',
+      'eslint.config.js',tailwind.config.js',
     ];
 
     const results = [];
@@ -93,8 +87,7 @@ class BuildHealthCheck {
 
         results.push({ file: config, status: 'valid' });
       } catch (error) {
-        await this.log(
-          `Config file ${config} has issues: ${error.message}`,
+        await this.log(Config file ${config} has issues: ${error.message}',
           'ERROR'
         );
         results.push({ file: config, status: 'invalid', error: error.message });
@@ -112,8 +105,7 @@ class BuildHealthCheck {
         const stats = await fs.stat(distPath);
         if (stats.isDirectory()) {
           const files = await fs.readdir(distPath);
-          await this.log(
-            `Build assets found: ${files.length} files in dist/`,
+          await this.log(Build assets found: ${files.length} files in dist/',
             'INFO'
           );
           return { status: 'exists', fileCount: files.length };
@@ -124,18 +116,15 @@ class BuildHealthCheck {
 
       // Try to build
       await this.log('Attempting to build project', 'INFO');
-      const { stdout, stderr } = await execAsync(
-        'cd /workspace && npm run build'
+      const { stdout, stderr } = await execAsync(cd /workspace && npm run build'
       );
 
-      if (stderr && !stderr.includes('warn')) {
-        throw new Error(`Build failed: ${stderr}`);
+      if (stderr && !stderr.includes('warn')) {throw new Error(`Build failed: ${stderr}`);
       }
 
       await this.log('Build completed successfully', 'INFO');
       return { status: 'built', output: stdout };
-    } catch (error) {
-      await this.log(`Build check failed: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Build check failed: ${error.message}`, 'ERROR');
       return { status: 'failed', error: error.message };
     }
   }
@@ -165,8 +154,7 @@ class BuildHealthCheck {
           }
         }, 30000);
       } catch (error) {
-        await this.log(
-          `Failed to trigger syntax fixer: ${error.message}`,
+        await this.log(Failed to trigger syntax fixer: ${error.message}',
           'ERROR'
         );
       }
@@ -207,12 +195,10 @@ class BuildHealthCheck {
             : 'critical';
 
       await fs.writeFile(this.reportFile, JSON.stringify(results, null, 2));
-      await this.log(
-        `Build health check completed: ${results.status} (${results.healthScore}%)`,
+      await this.log(Build health check completed: ${results.status} (${results.healthScore}%)',
         'INFO'
       );
-    } catch (error) {
-      await this.log(`Build health check failed: ${error.message}`, 'ERROR');
+    } catch (error) {await this.log(`Build health check failed: ${error.message}`, 'ERROR');
     }
   }
 }

@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -14,7 +14,7 @@ class BuildErrorDetector {
   }
 
   ensureDirectories() {
-    [this.logsPath, this.reportsPath].forEach(dir => {
+    ['this.logsPath', 'this.reportsPath'].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
@@ -24,7 +24,7 @@ class BuildErrorDetector {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    console.log(logMessage);
+    console.log(`logMessage);
 
     const logFile = path.join(this.logsPath, 'build-error-detector.log');
     fs.appendFileSync(logFile, logMessage + '\n');
@@ -42,8 +42,7 @@ class BuildErrorDetector {
       return { success: true, output: result, errors: [] };
     } catch (error) {
       if (error.stdout) {
-        const errors = this.parseBuildErrors(error.stdout);
-        this.log(`❌ Build check failed with ${errors.length} errors`);
+        const errors = this.parseBuildErrors(error.stdout);this.log(❌ Build check failed with ${errors.length} errors`);
         return { success: false, output: error.stdout, errors };
       }
       return { success: false, output: error.message, errors: [] };
@@ -71,8 +70,7 @@ class BuildErrorDetector {
     return errors;
   }
 
-  async fixBuildErrors(errors) {
-    this.log(`🔧 Attempting to fix ${errors.length} build errors...`);
+  async fixBuildErrors(errors) {this.log(`🔧 Attempting to fix ${errors.length} build errors...`);
 
     let fixedCount = 0;
     const fixResults = [];
@@ -89,8 +87,7 @@ class BuildErrorDetector {
           fixed,
           timestamp: new Date().toISOString(),
         });
-      } catch (fixError) {
-        this.log(`❌ Error fixing build error: ${fixError.message}`, 'ERROR');
+      } catch (fixError) {this.log(`❌ Error fixing build error: ${fixError.message}`, 'ERROR');
         fixResults.push({
           error,
           fixed: false,
@@ -99,8 +96,7 @@ class BuildErrorDetector {
         });
       }
     }
-
-    this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
+this.log(`✅ Fixed ${fixedCount} out of ${errors.length} build errors`);
     return { fixedCount, totalErrors: errors.length, results: fixResults };
   }
 
@@ -129,7 +125,7 @@ class BuildErrorDetector {
       this.log('🔧 Fixing memory error...');
 
       // Clear build cache
-      execSync('rm -rf dist build .next node_modules/.cache', {
+      execSync('rm -rf dist build .next ''node_modules/.cache''', {
         cwd: this.workspacePath,
         stdio: 'pipe',
       });
@@ -142,8 +138,7 @@ class BuildErrorDetector {
 
       this.log('✅ Memory error fix applied');
       return true;
-    } catch (error) {
-      this.log(`❌ Failed to fix memory error: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Failed to fix memory error: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -165,8 +160,7 @@ class BuildErrorDetector {
 
       this.log('✅ Dependency error fix applied');
       return true;
-    } catch (error) {
-      this.log(`❌ Failed to fix dependency error: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Failed to fix dependency error: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -183,8 +177,7 @@ class BuildErrorDetector {
 
       this.log('✅ Syntax error fix applied');
       return true;
-    } catch (error) {
-      this.log(`❌ Failed to fix syntax error: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Failed to fix syntax error: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -201,8 +194,7 @@ class BuildErrorDetector {
 
       this.log('✅ Type error fix applied');
       return true;
-    } catch (error) {
-      this.log(`❌ Failed to fix type error: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Failed to fix type error: ${error.message}`, 'ERROR');
       return false;
     }
   }
@@ -223,21 +215,14 @@ class BuildErrorDetector {
             : 100,
       },
       fixResults: fixResults.results,
-      recommendations: [
-        'Review any remaining build errors manually',
-        'Check for memory constraints in build process',
-        'Verify all dependencies are properly installed',
-        'Monitor build performance and optimize if needed',
-      ],
+      recommendations: ['Review any remaining build errors manually'', 'Check for memory constraints in build process', 'Verify all dependencies are properly installed'', 'Monitor build performance and optimize if needed', ''],
     };
 
     const reportFile = path.join(
-      this.reportsPath,
-      'build-error-detector-report.json'
+      this.reportsPath,build-error-detector-report.json'
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report generated: ${reportFile}`);
+this.log(`📄 Report generated: ${reportFile}`);
     return report;
   }
 
@@ -260,8 +245,7 @@ class BuildErrorDetector {
       const report = await this.generateReport(fixResults);
 
       this.log('🎉 Build Error Detector completed!');
-      this.log(
-        `📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors`
+      this.log(📊 Fixed ${fixResults.fixedCount} out of ${fixResults.totalErrors} errors'
       );
 
       return {
@@ -270,8 +254,7 @@ class BuildErrorDetector {
         fixed: fixResults.fixedCount,
         report,
       };
-    } catch (error) {
-      this.log(`💥 Build Error Detector failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`💥 Build Error Detector failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }

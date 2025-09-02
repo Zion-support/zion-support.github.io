@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const { execSync } = require('child_process');
 const fs = require('fs').promises;
@@ -15,7 +15,7 @@ class QuickErrorChecker {
   async log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
-    console.log(logMessage);
+    console.log(`logMessage);
     await fs.appendFile(this.logFile, logMessage + '\n');
   }
 
@@ -37,24 +37,20 @@ class QuickErrorChecker {
     await this.log('🔍 Quick syntax check...');
     
     // Check for common syntax errors in JS files
-    const jsFiles = [
-      'automation/browser-error-fixer.js',
-      'scripts/automation/*.cjs',
-      'scripts/automation/*.js'
+    const jsFiles = ['''automation/browser-error-fixer.js'''', '''scripts/automation/''*.cjs', '''scripts/automation/''*.js'
     ];
     
     for (const pattern of jsFiles) {
       try {
-        const files = require('glob').sync(pattern, { cwd: this.projectRoot });
+        const files = require('glob').sync(pattern', '{ cwd: this.projectRoot });
         for (const file of files) {
-          const filePath = path.join(this.projectRoot, file);
-          const content = await fs.readFile(filePath, 'utf8');
+          const filePath = path.join(this.projectRoot', 'file);
+          const content = await fs.readFile(filePath', 'utf8');
           
           // Check for missing commas in objects
-          if (content.includes('}\n  }') || content.includes(']\n  }')) {
-            await this.log(`🔧 Fixing syntax in ${file}`);
+          if (content.includes('}\n  }') || content.includes(']\n  }')) {await this.log(🔧 Fixing syntax in ${file}`);
             let fixedContent = content
-              .replace(/(\w+:\s*[^,}]+)\s*\n\s*(\w+:)/g, '$1,\n  $2')
+              .replace(/(\w+:\s*['^', '}']+)\s*\n\s*(\w+:)/g, '$1,\n  $2')
               .replace(/(\w+:\s*\[[^\]]*\])\s*\n\s*(\w+:)/g, '$1,\n  $2');
             
             await fs.writeFile(filePath, fixedContent);
@@ -65,8 +61,7 @@ class QuickErrorChecker {
             });
           }
         }
-      } catch (error) {
-        await this.log(`❌ Error checking ${pattern}: ${error.message}`);
+      } catch (error) {await this.log(`❌ Error checking ${pattern}: ${error.message}`);
       }
     }
   }
@@ -79,12 +74,11 @@ class QuickErrorChecker {
     
     for (const file of jsxFiles) {
       try {
-        const filePath = path.join(this.projectRoot, file);
-        const content = await fs.readFile(filePath, 'utf8');
+        const filePath = path.join(this.projectRoot, 'file);
+        const content = await fs.readFile(filePath', 'utf8');
         
         // Check if file uses React but doesn't import it
-        if ((content.includes('React.') || content.includes('<React.')) && !content.includes("import React")) {
-          await this.log(`🔧 Adding React import to ${file}`);
+        if ((content.includes('React.') || content.includes('<React.')) && !content.includes("import React")) {await this.log(`🔧 Adding React import to ${file}`);
           const fixedContent = "import React from 'react';\n" + content;
           await fs.writeFile(filePath, fixedContent);
           this.fixesApplied.push({
@@ -93,8 +87,7 @@ class QuickErrorChecker {
             timestamp: new Date().toISOString()
           });
         }
-      } catch (error) {
-        await this.log(`❌ Error checking ${file}: ${error.message}`);
+      } catch (error) {await this.log(`❌ Error checking ${file}: ${error.message}`);
       }
     }
   }
@@ -107,15 +100,9 @@ class QuickErrorChecker {
       const content = await fs.readFile(eslintPath, 'utf8');
       
       if (!content.includes('module.exports')) {
-        await this.log('🔧 Fixing ESLint configuration...');
-        const fixedConfig = `module.exports = {
-  extends: ['next/core-web-vitals', 'next/typescript'],
-  rules: {
-    '@typescript-eslint/no-unused-vars': 'warn',
-    '@typescript-eslint/no-explicit-any': 'warn',
-    'react/react-in-jsx-scope': 'off',
-    'react/prop-types': 'off',
-    'no-console': 'warn'
+        await this.log('🔧 Fixing ESLint configuration...');const fixedConfig = `module.exports = {
+  extends: ['''next/core-web-vitals''', '''next/typescript'''],
+  rules: {@typescript-''eslint/no-unused-vars''': 'warn',@typescript-''eslint/no-explicit-any''': 'warn',''react/react-in-jsx-scope''': 'off',''react/prop-types''': 'off',no-console': 'warn'
   },
   ignorePatterns: ['node_modules/', '.next/', 'out/', 'dist/']
 };`;
@@ -127,8 +114,7 @@ class QuickErrorChecker {
           timestamp: new Date().toISOString()
         });
       }
-    } catch (error) {
-      await this.log(`❌ Error checking ESLint config: ${error.message}`);
+    } catch (error) {await this.log(`❌ Error checking ESLint config: ${error.message}`);
     }
   }
 
@@ -142,9 +128,7 @@ class QuickErrorChecker {
       
       const endTime = new Date();
       const duration = endTime - this.startTime;
-      
-      await this.log(`✅ Quick Error Check completed in ${duration.getTime()}ms`);
-      await this.log(`📈 Fixes applied: ${this.fixesApplied.length}`);
+      await this.log(`✅ Quick Error Check completed in ${duration.getTime()}ms`);await this.log(`📈 Fixes applied: ${this.fixesApplied.length}`);
       
       return {
         success: true,
@@ -152,8 +136,7 @@ class QuickErrorChecker {
         duration: duration.getTime()
       };
       
-    } catch (error) {
-      await this.log(`❌ Quick Error Check failed: ${error.message}`);
+    } catch (error) {await this.log(`❌ Quick Error Check failed: ${error.message}`);
       throw error;
     }
   }

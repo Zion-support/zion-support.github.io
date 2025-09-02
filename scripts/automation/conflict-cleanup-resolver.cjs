@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -25,7 +25,7 @@ class ConflictCleanupResolver {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
-    console.log(logEntry);
+    console.log(`logEntry);
 
     const logFile = path.join(this.logsDir, 'conflict-cleanup.log');
     fs.appendFileSync(logFile, logEntry + '\n');
@@ -46,8 +46,7 @@ class ConflictCleanupResolver {
 
       // Step 4: Finalize the merge
       await this.finalizeMerge();
-    } catch (error) {
-      this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(❌ Fatal error: ${error.message}, 'ERROR'`);
       this.cleanupStats.errors++;
     }
 
@@ -59,16 +58,10 @@ class ConflictCleanupResolver {
 
     try {
       // Find and remove all backup files
-      const backupPatterns = [
-        '**/*.backup.*',
-        '**/*.cleanup-backup.*',
-        '**/*.backup.1756*',
-        '**/*.cleanup-backup.1756*',
-      ];
+      const backupPatterns = ['**/*.backup.*'', '**/*.cleanup-backup.*', '**/*.backup.1756*'', '**/*.cleanup-backup.1756*', ''];
 
       for (const pattern of backupPatterns) {
-        try {
-          const files = execSync(`find . -name "${pattern}" -type f`, {
+        try {const files = execSync(`find . -name "${pattern}" -type f`, {
             encoding: 'utf8',
           })
             .split('\n')
@@ -76,12 +69,10 @@ class ConflictCleanupResolver {
 
           for (const file of files) {
             try {
-              fs.unlinkSync(file);
-              this.log(`🗑️ Removed backup file: ${file}`);
+              fs.unlinkSync(file);this.log(`🗑️ Removed backup file: ${file}');
               this.cleanupStats.filesCleaned++;
             } catch (error) {
-              this.log(
-                `⚠️ Failed to remove backup file ${file}: ${error.message}`,
+              this.log(⚠️ Failed to remove backup file ${file}: ${error.message}',
                 'WARN'
               );
             }
@@ -100,14 +91,12 @@ class ConflictCleanupResolver {
 
     try {
       // Get list of conflicted files
-      const conflictedFiles = this.getConflictedFiles();
-      this.log(`Found ${conflictedFiles.length} conflicted files`);
+      const conflictedFiles = this.getConflictedFiles();this.log(`Found ${conflictedFiles.length} conflicted files`);
 
       for (const file of conflictedFiles) {
         await this.resolveFileConflict(file);
       }
-    } catch (error) {
-      this.log(`❌ Error resolving merge conflicts: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Error resolving merge conflicts: ${error.message}`, 'ERROR');
     }
   }
 
@@ -130,12 +119,10 @@ class ConflictCleanupResolver {
     }
   }
 
-  async resolveFileConflict(filePath) {
-    this.log(`🔧 Resolving conflict in: ${filePath}`);
+  async resolveFileConflict(filePath) {this.log(`🔧 Resolving conflict in: ${filePath}`);
 
     try {
-      if (!fs.existsSync(filePath)) {
-        this.log(`⚠️ File does not exist: ${filePath}`, 'WARN');
+      if (!fs.existsSync(filePath)) {this.log(`⚠️ File does not exist: ${filePath}`, 'WARN');
         return;
       }
 
@@ -146,8 +133,7 @@ class ConflictCleanupResolver {
         !content.includes('<<<<<<<') &&
         !content.includes('=======') &&
         !content.includes('>>>>>>>')
-      ) {
-        this.log(`✅ No conflicts in: ${filePath}`);
+      ) {this.log(`✅ No conflicts in: ${filePath}`);
         return;
       }
 
@@ -156,12 +142,10 @@ class ConflictCleanupResolver {
 
       // Write resolved content
       fs.writeFileSync(filePath, resolvedContent);
-
-      this.log(`✅ Resolved conflicts in: ${filePath}`);
+this.log(`✅ Resolved conflicts in: ${filePath}');
       this.cleanupStats.conflictsResolved++;
     } catch (error) {
-      this.log(
-        `❌ Failed to resolve conflicts in ${filePath}: ${error.message}`,
+      this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}',
         'ERROR'
       );
       this.cleanupStats.errors++;
@@ -260,19 +244,17 @@ class ConflictCleanupResolver {
         try {
           if (fs.existsSync(file)) {
             fs.unlinkSync(file);
-            this.log(`🗑️ Removed deleted file: ${file}`);
+            this.log(`🗑️ Removed deleted file: ${file}');
             this.cleanupStats.filesCleaned++;
           }
         } catch (error) {
-          this.log(
-            `⚠️ Failed to remove deleted file ${file}: ${error.message}`,
+          this.log(⚠️ Failed to remove deleted file ${file}: ${error.message}',
             'WARN'
           );
         }
       }
     } catch (error) {
-      this.log(
-        `❌ Error cleaning up duplicate files: ${error.message}`,
+      this.log(❌ Error cleaning up duplicate files: ${error.message}',
         'ERROR'
       );
     }
@@ -309,8 +291,7 @@ class ConflictCleanupResolver {
       // Push changes
       execSync('git push origin main', { stdio: 'inherit' });
       this.log('✅ Successfully pushed merged changes to remote');
-    } catch (error) {
-      this.log(`❌ Failed to finalize merge: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`❌ Failed to finalize merge: ${error.message}`, 'ERROR');
       this.cleanupStats.errors++;
     }
   }
@@ -331,12 +312,8 @@ class ConflictCleanupResolver {
     const reportPath = path.join(this.logsDir, 'conflict-cleanup-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log('📋 Conflict Cleanup Summary:');
-    this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);
-    this.log(`   Files Cleaned: ${report.summary.filesCleaned}`);
-    this.log(`   Errors: ${report.summary.errors}`);
-
-    this.log(`📄 Detailed report saved to: ${reportPath}`);
+    this.log('📋 Conflict Cleanup Summary:');this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);this.log(`   Files Cleaned: ${report.summary.filesCleaned}`);this.log(`   Errors: ${report.summary.errors}`);
+this.log(`📄 Detailed report saved to: ${reportPath}`);
   }
 }
 

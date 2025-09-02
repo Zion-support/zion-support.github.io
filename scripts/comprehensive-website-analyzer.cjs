@@ -22,12 +22,11 @@ class ComprehensiveWebsiteAnalyzer {
     this.checkedUrls.add(url);
 
     try {
-      console.log(`Checking: ${url}`);
+      console.log(`Checking: ${url}');
       const response = await axios.get(url, {
         timeout: 10000,
         validateStatus: status => status < 500,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Analyzer/1.0)',
+        headers: {User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Analyzer/1.0)',
         },
       });
 
@@ -46,8 +45,7 @@ class ComprehensiveWebsiteAnalyzer {
           const links = this.extractLinks(response.data, url);
           for (const link of links) {
             if (link.startsWith('/') || link.startsWith(this.baseUrl)) {
-              const fullUrl = link.startsWith('/')
-                ? `${this.baseUrl}${link}`
+              const fullUrl = link.startsWith('/')? `${this.baseUrl}${link}`
                 : link;
               await this.checkUrl(fullUrl, url);
             }
@@ -57,8 +55,7 @@ class ComprehensiveWebsiteAnalyzer {
         this.brokenLinks.push({
           url,
           status: response.status,
-          parentUrl,
-          error: `HTTP ${response.status}`,
+          parentUrl,error: `HTTP ${response.status}`,
           headers: response.headers,
         });
       }
@@ -100,143 +97,86 @@ class ComprehensiveWebsiteAnalyzer {
     await this.checkUrl(this.baseUrl);
 
     // Check common routes
-    const commonRoutes = [
-      '/about',
-      '/services',
-      '/solutions',
-      '/contact',
-      '/pricing',
-      '/blog',
-      '/careers',
-      '/partners',
-      '/support',
-      '/help',
-      '/training',
-      '/sitemap',
-      '/privacy-policy',
-      '/terms-of-service',
-      '/cookie-policy',
-      '/api',
-      '/docs',
-      '/research-development',
-      '/case-studies',
-      '/white-papers',
-      '/events',
-      '/webinars',
-      '/news',
-      '/press',
-      '/community',
-      '/developer',
-      '/request-quote',
-      '/login',
-      '/signup',
-      '/dashboard',
-      '/admin',
-      '/talent',
-      '/marketplace',
-      '/micro-saas',
-      '/ai-services',
-      '/cybersecurity',
-      '/cloud-devops',
-      '/quantum-computing',
-      '/space-technology',
-      '/digital-transformation',
-      '/data-analytics',
-      '/iot-edge-computing',
-      '/manufacturing-solutions',
-      '/financial-solutions',
-      '/industry-solutions',
-      '/startup-solutions',
-      '/supply-chain',
-      '/sustainability',
-      '/system-status',
-      '/testimonials',
-      '/faq',
-      '/accessibility',
-      '/comprehensive-services',
-      '/revolutionary-services',
-      '/new-services-2025',
-      '/enhanced-new-services-2025',
-      '/comprehensive-sitemap',
-      '/comprehensive-pricing',
-      '/services-overview',
-      '/services-catalog',
-      '/services-comparison',
-      '/services-pricing',
-      '/ai-solutions',
-      '/quantum-ai-platform',
-      '/digital-twin',
-      '/zero-trust-security',
-      '/enterprise-solutions',
+    const commonRoutes = [/about',
+      '/services',/solutions',
+      '/contact',/pricing',
+      '/blog',/careers',
+      '/partners',/support',
+      '/help',/training',
+      '/sitemap',/privacy-policy',
+      '/terms-of-service',/cookie-policy',
+      '/api',/docs',
+      '/research-development',/case-studies',
+      '/white-papers',/events',
+      '/webinars',/news',
+      '/press',/community',
+      '/developer',/request-quote',
+      '/login',/signup',
+      '/dashboard',/admin',
+      '/talent',/marketplace',
+      '/micro-saas',/ai-services',
+      '/cybersecurity',/cloud-devops',
+      '/quantum-computing',/space-technology',
+      '/digital-transformation',/data-analytics',
+      '/iot-edge-computing',/manufacturing-solutions',
+      '/financial-solutions',/industry-solutions',
+      '/startup-solutions',/supply-chain',
+      '/sustainability',/system-status',
+      '/testimonials',/faq',
+      '/accessibility',/comprehensive-services',
+      '/revolutionary-services',/new-services-2025',
+      '/enhanced-new-services-2025',/comprehensive-sitemap',
+      '/comprehensive-pricing',/services-overview',
+      '/services-catalog',/services-comparison',
+      '/services-pricing',/ai-solutions',
+      '/quantum-ai-platform',/digital-twin',
+      '/zero-trust-security',/enterprise-solutions',
       '/ai-business-intelligence',
     ];
 
-    for (const route of commonRoutes) {
-      await this.checkUrl(`${this.baseUrl}${route}`);
+    for (const route of commonRoutes) {await this.checkUrl(`${this.baseUrl}${route}');
     }
 
     // Check service sub-routes
-    const serviceRoutes = [
-      '/ai-solutions',
-      '/quantum-computing',
-      '/cybersecurity',
-      '/cloud-devops',
-      '/digital-transformation',
-      '/data-analytics',
-      '/iot-edge-computing',
-      '/space-technology',
-      '/ai-business-intelligence',
-      '/ai-content-creation',
-      '/ai-cybersecurity',
-      '/ai-financial-analytics',
-      '/ai-healthcare-analytics',
-      '/ai-hr-platform',
-      '/ai-marketing-automation',
-      '/ai-supply-chain-optimization',
-      '/ai-workflow-orchestrator',
-      '/ai-autonomous-research-assistant',
-      '/ai-content-marketing-suite',
-      '/ai-quantum-hybrid-platform',
-      '/it-infrastructure',
-      '/digital-twin',
-      '/ai-devops-automation-platform',
+    const serviceRoutes = [/ai-solutions',
+      '/quantum-computing',/cybersecurity',
+      '/cloud-devops',/digital-transformation',
+      '/data-analytics',/iot-edge-computing',
+      '/space-technology',/ai-business-intelligence',
+      '/ai-content-creation',/ai-cybersecurity',
+      '/ai-financial-analytics',/ai-healthcare-analytics',
+      '/ai-hr-platform',/ai-marketing-automation',
+      '/ai-supply-chain-optimization',/ai-workflow-orchestrator',
+      '/ai-autonomous-research-assistant',/ai-content-marketing-suite',
+      '/ai-quantum-hybrid-platform',/it-infrastructure',
+      '/digital-twin',/ai-devops-automation-platform',
     ];
 
     for (const serviceRoute of serviceRoutes) {
-      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`);
+      await this.checkUrl(`${this.baseUrl}/services${serviceRoute}');
     }
 
     // Check solution sub-routes
-    const solutionRoutes = [
-      '/enterprise',
-      '/ai-business-intelligence',
-      '/quantum-ai-platform',
-      '/digital-twin',
-      '/zero-trust-security',
+    const solutionRoutes = [/enterprise',
+      '/ai-business-intelligence',/quantum-ai-platform',
+      '/digital-twin',/zero-trust-security',
     ];
 
-    for (const solutionRoute of solutionRoutes) {
-      await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
+    for (const solutionRoute of solutionRoutes) {await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
     }
 
     // Check about sub-routes
     const aboutRoutes = ['/story', '/team'];
 
-    for (const aboutRoute of aboutRoutes) {
-      await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);
+    for (const aboutRoute of aboutRoutes) {await this.checkUrl(`${this.baseUrl}/about${aboutRoute}');
     }
 
     // Check resources sub-routes
-    const resourceRoutes = [
-      '/blog',
-      '/case-studies',
-      '/research-development',
-      '/docs',
-      '/api',
-      '/sitemap',
-      '/support',
-      '/training',
-      '/help',
+    const resourceRoutes = [/blog',
+      '/case-studies',/research-development',
+      '/docs',/api',
+      '/sitemap',/support',
+      '/training',/help',
     ];
 
     for (const resourceRoute of resourceRoutes) {
@@ -256,9 +196,7 @@ class ComprehensiveWebsiteAnalyzer {
       summary: {
         totalLinksChecked: this.checkedUrls.size,
         brokenLinks: this.brokenLinks.length,
-        workingLinks: this.workingLinks.length,
-        successRate: `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,
-        duration: `${duration}ms`,
+        workingLinks: this.workingLinks.length,successRate: `${((this.workingLinks.length / this.checkedUrls.size) * 100).toFixed(2)}%`,duration: `${duration}ms`,
         errors: this.errors.length,
         warnings: this.warnings.length,
       },
@@ -279,8 +217,7 @@ class ComprehensiveWebsiteAnalyzer {
     if (this.brokenLinks.length > 0) {
       recommendations.push({
         type: 'critical',
-        title: 'Fix Broken Links',
-        description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,
+        title: 'Fix Broken Links',description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,
         actions: this.brokenLinks.map(link => ({
           url: link.url,
           action: 'Create missing page or fix redirect',
@@ -293,8 +230,7 @@ class ComprehensiveWebsiteAnalyzer {
       recommendations.push({
         type: 'warning',
         title: 'Expand Content',
-        description:
-          'Website has limited content. Consider adding more pages and services.',
+        description:Website has limited content. Consider adding more pages and services.',
         actions: [
           { action: 'Add more service pages', priority: 'medium' },
           { action: 'Create blog section', priority: 'medium' },
@@ -304,12 +240,9 @@ class ComprehensiveWebsiteAnalyzer {
     }
 
     // Check for missing essential pages
-    const essentialPages = [
-      '/privacy-policy',
-      '/terms-of-service',
-      '/cookie-policy',
-      '/sitemap',
-      '/contact',
+    const essentialPages = [/privacy-policy',
+      '/terms-of-service',/cookie-policy',
+      '/sitemap',/contact',
       '/about',
     ];
 
@@ -335,16 +268,14 @@ class ComprehensiveWebsiteAnalyzer {
 
   async saveReport(filename = 'comprehensive-website-analysis.json') {
     const report = this.generateReport();
-    await fs.writeFile(filename, JSON.stringify(report, null, 2));
-    console.log(`Report saved to ${filename}`);
+    await fs.writeFile(filename, JSON.stringify(report, null, 2));console.log(`Report saved to ${filename}');
     return report;
   }
 }
 
 // Run the analysis
 async function main() {
-  const analyzer = new ComprehensiveWebsiteAnalyzer(
-    'https://ziontechgroup.com'
+  const analyzer = new ComprehensiveWebsiteAnalyzer(https://ziontechgroup.com'
   );
 
   try {
@@ -352,24 +283,17 @@ async function main() {
     const report = await analyzer.saveReport();
 
     console.log('\n=== ANALYSIS SUMMARY ===');
-    console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);
-    console.log(`Working links: ${report.summary.workingLinks}`);
-    console.log(`Broken links: ${report.summary.brokenLinks}`);
-    console.log(`Success rate: ${report.summary.successRate}`);
-    console.log(`Duration: ${report.summary.duration}`);
+    console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);console.log(`Working links: ${report.summary.workingLinks}`);console.log(`Broken links: ${report.summary.brokenLinks}`);console.log(`Success rate: ${report.summary.successRate}`);console.log(`Duration: ${report.summary.duration}`);
 
     if (report.brokenLinks.length > 0) {
       console.log('\n=== BROKEN LINKS ===');
-      report.brokenLinks.forEach(link => {
-        console.log(`❌ ${link.url} - ${link.error}`);
+      report.brokenLinks.forEach(link => {console.log(`❌ ${link.url} - ${link.error}`);
       });
     }
 
     if (report.recommendations.length > 0) {
       console.log('\n=== RECOMMENDATIONS ===');
-      report.recommendations.forEach(rec => {
-        console.log(`${rec.type.toUpperCase()}: ${rec.title}`);
-        console.log(`  ${rec.description}`);
+      report.recommendations.forEach(rec => {console.log(`${rec.type.toUpperCase()}: ${rec.title}`);console.log(`  ${rec.description}`);
       });
     }
   } catch (error) {

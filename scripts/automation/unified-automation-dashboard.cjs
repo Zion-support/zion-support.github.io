@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 const fs = require('fs');
 const path = require('path');
@@ -28,7 +28,7 @@ class UnifiedAutomationDashboard {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
 
-    console.log(logMessage);
+    console.log(`logMessage);
 
     // Write to log file
     fs.appendFileSync(this.logFile, logMessage + '\n');
@@ -43,31 +43,22 @@ class UnifiedAutomationDashboard {
     try {
       const output = execSync('pm2 jlist', { encoding: 'utf8' });
       return JSON.parse(output);
-    } catch (error) {
-      this.log(`Failed to get PM2 status: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(Failed to get PM2 status: ${error.message}, 'ERROR'`);
       return [];
     }
   }
 
   async getAutomationReports() {
     const reports = {};
-    const reportFiles = [
-      'console-error-fixer-report.json',
-      'performance-report.json',
-      'comprehensive-error-fixer-report.json',
-      'ai-improvements.json',
-      'performance-optimizations.json',
-      'test-results.json',
-    ];
+    const reportFiles = ['console-error-fixer-report.json'', 'performance-report.json', 'comprehensive-error-fixer-report.json'', 'ai-improvements.json', 'performance-optimizations.json'', 'test-results.json', ''];
 
     for (const file of reportFiles) {
-      const filePath = path.join(this.projectRoot, file);
+      const filePath = path.join(this.projectRoot, 'file);
       if (fs.existsSync(filePath)) {
         try {
-          const content = fs.readFileSync(filePath, 'utf8');
-          reports[file.replace('.json', '')] = JSON.parse(content);
-        } catch (error) {
-          this.log(`Failed to read report ${file}: ${error.message}`, 'WARN');
+          const content = fs.readFileSync(filePath', 'utf8');
+          reports['file.replace('.json'', '')] = JSON.parse(content);
+        } catch (error) {this.log(`Failed to read report ${file}: ${error.message}`, 'WARN');
         }
       }
     }
@@ -116,12 +107,10 @@ class UnifiedAutomationDashboard {
           totalSize += stats.size;
         });
         analysis.metrics.bundleSize = {
-          totalFiles: files.length,
-          totalSize: `${(totalSize / 1024 / 1024).toFixed(2)} MB`,
+          totalFiles: files.length,totalSize: `${(totalSize / 1024 / 1024).toFixed(2)} MB`,
         };
       }
-    } catch (error) {
-      this.log(`Code quality analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Code quality analysis failed: ${error.message}`, 'ERROR');
     }
 
     return analysis;
@@ -168,11 +157,9 @@ class UnifiedAutomationDashboard {
       const htmlDashboard = this.generateHTMLDashboard(dashboard);
       const htmlPath = path.join(this.dashboardDir, 'index.html');
       fs.writeFileSync(htmlPath, htmlDashboard);
-
-      this.log(`Dashboard generated successfully at ${htmlPath}`);
+this.log(`Dashboard generated successfully at ${htmlPath}`);
       return dashboard;
-    } catch (error) {
-      this.log(`Dashboard generation failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Dashboard generation failed: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -243,30 +230,25 @@ class UnifiedAutomationDashboard {
       reports['console-error-fixer'] &&
       reports['console-error-fixer'].consoleErrors > 0
     ) {
-      actions.push(
-        'Review and remove console.log statements from production code'
+      actions.push(Review and remove console.log statements from production code'
       );
     }
 
     return actions;
   }
 
-  generateHTMLDashboard(dashboard) {
-    return `<!DOCTYPE html>
+  generateHTMLDashboard(dashboard) {return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zion Tech Group - Automation Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com'></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        'neon-blue': '#00d4ff',
-                        'neon-purple': '#8b5cf6',
-                        'neon-pink': '#ec4899'
+                    colors: {neon-blue': '#00d4ff',neon-purple': '#8b5cf6',neon-pink': '#ec4899'
                     }
                 }
             }
@@ -336,7 +318,7 @@ class UnifiedAutomationDashboard {
                     </div>
                     <div class="ml-4">
                         <p class="text-sm font-medium text-gray-400">Bundle Size</p>
-                        <p class="text-2xl font-bold text-blue-400">${dashboard.codeQuality.metrics.bundleSize ? dashboard.codeQuality.metrics.bundleSize.totalSize : 'N/A'}</p>
+                        <p class="text-2xl font-bold text-blue-400">${dashboard.codeQuality.metrics.bundleSize ? dashboard.codeQuality.metrics.bundleSize.totalSize : '''N/A'''}</p>
                     </div>
                 </div>
             </div>
@@ -375,9 +357,8 @@ class UnifiedAutomationDashboard {
                                 <td class="py-2">${(process.memory / 1024 / 1024).toFixed(1)} MB</td>
                                 <td class="py-2">${process.cpu}%</td>
                                 <td class="py-2">${Math.floor(process.uptime / 1000 / 60)}m</td>
-                                <td class="py-2">${process.restarts}</td>
+                                <td class="py-2'>${process.restarts}</td>
                             </tr>
-                        `
                           )
                           .join('')}
                     </tbody>
@@ -392,9 +373,8 @@ class UnifiedAutomationDashboard {
                 <div>
                     <h3 class="text-lg font-semibold mb-3">TypeScript</h3>
                     <div class="flex items-center">
-                        <span class="px-3 py-1 rounded text-sm font-medium ${
-                          dashboard.codeQuality.metrics.typescript.status ===
-                          'passed'
+                        <span class='px-3 py-1 rounded text-sm font-medium ${
+                          dashboard.codeQuality.metrics.typescript.status ===passed'
                             ? 'bg-green-500 text-white'
                             : 'bg-red-500 text-white'
                         }">${dashboard.codeQuality.metrics.typescript.status}</span>
@@ -404,9 +384,8 @@ class UnifiedAutomationDashboard {
                 <div>
                     <h3 class="text-lg font-semibold mb-3">ESLint</h3>
                     <div class="flex items-center">
-                        <span class="px-3 py-1 rounded text-sm font-medium ${
-                          dashboard.codeQuality.metrics.eslint.status ===
-                          'passed'
+                        <span class='px-3 py-1 rounded text-sm font-medium ${
+                          dashboard.codeQuality.metrics.eslint.status ===passed'
                             ? 'bg-green-500 text-white'
                             : 'bg-red-500 text-white'
                         }">${dashboard.codeQuality.metrics.eslint.status}</span>
@@ -421,13 +400,11 @@ class UnifiedAutomationDashboard {
             <h2 class="text-2xl font-bold mb-4 text-neon-pink">⚡ Next Actions</h2>
             <div class="space-y-3">
                 ${dashboard.summary.nextActions
-                  .map(
-                    action => `
+                  .map(action => `
                     <div class="flex items-start">
                         <div class="w-2 h-2 bg-neon-pink rounded-full mt-2 mr-3"></div>
-                        <p class="text-gray-300">${action}</p>
+                        <p class="text-gray-300'>${action}</p>
                     </div>
-                `
                   )
                   .join('')}
             </div>
@@ -441,18 +418,15 @@ class UnifiedAutomationDashboard {
                 <h2 class="text-2xl font-bold mb-4 text-red-400">🚨 Critical Issues</h2>
                 <div class="space-y-3">
                     ${dashboard.summary.criticalIssues
-                      .map(
-                        issue => `
+                      .map(issue => `
                         <div class="flex items-start">
                             <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3"></div>
-                            <p class="text-red-300">${issue}</p>
+                            <p class="text-red-300'>${issue}</p>
                         </div>
-                    `
                       )
                       .join('')}
                 </div>
             </div>
-        `
             : ''
         }
 
@@ -484,8 +458,7 @@ class UnifiedAutomationDashboard {
         async () => {
           try {
             await this.generateDashboard();
-          } catch (error) {
-            this.log(`Dashboard update failed: ${error.message}`, 'ERROR');
+          } catch (error) {this.log(`Dashboard update failed: ${error.message}`, 'ERROR');
           }
         },
         5 * 60 * 1000
@@ -497,8 +470,7 @@ class UnifiedAutomationDashboard {
       setInterval(() => {
         this.log('Dashboard heartbeat...');
       }, 60000); // Every minute
-    } catch (error) {
-      this.log(`Failed to start dashboard: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to start dashboard: ${error.message}`, 'ERROR');
       throw error;
     }
   }
@@ -519,8 +491,7 @@ if (require.main === module) {
     process.exit(0);
   });
 
-  dashboard.start().catch(error => {
-    dashboard.log(`Fatal error: ${error.message}`, 'ERROR');
+  dashboard.start().catch(error => {dashboard.log(`Fatal error: ${error.message}`, 'ERROR');
     process.exit(1);
   });
 }

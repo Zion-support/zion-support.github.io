@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * Intelligent Repository Manager
@@ -41,7 +41,7 @@ const CONFIG = {
 const log = (message, level = 'INFO') => {
   const timestamp = new Date().toISOString();
   const logMessage = `[${timestamp}] [${level}] ${message}`;
-  console.log(logMessage);
+  console.log(`logMessage);
   
   // Ensure log directory exists
   if (!fs.existsSync(CONFIG.LOG_DIR)) {
@@ -66,8 +66,7 @@ const executeCommand = (command, options = {}) => {
   }
 };
 
-const gitCommand = (command, options = {}) => {
-  return executeCommand(`git ${command}`, options);
+const gitCommand = (command, options = {}) => {return executeCommand(git ${command}, options`);
 };
 
 const isGitRepository = () => {
@@ -95,39 +94,30 @@ const getCursorBranches = () => {
   return branches.filter(branch => branch.startsWith(CONFIG.CURSOR_BRANCH_PREFIX));
 };
 
-const getBranchInfo = (branchName) => {
-  const result = gitCommand(`log --oneline ${CONFIG.MAIN_BRANCH}..origin/${branchName}`, { silent: true });
+const getBranchInfo = (branchName) => {const result = gitCommand(`log --oneline ${CONFIG.MAIN_BRANCH}..origin/${branchName}`, { silent: true });
   if (!result.success) return { commits: 0, files: [] };
   
   const commits = result.output.split('\n').filter(line => line.trim()).length;
   
-  // Get changed files
-  const filesResult = gitCommand(`diff --name-only ${CONFIG.MAIN_BRANCH}..origin/${branchName}`, { silent: true });
+  // Get changed filesconst filesResult = gitCommand(`diff --name-only ${CONFIG.MAIN_BRANCH}..origin/${branchName}`, { silent: true });
   const files = filesResult.success ? filesResult.output.split('\n').filter(line => line.trim()) : [];
   
   return { commits, files };
 };
 
 const createBackupBranch = () => {
-  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-  const backupBranch = `${CONFIG.BACKUP_BRANCH_PREFIX}${timestamp}`;
-  
+  const timestamp = new Date().toISOString().replace(/[:.]/g, '-');const backupBranch = `${CONFIG.BACKUP_BRANCH_PREFIX}${timestamp}`;
   log(`Creating backup branch: ${backupBranch}`);
   
-  // Create backup of current main
-  const result = gitCommand(`checkout -b ${backupBranch}`, { silent: true });
-  if (result.success) {
-    gitCommand(`push origin ${backupBranch}`, { silent: true });
-    log(`Backup branch created and pushed: ${backupBranch}`);
+  // Create backup of current mainconst result = gitCommand(`checkout -b ${backupBranch}`, { silent: true });
+  if (result.success) {gitCommand(`push origin ${backupBranch}`, { silent: true });log(`Backup branch created and pushed: ${backupBranch}`);
     return backupBranch;
   }
-  
   log(`Failed to create backup branch: ${result.error}`, 'ERROR');
   return null;
 };
 
-const intelligentConflictResolution = (conflictedFiles, branchName) => {
-  log(`Resolving conflicts for branch: ${branchName}`);
+const intelligentConflictResolution = (conflictedFiles, branchName) => {log(`Resolving conflicts for branch: ${branchName}`);
   
   const resolutionStrategies = {
     intelligent: () => {
@@ -138,33 +128,24 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {
         
         if (fileExt === '.json' || fileExt === '.js' || fileExt === '.ts' || fileExt === '.jsx' || fileExt === '.tsx') {
           // For code files, try to merge intelligently
-          try {
-            const result = gitCommand(`checkout --ours "${file}"`, { silent: true });
-            if (result.success) {
-              log(`Resolved conflict in ${file} using 'ours' strategy`);
+          try {const result = gitCommand(`checkout --ours "${file}"`, { silent: true });
+            if (result.success) {log(`Resolved conflict in ${file} using 'ours' strategy`);
             }
-          } catch (error) {
-            log(`Failed to resolve conflict in ${file}: ${error}`, 'ERROR');
+          } catch (error) {log(`Failed to resolve conflict in ${file}: ${error}`, 'ERROR');
           }
         } else if (fileExt === '.md' || fileExt === '.txt') {
           // For documentation, try to merge both versions
-          try {
-            const result = gitCommand(`checkout --theirs "${file}"`, { silent: true });
-            if (result.success) {
-              log(`Resolved conflict in ${file} using 'theirs' strategy`);
+          try {const result = gitCommand(`checkout --theirs "${file}"`, { silent: true });
+            if (result.success) {log(`Resolved conflict in ${file} using 'theirs' strategy`);
             }
-          } catch (error) {
-            log(`Failed to resolve conflict in ${file}: ${error}`, 'ERROR');
+          } catch (error) {log(`Failed to resolve conflict in ${file}: ${error}`, 'ERROR');
           }
         } else {
           // For other files, use default strategy
-          try {
-            const result = gitCommand(`checkout --ours "${file}"`, { silent: true });
-            if (result.success) {
-              log(`Resolved conflict in ${file} using default strategy`);
+          try {const result = gitCommand(`checkout --ours "${file}"`, { silent: true });
+            if (result.success) {log(`Resolved conflict in ${file} using default strategy`);
             }
-          } catch (error) {
-            log(`Failed to resolve conflict in ${file}: ${error}`, 'ERROR');
+          } catch (error) {log(`Failed to resolve conflict in ${file}: ${error}`, 'ERROR');
           }
         }
       });
@@ -172,17 +153,13 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {
     
     aggressive: () => {
       // Always use 'ours' strategy
-      conflictedFiles.forEach(file => {
-        gitCommand(`checkout --ours "${file}"`, { silent: true });
-        log(`Resolved conflict in ${file} using aggressive strategy`);
+      conflictedFiles.forEach(file => {gitCommand(`checkout --ours "${file}"`, { silent: true });log(`Resolved conflict in ${file} using aggressive strategy`);
       });
     },
     
     conservative: () => {
       // Always use 'theirs' strategy
-      conflictedFiles.forEach(file => {
-        gitCommand(`checkout --theirs "${file}"`, { silent: true });
-        log(`Resolved conflict in ${file} using conservative strategy`);
+      conflictedFiles.forEach(file => {gitCommand(`checkout --theirs "${file}"`, { silent: true });log(`Resolved conflict in ${file} using conservative strategy`);
     });
     }
   };
@@ -191,53 +168,39 @@ const intelligentConflictResolution = (conflictedFiles, branchName) => {
   strategy();
 };
 
-const mergeBranch = async (branchName) => {
-  log(`Attempting to merge branch: ${branchName}`);
+const mergeBranch = async (branchName) => {log(`Attempting to merge branch: ${branchName}`);
   
-  // Checkout main branch
-  let result = gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { silent: true });
-  if (!result.success) {
-    log(`Failed to checkout ${CONFIG.MAIN_BRANCH}: ${result.error}`, 'ERROR');
+  // Checkout main branchlet result = gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { silent: true });
+  if (!result.success) {log(`Failed to checkout ${CONFIG.MAIN_BRANCH}: ${result.error}`, 'ERROR');
     return false;
   }
   
-  // Pull latest changes
-  result = gitCommand(`pull origin ${CONFIG.MAIN_BRANCH}`, { silent: true });
-  if (!result.success) {
-    log(`Failed to pull latest changes: ${result.error}`, 'ERROR');
+  // Pull latest changesresult = gitCommand(`pull origin ${CONFIG.MAIN_BRANCH}`, { silent: true });
+  if (!result.success) {log(`Failed to pull latest changes: ${result.error}`, 'ERROR');
     return false;
   }
   
-  // Attempt merge
-  result = gitCommand(`merge --no-edit origin/${branchName}`, { silent: true });
-  if (result.success) {
-    log(`Successfully merged ${branchName} into ${CONFIG.MAIN_BRANCH}`);
+  // Attempt mergeresult = gitCommand(`merge --no-edit origin/${branchName}`, { silent: true });
+  if (result.success) {log(`Successfully merged ${branchName} into ${CONFIG.MAIN_BRANCH}`);
     
-    // Push changes
-    const pushResult = gitCommand(`push origin ${CONFIG.MAIN_BRANCH}`, { silent: true });
-    if (pushResult.success) {
-      log(`Pushed merged changes to remote`);
+    // Push changesconst pushResult = gitCommand(`push origin ${CONFIG.MAIN_BRANCH}`, { silent: true });
+    if (pushResult.success) {log(`Pushed merged changes to remote`);
       
-      // Clean up merged branch
-      gitCommand(`push origin --delete ${branchName}`, { silent: true });
-      log(`Deleted remote branch: ${branchName}`);
+      // Clean up merged branchgitCommand(`push origin --delete ${branchName}`, { silent: true });log(`Deleted remote branch: ${branchName}`);
       
       return true;
-    } else {
-      log(`Failed to push merged changes: ${pushResult.error}`, 'ERROR');
+    } else {log(`Failed to push merged changes: ${pushResult.error}`, 'ERROR');
       return false;
     }
   } else {
-    // Handle merge conflicts
-    log(`Merge conflict detected for branch: ${branchName}`);
+    // Handle merge conflictslog(`Merge conflict detected for branch: ${branchName}`);
     
     // Get conflicted files
     const conflictedFilesResult = gitCommand('diff --name-only --diff-filter=U', { silent: true });
     if (conflictedFilesResult.success) {
       const conflictedFiles = conflictedFilesResult.output.split('\n').filter(line => line.trim());
       
-      if (conflictedFiles.length > 0) {
-        log(`Conflicted files: ${conflictedFiles.join(', ')}`);
+      if (conflictedFiles.length > 0) {log(`Conflicted files: ${conflictedFiles.join(', ')}`);
         
         // Resolve conflicts intelligently
         intelligentConflictResolution(conflictedFiles, branchName);
@@ -245,41 +208,31 @@ const mergeBranch = async (branchName) => {
         // Stage resolved files
         gitCommand('add .', { silent: true });
         
-        // Commit resolution
-        const commitResult = gitCommand(`commit -m "Auto-resolve merge conflicts for ${branchName} - ${new Date().toISOString()}"`, { silent: true });
-        if (commitResult.success) {
-          log(`Successfully resolved conflicts for ${branchName}`);
+        // Commit resolutionconst commitResult = gitCommand(`commit -m "Auto-resolve merge conflicts for ${branchName} - ${new Date().toISOString()}"`, { silent: true });
+        if (commitResult.success) {log(`Successfully resolved conflicts for ${branchName}`);
           
-          // Push resolved changes
-          const pushResult = gitCommand(`push origin ${CONFIG.MAIN_BRANCH}`, { silent: true });
-          if (pushResult.success) {
-            log(`Pushed conflict resolution to remote`);
+          // Push resolved changesconst pushResult = gitCommand(`push origin ${CONFIG.MAIN_BRANCH}`, { silent: true });
+          if (pushResult.success) {log(`Pushed conflict resolution to remote`);
             
-            // Clean up merged branch
-            gitCommand(`push origin --delete ${branchName}`, { silent: true });
-            log(`Deleted remote branch: ${branchName}`);
+            // Clean up merged branchgitCommand(`push origin --delete ${branchName}`, { silent: true });log(`Deleted remote branch: ${branchName}`);
             
             return true;
-          } else {
-            log(`Failed to push conflict resolution: ${pushResult.error}`, 'ERROR');
+          } else {log(`Failed to push conflict resolution: ${pushResult.error}`, 'ERROR');
             return false;
           }
-        } else {
-          log(`Failed to commit conflict resolution: ${commitResult.error}`, 'ERROR');
+        } else {log(`Failed to commit conflict resolution: ${commitResult.error}`, 'ERROR');
           return false;
         }
       }
     }
     
     // Abort merge if we get here
-    gitCommand('merge --abort', { silent: true });
-    log(`Aborted merge for branch: ${branchName}`);
+    gitCommand('merge --abort', { silent: true });log(`Aborted merge for branch: ${branchName}`);
     return false;
   }
 };
 
-const intelligentBranchAnalysis = (branches) => {
-  log(`Analyzing ${branches.length} branches for intelligent merging`);
+const intelligentBranchAnalysis = (branches) => {log(`Analyzing ${branches.length} branches for intelligent merging`);
   
   const branchAnalysis = branches.map(branch => {
     const info = getBranchInfo(branch);
@@ -333,8 +286,7 @@ const calculateBranchPriority = (branch, info) => {
   return priority;
 };
 
-const getBranchAge = (branchName) => {
-  const result = gitCommand(`log -1 --format=%ct origin/${branchName}`, { silent: true });
+const getBranchAge = (branchName) => {const result = gitCommand(`log -1 --format=%ct origin/${branchName}`, { silent: true });
   if (!result.success) return 999; // Default to old if can't determine
   
   const commitTime = parseInt(result.output.trim());
@@ -360,16 +312,13 @@ const executeIntelligentMerging = async () => {
   
   // Get current branch
   const currentBranch = getCurrentBranch();
-  if (currentBranch !== CONFIG.MAIN_BRANCH) {
-    log(`Not on main branch (currently on ${currentBranch}). Switching to main.`);
-    gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { silent: true });
+  if (currentBranch !== CONFIG.MAIN_BRANCH) {log(`Not on main branch (currently on ${currentBranch}). Switching to main.`);gitCommand(`checkout ${CONFIG.MAIN_BRANCH}`, { silent: true });
   }
   
   // Fetch latest changes
   log('Fetching latest changes from remote');
   const fetchResult = gitCommand('fetch origin', { silent: true });
-  if (!fetchResult.success) {
-    log(`Failed to fetch from remote: ${fetchResult.error}`, 'ERROR');
+  if (!fetchResult.success) {log(`Failed to fetch from remote: ${fetchResult.error}`, 'ERROR');
     return;
   }
   
@@ -379,7 +328,6 @@ const executeIntelligentMerging = async () => {
     log('No cursor branches found. Nothing to merge.');
     return;
   }
-  
   log(`Found ${cursorBranches.length} cursor branches to analyze`);
   
   // Analyze branches intelligently
@@ -392,7 +340,6 @@ const executeIntelligentMerging = async () => {
     log('No mergeable branches found.');
     return;
   }
-  
   log(`Found ${mergeableBranches.length} mergeable branches`);
   
   // Create backup before merging
@@ -406,36 +353,29 @@ const executeIntelligentMerging = async () => {
   let successCount = 0;
   let failureCount = 0;
   
-  for (const branchInfo of mergeableBranches.slice(0, CONFIG.MAX_CONCURRENT_MERGES)) {
-    log(`Processing branch: ${branchInfo.branch} (Priority: ${branchInfo.priority})`);
+  for (const branchInfo of mergeableBranches.slice(0, CONFIG.MAX_CONCURRENT_MERGES)) {log(`Processing branch: ${branchInfo.branch} (Priority: ${branchInfo.priority})`);
     
     try {
       const success = await mergeBranch(branchInfo.branch);
       if (success) {
-        successCount++;
-        log(`Successfully merged branch: ${branchInfo.branch}`);
+        successCount++;log(`Successfully merged branch: ${branchInfo.branch}`);
       } else {
-        failureCount++;
-        log(`Failed to merge branch: ${branchInfo.branch}`, 'ERROR');
+        failureCount++;log(`Failed to merge branch: ${branchInfo.branch}`, 'ERROR');
       }
     } catch (error) {
-      failureCount++;
-      log(`Error processing branch ${branchInfo.branch}: ${error.message}`, 'ERROR');
+      failureCount++;log(`Error processing branch ${branchInfo.branch}: ${error.message}`, 'ERROR');
     }
     
     // Small delay between merges
     await new Promise(resolve => setTimeout(resolve, 1000));
   }
   
-  // Summary
-  log(`Merge cycle completed. Success: ${successCount}, Failures: ${failureCount}`);
+  // Summarylog(`Merge cycle completed. Success: ${successCount}, Failures: ${failureCount}`);
   
-  if (successCount > 0) {
-    log(`Successfully merged ${successCount} branches. Backup available at: ${backupBranch}`);
+  if (successCount > 0) {log(`Successfully merged ${successCount} branches. Backup available at: ${backupBranch}`);
   }
   
-  if (failureCount > 0) {
-    log(`${failureCount} branches failed to merge. Check logs for details.`, 'WARN');
+  if (failureCount > 0) {log(`${failureCount} branches failed to merge. Check logs for details.`, 'WARN');
   }
 };
 
@@ -462,15 +402,12 @@ const monitorRepositoryHealth = () => {
     issues.push('High number of backup branches - consider cleanup');
   }
   
-  if (healthMetrics.currentBranch !== CONFIG.MAIN_BRANCH) {
-    issues.push(`Not on main branch (${healthMetrics.currentBranch})`);
+  if (healthMetrics.currentBranch !== CONFIG.MAIN_BRANCH) {issues.push(`Not on main branch (${healthMetrics.currentBranch})`);
   }
   
-  // Log health metrics
-  log(`Repository Health Metrics: ${JSON.stringify(healthMetrics, null, 2)}`);
+  // Log health metricslog(`Repository Health Metrics: ${JSON.stringify(healthMetrics, null, 2)}`);
   
-  if (issues.length > 0) {
-    log(`Repository Health Issues: ${issues.join('; ')}`, 'WARN');
+  if (issues.length > 0) {log(`Repository Health Issues: ${issues.join('; ')}`, 'WARN');
   }
   
   return healthMetrics;
@@ -490,20 +427,15 @@ const cleanupOldBranches = () => {
       const branchAge = getBranchAge(branch);
       const branchAgeMs = branchAge * 60 * 60 * 1000;
       
-      if (branchAgeMs > oneWeekAgo) {
-        log(`Cleaning up old branch: ${branch} (age: ${branchAge.toFixed(1)} hours)`);
-        
+      if (branchAgeMs > oneWeekAgo) {log(`Cleaning up old branch: ${branch} (age: ${branchAge.toFixed(1)} hours)`);
         const deleteResult = gitCommand(`push origin --delete ${branch}`, { silent: true });
         if (deleteResult.success) {
-          cleanedCount++;
-          log(`Successfully deleted old branch: ${branch}`);
-        } else {
-          log(`Failed to delete old branch ${branch}: ${deleteResult.error}`, 'ERROR');
+          cleanedCount++;log(`Successfully deleted old branch: ${branch}`);
+        } else {log(`Failed to delete old branch ${branch}: ${deleteResult.error}`, 'ERROR');
         }
       }
     }
   });
-  
   log(`Cleanup completed. Deleted ${cleanedCount} old branches`);
   return cleanedCount;
 };
@@ -529,12 +461,9 @@ const main = async () => {
       cleanedBranches: cleanedCount,
       status: 'completed'
     };
-    
     log(`Repository management cycle completed successfully: ${JSON.stringify(summary, null, 2)}`);
     
-  } catch (error) {
-    log(`Repository management cycle failed: ${error.message}`, 'ERROR');
-    log(`Stack trace: ${error.stack}`, 'ERROR');
+  } catch (error) {log(`Repository management cycle failed: ${error.message}`, 'ERROR');log(`Stack trace: ${error.stack}`, 'ERROR');
   }
 };
 

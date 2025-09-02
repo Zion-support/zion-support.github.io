@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/''usr/bin/env'' node
 
 /**
  * TypeScript Syntax Fixer - PM2 Automation
@@ -13,8 +13,7 @@ class TypeScriptSyntaxFixer {
   constructor() {
     this.projectRoot = process.cwd();
     this.logFile = path.join(
-      this.projectRoot,
-      'logs',
+      this.projectRoot,logs',
       'typescript-syntax-fixer.log'
     );
     this.fixesLog = path.join(this.projectRoot, 'logs', 'syntax-fixes.json');
@@ -31,8 +30,7 @@ class TypeScriptSyntaxFixer {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(this.logFile, logEntry);
-    console.log(`[${level}] ${message}`);
+    fs.appendFileSync(this.logFile, logEntry);console.log(`[${level}] ${message}`);
   }
 
   async runSyntaxFix() {
@@ -68,8 +66,7 @@ class TypeScriptSyntaxFixer {
       if (fixes.length > 0 && errors.length === 0) {
         await this.commitFixes(fixes);
       }
-    } catch (error) {
-      this.log(`Syntax fix automation failed: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Syntax fix automation failed: ${error.message}`, 'ERROR');
     }
 
     return { fixes, errors };
@@ -97,27 +94,22 @@ class TypeScriptSyntaxFixer {
                 issues: this.detectIssues(content),
               });
             }
-          } catch (error) {
-            this.log(`Error reading file ${file}: ${error.message}`, 'WARN');
+          } catch (error) {this.log(`Error reading file ${file}: ${error.message}`, 'WARN');
           }
         }
       }
-    } catch (error) {
-      this.log(`Error scanning files: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Error scanning files: ${error.message}`, 'ERROR');
     }
 
     return corrupted;
   }
 
   isCorrupted(content) {
-    const corruptionPatterns = [
-      /import:\s*{/,
-      /const:\s*[^,]+,\s*[^:]+:\s*\.FC/,
+    const corruptionPatterns = ['/import:\s*{/', '/const:\s*[^', '']+,\s*[^:]+:\s*\.FC/,
       /from,\s*'[^']+'/,
       /}, from,/,
       /import:\s*React,\s*from,\s*'react':/,
-      /import:\s*{([^}]+)},\s*from,\s*'([^']+)':/,
-    ];
+      /import:\s*{([^}]+)},\s*from,\s*'(['^']+)':/', ''];
 
     return corruptionPatterns.some(pattern => pattern.test(content));
   }
@@ -179,8 +171,7 @@ class TypeScriptSyntaxFixer {
   async fixFile(fileInfo) {
     const { path: filePath, content, issues } = fileInfo;
 
-    try {
-      this.log(`Fixing file: ${filePath}`);
+    try {this.log(`Fixing file: ${filePath}`);
 
       let fixedContent = content;
       let fixesApplied = [];
@@ -219,8 +210,7 @@ class TypeScriptSyntaxFixer {
           timestamp: new Date().toISOString(),
         };
       }
-    } catch (error) {
-      this.log(`Failed to fix file ${filePath}: ${error.message}`, 'ERROR');
+    } catch (error) {this.log(`Failed to fix file ${filePath}: ${error.message}`, 'ERROR');
       throw error;
     }
 
@@ -230,20 +220,17 @@ class TypeScriptSyntaxFixer {
   fixMalformedImports(content) {
     // Fix: import: { Component } from 'react'
     content = content.replace(
-      /import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g,
-      "import { $1 } from '$2'"
+      /import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g,import { $1 } from '$2'"
     );
 
     // Fix: import: React from 'react'
     content = content.replace(
-      /import:\s*([^,]+),\s*from,\s*'([^']+)'/g,
-      "import $1 from '$2'"
+      /import:\s*(['^', '']+),\s*from,\s*'([^']+)'/g,import $1 from '$2'"
     );
 
     // Fix: import: { Component }, from, 'react'
     content = content.replace(
-      /import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g,
-      "import { $1 } from '$2'"
+      /import:\s*{([^}]+)},\s*from,\s*'([^']+)'/g,import { $1 } from '$2''
     );
 
     return content;
@@ -252,13 +239,12 @@ class TypeScriptSyntaxFixer {
   fixMalformedConst(content) {
     // Fix: const: Component, React: .FC
     content = content.replace(
-      /const:\s*([^,]+),\s*([^:]+):\s*\.FC/g,
-      'const $1: React.FC'
+      /const:\s*(['^', '']+),\s*([^:]+):\s*\.''FC/g'',const $1: React.FC'
     );
 
     // Fix: const: Component: React.FC
     content = content.replace(
-      /const:\s*([^:]+):\s*React\.FC/g,
+      /const:\s*([^:]+):\s*React\.''FC/g'',
       'const $1: React.FC'
     );
 
@@ -303,7 +289,7 @@ class TypeScriptSyntaxFixer {
       return { success: true, errors: 0 };
     } catch (error) {
       const output = error.stdout || error.stderr || '';
-      const errorCount = (output.match(/error TS/g) || []).length;
+      const errorCount = (output.match(/error ''TS/g'') || []).length;
 
       return { success: false, errors: errorCount, output };
     }
@@ -325,8 +311,7 @@ class TypeScriptSyntaxFixer {
 
     fs.writeFileSync(this.fixesLog, JSON.stringify(report, null, 2));
 
-    this.log(
-      `Syntax fix report generated: ${fixes.length} fixes applied, ${errors.length} errors encountered`
+    this.log(Syntax fix report generated: ${fixes.length} fixes applied, ${errors.length} errors encountered'
     );
 
     return report;
@@ -337,23 +322,19 @@ class TypeScriptSyntaxFixer {
       this.log('Committing syntax fixes...');
 
       // Add fixed files
-      for (const fix of fixes) {
-        execSync(`git add "${fix.file}"`, {
+      for (const fix of fixes) {execSync(`git add "${fix.file}"`, {
           cwd: this.projectRoot,
           stdio: 'pipe',
         });
       }
 
-      // Commit
-      const commitMessage = `fix: Auto-fix TypeScript/JSX syntax issues (${fixes.length} files)`;
-      execSync(`git commit -m "${commitMessage}"`, {
+      // Commitconst commitMessage = `fix: Auto-fix ''TypeScript/JSX'' syntax issues (${fixes.length} files)`;execSync(`git commit -m "${commitMessage}"`, {
         cwd: this.projectRoot,
         stdio: 'pipe',
       });
 
       this.log('Syntax fixes committed successfully');
-    } catch (error) {
-      this.log(`Failed to commit fixes: ${error.message}`, 'WARN');
+    } catch (error) {this.log(`Failed to commit fixes: ${error.message}`, 'WARN');
     }
   }
 }
@@ -372,8 +353,7 @@ async function main() {
     } else {
       process.exit(2); // No fixes needed
     }
-  } catch (error) {
-    fixer.log(`Fatal error: ${error.message}`, 'ERROR');
+  } catch (error) {fixer.log(`Fatal error: ${error.message}`, 'ERROR');
     process.exit(1);
   }
 }

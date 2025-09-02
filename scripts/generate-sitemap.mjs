@@ -11,14 +11,10 @@ const BASE_URL = 'https://ziontechgroup.com';
 const PAGES_DIR = path.join(__dirname, '..', 'pages');
 
 // Files to exclude from sitemap
-const EXCLUDED_FILES = [
-  '_app',
-  '_document',
-  '_error',
-  '404',
-  '500',
-  'api',
-  'test',
+const EXCLUDED_FILES = [_app',
+  '_document',_error',
+  '404',500',
+  'api',test',
 ];
 
 // Directories to exclude
@@ -77,8 +73,7 @@ function generateSitemap() {
     scanDirectory(PAGES_DIR);
   }
 
-  // Generate sitemap XML
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  // Generate sitemap XMLconst sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls
   .map(
@@ -86,8 +81,7 @@ ${urls
     <loc>${BASE_URL}${url.url}</loc>
     <lastmod>${url.lastmod}</lastmod>
     <changefreq>${url.changefreq}</changefreq>
-    <priority>${url.priority}</priority>
-  </url>`
+    <priority>${url.priority}</priority></url>`
   )
   .join('\n')}
 </urlset>`;
@@ -95,11 +89,7 @@ ${urls
   // Write sitemap to public directory
   const outputPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
   fs.writeFileSync(outputPath, sitemap);
-
-  console.log(`✅ Sitemap generated successfully!`);
-  console.log(`📍 Location: ${outputPath}`);
-  console.log(`🔗 URLs included: ${urls.length}`);
-  console.log(`🌐 Base URL: ${BASE_URL}`);
+console.log(`✅ Sitemap generated successfully!`);console.log(`📍 Location: ${outputPath}`);console.log(`🔗 URLs included: ${urls.length}`);console.log(`🌐 Base URL: ${BASE_URL}`);
 }
 
 generateSitemap();
