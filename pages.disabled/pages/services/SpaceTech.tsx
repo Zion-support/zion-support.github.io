@@ -70,7 +70,8 @@ import {}
   Navigation,
   Earth,
   Moon,
-  Sun} from 'lucide-react';
+  Sun} from
+  'lucide-react';
 
 :pages.disabled/pages/services/SpaceTech.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
@@ -90,7 +91,9 @@ import {}
 ""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               Space""
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">'{' '}
+              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
+  '{' 
+  '}
                 Technology;
               </span>
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -357,4 +360,4 @@ import {}
 ;
 :pages.disabled/pages/services/SpaceTech.tsx
 export { SpaceTech };export default SpaceTech;'"
-'"'"
+  '"'"
