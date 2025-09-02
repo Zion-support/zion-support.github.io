@@ -1,32 +1,35 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3;
-  return (    <footer className='bg-gray-900 text-white'>
+import React from 'react';
+
+const EnhancedFooter: React.FC = () => {
+  return (
+    <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
-      <div className='container mx-auto px-4 py-12'>
-        <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8'>
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
-          <div className='lg:col-span-1'>
-            <div className='flex items-center space-x-2 mb-4'>
-              <div className='w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
-                <span className='text-white font-bold text-xl'>Z</span>
+          <div className="lg:col-span-1">
+            <div className="flex items-center space-x-2 mb-4">
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-xl">Z</span>
               </div>
-              <div className='text-xl font-bold'>Zion Tech Group</div>
+              <div className="text-xl font-bold">Zion Tech Group</div>
             </div>
-            <p className='text-gray-300 mb-4'>
-              Leading technology solutions provider helping businesses transform their digital presence;
-              with cutting-edge AI, cloud architecture, and innovative development services.;
+            <p className="text-gray-300 mb-4">
+              Leading technology solutions provider helping businesses transform their digital presence
+              with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
-            <div className='flex space-x-4'>
-              <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
-                <Linkedin className='w-5 h-5' />
+            <div className="flex space-x-4">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Linkedin className="w-5 h-5" />
               </a>
-              <a href='https://twitter.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
-                <Twitter className='w-5 h-5' />
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Twitter className="w-5 h-5" />
               </a>
-              <a href='https://github.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
-                <Github className='w-5 h-5' />
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Github className="w-5 h-5" />
               </a>
-              <a href='https://facebook.com' target='_blank' rel='noopener noreferrer' className='text-gray-300 hover:text-blue-400 transition-colors'>
-                <Facebook className='w-5 h-5' />
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-blue-400 transition-colors">
+                <Facebook className="w-5 h-5" />
               </a>
             </div>
           </div>
