@@ -1,173 +1,179 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  Calendar, 
+  Brain, 
+  Target, 
+  BarChart3, 
+  Zap, 
+  ArrowRight,
+  Clock,
+  Star,
+  Lightbulb,
+  CheckCircle,
+  Eye,
+  Globe,
+  PieChart,
+  Monitor,
+  FileText,
+  Share2,
+  Users,
+  TrendingUp
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
+=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Target, Brain, Users, Clock, Shield, CheckCircle, Star, Award, Rocket, ArrowRight, Phone, Video, Zap, TrendingUp, BarChart3, Globe, Heart, Settings, Monitor, Smartphone, Laptop, Calendar, GitBranch, PieChart, AlertTriangle              } from 'lucide-react.ts';
 import { SEO              } from '@/components/SEO';
 
-export default function AIProjectManagement(...args: any[]): any {
+export default function AIProjectManagement() {
   const features = [
     {
       icon: Brain,
       title: "AI-Powered Planning",
-      description: "Intelligent project planning with predictive analytics and resource optimization"
+      description: "Intelligent project planning with automated task breakdown and resource allocation."
+    },
+    {
+      icon: Calendar,
+      title: "Smart Scheduling",
+      description: "Optimize project timelines with AI-driven scheduling and dependency management."
     },
     {
       icon: Target,
-      title: "Smart Goal Setting",
-      description: "AI-driven milestone tracking and adaptive goal adjustment"
-    },
-    {
-      icon: Users,
-      title: "Team Optimization",
-      description: "Automated team allocation and workload balancing"
-    },
-    {
-      icon: Clock,
-      title: "Predictive Scheduling",
-      description: "Forecast project timelines and identify potential delays"
+      title: "Risk Assessment",
+      description: "Identify potential project risks early with predictive analytics and AI insights."
     },
     {
       icon: BarChart3,
-      title: "Real-Time Analytics",
-      description: "Live project insights and performance metrics"
+      title: "Performance Tracking",
+      description: "Monitor project progress with real-time analytics and automated reporting."
     },
     {
-      icon: Shield,
-      title: "Risk Management",
-      description: "AI-powered risk identification and mitigation strategies"
+      icon: Zap,
+      title: "Automated Workflows",
+      description: "Streamline project processes with intelligent automation and task management."
+    },
+    {
+      icon: Users,
+      title: "Team Collaboration",
+      description: "Enhance team productivity with AI-powered collaboration tools and communication."
     }
   ];
 
   const benefits = [
-    "Reduce project delivery time by 30-50%",
-    "Improve resource utilization by 40-60%",
-    "Increase project success rate by 25-40%",
-    "Reduce project costs by 20-35%",
-    "Eliminate manual reporting by 80%",
-    "Improve stakeholder communication by 50%"
-  ];
-
-  const solutions = [
     {
-      title: "AI Project Planning",
-      description: "Intelligent project planning and scheduling with predictive analytics",
-      features: ["Smart milestone planning", "Resource optimization", "Timeline forecasting"],
-      price: "From $3,000/month"
+      icon: Target,
+      title: "Improved Project Success",
+      description: "Increase project success rates with AI-powered planning and risk management."
     },
     {
-      title: "Team Management AI",
-      description: "AI-powered team allocation and performance optimization",
-      features: ["Workload balancing", "Skill matching", "Performance tracking"],
-      price: "From $2,500/month"
+      icon: Lightbulb,
+      title: "Better Resource Utilization",
+      description: "Optimize resource allocation and reduce waste with intelligent planning."
     },
     {
-      title: "Risk Management Platform",
-      description: "Advanced risk identification and mitigation strategies",
-      features: ["Risk prediction", "Mitigation planning", "Real-time alerts"],
-      price: "From $2,000/month"
+      icon: Clock,
+      title: "Faster Delivery",
+      description: "Accelerate project completion with automated workflows and optimized scheduling."
     },
     {
-      title: "Complete PM Suite",
-      description: "Full AI-powered project management solution",
-      features: ["All features", "Custom integrations", "Enterprise support"],
-      price: "From $6,000/month"
+      icon: Star,
+      title: "Enhanced Collaboration",
+      description: "Improve team productivity and communication with AI-powered tools."
     }
   ];
 
   const projectTypes = [
-    "Software Development",
-    "Construction & Engineering",
-    "Marketing Campaigns",
-    "Product Launches",
-    "Research & Development",
-    "Event Management"
+    {
+      title: "Software Development",
+      description: "Manage agile development projects with AI-powered sprint planning and tracking."
+    },
+    {
+      title: "Construction Projects",
+      description: "Oversee construction timelines, resource allocation, and risk management."
+    },
+    {
+      title: "Marketing Campaigns",
+      description: "Coordinate multi-channel marketing campaigns with automated workflow management."
+    },
+    {
+      title: "Research Projects",
+      description: "Track research milestones, data collection, and analysis progress."
+    }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="AI Project Management Services - Zion Tech Group"
-        description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates."
-      />
-      
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-emerald-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden py-20 lg:py-32">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>
-        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative overflow-hidden bg-gradient-to-r from-emerald-600 to-green-700 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
+            className="text-center"
           >
-            <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">
-              <Target className="w-5 h-5 text-orange-400 mr-2" />
-              <span className="text-orange-300 font-medium">AI Project Management</span>
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 rounded-full">
+                <Calendar className="h-8 w-8 text-white" />
+              </div>
             </div>
-            
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-600 bg-clip-text text-transparent">
-                AI Project Management
-              </span>
-              <br />
-              <span className="text-white">That Delivers Results</span>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              AI Project Management
             </h1>
-            
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your project delivery with AI-powered management that optimizes 
-              planning, resource allocation, and risk management. Deliver projects faster, 
-              cheaper, and with unprecedented success rates.
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-emerald-100">
+              Transform your project management with AI-powered planning, scheduling, and automation.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-emerald-600 font-semibold rounded-lg hover:bg-emerald-50 transition-colors"
               >
-                <Rocket className="w-5 h-5 mr-2" />
-                Start Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center"
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-emerald-600 transition-colors"
               >
-                <Video className="w-5 h-5 mr-2" />
-                Watch Demo
-              </motion.button>
+                View All Services
+              </Link>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced AI Technology for Better Project Delivery
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Advanced Project Management Features
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management platform combines machine learning, 
-              predictive analytics, and automation to deliver exceptional project outcomes.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our AI-powered platform provides comprehensive project management capabilities to improve success rates.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)              => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-300 group"
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-300">
+                <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="w-6 h-6 text-orange-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -178,21 +184,21 @@ export default function AIProjectManagement(...args: any[]): any {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-slate-800/30">
-        <div className="container mx-auto px-4">
+      {/* Project Types Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/20">
+        <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Proven Results & Benefits
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Perfect for All Project Types
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management delivers measurable improvements 
-              in delivery time, cost reduction, and project success rates.
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Our AI Project Management platform adapts to any industry and project complexity.
             </p>
           </motion.div>
 
@@ -203,31 +209,40 @@ export default function AIProjectManagement(...args: any[]): any {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4"
+                viewport={{ once: true }}
+                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-lg p-6 hover:border-orange-500/50 transition-all duration-300"
               >
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
-                <span className="text-white font-medium">{benefit}</span>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="w-6 h-6 text-orange-400" />
+                  <span className="text-white font-medium text-lg">{type}</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Solutions Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      {/* Benefits Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Flexible Solutions for Every Project
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our AI Project Management?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our range of AI-powered project management solutions designed to 
-              meet your specific project needs and scale with your organization.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the benefits of AI-powered project management that improves success rates and efficiency.
             </p>
           </motion.div>
 
@@ -238,30 +253,22 @@ export default function AIProjectManagement(...args: any[]): any {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-orange-400/30 transition-all duration-300"
+                viewport={{ once: true }}
+                className="bg-gray-50 p-8 rounded-xl border border-gray-200"
               >
-                <h3 className="text-2xl font-semibold text-white mb-4">{solution.title}</h3>
-                <p className="text-gray-300 mb-6">{solution.description}</p>
-                
-                <div className="space-y-3 mb-6">
-                  {solution.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-3">
-                      <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="text-3xl font-bold text-orange-400 mb-6">{solution.price}</div>
-                <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
-                  Get Started
-                </button>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {projectType.title}
+                </h3>
+                <p className="text-gray-600">
+                  {projectType.description}
+                </p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
+=======
       {/* Project Types Section */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-4">
@@ -300,37 +307,34 @@ export default function AIProjectManagement(...args: any[]): any {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-r from-emerald-600 to-green-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Project Delivery?
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Transform Your Project Management?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join the AI revolution in project management and deliver projects 
-              faster, cheaper, and with higher success rates.
+            <p className="text-xl mb-8 text-emerald-100 max-w-3xl mx-auto">
+              Join organizations that are already leveraging AI to improve project success rates.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 flex items-center justify-center"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-emerald-600 font-semibold rounded-lg hover:bg-emerald-50 transition-colors"
               >
-                <ArrowRight className="w-5 h-5 mr-2" />
-                Start Your Free Trial
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center"
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-emerald-600 transition-colors"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Call +1 302 464 0950
-              </motion.button>
+                Explore All Services
+              </Link>
             </div>
           </motion.div>
         </div>

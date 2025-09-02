@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { Leaf, Zap, Database, Shield, BarChart3, Activity, Globe, Cpu               } from 'lucide-react.ts';
-=======
 import React from 'react.ts';
 import { motion              } from 'framer-motion.ts';
 import { Leaf,
@@ -27,12 +23,8 @@ import { Leaf,
   Target,
   Award,
   BarChart3
-<<<<<<< HEAD
-import { SEO              } from '../../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function GreenIT(...args: any[]): any {
   const features = [
@@ -49,15 +41,6 @@ export default function GreenIT(...args: any[]): any {
     {
       icon: Cloud,
       title: 'Green Cloud Solutions',
-<<<<<<< HEAD
-      description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.'
-    },
-    {
-      icon: Recycle,
-      title: 'Circular IT Economy',
-      description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.'
-
-=======
       description: 'Leverage renewable energy-powered cloud infrastructure for sustainable computing.';
     },;
     {;
@@ -65,9 +48,7 @@ export default function GreenIT(...args: any[]): any {
       title: 'Circular IT Economy',;
       description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const solutions = [
     {
       title: 'Energy-Efficient Data Centers',
@@ -86,15 +67,6 @@ export default function GreenIT(...args: any[]): any {
       description: 'Implement intelligent power management systems for optimal energy usage',
       icon: Gauge,
       benefits: ['Automated power optimization', 'Real-time monitoring', 'Predictive maintenance']
-<<<<<<< HEAD
-    },
-    {
-      title: 'Green Software Development',
-      description: 'Develop energy-efficient software applications and optimize existing systems',
-      icon: Code,
-      benefits: ['Reduced computational overhead', 'Lower energy consumption', 'Improved performance']
-
-=======
     },;
     {;
       title: 'Green Software Development',;
@@ -102,9 +74,7 @@ export default function GreenIT(...args: any[]): any {
       icon: Code,;
       benefits: ['Reduced computational overhead', 'Lower energy consumption', 'Improved performance'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const useCases = [
     {
       industry: 'Enterprise',
@@ -123,15 +93,6 @@ export default function GreenIT(...args: any[]): any {
       description: 'Green campus technology and sustainable educational IT infrastructure',
       icon: GraduationCap,
       metrics: ['Student Experience', 'Operational Costs', 'Sustainability Goals']
-<<<<<<< HEAD
-    },
-    {
-      industry: 'Manufacturing',
-      description: 'Smart manufacturing with energy-efficient automation and monitoring',
-      icon: Factory,
-      metrics: ['Production Efficiency', 'Energy Consumption', 'Environmental Compliance']
-
-=======
     },;
     {;
       industry: 'Manufacturing',;
@@ -139,9 +100,7 @@ export default function GreenIT(...args: any[]): any {
       icon: Factory,;
       metrics: ['Production Efficiency', 'Energy Consumption', 'Environmental Compliance'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -156,15 +115,6 @@ export default function GreenIT(...args: any[]): any {
     {
       icon: Globe,
       title: 'Environmental Impact',
-<<<<<<< HEAD
-      description: 'Reduce carbon footprint and contribute to environmental conservation'
-    },
-    {
-      icon: Award,
-      title: 'Brand Reputation',
-      description: 'Enhance brand image through commitment to sustainability'
-
-=======
       description: 'Reduce carbon footprint and contribute to environmental conservation';
     },;
     {;
@@ -172,16 +122,13 @@ export default function GreenIT(...args: any[]): any {
       title: 'Brand Reputation',;
       description: 'Enhance brand image through commitment to sustainability';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Green IT Services - Zion Tech Group"
         description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
       />
-
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
@@ -190,26 +137,13 @@ export default function GreenIT(...args: any[]): any {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-
             <div className="inline-flex items-center px-4 py-2 bg-green-400/20 text-green-400 rounded-full text-sm font-medium mb-6">
               <Leaf className="w-4 h-4 mr-2" />
               Sustainable Technology
@@ -233,7 +167,6 @@ export default function GreenIT(...args: any[]): any {
           </motion.div>
         </div>
       </section>
-
       {/* Green IT Services */}
       <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -269,7 +202,6 @@ export default function GreenIT(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Green Technologies */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -303,7 +235,6 @@ export default function GreenIT(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -312,25 +243,12 @@ export default function GreenIT(...args: any[]): any {
               initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
-
               <h2 className="text-4xl font-bold text-white mb-6">
                 What is Green IT?
               </h2>
@@ -363,31 +281,17 @@ export default function GreenIT(...args: any[]): any {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial = {
   { opacity: 0,
   x: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               className="relative"
-
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-xl font-semibold text-white">Sustainability Dashboard</h3>
@@ -422,7 +326,6 @@ export default function GreenIT(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Key Features */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -430,26 +333,13 @@ export default function GreenIT(...args: any[]): any {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -466,35 +356,16 @@ export default function GreenIT(...args: any[]): any {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-green-400" />
                 </div>
@@ -505,7 +376,6 @@ export default function GreenIT(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Core Solutions */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -513,26 +383,13 @@ export default function GreenIT(...args: any[]): any {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Core Solutions
             </h2>
@@ -549,35 +406,16 @@ export default function GreenIT(...args: any[]): any {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
                     <solution.icon className="w-8 h-8 text-green-400" />
@@ -598,7 +436,6 @@ export default function GreenIT(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Industry Use Cases */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -606,26 +443,13 @@ export default function GreenIT(...args: any[]): any {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -642,35 +466,16 @@ export default function GreenIT(...args: any[]): any {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-green-400" />
@@ -691,7 +496,6 @@ export default function GreenIT(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Benefits */}
       <section className="py-20">
         <div className="container mx-auto px-6">
@@ -699,26 +503,13 @@ export default function GreenIT(...args: any[]): any {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -735,35 +526,16 @@ export default function GreenIT(...args: any[]): any {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-center"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-green-400" />
                 </div>
@@ -774,7 +546,6 @@ export default function GreenIT(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* Implementation Process */}
       <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
@@ -782,26 +553,13 @@ export default function GreenIT(...args: any[]): any {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
@@ -838,35 +596,16 @@ export default function GreenIT(...args: any[]): any {
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
@@ -877,7 +616,6 @@ export default function GreenIT(...args: any[]): any {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
         <div className="container mx-auto px-6 text-center">
@@ -885,25 +623,12 @@ export default function GreenIT(...args: any[]): any {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Green with Your IT?
             </h2>

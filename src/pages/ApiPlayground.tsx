@@ -546,7 +546,6 @@ export default function ApiPlayground() {
                     </div>
                   )}
                 </div>
-              </div>
 
               {/* API Playground */}
               <div className="lg:col-span-2">
@@ -707,6 +706,45 @@ export default function ApiPlayground() {
                             </div>
                           </div>
                         </div>
+                      )}
+
+                        {activeTab === 'docs' && (
+                          <div className="space-y-6">
+                            <div>
+                              <h3 className="text-lg font-semibold text-white mb-3">Parameters</h3>
+                              <div className="space-y-3">
+                                {selectedApi.parameters.map((param, index) => (
+                                  <div key={index} className="bg-slate-900 p-4 rounded-lg">
+                                    <div className="flex items-center justify-between mb-2">
+                                      <span className="text-white font-medium">{param.name}</span>
+                                      <div className="flex items-center gap-2">
+                                        <span className={`px-2 py-1 rounded text-xs ${
+                                          param.required ? 'bg-red-500/20 text-red-400' : 'bg-green-500/20 text-green-400'
+                                        }`}>
+                                          {param.required ? 'Required' : 'Optional'}
+                                        </span>
+                                        <span className="text-gray-300 text-sm">{param.type}</span>
+                                      </div>
+                                    </div>
+                                    <p className="text-gray-300 text-sm">{param.description}</p>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+
+                            <div className="flex justify-center">
+                              <a
+                                href={selectedApi.documentation}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center gap-2"
+                              >
+                                <BookOpen className="w-5 h-5" />
+                                View Full Documentation
+                              </a>
+                            </div>
+                          </div>
+                        )}
 
                         {/* Examples */}
                         <div className="grid md:grid-cols-2 gap-6">

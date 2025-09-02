@@ -1,16 +1,14 @@
 {
-  "name": "Zion Tech Group - AI & Quantum Computing Solutions",
+  "name": "Zion Tech Group - Future Technology Solutions",
   "short_name": "Zion Tech",
-  "description": "Leading provider of AI, quantum computing, cybersecurity, and digital transformation solutions for enterprises worldwide.",
+  "description": "Pioneering the future of technology with AI-powered solutions that transform businesses and empower innovation.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0f172a",
-  "theme_color": "#3b82f6",
+  "theme_color": "#0ea5e9",
   "orientation": "portrait-primary",
-  "scope": "/",
   "lang": "en",
-  "dir": "ltr",
-  "categories": ["business", "productivity", "technology", "education"],
+  "categories": ["business", "productivity", "technology"],
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -23,44 +21,17 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    },
-    {
-      "src": "/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "/favicon-16x16.png",
-      "sizes": "16x16",
-      "type": "image/png"
     }
   ],
   "shortcuts": [
     {
       "name": "Services",
       "short_name": "Services",
-      "description": "View our AI and technology services",
+      "description": "View our technology services",
       "url": "/services",
       "icons": [
         {
           "src": "/icon-services.png",
-          "sizes": "96x96"
-        }
-      ]
-    },
-    {
-      "name": "Solutions",
-      "short_name": "Solutions",
-      "description": "Industry-specific solutions",
-      "url": "/solutions",
-      "icons": [
-        {
-          "src": "/icon-solutions.png",
           "sizes": "96x96"
         }
       ]
@@ -88,52 +59,6 @@
           "sizes": "96x96"
         }
       ]
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshot-desktop.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Zion Tech Group Desktop Experience"
-    },
-    {
-      "src": "/screenshot-mobile.png",
-      "sizes": "390x844",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Zion Tech Group Mobile Experience"
-    }
-  ],
-  "related_applications": [
-    {
-      "platform": "webapp",
-      "url": "https://ziontechgroup.com/manifest.json"
-    }
-  ],
-  "prefer_related_applications": false,
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "launch_handler": {
-    "client_mode": "navigate-existing"
-  },
-  "handle_links": "preferred",
-  "protocol_handlers": [
-    {
-      "protocol": "web+zion",
-      "url": "/?protocol=%s"
-    }
-  ],
-  "file_handlers": [
-    {
-      "action": "/file-handler",
-      "accept": {
-        "application/pdf": [".pdf"],
-        "text/plain": [".txt"],
-        "image/*": [".png", ".jpg", ".jpeg", ".gif", ".webp"]
-      }
     }
   ]
 }

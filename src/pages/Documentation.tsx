@@ -446,6 +446,21 @@ export default function Documentation() {
                         <h3 className="text-xl font-bold text-white">{category.name}</h3>
                         <p className="text-sm text-gray-400">{category.description}</p>
                       </div>
+                      
+                      <div className="flex items-center justify-between mb-4">
+                        <div className="flex items-center space-x-4 text-slate-400 text-sm">
+                          <span className="flex items-center">
+                            <Clock className="w-4 h-4 mr-1" />
+                            {guide.readTime}
+                          </span>
+                          <span>{guide.difficulty}</span>
+                        </div>
+                        <span className="text-slate-400 text-sm">{guide.views} views</span>
+                      </div>
+                      
+                      <button className="w-full bg-slate-700 text-white py-3 px-6 rounded-xl font-semibold hover:bg-slate-600 transition-colors duration-300">
+                        Read Guide
+                      </button>
                     </div>
 
                     <div className="space-y-3 mb-4">
@@ -642,7 +657,7 @@ export default function Documentation() {
                 }
               ].map((guide, index) => (
                 <motion.div
-                  key={index}
+                  key={resource.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}

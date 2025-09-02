@@ -1,18 +1,6 @@
 {
   "checks": [
     {
-      "file": "index.html",
-      "csp": false,
-      "xFrame": false,
-      "xContent": false
-    },
-    {
-      "file": "offline.html",
-      "csp": false,
-      "xFrame": false,
-      "xContent": false
-    },
-    {
       "type": "package-scripts",
       "hasSecurityScript": false,
       "hasAuditScript": false,

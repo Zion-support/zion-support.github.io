@@ -36,6 +36,13 @@ import {
   Microscope,
   Database,
   Truck,
+} from 'lucide-react';
+import SEO from "@/components/SEO";
+import { ULTIMATE_INNOVATIVE_SERVICES_2026              } from '@/data/ultimateInnovativeServices2026';
+
+export default function ComprehensiveServicesOverview2026(...args[]: any):  {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [expandedCategory, setExpandedCategory] = useState<any>(null);
   Package,
   Warehouse
 } from 'lucide-react';
@@ -126,6 +133,17 @@ const ComprehensiveServicesOverview2026 = () => {
       ]
     },
     {
+      innovationLevel: 'Advanced';
+    };
+  ];
+  const filteredCategories = selectedCategory === 'all'
+    ? serviceCategories: anyanyanyanyanyanyanyanyanyanyanyanyanyserviceCategories.filter(cat              => cat.id === selectedCategory);
+
+  const toggleCategoryExpansion = (categoryId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
+    setExpandedCategory(expandedCategory === categoryId ? null : categoryId);
+  };
+  const totalMarketSize = '$3.2+ trillion';
+  const avgROI = '400-1500%';
       title: "AI Content & Marketing",
       description: "Intelligent content creation and optimization",
       icon: Zap,
@@ -322,6 +340,51 @@ const ComprehensiveServicesOverview2026 = () => {
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive solutions designed to address every aspect of modern business challenges
             </p>
+                      >
+                        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-6">
+                          {category.services.map((service, serviceIndex)               => (
+                            <div key={service.id} className="bg-zion-slate-800/30 rounded-lg p-6 border border-zion-slate-600/30">
+                              <div className="flex items-start justify-between mb-4">
+                                <h4 className="text-lg font-semibold text-white">{service.title}</h4>
+                                <div className="text-right">
+                                  <div className="text-xl font-bold text-zion-cyan">
+                                    ${service.price.toLocaleString()}
+                                  </div>
+                                  <div className="text-sm text-zion-slate-400">
+                                    {service.pricingModel}
+                                  </div>
+                                </div>
+                              </div>
+                              <p className="text-zion-slate-300 text-sm mb-4">{service.description}</p>
+                              <div className="flex items-center gap-2 mb-4">
+                                <div className={`px-2 py-1 rounded-full text-xs font-semibold ${
+                                  service.innovationLevel === 'Revolutionary'
+                                    ? 'bg-red-500/20 text-red-400 border border-red-500/30'
+                                    : service.innovationLevel === 'Cutting-edge'
+                                    ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
+                                    : 'bg-blue-500/20 text-blue-400 border border-blue-500/30'
+                                }`}>
+                                  {service.innovationLevel}
+                                </div>
+                                <div className="text-xs text-zion-slate-400">
+                                  ROI: {service.roi}
+                                </div>
+                              </div>
+                              <div className="flex flex-wrap gap-2 mb-4">
+                                {service.tags.slice(0, 3).map((tag, tagIndex) => (
+                                  <span
+                                    key={tagIndex}
+                                    className="px-2 py-1 bg-zion-slate-700/50 text-zion-slate-300 text-xs rounded-md"
+                                    {tag}
+                                  </span>
+                                ))}
+                              </div>
+                              <Link
+                                to="/contact"
+                                className="w-full flex items-center justify-center gap-2 py-2 px-4 bg-gradient-to-r from-zion-cyan to-zion-blue text-white rounded-lg hover:from-zion-blue hover:to-zion-cyan transition-all duration-200 font-semibold text-sm"
+                                <MessageCircle className="w-4 h-4" />
+                                Get Started
+                              </Link>
           </motion.div>
           
           <div className="space-y-12">

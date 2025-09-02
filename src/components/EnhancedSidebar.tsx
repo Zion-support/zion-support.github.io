@@ -1,3 +1,4 @@
+               } from 'lucide-react.ts';
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -18,6 +19,18 @@ interface SidebarProps {
 
 export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {
   const location = useLocation();
+export const EnhancedSidebar: React.FC = (): JSX.Element => {;
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['Services']));
+  const location = useLocation();
+
+  const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
+    const newExpanded = new Set(expandedSections);
+    if (newExpanded.has(section)) {
+      newExpanded.delete(section)} else {
+      newExpanded.add(section)}
+    setExpandedSections(newExpanded)};
+
+  const isActive = (path: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => location.pathname === path;
   const [expandedSections, setExpandedSections] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
 

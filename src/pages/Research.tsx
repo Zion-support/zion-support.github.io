@@ -495,6 +495,12 @@ export default function Research() {
                 </div>
               </div>
             </div>
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Research & Innovation
+            </h1>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+              Pushing the boundaries of technology through cutting-edge research, innovative solutions, and collaborative partnerships.
+            </p>
           </div>
         </section>
 

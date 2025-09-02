@@ -1,8 +1,12 @@
 import React, { useState } from 'react.ts';
 import { Link, useLocation               } from 'react-router-dom.ts';
-<<<<<<< HEAD
-import { cn               } from '@/lib/utils';
-import { Home,
+import { cn } from '@/lib/utils';
+import {
+  Menu,
+  X,
+  ChevronDown,
+  ChevronRight,
+  Home,
   Briefcase,
   Users,
   Settings,
@@ -21,99 +25,29 @@ import { Home,
   Cpu,
   Shield,
   Rocket,
-=======
 import { 
   Menu, 
   X, 
   ChevronDown, 
   ChevronRight,
   Home,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
   Zap,
-  Brain,
-  Shield,
   Cloud,
-  Cpu,
-  Users,
   ShoppingCart,
   BookOpen,
   MessageCircle,
-  HelpCircle,
   DollarSign,
   Star,
   Target,
   TrendingUp,
   Award,
-  Settings,
-  Globe,
-  Rocket,
   Heart,
   Lock,
   Database,
   Network,
   Palette,
   Video,
-<<<<<<< HEAD
-  Audio,
-  Document,
-  Folder,
-  File,
-  Archive,
-  Backup,
-  Restore,
-  Sync,
-  Share,
-  Export,
-  Import,
-  Download,
-  Upload,
-  Copy,
-  Paste,
-  Cut,
-  Delete,
-  Undo,
-  Redo,
-  Save,
-  Load,
-  Open,
-  Close,
-  Minimize,
-  Maximize,
-  Restore as RestoreIcon,
-  Move,
-  Resize,
-  Rotate,
-  Scale,
-  Transform,
-  Animate,
-  Transition,
-  Effect,
-  Filter,
-  Blend,
-  Mask,
-  Clip,
-  Crop,
-  Resize as ResizeIcon,
-  Rotate as RotateIcon,
-  Scale as ScaleIcon,
-  Transform as TransformIcon,
-  Animate as AnimateIcon,
-  Transition as TransitionIcon,
-  Effect as EffectIcon,
-  Filter as FilterIcon,
-  Blend as BlendIcon,
-  Mask as MaskIcon,
-  Clip as ClipIcon,
-  Crop as CropIcon,
-  Clock,
-  Handshake,
-  Leaf,
-  HardDrive,
-  RefreshCw
-interface MainSidebarProps extends React.PropsWithChildren<{}> {
-
-  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
-  onClose: ()               => void;
 =======
   PenTool,
   Atom,
@@ -128,9 +62,23 @@ interface MainSidebarProps extends React.PropsWithChildren<{}> {
   Phone,
   Mail,
   MapPin,
-  Users
  
 } from 'lucide-react.ts';
+
+=======
+  Building2,
+  TestTube,
+  Newspaper,
+  Handshake,
+  Monitor,
+  GraduationCap,
+  Lightbulb,
+  Code,
+  Activity,
+  Workflow,
+  Truck
+
+} from 'lucide-react';
 
 interface SidebarItem {
 
@@ -168,12 +116,64 @@ interface SidebarItem {
 
 
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+
+interface NavigationSection {
+  Users
+  Audio,
+  Document,
+  Folder,
+  File,
+  Archive,
+  Backup,
+  Restore,
+  Sync,
+  Share,
+  Export,
+  Import,
+  Download,
+  Upload,
+  Copy,
+  Paste,
+  Cut,
+  Delete,
+  Undo,
+  Redo,
+  Save,
+  Load,
+  Open,
+  Close,
+  Minimize,
+  Maximize,
+  Move,
+  Resize,
+  Rotate,
+  Scale,
+  Transform,
+  Animate,
+  Transition,
+  Effect,
+  Filter,
+  Blend,
+  Mask,
+  Clip,
+  Crop
+} from 'lucide-react';
+interface SidebarItem {
+  title: string;
+  href?: string;
+  icon: React.ComponentType<{ className?: string }>;
+  children?: SidebarItem[];
+  badge?: string;
+  disabled?: boolean;
+}
 
 export function MainSidebar(...args: any[]): any {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedSections, setExpandedSections] = useState<any>(['services']);
   const location = useLocation();
+
+  const toggleSection = (section: string) => {
+=======
 
   const toggleSection = (section: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     setExpandedSections(prev => 
@@ -182,7 +182,6 @@ export function MainSidebar(...args: any[]): any {
         : [...prev, section]
     );
   };
-
   const navigation: SidebarItem[] = [
     {
       title: 'Main',
@@ -263,10 +262,13 @@ export function MainSidebar(...args: any[]): any {
       ]
     },
     {
+=======
       name: 'Emerging Tech',
       href: '#',
       icon: Rocket,
       children: [
+      title: 'Resources',
+      items: [
         {
           name: 'Quantum Computing',
           href: '/services/quantum-computing',
@@ -325,7 +327,7 @@ export function MainSidebar(...args: any[]): any {
       ]
     },
     {
-      name: 'Comp',
+      name: 'Company',
       href: '#',
       icon: Info,
       children: [
@@ -378,6 +380,9 @@ export function MainSidebar(...args: any[]): any {
           icon: MessageCircle,
           description: 'Support Resources'
         },
+=======
+      title: 'Resources',
+      items: [
         {
           name: 'Documentation',
           href: '/docs',
@@ -387,64 +392,16 @@ export function MainSidebar(...args: any[]): any {
       ]
     },
     {
-<<<<<<< HEAD
-      title: 'Talent & Community',
-      items: [
-        { name: 'Find Talent', href: '/talent', icon: Users },
-        { name: 'AI Hiring Platform', href: '/zion-hire-ai', icon: Brain },
-        { name: 'Community Forum', href: '/community', icon: MessageSquare },
-        { name: 'Partnerships', href: '/partners', icon: Handshake },
-        { name: 'Training Programs', href: '/training', icon: GraduationCap },
-        { name: 'Certifications', href: '/certifications', icon: Award },
-      ]
-    },
-    {
-      title: 'Resources & Support',
-      items: [
-        { name: 'Help Center', href: '/help', icon: HelpCircle },
-        { name: 'Developer Portal', href: '/developers', icon: Code },
-        { name: 'API Documentation', href: '/api-docs', icon: FileText },
-        { name: 'Case Studies', href: '/case-studies', icon: FileText },
-        { name: 'White Papers', href: '/white-papers', icon: FileText },
-        { name: 'Video Tutorials', href: '/tutorials', icon: Video },
-      ]
-
-  ];
-
-  const contactInfo = [
-    {
-      icon: Phone,
-      text: '+1 302 464 0950',
-      href: 'tel:+13024640950',
-      description: 'Call us anytime'
-    },
-    {
-      icon: Mail,
-      text: 'kleber@ziontechgroup.com',
-      href: 'mailto:kleber@ziontechgroup.com',
-      description: 'Email us for support'
-    },
-    {
-      icon: MapPin,
-      text: '364 E Main St STE 1008 Middletown DE 19709',
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
-      description: 'Headquarters location'
-    },
-  ];
-=======
       name: 'Contact',
       href: '/contact',
       icon: Phone
     }
   ];
-
   const renderSidebarItem = (item: SidebarItem, level: number = 0) => {
     const isActive = location.pathname === item.href;
     const hasChildren = item.children && item.children.length > 0;
     const isExpanded = expandedSections.includes(item.name.toLowerCase());
     const isFeatured = item.featured;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
     return (
       <div key={item.name} className="mb-1">
         {hasChildren ? (
@@ -470,7 +427,6 @@ export function MainSidebar(...args: any[]): any {
                 <ChevronRight className="w-4 h-4" />
               )}
             </button>
-            
             {isExpanded && (
               <div className="ml-6 mt-2 space-y-1">
                 {item.children!.map(child => renderSidebarItem(child, level + 1))}
@@ -498,184 +454,184 @@ export function MainSidebar(...args: any[]): any {
         )}
       </div>
     );
+
+interface MainSidebarProps {
+  className?: string;
+  isOpen?: boolean;
+  onToggle?: () => void;
+}
+
+const navigationItems: SidebarItem[] = [
+  {
+    title: 'Dashboard',
+    href: '/',
+    icon: Home
+  },
+  {
+    title: 'AI Services',
+    href: '/ai-services',
+    icon: Brain,
+    children: [
+      {
+        title: 'AI Solutions',
+        href: '/ai-solutions',
+        icon: Brain
+      },
+      {
+        title: 'AI Healthcare',
+        href: '/services/ai-healthcare-platform',
+        icon: Heart
+      },
+      {
+        title: 'AI Cybersecurity',
+        href: '/services/ai-cybersecurity-platform',
+        icon: Shield
+      },
+      {
+        title: 'AI Supply Chain',
+        href: '/services/ai-supply-chain-optimization',
+        icon: Network
+      },
+      {
+        title: 'AI Quantum Hybrid',
+        href: '/services/ai-quantum-hybrid-platform',
+        icon: Cpu
+      }
+    ]
+  },
+  {
+    title: 'IT Services',
+    href: '/it-services',
+    icon: Code,
+    children: [
+      {
+        title: 'Cloud Solutions',
+        href: '/cloud-solutions',
+        icon: Cloud
+      },
+      {
+        title: 'Digital Transformation',
+        href: '/digital-transformation',
+        icon: Rocket
+      },
+      {
+        title: 'Edge Computing',
+        href: '/services/edge-computing-platform',
+        icon: Zap
+      }
+    ]
+  },
+  {
+    title: 'Enterprise',
+    href: '/enterprise',
+    icon: Building
+  },
+  {
+    title: 'Industry Solutions',
+    href: '/industry-solutions',
+    icon: Target
+  },
+  {
+    title: 'Emerging Tech',
+    href: '/emerging-tech',
+    icon: Star
+  },
+  {
+    title: 'Micro SaaS',
+    href: '/micro-saas',
+    icon: ShoppingCart
+  },
+  {
+    title: 'About',
+    href: '/about',
+    icon: Users
+  },
+  {
+    title: 'Contact',
+    href: '/contact',
+    icon: MessageSquare
+  }
+];
+
+const SidebarItem: React.FC<{ item: SidebarItem; level?: number }> = ({ item, level = 0 }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const location = useLocation();
+  const isActive = item.href && location.pathname === item.href;
+  const hasChildren = item.children && item.children.length > 0;
+
+  const handleToggle = () => {
+    if (hasChildren) {
+      setIsExpanded(!isExpanded);
+    }
   };
-
   return (
-    <>
-<<<<<<< HEAD
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden backdrop-blur-sm"
-          onClick={onClose}
-        />
-      )}
-=======
-      {/* Mobile menu button */}
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+    <div>
+      <div
+        className={cn(
+          'flex items-center justify-between px-3 py-2 rounded-lg cursor-pointer transition-colors',
+          isActive
+            ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+            : 'text-gray-300 hover:bg-white/10 hover:text-white',
+          level > 0 && 'ml-4'
+        )}
+        onClick={handleToggle}
       >
-        {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-      </button>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
-      {/* Sidebar */}
-      <div className={`
-        fixed inset-y-0 left-0 z-50 w-80 bg-slate-900/95 border-r border-slate-700/50 backdrop-blur-xl
-        transform transition-transform duration-300 ease-in-out lg:translate-x-0 lg:static lg:inset-0
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
-      `}>
-        <div className="flex flex-col h-full">
-          {/* Header */}
-          <div className="flex items-center justify-between p-4 border-b border-slate-700/50">
-            <h2 className="text-lg font-semibold text-white">Navigation</h2>
-            <button
-<<<<<<< HEAD
-              onClick={onClose}
-              className="lg:hidden p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors"
-
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-=======
-              onClick={() => setIsOpen(false)}
-              className="lg:hidden p-1 rounded text-slate-400 hover:text-white hover:bg-slate-800"
-            >
-              <X className="w-5 h-5" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            </button>
-          </div>
-
-          {/* Navigation */}
-<<<<<<< HEAD
-          <nav className="flex-1 overflow-y-auto p-4 space-y-6">
-            {navigationItems.map((section) => (
-              <div key={section.title}>
-                <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-3 flex items-center gap-2">
-                  <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-                  {section.title}
-                </h3>
-                <ul className="space-y-1">
-                  {section.items.map((item) => {
-                    const IconComponent = item.icon;
-                    const isActive = location.pathname === item.href;
-
-                    return (
-                      <li key={item.name}>
-                        <Link
-                          to={item.href}
-                          onClick={onClose}
-                          className={cn(
-                            "flex items-center px-3 py-2.5 text-sm font-medium rounded-lg transition-all duration-200 group",
-                            isActive
-                              ? "bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 text-zion-cyan border border-zion-cyan/30 shadow-lg shadow-zion-cyan/10"
-                              : "text-gray-300 hover:text-white hover:bg-white/10 hover:border-white/20 border border-transparent"
-                          )}
-
-                          <IconComponent className={cn(
-                            "w-4 h-4 mr-3 transition-colors duration-200",
-                            isActive ? "text-zion-cyan" : "text-gray-400 group-hover:text-zion-cyan"
-                          )} />
-                          {item.name}
-                        </Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))}
-          </nav>
-
-          {/* Contact Info */}
-          <div className="p-4 border-t border-white/20 bg-white/5">
-            <h3 className="text-zion-cyan text-xs font-semibold uppercase tracking-wider mb-4 flex items-center gap-2">
-              <div className="w-2 h-2 bg-zion-cyan rounded-full"></div>
-              Contact Information
-            </h3>
-            <div className="space-y-3">
-              {contactInfo.map((contact) => {
-                const IconComponent = contact.icon;
-                return (
-                  <a
-                    key={contact.text}
-                    href={contact.href}
-                    target={contact.href.startsWith('http') ? '_blank' : undefined}
-                    rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="flex items-start gap-3 p-3 glass rounded-lg border border-white/20 hover:border-zion-cyan/30 hover:bg-white/10 transition-all duration-200 group"
-
-                    <div className="w-8 h-8 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-200">
-                      <IconComponent className="w-4 h-4 text-white" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="text-sm font-medium text-white group-hover:text-zion-cyan transition-colors duration-200">
-                        {contact.text}
-                      </div>
-                      <div className="text-xs text-gray-400 mt-1">
-                        {contact.description}
-                      </div>
-                    </div>
-                  </a>
-                );
-              })}
-            </div>
-
-            {/* Website Link */}
-            <div className="mt-4 pt-4 border-t border-white/20">
-              <a
-                href="https://ziontechgroup.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-lg font-medium hover:from-zion-cyan-dark hover:to-zion-purple-dark transition-all duration-200 transform hover:scale-105"
-
-                <Globe className="w-4 h-4" />
-                Visit Website
-              </a>
-=======
-          <nav className="flex-1 overflow-y-auto p-4 space-y-2">
-            {navigation.map(item => renderSidebarItem(item))}
-          </nav>
-
-          {/* Footer */}
-          <div className="p-4 border-t border-slate-700/50">
-            <div className="text-xs text-slate-400 space-y-2">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-3 h-3" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-3 h-3" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-3 h-3" />
-                <span>Middletown DE 19709</span>
-              </div>
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-            </div>
-          </div>
+        <div className="flex items-center space-x-3">
+          <item.icon className="w-5 h-5" />
+          <span className="text-sm font-medium">{item.title}</span>
+          {item.badge && (
+            <span className="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-400 rounded-full">
+              {item.badge}
+            </span>
+          )}
         </div>
+        {hasChildren && (
+          <ChevronRight
+            className={cn(
+              'w-4 h-4 transition-transform',
+              isExpanded && 'rotate-90'
+            )}
+          />
+        )}
       </div>
+      
+      {hasChildren && isExpanded && (
+        <div className="mt-2 space-y-1">
+          {item.children!.map((child, index) => (
+            <SidebarItem key={index} item={child} level={level + 1} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
 
-      {/* Overlay */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/50 lg:hidden"
-          onClick={() => setIsOpen(false)}
-        />
+export const MainSidebar: React.FC<MainSidebarProps> = ({
+  className,
+  isOpen = true,
+  onToggle
+}) => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
+
+=======
+          />
+        )}
+      </div>
+    );
+  };
+  return (
+    <aside
+      className={cn(
+        'bg-slate-900/95 backdrop-blur-sm border-r border-white/10 transition-all duration-300',
+        isCollapsed ? 'w-16' : 'w-64',
+        className
       )}
     </>
   )};
-=======;
             </div>;
           </div>;
         </div>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-</div>}}}}
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+};

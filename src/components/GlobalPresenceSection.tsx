@@ -7,76 +7,11 @@ import { Globe,
   Star,
   Award,
   CheckCircle
-<<<<<<< HEAD
-export const GlobalPresenceSection: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const GlobalPresenceSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const locations = [
-    {
-      city: 'New York',
-      country: 'United States',
-      flag: '🇺🇸',
-      timezone: 'EST (UTC-5)',
-      services['AI Development', 'Cloud Solutions', 'Cybersecurity'],
-      teamSize: '25+',
-      established: '2018'
-    },
-    {
-      city: 'London',
-      country: 'United Kingdom',
-      flag: '🇬🇧',
-      timezone: 'GMT (UTC+0)',
-      services['Digital Transformation', 'FinTech Solutions', 'Compliance'],
-      teamSize: '20+',
-      established: '2019'
-    },
-    {
-      city: 'Singapore',
-      country: 'Singapore',
-      flag: '🇸🇬',
-      timezone: 'SGT (UTC+8)',
-      services['APAC Operations', 'Supply Chain Tech', 'Smart Cities'],
-      teamSize: '15+',
-      established: '2020'
-    },
-    {
-      city: 'Toronto',
-      country: 'Canada',
-      flag: '🇨🇦',
-      timezone: 'EST (UTC-5)',
-      services['Healthcare Tech', 'AI Research', 'Startup Incubation'],
-      teamSize: '18+',
-      established: '2021'
-    },
-    {
-      city: 'Berlin',
-      country: 'Germ',
-      flag: '🇩🇪',
-      timezone: 'CET (UTC+1)',
-      services['IoT Solutions', 'Manufacturing Tech', 'Green Tech'],
-      teamSize: '12+',
-      established: '2022'
-    },
-    {
-      city: 'Sydney',
-      country: 'Australia',
-      flag: '🇦🇺',
-      timezone: 'AEST (UTC+10)',
-      services['EdTech Solutions', 'Renewable Energy', 'Digital Health'],
-      teamSize: '10+',
-<<<<<<< HEAD
-      established: '2022'
-
-=======
       established: '2022';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-=======
 const globalOffices = [
   {
     city: "Middletown, DE",
@@ -107,8 +42,6 @@ const globalOffices = [
     description: "Canadian market and development center";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 const globalStats = [;
   { label: "Countries Served", value: "25+", icon: "🌍" },;
   { label: "Global Clients", value: "500+", icon: "👥" },;
@@ -122,35 +55,18 @@ export function GlobalPresenceSection(...args: any[]): any {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-<<<<<<< HEAD
-
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Global Presence
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -159,72 +75,24 @@ export function GlobalPresenceSection(...args: any[]): any {
           </p>
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Global Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 lg:grid-cols-6 gap-6 mb-16"
-
-          {globalStats.map((stat, index)               => {
-=======
         {/* Global Statistics */}
         <motion.div 
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
-<<<<<<< HEAD
           initial = {
   { opacity: 0,
   y: 30 
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-}}
-          transition = {
-  { duration: 0.6,
-  delay: 0.1 
-
-}}
-          className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-6 mb-16"
-=======
-          initial = {
-  { opacity: 0,
-  y: 30 
-
-
-
-
-
-
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         >;
           {globalStats.map((stat, index)                => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             const IconComponent = stat.icon;
             return (
               <div key = {stat.label} className="text-center">
@@ -241,83 +109,21 @@ export function GlobalPresenceSection(...args: any[]): any {
             )})}
         </motion.div>
 
-<<<<<<< HEAD
-        {/* Locations Grid */}
-        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {locations.map((location, index)                => (
-            <motion.div
-              key={location.city}
-              initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-              transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-              className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
-
-              <div className="flex items-center mb-4">
-                <span className="text-3xl mr-3">{location.flag}</span>
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {location.city}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{location.country}</p>
-=======
         {/* Global Offices */}
         <motion.div 
           className="mb-16"
           initial = {
   { opacity: 0,
   y: 30 
-
-
-<<<<<<< HEAD
-              <div className="mb-4">
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm">Services:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {location.services.map((service, serviceIndex) => (
-                    <span
-                      key={serviceIndex}
-                      className="px-2 py-1 bg-blue-50 text-blue-700 text-xs rounded-full"
-
-                      {service}
-                    </span>
-                  ))}
-=======
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
@@ -332,47 +138,25 @@ export function GlobalPresenceSection(...args: any[]): any {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
-
-
-
-
-
-
 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">{office.icon}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 </div>
-                
                 <div className="mb-2">
                   <span className="px-3 py-1 bg-blue-600/20 text-blue-400 text-xs font-semibold rounded-full">
                     {office.type}
                   </span>
                 </div>
-                
                 <h4 className="text-lg font-bold text-white mb-1">{office.city}</h4>
                 <p className="text-gray-400 text-sm mb-3">{office.country}</p>
                 <p className="text-gray-300 text-xs">{office.description}</p>
@@ -380,40 +164,21 @@ export function GlobalPresenceSection(...args: any[]): any {
             ))}
           </div>
         </motion.div>
-
         {/* Global Map Visualization */}
         <motion.div 
           className="text-center mb-12"
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
-
 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
@@ -427,45 +192,22 @@ export function GlobalPresenceSection(...args: any[]): any {
             </p>
           </div>
         </motion.div>
-
         <motion.div 
           className="text-center"
-<<<<<<< HEAD
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 1.0 
-
-
-
-
-
-
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Go Global?
@@ -489,12 +231,7 @@ export function GlobalPresenceSection(...args: any[]): any {
       </div>;
     </section>;
   )};
-
 export default GlobalPresenceSection;
-<<<<<<< HEAD
-}}
-=======
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -502,8 +239,5 @@ export default GlobalPresenceSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default GlobalPresenceSection;
 export default GlobalPresenceSection;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

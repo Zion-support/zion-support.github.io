@@ -7,15 +7,23 @@ const path = require('path');
 class CIAutomation {
   constructor() {
     this.projectRoot = path.resolve(__dirname, '../../');
-    this.logFile = path.join(this.projectRoot, 'ci-cd-reports', 'ci-automation.log');
-    this.reportFile = path.join(this.projectRoot, 'ci-cd-reports', 'ci-report.json');
+    this.logFile = path.join(
+      this.projectRoot,
+      'ci-cd-reports',
+      'ci-automation.log'
+    );
+    this.reportFile = path.join(
+      this.projectRoot,
+      'ci-cd-reports',
+      'ci-report.json'
+    );
     this.ensureDirectories();
   }
 
   ensureDirectories() {
     const dirs = [
       path.join(this.projectRoot, 'ci-cd-reports'),
-      path.join(this.projectRoot, 'test-reports')
+      path.join(this.projectRoot, 'test-reports'),
     ];
     dirs.forEach(dir => {
       if (!fs.existsSync(dir)) {
@@ -28,7 +36,7 @@ class CIAutomation {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
     console.log(logEntry);
-    
+
     // Append to log file
     fs.appendFileSync(this.logFile, logEntry + '\n');
   }
@@ -36,27 +44,27 @@ class CIAutomation {
   async runCommand(command, cwd = this.projectRoot) {
     return new Promise((resolve, reject) => {
       this.log(`Running command: ${command}`);
-      
+
       const child = spawn(command, [], {
         shell: true,
         cwd,
-        stdio: ['pipe', 'pipe', 'pipe']
+        stdio: ['pipe', 'pipe', 'pipe'],
       });
 
       let stdout = '';
       let stderr = '';
 
-      child.stdout.on('data', (data) => {
+      child.stdout.on('data', data => {
         stdout += data.toString();
         this.log(`STDOUT: ${data.toString().trim()}`);
       });
 
-      child.stderr.on('data', (data) => {
+      child.stderr.on('data', data => {
         stderr += data.toString();
         this.log(`STDERR: ${data.toString().trim()}`);
       });
 
-      child.on('close', (code) => {
+      child.on('close', code => {
         if (code === 0) {
           this.log(`Command completed successfully with code ${code}`);
           resolve({ code, stdout, stderr });
@@ -66,7 +74,7 @@ class CIAutomation {
         }
       });
 
-      child.on('error', (error) => {
+      child.on('error', error => {
         this.log(`Command error: ${error.message}`, 'ERROR');
         reject(error);
       });
@@ -136,7 +144,7 @@ class CIAutomation {
   async verifyBuildOutput() {
     this.log('Verifying build output...');
     const distPath = path.join(this.projectRoot, 'dist');
-    
+
     if (!fs.existsSync(distPath)) {
       this.log('Build output directory not found', 'ERROR');
       return false;
@@ -144,11 +152,13 @@ class CIAutomation {
 
     const files = fs.readdirSync(distPath);
     this.log(`Build output contains ${files.length} files/directories`);
-    
+
     // Check for critical files
     const criticalFiles = ['index.html'];
-    const missingFiles = criticalFiles.filter(file => !fs.existsSync(path.join(distPath, file)));
-    
+    const missingFiles = criticalFiles.filter(
+      file => !fs.existsSync(path.join(distPath, file))
+    );
+
     if (missingFiles.length > 0) {
       this.log(`Missing critical files: ${missingFiles.join(', ')}`, 'ERROR');
       return false;
@@ -166,31 +176,34 @@ class CIAutomation {
       summary: {
         total: results.length,
         passed: results.filter(r => r.success).length,
-        failed: results.filter(r => !r.success).length
-      }
+        failed: results.filter(r => !r.success).length,
+      },
     };
 
     fs.writeFileSync(this.reportFile, JSON.stringify(report, null, 2));
     this.log(`Report generated: ${this.reportFile}`);
-    
+
     return report;
   }
 
   async run() {
     this.log('Starting CI automation...');
-    
+
     const results = [];
-    
+
     // Install dependencies
     const depsResult = await this.installDependencies();
     results.push({
       step: 'install-dependencies',
       success: depsResult,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     if (!depsResult) {
-      this.log('Skipping remaining steps due to dependency installation failure', 'WARN');
+      this.log(
+        'Skipping remaining steps due to dependency installation failure',
+        'WARN'
+      );
       await this.generateReport(results);
       return;
     }
@@ -200,7 +213,7 @@ class CIAutomation {
     results.push({
       step: 'lint',
       success: lintResult,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     // Run type check
@@ -208,7 +221,7 @@ class CIAutomation {
     results.push({
       step: 'type-check',
       success: typeCheckResult,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     // Run build
@@ -216,7 +229,7 @@ class CIAutomation {
     results.push({
       step: 'build',
       success: buildResult,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
     });
 
     if (buildResult) {
@@ -225,7 +238,7 @@ class CIAutomation {
       results.push({
         step: 'verify-build',
         success: verifyResult,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       });
 
       // Run tests
@@ -233,16 +246,16 @@ class CIAutomation {
       results.push({
         step: 'tests',
         success: testResult,
-        timestamp: new Date().toISOString()
+        timestamp: new Date().toISOString(),
       });
     }
 
     // Generate final report
     const report = await this.generateReport(results);
-    
+
     this.log(`CI automation completed. Status: ${report.status}`);
     this.log(`Passed: ${report.summary.passed}/${report.summary.total}`);
-    
+
     if (report.status === 'FAILED') {
       this.log('CI automation failed. Check the report for details.', 'ERROR');
       process.exit(1);

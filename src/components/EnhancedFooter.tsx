@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { 
   Zap, Mail, Phone, MapPin, Globe, Twitter, Linkedin, 
   Facebook, Instagram, Youtube, Github, ArrowRight,
@@ -10,7 +9,7 @@ import {
 export function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
 
-  const footerSections = [
+  const serviceCategories = [
     {
       title: 'Company',
       links: [
@@ -29,6 +28,9 @@ export function EnhancedFooter() {
         { name: 'Cloud Services', href: '/services/cloud-devops', description: 'Infrastructure & DevOps' },
         { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', description: 'Security & compliance' },
         { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
+        { name: 'Quantum Computing', href: '/services/ai-quantum-financial-trading-platform', description: 'Next-gen computing power' },
+        { name: 'Smart City Solutions', href: '/services/ai-smart-city-infrastructure-management', description: 'Urban infrastructure management' },
+        { name: 'Autonomous Systems', href: '/services/ai-autonomous-vehicle-management-platform', description: 'AI-powered automation' },
         { name: 'Micro SaaS', href: '/micro-saas', description: 'Lightweight applications' },
         { name: 'Consulting', href: '/it-consulting', description: 'Technology advisory' },
       ]
@@ -45,7 +47,7 @@ export function EnhancedFooter() {
       ]
     },
     {
-      title: 'Resources',
+      title: 'Events & Media',
       links: [
         { name: 'Blog', href: '/blog', description: 'Insights & updates' },
         { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
@@ -90,23 +92,23 @@ export function EnhancedFooter() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'contact@ziontechgroup.com',
-      href: 'mailto:contact@ziontechgroup.com',
+      value: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com',
       description: 'Send us a message'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+1 302 464 0950',
+      href: 'tel:+13024640950',
       description: 'Call us directly'
     },
     {
       icon: MapPin,
       label: 'Address',
-      value: '123 Tech Street, Innovation City, IC 12345',
-      href: 'https://maps.google.com/?q=123+Tech+Street+Innovation+City',
-      description: 'Visit our headquarters'
+      value: '364 E Main St STE 1008, Middletown DE 19709',
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709',
+      description: 'Visit our office'
     }
   ];
 

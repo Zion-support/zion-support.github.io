@@ -1,182 +1,202 @@
 #!/bin/bash
 
-# Comprehensive script to resolve merge conflicts and merge all open PRs into main
+# Comprehensive Merge All PRs Script
+# This script will merge all cursor branches into main, handling conflicts systematically
+
 set -e
 
-echo "🚀 Starting comprehensive merge conflict resolution for all open PRs..."
-echo "📊 Total cursor branches to process: $(git branch -r | grep "origin/cursor/" | wc -l)"
-echo "⏰ Started at: $(date)"
-echo "---"
+echo "🚀 Starting comprehensive merge of all cursor branches into main..."
 
-# Create a backup branch
-BACKUP_BRANCH="backup-main-$(date +%Y%m%d-%H%M%S)"
-echo "🔒 Creating backup branch: $BACKUP_BRANCH"
-git checkout -b "$BACKUP_BRANCH"
-git push origin "$BACKUP_BRANCH"
+# Ensure we're on main branch
 git checkout main
-
-# Initialize counters
-SUCCESSFUL_MERGES=0
-FAILED_MERGES=0
-CONFLICT_RESOLUTIONS=0
-SKIPPED_BRANCHES=0
+git pull origin main
 
 # Get all cursor branches
-BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///' | sort)
+CURSOR_BRANCHES=$(git branch -r | grep "origin/cursor/" | sed 's/origin\///')
 
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    local branch="$2"
-    
-    echo "🔧 Resolving conflicts in $file for branch $branch..."
-    
-    # Check if file has merge conflicts
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        echo "⚠️  Found conflicts in $file, resolving..."
-        
-        # Create a backup of the conflicted file
-        cp "$file" "${file}.backup.$(date +%s)"
-        
-        # Strategy: Keep both versions where possible, prefer main branch for critical files
-        if [[ "$file" == "package.json" || "$file" == "package-lock.json" ]]; then
-            echo "📦 Critical file detected, keeping main version and merging dependencies..."
-            # For package files, we'll need special handling
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        elif [[ "$file" == "next.config.js" || "$file" == "tsconfig.json" ]]; then
-            echo "⚙️  Config file detected, keeping main version..."
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        else
-            echo "📝 Regular file, attempting to merge both versions..."
-            # Remove conflict markers and try to keep both versions
-            sed -i '/<<<<<<< HEAD/,/=======/d' "$file"
-            sed -i '/>>>>>>> /d' "$file"
-        fi
-        
-        echo "✅ Resolved conflicts in $file"
-        CONFLICT_RESOLUTIONS=$((CONFLICT_RESOLUTIONS + 1))
-    fi
-}
+# Counter for tracking progress
+TOTAL_BRANCHES=$(echo "$CURSOR_BRANCHES" | wc -l)
+CURRENT=0
+SUCCESSFUL=0
+FAILED=0
+SKIPPED=0
 
-# Function to check if a branch can be merged
-can_merge_branch() {
-    local branch="$1"
-    
-    # Skip if branch doesn't exist
-    if ! git ls-remote --heads origin "$branch" > /dev/null 2>&1; then
-        return 1
-    fi
-    
-    # Skip if branch is already merged
-    if git branch --merged main | grep -q "$branch"; then
-        return 1
-    fi
-    
-    return 0
-}
+echo "📊 Found $TOTAL_BRANCHES cursor branches to merge"
 
 # Function to merge a single branch
 merge_branch() {
-    local branch="$1"
+    local branch=$1
+    local current=$2
+    local total=$3
     
-    echo "🔄 Attempting to merge $branch..."
+    echo ""
+    echo "🔄 [$current/$total] Merging branch: $branch"
+    echo "=================================================="
     
-    # Fetch the latest version of the branch
-    git fetch origin "$branch"
+    # Check if branch exists locally, if not fetch it
+    if ! git show-ref --verify --quiet refs/heads/$branch; then
+        echo "📥 Fetching branch $branch..."
+        git fetch origin $branch:$branch
+    fi
+    
+    # Check if branch has changes compared to main
+    local commits_ahead=$(git rev-list --count main..$branch 2>/dev/null || echo "0")
+    
+    if [ "$commits_ahead" -eq "0" ]; then
+        echo "⏭️  Branch $branch has no new commits, skipping..."
+        return 1
+    fi
+    
+    echo "📝 Branch $branch has $commits_ahead commits ahead of main"
     
     # Try to merge
-    if git merge --no-commit --no-ff "origin/$branch" 2>/dev/null; then
+    if git merge --no-edit $branch 2>/dev/null; then
         echo "✅ Successfully merged $branch"
-        git commit -m "Merge $branch into main - $(date)"
-        SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
         return 0
     else
-        echo "⚠️  Merge conflicts detected in $branch, resolving..."
+        echo "⚠️  Merge conflict detected in $branch, attempting to resolve..."
         
-        # Get list of conflicted files
-        CONFLICTED_FILES=$(git diff --name-only --diff-filter=U)
+        # Check for specific file types and resolve conflicts
+        resolve_conflicts
         
-        if [ -n "$CONFLICTED_FILES" ]; then
-            echo "📋 Conflicted files: $CONFLICTED_FILES"
-            
-            # Resolve conflicts in each file
-            for file in $CONFLICTED_FILES; do
-                if [ -f "$file" ]; then
-                    resolve_conflicts "$file" "$branch"
-                fi
-            done
-            
-            # Add resolved files
-            git add .
-            
-            # Commit the merge
-            git commit -m "Resolve merge conflicts for $branch - $(date)"
-            
-            echo "✅ Successfully resolved conflicts and merged $branch"
-            SUCCESSFUL_MERGES=$((SUCCESSFUL_MERGES + 1))
-            return 0
-        else
-            echo "❌ No conflicted files found, but merge failed. Aborting..."
+        # Try to complete the merge
+        if git status --porcelain | grep -q "^UU\|^AA\|^DD"; then
+            echo "❌ Unresolved conflicts remain, aborting merge..."
             git merge --abort
-            FAILED_MERGES=$((FAILED_MERGES + 1))
-            return 1
+            return 2
+        else
+            echo "✅ Conflicts resolved, completing merge..."
+            git add .
+            if git commit -m "Merge $branch into main - conflicts resolved" 2>/dev/null; then
+                echo "✅ Successfully merged $branch after conflict resolution"
+                return 0
+            else
+                echo "❌ Failed to complete merge after conflict resolution"
+                git merge --abort
+                return 2
+            fi
         fi
     fi
 }
 
-# Main processing loop
-echo "🔄 Starting branch processing..."
-echo "---"
+# Function to resolve common conflicts
+resolve_conflicts() {
+    echo "🔧 Attempting to resolve conflicts..."
+    
+    # Get list of conflicted files
+    local conflicted_files=$(git diff --name-only --diff-filter=U)
+    
+    for file in $conflicted_files; do
+        echo "  📄 Resolving conflicts in: $file"
+        
+        # Handle different file types
+        case "$file" in
+            "package.json"|"package-lock.json"|"yarn.lock")
+                echo "    📦 Package file conflict - keeping main version"
+                git checkout --ours "$file"
+                git add "$file"
+                ;;
+            "*.config.js"|"*.config.ts"|"*.config.cjs")
+                echo "    ⚙️  Config file conflict - keeping main version"
+                git checkout --ours "$file"
+                git add "$file"
+                ;;
+            "*.jsx"|"*.tsx"|"*.js"|"*.ts")
+                echo "    💻 Code file conflict - attempting smart merge"
+                if resolve_code_conflict "$file"; then
+                    echo "    ✅ Code conflict resolved"
+                else
+                    echo "    ❌ Code conflict could not be resolved automatically"
+                    return 1
+                fi
+                ;;
+            *)
+                echo "    ❓ Unknown file type - keeping main version"
+                git checkout --ours "$file"
+                git add "$file"
+                ;;
+        esac
+    done
+}
 
-for branch in $BRANCHES; do
-    echo "📋 Processing branch: $branch"
+# Function to resolve code conflicts intelligently
+resolve_code_conflict() {
+    local file=$1
     
-    # Check if branch can be merged
-    if ! can_merge_branch "$branch"; then
-        echo "⏭️  Skipping $branch (already merged or doesn't exist)"
-        SKIPPED_BRANCHES=$((SKIPPED_BRANCHES + 1))
-        continue
+    # Check if file exists in both branches
+    if ! git show HEAD:"$file" >/dev/null 2>&1; then
+        echo "      📁 File doesn't exist in main, keeping branch version"
+        git checkout --theirs "$file"
+        git add "$file"
+        return 0
     fi
     
-    # Try to merge the branch
-    if merge_branch "$branch"; then
-        echo "✅ Branch $branch processed successfully"
+    if ! git show MERGE_HEAD:"$file" >/dev/null 2>&1; then
+        echo "      📁 File doesn't exist in branch, keeping main version"
+        git checkout --ours "$file"
+        git add "$file"
+        return 0
+    fi
+    
+    # Try to merge with git's built-in merge tool
+    if git mergetool --tool=vimdiff "$file" 2>/dev/null; then
+        git add "$file"
+        return 0
     else
-        echo "❌ Failed to process branch $branch"
+        # Fallback: keep main version for complex conflicts
+        echo "      ⚠️  Complex conflict, keeping main version"
+        git checkout --ours "$file"
+        git add "$file"
+        return 0
+    fi
+}
+
+# Main merge loop
+for branch in $CURSOR_BRANCHES; do
+    CURRENT=$((CURRENT + 1))
+    
+    case $(merge_branch $branch $CURRENT $TOTAL_BRANCHES) in
+        0) SUCCESSFUL=$((SUCCESSFUL + 1)) ;;
+        1) SKIPPED=$((SKIPPED + 1)) ;;
+        2) FAILED=$((FAILED + 1)) ;;
+    esac
+    
+    # Push changes every 10 successful merges
+    if [ $((SUCCESSFUL % 10)) -eq 0 ] && [ $SUCCESSFUL -gt 0 ]; then
+        echo "📤 Pushing changes to remote..."
+        if git push origin main; then
+            echo "✅ Changes pushed successfully"
+        else
+            echo "❌ Failed to push changes"
+        fi
     fi
     
-    # Progress update
-    echo "📊 Progress: $SUCCESSFUL_MERGES successful, $FAILED_MERGES failed, $CONFLICT_RESOLUTIONS conflicts resolved"
-    echo "---"
-    
-    # Push changes periodically to avoid losing work
-    if [ $((SUCCESSFUL_MERGES % 10)) -eq 0 ] && [ $SUCCESSFUL_MERGES -gt 0 ]; then
-        echo "💾 Pushing progress to remote..."
-        git push origin main
-    fi
+    # Small delay to avoid overwhelming the system
+    sleep 1
 done
 
 # Final push
-echo "💾 Pushing final changes to remote..."
-git push origin main
+echo "📤 Final push to remote..."
+if git push origin main; then
+    echo "✅ Final push successful"
+else
+    echo "❌ Final push failed"
+fi
 
 # Summary
 echo ""
-echo "🎉 Comprehensive merge conflict resolution completed!"
+echo "🎉 Merge operation completed!"
+echo "=================================================="
 echo "📊 Summary:"
-echo "   ✅ Successful merges: $SUCCESSFUL_MERGES"
-echo "   ❌ Failed merges: $FAILED_MERGES"
-echo "   🔧 Conflicts resolved: $CONFLICT_RESOLUTIONS"
-echo "   ⏭️  Skipped branches: $SKIPPED_BRANCHES"
-echo "   🔒 Backup branch: $BACKUP_BRANCH"
-echo "⏰ Completed at: $(date)"
+echo "   Total branches processed: $TOTAL_BRANCHES"
+echo "   ✅ Successfully merged: $SUCCESSFUL"
+echo "   ⏭️  Skipped (no changes): $SKIPPED"
+echo "   ❌ Failed to merge: $FAILED"
+echo "=================================================="
 
-# Cleanup recommendations
-echo ""
-echo "🧹 Cleanup recommendations:"
-echo "   1. Review the merged changes: git log --oneline -20"
-echo "   2. Test the application thoroughly"
-echo "   3. Delete the backup branch when satisfied: git push origin --delete $BACKUP_BRANCH"
-echo "   4. Consider cleaning up old feature branches"
+if [ $FAILED -gt 0 ]; then
+    echo "⚠️  Some branches failed to merge. Check the logs above for details."
+    echo "💡 You may need to manually resolve conflicts for failed branches."
+fi
+
+echo "🚀 All manageable branches have been merged into main!"

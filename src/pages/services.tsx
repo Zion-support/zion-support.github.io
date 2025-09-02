@@ -48,6 +48,12 @@ type Service = {
 
 const featuredServices: Service[] = [
   {
+    title: 'AI Autonomous Business Manager',
+    description: 'Fully autonomous AI system that manages your entire business operations with 40-60% cost reduction.',
+    priceRange: '$2,500 - $12,000/month',
+    learnMoreUrl: '/services/ai-autonomous-business-manager',
+  },
+  {
     title: 'AI Development & MLOps',
     description: 'Custom LLMs, RAG, fine-tuning, and MLOps pipelines on AWS/Azure/GCP.',
     priceRange: '$8,000 - $120,000',
@@ -138,6 +144,17 @@ const Services: React.FC = (): JSX.Element => {
   ];
 
   const coreServices = [
+    {
+      category: 'ai',
+      icon: Brain,
+      title: "AI Autonomous Business Manager",
+      description: "Fully autonomous AI system that manages your entire business operations with 40-60% cost reduction.",
+      features: ["24/7 Autonomous Operation", "Real-time Decision Making", "Predictive Analytics", "Process Optimization"],
+      pricing: "$2,500 - $12,000/month",
+      color: "from-purple-500 to-pink-500",
+      featured: true,
+      href: "/services/ai-autonomous-business-manager"
+    },
     {
       category: 'ai',
       icon: Brain,

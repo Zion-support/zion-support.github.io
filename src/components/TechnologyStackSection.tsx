@@ -10,76 +10,11 @@ import { Code,
   Server,
   Cpu,
   Network
-<<<<<<< HEAD
-export const TechnologyStackSection: React.FC = (): JSX.Element => {
-=======
               } from 'lucide-react.ts';
 
-<<<<<<< HEAD
-export const TechnologyStackSection: React.FC = (): JSX.Element => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const techCategories = [
-    {
-      icon: Brain,
-      title: 'AI & Machine Learning',
-      technologies[
-        'TensorFlow', 'PyTorch', 'Scikit-learn', 'OpenAI GPT', 'Hugging Face',
-        'Keras', 'Pandas', 'NumPy', 'Jupyter', 'MLflow'
-      ],
-      color: 'from-purple-500 to-pink-500'
-    },
-    {
-      icon: Code,
-      title: 'Frontend Development',
-      technologies[
-        'React', 'Vue.js', 'Angular', 'TypeScript', 'Next.js',
-        'Tailwind CSS', 'Material-UI', 'Redux', 'GraphQL', 'Webpack'
-      ],
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Server,
-      title: 'Backend Development',
-      technologies[
-        'Node.js', 'Python', 'Java', 'Go', 'C#',
-        'Express.js', 'Django', 'Spring Boot', 'FastAPI', 'ASP.NET Core'
-      ],
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: Database,
-      title: 'Databases & Storage',
-      technologies[
-        'PostgreSQL', 'MongoDB', 'Redis', 'MySQL', 'Elasticsearch',
-        'AWS RDS', 'Azure SQL', 'Google Cloud SQL', 'DynamoDB', 'Cassandra'
-      ],
-      color: 'from-yellow-500 to-orange-500'
-    },
-    {
-      icon: Cloud,
-      title: 'Cloud & DevOps',
-      technologies[
-        'AWS', 'Azure', 'Google Cloud', 'Docker', 'Kubernetes',
-        'Terraform', 'Jenkins', 'GitLab CI/CD', 'Ansible', 'Prometheus'
-      ],
-      color: 'from-indigo-500 to-purple-500'
-    },
-    {
-      icon: Shield,
-      title: 'Security & Compliance',
-      technologies[
-        'OAuth 2.0', 'JWT', 'SAML', 'LDAP', 'MFA',
-        'SIEM', 'EDR', 'Firewall', 'VPN', 'Encryption'
-      ],
-<<<<<<< HEAD
-      color: 'from-red-500 to-pink-500'
-
-=======
       color: 'from-red-500 to-pink-500';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-=======
 const technologyCategories = [
   {
     category: "Frontend Technologies",
@@ -126,8 +61,6 @@ const technologyCategories = [
     color: "from-orange-500 to-red-500";
   };
 ];
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 const emergingTech = [;
   { name: "Quantum Computing", icon: "⚛️", status: "Research" },;
   { name: "Blockchain", icon: "🔗", status: "Production" },;
@@ -143,35 +76,18 @@ export function TechnologyStackSection(...args: any[]): any {
       <div className="max-w-7xl mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
-<<<<<<< HEAD
-
-          <h2 className="text-4xl font-bold mb-4">
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Technology Stack
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -179,40 +95,7 @@ export function TechnologyStackSection(...args: any[]): any {
             Our comprehensive tech stack ensures scalability, security, and performance.
           </p>
         </motion.div>
-
         {/* Technology Categories */}
-<<<<<<< HEAD
-        <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 mb-16">;
-          {techCategories.map((category, index)                => {;
-            const IconComponent = category.icon;
-            return (
-              <motion.div
-                key = {category.title}
-                initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-                whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-                transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-                className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-700 transition-all duration-300"
-
-                <div className="flex items-center mb-6">
-                  <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} mr-4`}>
-                    <IconComponent className="h-8 w-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold">
-                    {category.title}
-                  </h3>
-=======
         <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8 mb-16">
           {technologyCategories.map((category, index)               => (
             <motion.div
@@ -221,43 +104,23 @@ export function TechnologyStackSection(...args: any[]): any {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
             >
               <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-3">
                 <div className={`w-8 h-8 bg-gradient-to-br ${category.color} rounded-lg flex items-center justify-center`}>
                   <span className="text-sm">⚡</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
                 {category.category}
               </h3>
-              
               <div className="space-y-4">
                 {category.technologies.map((tech, techIndex) => (
                   <div key={tech.name} className="flex items-center justify-between">
@@ -265,13 +128,6 @@ export function TechnologyStackSection(...args: any[]): any {
                       <span className="text-xl">{tech.icon}</span>
                       <span className="text-gray-300 font-medium">{tech.name}</span>
                     </div>
-<<<<<<< HEAD
-                  ))}
-                </div>
-              </motion.div>
-            )})}
-=======
-                    
                     <div className="flex items-center gap-2">
                       <div className="w-20 bg-slate-700 rounded-full h-2">
                         <motion.div
@@ -282,12 +138,6 @@ export function TechnologyStackSection(...args: any[]): any {
                           transition = {
   { duration: 1,
   delay: 0.8 + techIndex * 0.1 
-
-
-
-
-
-
 }}
                         />
                       </div>
@@ -300,66 +150,27 @@ export function TechnologyStackSection(...args: any[]): any {
               </div>
             </motion.div>
           ))}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
         </div>
-
         {/* Emerging Technologies */}
         <motion.div 
           className="mb-16"
-<<<<<<< HEAD
-
-          <h3 className="text-2xl font-bold text-center mb-8">
-=======
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-8">
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
             Emerging Technologies
           </h3>
-<<<<<<< HEAD
-          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">;
-            {emergingTech.map((tech, index)                => {;
-              const IconComponent = tech.icon;
-              return (
-                <div key = {tech.name} className="text-center">
-                  <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-blue-600 rounded-full">
-                      <IconComponent className="h-8 w-8 text-white" />
-                    </div>
-                  </div>
-                  <h4 className="text-lg font-semibold mb-2">{tech.name}</h4>
-                  <p className="text-sm text-gray-400">{tech.status}</p>
-=======
           
           <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
             {emergingTech.map((tech, index)               => (
@@ -369,83 +180,44 @@ export function TechnologyStackSection(...args: any[]): any {
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
-
-
-
-
-
-
 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">{tech.icon}</span>
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                 </div>
               )})}
           </div>
         </motion.div>
-
         {/* Technology Philosophy */}
         <motion.div 
           className="mb-12"
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
-
 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-white text-center mb-6">
               Our Technology Philosophy
             </h3>
-            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -454,7 +226,6 @@ export function TechnologyStackSection(...args: any[]): any {
                 <h4 className="text-lg font-bold text-white mb-2">Innovation First</h4>
                 <p className="text-gray-400 text-sm">Always exploring cutting-edge technologies</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">🛡️</span>
@@ -462,7 +233,6 @@ export function TechnologyStackSection(...args: any[]): any {
                 <h4 className="text-lg font-bold text-white mb-2">Security Focused</h4>
                 <p className="text-gray-400 text-sm">Enterprise-grade security in everything we build</p>
               </div>
-              
               <div className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl">⚡</span>
@@ -473,45 +243,22 @@ export function TechnologyStackSection(...args: any[]): any {
             </div>
           </div>
         </motion.div>
-
         <motion.div 
           className="text-center"
-<<<<<<< HEAD
-
-=======
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 1.0 
-
-
-
-
-
-
 }}
         >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4">
               Ready to Build with Modern Tech?
@@ -535,12 +282,7 @@ export function TechnologyStackSection(...args: any[]): any {
       </div>;
     </section>;
   )};
-
 export default TechnologyStackSection;
-<<<<<<< HEAD
-}}
-=======
-=======
             <span className="text-2xl">→</span>;
           </div>;
         </motion.div>;
@@ -548,8 +290,5 @@ export default TechnologyStackSection;
     </section>;
   );
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-
 export default TechnologyStackSection;
 export default TechnologyStackSection;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

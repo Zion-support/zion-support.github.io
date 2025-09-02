@@ -123,3 +123,4 @@ start-*-automation.sh
 monitor-*.sh
 manage-*.sh
 backups/sync-backups/
+tsconfig.tsbuildinfo

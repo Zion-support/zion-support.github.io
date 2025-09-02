@@ -5,21 +5,25 @@ This project includes a comprehensive PM2 automation system that automatically m
 ## 🚀 Quick Start
 
 ### 1. Install PM2 (if not already installed)
+
 ```bash
 npm install -g pm2
 ```
 
 ### 2. Start all automation processes
+
 ```bash
 npm run automation:setup
 ```
 
 ### 3. Check status
+
 ```bash
 npm run pm2:status
 ```
 
 ### 4. View logs
+
 ```bash
 npm run pm2:logs
 ```
@@ -27,6 +31,7 @@ npm run pm2:logs
 ## 📋 Available Scripts
 
 ### PM2 Management
+
 - `npm run pm2:start` - Start all PM2 processes
 - `npm run pm2:stop` - Stop all PM2 processes
 - `npm run pm2:restart` - Restart all PM2 processes
@@ -36,6 +41,7 @@ npm run pm2:logs
 - `npm run pm2:monit` - Open PM2 monitoring dashboard
 
 ### Individual Automation Scripts
+
 - `npm run lint:fix` - Run lint fixer manually
 - `npm run quality:check` - Run code quality monitor manually
 - `npm run quality:fix` - Run lint fixer + auto-commit
@@ -45,6 +51,7 @@ npm run pm2:logs
 ## 🔧 Automation Processes
 
 ### 1. Lint Fixer (`lint-fixer`)
+
 - **Schedule**: Every 6 hours
 - **Purpose**: Automatically fixes common lint issues
 - **Fixes**:
@@ -56,6 +63,7 @@ npm run pm2:logs
 - **Auto-commit**: Yes, with descriptive messages
 
 ### 2. Code Quality Monitor (`code-quality-monitor`)
+
 - **Schedule**: Every 12 hours
 - **Purpose**: Monitors code quality and reports issues
 - **Checks**:
@@ -67,6 +75,7 @@ npm run pm2:logs
 - **Output**: JSON report with recommendations
 
 ### 3. Auto-Commit Fixes (`auto-commit-fixes`)
+
 - **Schedule**: Every 4 hours
 - **Purpose**: Automatically commits small fixes
 - **Auto-commit rules**:
@@ -76,6 +85,7 @@ npm run pm2:logs
 - **Git integration**: Pushes to non-main branches automatically
 
 ### 4. Dependency Monitor (`dependency-monitor`)
+
 - **Schedule**: Weekly (Sunday)
 - **Purpose**: Monitors package health and security
 - **Checks**:
@@ -87,6 +97,7 @@ npm run pm2:logs
 - **Output**: Security report with recommendations
 
 ### 5. Performance Monitor (`performance-monitor`)
+
 - **Schedule**: Every 8 hours
 - **Purpose**: Monitors build performance and bundle size
 - **Checks**:
@@ -100,7 +111,9 @@ npm run pm2:logs
 ## 📊 Monitoring and Logs
 
 ### Log Files
+
 All processes log to `logs/pm2/`:
+
 - `lint-fixer.log` - Lint fixing operations
 - `code-quality-monitor.log` - Quality monitoring
 - `auto-commit-fixes.log` - Auto-commit operations
@@ -108,11 +121,13 @@ All processes log to `logs/pm2/`:
 - `performance-monitor.log` - Performance monitoring
 
 ### Reports
+
 - `code-quality-report.json` - Code quality analysis
 - `dependency-report.json` - Dependency health report
 - `performance-report.json` - Performance metrics
 
 ### Real-time Monitoring
+
 ```bash
 # View all logs in real-time
 npm run pm2:logs
@@ -127,7 +142,9 @@ npm run pm2:status
 ## ⚙️ Configuration
 
 ### Ecosystem Configuration
+
 The `ecosystem.config.js` file configures all PM2 processes with:
+
 - Automatic restarts
 - Memory limits (1GB per process)
 - Cron-based restarts
@@ -135,7 +152,9 @@ The `ecosystem.config.js` file configures all PM2 processes with:
 - Environment variables
 
 ### Customization
+
 You can modify the automation behavior by editing:
+
 - `scripts/pm2/*.js` - Individual automation scripts
 - `ecosystem.config.js` - PM2 process configuration
 - `package.json` - NPM scripts and scheduling
@@ -145,6 +164,7 @@ You can modify the automation behavior by editing:
 ### Common Issues
 
 #### PM2 not starting
+
 ```bash
 # Check if PM2 is installed
 pm2 --version
@@ -158,6 +178,7 @@ pm2 cleardump
 ```
 
 #### Processes failing
+
 ```bash
 # Check process logs
 npm run pm2:logs
@@ -170,6 +191,7 @@ pm2 logs lint-fixer
 ```
 
 #### Git issues
+
 ```bash
 # Check git status
 git status
@@ -179,6 +201,7 @@ git config core.hooksPath .husky
 ```
 
 ### Manual Recovery
+
 ```bash
 # Stop all processes
 npm run pm2:stop
@@ -194,13 +217,14 @@ npm run automation:setup
 ## 🔄 Integration with CI/CD
 
 ### GitHub Actions
+
 The automation system can be integrated with GitHub Actions:
 
 ```yaml
 name: PM2 Automation Health Check
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Every 6 hours
+    - cron: '0 */6 * * *' # Every 6 hours
 
 jobs:
   health-check:
@@ -216,7 +240,9 @@ jobs:
 ```
 
 ### Netlify Integration
+
 The automation system automatically triggers builds when:
+
 - Lint issues are fixed
 - Code quality improvements are committed
 - Dependencies are updated
@@ -224,16 +250,19 @@ The automation system automatically triggers builds when:
 ## 📈 Best Practices
 
 ### 1. Regular Monitoring
+
 - Check PM2 status weekly: `npm run pm2:status`
 - Review logs monthly: `npm run pm2:logs`
 - Monitor performance reports: `npm run perf:check`
 
 ### 2. Maintenance
+
 - Update PM2 globally: `npm update -g pm2`
 - Review automation scripts quarterly
 - Adjust schedules based on project needs
 
 ### 3. Security
+
 - Review dependency reports weekly
 - Address security vulnerabilities immediately
 - Keep Node.js and npm versions updated
@@ -241,16 +270,19 @@ The automation system automatically triggers builds when:
 ## 🎯 Benefits
 
 ### Automated Code Quality
+
 - Consistent code formatting
 - Reduced technical debt
 - Automated issue detection
 
 ### Continuous Improvement
+
 - Regular performance monitoring
 - Dependency health tracking
 - Automated security checks
 
 ### Developer Experience
+
 - Reduced manual lint fixing
 - Automated git operations
 - Comprehensive monitoring dashboard
@@ -258,6 +290,7 @@ The automation system automatically triggers builds when:
 ## 📞 Support
 
 For issues with the PM2 automation system:
+
 1. Check the logs: `npm run pm2:logs`
 2. Review the troubleshooting section
 3. Check PM2 documentation: https://pm2.keymetrics.io/

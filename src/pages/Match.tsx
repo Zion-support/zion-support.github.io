@@ -37,17 +37,12 @@ import { Sparkles,
   Server,
   Network,
   Settings as SettingsIcon
-<<<<<<< HEAD
-import { SEO              } from '../components/SEO';
-=======
 } from 'lucide-react';
 import SEO from '../components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const Match: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-
   const categories = [;
     { id: 'all', name: 'All Categories', icon: Sparkles, count: 150 },;
     { id: 'ai', name: 'AI Services', icon: Brain, count: 45 },;
@@ -56,7 +51,6 @@ const Match: React.FC = (): JSX.Element => {;
     { id: 'data', name: 'Data & Analytics', icon: Database, count: 25 },;
     { id: 'iot', name: 'IoT & Edge', icon: Cpu, count: 20 };
   ];
-
   const matchedServices = [
     {
       id: 1,
@@ -129,15 +123,6 @@ const Match: React.FC = (): JSX.Element => {;
       category: "ai",
       description: "Automate complex business processes with intelligent AI workflows and decision engines.",
       rating: 4.9,
-<<<<<<< HEAD
-      reviews: 112,
-      price: "$2,799/mo",
-      features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],
-      matchScore: 87,
-      icon: Zap,
-      featured: true
-
-=======
       reviews: 112,;
       price: "$2,799/mo",;
       features: ["Process Automation", "Smart Routing", "Exception Handling", "Performance Analytics"],;
@@ -145,28 +130,19 @@ const Match: React.FC = (): JSX.Element => {;
       icon: Zap,;
       featured: true;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
-
   const filteredServices = matchedServices.filter(service => {;
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
                          service.description.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesCategory && matchesSearch;
   });
-
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="AI Service Matcher - Zion Tech Group"
         description="Find the perfect AI and technology services for your business with our intelligent matching algorithm. Get personalized recommendations based on your needs."
         keywords="AI service matcher, technology matching, business solutions, Zion Tech Group"
       />
-
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>
@@ -175,64 +151,45 @@ const Match: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center max-w-4xl mx-auto"
-
             <div className="flex items-center justify-center mb-6">
               <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
               <h1 className="text-4xl font-bold text-white">AI Service Matcher</h1>
             </div>
-
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Find Your Perfect
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                 Technology Match
               </span>
             </h2>
-
             <p className="text-xl md:text-2xl text-slate-300 mb-8 leading-relaxed">
               Our AI-powered matching algorithm analyzes your business needs and connects you
               with the perfect technology solutions. Get personalized recommendations in seconds.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-
                 Get Matched
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-
                 Browse All Services
               </Link>
             </div>
           </motion.div>
         </div>
       </section>
-
       {/* Search and Filter Section */}
       <section className="py-16 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -248,7 +205,6 @@ const Match: React.FC = (): JSX.Element => {;
                 className="w-full pl-12 pr-4 py-4 bg-slate-700/50 border border-slate-600/50 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 transition-all duration-200"
               />
             </div>
-
             {/* Category Filters */}
             <div className="flex flex-wrap gap-3 justify-center">
               {categories.map((category) => (
@@ -260,7 +216,6 @@ const Match: React.FC = (): JSX.Element => {;
                       ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/25'
                       : 'bg-slate-700/50 text-slate-300 hover:bg-slate-600/50 hover:text-white border border-slate-600/50'
                   }`}
-
                   <category.icon className="w-4 h-4" />
                   {category.name}
                   <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
@@ -272,7 +227,6 @@ const Match: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Matched Services Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -280,26 +234,13 @@ const Match: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Your <span className="text-cyan-400">Perfect Matches</span>
             </h2>
@@ -316,37 +257,18 @@ const Match: React.FC = (): JSX.Element => {;
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className={`bg-slate-800/50 border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 ${
                   service.featured ? 'border-cyan-400/30 bg-gradient-to-br from-cyan-400/5 to-blue-500/5' : 'border-slate-700/50'
                 }`}
-
                 {/* Header */}
                 <div className="flex items-start justify-between mb-4">
                   <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center">
@@ -364,11 +286,9 @@ const Match: React.FC = (): JSX.Element => {;
                     </div>
                   </div>
                 </div>
-
                 {/* Service Info */}
                 <h3 className="text-xl font-bold text-white mb-3">{service.name}</h3>
                 <p className="text-slate-300 mb-4 text-sm leading-relaxed">{service.description}</p>
-
                 {/* Rating and Price */}
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center">
@@ -381,7 +301,6 @@ const Match: React.FC = (): JSX.Element => {;
                   </div>
                   <div className="text-cyan-400 font-bold">{service.price}</div>
                 </div>
-
                 {/* Features */}
                 <div className="space-y-2 mb-6">
                   {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -396,41 +315,30 @@ const Match: React.FC = (): JSX.Element => {;
                     </div>
                   )}
                 </div>
-
                 {/* Actions */}
                 <div className="flex gap-2">
                   <Link
                     to = {
   `/services/${service.name.toLowerCase().replace(/\s+/g,
   '-')
-
-
-
-
-
-
 }`}
                     className="flex-1 inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200"
-
                     Learn More
                   </Link>
                   <Link
                     to="/contact"
                     className="inline-flex items-center justify-center px-4 py-2 border border-cyan-400/30 text-cyan-400 text-sm font-medium rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-
                     Contact
                   </Link>
                 </div>
               </motion.div>
             ))}
           </div>
-
           {filteredServices.length === 0 && (
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               className="text-center py-16"
-
               <div className="w-24 h-24 bg-slate-700/50 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Search className="w-12 h-12 text-slate-400" />
               </div>
@@ -441,7 +349,6 @@ const Match: React.FC = (): JSX.Element => {;
               <Link
                 to="/services"
                 className="inline-flex items-center px-6 py-3 bg-cyan-500 text-white font-medium rounded-lg hover:bg-cyan-400 transition-all duration-200"
-
                 Browse All Services
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
@@ -449,7 +356,6 @@ const Match: React.FC = (): JSX.Element => {;
           )}
         </div>
       </section>
-
       {/* How It Works Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="container mx-auto px-4">
@@ -457,26 +363,13 @@ const Match: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               How Our <span className="text-cyan-400">AI Matcher</span> Works
             </h2>
@@ -512,35 +405,16 @@ const Match: React.FC = (): JSX.Element => {;
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
                   <step.icon className="w-10 h-10 text-cyan-400" />
                 </div>
@@ -552,7 +426,6 @@ const Match: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">
         <div className="container mx-auto px-4 text-center">
@@ -560,25 +433,12 @@ const Match: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Find Your Perfect Match?
             </h2>
@@ -586,28 +446,16 @@ const Match: React.FC = (): JSX.Element => {;
               Let our AI matcher find the perfect technology solutions for your business.
               Get started today and discover services tailored to your needs.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/25"
-
                 Start Matching
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Browse All Services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
               >
                 Browse All Services;
               </Link>;
@@ -616,8 +464,6 @@ const Match: React.FC = (): JSX.Element => {;
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
-
 export default Match;}}}

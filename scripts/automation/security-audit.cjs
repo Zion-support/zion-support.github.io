@@ -7,12 +7,13 @@ const path = require('path');
 console.log('🔒 Starting continuous security audit automation...');
 
 // Get automation interval from environment variable (default: 4 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours
+const AUTOMATION_INTERVAL =
+  parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours
 
 async function runSecurityAudit() {
   try {
     console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
-    
+
     // Run npm audit
     console.log('🔍 Running npm security audit...');
     try {
@@ -28,7 +29,7 @@ async function runSecurityAudit() {
         // Don't exit, just log the error and continue
       }
     }
-    
+
     // Check for known vulnerabilities in dependencies
     console.log('📦 Checking for known vulnerabilities...');
     try {
@@ -37,7 +38,7 @@ async function runSecurityAudit() {
     } catch (error) {
       console.log('⚠️  Known vulnerabilities detected');
     }
-    
+
     // Check for outdated packages with security implications
     console.log('🔄 Checking for outdated packages...');
     try {
@@ -45,7 +46,7 @@ async function runSecurityAudit() {
     } catch (error) {
       console.log('✅ All packages are up to date');
     }
-    
+
     // Run security scan if available
     console.log('🔍 Running additional security scans...');
     try {
@@ -55,20 +56,19 @@ async function runSecurityAudit() {
     } catch (error) {
       console.log('ℹ️  No additional security scan available');
     }
-    
+
     // Generate security report
     const report = {
       timestamp: new Date().toISOString(),
       summary: 'Security audit completed',
-      status: 'completed'
+      status: 'completed',
     };
-    
+
     const reportPath = path.join(process.cwd(), 'security-audit-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     console.log(`📊 Report saved to ${reportPath}`);
-    
+
     console.log('✅ Continuous security audit completed successfully');
-    
   } catch (error) {
     console.error('❌ Continuous security audit failed:', error.message);
     // Don't exit, just log the error and continue
@@ -77,17 +77,21 @@ async function runSecurityAudit() {
 
 // Main continuous loop
 async function runContinuous() {
-  console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-  
+  console.log(
+    `🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
+  );
+
   // Run initial security audit
   await runSecurityAudit();
-  
+
   // Set up continuous execution
   setInterval(async () => {
     await runSecurityAudit();
   }, AUTOMATION_INTERVAL);
-  
-  console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+
+  console.log(
+    `✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`
+  );
 }
 
 // Handle graceful shutdown
