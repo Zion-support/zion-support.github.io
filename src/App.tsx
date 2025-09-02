@@ -1,7 +1,17 @@
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 // Layout Components
 import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
 import { Sidebar } from './components/Sidebar';
+
+// Loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  </div>
+);
 
 // Optimized lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
@@ -34,6 +44,17 @@ const Training = createLazyComponent(() => import('./pages/Training'));
 const Webinars = createLazyComponent(() => import('./pages/Webinars'));
 const Research = createLazyComponent(() => import('./pages/Research'));
 const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
+
+// Additional required components
+const FAQ = createLazyComponent(() => import('./pages/FAQ'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+const Cookies = createLazyComponent(() => import('./pages/Cookies'));
+const DataProtection = createLazyComponent(() => import('./pages/DataProtection'));
+const Accessibility = createLazyComponent(() => import('./pages/Accessibility'));
+const SystemStatus = createLazyComponent(() => import('./pages/SystemStatus'));
+const Search = createLazyComponent(() => import('./pages/Search'));
+const Categories = createLazyComponent(() => import('./pages/Categories'));
 
 // New Autonomous AI Services 2025
 const AIAutonomousContentMarketingPlatform = createLazyComponent(() => import('./pages/services/AI-Autonomous-Content-Marketing-Platform'));

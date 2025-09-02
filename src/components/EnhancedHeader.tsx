@@ -312,32 +312,40 @@ export function EnhancedHeader() {
   };
 
 export const EnhancedHeader: React.FC = () => {
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
-    { label:, Home', href: '/ }, { label:,
-  Services', href: '/services },
-    { label:, Solutions', href: '/solutions }, { label:,
-  Enterprise', href: '/enterprise },
-    { label:, Request Quote', href: '/request-quote }, { label:,
-  Case Studies', href: '/case-studies },
-    { label:, Careers', href: '/careers }, { label:,
-  Contact', href: '/contact }
+    { label: 'Home', href: '/' },
+    { label: 'Services', href: '/services' },
+    { label: 'Solutions', href: '/solutions' },
+    { label: 'Enterprise', href: '/enterprise' },
+    { label: 'Request Quote', href: '/request-quote' },
+    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'Careers', href: '/careers' },
+    { label: 'Contact', href: '/contact' }
   ];
+
   return (
-    <header className="bg-white shadow-lg">      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-white shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center">
             <a href="/" className="text-2xl font-bold text-blue-900">
               Zion Tech Group
             </a>
           </div>
-          <nav className="hidden md:flex space-x-8">            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
-            <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
-            <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>
-            <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>            <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
+          <nav className="hidden md:flex space-x-8">
+            {navLinks.map((link, index) => (
+              <a key={index} href={link.href} className="text-gray-700 hover:text-blue-600">
+                {link.label}
+              </a>
+            ))}
           </nav>
-          <button aria-label="Toggle navigation" onClick={() => setMobileOpen((v) => !v)} className="md: hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+          <button 
+            aria-label="Toggle navigation" 
+            onClick={() => setMobileOpen((v) => !v)} 
+            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+          >
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -345,4 +353,5 @@ export const EnhancedHeader: React.FC = () => {
         </div>
       </div>
     </header>
-  );}";;
+  );
+};

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import {
   ArrowRight,
   Brain,
@@ -17,7 +17,7 @@ import {
   Star,
   TrendingUp,
   Clock,
-  Award,;
+  Award
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 

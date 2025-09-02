@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
@@ -6,7 +7,7 @@ import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
-const Home: React.FC = () => {
+export default function Home() {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -34,7 +35,6 @@ const Home: React.FC = () => {
       href: "/micro-saas"
     }
   ];
-export default function Home() {
   return (
     <>
       <Head>

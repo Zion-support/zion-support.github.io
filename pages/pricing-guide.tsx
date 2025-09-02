@@ -1,15 +1,9 @@
-import React from;
-  'react';
-import { motion } from;
-  'framer-motion';
-import { SEO } from;
-  '../components/SEO';
-import { Button } from;
-  '../components/ui/Button';
-import { Card } from;
-  '../components/ui/Card';
-import { Badge } from;
-  '../components/ui/Badge';
+import React from 'react';
+import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
 import { 
   CheckCircle, 
   Star, 
@@ -36,11 +30,9 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-  HelpCircle;
+  HelpCircle,
+  Network
 } from 'lucide-react';
-import { Network } from 'lucide-react';
-} from
-  'lucide-react';
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [
