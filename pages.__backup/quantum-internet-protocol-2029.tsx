@@ -1,25 +1,35 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from
+  'react';
+import Head from
+  'next/head';
+import Link from
+  'next/link';
+import { motion } from
+  'framer-motion';
 import { 
 <:pages/quantum-internet-protocol-2029.tsxAtom, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, 
   Zap, Sparkles, Shield, Cpu, Database, Cloud, Lock, 
   Users, Briefcase, BookOpen, MessageCircle, TrendingUp,
   Target, Layers, Globe, Brain, Rocket, Building, Network
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+} from,
+  lucide-react';
+import UltraFuturisticNavigation2029 from
+  '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from
+  '../components/layout/UltraFuturisticFooter2029';
 
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950,
+  email:,
+  kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709,
+  website:,
+  https: //ziontechgroup.com
 };
 
 const features = [
-<:pages/quantum-internet-protocol-2029.tsx'Quantum entanglement distribution',
+<:pages/quantum-internet-protocol-2029.tsx,
+  Quantum entanglement distribution',
   'Quantum key distribution',
   'Quantum teleportation',
   'Quantum routing protocols',
@@ -58,46 +68,55 @@ const technology = [
 
 const pricingPlans = [
   {
-<:pages/quantum-internet-protocol-2029.tsxname: 'Government Standard',
-    price: '$29,999',
-    period: '/month',
-    description: 'Perfect for government agencies and research institutions',
+<: pages/quantum-internet-protocol-2029.tsxname:
+  'Government Standard,
+    price:,
+  $29,999',
+    period: '/month,
+    description:,
+  Perfect for government agencies and research institutions',
     features: [
-      'Basic quantum network access',
-      'Quantum encryption protocols',
-      'Network security features',
-      'Basic support',
-      'Compliance certification'
+  'Basic quantum network access,
+  'Quantum encryption protocols',
+  'Network security features',
+  'Basic support',
+  'Compliance certification'
 ],
     popular: false
   },
   {
-<:pages/quantum-internet-protocol-2029.tsxname: 'Enterprise Pro',
-    price: '$59,999',
-    period: '/month',
-    description: 'For large enterprises and financial institutions',
+<:pages/quantum-internet-protocol-2029.tsxname:,
+  Enterprise Pro',
+    price: $59,999,
+  ,
+    period: '/month,
+    description:,
+  For large enterprises and financial institutions',
     features: [
-      'Full quantum network access',
-      'Advanced quantum protocols',
-      'Custom network configurations',
-'Priority support',
-      'Custom training',
-      'Integration services'
+  'Full quantum network access,
+  'Advanced quantum protocols',
+  'Custom network configurations',
+  'Priority support',
+  'Custom training',
+  'Integration services'
     ],
     popular: true
   },
   {
-<:pages/quantum-internet-protocol-2029.tsxname: 'Military Elite',
-    price: '$99,999',
-    period: '/month',
-    description: 'For military and defense organizations',
+<:pages/quantum-internet-protocol-2029.tsxname:,
+  Military Elite',
+    price: $99,999,
+  ,
+    period: '/month,
+    description:,
+  For military and defense organizations',
     features: [
-      'Military-grade quantum security',
-      'Custom quantum protocols',
-      'On-site deployment',
-      '24/7 dedicated support',
-      'Compliance certification',
-      'Training and certification'
+  'Military-grade quantum security,
+  'Custom quantum protocols',
+  'On-site deployment',
+  '24/7 dedicated support',
+  'Compliance certification',
+  'Training and certification'
 ],
     popular: false
   }
@@ -400,7 +419,8 @@ const pricingPlans = [
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative ${plan.popular ? 'scale-105' : ''}`}
+                className={`relative ${plan.popular ?,
+  scale-105': '}`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">

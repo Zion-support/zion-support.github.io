@@ -1,5 +1,7 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';
+import React from
+  'react';'
+import { Link } from
+  'react-router-dom';
 const QuantumAIServices = () => {}
   return()
 :pages.disabled/pages/services/quantum-ai.jsx
@@ -188,4 +190,4 @@ const QuantumAIServices = () => {}
 export { QuantumAIServices };
 :pages.disabled/pages/services/quantum-ai.jsx
 export default QuantumAIServices;'"
-'"'"
+  '"'"

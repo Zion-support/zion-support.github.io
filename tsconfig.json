@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2022",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -79,18 +75,9 @@
         "src/constants/*"
       ]
     },
-    "typeRoots": [
-      "./node_modules/@types",
-      "./types"
-    ],
-    "types": [
-      "node"
-    ],
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
+    "typeRoots": ["./node_modules/@types", "./types"],
+    "types": ["node"],
+    "plugins": [{ "name": "next" }],
     "strictNullChecks": true,
     "strictFunctionTypes": true,
     "strictBindCallApply": true,
@@ -111,10 +98,25 @@
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
-    "components",
     "contracts",
     "cypress",
     "**/*.backup",
-    "**/*.disabled"
+    "**/*.disabled",
+<<<<<<< HEAD
+    "cypress_backup",
+    "contracts_backup",
+    "data_backup",
+    "fix_utils_files.ts",
+    "hooks/useResponsive.ts",
+    "lib_backup",
+    "pages-backup",
+    "pages.__backup",
+    "server",
+    "services",
+    "src.broken"
+=======
+    "temp_working",
+    "supabase/functions"
+>>>>>>> origin/main
   ]
 }
