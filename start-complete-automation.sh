@@ -9,7 +9,7 @@ echo "🚀 Starting ZION TECH Complete Automation System..."
 echo "=================================================="
 
 # Ensure we're in the project root
-cd "$(dirname "$$0")"
+cd "$(dirname "$0")"
 
 # Create necessary directories
 echo "📁 Creating necessary directories..."
@@ -37,11 +37,29 @@ pm2 delete all 2>/dev/null || true
 
 # Start the PM2 ecosystem
 echo "🚀 Starting PM2 ecosystem..."
-pm2 start ecosystem.config.cjs
+if [ -f "ecosystem.config.cjs" ]; then
+  pm2 start ecosystem.config.cjs
+elif [ -f "ecosystem.enhanced.cjs" ]; then
+  pm2 start ecosystem.enhanced.cjs
+elif [ -f "ecosystem.enhanced.simplified.cjs" ]; then
+  pm2 start ecosystem.enhanced.simplified.cjs
+elif [ -f "ecosystem.working.cjs" ]; then
+  pm2 start ecosystem.working.cjs
+else
+  echo "⚠️ No PM2 ecosystem file found. Skipping PM2 start."
+fi
 
 # Start the master automation orchestrator
 echo "🎯 Starting Master Automation Orchestrator..."
-node scripts/automation/master-automation-orchestrator.cjs &
+if [ -f "scripts/automation/master-automation-orchestrator.cjs" ]; then
+  node scripts/automation/master-automation-orchestrator.cjs &
+elif [ -f "automation/intelligent-orchestrator.js" ]; then
+  node automation/intelligent-orchestrator.js &
+elif [ -f "scripts/pm2/pm2-automation-launcher.cjs" ]; then
+  node scripts/pm2/pm2-automation-launcher.cjs &
+else
+  echo "⚠️ No master orchestrator script found. Skipping orchestrator start."
+fi
 
 # Wait a moment for processes to start
 sleep 5

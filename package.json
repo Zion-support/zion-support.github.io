@@ -41,9 +41,13 @@
     "analyze": "ANALYZE=true npm run build",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "test:ci": "vitest run --coverage --reporter=dot",
+    "build:ci": "NODE_ENV=production NEXT_TELEMETRY_DISABLED=1 next build",
+    "verify": "npm run lint && npm run type-check && npm run test:ci && npm run build:ci",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@google-analytics/data": "^5.2.0",
@@ -78,6 +82,7 @@
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^6.26.2",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
@@ -95,10 +100,10 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "husky": "^9.1.7",
-    "node": "^10.9.2",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.4.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vitest": "^2.0.5"
   }
 }

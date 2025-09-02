@@ -116,7 +116,7 @@ cd zion-tech-group
 
 2. Install dependencies:
 ```bash
-npm install
+npm ci --omit=optional || npm install --no-audit --no-fund --legacy-peer-deps --omit=optional
 ```
 
 3. Run the development server:
@@ -126,11 +126,21 @@ npm run dev
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Building for Production
+### Building for Production and Testing
 
 ```bash
 npm run build
 npm start
+```
+
+Run tests (Vitest):
+```bash
+npm run test
+```
+
+Run full verification locally:
+```bash
+npm run verify
 ```
 
 ## 📱 Responsive Design
