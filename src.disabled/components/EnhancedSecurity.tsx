@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from;
   'react'; import { motion } from;
-  'framer-motion'; import { ; Shield,; Lock,; AlertTriangle,; CheckCircle,; Eye,; EyeOff,; Settings,; X,; RefreshCw,; Info; } from
-  'lucide-react'; ; interface SecurityStatus {
+  'framer-motion'; import { ; Shield,; Lock,; AlertTriangle,; CheckCircle,; Eye,; EyeOff,; Settings,; X,; RefreshCw,; Info; } from;
+  'lucide-react'; ; interface SecurityStatus {;
    https: boolean;
    csp: boolean;
    hsts: boolean;
@@ -10,7 +10,7 @@ import React, { useEffect, useState } from;
    contentType: boolean;
    referrerPolicy: boolean;
    permissionsPolicy: boolean;
-}; interface SecurityThreat {
+}; interface SecurityThreat {;
    id: string;
    type: 'low' | 'medium' | 'high' | 'critical';
    description: string;

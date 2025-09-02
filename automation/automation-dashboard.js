@@ -1,22 +1,22 @@
 #!/usr/bin/env node;
-const fs = require(,
+const fs = require(,;
   fs');
-const path = require(
+const path = require(;
   'path');
-const { execSync } = require(
+const { execSync } = require(;
   'child_process');
-const http = require(
+const http = require(;
   'http');
-const url = require(
+const url = require(;
   'url');
 class AutomationDashboard {;
   constructor() {;
-
+;
     this.automationSystems = new Map();
     this.metrics = new Map();
     this.alerts = [];
-    this.logFile = path.join(__dirname,
-  'logs',
+    this.logFile = path.join(__dirname,;
+  'logs',;
   'automation-dashboard.log');
     this.ensureLogDirectory();
     this.loadAutomationSystems();
@@ -31,38 +31,38 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
 ;
   loadAutomationSystems() {;
     const systems = [;
-      { name: 'lint-monitor, path:,
-  lint-monitor.js', category: 'code-quality, status:,
+      { name: 'lint-monitor, path:,;
+  lint-monitor.js', category: 'code-quality, status:,;
   available' },;
-      { name: 'lint-fixer, path:,
-  lint-error-fixer.js', category: 'code-quality, status:,
+      { name: 'lint-fixer, path:,;
+  lint-error-fixer.js', category: 'code-quality, status:,;
   available' },;
-      { name: 'lint-manager, path:,
-  lint-automation-manager.js', category: 'code-quality, status:,
+      { name: 'lint-manager, path:,;
+  lint-automation-manager.js', category: 'code-quality, status:,;
   available' },;
-      { name: 'code-quality, path:,
-  code-quality-monitor.js', category: 'analysis, status:,
+      { name: 'code-quality, path:,;
+  code-quality-monitor.js', category: 'analysis, status:,;
   available' },;
-      { name: 'performance, path:,
-  performance-optimizer.js', category: 'optimization, status:,
+      { name: 'performance, path:,;
+  performance-optimizer.js', category: 'optimization, status:,;
   available' },;
-      { name: 'content-generator, path:,
-  content-generator.js', category: 'generation, status:,
+      { name: 'content-generator, path:,;
+  content-generator.js', category: 'generation, status:,;
   available' },;
-      { name: 'seo-optimizer, path:,
-  seo-optimizer.js', category: 'seo, status:,
+      { name: 'seo-optimizer, path:,;
+  seo-optimizer.js', category: 'seo, status:,;
   available' },;
-      { name: 'security-scanner, path:,
-  security-scanner.js', category: 'security, status:,
+      { name: 'security-scanner, path:,;
+  security-scanner.js', category: 'security, status:,;
   available' },;
-      { name: 'test-generator, path:,
-  test-generator.js', category: 'testing, status:,
+      { name: 'test-generator, path:,;
+  test-generator.js', category: 'testing, status:,;
   available' },;
-      { name: 'intelligent-orchestrator, path:,
-  intelligent-orchestrator.js', category: 'orchestration, status:,
+      { name: 'intelligent-orchestrator, path:,;
+  intelligent-orchestrator.js', category: 'orchestration, status:,;
   available' },;
-      { name: 'automation-factory, path:,
-  automation-factory.js', category: 'factory, status:
+      { name: 'automation-factory, path:,;
+  automation-factory.js', category: 'factory, status:;
   'available' };
     ];
     for (const systemPath = path.join(__dirname, system.path);
@@ -104,7 +104,7 @@ this.alerts = [];
 ;
       if (successRate < 0.8) {;
         this.alerts.push({;
-          type:
+          type:;
   'warning',;
           system: name,;
           message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,;
@@ -112,7 +112,7 @@ this.alerts = [];
         })};
 if (system.averageExecutionTime > 30000) {;if (system.averageExecutionTime > 30000) {;
 this.alerts.push({;
-          type:
+          type:;
   'warning',;
           system: name,;
           message: `Slow execution time: ${system.averageExecutionTime}ms`,;
@@ -120,10 +120,10 @@ this.alerts.push({;
         })};
 if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
 this.alerts.push({;
-          type:
+          type:;
   'error',;
           system: name,;
-          message:
+          message:;
   'System not running recently',;
           timestamp: new Date().toISOString();
         })};
@@ -139,10 +139,10 @@ system.isRunning = true;
     try {;
       this.log(`🚀 Running system: ${systemName}`);
 ;
-      const result = execSync(`node,
+      const result = execSync(`node,;
   ${system.path}'`, {;
         encoding: 'utf8,;
-        stdio:
+        stdio:;
   'pipe';
       });
 ;
@@ -168,12 +168,12 @@ const system = this.automationSystems.get(systemName);
     system.averageExecutionTime = system.totalExecutionTime / (system.successCount + system.failureCount);
     system.lastRun = new Date()};
 async runAllSystems() {;async runAllSystems() {;
-this.log(,
+this.log(,;
   🚀 Running all automation systems...');
 ;
     const results = [];
     for (const [name, system] of this.automationSystems) {;
-      if (system.status ===
+      if (system.status ===;
   'available') {;
         const result = await this.runSystem(name);
         results.push({ name, ...result });
@@ -189,105 +189,105 @@ const systems = Array.from(this.automationSystems.values());
     const metrics = Array.from(this.metrics.values());
     const alerts = this.alerts;
     return `<!DOCTYPE html>;
-<html lang=
+<html lang=;
   'en'>;
 <head>;
-    <meta charset=
+    <meta charset=;
   'UTF-8'>;
-    <meta name=
-  'viewport' content=
+    <meta name=;
+  'viewport' content=;
   'width=device-width, initial-scale=1.0'>;
     <title>Automation Dashboard</title>;
-    <script src=
+    <script src=;
   'https: //cdn.tailwindcss.com'></script>;
-    <script src=
+    <script src=;
   'https://cdn.jsdelivr.net/npm/chart.js'></script>;
 </head>;
-<body class=
+<body class=;
   'bg-gray-100'>;
-    <div class=
+    <div class=;
   'container mx-auto px-4 py-8'>;
-        <h1 class=
+        <h1 class=;
   'text-3xl font-bold text-gray-800 mb-8'>Automation Dashboard</h1>;
 ;
         <!-- System Status -->;
-        <div class=
+        <div class=;
   'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8'>;
             ${systems.map(system => `;
-                <div class=
+                <div class=;
   'bg-white rounded-lg shadow-md p-6'>;
-                    <div class=
+                    <div class=;
   'flex items-center justify-between mb-4'>;
-                        <h3 class=
+                        <h3 class=;
   'text-lg font-semibold text-gray-800>${system.name}</h3>;
-                        <span class=,
+                        <span class=,;
   px-2 py-1 rounded-full text-xs font-medium ${;
-                            system.isRunning ? 'bg-green-100 text-green-800
+                            system.isRunning ? 'bg-green-100 text-green-800;
   ': 'bg-gray-100 text-gray-800;
                         }'>;
-                            ${system.isRunning ?,
+                            ${system.isRunning ?,;
   Running': 'Idle};
                         </span>;
                     </div>;
-                    <div class=
+                    <div class=;
   'space-y-2 text-sm text-gray-600'>;
                         <p>Category: ${system.category}</p>;
                         <p>Success Rate: ${((system.successCount / (system.successCount + system.failureCount)) * 100 || 0).toFixed(1)}%</p>;
                         <p>Avg Time: ${system.averageExecutionTime.toFixed(0)}ms</p>;
-                        <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
+                        <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,;
   Never'}</p>;
                     </div>;
-                </div>`;).join('
+                </div>`;).join(';
   ')};
         </div>;
         <!-- Alerts -->;
-        <div class='bg-white rounded-lg shadow-md p-6 mb-8
+        <div class='bg-white rounded-lg shadow-md p-6 mb-8;
   '>;
-            <h2 class='text-xl font-semibold text-gray-800 mb-4
+            <h2 class='text-xl font-semibold text-gray-800 mb-4;
   '>Alerts</h2>;
             ${alerts.length > 0 ? alerts.map(alert => `;
                 <div class='p-3 rounded-lg mb-2 ${;
-                    alert.type ===
-  'error' ?
+                    alert.type ===;
+  'error' ?;
   'bg-red-100 text-red-800': 'bg-yellow-100 text-yellow-800;
                 }
   '>;
                     <strong>${alert.system}:</strong> ${alert.message};
-                    <span class=,
-  text-xs ml-2
+                    <span class=,;
+  text-xs ml-2;
   '>${new Date(alert.timestamp).toLocaleString()}</span>;
-                </div>`;).join(''): '<p class='text-gray-500
+                </div>`;).join(''): '<p class='text-gray-500;
   '>No alerts</p>};
         </div>;
         <!-- Performance Chart -->;
-        <div class=,
+        <div class=,;
   bg-white rounded-lg shadow-md p-6'>;
-            <h2 class=
+            <h2 class=;
   'text-xl font-semibold text-gray-800 mb-4'>Performance Metrics</h2>;
-            <canvas id=
-  'performanceChart' width=
-  '400' height=
+            <canvas id=;
+  'performanceChart' width=;
+  '400' height=;
   '200'></canvas>;
         </div>;
         <!-- Actions -->;
-        <div class=
+        <div class=;
   'bg-white rounded-lg shadow-md p-6 mt-8'>;
-            <h2 class=
+            <h2 class=;
   'text-xl font-semibold text-gray-800 mb-4'>Actions</h2>;
-            <div class=
+            <div class=;
   'flex flex-wrap gap-4'>;
-                <button onclick=
-  'runAllSystems()' class=
+                <button onclick=;
+  'runAllSystems()' class=;
   'bg-blue-500 hover: bg-blue-600 text-white px-4 py-2 rounded-lg'>;
                     Run All Systems;
                 </button>;
-                <button onclick=
-  'refreshDashboard()' class=
+                <button onclick=;
+  'refreshDashboard()' class=;
   'bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg'>;
                     Refresh Dashboard;
                 </button>;
-                <button onclick=
-  'generateReport()' class=
+                <button onclick=;
+  'generateReport()' class=;
   'bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg'>;
                     Generate Report;
                 </button>;
@@ -296,19 +296,19 @@ const systems = Array.from(this.automationSystems.values());
     </div>;
     <script>;
         // Performance Chart;
-        const ctx = document.getElementById(
-  'performanceChart').getContext(
+        const ctx = document.getElementById(;
+  'performanceChart').getContext(;
   '2d);
         const performanceChart = new Chart(ctx, {;
-            type:
+            type:;
   'line',;
             data: {;
                 labels: ${JSON.stringify(metrics.map(m => new Date(m.timestamp).toLocaleTimeString()))},;
                 datasets[{;
-                    label:
+                    label:;
   'Success Rate',;
                     data: ${JSON.stringify(metrics.map(m => m.successRate * 100))},;
-                    borderColor:,
+                    borderColor:,;
   rgb(59, 130, 246)',;
                     backgroundColor: rgba(59, 130, 246, 0.1)',;
                     tension: 0.1;
@@ -325,26 +325,26 @@ const systems = Array.from(this.automationSystems.values());
 ;
         });
         function runAllSystems() {;
-            fetch(,
+            fetch(,;
   /api/run-all', { method: 'POST });
                 .then(response => response.json());
                 .then(data => {;
-                    alert(,
+                    alert(,;
   All systems started');
                     setTimeout(refreshDashboard, 5000)})};
         function refreshDashboard() {;
             location.reload()};
 function generateReport() {;function generateReport() {;
-fetch(
+fetch(;
   '/api/report');
                 .then(response => response.json());
                 .then(data => {;
                     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json });
                     const url = window.URL.createObjectURL(blob);
-                    const a = document.createElement(
+                    const a = document.createElement(;
   'a');
                     a.href = url;
-                    a.download =
+                    a.download =;
   'automation-report.json';
                     a.click()})};
 // Auto-refresh every 30 seconds;// Auto-refresh every 30 seconds;
@@ -404,11 +404,11 @@ const recommendations = [];
 ;
       if (successRate < 0.8) {;
         recommendations.push({;
-          type:
+          type:;
   'performance',;
           system: name,;
           message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,;
-          priority:,
+          priority:,;
   high';
         })};
 if (system.averageExecutionTime > 30000) {;if (system.averageExecutionTime > 30000) {;
@@ -416,14 +416,14 @@ recommendations.push({;
           type: 'optimization,;
           system: name,;
           message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,;
-          priority:,
+          priority:,;
   medium';
         })};
 if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;if (!system.lastRun || Date.now() - system.lastRun.getTime() > 30 * 60 * 1000) {;
 recommendations.push({;
           type: 'maintenance,;
           system: name,;
-          message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
+          message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,;
   Never'}`,;
           priority: 'low;
         })};
@@ -432,33 +432,33 @@ recommendations.push({;
 createServer() {;createServer() {;
 const server = http.createServer((req, res) => {;
       const pathname = parsedUrl.pathname;
-      res.setHeader(,
-  Content-Type',
+      res.setHeader(,;
+  Content-Type',;
   'application/json');
-      res.setHeader(
-  'Access-Control-Allow-Origin',
+      res.setHeader(;
+  'Access-Control-Allow-Origin',;
   '*');
-      res.setHeader(
-  'Access-Control-Allow-Methods',
+      res.setHeader(;
+  'Access-Control-Allow-Methods',;
   'GET, POST, OPTIONS');
-      res.setHeader(
-  'Access-Control-Allow-Headers',
+      res.setHeader(;
+  'Access-Control-Allow-Headers',;
   'Content-Type');
-      if (req.method ===
+      if (req.method ===;
   'OPTIONS') {;
         res.writeHead(200);
         res.end();
         return};
 switch (pathname) {;switch (pathname) {;
-case
+case;
   '/': ;
-          res.setHeader(
-  'Content-Type,
+          res.setHeader(;
+  'Content-Type,;
   'text/html');
           res.writeHead(200);
           res.end(this.generateDashboardHTML());
           break;
-        case
+        case;
   '/api/status':;
           res.writeHead(200);
           res.end(JSON.stringify({;
@@ -467,26 +467,26 @@ case
             alerts: this.alerts;
           }));
           break;
-        case,
+        case,;
   /api/run-all': ;
-          if (req.method ===
+          if (req.method ===;
   'POST) {;
             this.runAllSystems().then(results => {;
               res.writeHead(200);
               res.end(JSON.stringify({ success: true, results }))})} else {;
             res.writeHead(405);
-            res.end(JSON.stringify({ error:,
+            res.end(JSON.stringify({ error:,;
   Method not allowed' }))};
 break;break;
-case
+case;
   '/api/run': ;
-          if (req.method ===
+          if (req.method ===;
   'POST') {;
-            const body = '
+            const body = ';
   ';
             req.on('data, chunk => body += chunk);
-            req.on(,
-  end
+            req.on(,;
+  end;
   ', () => {;
               const { system } = JSON.parse(body);
               this.runSystem(system).then(result => {;
@@ -495,8 +495,8 @@ case
             res.writeHead(405);
             res.end(JSON.stringify({ error: 'Method not allowed }))};
 break;break;
-case,
-  /api/report
+case,;
+  /api/report;
   ': ;
           res.writeHead(200);
           res.end(JSON.stringify(this.generateReport()));
@@ -520,15 +520,15 @@ const dashboard = new AutomationDashboard();
 const command = process.argv[2];
 const port = process.argv[3] || 3001;
 switch (command) {;
-  case,
-  start
+  case,;
+  start;
   ': ;
     dashboard.start(parseInt(port));
     break;
   case 'status:;
     // // // // // // // // console.log(JSON.stringify(dashboard.generateReport(), null, 2));
     break;
-  case 'run-all
+  case 'run-all;
   ':;
     dashboard.runAllSystems().then(results => {;
       // // // // // // // // console.log(JSON.stringify(results, null, 2));
@@ -536,16 +536,16 @@ process.exit(0);process.exit(0);
 });
     break;
   default:;
-    // // // // // // // // console.log(,
-  Usage: node automation-dashboard.js [start|status|run-all] [port]
+    // // // // // // // // console.log(,;
+  Usage: node automation-dashboard.js [start|status|run-all] [port];
   ');
-    // // // // // // // // console.log('\nCommands:
+    // // // // // // // // console.log('\nCommands:;
   ');
-    // // // // // // // // console.log('  start    - Start the dashboard server
+    // // // // // // // // console.log('  start    - Start the dashboard server;
   ');
-    // // // // // // // // console.log('  status   - Show current status
+    // // // // // // // // console.log('  status   - Show current status;
   ');
-    // // // // // // // // console.log('  run-all  - Run all automation systems
+    // // // // // // // // console.log('  run-all  - Run all automation systems;
   ');
 process.exit(1);process.exit(1);
 ;
@@ -556,4 +556,4 @@ process.exit(0);process.exit(0);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
 ;
-
+;

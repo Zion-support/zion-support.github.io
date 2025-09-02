@@ -1,4 +1,4 @@
-export interface ComprehensiveItService {
+export interface ComprehensiveItService {;
    id: string;
    title: string;
    description: string;

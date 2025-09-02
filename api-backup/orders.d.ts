@@ -1,1 +1,1 @@
-type Req = { method?: string; query?: { userId?: string; user_id?: string; }; headers?: Record<string, string | undefined>; 
+type Req = { method?: string; query?: { userId?: string; user_id?: string; }; headers?: Record<string, string | undefined>; ;

@@ -1,4 +1,4 @@
-export interface CybersecurityService {
+export interface CybersecurityService {;
    id: string;
    title: string;
    description: string;

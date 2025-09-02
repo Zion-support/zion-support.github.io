@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback } from;
   'react'; import { motion, AnimatePresence } from;
-  'framer-motion'; import { ; Search,; Eye,; Ear,; MousePointer,; Keyboard,; Smartphone,; Globe,; Target,; CheckCircle,; AlertTriangle,; Info,; Settings,; X,; RefreshCw,; Download,; Share2; } from
-  'lucide-react'; ; interface SEOAnalysis {
+  'framer-motion'; import { ; Search,; Eye,; Ear,; MousePointer,; Keyboard,; Smartphone,; Globe,; Target,; CheckCircle,; AlertTriangle,; Info,; Settings,; X,; RefreshCw,; Download,; Share2; } from;
+  'lucide-react'; ; interface SEOAnalysis {;
    title: string;
    description: string;
    keywords: string[];
    headings: { level: number;
    text: string;
    id: string;
-}[]; images: { src: string; alt: string; hasAlt: boolean }[]; links: { href: string; text: string; isInternal: boolean }[]; metaTags: { name: string; content: string }[]; }; interface AccessibilityAnalysis {
+}[]; images: { src: string; alt: string; hasAlt: boolean }[]; links: { href: string; text: string; isInternal: boolean }[]; metaTags: { name: string; content: string }[]; }; interface AccessibilityAnalysis {;
    contrastRatio: number;
    hasSkipLinks: boolean;
    hasProperHeadings: boolean;
@@ -17,7 +17,7 @@ import React, { useState, useEffect, useCallback } from;
    hasKeyboardNavigation: boolean;
    hasScreenReaderSupport: boolean;
    issues: string[];
-}; export const EnhancedSEOAccessibility: React.FC = () => {; const [isVisible, setIsVisible] = useState(false); const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis | null>(null); const [accessibilityAnalysis, setAccessibilityAnalysis] = useState<AccessibilityAnalysis | null>(null); const [isAnalyzing, setIsAnalyzing] = useState(false); const [currentTab, setCurrentTab] = useState<
-  'seo' |
-  'accessibility'>(
+}; export const EnhancedSEOAccessibility: React.FC = () => {; const [isVisible, setIsVisible] = useState(false); const [seoAnalysis, setSeoAnalysis] = useState<SEOAnalysis | null>(null); const [accessibilityAnalysis, setAccessibilityAnalysis] = useState<AccessibilityAnalysis | null>(null); const [isAnalyzing, setIsAnalyzing] = useState(false); const [currentTab, setCurrentTab] = useState<;
+  'seo' |;
+  'accessibility'>(;
   'seo'); ';

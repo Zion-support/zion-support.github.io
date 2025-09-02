@@ -1,252 +1,249 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 ;
-const fs = require(
+const fs = require(;
   'fs');
-const path = require(
+const path = require(;
   'path');
-const { execSync, spawn } = require(
+const { execSync, spawn } = require(;
   'child_process');
-const cron = require(
+const cron = require(;
   'node-cron');
 ;
-class DependencyMonitor {
-  constructor() {
+class DependencyMonitor {;
+  constructor() {;
     this.projectRoot = process.cwd();
     this.vulnerabilitiesFound = 0;
     this.dependenciesUpdated = 0;
     this.monitoring = false;
-    this.logFile = path.join(this.projectRoot,logs
+    this.logFile = path.join(this.projectRoot,logs;
   ',dependency.log');
-
-    // Ensure logs directory exists
+;
+    // Ensure logs directory exists;
     this.ensureLogsDirectory();
-
-    // Initialize monitoring
+;
+    // Initialize monitoring;
     this.startMonitoring();
   }
-
-  ensureLogsDirectory() {
+;
+  ensureLogsDirectory() {;
     const logsDir = path.dirname(this.logFile);
-    if (!fs.existsSync(logsDir)) {
+    if (!fs.existsSync(logsDir)) {;
       fs.mkdirSync(logsDir, { recursive: true });
     }
   }
-
-  log(message, level =
-  'INFO') {
+;
+  log(message, level =;
+  'INFO') {;
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-
-    try {
+;
+    try {;
       fs.appendFileSync(this.logFile, logEntry);
-    } catch (error) {
-      console.error(
+    } catch (error) {;
+      console.error(;
   'Failed to write to log file:', error.message);
     }
   }
-
-  async startMonitoring() {
-    this.log(
+;
+  async startMonitoring() {;
+    this.log(;
   'Starting dependency monitoring...');
-
-    // Schedule regular dependency checks
-    cron.schedule(
-  '0 */2 * * *', () => {
+;
+    // Schedule regular dependency checks;
+    cron.schedule(;
+  '0 */2 * * *', () => {;
       this.performDependencyCheck();
     });
-
-    // Schedule daily security audit
-    cron.schedule(
-  '0 1 * * *', () => {
+;
+    // Schedule daily security audit;
+    cron.schedule(;
+  '0 1 * * *', () => {;
       this.performSecurityAudit();
     });
-
-    // Schedule weekly dependency updates
-    cron.schedule(
-  '0 7 * * 0', () => {
+;
+    // Schedule weekly dependency updates;
+    cron.schedule(;
+  '0 7 * * 0', () => {;
       this.performWeeklyUpdates();
     });
-
-    // Initial dependency check
-    setTimeout(() => {
+;
+    // Initial dependency check;
+    setTimeout(() => {;
       this.performDependencyCheck();
     }, 15000);
-
-    this.log(
+;
+    this.log(;
   'Dependency monitoring started successfully');
   }
-
-  async performDependencyCheck() {
+;
+  async performDependencyCheck() {;
     if (this.monitoring) return;
-
+;
     this.monitoring = true;
-    this.log(
+    this.log(;
   'Performing dependency check...');
-
-    try {
+;
+    try {;
       const issues = await this.detectDependencyIssues();
-
-      if (issues.length > 0) {
-        this.log(
-          `Found ${issues.length} dependency issues, attempting fixes...`
+;
+      if (issues.length > 0) {;
+        this.log(;
+          `Found ${issues.length} dependency issues, attempting fixes...`;
         );
         await this.autoFixDependencyIssues(issues);
-      } else {
-        this.log(
+      } else {;
+        this.log(;
   'No dependency issues detected, all packages are up to date');
       }
-    } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`,ERROR,
+    } catch (error) {;
+      this.log(`Dependency check failed: ${error.message}`,ERROR,;
   );
-    } finally {
+    } finally {;
       this.monitoring = false;
     }
   }
-
-  async detectDependencyIssues() {
+;
+  async detectDependencyIssues() {;
     const issues = [];
-
-    try {
-      // Check for outdated packages
-      const outdatedResult = execSync('npm outdated --json
-  ', {
-        encoding: 'utf8,
-      });
+;
+    try {;
+      // Check for outdated packages;
+      const outdatedResult = execSync('npm outdated --json;
+  ', {;
+        encoding: 'utf8});
       const outdated = JSON.parse(outdatedResult);
-
-      if (Object.keys(outdated).length > 0) {
-        issues.push({
-          type: 'outdated
-  ',
-          packages: Object.keys(outdated),
-          severity:,
-  medium
-  ',
-        });
+;
+      if (Object.keys(outdated).length > 0) {;
+        issues.push({;
+          type: 'outdated;
+  ',;
+          packages: Object.keys(outdated),;
+          severity:,;
+  medium;
+  '});
       }
-    } catch (error) {
-      // No outdated packages found
+    } catch (error) {;
+      // No outdated packages found;
     }
-
-    try {
-      // Check for security vulnerabilities
-      const auditResult = execSync('npm audit --json
+;
+    try {;
+      // Check for security vulnerabilities;
+      const auditResult = execSync('npm audit --json;
   ', { encoding: 'utf8 });
       const audit = JSON.parse(auditResult);
-
-      if (
-        audit.vulnerabilities &&
-        Object.keys(audit.vulnerabilities).length > 0
-      ) {
-        issues.push({
-          type: 'vulnerability
-  ',
-          packages: Object.keys(audit.vulnerabilities),
-          severity:,
-  high
-  ',
-        });
+;
+      if (;
+        audit.vulnerabilities &&;
+        Object.keys(audit.vulnerabilities).length > 0;
+      ) {;
+        issues.push({;
+          type: 'vulnerability;
+  ',;
+          packages: Object.keys(audit.vulnerabilities),;
+          severity:,;
+  high;
+  '});
       }
-    } catch (error) {
-      // No vulnerabilities found
+    } catch (error) {;
+      // No vulnerabilities found;
     }
-
+;
     return issues;
   }
-
-  async autoFixDependencyIssues(issues) {
-    for (const issue of issues) {
-      try {
-        if (issue.type === 'vulnerability
-  ') {
-          this.log(
-            `Attempting to fix vulnerability in ${issue.packages.join(',)}`
+;
+  async autoFixDependencyIssues(issues) {;
+    for (const issue of issues) {;
+      try {;
+        if (issue.type === 'vulnerability;
+  ') {;
+          this.log(;
+            `Attempting to fix vulnerability in ${issue.packages.join(',)}`;
           );
-          execSync(
+          execSync(;
   'npm audit fix', { stdio: 'inherit });
           this.vulnerabilitiesFound++;
-        } else if (issue.type ===,
-  outdated') {
+        } else if (issue.type ===,;
+  outdated') {;
           this.log(`Updating outdated packages: ${issue.packages.join(,)}`);
-          execSync(,
-  npm update
+          execSync(,;
+  npm update;
   ', { stdio: 'inherit });
           this.dependenciesUpdated++;
         }
-      } catch (error) {
-        this.log(
-          `Failed to fix issue ${issue.type}: ${error.message}`,ERROR,
+      } catch (error) {;
+        this.log(;
+          `Failed to fix issue ${issue.type}: ${error.message}`,ERROR,;
   );
       }
     }
   }
-
-  async performSecurityAudit() {
-    this.log(
+;
+  async performSecurityAudit() {;
+    this.log(;
   'Performing security audit...');
-
-    try {
-      execSync(
+;
+    try {;
+      execSync(;
   'npm audit', { stdio: 'inherit });
-      this.log(
+      this.log(;
   'Security audit completed');
-    } catch (error) {
-      this.log(`Security audit failed: ${error.message}`,ERROR,
+    } catch (error) {;
+      this.log(`Security audit failed: ${error.message}`,ERROR,;
   );
     }
   }
-
-  async performWeeklyUpdates() {
-    this.log('Performing weekly dependency updates...
+;
+  async performWeeklyUpdates() {;
+    this.log('Performing weekly dependency updates...;
   ');
-
-    try {
-      execSync('npm update
+;
+    try {;
+      execSync('npm update;
   ', { stdio: 'inherit });
-      this.log('Weekly updates completed
+      this.log('Weekly updates completed;
   ');
-    } catch (error) {
+    } catch (error) {;
       this.log(`Weekly updates failed: ${error.message}`,ERROR');
     }
   }
-
-  getStats() {
-    return {
-      vulnerabilitiesFound: this.vulnerabilitiesFound,
-      dependenciesUpdated: this.dependenciesUpdated,
-      isMonitoring: this.monitoring,
-      lastCheck: new Date().toISOString(),
-    };
+;
+  getStats() {;
+    return {;
+      vulnerabilitiesFound: this.vulnerabilitiesFound,;
+      dependenciesUpdated: this.dependenciesUpdated,;
+      isMonitoring: this.monitoring,;
+      lastCheck: new Date().toISOString()};
   }
-
-  stop() {
+;
+  stop() {;
     this.monitoring = false;
-    this.log(
+    this.log(;
   'Dependency monitoring stopped');
   }
 }
-
-// Export the class
+;
+// Export the class;
 module.exports = DependencyMonitor;
-
-// If running directly, start the monitor
-if (require.main === module) {
+;
+// If running directly, start the monitor;
+if (require.main === module) {;
   const monitor = new DependencyMonitor();
-
-  // Handle graceful shutdown
-  process.on(
-  'SIGINT', () => {
-    monitor.log(
+;
+  // Handle graceful shutdown;
+  process.on(;
+  'SIGINT', () => {;
+    monitor.log(;
   'Shutting down Dependency Monitor...');
     monitor.stop();
     process.exit(0);
   });
-
-  process.on(
-  'SIGTERM', () => {
-    monitor.log(
+;
+  process.on(;
+  'SIGTERM', () => {;
+    monitor.log(;
   'Shutting down Dependency Monitor...');
     monitor.stop();
     process.exit(0);
   });
 }
+;

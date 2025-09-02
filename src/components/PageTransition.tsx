@@ -1,11 +1,10 @@
-import React from 'react';
 
-type PageTransitionProps = {
+type PageTransitionProps = {;
   children: React.ReactNode;
 };
-
-const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
+;
+const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {;
   return <>{children}</>;
 };
-
+;
 export default PageTransition;

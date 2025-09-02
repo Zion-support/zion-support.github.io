@@ -1,284 +1,283 @@
-#!/usr/bin/env node
-
-const { execSync } = require(
+#!/usr/bin/env node;
+const { execSync } = require(;
   'child_process');
-const fs = require(
+const fs = require(;
   'fs');
-const path = require(
+const path = require(;
   'path');
-
-console.log(
+;
+console.log(;
   '🔧 PM2 Automation Wrapper');
-console.log(
-  'Process:', process.env.PM2_PROCESS ||
+console.log(;
+  'Process:', process.env.PM2_PROCESS ||;
   'unknown');
-console.log(
+console.log(;
   'Arguments:', process.argv.slice(2));
-
-const task = process.argv[2] ||
+;
+const task = process.argv[2] ||;
   'help';
-
-function log(message) {
+;
+function log(message) {;
   const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] ${message}`);
 }
-
-function runCommand(command, description) {
-  try {
+;
+function runCommand(command, description) {;
+  try {;
     log(`Running: ${description}`);
-    const result = execSync(command, { 
-      encoding:,
-  utf8',
-      stdio: 'pipe,
-      cwd: process.cwd()
+    const result = execSync(command, {;
+      encoding:,;
+  utf8',;
+      stdio: 'pipe,;
+      cwd: process.cwd();
     });
     log(`✅ ${description} completed successfully`);
     return result;
-  } catch (error) {
+  } catch (error) {;
     log(`❌ ${description} failed: ${error.message}`);
     throw error;
   }
 }
-
-function runLinting() {
-  return runCommand(
-  'npm run lint',ESLint code quality check
+;
+function runLinting() {;
+  return runCommand(;
+  'npm run lint',ESLint code quality check;
   ');
 }
-
-function runTypeCheck() {
-  return runCommand('npm run type-check
+;
+function runTypeCheck() {;
+  return runCommand('npm run type-check;
   ',TypeScript type checking');
 }
-
-function runBuild() {
-  return runCommand(
-  'npm run build',Project build
+;
+function runBuild() {;
+  return runCommand(;
+  'npm run build',Project build;
   ');
 }
-
-function runSecurityAudit() {
-  return runCommand('npm audit --audit-level moderate
+;
+function runSecurityAudit() {;
+  return runCommand('npm audit --audit-level moderate;
   ',Security audit');
 }
-
-function runDependencyCheck() {
-  return runCommand(
-  'npm outdated',Dependency outdated check
+;
+function runDependencyCheck() {;
+  return runCommand(;
+  'npm outdated',Dependency outdated check;
   ');
 }
-
-function runDependencyUpdate() {
-  return runCommand('npm update
+;
+function runDependencyUpdate() {;
+  return runCommand('npm update;
   ',Dependency update');
 }
-
-function runPerformanceCheck() {
-  // This would typically run Lighthouse or other performance tools
-  log(
+;
+function runPerformanceCheck() {;
+  // This would typically run Lighthouse or other performance tools;
+  log(;
   'Running performance check...');
-  return
+  return;
   'Performance check completed';
 }
-
-function runLinkCheck() {
-  // This would typically check for broken links
-  log(
+;
+function runLinkCheck() {;
+  // This would typically check for broken links;
+  log(;
   'Running link check...');
-  return
+  return;
   'Link check completed';
 }
-
-function runQualityChecks() {
-  log(
+;
+function runQualityChecks() {;
+  log(;
   'Running quality checks...');
-  try {
+  try {;
     runLinting();
     runTypeCheck();
-    log(
+    log(;
   '✅ Quality checks completed');
-  } catch (error) {
+  } catch (error) {;
     log(`❌ Quality checks failed: ${error.message}`);
   }
 }
-
-function runSitemapGeneration() {
-  try {
-    if (fs.existsSync(
-  'scripts/generate-sitemap.js')) {
-      return runCommand(
-  'node scripts/generate-sitemap.js',Sitemap generation
+;
+function runSitemapGeneration() {;
+  try {;
+    if (fs.existsSync(;
+  'scripts/generate-sitemap.js')) {;
+      return runCommand(;
+  'node scripts/generate-sitemap.js',Sitemap generation;
   ');
-    } else {
-      log('⚠️ Sitemap generation script not found
+    } else {;
+      log('⚠️ Sitemap generation script not found;
   ');
-      return 'Sitemap generation skipped
+      return 'Sitemap generation skipped;
   ';
     }
-  } catch (error) {
+  } catch (error) {;
     log(`❌ Sitemap generation failed: ${error.message}`);
   }
 }
-
-async function main() {
-  try {
+;
+async function main() {;
+  try {;
     log(`Starting automation task: ${task}`);
-    
-    switch (task) {
-      case,
-  fix
-  ': log('Running console error fixer...
+;
+    switch (task) {;
+      case,;
+  fix;
+  ': log('Running console error fixer...;
   ');
-        // This would typically fix console errors
-        log('✅ Console error fixing completed
+        // This would typically fix console errors;
+        log('✅ Console error fixing completed;
   ');
         break;
-        
-      case 'check-links
-  ':
+;
+      case 'check-links;
+  ':;
         runLinkCheck();
         break;
-        
-      case 'improve
-  ':
-        log('Running continuous improvement...
+;
+      case 'improve;
+  ':;
+        log('Running continuous improvement...;
   ');
         runQualityChecks();
         break;
-        
-      case 'build-test
-  ':
-        log('Running daily build and test...
+;
+      case 'build-test;
+  ':;
+        log('Running daily build and test...;
   ');
         runBuild();
-        log('✅ Daily build and test completed
+        log('✅ Daily build and test completed;
   ');
         break;
-        
-      case 'security
-  ':
-        log('Running security audit...
+;
+      case 'security;
+  ':;
+        log('Running security audit...;
   ');
         runSecurityAudit();
         break;
-        
-      case 'deps
-  ':
-        log('Running dependency updates...
+;
+      case 'deps;
+  ':;
+        log('Running dependency updates...;
   ');
         runDependencyCheck();
         runDependencyUpdate();
-        log('✅ Dependency updates completed
+        log('✅ Dependency updates completed;
   ');
         break;
-        
-      case 'performance
-  ':
-        log('Running performance monitoring...
+;
+      case 'performance;
+  ':;
+        log('Running performance monitoring...;
   ');
         runPerformanceCheck();
         break;
-        
-      case 'quality
-  ':
-        log('Running quality checks...
+;
+      case 'quality;
+  ':;
+        log('Running quality checks...;
   ');
         runQualityChecks();
         break;
-        
-      case 'integrity
-  ':
-        log('Running link integrity check...
+;
+      case 'integrity;
+  ':;
+        log('Running link integrity check...;
   ');
         runLinkCheck();
         break;
-        
-      case 'maximize
-  ':
-        log('Running frontend optimization...
+;
+      case 'maximize;
+  ':;
+        log('Running frontend optimization...;
   ');
-        // This would typically optimize frontend assets
-        log('✅ Frontend optimization completed
+        // This would typically optimize frontend assets;
+        log('✅ Frontend optimization completed;
   ');
         break;
-        
-      case 'sitemap
-  ':
-        log('Running sitemap generation...
+;
+      case 'sitemap;
+  ':;
+        log('Running sitemap generation...;
   ');
         runSitemapGeneration();
         break;
-        
-      case 'code-review
-  ':
-        log('Running AI code review...
+;
+      case 'code-review;
+  ':;
+        log('Running AI code review...;
   ');
         runQualityChecks();
-        log('✅ AI code review completed
+        log('✅ AI code review completed;
   ');
         break;
-        
-      case 'smart-deps
-  ':
-        log('Running smart dependency intelligence...
+;
+      case 'smart-deps;
+  ':;
+        log('Running smart dependency intelligence...;
   ');
         runDependencyCheck();
         runDependencyUpdate();
-        log('✅ Smart dependency intelligence completed
+        log('✅ Smart dependency intelligence completed;
   ');
         break;
-        
-      case 'predict
-  ':
-        log('Running predictive issue detection...
+;
+      case 'predict;
+  ':;
+        log('Running predictive issue detection...;
   ');
         runQualityChecks();
         runSecurityAudit();
-        log('✅ Predictive issue detection completed
+        log('✅ Predictive issue detection completed;
   ');
         break;
-        
-      case 'build-pipeline
-  ':
-        log('Running intelligent build pipeline...
+;
+      case 'build-pipeline;
+  ':;
+        log('Running intelligent build pipeline...;
   ');
         runBuild();
         runQualityChecks();
         log('✅ Intelligent build pipeline completed);
         break;
-        
-      default:
+;
+      default:;
         log(`Unknown task: ${task}`);
-        log('Available tasks: fix, check-links, improve, build-test, security, deps, performance, quality, integrity, maximize, sitemap, code-review, smart-deps, predict, build-pipeline
+        log('Available tasks: fix, check-links, improve, build-test, security, deps, performance, quality, integrity, maximize, sitemap, code-review, smart-deps, predict, build-pipeline;
   ');
         break;
     }
-    
+;
     log(`Automation task ${task} completed successfully`);
     process.exit(0);
-    
-  } catch (error) {
+;
+  } catch (error) {;
     log(`❌ Automation task ${task} failed: ${error.message}`);
     process.exit(1);
   }
 }
-
-// Handle process termination
-process.on('SIGTERM
-  ', () => {
-  log('Received SIGTERM, shutting down gracefully...
+;
+// Handle process termination;
+process.on('SIGTERM;
+  ', () => {;
+  log('Received SIGTERM, shutting down gracefully...;
   ');
   process.exit(0);
 });
-
-process.on('SIGINT
-  ', () => {
+;
+process.on('SIGINT;
+  ', () => {;
   log('Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
-
-// Run the main function
-main().catch(error => {
+;
+// Run the main function;
+main().catch(error => {;
   log(`❌ Fatal error: ${error.message}`);
   process.exit(1);
 });

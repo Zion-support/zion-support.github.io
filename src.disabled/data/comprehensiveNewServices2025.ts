@@ -1,4 +1,4 @@
-export interface ComprehensiveNewService {
+export interface ComprehensiveNewService {;
    id: string;
    title: string;
    description: string;

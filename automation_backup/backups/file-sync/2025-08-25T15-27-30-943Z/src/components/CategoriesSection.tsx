@@ -7,128 +7,128 @@ import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe 
 const categories = [;
   {;
     title: 'Services,;
-    description:,
+    description:,;
   On-demand IT support, consulting, development, and more',;
-    icon: <Briefcase className=
+    icon: <Briefcase className=;
   'w-10 h-10                                                                                                                                                                              />,;
-    link:,
+    link:,;
   /services',;
     color: 'from-purple-500 to-indigo-600,;
-    features[,
-  24/7 Support',
-  'Global Coverage',
+    features[,;
+  24/7 Support',;
+  'Global Coverage',;
   'Certified Experts'],;
     stats: '500+ Services;
   },;
   {;
-    title:,
+    title:,;
   AI & IT Services',;
-    description: Professional IT consulting, development, and AI integration,
+    description: Professional IT consulting, development, and AI integration,;
   ,;
-    icon: <Brain className=
+    icon: <Brain className=;
   'w-10 h-10                                                                                                                                                                              />,;
-    link:,
+    link:,;
   /services',;
     color: 'from-zion-purple to-zion-purple-dark,;
     featured: true;
   },;
   {;
-    title:,
+    title:,;
   Talent Network',;
-    description: Connect with AI experts, developers, and tech specialists,
+    description: Connect with AI experts, developers, and tech specialists,;
   ,;
-    icon: <Users className=
+    icon: <Users className=;
   'w-10 h-10                                                                                                                                                                              />,;
-    link:,
+    link:,;
   /talent',;
     color: 'from-cyan-500 to-blue-600,;
-    features[,
-  AI Matching',
-  'Verified Profiles',
+    features[,;
+  AI Matching',;
+  'Verified Profiles',;
   'Skill Validation'],;
-    stats: 10,000+ Talents,
+    stats: 10,000+ Talents,;
   ;
   },;
   {;
     title: 'Equipment & Hardware,;
-    description:,
+    description:,;
   Rent or buy specialized hardware, servers, and devices',;
-    icon: <HardDrive className=
+    icon: <HardDrive className=;
   'w-10 h-10                                                                                                                                                                              />,;
-    link:,
+    link:,;
   /equipment',;
     color: 'from-amber-500 to-orange-600,;
-    features[,
-  Flexible Rental',
-  'Buy Options',
+    features[,;
+  Flexible Rental',;
+  'Buy Options',;
   'Maintenance Included'],;
-    stats: 1,000+ Items,
+    stats: 1,000+ Items,;
   ;
   },;
   {;
     title: 'Innovation Hub,;
-    description:,
+    description:,;
   Discover cutting-edge solutions and tech breakthroughs',;
-    icon: <Lightbulb className=
+    icon: <Lightbulb className=;
   'w-10 h-10                                                                                                                                                                              />,;
-    link:,
+    link:,;
   /category/innovation',;
     color: 'from-emerald-500 to-green-600,;
-    features[,
-  Latest Tech',
-  'Research Labs',
+    features[,;
+  Latest Tech',;
+  'Research Labs',;
   'Startup Solutions'],;
     stats: '100+ Innovations;
   },;
   {;
-ursor/website-audit-content-update-and-deployment-efec
-    title:,
+ursor/website-audit-content-update-and-deployment-efec;
+    title:,;
   AI Hiring Platform',;
     description: 'AI-powered recruitment and talent acquisition tools,;
-    icon: <ZapIcon className=,
+    icon: <ZapIcon className=,;
   w-10 h-10'                                                                                                                                                                              />,;
     link: '/zion-hire-ai,;
-    color:
+    color:;
   'from-zion-purple to-zion-purple-dark',;
     featured: true;
   };
 ];
 const specialServices = [;
   {;
-    title:,
+    title:,;
   IT Onsite Services',;
     link: '/it-onsite-services,;
-    icon: <Zap className=,
+    icon: <Zap className=,;
   w-5 h-5'                                                                                                                                                                              />,;
     description: '24/7 global technical support;
   },;
   {;
-    title:,
+    title:,;
   AI Consulting',;
     link: '/ai-consulting,;
-    icon: <Lightbulb className=,
+    icon: <Lightbulb className=,;
   w-5 h-5'                                                                                                                                                                              />,;
     description: 'Expert AI strategy & implementation;
   },;
   {;
-    title:,
+    title:,;
   Cloud Solutions',;
     link: '/cloud-solutions,;
-    icon: <Globe className=,
+    icon: <Globe className=,;
   w-5 h-5'                                                                                                                                                                              />,;
     description: 'Scalable cloud infrastructure;
-ursor/website-audit-content-update-and-deployment-efec
+ursor/website-audit-content-update-and-deployment-efec;
   },;
   {;
-    title:,
+    title:,;
   Security Services',;
     link: '/security-services,;
-    icon: <Shield className=,
+    icon: <Shield className=,;
   w-5 h-5'                                                                                                                                                                              />,;
     description: 'Cybersecurity & compliance;
   };
 ];
-interface CategoriesSectionProps {
+interface CategoriesSectionProps {;
    showTitle?: boolean;
 };
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
@@ -154,25 +154,25 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
     visible: {;
       opacity: 1,;
       y: 0,;
-      transition: { duration: 0.6, ease:,
+      transition: { duration: 0.6, ease:,;
   easeOut' };
     };
   };
   return (;
-    <section className =
+    <section className =;
   'py-20 bg-gradient-to-b from-zion-blue via-zion-blue-dark to-zion-blue relative overflow-hidden'>;
       {/* Background pattern */};
-      <div className=
+      <div className=;
   'absolute inset-0 opacity-5'>;
-        <div className=
+        <div className=;
   'absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.15)_1px,transparent_0)] bg-[length: 30px_30px]'></div>;
       </div>;
 ;
-      <div className=
+      <div className=;
   'container mx-auto px-4 relative z-10'>;
         {showTitle && (;
           <motion.div;
-            className=
+            className=;
   'text-center mb-16;
             initial = {;
   { opacity: 0,;
@@ -197,7 +197,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
             transition={{ duration: 0.8 }};
 ;
             <GradientHeading>Explore Categories</GradientHeading>;
-            <p className=,
+            <p className=,;
   text-zion-slate-light text-lg mt-4 max-w-3xl mx-auto leading-relaxed'>;
               Discover our comprehensive ecosystem of tech services, talent, equipment, and innovation;
             </p>;
@@ -205,47 +205,47 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         )};
 ;
         <motion.div;
-          className=
+          className=;
   'grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-6 mb-16;
           variants={containerVariants};
-          initial=,
+          initial=,;
   hidden';
-          animate=
+          animate=;
   'visible';
 ;
           {categories.map((category, index) => (;
             <motion.div key={category.title} variants={itemVariants}>;
               <Link;
                 to={category.link};
-                className=
+                className=;
   'group block h-full';
 ;
-                <div className=
+                <div className=;
   'rounded-2xl overflow-hidden h-full border border-zion-blue-light bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue-dark p-6 transition-all duration-500 hover: border-zion-purple/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-zion-purple/20>;
                   <div className={`rounded-2xl w-20 h-20 bg-gradient-to-br ${category.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>;
-                    <div className=,
+                    <div className=,;
   text-white'>;
                       {category.icon};
                     </div>;
                   </div>;
 ;
-                  <h3 className=
+                  <h3 className=;
   'text-white text-xl font-bold mb-3 group-hover: text-zion-cyan transition-colors>;
                     {category.title};
                   </h3>;
 ;
-                  <p className=,
+                  <p className=,;
   text-zion-slate-light mb-4 text-sm leading-relaxed'>;
                     {category.description};
                   </p>;
 ;
                   {/* Features */};
-                  <div className=
+                  <div className=;
   'space-y-2 mb-4'>;
                     {category.features.map((feature, idx) => (;
-                      <div key={idx} className=
+                      <div key={idx} className=;
   'flex items-center gap-2 text-xs text-zion-slate-light'>;
-                        <div className=
+                        <div className=;
   'w-1.5 h-1.5 rounded-full bg-zion-cyan'></div>;
                         {feature};
                       </div>;
@@ -253,19 +253,19 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
                   </div>;
 ;
                   {/* Stats */};
-                  <div className=
+                  <div className=;
   'text-zion-cyan text-sm font-semibold mb-4'>;
                     {category.stats};
                   </div>;
 ;
                   {/* Arrow indicator */};
-                  <div className=
+                  <div className=;
   'flex items-center justify-between'>;
-                    <span className=
+                    <span className=;
   'text-zion-slate-light text-sm group-hover: text-zion-cyan transition-colors'>;
                       Learn More;
                     </span>;
-                    <ArrowRight className=
+                    <ArrowRight className=;
   'w-4 h-4 text-zion-slate-light group-hover:text-zion-cyan group-hover:translate-x-1 transition-all duration-300                                                                                                                                                                              />;
                   </div>;
                 </div>;
@@ -275,7 +275,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>;
 ;
         <motion.div;
-          className=
+          className=;
   'mb-12';
           initial = {;
   { opacity: 0,;
@@ -308,9 +308,9 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 ;
 }};
         >;
-          <h3 className=,
+          <h3 className=,;
   text-center text-2xl font-bold text-white mb-8'>Featured Services</h3>;
-          <div className=
+          <div className=;
   'grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-4 gap-4>;
             {specialServices.map((service, index) => (;
               <motion.div;
@@ -348,19 +348,19 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
               >;
                 <Link;
                   to={service.link};
-                  className=,
+                  className=,;
   block p-4 bg-zion-blue-light/20 hover: bg-zion-blue-light/30 border border-zion-purple/20 hover:border-zion-purple/50 rounded-xl text-zion-cyan transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group';
 ;
-                  <div className=
+                  <div className=;
   'flex items-center gap-3 mb-2'>;
-                    <div className=
+                    <div className=;
   'text-zion-purple group-hover:scale-110 transition-transform>;
                       {service.icon};
                     </div>;
-                    <span className=
+                    <span className=;
   'font-semibold text-sm'>{service.title}</span>;
                   </div>;
-                  <p className=
+                  <p className=;
   'text-xs text-zion-slate-light leading-relaxed'>;
                     {service.description};
                   </p>;
@@ -371,7 +371,7 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
         </motion.div>;
 ;
         <motion.div;
-          className=
+          className=;
   'text-center';
           initial = {;
   { opacity: 0,;
@@ -405,18 +405,19 @@ export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) 
 }};
         >;
           <Link;
-            to=,
+            to=,;
   /categories';
-            className=
+            className=;
   'inline-flex items-center gap-2 text-zion-cyan border-b-2 border-zion-cyan hover: border-zion-cyan-dark transition-colors text-lg font-semibold group';
 ;
             Explore All Categories;
-            <ArrowRight className=
+            <ArrowRight className=;
   'w-5 h-5 group-hover:translate-x-1 transition-transform                                                                                                                                                                              />;
-ursor/website-audit-content-update-and-deployment-efec
+ursor/website-audit-content-update-and-deployment-efec;
           </Link>;
         </motion.div>;
       </div>;
     </section>;
   );
 };
+;

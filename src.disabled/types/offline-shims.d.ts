@@ -1,8 +1,7 @@
 import React from 'react';
-// Minimal type declarations for offline development
-
-// React stubs
-declare module 'react' {
+// Minimal type declarations for offline development;
+// React stubs;
+declare module 'react' {;
   export type FC<P = any> = (props: anyP)  => ;
   export type ReactNode = ;
   export interface ChangeEvent<T = any> { target: T }
@@ -16,26 +15,26 @@ declare module 'react' {
   const react: ;
   export default react;
 }
-
-declare module 'react/jsx-runtime' {
+;
+declare module 'react/jsx-runtime' {;
   export {};
 }
-
-declare namespace JSX {
-  interface Element {
+;
+declare namespace JSX {;
+  interface Element {;
   ;
 }
-  interface IntrinsicElements {
+  interface IntrinsicElements {;
   [elemName: string]: ;
 }
 }
-
-declare module 'react-dom' {
+;
+declare module 'react-dom' {;
   export function reactDom: ;
   export default reactDom;
 }
-
-declare module 'react-router-dom' {
+;
+declare module 'react-router-dom' {;
   export function useNavigate(): ;
   export const Link: ;
   export const Routes: ;
@@ -43,47 +42,46 @@ declare module 'react-router-dom' {
   const rr: ;
   export default rr;
 }
-
-declare module 'react-hook-form' {
+;
+declare module 'react-hook-form' {;
   export function useForm<T = any>(...args: unknown[]): ;
   const rhf: ;
   export default rhf;
 }
-
-declare module '@hookform/resolvers/zod' {
+;
+declare module '@hookform/resolvers/zod' {;
   export function zodResolver(...args: unknown[]): ;
 }
-
-declare module '@tanstack/react-query' {
+;
+declare module '@tanstack/react-query' {;
   export function useMutation<T = any>(...args: unknown[]): ;
   const rq: ;
   export default rq;
 }
-
-declare module 'jspdf' {
-  export class jsPDF {
+;
+declare module 'jspdf' {;
+  export class jsPDF {;
     constructor(...args: unknown[]);
     [key: string]: ;
   }
 }
-
-declare module 'path' {
+;
+declare module 'path' {;
   const path: ;
   export default path;
 }
-
-declare module 'jspdf-autotable' {
+;
+declare module 'jspdf-autotable' {;
   const autotable: ;
   export default autotable;
 }
-
-declare module 'zod' {
+;
+declare module 'zod' {;
   export type infer<T> = ;
   const z: ;
   export { z };
   export default z;
 }
-
-
+;
 export default useEffect;
 export default useRef;

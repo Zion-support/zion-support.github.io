@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react.ts';
-
-interface User {
+;
+interface User {;
   id: string;
    email: string;
    displayName?: string;
@@ -10,13 +10,13 @@ interface User {
    createdAt?: string;
    updatedAt?: string;
 }
-
-interface AuthTokens {
+;
+interface AuthTokens {;
   accessToken: string | null;
    refreshToken: string | null;
 }
-
-interface AuthContextType {
+;
+interface AuthContextType {;
   user: User | null;
    isLoading: boolean;
    onboardingStep: number;
@@ -32,16 +32,16 @@ interface AuthContextType {
    loginWithTwitter: () => Promise<any>;
    loginWithWeb3: () => Promise<any>;
 }
-
+;
 const AuthContext = createContext<AuthContextType | null>(null);
-
+;
 export const useAuth: React.FC = ($2) => {;
   const context = useContext(AuthContext);
   if (context = == null) {;
     throw new Error('useAuth must be used within an AuthProvider');
-
+;
   return context;
 };
-
+;
 export { AuthContext };
 export type { User, AuthTokens, AuthContextType };}}}}

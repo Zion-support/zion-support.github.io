@@ -1,4 +1,4 @@
-export interface ComprehensiveService {
+export interface ComprehensiveService {;
    id: string;
    name: string;
    tagline: string;
@@ -31,6 +31,6 @@ export interface ComprehensiveService {
    email: string;
    address: string;
    website: string;
-}; }; const CONTACT_INFO = {; mobile:,
-  +1 302 464 0950',; email: 'kleber@ziontechgroup.com,; address:,
-  364 E Main St STE 1008 Middletown DE 19709',; website: 'https:''
+}; }; const CONTACT_INFO = {; mobile:,;
+  +1 302 464 0950',; email: 'kleber@ziontechgroup.com,; address:,;
+  364 E Main St STE 1008 Middletown DE 19709',; website: 'https:'';

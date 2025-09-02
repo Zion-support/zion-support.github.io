@@ -1,15 +1,15 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import AdvancedInnovativeServicesShowcase2026 from './AdvancedInnovativeServicesShowcase2026';
-
-describe('AdvancedInnovativeServicesShowcase2026', () => {
-  it('renders without crashing', () => {
+;
+describe('AdvancedInnovativeServicesShowcase2026', () => {;
+  it('renders without crashing', () => {;
     render(<AdvancedInnovativeServicesShowcase2026 />);
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
   });
-
-  it('displays expected content', () => {
+;
+  it('displays expected content', () => {;
     render(<AdvancedInnovativeServicesShowcase2026 />);
-    // Add specific test assertions based on component content
+    // Add specific test assertions based on component content;
   });
 });
+;

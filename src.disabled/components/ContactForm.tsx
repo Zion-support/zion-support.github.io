@@ -1,51 +1,51 @@
-:src.disabled/components/ContactForm.tsx
+:src.disabled/components/ContactForm.tsx;
 import React, { useState } from;
   'react';
 import { motion } from;
   'framer-motion';
-import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  CheckCircle, 
-  AlertCircle,
-  User,
-  Building,
-  MessageSquare
+import {;
+  Mail,;
+  Phone,;
+  MapPin,;
+  Send,;
+  CheckCircle,;
+  AlertCircle,;
+  User,;
+  Building,;
+  MessageSquare;
 } from;
   'lucide-react';
-
-export const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    firstName:,
-  ',
-    lastName: ',
-    email:,
-  ',
-    company: ',
-    phone:,
-  ',
-    service: ',
-    message:,
-  ',
-    budget: ',
-    timeline: '
-  '
+;
+export const ContactForm: React.FC = () => {;
+  const [formData, setFormData] = useState({;
+    firstName:,;
+  ',;
+    lastName: ',;
+    email:,;
+  ',;
+    company: ',;
+    phone:,;
+  ',;
+    service: ',;
+    message:,;
+  ',;
+    budget: ',;
+    timeline: ';
+  ';
   });
-
+;
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle
-  ' | 'success
-  ' | 'error
-  '>('idle
+  const [submitStatus, setSubmitStatus] = useState<'idle;
+  ' | 'success;
+  ' | 'error;
+  '>('idle;
   ');
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
 import React, { useState } from 'react';
 export const ContactForm: React.FC = () => {;
 import { motion } from 'framer - motion';
-
+;
 ;
   const [formData, setFormData] = useState ({;
     firstName: '',;
@@ -68,8 +68,8 @@ import { motion } from 'framer - motion';
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
     >;) => {;
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev, [name]: value
+    setFormData(prev => ({;
+      ...prev, [name]: value;
     }));
   };
-:src.disabled/components/ContactForm.tsx
+:src.disabled/components/ContactForm.tsx;

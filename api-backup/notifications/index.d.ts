@@ -1,4 +1,4 @@
-interface Req {
+interface Req {;
   method?: string;
    query?: { userId?: string;
-}; body?: any; 
+}; body?: any; ;

@@ -36,20 +36,20 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         })};
     // Fix a broken link;
     const fixBrokenLink = async (originalUrl, validationResult) => {}
-'
+';
         if (validationResult.suggestedFix && validationResult.suggestedFix.startsWith('Redirect to:')) {}
-'
-''
-'''
+';
+'';
+''';
             const newUrl = validationResult.suggestedFix.replace('Redirect to: ',);
-            // Find and update the link""""
-            const links = document.querySelectorAll(`a[href="${originalUrl}"]`);
+            // Find and update the link'''';
+            const links = document.querySelectorAll(`a[href='${originalUrl}']`);
             links.forEach(link => {}
                 link.href = newUrl'`;
-                link.setAttribute('data-fixed',true')'`;'`
+                link.setAttribute('data-fixed',true')'`;'`;
                 link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`)});
             // Add to fixed links list;
             const fix = {}
-  originalUrl,
-                newUrl,'"`
-                type: 'redirect',"`'"`
+  originalUrl,;
+                newUrl,''`;
+                type: 'redirect','`'"`;

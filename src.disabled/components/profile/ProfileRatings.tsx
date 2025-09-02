@@ -1,4 +1,4 @@
-interface ProfileRatingsProps {
+interface ProfileRatingsProps {;
    userId: string;
    averageRating?: number;
    ratingCount?: number;

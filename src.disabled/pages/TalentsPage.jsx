@@ -1,2 +1,2 @@
 import React from;
-  'react'";export default function TalentsPage () {"""
+  'react'';export default function TalentsPage () {''';

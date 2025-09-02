@@ -1,23 +1,23 @@
-declare module "cmdk";
-declare module "@radix-ui/react-context-menu";
-declare module "vaul";
-declare module "@radix-ui/react-hover-card";
-declare module "input-otp";
-declare module "react-markdown";
-declare module "@radix-ui/react-menubar";
-declare module "@radix-ui/react-navigation-menu";
-declare module "react-resizable-panels";
-declare module "@radix-ui/react-toggle-group";
-declare module "@radix-ui/react-toggle";
-declare module
-  '*.module.css' {
+declare module 'cmdk';
+declare module '@radix-ui/react-context-menu';
+declare module 'vaul';
+declare module '@radix-ui/react-hover-card';
+declare module 'input-otp';
+declare module 'react-markdown';
+declare module '@radix-ui/react-menubar';
+declare module '@radix-ui/react-navigation-menu';
+declare module 'react-resizable-panels';
+declare module '@radix-ui/react-toggle-group';
+declare module '@radix-ui/react-toggle';
+declare module;
+  '*.module.css' {;
   const classes: { [key: string]: string };
   export default classes;
-declare module,
+declare module,;
   @tanstack/react-query';
-declare module
-  'react-day-picker' {
-  export interface DateRange {
+declare module;
+  'react-day-picker' {;
+  export interface DateRange {;
   from?: Date;
    to?: Date;
    // Minimal placeholder for the DayPicker component used in the app // The actual library provides full typings but we stub them here so the // TypeScript compiler can understand the imports without requiring the real // type definitions. // eslint-disable-next-line @typescript-eslint/no-explicit-any export const DayPicker: any;
@@ -25,7 +25,7 @@ declare module
    declare module 'lucide-react { import { FC, SVGProps;
 } from;
   'react';
-  export interface LucideProps extends SVGProps<SVGSVGElement> {
+  export interface LucideProps extends SVGProps<SVGSVGElement> {;
     color?: string;
     size?: number | string;
     strokeWidth?: number | string;
@@ -56,145 +56,141 @@ declare module
   export const Zap: LucideIcon;
   const icons: { [key: string]: LucideIcon };
   export default icons;
-declare module,
+declare module,;
   child_process';
-declare module
+declare module;
   'date-fns';
-declare module
-  'jspdf' {
+declare module;
+  'jspdf' {;
 export const jsPDF: any;
-  export default jsPDF;declare module
+  export default jsPDF;declare module;
   '@hookform/resolvers/zod';
-declare module
+declare module;
   '@radix-ui/react-accordion';
-declare module
+declare module;
   '@radix-ui/react-alert-dialog';
-declare module
+declare module;
   '@radix-ui/react-aspect-ratio';
-declare module
+declare module;
   '@radix-ui/react-avatar';
-declare module
+declare module;
   '@radix-ui/react-checkbox';
-declare module
+declare module;
   '@radix-ui/react-collapsible';
-declare module
+declare module;
   '@radix-ui/react-dialog';
-declare module
+declare module;
   '@radix-ui/react-dropdown-menu';
-declare module
+declare module;
   '@radix-ui/react-label';
-declare module
+declare module;
   '@radix-ui/react-popover';
-declare module
+declare module;
   '@radix-ui/react-progress';
-declare module
+declare module;
   '@radix-ui/react-radio-group';
-declare module
+declare module;
   '@radix-ui/react-scroll-area';
-declare module
+declare module;
   '@radix-ui/react-select';
-declare module
+declare module;
   '@radix-ui/react-separator';
-declare module
+declare module;
   '@radix-ui/react-slider';
-declare module
+declare module;
   '@radix-ui/react-slot';
-declare module
+declare module;
   '@radix-ui/react-switch';
-declare module
+declare module;
   '@radix-ui/react-tabs';
-declare module
+declare module;
   '@radix-ui/react-toast';
-declare module
+declare module;
   '@radix-ui/react-tooltip';
-declare module
+declare module;
   '@supabase/supabase-js';
-declare module
-  'class-variance-authority' {
-export function cva(...inputs: any[]): any
-  export type VariantProps<T extends (...args: any) => any> = any
-
-declare module
-  'clsx' {
+declare module;
+  'class-variance-authority' {;
+export function cva(...inputs: any[]): any;
+  export type VariantProps<T extends (...args: any) => any> = any;
+declare module;
+  'clsx' {;
   export type ClassValue = any;
-  export default function clsx(...classes: ClassValue[]): string;declare module
+  export default function clsx(...classes: ClassValue[]): string;declare module;
   'embla-carousel-react';
-declare module
+declare module;
   'framer-motion';
-declare module
+declare module;
   'i18next';
-declare module
+declare module;
   'i18next-browser-languagedetector';
-declare module
+declare module;
   'react-helmet-async';
-declare module
-  'react-hook-form {
-  import type { ComponentType, ReactElement, ReactNode } from
-  'react'
-  // Minimal generic typings to satisfy local usage without full type defs
-  export type FieldValues = Record<string, any>
-  export type FieldPath<TFieldValues extends FieldValues> =
-    keyof TFieldValues & string
-  export type Control<TFieldValues extends FieldValues = FieldValues> =  export interface UseFormReturn<
-    TFieldValues extends FieldValues = FieldValues,
-  > {
-    control: Control<TFieldValues>
-handleSubmit: any
-    register: any
-    formState: any
-    [key: string]: any
-
-  export function useForm<
-    TFieldValues extends FieldValues = FieldValues,
-  >(options?: any): UseFormReturn<TFieldValues>
-  export function useFieldArray<
-    TFieldValues extends FieldValues = FieldValues,
-  >(options: any): any
-  export interface ControllerProps<
-    TFieldValues extends FieldValues = FieldValues,
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
-  > {
-    name: TName
-    control?: Control<TFieldValues>
-    rules?: any
-    defaultValue?: any
-    render: (props: any) => ReactElement
-
-  export const Controller: ComponentType<ControllerProps<any, any>>
-  export interface FormProviderProps<
-    TFieldValues extends FieldValues = FieldValues,
-  > {
-    children?: ReactNode
-    [key: string]: any
-
-  export const FormProvider: ComponentType<FormProviderProps<any>>
-  export function useFormContext<
-    TFieldValues extends FieldValues = FieldValues,
+declare module;
+  'react-hook-form {;
+  import type { ComponentType, ReactElement, ReactNode } from;
+  'react';
+  // Minimal generic typings to satisfy local usage without full type defs;
+  export type FieldValues = Record<string, any>;
+  export type FieldPath<TFieldValues extends FieldValues> =;
+    keyof TFieldValues & string;
+  export type Control<TFieldValues extends FieldValues = FieldValues> =  export interface UseFormReturn<;
+    TFieldValues extends FieldValues = FieldValues,;
+  > {;
+    control: Control<TFieldValues>;
+handleSubmit: any;
+    register: any;
+    formState: any;
+    [key: string]: any;
+  export function useForm<;
+    TFieldValues extends FieldValues = FieldValues,;
+  >(options?: any): UseFormReturn<TFieldValues>;
+  export function useFieldArray<;
+    TFieldValues extends FieldValues = FieldValues,;
+  >(options: any): any;
+  export interface ControllerProps<;
+    TFieldValues extends FieldValues = FieldValues,;
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,;
+  > {;
+    name: TName;
+    control?: Control<TFieldValues>;
+    rules?: any;
+    defaultValue?: any;
+    render: (props: any) => ReactElement;
+  export const Controller: ComponentType<ControllerProps<any, any>>;
+  export interface FormProviderProps<;
+    TFieldValues extends FieldValues = FieldValues,;
+  > {;
+    children?: ReactNode;
+    [key: string]: any;
+  export const FormProvider: ComponentType<FormProviderProps<any>>;
+  export function useFormContext<;
+    TFieldValues extends FieldValues = FieldValues,;
   >(): UseFormReturn<TFieldValues>declare module;
   'react-i18next';
-declare module
+declare module;
   'react-dom/client';
-declare module
+declare module;
   'react-dom';
-declare module
+declare module;
   '@hello-pangea/dnd';
-declare module
+declare module;
   'react-redux';
-declare module
+declare module;
   'notistack';
-declare module
+declare module;
   '@sentry/browser';
-declare module
+declare module;
   'semver';
-declare module
+declare module;
   'ws';
-declare module
+declare module;
   'recharts';
-declare module
-  'next' {
+declare module;
+  'next' {;
 export type GetStaticPaths = any;
-  export type GetStaticProps<P = any, Q = any> = any;declare module
+  export type GetStaticProps<P = any, Q = any> = any;declare module;
   'next-themes';
-declare module
+declare module;
   'tailwind-merge';
 }}}}}}}}}}}}}

@@ -1,4 +1,4 @@
-export interface InnovativeBlockchainWeb3Service {
+export interface InnovativeBlockchainWeb3Service {;
    id: string;
    title: string;
    description: string;

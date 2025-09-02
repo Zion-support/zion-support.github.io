@@ -4,7 +4,7 @@ import React from;
   '';; import { AppLayout } from '@/layout/AppLayout;
   '';; import { NextSeo } from '@/components/NextSeo;
   '';; import { Button } from '@/components/ui/button;
-  '';; import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"';
+  '';; import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'';
   '; import { Input } from '@/components/ui/input;
   '';; import { Label } from '@/components/ui/label;
   '';';

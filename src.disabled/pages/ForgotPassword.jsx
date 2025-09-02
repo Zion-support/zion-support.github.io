@@ -1,2 +1,2 @@
 import React from;
-  'react'; export default function ForgotPassword () {''
+  'react'; export default function ForgotPassword () {'';

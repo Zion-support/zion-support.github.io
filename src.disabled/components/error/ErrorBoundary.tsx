@@ -1,11 +1,11 @@
 import React, { Component, ErrorInfo, ReactNode } from;
   'react'; import { motion } from;
   'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug } from;
-  'lucide-react'; interface Props {
+  'lucide-react'; interface Props {;
   children: ReactNode;
    fallback?: ReactNode;
    onError?: (error: Error, errorInfo: ErrorInfo) => void;
-} interface State {
+} interface State {;
   hasError: boolean;
    error?: Error;
    errorInfo?: ErrorInfo;

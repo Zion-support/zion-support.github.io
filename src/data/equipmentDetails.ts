@@ -1,4 +1,4 @@
-export interface EquipmentItem {
+export interface EquipmentItem {;
   id: string;
    name: string;
    description: string;
@@ -7,4 +7,4 @@ export interface EquipmentItem {
    image: string;
    specs: string[];
    availability: boolean;
-} ; export const EQUIPMENT_DETAILS: EquipmentItem[] = [ { id: "1"," name: "High-Performance GPU Server"," description: "Enterprise-grade GPU server for AI/ML workloads", price: 2500," category: "Servers"," image: "https:
+} ; export const EQUIPMENT_DETAILS: EquipmentItem[] = [ { id: '1',' name: 'High-Performance GPU Server',' description: 'Enterprise-grade GPU server for AI/ML workloads', price: 2500,' category: 'Servers',' image: "https:;

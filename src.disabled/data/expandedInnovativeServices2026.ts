@@ -1,4 +1,4 @@
-export interface ExpandedInnovativeService2026 {
+export interface ExpandedInnovativeService2026 {;
    id: string;
    title: string;
    description: string;

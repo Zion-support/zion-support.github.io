@@ -1,4 +1,4 @@
-export interface ComprehensiveAIService2026 {
+export interface ComprehensiveAIService2026 {;
    id: string;
    title: string;
    description: string;

@@ -1,4 +1,4 @@
-export interface AdvancedITInfrastructureService2034 {
+export interface AdvancedITInfrastructureService2034 {;
    id: string;
    title: string;
    description: string;

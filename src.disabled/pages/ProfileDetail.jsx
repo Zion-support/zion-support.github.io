@@ -1,2 +1,2 @@
 import React from;
-  'react'; export default function ProfileDetail () {''
+  'react'; export default function ProfileDetail () {'';

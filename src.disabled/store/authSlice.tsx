@@ -1,10 +1,10 @@
 import React from;
-  'react'; interface User {
+  'react'; interface User {;
   id: string;
    email: string;
    name: string;
    : src/store/authSlice.tsx avatar?: string;
-} avatar?: string} interface AuthState {
+} avatar?: string} interface AuthState {;
   isLoggedIn: boolean;
    isAuthenticated: boolean;
    isLoading: boolean;

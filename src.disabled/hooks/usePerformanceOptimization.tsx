@@ -1,9 +1,9 @@
-: src/hooks/usePerformanceOptimization.tsx interface PerformanceMetrics {
+: src/hooks/usePerformanceOptimization.tsx interface PerformanceMetrics {;
   loadTime: number;
    renderTime: number;
    memoryUsage: number;
    fps: number;
-} interface UsePerformanceOptimizationOptions {
+} interface UsePerformanceOptimizationOptions {;
   enableLazyLoading?: boolean;
    enableIntersectionObserver?: boolean;
    enableMemoryManagement?: boolean;
