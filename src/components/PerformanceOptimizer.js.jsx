@@ -1,2 +1,4 @@
  export const PerformanceOptimizer = ({ children }) => { const location = useLocation () '
 
+"
+}

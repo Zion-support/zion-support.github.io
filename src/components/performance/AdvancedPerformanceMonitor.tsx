@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react' import { motion } from 'frame
   fcp: number;
    lcp: number;
    fid: number;
-   cls: number;
+   cls: number;"
    ttfb: number;"
-   fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null" >(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {''
+   fmp: number} const AdvancedPerformanceMonitor: React.FC = () => { const [metrics, setMetrics] = useState<PerformanceMetrics | null"" >(null) const [isVisible, setIsVisible] = useState(false) useEffect(() => {'',
 }}
+"

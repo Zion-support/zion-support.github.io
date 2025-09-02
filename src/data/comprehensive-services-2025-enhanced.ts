@@ -3,7 +3,7 @@ export interface EnhancedServiceItem {
    title: string;
    description: string;
    category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Edge Computing' | 'Quantum AI' | 'Sustainable Tech' | 'Digital Twin' | 'Smart Cities';
-   shortDescription: string;
+   shortDescription: string;"
    price: string;"
    billing: 'month' | 'project' | 'hour' | 'year';
    features: string[];
@@ -22,6 +22,7 @@ export interface EnhancedServiceItem {
    contactInfo: { 
    mobile: string;
    email: string;
-   address: string;
+   address: string;"
    website: string} badges: string[] technologyStack: string[] integrations: string[] compliance: string[] scalability: string security: string[] } export const comprehensiveServices2025Enhanced: EnhancedServiceItem[] = [';'
 ;
+"

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from 'lucide-react';
+import Navigation from '../src/components/Navigation';
+import Footer from '../src/components/Footer';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -85,6 +87,8 @@ export default function Contact() {
         <meta name="description" content="Get in touch with Zion Tech Group. We're here to help transform your business with cutting-edge technology solutions." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
+      
+      <Navigation />
       
       <main className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -280,6 +284,8 @@ export default function Contact() {
           </div>
         </section>
       </main>
+      
+      <Footer />
     </>
   );
 }

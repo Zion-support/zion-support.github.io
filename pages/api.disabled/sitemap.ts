@@ -1,68 +1,38 @@
-import { NextApiRequest, NextApiResponse } from
-  'next';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const baseUrl =,
-  https: //ziontechgroup.com';
+  const baseUrl = 'https://ziontechgroup.com';
   
   const staticPages = [
-    ',
-,
-  /about
-  ',
-    '/contact
-  ',
-    '/services
-  ',
-    '/products
-  ',
-    '/talent
-  ',
-    '/blog
-  ',
-    '/blockchain-solutions
-  ',
-    '/iot-platforms
-  ',
-    '/enhanced-home
-  ',
-    '/auth
-  ',
-    '/auth/callback
-  ',
-    '/auth/forgot-password
-  ',
-    '/auth/reset-password
-  ',
-    '/auth/verify
-  ',
+    '/about',
+    '/contact',
+    '/services',
+    '/products',
+    '/talent',
+    '/blog',
+    '/blockchain-solutions',
+    '/iot-platforms',
+    '/enhanced-home',
+    '/auth',
+    '/auth/callback',
+    '/auth/forgot-password',
+    '/auth/reset-password',
+    '/auth/verify'
   ];
 
   const blogPages = [
-    '/blog/5g-technology-and-its-impact-on-iot-chat
-  ',
-    '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat
-  ',
-    '/blog/api-first-development-building-scalable-systems-chat
-  ',
-    '/blog/augmented-reality-in-enterprise-applications-chat
-  ',
-    '/blog/blockchain-technology-in-modern-business-solutions-chat
-  ',
-    '/blog/cloud-native-architecture-best-practices-chat
-  ',
-    '/blog/cybersecurity-trends-for-2024-and-beyond-chat
-  ',
-    '/blog/data-analytics-in-digital-transformation-chat
-  ',
-    '/blog/devops-automation-strategies-for-modern-teams-chat
-  ',
-    '/blog/digital-twins-revolutionizing-industry-4-0-chat
-  ',
-    '/blog/machine-learning-applications-in-enterprise-software-chat
-  ',
-    '/blog/microservices-architecture-benefits-and-challenges-chat
-  ',
+    '/blog/5g-technology-and-its-impact-on-iot-chat',
+    '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat',
+    '/blog/api-first-development-building-scalable-systems-chat',
+    '/blog/augmented-reality-in-enterprise-applications-chat',
+    '/blog/blockchain-technology-in-modern-business-solutions-chat',
+    '/blog/cloud-native-architecture-best-practices-chat',
+    '/blog/cybersecurity-trends-for-2024-and-beyond-chat',
+    '/blog/data-analytics-in-digital-transformation-chat',
+    '/blog/devops-automation-strategies-for-modern-teams-chat',
+    '/blog/digital-twins-revolutionizing-industry-4-0-chat',
+    '/blog/machine-learning-applications-in-enterprise-software-chat',
+    '/blog/microservices-architecture-benefits-and-challenges-chat',
     '/blog/quantum-computing-implications-for-business-chat
   ',
     '/blog/sustainable-technology-green-computing-solutions-chat
