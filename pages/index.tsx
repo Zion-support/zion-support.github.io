@@ -57,27 +57,6 @@ const Home: NextPage = () => {
             </Link>
           </motion.div>
 
-<<<<<<< HEAD
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-400">1000+</div>
-              <div className="text-gray-300">Projects Completed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400">75+</div>
-              <div className="text-gray-300">Expert Team Members</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-indigo-400">99%</div>
-              <div className="text-gray-300">Client Satisfaction</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400">24/7</div>
-              <div className="text-gray-300">Support Available</div>
-            </div>
-          </div>
-=======
           {/* Enhanced Stats */}
           <motion.div 
             className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
@@ -103,20 +82,12 @@ const Home: NextPage = () => {
               );
             })}
           </motion.div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3dc6
         </div>
       </section>
 
       {/* Services Overview */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-<<<<<<< HEAD
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Comprehensive Technology Solutions</h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              From innovative micro SaaS applications to enterprise-grade AI solutions and cutting-edge IT services, 
-              we provide end-to-end technology solutions that drive measurable business results and competitive advantages.
-=======
           <motion.div 
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
@@ -127,7 +98,6 @@ const Home: NextPage = () => {
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Services</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We provide comprehensive technology solutions to help your business thrive in the digital age.
->>>>>>> cursor/analyze-improve-and-deploy-application-3dc6
             </p>
           </motion.div>
           
@@ -146,8 +116,7 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>
               <p className="text-gray-600 mb-6">
-                Innovative, focused software solutions that solve specific business problems with minimal overhead. 
-                Starting from $12/month, our micro SaaS applications deliver immediate ROI and scale with your business.
+                Innovative, focused software solutions that solve specific business problems with minimal overhead.
               </p>
               <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
                 Learn More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -168,8 +137,7 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
               <p className="text-gray-600 mb-6">
-                Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses. 
-                From $2,000 to $75,000, our IT services ensure your infrastructure is secure, scalable, and optimized.
+                Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses.
               </p>
               <Link href="/services/it-services" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
                 Learn More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -190,8 +158,7 @@ const Home: NextPage = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
               <p className="text-gray-600 mb-6">
-                Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages. 
-                From $4,000 to $100,000, our AI services transform your business with machine learning and automation.
+                Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages.
               </p>
               <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors inline-flex items-center">
                 Learn More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
@@ -266,20 +233,6 @@ const Home: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-      <section className="py-20 bg-blue-600">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-            Join 1000+ successful businesses that have transformed their operations with our technology solutions. 
-            Get a free consultation and discover how we can accelerate your growth and efficiency.
-          </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-            Get Started Today
-          </Link>
-=======
       <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
@@ -304,7 +257,6 @@ const Home: NextPage = () => {
               </Link>
             </div>
           </motion.div>
->>>>>>> cursor/analyze-improve-and-deploy-application-3dc6
         </div>
       </section>
     </MainLayout>
