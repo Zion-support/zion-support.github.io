@@ -21,20 +21,20 @@ const Home: NextPage = () => {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-16 md:py-24 relative overflow-hidden">
         <div className="absolute inset-0 bg-black opacity-10"></div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Zion Tech Group</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 block sm:inline"> Zion Tech Group</span>
           </motion.h1>
           <motion.p 
-            className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200"
+            className="text-lg sm:text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200 leading-relaxed px-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
 
           {/* Stats Section */}
           <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+            className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto px-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -77,15 +77,15 @@ const Home: NextPage = () => {
               return (
                 <motion.div 
                   key={index}
-                  className="text-center"
+                  className="text-center p-4 md:p-6 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20"
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <div className="flex justify-center mb-2">
-                    <IconComponent className="w-8 h-8 text-blue-400" />
+                  <div className="flex justify-center mb-3">
+                    <IconComponent className="w-6 h-6 md:w-8 md:h-8 text-blue-400" />
                   </div>
-                  <div className="text-3xl font-bold text-white">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.number}</div>
+                  <div className="text-sm md:text-base text-gray-300 leading-tight">{stat.label}</div>
                 </motion.div>
               );
             })}
@@ -94,25 +94,25 @@ const Home: NextPage = () => {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-12 md:mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto px-4">
               Comprehensive technology solutions designed to accelerate your digital transformation
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {/* AI Services */}
             <motion.div 
-              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.1 }}
@@ -120,23 +120,23 @@ const Home: NextPage = () => {
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-center mb-4">
-                <Zap className="w-8 h-8 text-blue-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">AI Services</h3>
+                <Zap className="w-6 h-6 md:w-8 md:h-8 text-blue-600 mr-3" />
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">AI Services</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
                 Advanced artificial intelligence solutions including machine learning, natural language processing, 
                 and autonomous systems to revolutionize your business operations.
               </p>
               <ul className="space-y-2 mb-6">
                 {aiServices.slice(0, 3).map((service, index) => (
-                  <li key={index} className="flex items-center text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    {service.name}
+                  <li key={index} className="flex items-center text-gray-700 text-sm md:text-base">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span className="truncate">{service.name}</span>
                   </li>
                 ))}
               </ul>
               <Link href="/services/ai-services" className="group">
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2">
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2 text-sm md:text-base">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -145,7 +145,7 @@ const Home: NextPage = () => {
 
             {/* IT Services */}
             <motion.div 
-              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -153,23 +153,23 @@ const Home: NextPage = () => {
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-center mb-4">
-                <Shield className="w-8 h-8 text-green-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">IT Services</h3>
+                <Shield className="w-6 h-6 md:w-8 md:h-8 text-green-600 mr-3" />
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">IT Services</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
                 Comprehensive IT solutions including cloud migration, cybersecurity, infrastructure management, 
                 and 24/7 technical support to keep your business running smoothly.
               </p>
               <ul className="space-y-2 mb-6">
                 {itServices.slice(0, 3).map((service, index) => (
-                  <li key={index} className="flex items-center text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    {service.name}
+                  <li key={index} className="flex items-center text-gray-700 text-sm md:text-base">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span className="truncate">{service.name}</span>
                   </li>
                 ))}
               </ul>
               <Link href="/services/it-services" className="group">
-                <button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2">
+                <button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2 text-sm md:text-base">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -178,7 +178,7 @@ const Home: NextPage = () => {
 
             {/* Micro SaaS */}
             <motion.div 
-              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white rounded-xl shadow-lg p-6 md:p-8 hover:shadow-xl transition-shadow duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -186,23 +186,23 @@ const Home: NextPage = () => {
               whileHover={{ scale: 1.02 }}
             >
               <div className="flex items-center mb-4">
-                <Globe className="w-8 h-8 text-purple-600 mr-3" />
-                <h3 className="text-2xl font-bold text-gray-900">Micro SaaS</h3>
+                <Globe className="w-6 h-6 md:w-8 md:h-8 text-purple-600 mr-3" />
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900">Micro SaaS</h3>
               </div>
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 text-sm md:text-base leading-relaxed">
                 Innovative micro SaaS applications and platforms that solve specific business problems 
                 with scalable, cost-effective solutions tailored to your needs.
               </p>
               <ul className="space-y-2 mb-6">
                 {microSaasServices.slice(0, 3).map((service, index) => (
-                  <li key={index} className="flex items-center text-gray-700">
-                    <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                    {service.name}
+                  <li key={index} className="flex items-center text-gray-700 text-sm md:text-base">
+                    <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    <span className="truncate">{service.name}</span>
                   </li>
                 ))}
               </ul>
               <Link href="/services/micro-saas" className="group">
-                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2">
+                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2 text-sm md:text-base">
                   Learn More
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>

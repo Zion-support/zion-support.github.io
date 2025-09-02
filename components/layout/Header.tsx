@@ -26,15 +26,37 @@ const Header: React.FC = () => {
   ];
 
   const serviceCategories = [
-    { name: 'Micro SaaS', href: '/services/micro-saas' },
-    { name: 'IT Services', href: '/services/it-services' },
-    { name: 'AI Services', href: '/services/ai-services' },
+    { 
+      name: 'Micro SaaS', 
+      href: '/services/micro-saas',
+      description: 'Innovative micro SaaS applications',
+      popular: ['AI Content Generator', 'Social Media Scheduler', 'Email Marketing Automation']
+    },
+    { 
+      name: 'IT Services', 
+      href: '/services/it-services',
+      description: 'Comprehensive IT solutions',
+      popular: ['Cloud Migration', 'Cybersecurity', 'DevOps Automation']
+    },
+    { 
+      name: 'AI Services', 
+      href: '/services/ai-services',
+      description: 'Cutting-edge AI solutions',
+      popular: ['Custom AI Models', 'Computer Vision', 'Predictive Analytics']
+    },
   ];
 
   const solutionCategories = [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Custom Development', href: '/solutions/custom-development' },
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+  ];
+
+  const quickLinks = [
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Support', href: '/support' },
   ];
 
   return (
@@ -94,16 +116,36 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 border border-gray-100">
+                  <div className="p-4">
+                    <div className="text-sm font-semibold text-gray-500 mb-3">Our Services</div>
+                    {serviceCategories.map((category) => (
+                      <div key={category.name} className="mb-4 last:mb-0">
+                        <Link
+                          href={category.href}
+                          className="block text-gray-900 hover:text-blue-600 font-medium transition-colors mb-1"
+                        >
+                          {category.name}
+                        </Link>
+                        <div className="text-xs text-gray-500 mb-2">{category.description}</div>
+                        <div className="space-y-1">
+                          {category.popular.map((service) => (
+                            <div key={service} className="text-xs text-gray-600 hover:text-blue-500 transition-colors">
+                              {service}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                    <div className="border-t border-gray-100 pt-3 mt-3">
+                      <Link
+                        href="/services"
+                        className="text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors"
+                      >
+                        View All Services →
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -123,6 +165,27 @@ const Header: React.FC = () => {
                       className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
                     >
                       {category.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Resources Dropdown */}
+              <div className="relative group">
+                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                  Resources
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
+                    >
+                      {link.name}
                     </Link>
                   ))}
                 </div>
@@ -221,6 +284,21 @@ const Header: React.FC = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {category.name}
+                    </Link>
+                  ))}
+                </div>
+
+                {/* Mobile Resources */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="text-gray-700 font-medium mb-3">Resources</div>
+                  {quickLinks.map((link) => (
+                    <Link
+                      key={link.name}
+                      href={link.href}
+                      className="block py-2 pl-4 text-gray-600 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {link.name}
                     </Link>
                   ))}
                 </div>
