@@ -1,15 +1,14 @@
-<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
-import React from,
+:pages.disabled_auto/services/ai-content-generator.tsx
+import React from,;
   react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../../components/layout/MainLayout';
-import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from
+import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
   'lucide-react';
-import Link from
+import Link from;
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -20,15 +19,14 @@ import {
   Zap,
   Globe,
   Shield,
-  ArrowRight,
+  ArrowRight,;
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
 
 const AIContentGenerator: NextPage = () => {
   const features = [
     {
-<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
+:pages.disabled_auto/services/ai-content-generator.tsx
       title:
   'Multi-Language Support,
       description:
@@ -53,7 +51,6 @@ const AIContentGenerator: NextPage = () => {
       description: 'Work together with your team in real-time,
       icon: <Users className="w-6 h-6" />
     }
-=======
       title: 'Multi-Language Support',
       description:
         'Generate content in over 50 languages with native-level quality',
@@ -74,7 +71,6 @@ const AIContentGenerator: NextPage = () => {
       description: 'Work together with your team in real-time',
       icon: <Users className="w-6 h-6" />,
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
   ];
 
   const pricingPlans = [
@@ -86,19 +82,17 @@ const AIContentGenerator: NextPage = () => {
   /month',
       description: 'Perfect for small businesses and individuals,
       features: [
-<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
+:pages.disabled_auto/services/ai-content-generator.tsx
   '10,000 words per month',
   '5 languages supported',
   'Basic SEO optimization',
   'Email support',
   'Standard templates'
-=======
         '10, 000 words per month',
         '5 languages supported',
         'Basic SEO optimization',
         'Email support',
         'Standard templates',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
       ],
       popular: false,
     },
@@ -110,7 +104,7 @@ const AIContentGenerator: NextPage = () => {
   /month',
       description: 'Ideal for growing businesses and content teams,
       features: [
-<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
+:pages.disabled_auto/services/ai-content-generator.tsx
   '50,000 words per month',
   '25 languages supported',
   'Advanced SEO optimization',
@@ -118,7 +112,6 @@ const AIContentGenerator: NextPage = () => {
   'Custom templates',
   'Team collaboration (up to 5 users)',
   'API access'
-=======
         '50, 000 words per month',
         '25 languages supported',
         'Advanced SEO optimization',
@@ -126,7 +119,6 @@ const AIContentGenerator: NextPage = () => {
         'Custom templates',
         'Team collaboration (up to 5 users)',
         'API access',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
       ],
       popular: true,
     },
@@ -138,7 +130,7 @@ const AIContentGenerator: NextPage = () => {
   ',
       description: 'Tailored solutions for large organizations,
       features: [
-<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
+:pages.disabled_auto/services/ai-content-generator.tsx
         'Unlimited words
   ',
         'All languages supported
@@ -155,7 +147,6 @@ const AIContentGenerator: NextPage = () => {
   ',
         'Custom integrations
   '
-=======
         'Unlimited words',
         'All languages supported',
         'Custom AI models',
@@ -164,7 +155,6 @@ const AIContentGenerator: NextPage = () => {
         'Unlimited team members',
         'Advanced analytics',
         'Custom integrations',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
       ],
       popular: false,
     },
@@ -272,16 +262,14 @@ const AIContentGenerator: NextPage = () => {
 
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {pricingPlans.map((plan, index) => (
-<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
+:pages.disabled_auto/services/ai-content-generator.tsx
               <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${plan.popular ?,
   ring-2 ring-blue-500
   ': '}`}>
-=======
               <div
                 key={index}
                 className={`bg-white p-8 rounded-lg shadow-lg relative ${plan.popular ? 'ring-2 ring-blue-500' : ''}`}
               >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -314,15 +302,13 @@ const AIContentGenerator: NextPage = () => {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-<<<<<<< HEAD:pages.disabled_auto/services/ai-content-generator.tsx
+:pages.disabled_auto/services/ai-content-generator.tsx
                       ?,
   bg-blue-600 hover: bg-blue-700 text-white'
                       :
   'bg-gray-100 hover:bg-gray-200 text-gray-900
-=======
                       ? 'bg-blue-600 hover: bg-blue-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-content-generator.tsx
                   }`}
                 >
                   Get Started

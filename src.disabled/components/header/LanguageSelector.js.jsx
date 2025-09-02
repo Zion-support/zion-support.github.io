@@ -1,5 +1,5 @@
-import React, { useState } from,
-  react'; import { ChevronDown, Globe } from
+import React, { useState } from,;
+  react'; import { ChevronDown, Globe } from;
   'lucide-react'; export const LanguageSelector = () => {; const [isOpen, setIsOpen] = useState(false); const [currentLanguage, setCurrentLanguage] = useState(
   'EN'); const languages = [; { code: 'EN, name:,
   English', flag: '🇺🇸 },; { code:,
@@ -16,4 +16,4 @@ import React, { useState } from,
   🇨🇳' },; { code: 'JA, name:,
   日本語', flag: '🇯🇵 },; { code:,
   KO', name: '한국어, flag:
-  '🇰🇷' }; ]; const handleLanguageChange = (languageCode) => {; setCurrentLanguage(languageCode); setIsOpen(false);''
+  '🇰🇷' }; ]; const handleLanguageChange = (languageCode) => {; setCurrentLanguage(languageCode); setIsOpen(false)';

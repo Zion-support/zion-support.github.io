@@ -32,7 +32,7 @@ import { Brain,
   DollarSign,
   Heart,
   GraduationCap,
-  Home'
+  Home';
  } from 'lucide-react.ts';
 
 export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
@@ -40,23 +40,23 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
   
     },;
     {;
-      icon: Eye,;"
-      title: "Pattern Recognition",;"
+      icon: Eye,";
+      title: "Pattern Recognition",";
       description: "Advanced algorithms that identify hidden patterns and correlations in complex business data."};
   ]},;
     {;
-      icon: Database,;"
-      title: "Real-time Data Processing",;"
+      icon: Database,";
+      title: "Real-time Data Processing",";
       description: "Process and analyze massive amounts of data in real-time for instant insights."};
   ]},;
     {;
-      icon: Rocket,;"
-      title: "Growth Intelligence",;"
+      icon: Rocket,";
+      title: "Growth Intelligence",";
       description: "Strategic growth planning and execution optimization based on market analysis."};
   ]},;
     {;
-      icon: Home,;"
-      title: "Real Estate",;"
+      icon: Home,";
+      title: "Real Estate",";
       description: "AI-driven property valuation, market analysis, and investment optimization."};
   ];      
       {/* Hero Section */}"
@@ -519,5 +519,5 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
           </motion.div>;
         </div>;
       </section>;
-    </div>;"
+    </div>";
   )}'"'"

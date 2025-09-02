@@ -14,7 +14,7 @@ import {
   Brain, Cloud,
   Database, Network,
   Zap, Target,
-  CheckCircle
+  CheckCircle;
 } from 'lucide-react';
 
 const Sitemap: React.FC = () => {

@@ -3,11 +3,11 @@ import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
+   description?: string;
+   keywords?: string;
+   image?: string;
+   url?: string;
+   type?: string;
 }
 
 export const SEO: React.FC<SEOProps> = ({

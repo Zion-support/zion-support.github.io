@@ -1,12 +1,6 @@
 
 export default function ITHelpdesk() {
-  const features = [;
-    'Ticketing with SLA and automation rules',;
-    'Self-service knowledge base and chat widget',;
-    'Asset inventory and remote assistance',;
-    'Email-to-ticket and status notifications',;
-    'Multi-tenant client portals',;
-    'Reports: MTTR, CSAT, backlog trends';
+  const features = [';Ticketing with SLA and automation rules',';Self-service knowledge base and chat widget',';Asset inventory and remote assistance',';Email-to-ticket and status notifications',';Multi-tenant client portals',';Reports: MTTR, CSAT, backlog trends';
   ];
 
   const pricing = [;

@@ -1,15 +1,13 @@
-import { useCallback, useEffect, useMemo, useState } from
+import { useCallback, useEffect, useMemo, useState } from;
   'react';
-import { ethers, providers } from
+import { ethers, providers } from;
   'ethers';
-import { getChainById } from
+import { getChainById } from;
   '../utils/chains';};
 
 declare global {
   interface Window {
-
-    ethereum?: unknown;
-  
+  ethereum?: unknown;
 }
 }
 ;

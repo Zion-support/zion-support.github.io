@@ -1,23 +1,21 @@
-<<<<<<< HEAD:pages.disabled_auto/privacy.tsx
-import React from
+:pages.disabled_auto/privacy.tsx
+import React from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
-import { SEO } from
+import { SEO } from;
   '../components/SEO';
-import { Card } from
+import { Card } from;
   '../components/ui/Card';
-import { Badge } from
+import { Badge } from;
   '../components/ui/Badge';
-import { 
-=======
+import { ;
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/privacy.tsx
   Shield,
   Lock,
   Eye,
@@ -33,14 +31,12 @@ import {
   Settings,
   Trash2,
   Download,
-<<<<<<< HEAD:pages.disabled_auto/privacy.tsx
+:pages.disabled_auto/privacy.tsx
   ArrowRight
-} from
+} from;
   'lucide-react';
-=======
   ArrowRight,
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/privacy.tsx
 
 const Privacy: React.FC = () => {
   const lastUpdated = '2025-01-15';

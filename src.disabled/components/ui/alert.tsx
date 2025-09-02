@@ -10,15 +10,15 @@ interface AlertProps extends React.PropsWithChildren<{
 
 interface AlertTitleProps {
   children: React.ReactNode;
-  className?: string;
-
-  className?: string}
+   className?: string;
+   className?: string;
+}
 
 }
 
 interface AlertDescriptionProps {
   children: React.ReactNode;
-  className?: string;
+   className?: string;
 }
 
 export function Alert({ children, className = '' }: AlertProps) {

@@ -1,4 +1,4 @@
-import { z } from,
+import { z } from,;
   zod';
 
 // Environment variable schemas;
@@ -344,7 +344,7 @@ export function isServer(): boolean {
 if (typeof window ===
   'undefined') {
   // Server-side validation
-  try {
+  try {;
     config.validate();
     console.log(
   '[Config] Configuration validated successfully');

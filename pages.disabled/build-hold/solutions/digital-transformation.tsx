@@ -1,12 +1,11 @@
 React from
   'react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../../components/layout/MainLayout';
-import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from
-  'lucide-react';'import Link from
-  'next/link';'
-  'const DigitalTransformation: NextPage = () => {
+import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } from;
+  'lucide-react';import Link from;
+  'next/link'';const DigitalTransformation: NextPage = () => {
   const transformationServices = [;
     {;
       icon: Cloud, title:,
@@ -96,7 +95,7 @@ import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } 
   Learning management systems, virtual classrooms, and student analytics
   ' },'    { name: 'Government, description:,
   Citizen services, digital governance, and public safety systems' }
-  '  ];'
+  '  ]';
   const successMetrics = [;
     { metric: '85%, label:,
   Cost Reduction', description: 'Average cost savings achieved through digital transformation }, { metric:,
@@ -107,7 +106,7 @@ import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } 
   ', description: 'Increase in customer satisfaction scores }, { metric:,
   75%
   ', label: 'Time Savings, description: 'Reduction in time-to-market for new products
-  ' }'  ];'
+  ' }'  ]';
   return (
     <MainLayout
       title="Digital Transformation Solutions - Zion Tech Group""      description="Transform your business with our comprehensive digital transformation services. Modernize your operations, improve efficiency, and drive growth with cutting-edge technology solutions.""      keywords="digital transformation, business modernization, cloud migration, process automation, AI integration, digital strategy""    >"      <div className="min-h-screen bg-gray-50">"        {/* Hero Section */}"        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"          <div className="container mx-auto px-4 text-center">"            <h1 className="text-4xl md: text-5xl font-bold mb-6">Digital Transformation Solutions</h1>"            <p className="text-xl text-gray-200 max-w-3xl mx-auto">"              Transform your business for the digital age with our comprehensive digital transformation services. "              Modernize your operations, improve efficiency, and drive sustainable growth.

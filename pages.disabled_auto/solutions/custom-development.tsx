@@ -1,15 +1,14 @@
-<<<<<<< HEAD:pages.disabled_auto/solutions/custom-development.tsx
-import React from
+:pages.disabled_auto/solutions/custom-development.tsx
+import React from;
   'react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../../components/layout/MainLayout';
-import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } from
+import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } from;
   'lucide-react';
-import Link from
+import Link from;
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -21,16 +20,15 @@ import {
   Zap,
   Shield,
   Users,
-  CheckCircle,
+  CheckCircle,;
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/custom-development.tsx
 
 const CustomDevelopment: NextPage = () => {
   const developmentServices = [
     {
       icon: Code,
-<<<<<<< HEAD:pages.disabled_auto/solutions/custom-development.tsx
+:pages.disabled_auto/solutions/custom-development.tsx
       title:,
   Web Application Development',
       description: 'Custom web applications built with modern frameworks and technologies.,
@@ -95,7 +93,6 @@ const CustomDevelopment: NextPage = () => {
   'Data validation',
   'Security audits']
     }
-=======
       title: 'Web Application Development',
       description:
         'Custom web applications built with modern frameworks and technologies.',
@@ -166,12 +163,11 @@ const CustomDevelopment: NextPage = () => {
         'Security audits',
       ],
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/custom-development.tsx
   ];
 
   const developmentProcess = [
     {
-<<<<<<< HEAD:pages.disabled_auto/solutions/custom-development.tsx
+:pages.disabled_auto/solutions/custom-development.tsx
       step: '01,
       title:,
   Discovery & Planning',
@@ -237,7 +233,6 @@ const CustomDevelopment: NextPage = () => {
   Cloud' },
     { name: 'Docker, category:
   'DevOps' }
-=======
       step: '01',
       title: 'Discovery & Planning',
       description:
@@ -287,7 +282,6 @@ const CustomDevelopment: NextPage = () => {
     { name: 'AWS', category: 'Cloud' },
     { name: 'Azure', category: 'Cloud' },
     { name: 'Docker', category: 'DevOps' },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/custom-development.tsx
   ];
 
   return (

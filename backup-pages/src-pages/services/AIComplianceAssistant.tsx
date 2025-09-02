@@ -21,7 +21,7 @@ import {
   Download,
   Share2
   '
-} from 'lucide-react
+} from 'lucide-react;
   ';
 
 export default function AIComplianceAssistant() {

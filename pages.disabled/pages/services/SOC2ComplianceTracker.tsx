@@ -6,15 +6,15 @@ export default function SOC2ComplianceTracker(...args: []):  {
 export default function SOC2ComplianceTracker(...args: []):  {}
     },;
     {;
-      icon: Clock,;""
-      title: "Audit Trail",;""
+      icon: Clock,';
+      title: "Audit Trail",';
       description: "Complete audit logging of all system activities, changes, and access attempts for compliance reporting."};
   ]},;
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-    {;"
+    {";
     {;
-      icon: FileText,;""
-      title: "Documentation",;""
+      icon: FileText,';
+      title: "Documentation",';
       description: "Policies, procedures, and compliance documentation management"};
   ];
 
@@ -82,25 +82,25 @@ export default function SOC2ComplianceTracker(...args: []):  {}
         "Full SOC2 framework support",""
         "Custom control frameworks",""
         "White-label solutions",""
-        "Dedicated compliance manager",;""
-        "Advanced integrations",;""
-        "Unlimited users",;""
+        "Dedicated compliance manager",';
+        "Advanced integrations",';
+        "Unlimited users",';
         "Custom training";
       ],;
       popular: false};
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-  ]},;"
+  ]},";
   ]},;
-    {;""
-      title: "Build Customer Trust",;""
+    {';
+      title: "Build Customer Trust",';
       description: "Demonstrate your commitment to security and compliance to build customer confidence.",;
       icon: Users};
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx
-  ]},;"
+  ]},";
   ]},;
-    {;""
-      step: "06",;""
-      title: "Ongoing Compliance",;""
+    {';
+      step: "06",';
+      title: "Ongoing Compliance",';
       description: "Maintain compliance with continuous monitoring and improvement"};  ];
 
   return()
@@ -201,7 +201,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 "
 
         {/* Features Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -278,7 +278,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 "
 
         {/* Compliance Areas Section */}""
-        <section className="py-20 bg-slate-800/30">;""
+        <section className="py-20 bg-slate-800/30">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -355,7 +355,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 "
 
         {/* Compliance Journey Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -432,7 +432,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 "
 
         {/* Benefits Section */}""
-        <section className="py-20 bg-slate-800/30">;""
+        <section className="py-20 bg-slate-800/30">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -511,7 +511,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 "
 
         {/* Pricing Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -574,7 +574,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
                       : 'border-slate-700'`
                   }`}
 
-                  {plan.popular && (;""
+                  {plan.popular && (';
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                       <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular;
@@ -636,7 +636,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
 "
 
         {/* CTA Section */}""
-        <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">;""
+        <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">';
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div;
               initial = {}

@@ -11,14 +11,14 @@ function replaceNextImports(content, filePath) {
   // Replace next/link with react-router-dom
   if (content.includes(
   'next/link')) {
-    content = content.replace(/import Link from [
+    content = content.replace(/import Link from [;
   '"]next\/link['"];?/g,
-  'import { Link } from "react-router-dom";');
+  'import { Link } from "react-router-dom"';);
     modified = true}
   // Replace next/image with regular img tags (or keep as is for now)
   if (content.includes(
   'next/image')) {
-    content = content.replace(/import Image from [
+    content = content.replace(/import Image from [;
   '"]next\/image['"];?/g,
   '// import Image from "next/image"; // TODO: Replace with regular img or custom Image component);
     modified = true}
@@ -27,7 +27,7 @@ function replaceNextImports(content, filePath) {
   'next/router')) {
     content = content.replace(/import.*from [
   '"]next\/router['"];?/g,
-  'import { useNavigate, useLocation, useParams } from "react-router-dom";');
+  'import { useNavigate, useLocation, useParams } from "react-router-dom"';);
     modified = true}
   // Replace Next.js specific usage patterns
   if (content.includes(

@@ -1,35 +1,7 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react.ts';
 interface TabsContextType {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   activeTab: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
-setActiveTab: anyanyanyanyanyanyanyanyanyanyanyanyanyany(tab: string)                => void;
-
-
-
-
-
-
-
-
-
-
-
-
-
+   setActiveTab: anyanyanyanyanyanyanyanyanyanyanyanyanyany(tab: string) => void;
 }
 
 const TabsContext = createContext<TabsContextType | null>(null);

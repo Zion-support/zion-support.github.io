@@ -1,7 +1,7 @@
-<<<<<<< HEAD:src.disabled/components/ContactForm.tsx
-import React, { useState } from
+:src.disabled/components/ContactForm.tsx
+import React, { useState } from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
 import { 
   Mail, 
@@ -13,7 +13,7 @@ import {
   User,
   Building,
   MessageSquare
-} from
+} from;
   'lucide-react';
 
 export const ContactForm: React.FC = () => {
@@ -42,7 +42,6 @@ export const ContactForm: React.FC = () => {
   ');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
 import React, { useState } from 'react';
 export const ContactForm: React.FC = () => {;
 import { motion } from 'framer - motion';
@@ -61,22 +60,20 @@ import { motion } from 'framer - motion';
   }) ;
 ;
   const [isSubmitting, setIsSubmitting] = useState (false) ;
-  const [submitStatus, setSubmitStatus] = useState<;
-    'idle' | 'success' | 'error';
+  const [submitStatus, setSubmitStatus] = useState<';idle' | 'success' | 'error';
   > ('idle') ;
 ;
   const handleInputChange = useCallback((;
     e: React.ChangeEvent<;
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
     >;) => {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.tsx
     const { name, value } = e.target;
     setFormData (prev => ({;
       ...prev,;
       [name]: value,;
     }) ) ;
   };
-<<<<<<< HEAD:src.disabled/components/ContactForm.tsx
+:src.disabled/components/ContactForm.tsx
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -400,7 +397,6 @@ import { motion } from 'framer - motion';
     </div>
   );
 };
-=======
 ;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault () ;
@@ -428,30 +424,13 @@ import { motion } from 'framer - motion';
     };
   };
 ;
-  const services = [;
-    'AI & Machine Learning',;
-    'Cloud & DevOps',;
-    'Enterprise Security',;
-    'Digital Transformation',;
-    'Micro SAAS Services',;
-    'IT Onsite Services',;
-    'Custom Development',;
-    'Other',;
+  const services = [';AI & Machine Learning',';Cloud & DevOps',';Enterprise Security',';Digital Transformation',';Micro SAAS Services',';IT Onsite Services',';Custom Development',';Other',;
   ];
 ;
-  const budgets = [;
-    'Under $10K',;
-    '$10K - $50K',;
-    '$50K - $100K',;
-    '$100K - $500K',;
-    'Over $500K',;
+  const budgets = [';Under $10K',';$10K - $50K',';$50K - $100K',';$100K - $500K',';Over $500K',;
   ];
 ;
-  const timelines = [;
-    'Immediate (1 - 2 weeks) ',;
-    'Quick (1 - 2 months) ',;
-    'Standard (3 - 6 months) ',;
-    'Long - term (6 + months) ',;
+  const timelines = [';Immediate (1 - 2 weeks) ',';Quick (1 - 2 months) ',';Standard (3 - 6 months) ',';Long - term (6 + months) ',;
   ];
 ;
   if (submitStatus === 'success') {;
@@ -485,8 +464,7 @@ import { motion } from 'framer - motion';
           Ready to transform your business? Let & apos;s discuss how we can help;
           you achieve your goals.';
         </p>;
-      </div>;
-";
+      </div>";;
       <div role="button" className="grid grid - cols - 1 lg: grid - cols - 2 gap - 8 mb - 8">;
         {/* Contact Information */}";
         <div role="button" className="space - y-6">";
@@ -500,8 +478,7 @@ import { motion } from 'framer - motion';
                 kleber@ziontechgroup.com;
               </div>;
             </div>;
-          </div>;
-";
+          </div>";;
           <div role="button" className="flex items - center gap - 4">";
             <div role="button" className="w - 12 h - 12 bg - zion - cyan / 20 rounded - lg flex items - center justify - center">";
               <Phone className="w - 6 h - 6 text - zion - cyan" />;
@@ -510,8 +487,7 @@ import { motion } from 'framer - motion';
               <div role="button" className="text - white font - semibold">Phone</div>";
               <div role="button" className="text - zion - slate - light">+1 (302) 464 - 0950</div>;
             </div>;
-          </div>;
-";
+          </div>";;
           <div role="button" className="flex items - center gap - 4">";
             <div role="button" className="w - 12 h - 12 bg - zion - cyan / 20 rounded - lg flex items - center justify - center">";
               <MapPin className="w - 6 h - 6 text - zion - cyan" />;
@@ -522,8 +498,7 @@ import { motion } from 'framer - motion';
                 Delaware, United States;
               </div>;
             </div>;
-          </div>;
-";
+          </div>";;
           <div role="button" className="bg - gradient - to - r from - zion - cyan / 10 to - zion - purple / 10 border border - zion - cyan / 20 rounded - lg p - 4">";
             <h4 className="text - white font - semibold mb - 2">Response Time</h4>";
             <p className="text - zion - slate - light text - sm">;
@@ -571,8 +546,7 @@ import { motion } from 'framer - motion';
                 placeholder="Enter your last name";
               / />;
             </div>;
-          </div>;
-";
+          </div>";;
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <div>;
               <label";
@@ -626,8 +600,7 @@ import { motion } from 'framer - motion';
               className="w - full px - 4 py - 3 bg - zion - blue - light / 50 border border - zion - purple / 20 rounded - lg text - white placeholder - zion - slate - light focus:outline - none focus:border - zion - cyan / 50 transition - colors"";
               placeholder="Enter your company name";
             / />;
-          </div>;
-";
+          </div>";;
           <div role="button" className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
             <div>;
               <label";
@@ -739,6 +712,4 @@ import { motion } from 'framer - motion';
         </form>;
       </div>;
     </div>;) ;
-};
-";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.tsx
+}";;

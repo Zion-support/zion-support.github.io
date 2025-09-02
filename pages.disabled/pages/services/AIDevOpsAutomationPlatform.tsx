@@ -23,7 +23,7 @@ import {}
   BarChart3,
   Settings,
   Play,
-  Pause,
+  Pause,;
   RefreshCw} from 'lucide-react.ts';
 :pages.disabled/pages/services/AIDevOpsAutomationPlatform.tsx
 export default function AIDevOpsAutomationPlatform(...args: any[]): any {

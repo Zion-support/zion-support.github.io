@@ -4,37 +4,24 @@ import { useEffect, useState, useCallback } from 'react';
 
 interface AnalyticsEvent {
   name: string;
-  category: string;
-  action?: string;
-  label?: string;
-  value?: number;
-  custom_parameters?: Record<string, any>;
+   category: string;
+   action?: string;
+   label?: string;
+   value?: number;
+   custom_parameters?: Record<string, any>;
 }
 
 interface PerformanceMetrics {
   fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  loadTime: number;
-}
-
-interface UserBehavior {
-  pageViews: number;
-  sessionDuration: number;
-  bounceRate: number;
-  conversionRate: number;
+   lcp: number;
+   fid: number;
+   cls: number;
+   ttfb: number;
+   loadTime: number;
 }
 
 const AnalyticsManager: React.FC = () => {
   const [isInitialized, setIsInitialized] = useState(false);
-  const [userBehavior, setUserBehavior] = useState<UserBehavior>({
-    pageViews: 0,
-    sessionDuration: 0,
-    bounceRate: 0,
-    conversionRate: 0,
-  });
 
   // Initialize analytics
   useEffect(() => {
@@ -124,12 +111,6 @@ const AnalyticsManager: React.FC = () => {
       label: window.location.pathname,
       custom_parameters: pageData,
     });
-
-    // Update user behavior
-    setUserBehavior(prev => ({
-      ...prev,
-      pageViews: prev.pageViews + 1,
-    }));
   }, []);
 
   const trackEvent = useCallback((event: AnalyticsEvent) => {
@@ -228,25 +209,13 @@ const AnalyticsManager: React.FC = () => {
       name: 'conversion',
       category: 'Conversion',
       action: conversionType,
-      value: value,
+      ...(value !== undefined && { value }),
     });
-
-    // Update user behavior
-    setUserBehavior(prev => ({
-      ...prev,
-      conversionRate: prev.conversionRate + 1,
-    }));
   }, [trackEvent]);
 
   const startSessionTimer = useCallback(() => {
-    const startTime = Date.now();
-    
     const updateSessionDuration = () => {
-      const duration = Date.now() - startTime;
-      setUserBehavior(prev => ({
-        ...prev,
-        sessionDuration: duration,
-      }));
+      // Session duration tracking logic can be added here if needed
     };
 
     const interval = setInterval(updateSessionDuration, 1000);

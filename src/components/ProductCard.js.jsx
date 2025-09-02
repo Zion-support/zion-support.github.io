@@ -1,34 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; export default function ProductCard ({ product, onBuy, buyDisabled = false }) { const { isAuthenticated } = useAuth () ; const { isWishlisted, toggle } = useWishlist () ; const [imageError, setImageError] = useState (false) ; const router = useRouter () ; const enqueueSnackbar = useEnqueueSnackbar () ; if () !product ||" typeof product.id !== "string" ||" typeof product.title !== "string" ||" product.title.trim () === ") { captureException (" new Error ("Invalid product data received by ProductCard") , { extra: { product }}) ; return () <div className="relative border rounded - lg bg - card p - 4 text - center h - full flex flex - col justify - center items - center" data - testid="product - card - error" >" <p className="text - destructive text - sm"> Product information unavailable. </p> {}" {} </div>) ; } const active = isWishlisted (product.id) ; const dispatch = useDispatch () ;"""";
-=======
-import React from 'react'; export default function ProductCard({ product, onBuy, buyDisabled = false }) { const { isAuthenticated } = useAuth(); const { isWishlisted, toggle } = useWishlist(); const [imageError, setImageError] = useState(false); const router = useRouter(); const enqueueSnackbar = useEnqueueSnackbar(); if() !product ||" typeof product.id !== "string" ||" typeof product.title !== "string" ||" product.title.trim() === " ) { captureException(" new Error("Invalid product data received by ProductCard"), { extra: { product }} ); return () <div className="relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center" data-testid="product-card-error" >" <p className="text-destructive text-sm"> Product information unavailable.</p> {}" {} </div> ); } const active = isWishlisted(product.id); const dispatch = useDispatch();
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
-import Link from 'next/link';'''
-import { Heart } from 'lucide-react';'''
-import { useWishlist } from '@/hooks/useWishlist';'''
+import React from 'react'; export default function ProductCard ({ product, onBuy, buyDisabled = false }) { const { isAuthenticated } = useAuth () ; const { isWishlisted, toggle } = useWishlist () ; const [imageError, setImageError] = useState (false) ; const router = useRouter () ; const enqueueSnackbar = useEnqueueSnackbar () ; if () !product ||" typeof product.id !== "string" ||" typeof product.title !== "string" ||" product.title.trim () === ") { captureException (" new Error ("Invalid product data received by ProductCard") , { extra: { product }}) ; return () <div className="relative border rounded - lg bg - card p - 4 text - center h - full flex flex - col justify - center items - center" data - testid="product - card - error" >" <p className="text - destructive text - sm"> Product information unavailable. </p> {}" {} </div>) ; } const active = isWishlisted (product.id) ; const dispatch = useDispatch () ';"";import Link from 'next/link'';
+import { Heart } from 'lucide-react'';
+import { useWishlist } from '@/hooks/useWishlist'';
 import { Button } from '@/components/ui/button';
 import {}
   Tooltip,
   TooltipContent,
-  TooltipProvider,'
-  TooltipTrigger} from '@/components/ui/tooltip';'
-import { useDispatch } from 'react-redux';'
-import { addItem } from '@/store/cartSlice';'
-import Image from 'next/image';'
-import React, { useState } from 'react';'
-import { useAuth } from '@/context/auth/AuthProvider';'
-import { useRouter } from 'next/router';'
-import { useMediaQuery } from 'usehooks-ts';'
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';'
+  TooltipProvider,';
+  TooltipTrigger} from '@/components/ui/tooltip';
+import { useDispatch } from 'react-redux';
+import { addItem } from '@/store/cartSlice';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useRouter } from 'next/router';
+import { useMediaQuery } from 'usehooks-ts';
+import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@/utils/sentry';
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
   const { isAuthenticated } = useAuth();
   const { isWishlisted, toggle } = useWishlist();
   const [imageError, setImageError] = useState(false);
-  const router = useRouter();'
-  const enqueueSnackbar = useEnqueueSnackbar();''
+  const router = useRouter()';
+  const enqueueSnackbar = useEnqueueSnackbar()';
   if()'''
     !product ||''''
     typeof product.id !== 'string' ||''''
@@ -76,7 +69,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
         product: product.id,
         imageUrl});
     }
-  };'
+  }';
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
   return()"""
     <div""""
@@ -136,7 +129,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
                 <Button;
                   onClick={e => {}
                     e.stopPropagation();
-                    onBuy();"""
+                    onBuy()';"
                   }}""""
                   size="sm""""
                   variant="outline""""
@@ -166,4 +159,3 @@ export { ProductCard };
 export { ProductCard };
 
 export { ProductCard };
->>>>>>> pr-10728

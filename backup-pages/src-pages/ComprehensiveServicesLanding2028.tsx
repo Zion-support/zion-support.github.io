@@ -6,41 +6,27 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       company: "BioTech Innovations",;,
   "
       content: "Their quantum AI drug discovery platform has accelerated our research by 10x. Were now able to analyze molecular interactions that were previously impossible to model.",;
-      rating: 5,;"
+      rating: 5,";
       avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face"};
   ];
 
-  const stats = [;"
-    { number: "500+", label: "Successful Projects", icon: CheckCircle },;"
-    { number: "15+", label: "Years of Innovation", icon: Award },;"
-    { number: "99.9%", label: "Client Satisfaction", icon: Star },;"    { number: "24/7", label: "Support Available", icon: Clock };
+  const stats = [";
+    { number: "500+", label: "Successful Projects", icon: CheckCircle },";
+    { number: "15+", label: "Years of Innovation", icon: Award },";
+    { number: "99.9%", label: "Client Satisfaction", icon: Star },";    { number: "24/7", label: "Support Available", icon: Clock };
   ];
 
       default: return Rocket}
-  };
-
-      'from-green-600 to-emerald-600
-  ',;
-      'from-red-600 to-orange-600
-  ',;
-      'from-indigo-600 to-purple-600
-  ',;
-      'from-yellow-600 to-orange-600
-  ',;
-      'from-teal-600 to-blue-600
-  ',;
-      'from-pink-600 to-red-600
-  ';
-'from-blue-600 to-cyan-600
+  }';from-green-600 to-emerald-600
+  ',';from-red-600 to-orange-600
+  ',';from-indigo-600 to-purple-600
+  ',';from-yellow-600 to-orange-600
+  ',';from-teal-600 to-blue-600
+  ',';from-pink-600 to-red-600
+  ';from-blue-600 to-cyan-600
   ','
 
-  'from-purple-600 to-pink-600',;'
-  'from-green-600 to-emerald-600',;'
-  'from-red-600 to-orange-600',;'
-  'from-indigo-600 to-purple-600',;'
-  'from-yellow-600 to-orange-600',;'
-  'from-teal-600 to-blue-600',;'
-  'from-pink-600 to-red-600';
+  'from-purple-600 to-pink-600',';from-green-600 to-emerald-600',';from-red-600 to-orange-600',';from-indigo-600 to-purple-600',';from-yellow-600 to-orange-600',';from-teal-600 to-blue-600',';from-pink-600 to-red-600';
     ];
     return colors[Math.abs (category.length) % colors.length]};
 
@@ -148,7 +134,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       </section>
 
       {/* Stats Section */}"
-      <section className="py-16 bg-white/5 backdrop-blur-sm">;"
+      <section className="py-16 bg-white/5 backdrop-blur-sm">";
         <div className="container mx-auto px-4">"
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
             {stats.map((stat, index)  => (
@@ -186,7 +172,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       </section>
 
       {/* Services Overview */}"
-      <section id="services-section" className="py-20">;"
+      <section id="services-section" className="py-20">";
         <div className="container mx-auto px-4">
           <motion.div 
             initial = {
@@ -329,7 +315,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       </section>
 
       {/* Testimonials Section */}"
-      <section className="py-20 bg-white/5 backdrop-blur-sm">;"
+      <section className="py-20 bg-white/5 backdrop-blur-sm">";
         <div className="container mx-auto px-4">
           <motion.div 
             initial = {
@@ -430,7 +416,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       </section>
 
       {/* Why Choose Us Section */}"
-      <section className="py-20">;"
+      <section className="py-20">";
         <div className="container mx-auto px-4">
           <motion.div 
             initial = {

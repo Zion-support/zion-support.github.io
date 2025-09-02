@@ -1,18 +1,18 @@
-import React, { useState, useMemo } from 'react';'''
-import { motion } from 'framer-motion';'''
+import React, { useState, useMemo } from 'react'';
+import { motion } from 'framer-motion'';
 import { Lightbulb, Rocket, Brain, Zap, TrendingUp, Star, Users, Globe, CheckCircle, Cpu, Atom, Satellite, Dna, Shield, Leaf } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";""""
-import { Button } from "./ui/button";""""
-import { Badge } from "./ui/badge";""""
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"';""
+import { Button } from "./ui/button"';""
+import { Badge } from "./ui/badge"';""
 import { Input } from "./ui/input";
 const AdvancedServiceInnovationHub = () => {}
 '
 ''
 '''
-    const [selectedCategory, setSelectedCategory] = useState('all');'''
-    const [selectedImpact, setSelectedImpact] = useState('all');'''
-    const [selectedStatus, setSelectedStatus] = useState('all');'''
-    const [searchTerm, setSearchTerm] = useState('');'''
+    const [selectedCategory, setSelectedCategory] = useState('all')';'
+    const [selectedImpact, setSelectedImpact] = useState('all')';'
+    const [selectedStatus, setSelectedStatus] = useState('all')';'
+    const [searchTerm, setSearchTerm] = useState('')';'
     const [viewMode, setViewMode] = useState('trends');
     // Mock data - in real app this would come from API;
     const innovationTrends = []
@@ -28,8 +28,8 @@ const AdvancedServiceInnovationHub = () => {}
             timeline: '2025-2030',''
             adoption: 85,'''
             investment: '$50B+','''
-            keyPlayers['IBM',Google',Microsoft',Startups'],;'''
-            technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],;'''
+            keyPlayers['IBM',Google',Microsoft',Startups'],';'
+            technologies['Quantum Computing',Quantum Algorithms',Quantum Software'],';'
             status: 'Emerging'
         },
         {}
@@ -44,8 +44,8 @@ const AdvancedServiceInnovationHub = () => {}
             timeline: '2030-2040',''
             adoption: 45,'''
             investment: '$100B+','''
-            keyPlayers['OpenAI',Anthropic',Research Labs',Universities'],;'''
-            technologies['AI Consciousness',General AI',Neural Networks'],;'''
+            keyPlayers['OpenAI',Anthropic',Research Labs',Universities'],';'
+            technologies['AI Consciousness',General AI',Neural Networks'],';'
             status: 'Emerging'
         },
         {}
@@ -60,8 +60,8 @@ const AdvancedServiceInnovationHub = () => {}
             timeline: '2030-2040',''
             adoption: 30,'''
             investment: '$200B+','''
-            keyPlayers['SpaceX',Blue Origin',Asteroid Mining Companies'],;'''
-            technologies['Space Robotics',Resource Processing',Space Logistics'],;'''
+            keyPlayers['SpaceX',Blue Origin',Asteroid Mining Companies'],';'
+            technologies['Space Robotics',Resource Processing',Space Logistics'],';'
             status: 'Emerging'
         },
         {}
@@ -76,8 +76,8 @@ const AdvancedServiceInnovationHub = () => {}
             timeline: '2030-2040',''
             adoption: 60,'''
             investment: '$500B+','''
-            keyPlayers['ITER',Private Fusion Companies',Government Labs'],;'''
-            technologies['Fusion Physics',Plasma Confinement',Energy Conversion'],;'''
+            keyPlayers['ITER',Private Fusion Companies',Government Labs'],';'
+            technologies['Fusion Physics',Plasma Confinement',Energy Conversion'],';'
             status: 'Growing'
         },
         {}
@@ -92,8 +92,8 @@ const AdvancedServiceInnovationHub = () => {}
             timeline: '2025-2035',''
             adoption: 70,'''
             investment: '$150B+','''
-            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],;'''
-            technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],;'''
+            keyPlayers['Ginkgo Bioworks',Twist Bioscience',Research Institutions'],';'
+            technologies['DNA Programming',Genetic Engineering',Bio-Manufacturing'],';'
             status: 'Growing'
         },
         {}
@@ -108,8 +108,8 @@ const AdvancedServiceInnovationHub = () => {}
             timeline: '2030-2040',''
             adoption: 40,'''
             investment: '$80B+','''
-            keyPlayers['Neuralink',Kernel',Medical Device Companies'],;'''
-            technologies['Neural Interfaces',Signal Processing',AI/ML'],;'''
+            keyPlayers['Neuralink',Kernel',Medical Device Companies'],';'
+            technologies['Neural Interfaces',Signal Processing',AI/ML'],';'
             status: 'Emerging'
 
     ];
@@ -123,9 +123,9 @@ const AdvancedServiceInnovationHub = () => {}
 '
 ''
 '''
-            case 'High': return 'bg-red-100 text-red-800';'''
-            case 'Medium': return 'bg-yellow-100 text-yellow-800';'''
-            case 'Low': return 'bg-green-100 text-green-800';'''
+            case 'High': return 'bg-red-100 text-red-800'';
+            case 'Medium': return 'bg-yellow-100 text-yellow-800'';
+            case 'Low': return 'bg-green-100 text-green-800'';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getStatusColor = (status) => {}
@@ -133,23 +133,23 @@ const AdvancedServiceInnovationHub = () => {}
 '
 ''
 '''
-            case 'Emerging': return 'bg-blue-100 text-blue-800';'''
-            case 'Growing': return 'bg-green-100 text-green-800';'''
-            case 'Mature': return 'bg-orange-100 text-orange-800';'''
-            case 'Disruptive': return 'bg-purple-100 text-purple-800';'''
+            case 'Emerging': return 'bg-blue-100 text-blue-800'';
+            case 'Growing': return 'bg-green-100 text-green-800'';
+            case 'Mature': return 'bg-orange-100 text-orange-800'';
+            case 'Disruptive': return 'bg-purple-100 text-purple-800'';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getCategoryIcon = (category) => {}
         switch(category) {}
 '"""
 '"'"""
-            case 'quantum': return <Atom className="w-5 h-5"/>;'"'"""
-            case 'ai': return <Brain className="w-5 h-5"/>;'"'"""
-            case 'space-tech': return <Satellite className="w-5 h-5"/>;'"'"""
-            case 'green-tech': return <Leaf className="w-5 h-5"/>;'"'"""
-            case 'biotech-ai': return <Dna className="w-5 h-5"/>;""""
+            case 'quantum': return <Atom className="w-5 h-5"/>'';"""
+            case 'ai': return <Brain className="w-5 h-5"/>'';"""
+            case 'space-tech': return <Satellite className="w-5 h-5"/>'';"""
+            case 'green-tech': return <Leaf className="w-5 h-5"/>'';"""
+            case 'biotech-ai': return <Dna className="w-5 h-5"/>';""
             default: return <Cpu className="w-5 h-5"/>}
-    };'"""
+    }'';"
     const categories = ['"'"""
         { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"/> },"'"""
         { id: 'quantum', name: 'Quantum Technology', icon: <Atom className="w-4 h-4"/> },"'"""
@@ -157,7 +157,7 @@ const AdvancedServiceInnovationHub = () => {}
         { id: 'space-tech', name: 'Space Technology', icon: <Satellite className="w-4 h-4"/> },"'"""
         { id: 'green-tech', name: 'Green Technology', icon: <Leaf className="w-4 h-4"/> },"'"""
         { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className="w-4 h-4"/> }"""
-    ];""""
+    ]';""
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {}
@@ -165,8 +165,7 @@ const AdvancedServiceInnovationHub = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} className="mb-8">""""
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">"""
@@ -198,8 +197,7 @@ const AdvancedServiceInnovationHub = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">""""
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">"""
@@ -246,8 +244,7 @@ const AdvancedServiceInnovationHub = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.2 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
             {filteredTrends.map((trend, index) => (<motion.div key={trend.id} initial = {}
@@ -255,8 +252,7 @@ const AdvancedServiceInnovationHub = () => {}
   x: index % 2 === 0 ? -20 : 20;
 }} animate = {}
   { opacity: 1,
-  x: 0;
-"""
+  x: 0';"
 }} transition={{ delay: 0.1 * index }}>""""
                 <Card className="h-full hover:shadow-lg transition-shadow">"""
                   <CardHeader>""""
@@ -338,8 +334,7 @@ const AdvancedServiceInnovationHub = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.1 }} className="space-y-6">
           {futureRoadmap.map((roadmap, index) => (<motion.div key={roadmap.id} initial = {}
@@ -347,8 +342,7 @@ const AdvancedServiceInnovationHub = () => {}
   x: -20;
 }} animate = {}
   { opacity: 1,
-  x: 0;
-"""
+  x: 0';"
 }} transition={{ delay: 0.1 * index }}>""""
               <Card className="hover:shadow-lg transition-shadow">"""
                 <CardHeader>""""
@@ -433,8 +427,7 @@ const AdvancedServiceInnovationHub = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.1 }} className="space-y-6">""""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -582,8 +575,7 @@ const AdvancedServiceInnovationHub = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">""""
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""

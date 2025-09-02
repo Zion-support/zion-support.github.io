@@ -1,7 +1,7 @@
-import React from,
-  react'; import { Link } from
+import React from,;
+  react'; import { Link } from;
   'react-router-dom'; import { ; TrendingUp,; Target,; Users,; BarChart3,; MessageSquare,; Phone,; Mail,; MapPin,; CheckCircle,; Star,; Zap,; Shield,; Brain,; Clock,; DollarSign,; ArrowRight,; Lock,; Eye,; Activity,; Stethoscope,; Truck,; Route,; Calculator,; PieChart,; Network,; Bug; } from
-  'lucide-react'; import { SEO } from
+  'lucide-react'; import { SEO } from;
   '@/components/SEO'; ; const InnovativeAIServicesShowcase2025 = () => {; const services = [; {; id: 'ai-project-management-assistant,; title:,
   AI Project Management Assistant',; description: Revolutionize project delivery with AI-powered task prioritization, risk management, team collaboration, and real-time analytics.',; icon: Brain,; color:,
   from-purple-500 to-pink-500',; benefits: [
@@ -49,11 +49,4 @@ import React from,
 ,
   80% faster follow-ups',
   'Predictive sales analytics'],; price: 'From $199/month,; category:,
-  Sales & Marketing',; href: '/services/ai-sales-copilot; }; ]; ; const categories = [; 
-  'All Services',; 
-  'Project Management',; 
-  'Financial Services',; 
-  'Healthcare',; 
-  'Supply Chain',; 
-  'Cybersecurity',; 
-  'Sales & Marketing'; ]; ; const testimonials = [; {; name: "Sarah Johnson", ";"";" role: "CTO", ";"";" company: "InnovateTech Solutions", ";"";" content: "Zion Tech Group&apos;s AI services have transformed our operations. We&apos;ve seen dramatic improvements in efficiency and cost savings across all departments.",;" rating: 5;";" },;";" {;";"";" name: "Michael Chen", ";"";" role: "Operations Director", ";"";" company: "Global Dynamics Corp", ";"";" content: "The AI-powered solutions have given us a competitive edge. Our customers notice the improved service quality and faster response times.",;" rating: 5;";" },;";" {;";"";" name: "Emily Rodriguez", ";"";" role: "VP of Technology", ";"";" company: "Future Forward Inc", ";"";" content: "Working with Zion Tech Group has been exceptional. Their AI services are cutting-edge and their support team is incredibly responsive.",; rating: 5;" };";" ];";" ;"";" return (";"";" <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"";" <SEO";"";" title="Innovative AI Services Showcase 2025 — Zion Tech Group | Cutting-Edge AI Solutions";"";" description="Discover our comprehensive suite of innovative AI services including project management, financial planning, healthcare analytics, supply chain optimization, and cybersecurity. Transform your business with intelligent automation.";"";" keywords="AI services, artificial intelligence, project management, financial planning, healthcare analytics, supply chain optimization, cybersecurity, Zion Tech Group";"";" canonical="https:"""
+  Sales & Marketing',; href: '/services/ai-sales-copilot; }; ]; ; const categories = [';All Services',';Project Management',';Financial Services',';Healthcare',';Supply Chain',';Cybersecurity',';Sales & Marketing'; ]; ; const testimonials = [; {; name: "Sarah Johnson", "';"; role: "CTO", "';"; company: "InnovateTech Solutions", "';"; content: "Zion Tech Group&apos;s AI services have transformed our operations. We&apos;ve seen dramatic improvements in efficiency and cost savings across all departments.","; rating: 5';; },';; {';;""; name: "Michael Chen", "';"; role: "Operations Director", "';"; company: "Global Dynamics Corp", "';"; content: "The AI-powered solutions have given us a competitive edge. Our customers notice the improved service quality and faster response times.","; rating: 5';; },';; {';;""; name: "Emily Rodriguez", "';"; role: "VP of Technology", "';"; company: "Future Forward Inc", "';"; content: "Working with Zion Tech Group has been exceptional. Their AI services are cutting-edge and their support team is incredibly responsive.",; rating: 5"; }';; ]';; ';"; return ("';"; <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">';"; <SEO"';"; title="Innovative AI Services Showcase 2025 — Zion Tech Group | Cutting-Edge AI Solutions"';"; description="Discover our comprehensive suite of innovative AI services including project management, financial planning, healthcare analytics, supply chain optimization, and cybersecurity. Transform your business with intelligent automation."';"; keywords="AI services, artificial intelligence, project management, financial planning, healthcare analytics, supply chain optimization, cybersecurity, Zion Tech Group"';"; canonical="https:"""

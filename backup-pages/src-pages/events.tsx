@@ -18,10 +18,8 @@ import {
   TrendingUp,
   MessageCircle,
   BookOpen,
-  CheckCircle} from
-  'lucide-react.ts';
-
-  'All','
+  CheckCircle} from;
+  'lucide-react.ts';All','
   'AI & ML',
   '
   'Cybersecurity
@@ -36,7 +34,7 @@ import {
   '
   'Digital Transformation
   ',
-];'
+]';
 
 export default function Events(...args: any[]): any {
 

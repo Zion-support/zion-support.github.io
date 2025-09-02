@@ -1,15 +1,13 @@
-React, { useEffect, useState } from
+import React, { useEffect, useState  } from "react";
   'react';
-import { motion } from 'lucide-react';
-  'framer-motion';'import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity } from 'lucide-react';
-  'lucide-react';'
-  'interface SecurityMetrics {
+import { motion  } from 'lucide-react';import { Shield, AlertTriangle, CheckCircle, Lock, Database, Activity  } from 'lucide-react'';interface SecurityMetrics {
   overallScore: number;
-  vulnerabilities: {;critical: number;
-    high: number;
-    medium: number;
-    low: number;
-  };
+   vulnerabilities: {;
+  critical: number;
+   high: number;
+   medium: number;
+   low: number;
+};
   lastScan: Date;
 }
 
@@ -32,7 +30,7 @@ const mockData: SecurityMetrics = {;
 
   if (isLoading || !security) {
     return (
-<div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    );"
+<div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    )";
   }
 
   const getScoreColor = (score: number): string => {;
@@ -42,7 +40,7 @@ const mockData: SecurityMetrics = {;
   'text-yellow-500;
    return
   'text-red-500;
- };'
+ }';
   return (
     <div className="space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500" />"          Security Dashboard"        </h2></div>"
 

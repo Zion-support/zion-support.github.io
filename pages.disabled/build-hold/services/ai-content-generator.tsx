@@ -1,12 +1,11 @@
 React from,
   react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../../components/layout/MainLayout';
-import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from
-  'lucide-react';'import Link from
-  'next/link';'
-  'const AIContentGenerator: NextPage = () => {
+import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from;
+  'lucide-react';import Link from;
+  'next/link'';const AIContentGenerator: NextPage = () => {
   const features = [;
     {;
       title: 'Multi-Language Support, description: 'Generate content in over 50 languages with native-level quality

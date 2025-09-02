@@ -100,8 +100,8 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if (e.key === 'Escape') {}
                 e.preventDefault();
                 handleModalCancel()}'
-        };''
-        const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null;'''
+        }';
+        const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : null';'
         document.addEventListener('keydown', handleKey);
         return () => {}
 '
@@ -117,11 +117,11 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if (e.key === 'Escape') {}
                 e.preventDefault();
                 onClose()}
-        };'
-        document.addEventListener('keydown', handleKeyDown);'
+        }';
+        document.addEventListener('keydown', handleKeyDown)';
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, onClose]);
     if (!isOpen)"""
-        return null;""""
+        return null';""
     return (<div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="chat-assistant-title">""""
       <div className="w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]">"""
         {/* Header */}""""

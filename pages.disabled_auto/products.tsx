@@ -1,15 +1,14 @@
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
-import React from,
+:pages.disabled_auto/products.tsx
+import React from,;
   react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../components/layout/MainLayout';
-import Link from
+import Link from;
   'next/link';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from
+import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from;
   'lucide-react';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -21,14 +20,13 @@ import {
   Users,
   Zap,
   Globe,
-  Shield,
+  Shield,;
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
 
 const Products: NextPage = () => {
   const products = [
     {
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
       title:
   'AI Business Intelligence Platform,
       description:,
@@ -40,7 +38,6 @@ const Products: NextPage = () => {
   'Custom dashboard creation',
   'Automated reporting',
   'Multi-source data integration'
-=======
       title: 'AI Business Intelligence Platform',
       description:
         'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
@@ -50,13 +47,12 @@ const Products: NextPage = () => {
         'Custom dashboard creation',
         'Automated reporting',
         'Multi-source data integration',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $299/month,
       category:
   'AI & Analytics',
       rating: 4.9,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
       users:,
   500+',
       image: '/products/ai-bi-platform.jpg
@@ -71,7 +67,6 @@ const Products: NextPage = () => {
   'Cost optimization analysis',
   'Security compliance checks',
   '24/7 migration support'
-=======
       users: '500+',
       image: '/products/ai-bi-platform.jpg',
     },
@@ -85,13 +80,12 @@ const Products: NextPage = () => {
         'Cost optimization analysis',
         'Security compliance checks',
         '24/7 migration support',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $199/month,
       category:
   'Cloud Computing',
       rating: 4.8,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
       users:,
   300+',
       image: '/products/cloud-migration.jpg
@@ -106,7 +100,6 @@ const Products: NextPage = () => {
   'Compliance reporting',
   'Security awareness training',
   '24/7 SOC support'
-=======
       users: '300+',
       image: '/products/cloud-migration.jpg',
     },
@@ -120,13 +113,12 @@ const Products: NextPage = () => {
         'Compliance reporting',
         'Security awareness training',
         '24/7 SOC support',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $399/month,
       category:
   'Cybersecurity',
       rating: 4.9,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
       users:,
   200+',
       image: '/products/cybersecurity-monitoring.jpg
@@ -141,7 +133,6 @@ const Products: NextPage = () => {
   'User management system',
   'Analytics dashboard',
   'Deployment automation'
-=======
       users: '200+',
       image: '/products/cybersecurity-monitoring.jpg',
     },
@@ -155,13 +146,12 @@ const Products: NextPage = () => {
         'User management system',
         'Analytics dashboard',
         'Deployment automation',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $149/month,
       category:
   'SaaS Development',
       rating: 4.7,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
       users:,
   150+',
       image: '/products/micro-saas-kit.jpg
@@ -176,7 +166,6 @@ const Products: NextPage = () => {
   'Workflow optimization',
   'Change management tools',
   'ROI tracking'
-=======
       users: '150+',
       image: '/products/micro-saas-kit.jpg',
     },
@@ -190,13 +179,12 @@ const Products: NextPage = () => {
         'Workflow optimization',
         'Change management tools',
         'ROI tracking',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $249/month,
       category:
   'Digital Transformation',
       rating: 4.8,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
       users:,
   400+',
       image: '/products/digital-transformation.jpg
@@ -211,7 +199,6 @@ const Products: NextPage = () => {
   'Real-time processing',
   'Data synchronization',
   'Remote monitoring'
-=======
       users: '400+',
       image: '/products/digital-transformation.jpg',
     },
@@ -225,13 +212,12 @@ const Products: NextPage = () => {
         'Real-time processing',
         'Data synchronization',
         'Remote monitoring',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $179/month,
       category:
   'IoT & Edge Computing',
       rating: 4.6,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
       users:,
   100+',
       image: '/products/iot-edge-platform.jpg
@@ -246,7 +232,6 @@ const Products: NextPage = () => {
   'SaaS Development',
   'Digital Transformation',
   'IoT & Edge Computing'
-=======
       users: '100+',
       image: '/products/iot-edge-platform.jpg',
     },
@@ -260,7 +245,6 @@ const Products: NextPage = () => {
     'SaaS Development',
     'Digital Transformation',
     'IoT & Edge Computing',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
   ];
 
   return (
@@ -293,15 +277,13 @@ const Products: NextPage = () => {
               <button
                 key={index}
                 className={`px-6 py-2 rounded-full font-medium transition-colors ${
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
                   index === 0 
                     ?,
   bg-blue-600 text-white': 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600
-=======
                   index === 0
                     ? 'bg-blue-600 text-white'
                     : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
                 }`}
               >
                 {category}
@@ -366,16 +348,14 @@ const Products: NextPage = () => {
                   </div>
 
                   <div className="flex gap-3">
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
+:pages.disabled_auto/products.tsx
                     <Link 
                       href={`/products/${product.title.toLowerCase().replace(/\s+/g,
   '-')}`}
                       className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
-=======
                     <Link
                       href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}
                       className="flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
                     >
                       Learn More
                     </Link>

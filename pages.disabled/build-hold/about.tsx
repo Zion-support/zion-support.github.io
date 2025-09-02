@@ -1,11 +1,10 @@
 type { NextPage } from,
   next';
-import MainLayout from
-  '../components/layout/MainLayout';'{ Users, Target, Award, Globe, Zap, Shield, Heart, Lightbulb } from
+import MainLayout from;
+  '../components/layout/MainLayout';{ Users, Target, Award, Globe, Zap, Shield, Heart, Lightbulb } from
   'lucide-react';
-import Link from
-  'next/link';'
-  'const AboutPage: NextPage = () => {
+import Link from;
+  'next/link'';const AboutPage: NextPage = () => {
   const stats = [;
     { number: '500+, label: 'Projects Completed
   ', icon: <Award className="w-8 h-8" /> }, { number:,
@@ -14,7 +13,7 @@ import Link from
   99.9%
   ', label: 'Uptime Guarantee, icon: <Shield className="w-8 h-8" /> }, { number:,
   24/7
-  ', label: 'Support Available, icon: <Globe className="w-8 h-8" /> },"  ];"
+  ', label: 'Support Available, icon: <Globe className="w-8 h-8" /> },"  ]";
   const values = [;
     {
       icon: <Lightbulb className="w-8 h-8" />, title:,

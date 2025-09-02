@@ -1,9 +1,9 @@
 <:src/pages/case-studies.tsx.backup.1756558703296
-import React, { useState } from
+import React, { useState } from;
   'react.ts';
-import { motion          } from
+import { motion          } from;
   'framer-motion.ts';
-import { Link          } from
+import { Link          } from;
   'react-router-dom.ts';import { CheckCircle,
   TrendingUp,
   Users,
@@ -18,7 +18,7 @@ import { Link          } from
   Cloud,
   Brain,
   Globe
-          } from
+          } from;
   'lucide-react.ts';
 
 const caseStudies = [

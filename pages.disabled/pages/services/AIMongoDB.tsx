@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIMongoDB.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMongoDB() {
-    'Automated MongoDB monitoring and alerting',;'
-    'Predictive analytics for MongoDB scaling',;'
-    'Smart MongoDB security and compliance',;'
-    'AI-driven MongoDB automation and orchestration',;'
-    'Real-time MongoDB analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMongoDB(function AIMongoDB() {): any {}
-    'Automated MongoDB monitoring and alerting',;
-    'Predictive analytics for MongoDB scaling',;
-    'Smart MongoDB security and compliance',;
-    'AI-driven MongoDB automation and orchestration',;
-    'Real-time MongoDB analytics and insights',;
-    'Custom AI models for MongoDB applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMongoDB() {;
+    'Automated MongoDB monitoring and alerting',';Predictive analytics for MongoDB scaling',';Smart MongoDB security and compliance',';AI-driven MongoDB automation and orchestration',';Real-time MongoDB analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMongoDB(function AIMongoDB() {): any {};
+    'Automated MongoDB monitoring and alerting',';Predictive analytics for MongoDB scaling',';Smart MongoDB security and compliance',';AI-driven MongoDB automation and orchestration',';Real-time MongoDB analytics and insights',';Custom AI models for MongoDB applications';
 <:pages.disabled/pages/services/AIMongoDB.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited storage',Custom AI models',Full MongoDB suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'MongoDB optimization',;'
-    'MongoDB management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'MongoDB scaling and management';
-  ];
-
-  '
-    'Improve MongoDB performance by 50-80%',;'
-    'Reduce MongoDB query time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance MongoDB reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale MongoDB operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';MongoDB optimization',';MongoDB management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';MongoDB scaling and management';
+  ]';Improve MongoDB performance by 50-80%',';Reduce MongoDB query time by 40-70%',';Cut operational costs by 35-65%',';Enhance MongoDB reliability and scalability',';Optimize resource utilization',';Scale MongoDB operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIMongoDB.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

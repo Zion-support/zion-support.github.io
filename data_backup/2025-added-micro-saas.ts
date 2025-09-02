@@ -145,7 +145,7 @@ roi: 'Save 60–80% proposal hours,
   local-seo-insights-engine',
     name: 'Local SEO Insights Engine,
     tagline:,
-  Automated audits, content briefs, and citation fixes for local businesses',
+  Automated audits, content briefs, and citation fixes for local businesses',;
     price: '$129,;
     period:,
   /month',;

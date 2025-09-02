@@ -32,8 +32,7 @@ const securityHeaders = {
     "frame-ancestors
   'none'",upgrade-insecure-requests
   ',
-  ].join('; 
-  '),
+  ].join(';),
 
   // X-Frame-Options
   'X-Frame-Options

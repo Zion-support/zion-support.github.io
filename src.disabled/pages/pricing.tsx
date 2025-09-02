@@ -1,5 +1,5 @@
-<<<<<<< HEAD:src.disabled/pages/pricing.tsx
-import React from
+:src.disabled/pages/pricing.tsx
+import React from;
   'react';
 
 const Pricing: React.FC = () => (
@@ -9,9 +9,7 @@ const Pricing: React.FC = () => (
   </div>
 );
 
-=======
 import React from 'react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/pricing.tsx
 export default Pricing;
 
 ;
@@ -21,5 +19,4 @@ const Pricing: React.FC = () => (;
     <p className="text - gray - 300">Transparent plans for every stage. Contact us for enterprise.</p>;
   </div>;) ;
 ;
-;
-";
+";;

@@ -1,9 +1,9 @@
-<<<<<<< HEAD:src.disabled/pages/services/ai-autonomous-vehicle-platform.tsx
-import React from
+:src.disabled/pages/services/ai-autonomous-vehicle-platform.tsx
+import React from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
-import { Link } from
+import { Link } from;
   'react-router-dom';
 import { 
   Car, 
@@ -35,7 +35,7 @@ import {
   MessageCircle,
   Phone,
   Mail
-} from
+} from;
   'lucide-react';
 
 const AIAutonomousVehiclePlatform = () => {
@@ -76,7 +76,6 @@ const AIAutonomousVehiclePlatform = () => {
       icon: Cloud,
       color: "text-indigo-400"
     }
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -107,7 +106,6 @@ const AIAutonomousVehiclePlatform = () => {;
       description: "Seamless cloud connectivity for updates, data sharing, and fleet management", icon: Cloud,";
       color: "text-indigo-400";
     };
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-autonomous-vehicle-platform.tsx
   ];
 ;
   const useCases = [;
@@ -132,33 +130,21 @@ const AIAutonomousVehiclePlatform = () => {;
   const pricing = [;
     {";
       name: "Starter", price: "$2,999", period: "/month",";
-      description: "For small fleets and pilot programs", features: [";
-        "Up to 10 vehicles",";
-        "Basic AI perception", "Standard safety features",";
-        "Cloud monitoring", "Email support",";
-        "Basic analytics"";
+      description: "For small fleets and pilot programs", features: ["";Up to 10 vehicles","";Basic AI perception", "Standard safety features","";Cloud monitoring", "Email support","";Basic analytics"";
       ], cta: "Start Free Trial",;
       popular: false;
     }, {";
       name: "Professional",";
       price: "$7, 999",";
       period: "/month", description: "For growing fleets and commercial use",;
-      features: [";
-        "Up to 50 vehicles", "Advanced AI perception",";
-        "Enhanced safety systems", "Real-time analytics",";
-        "Priority support", "Custom integrations",";
-        "Fleet management tools"";
+      features: ["";Up to 50 vehicles", "Advanced AI perception","";Enhanced safety systems", "Real-time analytics","";Priority support", "Custom integrations","";Fleet management tools"";
       ], cta: "Get Started",;
       popular: true;
     }, {";
       name: "Enterprise",";
       price: "$19, 999",";
       period: "/month", description: "For large fleets and enterprise deployment",;
-      features: [";
-        "Unlimited vehicles", "Full AI autonomy",";
-        "Advanced cybersecurity", "Custom AI models",";
-        "24/7 dedicated support", "White-label solutions",";
-        "Compliance certifications"";
+      features: ["";Unlimited vehicles", "Full AI autonomy","";Advanced cybersecurity", "Custom AI models","";24/7 dedicated support", "White-label solutions","";Compliance certifications"";
       ], cta: "Contact Sales",;
       popular: false;
     };
@@ -180,7 +166,7 @@ const AIAutonomousVehiclePlatform = () => {;
       title: "Scalability", description: "Easy fleet expansion and management through cloud-based systems";
     };
   ];
-<<<<<<< HEAD:src.disabled/pages/services/ai-autonomous-vehicle-platform.tsx
+:src.disabled/pages/services/ai-autonomous-vehicle-platform.tsx
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -549,7 +535,6 @@ const AIAutonomousVehiclePlatform = () => {;
         </div>
       </section>
     </div>
-=======
 ;
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
@@ -565,20 +550,17 @@ const AIAutonomousVehiclePlatform = () => {;
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-sm font-medium mb-8">";
               <Rocket className="w-4 h-4 mr-2" />;
               Revolutionary AI Autonomous Vehicle Platform;
-            </div>;
-            ";
+            </div>";;
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">;
               The Future of";
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">;
                 Autonomous Transportation;
               </span>;
-            </h1>;
-            ";
+            </h1>";;
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">;
               Transform your fleet with our cutting-edge AI autonomous vehicle platform.;
               Experience unprecedented safety, efficiency, and scalability in autonomous transportation.;
-            </p>;
-";
+            </p>";;
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center mb-16">;
               <Link";
                 to="/contact"";
@@ -640,8 +622,7 @@ const AIAutonomousVehiclePlatform = () => {;
               Our platform combines cutting-edge AI, advanced sensors, and robust cybersecurity;
               to deliver the most reliable autonomous vehicle solution available.;
             </p>;
-          </motion.div>;
-";
+          </motion.div>";;
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">;
             {features.map((feature, index) => (;
               <motion.div;
@@ -679,8 +660,7 @@ const AIAutonomousVehiclePlatform = () => {;
               From urban transportation to industrial applications, our platform adapts;
               to diverse use cases and industry requirements.;
             </p>;
-          </motion.div>;
-";
+          </motion.div>";;
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">;
             {useCases.map((useCase, index) => (;
               <motion.div;
@@ -730,8 +710,7 @@ const AIAutonomousVehiclePlatform = () => {;
               Choose the perfect plan for your autonomous vehicle fleet.;
               All plans include our core AI features with no hidden fees.;
             </p>;
-          </motion.div>;
-";
+          </motion.div>";;
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">;
             {pricing.map((tier, index) => (;
               <motion.div;
@@ -753,8 +732,7 @@ const AIAutonomousVehiclePlatform = () => {;
                       Most Popular;
                     </div>;
                   </div>;
-                )};
-";
+                )}";;
                 <div className="text-center mb-6">";
                   <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>";
                   <div className="mb-4">";
@@ -762,8 +740,7 @@ const AIAutonomousVehiclePlatform = () => {;
                     <span className="text-gray-400">{tier.period}</span>;
                   </div>";
                   <p className="text-gray-300 text-sm">{tier.description}</p>;
-                </div>;
-";
+                </div>";;
                 <ul className="space-y-3 mb-8">;
                   {tier.features.map((feature, featureIndex) => (";
                     <li key={featureIndex} className="flex items-start space-x-3">";
@@ -804,8 +781,7 @@ const AIAutonomousVehiclePlatform = () => {;
               Experience the advantages of the most advanced autonomous vehicle platform;
               in the market.;
             </p>;
-          </motion.div>;
-";
+          </motion.div>";;
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
             {benefits.map((benefit, index) => (;
               <motion.div;
@@ -841,8 +817,7 @@ const AIAutonomousVehiclePlatform = () => {;
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">;
               Join the autonomous transportation revolution. Contact us today to learn;
               how our AI platform can revolutionize your operations.;
-            </p>;
-            ";
+            </p>";;
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">;
               <Link";
                 to="/contact"";
@@ -876,8 +851,7 @@ const AIAutonomousVehiclePlatform = () => {;
                   +1 (302) 464-0950;
                 </a>;
               </div>;
-            </div>;
-            ";
+            </div>";;
             <div className="flex flex-col items-center space-y-3">";
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center">";
                 <Mail className="w-6 h-6 text-blue-400" />;
@@ -888,8 +862,7 @@ const AIAutonomousVehiclePlatform = () => {;
                   kleber@ziontechgroup.com;
                 </a>;
               </div>;
-            </div>;
-            ";
+            </div>";;
             <div className="flex flex-col items-center space-y-3">";
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center">";
                 <MapPin className="w-6 h-6 text-blue-400" />;
@@ -906,8 +879,7 @@ const AIAutonomousVehiclePlatform = () => {;
         </div>;
       </section>;
     </div>;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-autonomous-vehicle-platform.tsx
   );
 };
 ;
-export default AIAutonomousVehiclePlatform;";
+export default AIAutonomousVehiclePlatform";;

@@ -14,16 +14,9 @@ self.addEventListener(
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
   );
-<<<<<<< HEAD
   self.skipWaiting()});
 self.addEventListener(
-  'activate', event => {
-=======
-  self.skipWaiting();
-});
-self.addEventListener('activate', event => {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  event.waitUntil(
+  'activate', event => {  event.waitUntil(
     caches.keys().then(keyList =>
       Promise.all(
         keyList.map(key => {
@@ -34,22 +27,13 @@ self.addEventListener('activate', event => {
       )
     )
   );
-<<<<<<< HEAD
   self.clients.claim()});
 self.addEventListener(
   'fetch', event => {
   if (event.request.method !==
   'GET') return;
   if (event.request.url.includes(
-  '/api/')) {
-=======
-  self.clients.claim();
-});
-self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET') return;
-  if (event.request.url.includes('/api/')) {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    event.respondWith(
+  '/api/')) {    event.respondWith(
       caches.open(DATA_CACHE_NAME).then(cache =>
         fetch(event.request)
           .then(response => {
@@ -68,16 +52,7 @@ self.addEventListener('fetch', event => {
     caches.match(event.request).then(response => {
       return (
         response ||
-<<<<<<< HEAD
         fetch(event.request).catch(() => caches.match(
   '/offline.html'))
       )})
   )});
-
-=======
-        fetch(event.request).catch(() => caches.match('/offline.html'))
-      );
-    })
-  );
-});
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1

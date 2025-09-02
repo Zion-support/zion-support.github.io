@@ -1,7 +1,6 @@
-import { createClient } from,
-  @supabase/supabase-js';''
-  '
-import { withErrorLogging } from '@/utils/withErrorLogging
+import { createClient } from,;
+  @supabase/supabase-js'';
+import { withErrorLogging } from '@/utils/withErrorLogging;
   ';
 const supabaseUrl = process.env.SUPABASE_URL ||'
     process.env.VITE_SUPABASE_URL ||'
@@ -24,13 +23,12 @@ async function handler(req, res) {
     if (req.method !== 'POST
   ') {
 
-        res.status(405).end();'
-        return;'
-  '
+        res.status(405).end()';
+        return';
     }''
   '
     const { userId, amount, orderId, reason = 'order
-  ' } = req.body || {};''
+  ' } = req.body || {}';
   '
     if (!userId || typeof amount !== 'number
   ') {
@@ -40,10 +38,10 @@ async function handler(req, res) {
 ''
   '
         res.status(400).json({ error: 'Missing userId or amount });
-        return;'
+        return';
     }'
   '
-    const delta = Math.round(amount);''
+    const delta = Math.round(amount)';
   '
     const { error } = await supabase.from('points_ledger
   ').insert({
@@ -69,9 +67,8 @@ async function handler(req, res) {
   '
         .eq('id
   ', userId)
-        .single();'
-    const current = profile?.points ?? 0;'
-  '
+        .single()';
+    const current = profile?.points ?? 0';
     await supabase''
   '
         .from('profiles
@@ -82,6 +79,5 @@ async function handler(req, res) {
   ', userId);
     res.status(200).json({ success: true });
 }'
-export default withErrorLogging(handler);'
-  '
+export default withErrorLogging(handler)';
 '''

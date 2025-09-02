@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -16,7 +14,7 @@ import {
   Users,
   Clock,
   CheckCircle,
-  Search
+  Search;
  } from 'lucide-react';
 
 export const EnhancedServicesShowcase: React.FC = () => {
@@ -109,5 +107,4 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
 
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
->>>>>>> pr-10728
 

@@ -1,9 +1,9 @@
 export interface Real2026Addition {
   id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
+   name: string;
+   tagline: string;
+   price: string;
+   features: string[];
 }
 export const real2026Additions: Real2026Addition[] = [
   {

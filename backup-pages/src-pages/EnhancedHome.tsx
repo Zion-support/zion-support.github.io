@@ -1,4 +1,4 @@
-<<<<<<< HEAD:backup-pages/src-pages/EnhancedHome.tsx
+:backup-pages/src-pages/EnhancedHome.tsx
 import {
   Users, 
   TrendingUp, 
@@ -53,7 +53,7 @@ import {
   Settings,
   Palette
   '
-} from 'lucide-react
+} from 'lucide-react;
   ';
 
 // Optimized futuristic animated background component
@@ -298,8 +298,7 @@ StatsSection.displayName = 'StatsSection
 
 });
 
-)});
-'
+)})';
 CTASection.displayName =
   'CTASection';
 
@@ -349,6 +348,4 @@ const EnhancedHome: React.FC = () => {
         </LazyLoadWrapper>
       </div>
     </>) };
-export default EnhancedHome;'"`
-=======
->>>>>>> pr-10728:src/pages/EnhancedHome.tsx
+export default EnhancedHome'"`;

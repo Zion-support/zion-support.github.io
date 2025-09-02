@@ -3,13 +3,13 @@ import Head from 'next/head';
 
 interface SEOEnhancerProps {
   title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  canonicalUrl?: string;
-  structuredData?: object;
-  noindex?: boolean;
-  nofollow?: boolean;
+   description?: string;
+   keywords?: string;
+   ogImage?: string;
+   canonicalUrl?: string;
+   structuredData?: object;
+   noindex?: boolean;
+   nofollow?: boolean;
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({

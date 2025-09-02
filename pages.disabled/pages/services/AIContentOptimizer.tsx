@@ -9,7 +9,7 @@ import {}
   Users,
   Shield,
   Brain,
-  Search,
+  Search,;
   PenTool} from 'lucide-react.ts';
 :pages.disabled/pages/services/AIContentOptimizer.tsx
 export default function AIContentOptimizer(...args: any[]): any {
@@ -128,7 +128,7 @@ export default function AIContentOptimizer(...args: any[]): any {}
             {features.map((feature, index) => (
               <motion.div;
                 key={index}""
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300""
+                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -137,8 +137,7 @@ export default function AIContentOptimizer(...args: any[]): any {}
               >
 :pages.disabled/pages/services/AIContentOptimizer.tsx
                 <div
-                  className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}"
-                >""
+                  className={`w-12 h-12 bg-gradient-to-r ${feature.color} rounded-lg flex items-center justify-center mb-4`}">""
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -203,7 +202,7 @@ export default function AIContentOptimizer(...args: any[]): any {}
             {useCases.map((useCase, index) => (
               <motion.div;
                 key={index}""
-                className="text-center""
+                className="text-center 
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -211,8 +210,7 @@ export default function AIContentOptimizer(...args: any[]): any {}
 :pages.disabled/pages/services/AIContentOptimizer.tsx
               >`
                 <div``
-                  className={`w-20 h-20 bg-gradient-to-r ${useCase.color} rounded-full flex items-center justify-center mx-auto mb-6`}"
-                >""
+                  className={`w-20 h-20 bg-gradient-to-r ${useCase.color} rounded-full flex items-center justify-center mx-auto mb-6`}">""
                   <useCase.icon className="w-10 h-10 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">

@@ -7,9 +7,7 @@
 };
 ;
 
-  ;
-
-  '
+  ';
   primary: 'border-cyan-400,'
   secondary:,
   border-blue-400',
@@ -79,7 +77,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         </motion.div>;
       )};
       ;
-      {/* Screen reader text */};"
+      {/* Screen reader text */}";
       <span className="sr-only">Loading, please wait</span>;
     </div>;
   )};
@@ -111,7 +109,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 ;
 
 }};
-    />;"
+    />";
     <span className="sr-only">Loading</span>;
   </div>;
 );
@@ -139,7 +137,7 @@ export const FullScreenLoader: React.FC<{
           </div>;
         </div>;
       )};
-      ;"
+      ";
       <LoadingSpinner size="lg" color="cyan" text={text}  />;    </div>;
   </div>;
 );
@@ -156,11 +154,11 @@ export const SkeletonLoader: React.FC<{
   <div className={`animate-pulse ${className}`}>
     {Array.from({ length: lines }).map(_: unknown, index: unknown (
       <div
-        key={index};`
+        key={index}`;
         className={`h-4 bg-gray-300 rounded mb-2 ${;
           index === lines - 1 ?,
   w-3/4
-  ': 'w-full;`
+  ': 'w-full`;
         }`};      />;
     ))};
   </div>;

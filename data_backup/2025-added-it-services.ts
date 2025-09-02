@@ -59,7 +59,7 @@ export const addedITServices2025: AdvancedITService[] = [
       'mTLS and device posture',
       'Per-route policies',
       'Just-in-time access',
-      'Session recording',
+      'Session recording',;
       'SIEM integration';
     ],;
     popular: true,;

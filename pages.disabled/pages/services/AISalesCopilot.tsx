@@ -40,7 +40,7 @@ import {}
   ShoppingCart,
   Home,
   DollarSign,
-  Heart''
+  Heart'';
 } from 'lucide-react';
 ;
 :pages.disabled/pages/services/AISalesCopilot.tsx
@@ -527,8 +527,5 @@ import {}
   )};
 ;
 :pages.disabled/pages/services/AISalesCopilot.tsx
-export { AISalesCopilot };export default AISalesCopilot;'"
-'"'"
-export { AISalesCopilot };export default AISalesCopilot;
-
-'""
+export { AISalesCopilot };export default AISalesCopilot'';"'"
+export { AISalesCopilot };export default AISalesCopilot'';

@@ -5,30 +5,30 @@ export type ColorScheme = 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'pink
 
 export interface ThemeConfig {
   theme: Theme;
-  colorScheme: ColorScheme;
-  primaryColor: string;
-  secondaryColor: string;
-  accentColor: string;
-  backgroundColor: string;
-  surfaceColor: string;
-  textColor: string;
-  textSecondaryColor: string;
-  borderColor: string;
-  shadowColor: string;
-  successColor: string;
-  warningColor: string;
-  errorColor: string;
-  infoColor: string;
+   colorScheme: ColorScheme;
+   primaryColor: string;
+   secondaryColor: string;
+   accentColor: string;
+   backgroundColor: string;
+   surfaceColor: string;
+   textColor: string;
+   textSecondaryColor: string;
+   borderColor: string;
+   shadowColor: string;
+   successColor: string;
+   warningColor: string;
+   errorColor: string;
+   infoColor: string;
 }
 
 interface ThemeContextType {
   theme: Theme;
-  colorScheme: ColorScheme;
-  config: ThemeConfig;
-  setTheme: (theme: Theme) => void;
-  setColorScheme: (scheme: ColorScheme) => void;
-  toggleTheme: () => void;
-  isDark: boolean;
+   colorScheme: ColorScheme;
+   config: ThemeConfig;
+   setTheme: (theme: Theme) => void;
+   setColorScheme: (scheme: ColorScheme) => void;
+   toggleTheme: () => void;
+   isDark: boolean;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -178,8 +178,8 @@ const darkTheme: Partial<ThemeConfig> = {
 
 interface ThemeProviderProps {
   children: ReactNode;
-  defaultTheme?: Theme;
-  defaultColorScheme?: ColorScheme;
+   defaultTheme?: Theme;
+   defaultColorScheme?: ColorScheme;
 }
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({

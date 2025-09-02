@@ -1,7 +1,7 @@
 React from
   'react';
-import Header from
-  './Header';'import Footer from
+import Header from "react";
+  './Header';import Footer from "react";
   './Footer;
 
 type LayoutProps = {children: React.ReactNode;

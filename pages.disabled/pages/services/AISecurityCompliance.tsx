@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityCompliance.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityCompliance() {
-    'Automated compliance verification and validation',;'
-    'Predictive analytics for compliance needs',;'
-    'Smart compliance framework management',;'
-    'AI-driven compliance automation and orchestration',;'
-    'Real-time compliance performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityCompliance(function AISecurityCompliance() {): any {}
-    'Automated compliance verification and validation',;
-    'Predictive analytics for compliance needs',;
-    'Smart compliance framework management',;
-    'AI-driven compliance automation and orchestration',;
-    'Real-time compliance performance tracking',;
-    'Custom AI models for compliance applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityCompliance() {;
+    'Automated compliance verification and validation',';Predictive analytics for compliance needs',';Smart compliance framework management',';AI-driven compliance automation and orchestration',';Real-time compliance performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityCompliance(function AISecurityCompliance() {): any {};
+    'Automated compliance verification and validation',';Predictive analytics for compliance needs',';Smart compliance framework management',';AI-driven compliance automation and orchestration',';Real-time compliance performance tracking',';Custom AI models for compliance applications';
 <:pages.disabled/pages/services/AISecurityCompliance.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited compliance frameworks',Custom AI models',Full compliance suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security compliance optimization',;'
-    'Compliance monitoring and reporting',;'
-    'Compliance verification and validation',;'
-    'Compliance framework management and automation',;'
-    'Compliance automation and orchestration',;'
-    'Compliance scaling and management';
-  ];
-
-  '
-    'Improve security compliance performance by 50-80%',;'
-    'Reduce compliance verification time by 40-70%',;'
-    'Cut security compliance costs by 35-65%',;'
-    'Enhance security compliance reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security compliance operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security compliance optimization',';Compliance monitoring and reporting',';Compliance verification and validation',';Compliance framework management and automation',';Compliance automation and orchestration',';Compliance scaling and management';
+  ]';Improve security compliance performance by 50-80%',';Reduce compliance verification time by 40-70%',';Cut security compliance costs by 35-65%',';Enhance security compliance reliability and scalability',';Optimize resource utilization',';Scale security compliance operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityCompliance.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIVideoAnalytics.tsx
-import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics() {
-    'Behavioral analysis and anomaly detection',;'
-    'Automated video summarization and highlights',;'
-    'Multi-camera synchronization and analytics',;'
-    'Custom AI models for industry-specific use cases',;'
-    'Cloud-based processing with edge computing options',;'
-import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics(function AIVideoAnalytics() {): any {}
-    'Behavioral analysis and anomaly detection',;
-    'Automated video summarization and highlights',;
-    'Multi-camera synchronization and analytics',;
-    'Custom AI models for industry-specific use cases',;
-    'Cloud-based processing with edge computing options',;
-    'Integration with major security and analytics platforms';
+import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics() {;
+    'Behavioral analysis and anomaly detection',';Automated video summarization and highlights',';Multi-camera synchronization and analytics',';Custom AI models for industry-specific use cases',';Cloud-based processing with edge computing options',';
+import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, Shield, Users, BarChart3 export default function AIVideoAnalytics(function AIVideoAnalytics() {): any {};
+    'Behavioral analysis and anomaly detection',';Automated video summarization and highlights',';Multi-camera synchronization and analytics',';Custom AI models for industry-specific use cases',';Cloud-based processing with edge computing options',';Integration with major security and analytics platforms';
 <:pages.disabled/pages/services/AIVideoAnalytics.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
 >    { ;
       name: 'Enterprise', ;
       price: '$1,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,499/mo', ';
       details: ['Unlimited cameras',Custom AI models',90-day storage',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Retail analytics and customer behavior tracking',;'
-    'Security surveillance and threat detection',;'
-    'Manufacturing quality control and safety monitoring',;'
-    'Traffic analysis and smart city applications',;'
-    'Healthcare patient monitoring and safety',;'
-    'Sports analytics and performance tracking';
-  ];
-
-  '
-    'Reduce security incidents by 60-80%',;'
-    'Improve operational efficiency by 30-50%',;'
-    'Cut manual monitoring costs by 70-90%',;'
-    'Enhance safety compliance and reporting',;'
-    'Gain actionable insights from video data',;'
-    'Scale security operations without additional staff';
-  ];
-
-  '
-    'Retail & Shopping Centers',;'
-    'Manufacturing & Industrial',;'
-    'Healthcare & Hospitals',;'
-    'Transportation & Logistics',;'
-    'Education & Universities',;'
-    'Government & Public Safety';
+  ]';Retail analytics and customer behavior tracking',';Security surveillance and threat detection',';Manufacturing quality control and safety monitoring',';Traffic analysis and smart city applications',';Healthcare patient monitoring and safety',';Sports analytics and performance tracking';
+  ]';Reduce security incidents by 60-80%',';Improve operational efficiency by 30-50%',';Cut manual monitoring costs by 70-90%',';Enhance safety compliance and reporting',';Gain actionable insights from video data',';Scale security operations without additional staff';
+  ]';Retail & Shopping Centers',';Manufacturing & Industrial',';Healthcare & Hospitals',';Transportation & Logistics',';Education & Universities',';Government & Public Safety';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Video, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Eye, Zap, S
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIVideoAnalytics.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

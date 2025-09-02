@@ -1,15 +1,15 @@
 export interface EmergingTechService2027 {
   id: string;
-  title: string;
-  description: string;
-  category: string;
-  subcategory: string;
-  pricing: {
-    monthly: number;
-    yearly: number;
-    custom: string;
-    currency: string;
-    pricingModel: string};
+   title: string;
+   description: string;
+   category: string;
+   subcategory: string;
+   pricing: { monthly: number;
+   yearly: number;
+   custom: string;
+   currency: string;
+   pricingModel: string;
+};
   features: string[];
   benefits: string[];
   useCases: string[];

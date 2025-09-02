@@ -33,7 +33,7 @@ import { Brain,
   Eye,
   Target,
   Rocket,
-  Sparkles'
+  Sparkles';
  } from 'lucide-react';
 ;
 export { function };
@@ -44,8 +44,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
       description: "AI-powered workflow automation with dynamic adaptation and real-time optimization",
       icon: Zap,
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
-      benefits[;"
-        "Reduce manual tasks by 85%","
+      benefits[';Reduce manual tasks by 85%","
         "Improve process efficiency by 60%","
         "Real-time performance monitoring","
         "Predictive failure prevention"      ]
@@ -56,7 +55,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
       title: "Multi-Agent Coordination",""
       description: "Advanced AI agents working together to solve complex business problems",
       icon: Brain,"
-      benefits[;""
+      benefits[';
         "Reduce manual tasks by 85%",""
         "Improve process efficiency by 60%",""
         "Real-time performance monitoring",""
@@ -68,7 +67,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
       title: "Multi-Agent Coordination",""
       description: "Advanced AI agents working together to solve complex business problems",
       icon: Brain,
-      benefits[;""
+      benefits[';
         "Coordinated decision making",""
         "Intelligent resource allocation",""
         "Cross-functional collaboration",""
@@ -90,7 +89,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
       title: "Predictive Analytics Engine",""
       description: "Machine learning models that forecast trends and optimize business outcomes",
       icon: TrendingUp,
-      benefits[;""
+      benefits[';
         "95% prediction accuracy",""
         "Real-time trend analysis",""
         "Automated optimization",""
@@ -112,10 +111,10 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
       title: "Enterprise Security Suite",""
       description: "AI-powered threat detection and response with zero-trust architecture",
       icon: Shield,
-      benefits[;""
-        "99.9% threat detection rate",;""
-        "Zero-day attack prevention",;""
-        "Automated incident response",;""
+      benefits[';
+        "99.9% threat detection rate",';
+        "Zero-day attack prevention",';
+        "Automated incident response",';
         "Compliance automation";
       ]};
   ];
@@ -133,12 +132,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
       description: "Perfect for small to medium enterprises","
       description: "Perfect for small to medium enterprises",
-      features[;""
+      features[';
         "Basic AI orchestration",""
         "Up to 10 workflows",""
         "Standard security features",""
         "Email support","        "Basic analytics dashboard""
-      ],;""
+      ],';
       cta: "Get Started",
       popular: false;
     },
@@ -153,7 +152,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
       description: "Ideal for growing businesses","
       description: "Ideal for growing businesses",
-      features[;""
+      features[';
         "Advanced AI orchestration",""
         "Up to 50 workflows",""
         "Enhanced security suite",""
@@ -161,7 +160,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
         "Advanced analytics",""
         "Custom integrations",""
         "Performance optimization""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: true;
     },
@@ -176,18 +175,17 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
       description: "For large-scale operations","
       description: "For large-scale operations",
-      features[;""
+      features[';
         "Full AI orchestration suite",""
         "Unlimited workflows",""
         "Enterprise security",""
         "24/7 dedicated support",""
         "Custom AI models",""
-        "White-label solutions",;""
-        "On-premise deployment",;""
+        "White-label solutions",';
+        "On-premise deployment",';
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
-        "SLA guarantees";"
-        "SLA guarantees";
-      ],;""
+        "SLA guarantees"';SLA guarantees";
+      ],';
       cta: "Contact Sales",;
       popular: false};
   ];
@@ -197,7 +195,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
 "
 ""
       industry: "Financial Services","
-      applications[;""
+      applications[';
         "Fraud detection and prevention",""
         "Risk assessment automation",""
         "Regulatory compliance","        "Trading optimization"
@@ -212,7 +210,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
     {}
 ""
       industry: "Financial Services",
-      applications[;""
+      applications[';
         "Fraud detection and prevention",""
         "Risk assessment automation",""
         "Regulatory compliance","        "Trading optimization""
@@ -221,7 +219,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
     {}
 ""
       industry: "Healthcare",
-      applications[;""
+      applications[';
         "Patient care coordination",""
         "Diagnostic assistance",""
         "Resource optimization",""
@@ -239,7 +237,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
     {}
 ""
       industry: "Manufacturing",
-      applications[;""
+      applications[';
         "Supply chain optimization",""
         "Predictive maintenance",""
         "Quality control",""
@@ -257,10 +255,10 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
     {}
 ""
       industry: "Retail",
-      applications[;""
-        "Customer behavior analysis",;""
-        "Inventory optimization",;""
-        "Personalized marketing",;""
+      applications[';
+        "Customer behavior analysis",';
+        "Inventory optimization",';
+        "Personalized marketing",';
         "Demand forecasting";
       ]};
 :pages.disabled/pages/services/AIEnterpriseOrchestrator.tsx
@@ -351,7 +349,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
           </motion.div>;
         </div>"
         {/* Floating Elements */}""
-        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-600/20 rounded-full blur-xl"></div>;""
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-600/20 rounded-full blur-xl"></div>';
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-pink-600/20 rounded-full blur-xl"></div>
       </section>"
             </p>
@@ -374,12 +372,12 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
         </div>
 
         {/* Floating Elements */}""
-        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-600/20 rounded-full blur-xl"></div>;""
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-600/20 rounded-full blur-xl"></div>';
         <div className="absolute bottom-20 right-10 w-32 h-32 bg-pink-600/20 rounded-full blur-xl"></div>
       </section>
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
@@ -502,7 +500,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
@@ -595,7 +593,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
                     : 'border-slate-700'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -657,7 +655,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
@@ -766,7 +764,7 @@ export default function AIEnterpriseOrchestrator(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-gradient-to-r from-purple-900/50 to-pink-900/50">;""
+      <section className="py-20 bg-gradient-to-r from-purple-900/50 to-pink-900/50">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial = {}

@@ -1,12 +1,11 @@
 React from,
   react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../../components/layout/MainLayout';
-import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSign } from
-  'lucide-react';'import Link from
-  'next/link';'
-  'const Startups: NextPage = () => {
+import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSign } from;
+  'lucide-react';import Link from;
+  'next/link'';const Startups: NextPage = () => {
   const solutions = [;
     {;
       title: 'MVP Development, description: 'Rapid development of minimum viable products to validate your ideas

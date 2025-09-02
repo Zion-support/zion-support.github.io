@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-import fs from
+import fs from;
   'fs';
-import path from
+import path from;
   'path';
-import { execSync } from
+import { execSync } from;
   'child_process';
-import { fileURLToPath } from
+import { fileURLToPath } from;
   'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -66,13 +66,8 @@ class AutoFixer {
   'Checking for merge conflicts...');
       
       // Find files with merge conflict markers
-<<<<<<< HEAD
       const conflictFiles = execSync(
-  'grep -r "" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {
-=======
-      const conflictFiles = execSync('grep -r "" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {
->>>>>>> pr-10728
-        cwd: this.projectRoot,
+  'grep -r "" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {        cwd: this.projectRoot,
         encoding:
   'utf8'
       }).trim().split(
@@ -116,16 +111,9 @@ class AutoFixer {
     
     // Simple merge conflict resolution - keep HEAD version and remove markers
     let fixed = content
-<<<<<<< HEAD
       .replace(/\n/g, '
   ')
-      .replace(/.replace(/// Clean up any remaining artifacts
-=======
-      .replace(/\n/g, '')
-      .replace(/\n[\s\S]*?      .replace(/    
-    // Clean up any remaining artifacts
->>>>>>> pr-10728
-    fixed = fixed
+      .replace(/.replace(/// Clean up any remaining artifacts    fixed = fixed
       .replace(/\n\n\n+/g, '\n\n
   ')
       .replace(/^\s*\n/gm, '\n
@@ -141,7 +129,7 @@ class AutoFixer {
   async fixImportErrors() {
     try {
       this.log('info
-  ', 'Fixing import errors...
+  ', 'Fixing import errors...;
   ');
       
       // Run ESLint auto-fix for import/export issues
@@ -156,7 +144,7 @@ class AutoFixer {
       return true;
     } catch (error) {
       this.log('error
-  ', 'Failed to fix import errors
+  ', 'Failed to fix import errors;
   ', error);
       this.fixesFailed.push(`Failed to fix import errors: ${error.message}`);
       return false;
@@ -254,10 +242,10 @@ class AutoFixer {
         // Fix common syntax issues
         content = content
           // Fix missing semicolons
-          .replace(/(\w+)\s*$/gm, '$1;')
+          .replace(/(\w+)\s*$/gm, '$1';)
           // Fix incomplete function declarations
           .replace(/export\s*$/gm,
-  'export default {};')
+  'export default {}';)
           // Fix incomplete object declarations
           .replace(/{\s*$/gm,
   '{}')
@@ -273,11 +261,11 @@ class AutoFixer {
   '$1')
           // Fix incomplete type declarations
           .replace(/:\s*;/g,
-  ': any;')
+  ': any';)
           .replace(/:\s*}/g,
   ': any }')
           .replace(/:\s*$/gm,
-  ': any;');
+  ': any';);
         
         if (content !== originalContent) {
           fs.writeFileSync(filePath, content);
@@ -299,7 +287,7 @@ class AutoFixer {
         cwd: this.projectRoot,
         encoding:
   'utf8'
-      }).trim().split(
+      }).trim().split(;
   '\n');
       
       for (const file of tsFiles) {
@@ -327,7 +315,7 @@ class AutoFixer {
   '"]/g, "from './$1
   '")
           .replace(/from ['"]\.\.\/([^
-  '"]+)['"]/g, "from
+  '"]+)['"]/g, "from;
   '../$1'");
         
         if (content !== originalContent) {

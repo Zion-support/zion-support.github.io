@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIKubernetes.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKubernetes() {
-    'Automated Kubernetes monitoring and alerting',;'
-    'Predictive analytics for Kubernetes scaling',;'
-    'Smart Kubernetes security and compliance',;'
-    'AI-driven Kubernetes automation and orchestration',;'
-    'Real-time Kubernetes analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKubernetes(function AIKubernetes() {): any {}
-    'Automated Kubernetes monitoring and alerting',;
-    'Predictive analytics for Kubernetes scaling',;
-    'Smart Kubernetes security and compliance',;
-    'AI-driven Kubernetes automation and orchestration',;
-    'Real-time Kubernetes analytics and insights',;
-    'Custom AI models for Kubernetes applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKubernetes() {;
+    'Automated Kubernetes monitoring and alerting',';Predictive analytics for Kubernetes scaling',';Smart Kubernetes security and compliance',';AI-driven Kubernetes automation and orchestration',';Real-time Kubernetes analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIKubernetes(function AIKubernetes() {): any {};
+    'Automated Kubernetes monitoring and alerting',';Predictive analytics for Kubernetes scaling',';Smart Kubernetes security and compliance',';AI-driven Kubernetes automation and orchestration',';Real-time Kubernetes analytics and insights',';Custom AI models for Kubernetes applications';
 <:pages.disabled/pages/services/AIKubernetes.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited storage',Custom AI models',Full Kubernetes suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Kubernetes optimization',;'
-    'Kubernetes management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Kubernetes scaling and management';
-  ];
-
-  '
-    'Improve Kubernetes performance by 50-80%',;'
-    'Reduce Kubernetes deployment time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Kubernetes reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale Kubernetes operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Kubernetes optimization',';Kubernetes management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Kubernetes scaling and management';
+  ]';Improve Kubernetes performance by 50-80%',';Reduce Kubernetes deployment time by 40-70%',';Cut operational costs by 35-65%',';Enhance Kubernetes reliability and scalability',';Optimize resource utilization',';Scale Kubernetes operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIKubernetes.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

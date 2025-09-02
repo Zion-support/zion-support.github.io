@@ -1,108 +1,31 @@
 export interface EnterpriseService2034 {
   id: string;
-  name: string;
-  description: string;
-  category: string;
-  price: string;
-  features: string[];
-  benefits: string[];
-  useCases: string[];
-  technology: string[];
-  marketSize: string;
-  competitors: string[];
-  competitiveAdvantage: string;
-  implementationTime: string;
-  roi: string;
-  support: string;
-  documentation: string;
-  api: boolean;
-  sdk: boolean;
-  integrations: string[];
-  compliance: string[];
-  security: string[];
-  scalability: string;
-  uptime: string;
-  contact: string;
-website: string;export const enterprise2034Services: EnterpriseService2034[] = [
-  {
-    id:,
-  quantum-zero-trust-architecture',
-    name: 'Quantum Zero Trust Architecture Platform,
-    description:,
-  Revolutionary security platform that implements quantum-enhanced zero trust principles across all enterprise systems and networks.',
-    category: 'Cybersecurity & Quantum,
-    price:,
-  $34,999/month',
-    features[
-  'Quantum-enhanced identity verification',
-  'Real-time threat detection',
-  'Zero trust network segmentation',
-  'Quantum encryption protocols',
-  'Behavioral analytics',
-  'Continuous authentication',
-  'Quantum key distribution',
-  'Advanced threat hunting'
-    ],
-    benefits[
-  'Unprecedented security protection',
-  'Quantum-level encryption',
-  'Real-time threat prevention',
-  'Compliance automation',
-  'Reduced attack surface',
-  'Future-proof security'
-    ],
-    useCases[
-  'Financial institutions',
-  'Healthcare organizations',
-  'Government agencies',
-  'Defense contractors',
-  'Technology companies',
-  'Critical infrastructure'
-    ],
-    technology[
-  'Quantum cryptography',
-  'Zero trust architecture',
-  'AI threat detection',
-  'Behavioral analytics',
-  'Quantum key distribution',
-  'Advanced authentication'
-    ],
-    marketSize: '$45.6B by 2035,
-    competitors[,
-  Palo Alto Networks',
-  'CrowdStrike',
-  'SentinelOne'],
-    competitiveAdvantage: 'Only platform combining quantum computing with zero trust architecture,
-    implementationTime:,
-  6-12 months',
-    roi: '300-500% within 18 months,
-    support:,
-  24/7 quantum security specialists',
-    documentation: 'Comprehensive security implementation guides,
-    api: true,
-    sdk: true,
-    integrations[,
-  Active Directory',
-  'LDAP',
-  'SIEM systems',
-  'Firewall platforms'],
-    compliance[
-  'SOC 2',
-  'ISO 27001',
-  'NIST',
-  'GDPR',
-  'HIPAA'],
-    security[
-  'Quantum encryption',
-  'Zero trust principles',
-  'Advanced authentication'],
-    scalability: 'Unlimited enterprise protection,
-    uptime:,
-  99.999% security platform availability',
-    contact: '+1 302 464 0950,
-    website:,
-  https: //ziontechgroup.com/quantum-zero-trust-architecture
-  },
+   name: string;
+   description: string;
+   category: string;
+   price: string;
+   features: string[];
+   benefits: string[];
+   useCases: string[];
+   technology: string[];
+   marketSize: string;
+   competitors: string[];
+   competitiveAdvantage: string;
+   implementationTime: string;
+   roi: string;
+   support: string;
+   documentation: string;
+   api: boolean;
+   sdk: boolean;
+   integrations: string[];
+   compliance: string[];
+   security: string[];
+   scalability: string;
+   uptime: string;
+   contact: string;
+   website: string;
+  export const enterprise2034Services: EnterpriseService2034[] = [ { id:, quantum-zero-trust-architecture', name: 'Quantum Zero Trust Architecture Platform, description:, Revolutionary security platform that implements quantum-enhanced zero trust principles across all enterprise systems and networks.', category: 'Cybersecurity & Quantum, price:, $34,999/month', features[ 'Quantum-enhanced identity verification', 'Real-time threat detection', 'Zero trust network segmentation', 'Quantum encryption protocols', 'Behavioral analytics', 'Continuous authentication', 'Quantum key distribution', 'Advanced threat hunting' ], benefits[ 'Unprecedented security protection', 'Quantum-level encryption', 'Real-time threat prevention', 'Compliance automation', 'Reduced attack surface', 'Future-proof security' ], useCases[ 'Financial institutions', 'Healthcare organizations', 'Government agencies', 'Defense contractors', 'Technology companies', 'Critical infrastructure' ], technology[ 'Quantum cryptography', 'Zero trust architecture', 'AI threat detection', 'Behavioral analytics', 'Quantum key distribution', 'Advanced authentication' ], marketSize: '$45.6B by 2035, competitors[, Palo Alto Networks', 'CrowdStrike', 'SentinelOne'], competitiveAdvantage: 'Only platform combining quantum computing with zero trust architecture, implementationTime:, 6-12 months', roi: '300-500% within 18 months, support:, 24/7 quantum security specialists', documentation: 'Comprehensive security implementation guides, api: true, sdk: true, integrations[, Active Directory', 'LDAP', 'SIEM systems', 'Firewall platforms'], compliance[ 'SOC 2', 'ISO 27001', 'NIST', 'GDPR', 'HIPAA'], security[ 'Quantum encryption', 'Zero trust principles', 'Advanced authentication'], scalability: 'Unlimited enterprise protection, uptime:, 99.999% security platform availability', contact: '+1 302 464 0950, website:, https: //ziontechgroup.com/quantum-zero-trust-architecture;
+},
   {
     id:,
   ai-autonomous-devops-platform',

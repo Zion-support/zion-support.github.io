@@ -1,12 +1,12 @@
 React from
   'react';
-import { motion } from
-  'framer-motion';'{ SEO } from
+import { motion } from;
+  'framer-motion';{ SEO } from
   '../components/SEO';
-import { Card } from
-  '../components/ui/Card';'{ Badge } from
+import { Card } from;
+  '../components/ui/Card';{ Badge } from
   '../components/ui/Badge';
-import { ;'  FileText, Scale,
+import { ';  FileText, Scale,
   AlertTriangle, CheckCircle,
   Calendar, Globe,
   Mail, Phone,
@@ -14,9 +14,8 @@ import { ;'  FileText, Scale,
   Users, DollarSign,
   Clock, BookOpen
 } from
-  'lucide-react';'
-  'const Terms: React.FC = () => {
-  const lastUpdated = "2025-01-15";""  const sections = [;
+  'lucide-react'';const Terms: React.FC = () => {
+  const lastUpdated = "2025-01-15"';  const sections = [;
     {
       id: "acceptance-of-terms", title: "Acceptance of Terms","      icon: CheckCircle, content: ["        "By accessing and using Zion Tech Group services, you accept and agree to be bound by these Terms of Service", "If you do not agree to these terms, you may not access or use our services", "These terms apply to all visitors, users, and others who access or use our services","        "We reserve the right to modify these terms at any time without prior notice""      ]"    }, {;
       id: "service-description","      title: "Service Description", icon: BookOpen,"      content: ["        "Zion Tech Group provides AI-powered solutions, consulting services, and technology products", "Our services include but are not limited to AI development, cloud migration, and cybersecurity solutions","        "We reserve the right to modify, suspend, or discontinue any part of our services at any time", "Service availability may vary based on geographic location and technical requirements""      ]"    }, {;
@@ -28,7 +27,7 @@ import { ;'  FileText, Scale,
   ];
 
   const contactInfo = {;
-    email: "legal@ziontechgroup.com", phone: "+1 (555) 123-4567", address: "123 Technology Drive, San Francisco, CA 94105""  };"
+    email: "legal@ziontechgroup.com", phone: "+1 (555) 123-4567", address: "123 Technology Drive, San Francisco, CA 94105""  }";
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <SEO "        title="Terms of Service - Zion Tech Group" "        description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group&apos;s AI services and solutions."''      />
   '      

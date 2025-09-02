@@ -50,7 +50,7 @@ import {}
   GitBranch,
   Github,
   Gitlab,
-  Bitbucket''
+  Bitbucket'';
 } from 'lucide-react';
 ;
 
@@ -693,6 +693,5 @@ import {}
         </div>
       </section>
     </div>
-  )};
-'"`
+  )}'"`;
 export default AIAutonomousCodeReviewer}}}}'"`'"`

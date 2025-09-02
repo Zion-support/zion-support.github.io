@@ -7,12 +7,12 @@ export default function AIBusinessIntelligence(...args[]):  {}
     },;
     {;
       icon: Eye,;
-      title: 'Predictive Analytics',;'
+      title: 'Predictive Analytics',';
       description: 'Forecast trends and identify opportunities'};
 :pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx
-  ]},;'
-    {;''
-      title: 'Automated Reporting',;'      description: 'Generate reports automatically with AI insights',;
+  ]},';
+    {';
+      title: 'Automated Reporting',';      description: 'Generate reports automatically with AI insights',;
   ]},;
     {;
       title: 'Automated Reporting',;
@@ -95,11 +95,11 @@ export default function AIBusinessIntelligence(...args[]):  {}
           </motion.div>
         </div>
 :pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -201,7 +201,7 @@ export default function AIBusinessIntelligence(...args[]):  {}
       </section>
 
       {/* Capabilities Section */}""
-      <section className="py-20 bg-white/5">;""
+      <section className="py-20 bg-white/5">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -306,7 +306,7 @@ export default function AIBusinessIntelligence(...args[]):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -535,7 +535,7 @@ export default function AIBusinessIntelligence(...args[]):  {}
               viewport={{ once: true }}"
 >              className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
 "
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>;"
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>";
               <div className="text-4xl font-bold text-zion-cyan mb-6">Custom</div>"
               <ul className="space-y-3 mb-8">"
                 <li className="flex items-center text-zion-slate-light">"
@@ -543,7 +543,7 @@ export default function AIBusinessIntelligence(...args[]):  {}
               viewport={{ once: true }}""
               className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300""
 ""
-              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>;""
+              <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>';
               <div className="text-4xl font-bold text-zion-cyan mb-6">Custom</div>""
               <ul className="space-y-3 mb-8">""
                 <li className="flex items-center text-zion-slate-light">""
@@ -586,7 +586,7 @@ export default function AIBusinessIntelligence(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -646,15 +646,15 @@ export default function AIBusinessIntelligence(...args[]):  {}
   )}
 :pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx
 // Missing icon component"
-const CheckCircle = ({ className }: { className?: string }) => (;""
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;""
+const CheckCircle = ({ className }: { className?: string }) => (';
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">';
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />;
-  </svg>;'"
+  </svg>'";
 )}}}}'"'"
 
 // Missing icon component;
-const CheckCircle: any = ({ className }: { className?: string }) => (;""
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;""
+const CheckCircle: any = ({ className }: { className?: string }) => (';
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">';
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />;
   </svg>;
 )}}}}'""

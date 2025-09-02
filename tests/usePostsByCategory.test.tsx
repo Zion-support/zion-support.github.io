@@ -1,10 +1,10 @@
-import { renderHook, waitFor } from,
+import { renderHook, waitFor } from,;
   @testing-library/react';
-import { QueryClient, QueryClientProvider } from
+import { QueryClient, QueryClientProvider } from;
   '@tanstack/react-query';
-import { usePostsByCategory } from
+import { usePostsByCategory } from;
   '@/hooks/usePostsByCategory';
-import * as forumService from
+import * as forumService from;
   '@/services/forumPostService';
 
 it(

@@ -1,13 +1,14 @@
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props { children: ReactNode;
-  fallback?: ReactNode;
- }
+interface Props {
+  children: ReactNode;
+   fallback?: ReactNode;
+}
 
-interface State { hasError: boolean;
-  error?: Error;
- }
+interface State {
+  hasError: boolean;
+   error?: Error;
+}
 
 export class ErrorBoundary extends Component<Props, State> {
   public state: State = { hasError: false
@@ -58,5 +59,3 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-=======
->>>>>>> pr-10728

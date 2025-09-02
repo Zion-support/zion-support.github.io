@@ -1,27 +1,27 @@
-import { createMocks, RequestMethod } from
+import { createMocks, RequestMethod } from;
   'node-mocks-http';
-import type { NextApiRequest, NextApiResponse } from
+import type { NextApiRequest, NextApiResponse } from;
   'next';
-import reviewsHandler from
+import reviewsHandler from;
   '@/pages/api/reviews'; // Handler for POST /api/reviews
-import productReviewsHandler from
+import productReviewsHandler from;
   '@/pages/api/reviews/[productId]'; // Handler for GET /api/reviews/[productId]
 import {
   PrismaClient,
   ProductReview,
   User as PrismaUser,
   Prisma,
-} from
+} from;
   '@prisma/client'; // Import Prisma types
-import { supabase } from
+import { supabase } from;
   '@/integrations/supabase/client';
 import type {
   User as SupabaseUser,
   Session,
   AuthError,
-} from
+} from;
   '@supabase/supabase-js'; // Supabase types
-import { describe, it, expect, beforeEach, vi } from
+import { describe, it, expect, beforeEach, vi } from;
   'vitest';
 
 // Mock Prisma Client
@@ -74,7 +74,7 @@ jest.mock(
 // Define expected response types
 interface ErrorResponse {
   error: string;
-  details?: string;
+   details?: string;
 }
 // For POST /api/reviews, success is the created ProductReview
 type PostReviewSuccessResponse = ProductReview;

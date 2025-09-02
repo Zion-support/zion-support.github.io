@@ -1,18 +1,17 @@
-<<<<<<< HEAD:pages.disabled_auto/white-papers.tsx
-import React from
+:pages.disabled_auto/white-papers.tsx
+import React from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
-import { SEO } from
+import { SEO } from;
   '../components/SEO';
-import { Button } from
+import { Button } from;
   '../components/ui/Button';
-import { Card } from
+import { Card } from;
   '../components/ui/Card';
-import { Badge } from
+import { Badge } from;
   '../components/ui/Badge';
-import { 
-=======
+import { ;
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -20,7 +19,6 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
   FileText,
   Download,
   Calendar,
@@ -45,14 +43,12 @@ import {
   Mail,
   Award,
   Star,
-<<<<<<< HEAD:pages.disabled_auto/white-papers.tsx
+:pages.disabled_auto/white-papers.tsx
   CheckCircle
-} from
+} from;
   'lucide-react';
-=======
   CheckCircle,
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
 
 const WhitePapers: React.FC = () => {
   const whitePapers = [
@@ -454,15 +450,13 @@ const WhitePapers: React.FC = () => {
                       <button
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-<<<<<<< HEAD:pages.disabled_auto/white-papers.tsx
+:pages.disabled_auto/white-papers.tsx
                           category.active 
                             ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
-=======
                           category.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/white-papers.tsx
                         }`}
                       >
                         <span>{category.name}</span>

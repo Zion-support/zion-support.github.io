@@ -1,7 +1,7 @@
-import React from
-  'react'; import { motion } from
-  'framer-motion'; import { Atom, Cpu, Zap, Shield, CheckCircle, Star, Users, Globe, Lock, Database, Network, BarChart3, ArrowRight, Sparkles, Target, Rocket, TrendingUp, Activity, Microscope, Brain, CircuitBoard, Layers, Workflow, Settings, Play } from
-  'lucide-react'; import { SEO } from
+import React from;
+  'react'; import { motion } from;
+  'framer-motion'; import { Atom, Cpu, Zap, Shield, CheckCircle, Star, Users, Globe, Lock, Database, Network, BarChart3, ArrowRight, Sparkles, Target, Rocket, TrendingUp, Activity, Microscope, Brain, CircuitBoard, Layers, Workflow, Settings, Play } from;
+  'lucide-react'; import { SEO } from;
   '../../components/SEO'; const AIQuantumComputingSolutions = () => { const features = [ { icon: Atom, title:,
   Quantum Algorithm Development', description: 'Advanced quantum algorithm design and optimization for complex computational problems }, { icon: Cpu, title:,
   Quantum Simulation Platform', description: 'High-performance quantum simulation environment for research and development }, { icon: Zap, title:,

@@ -33,7 +33,7 @@ import { AlertTriangle,
   Phone,
   Mail,
   MapPin,
-  Server'
+  Server';
 } from 'lucide-react';
 ;
 export { function };
@@ -75,26 +75,19 @@ export default function AIIncidentPostmortems(...args[]): {
 =
   }},;
 >    {;
-      icon: Database,;'
-      title: 'Centralized Knowledge Base',;'
+      icon: Database,';
+      title: 'Centralized Knowledge Base',';
       description: 'Maintain a searchable repository of all incidents and resolutions'};
-  ];'
-    'Reduce incident resolution time by 60%',;'
-    'Improve team productivity by 45%',;'
-    'Decrease repeat incidents by 80%',;'
-    'Enhance customer satisfaction scores',;'
-    'Streamline compliance reporting',;'
-    'Optimize resource allocation';
-  ];'
-        'Up to 10 incidents per month',Basic AI analysis',Email support',Standard reporting',Team collaboration (up to 5 users),Basic integrations'
-      ],;'
-      features[;''
+  ]';Reduce incident resolution time by 60%',';Improve team productivity by 45%',';Decrease repeat incidents by 80%',';Enhance customer satisfaction scores',';Streamline compliance reporting',';Optimize resource allocation';
+  ]';Up to 10 incidents per month',Basic AI analysis',Email support',Standard reporting',Team collaboration (up to 5 users),Basic integrations'
+      ],';
+      features[';
         'Up to 10 incidents per month',''
         'Basic AI analysis',''
         'Email support',''
         'Standard reporting',''
         'Team collaboration (up to 5 users)','        'Basic integrations''
-      ],;''
+      ],';
       cta: 'Start Free Trial',
       popular: false
     },
@@ -104,9 +97,8 @@ export default function AIIncidentPostmortems(...args[]): {
       price: '$599','
       period: '/month','
       description: 'Ideal for growing organizations',
-      features[;'
-        'Up to 50 incidents per month',Advanced AI analysis',Priority support',Custom reporting',Team collaboration (up to 20 users),Advanced integrations',API access',Custom workflows'
-      ],;'
+      features[';Up to 50 incidents per month',Advanced AI analysis',Priority support',Custom reporting',Team collaboration (up to 20 users),Advanced integrations',API access',Custom workflows'
+      ],';
       cta: 'Start Free Trial',
       popular: true
     },
@@ -116,16 +108,13 @@ export default function AIIncidentPostmortems(...args[]): {
       price: '$1,299','
       period: '/month','
       description: 'For large enterprises with complex needs',
-      features[;'
-        'Unlimited incidents',Premium AI analysis',24/7 dedicated support',Custom dashboards',Unlimited team members',Enterprise integrations',Advanced analytics',Custom AI models',;'
-        'On-premise deployment option',;'
-        'Dedicated account manager';
-      ],;'
+      features[';Unlimited incidents',Premium AI analysis',24/7 dedicated support',Custom dashboards',Unlimited team members',Enterprise integrations',Advanced analytics',Custom AI models',';On-premise deployment option',';Dedicated account manager';
+      ],';
       cta: 'Contact Sales',;
       popular: false};
-  ]},;'
-    {;''
-      title: 'Customer Support',;'      description: 'Improve customer experience with faster incident resolution and communication',;
+  ]},';
+    {';
+      title: 'Customer Support',';      description: 'Improve customer experience with faster incident resolution and communication',;
       icon: MessageSquare};
   ];
 :pages.disabled/pages/services/AIIncidentPostmortems.tsx
@@ -189,9 +178,9 @@ export default function AIIncidentPostmortems(...args[]): {
             </div>
           </motion.div>
         </div>
-      </section>;"
+      </section>";
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -278,7 +267,7 @@ export default function AIIncidentPostmortems(...args[]): {
         </div>
       </section>"
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -357,7 +346,7 @@ export default function AIIncidentPostmortems(...args[]): {
         </div>
       </section>"
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -429,7 +418,7 @@ export default function AIIncidentPostmortems(...args[]): {
                     ? 'border-purple-500/50 bg-gradient-to-br from-purple-900/20 to-pink-900/20'''`
                     : 'border-slate-700/50'``
                 }`}"
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -468,7 +457,7 @@ export default function AIIncidentPostmortems(...args[]): {
         </div>
       </section>"
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -555,7 +544,7 @@ export default function AIIncidentPostmortems(...args[]): {
         </div>
       </section>"
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -600,7 +589,7 @@ export default function AIIncidentPostmortems(...args[]): {
         </div>
       </section>"
       {/* Contact Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {

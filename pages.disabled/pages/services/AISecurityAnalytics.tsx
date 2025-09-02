@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityAnalytics.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAnalytics() {
-    'Automated security data processing and insights',;'
-    'Predictive analytics for security trends',;'
-    'Smart security reporting and visualization',;'
-    'AI-driven security data correlation and analysis',;'
-    'Real-time security performance metrics',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAnalytics(function AISecurityAnalytics() {): any {}
-    'Automated security data processing and insights',;
-    'Predictive analytics for security trends',;
-    'Smart security reporting and visualization',;
-    'AI-driven security data correlation and analysis',;
-    'Real-time security performance metrics',;
-    'Custom AI models for security applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAnalytics() {;
+    'Automated security data processing and insights',';Predictive analytics for security trends',';Smart security reporting and visualization',';AI-driven security data correlation and analysis',';Real-time security performance metrics',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAnalytics(function AISecurityAnalytics() {): any {};
+    'Automated security data processing and insights',';Predictive analytics for security trends',';Smart security reporting and visualization',';AI-driven security data correlation and analysis',';Real-time security performance metrics',';Custom AI models for security applications';
 <:pages.disabled/pages/services/AISecurityAnalytics.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$3,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$3,499/mo', ';
       details: ['Unlimited data',Custom AI models',Full analytics suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security analytics optimization',;'
-    'Threat intelligence and analysis',;'
-    'Security data processing and insights',;'
-    'Security reporting and visualization',;'
-    'Security data correlation and analysis',;'
-    'Security analytics scaling and management';
-  ];
-
-  '
-    'Improve security analytics performance by 50-80%',;'
-    'Reduce data processing time by 40-70%',;'
-    'Cut security analytics costs by 35-65%',;'
-    'Enhance security analytics reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security analytics operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security analytics optimization',';Threat intelligence and analysis',';Security data processing and insights',';Security reporting and visualization',';Security data correlation and analysis',';Security analytics scaling and management';
+  ]';Improve security analytics performance by 50-80%',';Reduce data processing time by 40-70%',';Cut security analytics costs by 35-65%',';Enhance security analytics reliability and scalability',';Optimize resource utilization',';Scale security analytics operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hover:bg-violet-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityAnalytics.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

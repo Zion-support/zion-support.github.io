@@ -1,13 +1,13 @@
 React from
   'react';
-import { motion } from
-  'framer-motion';'{ SEO } from
+import { motion } from;
+  'framer-motion';{ SEO } from
   '../components/SEO';
-import { Button } from
-  '../components/ui/Button';'{ Card } from
+import { Button } from;
+  '../components/ui/Button';{ Card } from
   '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';'import { ;'  Linkedin, Twitter,
+import { Badge } from;
+  '../components/ui/Badge';import { ';  Linkedin, Twitter,
   Mail, Globe,
   Award, Star,
   Users, Brain,
@@ -20,8 +20,7 @@ import { Badge } from
   Heart, Sparkles,
   CheckCircle, ArrowRight
 } from
-  'lucide-react';'
-  'const Team: React.FC = () => {
+  'lucide-react'';const Team: React.FC = () => {
   const teamMembers = [;
     {;
       id: 1, name: "Dr. Sarah Johnson","      title: "Chief Executive Officer", bio: "Visionary leader with 15+ years of experience in AI and technology innovation. Former VP of Engineering at leading tech companies.","      image: "/api/placeholder/300/300", expertise: ["AI Strategy", "Leadership", "Innovation"], education: "PhD in Computer Science, MIT", experience: "15+ years","      linkedin: "https://linkedin.com/in/sarahjohnson", twitter: "https://twitter.com/sarahjohnson","      email: "sarah@ziontechgroup.com", featured: true"    },"    {;
@@ -37,7 +36,7 @@ import { Badge } from
   const otherMembers = teamMembers.filter(member => !member.featured);
 
   const companyStats = [;
-    { label: "Team Members", value: "50+", icon: Users }, { label: "Years Combined Experience", value: "500+", icon: Award },"    { label: "PhD Holders", value: "15+", icon: GraduationCap }, { label: "Research Papers Published", value: "100+", icon: Star }"  ];"
+    { label: "Team Members", value: "50+", icon: Users }, { label: "Years Combined Experience", value: "500+", icon: Award },"    { label: "PhD Holders", value: "15+", icon: GraduationCap }, { label: "Research Papers Published", value: "100+", icon: Star }"  ]";
   const values = [;
     {
       title: "Innovation First", description: "We push the boundaries of what&apos;s possible with AI and technology", ,

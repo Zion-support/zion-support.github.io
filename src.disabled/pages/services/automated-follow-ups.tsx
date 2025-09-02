@@ -1,5 +1,5 @@
-<<<<<<< HEAD:src.disabled/pages/services/automated-follow-ups.tsx
-import React from
+:src.disabled/pages/services/automated-follow-ups.tsx
+import React from;
   'react';
 
 const AutomatedFollowUps: React.FC = () => {
@@ -27,7 +27,6 @@ const AutomatedFollowUps: React.FC = () => {
         <a href="https://www.pipedrive.com/" target="_blank" rel="noopener noreferrer">Pipedrive</a>
       </div>
     </div>
-=======
 import React from 'react';
 ;
 const AutomatedFollowUps: React.FC = () => {;
@@ -55,10 +54,8 @@ const AutomatedFollowUps: React.FC = () => {;
         <a href="https://www.pipedrive.com/" target="_blank" rel="noopener noreferrer">Pipedrive</a>;
       </div>;
     </div>;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/automated-follow-ups.tsx
   );
 };
 ;
 export default AutomatedFollowUps;
-;
-";
+";;

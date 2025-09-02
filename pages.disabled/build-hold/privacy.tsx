@@ -1,12 +1,12 @@
 React from
   'react';
-import { motion } from
-  'framer-motion';'{ SEO } from
+import { motion } from;
+  'framer-motion';{ SEO } from
   '../components/SEO';
-import { Card } from
-  '../components/ui/Card';'{ Badge } from
+import { Card } from;
+  '../components/ui/Card';{ Badge } from
   '../components/ui/Badge';
-import { ;'  Shield, Lock,
+import { ';  Shield, Lock,
   Eye, Database,
   Users, Mail,
   Phone, Calendar,
@@ -15,8 +15,8 @@ import { ;'  Shield, Lock,
   Settings, Trash2,
   Download, ArrowRight
 } from
-  'lucide-react';''const Privacy: React.FC = () => {
-  const lastUpdated = "2025-01-15";""  const sections = [;
+  'lucide-react'';const Privacy: React.FC = () => {
+  const lastUpdated = "2025-01-15"';  const sections = [;
     {
       id: "information-we-collect", title: "Information We Collect","      icon: Database, content: ["        "Personal Information: Name, email address, phone number, company information", "Usage Data: Website interactions, service usage patterns, and performance metrics","        "Technical Data: IP address, browser type, device information, and cookies","        "Communication Data: Messages, emails, and other communications with us""      ]"    }, {;
       id: "how-we-use-information","      title: "How We Use Your Information", icon: Settings,"      content: ["        "Provide and improve our AI services and solutions", "Communicate with you about our services and updates","        "Process transactions and manage your account", "Comply with legal obligations and protect our rights""      ]"    }, {;
@@ -27,7 +27,7 @@ import { ;'  Shield, Lock,
   ];
 
   const contactInfo = {;
-    email: "privacy@ziontechgroup.com", phone: "+1 (555) 123-4567", address: "123 Technology Drive, San Francisco, CA 94105""  };"
+    email: "privacy@ziontechgroup.com", phone: "+1 (555) 123-4567", address: "123 Technology Drive, San Francisco, CA 94105""  }";
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <SEO "        title="Privacy Policy - Zion Tech Group" "        description="Learn how Zion Tech Group collects, uses, and protects your personal information. Our commitment to privacy and data protection.""      />"      
       {/* Hero Section */}

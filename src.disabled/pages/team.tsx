@@ -1,10 +1,8 @@
-<<<<<<< HEAD:src.disabled/pages/team.tsx
-import React from
+:src.disabled/pages/team.tsx
+import React from;
   'react';
-=======
 import React from 'react';
 export default React.memo(function Team () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/team.tsx
 
 ;
   return (;
@@ -12,5 +10,4 @@ export default React.memo(function Team () {;
       <h1 className="text - 4xl font - bold mb - 4">Our Team</h1>";
       <p className="text - gray - 300">Meet the people behind Zion Tech Group.</p>;
     </div>;) ;
-};
-";
+}";;

@@ -96,9 +96,9 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             <select;
               value={selectedTimeRange}
               onChange={e => {}
-                setSelectedTimeRange(e.target.value);'
+                setSelectedTimeRange(e.target.value)';
                 handleDashboardInteraction('time_range_changed', {}
-                  timeRange: e.target.value});"""
+                  timeRange: e.target.value})';"
               }}""""
               className="px-2 py-1 bg-white/20 rounded text-xs focus:outline-none focus:ring-2 focus:ring-white/50""""
             >""""
@@ -372,7 +372,7 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
             onClick={() => {}
 '
               handleDashboardInteraction('refresh_clicked');
-              updateAnalyticsSummary();"""
+              updateAnalyticsSummary()';"
             }}""""
             className="flex-1 px-3 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2""""
           >""""
@@ -382,8 +382,8 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
 
           <button;
             onClick={() => {}
-              handleTrackConversion();'
-              handleDashboardInteraction('conversion_tracked');"""
+              handleTrackConversion()';
+              handleDashboardInteraction('conversion_tracked')';"
             }}""""
             className="px-3 py-2 bg-green-500 hover:bg-green-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-2""""
           >""""
@@ -394,5 +394,5 @@ export const AnalyticsDashboard = ({ className = '', showRealTime = true, refres
       </div>
     </div>
   );
-};'"`
+}'"`;
 '"`'"`

@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AILegalTech.tsx
-import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech() {
-    'Automated compliance monitoring and reporting',;'
-    'Predictive analytics for case outcomes',;'
-    'Legal research automation and citation checking',;'
-    'Bias-free legal document screening',;'
-    'Integration with major legal management platforms',;'
-import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech(function AILegalTech() {): any {}
-    'Automated compliance monitoring and reporting',;
-    'Predictive analytics for case outcomes',;
-    'Legal research automation and citation checking',;
-    'Bias-free legal document screening',;
-    'Integration with major legal management platforms',;
-    'Custom AI models for specialized legal domains';
+import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech() {;
+    'Automated compliance monitoring and reporting',';Predictive analytics for case outcomes',';Legal research automation and citation checking',';Bias-free legal document screening',';Integration with major legal management platforms',';
+import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Zap, Shield, Gavel, BarChart3 export default function AILegalTech(function AILegalTech() {): any {};
+    'Automated compliance monitoring and reporting',';Predictive analytics for case outcomes',';Legal research automation and citation checking',';Bias-free legal document screening',';Integration with major legal management platforms',';Custom AI models for specialized legal domains';
 <:pages.disabled/pages/services/AILegalTech.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited documents',Custom AI models',Full platform integration',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Contract review and risk assessment',;'
-    'Legal document automation',;'
-    'Compliance monitoring and reporting',;'
-    'Legal research and case preparation',;'
-    'Due diligence and discovery',;'
-    'Regulatory compliance management';
-  ];
-
-  '
-    'Reduce document review time by 70-85%',;'
-    'Improve accuracy and consistency by 90%',;'
-    'Cut legal costs by 30-50%',;'
-    'Accelerate contract negotiations by 3-5x',;'
-    'Enhance compliance and risk management',;'
-    'Scale legal operations without additional staff';
-  ];
-
-  '
-    'Corporate Law',;'
-    'Real Estate Law',;'
-    'Healthcare Law',;'
-    'Financial Services',;'
-    'Technology & IP',;'
-    'Government & Public Sector';
+  ]';Contract review and risk assessment',';Legal document automation',';Compliance monitoring and reporting',';Legal research and case preparation',';Due diligence and discovery',';Regulatory compliance management';
+  ]';Reduce document review time by 70-85%',';Improve accuracy and consistency by 90%',';Cut legal costs by 30-50%',';Accelerate contract negotiations by 3-5x',';Enhance compliance and risk management',';Scale legal operations without additional staff';
+  ]';Corporate Law',';Real Estate Law',';Healthcare Law',';Financial Services',';Technology & IP',';Government & Public Sector';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Scale, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, FileText, Z
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-slate-600 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AILegalTech.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

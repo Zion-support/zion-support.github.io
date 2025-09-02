@@ -31,7 +31,7 @@ import { Brain,
   DollarSign,
   Globe,
   Smartphone,
-  Cloud'
+  Cloud';
  } from 'lucide-react';
 ;
 export { function };
@@ -41,11 +41,7 @@ export default function AIProjectManagementPlatform(...args: []):  {}
       icon: Zap,;
       title: 'Automated Reporting',;
       description: 'Intelligent report generation with customizable dashboards and stakeholder updates'};
-  ];
-
-        'Custom AI model training',;
-        'On-premise deployment options',;
-        'SLA guarantees';
+  ]';Custom AI model training',';On-premise deployment options',';SLA guarantees';
       ],;
       popular: false};
   ]},;
@@ -142,11 +138,11 @@ export default function AIProjectManagementPlatform(...args: []):  {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/ai-project-management-platform.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -248,7 +244,7 @@ export default function AIProjectManagementPlatform(...args: []):  {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -350,7 +346,7 @@ export default function AIProjectManagementPlatform(...args: []):  {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -452,7 +448,7 @@ export default function AIProjectManagementPlatform(...args: []):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -541,7 +537,7 @@ export default function AIProjectManagementPlatform(...args: []):  {}
                     : 'border-gray-700'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -596,7 +592,7 @@ export default function AIProjectManagementPlatform(...args: []):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -659,7 +655,7 @@ export default function AIProjectManagementPlatform(...args: []):  {}
         </div>;
       </section>;
 :pages.disabled/pages/services/ai-project-management-platform.tsx
-    </div>;'"`
+    </div>'"`;
   )}}}}}}'"`'"`
     </div>;
   )}}}}}}'"`

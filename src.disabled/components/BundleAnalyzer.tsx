@@ -8,13 +8,11 @@ interface BundleAnalyzerProps extends React.PropsWithChildren<{}> {
 }
 
 interface BundleMetrics {
-
   totalSize: number;
-  chunkCount: number;
-largestChunk: {;
-    name: string;
-    size: number;
-  
+   chunkCount: number;
+   largestChunk: {;
+   name: string;
+   size: number;
 };
   averageChunkSize: number;
   gzipSavings: number;

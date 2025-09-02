@@ -1,12 +1,12 @@
-import { createMocks, RequestMethod } from
+import { createMocks, RequestMethod } from;
   'node-mocks-http';
-import type { NextApiRequest, NextApiResponse } from
+import type { NextApiRequest, NextApiResponse } from;
   'next';
-import inviteHandler from
+import inviteHandler from;
   '@/pages/api/team-builder/invite';
-import { supabase } from
+import { supabase } from;
   '@/integrations/supabase/client'; // To be mocked
-import { TeamInvite } from
+import { TeamInvite } from;
   '@/types';
 
 // Mock Supabase

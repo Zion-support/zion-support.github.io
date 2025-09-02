@@ -1,4 +1,4 @@
-import { Link } from 'react - router - dom';'''
+import { Link } from 'react - router - dom'';
 import React from 'react';
 ;
 ;
@@ -75,8 +75,7 @@ export function ContactInfo() {
                       href="https://ziontechgroup.com""""
                       target="_blank""""
                       rel="noopener noreferrer""""
-                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1"""
-                    >"""
+                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors flex items-center gap-1 ">"""
                       ziontechgroup.com""""
                       <ExternalLink className="h-4 w-4" />
                     </a>
@@ -120,8 +119,7 @@ export function ContactInfo() {
                       </span>"""
                       <Badge""""
                         variant="secondary""""
-                        className="bg-green-500/20 text-green-400 border-green-500/30"""
-                      >
+                        className="bg-green-500/20 text-green-400 border-green-500/30 ">
                         Available;
                       </Badge>
                     </div>
@@ -153,8 +151,7 @@ export function ContactInfo() {
                 <Link to="/comprehensive-services">"""
                   <Button""""
                     variant="outline""""
-                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"""
-                  >
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10 ">
                     View All Services;
                   </Button>
                 </Link>"""
@@ -162,8 +159,7 @@ export function ContactInfo() {
                 <Link to="/it-onsite-services">"""
                   <Button""""
                     variant="outline""""
-                    className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10"""
-                  >
+                    className="w-full border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light/10 ">
                     IT Onsite Services;
                   </Button>
                 </Link>"""
@@ -234,8 +230,7 @@ export function ContactInfo() {
               <Link to="/request-quote">"""
                 <Button""""
                   size="lg""""
-                  className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3"""
-                >
+                  className="bg-white text-zion-purple hover:bg-zion-slate-light px-8 py-3 ">
                   Get Free Consultation;
                 </Button>"""
               </Link>""""
@@ -243,8 +238,7 @@ export function ContactInfo() {
                 <Button""""
                   size="lg""""
                   variant="outline""""
-                  className="border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3"""
-                >
+                  className="border-white text-white hover:bg-white hover:text-zion-purple px-8 py-3 ">
                   Call Now: +1 302 464 0950;
                 </Button>
               </a>

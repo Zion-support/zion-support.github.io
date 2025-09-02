@@ -33,4 +33,4 @@ global.console = {
   ...console,
   warn: vi.fn(),
   error: vi.fn(),
-}
+};

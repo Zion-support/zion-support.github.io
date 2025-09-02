@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { SEO } from '../components/SEO';
@@ -35,13 +34,6 @@ const Home: React.FC = () => {
       href: "/micro-saas"
     }
   ];
-=======
-import React from
-  'react';
-import Head from
-  'next/head';
->>>>>>> origin/main
-
 export default function Home() {
   return (
     <>
@@ -64,7 +56,6 @@ export default function Home() {
               services, and cutting-edge innovations.
             </p>
           </div>
-<<<<<<< HEAD
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -83,8 +74,6 @@ export default function Home() {
               </Card>
             ))}
           </div>
-=======
->>>>>>> origin/main
         </div>
       </main>
     </>

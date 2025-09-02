@@ -1,15 +1,14 @@
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
-import React from,
+:pages.disabled_auto/whitepapers.tsx
+import React from,;
   react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../components/layout/MainLayout';
-import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from
+import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   'lucide-react';
-import Link from
+import Link from;
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -20,15 +19,14 @@ import {
   User,
   Eye,
   ArrowRight,
-  Search,
+  Search,;
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
 
 const Whitepapers: NextPage = () => {
   const whitepapers = [
     {
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
+:pages.disabled_auto/whitepapers.tsx
       id:
   'ai-business-transformation,
       title:,
@@ -39,7 +37,6 @@ const Whitepapers: NextPage = () => {
       date:,
   2024-01-20',
       category: 'Artificial Intelligence,
-=======
       id: 'ai-business-transformation',
       title: 'AI-Powered Business Transformation: A Comprehensive Guide',
       description:
@@ -47,13 +44,12 @@ const Whitepapers: NextPage = () => {
       author: 'Dr. Sarah Johnson',
       date: '2024-01-20',
       category: 'Artificial Intelligence',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 45,
       downloads:
   '12.5k',
       rating: 4.8,
       featured: true,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
+:pages.disabled_auto/whitepapers.tsx
       topics: [,
   Machine Learning',
   'Business Strategy',
@@ -70,7 +66,6 @@ const Whitepapers: NextPage = () => {
       date: '2024-01-15,
       category:
   'Cloud Computing',
-=======
       topics: [
         'Machine Learning',
         'Business Strategy',
@@ -86,13 +81,12 @@ const Whitepapers: NextPage = () => {
       author: 'Michael Chen',
       date: '2024-01-15',
       category: 'Cloud Computing',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 32,
       downloads:
   '8.2k',
       rating: 4.7,
       featured: true,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
+:pages.disabled_auto/whitepapers.tsx
       topics: [,
   Cloud Architecture',
   'Migration Planning',
@@ -109,7 +103,6 @@ const Whitepapers: NextPage = () => {
       date: '2024-01-10,
       category:
   'Cybersecurity',
-=======
       topics: [
         'Cloud Architecture',
         'Migration Planning',
@@ -125,13 +118,12 @@ const Whitepapers: NextPage = () => {
       author: 'David Rodriguez',
       date: '2024-01-10',
       category: 'Cybersecurity',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 38,
       downloads:
   '6.8k',
       rating: 4.9,
       featured: false,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
+:pages.disabled_auto/whitepapers.tsx
       topics: [,
   Threat Detection',
   'Risk Management',
@@ -148,7 +140,6 @@ const Whitepapers: NextPage = () => {
       date:,
   2024-01-05',
       category: 'Software Architecture,
-=======
       topics: [
         'Threat Detection',
         'Risk Management',
@@ -164,13 +155,12 @@ const Whitepapers: NextPage = () => {
       author: 'Emily Watson',
       date: '2024-01-05',
       category: 'Software Architecture',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 52,
       downloads:
   '5.4k',
       rating: 4.6,
       featured: false,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
+:pages.disabled_auto/whitepapers.tsx
       topics: [,
   Service Design',
   'API Management',
@@ -187,7 +177,6 @@ const Whitepapers: NextPage = () => {
       date:,
   2023-12-28',
       category: 'Data Analytics,
-=======
       topics: ['Service Design', 'API Management', 'Scalability', 'DevOps'],
     },
     {
@@ -199,13 +188,12 @@ const Whitepapers: NextPage = () => {
       author: 'Alex Thompson',
       date: '2023-12-28',
       category: 'Data Analytics',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 41,
       downloads:
   '4.9k',
       rating: 4.7,
       featured: false,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
+:pages.disabled_auto/whitepapers.tsx
       topics: [,
   Business Intelligence',
   'Data Visualization',
@@ -222,7 +210,6 @@ const Whitepapers: NextPage = () => {
       date:,
   2023-12-20',
       category: 'Mobile Development,
-=======
       topics: [
         'Business Intelligence',
         'Data Visualization',
@@ -238,13 +225,12 @@ const Whitepapers: NextPage = () => {
       author: 'Lisa Park',
       date: '2023-12-20',
       category: 'Mobile Development',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
       pages: 28,
       downloads:
   '3.7k',
       rating: 4.5,
       featured: false,
-<<<<<<< HEAD:pages.disabled_auto/whitepapers.tsx
+:pages.disabled_auto/whitepapers.tsx
       topics: [
   'React Native',
   'Flutter',
@@ -261,7 +247,6 @@ const Whitepapers: NextPage = () => {
   'Software Architecture',
   'Data Analytics',
   'Mobile Development'];
-=======
       topics: ['React Native', 'Flutter', 'Performance', 'User Experience'],
     },
   ];
@@ -275,7 +260,6 @@ const Whitepapers: NextPage = () => {
     'Data Analytics',
     'Mobile Development',
   ];
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
 
   return (
     <MainLayout

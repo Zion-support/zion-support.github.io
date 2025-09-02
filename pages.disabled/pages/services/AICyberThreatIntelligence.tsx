@@ -22,7 +22,7 @@ import { Brain,
   AlertTriangle,
   Activity,
   BarChart3,
-  Lock'
+  Lock';
   } from 'lucide-react.ts';
 };
   ];
@@ -33,8 +33,7 @@ import { Brain,
       name: "Basic Protection","
       price: "$4,999","
       period: "/month",
-      features[;"
-        "Core threat detection","
+      features[';Core threat detection","
         "Basic AI analytics","
         "Standard monitoring","
         "Up to 100 endpoints","
@@ -47,7 +46,7 @@ import { Brain,
       name: "Professional Security",""
       price: "$12,999",""
       period: "/month","
-      features[;""
+      features[';
         "Advanced AI algorithms",""
         "Predictive threat modeling",""
         "Priority support",""
@@ -63,7 +62,7 @@ import { Brain,
       name: "Enterprise Defense",""
       price: "$29,999",""
       period: "/month","
-      features[;""
+      features[';
         "Full AI security suite",""
         "Unlimited endpoints",""
         "Custom development",""
@@ -91,7 +90,7 @@ import { Brain,
       industry: "Manufacturing",""
       description: "Protect industrial control systems and intellectual property from cyber espionage",""
       benefits["OT security", "IP protection", "Supply chain security"]};
-  ];"
+  ]";
   const technologies = [""
     "Machine Learning & AI",""
     "Behavioral Analytics",""
@@ -99,7 +98,7 @@ import { Brain,
     "Network Security",""
     "Endpoint Protection",""
     "Cloud Security",""
-    "Real-time Analytics",;"    "Predictive Modeling";
+    "Real-time Analytics",';Predictive Modeling";
 :pages.disabled/pages/services/AICyberThreatIntelligence.tsx
   ];
 
@@ -606,5 +605,5 @@ import { Brain,
         </div>
       </section>;
     </div>;
-  )};'"`
-export default AICyberThreatIntelligence;'"`'"`
+  )}'"`;
+export default AICyberThreatIntelligence'"`;'"`

@@ -1,32 +1,32 @@
-import Link from 'next/link';'''
-import { Link } from 'react-router-dom';'''
-import { Heart } from 'lucide-react';'''
-import { useWishlist } from '@/hooks/useWishlist';'''
+import Link from 'next/link'';
+import { Link } from 'react-router-dom'';
+import { Heart } from 'lucide-react'';
+import { useWishlist } from '@/hooks/useWishlist'';
 import { Button } from '@/components/ui/button';
 import {}
   Tooltip,
   TooltipContent,
-  TooltipProvider,'
-  TooltipTrigger} from '@/components/ui/tooltip';'
-import { useDispatch } from 'react-redux';'
-import { addItem } from '@/store/cartSlice';'
-import Image from 'next/image';'
-import React, { useState } from 'react';'
-import { useAuth } from '@/context/auth/AuthProvider';'
-import { useRouter } from 'next/router';'
+  TooltipProvider,';
+  TooltipTrigger} from '@/components/ui/tooltip';
+import { useDispatch } from 'react-redux';
+import { addItem } from '@/store/cartSlice';
+import Image from 'next/image';
+import React, { useState } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useRouter } from 'next/router';
 // import Image from 'next/image'; // TODO: Replace with regular img or custom Image component''
-import React, { useState } from 'react';'
-import { useAuth } from '@/context/auth/AuthProvider';'
-import { useNavigate } from 'react-router-dom';'
-import { useMediaQuery } from 'usehooks-ts';'
-import { useEnqueueSnackbar } from '@/context/SnackbarContext';'
+import React, { useState } from 'react';
+import { useAuth } from '@/context/auth/AuthProvider';
+import { useNavigate } from 'react-router-dom';
+import { useMediaQuery } from 'usehooks-ts';
+import { useEnqueueSnackbar } from '@/context/SnackbarContext';
 import { captureException } from '@/utils/sentry';
 export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
   const { isAuthenticated } = useAuth();
   const { isWishlisted, toggle } = useWishlist();
   const [imageError, setImageError] = useState(false);
-  const router = useNavigate();'
-  const enqueueSnackbar = useEnqueueSnackbar();''
+  const router = useNavigate()';
+  const enqueueSnackbar = useEnqueueSnackbar()';
   if()'''
     !product ||''''
     typeof product.id !== 'string' ||''''
@@ -74,7 +74,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
         product: product.id,
         imageUrl});
     }
-  };'
+  }';
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
   return()"""
     <div""""
@@ -132,7 +132,7 @@ export default function ProductCard({ product, onBuy, buyDisabled = false }) {}
                 <Button;
                   onClick={e => {}
                     e.stopPropagation();
-                    onBuy();"""
+                    onBuy()';"
                   }}""""
                   size="sm""""
                   variant="outline""""

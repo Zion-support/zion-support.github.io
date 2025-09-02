@@ -1,6 +1,6 @@
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import Head from
+import Head from;
   'next/head';
 
 const Custom404: NextPage = () => {

@@ -1,10 +1,8 @@
-<<<<<<< HEAD:src.disabled/pages/privacy.tsx
-import React from
+:src.disabled/pages/privacy.tsx
+import React from;
   'react';
-=======
 import React from 'react';
 export default React.memo(function Privacy () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/privacy.tsx
 
 ;
   return (;
@@ -12,5 +10,4 @@ export default React.memo(function Privacy () {;
       <h1 className="text - 4xl font - bold mb - 4">Privacy Policy</h1>";
       <p className="text - gray - 300">We respect your privacy and protect your data.</p>;
     </div>;) ;
-};
-";
+}";;

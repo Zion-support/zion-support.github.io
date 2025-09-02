@@ -27,7 +27,7 @@ const projectBriefSchema = z.object({
   lockTimeline: z.boolean().optional(),
   lockBudget: z.boolean().optional(),
   talentFilters: z.object({ // New
-    verifiedOnly: z.boolean().optional(),
+    verifiedOnly: z.boolean().optional(),;
     regions: z.string().optional(), // Comma-separated string for now;
   }).optional(),;
 });

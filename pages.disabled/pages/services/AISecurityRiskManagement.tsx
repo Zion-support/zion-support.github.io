@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityRiskManagement.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityRiskManagement() {
-    'Automated risk identification and prioritization',;'
-    'Predictive analytics for risk prediction',;'
-    'Smart risk framework management',;'
-    'AI-driven risk automation and orchestration',;'
-    'Real-time risk performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityRiskManagement(function AISecurityRiskManagement() {): any {}
-    'Automated risk identification and prioritization',;
-    'Predictive analytics for risk prediction',;
-    'Smart risk framework management',;
-    'AI-driven risk automation and orchestration',;
-    'Real-time risk performance tracking',;
-    'Custom AI models for risk applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityRiskManagement() {;
+    'Automated risk identification and prioritization',';Predictive analytics for risk prediction',';Smart risk framework management',';AI-driven risk automation and orchestration',';Real-time risk performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityRiskManagement(function AISecurityRiskManagement() {): any {};
+    'Automated risk identification and prioritization',';Predictive analytics for risk prediction',';Smart risk framework management',';AI-driven risk automation and orchestration',';Real-time risk performance tracking',';Custom AI models for risk applications';
 <:pages.disabled/pages/services/AISecurityRiskManagement.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,999/mo', ';
       details: ['Unlimited risk assessments',Custom AI models',Full risk management suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security risk management optimization',;'
-    'Risk assessment and analysis',;'
-    'Risk identification and prioritization',;'
-    'Risk framework management and automation',;'
-    'Risk automation and orchestration',;'
-    'Risk scaling and management';
-  ];
-
-  '
-    'Improve security risk management performance by 50-80%',;'
-    'Reduce risk assessment time by 40-70%',;'
-    'Cut security risk management costs by 35-65%',;'
-    'Enhance security risk management reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security risk management operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security risk management optimization',';Risk assessment and analysis',';Risk identification and prioritization',';Risk framework management and automation',';Risk automation and orchestration',';Risk scaling and management';
+  ]';Improve security risk management performance by 50-80%',';Reduce risk assessment time by 40-70%',';Cut security risk management costs by 35-65%',';Enhance security risk management reliability and scalability',';Optimize resource utilization',';Scale security risk management operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityRiskManagement.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

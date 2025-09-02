@@ -1,9 +1,6 @@
 React, { useEffect, useState } from,
   react';
-import { motion, AnimatePresence } from 'lucide-react';
-  'framer-motion';'import { Download, X, Smartphone, Monitor } from 'lucide-react';
-  'lucide-react';'
-  'interface BeforeInstallPromptEvent extends Event {
+import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Smartphone, Monitor  } from 'lucide-react'';interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
   readonly userChoice: Promise<{;
     outcome: 'accepted
@@ -36,11 +33,9 @@ const handleAppInstalled = () => {;setIsInstalled(true);
       setDeferredPrompt(null);
     };
 
-<<<<<<< HEAD
 window.addEventListener(,
-  beforeinstallprompt', handleBeforeInstallPrompt);'    window.addEventListener(
-  'appinstalled', handleAppInstalled);'
-  '    // Register service worker
+  beforeinstallprompt', handleBeforeInstallPrompt)';    window.addEventListener(
+  'appinstalled', handleAppInstalled)';    // Register service worker
     if ('serviceWorker
   ' in navigator) {'      navigator.serviceWorker.register(
   '/sw.js')
@@ -48,37 +43,23 @@ window.addEventListener(,
   'Service Worker registered successfully: , registration);,
   })
   '        .catch((error) => {
-          console.log('Service Worker registration failed: , error);'        });'    }
+          console.log('Service Worker registration failed: , error)';        })';    }
 
     return () => {
       window.removeEventListener(
-  'beforeinstallprompt', handleBeforeInstallPrompt);'      window.removeEventListener(
-  'appinstalled', handleAppInstalled);'    };'  }, []);
-=======
-window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);'    window.addEventListener('appinstalled', handleAppInstalled);''    // Register service worker'
-    if ('serviceWorker' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          console.log('Service Worker registered successfully: ', registration);'        })'        .catch((error) => {'
-          console.log('Service Worker registration failed: ', error);'        });'    }
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);'      window.removeEventListener('appinstalled', handleAppInstalled);'    };'  }, []);'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-
+  'beforeinstallprompt', handleBeforeInstallPrompt)';      window.removeEventListener(
+  'appinstalled', handleAppInstalled)';    }';  }, []);
   const handleInstallClick = async () => {;if (!deferredPrompt) return;
 
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     
-<<<<<<< HEAD
 if (outcome ===
   'accepted') {
   '      console.log('User accepted the install prompt
-  ');'    } else {
+  ')';    } else {
   '      console.log('User dismissed the install prompt
-  ');'    }'setDeferredPrompt(null);
-=======
-if (outcome === 'accepted') {'      console.log('User accepted the install prompt');'    } else {'      console.log('User dismissed the install prompt');'    }'setDeferredPrompt(null);'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    setShowInstallPrompt(false);
+  ')';    }'setDeferredPrompt(null);    setShowInstallPrompt(false);
   };
 
 const handleDismiss = () => {;setShowInstallPrompt(false);

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';'''
-import { Link } from 'react-router-dom';'''
-import { motion } from 'framer-motion';'''
+import React, { useState } from 'react'';
+import { Link } from 'react-router-dom'';
+import { motion } from 'framer-motion'';
 import { enhancedServices2025 } from '../data/enhanced-services-2025';
 const EnhancedServicesShowcase = () => {}
 '
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [searchTerm, setSearchTerm] = useState('');'
+  const [selectedCategory, setSelectedCategory] = useState('all')';
+  const [searchTerm, setSearchTerm] = useState('')';
   const categories = [''
     { id: 'all', name: 'All Services', icon: '🌟' },'
     { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },'
@@ -132,8 +132,7 @@ const EnhancedServicesShowcase = () => {}
               <motion.div;
                 key={service.id}"""
                 variants={itemVariants}""""
-                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"""
-              >"""
+                className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group ">"""
                 {/* Service Header */}""""
                 <div className="text-center mb-6">`
                   <div``
@@ -220,8 +219,7 @@ const EnhancedServicesShowcase = () => {}
                 <div className="text-center">
                   <Link"""
                     to={service.link}""""
-                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm"""
-                  >
+                    className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors duration-300 text-sm ">
                     Learn More"""
                     <svg""""
                       className="ml-2 h-4 w-4""""
@@ -254,11 +252,10 @@ const EnhancedServicesShowcase = () => {}
               <button;
                 onClick={() => {}
 '
-                  setSelectedCategory('all');'
-                  setSearchTerm('');"""
+                  setSelectedCategory('all')';
+                  setSearchTerm('')';"
                 }}""""
-                className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"""
-              >
+                className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300 ">
                 View All Services;
               </button>
             </motion.div>
@@ -295,14 +292,12 @@ const EnhancedServicesShowcase = () => {}
           >"""
             <Link""""
               to="/contact""""
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"""
-            >
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 ">
               Contact Us Today;
             </Link>"""
             <a""""
               href="tel:+13024640950""""
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"""
-            >
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 ">
               Call: +1 302 464 0950;
             </a>
           </motion.div>
@@ -348,8 +343,7 @@ const EnhancedServicesShowcase = () => {}
               Website:{' '}"""
               <a""""
                 href="https://ziontechgroup.com""""
-                className="text-blue-400 hover:text-blue-300"""
-              >
+                className="text-blue-400 hover:text-blue-300 ">
                 https://ziontechgroup.com;
               </a>
             </p>

@@ -9,12 +9,12 @@ import {
   Settings, User, Bell, Search, Menu, Zap, Star,
   TrendingUp, Award, Globe, Server, Smartphone,
   Database, Network, Lock, BarChart3, PenTool,
-  Eye, Sparkles, Phone, Mail, MapPin
+  Eye, Sparkles, Phone, Mail, MapPin;
 } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;
+   onClose: () => void;
 }
 
 export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {

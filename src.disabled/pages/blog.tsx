@@ -1,10 +1,8 @@
-<<<<<<< HEAD:src.disabled/pages/blog.tsx
-import React from
+:src.disabled/pages/blog.tsx
+import React from;
   'react';
-=======
 import React from 'react';
 export default React.memo(function Blog () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/blog.tsx
 
 ;
   return (;
@@ -12,5 +10,4 @@ export default React.memo(function Blog () {;
       <h1 className="text - 4xl font - bold mb - 4">Blog</h1>";
       <p className="text - gray - 300">Insights, tutorials, and announcements.</p>;
     </div>;) ;
-};
-";
+}";;

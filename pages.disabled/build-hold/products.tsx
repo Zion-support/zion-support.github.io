@@ -1,12 +1,11 @@
 React from,
   react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../components/layout/MainLayout';
-import Link from
-  'next/link';'import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from
-  'lucide-react';'
-  'const Products: NextPage = () => {
+import Link from;
+  'next/link';import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from;
+  'lucide-react'';const Products: NextPage = () => {
   const products = [;
     {;
       title: 'AI Business Intelligence Platform, description:,
@@ -99,8 +98,7 @@ import Link from
   100+', image: '/products/iot-edge-platform.jpg'    }
   '  ];
 
-  const categories = [;
-    'All Products
+  const categories = [';All Products
   ', 'AI & Analytics
   ',' 
   'Cloud Computing',
@@ -108,7 +106,7 @@ import Link from
   '    'SaaS Development
   ', 'Digital Transformation
   ',' 
-  'IoT & Edge Computing''  ];'
+  'IoT & Edge Computing''  ]';
   return (
     <MainLayout
       title="Products - Zion Tech Group""      description="Discover our comprehensive suite of technology products designed to accelerate your business growth and digital transformation.""    >"      {/* Hero Section */}

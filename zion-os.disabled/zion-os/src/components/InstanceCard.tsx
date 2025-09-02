@@ -1,19 +1,17 @@
 "use client";
 import { useState } from "react";
 interface InstanceCardProps {
-  instance: {
-    id: string;
-    name: string;
-    slug: string;
-    domain?: string | null;
-    subdomain?: string | null;
-    vertical: string;
-    governanceType: string;
-    createdAt: Date;
-    _count: {
-      deployments: number;
-      features: number;
-    };
+  instance: { id: string;
+   name: string;
+   slug: string;
+   domain?: string | null;
+   subdomain?: string | null;
+   vertical: string;
+   governanceType: string;
+   createdAt: Date;
+   _count: { deployments: number;
+   features: number;
+};
   };
 export function InstanceCard({ instance }: InstanceCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);

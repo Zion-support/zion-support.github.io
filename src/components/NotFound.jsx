@@ -1,5 +1,5 @@
-import React from 'react';'''
-import { Link } from 'react-router-dom';'''
+import React from 'react'';
+import { Link } from 'react-router-dom'';
 import { motion } from 'framer-motion';
 import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
 '
@@ -11,8 +11,8 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
         { path: '/about', label: 'About Us', description: 'Learn about Zion Tech Group' },'''
         { path: '/contact', label: 'Contact', description: 'Get in touch with us' },'''
         { path: '/blog', label: 'Blog', description: 'Latest insights and news' },'''
-        { path: '/careers', label: 'Careers', description: 'Join our team' }''
-    ];'''
+        { path: '/careers', label: 'Careers', description: 'Join our team' }'';
+    ]';'
     const servicePages = [''''
         { path: '/services/ai', label: 'AI Services', description: 'Artificial Intelligence solutions' },'''
         { path: '/services/cloud', label: 'Cloud Services', description: 'Cloud infrastructure and DevOps' },'''
@@ -34,8 +34,7 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
 
 }} transition = {}
   { duration: 2,
-  repeat: Infinity;
-"""
+  repeat: Infinity';"
 }}>""""
           <div className="w-32 h-32 mx-auto bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center">""""
             <AlertTriangle className="w-16 h-16 text-white"/>
@@ -71,8 +70,7 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 }} transition={{ delay: 0.1 * index }}>""""
                 <Link to={page.path} className="block p-4 bg-white/10 border border-white/20 rounded-lg hover:border-blue-400 hover:bg-white/20 transition-all duration-300 group">""""
                   <div className="flex items-center justify-between">""""
@@ -98,8 +96,7 @@ import { Home, Search, ArrowRight, AlertTriangle const NotFound = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 }} transition={{ delay: 0.1 * index }}>""""
                 <Link to={service.path} className="block p-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-400/30 rounded-lg hover:border-blue-400 hover:from-blue-500/30 hover:to-cyan-500/30 transition-all duration-300 group">""""
                   <div className="flex items-center justify-between">""""

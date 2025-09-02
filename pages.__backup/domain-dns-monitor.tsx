@@ -1,12 +1,12 @@
-import React from,
+import React from,;
   react';
-import Head from
+import Head from;
   'next/head';
 <: pages/domain-dns-monitor.tsx
-import QuantumHolographicMatrixBackground from
-  '../components/ui/QuantumHolographicMatrixBackground';import QuantumHolographicMatrixBackground from
+import QuantumHolographicMatrixBackground from;
+  '../components/ui/QuantumHolographicMatrixBackground';import QuantumHolographicMatrixBackground from;
   '../components/ui/QuantumHolographicMatrixBackground;
-import { Globe, Check, Phone, Mail, MapPin, ExternalLink } from,
+import { Globe, Check, Phone, Mail, MapPin, ExternalLink } from,;
   lucide-react';
 
 export default function DomainDNSMonitorPage() {

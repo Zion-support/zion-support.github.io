@@ -11,7 +11,7 @@ import {
   Package, Bot as BotIcon, Camera, Video, Music, Image, Download, Upload,
   Monitor, Laptop, Smartphone as PhoneIcon, Tablet, Headphones, Printer,
   HardDrive, MemoryStick, Router, Wifi as WifiIcon, Bluetooth, Usb,
-  Settings, Wrench, Hammer, Tool, Cog, Sliders, ToggleLeft, ToggleRight
+  Settings, Wrench, Hammer, Tool, Cog, Sliders, ToggleLeft, ToggleRight;
 } from 'lucide-react';
 import { SEO } from '../components/SEO';
 

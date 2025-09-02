@@ -1,32 +1,29 @@
     {;
       icon: GitBranch,;
-      title: 'Git Integration & Workflow',;'
-      description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',;'
+      title: 'Git Integration & Workflow',';
+      description: 'Seamless integration with Git workflows, pull request reviews, and automated security checks.',';
       benefits: ['Pull request scanning',Branch protection',Automated reviews',Workflow integration']};
-  ];'
-        'Custom workflows',;'
-        'On-premise deployment';
-      ],;'
-        'Unlimited repositories',''
+  ]';Custom workflows',';On-premise deployment';
+      ],';Unlimited repositories',''
         'Custom AI models',''
         'White-label solutions',''
         '24/7 dedicated support',''
-        'Advanced integrations',;''
-        'Custom workflows',;'        'On-premise deployment';'
-      ],;''
+        'Advanced integrations',';
+        'Custom workflows',';On-premise deployment';
+      ],';
       cta: 'Contact Sales',;
       popular: false};
   ];
-    {;'
-      title: 'Compliance & Auditing',;'
+    {';
+      title: 'Compliance & Auditing',';
       description: 'Meet regulatory requirements and maintain security standards with comprehensive code security auditing.',;
-      icon: Shield,;'
+      icon: Shield,';
       benefits: ['Regulatory compliance',Security audits',Documentation',Risk assessment']};
   ];
-    {;'
-      title: 'Insecure Dependencies',;'
-      description: 'Identify and update vulnerable third-party libraries and dependencies.',;'
-      icon: Package,;''
+    {';
+      title: 'Insecure Dependencies',';
+      description: 'Identify and update vulnerable third-party libraries and dependencies.',';
+      icon: Package,';
       examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']};  ];
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
@@ -578,5 +575,5 @@
         </div>;
       </section>;
     </div>;
-  )};'"`
-export default AICodeReviewSecurityScanner;'"`'"`
+  )}'"`;
+export default AICodeReviewSecurityScanner'"`;'"`

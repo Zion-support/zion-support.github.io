@@ -1,12 +1,11 @@
 React from
   'react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../../components/layout/MainLayout';
-import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } from
-  'lucide-react';'import Link from
-  'next/link';'
-  'const CustomDevelopment: NextPage = () => {
+import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } from;
+  'lucide-react';import Link from;
+  'next/link'';const CustomDevelopment: NextPage = () => {
   const developmentServices = [;
     {;
       icon: Code, title:,
@@ -110,7 +109,7 @@ import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } fr
   Cloud
   ' },'    { name: 'Docker, category:
   'DevOps' }
-  '  ];'
+  '  ]';
   return (
     <MainLayout
       title="Custom Development Solutions - Zion Tech Group""      description="Transform your ideas into powerful digital solutions with our custom development services. From web applications to mobile apps, we build scalable and secure solutions.""      keywords="custom development, web development, mobile app development, software development, custom software, application development""    >"      <div className="min-h-screen bg-gray-50">"        {/* Hero Section */}"        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"          <div className="container mx-auto px-4 text-center">"            <h1 className="text-4xl md: text-5xl font-bold mb-6">Custom Development Solutions</h1>"            <p className="text-xl text-gray-200 max-w-3xl mx-auto">"              Transform your ideas into powerful digital solutions with our expert development team. "              We build scalable, secure, and innovative applications tailored to your business needs.

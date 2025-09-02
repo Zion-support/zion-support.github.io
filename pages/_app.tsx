@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import '../src/index.css';
@@ -14,14 +13,5 @@ export default function App({ Component, pageProps }: AppProps) {
         });
     }
   }, []);
-
-=======
-import type { AppProps } from
-  'next/app';
-import
-  '../styles/globals.css';
-
-export default function App({ Component, pageProps }: AppProps) {
->>>>>>> origin/main
   return <Component {...pageProps} />;
 }

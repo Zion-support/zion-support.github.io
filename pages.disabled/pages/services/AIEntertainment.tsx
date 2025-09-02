@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIEntertainment.tsx
-import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 export default function AIEntertainment() {
-    'Automated content moderation and filtering',;'
-    'Predictive analytics for audience engagement',;'
-    'Real-time content performance optimization',;'
-    'Smart content scheduling and distribution',;'
-    'Integration with major entertainment platforms',;'
-import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 export default function AIEntertainment(function AIEntertainment() {): any {}
-    'Automated content moderation and filtering',;
-    'Predictive analytics for audience engagement',;
-    'Real-time content performance optimization',;
-    'Smart content scheduling and distribution',;
-    'Integration with major entertainment platforms',;
-    'Custom AI models for entertainment-specific insights';
+import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 export default function AIEntertainment() {;
+    'Automated content moderation and filtering',';Predictive analytics for audience engagement',';Real-time content performance optimization',';Smart content scheduling and distribution',';Integration with major entertainment platforms',';
+import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Video, BarChart3 export default function AIEntertainment(function AIEntertainment() {): any {};
+    'Automated content moderation and filtering',';Predictive analytics for audience engagement',';Real-time content performance optimization',';Smart content scheduling and distribution',';Integration with major entertainment platforms',';Custom AI models for entertainment-specific insights';
 <:pages.disabled/pages/services/AIEntertainment.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
 >    { ;
       name: 'Large Creator', ;
       price: '$1,499/mo', ;
-    { ;'
-      name: 'Large Creator', ;'
-      price: '$1,499/mo', ;'
+    { ';
+      name: 'Large Creator', ';
+      price: '$1,499/mo', ';
       details: ['Unlimited views',Custom AI models',Full platform integration',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Video content optimization and recommendation',;'
-    'Music and audio content personalization',;'
-    'Gaming content and player engagement',;'
-    'Social media content optimization',;'
-    'Streaming platform content curation',;'
-    'Content monetization and advertising';
-  ];
-
-  '
-    'Increase audience engagement by 30-50%',;'
-    'Improve content discovery by 40-60%',;'
-    'Cut content creation costs by 25-40%',;'
-    'Optimize content for maximum reach',;'
-    'Enhance user experience and satisfaction',;'
-    'Scale entertainment operations efficiently';
-  ];
-
-  '
-    'Video Streaming & YouTube',;'
-    'Music & Audio Platforms',;'
-    'Gaming & Esports',;'
-    'Social Media & Influencers',;'
-    'Podcasting & Audio Content',;'
-    'Live Streaming & Events';
+  ]';Video content optimization and recommendation',';Music and audio content personalization',';Gaming content and player engagement',';Social media content optimization',';Streaming platform content curation',';Content monetization and advertising';
+  ]';Increase audience engagement by 30-50%',';Improve content discovery by 40-60%',';Cut content creation costs by 25-40%',';Optimize content for maximum reach',';Enhance user experience and satisfaction',';Scale entertainment operations efficiently';
+  ]';Video Streaming & YouTube',';Music & Audio Platforms',';Gaming & Esports',';Social Media & Influencers',';Podcasting & Audio Content',';Live Streaming & Events';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Play, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-pink-600 text-pink-600 rounded-lg hover:bg-pink-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIEntertainment.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

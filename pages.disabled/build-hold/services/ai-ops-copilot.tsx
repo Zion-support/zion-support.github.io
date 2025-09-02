@@ -1,10 +1,10 @@
-import React from
+import React from;
   'react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../../components/layout/MainLayout';
-import Link from
+import Link from;
   'next/link';
 
 const AIOpsCopilot: NextPage = () => {

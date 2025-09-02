@@ -8,4 +8,4 @@ import { Activity, TrendingUp, TrendingDown, Clock, Zap, AlertTriangle, CheckCir
   '24h' |
   '7d' |
   '30d'>(
-  '24h');''
+  '24h')';

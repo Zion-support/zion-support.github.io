@@ -1,17 +1,16 @@
-<<<<<<< HEAD:pages.disabled_auto/services/micro-saas.tsx
-import React from,
+:pages.disabled_auto/services/micro-saas.tsx
+import React from,;
   react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../../components/layout/MainLayout';
-import { getServicesByCategory } from
+import { getServicesByCategory } from;
   '../../data/services';
-import { ArrowRight, CheckCircle, Star, Zap, Users, Shield } from
+import { ArrowRight, CheckCircle, Star, Zap, Users, Shield } from;
   'lucide-react';
-import Link from
+import Link from;
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -22,10 +21,9 @@ import {
   Star,
   Zap,
   Users,
-  Shield,
+  Shield,;
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/micro-saas.tsx
 
 const MicroSaasPage: NextPage = () => {
   const microSaasServices = getServicesByCategory(
@@ -34,7 +32,7 @@ const MicroSaasPage: NextPage = () => {
   const benefits = [
     {
       icon: <Zap className="w-8 h-8" />,
-<<<<<<< HEAD:pages.disabled_auto/services/micro-saas.tsx
+:pages.disabled_auto/services/micro-saas.tsx
       title:,
   Lightning Fast Setup',
       description: Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'
@@ -57,7 +55,6 @@ const MicroSaasPage: NextPage = () => {
   Proven Results',
       description: 'Track record of successful implementations with measurable ROI for our clients.
     }
-=======
       title: 'Lightning Fast Setup',
       description:
         'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.',
@@ -80,7 +77,6 @@ const MicroSaasPage: NextPage = () => {
       description:
         'Track record of successful implementations with measurable ROI for our clients.',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/micro-saas.tsx
   ];
 
   return (

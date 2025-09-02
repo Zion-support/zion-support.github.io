@@ -1,20 +1,25 @@
-import React, { useState, useEffect, useCallback, useRef } from,
-  react'; import { motion, AnimatePresence } from
+import React, { useState, useEffect, useCallback, useRef } from,;
+  react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Smartphone,; Tablet,; Monitor,; Hand,; MousePointer,; ArrowUpDown,; ZoomIn,; ZoomOut,; RotateCcw,; RotateCw,; Maximize,; Minimize,; Settings,; X,; CheckCircle,; AlertTriangle,; Info,; Smartphone as PhoneIcon,; Wifi,; Battery,; Signal,; Volume2,; VolumeX,; Sun,; Moon,; Eye,; EyeOff; } from
-  'lucide-react'; ; interface MobileSettings {; touchOptimization: boolean; gestureSupport: boolean; pinchZoom: boolean; rotationSupport: boolean; hapticFeedback: boolean; adaptiveLayout: boolean; mobileNavigation: boolean; touchTargets: boolean; swipeGestures: boolean; orientationLock:
-  'auto' |
-  'portrait' |
-  'landscape'; fontSize:
-  'small' |
-  'medium' |
-  'large'; contrast:
-  'normal' |
-  'high' |
-  'inverted'; brightness:
-  'auto' |
-  'low' |
-  'normal' |
-  'high; }; interface MobileOptimizerProps {; enabled?: boolean; showPanel?: boolean; autoDetect?: boolean; }; export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({; enabled = true,; showPanel = false,; autoDetect = true; }) => {; const [isOpen, setIsOpen] = useState(false); const [activeTab, setActiveTab] = useState<
+  'lucide-react'; ; interface MobileSettings {
+   touchOptimization: boolean;
+   gestureSupport: boolean;
+   pinchZoom: boolean;
+   rotationSupport: boolean;
+   hapticFeedback: boolean;
+   adaptiveLayout: boolean;
+   mobileNavigation: boolean;
+   touchTargets: boolean;
+   swipeGestures: boolean;
+   orientationLock: 'auto' | 'portrait' | 'landscape';
+   fontSize: 'small' | 'medium' | 'large';
+   contrast: 'normal' | 'high' | 'inverted';
+   brightness: 'auto' | 'low' | 'normal' | 'high;
+}; interface MobileOptimizerProps {
+   enabled?: boolean;
+   showPanel?: boolean;
+   autoDetect?: boolean;
+}; export const MobileOptimizer: React.FC<MobileOptimizerProps> = ({; enabled = true,; showPanel = false,; autoDetect = true; }) => {; const [isOpen, setIsOpen] = useState(false); const [activeTab, setActiveTab] = useState<
   'general' |
   'touch' |
   'display' |
@@ -24,4 +29,4 @@ import React, { useState, useEffect, useCallback, useRef } from,
   auto',; fontSize: 'medium,; contrast:,
   normal',; brightness: 'auto; }); ; const [deviceInfo, setDeviceInfo] = useState({; isMobile: false,; isTablet: false,; isDesktop: false,; orientation:
   'portrait',; screenSize: { width: 0, height: 0 },; pixelRatio: 1,; touchSupport: false,; batteryLevel: 0,; connectionType:
-  'unknown'; }); ; const [gestureHistory, setGestureHistory] = useState<Array<{; type: string; timestamp: Date; details: string; }>>([]); ; const [isOptimizing, setIsOptimizing] = useState(false); const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null); const gestureRef = useRef<HTMLDivElement>(null); ;''
+  'unknown'; }); ; const [gestureHistory, setGestureHistory] = useState<Array<{; type: string; timestamp: Date; details: string; }>>([]); ; const [isOptimizing, setIsOptimizing] = useState(false); const touchStartRef = useRef<{ x: number; y: number; time: number } | null>(null); const gestureRef = useRef<HTMLDivElement>(null); ';

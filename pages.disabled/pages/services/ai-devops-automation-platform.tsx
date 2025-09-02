@@ -953,5 +953,5 @@
         </section>
       </div>;
     </>
-  )};'"`
-export default AIDevOpsAutomationPlatform;'"`'"`
+  )}'"`;
+export default AIDevOpsAutomationPlatform'"`;'"`

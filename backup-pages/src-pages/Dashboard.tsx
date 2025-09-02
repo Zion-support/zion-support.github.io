@@ -88,25 +88,25 @@
 
   const getStatusColor = (status: string)  => {
 
-    switch (status) {;"
-      case "Completed":;"
-        return "bg-green-100 text-green-800";"
-      case "In Progress":;"
-        return "bg-blue-100 text-blue-800";"
-      case "Planning":;"        return "bg-yellow-100 text-yellow-800";
-      default:;"
+    switch (status) {";
+      case "Completed":";
+        return "bg-green-100 text-green-800"";
+      case "In Progress":";
+        return "bg-blue-100 text-blue-800"";
+      case "Planning":";        return "bg-yellow-100 text-yellow-800";
+      default:";
         return "bg-gray-100 text-gray-800"}
   };
 
   const getPriorityColor = (priority: string)  => {
 
-    switch (priority) {;"
-      case "High":;"
-        return "bg-red-100 text-red-800";"
-      case "Medium":;"
-        return "bg-yellow-100 text-yellow-800";"
-      case "Low":;"        return "bg-green-100 text-green-800";
-      default:;"
+    switch (priority) {";
+      case "High":";
+        return "bg-red-100 text-red-800"";
+      case "Medium":";
+        return "bg-yellow-100 text-yellow-800"";
+      case "Low":";        return "bg-green-100 text-green-800";
+      default:";
         return "bg-gray-100 text-gray-800"}
   };
 
@@ -178,7 +178,7 @@ import {
   Mail,
   Phone,
   MapPin,
-  } from
+  } from;
   'lucide-react';
 
 export default function Dashboard() {
@@ -636,7 +636,7 @@ export default function Dashboard() {
         </div>
 
         {/* Service Performance Chart */}"
-        <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">;"
+        <div className="mt-8 bg-white rounded-xl shadow-sm border border-gray-200 p-6">";
           <div className="flex items-center justify-between mb-6">"
             <h2 className="text-xl font-semibold text-gray-900">Service Performance</h2>"
             <div className="flex items-center space-x-4">"
@@ -656,7 +656,7 @@ export default function Dashboard() {
           </div>
           
           {/* Placeholder for chart */}"
-          <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">;"
+          <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">";
             <div className="text-center">"
               <BarChart3 className="h-12 w-12 text-gray-400 mx-auto mb-2" />"
               <p className="text-gray-500">Performance chart will be displayed here</p>"
@@ -682,7 +682,7 @@ export default function Dashboard() {
           <div className="h-64 bg-gray-50 rounded-lg flex items-center justify-center">"
             <div className="text-center">"
               <BarChart3 className="h-12 w-12 text-gray-400 mx-auto mb-2" />"
-              <p className="text-gray-500">Performance chart will be displayed here</p>;"
+              <p className="text-gray-500">Performance chart will be displayed here</p>";
               <p className="text-sm text-gray-400">Integration with analytics service required</p>;
             </div>;
           </div>;

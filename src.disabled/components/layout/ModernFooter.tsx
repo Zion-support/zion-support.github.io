@@ -1,6 +1,6 @@
-import React from,
-  react'; import { Link } from
-  'react-router-dom'; import { motion } from
+import React from,;
+  react'; import { Link } from;
+  'react-router-dom'; import { motion } from;
   'framer-motion'; import { ; Globe,; Brain,; Cloud,; Shield,; Zap,; Users,; Phone,; Mail,; MapPin,; Linkedin,; Twitter,; Github,; ArrowUp,; ExternalLink; } from
   'lucide-react'; ; const ModernFooter = () => {; const currentYear = new Date().getFullYear(); ; const footerSections = [; {; title: 'Services,; links: [; { name:,
   AI Solutions', href: '/ai-services, icon: Brain },; { name:,

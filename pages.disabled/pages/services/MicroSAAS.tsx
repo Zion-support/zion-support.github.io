@@ -1,46 +1,46 @@
 :pages.disabled/pages/services/MicroSAAS.tsx
-      icon: Globe,;""
-icon: Globe,;""
-      title: "Cloud Deployment",;""
-      description: "Scalable cloud infrastructure and deployment solutions",;""
-      price: "From $15,000/month",;""
+      icon: Globe,';
+icon: Globe,';
+      title: "Cloud Deployment",';
+      description: "Scalable cloud infrastructure and deployment solutions",';
+      price: "From $15,000/month",';
       features: ["AWS/Azure deployment", "Container orchestration", "Auto-scaling", "Monitoring"]};
 :pages.disabled/pages/services/MicroSAAS.tsx
-  ];"
-  const benefits = [;""
+  ]";
+  const benefits = [';
   ];
 
-  const benefits: any = [;""
-    "Lower development costs and faster time to market",;""
-    "Scalable architecture that grows with your business",;""
-    "Reduced infrastructure management overhead",;""
-    "Access to enterprise-grade security and compliance",;""
-    "Flexible subscription models and pricing strategies",;""
+  const benefits: any = [';
+    "Lower development costs and faster time to market",';
+    "Scalable architecture that grows with your business",';
+    "Reduced infrastructure management overhead",';
+    "Access to enterprise-grade security and compliance",';
+    "Flexible subscription models and pricing strategies",';
     "Continuous updates and feature improvements";
 :pages.disabled/pages/services/MicroSAAS.tsx
-  ];"
-    {;""
-      name: "Cloud",;""
-      description: "AWS, Azure, GCP with containerization and orchestration",;"
-      icon: Globe,;""
+  ]";
+    {';
+      name: "Cloud",';
+      description: "AWS, Azure, GCP with containerization and orchestration",";
+      icon: Globe,';
       features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"]};
-  ]},;"
-    {;""
-      title: "E-commerce",;"      description: "Online marketplace and retail management solutions",;
+  ]},";
+    {';
+      title: "E-commerce",";      description: "Online marketplace and retail management solutions",;
       icon: Package};
-  ];"
+  ]";
   return (""
     <div className = "min-h-screen bg-slate-900 text-white">"
   ];
 
-    {;""
-      name: "Cloud",;""
+    {';
+      name: "Cloud",';
       description: "AWS, Azure, GCP with containerization and orchestration",;
-      icon: Globe,;""
+      icon: Globe,';
       features: ["Cloud platforms", "Containerization", "Auto-scaling", "Load balancing"]};
   ]},;
-    {;""
-      title: "E-commerce",;"      description: "Online marketplace and retail management solutions",;
+    {';
+      title: "E-commerce",";      description: "Online marketplace and retail management solutions",;
       icon: Package};
   ];
 
@@ -320,7 +320,7 @@ icon: Globe,;""
       </section>;
     </div>;
 :pages.disabled/pages/services/MicroSAAS.tsx
-  )};'"
+  )}'";
 export default MicroSAAS}}}}'"'"
   )};
 

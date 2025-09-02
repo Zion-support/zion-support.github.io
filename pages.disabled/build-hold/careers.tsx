@@ -1,11 +1,10 @@
 type { NextPage } from,
   next';
-import Layout from
-  '../components/Layout';'Link from
+import Layout from;
+  '../components/Layout';Link from
   'next/link';
-import { Users, Briefcase, Heart, Zap, CheckCircle } from
-  'lucide-react';'
-  'const Careers: NextPage = () => {
+import { Users, Briefcase, Heart, Zap, CheckCircle } from;
+  'lucide-react'';const Careers: NextPage = () => {
   return (
     <Layout
       title="Careers at Zion Tech Group - Join Our Team""      description="Join Zion Tech Group and be part of a team that&apos;s transforming businesses through innovative technology solutions. Explore career opportunities and grow with us."''    >      {/* Hero Section */}

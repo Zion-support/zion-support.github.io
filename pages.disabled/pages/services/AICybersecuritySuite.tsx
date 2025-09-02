@@ -36,7 +36,7 @@ import { Shield,
   Database,
   FileText,
   Monitor,
-  Activity'
+  Activity';
  } from 'lucide-react';
 ;
 export { function };
@@ -79,11 +79,7 @@ export default function AICybersecuritySuite(...args[]):  {
       title: "Compliance Automation","
       description: "Automated compliance monitoring and reporting for all major regulatory frameworks",
       icon: CheckCircle,
-      benefits: [;"
-        "GDPR compliance",;"
-        "SOC 2 automation",;"
-        "HIPAA compliance",;"
-        "Real-time audit trails";  ];
+      benefits: [';GDPR compliance",';SOC 2 automation",';HIPAA compliance",';Real-time audit trails";  ];
 
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -273,7 +269,7 @@ export default function AICybersecuritySuite(...args[]):  {
         </div>;
       </section>"
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -349,7 +345,7 @@ export default function AICybersecuritySuite(...args[]):  {
         </div>
       </section>"
       {/* Services & Pricing Section */}""
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;""
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">';
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -435,7 +431,7 @@ export default function AICybersecuritySuite(...args[]):  {
         </div>
       </section>"
       {/* Security Modules Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -522,7 +518,7 @@ export default function AICybersecuritySuite(...args[]):  {
         </div>
       </section>"
       {/* Benefits Section */}""
-      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">;""
+      <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">';
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -604,7 +600,7 @@ export default function AICybersecuritySuite(...args[]):  {
         </div>
       </section>"
       {/* Technologies Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -680,7 +676,7 @@ export default function AICybersecuritySuite(...args[]):  {
         </div>
       </section>"
       {/* CTA Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div
             initial = {

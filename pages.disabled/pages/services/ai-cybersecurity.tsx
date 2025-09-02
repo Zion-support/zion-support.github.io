@@ -1,32 +1,25 @@
 :pages.disabled/pages/services/ai-cybersecurity.tsx
 import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {
-import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {}
+import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, Network, Code, Key, Target, CheckCircle, Clock, TrendingUp const AICybersecurity: React.FC = () => {};
     },;
     {;
       icon: Eye,;
-      title: 'Behavioral Analytics',;'
+      title: 'Behavioral Analytics',';
       description: 'Monitor and analyze user behavior for suspicious activity'};
   ]},;
-    {;'
-      title: 'Security Automation',;'
-      description: 'Automate security operations and responses',;'
+    {';
+      title: 'Security Automation',';
+      description: 'Automate security operations and responses',';
       icon: '⚡'};
 :pages.disabled/pages/services/ai-cybersecurity.tsx
-  ];'
-  const benefits = [;''
-    'Real-time threat detection and response',;''
-    'Reduced false positives with AI accuracy',;''
-    '24/7 automated security monitoring',;''
-    'Predictive threat intelligence',;''
-    'Cost-effective security operations',;'    'Compliance and regulatory support';
-  ];
-
-    'Real-time threat detection and response',;
-    'Reduced false positives with AI accuracy',;
-    '24/7 automated security monitoring',;
-    'Predictive threat intelligence',;
-    'Cost-effective security operations',;
-    'Compliance and regulatory support';
+  ]';
+  const benefits = [';
+    'Real-time threat detection and response',';
+    'Reduced false positives with AI accuracy',';
+    '24/7 automated security monitoring',';
+    'Predictive threat intelligence',';
+    'Cost-effective security operations',';Compliance and regulatory support';
+  ]';Real-time threat detection and response',';Reduced false positives with AI accuracy',';24/7 automated security monitoring',';Predictive threat intelligence',';Cost-effective security operations',';Compliance and regulatory support';
   ];
 :pages.disabled/pages/services/ai-cybersecurity.tsx
 
@@ -124,7 +117,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       </section>
 
       {/* Features Section */}""
-      <section className="py-16 px-4">;""
+      <section className="py-16 px-4">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -229,7 +222,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       </section>
 
       {/* Services Section */}""
-      <section className="py-16 px-4 bg-slate-800/30">;""
+      <section className="py-16 px-4 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -345,7 +338,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-16 px-4">;""
+      <section className="py-16 px-4">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -484,7 +477,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       </section>
 
       {/* CTA Section */}""
-      <section className="py-16 px-4">;""
+      <section className="py-16 px-4">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -538,7 +531,7 @@ import { Shield, Brain, Lock, Eye, AlertTriangle, Zap, Users, Globe, Database, N
       </section>;
     </div>;
 :pages.disabled/pages/services/ai-cybersecurity.tsx
-  )};'"
+  )}'";
 export default AICybersecurity}}}'"'"
   )};
 

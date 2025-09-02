@@ -1,11 +1,10 @@
 React from
   'react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../components/layout/MainLayout';
-import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from
-  'lucide-react';'
-  'const Cookies: NextPage = () => {
+import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
+  'lucide-react'';const Cookies: NextPage = () => {
   const cookieTypes = [;
     {;
       icon: Cookie, title:,

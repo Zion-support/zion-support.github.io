@@ -1,14 +1,14 @@
-import React, { useState, useCallback } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';'''
+import React, { useState, useCallback } from 'react'';
+import { motion, AnimatePresence } from 'framer-motion'';
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration.jsx";
 ;
 export const AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
+    })';
     const [activeTab, setActiveTab] = useState('generate');
-    const [showAdvanced, setShowAdvanced] = useState(false);'
+    const [showAdvanced, setShowAdvanced] = useState(false)';
     const [customCode, setCustomCode] = useState('');
     const [copied, setCopied] = useState(false);
     const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration();
@@ -33,7 +33,7 @@ export const AICodeGenerator = () => {
         e.preventDefault();
         if (!form.prompt.trim())
             return;
-        await generateCode(form.prompt, form);'
+        await generateCode(form.prompt, form)';
         trackEvent('ai_code_generator',form_submitted', form.language, null, {}
             framework: form.framework,
             style: form.style,
@@ -44,7 +44,7 @@ export const AICodeGenerator = () => {
     const handleAnalyzeCustomCode = useCallback(async () => {}
         if (!customCode.trim())
             return;
-        await analyzeCode(customCode, form.language);'
+        await analyzeCode(customCode, form.language)';
         trackEvent('ai_code_generator',custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization;
     const handleOptimizeCode = useCallback(async (focus) => {}
@@ -61,30 +61,30 @@ export const AICodeGenerator = () => {
     const handleGenerateTests = useCallback(async () => {}
         if(!generatedCode && !customCode) return;
         const codeToTest = generatedCode || customCode;
-        const testCode = await generateTests(codeToTest, form.language);'
+        const testCode = await generateTests(codeToTest, form.language)';
         // In a real implementation, you'd want to display the test code''
-        // // // // // // // // console.log('Generated tests:', testCode);'
+        // // // // // // // // console.log('Generated tests:', testCode)';
         trackEvent('ai_code_generator',tests_generated', form.language, testCode.length);
-    }, [generatedCode, customCode, generateTests, form.language, trackEvent]);'
-        // console.log('Generated tests:', testCode);'
+    }, [generatedCode, customCode, generateTests, form.language, trackEvent])';
+        // console.log('Generated tests:', testCode)';
         trackEvent('ai_code_generator',tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation;
     const handleGenerateDocs = useCallback(async () => {}
         if(!generatedCode && !customCode) return;
         const codeToDoc = generatedCode || customCode;
-        const docs = await generateDocs(codeToDoc, form.language);'
+        const docs = await generateDocs(codeToDoc, form.language)';
         // In a real implementation, you'd want to display the documentation''
-        // // // // // // // // console.log('Generated docs:', docs);'
+        // // // // // // // // console.log('Generated docs:', docs)';
         trackEvent('ai_code_generator',docs_generated', form.language, docs.length);
-    }, [generatedCode, customCode, generateDocs, form.language, trackEvent]);'
-        // console.log('Generated docs:', docs);'
+    }, [generatedCode, customCode, generateDocs, form.language, trackEvent])';
+        // console.log('Generated docs:', docs)';
         trackEvent('ai_code_generator',docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard;
     const copyToClipboard = useCallback(async (code) => {}
         try {}
             await navigator.clipboard.writeText(code);
             setCopied(true);
-            setTimeout(() => setCopied(false), 2000);'
+            setTimeout(() => setCopied(false), 2000)';
             // // // // // // // // console.error('Failed to copy code:', error);
         }'
             trackEvent('ai_code_generator',code_copied',clipboard', code.length)}
@@ -96,15 +96,15 @@ export const AICodeGenerator = () => {
     }, [trackEvent]);
     // Apply suggestion;
     const handleApplySuggestion = useCallback((suggestion) => {}
-        applySuggestion(suggestion);'
+        applySuggestion(suggestion)';
         trackEvent('ai_code_generator',suggestion_applied', suggestion.type, null, {}
             suggestionId: suggestion.id,
             impact: suggestion.impact;
         }) }, [applySuggestion, trackEvent]) ;
     // Clear history;
     const handleClearHistory = useCallback(() => {}
-        clearHistory();'"""
-        trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent]);""""
+        clearHistory()'';"
+        trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent])';""
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">"""
       {/* Header */}""""
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">""""
@@ -156,8 +156,7 @@ export const AICodeGenerator = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">"""
               {/* Generation Form */}""""
@@ -169,8 +168,7 @@ export const AICodeGenerator = () => {
                   <textarea value={form.prompt} onChange = { (e) => setForm(prev => ({ ...prev,
   prompt: e.target.value;
   (e) => setForm(prev => ({ ...prev,
-  prompt: e.target.value;
-"""
+  prompt: e.target.value';"
 """"
 }))} placeholder="e.g., Create a React component for a user profile card with avatar, name, email, and edit button..." className="w-full h-32 p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 resize-none" required/>
                 </div>
@@ -184,8 +182,7 @@ export const AICodeGenerator = () => {
                     <select value={form.language} onChange = { (e) => setForm(prev => ({ ...prev,
   language: e.target.value;
   (e) => setForm(prev => ({ ...prev,
-  language: e.target.value;
-"""
+  language: e.target.value';"
 """"
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">""""
                       <option value="typescript">TypeScript</option>""""
@@ -205,8 +202,7 @@ export const AICodeGenerator = () => {
                     </label>'
                     <select value={form.framework || ''} onChange = {}
   (e) => setForm(prev => ({ ...prev,
-  framework: e.target.value || null;
-"""
+  framework: e.target.value || null';"
 """"
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">""""
                       <option value="">None</option>""""
@@ -228,8 +224,7 @@ export const AICodeGenerator = () => {
                     <select value={form.style} onChange = { (e) => setForm(prev => ({ ...prev,
   style: e.target.value;
   (e) => setForm(prev => ({ ...prev,
-  style: e.target.value;
-"""
+  style: e.target.value';"
 """"
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">""""
                       <option value="functional">Functional</option>""""
@@ -246,8 +241,7 @@ export const AICodeGenerator = () => {
                     <select value={form.quality} onChange = { (e) => setForm(prev => ({ ...prev,
   quality: e.target.value;
   (e) => setForm(prev => ({ ...prev,
-  quality: e.target.value;
-"""
+  quality: e.target.value';"
 """"
 }))} className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100">""""
                       <option value="prototype">Prototype</option>""""
@@ -273,8 +267,7 @@ export const AICodeGenerator = () => {
 
 }} exit = {}
   { opacity: 0,
-  height: 0;
-"""
+  height: 0';"
 """"
 }} className="grid grid-cols-2 md:grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">'
                     {[''
@@ -286,8 +279,7 @@ export const AICodeGenerator = () => {
                 ].map(({ key, label, icon: Icon }) => (<label key={key} className="flex items-center gap-2 cursor-pointer">""""
                         <input type="checkbox" checked={form[key]} onChange = {}
   (e) => setForm(prev => ({ ...prev,
-  [key]: e.target.checked;
-"""
+  [key]: e.target.checked';"
 }) ) } className="w - 4 h - 4 text - purple - 600 bg - gray - 100 border - gray - 300 rounded focus:ring - purple - 500 dark:focus:ring - purple - 600 dark:ring - offset - gray - 800 focus:ring - 2 dark:bg - gray - 700 dark:border - gray - 600"/>"""
                         <Icon className="w - 4 h - 4 text - gray - 600 dark:text - gray - 400"/>"""
                         <span className="text - sm text - gray - 700 dark:text - gray - 300">{label}</span>
@@ -319,8 +311,7 @@ export const AICodeGenerator = () => {
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} className="space-y-4">""""
                   <div className="flex items-center justify-between">""""
@@ -356,8 +347,7 @@ export const AICodeGenerator = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">"""
               <div>""""
@@ -383,8 +373,7 @@ export const AICodeGenerator = () => {
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} className="space-y-6">"""
                   {/* Metrics Overview */}""""
@@ -396,7 +385,7 @@ export const AICodeGenerator = () => {
                     { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },'
                     { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
                 ].map(({ key, label, icon: Icon, color }) => {}
-                    const value = codeAnalysis[key];'
+                    const value = codeAnalysis[key]';
                     if (typeof value === 'number') {}
 """
 ""`
@@ -454,8 +443,7 @@ export const AICodeGenerator = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">""""
               <div className="text-center py-8">""""
@@ -492,8 +480,7 @@ export const AICodeGenerator = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">""""
               <div className="text-center py-8">""""
@@ -521,8 +508,7 @@ export const AICodeGenerator = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">""""
               <div className="text-center py-8">""""
@@ -548,8 +534,7 @@ export const AICodeGenerator = () => {
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">""""
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
@@ -561,8 +546,7 @@ export const AICodeGenerator = () => {
   x: 20;
 }} animate = {}
   { opacity: 1,
-  x: 0;
-"""
+  x: 0';"
 """"
 }} className="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">""""
                   <div className="flex items-start justify-between mb-3">"'"`
@@ -613,8 +597,7 @@ export const AICodeGenerator = () => {
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-6">""""
             <div className="flex items-center justify-between mb-4">""""
@@ -657,6 +640,6 @@ export const AICodeGenerator = () => {
             </div>
           </motion.div>) }'"`
       </div>'"`'"`
-    </div>)};'"`'"`'"`
+    </div>)}'"`;'"`'"`
 '"`'"`'"`
 '"`'"`

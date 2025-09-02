@@ -3,14 +3,14 @@ import Head from 'next/head';
 
 interface SEOHeadProps {
   title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
-  noindex?: boolean;
-  structuredData?: object;
+   description?: string;
+   keywords?: string;
+   canonical?: string;
+   ogImage?: string;
+   ogType?: string;
+   twitterCard?: string;
+   noindex?: boolean;
+   structuredData?: object;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({

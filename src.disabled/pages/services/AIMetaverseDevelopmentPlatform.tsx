@@ -2,13 +2,7 @@ import React from 'react';
 import { SEO } from "../../components/SEO";
 
 export default function AIMetaverseDevelopmentPlatform() {
-  const features = [;
-    'AI-powered 3D world generation and design',;
-    'Intelligent avatar creation and customization',;
-    'Real-time virtual environment optimization',;
-    'Advanced spatial computing and AR/VR integration',;
-    'AI-driven social interaction and engagement',;
-    'Metaverse economy and NFT marketplace tools';
+  const features = [';AI-powered 3D world generation and design',';Intelligent avatar creation and customization',';Real-time virtual environment optimization',';Advanced spatial computing and AR/VR integration',';AI-driven social interaction and engagement',';Metaverse economy and NFT marketplace tools';
   ];
 
   const tiers = [
@@ -46,39 +40,18 @@ export default function AIMetaverseDevelopmentPlatform() {
       details: [
         'Unlimited virtual worlds',
         'Custom AI algorithms',
-        '24/7 dedicated support',;
-        'On-premise deployment options',;
-        'Custom integrations and APIs',;
-        'White-label solutions available',;
-        'Enterprise security features';
+        '24/7 dedicated support',';On-premise deployment options',';Custom integrations and APIs',';White-label solutions available',';Enterprise security features';
       ];
     };
   ];
 
-  const useCases = [;
-    'Virtual events and conferences',;
-    'Gaming and entertainment platforms',;
-    'Virtual real estate and architecture',;
-    'Remote work and collaboration spaces',;
-    'Education and training environments',;
-    'Social networking and communities';
+  const useCases = [';Virtual events and conferences',';Gaming and entertainment platforms',';Virtual real estate and architecture',';Remote work and collaboration spaces',';Education and training environments',';Social networking and communities';
   ];
 
-  const benefits = [;
-    'Reduce development time by 50-70% with AI automation',;
-    'Create immersive experiences that increase user engagement',;
-    'Scale virtual worlds efficiently with intelligent optimization',;
-    'Enable cross-platform compatibility and accessibility',;
-    'Build sustainable metaverse economies and ecosystems';
+  const benefits = [';Reduce development time by 50-70% with AI automation',';Create immersive experiences that increase user engagement',';Scale virtual worlds efficiently with intelligent optimization',';Enable cross-platform compatibility and accessibility',';Build sustainable metaverse economies and ecosystems';
   ];
 
-  const industries = [;
-    'Gaming and Entertainment',;
-    'Real Estate and Architecture',;
-    'Education and Training',;
-    'Healthcare and Telemedicine',;
-    'Retail and E-commerce',;
-    'Corporate and Enterprise';
+  const industries = [';Gaming and Entertainment',';Real Estate and Architecture',';Education and Training',';Healthcare and Telemedicine',';Retail and E-commerce',';Corporate and Enterprise';
   ];
 
   return (

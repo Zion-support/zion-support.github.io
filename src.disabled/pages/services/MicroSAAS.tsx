@@ -46,13 +46,7 @@ const MicroSAAS: React.FC = ($2) => {
     };
   ];
 
-  const benefits = [;
-    "Lower development costs and faster time to market",;
-    "Scalable architecture that grows with your business",;
-    "Reduced infrastructure management overhead",;
-    "Access to enterprise-grade security and compliance",;
-    "Flexible subscription models and pricing strategies",;
-    "Continuous updates and feature improvements";
+  const benefits = [";Lower development costs and faster time to market",";Scalable architecture that grows with your business",";Reduced infrastructure management overhead",";Access to enterprise-grade security and compliance",";Flexible subscription models and pricing strategies",";Continuous updates and feature improvements";
   ];
 
   const technologies = [

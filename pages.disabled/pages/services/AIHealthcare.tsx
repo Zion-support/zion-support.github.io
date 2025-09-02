@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIHealthcare.tsx
-import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare() {
-    'Automated medical record processing and coding',;'
-    'Predictive analytics for patient outcomes',;'
-    'Drug interaction and adverse event monitoring',;'
-    'Telemedicine and remote patient monitoring',;'
-    'Integration with major EHR and healthcare systems',;'
-import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare(function AIHealthcare() {): any {}
-    'Automated medical record processing and coding',;
-    'Predictive analytics for patient outcomes',;
-    'Drug interaction and adverse event monitoring',;
-    'Telemedicine and remote patient monitoring',;
-    'Integration with major EHR and healthcare systems',;
-    'Custom AI models for specialized medical domains';
+import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare() {;
+    'Automated medical record processing and coding',';Predictive analytics for patient outcomes',';Drug interaction and adverse event monitoring',';Telemedicine and remote patient monitoring',';Integration with major EHR and healthcare systems',';
+import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Activity, BarChart3 export default function AIHealthcare(function AIHealthcare() {): any {};
+    'Automated medical record processing and coding',';Predictive analytics for patient outcomes',';Drug interaction and adverse event monitoring',';Telemedicine and remote patient monitoring',';Integration with major EHR and healthcare systems',';Custom AI models for specialized medical domains';
 <:pages.disabled/pages/services/AIHealthcare.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 >    { ;
       name: 'Large Health System', ;
       price: '$2,999/mo', ;
-    { ;'
-      name: 'Large Health System', ;'
-      price: '$2,999/mo', ;'
+    { ';
+      name: 'Large Health System', ';
+      price: '$2,999/mo', ';
       details: ['Unlimited patients',Custom AI models',Full system integration',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Medical imaging and radiology analysis',;'
-    'Patient diagnosis and treatment planning',;'
-    'Electronic health record optimization',;'
-    'Drug discovery and clinical trials',;'
-    'Population health management',;'
-    'Medical research and data analysis';
-  ];
-
-  '
-    'Improve diagnostic accuracy by 20-35%',;'
-    'Reduce medical errors by 30-50%',;'
-    'Cut administrative costs by 25-40%',;'
-    'Accelerate treatment decisions by 40-60%',;'
-    'Enhance patient outcomes and satisfaction',;'
-    'Scale healthcare operations efficiently';
-  ];
-
-  '
-    'Hospitals & Health Systems',;'
-    'Medical Practices & Clinics',;'
-    'Radiology & Imaging Centers',;'
-    'Pharmaceutical Companies',;'
-    'Research Institutions',;'
-    'Health Insurance Providers';
+  ]';Medical imaging and radiology analysis',';Patient diagnosis and treatment planning',';Electronic health record optimization',';Drug discovery and clinical trials',';Population health management',';Medical research and data analysis';
+  ]';Improve diagnostic accuracy by 20-35%',';Reduce medical errors by 30-50%',';Cut administrative costs by 25-40%',';Accelerate treatment decisions by 40-60%',';Enhance patient outcomes and satisfaction',';Scale healthcare operations efficiently';
+  ]';Hospitals & Health Systems',';Medical Practices & Clinics',';Radiology & Imaging Centers',';Pharmaceutical Companies',';Research Institutions',';Health Insurance Providers';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Heart, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIHealthcare.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

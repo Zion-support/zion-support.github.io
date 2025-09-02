@@ -31,25 +31,19 @@ import { Workflow,
   Network,
   Cpu,
   Server,
-  ShoppingCart'
+  ShoppingCart';
  } from 'lucide-react.ts';
 },;
     {;
-      icon: Users,;"
-      title: "Team Collaboration",;"
+      icon: Users,";
+      title: "Team Collaboration",";
       description: "Seamless team coordination with real-time updates and communication tools"};
   ];
 
-  const benefits = [;"
-    "Reduce manual workflow processing by up to 80%",;"
-    "Improve decision accuracy with AI-powered insights",;"
-    "Scale operations without proportional cost increases",;"
-    "Ensure compliance and audit trail maintenance",;"
-    "Real-time monitoring and alerting capabilities",;"
-    "Seamless integration with existing systems";
+  const benefits = [';Reduce manual workflow processing by up to 80%",';Improve decision accuracy with AI-powered insights",';Scale operations without proportional cost increases",';Ensure compliance and audit trail maintenance",';Real-time monitoring and alerting capabilities",';Seamless integration with existing systems";
   ]},;
-    {;"
-      title: "Retail",;"
+    {";
+      title: "Retail",";
       description: "Automate inventory management and customer service workflows",;}}
               animate = {
 
@@ -595,5 +589,5 @@ import { Workflow,
         </section>;
       </div>;
     </>
-  )};'"`
-export default AIWorkflowOrchestrator;'"`'"`
+  )}'"`;
+export default AIWorkflowOrchestrator'"`;'"`

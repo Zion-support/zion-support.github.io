@@ -1,25 +1,21 @@
-import React from,
+import React from,;
   react';
-import { Helmet } from
+import { Helmet } from;
   'react-helmet-async';
 interface SEOProps {
   title: string;
-  description: string;
-  canonical?: string;
-  url?: string;
-  image?: string;
-  type?:
-  'website' |
-  'article' |
-  'product' |
-  'service;
-  publishedTime?: string;
-  modifiedTime?: string;
-  author?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
+   description: string;
+   canonical?: string;
+   url?: string;
+   image?: string;
+   type?: 'website' | 'article' | 'product' | 'service;
+   publishedTime?: string;
+   modifiedTime?: string;
+   author?: string;
+   section?: string;
+   tags?: string[];
+   noindex?: boolean;
+   nofollow?: boolean;
 }
 
 export function SEO({

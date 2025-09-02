@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
   highContrast: boolean;
-  fontSize: 'small' | 'normal' | 'large' | 'xlarge';
-  reducedMotion: boolean;
-  focusVisible: boolean;
-  screenReader: boolean;
+   fontSize: 'small' | 'normal' | 'large' | 'xlarge';
+   reducedMotion: boolean;
+   focusVisible: boolean;
+   screenReader: boolean;
 }
 
 const AccessibilityManager: React.FC = () => {

@@ -1,8 +1,8 @@
-import React, { useState } from
-  'react'; import { motion } from
-  'framer-motion'; import { Link } from
-  'react-router-dom'; import { Brain, Cloud, Shield, Zap, Users, Rocket, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Database, Lock, Cpu, Network, Smartphone, BarChart3, Code, Server, Chip, Wifi, ShieldCheck, Bot, GitFork, Eye, Sparkles, Phone, Mail, MapPin, MessageSquare, FileText, Search, Clock, Atom, Target, DollarSign, Building2, Heart, Car, Leaf, Stethoscope, Microscope, Workflow, Automation, BookOpen, Receipt, Calendar, Share2, CreditCard, Package, Bot as BotIcon } from
-  'lucide-react'; import { SEO } from
+import React, { useState } from;
+  'react'; import { motion } from;
+  'framer-motion'; import { Link } from;
+  'react-router-dom'; import { Brain, Cloud, Shield, Zap, Users, Rocket, TrendingUp, CheckCircle, ArrowRight, Star, Award, Globe, Database, Lock, Cpu, Network, Smartphone, BarChart3, Code, Server, Chip, Wifi, ShieldCheck, Bot, GitFork, Eye, Sparkles, Phone, Mail, MapPin, MessageSquare, FileText, Search, Clock, Atom, Target, DollarSign, Building2, Heart, Car, Leaf, Stethoscope, Microscope, Workflow, Automation, BookOpen, Receipt, Calendar, Share2, CreditCard, Package, Bot as BotIcon } from;
+  'lucide-react'; import { SEO } from;
   '@/components/SEO'; type Service = { title: string; description: string; priceRange: string; learnMoreUrl?: string; ctaUrl?: string; icon?: any; category?: string; popular?: boolean; }; const featuredServices: Service[] = [ { title:,
   AI Legal Document Automation Platform', description: AI-powered legal document generation, review, and compliance automation.,
   , priceRange: $299 - $1, 999/month,

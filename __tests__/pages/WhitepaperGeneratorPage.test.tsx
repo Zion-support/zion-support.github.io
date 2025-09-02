@@ -1,4 +1,4 @@
-import React from
+import React from;
   'react';
 import {
   render,
@@ -6,15 +6,15 @@ import {
   fireEvent,
   waitFor,
   act,
-} from
+} from;
   '@testing-library/react';
 import
   '@testing-library/jest-dom';
-import WhitepaperGeneratorPage from
+import WhitepaperGeneratorPage from;
   '@/pages/WhitepaperGeneratorPage';
-import { supabase } from
+import { supabase } from;
   '@/lib/supabaseClient';
-import * as recharts from
+import * as recharts from;
   'recharts'; // For mocking ResponsiveContainer
 
 // --- Mocks ---
@@ -83,9 +83,8 @@ jest
 // Define a type for the mocked html2canvas result
 interface MockCanvas {
   toDataURL: (type?: string, quality?: unknown) => string;
-  // Add other canvas properties/methods if needed by jsPDF mock
-  width?: number;
-  height?: number;
+   // Add other canvas properties/methods if needed by jsPDF mock width?: number;
+   height?: number;
 }
 
 // Mock html2canvas and jsPDF
@@ -103,13 +102,11 @@ jest.mock(,
 
 interface MockJsPDF {
   addImage: jest.Mock;
-  save: jest.Mock;
-  addPage: jest.Mock;
-  internal: {
-    pageSize: {
-      getWidth: () => number;
-      getHeight: () => number;
-    };
+   save: jest.Mock;
+   addPage: jest.Mock;
+   internal: { pageSize: { getWidth: () => number;
+   getHeight: () => number;
+};
   };
   getImageProperties: (
     imageData: string | HTMLImageElement | HTMLCanvasElement | Uint8Array

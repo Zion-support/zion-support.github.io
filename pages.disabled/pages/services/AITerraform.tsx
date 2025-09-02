@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AITerraform.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITerraform() {
-    'Automated Terraform monitoring and alerting',;'
-    'Predictive analytics for Terraform scaling',;'
-    'Smart Terraform security and compliance',;'
-    'AI-driven Terraform automation and orchestration',;'
-    'Real-time Terraform analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITerraform(function AITerraform() {): any {}
-    'Automated Terraform monitoring and alerting',;
-    'Predictive analytics for Terraform scaling',;
-    'Smart Terraform security and compliance',;
-    'AI-driven Terraform automation and orchestration',;
-    'Real-time Terraform analytics and insights',;
-    'Custom AI models for Terraform applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITerraform() {;
+    'Automated Terraform monitoring and alerting',';Predictive analytics for Terraform scaling',';Smart Terraform security and compliance',';AI-driven Terraform automation and orchestration',';Real-time Terraform analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITerraform(function AITerraform() {): any {};
+    'Automated Terraform monitoring and alerting',';Predictive analytics for Terraform scaling',';Smart Terraform security and compliance',';AI-driven Terraform automation and orchestration',';Real-time Terraform analytics and insights',';Custom AI models for Terraform applications';
 <:pages.disabled/pages/services/AITerraform.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited storage',Custom AI models',Full Terraform suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Terraform optimization',;'
-    'Terraform management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Terraform scaling and management';
-  ];
-
-  '
-    'Improve Terraform performance by 50-80%',;'
-    'Reduce Terraform deployment time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Terraform reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale Terraform operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Terraform optimization',';Terraform management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Terraform scaling and management';
+  ]';Improve Terraform performance by 50-80%',';Reduce Terraform deployment time by 40-70%',';Cut operational costs by 35-65%',';Enhance Terraform reliability and scalability',';Optimize resource utilization',';Scale Terraform operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AITerraform.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

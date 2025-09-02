@@ -1,8 +1,8 @@
-import React from,
+import React from,;
   react';
-import Head from
+import Head from;
   'next/head';
-import { motion } from
+import { motion } from;
   'framer-motion';
 import { 
   Newspaper, 
@@ -18,9 +18,9 @@ import {
   Brain,
   Atom,
   Zap
-} from
+} from;
   'lucide-react';
-import UltraAdvancedFuturisticBackground from
+import UltraAdvancedFuturisticBackground from;
   '../components/ui/UltraAdvancedFuturisticBackground';
 
 const NewsPage: React.FC = () => {
@@ -114,7 +114,7 @@ const NewsPage: React.FC = () => {
   Clock, BookOpen, Video, Podcast, FileText, Search
 } from 'lucide-react
   ';
-import Link from 'next/link
+import Link from 'next/link;
   ';
 return (
     <UltraAdvancedFuturisticBackground>
@@ -208,17 +208,17 @@ export default function News() {
   AI',
   'Quantum Computing',
   'Innovation'],
-import Head from
+import Head from;
   'next/head';
-import Link from
+import Link from;
   'next/link';
-import { motion } from
+import { motion } from;
   'framer-motion';
 import { 
   Calendar, Clock, ArrowRight, Star, Users, 
   Brain, Atom, Shield, Rocket, Globe,
   TrendingUp, Award, Sparkles, ExternalLink
-} from
+} from;
   'lucide-react';
 
 export default function News() {

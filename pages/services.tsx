@@ -17,7 +17,7 @@ import {
   Star,
   TrendingUp,
   Clock,
-  Award,
+  Award,;
 } from 'lucide-react';
 import PageTransition from '../src/components/PageTransition';
 

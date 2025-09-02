@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIGrafana.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIGrafana() {
-    'Automated Grafana monitoring and alerting',;'
-    'Predictive analytics for Grafana scaling',;'
-    'Smart Grafana security and compliance',;'
-    'AI-driven Grafana automation and orchestration',;'
-    'Real-time Grafana analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIGrafana(function AIGrafana() {): any {}
-    'Automated Grafana monitoring and alerting',;
-    'Predictive analytics for Grafana scaling',;
-    'Smart Grafana security and compliance',;
-    'AI-driven Grafana automation and orchestration',;
-    'Real-time Grafana analytics and insights',;
-    'Custom AI models for Grafana applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIGrafana() {;
+    'Automated Grafana monitoring and alerting',';Predictive analytics for Grafana scaling',';Smart Grafana security and compliance',';AI-driven Grafana automation and orchestration',';Real-time Grafana analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIGrafana(function AIGrafana() {): any {};
+    'Automated Grafana monitoring and alerting',';Predictive analytics for Grafana scaling',';Smart Grafana security and compliance',';AI-driven Grafana automation and orchestration',';Real-time Grafana analytics and insights',';Custom AI models for Grafana applications';
 <:pages.disabled/pages/services/AIGrafana.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited storage',Custom AI models',Full Grafana suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Grafana optimization',;'
-    'Grafana management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Grafana scaling and management';
-  ];
-
-  '
-    'Improve Grafana performance by 50-80%',;'
-    'Reduce Grafana dashboard load time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Grafana reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale Grafana operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Grafana optimization',';Grafana management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Grafana scaling and management';
+  ]';Improve Grafana performance by 50-80%',';Reduce Grafana dashboard load time by 40-70%',';Cut operational costs by 35-65%',';Enhance Grafana reliability and scalability',';Optimize resource utilization',';Scale Grafana operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIGrafana.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

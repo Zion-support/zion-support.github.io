@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum Computing, Technology Solutions, Zion Tech Group', image = '/images/zion-tech-group-og.jpg', url = window.location.href, type = 'website', structuredData }) => {}
 '
 ''
@@ -33,7 +33,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
             "contactType": "customer service",""""
             "email": "kleber@ziontechgroup.com""""
         },""""
-        "sameAs"[;""""
+        "sameAs"[';""
             "https://linkedin.com/company/ziontechgroup",""""
             "https://twitter.com/ziontechgroup",""""
             "https://github.com/ziontechgroup""""
@@ -74,7 +74,7 @@ const SEOMeta = ({ title, description, keywords = 'AI, Machine Learning, Quantum
     const finalStructuredData = structuredData || defaultStructuredData;
     return (<Helmet>;
       {/* Basic Meta Tags */}"""
-      <title>{fullTitle}</title>;""""
+      <title>{fullTitle}</title>';""
       <meta name="description" content={description}/>""""
       <meta name="keywords" content={keywords}/>""""
       <meta name="author" content="Zion Tech Group"/>""""

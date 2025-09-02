@@ -1,13 +1,13 @@
 React from
   'react';
-import { motion } from
-  'framer-motion';'{ SEO } from
+import { motion } from;
+  'framer-motion';{ SEO } from
   '../components/SEO';
-import { Button } from
-  '../components/ui/Button';'{ Card } from
+import { Button } from;
+  '../components/ui/Button';{ Card } from
   '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';'import { ;'  FileText, Download,
+import { Badge } from;
+  '../components/ui/Badge';import { ';  FileText, Download,
   Calendar, User,
   Clock, ArrowRight,
   Search, Filter,
@@ -21,8 +21,7 @@ import { Badge } from
   Award, Star,
   CheckCircle
 } from
-  'lucide-react';'
-  'const WhitePapers: React.FC = () => {
+  'lucide-react'';const WhitePapers: React.FC = () => {
   const whitePapers = [;
     {;
       id: 1, title: "The Future of AI in Enterprise: A Comprehensive Guide to Implementation","      description: "Explore the latest trends, challenges, and opportunities in enterprise AI adoption. This comprehensive guide covers everything from strategy to implementation.", author: "Dr. Sarah Johnson","      date: "2025-01-15", readTime: "45 min read","      category: "AI Strategy", downloads: 1250,"      rating: 4.9, pages: 32,"      image: "/api/placeholder/400/300", tags: ["AI Strategy", "Enterprise", "Implementation", "Future Trends"], featured: true,"      downloadUrl: "/downloads/ai-enterprise-guide.pdf""    }, {"      id: 2,;
@@ -33,7 +32,7 @@ import { Badge } from
       title: "Digital Transformation: A Roadmap for Modern Organizations", description: "Complete roadmap for organizations looking to embrace digital transformation and leverage emerging technologies.","      author: "James Wilson", date: "2025-01-03","      readTime: "50 min read", category: "Digital Transformation","      downloads: 1350, rating: 4.9,"      pages: 36, image: "/api/placeholder/400/300","      tags: ["Digital Transformation", "Strategy", "Technology", "Innovation"], featured: false,"      downloadUrl: "/downloads/digital-transformation-roadmap.pdf""    }"  ];
 
   const categories = [;
-    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false },"    { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false },"    { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false },"    { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }"  ];"
+    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false },"    { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false },"    { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false },"    { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }"  ]";
   const featuredPaper = whitePapers.find(paper => paper.featured);
 
   return (

@@ -2,11 +2,11 @@ import React, { useEffect } from 'react';
 
 interface PerformanceMetrics {
   fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-  fmp?: number;
+   lcp?: number;
+   fid?: number;
+   cls?: number;
+   ttfb?: number;
+   fmp?: number;
 }
 
 const PerformanceMonitor: React.FC = () => {

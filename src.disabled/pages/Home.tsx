@@ -1,4 +1,4 @@
-import React from 'react';'import { SEO } from '../components / SEO';''const Home: React.FC = () => {';
+import React from 'react';import { SEO } from '../components / SEO'';const Home: React.FC = () => {';
 export default Home;
 
   return (;
@@ -15,5 +15,4 @@ export default Home;
       </div>;
 </>) ;
 };
-;
-";
+";;

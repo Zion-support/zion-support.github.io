@@ -1,20 +1,17 @@
-<<<<<<< HEAD:pages/solutions/enterprise.tsx
+:pages/solutions/enterprise.tsx
 import type { NextPage } from 'next';
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-<<<<<<< HEAD:pages.disabled_auto/solutions/enterprise.tsx
+:pages.disabled_auto/solutions/enterprise.tsx
 import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react';
-=======
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import Layout from
+import Layout from;
   '../../components/Layout';
-import Link from
+import Link from;
   'next/link';
-import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from
+import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
   'lucide-react';
->>>>>>> origin/main:pages.disabled_auto/solutions/enterprise.tsx
-=======
 import {
   Building,
   Users,
@@ -22,9 +19,8 @@ import {
   Zap,
   Database,
   Globe,
-  CheckCircle,
+  CheckCircle,;
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.tsx
 
 const EnterpriseSolutions: NextPage = () => {
   return (
@@ -228,11 +224,10 @@ const EnterpriseSolutions: NextPage = () => {
                     <span className="text-red-600 text-sm font-bold">2</span>
                   </div>
                   <div>
-<<<<<<< HEAD:pages.disabled_auto/solutions/enterprise.tsx
+:pages.disabled_auto/solutions/enterprise.tsx
                     <h4 className="text-lg font-semibold mb-2">Scalability Issues</h4>
                     <p className="text-gray-600">Systems that can
   't handle growth and increased user demands effectively.</p>
-=======
                     <h4 className="text-lg font-semibold mb-2">
                       Scalability Issues
                     </h4>
@@ -241,7 +236,6 @@ const EnterpriseSolutions: NextPage = () => {
                       demands effectively.
                     </p>
                     '
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/enterprise.tsx
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

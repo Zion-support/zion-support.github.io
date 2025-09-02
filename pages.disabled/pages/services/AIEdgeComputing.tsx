@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIEdgeComputing.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIEdgeComputing() {
-    'Automated edge monitoring and alerting',;'
-    'Predictive analytics for edge scaling',;'
-    'Smart edge security and compliance',;'
-    'AI-driven edge automation and orchestration',;'
-    'Real-time edge analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIEdgeComputing(function AIEdgeComputing() {): any {}
-    'Automated edge monitoring and alerting',;
-    'Predictive analytics for edge scaling',;
-    'Smart edge security and compliance',;
-    'AI-driven edge automation and orchestration',;
-    'Real-time edge analytics and insights',;
-    'Custom AI models for edge applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIEdgeComputing() {;
+    'Automated edge monitoring and alerting',';Predictive analytics for edge scaling',';Smart edge security and compliance',';AI-driven edge automation and orchestration',';Real-time edge analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIEdgeComputing(function AIEdgeComputing() {): any {};
+    'Automated edge monitoring and alerting',';Predictive analytics for edge scaling',';Smart edge security and compliance',';AI-driven edge automation and orchestration',';Real-time edge analytics and insights',';Custom AI models for edge applications';
 <:pages.disabled/pages/services/AIEdgeComputing.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited storage',Custom AI models',Full edge suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Edge optimization',;'
-    'Edge device management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Edge scaling and management';
-  ];
-
-  '
-    'Improve edge performance by 50-80%',;'
-    'Reduce edge processing time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance edge reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale edge operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Edge optimization',';Edge device management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Edge scaling and management';
+  ]';Improve edge performance by 50-80%',';Reduce edge processing time by 40-70%',';Cut operational costs by 35-65%',';Enhance edge reliability and scalability',';Optimize resource utilization',';Scale edge operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIEdgeComputing.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

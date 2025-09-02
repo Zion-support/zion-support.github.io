@@ -1,12 +1,12 @@
-import { render, screen, fireEvent, act } from
+import { render, screen, fireEvent, act } from;
   '@testing-library/react';
-import { MemoryRouter } from
+import { MemoryRouter } from;
   'react-router-dom';
-import EquipmentDetail from
+import EquipmentDetail from;
   '@/pages/EquipmentDetail';
-import { safeStorage } from
+import { safeStorage } from;
   '@/utils/safeStorage';
-import * as router from
+import * as router from;
   'react-router-dom';
 
 jest.mock(

@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIGaming.tsx
-import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming() {
-    'Automated content generation and procedural creation',;'
-    'Predictive analytics for player engagement and retention',;'
-    'Real-time matchmaking and player pairing optimization',;'
-    'Smart anti-cheat and security systems',;'
-    'Integration with major gaming engines and platforms',;'
-import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming(function AIGaming() {): any {}
-    'Automated content generation and procedural creation',;
-    'Predictive analytics for player engagement and retention',;
-    'Real-time matchmaking and player pairing optimization',;
-    'Smart anti-cheat and security systems',;
-    'Integration with major gaming engines and platforms',;
-    'Custom AI models for gaming-specific insights';
+import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming() {;
+    'Automated content generation and procedural creation',';Predictive analytics for player engagement and retention',';Real-time matchmaking and player pairing optimization',';Smart anti-cheat and security systems',';Integration with major gaming engines and platforms',';
+import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Users, BarChart3 export default function AIGaming(function AIGaming() {): any {};
+    'Automated content generation and procedural creation',';Predictive analytics for player engagement and retention',';Real-time matchmaking and player pairing optimization',';Smart anti-cheat and security systems',';Integration with major gaming engines and platforms',';Custom AI models for gaming-specific insights';
 <:pages.disabled/pages/services/AIGaming.tsx
   ];
 
@@ -33,56 +24,23 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
       name: 'Large Studio', ;
       price: '$1,999/mo', ;
 :pages.disabled/pages/services/AIGaming.tsx
-    { ;'
-      name: 'Large Studio', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Large Studio', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] },;
-  ];'
-    'Player engagement and retention optimization',;'
-    'Game difficulty and balance adjustment',;'
-    'Content generation and procedural creation',;'
-    'Matchmaking and player pairing',;'
-    'Anti-cheat and security systems',;'
-    'Monetization and in-game economy optimization';
-  ];'
-    'Increase player engagement by 35-55%',;'
-    'Improve player retention by 40-60%',;'
-    'Cut development costs by 25-40%',;'
-    'Optimize game balance and difficulty',;'
-    'Enhance player experience and satisfaction',;'
-    'Scale gaming operations efficiently';
-  ];'
-  const industries = [;''
-    'Mobile Gaming',;''
-    'PC Gaming',;''
-    'Console Gaming',;''
-    'VR/AR Gaming',;''
-    'Esports & Competitive Gaming',;'    'Educational & Serious Games';
+  ]';Player engagement and retention optimization',';Game difficulty and balance adjustment',';Content generation and procedural creation',';Matchmaking and player pairing',';Anti-cheat and security systems',';Monetization and in-game economy optimization';
+  ]';Increase player engagement by 35-55%',';Improve player retention by 40-60%',';Cut development costs by 25-40%',';Optimize game balance and difficulty',';Enhance player experience and satisfaction',';Scale gaming operations efficiently';
+  ]';
+  const industries = [';
+    'Mobile Gaming',';
+    'PC Gaming',';
+    'Console Gaming',';
+    'VR/AR Gaming',';
+    'Esports & Competitive Gaming',';Educational & Serious Games';
       details: ['Unlimited players',Custom AI models',Full platform integration',24/7 dedicated support'] },;
-  ];
-
-    'Player engagement and retention optimization',;
-    'Game difficulty and balance adjustment',;
-    'Content generation and procedural creation',;
-    'Matchmaking and player pairing',;
-    'Anti-cheat and security systems',;
-    'Monetization and in-game economy optimization';
-  ];
-
-    'Increase player engagement by 35-55%',;
-    'Improve player retention by 40-60%',;
-    'Cut development costs by 25-40%',;
-    'Optimize game balance and difficulty',;
-    'Enhance player experience and satisfaction',;
-    'Scale gaming operations efficiently';
-  ];
-
-    'Mobile Gaming',;
-    'PC Gaming',;
-    'Console Gaming',;
-    'VR/AR Gaming',;
-    'Esports & Competitive Gaming',;
-    'Educational & Serious Games';
+  ]';Player engagement and retention optimization',';Game difficulty and balance adjustment',';Content generation and procedural creation',';Matchmaking and player pairing',';Anti-cheat and security systems',';Monetization and in-game economy optimization';
+  ]';Increase player engagement by 35-55%',';Improve player retention by 40-60%',';Cut development costs by 25-40%',';Optimize game balance and difficulty',';Enhance player experience and satisfaction',';Scale gaming operations efficiently';
+  ]';Mobile Gaming',';PC Gaming',';Console Gaming',';VR/AR Gaming',';Esports & Competitive Gaming',';Educational & Serious Games';
   ];
   return()
     <div className = "min-h-screen bg-white">""
@@ -238,14 +196,14 @@ import { Gamepad2, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIGaming.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

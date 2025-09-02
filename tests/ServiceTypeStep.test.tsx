@@ -1,10 +1,10 @@
-import { render, screen, fireEvent, waitFor } from,
+import { render, screen, fireEvent, waitFor } from,;
   @testing-library/react';
-import { ServiceTypeStep } from
+import { ServiceTypeStep } from;
   '@/components/QuoteRequestForm/ServiceTypeStep';
-import { QuoteFormData } from
+import { QuoteFormData } from;
   '@/types/quotes';
-import { vi } from
+import { vi } from;
   'vitest';
 
 const baseData: QuoteFormData = {

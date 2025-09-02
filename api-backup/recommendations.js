@@ -8,10 +8,10 @@ export default async function handler(req, res) {
   '
         res.setHeader('Allow
   ', 'GET
-  ');''
+  ')';
   '
         return res.status(405).end('Method Not Allowed
-  ');'
+  ')';
     }'
   '
     res.status(200).json([''
@@ -19,7 +19,7 @@ export default async function handler(req, res) {
         { itemId: 'eq-001, score: 0.92 },',
   '
         { itemId: 'eq-002, score: 0.85 },
-    ]);'
+    ])';
 }'
   '
 '''

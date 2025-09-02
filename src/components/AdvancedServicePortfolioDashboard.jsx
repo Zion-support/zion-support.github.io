@@ -1,18 +1,18 @@
-import React, { useState, useMemo } from 'react';'''
-import { motion } from 'framer-motion';'''
+import React, { useState, useMemo } from 'react'';
+import { motion } from 'framer-motion'';
 import { BarChart3, PieChart, TrendingUp, DollarSign, Users, Target, Rocket, Brain, Zap, Star, Filter, Download, Eye, Award, ArrowUpRight, ArrowDownRight } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";""""
-import { Button } from "./ui/button";""""
-import { Badge } from "./ui/badge";""""
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"';""
+import { Button } from "./ui/button"';""
+import { Badge } from "./ui/badge"';""
 import { Input } from "./ui/input";
 const AdvancedServicePortfolioDashboard = () => {}
 '
 ''
 '''
-    const [selectedCategory, setSelectedCategory] = useState('all');'''
-    const [selectedStatus, setSelectedStatus] = useState('all');'''
-    const [selectedComplexity, setSelectedComplexity] = useState('all');'''
-    const [searchTerm, setSearchTerm] = useState('');'''
+    const [selectedCategory, setSelectedCategory] = useState('all')';'
+    const [selectedStatus, setSelectedStatus] = useState('all')';'
+    const [selectedComplexity, setSelectedComplexity] = useState('all')';'
+    const [searchTerm, setSearchTerm] = useState('')';'
     const [viewMode, setViewMode] = useState('overview');
     // Mock data - in real app this would come from API;
     const portfolioData = []
@@ -154,10 +154,10 @@ const AdvancedServicePortfolioDashboard = () => {}
 '
 ''
 '''
-            case 'Active': return 'bg-green-100 text-green-800';'''
-            case 'Development': return 'bg-blue-100 text-blue-800';'''
-            case 'Planning': return 'bg-yellow-100 text-yellow-800';'''
-            case 'Discontinued': return 'bg-red-100 text-red-800';'''
+            case 'Active': return 'bg-green-100 text-green-800'';
+            case 'Development': return 'bg-blue-100 text-blue-800'';
+            case 'Planning': return 'bg-yellow-100 text-yellow-800'';
+            case 'Discontinued': return 'bg-red-100 text-red-800'';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getComplexityColor = (complexity) => {}
@@ -165,10 +165,10 @@ const AdvancedServicePortfolioDashboard = () => {}
 '
 ''
 '''
-            case 'Basic': return 'bg-green-100 text-green-800';'''
-            case 'Intermediate': return 'bg-blue-100 text-blue-800';'''
-            case 'Advanced': return 'bg-orange-100 text-orange-800';'''
-            case 'Enterprise': return 'bg-purple-100 text-purple-800';'''
+            case 'Basic': return 'bg-green-100 text-green-800'';
+            case 'Intermediate': return 'bg-blue-100 text-blue-800'';
+            case 'Advanced': return 'bg-orange-100 text-orange-800'';
+            case 'Enterprise': return 'bg-purple-100 text-purple-800'';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getMarketDemandColor = (demand) => {}
@@ -176,21 +176,21 @@ const AdvancedServicePortfolioDashboard = () => {}
 '
 ''
 '''
-            case 'Low': return 'bg-gray-100 text-gray-800';'''
-            case 'Medium': return 'bg-blue-100 text-blue-800';'''
-            case 'High': return 'bg-orange-100 text-orange-800';'''
-            case 'Exploding': return 'bg-red-100 text-red-800';'''
+            case 'Low': return 'bg-gray-100 text-gray-800'';
+            case 'Medium': return 'bg-blue-100 text-blue-800'';
+            case 'High': return 'bg-orange-100 text-orange-800'';
+            case 'Exploding': return 'bg-red-100 text-red-800'';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getTechnologyMaturityColor = (maturity) => {}
         switch (maturity) {}
 '
-            case 'Emerging': return 'bg-blue-100 text-blue-800';'
-            case 'Growing': return 'bg-green-100 text-green-800';'
-            case 'Mature': return 'bg-orange-100 text-orange-800';'
-            case 'Leading': return 'bg-purple-100 text-purple-800';'
+            case 'Emerging': return 'bg-blue-100 text-blue-800';
+            case 'Growing': return 'bg-green-100 text-green-800';
+            case 'Mature': return 'bg-orange-100 text-orange-800';
+            case 'Leading': return 'bg-purple-100 text-purple-800';
             default: return 'bg-gray-100 text-gray-800'}
-    };'
+    }';
     const categories = [''
         { id: 'all', name: 'All Categories', count: portfolioData.length },'
         { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length },'
@@ -198,7 +198,7 @@ const AdvancedServicePortfolioDashboard = () => {}
         { id: 'space-tech', name: 'Space Technology', count: portfolioData.filter(s => s.category === 'space-tech').length },'
         { id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length },'
         { id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length }"""
-    ];""""
+    ]';""
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {}
@@ -206,8 +206,7 @@ const AdvancedServicePortfolioDashboard = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} className="mb-8">""""
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">"""
@@ -237,8 +236,7 @@ const AdvancedServicePortfolioDashboard = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.1 }} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">""""
         <Card className="hover:shadow-lg transition-shadow">""""
@@ -344,8 +342,7 @@ const AdvancedServicePortfolioDashboard = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.2 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">""""
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">"""
@@ -388,9 +385,9 @@ const AdvancedServicePortfolioDashboard = () => {}
           <div className="flex items-end">""""
             <Button variant="outline" className="w-full" onClick={() => {}
 '
-            setSelectedCategory('all');'
-            setSelectedStatus('all');'
-            setSelectedComplexity('all');'"""
+            setSelectedCategory('all')';
+            setSelectedStatus('all')';
+            setSelectedComplexity('all')'';"
             setSearchTerm('')}}>""""
               <Filter className="w-4 h-4 mr-2"/>
               Clear Filters;
@@ -405,8 +402,7 @@ const AdvancedServicePortfolioDashboard = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.3 }} className="mb-8">
         <Card>"""
@@ -443,8 +439,7 @@ const AdvancedServicePortfolioDashboard = () => {}
   x: -20;
 }} animate = {}
   { opacity: 1,
-  x: 0;
-"""
+  x: 0';"
 """"
 }} transition={{ delay: 0.1 * index }} className="border-b border-zion-slate-light/10 hover:bg-zion-blue-light/5">""""
                       <td className="py-3 px-4">""""
@@ -502,8 +497,7 @@ const AdvancedServicePortfolioDashboard = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.4 }} className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
         {/* Category Distribution */}
@@ -521,8 +515,7 @@ const AdvancedServicePortfolioDashboard = () => {}
   x: -20;
 }} animate = {}
   { opacity: 1,
-  x: 0;
-"""
+  x: 0';"
 """"
 }} transition={{ delay: 0.1 * index }} className="flex items-center justify-between">"'"`
                   <div className="flex items-center gap-3">'`'`
@@ -598,8 +591,7 @@ const AdvancedServicePortfolioDashboard = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.5 }} className="text-center">""""
         <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""

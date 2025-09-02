@@ -1,7 +1,7 @@
 
 const ComprehensivePricingGuide2030: React.FC = () => {;,
   const [activeCategory, setActiveCategory] = useState(
-  'all');'
+  'all')';
   const [searchTerm, setSearchTerm] = useState('
   ');
 
@@ -29,9 +29,9 @@ const ComprehensivePricingGuide2030: React.FC = () => {;,
 
   const getCategoryIcon = (category: string) => {;,
   if (category.toLowerCase().includes(
-  'ai')) return Brain;'
+  'ai')) return Brain';
     if (category.toLowerCase().includes(
-  'cybersecurity')) return Shield;'    if (category.toLowerCase().includes(
+  'cybersecurity')) return Shield';    if (category.toLowerCase().includes(
   'cloud')) return Cloud;
     return Star};
 
@@ -42,15 +42,12 @@ const ComprehensivePricingGuide2030: React.FC = () => {;,
     if (price < 1000) return { tier: 'Enterprise, color:,
   bg-purple-600/20 border-purple-500/30 text-purple-300' };
     return { tier: 'Premium, color:,
-  bg-orange-600/20 border-orange-500/30 text-orange-300' }};
-
-  'Basic AI features',Email support
+  bg-orange-600/20 border-orange-500/30 text-orange-300' }}';Basic AI features',Email support
   ',Up to 5 users',Standard integrations
   ',Community forum access',Basic analytics
   ',Mobile app access'
       ],;
-features[;'
-  'Basic AI features',
+features[';Basic AI features',
   '
         'Email support
   ','
@@ -65,7 +62,7 @@ features[;'
         'Basic analytics
   ',' 
   'Mobile app access'
-      ],;'
+      ],';
       color: 'from-cyan-500 to-blue-600,
       popular: false,
       bestFor:,
@@ -154,7 +151,7 @@ features[;'
       </section>;
 
       {/* Contact Banner */}"
-      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8 px-4">;"
+      <section className="bg-gradient-to-r from-purple-600 to-blue-600 py-8 px-4">";
         <div className="max-w-7xl mx-auto text-center">"
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 text-white">"
             <div className="flex items-center gap-2">"
@@ -173,7 +170,7 @@ features[;'
       </section>
 
       {/* Search and Filter */}"
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-12 px-4 sm:px-6 lg:px-8">";
         <div className="max-w-7xl mx-auto">"
           <div className="flex flex-col lg:flex-row gap-6 mb-8">"
             <div className="flex-1">"
@@ -211,7 +208,7 @@ features[;'
       </section>
 
       {/* Pricing Overview */}"
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-12 px-4 sm:px-6 lg:px-8">";
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -268,9 +265,9 @@ features[;'
         </div>
       </section>
 
-      {/* Services Grid */};"
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;"
-        <div className="max-w-7xl mx-auto">;"
+      {/* Services Grid */}";
+      <section className="py-12 px-4 sm:px-6 lg:px-8">";
+        <div className="max-w-7xl mx-auto">";
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredServices.map((service, index) => {;
 
@@ -369,8 +366,8 @@ features[;'
                   </div>;
                 </motion.div>;) }) }          </div>
 
-          {filteredServices.length = == 0 && (;"
-            <div className="text-center py-12">;"
+          {filteredServices.length = == 0 && (";
+            <div className="text-center py-12">";
               <div className="text-gray-400 text-lg mb-4">No services found matching your criteria</div>;
               <button;
                 onClick={() => {;
@@ -385,7 +382,7 @@ features[;'
       </section>
 
       {/* Pricing Benefits */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">;"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">";
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -499,7 +496,7 @@ features[;'
       </section>
 
       {/* Call to Action */}"
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;"
+      <section className="py-20 px-4 sm:px-6 lg:px-8">";
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -632,7 +629,7 @@ features[;'
       </section>
 
       {/* Footer CTA */}"
-      <section className="py-16">;"
+      <section className="py-16">";
         <div className="container mx-auto px-4 text-center">"
           <div className="max-w-3xl mx-auto">"
             <div className="text-slate-300 mb-6">

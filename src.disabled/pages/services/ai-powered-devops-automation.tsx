@@ -56,7 +56,7 @@ import {
   Trash2,
   Edit,
   Copy,
-  ExternalLink
+  ExternalLink;
 } from 'lucide-react';
 
 const AIPoweredDevOpsAutomation = () => {

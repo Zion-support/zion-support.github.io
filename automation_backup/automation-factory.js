@@ -67,9 +67,7 @@ class AutomationFactory {;
     console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage)};
   loadExistingScripts() {;
-    const scriptTypes = {;
-
-  'lint-monitor': { file:
+    const scriptTypes = {';lint-monitor': { file:
   'lint-monitor.js,;
   description:,
   Continuous lint monitoring';
@@ -79,13 +77,9 @@ class AutomationFactory {;
 ;
 ;
 ;
-},;
-
-  'lint-fixer': { file:
+},';lint-fixer': { file:
   'lint-error-fixer.js, description:,
-  Automated lint error fixing' },;
-
-  'lint-manager': { file:
+  Automated lint error fixing' },';lint-manager': { file:
   'lint-automation-manager.js, description:
   'Lint automation management' };
     };
@@ -235,8 +229,7 @@ monitor.analyzeCodeQuality().then(metrics => {;
     console.log(
   'Metrics:,
   , metrics)};
-});
-`;
+})`;;
     const scriptPath = path.join(__dirname,
   'code-quality-monitor.js');
     fs.writeFileSync(scriptPath, script);
@@ -359,17 +352,7 @@ class PerformanceOptimizer {;
     return [
   'example-unused-package']};
   generateRecommendations() {;
-    return [;
-
-  'Implement code splitting for better performance',;
-
-  'Optimize images using WebP format',;
-
-  'Remove unused dependencies',;
-
-  'Enable gzip compression',;
-
-  'Use React.memo for expensive components';
+    return [';Implement code splitting for better performance',';Optimize images using WebP format',';Remove unused dependencies',';Enable gzip compression',';Use React.memo for expensive components';
     // // // // // // // // console.log(
   'Performance report:', report);
   };
@@ -386,8 +369,7 @@ optimizer.optimizePerformance().then(report => {;
     console.log(
   'Performance report:,
   , report)};
-});
-`;
+})`;;
     const scriptPath = path.join(__dirname,
   'performance-optimizer.js');
     fs.writeFileSync(scriptPath, script);

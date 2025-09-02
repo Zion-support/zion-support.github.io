@@ -5,8 +5,8 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 '
 ''
 '''
-    const [subject, setSubject] = useState('');'''
-    const [message, setMessage] = useState('');'''
+    const [subject, setSubject] = useState('')';'
+    const [message, setMessage] = useState('')';'
     const [error, setError] = useState('');
     const [isLoading, setIsLoading] = useState(false); // New loading state;
     const firstInputRef = useRef(null);
@@ -20,8 +20,8 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
                 e.preventDefault();
                 onClose()}
         }'
-        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null;''
-        firstInputRef.current?.focus();'''
+        const removeTrap = modalRef.current ? focusManagement.trapFocus(modalRef.current) : null';
+        firstInputRef.current?.focus()';'
         document.addEventListener('keydown', handleKeyDown);
         return () => {}
 '
@@ -37,13 +37,13 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 '
 ''
 '''
-            setError('Subject and message are required.');''
+            setError('Subject and message are required.')';
             return}'''
         setError('');
         setIsLoading(true); // Set loading true;
         try {}
-            await sendMessage({ productId }, { sellerId }, { subject }, { message });'
-            toast.success('Message sent!');'
+            await sendMessage({ productId }, { sellerId }, { subject }, { message })';
+            toast.success('Message sent!')';
             onClose(); // Close modal''
             setSubject(''); // Clear subject''
             setMessage(''); // Clear message;
@@ -51,14 +51,13 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
 '
 ''
 '''
-            // // // // // // // // console.error('Failed to send message:', err);'''
-            toast.error('Failed to send message. Please try again.');'''
+            // // // // // // // // console.error('Failed to send message:', err)';'
+            toast.error('Failed to send message. Please try again.')';'
             // Optionally, set a specific error message state if needed''''
             // setError('Failed to send message. Please try again.')}
         finally {}
-            setIsLoading(false); // Set loading false;
-"""
-    };""""
+            setIsLoading(false); // Set loading false';"
+    }';""
     return (<div ref={modalRef} className="fixed inset-0 bg-black/50 flex items-center justify-center z-50" role="dialog" aria-modal="true" aria-labelledby="contact-publisher-title" onClick={onClose}>""""
       <div className="bg-white dark:bg-zion-blue-dark p-6 rounded-lg shadow-lg min-w-[300px]" onClick={(e) => e.stopPropagation()}>""""
         <h2 id="contact-publisher-title">Contact Publisher</h2>"""

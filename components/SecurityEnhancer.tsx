@@ -14,8 +14,7 @@ const SecurityEnhancer: React.FC = () => {
       frame-src 'none';
       object-src 'none';
       base-uri 'self';
-      form-action 'self';
-    `;
+      form-action 'self'`;;
 
     // Add CSP meta tag
     const cspMeta = document.createElement('meta');
@@ -122,7 +121,7 @@ const SecurityEnhancer: React.FC = () => {
       {/* Content Security Policy */}
       <meta 
         httpEquiv="Content-Security-Policy" 
-        content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';" 
+        content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'"; 
       />
       
       {/* Additional Security Meta Tags */}

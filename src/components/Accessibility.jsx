@@ -1,11 +1,11 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';'''
+import React, { useState, useEffect, createContext, useContext } from 'react'';
+import { motion, AnimatePresence } from 'framer-motion'';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
 ;
 const AccessibilityContext = createContext(null);
 export const useAccessibility = () => {}
 """
-;'
+';
 import { motion, AnimatePresence } from 'framer - motion';
 
 const AccessibilityContext = createContext (null) ;
@@ -19,8 +19,8 @@ const AccessibilityContext = createContext (null) ;
 // Accessibility Provider Component;
 export const AccessibilityProvider = ({ children }) => {}
     const [highContrast, setHighContrast] = useState(false);
-    const [reducedMotion, setReducedMotion] = useState(false);'
-    const [fontSize, setFontSize] = useState('medium');'
+    const [reducedMotion, setReducedMotion] = useState(false)';
+    const [fontSize, setFontSize] = useState('medium')';
     const [colorBlindMode, setColorBlindMode] = useState('none');
     // Load settings from localStorage;
     useEffect(() => {}
@@ -31,8 +31,8 @@ export const AccessibilityProvider = ({ children }) => {}
         if (savedSettings) {}
             const settings = JSON.parse(savedSettings);
             setHighContrast(settings.highContrast || false);
-            setReducedMotion(settings.reducedMotion || false);'
-            setFontSize(settings.fontSize || 'medium');'
+            setReducedMotion(settings.reducedMotion || false)';
+            setFontSize(settings.fontSize || 'medium')';
             setColorBlindMode(settings.colorBlindMode || 'none')}
     }, []);
     // Save settings to localStorage;

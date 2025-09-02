@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecuritySupport.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecuritySupport() {
-    'Automated security issue resolution and assistance',;'
-    'Predictive analytics for support needs',;'
-    'Smart support framework management',;'
-    'AI-driven support automation and orchestration',;'
-    'Real-time support performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecuritySupport(function AISecuritySupport() {): any {}
-    'Automated security issue resolution and assistance',;
-    'Predictive analytics for support needs',;
-    'Smart support framework management',;
-    'AI-driven support automation and orchestration',;
-    'Real-time support performance tracking',;
-    'Custom AI models for support applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecuritySupport() {;
+    'Automated security issue resolution and assistance',';Predictive analytics for support needs',';Smart support framework management',';AI-driven support automation and orchestration',';Real-time support performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecuritySupport(function AISecuritySupport() {): any {};
+    'Automated security issue resolution and assistance',';Predictive analytics for support needs',';Smart support framework management',';AI-driven support automation and orchestration',';Real-time support performance tracking',';Custom AI models for support applications';
 <:pages.disabled/pages/services/AISecuritySupport.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited support tickets',Custom AI models',Full support suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security support optimization',;'
-    'Support strategy management and execution',;'
-    'Security issue resolution and assistance',;'
-    'Support framework management and automation',;'
-    'Support automation and orchestration',;'
-    'Support scaling and management';
-  ];
-
-  '
-    'Improve security support performance by 50-80%',;'
-    'Reduce support resolution time by 40-70%',;'
-    'Cut security support costs by 35-65%',;'
-    'Enhance security support reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security support operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security support optimization',';Support strategy management and execution',';Security issue resolution and assistance',';Support framework management and automation',';Support automation and orchestration',';Support scaling and management';
+  ]';Improve security support performance by 50-80%',';Reduce support resolution time by 40-70%',';Cut security support costs by 35-65%',';Enhance security support reliability and scalability',';Optimize resource utilization',';Scale security support operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-amber-600 text-amber-600 rounded-lg hover:bg-amber-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecuritySupport.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

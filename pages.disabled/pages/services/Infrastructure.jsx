@@ -1,6 +1,6 @@
-import React from
-  'react';'
-import { Link } from
+import React from;
+  'react';
+import { Link } from;
   'react-router-dom';
 const InfrastructureServices = () => {}
   return()
@@ -10,26 +10,12 @@ const InfrastructureServices = () => {}
           <div className="text-center">""
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
 :pages.disabled/pages/services/Infrastructure.jsx
-<<<<<<< HEAD
-              IT Infrastructure Solutions"</h1>""
-=======
-              IT Infrastructure Solutions"
-              IT Infrastructure Solutions;
-            </h1>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              IT Infrastructure Solutions"</h1>""            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Build robust, scalable infrastructure for your business needs.
             </p>
           </div>
 :pages.disabled/pages/services/Infrastructure.jsx
-<<<<<<< HEAD
-        </div>"</section>""
-=======
-        </div>"
-        </div>
-      </section>""
->>>>>>> pr-10728
-      <section className="py-16 bg-white">""
+        </div>"</section>""      <section className="py-16 bg-white">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl">""
@@ -51,30 +37,7 @@ const InfrastructureServices = () => {}
             </div>""
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl">""
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
-<<<<<<< HEAD
-                Data Centers"</h3>""
-=======
-                Data Centers"
-                Network Design;
-              </h3>""
-              <p className="text-slate-600">
-                Scalable network architecture and optimization.
-              </p>
-            </div>""
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl">""
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">
-                System Administration;
-              </h3>""
-              <p className="text-slate-600">
-                24/7 monitoring and maintenance services.
-              </p>
-            </div>""
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl">""
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">
-                Data Centers;
-              </h3>""
->>>>>>> pr-10728
-              <p className="text-slate-600">
+                Data Centers"</h3>""              <p className="text-slate-600">
                 Reliable hosting and colocation solutions.
               </p>
             </div>
@@ -87,21 +50,7 @@ const InfrastructureServices = () => {}
           <h2 className="text-3xl font-bold mb-6">Build Your Foundation</h2>"
           <Link""
             to="/contact""
-<<<<<<< HEAD
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-=======
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
-        </div>
-      </section>""
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">""
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
-          <h2 className="text-3xl font-bold mb-6">Build Your Foundation</h2>
-          <Link""
-            to="/contact""
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300""
-          >
->>>>>>> pr-10728
-            Get Started;
+            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">            Get Started;
           </Link>
         </div>
       </section>
@@ -110,11 +59,4 @@ const InfrastructureServices = () => {}
 };
 export { InfrastructureServices };
 :pages.disabled/pages/services/Infrastructure.jsx
-export default InfrastructureServices;'"
-<<<<<<< HEAD
-  '"'"
-=======
-'"'"
-export default InfrastructureServices;
-'""
->>>>>>> pr-10728
+export default InfrastructureServices'';"'"

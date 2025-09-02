@@ -242,7 +242,7 @@ class CodeQualityMonitor {;
   'debugger statement found',;
               line: this.findLineNumber(content,
 ,
-  // debugger;');
+  // debugger';);
             });
 ;
           if (content.includes(

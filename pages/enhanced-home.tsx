@@ -16,7 +16,7 @@ import {
   Code,
   Database,
   Lock,
-  Rocket
+  Rocket;
 } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 import PerformanceMonitor from '../components/PerformanceMonitor';

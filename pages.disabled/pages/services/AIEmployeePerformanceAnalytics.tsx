@@ -46,19 +46,19 @@ import { Users,
   GraduationCap,
   Heart,
   TrendingDown,
-  Lightbulb'
+  Lightbulb';
  } from 'lucide-react.ts';
 
 export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
     },;
     {;
-      icon: Activity,;""
-      title: "Engagement & Wellness Monitoring",;""
+      icon: Activity,';
+      title: "Engagement & Wellness Monitoring",';
       description: "Track employee engagement, burnout indicators, and wellness metrics to support employee well-being."};
   ]},;
     {;
-      icon: Clock,;""
-      title: "Time Savings",;""
+      icon: Clock,';
+      title: "Time Savings",';
       description: "Automate performance reviews and analytics, saving HR teams hours of manual work each month."};
   ];
 
@@ -114,18 +114,18 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
         "White-label solutions",""
         "Advanced security features",""
         "Custom reporting",""
-        "On-premise deployment",;""
-        "SLA guarantees",;""
+        "On-premise deployment",';
+        "SLA guarantees",';
         "24/7 support";
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx      cta: "Contact Sales",;
       popular: false};
-  ]},;"
-      ],;""
+  ]},";
+      ],';
       cta: "Contact Sales",;
       popular: false};
   ]},;
-    {;""
-      industry: "Finance",;"      description: "Track financial advisor performance, client satisfaction, and investment portfolio management",;
+    {';
+      industry: "Finance",";      description: "Track financial advisor performance, client satisfaction, and investment portfolio management",;
       icon: DollarSign};
   ];
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
@@ -167,23 +167,23 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
     {
 "
 ""
-      name: "Learning Platforms",;""
-      platforms: ["LinkedIn Learning", "Coursera", "Udemy", "Skillshare"]},;"
-    {;""
-      name: "Time Tracking",;""
+      name: "Learning Platforms",';
+      platforms: ["LinkedIn Learning", "Coursera", "Udemy", "Skillshare"]},";
+    {';
+      name: "Time Tracking",';
       platforms: ["Toggl", "Harvest", "Time Doctor", "RescueTime"]};
-  ]},;"
+  ]},";
     {}
 ""
-      name: "Learning Platforms",;""
+      name: "Learning Platforms",';
       platforms: ["LinkedIn Learning", "Coursera", "Udemy", "Skillshare"]},;
-    {;""
-      name: "Time Tracking",;""
+    {';
+      name: "Time Tracking",';
       platforms: ["Toggl", "Harvest", "Time Doctor", "RescueTime"]};
   ]},;
-    {;""
-      metric: "3.2x",;""
-      label: "ROI",;""
+    {';
+      metric: "3.2x",';
+      label: "ROI",';
       description: "Return on investment for performance analytics"};
   ];
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
@@ -209,13 +209,13 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
     {
 "
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
-      category: "Collaboration Metrics",;"
+      category: "Collaboration Metrics",";
     {}
 ""
-      category: "Collaboration Metrics",;""
+      category: "Collaboration Metrics",';
       indicators: ["Team Participation", "Knowledge Sharing", "Cross-functional Projects", "Mentoring"]},;
-    {;""
-      category: "Growth Metrics",;""
+    {';
+      category: "Growth Metrics",';
       indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"]};  ];
 
   return (""
@@ -240,11 +240,11 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20"></div>
         "
 >""
-      category: "Collaboration Metrics",;""
-      indicators: ["Team Participation", "Knowledge Sharing", "Cross-functional Projects", "Mentoring"]},;"
-    {;""
-      category: "Growth Metrics",;""
-      indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"]};  ];"
+      category: "Collaboration Metrics",';
+      indicators: ["Team Participation", "Knowledge Sharing", "Cross-functional Projects", "Mentoring"]},";
+    {';
+      category: "Growth Metrics",';
+      indicators: ["Skill Development", "Learning Progress", "Career Advancement", "Certifications"]};  ]";
   return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO""
@@ -1205,7 +1205,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
         </div>;
       </section>;
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx
-    </div>;'"`
+    </div>'"`;
   )}'"`'"`
     </div>;
   )}'"`

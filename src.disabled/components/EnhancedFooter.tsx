@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { 
   Globe, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram, 
   Github, ArrowRight, Heart, Shield, Zap, Users, Brain, Cloud, 
-  Building2, BookOpen, MessageSquare, Award, Star
+  Building2, BookOpen, MessageSquare, Award, Star;
 } from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {

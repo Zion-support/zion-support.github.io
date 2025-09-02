@@ -616,3 +616,4 @@ export default {
   '@tailwindcss/aspect-ratio'),
   ],
 } satisfies Config
+;

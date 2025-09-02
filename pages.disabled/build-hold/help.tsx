@@ -1,12 +1,11 @@
 React from
   'react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../components/layout/MainLayout';
-import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } from
-  'lucide-react';'import Link from
-  'next/link';'
-  'const Help: NextPage = () => {
+import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } from;
+  'lucide-react';import Link from;
+  'next/link'';const Help: NextPage = () => {
   const helpCategories = [;
     {;
       icon: Book, title:,

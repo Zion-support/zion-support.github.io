@@ -1,12 +1,11 @@
 React from
   'react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../components/layout/MainLayout';
-import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from
-  'lucide-react';'import Link from
-  'next/link';'
-  'const Documentation: NextPage = () => {
+import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from;
+  'lucide-react';import Link from;
+  'next/link'';const Documentation: NextPage = () => {
   const docCategories = [;
     {;
       icon: Book, title:,
@@ -98,7 +97,7 @@ import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from
   { title: 'Support, href: '/help
   ', icon: Book }, { title:,
   Community
-  ', href: '/community, icon: ExternalLink }'  ];'
+  ', href: '/community, icon: ExternalLink }'  ]';
   return (
     <MainLayout
       title="Documentation - Zion Tech Group""      description="Comprehensive documentation for Zion Tech Group services. Find guides, API references, tutorials, and technical resources to help you succeed.""      keywords="documentation, API reference, guides, tutorials, technical documentation, developer resources""    >"      <div className="min-h-screen bg-gray-50">"        {/* Hero Section */}"        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"          <div className="container mx-auto px-4 text-center">"            <h1 className="text-4xl md: text-5xl font-bold mb-6">Documentation</h1>"            <p className="text-xl text-gray-200 max-w-3xl mx-auto">"              Comprehensive guides, API references, and technical resources to help you "              make the most of our services and build amazing solutions.

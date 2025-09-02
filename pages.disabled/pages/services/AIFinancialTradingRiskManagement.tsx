@@ -26,7 +26,7 @@ import { TrendingUp,
   DollarSign,
   Activity,
   AlertTriangle,
-  Target'
+  Target';
  } from 'lucide-react';
 ;
 export { function };
@@ -35,8 +35,8 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
   
     },;
     {;
-      icon: Eye,;"
-      title: "Data Integration",;"
+      icon: Eye,";
+      title: "Data Integration",";
       description: "Seamless integration with major data providers and trading platforms"};
   ];
 
@@ -45,8 +45,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 "
       name: "AI Trading Platform","
       price: "From $4,999/month",
-      features[;"
-        "Advanced trading algorithms","
+      features[';Advanced trading algorithms","
         "Real-time market data","
         "Portfolio optimization","
         "Backtesting capabilities","
@@ -58,7 +57,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 ""
       name: "Risk Management Suite",""
       price: "From $2,999/month","
-      features[;""
+      features[';
         "Portfolio risk analysis",""
         "VaR calculations",""
         "Stress testing",""
@@ -72,7 +71,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 ""
       name: "Market Analysis Engine",""
       price: "From $3,999/month","
-      features[;""
+      features[';
         "AI market predictions",""
         "Sentiment analysis",""
         "Technical indicators",""
@@ -86,39 +85,39 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 ""
       name: "Quantitative Research",""
       price: "From $5,999/month","
-      features[;""
+      features[';
         "Custom strategy development",""
-        "Advanced modeling",;""
-        "Performance analytics",;""
-        "Research reports",;""
-        "Expert consultation",;""
+        "Advanced modeling",';
+        "Performance analytics",';
+        "Research reports",';
+        "Expert consultation",';
         "Strategy optimization";
       ]};
-  ];"
+  ]";
   const supportedAssets = [""
     "Stocks & Equities",""
-    "Bonds & Fixed Income",;""
-    "Foreign Exchange (Forex)",;""
-    "Commodities",;""
-    "Cryptocurrencies",;""
-    "Options & Derivatives",;""
-    "ETFs & Mutual Funds",;""
+    "Bonds & Fixed Income",';
+    "Foreign Exchange (Forex)",';
+    "Commodities",';
+    "Cryptocurrencies",';
+    "Options & Derivatives",';
+    "ETFs & Mutual Funds",';
     "Alternative Investments";
-  ];"
-  const benefits = [;""
-    "Increase trading returns by 25-40%",;""
-    "Reduce portfolio risk by 30%",;""
-    "24/7 automated trading",;""
-    "Real-time risk monitoring",;""
-    "Compliance automation",;""
+  ]";
+  const benefits = [';
+    "Increase trading returns by 25-40%",';
+    "Reduce portfolio risk by 30%",';
+    "24/7 automated trading",';
+    "Real-time risk monitoring",';
+    "Compliance automation",';
     "Scalable operations";
-  ];"
-  const technologies = [;""
-    "Machine Learning Algorithms",;""
-    "Deep Neural Networks",;""
-    "Natural Language Processing",;""
-    "High-Frequency Trading Engines",;""
-    "Real-time Data Processing",;"    "Blockchain Integration";
+  ]";
+  const technologies = [';
+    "Machine Learning Algorithms",';
+    "Deep Neural Networks",';
+    "Natural Language Processing",';
+    "High-Frequency Trading Engines",';
+    "Real-time Data Processing",';Blockchain Integration";
   ];
   return()
 :pages.disabled/pages/services/AIFinancialTradingRiskManagement.tsx
@@ -186,7 +185,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
           </div>
         </section>"
         {/* Features Section */}""
-        <section className="py-20 px-6">;""
+        <section className="py-20 px-6">';
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -269,7 +268,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
           </div>
         </section>"
         {/* Service Packages */}""
-        <section className="py-20 px-6 bg-black/30">;""
+        <section className="py-20 px-6 bg-black/30">';
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -363,7 +362,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
           </div>
         </section>"
         {/* Supported Assets */}""
-        <section className="py-20 px-6">;""
+        <section className="py-20 px-6">';
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -438,7 +437,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
           </div>
         </section>"
         {/* Benefits Section */}""
-        <section className="py-20 px-6 bg-black/30">;""
+        <section className="py-20 px-6 bg-black/30">';
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -517,7 +516,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
           </div>
         </section>"
         {/* Technologies Section */}""
-        <section className="py-20 px-6">;""
+        <section className="py-20 px-6">';
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -592,7 +591,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
           </div>
         </section>"
         {/* CTA Section */}""
-        <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">;""
+        <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">';
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
               initial = {
@@ -690,7 +689,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
           </div>
         </section>"
         {/* Contact Information */}""
-        <section className="py-20 px-6">;""
+        <section className="py-20 px-6">';
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {

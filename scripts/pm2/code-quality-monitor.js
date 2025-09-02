@@ -107,7 +107,7 @@ class CodeQualityMonitor {
   ',
                 message: `Potentially unused import: ${importName}`,
                 severity: 'medium
-  '
+  ';
               });
 
 

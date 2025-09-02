@@ -35,7 +35,7 @@ import {}
   Activity,
   Database,
   Cpu,
-  Lock''
+  Lock'';
 } from 'lucide-react';
   Brain,
   BarChart3,
@@ -59,8 +59,8 @@ import {}
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
 const AIBusinessIntelligence: React.FC = props {
 '
-      title: 'Performance Optimization',;'
-      description: 'AI-driven recommendations for optimizing business processes, pricing, and resource allocation.',;'
+      title: 'Performance Optimization',';
+      description: 'AI-driven recommendations for optimizing business processes, pricing, and resource allocation.',';
       benefits: ['Process optimization',Pricing strategies',Resource allocation',Efficiency improvements']}
   ];
 export { function };
@@ -136,29 +136,29 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
       title: "Automated Insights",""
       description: "AI-generated recommendations and actionable insights delivered in real-time.""
     }""
-      title: "Automated Insights",;""
+      title: "Automated Insights",';
       description: "Automatically discover patterns, anomalies, and actionable insights from your data."};
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
-  ];"
-      icon: Zap,;""
-      title: "Automated Insights",;""
+  ]";
+      icon: Zap,';
+      title: "Automated Insights",';
       description: "AI-generated recommendations and actionable insights delivered in real-time."};
-  ];"
-  const benefits = [;""
+  ]";
+  const benefits = [';
   ];
 
-      icon: Zap,;""
-      title: "Automated Insights",;""
+      icon: Zap,';
+      title: "Automated Insights",';
       description: "AI-generated recommendations and actionable insights delivered in real-time."};
   ];
 
-  const benefits: any = [;""
-    "Increase revenue by 15-25% through data-driven decision making",;""
-    "Reduce operational costs by 20-30% with optimized processes",;""
-    "Improve customer satisfaction by 35% with personalized insights",;""
-    "Accelerate time-to-market by 40% with predictive analytics",;""
-    "Enhance team productivity by 25% with automated reporting",;""
-    "Reduce risk by 30% with early warning systems";""
+  const benefits: any = [';
+    "Increase revenue by 15-25% through data-driven decision making",';
+    "Reduce operational costs by 20-30% with optimized processes",';
+    "Improve customer satisfaction by 35% with personalized insights",';
+    "Accelerate time-to-market by 40% with predictive analytics",';
+    "Enhance team productivity by 25% with automated reporting",';
+    "Reduce risk by 30% with early warning systems"';
     "Increase revenue by 15-25% through data-driven decision making",""
     "Reduce operational costs by 20-30% with optimized processes",""
     "Improve customer satisfaction by 35% with personalized insights",""
@@ -166,7 +166,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
     "Enhance team productivity by 25% with automated reporting",""
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
     "Reduce risk by 30% with early warning systems"
-  ];"
+  ]";
   return ("    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Helmet>"
     "Reduce risk by 30% with early warning systems""
@@ -218,25 +218,25 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
     {
 "
 ""
-      industry: "Finance",;""
+      industry: "Finance",';
       description: "Risk assessment, fraud detection, and investment portfolio optimization"
     },
     {
 "
 ""
-      industry: "Finance",;""
+      industry: "Finance",';
       description: "Risk assessment, fraud detection, and investment portfolio optimization"
     },
     {
 "
 ""
-      industry: "Manufacturing",;""
+      industry: "Manufacturing",';
       description: "Predictive maintenance, quality control, and supply chain optimization"
     },
     {
 "
 ""
-      industry: "Marketing",;""
+      industry: "Marketing",';
       description: "Campaign performance analysis, audience targeting, and ROI optimization"
 
         {/* Background Elements */}""
@@ -250,22 +250,22 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
     },
     {}
 ""
-      industry: "Finance",;""
+      industry: "Finance",';
       description: "Risk assessment, fraud detection, and investment portfolio optimization""
     },
     {}
 ""
-      industry: "Finance",;""
+      industry: "Finance",';
       description: "Risk assessment, fraud detection, and investment portfolio optimization""
     },
     {}
 ""
-      industry: "Manufacturing",;""
+      industry: "Manufacturing",';
       description: "Predictive maintenance, quality control, and supply chain optimization""
     },
     {}
 ""
-      industry: "Marketing",;""
+      industry: "Marketing",';
       description: "Campaign performance analysis, audience targeting, and ROI optimization""
     }
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
@@ -291,7 +291,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"
->  ];"
+>  ]";
   return (""
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO ""
@@ -552,8 +552,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 
 =
           "
->          </motion.div>;"
-          ""
+>          </motion.div>';"
           ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index;
@@ -907,7 +906,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
       </div>
 
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -977,8 +976,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 
 =
           "
->          </motion.div>;"
-          ""
+>          </motion.div>';"
           ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
             {useCases.map((useCase, index;
@@ -1106,7 +1104,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">;""
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-blue-50">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -1226,7 +1224,7 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
           </div>
         </div>
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* CTA Section */}""
@@ -1399,7 +1397,6 @@ export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
 };
 ;
 :pages.disabled/pages/services/AIBusinessIntelligence.tsx
-export default AIBusinessIntelligence;'"`
+export default AIBusinessIntelligence'"`;
 '"`'"`
-export default AIBusinessIntelligence;
-'"`
+export default AIBusinessIntelligence'"`;

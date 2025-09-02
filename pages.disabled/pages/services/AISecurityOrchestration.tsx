@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityOrchestration.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOrchestration() {
-    'Automated security process coordination and automation',;'
-    'Predictive analytics for orchestration needs',;'
-    'Smart orchestration framework management',;'
-    'AI-driven orchestration automation and coordination',;'
-    'Real-time orchestration performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOrchestration(function AISecurityOrchestration() {): any {}
-    'Automated security process coordination and automation',;
-    'Predictive analytics for orchestration needs',;
-    'Smart orchestration framework management',;
-    'AI-driven orchestration automation and coordination',;
-    'Real-time orchestration performance tracking',;
-    'Custom AI models for orchestration applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOrchestration() {;
+    'Automated security process coordination and automation',';Predictive analytics for orchestration needs',';Smart orchestration framework management',';AI-driven orchestration automation and coordination',';Real-time orchestration performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOrchestration(function AISecurityOrchestration() {): any {};
+    'Automated security process coordination and automation',';Predictive analytics for orchestration needs',';Smart orchestration framework management',';AI-driven orchestration automation and coordination',';Real-time orchestration performance tracking',';Custom AI models for orchestration applications';
 <:pages.disabled/pages/services/AISecurityOrchestration.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$3,299/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,299/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$3,299/mo', ';
       details: ['Unlimited workflows',Custom AI models',Full orchestration suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security orchestration optimization',;'
-    'Security workflow management and execution',;'
-    'Security process coordination and automation',;'
-    'Orchestration framework management and automation',;'
-    'Orchestration automation and coordination',;'
-    'Orchestration scaling and management';
-  ];
-
-  '
-    'Improve security orchestration performance by 50-80%',;'
-    'Reduce orchestration completion time by 40-70%',;'
-    'Cut security orchestration costs by 35-65%',;'
-    'Enhance security orchestration reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security orchestration operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security orchestration optimization',';Security workflow management and execution',';Security process coordination and automation',';Orchestration framework management and automation',';Orchestration automation and coordination',';Orchestration scaling and management';
+  ]';Improve security orchestration performance by 50-80%',';Reduce orchestration completion time by 40-70%',';Cut security orchestration costs by 35-65%',';Enhance security orchestration reliability and scalability',';Optimize resource utilization',';Scale security orchestration operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityOrchestration.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

@@ -1,7 +1,7 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Helmet } from 'react-helmet-async';'
-import { motion } from 'framer-motion';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 import { CheckCircle, Shield, Zap, TrendingUp, GitFork, BarChart3, Clock, Star, ArrowRight } from 'lucide-react';
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx
 const AICodeReviewAssistant = () => {
@@ -95,7 +95,7 @@ const AICodeReviewAssistant = () => {}
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx
             description: "Perfect for small development teams","
             description: "Perfect for small development teams",
-            features[;""
+            features[';
                 "Up to 10 developers",""
                 "Basic security scanning",""
                 "GitHub integration",""
@@ -117,7 +117,7 @@ const AICodeReviewAssistant = () => {}
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx
             description: "Ideal for growing development teams","
             description: "Ideal for growing development teams",
-            features[;""
+            features[';
                 "Up to 25 developers",""
                 "Advanced security scanning",""
                 "Multi-repo support",""
@@ -140,7 +140,7 @@ const AICodeReviewAssistant = () => {}
 :pages.disabled/pages/services/AICodeReviewAssistant.jsx
             description: "For large organizations with complex needs","
             description: "For large organizations with complex needs",
-            features[;""
+            features[';
                 "Unlimited developers",""
                 "Custom integrations",""
                 "Advanced compliance",""
@@ -151,11 +151,10 @@ const AICodeReviewAssistant = () => {}
             ],;
             popular: false
 
-    ];"
+    ]";
     const integrations = [""
         "GitHub", "GitLab", "Bitbucket", "Jira", "Slack", "Microsoft Teams", "Discord", "Email"
-    ];"
-                "SLA guarantees""
+    ]';SLA guarantees""
             ],;
             popular: false;
     ];
@@ -255,8 +254,7 @@ const AICodeReviewAssistant = () => {}
   y: 20;
 }} whileInView = {}
   { opacity: 1,
-  y: 0;
-""
+  y: 0';
 }} transition={{ duration: 0.6 }} className="text-6xl mb-6">
               🔍
             </motion.div>""
@@ -920,5 +918,5 @@ const AICodeReviewAssistant = () => {}
       </div>
     </>)};
 export { AICodeReviewAssistant };
-export default AICodeReviewAssistant;'"`
+export default AICodeReviewAssistant'"`;
 }}}}'"`'"`

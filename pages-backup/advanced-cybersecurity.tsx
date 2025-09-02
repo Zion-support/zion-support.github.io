@@ -1,8 +1,8 @@
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import { Helmet } from
+import { Helmet } from;
   'react-helmet-async';
-import { useState } from
+import { useState } from;
   'react';
 import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from "../data/advancedCybersecurityServices2027";
 
@@ -14,7 +14,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
   const [sortBy, setSortBy] = useState<any>('innovation
   ');
 
-  const categories = [;'
+  const categories = [';
     { id: 'all, name:,
   All Security', color: 'from-blue-500 to-purple-600 },;,
   { id: 'AI Security, name:,

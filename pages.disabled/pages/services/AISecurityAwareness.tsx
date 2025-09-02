@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityAwareness.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAwareness() {
-    'Automated security behavior assessment and training',;'
-    'Predictive analytics for awareness needs',;'
-    'Smart awareness framework management',;'
-    'AI-driven awareness automation and orchestration',;'
-    'Real-time awareness performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAwareness(function AISecurityAwareness() {): any {}
-    'Automated security behavior assessment and training',;
-    'Predictive analytics for awareness needs',;
-    'Smart awareness framework management',;
-    'AI-driven awareness automation and orchestration',;
-    'Real-time awareness performance tracking',;
-    'Custom AI models for awareness applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAwareness() {;
+    'Automated security behavior assessment and training',';Predictive analytics for awareness needs',';Smart awareness framework management',';AI-driven awareness automation and orchestration',';Real-time awareness performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAwareness(function AISecurityAwareness() {): any {};
+    'Automated security behavior assessment and training',';Predictive analytics for awareness needs',';Smart awareness framework management',';AI-driven awareness automation and orchestration',';Real-time awareness performance tracking',';Custom AI models for awareness applications';
 <:pages.disabled/pages/services/AISecurityAwareness.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$1,199/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,199/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,199/mo', ';
       details: ['Unlimited employees',Custom AI models',Full awareness suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security awareness optimization',;'
-    'Awareness strategy management and execution',;'
-    'Security behavior assessment and training',;'
-    'Awareness framework management and automation',;'
-    'Awareness automation and orchestration',;'
-    'Awareness scaling and management';
-  ];
-
-  '
-    'Improve security awareness performance by 50-80%',;'
-    'Reduce awareness training time by 40-70%',;'
-    'Cut security awareness costs by 35-65%',;'
-    'Enhance security awareness reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security awareness operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security awareness optimization',';Awareness strategy management and execution',';Security behavior assessment and training',';Awareness framework management and automation',';Awareness automation and orchestration',';Awareness scaling and management';
+  ]';Improve security awareness performance by 50-80%',';Reduce awareness training time by 40-70%',';Cut security awareness costs by 35-65%',';Enhance security awareness reliability and scalability',';Optimize resource utilization',';Scale security awareness operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityAwareness.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

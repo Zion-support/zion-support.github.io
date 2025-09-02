@@ -210,7 +210,7 @@ class CodeQualityMonitor {;
   'debugger statement found',
               line: this.findLineNumber(content,
 ,
-  // debugger;')
+  // debugger';)
             });
           if (content.includes(
   'TODO: ') || content.includes(
@@ -353,13 +353,13 @@ class CodeQualityMonitor {;
         let newContent = content;
         // Remove empty import statements
         newContent = newContent.replace(/import\s*{\s*}\s*from\s*[
-  '"][^'"]*[
+  '"][^'"]*[;
   '"];?\n?/g, '');
         // Remove unused React imports if no JSX
         if (!newContent.includes(
   '<') && newContent.includes(
   'import React')) {
-          newContent = newContent.replace(/import\s+React\s+from\s+[
+          newContent = newContent.replace(/import\s+React\s+from\s+[;
   '"]react['"];?\n?/g, '
   ');
         if (modified) {

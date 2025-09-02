@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'''
+import React, { useState } from 'react'';
 import { motion, AnimatePresence } from 'framer-motion';
 import {}
   Brain, 
@@ -14,8 +14,8 @@ import {}
   DollarSign,'
   Clock,''
   Target,'''
-  Award''''
-} from 'lucide-react';'''
+  Award'''';
+} from 'lucide-react'';
 import { Link } from 'react-router-dom';
 
 // Import the new service data
@@ -95,8 +95,7 @@ export function ComprehensiveServicesShowcase() {}
         ease: "easeOut"""
       }
     }
-  };
-"""
+  }';"
   return (""""
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">""""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -245,8 +244,7 @@ export function ComprehensiveServicesShowcase() {}
                     {service.features.slice(0, 3).map((feature, index) => (
                       <span"""
                         key={index}""""
-                        className="bg-zion-slate/50 text-zion-cyan-light text-xs px-2 py-1 rounded-full"""
-                      >
+                        className="bg-zion-slate/50 text-zion-cyan-light text-xs px-2 py-1 rounded-full ">
                         {feature}
                       </span>
                     ))}"""
@@ -273,8 +271,7 @@ export function ComprehensiveServicesShowcase() {}
                 <div className="flex items-center justify-between">
                   <Link"""
                     to={service.link}""""
-                    className="flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300 group-hover:scale-105"""
-                  >"""
+                    className="flex items-center space-x-2 bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg transition-all duration-300 group-hover:scale-105 ">"""
                     <span>Learn More</span>""""
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />"""
                   </Link>""""
@@ -313,14 +310,12 @@ export function ComprehensiveServicesShowcase() {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
               <Link""""
                 to="/contact""""
-                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"""
-              >
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105 ">
                 Schedule Consultation;
               </Link>"""
               <a""""
                 href="tel:+13024640950""""
-                className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300"""
-              >
+                className="bg-zion-slate-dark text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate hover:border-zion-cyan/50 transition-all duration-300 ">
                 Call Now: +1 302 464 0950;
               </a>
             </div>
@@ -358,8 +353,7 @@ export function ComprehensiveServicesShowcase() {}
                 <div className="text-6xl">{selectedService.icon}</div>
                 <button"""
                   onClick={() => setSelectedService(null)}""""
-                  className="text-zion-cyan-light hover:text-white transition-colors"""
-                >
+                  className="text-zion-cyan-light hover:text-white transition-colors ">
                   ✕
                 </button>
               </div>"""
@@ -416,14 +410,12 @@ export function ComprehensiveServicesShowcase() {}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Link"""
                     to={selectedService.link}""""
-                    className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 text-center"""
-                  >
+                    className="bg-gradient-to-r from-zion-cyan to-zion-blue text-white px-8 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 text-center ">
                     Get Started Now;
                   </Link>"""
                   <a""""
                     href="tel:+13024640950""""
-                    className="bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate-dark transition-all duration-300 text-center"""
-                  >
+                    className="bg-zion-slate text-zion-cyan px-8 py-3 rounded-lg font-medium border border-zion-cyan/30 hover:bg-zion-slate-dark transition-all duration-300 text-center ">
                     Call for Consultation;
                   </a>
                 </div>

@@ -1,5 +1,5 @@
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-      ],;''
+      ],';
 import {}
   Brain,
   TrendingUp,
@@ -30,7 +30,7 @@ import {}
   MessageCircle,
   Calendar,
   AlertTriangle,
-  Star'
+  Star';
 } from 'lucide-react';
 ;
 const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
@@ -58,9 +58,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       icon: Zap,;
       title: 'Optimize Resource Allocation',;
       description: 'Focus your team\'s efforts on high-impact activities and customers who need attention most.'};
-  ];
-
-        'Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support'
+  ]';Up to 1,000 customers',Basic prediction models',Email alerts',Standard integrations',Email support'
       ],;
       cta: 'Start Free Trial',
       popular: false;
@@ -76,9 +74,8 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       price: '$799',
       period: '/month',
       description: 'Ideal for established businesses',
-      features[;'
-        'Up to 10,000 customers',Advanced AI models',Real-time dashboards',Custom integrations',Priority support',Advanced analytics'
-      ],;'
+      features[';Up to 10,000 customers',Advanced AI models',Real-time dashboards',Custom integrations',Priority support',Advanced analytics'
+      ],';
       cta: 'Start Free Trial',
       popular: true;
     },
@@ -93,11 +90,8 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       price: '$1,999',
       period: '/month',
       description: 'For large-scale operations',
-      features[;'
-        'Unlimited customers',Custom AI models',White-label solution',Dedicated support',;'
-        'Custom development',;'
-        'Advanced security';
-      ],;'
+      features[';Unlimited customers',Custom AI models',White-label solution',Dedicated support',';Custom development',';Advanced security';
+      ],';
       cta: 'Contact Sales',;
       popular: false};
   ]},;
@@ -112,9 +106,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       title: 'Financial Services','
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring','
       metrics['Reduce risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']};
-  ];'
-    'Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';'
-    'Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',;'    'Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
+  ]';Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks'';Salesforce', 'HubSpot', 'Intercom', 'Zendesk', 'Slack', 'Microsoft Teams',';Google Analytics', 'Mixpanel', 'Amplitude', 'Segment', 'Zapier', 'Webhooks';
     {}
       title: 'E-commerce',
       description: 'Customer lifetime value prediction, personalized recommendations, and retention strategies',
@@ -123,9 +115,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       title: 'Financial Services',
       description: 'Risk assessment, product adoption prediction, and customer satisfaction monitoring',
       metrics['Reduce risk by 30%',Increase product adoption by 45%',Improve satisfaction scores']};
-  ];
-
-    'Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
+  ]';Google Analytics',Mixpanel',Amplitude',Segment',Zapier',Webhooks';
   ];
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
 
@@ -201,11 +191,11 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -402,7 +392,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Capabilities */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -549,7 +539,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Use Cases */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -677,7 +667,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Benefits */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -792,7 +782,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Pricing */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -886,7 +876,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
                     : 'border-slate-700/50 hover:border-purple-400/50'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -944,7 +934,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Implementation Process */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -1089,7 +1079,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">;""
+      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">';
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial = {}
@@ -1208,7 +1198,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AICustomerSuccessPrediction.tsx
       </section>"
       {/* Contact Information */}""
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">"
             <div>""
@@ -1239,7 +1229,7 @@ const AICustomerSuccessPrediction: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Contact Information */}""
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div>""

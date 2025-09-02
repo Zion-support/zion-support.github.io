@@ -1,7 +1,6 @@
-import React from 'react.ts';'
+import React from 'react.ts';
 import Head from 'next/head.ts';
-'
-import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react';'
+import { ArrowRight, CheckCircle, ExternalLink, Phone, Mail, MapPin  } from 'lucide-react';
 import Link from 'next/link.ts';
 export { function };
 export default function ServicesAdvertisingPage(...args[]):  {
@@ -14,7 +13,7 @@ export default function ServicesAdvertisingPage(...args[]):  {
   ;
   ;
   ;
-  ;'
+  ';
   website: 'https://ziontechgroup.com';
   ;
 
@@ -23,27 +22,22 @@ export default function ServicesAdvertisingPage(...args[]):  {
 
 
 
-};'
+}';
   const benefits = [''
-    '1000% ROI target with measurable KPIs',Transparent pricing with market references',;'
-    'Fast onboarding with templates and playbooks',;'
-    'Enterprise-grade security and compliance',;'
-    '24/7 support with SLAs',;'
-    'Proven architectures and reference implementations',;'
-    'No long-term lock-in; cancel anytime',SOC 2-aligned processes and data handling',Flexible deployment: SaaS or self-hosted options'
+    '1000% ROI target with measurable KPIs',Transparent pricing with market references',';Fast onboarding with templates and playbooks',';Enterprise-grade security and compliance',';24/7 support with SLAs',';Proven architectures and reference implementations',';No long-term lock-in; cancel anytime',SOC 2-aligned processes and data handling',Flexible deployment: SaaS or self-hosted options'
   ];
-  const newHighlights = [;'
-    { title: 'Privacy Request Portal (DSAR), price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/',https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },;'
-    { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },;'
-    { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },;'
+  const newHighlights = [';
+    { title: 'Privacy Request Portal (DSAR), price: 'From $99/mo + usage', refs: ['https://transcend.io/pricing/',https://www.onetrust.com/pricing/'], href: '/services/gdpr-dsar-portal' },';
+    { title: 'CSP & Security Headers Manager', price: 'From $49/mo per domain', refs: ['https://securityheaders.com/'], href: '/services/security-headers-csp-manager' },';
+    { title: 'Checkout A/B Optimizer', price: 'From $99/mo', refs: ['https://www.optimizely.com/pricing/'], href: '/services/checkout-performance-optimizer' },';
     { title: 'Status & Incident Hub', price: 'From $59/mo', refs: ['https://betterstack.com/status/pricing'], href: '/services/status-incident-hub' };
   ];
-  const anchors = [;'
-    { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },;'
-    { title: 'Security', href: '#ai-guardrails-safety' },;'
-    { title: 'Observability', href: '#status-page-slo-monitor' },;'
-    { title: 'Compliance', href: '#k8s-soc2-control-pack' },;'
-    { title: 'Edge & Cron', href: '#edge-cron-orchestrator' },;'
+  const anchors = [';
+    { title: 'AI & ML', href: '#ai-evaluation-orchestrator' },';
+    { title: 'Security', href: '#ai-guardrails-safety' },';
+    { title: 'Observability', href: '#status-page-slo-monitor' },';
+    { title: 'Compliance', href: '#k8s-soc2-control-pack' },';
+    { title: 'Edge & Cron', href: '#edge-cron-orchestrator' },';
     { title: 'Commerce', href: '#checkout-performance-optimizer' };
   ];
   const pricingRefs = [
@@ -134,11 +128,11 @@ export default function ServicesAdvertisingPage(...args[]):  {
     {
 '
       title: 'Observability & APM',
-      links[;'
-        { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },;'
-        { name: 'New Relic', href: 'https://newrelic.com/pricing' },;'
+      links[';
+        { name: 'Datadog', href: 'https://www.datadoghq.com/pricing/' },';
+        { name: 'New Relic', href: 'https://newrelic.com/pricing' },';
         { name: 'Grafana Cloud', href: 'https://grafana.com/pricing/' };
-      ],;'
+      ],';
       note: 'SMB budgets: $50–$2,000/mo.';
     };
   ];
@@ -172,8 +166,8 @@ export default function ServicesAdvertisingPage(...args[]):  {
     devex = [''
       { name: 'BuildPulse', href: 'https://buildpulse.io/pricing' }
     ],;
-    seo: [;'
-      { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },;'
+    seo: [';
+      { name: 'ContentKing', href: 'https://www.contentkingapp.com/pricing/' },';
       { name: 'Little Warden', href: 'https://littlewarden.com/pricing' };
     ];
   } as const;

@@ -4,15 +4,15 @@ import { cn } from '../../src/lib/utils';
 
 interface OptimizedImageProps {
   src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  sizes?: string;
+   alt: string;
+   width?: number;
+   height?: number;
+   className?: string;
+   priority?: boolean;
+   quality?: number;
+   placeholder?: 'blur' | 'empty';
+   blurDataURL?: string;
+   sizes?: string;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({

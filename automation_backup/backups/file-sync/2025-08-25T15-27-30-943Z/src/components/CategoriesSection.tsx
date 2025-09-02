@@ -1,8 +1,8 @@
-import { GradientHeading } from,
+import { GradientHeading } from,;
   ./GradientHeading';
-import { Link } from
+import { Link } from;
   'react-router-dom';
-import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from
+import { Briefcase, HardDrive, Lightbulb, Users, ArrowRight, Zap, Shield, Globe import { motion } from;
   'framer-motion';
 const categories = [;
   {;
@@ -128,8 +128,9 @@ ursor/website-audit-content-update-and-deployment-efec
     description: 'Cybersecurity & compliance;
   };
 ];
-interface CategoriesSectionProps {;
-  showTitle?: boolean};
+interface CategoriesSectionProps {
+   showTitle?: boolean;
+};
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {;
   const containerVariants = {;
     hidden: { opacity: 0 },;

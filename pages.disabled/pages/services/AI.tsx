@@ -1,5 +1,5 @@
 :pages.disabled/pages/services/AI.tsx
-      ],;""
+      ],';
       price: "From $2,500",""
       duration: "2-4 weeks"
     },
@@ -30,7 +30,7 @@ import {}
   Heart,
   DollarSign,
   Factory,
-  ShoppingCart'
+  ShoppingCart';
  } from 'lucide-react';
 ;
 export { function };
@@ -40,12 +40,12 @@ export default function AIServices(...args[]):  {}
       name: "AI Strategy & Consulting",""
       description: "Strategic guidance on implementing AI solutions across your organization",
       icon: Target,
-      features[;""
+      features[';
         "AI readiness assessment",""
         "Technology roadmap planning",""
         "ROI analysis and business case development",""
         "Change management strategies""
-      ],;""
+      ],';
       price: "From $2,500",""
       duration: "2-4 weeks""
     },
@@ -54,12 +54,12 @@ export default function AIServices(...args[]):  {}
       name: "Machine Learning Development",""
       description: "Custom ML models and algorithms tailored to your specific business needs",
       icon: Brain,
-      features[;""
+      features[';
         "Custom model development",""
         "Data preprocessing and feature engineering",""
         "Model training and optimization",""
         "Performance monitoring and maintenance""
-      ],;""
+      ],';
       price: "From $5,000",""
 :pages.disabled/pages/services/AI.tsx
       duration: "4-8 weeks"
@@ -77,12 +77,12 @@ export default function AIServices(...args[]):  {}
       name: "AI-Powered Applications",""
       description: "Intelligent automation and insights through custom AI applications",
       icon: Zap,
-      features[;""
+      features[';
         "Chatbot and virtual assistant development",""
         "Predictive analytics applications",""
         "Computer vision solutions",""
         "Natural language processing systems""
-      ],;""
+      ],';
       price: "From $8,500",""
 :pages.disabled/pages/services/AI.tsx
       duration: "6-12 weeks"
@@ -100,29 +100,29 @@ export default function AIServices(...args[]):  {}
       name: "AI Infrastructure & MLOps",""
       description: "Scalable AI infrastructure and machine learning operations",
       icon: Cloud,
-      features[;""
+      features[';
         "ML pipeline automation",""
-        "Model versioning and deployment",;""
-        "Scalable training infrastructure",;""
+        "Model versioning and deployment",';
+        "Scalable training infrastructure",';
 :pages.disabled/pages/services/AI.tsx
-        "Monitoring and alerting systems";"
-      ],;""
-      price: "From $6,000",;""
+        "Monitoring and alerting systems"";
+      ],';
+      price: "From $6,000",';
       duration: "4-10 weeks"};
-  ];"
-  const aiTechnologies = [;""
+  ]";
+  const aiTechnologies = [';
         "Monitoring and alerting systems";
-      ],;""
-      price: "From $6,000",;""
+      ],';
+      price: "From $6,000",';
       duration: "4-10 weeks"};
   ];
 
-  const aiTechnologies: any = [;""
-    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },;""
-    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },;""
-    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },;""
-    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },;""
-    { name: "NLP", description: "Natural language processing", icon: MessageSquare },;""
+  const aiTechnologies: any = [';
+    { name: "TensorFlow", description: "Open-source ML framework", icon: Code },';
+    { name: "PyTorch", description: "Deep learning research platform", icon: Brain },';
+    { name: "OpenAI GPT", description: "Advanced language models", icon: Cpu },';
+    { name: "Computer Vision", description: "Image and video analysis", icon: Eye },';
+    { name: "NLP", description: "Natural language processing", icon: MessageSquare },';
     { name: "AutoML", description: "Automated machine learning", icon: Zap };
   ];
 :pages.disabled/pages/services/AI.tsx
@@ -155,19 +155,19 @@ export default function AIServices(...args[]):  {}
       industry: "Manufacturing",""
       applications["Predictive maintenance", "Quality control", "Supply chain optimization"],;
       icon: Factory
-    }};"
+    }}";
     {}
 ""
       industry: "Manufacturing",""
       applications["Predictive maintenance", "Quality control", "Supply chain optimization"],;
       icon: Factory;
     }};
-    {;""
-      industry: "Retail",;""
+    {';
+      industry: "Retail",';
       applications: ["Customer segmentation", "Demand forecasting", "Personalized recommendations"],;
       icon: ShoppingCart};
 :pages.disabled/pages/services/AI.tsx
-  ];"
+  ]";
   return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
   ];
@@ -234,7 +234,7 @@ export default function AIServices(...args[]):  {}
       </section>
 
       {/* Services Grid */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -315,7 +315,7 @@ export default function AIServices(...args[]):  {}
       </section>
 
       {/* Technologies Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -356,7 +356,7 @@ export default function AIServices(...args[]):  {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -407,7 +407,7 @@ export default function AIServices(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">""
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">

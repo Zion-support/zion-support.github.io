@@ -20,7 +20,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
       description: "Perfect for small businesses optimizing their supply chain","
       description: "Perfect for small businesses optimizing their supply chain",
-      features[;""
+      features[';
         "Up to 3 warehouses",""
         "Basic route optimization",""
         "Inventory tracking",""
@@ -42,7 +42,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
       description: "Ideal for growing businesses with complex supply chain needs","
       description: "Ideal for growing businesses with complex supply chain needs",
-      features[;""
+      features[';
         "Up to 10 warehouses",""
         "Advanced AI optimization",""
         "Real-time monitoring",""
@@ -67,7 +67,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
       description: "For large enterprises with global supply chain operations","
       description: "For large enterprises with global supply chain operations",
-      features[;""
+      features[';
         "Unlimited warehouses",""
         "Premium AI optimization",""
         "Custom development",""
@@ -107,7 +107,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
       <div className="relative overflow-hidden">"
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">"
           <div className="text-center">"
->  ]};  ];"
+>  ]};  ]";
   return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO ""
@@ -409,8 +409,8 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
       </div>;
     </div>;
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx
-  )};'"`
-export default AISupplyChainOptimizationPlatform;'"`'"`
+  )}'"`;
+export default AISupplyChainOptimizationPlatform'"`;'"`
   )};
 
-export default AISupplyChainOptimizationPlatform;'"`
+export default AISupplyChainOptimizationPlatform'"`;

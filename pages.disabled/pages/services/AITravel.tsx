@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AITravel.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITravel() {
-    'Automated travel monitoring and alerting',;'
-    'Predictive analytics for travel scaling',;'
-    'Smart travel security and compliance',;'
-    'AI-driven travel automation and orchestration',;'
-    'Real-time travel analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITravel(function AITravel() {): any {}
-    'Automated travel monitoring and alerting',;
-    'Predictive analytics for travel scaling',;
-    'Smart travel security and compliance',;
-    'AI-driven travel automation and orchestration',;
-    'Real-time travel analytics and insights',;
-    'Custom AI models for travel applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITravel() {;
+    'Automated travel monitoring and alerting',';Predictive analytics for travel scaling',';Smart travel security and compliance',';AI-driven travel automation and orchestration',';Real-time travel analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AITravel(function AITravel() {): any {};
+    'Automated travel monitoring and alerting',';Predictive analytics for travel scaling',';Smart travel security and compliance',';AI-driven travel automation and orchestration',';Real-time travel analytics and insights',';Custom AI models for travel applications';
 <:pages.disabled/pages/services/AITravel.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited storage',Custom AI models',Full travel suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Travel optimization',;'
-    'Travel planning and management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Travel scaling and management';
-  ];
-
-  '
-    'Improve travel performance by 50-80%',;'
-    'Reduce travel planning time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance travel reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale travel operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Travel optimization',';Travel planning and management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Travel scaling and management';
+  ]';Improve travel performance by 50-80%',';Reduce travel planning time by 40-70%',';Cut operational costs by 35-65%',';Enhance travel reliability and scalability',';Optimize resource utilization',';Scale travel operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-rose-600 text-rose-600 rounded-lg hover:bg-rose-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AITravel.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

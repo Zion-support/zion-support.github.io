@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIDevOps.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDevOps() {
-    'Automated DevOps monitoring and alerting',;'
-    'Predictive analytics for DevOps scaling',;'
-    'Smart DevOps security and compliance',;'
-    'AI-driven DevOps automation and orchestration',;'
-    'Real-time DevOps analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDevOps(function AIDevOps() {): any {}
-    'Automated DevOps monitoring and alerting',;
-    'Predictive analytics for DevOps scaling',;
-    'Smart DevOps security and compliance',;
-    'AI-driven DevOps automation and orchestration',;
-    'Real-time DevOps analytics and insights',;
-    'Custom AI models for DevOps applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDevOps() {;
+    'Automated DevOps monitoring and alerting',';Predictive analytics for DevOps scaling',';Smart DevOps security and compliance',';AI-driven DevOps automation and orchestration',';Real-time DevOps analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIDevOps(function AIDevOps() {): any {};
+    'Automated DevOps monitoring and alerting',';Predictive analytics for DevOps scaling',';Smart DevOps security and compliance',';AI-driven DevOps automation and orchestration',';Real-time DevOps analytics and insights',';Custom AI models for DevOps applications';
 <:pages.disabled/pages/services/AIDevOps.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited storage',Custom AI models',Full DevOps suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'DevOps optimization',;'
-    'DevOps pipeline management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'DevOps scaling and management';
-  ];
-
-  '
-    'Improve DevOps performance by 50-80%',;'
-    'Reduce DevOps deployment time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance DevOps reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale DevOps operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';DevOps optimization',';DevOps pipeline management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';DevOps scaling and management';
+  ]';Improve DevOps performance by 50-80%',';Reduce DevOps deployment time by 40-70%',';Cut operational costs by 35-65%',';Enhance DevOps reliability and scalability',';Optimize resource utilization',';Scale DevOps operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-amber-600 text-amber-600 rounded-lg hover:bg-amber-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIDevOps.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

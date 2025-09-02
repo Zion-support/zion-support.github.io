@@ -13,34 +13,18 @@
   Search,
   Filter,
   } from 'lucide-react
+  ';Legacy Modernization
+  ',';Digital Strategy
+  ',';Change Management
+  ',';Technology Consulting
   ';
-
-      'Legacy Modernization
-  ',;
-      'Digital Strategy
-  ',;
-      'Change Management
-  ',;
-      'Technology Consulting
-  ';
-    ]};
-'Process Automation
+    ]}';Process Automation
   ','
 
-  'Customer Experience',;'
-  'Legacy Modernization',;'
-  'Digital Strategy',;'
-  'Change Management',;'
-  'Technology Consulting';
+  'Customer Experience',';Legacy Modernization',';Digital Strategy',';Change Management',';Technology Consulting';
     ]};
 ];
-;
-
-  'Citizen Engagement',;
-
-  'Regulatory Compliance',;
-
-  'Infrastructure Management';
+';Citizen Engagement',';Regulatory Compliance',';Infrastructure Management';
     ],;
     color: 'from-gray-500 to-slate-600};
 ];
@@ -426,11 +410,11 @@
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}"
             className="mb-12 text-center"
-          >;"
-            <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>;"
+          >";
+            <h2 className="text-3xl font-bold text-white mb-4">Solution Categories</h2>";
             <p className="text-zion-slate-light text-lg">Explore our comprehensive range of technology solutions</p>;
           </motion.div>;
-;"
+";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {solutionCategories.map((category, index) => {;
               
@@ -472,8 +456,8 @@
                           </div>
                         ))}
                       </div>"
-                      <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">;"
-                        <span className="text-sm font-medium">Learn More</span>;"
+                      <div className="mt-4 flex items-center text-zion-cyan group-hover:text-zion-cyan-light transition-colors duration-300">";
+                        <span className="text-sm font-medium">Learn More</span>";
                         <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform duration-300"  />;
                       </div>;
                     </div>;
@@ -501,12 +485,12 @@
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}"
             className="mb-12 text-center"
-          >;"
-            <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>;'"
+          >";
+            <h2 className="text-3xl font-bold text-white mb-4">Industry-Specific Solutions</h2>'";
             <p className="text-zion-slate-light text-lg">Tailored solutions designed for your industry
   's unique challenges</p>;
           </motion.div>;
-;"
+";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {industrySolutions.map((industry, index) => {;
               
@@ -549,7 +533,7 @@
                       to={`/solutions/${industry.industry.toLowerCase()}`}"
                       className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-light transition-colors duration-300";
                     >;
-                      View {industry.industry} Solutions;"
+                      View {industry.industry} Solutions";
                       <ArrowRight className="ml-2 h-4 w-4"  />;
                     </Link>;
                   </div>;
@@ -558,7 +542,7 @@
       </section>;
 
       {/* Featured Solutions */}"
-      <section className = "py-16">;"
+      <section className = "py-16">";
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial = {
@@ -576,11 +560,11 @@
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}"
             className="mb-12 text-center"
-          >;"
-            <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>;"
+          >";
+            <h2 className="text-3xl font-bold text-white mb-4">Featured Solutions</h2>";
             <p className="text-zion-slate-light text-lg">Our most popular and impactful technology solutions</p>;
           </motion.div>;
-;"
+";
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredSolutions.map((solution, index) => {;
               
@@ -654,7 +638,7 @@
                       to={`/solutions/${solution.id}`}"
                       className="text-blue-400 hover:text-blue-300 text-sm font-medium"
                     >
-                      Learn More;"
+                      Learn More";
                       <ArrowRight className="ml-2 h-4 w-4"  />;
                     </Link>;
                   </div>;

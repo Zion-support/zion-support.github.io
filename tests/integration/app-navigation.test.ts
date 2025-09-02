@@ -1,12 +1,12 @@
-import { render, screen, fireEvent } from
+import { render, screen, fireEvent } from;
   '@testing-library/react';
-import { describe, it, expect } from
+import { describe, it, expect } from;
   'vitest';
-import { BrowserRouter } from
+import { BrowserRouter } from;
   'react-router-dom';
-import React from
+import React from;
   'react';
-import App from
+import App from;
   '../../src/App';
 
 describe(

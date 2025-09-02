@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from
-  'react'; import { motion, AnimatePresence } from
+import React, { useState, useEffect } from;
+  'react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Search,; Filter,; Star,; ArrowRight,; ChevronDown,; Brain,; Cpu,; Database,; Network,; Shield,; Rocket,; Users,; BarChart3,; Code,; Server,; Chip,; Globe,; Zap,; Lock,; ShieldCheck,; TrendingUp,; CheckCircle,; Clock,; DollarSign,; Target,; Handshake,; Lightbulb,; Phone,; Mail,; MapPin,; ExternalLink,; Award,; TrendingDown,; Eye,; Users,; BarChart3,; Globe,; Shield,; Cpu,; Database,; Network,; Rocket,; Brain,; Zap,; Lock,; CheckCircle,; Star,; Clock,; DollarSign,; Target,; Handshake,; Lightbulb; } from
-  'lucide-react'; import { SEO } from
-  '../components/SEO'; import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from
+  'lucide-react'; import { SEO } from;
+  '../components/SEO'; import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from;
   '../data/innovativeMicroSaasServices2025'; ; const ComprehensiveServicesAdvertising2025: React.FC = () => {; const [activeCategory, setActiveCategory] = useState(,
   all'); const [searchTerm, setSearchTerm] = useState('
   '); const [sortBy, setSortBy] = useState('rating
@@ -112,7 +112,7 @@ import React, { useState, useEffect } from
   ': return 'text-blue-500
   '; case 'Cutting-edge
   ': return 'text-purple-500
-  '; default: return 'text-gray-500; }; };" ;";" const getInnovationIcon = (level: string) => {;";" switch (level) {;";"";" case,
+  '; default: return 'text-gray-500; }; }';;"; const getInnovationIcon = (level: string) => {';; switch (level) {';;""; case,
   Practical
-  ': return <CheckCircle className="w-4 h-4" />;";"";" case 'Advanced
-  ': return <TrendingUp className="w-4 h-4" />;";"";" case 'Cutting-edge: return <Rocket className="w-4 h-4" />;";"";" default: return <Lightbulb className="w-4 h-4" />;" };";" };";" ;"";" return (";"";" <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;"";" <SEO ";"";" title="Comprehensive Services Advertising 2025 - Zion Tech Group";"";" description="Explore our comprehensive portfolio of innovative micro SAAS services, IT solutions, and AI-powered platforms. Get competitive pricing and expert support.";"";" canonical="https:"""
+  ': return <CheckCircle className="w-4 h-4" />';;""; case 'Advanced
+  ': return <TrendingUp className="w-4 h-4" />';;""; case 'Cutting-edge: return <Rocket className="w-4 h-4" />';;""; default: return <Lightbulb className="w-4 h-4" />"; }';; }';; ';"; return ("';"; <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">';"; <SEO "';"; title="Comprehensive Services Advertising 2025 - Zion Tech Group"';"; description="Explore our comprehensive portfolio of innovative micro SAAS services, IT solutions, and AI-powered platforms. Get competitive pricing and expert support."';"; canonical="https:"""

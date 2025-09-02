@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import fs from
+import fs from;
   'fs';
-import path from
+import path from;
   'path';
-import { fileURLToPath } from
+import { fileURLToPath } from;
   'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -15,7 +15,6 @@ function analyzeWebsite() {
   console.log(
   '🔍 Analyzing Zion Tech Group Website...\n');
 
-<<<<<<< HEAD
   const srcDir = path.join(__dirname,
   '..',
   'src');
@@ -29,18 +28,7 @@ function analyzeWebsite() {
   'App.tsx');
   const appContent = fs.readFileSync(appTsxPath,
   'utf8');
-  
-=======
-  const srcDir = path.join(__dirname, '..', 'src');
-  const pagesDir = path.join(srcDir, 'pages');
-  const componentsDir = path.join(srcDir, 'components');
-
-  // Read App.tsx to extract all routes
-  const appTsxPath = path.join(srcDir, 'App.tsx');
-  const appContent = fs.readFileSync(appTsxPath, 'utf8');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  // Extract route paths from App.tsx
+    // Extract route paths from App.tsx
   const routeRegex = /path="([^"]+)"/g;
   const routes = [];
   let match;
@@ -55,15 +43,9 @@ function analyzeWebsite() {
   // Check which pages exist
   const existingPages = [];
   const missingPages = [];
-<<<<<<< HEAD
   
   function scanDirectory(dir, basePath = '
-  ') {
-=======
-
-  function scanDirectory(dir, basePath = '') {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    const items = fs.readdirSync(dir);
+  ') {    const items = fs.readdirSync(dir);
 
     items.forEach(item => {
       const fullPath = path.join(dir, item);
@@ -87,7 +69,6 @@ function analyzeWebsite() {
 
   // Check for missing pages
   routes.forEach(route => {
-<<<<<<< HEAD
     if (route ===
   '*') return; // Skip 404 route
     
@@ -98,18 +79,7 @@ function analyzeWebsite() {
       page.includes(routePath) || 
       page.includes(route.replace(/\//g, '-
   ')) ||
-      page.includes(route.replace(/\//g, ''))
-=======
-    if (route === '*') return; // Skip 404 route
-
-    const routePath = route.replace(/^\//, '').replace(/\//g, '-');
-    const hasPage = existingPages.some(
-      page =>
-        page.includes(routePath) ||
-        page.includes(route.replace(/\//g, '-')) ||
-        page.includes(route.replace(/\//g, ''))
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    );
+      page.includes(route.replace(/\//g, ''))    );
 
     if (!hasPage) {
       missingPages.push(route);
@@ -125,16 +95,9 @@ function analyzeWebsite() {
     const fullPath = path.join(pagesDir, pagePath +
   '.tsx');
     if (fs.existsSync(fullPath)) {
-<<<<<<< HEAD
       const content = fs.readFileSync(fullPath,
   'utf8');
-      if (content.length < 5000) { // Less than 5KB is considered placeholder
-=======
-      const content = fs.readFileSync(fullPath, 'utf8');
-      if (content.length < 5000) {
-        // Less than 5KB is considered placeholder
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-        placeholderPages.push(pagePath);
+      if (content.length < 5000) { // Less than 5KB is considered placeholder        placeholderPages.push(pagePath);
       }
     }
   });

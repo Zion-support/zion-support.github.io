@@ -4,15 +4,15 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
-  showDetails?: boolean;
+   fallback?: ReactNode;
+   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+   showDetails?: boolean;
 }
 
 interface State {
   hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+   error: Error | null;
+   errorInfo: ErrorInfo | null;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -33,7 +33,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  override componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
       errorInfo,
@@ -102,7 +102,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.reload();
   };
 
-  render() {
+  override render() {
     if (this.state.hasError) {
       // Custom fallback UI
       if (this.props.fallback) {

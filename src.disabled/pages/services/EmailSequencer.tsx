@@ -1,12 +1,6 @@
 
 export default function EmailSequencer() {
-	const features = [;
-		'Multi-step sequences with A/B testing',;
-		'AI subject line and body suggestions',;
-		'CRM/webhook integrations (HubSpot, Salesforce, Slack)',;
-		'Smart send windows and reply-detection',;
-		'Per-recipient throttling and warmup controls',;
-		'Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips';
+	const features = [';Multi-step sequences with A/B testing',';AI subject line and body suggestions',';CRM/webhook integrations (HubSpot, Salesforce, Slack)',';Smart send windows and reply-detection',';Per-recipient throttling and warmup controls',';Compliance: unsubscribe, custom domains, DKIM/SPF/DMARC tips';
 	];
 
 	const plans = [;

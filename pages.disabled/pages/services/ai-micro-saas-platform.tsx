@@ -28,7 +28,7 @@ import {}
   DollarSign,
   Clock,
   Award,
-  Lightbulb,
+  Lightbulb,;
   Sparkles} from 'lucide-react';
 
 export function AIMicroSaaSPlatform(function AIMicroSaaSPlatform() {): any {}

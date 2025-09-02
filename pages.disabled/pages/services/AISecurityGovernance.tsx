@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityGovernance.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityGovernance() {
-    'Automated security compliance monitoring and reporting',;'
-    'Predictive analytics for governance needs',;'
-    'Smart governance framework management',;'
-    'AI-driven governance automation and orchestration',;'
-    'Real-time governance performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityGovernance(function AISecurityGovernance() {): any {}
-    'Automated security compliance monitoring and reporting',;
-    'Predictive analytics for governance needs',;
-    'Smart governance framework management',;
-    'AI-driven governance automation and orchestration',;
-    'Real-time governance performance tracking',;
-    'Custom AI models for governance applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityGovernance() {;
+    'Automated security compliance monitoring and reporting',';Predictive analytics for governance needs',';Smart governance framework management',';AI-driven governance automation and orchestration',';Real-time governance performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityGovernance(function AISecurityGovernance() {): any {};
+    'Automated security compliance monitoring and reporting',';Predictive analytics for governance needs',';Smart governance framework management',';AI-driven governance automation and orchestration',';Real-time governance performance tracking',';Custom AI models for governance applications';
 <:pages.disabled/pages/services/AISecurityGovernance.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$4,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$4,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$4,499/mo', ';
       details: ['Unlimited policies',Custom AI models',Full governance suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security governance optimization',;'
-    'Governance policy management and enforcement',;'
-    'Security compliance monitoring and reporting',;'
-    'Governance framework management and automation',;'
-    'Governance automation and orchestration',;'
-    'Governance scaling and management';
-  ];
-
-  '
-    'Improve security governance performance by 50-80%',;'
-    'Reduce governance compliance time by 40-70%',;'
-    'Cut security governance costs by 35-65%',;'
-    'Enhance security governance reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security governance operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security governance optimization',';Governance policy management and enforcement',';Security compliance monitoring and reporting',';Governance framework management and automation',';Governance automation and orchestration',';Governance scaling and management';
+  ]';Improve security governance performance by 50-80%',';Reduce governance compliance time by 40-70%',';Cut security governance costs by 35-65%',';Enhance security governance reliability and scalability',';Optimize resource utilization',';Scale security governance operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityGovernance.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

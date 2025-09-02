@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-import { execSync, spawn } from
+import { execSync, spawn } from;
   'child_process';
-import fs from
+import fs from;
   'fs';
-import path from
+import path from;
   'path';
 
 class SyntaxErrorFixer {
@@ -199,7 +199,7 @@ class SyntaxErrorFixer {
       }
 
       // Fix incomplete exports
-      content = content.replace(/export\\s*$/gm, 'export default {};');
+      content = content.replace(/export\\s*$/gm, 'export default {}';);
       if (content !== fs.readFileSync(filePath,
   'utf8')) modified = true;
 

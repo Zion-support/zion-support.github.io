@@ -33,8 +33,7 @@ export function Button({
   ',
   disabled = false}: ButtonProps) {
 
-  ;
-'
+  ';
   default:
   'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan,
 ,
@@ -76,8 +75,7 @@ export function Button({
   )}
 // Export button variants for use in other components;
 export 
-  ;
-'
+  ';
   default: 'bg-zion-cyan text-zion-slate-dark hover:bg-zion-cyan-light focus:ring-zion-cyan,
 ,
   outline: 'border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-slate-dark focus:ring-zion-cyan,'

@@ -1,13 +1,12 @@
-import { NextApiRequest, NextApiResponse } from
-  'next';'
-  'interface WebVitalsData {
+import { NextApiRequest, NextApiResponse } from;
+  'next'';interface WebVitalsData {
   name: string;
-  value: number;
-  id: string;
-  delta: number;
-  timestamp: number;
-  url: string;
-  userAgent: string;
+   value: number;
+   id: string;
+   delta: number;
+   timestamp: number;
+   url: string;
+   userAgent: string;
 }
 
 export default async function handler(
@@ -44,4 +43,4 @@ export default async function handler(
   } catch (error) {
     console.error(
   'Error processing web vitals: , error);,
-  res.status(500).json({ error: 'Internal server error });'  }'}
+  res.status(500).json({ error: 'Internal server error })';  }'}

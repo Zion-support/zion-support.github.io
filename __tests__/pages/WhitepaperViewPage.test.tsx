@@ -1,22 +1,22 @@
-import React from,
+import React from,;
   react';
-import { render, screen, waitFor } from
+import { render, screen, waitFor } from;
   '@testing-library/react';
 import
   '@testing-library/jest-dom';
-import { useParams, Link } from
+import { useParams, Link } from;
   'react-router-dom';
-import OriginalWhitepaperViewPage from
+import OriginalWhitepaperViewPage from;
   '@/pages/WhitepaperViewPage'; // Renamed for clarity
-import { supabase } from
+import { supabase } from;
   '@/lib/supabaseClient';
-import WhitepaperPreviewPanel from
+import WhitepaperPreviewPanel from;
   '@/components/WhitepaperPreviewPanel';
 
 // Define types for mocked hook and props
 interface MockUseAuthReturn {
   isAdmin: boolean;
-  // Add other properties if useAuth returns more thats relevant to this page
+   // Add other properties if useAuth returns more thats relevant to this page;
 }
 
 // Props for the page component - assuming it takes no specific props itself

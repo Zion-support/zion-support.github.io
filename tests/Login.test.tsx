@@ -1,14 +1,14 @@
-import { render, screen, fireEvent } from
+import { render, screen, fireEvent } from;
   '@testing-library/react';
-import { MemoryRouter } from
+import { MemoryRouter } from;
   'react-router-dom';
-import { LoginForm } from
+import { LoginForm } from;
   '@/components/auth/login';
-import * as authService from
+import * as authService from;
   '@/services/authService';
-import * as authHook from
+import * as authHook from;
   '@/hooks/useAuth';
-import { vi } from
+import { vi } from;
   'vitest';
 
 vi.spyOn(authHook,

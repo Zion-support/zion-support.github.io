@@ -25,7 +25,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       lockBudget: false,
       talentFilters: { // New
         verifiedOnly: false,'
-        regions: ''}}});'
+        regions: ''}}})';
     { name: 'Review & Submit', fields: [] }, // No fields, just review;
   ];
     if (isValid) {
@@ -82,7 +82,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
     };
 =
         regions: data.talentFilters?.regions?.split(',).map(r   => r.trim()).filter(r => r) || [],}};
->        verifiedOnly: data.talentFilters?.verifiedOnly,;'
+>        verifiedOnly: data.talentFilters?.verifiedOnly,';
         regions: data.talentFilters?.regions?.split(',).map(r   => r.trim()).filter(r => r) || []}};
     setProjectBriefSubmitted(projectBriefData);
     try {
@@ -90,11 +90,11 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       if (!response.ok) {
 '
         throw new Error(errorData.error || 'Failed to generate team recommendation')}'
-      setTeamRecommendation(recommendationResult);'      toast.success('Team recommendation generated successfully!');
+      setTeamRecommendation(recommendationResult)';      toast.success('Team recommendation generated successfully!');
       // setCurrentStep(prev: unknown prev + 1); // No longer using steps for display, display immediately
     } catch (error: ) {
 '
-      // console.error('Error submitting project brief:', error);'
+      // console.error('Error submitting project brief:', error)';
       toast.error(error.message || 'An error occurred while generating the team.')} finally {
 
       setIsLoading(false)}
@@ -134,7 +134,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       // Optionally, update UI to reflect invite status on the talent card
     } catch (error: ) {
 '`
-      // console.error('Error sending invite:', error);``
+      // console.error('Error sending invite:', error)`;
       toast.error(`Failed to send invite: ${error.message}`)}
   };
     if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available
@@ -150,7 +150,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
       toast.success(`Invitation sent to talent for ${roleTitle}! (Invite ID: ${inviteResult.id})`);
       // Optionally, update UI to reflect invite status on the talent card;
     } catch (error: ) {}
-      // console.error('Error sending invite:', error);`
+      // console.error('Error sending invite:', error)`;
       toast.error(`Failed to send invite: ${error.message}`)}
   };
 
@@ -487,7 +487,6 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>;
   )};
 ;
 :pages.disabled/pages/team-builder/index.tsx
-export { TeamBuilderPage };export default TeamBuilderPage;'"`
+export { TeamBuilderPage };export default TeamBuilderPage'"`;
 '"`'"`
-export { TeamBuilderPage };export default TeamBuilderPage;
-'"`
+export { TeamBuilderPage };export default TeamBuilderPage'"`;

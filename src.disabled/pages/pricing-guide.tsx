@@ -1,10 +1,8 @@
-<<<<<<< HEAD:src.disabled/pages/pricing-guide.tsx
-import React from
+:src.disabled/pages/pricing-guide.tsx
+import React from;
   'react';
-=======
 import React from 'react';
 export default React.memo(function PricingGuide () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/pricing-guide.tsx
 
 ;
   return (;
@@ -12,5 +10,4 @@ export default React.memo(function PricingGuide () {;
       <h1 className="text - 4xl font - bold mb - 4">Pricing Guide</h1>";
       <p className="text - gray - 300">Average market ranges and comparison guidance.</p>;
     </div>;) ;
-};
-";
+}";;

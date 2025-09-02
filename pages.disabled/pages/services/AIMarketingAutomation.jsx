@@ -1,5 +1,5 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Clock, BarChart3 const AIMarketingAutomation = () => {}
     const features = []
@@ -35,7 +35,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
             title: "Automated Workflows",""
             description: "Intelligent automation of marketing processes, from lead generation to customer retention",""
             benefits["Lead nurturing", "Email automation", "Social media management", "Content scheduling"]
-        }
+        };
     ];
 :pages.disabled/pages/services/AIMarketingAutomation.jsx
     const solutions = [
@@ -251,17 +251,17 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
     };
 =
 
-    };"
+    }";
 >            transition: {}
                 duration: 0.5;
-    };""
+    }';
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}""
       <div className="relative overflow-hidden">""
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"/>
 :pages.disabled/pages/services/AIMarketingAutomation.jsx
 "
-    };""
+    }';
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       {/* Hero Section */}""
       <div className="relative overflow-hidden">""
@@ -314,8 +314,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-""
+  y: 0';
 }} transition={{ duration: 0.8 }} className="text-center">""
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full mb-6">""
               <Target className="w-10 h-10 text-white"/>
@@ -418,8 +417,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
   y: 20;
 }} whileInView = {}
   { opacity: 1,
-  y: 0;
-""
+  y: 0';
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-white mb-6">Solutions by Marketing Channel</h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -477,8 +475,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
   y: 0;
 }} viewport={{ once: true }} transition = {}
   { duration: 0.5,
-  delay: index * 0.1;
-""
+  delay: index * 0.1';
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6">""
                 <div className="flex items-center mb-6">""
                   <div className="w-12 h-12 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg flex items-center justify-center mr-4">""
@@ -531,8 +528,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
   y: 20;
 }} whileInView = {}
   { opacity: 1,
-  y: 0;
-""
+  y: 0';
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">""
           <h2 className="text-4xl font-bold text-white mb-6">Business Benefits</h2>""
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -587,8 +583,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
   y: 0;
 }} viewport={{ once: true }} transition = {}
   { duration: 0.5,
-  delay: index * 0.1;
-""
+  delay: index * 0.1';
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">""
               <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                 <benefit.icon className="w-8 h-8 text-white"/>
@@ -633,8 +628,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
   y: 20;
 }} whileInView = {}
   { opacity: 1,
-  y: 0;
-""
+  y: 0';
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-white mb-6">Technology Stack</h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -689,8 +683,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
   y: 0;
 }} viewport={{ once: true }} transition = {}
   { duration: 0.5,
-  delay: index * 0.1;
-""
+  delay: index * 0.1';
 }} className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-green-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                   <tech.icon className="w-8 h-8 text-white"/>
@@ -742,8 +735,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
   y: 20;
 }} whileInView = {}
   { opacity: 1,
-  y: 0;
-""
+  y: 0';
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="text-center">""
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Automate Your Marketing?
@@ -765,7 +757,7 @@ import { Target, Users, Mail, MessageSquare, TrendingUp, Zap, Brain, Globe, Cloc
     </div>)};
 export { AIMarketingAutomation };
 :pages.disabled/pages/services/AIMarketingAutomation.jsx
-export default AIMarketingAutomation;'"
+export default AIMarketingAutomation'";
 }}}}}}}}}'"'"
 export default AIMarketingAutomation;
 }}}}}}}}}'""

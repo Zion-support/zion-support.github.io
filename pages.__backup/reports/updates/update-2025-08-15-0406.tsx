@@ -1,6 +1,6 @@
-import React from,
+import React from,;
   react';
-import Head from
+import Head from;
   'next/head';
 
 export default function Update202508150406() {

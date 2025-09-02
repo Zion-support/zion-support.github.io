@@ -1,18 +1,17 @@
 export interface EnterpriseItService {
   id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-address: string;
-  };export const enterpriseITServices: EnterpriseItService[] = [
+   name: string;
+   tagline: string;
+   price: string;
+   description: string;
+   features: string[];
+   link: string;
+   category: string;
+   realImplementation: boolean;
+   contactInfo: { mobile: string;
+   email: string;
+   address: string;
+};export const enterpriseITServices: EnterpriseItService[] = [
   {
     id: "enterprise-architecture",
     name: "Enterprise Architecture Consulting",

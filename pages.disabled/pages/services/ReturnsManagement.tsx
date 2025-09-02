@@ -70,10 +70,10 @@ function ReturnsManagement(function ReturnsManagement() {): any {}
             </div>
           ))}
 :pages.disabled/pages/services/ReturnsManagement.tsx
-        </div>;"
+        </div>";
         </div>;
-;""
-        <p className="mt-10 text-sm text-zion-slate-light">;""
+';
+        <p className="mt-10 text-sm text-zion-slate-light">';
           Learn more at <a className="text-cyan-400 underline" href="https://ziontechgroup.com/services" target="_blank" rel="noreferrer">ziontechgroup.com/services</a>;
         </p>;
       </section>;
@@ -94,7 +94,5 @@ export default ReturnsManagement;
 export default ReturnsManagement;
 export default ReturnsManagement;
 :pages.disabled/pages/services/ReturnsManagement.tsx
-export default ReturnsManagement;'"
-'"'"
-export default ReturnsManagement;
-'""
+export default ReturnsManagement'';"'"
+export default ReturnsManagement'';

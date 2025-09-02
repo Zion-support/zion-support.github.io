@@ -201,8 +201,7 @@ monitor.analyzeCodeQuality().then(metrics => {
     console.log(
   'Metrics:,
   , metrics)}
-});
-`;
+})`;;
     const scriptPath = path.join(__dirname,
   'code-quality-monitor.js');
     fs.writeFileSync(scriptPath, script);
@@ -335,8 +334,7 @@ optimizer.optimizePerformance().then(report => {
     console.log(
   'Performance report:,
   , report)}
-});
-`;
+})`;;
     const scriptPath = path.join(__dirname,
   'performance-optimizer.js');
     fs.writeFileSync(scriptPath, script);

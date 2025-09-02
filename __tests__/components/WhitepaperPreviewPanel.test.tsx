@@ -1,10 +1,10 @@
-import React from
+import React from;
   'react';
-import { render, screen } from
+import { render, screen } from;
   '@testing-library/react';
 import
   '@testing-library/jest-dom';
-import WhitepaperPreviewPanel from
+import WhitepaperPreviewPanel from;
   '@/components/WhitepaperPreviewPanel';
 
 // Mock react-markdown
@@ -15,7 +15,9 @@ jest.mock(
 
 // Define a type for Pie props for better type safety
 interface MockPieProps {
-  data: Array<{ name: string; value: number }>;
+  data: Array<{ name: string;
+   value: number;
+}>;
   children?: React.ReactNode;
   // Add other props if used by the actual Pie component and needed for the mock
 }

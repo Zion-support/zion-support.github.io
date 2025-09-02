@@ -45,7 +45,7 @@ import {
   Trash2,
   Copy,
   Download,
-  Upload
+  Upload;
 } from 'lucide-react';
 
 const AISocialMediaScheduler = () => {

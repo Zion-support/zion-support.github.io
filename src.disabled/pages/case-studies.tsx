@@ -1,10 +1,8 @@
-<<<<<<< HEAD:src.disabled/pages/case-studies.tsx
-import React from
+:src.disabled/pages/case-studies.tsx
+import React from;
   'react';
-=======
 import React from 'react';
 export default React.memo(function CaseStudies () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/case-studies.tsx
 
 ;
   return (;
@@ -12,5 +10,4 @@ export default React.memo(function CaseStudies () {;
       <h1 className="text - 4xl font - bold mb - 4">Case Studies</h1>";
       <p className="text - gray - 300">Real outcomes from client engagements.</p>;
     </div>;) ;
-};
-";
+}";;

@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIComplianceMonitoring.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIComplianceMonitoring() {
-    'Automated compliance reporting and alerting',;'
-    'Predictive analytics for compliance risks',;'
-    'Smart governance and policy management',;'
-    'AI-driven compliance automation and orchestration',;'
-    'Real-time compliance analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIComplianceMonitoring(function AIComplianceMonitoring() {): any {}
-    'Automated compliance reporting and alerting',;
-    'Predictive analytics for compliance risks',;
-    'Smart governance and policy management',;
-    'AI-driven compliance automation and orchestration',;
-    'Real-time compliance analytics and insights',;
-    'Custom AI models for compliance applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIComplianceMonitoring() {;
+    'Automated compliance reporting and alerting',';Predictive analytics for compliance risks',';Smart governance and policy management',';AI-driven compliance automation and orchestration',';Real-time compliance analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIComplianceMonitoring(function AIComplianceMonitoring() {): any {};
+    'Automated compliance reporting and alerting',';Predictive analytics for compliance risks',';Smart governance and policy management',';AI-driven compliance automation and orchestration',';Real-time compliance analytics and insights',';Custom AI models for compliance applications';
 <:pages.disabled/pages/services/AIComplianceMonitoring.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,999/mo', ';
       details: ['Unlimited regulations',Custom AI models',Full compliance suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Compliance monitoring optimization',;'
-    'Regulatory compliance tracking',;'
-    'Compliance reporting and analytics',;'
-    'Governance and policy management',;'
-    'Compliance automation and orchestration',;'
-    'Compliance scaling and management';
-  ];
-
-  '
-    'Improve compliance monitoring performance by 50-80%',;'
-    'Reduce compliance reporting time by 40-70%',;'
-    'Cut compliance operational costs by 35-65%',;'
-    'Enhance compliance reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale compliance operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Compliance monitoring optimization',';Regulatory compliance tracking',';Compliance reporting and analytics',';Governance and policy management',';Compliance automation and orchestration',';Compliance scaling and management';
+  ]';Improve compliance monitoring performance by 50-80%',';Reduce compliance reporting time by 40-70%',';Cut compliance operational costs by 35-65%',';Enhance compliance reliability and scalability',';Optimize resource utilization',';Scale compliance operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIComplianceMonitoring.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

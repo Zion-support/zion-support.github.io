@@ -1,21 +1,21 @@
-import React from
+import React from;
   'react';
-import Head from
+import Head from;
   'next/head';
-import Link from
+import Link from;
   'next/link';
-import { motion } from
+import { motion } from;
   'framer-motion';
 import { 
 <:pages/quantum-internet-protocol-2029.tsxAtom, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, 
   Zap, Sparkles, Shield, Cpu, Database, Cloud, Lock, 
   Users, Briefcase, BookOpen, MessageCircle, TrendingUp,
   Target, Layers, Globe, Brain, Rocket, Building, Network
-} from,
+} from,;
   lucide-react';
-import UltraFuturisticNavigation2029 from
+import UltraFuturisticNavigation2029 from;
   '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from
+import UltraFuturisticFooter2029 from;
   '../components/layout/UltraFuturisticFooter2029';
 
 const contactInfo = {

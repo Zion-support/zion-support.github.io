@@ -7,12 +7,12 @@ export default function CustomerExperience(...args[]):  {}
     },;
     {;
       icon: Star,;
-      title: 'Loyalty Programs',;'
+      title: 'Loyalty Programs',';
       description: 'Reward and retain your best customers'};
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx
-  ]},;'
-    {;''
-      title: 'Performance Analytics',;'      description: 'Track and improve customer experience metrics',;
+  ]},';
+    {';
+      title: 'Performance Analytics',';      description: 'Track and improve customer experience metrics',;
   ]},;
     {;
       title: 'Performance Analytics',;
@@ -95,11 +95,11 @@ export default function CustomerExperience(...args[]):  {}
           </motion.div>
         </div>
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -201,7 +201,7 @@ export default function CustomerExperience(...args[]):  {}
       </section>
 
       {/* Capabilities Section */}""
-      <section className="py-20 bg-white/5">;""
+      <section className="py-20 bg-white/5">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -306,7 +306,7 @@ export default function CustomerExperience(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container-responsive">
           <motion.div;
             initial = {}

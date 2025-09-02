@@ -1,18 +1,17 @@
 export interface CartItem {
   id: string;
-  name: string;
-  price: number;
-  quantity: number;
-  image?: string;
-  description?: string;
-  category?: string;
-  sku?: string;
-  weight?: number;
-  dimensions?: {
-    length: number;
-    width: number;
-    height: number;
-  };
+   name: string;
+   price: number;
+   quantity: number;
+   image?: string;
+   description?: string;
+   category?: string;
+   sku?: string;
+   weight?: number;
+   dimensions?: { length: number;
+   width: number;
+   height: number;
+};
   vendor?: string;
   tags?: string[];
   metadata?: Record<string, any>;
@@ -20,13 +19,13 @@ export interface CartItem {
 
 export interface Cart {
   items: CartItem[];
-  total: number;
-  subtotal: number;
-  tax: number;
-  shipping: number;
-  discount: number;
-  currency: string;
-  lastUpdated: Date;
+   total: number;
+   subtotal: number;
+   tax: number;
+   shipping: number;
+   discount: number;
+   currency: string;
+   lastUpdated: Date;
 }
 
 // Calculate cart totals

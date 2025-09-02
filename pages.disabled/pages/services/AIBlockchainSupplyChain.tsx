@@ -22,7 +22,7 @@ import { Brain,
   Database,
   Activity,
   BarChart3,
-  Network'
+  Network';
   } from 'lucide-react.ts';
 };
   ];
@@ -33,8 +33,7 @@ import { Brain,
       name: "Starter Plan","
       price: "$5,999","
       period: "/month",
-      features[;"
-        "Basic blockchain tracking","
+      features[';Basic blockchain tracking","
         "AI analytics dashboard","
         "Standard compliance","
         "Up to 1000 transactions/month","
@@ -47,7 +46,7 @@ import { Brain,
       name: "Professional Plan",""
       price: "$14,999",""
       period: "/month","
-      features[;""
+      features[';
         "Advanced AI algorithms",""
         "Smart contract automation",""
         "Priority support",""
@@ -63,7 +62,7 @@ import { Brain,
       name: "Enterprise Plan",""
       price: "$34,999",""
       period: "/month","
-      features[;""
+      features[';
         "Full AI blockchain suite",""
         "Unlimited transactions",""
         "Custom development",""
@@ -91,7 +90,7 @@ import { Brain,
       industry: "Pharmaceuticals",""
       description: "Combat counterfeit drugs and ensure regulatory compliance with blockchain verification and AI monitoring",""
       benefits["Anti-counterfeit protection", "Regulatory compliance", "Patient safety"]};
-  ];"
+  ]";
   const technologies = [""
     "Machine Learning & AI",""
     "Blockchain Technology",""
@@ -99,7 +98,7 @@ import { Brain,
     "IoT Integration",""
     "Cloud Computing",""
     "API Integration",""
-    "Real-time Analytics",;"    "Predictive Modeling";
+    "Real-time Analytics",';Predictive Modeling";
 :pages.disabled/pages/services/AIBlockchainSupplyChain.tsx
   ];
 
@@ -606,5 +605,5 @@ import { Brain,
         </div>
       </section>;
     </div>;
-  )};'"`
-export default AIBlockchainSupplyChain;'"`'"`
+  )}'"`;
+export default AIBlockchainSupplyChain'"`;'"`

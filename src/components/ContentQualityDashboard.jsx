@@ -51,15 +51,15 @@ const ContentQualityDashboard = ({ className = '' }) => {
                     title: 'Contact Us - Get in Touch',
                     content: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business with cutting-edge solutions.',
                     metaDescription: 'Contact Zion Tech Group for all your technology needs.Our team is ready to help you transform your business.',
-import React, { useState, useEffect, useCallback } from 'react';'
+import React, { useState, useEffect, useCallback } from 'react';
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
-import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";'
+import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx"';
 const ContentQualityDashboard = ({ className = '' }) => {}
     const [isOpen, setIsOpen] = useState(false);
-    const [isLoading, setIsLoading] = useState(false);'
-    const [report, setReport] = useState(null);''
-    const [selectedPage, setSelectedPage] = useState(null);'''
-    const [searchTerm, setSearchTerm] = useState('');'''
+    const [isLoading, setIsLoading] = useState(false)';
+    const [report, setReport] = useState(null)';
+    const [selectedPage, setSelectedPage] = useState(null)';'
+    const [searchTerm, setSearchTerm] = useState('')';'
     const [filterStatus, setFilterStatus] = useState('all');
     const contentAnalyzer = ContentQualityAnalyzer.getInstance();
     const analyzeAllPages = useCallback(async () => {}
@@ -76,7 +76,7 @@ const ContentQualityDashboard = ({ className = '' }) => {}
                     title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services','''
                     content: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services. Transform your business with cutting-edge technology.','''
                     metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.','''
-                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],;'''
+                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],';'
                     links['/services',/ai-solutions',/about',/contact'];
                 },;
                 {}
@@ -87,7 +87,7 @@ const ContentQualityDashboard = ({ className = '' }) => {}
                     title: 'Our Services - Comprehensive Technology Solutions','''
                     content: 'We offer a wide range of technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation. Our expert team delivers innovative solutions tailored to your business needs.','''
                     metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.','''
-                    images['/images/services-overview.jpg'],;'''
+                    images['/images/services-overview.jpg'],';'
                     links['/ai-solutions',/cloud-devops',/cybersecurity',/about'];
                 },;
                 {}
@@ -98,7 +98,7 @@ const ContentQualityDashboard = ({ className = '' }) => {}
                     title: 'AI Solutions - Artificial Intelligence Services','''
                     content: 'Cutting-edge artificial intelligence solutions for modern businesses. Machine learning, predictive analytics, and AI automation to drive innovation and efficiency.','''
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.','''
-                    images['/images/ai-solutions.jpg'],;'''
+                    images['/images/ai-solutions.jpg'],';'
                     links['/services',/about',/contact'];
                 },;
                 {}
@@ -109,7 +109,7 @@ const ContentQualityDashboard = ({ className = '' }) => {}
                     title: 'About Us - Zion Tech Group','''
                     content: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions. Discover our team of experts and our journey in the tech industry.','''
                     metaDescription: 'Learn about Zion Tech Group, our mission, values, and commitment to delivering innovative technology solutions.','''
-                    images['/images/about-team.jpg'],;'''
+                    images['/images/about-team.jpg'],';'
                     links['/services',/team',/contact',/mission'];
                 },;
                 {}
@@ -123,9 +123,8 @@ const ContentQualityDashboard = ({ className = '' }) => {}
             // // // // // // // // console.error('Error analyzing pages:', error);
         }
         finally {}
-            setIsLoading(false);
-'
-            setIsLoading(false);''
+            setIsLoading(false)';
+            setIsLoading(false)';
 '''
                     images['/images/contact-office.jpg'],'''
                     links['/services',/about',/team']
@@ -159,9 +158,9 @@ const ContentQualityDashboard = ({ className = '' }) => {}
                 switch (filterStatus) {}
 '
                     case 'excellent': any;
-                        return page.overallScore >= 80;'
+                        return page.overallScore >= 80';
                     case 'good': any;
-                        return page.overallScore >= 60 && page.overallScore < 80;'
+                        return page.overallScore >= 60 && page.overallScore < 80';
                     case 'poor': any;
                         return page.overallScore < 40;
                     default: any;
@@ -174,7 +173,7 @@ const ContentQualityDashboard = ({ className = '' }) => {}
         if (score >= 60)'
             return 'text-yellow-600 bg-yellow-50 border-yellow-200';
         if (score >= 40)'
-            return 'text-orange-600 bg-orange-50 border-orange-200';'
+            return 'text-orange-600 bg-orange-50 border-orange-200';
         return 'text-red-600 bg-red-50 border-red-200'};
     const getStatusText = (score) => {}
         if (score >= 80)'
@@ -182,11 +181,11 @@ const ContentQualityDashboard = ({ className = '' }) => {}
         if (score >= 60)'
             return 'Good';
         if (score >= 40)'
-            return 'Fair';'
+            return 'Fair';
         return 'Poor'};
     const exportReport = () => {}
         if (!report)
-            return;'
+            return';
         const csvContent = [''
             ['Page URL',Title',Word Count',SEO Score',Overall Score',Issues',Recommendations'],
             ...report.pageMetrics.map(page => [page.pageUrl,
@@ -194,18 +193,18 @@ const ContentQualityDashboard = ({ className = '' }) => {}
                 page.wordCount.toString(),
                 page.seoScore.toString(),
                 page.overallScore.toString(),'
-                page.issues.join('; '),'
-                page.recommendations.join('; ')'"""
+                page.issues.join(';),'
+                page.recommendations.join(';)'"""
             ])'"'"""
-        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');'
+        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n')';
         const blob = new Blob([csvContent], { type: 'text/csv' });
-        const url = window.URL.createObjectURL(blob);'
+        const url = window.URL.createObjectURL(blob)';
         const a = document.createElement('a');
-        a.href = url;'
+        a.href = url';
         a.download = 'content-quality-report.csv';
         a.click();
-        window.URL.revokeObjectURL(url)};`
-    const filteredPages = getFilteredPages();``
+        window.URL.revokeObjectURL(url)}`;
+    const filteredPages = getFilteredPages()`;
     return (<div className={`fixed bottom-6 left-6 z-50 ${className}`}>"""
       {/* Floating Action Button */}""""
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle Content Quality Dashboard">""""

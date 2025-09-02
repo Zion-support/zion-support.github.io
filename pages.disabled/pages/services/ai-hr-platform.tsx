@@ -1,33 +1,26 @@
 :pages.disabled/pages/services/ai-hr-platform.tsx
 import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = props {
 
-import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = props {}
+import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search, Award, Shield, Globe, Zap, Heart, Building, UserCheck, UserPlus const AIHRPlatform: React.FC = props {};
     },;
     {;
       icon: Shield,;
-      title: 'Compliance Automation',;'
+      title: 'Compliance Automation',';
       description: 'Automated HR compliance and reporting'};
   ]},;
-    {;'
-      title: 'Employee Engagement',;'
-      description: 'Monitor and improve workplace satisfaction',;'
+    {';
+      title: 'Employee Engagement',';
+      description: 'Monitor and improve workplace satisfaction',';
       icon: '❤️'};
 :pages.disabled/pages/services/ai-hr-platform.tsx
-  ];'
-  const benefits = [;''
-    'Reduce time-to-hire by 50% with AI screening',;''
-    'Improve candidate quality and retention rates',;''
-    'Automate routine HR tasks and workflows',;''
-    'Data-driven insights for better decisions',;''
-    'Enhanced employee experience and engagement',;'    'Compliance automation and risk reduction';
-  ];
-
-    'Reduce time-to-hire by 50% with AI screening',;
-    'Improve candidate quality and retention rates',;
-    'Automate routine HR tasks and workflows',;
-    'Data-driven insights for better decisions',;
-    'Enhanced employee experience and engagement',;
-    'Compliance automation and risk reduction';
+  ]';
+  const benefits = [';
+    'Reduce time-to-hire by 50% with AI screening',';
+    'Improve candidate quality and retention rates',';
+    'Automate routine HR tasks and workflows',';
+    'Data-driven insights for better decisions',';
+    'Enhanced employee experience and engagement',';Compliance automation and risk reduction';
+  ]';Reduce time-to-hire by 50% with AI screening',';Improve candidate quality and retention rates',';Automate routine HR tasks and workflows',';Data-driven insights for better decisions',';Enhanced employee experience and engagement',';Compliance automation and risk reduction';
   ];
   return()
 :pages.disabled/pages/services/ai-hr-platform.tsx
@@ -117,11 +110,11 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
           </motion.div>
         </div>
 :pages.disabled/pages/services/ai-hr-platform.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-16 px-4">;""
+      <section className="py-16 px-4">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -230,7 +223,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       </section>
 
       {/* Modules Section */}""
-      <section className="py-16 px-4 bg-slate-800/30">;""
+      <section className="py-16 px-4 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -341,7 +334,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-16 px-4">;""
+      <section className="py-16 px-4">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -481,7 +474,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       </section>
 
       {/* CTA Section */}""
-      <section className="py-16 px-4">;""
+      <section className="py-16 px-4">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -535,7 +528,7 @@ import { Users, Brain, Target, CheckCircle, Clock, TrendingUp, FileText, Search,
       </section>;
     </div>;
 :pages.disabled/pages/services/ai-hr-platform.tsx
-  )};'"
+  )}'";
 export default AIHRPlatform}}}'"'"
   )};
 

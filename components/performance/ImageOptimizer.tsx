@@ -2,19 +2,19 @@ import React, { useState, useRef, useEffect } from 'react';
 
 interface ImageOptimizerProps {
   src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  quality?: number;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  sizes?: string;
-  fill?: boolean;
-  style?: React.CSSProperties;
-  onLoad?: () => void;
-  onError?: () => void;
+   alt: string;
+   width?: number;
+   height?: number;
+   className?: string;
+   priority?: boolean;
+   quality?: number;
+   placeholder?: 'blur' | 'empty';
+   blurDataURL?: string;
+   sizes?: string;
+   fill?: boolean;
+   style?: React.CSSProperties;
+   onLoad?: () => void;
+   onError?: () => void;
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({

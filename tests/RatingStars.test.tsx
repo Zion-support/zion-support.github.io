@@ -1,6 +1,6 @@
-import { render } from
+import { render } from;
   '@testing-library/react';
-import { RatingStars } from
+import { RatingStars } from;
   '@/components/RatingStars';
 
 test(

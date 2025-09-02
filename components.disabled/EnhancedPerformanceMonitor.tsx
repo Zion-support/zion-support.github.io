@@ -1,19 +1,20 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';''interface PerformanceMetrics {fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-  fmp: number;
-  tti: number;
-  score: number;
+import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'';interface PerformanceMetrics {
+  fcp: number;
+   lcp: number;
+   fid: number;
+   cls: number;
+   ttfb: number;
+   fmp: number;
+   tti: number;
+   score: number;
 }
 
 interface PerformanceMonitorProps {
   showDetails?: boolean;
-  autoRefresh?: boolean;
-  refreshInterval?: number;
+   autoRefresh?: boolean;
+   refreshInterval?: number;
 }
 
 const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
@@ -58,8 +59,8 @@ case,
   ') {'                metrics.fcp = Math.round(entry.startTime);              }
               break;
             case,
-  largest-contentful-paint': metrics.lcp = Math.round(entry.startTime);'              break;'            case
-  'first-input': metrics.fid = Math.round(entry.processingStart - entry.startTime);'              break;'            case
+  largest-contentful-paint': metrics.lcp = Math.round(entry.startTime)';              break';            case
+  'first-input': metrics.fid = Math.round(entry.processingStart - entry.startTime)';              break';            case
   'layout-shift': if (!(entry as any).hadRecentInput) {
   '                metrics.cls = (metrics.cls || 0) + (entry as any).value;              }break;
           }
@@ -67,14 +68,14 @@ case,
 
         // Calculate TTFB
 const navigationEntry = performance.getEntriesByType(
-  'navigation')[0] as PerformanceNavigationTiming;'        if (navigationEntry) {
+  'navigation')[0] as PerformanceNavigationTiming';        if (navigationEntry) {
   '          metrics.ttfb = Math.round(navigationEntry.responseStart - navigationEntry.requestStart);
         }
 
         // Calculate FMP (First Meaningful Paint)
         const paintEntries = performance.getEntriesByType('paint
-  ');'        const fmpEntry = paintEntries.find(entry => entry.name ===
-  'first-meaningful-paint');'        if (fmpEntry) {
+  ')';        const fmpEntry = paintEntries.find(entry => entry.name ===
+  'first-meaningful-paint')';        if (fmpEntry) {
   '          metrics.fmp = Math.round(fmpEntry.startTime);}
 
         // Calculate TTI (Time to Interactive) - simplified
@@ -97,8 +98,8 @@ observer.observe({ entryTypes: [,
   ', 'largest-contentful-paint
   ', 'first-input
   ', 'layout-shift
-  '] });'      } catch (error) {
-  '        console.warn('Performance Observer not supported: , error);'      }
+  '] })';      } catch (error) {
+  '        console.warn('Performance Observer not supported: , error)';      }
   '// Fallback timeout
       setTimeout(() => {
         resolve({
@@ -118,12 +119,11 @@ const updateMetrics = useCallback(async () => {;setIsLoading(true);
       const newAlerts: string[] = [];
 if (newMetrics.fcp > 3000) newAlerts.push(,
   First Contentful Paint is slow
-  ');'      if (newMetrics.lcp > 4000) newAlerts.push(
-  'Largest Contentful Paint is slow');'      if (newMetrics.fid > 300) newAlerts.push(
-  'First Input Delay is high');'      if (newMetrics.cls > 0.25) newAlerts.push(
-  'Cumulative Layout Shift is high');'      if (newMetrics.score < 50) newAlerts.push(
-  'Overall performance score is low');'
-  '      setAlerts(newAlerts);
+  ')';      if (newMetrics.lcp > 4000) newAlerts.push(
+  'Largest Contentful Paint is slow')';      if (newMetrics.fid > 300) newAlerts.push(
+  'First Input Delay is high')';      if (newMetrics.cls > 0.25) newAlerts.push(
+  'Cumulative Layout Shift is high')';      if (newMetrics.score < 50) newAlerts.push(
+  'Overall performance score is low')';      setAlerts(newAlerts);
     } catch (error) {
       console.error('Error collecting performance metrics: , error);,
   } finally {
@@ -141,14 +141,14 @@ if (newMetrics.fcp > 3000) newAlerts.push(,
 
 const getScoreColor = (score: number): string => {;
     if (score >= 90) return 'text-green-500
-  ';'    if (score >= 70) return
-  'text-yellow-500';'    return
+  ';    if (score >= 70) return
+  'text-yellow-500';    return
   'text-red-500';  };,
   const getScoreBgColor = (score: number): string => {;
     if (score >= 90) return
-  'bg-green-100';'    if (score >= 70) return
-  'bg-yellow-100';'    return
-  'bg-red-100';  };'
+  'bg-green-100';    if (score >= 70) return
+  'bg-yellow-100';    return
+  'bg-red-100';  }';
   if (!showDetails) {
     return (
       <div className="fixed bottom-4 right-4 z-50">"        <motion.div"          initial={{ scale: 0, opacity: 0 }}

@@ -71,12 +71,12 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
             <p className="text-slate-300">E-mail: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>""
             <p className="text-slate-300">Address: 364 E Main St STE 1008 Middletown DE 19709</p>
 :pages.disabled/pages/services/AiLeadScoring.tsx
-          </div>;"</div>;""
+          </div>";</div>';
         <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Book a demo</a>;
       </section>;
     </div>;
   )};
 ;
 :pages.disabled/pages/services/AiLeadScoring.tsx
-export { AiLeadScoring };"
+export { AiLeadScoring }";
 export default AiLeadScoring}'"'"

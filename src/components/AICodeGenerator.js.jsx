@@ -1,14 +1,14 @@
-import React, { useState, useCallback } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';'''
+import React, { useState, useCallback } from 'react'';
+import { motion, AnimatePresence } from 'framer-motion'';
 import { Code, Sparkles, Download, TestTube, FileText, Settings, Zap, Shield, Gauge, Wrench, Eye, Trash2, Copy, CheckCircle, AlertCircle, Info, Loader2 } from 'lucide-react';
 import { useAICodeGeneration } from "../hooks/useAICodeGeneration.jsx";
 ;
 export const AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
+    })';
     const [activeTab, setActiveTab] = useState('generate');
-    const [showAdvanced, setShowAdvanced] = useState(false);'
+    const [showAdvanced, setShowAdvanced] = useState(false)';
     const [customCode, setCustomCode] = useState('');
     const [copied, setCopied] = useState(false);
     const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration();
@@ -33,7 +33,7 @@ export const AICodeGenerator = () => {
         e.preventDefault();
         if(!form.prompt.trim())
             return;
-        await generateCode(form.prompt, form);'
+        await generateCode(form.prompt, form)';
         trackEvent('ai_code_generator',form_submitted', form.language, null, {}
             framework: form.framework,
             style: form.style,
@@ -44,7 +44,7 @@ export const AICodeGenerator = () => {
     const handleAnalyzeCustomCode = useCallback(async () => {}
         if(!customCode.trim())
             return;
-        await analyzeCode(customCode, form.language);'
+        await analyzeCode(customCode, form.language)';
         trackEvent('ai_code_generator',custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]);
     // Handle code optimization;
     const handleOptimizeCode = useCallback(async (focus) => {}
@@ -61,27 +61,27 @@ export const AICodeGenerator = () => {
     // Handle test generation;
     const handleGenerateTests = useCallback(async () => {}
         if(!generatedCode && !customCode)
-            return;'
-        const codeToTest = generatedCode || customCode;''
-        const testCode = await generateTests(codeToTest, form.language);'''
+            return';
+        const codeToTest = generatedCode || customCode';
+        const testCode = await generateTests(codeToTest, form.language)';'
         // In a real implementation, you'd want to display the test code''''
-        // console.log('Generated tests:', testCode);'''
+        // console.log('Generated tests:', testCode)';'
         trackEvent('ai_code_generator',tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]);
     // Handle documentation generation;
     const handleGenerateDocs = useCallback(async () => {}
         if(!generatedCode && !customCode)
-            return;'
-        const codeToDoc = generatedCode || customCode;''
-        const docs = await generateDocs(codeToDoc, form.language);'''
+            return';
+        const codeToDoc = generatedCode || customCode';
+        const docs = await generateDocs(codeToDoc, form.language)';'
         // In a real implementation, you'd want to display the documentation''''
-        // console.log('Generated docs:', docs);'''
+        // console.log('Generated docs:', docs)';'
         trackEvent('ai_code_generator',docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]);
     // Copy code to clipboard;
     const copyToClipboard = useCallback(async (code) => {}
         try {}
             await navigator.clipboard.writeText(code);
             setCopied(true);
-            setTimeout(() => setCopied(false), 2000);'
+            setTimeout(() => setCopied(false), 2000)';
             trackEvent('ai_code_generator',code_copied',clipboard', code.length)}
         catch (error) {}
 '
@@ -91,15 +91,15 @@ export const AICodeGenerator = () => {
     }, [trackEvent]);
     // Apply suggestion;
     const handleApplySuggestion = useCallback((suggestion) => {}
-        applySuggestion(suggestion);'
+        applySuggestion(suggestion)';
         trackEvent('ai_code_generator',suggestion_applied', suggestion.type, null, {}
             suggestionId: suggestion.id,
             impact: suggestion.impact;
         })}, [applySuggestion, trackEvent]);
     // Clear history;
     const handleClearHistory = useCallback(() => {}
-        clearHistory();'"""
-        trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent]);""""
+        clearHistory()'';"
+        trackEvent('ai_code_generator',history_cleared',manual')}, [clearHistory, trackEvent])';""
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">"""
       {/* Header */}""""
       <div className="bg-gradient-to-r from-purple-500 to-blue-500 p-6 text-white">""""
@@ -368,7 +368,7 @@ export const AICodeGenerator = () => {
                     { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },'
                     { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
                 ].map(({ key, label, icon: Icon, color }) => {}
-                    const value = codeAnalysis[key];'
+                    const value = codeAnalysis[key]';
                     if (typeof value === 'number') {}
 """
 ""`
@@ -620,5 +620,5 @@ export const AICodeGenerator = () => {
             </div>
           </motion.div>) }
       </div>
-    </div>)};'"`
+    </div>)}'"`;
 '"`'"`

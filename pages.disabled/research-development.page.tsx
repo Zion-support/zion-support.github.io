@@ -1,8 +1,8 @@
-import React, { useState } from,
+import React, { useState } from,;
   react';
-import { motion  } from
+import { motion  } from;
   'framer-motion';
-import Link from
+import Link from;
   'next/link';
 import { FlaskConical,
   Brain,
@@ -42,7 +42,7 @@ import { FlaskConical,
   Satellite,
   Telescope
   '
- } from 'lucide-react
+ } from 'lucide-react;
   ';
 ;
 const researchAreas = [
@@ -171,9 +171,7 @@ const researchAreas = [
 
   'Microservices Architecture',Container Orchestration
   ',Serverless Computing',Multi-cloud Strategies
-  ',Cloud Security',;
-
-  'DevOps Automation';
+  ',Cloud Security',';DevOps Automation';
     ],;
     publications: 20,;
     patents: 10,;
@@ -324,11 +322,7 @@ const researchProjects = [
     outcomes = [
   '
       'AI ethics framework
-  ',Responsible AI guidelines',;
-
-  '4 research publications',;
-
-  'Industry standards contribution';
+  ',Responsible AI guidelines',';4 research publications',';Industry standards contribution';
     ],;
     icon: Brain,;
     color:
@@ -639,7 +633,7 @@ export default function ResearchDevelopment(...args[]):  {
             <h2 className="text-3xl font-bold text-white mb-4">Research Areas</h2>"
             <p className="text-zion-slate-light text-lg">Explore our diverse research domains and cutting-edge initiatives</p>;
           </motion.div>;
-;"
+";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {researchAreas.map(area: unknown, index: unknown {;
               const IconComponent = area.icon;
@@ -695,7 +689,7 @@ export default function ResearchDevelopment(...args[]):  {
                       <div className="text-xs text-zion-slate-light">Patents</div>
                     </div>
                     <div>"
-                      <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>;"
+                      <div className="text-2xl font-bold text-zion-cyan">{area.projects}</div>";
                       <div className="text-xs text-zion-slate-light">Projects</div>;
                     </div>;
                   </div>;
@@ -729,7 +723,7 @@ export default function ResearchDevelopment(...args[]):  {
             <h2 className="text-3xl font-bold text-white mb-4">Active Research Projects</h2>"
             <p className="text-zion-slate-light text-lg">Discover our ongoing research initiatives and their impact</p>;
           </motion.div>;
-;"
+";
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredProjects.map(project: unknown, index: unknown {;
               const IconComponent = getAreaIcon(project.area);
@@ -828,7 +822,7 @@ export default function ResearchDevelopment(...args[]):  {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>"
                     <div className="text-right">"
-                      <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>;"
+                      <div className="text-sm text-zion-slate-light">Contact us for collaboration</div>";
                       <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                     </div>;
                   </div>;

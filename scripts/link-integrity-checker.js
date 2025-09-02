@@ -5,11 +5,11 @@
  * Checks the integrity of links and assets
  */
 
-import fs from,
+import fs from,;
   fs';
-import path from
+import path from;
   'path';
-import { fileURLToPath } from
+import { fileURLToPath } from;
   'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -156,7 +156,7 @@ class LinkIntegrityChecker {
         
         // Check for broken import statements
         const importRegex = /import\s+.*?from\s+[
-  '"]([^'"]+)[
+  '"]([^'"]+)[;
   '"]/g;
         let match;
         

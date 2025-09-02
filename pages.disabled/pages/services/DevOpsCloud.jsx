@@ -1,9 +1,9 @@
-import React from
+import React from;
   'react';
-import { SEO } from "@/components/SEO";'
-import { Link } from
-  'react-router-dom';'
-import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from
+import { SEO } from "@/components/SEO"';
+import { Link } from;
+  'react-router-dom';
+import { Check, Cloud, Zap, Shield, Database, Users, Target, Server } from;
   'lucide-react';
 export { function };
 :pages.disabled/pages/services/DevOpsCloud.jsx
@@ -11,7 +11,6 @@ export default function DevOpsCloudServices() {
     const devopsServices = [
         {
 
-<<<<<<< HEAD
             icon: Cloud,
 ,
   title: 'Cloud Migration & Strategy,'
@@ -27,26 +26,7 @@ export default function DevOpsCloudServices() {
   'Cloud readiness assessment,Multi-cloud strategy planning,
   ,Migration roadmap development',Cost optimization analysis
   ',Security and compliance review',Performance benchmarking
-  '
-=======
-            icon: Cloud,'
-            title: 'Cloud Migration & Strategy','
-            description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.','
-            price: 'From $8,500/project','
-            marketPrice: '$7,000 - $25,000/project','
-            features: [''
-export default function DevOpsCloudServices() {}
-    const devopsServices = []
-        {}
-            icon: Cloud,
-            title: 'Cloud Migration & Strategy',
-            description: 'Comprehensive cloud migration services with multi-cloud strategy and cost optimization.',
-            price: 'From $8,500/project',
-            marketPrice: '$7,000 - $25,000/project',
-            features: ['
-                'Cloud readiness assessment',Multi-cloud strategy planning',Migration roadmap development',Cost optimization analysis',Security and compliance review',Performance benchmarking'
->>>>>>> pr-10728
-            ],'
+  '            ],'
             benefits: ['
   '
                 'Reduced infrastructure costs by 30-50%,Improved scalability and flexibility',Enhanced disaster recovery
@@ -56,7 +36,6 @@ export default function DevOpsCloudServices() {}
 :pages.disabled/pages/services/DevOpsCloud.jsx
         {
 
-<<<<<<< HEAD
             icon: Zap,
 ,
   title: 'CI/CD Pipeline Development,'
@@ -72,24 +51,7 @@ export default function DevOpsCloudServices() {}
   'Automated build and test pipelines,Deployment automation,
   ,Environment management',Rollback and recovery
   ',Pipeline monitoring and alerts',Security scanning integration
-  '
-=======
-            icon: Zap,'
-            title: 'CI/CD Pipeline Development','
-            description: 'Automated continuous integration and deployment pipelines for faster, reliable software delivery.','
-            price: 'From $6,500/project','
-            marketPrice: '$5,500 - $18,000/project','
-            features: [''
-        {}
-            icon: Zap,
-            title: 'CI/CD Pipeline Development',
-            description: 'Automated continuous integration and deployment pipelines for faster, reliable software delivery.',
-            price: 'From $6,500/project',
-            marketPrice: '$5,500 - $18,000/project',
-            features: ['
-                'Automated build and test pipelines',Deployment automation',Environment management',Rollback and recovery',Pipeline monitoring and alerts',Security scanning integration'
->>>>>>> pr-10728
-            ],'
+  '            ],'
             benefits: ['
   '
                 'Faster time to market,Reduced deployment errors',Improved code quality
@@ -99,7 +61,6 @@ export default function DevOpsCloudServices() {}
 :pages.disabled/pages/services/DevOpsCloud.jsx
         {
 
-<<<<<<< HEAD
             icon: Shield,
 ,
   title: Infrastructure as Code (IaC),
@@ -114,24 +75,7 @@ export default function DevOpsCloudServices() {}
   'Terraform and CloudFormation,Ansible and Puppet automation,
   ,Infrastructure versioning',Environment consistency
   ',Automated scaling policies',Cost monitoring and alerts
-  '
-=======
-            icon: Shield,'
-            title: 'Infrastructure as Code (IaC),'
-            description: 'Automated infrastructure provisioning and management using modern IaC tools and practices.','
-            price: 'From $5,500/project','
-            marketPrice: '$4,500 - $15,000/project','
-            features: [''
-        {}
-            icon: Shield,
-            title: 'Infrastructure as Code (IaC),
-            description: 'Automated infrastructure provisioning and management using modern IaC tools and practices.',
-            price: 'From $5,500/project',
-            marketPrice: '$4,500 - $15,000/project',
-            features: ['
-                'Terraform and CloudFormation',Ansible and Puppet automation',Infrastructure versioning',Environment consistency',Automated scaling policies',Cost monitoring and alerts'
->>>>>>> pr-10728
-            ],'
+  '            ],'
             benefits: ['
   '
                 'Consistent infrastructure deployment,Reduced manual configuration errors',Faster environment provisioning
@@ -141,7 +85,6 @@ export default function DevOpsCloudServices() {}
 :pages.disabled/pages/services/DevOpsCloud.jsx
         {
 
-<<<<<<< HEAD
             icon: Database,
 ,
   title: 'Container Orchestration & Kubernetes,'
@@ -157,24 +100,7 @@ export default function DevOpsCloudServices() {}
   'Kubernetes cluster design,Container security and scanning,
   ,Auto-scaling and load balancing',Service mesh implementation
   ',Monitoring and logging',Backup and disaster recovery
-  '
-=======
-            icon: Database,'
-            title: 'Container Orchestration & Kubernetes','
-            description: 'Enterprise-grade container management and orchestration with Kubernetes and Docker.','
-            price: 'From $7,500/project','
-            marketPrice: '$6,500 - $20,000/project','
-            features: [''
-        {}
-            icon: Database,
-            title: 'Container Orchestration & Kubernetes',
-            description: 'Enterprise-grade container management and orchestration with Kubernetes and Docker.',
-            price: 'From $7,500/project',
-            marketPrice: '$6,500 - $20,000/project',
-            features: ['
-                'Kubernetes cluster design',Container security and scanning',Auto-scaling and load balancing',Service mesh implementation',Monitoring and logging',Backup and disaster recovery'
->>>>>>> pr-10728
-            ],'
+  '            ],'
             benefits: ['
   '
                 'Improved application scalability,Better resource utilization',Enhanced deployment flexibility
@@ -184,7 +110,6 @@ export default function DevOpsCloudServices() {}
 :pages.disabled/pages/services/DevOpsCloud.jsx
         {
 
-<<<<<<< HEAD
             icon: Users,
 ,
   title: 'DevOps Consulting & Training,'
@@ -200,24 +125,7 @@ export default function DevOpsCloudServices() {}
   'DevOps maturity assessment,Process optimization,
   ,Team structure recommendations',Tool selection and implementation
   ',Best practices training',Change management support
-  '
-=======
-            icon: Users,'
-            title: 'DevOps Consulting & Training','
-            description: 'Strategic DevOps consulting and comprehensive team training for organizational transformation.','
-            price: 'From $4,500/month','
-            marketPrice: '$3,500 - $12,000/month','
-            features: [''
-        {}
-            icon: Users,
-            title: 'DevOps Consulting & Training',
-            description: 'Strategic DevOps consulting and comprehensive team training for organizational transformation.',
-            price: 'From $4,500/month',
-            marketPrice: '$3,500 - $12,000/month',
-            features: ['
-                'DevOps maturity assessment',Process optimization',Team structure recommendations',Tool selection and implementation',Best practices training',Change management support'
->>>>>>> pr-10728
-            ],'
+  '            ],'
             benefits: ['
   '
                 'Improved development velocity,Better team collaboration',Reduced operational costs
@@ -227,7 +135,6 @@ export default function DevOpsCloudServices() {}
 :pages.disabled/pages/services/DevOpsCloud.jsx
         {
 
-<<<<<<< HEAD
             icon: Server,
 ,
   title: 'Monitoring & Observability,'
@@ -243,24 +150,7 @@ export default function DevOpsCloudServices() {}
   'Application performance monitoring,Infrastructure monitoring,
   ,Centralized logging and analysis',Real-time alerting
   ',Custom dashboards',Capacity planning insights
-  '
-=======
-            icon: Server,'
-            title: 'Monitoring & Observability','
-            description: 'Comprehensive monitoring, logging, and observability solutions for modern applications.','
-            price: 'From $4,800/month','
-            marketPrice: '$4,000 - $12,000/month','
-            features: [''
-        {}
-            icon: Server,
-            title: 'Monitoring & Observability',
-            description: 'Comprehensive monitoring, logging, and observability solutions for modern applications.',
-            price: 'From $4,800/month',
-            marketPrice: '$4,000 - $12,000/month',
-            features: ['
-                'Application performance monitoring',Infrastructure monitoring',Centralized logging and analysis',Real-time alerting',Custom dashboards',Capacity planning insights'
->>>>>>> pr-10728
-            ],'
+  '            ],'
             benefits: ['
   '
                 'Proactive issue detection,Improved system reliability,
@@ -268,13 +158,7 @@ export default function DevOpsCloudServices() {}
   ',Data-driven optimization'
             ]
 
-<<<<<<< HEAD
-    ];: pages.disabled/pages/services/DevOpsCloud.jsx
-=======
-    ];
-:pages.disabled/pages/services/DevOpsCloud.jsx
->>>>>>> pr-10728
-    const cloudProviders = [
+    ];: pages.disabled/pages/services/DevOpsCloud.jsx    const cloudProviders = [
         {
   '
             name:Amazon Web Services (AWS),
@@ -308,7 +192,6 @@ export default function DevOpsCloudServices() {}
             pricing: Sustained use discounts, committed use,
   },
         {
-<<<<<<< HEAD
   '
             name: 'Multi-Cloud Strategy,'
             services:,
@@ -316,38 +199,7 @@ export default function DevOpsCloudServices() {}
   '
             strengths: Vendor independence, best-of-breed,
   ,'pricing: 'Optimized for each workload'
-=======
-'
-            name: 'Multi-Cloud Strategy','
-            services: 'Cross-platform orchestration, hybrid solutions','
-            strengths: 'Vendor independence, best-of-breed','
-    const cloudProviders = []
-        {}
-            name: 'Amazon Web Services (AWS),
-            services: 'EC2, S3, Lambda, RDS, EKS',
-            strengths: 'Market leader, extensive services',
-            pricing: 'Competitive, pay-as-you-use'
-        },
-        {}
-            name: 'Microsoft Azure',
-            services: 'Virtual Machines, Blob Storage, Functions, AKS',
-            strengths: 'Enterprise integration, hybrid cloud',
-            pricing: 'Enterprise discounts, reserved instances'
-        },
-        {}
-            name: 'Google Cloud Platform (GCP),
-            services: 'Compute Engine, Cloud Storage, Cloud Functions, GKE',
-            strengths: 'AI/ML capabilities, global network',
-            pricing: 'Sustained use discounts, committed use'
-        },
-        {}
-            name: 'Multi-Cloud Strategy',
-            services: 'Cross-platform orchestration, hybrid solutions',
-            strengths: 'Vendor independence, best-of-breed',
-            pricing: 'Optimized for each workload'
->>>>>>> pr-10728
-
-    ];'
+    ]';
     const industries = ['
   '
         'Financial Services & Banking,Healthcare & Life Sciences,
@@ -355,7 +207,7 @@ export default function DevOpsCloudServices() {}
   ',Media & Entertainment',Manufacturing & Logistics
   ',Education & Research',Government & Public Sector
   ',Startups & Scale-ups'
-    ];'
+    ]';
     const technologies = ['
   '
         'AWS, Azure, GCP
@@ -363,22 +215,14 @@ export default function DevOpsCloudServices() {}
   ',Jenkins & GitLab CI',Prometheus & Grafana
   ',ELK Stack & Splunk',Istio & Linkerd
   ',Helm & ArgoCD'
-    ];'
-<<<<<<< HEAD
+    ]';
     const benefits = ['
   '
         'Faster software delivery and deployment
   ',Improved system reliability and uptime',Reduced infrastructure costs
   ',Enhanced security and compliance',Better scalability and performance
   ',Improved team collaboration and productivity'
-    ];: pages.disabled/pages/services/DevOpsCloud.jsx
-=======
-    const benefits = [''
-        'Faster software delivery and deployment',Improved system reliability and uptime',Reduced infrastructure costs',Enhanced security and compliance',Better scalability and performance',Improved team collaboration and productivity'
-    ];
-:pages.disabled/pages/services/DevOpsCloud.jsx
->>>>>>> pr-10728
-    const useCases = [
+    ];: pages.disabled/pages/services/DevOpsCloud.jsx    const useCases = [
         {
   '
             title: 'Microservices Migration,'
@@ -419,71 +263,22 @@ export default function DevOpsCloudServices() {}
             implementation:
   '12-20 weeks'
 "
-    ];""
+    ]';
     return (<div className="min-h-screen bg-background">""
       <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
-<<<<<<< HEAD
-"{/* Hero Section */}""
-=======
-"
-    const useCases = []
-        {}
-            title: 'Microservices Migration',
-            description: 'Legacy monolithic application migration to microservices architecture with container orchestration.',
-            roi: '40-60% cost reduction',
-            implementation: '20-32 weeks'
-        },
-        {}
-            title: 'Multi-Cloud Strategy',
-            description: 'Implementation of multi-cloud architecture for improved resilience and cost optimization.',
-            roi: '25-45% cost savings',
-            implementation: '16-24 weeks'
-        },
-        {}
-            title: 'DevOps Transformation',
-            description: 'Complete organizational DevOps transformation with process optimization and tool implementation.',
-            roi: '30-50% efficiency improvement',
-            implementation: '24-36 weeks'
-        },
-        {}
-            title: 'Cloud-Native Development',
-            description: 'Modern cloud-native application development with CI/CD and infrastructure automation.',
-            roi: '35-55% faster delivery',
-            implementation: '12-20 weeks'
-
-    ];""
-    return (<div className="min-h-screen bg-background">""
-      <SEO title="DevOps & Cloud Services - Zion Tech Group" description="Comprehensive DevOps consulting, cloud migration, CI/CD pipelines, and infrastructure automation services for modern software delivery." keywords="DevOps services, cloud migration, CI/CD, Kubernetes, infrastructure as code, cloud consulting, automation" canonical="https://ziontechgroup.com/services/devops-cloud"/>
-
-      {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">""
+"{/* Hero Section */}""      <section className="relative bg-gradient-to-br from-orange-900 via-red-900 to-pink-900 text-white py-20">""
         <div className="absolute inset-0 bg-black/20"></div>""
         <div className="relative container mx-auto px-4 text-center">""
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-            DevOps & Cloud Services"</h1>""
-=======
-            DevOps & Cloud Services"
-            DevOps & Cloud Services;
-          </h1>""
->>>>>>> pr-10728
-          <p className="text-xl md:text-2xl text-orange-100 max-w-4xl mx-auto leading-relaxed">
+            DevOps & Cloud Services"</h1>""          <p className="text-xl md:text-2xl text-orange-100 max-w-4xl mx-auto leading-relaxed">
             Accelerate your software delivery with modern DevOps practices and cloud-native solutions.
             From migration to automation, we help you build faster, more reliable applications.
           </p>
         </div>
       </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-"{/* Services Overview */}""
-=======
-"
-
-      {/* Services Overview */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
+"{/* Services Overview */}""      <section className="py-20 bg-white">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our DevOps & Cloud Services</h2>""
@@ -492,49 +287,21 @@ export default function DevOpsCloudServices() {}
               processes and infrastructure for better performance and efficiency.
             </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-          </div>"""
-=======
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">""
+          </div>"""          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {devopsServices.map((service, index) => (<div key={service.title} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200">""
                 <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">""
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-                  <service.icon className="w-8 h-8 text-orange-600"/>"</div>""
-=======
-                  <service.icon className="w-8 h-8 text-orange-600"/>"
-                  <service.icon className="w-8 h-8 text-orange-600"/>
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>""
+                  <service.icon className="w-8 h-8 text-orange-600"/>"</div>""                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>""
                 <p className="text-gray-600 mb-4">{service.description}</p>""
                 <div className="mb-4">""
                   <p className="text-lg font-semibold text-orange-600">{service.price}</p>""
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-                  <p className="text-sm text-gray-500">Market: {service.marketPrice}</p>"</div>""
-=======
-                  <p className="text-sm text-gray-500">Market: {service.marketPrice}</p>"
-                  <p className="text-sm text-gray-500">Market: {service.marketPrice}</p>
-                </div>""
->>>>>>> pr-10728
-                <ul className="space-y-2 mb-4">""
+                  <p className="text-sm text-gray-500">Market: {service.marketPrice}</p>"</div>""                <ul className="space-y-2 mb-4">""
                   {service.features.slice(0, 4).map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-700">""
                       <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
                       {feature}
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-                    </li>))}"</ul>""
-=======
-                    </li>))}"
-                    </li>))}
-                </ul>""
->>>>>>> pr-10728
-                <div className="space-y-2">""
+                    </li>))}"</ul>""                <div className="space-y-2">""
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (<div key={benefitIndex} className="text-sm text-gray-600">""
                       <span className="font-medium">✓</span> {benefit}
                     </div>))}
@@ -544,14 +311,7 @@ export default function DevOpsCloudServices() {}
         </div>
       </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-"{/* Cloud Providers Section */}""
-=======
-"
-
-      {/* Cloud Providers Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gray-50">""
+"{/* Cloud Providers Section */}""      <section className="py-20 bg-gray-50">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Cloud Providers We Work With</h2>""
@@ -559,14 +319,7 @@ export default function DevOpsCloudServices() {}
               Expertise across major cloud platforms to help you choose the right solution for your business needs.
             </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-          </div>"""
-=======
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">""
+          </div>"""          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">""
             {cloudProviders.map((provider, index) => (<div key={provider.name} className="bg-white rounded-xl p-6 border border-gray-200">""
                 <h3 className="text-lg font-bold text-gray-900 mb-3">{provider.name}</h3>""
 :pages.disabled/pages/services/DevOpsCloud.jsx
@@ -578,22 +331,7 @@ export default function DevOpsCloudServices() {}
                   <div>""
                     <span className="font-medium text-gray-700">Strengths:</span>""
                     <p className="text-gray-600">{provider.strengths}</p>
-<<<<<<< HEAD
-                  </div>"<div>""
-=======
-                  </div>"
-                <div className="space-y-3 text-sm">
-                  <div>""
-                    <span className="font-medium text-gray-700">Key Services:</span>""
-                    <p className="text-gray-600">{provider.services}</p>
-                  </div>
-                  <div>""
-                    <span className="font-medium text-gray-700">Strengths:</span>""
-                    <p className="text-gray-600">{provider.strengths}</p>
-                  </div>
-                  <div>""
->>>>>>> pr-10728
-                    <span className="font-medium text-gray-700">Pricing:</span>""
+                  </div>"<div>""                    <span className="font-medium text-gray-700">Pricing:</span>""
                     <p className="text-gray-600">{provider.pricing}</p>
                   </div>
                 </div>
@@ -602,14 +340,7 @@ export default function DevOpsCloudServices() {}
         </div>
       </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-"{/* Use Cases Section */}""
-=======
-"
-
-      {/* Use Cases Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
+"{/* Use Cases Section */}""      <section className="py-20 bg-white">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Real-World DevOps Use Cases</h2>""
@@ -617,14 +348,7 @@ export default function DevOpsCloudServices() {}
               Proven DevOps solutions that deliver measurable business value across diverse industries.
             </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-          </div>"""
-=======
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">""
+          </div>"""          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">""
             {useCases.map((useCase, index) => (<div key={useCase.title} className="bg-gray-50 rounded-xl p-8 border border-gray-200">""
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{useCase.title}</h3>""
                 <p className="text-gray-600 mb-6 leading-relaxed">{useCase.description}</p>""
@@ -632,14 +356,7 @@ export default function DevOpsCloudServices() {}
                   <div className="bg-orange-50 p-4 rounded-lg">""
                     <div className="text-sm text-gray-600 mb-1">Expected ROI</div>""
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-                    <div className="text-lg font-semibold text-orange-600">{useCase.roi}</div>"</div>""
-=======
-                    <div className="text-lg font-semibold text-orange-600">{useCase.roi}</div>"
-                    <div className="text-lg font-semibold text-orange-600">{useCase.roi}</div>
-                  </div>""
->>>>>>> pr-10728
-                  <div className="bg-blue-50 p-4 rounded-lg">""
+                    <div className="text-lg font-semibold text-orange-600">{useCase.roi}</div>"</div>""                  <div className="bg-blue-50 p-4 rounded-lg">""
                     <div className="text-sm text-gray-600 mb-1">Implementation</div>""
                     <div className="text-lg font-semibold text-blue-600">{useCase.implementation}</div>
                   </div>
@@ -656,81 +373,31 @@ export default function DevOpsCloudServices() {}
           <div className="grid md:grid-cols-2 gap-12 items-center">"
             <div>""
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-<<<<<<< HEAD
-                Why Choose Our DevOps Services?"</h2>""
-=======
-                Why Choose Our DevOps Services?"
-
-      {/* Benefits Section */}""
-      <section className="py-20 bg-gray-50">""
-        <div className="container mx-auto px-4">""
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>""
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Why Choose Our DevOps Services?
-              </h2>""
->>>>>>> pr-10728
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                Why Choose Our DevOps Services?"</h2>""              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Our DevOps expertise combined with cloud-native technologies enables us to deliver;
                 solutions that provide real business value and competitive advantage.
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-              </p>"""
-=======
-              </p>"
-              </p>
-""
->>>>>>> pr-10728
-              <div className="space-y-4">""
+              </p>"""              <div className="space-y-4">""
                 {benefits.map((benefit, index) => (<div key={index} className="flex items-start">""
                     <Check className="w-6 h-6 text-orange-500 mr-3 mt-0.5 flex-shrink-0"/>""
                     <span className="text-gray-700">{benefit}</span>
                   </div>))}
               </div>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-            </div>"""
-=======
-            </div>"
-            </div>
-""
->>>>>>> pr-10728
-            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">""
+            </div>"""            <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">""
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Free DevOps Assessment</h3>""
               <p className="text-gray-600 mb-6">
 :pages.disabled/pages/services/DevOpsCloud.jsx
                 Discover how DevOps can transform your business with our comprehensive
-<<<<<<< HEAD
-                DevOps maturity assessment and strategy session."</p>""
-=======
-                DevOps maturity assessment and strategy session."
-                Discover how DevOps can transform your business with our comprehensive;
-                DevOps maturity assessment and strategy session.
-              </p>""
->>>>>>> pr-10728
-              <div className="space-y-3 mb-6">""
+                DevOps maturity assessment and strategy session."</p>""              <div className="space-y-3 mb-6">""
                 <div className="flex justify-between">""
                   <span className="text-gray-600">Assessment Value:</span>""
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-                  <span className="font-semibold text-gray-900">$3,000</span>"</div>""
-=======
-                  <span className="font-semibold text-gray-900">$3,000</span>"
-                  <span className="font-semibold text-gray-900">$3,000</span>
-                </div>""
->>>>>>> pr-10728
-                <div className="flex justify-between">""
+                  <span className="font-semibold text-gray-900">$3,000</span>"</div>""                <div className="flex justify-between">""
                   <span className="text-gray-600">Your Cost:</span>""
                   <span className="font-semibold text-green-600">FREE</span>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-                </div>"</div>""
-=======
-                </div>"
-                </div>
-              </div>""
->>>>>>> pr-10728
-              <Link to="/contact" className="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors inline-block w-full text-center">
+                </div>"</div>""              <Link to="/contact" className="bg-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors inline-block w-full text-center">
                 Schedule Assessment;
               </Link>
             </div>
@@ -738,14 +405,7 @@ export default function DevOpsCloudServices() {}
         </div>
       </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-"{/* Industries Section */}""
-=======
-"
-
-      {/* Industries Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
+"{/* Industries Section */}""      <section className="py-20 bg-white">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Industries We Serve</h2>""
@@ -754,38 +414,17 @@ export default function DevOpsCloudServices() {}
               across diverse industry sectors.
             </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-          </div>"""
-=======
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
-          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">""
+          </div>"""          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">""
             {industries.map((industry, index) => (<div key={industry} className="bg-gray-50 rounded-xl p-6 text-center hover:bg-orange-50 transition-colors border border-gray-200">""
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-                  <Target className="w-8 h-8 text-orange-600"/>"</div>""
-=======
-                  <Target className="w-8 h-8 text-orange-600"/>"
-                  <Target className="w-8 h-8 text-orange-600"/>
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
+                  <Target className="w-8 h-8 text-orange-600"/>"</div>""                <h3 className="text-lg font-semibold text-gray-900">{industry}</h3>
               </div>))}
           </div>
         </div>
       </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-"{/* Technologies Section */}""
-=======
-"
-
-      {/* Technologies Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gray-50">""
+"{/* Technologies Section */}""      <section className="py-20 bg-gray-50">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">DevOps Technologies We Use</h2>""
@@ -794,14 +433,7 @@ export default function DevOpsCloudServices() {}
               and innovative solutions for our clients.
             </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-          </div>"""
-=======
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">""
+          </div>"""          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">""
             {technologies.map((tech, index) => (<div key={tech} className="bg-white rounded-lg p-4 text-center hover:bg-orange-50 transition-colors border border-gray-200">""
                 <span className="text-gray-700 font-medium text-sm">{tech}</span>
               </div>))}
@@ -809,14 +441,7 @@ export default function DevOpsCloudServices() {}
         </div>
       </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-"{/* Process Section */}""
-=======
-"
-
-      {/* Process Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
+"{/* Process Section */}""      <section className="py-20 bg-white">""
         <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our DevOps Implementation Process</h2>""
@@ -824,26 +449,12 @@ export default function DevOpsCloudServices() {}
               A proven methodology for delivering successful DevOps transformations that drive business value.
             </p>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-          </div>"""
-=======
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
-          <div className="max-w-6xl mx-auto">""
+          </div>"""          <div className="max-w-6xl mx-auto">""
             <div className="grid md:grid-cols-6 gap-8">""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-                  <span className="text-white font-bold text-xl">1</span>"</div>""
-=======
-                  <span className="text-white font-bold text-xl">1</span>"
-                  <span className="text-white font-bold text-xl">1</span>
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Assessment</h3>""
+                  <span className="text-white font-bold text-xl">1</span>"</div>""                <h3 className="text-lg font-bold text-gray-900 mb-2">Assessment</h3>""
                 <p className="text-gray-600 text-sm">
                   Evaluate current DevOps maturity;
                 </p>
@@ -852,18 +463,7 @@ export default function DevOpsCloudServices() {}
 ""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
-                  <span className="text-white font-bold text-xl">2</span>"</div>""
-=======
-                  <span className="text-white font-bold text-xl">2</span>"
-              </div>
-""
-              <div className="text-center">""
-                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                  <span className="text-white font-bold text-xl">2</span>
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Strategy</h3>""
+                  <span className="text-white font-bold text-xl">2</span>"</div>""                <h3 className="text-lg font-bold text-gray-900 mb-2">Strategy</h3>""
                 <p className="text-gray-600 text-sm">
                   Develop DevOps roadmap and goals;
                 </p>
@@ -872,18 +472,7 @@ export default function DevOpsCloudServices() {}
 ""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
-                  <span className="text-white font-bold text-xl">3</span>"</div>""
-=======
-                  <span className="text-white font-bold text-xl">3</span>"
-              </div>
-""
-              <div className="text-center">""
-                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                  <span className="text-white font-bold text-xl">3</span>
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Implementation</h3>""
+                  <span className="text-white font-bold text-xl">3</span>"</div>""                <h3 className="text-lg font-bold text-gray-900 mb-2">Implementation</h3>""
                 <p className="text-gray-600 text-sm">
                   Build and deploy DevOps tools;
                 </p>
@@ -892,18 +481,7 @@ export default function DevOpsCloudServices() {}
 ""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
-                  <span className="text-white font-bold text-xl">4</span>"</div>""
-=======
-                  <span className="text-white font-bold text-xl">4</span>"
-              </div>
-""
-              <div className="text-center">""
-                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                  <span className="text-white font-bold text-xl">4</span>
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Training</h3>""
+                  <span className="text-white font-bold text-xl">4</span>"</div>""                <h3 className="text-lg font-bold text-gray-900 mb-2">Training</h3>""
                 <p className="text-gray-600 text-sm">
                   Enable teams with new processes;
                 </p>
@@ -912,18 +490,7 @@ export default function DevOpsCloudServices() {}
 ""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
-                  <span className="text-white font-bold text-xl">5</span>"</div>""
-=======
-                  <span className="text-white font-bold text-xl">5</span>"
-              </div>
-""
-              <div className="text-center">""
-                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                  <span className="text-white font-bold text-xl">5</span>
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Optimization</h3>""
+                  <span className="text-white font-bold text-xl">5</span>"</div>""                <h3 className="text-lg font-bold text-gray-900 mb-2">Optimization</h3>""
                 <p className="text-gray-600 text-sm">
                   Continuous improvement and scaling;
                 </p>
@@ -932,18 +499,7 @@ export default function DevOpsCloudServices() {}
 ""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
-                  <span className="text-white font-bold text-xl">6</span>"</div>""
-=======
-                  <span className="text-white font-bold text-xl">6</span>"
-              </div>
-""
-              <div className="text-center">""
-                <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                  <span className="text-white font-bold text-xl">6</span>
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-lg font-bold text-gray-900 mb-2">Support</h3>""
+                  <span className="text-white font-bold text-xl">6</span>"</div>""                <h3 className="text-lg font-bold text-gray-900 mb-2">Support</h3>""
                 <p className="text-gray-600 text-sm">
                   Ongoing maintenance and support;
                 </p>
@@ -953,14 +509,7 @@ export default function DevOpsCloudServices() {}
         </div>
       </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-<<<<<<< HEAD
-"{/* CTA Section */}""
-=======
-"
-
-      {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">""
+"{/* CTA Section */}""      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600 text-white">""
         <div className="container mx-auto px-4 text-center">""
           <h2 className="text-4xl font-bold mb-6">Ready to Accelerate Your Delivery?</h2>""
           <p className="text-xl mb-8 max-w-3xl mx-auto">
@@ -970,31 +519,13 @@ export default function DevOpsCloudServices() {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <Link to="/contact" className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-<<<<<<< HEAD
-              Start Your DevOps Journey"</Link>""
-=======
-              Start Your DevOps Journey"
-            Let our DevOps experts help you build faster, more reliable applications;
-            with modern cloud-native practices and automation.
-          </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-            <Link to="/contact" className="bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Start Your DevOps Journey;
-            </Link>""
->>>>>>> pr-10728
-            <Link to="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors">
+              Start Your DevOps Journey"</Link>""            <Link to="/services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors">
               Explore All Services;
             </Link>
           </div>
         </div>
       </section>
 :pages.disabled/pages/services/DevOpsCloud.jsx
-    </div>);'"
-<<<<<<< HEAD
+    </div>)'";
 }}}}}
   '"'"
-=======
-}}}}}'"'"
-    </div>);
-}}}}}'""
->>>>>>> pr-10728

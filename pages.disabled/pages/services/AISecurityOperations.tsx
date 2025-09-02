@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityOperations.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOperations() {
-    'Automated incident detection and response',;'
-    'Predictive analytics for security threats',;'
-    'Smart security orchestration and automation',;'
-    'AI-driven security analytics and insights',;'
-    'Real-time security performance monitoring',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOperations(function AISecurityOperations() {): any {}
-    'Automated incident detection and response',;
-    'Predictive analytics for security threats',;
-    'Smart security orchestration and automation',;
-    'AI-driven security analytics and insights',;
-    'Real-time security performance monitoring',;
-    'Custom AI models for security applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOperations() {;
+    'Automated incident detection and response',';Predictive analytics for security threats',';Smart security orchestration and automation',';AI-driven security analytics and insights',';Real-time security performance monitoring',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityOperations(function AISecurityOperations() {): any {};
+    'Automated incident detection and response',';Predictive analytics for security threats',';Smart security orchestration and automation',';AI-driven security analytics and insights',';Real-time security performance monitoring',';Custom AI models for security applications';
 <:pages.disabled/pages/services/AISecurityOperations.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$4,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$4,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$4,499/mo', ';
       details: ['Unlimited events',Custom AI models',Full security suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security operations optimization',;'
-    'Security monitoring and alerting',;'
-    'Incident detection and response',;'
-    'Security orchestration and automation',;'
-    'Security analytics and insights',;'
-    'Security scaling and management';
-  ];
-
-  '
-    'Improve security operations performance by 50-80%',;'
-    'Reduce incident response time by 40-70%',;'
-    'Cut security operational costs by 35-65%',;'
-    'Enhance security operations reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security operations optimization',';Security monitoring and alerting',';Incident detection and response',';Security orchestration and automation',';Security analytics and insights',';Security scaling and management';
+  ]';Improve security operations performance by 50-80%',';Reduce incident response time by 40-70%',';Cut security operational costs by 35-65%',';Enhance security operations reliability and scalability',';Optimize resource utilization',';Scale security operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-slate-600 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityOperations.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

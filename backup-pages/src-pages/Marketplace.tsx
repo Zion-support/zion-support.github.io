@@ -16,7 +16,7 @@ import {
   TrendingUp,
   Award,
   Users,
-  ArrowRight} from
+  ArrowRight} from;
   'lucide-react';
 
   Card,
@@ -42,7 +42,7 @@ const Marketplace: React.FC = () => {
     return matchesCategory && matchesSearch}) ;
 
       case 'price
-  ': return b.rating - a.rating;'      case
+  ': return b.rating - a.rating';      case
   'price':
         return (
           parseFloat(a.price.replace(/[^0-9.]/g,)) -,
@@ -410,5 +410,4 @@ const Marketplace: React.FC = () => {
         </section>
       </div>
     </>) };
-export default Marketplace;
-'"`
+export default Marketplace'"`;

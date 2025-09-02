@@ -1,10 +1,10 @@
-import React, { useState } from
+import React, { useState } from;
   'react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../components/layout/MainLayout';
-import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from
+import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
   'lucide-react';
 
 const FAQ: NextPage = () => {
@@ -20,13 +20,11 @@ const FAQ: NextPage = () => {
 
   const faqCategories = [
     {
-<<<<<<< HEAD:pages.disabled_auto/faq.tsx
+:pages.disabled_auto/faq.tsx
       title:,
   General Questions',
       questions: [
-=======
       title: 'General Questions', questions: [
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
         {
           question:
   'What services does Zion Tech Group offer?,
@@ -34,7 +32,7 @@ const FAQ: NextPage = () => {
   Zion Tech Group offers a comprehensive range of technology services including AI development, quantum computing solutions, blockchain infrastructure, micro SaaS applications, IT services, and digital transformation consulting. We help businesses modernize their operations and leverage cutting-edge technologies.'
         },
         {
-<<<<<<< HEAD:pages.disabled_auto/faq.tsx
+:pages.disabled_auto/faq.tsx
           question: 'How long has Zion Tech Group been in business?,
           answer:,
   Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'
@@ -123,7 +121,6 @@ const FAQ: NextPage = () => {
           question: 'What technologies do you work with?,
           answer:
   'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
-=======
           question: 'How long has Zion Tech Group been in business?', answer: 'Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'
         }, {
           question: 'What industries do you serve?',
@@ -179,7 +176,6 @@ const FAQ: NextPage = () => {
         },
         {
           question: 'What technologies do you work with?', answer: 'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
         }
       ]
     }
@@ -188,12 +184,10 @@ const FAQ: NextPage = () => {
   return (
     <MainLayout
       title="Frequently Asked Questions - Zion Tech Group"
-<<<<<<< HEAD:pages.disabled_auto/faq.tsx
+:pages.disabled_auto/faq.tsx
       description="Find answers to common questions about Zion Tech Group
   's services, pricing, and support. Get the information you need to make informed decisions about your technology needs."
-=======
       description="Find answers to common questions about Zion Tech Group&apos;s services, pricing, and support. Get the information you need to make informed decisions about your technology needs."'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
       keywords="FAQ, frequently asked questions, support, help, services, pricing, technical support"
     >
       <div className="min-h-screen bg-gray-50">

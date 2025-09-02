@@ -43,7 +43,7 @@ import {}
   Repeat,
   GitBranch,
   Code,
-  Terminal''
+  Terminal'';
 } from 'lucide-react';
 ;
 export { function };

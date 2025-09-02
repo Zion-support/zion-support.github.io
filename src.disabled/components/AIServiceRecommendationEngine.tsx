@@ -1,10 +1,38 @@
-import React, { useState, useEffect, useCallback, useMemo } from
-  'react'; import { motion, AnimatePresence } from
+import React, { useState, useEffect, useCallback, useMemo } from;
+  'react'; import { motion, AnimatePresence } from;
   'framer-motion'; import { ; Brain,; Sparkles,; Target,; TrendingUp,; Zap,; Shield,; Globe,; Cpu,; Database,; Cloud,; Lock,; Users,; BarChart3,; Code,; Rocket,; Star,; CheckCircle,; ArrowRight,; Lightbulb,; Settings,; RefreshCw,; Eye,; Heart,; MessageSquare,; Calendar,; DollarSign,; Award; } from
-  'lucide-react'; ; interface ServiceCategory {; id: string; name: string; icon: React.ComponentType<any>; description: string; popularity: number; growthRate: number; averageRating: number; priceRange: string; implementationTime: string; roi: string; }; interface UserBehavior {; pageViews: string[]; timeSpent: number; interactions: string[]; interests: string[]; companySize: string; industry: string; budget: string; timeline: string; painPoints: string[]; }; interface ServiceRecommendation {; id: string; service: ServiceCategory; confidence: number; reasoning: string[]; benefits: string[]; implementation: string[]; estimatedCost: string; estimatedROI: string; priority:,
-  high' |
-  'medium' |
-  'low'; }; const serviceCategories: ServiceCategory[] = [; {; id:
+  'lucide-react'; ; interface ServiceCategory {
+   id: string;
+   name: string;
+   icon: React.ComponentType<any>;
+   description: string;
+   popularity: number;
+   growthRate: number;
+   averageRating: number;
+   priceRange: string;
+   implementationTime: string;
+   roi: string;
+}; interface UserBehavior {
+   pageViews: string[];
+   timeSpent: number;
+   interactions: string[];
+   interests: string[];
+   companySize: string;
+   industry: string;
+   budget: string;
+   timeline: string;
+   painPoints: string[];
+}; interface ServiceRecommendation {
+   id: string;
+   service: ServiceCategory;
+   confidence: number;
+   reasoning: string[];
+   benefits: string[];
+   implementation: string[];
+   estimatedCost: string;
+   estimatedROI: string;
+   priority:, high' | 'medium' | 'low';
+}; const serviceCategories: ServiceCategory[] = [; {; id:
   'ai-ml,; name:
   'AI & Machine Learning',; icon: Brain,; description:
   'Advanced AI solutions for business automation and intelligence',; popularity: 95,; growthRate: 87,; averageRating: 4.8,; priceRange:,
@@ -39,4 +67,4 @@ import React, { useState, useEffect, useCallback, useMemo } from
   $150K - $1.5M',; implementationTime: '6-10 months,; roi:
   '400-800%'; }; ]; ; export function AIServiceRecommendationEngine() {; const [isOpen, setIsOpen] = useState(false); const [isAnalyzing, setIsAnalyzing] = useState(false); const [userBehavior, setUserBehavior] = useState<UserBehavior>({; pageViews: [],; timeSpent: 0,; interactions: [],; interests: [],; companySize:,
   medium',; industry: 'technology,; budget:,
-  medium',; timeline: '6-12 months,; painPoints: []; }); const [recommendations, setRecommendations] = useState<ServiceRecommendation[]>([]); const [selectedService, setSelectedService] = useState<ServiceRecommendation | null>(null); const [analysisProgress, setAnalysisProgress] = useState(0); ;''
+  medium',; timeline: '6-12 months,; painPoints: []; }); const [recommendations, setRecommendations] = useState<ServiceRecommendation[]>([]); const [selectedService, setSelectedService] = useState<ServiceRecommendation | null>(null); const [analysisProgress, setAnalysisProgress] = useState(0); ';

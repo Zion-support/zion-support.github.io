@@ -1,5 +1,5 @@
 import React from 'react';
-import SEO from "@/components/SEO";'
+import SEO from "@/components/SEO"';
 import { Brain, Shield, Database, TrendingUp } from 'lucide-react';
 const AIServices = () => {
     const aiServices = [
@@ -323,8 +323,7 @@ const AIServices = () => {
             rating: 4.8,
             reviewCount: 223
         }
-    ];"
-""
+    ]';"
     const categories = ["All Services", "Strategy", "ML", "NLP", "Vision", "Analytics", "Automation", "Ethics", "Infrastructure", "Integration", "Training"];
 :pages.disabled/pages/services/AIServices.jsx
 
@@ -601,5 +600,5 @@ const AIServices = () => {
 };
 ;
 export { AIServices };
-export default AIServices;'"`
+export default AIServices'"`;
 }}'"`'"`

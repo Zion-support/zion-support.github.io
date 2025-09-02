@@ -1,13 +1,12 @@
-<<<<<<< HEAD:pages.disabled_auto/status.tsx
-import React from,
+:pages.disabled_auto/status.tsx
+import React from,;
   react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../components/layout/MainLayout';
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from
+import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from;
   'lucide-react';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -19,14 +18,13 @@ import {
   Activity,
   Server,
   Database,
-  Cloud,
+  Cloud,;
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
 
 const Status: NextPage = () => {
   const services = [
     {
-<<<<<<< HEAD:pages.disabled_auto/status.tsx
+:pages.disabled_auto/status.tsx
       name:
   'Web Application,
       status:,
@@ -84,7 +82,6 @@ const Status: NextPage = () => {
       lastIncident:,
   No incidents in the past 30 days'
     }
-=======
       name: 'Web Application',
       status: 'operational',
       uptime: '99.9%',
@@ -126,7 +123,6 @@ const Status: NextPage = () => {
       responseTime: '30ms',
       lastIncident: 'No incidents in the past 30 days',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
   ];
 
   const getStatusIcon = (status: string) => {
@@ -167,7 +163,7 @@ const Status: NextPage = () => {
   const incidents = [
     {
       id: 1,
-<<<<<<< HEAD:pages.disabled_auto/status.tsx
+:pages.disabled_auto/status.tsx
       title:,
   Scheduled Maintenance - API Services',
       status: 'resolved,
@@ -188,7 +184,6 @@ const Status: NextPage = () => {
       impact:
   'minor'
     }
-=======
       title: 'Scheduled Maintenance - API Services',
       status: 'resolved',
       date: '2025-01-20',
@@ -205,7 +200,6 @@ const Status: NextPage = () => {
         'Temporary performance degradation in database queries has been resolved.',
       impact: 'minor',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
   ];
 
   return (
@@ -239,13 +233,11 @@ const Status: NextPage = () => {
                 </h2>
               </div>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD:pages.disabled_auto/status.tsx
+:pages.disabled_auto/status.tsx
                 All services are running normally. We
   're monitoring our systems 24/7 to ensure optimal performance.
-=======
                 All services are running normally. We&apos;re monitoring our
                 systems 24/7 to ensure optimal performance.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
               </p>
             </div>
 
@@ -377,14 +369,13 @@ const Status: NextPage = () => {
                         </p>
                         <div className="flex items-center text-sm text-gray-500">
                           <span className="mr-4">Date: {incident.date}</span>
-<<<<<<< HEAD:pages.disabled_auto/status.tsx
+:pages.disabled_auto/status.tsx
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                             incident.impact ===,
   minor
   ' ? 'bg-yellow-100 text-yellow-800
   ': 'bg-red-100 text-red-800
                           }`}>
-=======
                           <span
                             className={`px-2 py-1 rounded-full text-xs font-medium ${
                               incident.impact === 'minor'
@@ -392,7 +383,6 @@ const Status: NextPage = () => {
                                 : 'bg-red-100 text-red-800'
                             }`}
                           >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
                             {incident.impact} impact
                           </span>
                         </div>

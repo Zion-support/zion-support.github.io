@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; export default function ExpensiveComponent () { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {'';
-=======
-import React from 'react'; export default function ExpensiveComponent() { const [data, setData] = useState([]); const [loading, setLoading] = useState(true); useEffect(() => {
-}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
-import React, { useState, useEffect } from 'react';
+import React from 'react'; export default function ExpensiveComponent () { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {'';import React, { useState, useEffect } from 'react';
 export default function ExpensiveComponent() {}
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -40,4 +32,3 @@ export { ExpensiveComponent };
 export { ExpensiveComponent };
 
 export { ExpensiveComponent };
->>>>>>> pr-10728

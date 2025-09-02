@@ -2,9 +2,9 @@ import React from 'react';
 
 interface ModernLoaderProps {
   size?: 'sm' | 'md' | 'lg';
-  variant?: 'spinner' | 'dots' | 'pulse' | 'wave';
-  className?: string;
-  text?: string;
+   variant?: 'spinner' | 'dots' | 'pulse' | 'wave';
+   className?: string;
+   text?: string;
 }
 
 export const ModernLoader: React.FC<ModernLoaderProps> = ({

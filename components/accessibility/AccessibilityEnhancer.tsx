@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
-  skipToContent?: boolean;
-  focusManagement?: boolean;
-  keyboardNavigation?: boolean;
+   skipToContent?: boolean;
+   focusManagement?: boolean;
+   keyboardNavigation?: boolean;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({

@@ -31,7 +31,7 @@ import {}
   Factory,
   Ship,
   Plane,
-  Store} from
+  Store} from;
   'lucide-react';
 
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
@@ -44,34 +44,11 @@ export default function AISupplyChainOptimization() {
       />
 "
       {/* Hero Section */}""
-<<<<<<< HEAD
-      <section className="relative overflow-hidden py-20 lg:py-32">"        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-red-900/20"></div>"""
-=======
-      <section className="relative overflow-hidden py-20 lg:py-32">"        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-red-900/20"></div>"
-export default function AISupplyChainOptimization(function AISupplyChainOptimization() {): any {}
-  return()
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO""
-        title="AI Supply Chain Optimization - Zion Tech Group""
-        description="Optimize your supply chain with AI-powered forecasting, route optimization, and inventory management. Reduce costs and improve efficiency.""
-      />
-
-      {/* Hero Section */}""
-      <section className="relative overflow-hidden py-20 lg:py-32">"        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-red-900/20"></div>
-""
->>>>>>> pr-10728
-        <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden py-20 lg:py-32">"        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-red-900/20"></div>"""        <div className="relative max-w-7xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-            animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
-            animate={{ opacity: 1, y: 0 }}"
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
-            className="text-center max-w-4xl mx-auto""
+            animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""            className="text-center max-w-4xl mx-auto""
           >""
             <div className="inline-flex items-center px-4 py-2 bg-orange-600/20 text-orange-400 rounded-full text-sm font-medium mb-6">""
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
@@ -89,55 +66,19 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
               Transform your supply chain with AI-powered optimization. Reduce
               costs, improve efficiency, and enhance customer satisfaction with
-<<<<<<< HEAD
-              intelligent supply chain management."</p>""
-=======
-              intelligent supply chain management."
-              <Truck className="w-4 h-4 mr-2"  />              AI-Powered Optimization;
-            </div>""
-            <h1 className="text-4xl md:text-7xl font-bold text-white mb-6">
-              AI Supply Chain""
-              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
-                {' '}
-                Optimization;
-              </span>
-            </h1>""
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
-              Transform your supply chain with AI-powered optimization. Reduce;
-              costs, improve efficiency, and enhance customer satisfaction with;
-              intelligent supply chain management.
-            </p>""
->>>>>>> pr-10728
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+              intelligent supply chain management."</p>""            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center">""
                 <Play className="w-5 h-5 mr-2"  />
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
                 Start Free Trial"
               </button>""
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">""
-<<<<<<< HEAD
-                <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure</button>
-=======
-                <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure
-                Start Free Trial;
-              </button>""
-              <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">""
-                <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure;
-              </button>
->>>>>>> pr-10728
-            </div>
+                <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure</button>            </div>
           </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* Key Metrics Section */}""
-=======
-"
-
-      {/* Key Metrics Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
+"{/* Key Metrics Section */}""      <section className="py-20">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
@@ -146,36 +87,14 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
-                transition={{ duration: 0.5, delay: index * 0.1 }}"
-            {keyMetrics.map((metric, index (
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}""
->>>>>>> pr-10728
-                className="text-center""
+                transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""                className="text-center""
               >""
                 <div className="text-4xl md:text-5xl font-bold text-orange-400 mb-2">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
                   {metric.metric}"
                 </div>""
                 <div className="text-lg font-semibold text-white mb-2">
-<<<<<<< HEAD
-                  {metric.label}"</div>""
-=======
-                  {metric.label}"
-                  {metric.metric}
-                </div>""
-                <div className="text-lg font-semibold text-white mb-2">
-                  {metric.label}
-                </div>""
->>>>>>> pr-10728
-                <div className="text-sm text-gray-400">
+                  {metric.label}"</div>""                <div className="text-sm text-gray-400">
                   {metric.description}
                 </div>"
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>"
@@ -186,37 +105,16 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* Features Section */}""
-=======
-"
-
-      {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-800/50">""
+"{/* Features Section */}""      <section className="py-20 bg-slate-800/50">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
-            whileInView={{ opacity: 1, y: 0 }}"
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""            className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-              Powerful Features"</h2>""
-=======
-              Powerful Features"
-              Powerful Features;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Powerful Features"</h2>""            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Join industry leaders who have revolutionized their supply chain operations with AI-powered optimization.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
@@ -231,25 +129,7 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 viewport={{ once: true }}""
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-<<<<<<< HEAD
-              >"{/* Icon */}""
-=======
-              >"
-          </motion.div>
-""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map(feature: unknown, index: unknown (
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}""
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50""
-              >
-                {/* Icon */}""
->>>>>>> pr-10728
-                <div className="mb-6">""
+              >"{/* Icon */}""                <div className="mb-6">""
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">""
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
@@ -259,91 +139,39 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 {/* Content */}"
                 <div>""
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
-<<<<<<< HEAD
-                    {feature.title}"</h3>""
-=======
-                    {feature.title}"
-                {/* Content */}
-                <div>""
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
-                    {feature.title}
-                  </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {feature.title}"</h3>""                  <p className="text-gray-300 text-sm leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* Hover Effect */}""
-=======
-"
-
-                {/* Hover Effect */}""
->>>>>>> pr-10728
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+"{/* Hover Effect */}""                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* Optimization Areas Section */}""
-=======
-"
-
-      {/* Optimization Areas Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
+"{/* Optimization Areas Section */}""      <section className="py-20">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
-            whileInView={{ opacity: 1, y: 0 }}"
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""            className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-              Optimization Areas"</h2>""
-=======
-              Optimization Areas"
-              Optimization Areas;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Optimization Areas"</h2>""            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Tailored optimization strategies for different industries with unique supply chain challenges and requirements.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-          </motion.div>"""
-=======
-          </motion.div>"
-          </motion.div>
-""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          </motion.div>"""          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {optimizationAreas.map(category: unknown, index: unknown;
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-                transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
-                transition={{ duration: 0.5, delay: index * 0.1 }}"
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}""
->>>>>>> pr-10728
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50""
+                transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50""
               >""
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors duration-300">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
@@ -351,18 +179,7 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 </h3>""
                 <ul className="space-y-2">
                   {category.areas.map((area, areaIndex) => (
-<<<<<<< HEAD
-                    <li"key={areaIndex}""
-=======
-                    <li"
-                  {category.category}
-                </h3>""
-                <ul className="space-y-2">
-                  {category.areas.map((area, areaIndex) => (
-                    <li;
-                      key={areaIndex}""
->>>>>>> pr-10728
-                      className="flex items-center text-gray-300 text-sm""
+                    <li"key={areaIndex}""                      className="flex items-center text-gray-300 text-sm""
                     >""
                       <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0"  />                      {area}
                     </li>
@@ -374,38 +191,17 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* Benefits Section */}""
-=======
-"
-
-      {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-800/50">""
+"{/* Benefits Section */}""      <section className="py-20 bg-slate-800/50">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
-            transition={{ duration: 0.8 }}"
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            transition={{ duration: 0.8 }}"viewport={{ once: true }}""            className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-              Business Benefits"</h2>""
-=======
-              Business Benefits"
-              Business Benefits;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Business Benefits"</h2>""            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how AI Supply Chain Optimization transforms different industries and business operations.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
@@ -420,25 +216,7 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 viewport={{ once: true }}""
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-<<<<<<< HEAD
-              >"{/* Icon */}""
-=======
-              >"
-          </motion.div>
-""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map(benefit: unknown, index: unknown (
-              <motion.div;
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}""
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50""
-              >
-                {/* Icon */}""
->>>>>>> pr-10728
-                <div className="mb-6">""
+              >"{/* Icon */}""                <div className="mb-6">""
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">""
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
@@ -448,67 +226,29 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 {/* Content */}"
                 <div>""
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
-<<<<<<< HEAD
-                    {benefit.title}"</h3>""
-=======
-                    {benefit.title}"
-                {/* Content */}
-                <div>""
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
-                    {benefit.title}
-                  </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {benefit.title}"</h3>""                  <p className="text-gray-300 text-sm leading-relaxed">
                     {benefit.description}
                   </p>
                 </div>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* Hover Effect */}""
-=======
-"
-
-                {/* Hover Effect */}""
->>>>>>> pr-10728
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+"{/* Hover Effect */}""                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* Pricing Section */}""
-=======
-"
-
-      {/* Pricing Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
+"{/* Pricing Section */}""      <section className="py-20">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
-            transition={{ duration: 0.8 }}"
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            transition={{ duration: 0.8 }}"viewport={{ once: true }}""            className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-              Transparent Pricing"</h2>""
-=======
-              Transparent Pricing"
-              Transparent Pricing;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Transparent Pricing"</h2>""            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that best fits your business needs. All plans include a 14-day free trial.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
@@ -516,47 +256,17 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown()
-<<<<<<< HEAD
-              <motion.divkey={index}
-=======
-              <motion.div
-          </motion.div>
-""
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map(plan: unknown, index: unknown (
-              <motion.div;
-                key={index}
->>>>>>> pr-10728
-                initial={{ opacity: 0, y: 20 }}
+              <motion.divkey={index}                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${,
   plan.popular'
-  '
-=======
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
-'
-                  plan.popular''
-                    ? 'border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-red-500/10'''`
-                    : 'border-white/10 hover:border-orange-500/50'``
-                }`}
-              >"
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${}
-                  plan.popular'
->>>>>>> pr-10728
-                    ? 'border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-red-500/10''
+  '                    ? 'border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-red-500/10''
   '`: 'border-white/10 hover:border-orange-500/50``
                 }`}
-<<<<<<< HEAD
-              >"{plan.popular && (""
-=======
-              >
-                {plan.popular && (""
->>>>>>> pr-10728
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
+              >"{plan.popular && (""                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -571,23 +281,7 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                   <p className="text-gray-400 text-sm mb-4">
                     {plan.description}"
                   </p>""
-<<<<<<< HEAD
-                  <div className="text-4xl font-bold text-white mb-2">"{plan.price}""
-=======
-                  <div className="text-4xl font-bold text-white mb-2">"
-                )}
-""
-                <div className="text-center mb-8">""
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {plan.name}
-                  </h3>""
-                  <p className="text-gray-400 text-sm mb-4">
-                    {plan.description}
-                  </p>""
-                  <div className="text-4xl font-bold text-white mb-2">
-                    {plan.price}""
->>>>>>> pr-10728
-                    <span className="text-lg text-gray-400">{plan.period}</span>
+                  <div className="text-4xl font-bold text-white mb-2">"{plan.price}""                    <span className="text-lg text-gray-400">{plan.period}</span>
                   </div>"
                   <p className="text-gray-300">{plan.description}</p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
@@ -595,18 +289,7 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
 ""
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
-                    <li"key={featureIndex}""
-=======
-                    <li"
-                </div>
-""
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li;
-                      key={featureIndex}""
->>>>>>> pr-10728
-                      className="flex items-center text-gray-300""
+                    <li"key={featureIndex}""                      className="flex items-center text-gray-300""
                     >""
                       <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0"  />"                      <span className="text-sm">{feature}</span>
                     </li>
@@ -615,28 +298,12 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
 `
                 <button``
-<<<<<<< HEAD
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
   plan.popular'
   '
                       ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover: from-orange-700 hover:to-red-700''
   '`
-                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20``}`}
-=======
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-'
-                    plan.popular''
-                      ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700'''`
-                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'``
-
-                <button`
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-                    plan.popular'
-                      ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover:from-orange-700 hover:to-red-700''
-                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20'`
-                  }`}
->>>>>>> pr-10728
-                >
+                      : 'bg-white/10 text-white border border-white/20 hover:bg-white/20``}`}                >
                   {plan.cta}
                 </button>
               </motion.div>
@@ -645,38 +312,17 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* Use Cases Section */}""
-=======
-"
-
-      {/* Use Cases Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-800/50">""
+"{/* Use Cases Section */}""      <section className="py-20 bg-slate-800/50">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
-            transition={{ duration: 0.8 }}"
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            transition={{ duration: 0.8 }}"viewport={{ once: true }}""            className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-              Industry Use Cases"</h2>""
-=======
-              Industry Use Cases"
-              Industry Use Cases;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Industry Use Cases"</h2>""            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how organizations across industries leverage our AI supply;
               chain optimization to improve efficiency.
             </p>
@@ -692,25 +338,7 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 viewport={{ once: true }}""
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-<<<<<<< HEAD
-              >"{/* Icon */}""
-=======
-              >"
-          </motion.div>
-""
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {useCases.map(useCase: unknown, index: unknown (
-              <motion.div;
-                key={useCase.industry}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}""
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50""
-              >
-                {/* Icon */}""
->>>>>>> pr-10728
-                <div className="mb-6">""
+              >"{/* Icon */}""                <div className="mb-6">""
                   <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">""
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
@@ -720,93 +348,41 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 {/* Content */}"
                 <div>""
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
-<<<<<<< HEAD
-                    {useCase.industry}"</h3>""
-=======
-                    {useCase.industry}"
-                {/* Content */}
-                <div>""
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
-                    {useCase.industry}
-                  </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {useCase.industry}"</h3>""                  <p className="text-gray-300 text-sm leading-relaxed">
                     {useCase.description}
                   </p>
                 </div>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* Hover Effect */}""
-=======
-"
-
-                {/* Hover Effect */}""
->>>>>>> pr-10728
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+"{/* Hover Effect */}""                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* Integrations Section */}""
-=======
-"
-
-      {/* Integrations Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
+"{/* Integrations Section */}""      <section className="py-20">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-            transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
-            transition={{ duration: 0.8 }}"
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
+            transition={{ duration: 0.8 }}"viewport={{ once: true }}""            className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-              Seamless Integrations"</h2>""
-=======
-              Seamless Integrations"
-              Seamless Integrations;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Seamless Integrations"</h2>""            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Connect with your existing supply chain and logistics tools for a;
               unified optimization experience.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-          </motion.div>"""
-=======
-          </motion.div>"
-          </motion.div>
-""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          </motion.div>"""          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {integrations.map(integration: unknown, index: unknown;
               <motion.div;
                 key={integration.name}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-                transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
-                transition={{ duration: 0.5, delay: index * 0.1 }}"
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}""
->>>>>>> pr-10728
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50""
+                transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50""
               >""
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-orange-400 transition-colors duration-300">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
@@ -816,20 +392,7 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                   {integration.platforms.map((platform, platformIndex()
                     <span"
                       key={platformIndex}""
-<<<<<<< HEAD
-                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20">
-=======
-                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
-                  {integration.name}
-                </h3>""
-                <div className="flex flex-wrap gap-2">
-                  {integration.platforms.map((platform, platformIndex (
-                    <span;
-                      key={platformIndex}""
-                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20""
-                    >
->>>>>>> pr-10728
-                      {platform}
+                      className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20">                      {platform}
                     </span>
                   ))}
                 </div>
@@ -839,14 +402,7 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
-"{/* CTA Section */}""
-=======
-"
-
-      {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gradient-to-r from-orange-900/20 to-red-900/20">""
+"{/* CTA Section */}""      <section className="py-20 bg-gradient-to-r from-orange-900/20 to-red-900/20">""
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -864,25 +420,7 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center">""
-<<<<<<< HEAD
-                <Star className="w-5 h-5 mr-2"  />                Start Free Trial"</button>""
-=======
-                <Star className="w-5 h-5 mr-2"  />                Start Free Trial"
-            viewport={{ once: true }}
-          >""
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              Ready to Optimize Your Supply Chain?
-            </h2>""
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of businesses already using AI-powered supply chain;
-              optimization to reduce costs and improve operational efficiency.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center">""
-                <Star className="w-5 h-5 mr-2"  />                Start Free Trial;
-              </button>""
->>>>>>> pr-10728
-              <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">""
+                <Star className="w-5 h-5 mr-2"  />                Start Free Trial"</button>""              <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">""
                 <Share2 className="w-5 h-5 mr-2 inline" />
                 Schedule Demo;
               </Link>

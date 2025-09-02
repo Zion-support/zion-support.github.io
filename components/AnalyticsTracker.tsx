@@ -3,13 +3,12 @@ import Head from 'next/head';
 
 interface AnalyticsTrackerProps {
   pageName?: string;
-  customEvents?: Array<{
-    event: string;
-    category: string;
-    action: string;
-    label?: string;
-    value?: number;
-  }>;
+   customEvents?: Array<{ event: string;
+   category: string;
+   action: string;
+   label?: string;
+   value?: number;
+}>;
 }
 
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
@@ -112,7 +111,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
 
       // Track form interactions
       const trackFormInteractions = (e: Event) => {
-        const target = e.target as HTMLElement;
+        const target = e.target as HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
         if (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.tagName === 'SELECT') {
           if (typeof window !== 'undefined' && window.gtag) {
             window.gtag('event', 'form_interaction', {

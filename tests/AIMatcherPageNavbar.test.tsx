@@ -1,10 +1,10 @@
-import { render } from
+import { render } from;
   '@testing-library/react';
-import { MemoryRouter } from
+import { MemoryRouter } from;
   'react-router-dom';
-import { AppLayout } from
+import { AppLayout } from;
   '@/layout/AppLayout';
-import AIMatcherPage from
+import AIMatcherPage from;
   '@/pages/AIMatcher';
 
 test(

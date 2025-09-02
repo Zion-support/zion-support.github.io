@@ -153,7 +153,7 @@ import {
   Brush,
   Sparkles,
   Eye,
-  Award
+  Award;
 } from 'lucide-react';
 
 export default function InnovativeServicesShowcase2027() {

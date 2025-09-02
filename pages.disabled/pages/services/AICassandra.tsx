@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AICassandra.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra() {
-    'Automated Cassandra monitoring and alerting',;'
-    'Predictive analytics for Cassandra scaling',;'
-    'Smart Cassandra security and compliance',;'
-    'AI-driven Cassandra automation and orchestration',;'
-    'Real-time Cassandra analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra(function AICassandra() {): any {}
-    'Automated Cassandra monitoring and alerting',;
-    'Predictive analytics for Cassandra scaling',;
-    'Smart Cassandra security and compliance',;
-    'AI-driven Cassandra automation and orchestration',;
-    'Real-time Cassandra analytics and insights',;
-    'Custom AI models for Cassandra applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra() {;
+    'Automated Cassandra monitoring and alerting',';Predictive analytics for Cassandra scaling',';Smart Cassandra security and compliance',';AI-driven Cassandra automation and orchestration',';Real-time Cassandra analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AICassandra(function AICassandra() {): any {};
+    'Automated Cassandra monitoring and alerting',';Predictive analytics for Cassandra scaling',';Smart Cassandra security and compliance',';AI-driven Cassandra automation and orchestration',';Real-time Cassandra analytics and insights',';Custom AI models for Cassandra applications';
 <:pages.disabled/pages/services/AICassandra.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited storage',Custom AI models',Full Cassandra suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Cassandra performance optimization',;'
-    'Data distribution and partitioning',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Cassandra scaling and management';
-  ];
-
-  '
-    'Improve Cassandra performance by 50-80%',;'
-    'Reduce storage costs by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Cassandra reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale Cassandra operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Cassandra performance optimization',';Data distribution and partitioning',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Cassandra scaling and management';
+  ]';Improve Cassandra performance by 50-80%',';Reduce storage costs by 40-70%',';Cut operational costs by 35-65%',';Enhance Cassandra reliability and scalability',';Optimize resource utilization',';Scale Cassandra operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AICassandra.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

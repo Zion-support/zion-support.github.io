@@ -27,7 +27,7 @@ import {}
   Gauge,
   Target,
   Award,
-  BarChart3'
+  BarChart3';
 } from 'lucide-react';
 ;
 export { function };
@@ -133,11 +133,11 @@ export default function GreenIT(...args: unknown[]): unknown {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/GreenIT.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Green IT Services */}""
-      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">;""
+      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -203,7 +203,7 @@ export default function GreenIT(...args: unknown[]): unknown {}
       </section>
 
       {/* Green Technologies */}""
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -264,7 +264,7 @@ export default function GreenIT(...args: unknown[]): unknown {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">""
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div;
@@ -437,7 +437,7 @@ export default function GreenIT(...args: unknown[]): unknown {}
       </section>
 
       {/* Key Features */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -547,7 +547,7 @@ export default function GreenIT(...args: unknown[]): unknown {}
       </section>
 
       {/* Core Solutions */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -669,7 +669,7 @@ export default function GreenIT(...args: unknown[]): unknown {}
       </section>
 
       {/* Industry Use Cases */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -791,7 +791,7 @@ export default function GreenIT(...args: unknown[]): unknown {}
       </section>
 
       {/* Benefits */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -901,7 +901,7 @@ export default function GreenIT(...args: unknown[]): unknown {}
       </section>
 
       {/* Implementation Process */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-6">
           <motion.div;
             initial = {}
@@ -1045,7 +1045,7 @@ export default function GreenIT(...args: unknown[]): unknown {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">;""
+      <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">';
         <div className="container mx-auto px-6 text-center">
           <motion.div;
             initial = {}
@@ -1100,7 +1100,7 @@ export default function GreenIT(...args: unknown[]): unknown {}
         </div>;
       </section>;
 :pages.disabled/pages/services/GreenIT.tsx
-    </div>;'"
+    </div>'";
   )}}}}}}}'"'"
     </div>;
   )}}}}}}}'""

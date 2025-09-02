@@ -16,4 +16,4 @@ export type ServiceItem = {; id: string; title: string; description: string; cat
   'Autonomous Systems' |
   'Sustainability' |
   'Digital Transformation' |
-  'Enterprise Solutions'; price: string;'
+  'Enterprise Solutions'; price: string';

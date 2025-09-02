@@ -1,18 +1,19 @@
 import React, { useEffect, useState, useCallback } from 'react.ts';
 
 interface PerformanceMetrics {
-  fcp: number | null; // First Contentful Paint
-  lcp: number | null; // Largest Contentful Paint
-  fid: number | null; // First Input Delay
-  cls: number | null; // Cumulative Layout Shift
-  ttfb: number | null; // Time to First Byte
-  fmp: number | null; // First Meaningful Paint
+  fcp: number | null;
+   // First Contentful Paint lcp: number | null;
+   // Largest Contentful Paint fid: number | null;
+   // First Input Delay cls: number | null;
+   // Cumulative Layout Shift ttfb: number | null;
+   // Time to First Byte fmp: number | null;
+   // First Meaningful Paint;
 }
 
 interface PerformanceScore {
   score: number;
-  rating: 'good' | 'needs-improvement' | 'poor';
-  color: string;
+   rating: 'good' | 'needs-improvement' | 'poor';
+   color: string;
 }
 
 const AdvancedPerformanceMonitor: React.FC = () => {

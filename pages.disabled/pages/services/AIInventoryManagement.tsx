@@ -47,19 +47,19 @@ import { Package,
   AlertCircle,
   Calendar,
   MapPin,
-  Store'
+  Store';
  } from 'lucide-react.ts';
 
 export default function AIInventoryManagement(...args: any[]): any {}
     },;
     {;
-      icon: Activity,;""
-      title: "Supply Chain Integration",;""
+      icon: Activity,';
+      title: "Supply Chain Integration",';
       description: "Seamless integration with suppliers, logistics partners, and e-commerce platforms for end-to-end visibility."};
   ]},;
     {;
-      icon: Clock,;""
-      title: "Time Savings",;""
+      icon: Clock,';
+      title: "Time Savings",';
       description: "Automate routine inventory tasks and focus on strategic business decisions."};
   ];
 
@@ -115,18 +115,18 @@ export default function AIInventoryManagement(...args: any[]): any {}
         "White-label solutions",""
         "Advanced security features",""
         "Custom reporting",""
-        "On-premise deployment",;""
-        "SLA guarantees",;""
+        "On-premise deployment",';
+        "SLA guarantees",';
         "24/7 support";
 :pages.disabled/pages/services/AIInventoryManagement.tsx      cta: "Contact Sales",;
       popular: false};
-  ]},;"
-      ],;""
+  ]},";
+      ],';
       cta: "Contact Sales",;
       popular: false};
   ]},;
-    {;""
-      industry: "Automotive",;"      description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",;
+    {';
+      industry: "Automotive",";      description: "Track spare parts, manage service inventory, and optimize supply chain for dealerships",;
       icon: Truck};
   ];
 :pages.disabled/pages/services/AIInventoryManagement.tsx
@@ -168,20 +168,20 @@ export default function AIInventoryManagement(...args: any[]): any {}
     {
 "
 ""
-      name: "ERP Systems",;""
-      platforms: ["SAP", "Oracle", "Microsoft Dynamics", "Infor"]},;"
+      name: "ERP Systems",';
+      platforms: ["SAP", "Oracle", "Microsoft Dynamics", "Infor"]},";
     {}
 ""
-      name: "ERP Systems",;""
+      name: "ERP Systems",';
       platforms: ["SAP", "Oracle", "Microsoft Dynamics", "Infor"]},;
-    {;""
-      name: "Supplier Platforms",;""
+    {';
+      name: "Supplier Platforms",';
       platforms: ["Alibaba", "Amazon Business", "ThomasNet", "Global Sources"]};
 :pages.disabled/pages/services/AIInventoryManagement.tsx
   ]},;
-    {;""
-      metric: "3x",;""
-      label: "Faster Processing",;""
+    {';
+      metric: "3x",';
+      label: "Faster Processing",';
       description: "Improved inventory processing speed"};  ];
 
   return (""
@@ -205,11 +205,11 @@ export default function AIInventoryManagement(...args: any[]): any {}
       <section className="relative overflow-hidden py-20 lg:py-32">"
         <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-transparent to-blue-900/20"></div>
         "
->  ]},;"
-    {;""
-      metric: "3x",;""
-      label: "Faster Processing",;""
-      description: "Improved inventory processing speed"};  ];"
+>  ]},";
+    {';
+      metric: "3x",';
+      label: "Faster Processing",';
+      description: "Improved inventory processing speed"};  ]";
   return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO""
@@ -1063,7 +1063,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
         </div>;
       </section>;
 :pages.disabled/pages/services/AIInventoryManagement.tsx
-    </div>;'"`
+    </div>'"`;
   )}'"`'"`
     </div>;
   )}'"`

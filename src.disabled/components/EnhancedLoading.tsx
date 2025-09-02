@@ -1,11 +1,9 @@
-interface EnhancedLoadingProps { size?:,
-  sm' |
-  'md' |
-  'lg' |
-  'xl'; variant?: 'spinner' |
-  'dots' |
-  'pulse' |
-  'wave; text?: string; className?: string; } export const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ size =,
+interface EnhancedLoadingProps {
+  size?:, sm' | 'md' | 'lg' | 'xl';
+   variant?: 'spinner' | 'dots' | 'pulse' | 'wave;
+   text?: string;
+   className?: string;
+} export const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({ size =,
   md', variant =
   'spinner', text =
   'Loading...', className = '
@@ -47,4 +45,4 @@ interface EnhancedLoadingProps { size?:,
   ' }) => ( <div className="flex items-center space-x-2"> <EnhancedLoading size={size} variant="dots" /> <span className="text-sm text-gray-600 dark: text-gray-400">{text}</span> </div> ); export const ButtonLoading: React.FC<{ text?: string; size?: 'sm
   ' | 'md
   ' }> = ({ text = 'Loading...
-  ', size = 'sm' }) => ( <div className="flex items-center space-x-2"> <EnhancedLoading size={size} variant="spinner" /> <span>{text}</span> </div> );""`
+  ', size = 'sm' }) => ( <div className="flex items-center space-x-2"> <EnhancedLoading size={size} variant="spinner" /> <span>{text}</span> </div> )';`

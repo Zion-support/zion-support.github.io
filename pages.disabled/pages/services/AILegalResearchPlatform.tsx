@@ -40,7 +40,7 @@ import { Brain,
   Gavel,
   Library,
   Briefcase,
-  Award'
+  Award';
  } from 'lucide-react';
 ;
 export { function };
@@ -51,31 +51,31 @@ export default function AILegalResearchPlatform(...args[]):  {}
     "Automated legal citation checking and validation",""
     "Real-time legal precedent tracking",""
     "Advanced search with natural language queries",""
-    "Legal document generation and templates",;""
-    "Compliance monitoring and risk assessment",;""
-    "Multi-jurisdiction legal research",;""
-    "Legal trend analysis and predictions",;""
-    "Automated case outcome prediction",;""
-    "Legal knowledge base management",;""
+    "Legal document generation and templates",';
+    "Compliance monitoring and risk assessment",';
+    "Multi-jurisdiction legal research",';
+    "Legal trend analysis and predictions",';
+    "Automated case outcome prediction",';
+    "Legal knowledge base management",';
     "Collaborative research and sharing tools";
   ];
 
-  const benefits: any = [;""
-    "Reduce research time by 70%",;""
-    "Improve case outcome accuracy by 45%",;""
-    "Increase billable hours by 30%",;""
-    "Reduce legal research costs by 50%",;""
+  const benefits: any = [';
+    "Reduce research time by 70%",';
+    "Improve case outcome accuracy by 45%",';
+    "Increase billable hours by 30%",';
+    "Reduce legal research costs by 50%",';
     "Enhance client service quality";
   ];
 
   const useCases: any = [""
     "Law firms and attorneys",""
-    "Corporate legal departments",;""
-    "Legal research institutions",;""
-    "Government agencies",;""
-    "Compliance officers",;""
-    "Risk management teams",;""
-    "Legal technology companies",;""
+    "Corporate legal departments",';
+    "Legal research institutions",';
+    "Government agencies",';
+    "Compliance officers",';
+    "Risk management teams",';
+    "Legal technology companies",';
     "Academic legal research";
   ];
 
@@ -87,20 +87,19 @@ export default function AILegalResearchPlatform(...args[]):  {}
       period: "/month",""
       description: "Perfect for individual attorneys and small law firms",
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
-      features[;"
-        "AI legal research (up to 100 queries/month)","
+      features[';AI legal research (up to 100 queries/month)","
         "Basic document analysis","
         "Case law database access","
         "Citation checking","
         "Email support","
-        "Up to 5 users"      features[;""
+        "Up to 5 users"      features[';
         "AI legal research (up to 100 queries/month)",""
         "Basic document analysis",""
         "Case law database access",""
         "Citation checking",""
         "Email support",""
         "Up to 5 users""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: false;
     },
@@ -115,7 +114,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
       description: "Ideal for growing law firms and legal teams","
       description: "Ideal for growing law firms and legal teams",
-      features[;""
+      features[';
         "AI legal research (unlimited queries)",""
         "Advanced document analysis",""
         "Multi-jurisdiction research",""
@@ -123,7 +122,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
         "Priority support",""
         "Up to 25 users",""
         "API access""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: true;
     },
@@ -138,17 +137,16 @@ export default function AILegalResearchPlatform(...args[]):  {}
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
       description: "For large law firms and corporate legal departments","
       description: "For large law firms and corporate legal departments",
-      features[;""
+      features[';
         "Custom AI model training",""
         "White-label solutions",""
         "Advanced analytics and reporting",""
         "Custom integrations",""
-        "Dedicated account manager",;""
-        "24/7 phone support",;""
+        "Dedicated account manager",';
+        "24/7 phone support",';
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
-        "Unlimited users";"
-        "Unlimited users";
-      ],;""
+        "Unlimited users"';Unlimited users";
+      ],';
       cta: "Contact Sales",;
       popular: false};
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx
@@ -256,7 +254,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
       </section>
 
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -358,7 +356,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -460,7 +458,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -562,7 +560,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -654,7 +652,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
                     : 'border-gray-700'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-amber-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
@@ -713,7 +711,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -788,7 +786,7 @@ export default function AILegalResearchPlatform(...args[]):  {}
       </section>
 
       {/* Contact Info */}""
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;""
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">';
         <div className="max-w-4xl mx-auto text-center">""
           <p className="text-gray-400 mb-4">
 :pages.disabled/pages/services/AILegalResearchPlatform.tsx

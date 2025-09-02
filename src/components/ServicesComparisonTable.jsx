@@ -1,11 +1,11 @@
-import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react';'''
+import { Check, X, Star, Clock, Phone, Mail } from 'lucide - react'';
 import React from 'react';
 ;
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";import { Check, X, Star, Clock, Phone, Mail } from 'lucide-react';
 import {}
-  COMPREHENSIVE_SERVICES,'
+  COMPREHENSIVE_SERVICES,';
   CONTACT_INFO} from '@/data/comprehensiveServices';
 export function ServicesComparisonTable() {}
 '
@@ -18,7 +18,7 @@ export function ServicesComparisonTable() {}
     ) : (""""
       <X className="w-4 h-4 text-red-500" />
     );
-  };"""
+  }';"
   return (""""
     <div className="py-16 bg-slate-50 dark:bg-slate-900">""""
       <div className="container mx-auto px-4">""""
@@ -61,8 +61,7 @@ export function ServicesComparisonTable() {}
                   </p>"""
                   <Button""""
                     variant="outline""""
-                    className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white"""
-                  >
+                    className="w-full border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white ">
                     View {category}
                   </Button>
                 </CardContent>
@@ -287,8 +286,7 @@ export function ServicesComparisonTable() {}
                       </div>"""
                       <Badge""""
                         variant="outline""""
-                        className="border-blue-500 text-blue-600"""
-                      >
+                        className="border-blue-500 text-blue-600 ">
                         {service.category}
                       </Badge>"""
                     </div>""""

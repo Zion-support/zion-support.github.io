@@ -1,10 +1,10 @@
-import { NextApiRequest, NextApiResponse } from
+import { NextApiRequest, NextApiResponse } from;
   'next';
-import { createMocks, createRequest, createResponse } from
+import { createMocks, createRequest, createResponse } from;
   'node-mocks-http';
-import productHandler from
+import productHandler from;
   '@/pages/api/products/index';
-import { PrismaClient } from
+import { PrismaClient } from;
   '@prisma/client';
 
 // Mock Prisma Client
@@ -28,13 +28,13 @@ let prisma: PrismaClient;
 
 interface ProductLike {
   id: string;
-  name: string;
-  description?: string; // Optional as it
-  's not used in all assertions directly on responseData items
-  images?: unknown[]; // Changed from any[] to unknown[]
-  price?: number | null; // Optional
-  currency?: string; // Optional
-  tags?: string[]; // Optional
+   name: string;
+   description?: string;
+   // Optional as it 's not used in all assertions directly on responseData items images?: unknown[];
+   // Changed from any[] to unknown[] price?: number | null;
+   // Optional currency?: string;
+   // Optional tags?: string[];
+   // Optional;
 }
 
 describe('/api/products API Endpoint

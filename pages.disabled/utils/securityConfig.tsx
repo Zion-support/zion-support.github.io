@@ -155,7 +155,7 @@ export;
   return Object.entries (securityConfig.csp) .map ( ([key, values]) => {}
       if (Array.isArray (values) ) {}
         return `${key} ${values.join (' ') }`}
-      return `${key} ${values}`}) .join ('; ') };
+      return `${key} ${values}`}) .join (';) };
 
 // Validate input against patterns;
   email: (email: string) : boolean =>
@@ -224,6 +224,4 @@ export;
     validation: true}) };
     validation: true
   }) 
-};
-
-'"`
+}'"`;

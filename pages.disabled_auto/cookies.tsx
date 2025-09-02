@@ -1,13 +1,12 @@
-<<<<<<< HEAD:pages.disabled_auto/cookies.tsx
-import React from
+:pages.disabled_auto/cookies.tsx
+import React from;
   'react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../components/layout/MainLayout';
-import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from
+import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from;
   'lucide-react';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -17,15 +16,14 @@ import {
   Shield,
   Eye,
   Database,
-  CheckCircle,
+  CheckCircle,;
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
 
 const Cookies: NextPage = () => {
   const cookieTypes = [
     {
       icon: Cookie,
-<<<<<<< HEAD:pages.disabled_auto/cookies.tsx
+:pages.disabled_auto/cookies.tsx
       title:,
   Essential Cookies',
       description: 'These cookies are necessary for the website to function and cannot be switched off.,
@@ -64,7 +62,6 @@ const Cookies: NextPage = () => {
   'Campaign tracking',
   'Conversion measurement']
     }
-=======
       title: 'Essential Cookies',
       description:
         'These cookies are necessary for the website to function and cannot be switched off.',
@@ -91,13 +88,12 @@ const Cookies: NextPage = () => {
         'These cookies are used to deliver relevant advertisements and marketing campaigns.',
       examples: ['Ad targeting', 'Campaign tracking', 'Conversion measurement'],
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
   ];
 
   const cookieFeatures = [
     {
       icon: Shield,
-<<<<<<< HEAD:pages.disabled_auto/cookies.tsx
+:pages.disabled_auto/cookies.tsx
       title:,
   Cookie Consent',
       description: 'We obtain your consent before setting non-essential cookies.
@@ -114,7 +110,6 @@ const Cookies: NextPage = () => {
   Transparency',
       description: 'We provide clear information about the cookies we use.
     }
-=======
       title: 'Cookie Consent',
       description:
         'We obtain your consent before setting non-essential cookies.',
@@ -129,7 +124,6 @@ const Cookies: NextPage = () => {
       title: 'Transparency',
       description: 'We provide clear information about the cookies we use.',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
   ];
 
   return (

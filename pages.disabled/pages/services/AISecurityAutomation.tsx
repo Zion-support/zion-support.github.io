@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityAutomation.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAutomation() {
-    'Automated security response and remediation',;'
-    'Predictive analytics for automation opportunities',;'
-    'Smart security process optimization',;'
-    'AI-driven security task automation',;'
-    'Real-time automation performance monitoring',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAutomation(function AISecurityAutomation() {): any {}
-    'Automated security response and remediation',;
-    'Predictive analytics for automation opportunities',;
-    'Smart security process optimization',;
-    'AI-driven security task automation',;
-    'Real-time automation performance monitoring',;
-    'Custom AI models for automation applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAutomation() {;
+    'Automated security response and remediation',';Predictive analytics for automation opportunities',';Smart security process optimization',';AI-driven security task automation',';Real-time automation performance monitoring',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAutomation(function AISecurityAutomation() {): any {};
+    'Automated security response and remediation',';Predictive analytics for automation opportunities',';Smart security process optimization',';AI-driven security task automation',';Real-time automation performance monitoring',';Custom AI models for automation applications';
 <:pages.disabled/pages/services/AISecurityAutomation.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$3,999/mo', ';
       details: ['Unlimited workflows',Custom AI models',Full automation suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security automation optimization',;'
-    'Workflow automation and orchestration',;'
-    'Security response and remediation',;'
-    'Process optimization and automation',;'
-    'Task automation and management',;'
-    'Automation scaling and management';
-  ];
-
-  '
-    'Improve security automation performance by 50-80%',;'
-    'Reduce manual task time by 40-70%',;'
-    'Cut security operational costs by 35-65%',;'
-    'Enhance security automation reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security automation operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security automation optimization',';Workflow automation and orchestration',';Security response and remediation',';Process optimization and automation',';Task automation and management',';Automation scaling and management';
+  ]';Improve security automation performance by 50-80%',';Reduce manual task time by 40-70%',';Cut security operational costs by 35-65%',';Enhance security automation reliability and scalability',';Optimize resource utilization',';Scale security automation operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-rose-600 text-rose-600 rounded-lg hover:bg-rose-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityAutomation.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

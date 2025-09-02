@@ -1,13 +1,12 @@
-<<<<<<< HEAD:pages.disabled_auto/solutions/index.tsx
-import type { NextPage } from
+:pages.disabled_auto/solutions/index.tsx
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../../components/layout/MainLayout';
-import Link from
+import Link from;
   'next/link';
-import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from
+import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from;
   'lucide-react';
-=======
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
@@ -22,9 +21,8 @@ import {
   ArrowRight,
   Zap,
   Shield,
-  Brain,
+  Brain,;
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/index.tsx
 
 const Solutions: NextPage = () => {
   return (

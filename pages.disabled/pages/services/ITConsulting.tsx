@@ -156,7 +156,7 @@ import {}
   HardDrive3,
   Server4,
   Rocket,
-  Building2'
+  Building2';
  } from 'lucide-react';
 ;
 export { function };
@@ -166,14 +166,7 @@ export default function ITConsulting(...args: []):  {}
       icon: Cloud,;
       title: 'Cloud Strategy',;
       description: 'Plan cloud migration and hybrid cloud solutions'};
-  ];
-
-    'Optimize IT infrastructure and reduce costs by 25%',;
-    'Improve system performance and reliability',;
-    'Enhance cybersecurity posture and compliance',;
-    'Enable digital transformation initiatives',;
-    'Streamline IT operations and processes',;
-    'Align technology with business objectives';
+  ]';Optimize IT infrastructure and reduce costs by 25%',';Improve system performance and reliability',';Enhance cybersecurity posture and compliance',';Enable digital transformation initiatives',';Streamline IT operations and processes',';Align technology with business objectives';
   ]},;
     {;
       icon: Scale,;
@@ -265,9 +258,9 @@ export default function ITConsulting(...args: []):  {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/ITConsulting.tsx
-      </section>;"
+      </section>";
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="text-center mb-16"
@@ -276,7 +269,7 @@ export default function ITConsulting(...args: []):  {}
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="text-center mb-16""
@@ -376,7 +369,7 @@ export default function ITConsulting(...args: []):  {}
 :pages.disabled/pages/services/ITConsulting.tsx
       </section>"
       {/* Expertise Areas */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="text-center mb-16"
@@ -385,7 +378,7 @@ export default function ITConsulting(...args: []):  {}
       </section>
 
       {/* Expertise Areas */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="text-center mb-16""
@@ -477,7 +470,7 @@ export default function ITConsulting(...args: []):  {}
 :pages.disabled/pages/services/ITConsulting.tsx
       </section>"
       {/* Benefits Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="text-center mb-16"
@@ -486,7 +479,7 @@ export default function ITConsulting(...args: []):  {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="text-center mb-16""
@@ -540,7 +533,7 @@ export default function ITConsulting(...args: []):  {}
 :pages.disabled/pages/services/ITConsulting.tsx
       </section>"
       {/* Industries Section */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="text-center mb-16"
@@ -549,7 +542,7 @@ export default function ITConsulting(...args: []):  {}
       </section>
 
       {/* Industries Section */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="text-center mb-16""
@@ -622,7 +615,7 @@ export default function ITConsulting(...args: []):  {}
 :pages.disabled/pages/services/ITConsulting.tsx
       </section>"
       {/* Process Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="text-center mb-16"
@@ -635,7 +628,7 @@ export default function ITConsulting(...args: []):  {}
       </section>
 
       {/* Process Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="text-center mb-16""
@@ -696,7 +689,7 @@ export default function ITConsulting(...args: []):  {}
 :pages.disabled/pages/services/ITConsulting.tsx
       </section>"
       {/* CTA Section */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
@@ -724,7 +717,7 @@ export default function ITConsulting(...args: []):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center""
@@ -757,7 +750,5 @@ export default function ITConsulting(...args: []):  {}
     </div>
   )};
 :pages.disabled/pages/services/ITConsulting.tsx
-;export default ITConsulting;'"
-'"'"
-;export default ITConsulting;
-'""
+;export default ITConsulting'';"'"
+;export default ITConsulting'';

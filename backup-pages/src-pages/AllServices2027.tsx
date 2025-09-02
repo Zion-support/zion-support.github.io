@@ -88,7 +88,7 @@
         </div>
       </section>
       {/* Contact Information Banner */}"
-      <section className="bg-gradient-to-r from-cyan-600 to-blue-600 py-8">;"
+      <section className="bg-gradient-to-r from-cyan-600 to-blue-600 py-8">";
         <div className="max-w-7xl mx-auto px-6">"
           <div className="flex flex-col md:flex-row items-center justify-between text-white">"
             <div className="flex items-center space-x-4 mb-4 md:mb-0">"
@@ -107,7 +107,7 @@
       </section>
 
       {/* Category Overview */}"
-      <section className="py-20 bg-zion-slate">;"
+      <section className="py-20 bg-zion-slate">";
         <div className="max-w-7xl mx-auto px-6">"
           <div className="text-center mb-16">"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -122,7 +122,7 @@
             {categories.map((category)  => {;
               specific business challenges and drive innovation.;
             </p>;
-          </div>;"
+          </div>";
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
             {categories.map((category) => {;
 
@@ -150,7 +150,7 @@
                       <span className="text-cyan-400 font-semibold">${stats.avgPrice}/mo</span>
                     </div>"
                     <div className="flex justify-between">
-                      <span>Avg. Rating:</span>;"
+                      <span>Avg. Rating:</span>";
                       <span className="text-cyan-400 font-semibold">{stats.avgRating}/5</span>;
                     </div>;
                   </div>;
@@ -159,7 +159,7 @@
       </section>
 
       {/* Services Grid */}"
-      <section className = "py-20 bg-zion-slate-dark">;"
+      <section className = "py-20 bg-zion-slate-dark">";
         <div className="max-w-7xl mx-auto px-6">"
           <div className="flex items-center justify-between mb-12">"
             <h2 className="text-3xl md:text-4xl font-bold text-white">
@@ -193,7 +193,7 @@
       </section>
 
       {/* Service Categories Deep Dive */}"
-      <section className="py-20 bg-zion-slate">;"
+      <section className="py-20 bg-zion-slate">";
         <div className="max-w-7xl mx-auto px-6">"
           <div className="text-center mb-16">"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -330,7 +330,7 @@
       </section>
 
       {/* CTA Section */}"
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">;"
+      <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">";
         <div className="max-w-4xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -368,9 +368,7 @@
 // Service Card Component
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
 
-            </a>;
-
-  '
+            </a>';
       case 'AI Services
   ':;            </a>;
           </div>;
@@ -385,20 +383,20 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
     switch (category) {;
       case,
   AI Services
-  ': ;"
+  ': ";
         return <Brain className="w-5 h-5"  />;
       case 'Cybersecurity
-  ':;"
+  ':";
         return <Shield className="w-5 h-5"  />;
       case 'Emerging Technology
-  ':;"
+  ':";
         return <Zap className="w-5 h-5"  />;
       case 'IT Services
-  ':;"
+  ':";
         return <Code className="w-5 h-5"  />;
-      case 'Telecommunications:;"
+      case 'Telecommunications:";
         return <Signal className="w-5 h-5"  />;
-      default:;"
+      default:";
         return <Users className = "w-5 h-5"  />}};
   return()
     <motion.div
@@ -471,5 +469,4 @@ const ServiceCard: React.FC<{ service: any }> = ({ service }) => {
           </Link>;
         </div>;
       </div>;
-    </motion.div>;) };export default AllServices2027;
-'"`
+    </motion.div>;) };export default AllServices2027'"`;

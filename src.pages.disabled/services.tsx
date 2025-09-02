@@ -15,7 +15,7 @@ const Services: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD:src/pages/services.tsx
+:src/pages/services.tsx
 const featuredServices: Service[] = [
   {
     title: 'AI Autonomous Business Manager',
@@ -504,6 +504,4 @@ const Services: React.FC = (): JSX.Element => {
   );
 }
 
-=======
 export default Services;
->>>>>>> cursor/website-audit-content-update-and-deployment-bf61:src.pages.disabled/services.tsx

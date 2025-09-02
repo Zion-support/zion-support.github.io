@@ -251,7 +251,7 @@ class IntelligentOrchestrator {
         // This is a simplified check - in a real implementation, you
   'd analyze import usage
         for (const dep of dependencies) {
-          if (!this.isDependencyUsed(dep)) {
+          if (!this.isDependencyUsed(dep)) {;
             unusedDeps.push(dep);
           }
         }

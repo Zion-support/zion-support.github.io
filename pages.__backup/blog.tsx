@@ -1,14 +1,14 @@
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import Head from
+import Head from;
   'next/head';
-import Link from
+import Link from;
   'next/link';
-import { useState } from
+import { useState } from;
   'react';
-import Navigation from
+import Navigation from;
   '../components/Navigation';
-import Footer from
+import Footer from;
   '../components/Footer';
 
 const Blog: NextPage = () => {

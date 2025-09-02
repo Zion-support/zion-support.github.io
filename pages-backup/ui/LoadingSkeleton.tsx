@@ -1,4 +1,4 @@
-<<<<<<< HEAD:pages-backup/ui/LoadingSkeleton.tsx
+:pages-backup/ui/LoadingSkeleton.tsx
 
   className = '
   ', 
@@ -138,8 +138,8 @@ export function ListSkeleton(...args: any[]): any {
           {showAvatar && ("
             <Skeleton className="w-12 h-12 rounded-full flex-shrink-0"  />
           )}"
-          <div className="flex-1 space-y-2">;"
-            <Skeleton className="h-4 w-3/4"  />;"
+          <div className="flex-1 space-y-2">";
+            <Skeleton className="h-4 w-3/4"  />";
             <Skeleton className="h-3 w-1/2"  />;          </div>;
         </div>;
       ))};
@@ -165,5 +165,3 @@ export function GridSkeleton(...args: any[]): any {
     </div>
   )}
 '"`
-=======
->>>>>>> pr-10728:src/components/ui/LoadingSkeleton.tsx

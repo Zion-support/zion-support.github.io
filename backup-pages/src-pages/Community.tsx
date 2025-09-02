@@ -10,7 +10,7 @@ export default function Community(...args[]):  {
        />
       
       {/* Header */}"
-      <div className="bg-slate-800/50 border-b border-slate-700">;"
+      <div className="bg-slate-800/50 border-b border-slate-700">";
         <div className="container mx-auto px-4 py-16">
           <motion.div
             initial = {
@@ -37,16 +37,14 @@ export default function Community(...args[]):  {
               Connect with technology professionals, share knowledge, and stay ahead of industry trends.
   '
 interface CommunityPost {
-
   id: string;
-  title: string;
-  content: string;
-  author: {
-
-    name: string;
-    avatar: string;
-    role: string;
-    verified: boolean};  category: string;
+   title: string;
+   content: string;
+   author: { name: string;
+   avatar: string;
+   role: string;
+   verified: boolean;
+};  category: string;
   tags: string[];
   likes: number;
   replies: number;
@@ -56,39 +54,19 @@ interface CommunityPost {
   isFeatured: boolean}
 
 interface CommunityCategory {
-
   id: string;
-  name: string;
-  description: string;
-  icon: unknown;
-  color: string;
-  postCount: number;
-  topics: string[];
-const Community: React.FC = () => {
-
-  const [searchQuery, setSearchQuery] = useState(,
-  ');
-  const [selectedCategory, setSelectedCategory] = useState<string>(
-  'all');
-  const [sortBy, setSortBy] = useState<string>(
-  'latest');
-
-  const communityCategories: CommunityCategory[] = [
-    {
-
-      id:
-  'general,;
-      name:,
-  General Discussion',
-      description: 'General topics about Zion Tech Group and technology,
-      icon: Users,
-      color:
-  'from-blue-500 to-cyan-500',
-      postCount: 1247,
-      topics: [,
-  Company News',Technology Trends
-  ',Industry Updates']
-    },
+   name: string;
+   description: string;
+   icon: unknown;
+   color: string;
+   postCount: number;
+   topics: string[];
+   const Community: React.FC = () => { const [searchQuery, setSearchQuery] = useState(, ');
+   const [selectedCategory, setSelectedCategory] = useState<string>( 'all');
+   const [sortBy, setSortBy] = useState<string>( 'latest');
+   const communityCategories: CommunityCategory[] = [ { id: 'general,;
+   name:, General Discussion', description: 'General topics about Zion Tech Group and technology, icon: Users, color: 'from-blue-500 to-cyan-500', postCount: 1247, topics: [, Company News',Technology Trends ',Industry Updates'];
+},
     {
 
       id: 'ai-services,;
@@ -319,9 +297,9 @@ const Community: React.FC = () => {
       case,
   popular
   ': return b.likes - a.likes;
-return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'      case
+return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()';      case
   'popular':
-        return b.likes - a.likes;'
+        return b.likes - a.likes';
       case
   'most-replied':
         return b.replies - a.replies;
@@ -762,7 +740,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'      
       </div>
 
       {/* Create New Post Section */}"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">";
         <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-3xl p-8 text-center">"
           <h2 className="text-3xl font-bold text-white mb-4">
             Share Your Knowledge
@@ -787,7 +765,7 @@ return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();'      
       </div>;
 
       {/* Community Stats */}"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">";
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">"
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 text-center">"
             <Users className="w-12 h-12 text-blue-400 mx-auto mb-4"  />"

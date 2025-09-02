@@ -50,24 +50,15 @@ import {
   PhoneCall,
   Mail as MailIcon,
   MapPin as MapPinIcon,
-  } from 'lucide-react
-  ';
-
-        'Quantum Computing - Next-gen computational power
-  ',;
-        'IoT Edge Computing - Smart device networks
-  ',;
-        'Space Tech - Space technology solutions
-  ',;
-        'Green IT - Sustainable technology solutions
+  } from 'lucide-react;
+  ';Quantum Computing - Next-gen computational power
+  ',';IoT Edge Computing - Smart device networks
+  ',';Space Tech - Space technology solutions
+  ',';Green IT - Sustainable technology solutions
   ';
       ]};
-items: [;'
-
-  'Quantum Computing - Next-gen computational power,;,
-  'IoT Edge Computing - Smart device networks',;'
-  'Space Tech - Space technology solutions',;'
-  'Green IT - Sustainable technology solutions';
+items: [';Quantum Computing - Next-gen computational power,;,
+  'IoT Edge Computing - Smart device networks',';Space Tech - Space technology solutions',';Green IT - Sustainable technology solutions';
       ]};
   ];
 

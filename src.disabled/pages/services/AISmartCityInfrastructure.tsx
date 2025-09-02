@@ -1,7 +1,7 @@
-import React from
-  'react'; import { motion } from
-  'framer-motion'; import { Building, TrafficCone, Zap, Shield, CheckCircle, Star, Users, Globe, Lock, Database, Network, BarChart3, ArrowRight, Sparkles, Target, Rocket, TrendingUp, Activity, Microscope, Brain, CircuitBoard, Layers, Workflow, Settings, Play, MapPin, Wifi, Camera, Lightbulb, Leaf, Car, Bus, Train } from
-  'lucide-react'; import { SEO } from
+import React from;
+  'react'; import { motion } from;
+  'framer-motion'; import { Building, TrafficCone, Zap, Shield, CheckCircle, Star, Users, Globe, Lock, Database, Network, BarChart3, ArrowRight, Sparkles, Target, Rocket, TrendingUp, Activity, Microscope, Brain, CircuitBoard, Layers, Workflow, Settings, Play, MapPin, Wifi, Camera, Lightbulb, Leaf, Car, Bus, Train } from;
+  'lucide-react'; import { SEO } from;
   '../../components/SEO'; const AISmartCityInfrastructure = () => { const features = [ { icon: Building, title:,
   Smart Building Management', description: AI-powered building automation for energy efficiency, security, and occupant comfort' }, { icon: TrafficCone, title:,
   Intelligent Traffic Management', description: Real-time traffic optimization, congestion reduction, and smart signal control' }, { icon: Zap, title:,

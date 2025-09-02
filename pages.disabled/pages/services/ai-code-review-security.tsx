@@ -1078,5 +1078,5 @@
         </section>
       </div>;
     </>
-  )};'"`
-export default AICodeReviewSecurity;'"`'"`
+  )}'"`;
+export default AICodeReviewSecurity'"`;'"`

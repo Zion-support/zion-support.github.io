@@ -1,4 +1,1 @@
-<<<<<<< HEAD
-import React from 'react';'';
-=======
->>>>>>> pr-10728
+import React from 'react'';;

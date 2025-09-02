@@ -1,59 +1,23 @@
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
-import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {
-    'Intelligent interview scheduling and feedback',;'
-    'Employee performance analytics and insights',;'
-    'Predictive turnover analysis and retention strategies',;'
-    'Automated onboarding and training workflows',;'
-    'Diversity and inclusion analytics',;'
-    'Compliance monitoring and reporting';
-  ];'
-    'Reduce time-to-hire by 60%',;'
-    'Improve candidate quality by 40%',;'
-    'Reduce hiring costs by 30%',;'
-    'Increase employee retention by 25%',;'
-    'Automate routine HR tasks',;'
-    'Data-driven decision making';
-  ];'
-    { ;''
-      name: 'Enterprise', ;''
-      price: '$999/mo', ;'      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
+import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform() {;
+    'Intelligent interview scheduling and feedback',';Employee performance analytics and insights',';Predictive turnover analysis and retention strategies',';Automated onboarding and training workflows',';Diversity and inclusion analytics',';Compliance monitoring and reporting';
+  ]';Reduce time-to-hire by 60%',';Improve candidate quality by 40%',';Reduce hiring costs by 30%',';Increase employee retention by 25%',';Automate routine HR tasks',';Data-driven decision making';
+  ]';
+    { ';
+      name: 'Enterprise', ';
+      price: '$999/mo', ';      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
       popular: false};
-  ];'
-    'Recruitment and talent acquisition',;'
-    'Employee performance management',;'
-    'Learning and development',;'
-    'Workforce planning and analytics',;'
-    'Compliance and HR operations',;'
-    'Employee engagement and retention';
-  ];'
-    'Learning & Development',;'
-    'Workforce Analytics',;'
-    'Employee Engagement',;'
-    'Compliance & Reporting',;'
-    'Onboarding & Offboarding',;'
-    'Succession Planning';'
-    'Talent Acquisition',''
-    'Performance Management',;''
-    'Learning & Development',;''
-    'Workforce Analytics',;''
-    'Employee Engagement',;''
-    'Compliance & Reporting',;''
-    'Onboarding & Offboarding',;'    'Succession Planning';
-import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform(function AIHRTalentPlatform() {): any {}
-    'Intelligent interview scheduling and feedback',;
-    'Employee performance analytics and insights',;
-    'Predictive turnover analysis and retention strategies',;
-    'Automated onboarding and training workflows',;
-    'Diversity and inclusion analytics',;
-    'Compliance monitoring and reporting';
-  ];
-
-    'Reduce time-to-hire by 60%',;
-    'Improve candidate quality by 40%',;
-    'Reduce hiring costs by 30%',;
-    'Increase employee retention by 25%',;
-    'Automate routine HR tasks',;
-    'Data-driven decision making';
+  ]';Recruitment and talent acquisition',';Employee performance management',';Learning and development',';Workforce planning and analytics',';Compliance and HR operations',';Employee engagement and retention';
+  ]';Learning & Development',';Workforce Analytics',';Employee Engagement',';Compliance & Reporting',';Onboarding & Offboarding',';Succession Planning'';Talent Acquisition',''
+    'Performance Management',';
+    'Learning & Development',';
+    'Workforce Analytics',';
+    'Employee Engagement',';
+    'Compliance & Reporting',';
+    'Onboarding & Offboarding',';Succession Planning';
+import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Sparkles, Target, TrendingUp, Shield, Briefcase, Award export default function AIHRTalentPlatform(function AIHRTalentPlatform() {): any {};
+    'Intelligent interview scheduling and feedback',';Employee performance analytics and insights',';Predictive turnover analysis and retention strategies',';Automated onboarding and training workflows',';Diversity and inclusion analytics',';Compliance monitoring and reporting';
+  ]';Reduce time-to-hire by 60%',';Improve candidate quality by 40%',';Reduce hiring costs by 30%',';Increase employee retention by 25%',';Automate routine HR tasks',';Data-driven decision making';
   ];
 
     { ;
@@ -61,22 +25,8 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
       price: '$999/mo', ;
       features: ['Unlimited employees',Full AI suite',Custom AI training',Dedicated support',White-label solutions',Advanced compliance'],;
       popular: false};
-  ];
-
-    'Recruitment and talent acquisition',;
-    'Employee performance management',;
-    'Learning and development',;
-    'Workforce planning and analytics',;
-    'Compliance and HR operations',;
-    'Employee engagement and retention';
-  ];
-
-    'Learning & Development',;
-    'Workforce Analytics',;
-    'Employee Engagement',;
-    'Compliance & Reporting',;
-    'Onboarding & Offboarding',;
-    'Succession Planning';
+  ]';Recruitment and talent acquisition',';Employee performance management',';Learning and development',';Workforce planning and analytics',';Compliance and HR operations',';Employee engagement and retention';
+  ]';Learning & Development',';Workforce Analytics',';Employee Engagement',';Compliance & Reporting',';Onboarding & Offboarding',';Succession Planning';
   ];
   return()
 :pages.disabled/pages/services/AIHRTalentPlatform.tsx
@@ -422,18 +372,18 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";
-          >;"
+          >";
           </p>"
           <a ""
             href="https://ziontechgroup.com""
             target="_blank""
             rel="noreferrer""
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";"
-          >;""
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold"";
+          >';
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2"  />;          </a>;
         </div>;
       </section>;
-    </div>;'"`
+    </div>'"`;
   )}}}'"`'"`
             Learn more about our complete suite of AI-powered business solutions;
           </p>
@@ -442,7 +392,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
             target="_blank""
             rel="noreferrer""
             className="inline-flex items-center text-orange-600 hover:text-orange-700 font-semibold";
-          >;""
+          >';
             Visit ziontechgroup.com <ExternalLink className="w-4 h-4 ml-2"  />;          </a>;
         </div>;
       </section>;

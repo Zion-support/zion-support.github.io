@@ -30,7 +30,7 @@ import {}
   Target,
   BarChart3,
   Users,
-  Sparkles''
+  Sparkles'';
 } from 'lucide-react';
 ;
 export { function };
@@ -100,7 +100,7 @@ export default function AIContentGenerator(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerator.tsx
       description: "Perfect for individual creators and small businesses","
       description: "Perfect for individual creators and small businesses",
-      features[;""
+      features[';
         "Up to 100 content pieces/month",""
         "Basic AI writing tools",""
         "5 content templates",""
@@ -122,7 +122,7 @@ export default function AIContentGenerator(...args[]):  {}
 :pages.disabled/pages/services/AIContentGenerator.tsx
       description: "Ideal for growing businesses and content teams","
       description: "Ideal for growing businesses and content teams",
-      features[;""
+      features[';
         "Up to 500 content pieces/month",""
         "Advanced AI capabilities",""
         "Unlimited templates",""
@@ -145,33 +145,19 @@ export default function AIContentGenerator(...args[]):  {}
       title: 'Audience Targeting',
       description: 'Content tailored to specific demographics, industries, and customer personas'},;
     {;
-      icon: BarChart3,;'
-      title: 'Performance Analytics',;'
+      icon: BarChart3,';
+      title: 'Performance Analytics',';
       description: 'Track content performance with AI-powered insights and optimization recommendations'};
-  ];
-
-  '
-    'Increase content production by 10x with AI assistance',;'
-    'Improve SEO rankings by 45% with optimized content',;'
-    'Reduce content creation costs by 60%',;'
-    'Boost engagement rates by 35% with targeted content',;'
-    'Save 20+ hours per week on content creation',;'
-    'Maintain consistent brand voice across all content';
-  ];
-
-  '
-        'Advanced security features',;'
-        'Custom integrations';
-      ],;
-'
-        'Unlimited AI-generated content',''
+  ]';Increase content production by 10x with AI assistance',';Improve SEO rankings by 45% with optimized content',';Reduce content creation costs by 60%',';Boost engagement rates by 35% with targeted content',';Save 20+ hours per week on content creation',';Maintain consistent brand voice across all content';
+  ]';Advanced security features',';Custom integrations';
+      ],';Unlimited AI-generated content',''
         'Unlimited image generation',''
         'Custom AI model training',''
         'White-label solution',''
         'Dedicated account manager',''
-        'SLA guarantees',;''
-        'Advanced security features',;'        'Custom integrations';'
-      ],;'
+        'SLA guarantees',';
+        'Advanced security features',';Custom integrations';
+      ],';
 :pages.disabled/pages/services/AIContentGenerator.tsx
 '
       cta: 'Contact Sales',;
@@ -258,7 +244,7 @@ export default function AIContentGenerator(...args[]):  {}
 "
 
         {/* Features Section */}""
-        <section className="py-20 bg-black/30">;""
+        <section className="py-20 bg-black/30">';
           <div className="container-responsive">
             <motion.div;
               initial = {}
@@ -354,7 +340,7 @@ export default function AIContentGenerator(...args[]):  {}
 "
 
         {/* Content Types Section */}""
-        <section className="py-20 bg-slate-800/30">;""
+        <section className="py-20 bg-slate-800/30">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -436,7 +422,7 @@ export default function AIContentGenerator(...args[]):  {}
 "
 
         {/* Use Cases Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -521,7 +507,7 @@ export default function AIContentGenerator(...args[]):  {}
 "
 
         {/* Benefits Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="container-responsive">
             <motion.div;
               initial = {}
@@ -611,7 +597,7 @@ export default function AIContentGenerator(...args[]):  {}
 "
 
         {/* Pricing Section */}""
-        <section className="py-20 bg-black/30">;""
+        <section className="py-20 bg-black/30">';
           <div className="container-responsive">
             <motion.div;
               initial = {}
@@ -693,7 +679,7 @@ export default function AIContentGenerator(...args[]):  {}
                       : 'border-slate-700/50'`
                   }`}
 
-                  {plan.popular && (;""
+                  {plan.popular && (';
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                       <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular;
@@ -751,7 +737,7 @@ export default function AIContentGenerator(...args[]):  {}
 "
 
         {/* CTA Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="container-responsive">
             <motion.div;
               initial = {}

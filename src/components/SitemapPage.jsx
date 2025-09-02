@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth) ; const talentRoutes = completeSitemap.filter () route =>;'';
-=======
-import React from 'react'; export default function SitemapPage() { const publicRoutes = completeSitemap.filter(route => !route.requiredAuth); const talentRoutes = completeSitemap.filter() route =>;
-}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
-import React from 'react';
+import React from 'react'; export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth) ; const talentRoutes = completeSitemap.filter () route =>';;import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from "./SEO";
 ;
@@ -44,8 +36,7 @@ export default function SitemapPage() {
                 <li key={route.path}>
                   <Link"""
                     to={route.path}""""
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors block"""
-                  >
+                    className="text-zion-slate-light hover:text-zion-cyan transition-colors block ">
                     {route.label || route.title}
                   </Link>
                 </li>
@@ -63,8 +54,7 @@ export default function SitemapPage() {
                 <li key={route.path}>
                   <Link"""
                     to={route.path}""""
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors block"""
-                  >
+                    className="text-zion-slate-light hover:text-zion-cyan transition-colors block ">
                     {route.label || route.title}
                   </Link>
                 </li>
@@ -82,8 +72,7 @@ export default function SitemapPage() {
                 <li key={route.path}>
                   <Link"""
                     to={route.path}""""
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors block"""
-                  >
+                    className="text-zion-slate-light hover:text-zion-cyan transition-colors block ">
                     {route.label || route.title}
                   </Link>
                 </li>
@@ -101,8 +90,7 @@ export default function SitemapPage() {
                 <li key={route.path}>
                   <Link"""
                     to={route.path}""""
-                    className="text-zion-slate-light hover:text-zion-cyan transition-colors block"""
-                  >
+                    className="text-zion-slate-light hover:text-zion-cyan transition-colors block ">
                     {route.label || route.title}
                   </Link>
                 </li>
@@ -121,8 +109,7 @@ export default function SitemapPage() {
               <div key={route.path} className="bg-white/5 rounded p-3">
                 <Link"""
                   to={route.path}""""
-                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium"""
-                >
+                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors font-medium ">
                   {route.path}"""
                 </Link>""""
                 <span className="ml-2 text-xs italic text-zion-slate-light">
@@ -148,4 +135,3 @@ export { SitemapPage };
 export { SitemapPage };
 
 export { SitemapPage };
->>>>>>> pr-10728

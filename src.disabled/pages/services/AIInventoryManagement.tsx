@@ -36,7 +36,7 @@ import { Package,
   AlertCircle,
   Calendar,
   MapPin,
-  Store
+  Store;
  } from 'lucide-react.ts';
 
 export default function AIInventoryManagement(...args: unknown[]): unknown {
@@ -155,9 +155,7 @@ export default function AIInventoryManagement(...args: unknown[]): unknown {
         "White-label solutions",
         "Advanced security features",
         "Custom reporting",
-        "On-premise deployment",;
-        "SLA guarantees",;
-        "24/7 support";
+        "On-premise deployment",";SLA guarantees",";24/7 support";
       ],;
       cta: "Contact Sales",;
       popular: false;

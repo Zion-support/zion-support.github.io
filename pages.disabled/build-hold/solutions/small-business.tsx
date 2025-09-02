@@ -1,12 +1,11 @@
 React from,
   react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../../components/layout/MainLayout';
-import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from
-  'lucide-react';'import Link from
-  'next/link';'
-  'const SmallBusiness: NextPage = () => {
+import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from;
+  'lucide-react';import Link from;
+  'next/link'';const SmallBusiness: NextPage = () => {
   const solutions = [;
     {;
       title: 'Cloud-Based Business Management, description: 'Complete business management suite in the cloud

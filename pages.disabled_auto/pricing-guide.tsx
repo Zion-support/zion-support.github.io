@@ -1,14 +1,14 @@
-import React from
+import React from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
-import { SEO } from
+import { SEO } from;
   '../components/SEO';
-import { Button } from
+import { Button } from;
   '../components/ui/Button';
-import { Card } from
+import { Card } from;
   '../components/ui/Card';
-import { Badge } from
+import { Badge } from;
   '../components/ui/Badge';
 import { 
   CheckCircle, 
@@ -37,7 +37,7 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-  HelpCircle
+  HelpCircle;
 } from 'lucide-react';
 
 const PricingGuide: React.FC = () => {

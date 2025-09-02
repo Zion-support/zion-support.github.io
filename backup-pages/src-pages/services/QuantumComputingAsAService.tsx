@@ -9,12 +9,8 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   ,;
       color: 'from-indigo-500 to-purple-500};
   ];,
-  On-premise deployment options',;
-
-  'Research partnerships';
-      ],;
-
-  'Unlimited quantum computing hours',
+  On-premise deployment options',';Research partnerships';
+      ],';Unlimited quantum computing hours',
   '
         'Custom quantum hardware access
   ','
@@ -24,10 +20,8 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
         '24/7 phone support
   ','
 
-  'Custom integrations',;'
-  'On-premise deployment options',;'
-  'Research partnerships';
-      ],;'
+  'Custom integrations',';On-premise deployment options',';Research partnerships';
+      ],';
       cta: 'Contact Sales,;
       popular: false};
   ]},;
@@ -39,17 +33,12 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       metrics: [
   '40% cost reduction,Optimal route planning
   ',Real-time optimization']};
-  ];
-
-  'Python',Qiskit
+  ]';Python',Qiskit
   ',Cirq',PennyLane
   ',Q#',Julia
-  ',MATLAB',;
-
-  'AWS Braket',Azure Quantum
+  ',MATLAB',';AWS Braket',Azure Quantum
   ',Google Cloud',IBM Quantum
-  ',;
-    'REST APIs
+  ',';REST APIs
   ',GraphQL',Webhooks
   ',Docker',Kubernetes
   ';
@@ -119,7 +108,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
 
       {/* Key Benefits */}"
-      <section className="py-16 bg-slate-800/50">;"
+      <section className="py-16 bg-slate-800/50">";
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -293,7 +282,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
 
       {/* Features Grid */}"
-      <section className="py-16">;"
+      <section className="py-16">";
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -340,7 +329,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
 
       {/* Pricing Section */}"
-      <section className="py-16 bg-slate-800/50">;"
+      <section className="py-16 bg-slate-800/50">";
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -380,7 +369,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   'border-purple-500 relative'': 'border-slate-700`
                 }`}
 
-                {plan.popular && (;"
+                {plan.popular && (";
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                     <span className="bg-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -425,7 +414,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
 
       {/* Use Cases */}"
-      <section className="py-16">;"
+      <section className="py-16">";
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -477,7 +466,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
 
       {/* Integrations */}"
-      <section className="py-16 bg-slate-800/50">;"
+      <section className="py-16 bg-slate-800/50">";
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -521,7 +510,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
 
       {/* Security & Compliance */}"
-      <section className="py-16">;"
+      <section className="py-16">";
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -613,7 +602,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
 
       {/* CTA Section */}"
-      <section className="py-20">;"
+      <section className="py-20">";
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
@@ -672,7 +661,7 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       </section>
 
       {/* Contact Information */}"
-      <section className="py-16 bg-slate-800/50">;"
+      <section className="py-16 bg-slate-800/50">";
         <div className="container mx-auto px-4">"
           <div className="max-w-4xl mx-auto text-center">"
             <h2 className="text-3xl font-bold text-white mb-8">Get in Touch</h2>"

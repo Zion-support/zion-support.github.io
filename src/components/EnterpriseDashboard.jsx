@@ -1,16 +1,16 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';'''
-import { motion, AnimatePresence } from 'framer-motion';'''
+import React, { useState, useEffect, useCallback, useMemo } from 'react'';
+import { motion, AnimatePresence } from 'framer-motion'';
 import { Activity, Server, Shield, Users, TrendingUp, BarChart3, PieChart, LineChart, TrendingDown, Clock3, RefreshCw, Loader2 } from 'lucide-react';
 ;
 export const EnterpriseDashboard = () => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
+    })';
     const [activeTab, setActiveTab] = useState('overview');
     const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
-    const [isRefreshing, setIsRefreshing] = useState(false);'
-    const [dateRange, setDateRange] = useState('24h');'
-    const [searchQuery, setSearchQuery] = useState('');'
+    const [isRefreshing, setIsRefreshing] = useState(false)';
+    const [dateRange, setDateRange] = useState('24h')';
+    const [searchQuery, setSearchQuery] = useState('')';
     const [filterStatus, setFilterStatus] = useState('all');
     // Mock data - in production, this would come from real-time APIs;
     const [systemMetrics] = useState([]
@@ -123,7 +123,7 @@ export const EnterpriseDashboard = () => {
             description: 'Multiple login attempts from different locations within short time frame','''
             timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago''''
             status: 'investigating','''
-            affected['user-123',user-456'],;'''
+            affected['user-123',user-456'],';'
             source: 'Security Monitoring System'
         },
         {}
@@ -137,7 +137,7 @@ export const EnterpriseDashboard = () => {
             description: 'User attempted to access restricted resource without proper permissions','''
             timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago''''
             status: 'resolved','''
-            affected['user-789'],;'''
+            affected['user-789'],';'
             source: 'Access Control System'
 
     ]) ;
@@ -178,8 +178,8 @@ export const EnterpriseDashboard = () => {
             // Simulate API call;
             await new Promise(resolve => setTimeout(resolve, 1000));
             // Update timestamps (simplified for demo)
-            const now = new Date();'
-            // // // // // // // // console.log('Data refreshed at:', now.toLocaleTimeString());'
+            const now = new Date()';
+            // // // // // // // // console.log('Data refreshed at:', now.toLocaleTimeString())';
             trackEvent('enterprise_dashboard',data_refreshed',manual', undefined, {}
                 tab: activeTab,
                 dateRange;
@@ -187,7 +187,7 @@ export const EnterpriseDashboard = () => {
 
         catch (error) {}
 '
-            // // // // // // // // console.error('Failed to refresh data:', error);'
+            // // // // // // // // console.error('Failed to refresh data:', error)';
             trackEvent('enterprise_dashboard',refresh_failed',error', undefined, {}
 '
 ''
@@ -196,16 +196,15 @@ export const EnterpriseDashboard = () => {
             }) ;
 
         finally {}
-            setIsRefreshing(false);
-'
-            // console.log('Data refreshed at:', now.toLocaleTimeString());'
+            setIsRefreshing(false)';
+            // console.log('Data refreshed at:', now.toLocaleTimeString())';
             trackEvent('enterprise_dashboard',data_refreshed',manual', null, {}
                 tab: activeTab,
                 dateRange;
             }) }
         catch (error) {}
 '
-            // console.error('Failed to refresh data:', error);'
+            // console.error('Failed to refresh data:', error)';
             trackEvent('enterprise_dashboard',refresh_failed',error', null, {}
 '
 ''
@@ -220,7 +219,7 @@ export const EnterpriseDashboard = () => {
         const interval = setInterval(refreshData, refreshInterval);
         return () => clearInterval(interval)}, [refreshInterval, refreshData]);
     // Filtered data;
-    const filtered = securityAlerts;'
+    const filtered = securityAlerts';
         if (filterStatus !== 'all') {}
             filtered = filtered.filter(alert => alert.status === filterStatus)}
         if(searchQuery) {}
@@ -245,17 +244,17 @@ export const EnterpriseDashboard = () => {
             case 'healthy':''''
             case 'online':''''
             case 'success':''''
-                return 'text-green-600 bg-green-100 dark:text-green-400 dark:bg-green-900/30';'''
+                return 'text-green-600 bg-green-100 dark:text-green-400 dark:bg-green-900/30'';
             case 'warning':''''
             case 'degraded':''''
             case 'pending':''''
-                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';'''
+                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30'';
             case 'critical':''''
             case 'offline':''''
             case 'failure':''''
-                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';'''
+                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30'';
             case 'maintenance':''''
-                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';'''
+                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30'';
             default:''''
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}
     };
@@ -264,16 +263,16 @@ export const EnterpriseDashboard = () => {
         switch (severity) {}
 '
             case 'critical':''
-                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';'
+                return 'text-red-600 bg-red-100 dark:text-red-400 dark:bg-red-900/30';
             case 'high':''
-                return 'text-orange-600 bg-orange-100 dark:text-orange-400 dark:bg-orange-900/30';'
+                return 'text-orange-600 bg-orange-100 dark:text-orange-400 dark:bg-orange-900/30';
             case 'medium':''
-                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';'
+                return 'text-yellow-600 bg-yellow-100 dark:text-yellow-400 dark:bg-yellow-900/30';
             case 'low':''
-                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';'
+                return 'text-blue-600 bg-blue-100 dark:text-blue-400 dark:bg-blue-900/30';
             default:''
                 return 'text-gray-600 bg-gray-100 dark:text-gray-400 dark:bg-gray-900/30'}"""
-    };""""
+    }';""
     return (<div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">"""
       {/* Header */}""""
       <div className="bg-gradient-to-r from-indigo-500 to-purple-500 p-6 text-white">""""
@@ -333,8 +332,7 @@ export const EnterpriseDashboard = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">"""
               {/* System Metrics Overview */}""""
@@ -344,8 +342,7 @@ export const EnterpriseDashboard = () => {
   scale: 0.9;
 }} animate = {}
   { opacity: 1,
-  scale: 1;
-"""
+  scale: 1';"
 """"
 }} className="bg-gray-50 dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-center justify-between mb-4">""""
@@ -456,8 +453,7 @@ export const EnterpriseDashboard = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">""""
               <div className="text-center py-8">""""
@@ -502,8 +498,7 @@ export const EnterpriseDashboard = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">"""
               {/* Security Controls */}""""
@@ -527,8 +522,7 @@ export const EnterpriseDashboard = () => {
   x: 20;
 }} animate = {}
   { opacity: 1,
-  x: 0;
-"""
+  x: 0';"
 """"
 }} className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-start justify-between mb-4">""`
@@ -583,8 +577,7 @@ export const EnterpriseDashboard = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">"""
               {/* User Activity Controls */}""""
@@ -607,8 +600,7 @@ export const EnterpriseDashboard = () => {
   x: 20;
 }} animate = {}
   { opacity: 1,
-  x: 0;
-"""
+  x: 0';"
 """"
 }} className="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-center justify-between mb-3">""""
@@ -658,8 +650,7 @@ export const EnterpriseDashboard = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">""""
               <div className="text-center py-8">""""
@@ -679,8 +670,7 @@ export const EnterpriseDashboard = () => {
   scale: 0.9;
 }} animate = {}
   { opacity: 1,
-  scale: 1;
-"""
+  scale: 1';"
 """"
 }} className="bg-white dark:bg-gray-700 rounded-lg p-6 border border-gray-200 dark:border-gray-600">""""
                     <div className="flex items-center justify-between mb-4">""""
@@ -733,8 +723,7 @@ export const EnterpriseDashboard = () => {
   y: 0;
 }} exit = {}
   { opacity: 0,
-  y: -20;
-"""
+  y: -20';"
 """"
 }} className="space-y-6">""""
               <div className="text-center py-8">""""
@@ -772,5 +761,5 @@ export const EnterpriseDashboard = () => {
             </motion.div>) }
         </AnimatePresence>
       </div>
-    </div>)};'"`
+    </div>)}'"`;
 '"`'"`

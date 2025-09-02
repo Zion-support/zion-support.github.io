@@ -1,132 +1,126 @@
 export interface APIDocumentation {
   id: string;
-  name: string;
-  version: string;
-  description: string;
-  baseUrl: string;
-  endpoints: APIEndpoint[];
-  schemas: APISchema[];
-  examples: APIExample[];
-  metadata: {
-    lastGenerated: Date;
-    totalEndpoints: number;
-    coverage: number;
-    languages: string[];
-    frameworks: string[]}}
+   name: string;
+   version: string;
+   description: string;
+   baseUrl: string;
+   endpoints: APIEndpoint[];
+   schemas: APISchema[];
+   examples: APIExample[];
+   metadata: { lastGenerated: Date;
+   totalEndpoints: number;
+   coverage: number;
+   languages: string[];
+   frameworks: string[];
+}}
 export interface APIEndpoint {
   id: string;
-  path: string;
-  method:
-  'GET' |
-  'POST' |
-  'PUT' |
-  'DELETE' |
-  'PATCH' |
-  'HEAD' |
-  'OPTIONS';
-  summary: string;
-  description: string;
-  parameters: APIParameter[];
-  requestBody?: APIRequestBody;
-  responses: APIResponse[];
-  tags: string[];
-  deprecated: boolean;
-  rateLimit?: RateLimit;
-  authentication?: AuthenticationRequirement}
+   path: string;
+   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH' | 'HEAD' | 'OPTIONS';
+   summary: string;
+   description: string;
+   parameters: APIParameter[];
+   requestBody?: APIRequestBody;
+   responses: APIResponse[];
+   tags: string[];
+   deprecated: boolean;
+   rateLimit?: RateLimit;
+   authentication?: AuthenticationRequirement;
+}
 export interface APIParameter {
   name: string;
-  in:
-  'path' |
-  'query' |
-  'header' |
-  'cookie';
-  required: boolean;
-  schema: APISchema;
-  description: string;
-  example?;deprecated?: boolean}
+   in: 'path' | 'query' | 'header' | 'cookie';
+   required: boolean;
+   schema: APISchema;
+   description: string;
+   example?;
+  deprecated?: boolean;
+}
 export interface APIRequestBody {
   required: boolean;
-  content: Record<string, APIContent>;
-  description?: string}
+   content: Record<string, APIContent>;
+   description?: string;
+}
 export interface APIContent {
   schema: APISchema;
-  example?;examples?: Record<string, APIExample>}
+   example?;
+  examples?: Record<string, APIExample>;
+}
 export interface APIResponse {
   code: string;
-  description: string;
-  content?: Record<string, APIContent>;
-  headers?: Record<string, APIHeader>}
+   description: string;
+   content?: Record<string, APIContent>;
+   headers?: Record<string, APIHeader>;
+}
 export interface APIHeader {
   description: string;
-  schema: APISchema;
-  required: boolean}
+   schema: APISchema;
+   required: boolean;
+}
 export interface APISchema {
   type?: string;
-  format?: string;
-  description?: string;
-  properties?: Record<string, APISchema>;
-  items?: APISchema;
-  required?: string[];
-  enum?[];
-  example?;deprecated?: boolean;
-  minimum?: number;
-  maximum?: number;
-  exclusiveMinimum?: boolean;
-  exclusiveMaximum?: boolean;
-  minLength?: number;
-  maxLength?: number;
-  pattern?: string;
-  default?;nullable?: boolean;
-  $ref?: string}
+   format?: string;
+   description?: string;
+   properties?: Record<string, APISchema>;
+   items?: APISchema;
+   required?: string[];
+   enum?[];
+   example?;
+  deprecated?: boolean;
+   minimum?: number;
+   maximum?: number;
+   exclusiveMinimum?: boolean;
+   exclusiveMaximum?: boolean;
+   minLength?: number;
+   maxLength?: number;
+   pattern?: string;
+   default?;
+  nullable?: boolean;
+   $ref?: string;
+}
 export interface APIExample {
   id: string;
-  name: string;
-  summary: string;
-  description: string;
-  request: ExampleRequest;
-  response: ExampleResponse;
-  tags: string[]}
+   name: string;
+   summary: string;
+   description: string;
+   request: ExampleRequest;
+   response: ExampleResponse;
+   tags: string[];
+}
 export interface ExampleRequest {
   method: string;
-  url: string;
-  headers: Record<string, string>;
-  body?}
+   url: string;
+   headers: Record<string, string>;
+   body?;
+}
 export interface ExampleResponse {
   status: number;
-  headers: Record<string, string>;
-  body}
+   headers: Record<string, string>;
+   body;
+}
 export interface RateLimit {
   requests: number;
-  window: string;
-  description?: string}
+   window: string;
+   description?: string;
+}
 export interface AuthenticationRequirement {
-  type:
-  'bearer' |
-  'apiKey' |
-  'oauth2' |
-  'basic';
-  description: string;
-  required: boolean}
+  type: 'bearer' | 'apiKey' | 'oauth2' | 'basic';
+   description: string;
+   required: boolean;
+}
 export interface DocumentationConfig {
-  outputFormat:
-  'html' |
-  'markdown' |
-  'pdf' |
-  'json' |
-  'openapi';
-  includeExamples: boolean;
-  includeSchemas: boolean;
-  includeAuthentication: boolean;
-  includeRateLimits: boolean;
-  customStyling?: Record<string, any>;
-  branding?: {
-    logo?: string;
-    primaryColor?: string;
-    compName?: string}}
+  outputFormat: 'html' | 'markdown' | 'pdf' | 'json' | 'openapi';
+   includeExamples: boolean;
+   includeSchemas: boolean;
+   includeAuthentication: boolean;
+   includeRateLimits: boolean;
+   customStyling?: Record<string, any>;
+   branding?: { logo?: string;
+   primaryColor?: string;
+   compName?: string;
+}}
 export class APIDocGeneratorService {
-  private supportedFrameworks = [;
-
-  'express',
+  private supportedFrameworks = [';express',
   'fastify',
   'koa',
   'hapi',
@@ -137,9 +131,7 @@ export class APIDocGeneratorService {
   'aspnet',
   'laravel';
   ];
-  private supportedLanguages = [;
-
-  'javascript',
+  private supportedLanguages = [';javascript',
   'typescript',
   'python',
   'java',

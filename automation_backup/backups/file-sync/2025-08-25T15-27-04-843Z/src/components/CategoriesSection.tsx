@@ -1,6 +1,6 @@
-import { GradientHeading } from,
+import { GradientHeading } from,;
   ./GradientHeading';
-import { Link } from
+import { Link } from;
   'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users const categories = [;
   {;
@@ -69,8 +69,9 @@ const specialServices = [;
   '/services-comparison';
   };
 ];
-interface CategoriesSectionProps {;
-  showTitle?: boolean};
+interface CategoriesSectionProps {
+   showTitle?: boolean;
+};
 const containerVariants = {;
   hidden: { opacity: 0 },;
   visible: {;

@@ -1,5 +1,5 @@
-import React from,
-  react'; import { Link } from
+import React from,;
+  react'; import { Link } from;
   'react-router-dom'; ; export function Footer() {; const currentYear = new Date().getFullYear(); ; const navSections = [; {; title: 'Company,; links: [; { label:,
   Home', to: '/ },; { label:,
   About', to: '/about },; { label:,

@@ -83,7 +83,8 @@ const specialServices = [
   };
 ];
 interface CategoriesSectionProps {
-  showTitle?: boolean}
+  showTitle?: boolean;
+}
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   const containerVariants = {
     hidden: { opacity: 0 },;

@@ -1,22 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; const ServiceCategory = ({ category, services }) => { const categoryServices = services.filter (service => service.category.toLowerCase () .includes (category.toLowerCase () ) ) ; if (categoryServices.length === 0) return null; const getCategoryIcon = categoryName => { const iconMap = { "AI & Machine Learning": <Brain className="w - 6 h - 6" />, "Cybersecurity & Compliance": <Shield className="w - 6 h - 6" />,"Data & Analytics": <Database className="w - 6 h - 6" />, "Business Process": <Briefcase className="w - 6 h - 6" />,"Marketing & Sales": <TrendingUp className="w - 6 h - 6" />, "Financial Services": <DollarSign className="w - 6 h - 6" />,"Healthcare & Life Sciences": <Heart className="w - 6 h - 6" />, "Education & Training": <GraduationCap className="w - 6 h - 6" />,"Supply Chain & Logistics": <Truck className="w - 6 h - 6" />, "Real Estate & Property": <Home className="w - 6 h - 6" />,"Legal & Compliance": <Lock className="w - 6 h - 6" />};" return iconMap[categoryName] || <Briefcase className="w - 6 h - 6" />; }; const getCategoryColor = categoryName => { const colorMap = { "AI & Machine Learning": "from - purple - 500 to - indigo - 600", Cybersecurity & Compliance": "from - red - 500 to - pink - 600",Data & Analytics": "from - blue - 500 to - cyan - 600", Business Process": "from - green - 500 to - emerald - 600",Marketing & Sales": "from - orange - 500 to - red - 600", Financial Services": "from - yellow - 500 to - orange - 600",Healthcare & Life Sciences": "from - pink - 500 to - rose - 600", Education & Training": "from - indigo - 500 to - purple - 600",Supply Chain & Logistics": "from - teal - 500 to - green - 600", Real Estate & Property": "from - amber - 500 to - yellow - 600",Legal & Compliance": "from - slate - 500 to - gray - 600"}; return colorMap[categoryName] || "from - zion - purple to - zion - purple - dark"; }; return (" <div className="space - y-6">" <div className="flex items - center space - x-3 mb - 6"> <div className={`p - 3 rounded - lg bg - gradient - to - br ${getCategoryColor (category) }`} > {getCategoryIcon (category) } </div> <div>" <h3 className="text - 2xl font - bold text - white">{category}</h3>" <p className="text - zion - slate - light"> {categoryServices.length} services available </p> </div> </div> " <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6"> {categoryServices.map (service => (<Card key={service.id}" className="h - full border - zion - blue - light bg - zion - blue - dark hover:border - zion - purple / 50 transition - all duration - 300" >" <CardHeader className="pb - 3">" <div className="flex items - start justify - between mb - 2"> <Badge" variant="secondary" className="bg - zion - purple / 20 text - zion - cyan border - zion - purple / 30" > {service.category} </Badge> {service.featured && (" <Badge className="bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white"> Featured </Badge>) } </div>" <CardTitle className="text - white text - lg leading - tight"> {service.title} </CardTitle>" <CardDescription className="text - zion - slate - light text - sm leading - relaxed"> {service.description} </CardDescription> </CardHeader> " <CardContent className="pt - 0">" <div className="space - y-4"> {}" <div className="flex flex - wrap gap - 2"> {service.tags.slice (0, 3) .map (tag => (<Badge key={tag}" variant="outline" className="text - xs border - zion - blue - light text - zion - slate - light" > {tag} </Badge>) ) } </div> {}" <div className="flex items - center justify - between text - sm text - zion - slate - light">" <div className="flex items - center space - x-4">" <div className="flex items - center space - x-1">" <Star className="w - 4 h - 4 text - yellow - 400 fill - current" /> <span>{service.rating}</span>" <span className="text - zion - slate"> ({service.reviewCount}) </span> </div>" <div className="flex items - center space - x-1">" <Brain className="w - 4 h - 4 text - zion - cyan" /> <span>{service.aiScore}%</span> </div> </div>" <div className="flex items - center space - x-1">" <Clock className="w - 4 h - 4" /> <span>{service.availability}</span> </div> </div> {}" <div className="flex items - center justify - between">" <div className="space - y-1">" <div className="text - 2xl font - bold text - white"> ${service.price?.toLocaleString () }" <span className="text - sm text - zion - slate - light font - normal"> /month </span> </div>" <div className="text - sm text - zion - slate - light"> Starting from </div> </div> <Button" size="sm" className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white" onClick={ () => window.open ("https:"""`";
-=======
-import React from 'react'; const ServiceCategory = ({ category, services }) => { const categoryServices = services.filter(service => service.category.toLowerCase().includes(category.toLowerCase()) ); if(categoryServices.length === 0) return null; const getCategoryIcon = categoryName => { const iconMap = { "AI & Machine Learning": <Brain className="w-6 h-6" />,"Cybersecurity & Compliance": <Shield className="w-6 h-6" />,"Data & Analytics": <Database className="w-6 h-6" />,"Business Process": <Briefcase className="w-6 h-6" />,"Marketing & Sales": <TrendingUp className="w-6 h-6" />,"Financial Services": <DollarSign className="w-6 h-6" />,"Healthcare & Life Sciences": <Heart className="w-6 h-6" />,"Education & Training": <GraduationCap className="w-6 h-6" />,"Supply Chain & Logistics": <Truck className="w-6 h-6" />,"Real Estate & Property": <Home className="w-6 h-6" />,"Legal & Compliance": <Lock className="w-6 h-6" />};" return iconMap[categoryName] || <Briefcase className="w-6 h-6" />; }; const getCategoryColor = categoryName => { const colorMap = { "AI & Machine Learning": "from-purple-500 to-indigo-600",Cybersecurity & Compliance": "from-red-500 to-pink-600",Data & Analytics": "from-blue-500 to-cyan-600",Business Process": "from-green-500 to-emerald-600",Marketing & Sales": "from-orange-500 to-red-600",Financial Services": "from-yellow-500 to-orange-600",Healthcare & Life Sciences": "from-pink-500 to-rose-600",Education & Training": "from-indigo-500 to-purple-600",Supply Chain & Logistics": "from-teal-500 to-green-600",Real Estate & Property": "from-amber-500 to-yellow-600",Legal & Compliance": "from-slate-500 to-gray-600"}; return colorMap[categoryName] || "from-zion-purple to-zion-purple-dark"; }; return (" <div className="space-y-6">" <div className="flex items-center space-x-3 mb-6"> <div className={`p-3 rounded-lg bg-gradient-to-br ${getCategoryColor(category)}`} > {getCategoryIcon(category)} </div> <div>" <h3 className="text-2xl font-bold text-white">{category}</h3>" <p className="text-zion-slate-light"> {categoryServices.length} services available </p> </div> </div> " <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {categoryServices.map(service => ( <Card key={service.id}" className="h-full border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300" >" <CardHeader className="pb-3">" <div className="flex items-start justify-between mb-2"> <Badge" variant="secondary" className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30" > {service.category} </Badge> {service.featured && (" <Badge className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white"> Featured </Badge> )} </div>" <CardTitle className="text-white text-lg leading-tight"> {service.title} </CardTitle>" <CardDescription className="text-zion-slate-light text-sm leading-relaxed"> {service.description} </CardDescription> </CardHeader> " <CardContent className="pt-0">" <div className="space-y-4"> {}" <div className="flex flex-wrap gap-2"> {service.tags.slice(0, 3).map(tag => ( <Badge key={tag}" variant="outline" className="text-xs border-zion-blue-light text-zion-slate-light" > {tag} </Badge> ))} </div> {}" <div className="flex items-center justify-between text-sm text-zion-slate-light">" <div className="flex items-center space-x-4">" <div className="flex items-center space-x-1">" <Star className="w-4 h-4 text-yellow-400 fill-current" /> <span>{service.rating}</span>" <span className="text-zion-slate"> ({service.reviewCount}) </span> </div>" <div className="flex items-center space-x-1">" <Brain className="w-4 h-4 text-zion-cyan" /> <span>{service.aiScore}%</span> </div> </div>" <div className="flex items-center space-x-1">" <Clock className="w-4 h-4" /> <span>{service.availability}</span> </div> </div> {}" <div className="flex items-center justify-between">" <div className="space-y-1">" <div className="text-2xl font-bold text-white"> ${service.price?.toLocaleString()}" <span className="text-sm text-zion-slate-light font-normal"> /month </span> </div>" <div className="text-sm text-zion-slate-light"> Starting from </div> </div> <Button" size="sm" className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" onClick={() => window.open("https:
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
-import { Link } from 'react - router - dom';'''
+import React from 'react'; const ServiceCategory = ({ category, services }) => { const categoryServices = services.filter (service => service.category.toLowerCase () .includes (category.toLowerCase () ) ) ; if (categoryServices.length === 0) return null; const getCategoryIcon = categoryName => { const iconMap = { "AI & Machine Learning": <Brain className="w - 6 h - 6" />, "Cybersecurity & Compliance": <Shield className="w - 6 h - 6" />,"Data & Analytics": <Database className="w - 6 h - 6" />, "Business Process": <Briefcase className="w - 6 h - 6" />,"Marketing & Sales": <TrendingUp className="w - 6 h - 6" />, "Financial Services": <DollarSign className="w - 6 h - 6" />,"Healthcare & Life Sciences": <Heart className="w - 6 h - 6" />, "Education & Training": <GraduationCap className="w - 6 h - 6" />,"Supply Chain & Logistics": <Truck className="w - 6 h - 6" />, "Real Estate & Property": <Home className="w - 6 h - 6" />,"Legal & Compliance": <Lock className="w - 6 h - 6" />}"; return iconMap[categoryName] || <Briefcase className="w - 6 h - 6" />; }; const getCategoryColor = categoryName => { const colorMap = { "AI & Machine Learning": "from - purple - 500 to - indigo - 600", Cybersecurity & Compliance": "from - red - 500 to - pink - 600",Data & Analytics": "from - blue - 500 to - cyan - 600", Business Process": "from - green - 500 to - emerald - 600",Marketing & Sales": "from - orange - 500 to - red - 600", Financial Services": "from - yellow - 500 to - orange - 600",Healthcare & Life Sciences": "from - pink - 500 to - rose - 600", Education & Training": "from - indigo - 500 to - purple - 600",Supply Chain & Logistics": "from - teal - 500 to - green - 600", Real Estate & Property": "from - amber - 500 to - yellow - 600",Legal & Compliance": "from - slate - 500 to - gray - 600"}; return colorMap[categoryName] || "from - zion - purple to - zion - purple - dark"; }; return (" <div className="space - y-6">" <div className="flex items - center space - x-3 mb - 6"> <div className={`p - 3 rounded - lg bg - gradient - to - br ${getCategoryColor (category) }`} > {getCategoryIcon (category) } </div> <div>" <h3 className="text - 2xl font - bold text - white">{category}</h3>" <p className="text - zion - slate - light"> {categoryServices.length} services available </p> </div> </div> " <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 3 gap - 6"> {categoryServices.map (service => (<Card key={service.id}" className="h - full border - zion - blue - light bg - zion - blue - dark hover:border - zion - purple / 50 transition - all duration - 300" >" <CardHeader className="pb - 3">" <div className="flex items - start justify - between mb - 2"> <Badge" variant="secondary" className="bg - zion - purple / 20 text - zion - cyan border - zion - purple / 30" > {service.category} </Badge> {service.featured && (" <Badge className="bg - gradient - to - r from - zion - purple to - zion - purple - dark text - white"> Featured </Badge>) } </div>" <CardTitle className="text - white text - lg leading - tight"> {service.title} </CardTitle>" <CardDescription className="text - zion - slate - light text - sm leading - relaxed"> {service.description} </CardDescription> </CardHeader> " <CardContent className="pt - 0">" <div className="space - y-4"> {}" <div className="flex flex - wrap gap - 2"> {service.tags.slice (0, 3) .map (tag => (<Badge key={tag}" variant="outline" className="text - xs border - zion - blue - light text - zion - slate - light" > {tag} </Badge>) ) } </div> {}" <div className="flex items - center justify - between text - sm text - zion - slate - light">" <div className="flex items - center space - x-4">" <div className="flex items - center space - x-1">" <Star className="w - 4 h - 4 text - yellow - 400 fill - current" /> <span>{service.rating}</span>" <span className="text - zion - slate"> ({service.reviewCount}) </span> </div>" <div className="flex items - center space - x-1">" <Brain className="w - 4 h - 4 text - zion - cyan" /> <span>{service.aiScore}%</span> </div> </div>" <div className="flex items - center space - x-1">" <Clock className="w - 4 h - 4" /> <span>{service.availability}</span> </div> </div> {}" <div className="flex items - center justify - between">" <div className="space - y-1">" <div className="text - 2xl font - bold text - white"> ${service.price?.toLocaleString () }" <span className="text - sm text - zion - slate - light font - normal"> /month </span> </div>" <div className="text - sm text - zion - slate - light"> Starting from </div> </div> <Button" size="sm" className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white" onClick={ () => window.open ("https:"""`";import { Link } from 'react - router - dom'';
 import React from 'react';
 import {}
-  ENHANCED_SERVICES,'
-  ENHANCED_SERVICE_CATEGORIES} from '@/data/enhancedServices';'
+  ENHANCED_SERVICES,';
+  ENHANCED_SERVICE_CATEGORIES} from '@/data/enhancedServices';
 import { Button } from '@/components/ui/button';
 import {}
   Card,
   CardContent,'
   CardDescription,''
-  CardHeader,'''
-  CardTitle} from '@/components/ui/card';'''
+  CardHeader,''';
+  CardTitle} from '@/components/ui/card'';
 import { Badge } from '@/components/ui/badge';
 import {}
   Brain,
@@ -38,8 +31,8 @@ import {}
   Globe,
   Clock,'
   Mail,''
-  Phone,'''
-  MapPin} from 'lucide-react';'''
+  Phone,''';
+  MapPin} from 'lucide-react'';
 import { Link } from 'react-router-dom';
 const ServiceCategory = ({ category, services }) => {}
   const categoryServices = services.filter(service =>
@@ -59,15 +52,15 @@ const ServiceCategory = ({ category, services }) => {}
       'Education & Training': <GraduationCap className="w-6 h-6" />,"'"""
       'Supply Chain & Logistics': <Truck className="w-6 h-6" />,"'"""
       'Real Estate & Property': <Home className="w-6 h-6" />,"'"""
-      'Legal & Compliance': <Lock className="w-6 h-6" />};""""
+      'Legal & Compliance': <Lock className="w-6 h-6" />}';""
     return iconMap[categoryName] || <Briefcase className="w-6 h-6" />;
   };
   const getCategoryColor = categoryName => {}
     const colorMap = {}
 '
-      'AI & Machine Learning': 'from-purple-500 to-indigo-600',Cybersecurity & Compliance': 'from-red-500 to-pink-600',Data & Analytics': 'from-blue-500 to-cyan-600',Business Process': 'from-green-500 to-emerald-600',Marketing & Sales': 'from-orange-500 to-red-600',Financial Services': 'from-yellow-500 to-orange-600',Healthcare & Life Sciences': 'from-pink-500 to-rose-600',Education & Training': 'from-indigo-500 to-purple-600',Supply Chain & Logistics': 'from-teal-500 to-green-600',Real Estate & Property': 'from-amber-500 to-yellow-600',Legal & Compliance': 'from-slate-500 to-gray-600'};'
+      'AI & Machine Learning': 'from-purple-500 to-indigo-600',Cybersecurity & Compliance': 'from-red-500 to-pink-600',Data & Analytics': 'from-blue-500 to-cyan-600',Business Process': 'from-green-500 to-emerald-600',Marketing & Sales': 'from-orange-500 to-red-600',Financial Services': 'from-yellow-500 to-orange-600',Healthcare & Life Sciences': 'from-pink-500 to-rose-600',Education & Training': 'from-indigo-500 to-purple-600',Supply Chain & Logistics': 'from-teal-500 to-green-600',Real Estate & Property': 'from-amber-500 to-yellow-600',Legal & Compliance': 'from-slate-500 to-gray-600'}';
     return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark';
-  };"""
+  }';"
   return (""""
     <div className="space-y-6">""""
       <div className="flex items-center space-x-3 mb-6">
@@ -94,8 +87,7 @@ const ServiceCategory = ({ category, services }) => {}
               <div className="flex items-start justify-between mb-2">"""
                 <Badge""""
                   variant="secondary""""
-                  className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30"""
-                >
+                  className="bg-zion-purple/20 text-zion-cyan border-zion-purple/30 ">
                   {service.category}
                 </Badge>"""
                 {service.featured && (""""
@@ -120,8 +112,7 @@ const ServiceCategory = ({ category, services }) => {}
                     <Badge"""
                       key={tag}""""
                       variant="outline""""
-                      className="text-xs border-zion-blue-light text-zion-slate-light"""
-                    >
+                      className="text-xs border-zion-blue-light text-zion-slate-light ">
                       {tag}
                     </Badge>
                   ))}
@@ -184,7 +175,7 @@ const ServiceCategory = ({ category, services }) => {}
       </div>
     </div>
   );
-};"""
+}';"
 const BenefitsSection = () => (""""
   <section className="py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg">""""
     <div className="container mx-auto px-4">""""
@@ -275,7 +266,7 @@ const BenefitsSection = () => (""""
       </div>
     </div>
   </section>
-);"""
+)';"
 const ContactSection = () => (""""
   <section className="py-16 bg-gradient-to-br from-zion-blue to-zion-blue-dark border border-zion-blue-light rounded-lg">""""
     <div className="container mx-auto px-4 text-center">""""
@@ -294,8 +285,7 @@ const ContactSection = () => (""""
             <p className="font-medium text-white">Email</p>"""
             <a""""
               href="mailto:kleber@ziontechgroup.com""""
-              className="text-zion-cyan hover:underline text-sm"""
-            >
+              className="text-zion-cyan hover:underline text-sm ">
               kleber@ziontechgroup.com;
             </a>
           </div>
@@ -307,8 +297,7 @@ const ContactSection = () => (""""
             <p className="font-medium text-white">Phone</p>"""
             <a""""
               href="tel:+13024640950""""
-              className="text-zion-cyan hover:underline text-sm"""
-            >
+              className="text-zion-cyan hover:underline text-sm ">
               +1 302 464 0950;
             </a>
           </div>
@@ -349,8 +338,7 @@ const ContactSection = () => (""""
           <Button""""
             size="lg""""
             variant="outline""""
-            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10"""
-          >
+            className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan/10 ">
             Compare Services;
           </Button>
         </Link>
@@ -384,8 +372,7 @@ export default function EnhancedServicesOverview() {}
             <Button""""
               size="lg""""
               variant="outline""""
-              className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10"""
-            >
+              className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10 ">
               Compare Services;
             </Button>
           </Link>
@@ -420,4 +407,3 @@ export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverv
 export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview };
 
 export { ServiceCategory, BenefitsSection, ContactSection, EnhancedServicesOverview };
->>>>>>> pr-10728

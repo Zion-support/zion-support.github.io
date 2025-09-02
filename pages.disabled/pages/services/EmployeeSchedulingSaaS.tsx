@@ -6,15 +6,15 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
 export default function EmployeeSchedulingSaaS(...args: []):  {}
     },;
     {;
-      icon: Globe,;""
-      title: "Multi-location Support",;""
+      icon: Globe,';
+      title: "Multi-location Support",';
       description: "Manage schedules across multiple locations, departments, and time zones seamlessly."};
   ]},;
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-    {;"
+    {";
     {;
-      icon: FileText,;""
-      title: "Compliance Tracking",;""
+      icon: FileText,';
+      title: "Compliance Tracking",';
       description: "Ensure compliance with labor laws, break requirements, and overtime regulations"};
   ];
 
@@ -82,25 +82,25 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
         "Unlimited employees",""
         "Custom scheduling algorithms",""
         "Advanced compliance tools",""
-        "White-label options",;""
-        "Dedicated account manager",;""
-        "Custom training",;""
+        "White-label options",';
+        "Dedicated account manager",';
+        "Custom training",';
         "On-premise options";
       ],;
       popular: false};
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-  ]},;"
+  ]},";
   ]},;
-    {;""
-      title: "Ensure Compliance",;""
+    {';
+      title: "Ensure Compliance",';
       description: "Automatically comply with labor laws and avoid costly violations.",;
       icon: Shield};
   ]},;
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx
-    {;"
+    {";
     {;
-      icon: BarChart3,;""
-      title: "Construction",;""
+      icon: BarChart3,';
+      title: "Construction",';
       description: "Coordinate complex project schedules with multiple teams and locations"};  ];
 
   return()
@@ -201,7 +201,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 "
 
         {/* Features Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -278,7 +278,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 "
 
         {/* Scheduling Capabilities Section */}""
-        <section className="py-20 bg-slate-800/30">;""
+        <section className="py-20 bg-slate-800/30">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -355,7 +355,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 "
 
         {/* Industries Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -432,7 +432,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 "
 
         {/* Benefits Section */}""
-        <section className="py-20 bg-slate-800/30">;""
+        <section className="py-20 bg-slate-800/30">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -511,7 +511,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 "
 
         {/* Pricing Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -574,7 +574,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
                       : 'border-slate-700'`
                   }`}
 
-                  {plan.popular && (;""
+                  {plan.popular && (';
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                       <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular;
@@ -636,7 +636,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
 "
 
         {/* CTA Section */}""
-        <section className="py-20 bg-gradient-to-r from-orange-600/20 to-red-600/20">;""
+        <section className="py-20 bg-gradient-to-r from-orange-600/20 to-red-600/20">';
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div;
               initial = {}

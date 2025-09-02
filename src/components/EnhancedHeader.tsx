@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -10,7 +7,7 @@ import {
   MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, 
   Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, 
   Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, 
-  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 
+  PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText, Building2, Car, Share2 ;
 } from 'lucide-react';
 
 export function EnhancedHeader() {
@@ -316,128 +313,19 @@ export function EnhancedHeader() {
 
 export const EnhancedHeader: React.FC = () => {
   return (
-    <header className="bg-white shadow-lg">
-=======
-import React from 'react';
-
-export const EnhancedHeader: React.FC = () => {
-  return (<header className="bg-white shadow-lg">
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-white shadow-lg">      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center">
             <a href="/" className="text-2xl font-bold text-blue-900">
               Zion Tech Group
             </a>
           </div>
-<<<<<<< HEAD
-          <nav className="hidden md:flex space-x-8">
-=======
-          <nav className="hidden md:flex space-x-6">
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
+          <nav className="hidden md:flex space-x-8">            <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
             <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
             <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>
-            <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>
-<<<<<<< HEAD
-=======
-            <a href="/micro-saas" className="text-gray-700 hover:text-blue-600">Micro SAAS</a>
-            <a href="/it-services" className="text-gray-700 hover:text-blue-600">IT Services</a>
-            <a href="/marketplace" className="text-gray-700 hover:text-blue-600">Marketplace</a>
-            <a href="/news" className="text-gray-700 hover:text-blue-600">News</a>
-            <a href="/blog" className="text-gray-700 hover:text-blue-600">Blog</a>
-            <a href="/careers" className="text-gray-700 hover:text-blue-600">Careers</a>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-            <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
+            <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>            <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
           </nav>
         </div>
       </div>
     </header>
-  );
-=======
-import React, { useState } from 'react';
-export const EnhancedHeader: React.FC = () => {;
-
-;
-  const [mobileOpen, setMobileOpen] = useState (false) ;
-;
-  const navLinks = [;
-    { label: 'Home', href: '/' },;
-    { label: 'Services', href: '/services' },;
-    { label: 'Solutions', href: '/solutions' },;
-    { label: 'Enterprise', href: '/enterprise' },;
-    { label: 'Request Quote', href: '/request - quote' },;
-    { label: 'Case Studies', href: '/case - studies' },;
-    { label: 'Careers', href: '/careers' },;
-    { label: 'Contact', href: '/contact' },;
-  ];
-  return (;
-    <header className="sticky top - 0 z - 50 bg - white / 90 backdrop - blur border - b border - gray - 200">";
-      <div role="button" className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8">";
-        <div role="button" className="flex justify - between items - center h - 16">";
-          <a href="/" className="text - xl sm:text - 2xl font - bold text - blue - 900">;
-            Zion Tech Group;
-          </a>";
-          <nav className="hidden md:flex items - center gap - 6">;
-            {navLinks.map (link => (;
-              <a;
-                key={link.href};
-                href={link.href}";
-                className="text - gray - 700 hover: text - blue - 600 transition - colors";
-              >;
-                {link.label};
-              </a>;) ) };
-            <a";
-              href="/services / ai"";
-              className="hidden lg: inline - flex bg - blue - 600 text - white px - 4 py - 2 rounded - md hover:bg - blue - 700 transition - colors";
-            >;
-              Explore AI;
-            </a>;
-          </nav>;
-          <button";
-            aria - label="Toggle navigation";
-            onClick={ () => setMobileOpen (v => !v) }";
-            className="md: hidden inline - flex items - center justify - center p - 2 rounded - md text - gray - 600 hover:text - gray - 900 hover:bg - gray - 100";
-          >;
-            <svg";
-              xmlns="http://www.w3.org / 2000 / svg"";
-              className="h - 6 w - 6"";
-              fill="none"";
-              viewBox="0 0 24 24"";
-              stroke="currentColor";
-            >;
-              <path";
-                strokeLinecap="round"";
-                strokeLinejoin="round";
-                strokeWidth={2}";
-                d="M4 6h16M4 12h16M4 18h16";
-              />;
-            </svg>;
-          </button>;
-        </div>;
-      </div>;
-      {mobileOpen && (";
-        <div role="button" className="md:hidden border - t border - gray - 200 bg - white">";
-          <div role="button" className="px - 4 py - 3 space - y-2">;
-            {navLinks.map (link => (;
-              <a;
-                key={link.href};
-                href={link.href}";
-                className="block w - full py - 2 text - gray - 700 hover: text - blue - 600";
-              >;
-                {link.label};
-              </a>;) ) };
-            <a";
-              href="/services / ai"";
-              className="block w - full py - 2 text - blue - 700 font - medium";
-            >;
-              Explore AI;
-            </a>;
-          </div>;
-        </div>;) };
-    </header>;) ;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-};
-";
-=======
->>>>>>> pr-10728
+  );}";;

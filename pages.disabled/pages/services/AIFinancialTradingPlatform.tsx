@@ -38,7 +38,7 @@ import { Brain,
   Server,
   Lock,
   Eye,
-  AlertTriangle'
+  AlertTriangle';
  } from 'lucide-react';
 ;
 export { function };
@@ -49,31 +49,31 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
     "Risk management and portfolio optimization",""
     "Multi-asset class trading (stocks, forex, crypto)",""
     "Advanced technical and fundamental analysis",""
-    "Automated trading strategies and backtesting",;""
-    "Real-time market data and news feeds",;""
-    "Portfolio performance tracking and analytics",;""
-    "Compliance and regulatory monitoring",;""
-    "Custom trading algorithm development",;""
-    "High-frequency trading capabilities",;""
+    "Automated trading strategies and backtesting",';
+    "Real-time market data and news feeds",';
+    "Portfolio performance tracking and analytics",';
+    "Compliance and regulatory monitoring",';
+    "Custom trading algorithm development",';
+    "High-frequency trading capabilities",';
     "Secure and encrypted trading infrastructure";
   ];
 
-  const benefits: any = [;""
-    "Increase trading returns by 25-40%",;""
-    "Reduce trading risks by 30-50%",;""
-    "24/7 automated trading operations",;""
-    "Eliminate emotional trading decisions",;""
+  const benefits: any = [';
+    "Increase trading returns by 25-40%",';
+    "Reduce trading risks by 30-50%",';
+    "24/7 automated trading operations",';
+    "Eliminate emotional trading decisions",';
     "Access to institutional-grade tools";
   ];
 
   const useCases: any = [""
     "Individual retail traders",""
-    "Professional day traders",;""
-    "Hedge funds and asset managers",;""
-    "Institutional investors",;""
-    "Cryptocurrency traders",;""
-    "Forex trading professionals",;""
-    "Options and derivatives traders",;""
+    "Professional day traders",';
+    "Hedge funds and asset managers",';
+    "Institutional investors",';
+    "Cryptocurrency traders",';
+    "Forex trading professionals",';
+    "Options and derivatives traders",';
     "Quantitative trading firms";
   ];
 
@@ -85,20 +85,19 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
       period: "/month",""
       description: "Perfect for individual traders and beginners",
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
-      features[;"
-        "AI market analysis (5 strategies)","
+      features[';AI market analysis (5 strategies)","
         "Basic algorithmic trading","
         "Real-time market data","
         "Portfolio tracking","
         "Basic risk management","
-        "Email support"      features[;""
+        "Email support"      features[';
         "AI market analysis (5 strategies)",""
         "Basic algorithmic trading",""
         "Real-time market data",""
         "Portfolio tracking",""
         "Basic risk management",""
         "Email support""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: false;
     },
@@ -113,7 +112,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
       description: "Ideal for active traders and professionals","
       description: "Ideal for active traders and professionals",
-      features[;""
+      features[';
         "AI market analysis (unlimited strategies)",""
         "Advanced algorithmic trading",""
         "Multi-asset class trading",""
@@ -121,7 +120,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
         "Backtesting and optimization",""
         "Priority support",""
         "API access""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: true;
     },
@@ -136,17 +135,16 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
       description: "For institutional investors and hedge funds","
       description: "For institutional investors and hedge funds",
-      features[;""
+      features[';
         "Custom AI model development",""
         "High-frequency trading",""
         "White-label solutions",""
         "Dedicated infrastructure",""
-        "Custom integrations",;""
-        "Dedicated account manager",;""
+        "Custom integrations",';
+        "Dedicated account manager",';
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
-        "24/7 phone support";"
-        "24/7 phone support";
-      ],;""
+        "24/7 phone support"';24/7 phone support";
+      ],';
       cta: "Contact Sales",;
       popular: false};
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx
@@ -254,7 +252,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
       </section>
 
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -356,7 +354,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -458,7 +456,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -560,7 +558,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -652,7 +650,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
                     : 'border-gray-700'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
@@ -711,7 +709,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -786,7 +784,7 @@ export default function AIFinancialTradingPlatform(...args[]):  {}
       </section>
 
       {/* Contact Info */}""
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;""
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">';
         <div className="max-w-4xl mx-auto text-center">""
           <p className="text-gray-400 mb-4">
 :pages.disabled/pages/services/AIFinancialTradingPlatform.tsx

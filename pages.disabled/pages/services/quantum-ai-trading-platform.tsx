@@ -86,7 +86,7 @@ import {}
   Minus,
   X,
   Check,
-  AlertTriangle,
+  AlertTriangle,;
   Info} from 'lucide-react';
 
 export function QuantumAITradingPlatform(function QuantumAITradingPlatform() {): any {}

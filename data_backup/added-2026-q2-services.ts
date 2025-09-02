@@ -1,9 +1,9 @@
 export interface Added2026Q2Service {
   id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  features: string[];
+   name: string;
+   tagline: string;
+   price: string;
+   features: string[];
 }
 
 export const added2026Q2Services: Added2026Q2Service[] = [

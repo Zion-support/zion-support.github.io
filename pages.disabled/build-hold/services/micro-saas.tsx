@@ -1,16 +1,15 @@
 React from,
   react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../../components/layout/MainLayout';
-import { getServicesByCategory } from
-  '../../data/services';'{ ArrowRight, CheckCircle, Star, Zap, Users, Shield } from
+import { getServicesByCategory } from;
+  '../../data/services';{ ArrowRight, CheckCircle, Star, Zap, Users, Shield } from
   'lucide-react';
-import Link from
-  'next/link';'
-  'const MicroSaasPage: NextPage = () => {
+import Link from;
+  'next/link'';const MicroSaasPage: NextPage = () => {
   const microSaasServices = getServicesByCategory('micro-saas
-  ');'  const benefits = [;
+  ')';  const benefits = [;
     {
       icon: <Zap className="w-8 h-8" />, title:,
   Lightning Fast Setup',

@@ -1,14 +1,14 @@
-import { render, screen, fireEvent } from
+import { render, screen, fireEvent } from;
   '@testing-library/react';
-import { MemoryRouter } from
+import { MemoryRouter } from;
   'react-router-dom';
-import { vi } from
+import { vi } from;
   'vitest';
-import * as auth from
+import * as auth from;
   '@/hooks/useAuth';
-import * as router from
+import * as router from;
   'react-router-dom';
-import CreatePostButton from
+import CreatePostButton from;
   '@/components/community/CreatePostButton';
 test
   'redirects to login when user is not authenticated': unknown, (: unknown {

@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AITransportation.tsx
-import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation() {
-    'Automated vehicle maintenance and predictive diagnostics',;'
-    'Real-time logistics optimization and delivery tracking',;'
-    'Predictive analytics for demand forecasting',;'
-    'Smart traffic signal optimization and control',;'
-    'Integration with major transportation management systems',;'
-import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation(function AITransportation() {): any {}
-    'Automated vehicle maintenance and predictive diagnostics',;
-    'Real-time logistics optimization and delivery tracking',;
-    'Predictive analytics for demand forecasting',;
-    'Smart traffic signal optimization and control',;
-    'Integration with major transportation management systems',;
-    'Custom AI models for transportation-specific insights';
+import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation() {;
+    'Automated vehicle maintenance and predictive diagnostics',';Real-time logistics optimization and delivery tracking',';Predictive analytics for demand forecasting',';Smart traffic signal optimization and control',';Integration with major transportation management systems',';
+import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Route, BarChart3 export default function AITransportation(function AITransportation() {): any {};
+    'Automated vehicle maintenance and predictive diagnostics',';Real-time logistics optimization and delivery tracking',';Predictive analytics for demand forecasting',';Smart traffic signal optimization and control',';Integration with major transportation management systems',';Custom AI models for transportation-specific insights';
 <:pages.disabled/pages/services/AITransportation.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 >    { ;
       name: 'Large Fleet', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Large Fleet', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Large Fleet', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited vehicles',Custom AI models',Full system integration',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Fleet management and route optimization',;'
-    'Public transportation optimization',;'
-    'Logistics and supply chain management',;'
-    'Traffic management and smart cities',;'
-    'Ride-sharing and mobility services',;'
-    'Freight and cargo transportation';
-  ];
-
-  '
-    'Reduce fuel costs by 15-30%',;'
-    'Improve delivery efficiency by 25-40%',;'
-    'Cut maintenance costs by 20-35%',;'
-    'Optimize routes for maximum productivity',;'
-    'Enhance driver safety and compliance',;'
-    'Scale transportation operations efficiently';
-  ];
-
-  '
-    'Logistics & Freight',;'
-    'Public Transportation',;'
-    'Ride-sharing & Mobility',;'
-    'E-commerce Delivery',;'
-    'Construction & Heavy Equipment',;'
-    'Emergency Services';
+  ]';Fleet management and route optimization',';Public transportation optimization',';Logistics and supply chain management',';Traffic management and smart cities',';Ride-sharing and mobility services',';Freight and cargo transportation';
+  ]';Reduce fuel costs by 15-30%',';Improve delivery efficiency by 25-40%',';Cut maintenance costs by 20-35%',';Optimize routes for maximum productivity',';Enhance driver safety and compliance',';Scale transportation operations efficiently';
+  ]';Logistics & Freight',';Public Transportation',';Ride-sharing & Mobility',';E-commerce Delivery',';Construction & Heavy Equipment',';Emergency Services';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Truck, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AITransportation.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

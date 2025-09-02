@@ -1,6 +1,6 @@
-import React from
+import React from;
   'react';
-import { useParams } from
+import { useParams } from;
   'react-router-dom';
   availability_type?: string};
 ;

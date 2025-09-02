@@ -35,7 +35,7 @@ import {}
   Search,
   Filter,
   Download,
-  Share2''
+  Share2'';
 } from 'lucide-react';
 :pages.disabled/pages/services/AIComplianceAssistant.tsx
 export default function AIComplianceAssistant() {

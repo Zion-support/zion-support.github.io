@@ -18,7 +18,7 @@ import {}
   ExternalLink,
   Code,
   BarChart3,
-  CreditCard,
+  CreditCard,;
   Settings} from 'lucide-react.ts';
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
 const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {
@@ -537,8 +537,7 @@ const MicroSaaSPlatformElite: React.FC = (): JSX.Element => {}
     </div>
   )};
 :pages.disabled/pages/services/MicroSaaSPlatformElite.tsx
-export default MicroSaaSPlatformElite;'"`
+export default MicroSaaSPlatformElite'"`;
 '"`'"`
 
-export default MicroSaaSPlatformElite;
-'"`
+export default MicroSaaSPlatformElite'"`;

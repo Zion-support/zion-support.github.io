@@ -1,26 +1,25 @@
 React from,
   react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../../components/layout/MainLayout';
-import { services, getServicesByCategory } from
-  '../../data/services';'{ ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from
+import { services, getServicesByCategory } from;
+  '../../data/services';{ ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from
   'lucide-react';
-import Link from
-  'next/link';'import { motion } from
-  'framer-motion';'const ServicesPage: NextPage = () => {
+import Link from;
+  'next/link';import { motion } from;
+  'framer-motion';const ServicesPage: NextPage = () => {
   '  const microSaasServices = getServicesByCategory('micro-saas
-  ');'  const itServices = getServicesByCategory(
-  'it-services');'  const aiServices = getServicesByCategory(
-  'ai-services');'
-  '  const stats = [;
+  ')';  const itServices = getServicesByCategory(
+  'it-services')';  const aiServices = getServicesByCategory(
+  'ai-services')';  const stats = [;
     { number: '80+, label: 'Micro SaaS Solutions
   ', icon: Zap }, { number:,
   35+
   ', label: 'IT Services, icon: Shield },'    { number:,
   30+', label: 'AI Services, icon: Globe }, { number:,
   500+', label: 'Projects Completed, icon: TrendingUp },
-  '  ];'
+  '  ]';
   const benefits = [;
     {
       icon: <DollarSign className="w-8 h-8" />, title:,

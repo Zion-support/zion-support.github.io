@@ -80,7 +80,7 @@ import {}
   Stopwatch,
   Thermometer,
   Compass,
-  Map,
+  Map,;
   Navigation} from 'lucide-react';
 
 export function AICybersecurityPlatform(function AICybersecurityPlatform() {): any {}

@@ -1,18 +1,18 @@
-import React from
+import React from;
   'react';
-import { render, screen, fireEvent, waitFor } from
+import { render, screen, fireEvent, waitFor } from;
   '@testing-library/react';
 import
   '@testing-library/jest-dom';
-import TeamBuilderPage from
+import TeamBuilderPage from;
   '@/pages/team-builder'; // Adjust path if needed
-import { AppLayout } from
+import { AppLayout } from;
   '@/layout/AppLayout'; // Mocked
-import { useAuth } from
+import { useAuth } from;
   '@/hooks/useAuth'; // Mocked
-import { supabase } from
+import { supabase } from;
   '@/integrations/supabase/client'; // Mocked for any direct calls if they existed
-import { toast } from
+import { toast } from;
   'sonner';
 
 // Mocks

@@ -52,7 +52,7 @@ import {
   Database,
   Cpu,
   Network,
-  Server
+  Server;
 } from 'lucide-react';
 
 const AICustomerInsightsPlatform = () => {

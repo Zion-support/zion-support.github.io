@@ -1,33 +1,26 @@
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
 import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = props {
 
-import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = props {}
+import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, Gauge, Database, Shield, Zap, Users, Settings, BarChart3, Activity const AIPredictiveMaintenance: React.FC = props {};
     },;
     {;
       icon: BarChart3,;
-      title: 'Performance Analytics',;'
+      title: 'Performance Analytics',';
       description: 'Data-driven insights for optimization'};
   ]},;
-    {;'
-      title: 'Healthcare',;'
-      description: 'Medical equipment maintenance and reliability',;'
+    {';
+      title: 'Healthcare',';
+      description: 'Medical equipment maintenance and reliability',';
       icon: '🏥'};
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
-  ];'
-  const benefits = [;''
-    'Reduce unplanned downtime by up to 75%',;''
-    'Extend equipment lifespan and reliability',;''
-    'Lower maintenance costs and labor requirements',;''
-    'Improve safety and compliance standards',;''
-    'Optimize spare parts inventory management',;'    'Increase overall operational efficiency';
-  ];
-
-    'Reduce unplanned downtime by up to 75%',;
-    'Extend equipment lifespan and reliability',;
-    'Lower maintenance costs and labor requirements',;
-    'Improve safety and compliance standards',;
-    'Optimize spare parts inventory management',;
-    'Increase overall operational efficiency';
+  ]';
+  const benefits = [';
+    'Reduce unplanned downtime by up to 75%',';
+    'Extend equipment lifespan and reliability',';
+    'Lower maintenance costs and labor requirements',';
+    'Improve safety and compliance standards',';
+    'Optimize spare parts inventory management',';Increase overall operational efficiency';
+  ]';Reduce unplanned downtime by up to 75%',';Extend equipment lifespan and reliability',';Lower maintenance costs and labor requirements',';Improve safety and compliance standards',';Optimize spare parts inventory management',';Increase overall operational efficiency';
   ];
   return()
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
@@ -117,11 +110,11 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
           </motion.div>
         </div>
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-16 px-4">;""
+      <section className="py-16 px-4">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -230,7 +223,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       </section>
 
       {/* Applications Section */}""
-      <section className="py-16 px-4 bg-slate-800/30">;""
+      <section className="py-16 px-4 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -341,7 +334,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-16 px-4">;""
+      <section className="py-16 px-4">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -481,7 +474,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       </section>
 
       {/* CTA Section */}""
-      <section className="py-16 px-4">;""
+      <section className="py-16 px-4">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -535,7 +528,7 @@ import { Wrench, Brain, Target, CheckCircle, Clock, TrendingUp, AlertTriangle, G
       </section>;
     </div>;
 :pages.disabled/pages/services/ai-predictive-maintenance.tsx
-  )};'"
+  )}'";
 export default AIPredictiveMaintenance}}}'"'"
   )};
 

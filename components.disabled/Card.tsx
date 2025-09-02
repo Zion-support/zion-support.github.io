@@ -1,8 +1,7 @@
 React from
   'react';
-import { cn } from
-  '../../src/lib/utils';'
-  'const Card = React.forwardRef<;
+import { cn } from;
+  '../../src/lib/utils'';const Card = React.forwardRef<;
   HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
   <div
     ref={ref}
@@ -13,7 +12,7 @@ import { cn } from
   />
 ));
 Card.displayName = 'Card
-  ';''const CardHeader = React.forwardRef<;
+  '';const CardHeader = React.forwardRef<;
   HTMLDivElement, React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
@@ -23,8 +22,7 @@ Card.displayName = 'Card
   '    {...props}'  />
 ));
 CardHeader.displayName =
-  'CardHeader';'
-  'const CardTitle = React.forwardRef<;
+  'CardHeader'';const CardTitle = React.forwardRef<;
   HTMLParagraphElement, React.HTMLAttributes<HTMLHeadingElement>>(({ className, ...props }, ref) => (
   <h3
     ref={ref}
@@ -35,7 +33,7 @@ CardHeader.displayName =
   />
 ));
 CardTitle.displayName = 'CardTitle
-  ';''const CardDescription = React.forwardRef<;
+  '';const CardDescription = React.forwardRef<;
   HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
@@ -45,14 +43,12 @@ CardTitle.displayName = 'CardTitle
   '    {...props}'  />
 ));
 CardDescription.displayName =
-  'CardDescription';'
-  'const CardContent = React.forwardRef<;
+  'CardDescription'';const CardContent = React.forwardRef<;
   HTMLDivElement, React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn('p-6 pt-0
-  ', className)} {...props} />'));'CardContent.displayName =
-  'CardContent';'
-  'const CardFooter = React.forwardRef<;
+  ', className)} {...props} />'))';CardContent.displayName =
+  'CardContent'';const CardFooter = React.forwardRef<;
   HTMLDivElement, React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
@@ -62,4 +58,4 @@ CardDescription.displayName =
   '  />
 ));
 CardFooter.displayName = 'CardFooter
-  ';''export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+  '';export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };

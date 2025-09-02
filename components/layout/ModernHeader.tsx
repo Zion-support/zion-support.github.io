@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-React, { useState, useEffect } from
+import React, { useState, useEffect  } from "react";
   'react.ts';
-import Link from 'next/link';
-  'next/link.ts';'import {;'
-=======
-import React, { useState, useEffect } from 'react.ts';'import Link from 'next/link.ts';'import {;''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  Menu, X,
+import Link from 'next/link' from 'next/link.ts';import {';  Menu, X,
   ChevronDown, Zap,
   Shield, Cpu,
   Database, Globe,

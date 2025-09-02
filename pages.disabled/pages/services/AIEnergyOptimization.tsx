@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIEnergyOptimization.tsx
-import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe export default function AIEnergyOptimization() {
-    'Predictive maintenance for energy infrastructure',;'
-    'Smart grid integration and demand response optimization',;'
-    'Renewable energy integration and storage optimization',;'
-    'Carbon footprint tracking and sustainability reporting',;'
-    'Custom AI models for industry-specific energy patterns',;'
-import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe export default function AIEnergyOptimization(function AIEnergyOptimization() {): any {}
-    'Predictive maintenance for energy infrastructure',;
-    'Smart grid integration and demand response optimization',;
-    'Renewable energy integration and storage optimization',;
-    'Carbon footprint tracking and sustainability reporting',;
-    'Custom AI models for industry-specific energy patterns',;
-    'Integration with major building management systems';
+import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe export default function AIEnergyOptimization() {;
+    'Predictive maintenance for energy infrastructure',';Smart grid integration and demand response optimization',';Renewable energy integration and storage optimization',';Carbon footprint tracking and sustainability reporting',';Custom AI models for industry-specific energy patterns',';
+import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChart3, Target, Shield, Globe export default function AIEnergyOptimization(function AIEnergyOptimization() {): any {};
+    'Predictive maintenance for energy infrastructure',';Smart grid integration and demand response optimization',';Renewable energy integration and storage optimization',';Carbon footprint tracking and sustainability reporting',';Custom AI models for industry-specific energy patterns',';Integration with major building management systems';
 <:pages.disabled/pages/services/AIEnergyOptimization.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited facilities',Custom AI models',Full system integration',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Commercial building energy optimization',;'
-    'Manufacturing facility energy management',;'
-    'Data center power efficiency',;'
-    'Retail chain energy optimization',;'
-    'Healthcare facility energy management',;'
-    'Educational campus energy systems';
-  ];
-
-  '
-    'Reduce energy costs by 20-40%',;'
-    'Improve energy efficiency by 25-45%',;'
-    'Cut carbon emissions by 30-50%',;'
-    'Optimize renewable energy utilization',;'
-    'Enhance equipment lifespan and reliability',;'
-    'Achieve sustainability and ESG goals';
-  ];
-
-  '
-    'Commercial Real Estate',;'
-    'Manufacturing & Industrial',;'
-    'Data Centers & IT',;'
-    'Healthcare & Hospitals',;'
-    'Retail & Shopping Centers',;'
-    'Education & Universities';
+  ]';Commercial building energy optimization',';Manufacturing facility energy management',';Data center power efficiency',';Retail chain energy optimization',';Healthcare facility energy management',';Educational campus energy systems';
+  ]';Reduce energy costs by 20-40%',';Improve energy efficiency by 25-45%',';Cut carbon emissions by 30-50%',';Optimize renewable energy utilization',';Enhance equipment lifespan and reliability',';Achieve sustainability and ESG goals';
+  ]';Commercial Real Estate',';Manufacturing & Industrial',';Data Centers & IT',';Healthcare & Hospitals',';Retail & Shopping Centers',';Education & Universities';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Zap, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Leaf, BarChar
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIEnergyOptimization.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

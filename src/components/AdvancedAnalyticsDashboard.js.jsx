@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'''
+import React, { useState } from 'react'';
 import { motion } from 'framer-motion';
 import {}
   TrendingUp,
@@ -13,16 +13,16 @@ import {}
   ArrowUpRight,
   ArrowDownRight,'
   Shield,''
-  Brain,'''
-  Rocket} from 'lucide-react';'''
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card';'''
-import { Button } from './ui/button';'''
+  Brain,''';
+  Rocket} from 'lucide-react'';
+import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';
+import { Button } from './ui/button'';
 import { Badge } from './ui/badge';
 const AdvancedAnalyticsDashboard = () => {}
 '
 ''
 '''
-  const [timeRange, setTimeRange] = useState('30d');'''
+  const [timeRange, setTimeRange] = useState('30d')';'
   const [selectedMetric, setSelectedMetric] = useState('overview');
   // Mock data - in real app this would come from API;
   const metrics = []
@@ -112,7 +112,7 @@ const AdvancedAnalyticsDashboard = () => {}
       clients: 67,
       revenue: 340000,'
       status: 'stable'}
-  ];'
+  ]';
   const categoryDistribution = [''
     { label: 'AI & ML', value: 35, color: 'from-purple-500 to-pink-600' },'
     { label: 'Quantum', value: 20, color: 'from-blue-500 to-cyan-600' },'
@@ -124,11 +124,11 @@ const AdvancedAnalyticsDashboard = () => {}
     switch (status) {}
 '"""
       case 'trending':""""
-        return <TrendingUp className="w-4 h-4 text-green-500" />;'"""
+        return <TrendingUp className="w-4 h-4 text-green-500" />'';"
       case 'stable':""""
-        return <Activity className="w-4 h-4 text-blue-500" />;'"""
+        return <Activity className="w-4 h-4 text-blue-500" />'';"
       case 'declining':""""
-        return <TrendingDown className="w-4 h-4 text-red-500" />;"""
+        return <TrendingDown className="w-4 h-4 text-red-500" />';"
       default:""""
         return <Activity className="w-4 h-4 text-gray-500" />;
     }
@@ -137,15 +137,15 @@ const AdvancedAnalyticsDashboard = () => {}
     switch (status) {}
 '
       case 'trending':''
-        return 'bg-green-100 text-green-800';'
+        return 'bg-green-100 text-green-800';
       case 'stable':''
-        return 'bg-blue-100 text-blue-800';'
+        return 'bg-blue-100 text-blue-800';
       case 'declining':''
-        return 'bg-red-100 text-red-800';'
+        return 'bg-red-100 text-red-800';
       default:''
         return 'bg-gray-100 text-gray-800';
     }
-  };"""
+  }';"
   return (""""
     <div className="max-w-7xl mx-auto p-6">
       {/* Header */}
@@ -185,8 +185,7 @@ const AdvancedAnalyticsDashboard = () => {}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}"""
         transition={{ delay: 0.1 }}""""
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8"""
-      >
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 ">
         {metrics.map((metric, index) => (
           <motion.div;
             key={index}
@@ -232,8 +231,7 @@ const AdvancedAnalyticsDashboard = () => {}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}"""
         transition={{ delay: 0.2 }}""""
-        className="mb-8"""
-      >
+        className="mb-8 ">
         <Card>"""
           <CardHeader>""""
             <CardTitle className="flex items-center gap-2">""""
@@ -331,8 +329,7 @@ const AdvancedAnalyticsDashboard = () => {}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}"""
         transition={{ delay: 0.3 }}""""
-        className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8"""
-      >
+        className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 ">
         {/* Category Distribution */}
         <Card>"""
           <CardHeader>""""

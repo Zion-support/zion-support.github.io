@@ -1,13 +1,13 @@
-import React from
+import React from;
   'react';
-import Head from
+import Head from;
   'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star } from
+import { Phone, Mail, MapPin, Check, ArrowRight, Star } from;
   'lucide-react';
-import Layout from
+import Layout from;
   '../components/layout/Layout';
 
-import { enhancedRealMicroSaasServices } from
+import { enhancedRealMicroSaasServices } from;
   '../data/enhanced-real-micro-saas-services';
 
 export default function AutonomousManufacturingPage() {

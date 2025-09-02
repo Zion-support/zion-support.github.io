@@ -1,6 +1,6 @@
-import * as client from
+import * as client from;
   '@/integrations/supabase/client';
-import { vi } from
+import { vi } from;
   'vitest';
 
 // Test that checkOnline returns false when navigator is offline

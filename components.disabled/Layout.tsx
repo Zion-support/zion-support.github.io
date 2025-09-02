@@ -5,8 +5,8 @@ import EnhancedFooter from './layout/EnhancedFooter';
 
 interface LayoutProps {
   children: React.ReactNode;
-  title?: string;
-  description?: string;
+   title?: string;
+   description?: string;
 }
 
 const Layout: React.FC<LayoutProps> = ({

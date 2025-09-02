@@ -1,10 +1,10 @@
-interface SkeletonProps { className?: string; variant?:
-  'text' |
-  'title' |
-  'paragraph' |
-  'avatar' |
-  'card' |
-  'button'; lines?: number; height?: string; width?: string; } export function LoadingSkeleton({ className =,
+interface SkeletonProps {
+  className?: string;
+   variant?: 'text' | 'title' | 'paragraph' | 'avatar' | 'card' | 'button';
+   lines?: number;
+   height?: string;
+   width?: string;
+} export function LoadingSkeleton({ className =,
   ', variant = 'text
   ', lines = 1, height, width }: SkeletonProps) { const baseClasses = 'bg-gradient-to-r from-gray-200 via-gray-300 to-gray-200 rounded animate-pulse
   '; const variants = { text: 'h-4 w-full, title:,

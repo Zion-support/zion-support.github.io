@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIHRRecruitment.tsx
-import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {
-    'Automated interview scheduling and coordination',;'
-    'Predictive analytics for candidate success',;'
-    'Bias-free screening and diversity optimization',;'
-    'Automated reference checking and verification',;'
-    'Integration with major ATS and HR platforms',;'
-import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment(function AIHRRecruitment() {): any {}
-    'Automated interview scheduling and coordination',;
-    'Predictive analytics for candidate success',;
-    'Bias-free screening and diversity optimization',;
-    'Automated reference checking and verification',;
-    'Integration with major ATS and HR platforms',;
-    'Custom AI models for industry-specific hiring';
+import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment() {;
+    'Automated interview scheduling and coordination',';Predictive analytics for candidate success',';Bias-free screening and diversity optimization',';Automated reference checking and verification',';Integration with major ATS and HR platforms',';
+import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Briefcase, BarChart3 export default function AIHRRecruitment(function AIHRRecruitment() {): any {};
+    'Automated interview scheduling and coordination',';Predictive analytics for candidate success',';Bias-free screening and diversity optimization',';Automated reference checking and verification',';Integration with major ATS and HR platforms',';Custom AI models for industry-specific hiring';
 <:pages.disabled/pages/services/AIHRRecruitment.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
 >    { ;
       name: 'Enterprise', ;
       price: '$1,299/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,299/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,299/mo', ';
       details: ['Unlimited job postings',Custom AI models',Full platform integration',24/7 dedicated support'] },;
-  ];
-
-  '
-    'High-volume recruitment and hiring',;'
-    'Technical talent acquisition',;'
-    'Executive search and placement',;'
-    'Seasonal hiring optimization',;'
-    'Diversity and inclusion hiring',;'
-    'Remote workforce recruitment';
-  ];
-
-  '
-    'Reduce time-to-hire by 40-60%',;'
-    'Improve candidate quality by 30-50%',;'
-    'Cut recruitment costs by 25-40%',;'
-    'Increase diversity in hiring by 35-55%',;'
-    'Enhance candidate experience',;'
-    'Scale recruitment without additional staff';
-  ];
-
-  '
-    'Technology & Software',;'
-    'Healthcare & Life Sciences',;'
-    'Financial Services',;'
-    'Manufacturing & Industrial',;'
-    'Retail & E-commerce',;'
-    'Professional Services';
+  ]';High-volume recruitment and hiring',';Technical talent acquisition',';Executive search and placement',';Seasonal hiring optimization',';Diversity and inclusion hiring',';Remote workforce recruitment';
+  ]';Reduce time-to-hire by 40-60%',';Improve candidate quality by 30-50%',';Cut recruitment costs by 25-40%',';Increase diversity in hiring by 35-55%',';Enhance candidate experience',';Scale recruitment without additional staff';
+  ]';Technology & Software',';Healthcare & Life Sciences',';Financial Services',';Manufacturing & Industrial',';Retail & E-commerce',';Professional Services';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Users, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-violet-600 text-violet-600 rounded-lg hover:bg-violet-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIHRRecruitment.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

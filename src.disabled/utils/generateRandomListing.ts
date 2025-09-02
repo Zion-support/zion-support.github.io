@@ -1,4 +1,4 @@
-import { MarketplaceItem } from,
+import { MarketplaceItem } from,;
   @/src/data/marketplaceData'; const sampleTitles = [
   'AI-Powered Analytics Platform',
   'Cybersecurity Assessment Tool',

@@ -35,7 +35,7 @@ import {}
   Scale,
   Gavel,
   Building2,
-  Globe,
+  Globe,;
   Network} from 'lucide-react';
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx
   return()
@@ -248,7 +248,7 @@ import {}
             {complianceAreas.map(area: unknown, index: unknown (
               <motion.div;
                 key={index}""
-                className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50""
+                className="bg-slate-800/50 rounded-xl p-8 border border-slate-700/50 
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -256,8 +256,7 @@ import {}
               >
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx
                 <div
-                  className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-6`}"
-                >""
+                  className={`w-16 h-16 bg-gradient-to-br ${area.color} rounded-xl flex items-center justify-center mb-6`}">""
                   <area.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-semibold text-white mb-4">
@@ -709,8 +708,7 @@ import {}
     </div>
   )};
 :pages.disabled/pages/services/ai-financial-compliance-assistant.tsx
-export default AIFinancialComplianceAssistant;'"`
+export default AIFinancialComplianceAssistant'"`;
 '"`'"`
 
-export default AIFinancialComplianceAssistant;
-'"`
+export default AIFinancialComplianceAssistant'"`;

@@ -1,11 +1,10 @@
-import AIChatAssistant from
-  './AIChatAssistant';'
-  'describe('AIChatAssistant
+import AIChatAssistant from;
+  './AIChatAssistant'';describe('AIChatAssistant
   ', () => {''  it(
   'renders without crashing', () => {'
   '    render(<AIChatAssistant />);
     expect(screen.getByRole('main
-  ')).toBeInTheDocument();'  });'
+  ')).toBeInTheDocument()';  })';
   it(
   'displays correct content', () => {'
   '    render(<AIChatAssistant />);

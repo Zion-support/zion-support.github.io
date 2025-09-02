@@ -1,4 +1,4 @@
-import { render, fireEvent, waitFor } from @testing-library/react
+import { render, fireEvent, waitFor } from @testing-library/react;
   '; // Added waitFor
 // Mock Sentry to prevent errors in test environment
 jest.mock'@sentry/nextjs
@@ -8,7 +8,7 @@ jest.mock'@sentry/nextjs
   // For example, if it uses withSentryConfig, Sentry.XYZ, etc.
   // For now, init and captureException are common ones.
 }));
-import { ModeToggle } from @/components/ModeToggle
+import { ModeToggle } from @/components/ModeToggle;
   ';// Use the ThemeProvider from src/components to match the hook used by ModeToggle;
 import { ThemeProvider } from @/components/ThemeProvider';
 it

@@ -43,7 +43,7 @@ import {}
   TrendingDown,
   DollarSign as DollarIcon,
   BarChart,
-  PieChart as PieChartIcon''
+  PieChart as PieChartIcon'';
 } from 'lucide-react';
 ;
 export { function };

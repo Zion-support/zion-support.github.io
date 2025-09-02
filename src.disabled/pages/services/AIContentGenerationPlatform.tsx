@@ -21,7 +21,7 @@ import {
   Clock,
   DollarSign,
   Target,
-  Award
+  Award;
  } from 'lucide-react';
 
 export default function AIContentGenerationPlatform(...args[]):  {
@@ -128,13 +128,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
     'Stable Diffusion',
     'Natural Language Processing',
     'Computer Vision',
-    'Speech Synthesis',;
-    'Machine Learning',;
-    'Cloud Computing',;
-    'Real-time Processing',;
-    'API Integration',;
-    'Content Management',;
-    'Analytics & Insights';
+    'Speech Synthesis',';Machine Learning',';Cloud Computing',';Real-time Processing',';API Integration',';Content Management',';Analytics & Insights';
   ];
 
   const pricing = [
@@ -143,8 +137,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       price: '$99',
       period: '/month',
       description: 'Perfect for small businesses and individual creators',
-      features[;
-        '10,000 words per month',
+      features[';10,000 words per month',
         '100 AI-generated images',
         '5 video generations',
         'Basic templates',
@@ -159,8 +152,7 @@ export default function AIContentGenerationPlatform(...args[]):  {
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
-      features[;
-        '100,000 words per month',
+      features[';100,000 words per month',
         '1,000 AI-generated images',
         '50 video generations',
         'Advanced templates',
@@ -177,16 +169,13 @@ export default function AIContentGenerationPlatform(...args[]):  {
       price: '$999',
       period: '/month',
       description: 'For large organizations with high-volume content needs',
-      features[;
-        'Unlimited words',
+      features[';Unlimited words',
         'Unlimited images',
         'Unlimited videos',
         'Custom templates',
         'Dedicated support',
         'Highest quality output',
-        'Advanced analytics',;
-        'Custom integrations',;
-        'SLA guarantees';
+        'Advanced analytics',';Custom integrations',';SLA guarantees';
       ],;
       cta: 'Contact Sales',;
       popular: false;

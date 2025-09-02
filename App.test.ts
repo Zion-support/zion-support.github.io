@@ -1,8 +1,8 @@
-import { render, screen } from
+import { render, screen } from;
   '@testing-library/react';
-import { describe, it, expect } from
+import { describe, it, expect } from;
   'vitest';
-import App from
+import App from;
   './App';
 
 describe(

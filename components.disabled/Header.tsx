@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, X,
   ChevronDown, Brain,
-  Phone, Mail
+  Phone, Mail;
 } from 'lucide-react';
 
 const Header: React.FC = () => {

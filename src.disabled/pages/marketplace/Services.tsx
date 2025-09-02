@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/marketplace/Services.tsx
+:src.disabled/pages/marketplace/Services.tsx
 const Services: React.FC = () => (;
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
 		<div className="text-center text-white">;
@@ -9,5 +9,3 @@ const Services: React.FC = () => (;
 );
 
 export default Services;
-=======
->>>>>>> pr-10728:src/pages/marketplace/Services.tsx

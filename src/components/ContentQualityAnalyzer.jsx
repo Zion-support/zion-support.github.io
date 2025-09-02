@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';'''
+import React, { useState, useEffect } from 'react'';
 import { motion } from 'framer-motion';
-import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {}
+import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChart3, TrendingUp, Zap const ContentQualityAnalyzer = () => {};
     const [isOpen, setIsOpen] = useState(false);
-    const [isAnalyzing, setIsAnalyzing] = useState(false);'
-    const [contentIssues, setContentIssues] = useState([]);''
-    const [report, setReport] = useState(null);'''
-    const [selectedFilter, setSelectedFilter] = useState('all');'''
+    const [isAnalyzing, setIsAnalyzing] = useState(false)';
+    const [contentIssues, setContentIssues] = useState([])';
+    const [report, setReport] = useState(null)';'
+    const [selectedFilter, setSelectedFilter] = useState('all')';'
     const [searchTerm, setSearchTerm] = useState('');
     // Sample data based on the analysis report;
     const sampleIssues = []
@@ -67,9 +67,9 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
         generateReport (sampleIssues) }, []) ;
     const generateReport = (issues) => {}
         const totalPages = 79; // From analysis report;
-        const pagesWithIssues = issues.length;'
-        const criticalIssues = issues.filter(i => i.severity === 'high').length;'
-        const mediumIssues = issues.filter(i => i.severity === 'medium').length;'
+        const pagesWithIssues = issues.length';
+        const criticalIssues = issues.filter(i => i.severity === 'high').length';
+        const mediumIssues = issues.filter(i => i.severity === 'medium').length';
         const lowIssues = issues.filter(i => i.severity === 'low').length;
         setReport({}
             totalPages,
@@ -90,11 +90,11 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
         switch (severity) {}
 '
             case 'high': any;
-                return <AlertTriangle className="w-4 h-4 text-red-400"/>;'"""
+                return <AlertTriangle className="w-4 h-4 text-red-400"/>'';"
             case 'medium':""""
-                return <AlertTriangle className="w-4 h-4 text-yellow-400"/>;'"""
+                return <AlertTriangle className="w-4 h-4 text-yellow-400"/>'';"
             case 'low':""""
-                return <Info className="w-4 h-4 text-blue-400"/>;"""
+                return <Info className="w-4 h-4 text-blue-400"/>';"
             default:""""
                 return <Info className="w-4 h-4 text-gray-400"/>}
     };
@@ -104,11 +104,11 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
 ''
 '''
             case 'high':''''
-                return 'text-red-400';'''
+                return 'text-red-400'';
             case 'medium':''''
-                return 'text-yellow-400';'''
+                return 'text-yellow-400'';
             case 'low':''''
-                return 'text-blue-400';'''
+                return 'text-blue-400'';
             default:''''
                 return 'text-gray-400'}
     };
@@ -118,11 +118,11 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
 ''
 '''
             case 'resolved':''''
-                return 'text-green-400';'''
+                return 'text-green-400'';
             case 'in_progress':''''
-                return 'text-yellow-400';'''
+                return 'text-yellow-400'';
             case 'open':''''
-                return 'text-red-400';'''
+                return 'text-red-400'';
             default:''''
                 return 'text-gray-400'}
     };
@@ -136,13 +136,13 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
 ''
 '''
             case 'missing_title':''''
-                return 'Missing Title';'''
+                return 'Missing Title'';
             case 'missing_meta':''''
-                return 'Missing Meta Description';'''
+                return 'Missing Meta Description'';
             case 'no_headings':''''
-                return 'No Headings';'''
+                return 'No Headings'';
             case 'minimal_content':''''
-                return 'Minimal Content';'''
+                return 'Minimal Content'';
             case 'no_images':''''
                 return 'No Images';
             default: any;
@@ -164,8 +164,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
   opacity: 1;
 }} exit = {}
   { scale: 0.9,
-  opacity: 0;
-"""
+  opacity: 0';"
 """"
 }} className="bg-gray-900 rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>"""
             {/* Header */}""""

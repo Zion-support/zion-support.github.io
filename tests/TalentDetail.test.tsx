@@ -1,14 +1,14 @@
-import { render, screen } from,
+import { render, screen } from,;
   @testing-library/react';
-import { MemoryRouter, Route, Routes } from
+import { MemoryRouter, Route, Routes } from;
   'react-router-dom';
-import { QueryClient, QueryClientProvider } from
+import { QueryClient, QueryClientProvider } from;
   '@tanstack/react-query';
-import { rest } from
+import { rest } from;
   'msw';
-import { setupServer } from
+import { setupServer } from;
   'msw/node';
-import TalentDetail from
+import TalentDetail from;
   '@/pages/TalentDetail';
 
 const server = setupServer(

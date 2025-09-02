@@ -31,7 +31,7 @@ import { TrendingUp,
   Users,
   Lock,
   Eye,
-  PieChart'
+  PieChart';
  } from 'lucide-react';
 ;
 export { function };
@@ -41,11 +41,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
       icon: Eye,;
       title: 'Market Sentiment Analysis',;
       description: 'AI analyzes news, social media, and market data to gauge investor sentiment'};
-  ];
-
-        'Unlimited portfolio size',;
-        'On-premise options',;
-        'SLA guarantees';
+  ]';Unlimited portfolio size',';On-premise options',';SLA guarantees';
       ],;
       popular: false};
   ]},;
@@ -141,11 +137,11 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Performance Metrics */}""
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">""
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
@@ -202,7 +198,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
       </section>
 
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -304,7 +300,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -406,7 +402,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
       </section>
 
       {/* Trading Markets Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -508,7 +504,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -597,7 +593,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
                     : 'border-gray-700'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -652,7 +648,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -715,7 +711,7 @@ export default function AIFinancialTradingPlatform(...args: []):  {}
         </div>;
       </section>;
 :pages.disabled/pages/services/ai-financial-trading-platform.tsx
-    </div>;'"`
+    </div>'"`;
   )}}}}}}'"`'"`
     </div>;
   )}}}}}}'"`

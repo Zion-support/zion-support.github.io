@@ -1,36 +1,23 @@
 export interface ZionEmergingTechService2029 {
   id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  benefits: string[];
-  marketPrice: string;
-  category:
-    | 'Space'
-    | 'Energy'
-    | 'Transportation'
-    | 'Biotech'
-    | 'Robotics'
-    | 'AR/VR'
-    | 'Quantum'
-    | 'Nanotech'
-    | 'GreenTech'
-    | 'SmartCities'
-    | 'DigitalTwin'
-    | 'Metaverse';
-  icon: string;
-  isPopular?: boolean;
-  isNew?: boolean;
-  link: string;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string;
-  };
+   name: string;
+   tagline: string;
+   price: string;
+   period: string;
+   description: string;
+   features: string[];
+   benefits: string[];
+   marketPrice: string;
+   category: | 'Space' | 'Energy' | 'Transportation' | 'Biotech' | 'Robotics' | 'AR/VR' | 'Quantum' | 'Nanotech' | 'GreenTech' | 'SmartCities' | 'DigitalTwin' | 'Metaverse';
+   icon: string;
+   isPopular?: boolean;
+   isNew?: boolean;
+   link: string;
+   contactInfo: { mobile: string;
+   email: string;
+   address: string;
+   website: string;
+};
   realImplementation: boolean;
   technology: string[];
   integrations: string[];

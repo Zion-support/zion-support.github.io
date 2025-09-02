@@ -1,8 +1,8 @@
-import { render, screen, waitFor } from,
+import { render, screen, waitFor } from,;
   @testing-library/react';
-import { describe, it, expect, vi } from
+import { describe, it, expect, vi } from;
   'vitest';
-import React from
+import React from;
   'react';
 
 // Mock component for testing

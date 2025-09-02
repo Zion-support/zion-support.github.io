@@ -1,6 +1,6 @@
-import React from
+import React from;
   'react';
-import SEO from
+import SEO from;
   '../components/SEO';
 
 const ext = (url: string) => (

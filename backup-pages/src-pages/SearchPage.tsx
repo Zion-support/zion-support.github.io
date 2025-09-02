@@ -31,70 +31,31 @@ import {
   Calendar as CalendarIcon,
   User,
   Tag as TagIcon,
-  } from 'lucide-react
+  } from 'lucide-react;
   ';
 
 interface SearchResult {
   id: string;
-  type: 'service
-  ' | 'talent
-  ' | 'equipment
-  ' | 'comp
-  ';
-  title: string;
-  description: string;
-  url: string;
-  type: 'service
-  ' | 'page
-  ' | 'blog
-  ' | 'documentation
-  ' | 'case-study;
-  category: string;
-  tags: string[];
-  relevance: number;
-  lastUpdated: string;
-  icon: unknown;
-  featured?: boolean;
-export default function SearchPage() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const [searchQuery, setSearchQuery] = useState(searchParams.get(,
-  q
-  ') || '');
-  const [isSearching, setIsSearching] = useState(false);
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-  const [selectedFilters, setSelectedFilters] = useState<Set<string>>(new Set());
-  const [sortBy, setSortBy] = useState<
-  'relevance' |
-  'date' |
-  'popularity'>(
-  'relevance');
-  const [showFilters, setShowFilters] = useState(false);
-
-  // Mock search results - in a real app, this would come from an API
-  const mockSearchResults: SearchResult[] = [
-    // AI Services
-    {
-
-      id:
-  'ai-bi,
-      title:,
-  AI Business Intelligence',
-      description: Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making.,
-  ,
-      url: '/services/ai-business-intelligence,
-      type:,
-  service',
-      category: 'AI Services,
-      tags: [
-  'AI',Business Intelligence
-  ',Analytics',Machine Learning
-  ',Predictive'],
-      relevance: 0.95,
-      lastUpdated:
-  '2024-12-01',
-      icon: Brain,
-      featured: true
-    },
+   type: 'service ' | 'talent ' | 'equipment ' | 'comp ';
+   title: string;
+   description: string;
+   url: string;
+   type: 'service ' | 'page ' | 'blog ' | 'documentation ' | 'case-study;
+   category: string;
+   tags: string[];
+   relevance: number;
+   lastUpdated: string;
+   icon: unknown;
+   featured?: boolean;
+   export default function SearchPage() { const [searchParams, setSearchParams] = useSearchParams();
+   const [searchQuery, setSearchQuery] = useState(searchParams.get(, q ') || '');
+   const [isSearching, setIsSearching] = useState(false);
+   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+   const [selectedFilters, setSelectedFilters] = useState<Set<string>>(new Set());
+   const [sortBy, setSortBy] = useState< 'relevance' | 'date' | 'popularity'>( 'relevance');
+   const [showFilters, setShowFilters] = useState(false);
+   // Mock search results - in a real app, this would come from an API const mockSearchResults: SearchResult[] = [ // AI Services { id: 'ai-bi, title:, AI Business Intelligence', description: Advanced AI-powered business intelligence platform that provides real-time insights, predictive analytics, and automated reporting for data-driven decision making., , url: '/services/ai-business-intelligence, type:, service', category: 'AI Services, tags: [ 'AI',Business Intelligence ',Analytics',Machine Learning ',Predictive'], relevance: 0.95, lastUpdated: '2024-12-01', icon: Brain, featured: true;
+},
     {
 
       id:,
@@ -389,13 +350,13 @@ export default function SearchPage() {
       default: return FileText}
 ,
   case
-  'service': return Zap;'
+  'service': return Zap';
       case
-  'page': return FileText;'
+  'page': return FileText';
       case
-  'blog': return BookOpen;'
+  'blog': return BookOpen';
       case
-  'case-study': return FileText;'      case
+  'case-study': return FileText';      case
   'documentation: return Code;
       default: return FileText}
   };

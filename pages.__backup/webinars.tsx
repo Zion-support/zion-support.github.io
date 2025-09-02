@@ -1,6 +1,6 @@
-import React from
+import React from;
   'react';
-import SEO from
+import SEO from;
   '../components/SEO';
 
 export default function WebinarsPage() {
@@ -15,9 +15,9 @@ export default function WebinarsPage() {
 						<h2 className="text-2xl font-semibold mb-2">No scheduled webinars</h2>
 						<p className="text-gray-400">New sessions will be announced soon. Follow us on LinkedIn for updates.</p>
 					</article>
-import SEO from
+import SEO from;
   '../components/SEO';
-import Link from
+import Link from;
   'next/link';
 
 export default function WebinarsPage() {

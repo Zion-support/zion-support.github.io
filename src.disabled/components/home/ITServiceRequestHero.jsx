@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-export function ITServiceRequestHero() { const [location, setLocation] = useState("); const [isSubmitting, setIsSubmitting] = useState(false); const navigate = useNavigate(); const handleSubmit = e => { e.preventDefault(); if (!location.trim()) return; setIsSubmitting(true);"""";
-=======
-export function ITServiceRequestHero() { const [location, setLocation] = useState("); const [isSubmitting, setIsSubmitting] = useState(false); const navigate = useNavigate(); const handleSubmit = e => { e.preventDefault(); if(!location.trim()) return; setIsSubmitting(true);
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
+export function ITServiceRequestHero() { const [location, setLocation] = useState("); const [isSubmitting, setIsSubmitting] = useState(false); const navigate = useNavigate(); const handleSubmit = e => { e.preventDefault(); if (!location.trim()) return; setIsSubmitting(true)';"";

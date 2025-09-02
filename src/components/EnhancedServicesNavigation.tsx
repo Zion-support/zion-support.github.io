@@ -135,8 +135,7 @@
           pricing: "Custom pricing"""
         }
       ]};
-  ]};  ];
-"""
+  ]};  ]';"
   return (""""
     <div className = "relative">
       {/* Main Services Button */}
@@ -201,8 +200,7 @@
                     transition = {}
   { duration: 0.3,
                       """
-  delay: categoryIndex * 0.1;
-"""
+  delay: categoryIndex * 0.1';"
 }}""""
                     className="relative group"""
                     onMouseEnter={ () => setActiveCategory (category.name) }
@@ -231,8 +229,7 @@
 }}
                             transition = {}
   { duration: 0.2,
-  delay: serviceIndex * 0.05;
-"""
+  delay: serviceIndex * 0.05';"
 }}""""
                             className="flex items-center justify-between p-2 rounded bg-white/20 hover:bg-white/30 transition-colors duration-200""""
                           >""""

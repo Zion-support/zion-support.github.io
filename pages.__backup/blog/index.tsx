@@ -1,8 +1,8 @@
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import Head from
+import Head from;
   'next/head';
-import Link from
+import Link from;
   'next/link';
 
 const Index: NextPage = () => {

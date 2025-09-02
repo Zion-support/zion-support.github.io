@@ -1,8 +1,8 @@
-import { expect, test, vi } from
+import { expect, test, vi } from;
   'vitest';
-import handler from
+import handler from;
   '@/pages/api/users/me';
-import type { NextApiRequest, NextApiResponse } from
+import type { NextApiRequest, NextApiResponse } from;
   'next';
 
 // Define a more specific type for the mocked response

@@ -47,7 +47,7 @@ import {
   Clipboard,
   BookOpen,
   LineChart,
-  ShoppingBag
+  ShoppingBag;
 } from 'lucide-react&apos;;
 
 export default function AIBusinessIntelligence() {

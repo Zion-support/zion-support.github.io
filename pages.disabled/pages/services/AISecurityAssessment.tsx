@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityAssessment.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAssessment() {
-    'Automated security risk detection and evaluation',;'
-    'Predictive analytics for assessment needs',;'
-    'Smart assessment framework management',;'
-    'AI-driven assessment automation and orchestration',;'
-    'Real-time assessment performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAssessment(function AISecurityAssessment() {): any {}
-    'Automated security risk detection and evaluation',;
-    'Predictive analytics for assessment needs',;
-    'Smart assessment framework management',;
-    'AI-driven assessment automation and orchestration',;
-    'Real-time assessment performance tracking',;
-    'Custom AI models for assessment applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAssessment() {;
+    'Automated security risk detection and evaluation',';Predictive analytics for assessment needs',';Smart assessment framework management',';AI-driven assessment automation and orchestration',';Real-time assessment performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityAssessment(function AISecurityAssessment() {): any {};
+    'Automated security risk detection and evaluation',';Predictive analytics for assessment needs',';Smart assessment framework management',';AI-driven assessment automation and orchestration',';Real-time assessment performance tracking',';Custom AI models for assessment applications';
 <:pages.disabled/pages/services/AISecurityAssessment.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$3,199/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,199/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$3,199/mo', ';
       details: ['Unlimited assessments',Custom AI models',Full assessment suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security assessment optimization',;'
-    'Assessment strategy management and execution',;'
-    'Security risk detection and evaluation',;'
-    'Assessment framework management and automation',;'
-    'Assessment automation and orchestration',;'
-    'Assessment scaling and management';
-  ];
-
-  '
-    'Improve security assessment performance by 50-80%',;'
-    'Reduce assessment completion time by 40-70%',;'
-    'Cut security assessment costs by 35-65%',;'
-    'Enhance security assessment reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security assessment operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security assessment optimization',';Assessment strategy management and execution',';Security risk detection and evaluation',';Assessment framework management and automation',';Assessment automation and orchestration',';Assessment scaling and management';
+  ]';Improve security assessment performance by 50-80%',';Reduce assessment completion time by 40-70%',';Cut security assessment costs by 35-65%',';Enhance security assessment reliability and scalability',';Optimize resource utilization',';Scale security assessment operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-lime-600 text-lime-600 rounded-lg hover:bg-lime-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityAssessment.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

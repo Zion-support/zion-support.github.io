@@ -1,15 +1,15 @@
 #!/usr/bin/env node
-import fs from
+import fs from;
   'fs';
-import path from
+import path from;
   'path';
-import { execSync } from
+import { execSync } from;
   'child_process';
-import { fileURLToPath } from
+import { fileURLToPath } from;
   'url';
-import { dirname } from
+import { dirname } from;
   'path';
-import { globSync } from
+import { globSync } from;
   'glob';
 const __dirname = dirname(__filename);
 class LintErrorFixer {
@@ -43,7 +43,7 @@ class LintErrorFixer {
       for (const i = 0; i < lines.length; i++) {
         const line = lines[i];
         if (line.trim().startsWith(
-  'import ')) {
+  'import ')) {;
           inImportBlock = true;
           imports.push(line)} else if (inImportBlock && line.trim() === '
   ') {
@@ -55,7 +55,7 @@ class LintErrorFixer {
       const usedImports = imports.filter(importLine => {
         if (!importLine.trim().startsWith('import
   ')) return true;
-        // Extract import names
+        // Extract import names;
         const match = importLine.match(/import\s+{([^}]+)}\s+from/);
         if (match) {
           const importNames = match[1].split(',

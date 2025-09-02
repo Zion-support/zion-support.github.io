@@ -1,6 +1,6 @@
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Helmet } from 'react-helmet-async';'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx
 import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target, ArrowRight, Activity const IncidentResponsePlatform = () => {
@@ -40,7 +40,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             title: "Incident Timeline Tracking",""
             description: "Comprehensive tracking of all incident activities, communications, and resolution steps for audit compliance",""
             icon: <Clock className="w-6 h-6"/>
-
+;
     ];
 :pages.disabled/pages/services/IncidentResponsePlatform.jsx
     const benefits = [
@@ -152,11 +152,10 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
             ],
             popular: false
 
-    ];"
+    ]";
     const integrations = [""
         "SIEM Systems", "EDR Solutions", "Firewall", "IDS/IPS", "Slack", "Teams", "Jira", "ServiceNow"
-    ];"
-                "Custom development""
+    ]';Custom development""
             ],
             popular: false;
     ];
@@ -322,8 +321,7 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
   y: 20;
 }} whileInView = {}
   { opacity: 1,
-  y: 0;
-""
+  y: 0';
 }} transition={{ duration: 0.6 }} className="text-6xl mb-6">
               🚨
             </motion.div>""
@@ -928,5 +926,5 @@ import { CheckCircle, Shield, Zap, TrendingUp, AlertTriangle, Clock, Eye, Target
     </>);
 };
 export { IncidentResponsePlatform };
-export default IncidentResponsePlatform;'"`
+export default IncidentResponsePlatform'"`;
 }}}}'"`'"`

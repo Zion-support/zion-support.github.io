@@ -1,6 +1,6 @@
-import React, { useState } from 'react';'''
-import { innovativeServices2025 } from '../data/innovativeServices2025';'''
-import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027';'''
+import React, { useState } from 'react'';
+import { innovativeServices2025 } from '../data/innovativeServices2025'';
+import { ULTIMATE_INNOVATIVE_SERVICES_2027 } from '../data/ultimateInnovativeServices2027'';
 import { motion } from 'framer-motion';
 import {}
   Brain,
@@ -14,14 +14,14 @@ import {}
   ArrowRight,
   CheckCircle,'
   Phone,''
-  Mail,'''
+  Mail,''';
   MapPin} from 'lucide-react';
 
 const EnhancedComprehensiveServicesShowcase = () => {}
 '
 ''
 '''
-  const [activeCategory, setActiveCategory] = useState('all');'''
+  const [activeCategory, setActiveCategory] = useState('all')';'
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedService, setSelectedService] = useState(null);
 
@@ -270,8 +270,7 @@ const EnhancedComprehensiveServicesShowcase = () => {}
                   {service.tags?.slice(0, 3).map((tag, tagIndex) => (
                     <span"""
                       key={tagIndex}""""
-                      className="px-2 py-1 bg-white/5 rounded text-xs text-gray-300"""
-                    >
+                      className="px-2 py-1 bg-white/5 rounded text-xs text-gray-300 ">
                       {tag}
                     </span>
                   ))}
@@ -352,14 +351,12 @@ const EnhancedComprehensiveServicesShowcase = () => {}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"""
             <a""""
               href="mailto:kleber@ziontechgroup.com""""
-              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"""
-            >
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 ">
               Get Custom Quote;
             </a>"""
             <a""""
               href="tel:+13024640950""""
-              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"""
-            >
+              className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300 ">
               Call Us: +1 302 464 0950;
             </a>
           </div>

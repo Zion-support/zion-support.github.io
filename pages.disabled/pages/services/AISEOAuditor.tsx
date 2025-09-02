@@ -3,7 +3,7 @@ import {}
   CheckCircle2,
   ExternalLink,
 :pages.disabled/pages/services/AISEOAuditor.tsx
-  Phone,''
+  Phone,'';
   Mail} from 'lucide-react.ts';        <p className="mt-4 max-w-3xl text-slate-300">
           Identify SEO issues, generate prioritized fixes, and ship updates
           automatically with guardrails. Nightly crawls, Core Web Vitals checks,
@@ -103,7 +103,5 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
   )};
 ;
 :pages.disabled/pages/services/AISEOAuditor.tsx
-export { AISEOAuditor };export default AISEOAuditor;'"
-'"'"
-export { AISEOAuditor };export default AISEOAuditor;
-'""
+export { AISEOAuditor };export default AISEOAuditor'';"'"
+export { AISEOAuditor };export default AISEOAuditor'';

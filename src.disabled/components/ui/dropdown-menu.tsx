@@ -2,7 +2,7 @@ import React, { createContext, useContext, useState, ReactNode } from 'react';
 
 interface DropdownMenuContextType {
   isOpen: boolean;
-  setIsOpen: (open: boolean) => void;
+   setIsOpen: (open: boolean) => void;
 }
 
 const DropdownMenuContext = createContext<DropdownMenuContextType | undefined>(undefined);
@@ -25,7 +25,7 @@ export function DropdownMenu({ children }: DropdownMenuProps) {
 
 interface DropdownMenuTriggerProps {
   children: ReactNode;
-  asChild?: boolean;
+   asChild?: boolean;
 }
 
 export function DropdownMenuTrigger({ children, asChild = false }: DropdownMenuTriggerProps) {
@@ -51,8 +51,8 @@ export function DropdownMenuTrigger({ children, asChild = false }: DropdownMenuT
 
 interface DropdownMenuContentProps {
   children: ReactNode;
-  align?: 'start' | 'center' | 'end';
-  className?: string;
+   align?: 'start' | 'center' | 'end';
+   className?: string;
 }
 
 export function DropdownMenuContent({ children, align = 'start', className = '' }: DropdownMenuContentProps) {
@@ -80,9 +80,9 @@ export function DropdownMenuContent({ children, align = 'start', className = '' 
 
 interface DropdownMenuItemProps {
   children: ReactNode;
-  onClick?: () => void;
-  asChild?: boolean;
-  className?: string;
+   onClick?: () => void;
+   asChild?: boolean;
+   className?: string;
 }
 
 export function DropdownMenuItem({ children, onClick, asChild = false, className = '' }: DropdownMenuItemProps) {

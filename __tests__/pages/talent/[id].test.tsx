@@ -1,20 +1,20 @@
-import React from
+import React from;
   'react';
-import { render, screen, waitFor } from
+import { render, screen, waitFor } from;
   '@testing-library/react';
-import { vi } from
+import { vi } from;
   'vitest';
-import TalentPage from
+import TalentPage from;
   '@/pages/talent/[id]';
-import { TALENT_PROFILES, TalentProfileData } from
+import { TALENT_PROFILES, TalentProfileData } from;
   '@/data/talentData'; // Adjust path if necessary
-import { useRouter } from
+import { useRouter } from;
   'next/router'; // Correct import for useRouter
 
 // Mock next/router
 vi.mock(
   'next/router', () => ({
-  useRouter: vi.fn(),
+  useRouter: vi.fn(),;
 }));
 
 // Helper to mock fetch

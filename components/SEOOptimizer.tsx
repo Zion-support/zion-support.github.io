@@ -3,14 +3,14 @@ import Head from 'next/head';
 
 interface SEOOptimizerProps {
   title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  ogType?: string;
-  canonicalUrl?: string;
-  structuredData?: any;
-  noindex?: boolean;
-  nofollow?: boolean;
+   description?: string;
+   keywords?: string;
+   ogImage?: string;
+   ogType?: string;
+   canonicalUrl?: string;
+   structuredData?: any;
+   noindex?: boolean;
+   nofollow?: boolean;
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({

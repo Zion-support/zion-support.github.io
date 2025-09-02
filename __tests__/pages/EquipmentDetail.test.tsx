@@ -1,11 +1,11 @@
 // __tests__/pages/EquipmentDetail.test.tsx
-import React from
+import React from;
   'react';
-import { render, screen, fireEvent, act } from
+import { render, screen, fireEvent, act } from;
   '@testing-library/react';
 import
   '@testing-library/jest-dom';
-import EquipmentDetail, { SAMPLE_EQUIPMENT } from
+import EquipmentDetail, { SAMPLE_EQUIPMENT } from;
   '@/pages/EquipmentDetail';
 
 // Mock functions need to be declared before they are used in mock factories

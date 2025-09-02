@@ -1,7 +1,7 @@
-<<<<<<< HEAD:src.disabled/pages/services/index.tsx
-import React from,
+:src.disabled/pages/services/index.tsx
+import React from,;
   react';
-import { Link } from
+import { Link } from;
   'react-router-dom';
 
 const ServicesIndex: React.FC = () => {
@@ -19,7 +19,6 @@ const ServicesIndex: React.FC = () => {
   Automated Follow-Ups' },
     { to: '/services/ai-seo-optimizer, label:
   'AI SEO Optimizer' },
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 ;
@@ -31,7 +30,6 @@ const ServicesIndex: React.FC = () => {;
     { to: '/services/ai-email-responder', label: 'AI Email Responder' },;
     { to: '/services/automated-follow-ups', label: 'Automated Follow-Ups' },;
     { to: '/services/ai-seo-optimizer', label: 'AI SEO Optimizer' },;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/index.tsx
   ];
   return (;
     <div className="max-w-5xl mx-auto px-4 py-12 text-white">";
@@ -49,5 +47,4 @@ const ServicesIndex: React.FC = () => {;
 };
 ;
 export default ServicesIndex;
-;
-";
+";;

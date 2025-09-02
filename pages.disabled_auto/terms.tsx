@@ -1,15 +1,15 @@
-import React from
+import React from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
-import { SEO } from
+import { SEO } from;
   '../components/SEO';
-import { Card } from
+import { Card } from;
   '../components/ui/Card';
-import { Badge } from
+import { Badge } from;
   '../components/ui/Badge';
 import { 
-<<<<<<< HEAD:pages.disabled_auto/terms.tsx
+:pages.disabled_auto/terms.tsx
   FileText,
   Scale,
   AlertTriangle,
@@ -24,9 +24,8 @@ import {
   DollarSign,
   Clock,
   BookOpen
-} from
+} from;
   'lucide-react';
-=======
   FileText, Scale,
   AlertTriangle, CheckCircle,
   Calendar, Globe,
@@ -35,7 +34,6 @@ import {
   Users, DollarSign,
   Clock, BookOpen
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
 
 const Terms: React.FC = () => {
   const lastUpdated = "2025-01-15";
@@ -79,16 +77,14 @@ const Terms: React.FC = () => {
       id: "limitation-of-liability",
       title: "Limitation of Liability", icon: AlertTriangle,
       content: [
-<<<<<<< HEAD:pages.disabled_auto/terms.tsx
+:pages.disabled_auto/terms.tsx
         "Our services are provided
   'as is' without warranties of any kind",
         "We are not liable for any indirect, incidental, or consequential damages",
         "Our total liability is limited to the amount paid for the specific service",
         "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
-=======
         "Our services are provided 'as is' without warranties of any kind", "We are not liable for any indirect, incidental, or consequential damages",
         "Our total liability is limited to the amount paid for the specific service", "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
       ]
     }
   ];
@@ -101,12 +97,10 @@ const Terms: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Terms of Service - Zion Tech Group" 
-<<<<<<< HEAD:pages.disabled_auto/terms.tsx
+:pages.disabled_auto/terms.tsx
         description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group
   's AI services and solutions."
-=======
         description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group&apos;s AI services and solutions."'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
       />
       
       {/* Hero Section */}

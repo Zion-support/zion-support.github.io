@@ -16,7 +16,7 @@ import {
   Server,
   ArrowRight,
   CheckCircle,
-  Star
+  Star;
 } from 'lucide-react';
 
 const ServicesDirectory = () => {

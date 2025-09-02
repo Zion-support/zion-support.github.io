@@ -3,72 +3,16 @@
   Globe
  } from 'lucide-react';
 interface ContactFormData {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   name: string;
-  email: string;
-  phone: string;
-  comp: string;
-  service: string;
-message: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
+   email: string;
+   phone: string;
+   comp: string;
+   service: string;
+   message: string;
 }
 
 interface ContactFormErrors {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[key: string]: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
+  [key: string]: string;
 }
 
 export function EnhancedContact(...args[]: any):  {

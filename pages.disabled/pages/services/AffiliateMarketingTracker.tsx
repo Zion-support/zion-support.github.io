@@ -6,8 +6,8 @@ export default function AffiliateMarketingTracker(...args[]):  {
 export default function AffiliateMarketingTracker(...args[]):  {}
     },;
     {;
-      icon: Globe,;""
-      title: "Multi-channel Support",;""
+      icon: Globe,';
+      title: "Multi-channel Support",';
       description: "Track performance across social media, email, influencer partnerships, and more."};
   ];
 
@@ -24,7 +24,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
       description: "Perfect for small businesses starting with affiliate marketing","
       description: "Perfect for small businesses starting with affiliate marketing",
-      features[;""
+      features[';
         "Up to 100 affiliates",""
         "Basic tracking & analytics",""
         "Email support",""
@@ -45,7 +45,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
       description: "Ideal for growing businesses with active affiliate programs","
       description: "Ideal for growing businesses with active affiliate programs",
-      features[;""
+      features[';
         "Up to 500 affiliates",""
         "Advanced analytics & AI insights",""
         "Priority support",""
@@ -68,20 +68,20 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
       description: "For large-scale affiliate operations with custom requirements","
       description: "For large-scale affiliate operations with custom requirements",
-      features[;""
+      features[';
         "Unlimited affiliates",""
         "Custom integrations",""
-        "Dedicated account manager",;""
-        "White-label options",;""
-        "Advanced fraud protection",;""
+        "Dedicated account manager",';
+        "White-label options",';
+        "Advanced fraud protection",';
         "Custom commission structures";
       ],;
       popular: false};
 :pages.disabled/pages/services/AffiliateMarketingTracker.tsx
-  ]},;"
+  ]},";
   ]},;
-    {;""
-      title: "Scale Efficiently",;"      description: "Manage thousands of affiliates with automated systems and smart workflows.",;
+    {';
+      title: "Scale Efficiently",";      description: "Manage thousands of affiliates with automated systems and smart workflows.",;
       icon: Users};
   ];
 
@@ -183,7 +183,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 "
 
         {/* Features Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -260,7 +260,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 "
 
         {/* Benefits Section */}""
-        <section className="py-20 bg-slate-800/30">;""
+        <section className="py-20 bg-slate-800/30">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -339,7 +339,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 "
 
         {/* Pricing Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -402,7 +402,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
                       : 'border-slate-700'`
                   }`}
 
-                  {plan.popular && (;""
+                  {plan.popular && (';
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                       <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular;
@@ -464,7 +464,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
 "
 
         {/* CTA Section */}""
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;""
+        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">';
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div;
               initial = {}

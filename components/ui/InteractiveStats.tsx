@@ -2,13 +2,13 @@ import React from "react";
 
 interface StatItem {
   label: string;
-  value: string | number;
-  description?: string;
+   value: string | number;
+   description?: string;
 }
 
 interface InteractiveStatsProps {
   stats: StatItem[];
-  className?: string;
+   className?: string;
 }
 
 export default function InteractiveStats({ 

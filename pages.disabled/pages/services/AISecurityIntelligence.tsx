@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityIntelligence.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityIntelligence() {
-    'Automated security risk assessment and prediction',;'
-    'Predictive analytics for security threats',;'
-    'Smart intelligence framework management',;'
-    'AI-driven intelligence automation and orchestration',;'
-    'Real-time intelligence performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityIntelligence(function AISecurityIntelligence() {): any {}
-    'Automated security risk assessment and prediction',;
-    'Predictive analytics for security threats',;
-    'Smart intelligence framework management',;
-    'AI-driven intelligence automation and orchestration',;
-    'Real-time intelligence performance tracking',;
-    'Custom AI models for intelligence applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityIntelligence() {;
+    'Automated security risk assessment and prediction',';Predictive analytics for security threats',';Smart intelligence framework management',';AI-driven intelligence automation and orchestration',';Real-time intelligence performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityIntelligence(function AISecurityIntelligence() {): any {};
+    'Automated security risk assessment and prediction',';Predictive analytics for security threats',';Smart intelligence framework management',';AI-driven intelligence automation and orchestration',';Real-time intelligence performance tracking',';Custom AI models for intelligence applications';
 <:pages.disabled/pages/services/AISecurityIntelligence.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$3,999/mo', ';
       details: ['Unlimited threat feeds',Custom AI models',Full intelligence suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security intelligence optimization',;'
-    'Threat intelligence gathering and analysis',;'
-    'Security risk assessment and prediction',;'
-    'Intelligence framework management and automation',;'
-    'Intelligence automation and orchestration',;'
-    'Intelligence scaling and management';
-  ];
-
-  '
-    'Improve security intelligence performance by 50-80%',;'
-    'Reduce threat detection time by 40-70%',;'
-    'Cut security intelligence costs by 35-65%',;'
-    'Enhance security intelligence reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security intelligence operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security intelligence optimization',';Threat intelligence gathering and analysis',';Security risk assessment and prediction',';Intelligence framework management and automation',';Intelligence automation and orchestration',';Intelligence scaling and management';
+  ]';Improve security intelligence performance by 50-80%',';Reduce threat detection time by 40-70%',';Cut security intelligence costs by 35-65%',';Enhance security intelligence reliability and scalability',';Optimize resource utilization',';Scale security intelligence operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityIntelligence.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

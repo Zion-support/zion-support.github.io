@@ -1,14 +1,12 @@
-<<<<<<< HEAD:src.disabled/components/ui/InteractiveStats.tsx
+:src.disabled/components/ui/InteractiveStats.tsx
 interface Stat {
   label: string;
-  value: string;
-  description: string;
-
-interface InteractiveStatsProps {
-  stats: Stat[];
-  className?: string;
-
-const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "" }) => {
+   value: string;
+   description: string;
+   interface InteractiveStatsProps { stats: Stat[];
+   className?: string;
+   const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = "";
+}) => {
   return (
     <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 ${className}`}>
       {stats.map((stat, index) => (
@@ -26,5 +24,3 @@ const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats, className = 
 };
 
 export default InteractiveStats;}}
-=======
->>>>>>> pr-10728:src/components/ui/InteractiveStats.tsx

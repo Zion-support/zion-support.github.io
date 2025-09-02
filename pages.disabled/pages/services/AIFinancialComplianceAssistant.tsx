@@ -39,7 +39,7 @@ import { Shield,
   Clock,
   Award,
   Gauge,
-  PieChart'
+  PieChart';
 } from 'lucide-react';
 ;
 export { function };
@@ -81,27 +81,20 @@ export default function AIFinancialComplianceAssistant(...args[]): {
 =
   }},;
 >    {;
-      icon: BarChart3,;'
-      title: 'Advanced Analytics & Reporting',;'
+      icon: BarChart3,';
+      title: 'Advanced Analytics & Reporting',';
       description: 'Comprehensive dashboards and automated reporting for regulatory submissions'};
-  ];'
-    'Reduce compliance violations by 85%',;'
-    'Cut compliance costs by 60%',;'
-    'Improve audit efficiency by 70%',;'
-    'Ensure 99.9% regulatory accuracy',;'
-    'Streamline reporting processes',;'
-    'Enhance risk management capabilities';
-  ];'
-        'Up to 1,000 transactions/month',Basic compliance monitoring',Standard regulatory updates',Email support',Basic reporting',Up to 5 user licenses',Core compliance frameworks'
-      ],;'
-      features[;''
+  ]';Reduce compliance violations by 85%',';Cut compliance costs by 60%',';Improve audit efficiency by 70%',';Ensure 99.9% regulatory accuracy',';Streamline reporting processes',';Enhance risk management capabilities';
+  ]';Up to 1,000 transactions/month',Basic compliance monitoring',Standard regulatory updates',Email support',Basic reporting',Up to 5 user licenses',Core compliance frameworks'
+      ],';
+      features[';
         'Up to 1,000 transactions/month',''
         'Basic compliance monitoring',''
         'Standard regulatory updates',''
         'Email support',''
         'Basic reporting',''
         'Up to 5 user licenses','        'Core compliance frameworks''
-      ],;''
+      ],';
       cta: 'Start Free Trial',
       popular: false
     },
@@ -111,9 +104,8 @@ export default function AIFinancialComplianceAssistant(...args[]): {
       price: '$999','
       period: '/month','
       description: 'Ideal for growing financial organizations',
-      features[;'
-        'Up to 10,000 transactions/month',Advanced AI compliance monitoring',Real-time regulatory updates',Priority support',Custom reporting',Up to 25 user licenses',Advanced compliance frameworks',API integrations',Custom workflows',Advanced analytics'
-      ],;'
+      features[';Up to 10,000 transactions/month',Advanced AI compliance monitoring',Real-time regulatory updates',Priority support',Custom reporting',Up to 25 user licenses',Advanced compliance frameworks',API integrations',Custom workflows',Advanced analytics'
+      ],';
       cta: 'Start Free Trial',
       popular: true
     },
@@ -123,21 +115,18 @@ export default function AIFinancialComplianceAssistant(...args[]): {
       price: '$2,499','
       period: '/month','
       description: 'For large financial institutions with complex needs',
-      features[;'
-        'Unlimited transactions',Premium AI compliance monitoring',24/7 dedicated support',Custom dashboards',Unlimited user licenses',All compliance frameworks',Enterprise integrations',Advanced AI models',On-premise deployment option',Dedicated compliance consultant',;'
-        'Custom training programs',;'
-        'White-label solutions';
-      ],;'
+      features[';Unlimited transactions',Premium AI compliance monitoring',24/7 dedicated support',Custom dashboards',Unlimited user licenses',All compliance frameworks',Enterprise integrations',Advanced AI models',On-premise deployment option',Dedicated compliance consultant',';Custom training programs',';White-label solutions';
+      ],';
       cta: 'Contact Sales',;
       popular: false};
   ]},;
-    {;'
-      title: 'IFRS/GAAP',;'
+    {';
+      title: 'IFRS/GAAP',';
       description: 'Accounting standards compliance with automated financial reporting',;
       icon: BookOpen};
-  ]},;'
-    {;''
-      title: 'Fintech Startups',;'      description: 'Rapid compliance scaling for growing financial technology companies',;
+  ]},';
+    {';
+      title: 'Fintech Startups',';      description: 'Rapid compliance scaling for growing financial technology companies',;
       icon: Zap};
   ];
 :pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx
@@ -201,9 +190,9 @@ export default function AIFinancialComplianceAssistant(...args[]): {
             </div>
           </motion.div>
         </div>
-      </section>;"
+      </section>";
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -290,7 +279,7 @@ export default function AIFinancialComplianceAssistant(...args[]): {
         </div>
       </section>"
       {/* Compliance Frameworks Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -377,7 +366,7 @@ export default function AIFinancialComplianceAssistant(...args[]): {
         </div>
       </section>"
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -456,7 +445,7 @@ export default function AIFinancialComplianceAssistant(...args[]): {
         </div>
       </section>"
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -543,7 +532,7 @@ export default function AIFinancialComplianceAssistant(...args[]): {
         </div>
       </section>"
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -615,7 +604,7 @@ export default function AIFinancialComplianceAssistant(...args[]): {
                     ? 'border-blue-500/50 bg-gradient-to-br from-blue-900/20 to-cyan-900/20'''`
                     : 'border-slate-700/50'``
                 }`}"
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -654,7 +643,7 @@ export default function AIFinancialComplianceAssistant(...args[]): {
         </div>
       </section>"
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -699,7 +688,7 @@ export default function AIFinancialComplianceAssistant(...args[]): {
         </div>
       </section>"
       {/* Contact Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {

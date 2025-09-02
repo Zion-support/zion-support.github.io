@@ -1,11 +1,11 @@
-import type { NextPage } from 'next';'
-import { Helmet } from 'react-helmet-async';'
+import type { NextPage } from 'next';
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { ADVANCED_CYBERSECURITY_SERVICES_2027 } from "../data/advancedCybersecurityServices2027";
 
-const AdvancedCybersecurityServices: NextPage = () => {;'
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');'
-  const [searchTerm, setSearchTerm] = useState('');'
+const AdvancedCybersecurityServices: NextPage = () => {';
+  const [selectedCategory, setSelectedCategory] = useState<string>('all')';
+  const [searchTerm, setSearchTerm] = useState('')';
   const [sortBy, setSortBy] = useState<any>('innovation');
 
 :pages.disabled/root_pages/advanced-cybersecurity.tsx
@@ -18,12 +18,12 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
     { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },
     { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },
     { id: 'Cloud Security', name: 'Cloud Security', color: 'from-yellow-500 to-orange-600' }
-  const categories = [;'
-    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },;'
-    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },;'
-    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },;'
-    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },;'
-    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },;'
+  const categories = [';
+    { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },';
+    { id: 'AI Security', name: 'AI Security', color: 'from-purple-500 to-pink-600' },';
+    { id: 'Quantum Security', name: 'Quantum Security', color: 'from-indigo-500 to-blue-600' },';
+    { id: 'Network Security', name: 'Network Security', color: 'from-green-500 to-teal-600' },';
+    { id: 'Endpoint Security', name: 'Endpoint Security', color: 'from-orange-500 to-red-600' },';
 :pages.disabled/root_pages/advanced-cybersecurity.tsx
   const categories = [;
     { id: 'all', name: 'All Security', color: 'from-blue-500 to-purple-600' },;
@@ -49,16 +49,16 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
         return b.innovationLevel === 'Revolutionary' ? 1 : -1;
       case 'roi':
   const sortedServices = [...filteredServices].sort((a, b) => {;
-    switch (sortBy) {;'
+    switch (sortBy) {';
       case 'price':;
 :pages.disabled/root_pages/advanced-cybersecurity.tsx
         return a.pricing.monthly - b.pricing.monthly;
       case 'innovation':'
         return b.innovationLevel === 'Revolutionary' ? 1 : -1;
       case 'roi':'
-        return a.pricing.monthly - b.pricing.monthly;'
+        return a.pricing.monthly - b.pricing.monthly';
       case 'innovation':''
-        return b.innovationLevel === 'Revolutionary' ? 1 : -1;'
+        return b.innovationLevel === 'Revolutionary' ? 1 : -1';
       case 'roi':''
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
       default:
@@ -86,14 +86,11 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
 
 '
       default: return 'from-gray-500 to-gray-600'}
-  };
-'
+  }';
       default: return 'bg-gradient-to-r from-gray-500 to-gray-600'}
-  };
-'
+  }';
       default: return '🛡️'}
-  };
-"
+  }";
   return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-700 relative overflow-hidden">"
       {/* Animated Security Background Elements */}""
@@ -410,6 +407,5 @@ const AdvancedCybersecurityServices: NextPage = () => {;'
       </div>;
     </div>;
   );
-};
-'"`
+}'"`;
 export default AdvancedCybersecurityServices;}}}}'"`'"`

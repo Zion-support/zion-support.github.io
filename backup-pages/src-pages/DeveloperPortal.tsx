@@ -70,8 +70,8 @@
   'Content-Type':
   'application/json}}) ;
 
-const data = await response.json();`
-// // // // // console.log(data);`,      icon: Code
+const data = await response.json()`;
+// // // // // console.log(data)`;,      icon: Code
     },
     {
 
@@ -289,7 +289,7 @@ const data = await response.json();`
       </section>
 
       {/* Code Examples */}"
-      <section className="py-20 bg-zion-slate-dark">;"
+      <section className="py-20 bg-zion-slate-dark">";
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -331,7 +331,7 @@ const data = await response.json();`
       </section>
 
       {/* Resources */}"
-      <section className="py-20 bg-zion-blue-dark">;"
+      <section className="py-20 bg-zion-blue-dark">";
         <div className="container mx-auto px-4">"
           <div className="text-center mb-16">"
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -430,7 +430,7 @@ const data = await response.json();`
       </section>
 
       {/* Quick Start Section */}"
-      <section className="py-16 px-4 bg-slate-800/30">;"
+      <section className="py-16 px-4 bg-slate-800/30">";
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial = {
@@ -511,7 +511,7 @@ const data = await response.json();`
       </section>
 
       {/* CTA Section */}"
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">;"
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">";
         <div className="container mx-auto px-4 text-center">"
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Build Something Amazing?

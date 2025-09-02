@@ -1,12 +1,12 @@
-import { useState, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import { useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Wallet, Smartphone, Coins, Image, TrendingUp, BarChart3, Plus, Send, Download, Loader2 } from 'lucide-react';
 ;
 ;
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
+    })';
     const [activeTab, setActiveTab] = useState('overview');
     const [showMintNFT, setShowMintNFT] = useState(false);
     const [showSendTransaction, setShowSendTransaction] = useState(false);
@@ -29,7 +29,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
     });
     const handleConnectWallet = useCallback(async () => {}
         try {}
-            await connectWallet();'
+            await connectWallet()';
             trackEvent('blockchain',dashboard',wallet_connected')}
         catch (error) {}
 '
@@ -46,10 +46,10 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   image: nftForm.image || `https://via.placeholder.com/300x300/6366f1/ffffff?text=${nftForm.name```
 ```'`
 }`''
-                };'''
-                await mintNFT(contracts[1]?.address || '', metadata);'''
-                setNftForm({ name: '', description: '', image: '' });''
-                setShowMintNFT(false);'''
+                }';'
+                await mintNFT(contracts[1]?.address || '', metadata)';'
+                setNftForm({ name: '', description: '', image: '' })';
+                setShowMintNFT(false)';'
                 trackEvent('blockchain',dashboard',nft_minted')}
             catch (error) {}
 '
@@ -61,9 +61,9 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
     const handleSendTransaction = useCallback(async () => {}
         if(transactionForm.to.trim() && transactionForm.value && wallet) {}
             try {}
-                await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null);'
+                await sendTransaction(transactionForm.to, transactionForm.value, transactionForm.data || null)';
                 setTransactionForm({ to: '', value: '', data: '' });
-                setShowSendTransaction(false);'
+                setShowSendTransaction(false)';
                 trackEvent('blockchain',dashboard',transaction_sent')}
             catch (error) {}
 '
@@ -75,11 +75,11 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
     const getStatusColor = (status) => {}
         switch (status) {}
 '
-            case 'confirmed': return 'text-green-600 bg-green-100';'
-            case 'pending': return 'text-yellow-600 bg-yellow-100';'
-            case 'failed': return 'text-red-600 bg-red-100';'
+            case 'confirmed': return 'text-green-600 bg-green-100';
+            case 'pending': return 'text-yellow-600 bg-yellow-100';
+            case 'failed': return 'text-red-600 bg-red-100';
             default: return 'text-gray-600 bg-gray-100'}`
-    };``
+    }`;
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>"""
       {/* Header */}""""
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">""""
@@ -174,13 +174,12 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 name: 'New Contract','
                 address: '0x' + Math.random().toString(36).substr(2, 40),'
                 network: 'ethereum',
-                abi[],;'
-                functions['function1',function2'],;'
-                events['Event1',;'
-  'Event2']
+                abi[],';
+                functions['function1',function2'],';
+                events['Event1',';Event2']
             """
 """"
-})} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">;""""
+})} className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">';""
                   <Plus className="w-4 h-4 inline mr-2"/>
                   Add Contract;
                 </button>
@@ -567,5 +566,5 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             </motion.div>
           </motion.div>) }
       </AnimatePresence>
-    </div>)};'"`
+    </div>)}'"`;
 '"`'"`

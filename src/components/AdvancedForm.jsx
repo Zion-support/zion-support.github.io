@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
 ;
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
@@ -55,7 +55,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             return null}'
         // Type-specific validation''
         if (typeof value === 'string') {}
-            const stringValue = value.trim();'
+            const stringValue = value.trim()';
             // Email validation''
             if (field.type === 'email' && stringValue) {}
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -155,7 +155,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 '
 ''
 '''
-                trackEvent('form',submission_success',form_completed');'''
+                trackEvent('form',submission_success',form_completed')';'
                 trackConversion('form_submission', 1, { formType: title })}
             setIsSubmitted(true);
             // Reset form after successful submission;
@@ -192,23 +192,22 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         switch(field.type) {}
 '"""
 '"'"""
-            case 'email': return <Mail className="w-4 h-4"/>;'"'"""
-            case 'tel': return <Phone className="w-4 h-4"/>;'"'"""
-            case 'textarea': return <MessageSquare className="w-4 h-4"/>;'"'"""
-            case 'select': return <Building className="w-4 h-4"/>;""""
+            case 'email': return <Mail className="w-4 h-4"/>'';"""
+            case 'tel': return <Phone className="w-4 h-4"/>'';"""
+            case 'textarea': return <MessageSquare className="w-4 h-4"/>'';"""
+            case 'select': return <Building className="w-4 h-4"/>';""
             default: return <User className="w-4 h-4"/>}
     }, []);
     // Render field;
     const renderField = useCallback((field) => {}
-        const fieldValidation = validation[field.name];'
+        const fieldValidation = validation[field.name]';
         const isPasswordField = field.name.toLowerCase().includes('password');
         return (<motion.div key={field.name} initial = {}
   { opacity: 0,
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} className="space-y-2">""""
         <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">"""
@@ -302,8 +301,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   scale: 0.9;
 }} animate = {}
   { opacity: 1,
-  scale: 1;
-"""
+  scale: 1';"
 """"
 }} className="text-center p-8 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-700">""""
         <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4"/>""""
@@ -320,9 +318,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-`
-``
+  y: 0`;`
 }} className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>"""
       {/* Header */}""""
       <div className="bg-gradient-to-r from-blue-500 to-purple-500 p-6 text-white">""""
@@ -371,8 +367,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 
 }} exit = {}
   { opacity: 0,
-  height: 0;
-"""
+  height: 0';"
 """"
 }} className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-700 rounded-lg">""""
               <p className="text-sm text-red-600 dark:text-red-400">
@@ -380,5 +375,5 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             </motion.div>) }
         </AnimatePresence>
       </form>
-    </motion.div>)};'"`
+    </motion.div>)}'"`;
 '"`'"`

@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityTraining.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTraining() {
-    'Automated security skill assessment and certification',;'
-    'Predictive analytics for training needs',;'
-    'Smart training framework management',;'
-    'AI-driven training automation and orchestration',;'
-    'Real-time training performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTraining(function AISecurityTraining() {): any {}
-    'Automated security skill assessment and certification',;
-    'Predictive analytics for training needs',;
-    'Smart training framework management',;
-    'AI-driven training automation and orchestration',;
-    'Real-time training performance tracking',;
-    'Custom AI models for training applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTraining() {;
+    'Automated security skill assessment and certification',';Predictive analytics for training needs',';Smart training framework management',';AI-driven training automation and orchestration',';Real-time training performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityTraining(function AISecurityTraining() {): any {};
+    'Automated security skill assessment and certification',';Predictive analytics for training needs',';Smart training framework management',';AI-driven training automation and orchestration',';Real-time training performance tracking',';Custom AI models for training applications';
 <:pages.disabled/pages/services/AISecurityTraining.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$1,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,499/mo', ';
       details: ['Unlimited users',Custom AI models',Full training suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security training optimization',;'
-    'Training strategy management and execution',;'
-    'Security skill assessment and certification',;'
-    'Training framework management and automation',;'
-    'Training automation and orchestration',;'
-    'Training scaling and management';
-  ];
-
-  '
-    'Improve security training performance by 50-80%',;'
-    'Reduce training completion time by 40-70%',;'
-    'Cut security training costs by 35-65%',;'
-    'Enhance security training reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security training operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security training optimization',';Training strategy management and execution',';Security skill assessment and certification',';Training framework management and automation',';Training automation and orchestration',';Training scaling and management';
+  ]';Improve security training performance by 50-80%',';Reduce training completion time by 40-70%',';Cut security training costs by 35-65%',';Enhance security training reliability and scalability',';Optimize resource utilization',';Scale security training operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityTraining.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

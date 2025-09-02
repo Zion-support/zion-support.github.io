@@ -2,25 +2,15 @@ export class LinkChecker {}
 export default LinkChecker;
 :pages.disabled/utils/linkChecker.tsx
 export interface LinkInfo {
-export interface PageInfo {
-<<<<<<< HEAD
-:pages.disabled/utils/linkChecker.tsxexport interface LinkInfo {}
+  export interface PageInfo { :pages.disabled/utils/linkChecker.tsxexport interface LinkInfo {;
+}
 export interface PageInfo {}
 url: string;
   status:
   'working' |
   'broken' |
   'missing' |
-  'external';
-=======
-:pages.disabled/utils/linkChecker.tsx
-
-export interface LinkInfo {}
-export interface PageInfo {}
-  url: string;
-  status: 'working' | 'broken' | 'missing' | 'external';
->>>>>>> pr-10728
-  page: string;
+  'external';  page: string;
   anchor?: string;
   error?: string}
 
@@ -33,15 +23,8 @@ export interface PageInfo {}
   private visitedUrls: Set < string> = new Set () ;
   private brokenLinks: LinkInfo[] = [];
   private missingPages: string[] = [];
-<<<<<<< HEAD
 :pages.disabled/utils/linkChecker.tsx,
   constructor (baseUrl: string = 'https://ziontechgroup.com) {
-=======
-:pages.disabled/utils/linkChecker.tsx
-'
-  constructor (baseUrl: string = 'https://ziontechgroup.com') {
->>>>>>> pr-10728
-
     this.baseUrl = baseUrl}
 
   // Check if a link is internal or external
@@ -77,40 +60,7 @@ export interface PageInfo {}
   }
 
   // Extract all links from a page
-<<<<<<< HEAD
   extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {const links: LinkInfo[] = [];
-=======
-  extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {
-
-
-  constructor (baseUrl: string = 'https://ziontechgroup.com') {}
-    this.baseUrl = baseUrl}
-
-  // Check if a link is internal or external;
-  isInternalLink (url: string) : boolean {}
-    try {}
-      return urlObj.hostname === new URL (this.baseUrl) .hostname} catch {}
-      return false}
-  }
-
-  // Normalize URL to handle relative paths;
-  normalizeUrl (url: string, basePage: string) : string {}
-    try {}
-      if (url.startsWith ('http') ) {}
-        return url}
-      if (url.startsWith ('/') ) {}
-        return `${this.baseUrl}${url}`}
-      if (url.startsWith ('#') ) {}
-        return `${this.baseUrl}${basePage}${url}`}
-      return `${this.baseUrl}${basePage}/${url}`} catch {}
-      return url}
-  }
-
-  // Extract all links from a page;
-  extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {}
-    const links: LinkInfo[] = [];
->>>>>>> pr-10728
-
     // Extract href attributes from anchor tags;
     let match;
 
@@ -143,39 +93,10 @@ export interface PageInfo {}
 
         links.push ({
 
-<<<<<<< HEAD
           url: normalizedUrl,
 ,
   status: 'working,
           page: pagePath}) }}
-=======
-          url: normalizedUrl,'
-          status: 'working',
-          page: pagePath}) }
-    while ( (match = hrefRegex.exec (pageContent) ) !== null) {}
-      if (url &&
-        !url.startsWith ('javascript:') &&
-        !url.startsWith ('mailto:') &&
-        !url.startsWith ('tel:') ) {}
-        links.push ({}
-          url: normalizedUrl,
-          status: 'working',
-          page: pagePath,
-          anchor: url.startsWith ('#') ? url : undefined
-        }) }
-    }
-
-    // Extract src attributes from img, script, and link tags;
-    while ( (match = srcRegex.exec (pageContent) ) !== null) {}
-      if (url && !url.startsWith ('data:') && !url.startsWith ('blob:') ) {}
-        links.push ({}
-          url: normalizedUrl,
-          status: 'working',
-          page: pagePath
-        }) }
-    }
->>>>>>> pr-10728
-
     return links}
 
 :pages.disabled/utils/linkChecker.tsx
@@ -195,27 +116,7 @@ export interface PageInfo {}
 
     for (const link of links) {
 
-<<<<<<< HEAD
       if (this.visitedUrls.has (link.url) ) {continue}
-=======
-      if (this.visitedUrls.has (link.url) ) {
-
-  // Check if a page exists;
-  async checkPageExists (url: string: any): Promise < any> {}
-    try {}
-      return response.ok} catch {}
-      return false}
-  }
-
-  // Check all links on a page;
-  async checkPageLinks (pagePath: string, pageContent: string: any): Promise < any> {}
-    const checkedLinks: LinkInfo[] = [];
-
-    for (const link of links) {}
-      if (this.visitedUrls.has (link.url) ) {}
-        continue}
->>>>>>> pr-10728
-
       this.visitedUrls.add (link.url) ;
 
 :pages.disabled/utils/linkChecker.tsx
@@ -230,20 +131,8 @@ export interface PageInfo {}
   ';
           this.missingPages.push (link.url) }
       } else {
-<<<<<<< HEAD
 'link.status =
   'external'}
-=======
-'
-      if (this.isInternalLink (link.url) ) {}
-        if (exists) {}
-          link.status = 'working'} else {}
-          link.status = 'missing';
-          this.missingPages.push (link.url) }
-      } else {}
-        link.status = 'external'}
->>>>>>> pr-10728
-
       checkedLinks.push (link) }
 
 :pages.disabled/utils/linkChecker.tsx
@@ -273,39 +162,6 @@ export interface PageInfo {}
     return this.brokenLinks}
 
   // Get all missing pages
-<<<<<<< HEAD
-  getMissingPages () : string[] {return this.missingPages}
-=======
-  getMissingPages () : string[] {
-
-    return {}
-      path: pagePath,
-      title: this.extractPageTitle (pageContent) ,
-      links: checkedLinks,
-      exists: true
-    }}
-
-  // Extract page title;
-  private extractPageTitle (content: string) : string {}
-    return titleMatch ? titleMatch[1].trim () : 'Untitled'}
-
-  // Get analysis summary;
-  getSummary () {}
-    return {}
-      totalLinks: anythis.visitedUrls.size,
-      brokenLinks: this.brokenLinks.length,
-      missingPages: this.missingPages.length,
-      externalLinks: Array.from (this.visitedUrls) .filter (url => !this.isInternalLink (url) ) .length
-    }}
-
-  // Get all broken links;
-  getBrokenLinks () : LinkInfo[] {}
-    return this.brokenLinks}
-
-  // Get all missing pages;
-  getMissingPages () : string[] {}
-    return this.missingPages}
->>>>>>> pr-10728
-}
+  getMissingPages () : string[] {return this.missingPages}}
 
 '`

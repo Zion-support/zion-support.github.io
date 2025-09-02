@@ -5,12 +5,12 @@ export default function IoTEdge(...args: []):  {}
     },;
     {;
       icon: Database,;
-      title: 'Data Management',;'
+      title: 'Data Management',';
       description: 'Efficient storage and processing of IoT data streams'};
 :pages.disabled/pages/services/IoTEdge.tsx
-  ]},;'
-    {;''
-      title: 'Security & Compliance',;'      description: 'End-to-end security for IoT ecosystems',;
+  ]},';
+    {';
+      title: 'Security & Compliance',';      description: 'End-to-end security for IoT ecosystems',;
       icon: Shield};
   ];
   return (""
@@ -96,11 +96,11 @@ export default function IoTEdge(...args: []):  {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/IoTEdge.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -202,7 +202,7 @@ export default function IoTEdge(...args: []):  {}
       </section>
 
       {/* Services Section */}""
-      <section className="py-20 bg-white/5">;""
+      <section className="py-20 bg-white/5">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -320,7 +320,7 @@ export default function IoTEdge(...args: []):  {}
       </section>
 
       {/* Industries */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -423,7 +423,7 @@ export default function IoTEdge(...args: []):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -480,7 +480,7 @@ export default function IoTEdge(...args: []):  {}
         </div>;
       </section>;
 :pages.disabled/pages/services/IoTEdge.tsx
-    </div>;'"
+    </div>'";
   )}}}}'"'"
     </div>;
   )}}}}'""

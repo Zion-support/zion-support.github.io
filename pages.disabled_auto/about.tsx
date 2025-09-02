@@ -1,15 +1,15 @@
-import type { NextPage } from,
+import type { NextPage } from,;
   next';
-import MainLayout from
+import MainLayout from;
   '../components/layout/MainLayout';
-import { Users, Target, Award, Globe, Zap, Shield, Heart, Lightbulb } from
+import { Users, Target, Award, Globe, Zap, Shield, Heart, Lightbulb } from;
   'lucide-react';
-import Link from
+import Link from;
   'next/link';
 
 const AboutPage: NextPage = () => {
   const stats = [
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
     { number:
   '500+, label:
   'Projects Completed', icon: <Award className="w-8 h-8" /> },
@@ -19,15 +19,13 @@ const AboutPage: NextPage = () => {
   99.9%', label: 'Uptime Guarantee, icon: <Shield className="w-8 h-8" /> },
     { number:,
   24/7', label: 'Support Available, icon: <Globe className="w-8 h-8" /> },
-=======
     { number: '500+', label: 'Projects Completed', icon: <Award className="w-8 h-8" /> }, { number: '50+', label: 'Happy Clients', icon: <Users className="w-8 h-8" /> },
     { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" /> }, { number: '24/7', label: 'Support Available', icon: <Globe className="w-8 h-8" /> },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
   ];
 
   const values = [
     {
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
       icon: <Lightbulb className="w-8 h-8" />,
       title:,
   Innovation',
@@ -54,7 +52,6 @@ const AboutPage: NextPage = () => {
   Results-Driven
   ',
       description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.
-=======
       icon: <Lightbulb className="w-8 h-8" />, title: 'Innovation',
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
     }, {
@@ -68,13 +65,12 @@ const AboutPage: NextPage = () => {
     {
       icon: <Target className="w-8 h-8" />, title: 'Results-Driven',
       description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
     }
   ];
 
   const team = [
     {
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
       name:,
   Kleber Silva
   ',
@@ -113,7 +109,6 @@ const AboutPage: NextPage = () => {
   UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.
   ',
       image: '/team/emily.jpg
-=======
       name: 'Kleber Silva', role: 'Founder & CEO',
       bio: 'Technology visionary with over 15 years of experience in software development and business transformation.', image: '/team/kleber.jpg'
     },
@@ -128,13 +123,12 @@ const AboutPage: NextPage = () => {
     {
       name: 'Emily Rodriguez', role: 'Head of Design',
       bio: 'UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.', image: '/team/emily.jpg'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
     }
   ];
 
   const timeline = [
     {
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
       year:,
   2020
   ',
@@ -172,7 +166,6 @@ const AboutPage: NextPage = () => {
       description:,
   Serving clients across multiple countries and industries, with a focus on AI and digital transformation.
   '
-=======
       year: '2020', title: 'Company Founded',
       description: 'Zion Tech Group was established with a vision to democratize technology solutions for businesses of all sizes.'
     }, {
@@ -188,7 +181,6 @@ const AboutPage: NextPage = () => {
     {
       year: '2024', title: 'Global Reach',
       description: 'Serving clients across multiple countries and industries, with a focus on AI and digital transformation.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
     }
   ];
 
@@ -205,11 +197,9 @@ const AboutPage: NextPage = () => {
               Transforming Businesses Through Innovation
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
               Were a team of passionate technologists dedicated to helping businesses 
-=======
               We&apos;re a team of passionate technologists dedicated to helping businesses '
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
               leverage cutting-edge technology to achieve their goals and drive growth.
             </p>
           </div>
@@ -232,14 +222,12 @@ const AboutPage: NextPage = () => {
                 that not only work flawlessly but also provide measurable ROI for our clients.
               </p>
               <p className="text-lg text-gray-600">
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
                 Whether you're a startup looking to scale or an enterprise seeking digital transformation, 
                 we
   're here to be your technology partner every step of the way.
-=======
                 Whether you&apos;re a startup looking to scale or an enterprise seeking digital transformation, '
                 we&apos;re here to be your technology partner every step of the way.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
               </p>
             </div>
             <div className="bg-gray-100 rounded-lg p-8">
@@ -364,12 +352,10 @@ const AboutPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
               We
   're not just another technology company. Here's what makes us different.
-=======
               We&apos;re not just another technology company. Here&apos;s what makes us different.
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
             </p>
           </div>
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
@@ -382,12 +368,10 @@ const AboutPage: NextPage = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Track Record</h3>
               <p className="text-gray-600">
-<<<<<<< HEAD:pages.disabled_auto/about.tsx
+:pages.disabled_auto/about.tsx
                 We
   've successfully delivered hundreds of projects across various industries 
-=======
                 We&apos;ve successfully delivered hundreds of projects across various industries '
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/about.tsx
                 and business sizes.
               </p>
             </div>

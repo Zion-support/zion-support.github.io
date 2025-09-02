@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from '../../src/lib/utils';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  text?: string;
+   className?: string;
+   text?: string;
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -18,15 +17,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
     md: 'h-8 w-8',
     lg: 'h-12 w-12'
   };
-
-=======
-import React from 'react';'import { motion } from 'framer-motion';''interface LoadingSpinnerProps {'
-  size?: 'sm' | 'md' | 'lg';'  className?: string;'}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', className = '' '}) => {'  const sizeClasses = {;
-    sm: 'w-4 h-4', md: 'w-8 h-8','    lg: 'w-12 h-12''  };''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   return (
     <div className={cn('flex flex-col items-center justify-center space-y-2', className)}>
       <div

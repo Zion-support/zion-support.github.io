@@ -30,24 +30,24 @@ import { Brain,
   Target,
   PieChart,
   LineChart,
-  Activity'
+  Activity';
  } from 'lucide-react';
 ;
 export { function };
 export default function AIBusinessIntelligencePlatform(...args[]):  {}
     },;
     {;
-      icon: Users,;""
-      title: "Collaborative Insights",;""
+      icon: Users,';
+      title: "Collaborative Insights",';
       description: "Share dashboards and reports with team members, enabling better collaboration and decision-making."};
   ];
 
-  const benefits: any = [;""
-    "Improve decision-making speed by 80%",;""
-    "Reduce manual reporting by 90%",;""
-    "Identify business opportunities 3x faster",;""
-    "Increase operational efficiency by 45%",;""
-    "Reduce data analysis time by 70%",;""
+  const benefits: any = [';
+    "Improve decision-making speed by 80%",';
+    "Reduce manual reporting by 90%",';
+    "Identify business opportunities 3x faster",';
+    "Increase operational efficiency by 45%",';
+    "Reduce data analysis time by 70%",';
     "Improve forecast accuracy by 60%";
   ];
 
@@ -59,13 +59,12 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       period: "month",""
       description: "Perfect for small businesses getting started with AI analytics",
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
-      features[;"
-        "Up to 5 users","
+      features[';Up to 5 users","
         "Basic AI analytics","
         "Standard dashboards","
         "Email support","
         "Data integration (3 sources)","
-        "Monthly reports"      features[;""
+        "Monthly reports"      features[';
         "Up to 5 users",""
         "Basic AI analytics",""
         "Standard dashboards",""
@@ -89,7 +88,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       price: 499,""
       period: "month",""
       description: "Ideal for growing businesses with advanced analytics needs",
-      features[;""
+      features[';
         "Up to 25 users",""
         "Advanced AI algorithms",""
         "Custom dashboards",""
@@ -117,14 +116,14 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       price: 1299,""
       period: "month",""
       description: "For large organizations with complex data analytics requirements",
-      features[;""
+      features[';
         "Unlimited users",""
         "Custom AI models",""
         "White-label dashboards",""
         "24/7 dedicated support",""
-        "Unlimited data sources",;""
-        "Advanced security features",;""
-        "Custom integrations",;""
+        "Unlimited data sources",';
+        "Advanced security features",';
+        "Custom integrations",';
         "SLA guarantees";
       ],;
       popular: false};
@@ -152,7 +151,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
     {
 "
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
-      industry: "Manufacturing",;"
+      industry: "Manufacturing",";
 
   const useCases: any = []
     {}
@@ -172,10 +171,10 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
     },
     {}
 ""
-      industry: "Manufacturing",;""
+      industry: "Manufacturing",';
       description: "Predictive maintenance, quality control, and supply chain optimization"},;
-    {;""
-      industry: "Retail",;""
+    {';
+      industry: "Retail",';
       description: "Demand forecasting, customer segmentation, and store performance analysis"};  ];
 
   return (""
@@ -258,11 +257,11 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/AIBusinessIntelligencePlatform.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -365,7 +364,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -460,7 +459,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -549,7 +548,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
                     : 'border-slate-700'`
                 }`}
 
-                {tier.popular && (;""
+                {tier.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <Badge className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white border-0">
                       Most Popular;
@@ -608,7 +607,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -703,7 +702,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -762,7 +761,7 @@ export default function AIBusinessIntelligencePlatform(...args[]):  {}
       </section>
 
       {/* Contact Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}

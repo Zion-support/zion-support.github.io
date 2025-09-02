@@ -1,10 +1,10 @@
-import { render, screen, waitFor } from
+import { render, screen, waitFor } from;
   '@testing-library/react';
-import userEvent from
+import userEvent from;
   '@testing-library/user-event';
-import { vi } from
+import { vi } from;
   'vitest';
-import { ProductActions } from
+import { ProductActions } from;
   '@/components/ProductActions';
 
 vi.mock(

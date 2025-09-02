@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-=======
             }) }
         catch (error) {}
 '
@@ -47,7 +45,7 @@
         else if(page.keywords.length >= 1) {}
             score += 5}
         // URL structure (0-15 points)
-        maxScore += 15;'
+        maxScore += 15';
         if (page.url === '/' || page.url.includes('-')) {}
             score += 15}
         else if(page.url.length > 0) {}
@@ -101,7 +99,7 @@
             issues.push('URL could be more SEO-friendly (consider using hyphens))}
         return issues};
     const generateSEORecommendations = (issues) => {}
-        const recommendations = [];'
+        const recommendations = []';
         if (issues.some(issue => issue.includes('Title'))) {}
 '
             recommendations.push('Optimize page titles with relevant keywords and compelling copy')}'
@@ -125,8 +123,8 @@
 ''
 '''
             recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}'''
-        recommendations.push('Ensure content is unique, valuable, and addresses user intent');'''
-        recommendations.push('Implement structured data markup for better search engine understanding');'''
+        recommendations.push('Ensure content is unique, valuable, and addresses user intent')';'
+        recommendations.push('Implement structured data markup for better search engine understanding')';'
         recommendations.push('Optimize page loading speed for better user experience and SEO');
         return recommendations};
     const generateSummary = (pageAnalyses, topIssues) => {}
@@ -162,20 +160,20 @@
         return summary};
     const exportSEOReport = () => {}
         if (!report)
-            return;'
+            return';
         const csvContent = [''
             ['Page URL',Title',SEO Score',Issues',Recommendations'],
             ...report.pageAnalyses.map(page => [page.pageUrl,'
                 page.title,''
                 page.score.toString(),'''`
-                page.issues.join('; '),''`'`
-                page.recommendations.join('; ')'`'`'`
+                page.issues.join(';),''`'`
+                page.recommendations.join(';)'`'`'`
             ])'`'`'`'`
-        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');'''
-        const blob = new Blob([csvContent], { type: 'text/csv' });''
-        const url = window.URL.createObjectURL(blob);'''
-        const a = document.createElement('a');''
-        a.href = url;'''
+        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n')';'
+        const blob = new Blob([csvContent], { type: 'text/csv' })';
+        const url = window.URL.createObjectURL(blob)';'
+        const a = document.createElement('a')';
+        a.href = url';'
         a.download = 'seo-optimization-report.csv';
         a.click();
         window.URL.revokeObjectURL(url)};
@@ -185,7 +183,7 @@
         if (score >= 60)'
             return 'text-yellow-600 bg-yellow-50 border-yellow-200';
         if (score >= 40)'
-            return 'text-orange-600 bg-orange-50 border-orange-200';'
+            return 'text-orange-600 bg-orange-50 border-orange-200';
         return 'text-red-600 bg-red-50 border-red-200'};
     const getScoreText = (score) => {}
         if (score >= 80)'
@@ -193,8 +191,8 @@
         if (score >= 60)'
             return 'Good';
         if (score >= 40)'
-            return 'Fair';'"""
-        return 'Poor'};""""
+            return 'Fair'';"
+        return 'Poor'}';""
     return (<div className="fixed bottom-6 right-24 z-50">"""
       {/* Floating Action Button */}""""
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle SEO Optimizer">""""
@@ -382,4 +380,3 @@ export { SEOOptimizer };
 export { SEOOptimizer };
 
 export { SEOOptimizer };
->>>>>>> pr-10728

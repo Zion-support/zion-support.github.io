@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx
-import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {
-    'Custom AI models trained on your industry data',;'
-    'Automated feature engineering and model selection',;'
-    'Predictive insights with confidence intervals',;'
-    'Interactive dashboards and visualization tools',;'
-    'API integration with existing business systems',;'
-import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics(function AIPredictiveAnalytics() {): any {}
-    'Custom AI models trained on your industry data',;
-    'Automated feature engineering and model selection',;
-    'Predictive insights with confidence intervals',;
-    'Interactive dashboards and visualization tools',;
-    'API integration with existing business systems',;
-    'Automated model retraining and performance monitoring';
+import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics() {;
+    'Custom AI models trained on your industry data',';Automated feature engineering and model selection',';Predictive insights with confidence intervals',';Interactive dashboards and visualization tools',';API integration with existing business systems',';
+import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarChart3, Target, Zap, Shield, Users export default function AIPredictiveAnalytics(function AIPredictiveAnalytics() {): any {};
+    'Custom AI models trained on your industry data',';Automated feature engineering and model selection',';Predictive insights with confidence intervals',';Interactive dashboards and visualization tools',';API integration with existing business systems',';Automated model retraining and performance monitoring';
 <:pages.disabled/pages/services/AIPredictiveAnalytics.tsx
   ];
 
@@ -32,37 +23,13 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited models',Unlimited data',Custom ML algorithms',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Sales forecasting and demand prediction',;'
-    'Customer churn prediction and retention',;'
-    'Inventory optimization and supply chain forecasting',;'
-    'Risk assessment and fraud detection',;'
-    'Predictive maintenance for equipment',;'
-    'Market trend analysis and investment insights';
-  ];
-
-  '
-    'Improve forecast accuracy by 40-60%',;'
-    'Reduce operational costs by 25-35%',;'
-    'Increase revenue through better predictions',;'
-    'Optimize resource allocation and planning',;'
-    'Identify opportunities before competitors',;'
-    'Make data-driven decisions with confidence';
-  ];
-
-  '
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Pharmaceuticals',;'
-    'Manufacturing & Logistics',;'
-    'Real Estate & Construction',;'
-    'Energy & Utilities';
+  ]';Sales forecasting and demand prediction',';Customer churn prediction and retention',';Inventory optimization and supply chain forecasting',';Risk assessment and fraud detection',';Predictive maintenance for equipment',';Market trend analysis and investment insights';
+  ]';Improve forecast accuracy by 40-60%',';Reduce operational costs by 25-35%',';Increase revenue through better predictions',';Optimize resource allocation and planning',';Identify opportunities before competitors',';Make data-driven decisions with confidence';
+  ]';E-commerce & Retail',';Financial Services',';Healthcare & Pharmaceuticals',';Manufacturing & Logistics',';Real Estate & Construction',';Energy & Utilities';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { TrendingUp, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, BarCha
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIPredictiveAnalytics.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

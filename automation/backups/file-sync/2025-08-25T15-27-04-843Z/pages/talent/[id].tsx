@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from
+import React, { useEffect, useState } from;
   'react';
-import { useParams } from
+import { useParams } from;
   'react-router-dom';
 interface TalentProfileWithSocial extends TalentProfile {
   social?: Record<string, string>}

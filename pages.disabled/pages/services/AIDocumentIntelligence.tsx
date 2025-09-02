@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIDocumentIntelligence.tsx
-import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence() {
-    'AI-powered data extraction from complex forms',;'
-    'Automated compliance checking and validation',;'
-    'Real-time document processing and indexing',;'
-    'Secure cloud storage with enterprise-grade encryption',;'
-    'Custom workflow automation for document approval',;'
-import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence(function AIDocumentIntelligence() {): any {}
-    'AI-powered data extraction from complex forms',;
-    'Automated compliance checking and validation',;
-    'Real-time document processing and indexing',;
-    'Secure cloud storage with enterprise-grade encryption',;
-    'Custom workflow automation for document approval',;
-    'Integration with major business applications';
+import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence() {;
+    'AI-powered data extraction from complex forms',';Automated compliance checking and validation',';Real-time document processing and indexing',';Secure cloud storage with enterprise-grade encryption',';Custom workflow automation for document approval',';
+import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, Shield, Zap, BarChart3 export default function AIDocumentIntelligence(function AIDocumentIntelligence() {): any {};
+    'AI-powered data extraction from complex forms',';Automated compliance checking and validation',';Real-time document processing and indexing',';Secure cloud storage with enterprise-grade encryption',';Custom workflow automation for document approval',';Integration with major business applications';
 <:pages.disabled/pages/services/AIDocumentIntelligence.tsx
   ];
 
@@ -32,28 +23,12 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
 >    { ;
       name: 'Enterprise', ;
       price: '$999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$999/mo', ';
       details: ['Unlimited pages',Unlimited users',Custom AI models',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Invoice processing and expense management',;'
-    'Contract analysis and legal document review',;'
-    'Insurance claims processing and validation',;'
-    'Healthcare records and medical documentation',;'
-    'Financial statements and compliance reports',;'
-    'HR documents and employee onboarding';
-  ];
-
-  '
-    'Reduce manual data entry by 80-90%',;'
-    'Improve processing accuracy by 95%',;'
-    'Cut document processing costs by 60%',;'
-    'Accelerate approval workflows by 5x',;'
-    'Ensure 100% compliance with regulations',;'
-    'Scale operations without additional headcount';
+  ]';Invoice processing and expense management',';Contract analysis and legal document review',';Insurance claims processing and validation',';Healthcare records and medical documentation',';Financial statements and compliance reports',';HR documents and employee onboarding';
+  ]';Reduce manual data entry by 80-90%',';Improve processing accuracy by 95%',';Cut document processing costs by 60%',';Accelerate approval workflows by 5x',';Ensure 100% compliance with regulations',';Scale operations without additional headcount';
   ];
 
   return()
@@ -194,14 +169,14 @@ import { FileText, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Search, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-emerald-600 text-emerald-600 rounded-lg hover:bg-emerald-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIDocumentIntelligence.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

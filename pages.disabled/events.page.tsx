@@ -1,8 +1,8 @@
-import React, { useState } from
+import React, { useState } from;
   'react';
-import { motion  } from
+import { motion  } from;
   'framer-motion';
-import Link from
+import Link from;
   'next/link';
 import { Calendar,
   Clock,
@@ -25,7 +25,7 @@ import { Calendar,
   BookOpen,
   CheckCircle
   '
- } from 'lucide-react
+ } from 'lucide-react;
   ';
 ;
 const events = [
@@ -155,11 +155,8 @@ const events = [
     attendees: 400,"
     price: "$249",
     highlights = ["
-      "Transformation roadmaps",;"
-      "Change management strategies",;"
-      "Technology selection",;"
-      "Success metrics";
-    ],;"
+      "Transformation roadmaps",';Change management strategies",';Technology selection",';Success metrics";
+    ],";
     image: "/images/digital-transformation-summit.jpg";
   };];
 
@@ -334,7 +331,7 @@ export default function Events(...args[]):  {
   '"
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>;
             </motion.div>;
-;"
+";
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               {upcomingEvents.map((event, index {;
                 const CategoryIcon = getCategoryIcon(event.category);
@@ -440,7 +437,7 @@ export default function Events(...args[]):  {
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>"
                       <div className="text-right">"
-                        <div className="text-sm text-zion-slate-light">Contact us for details</div>;"
+                        <div className="text-sm text-zion-slate-light">Contact us for details</div>";
                         <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                       </div>;
                     </div>;
@@ -476,7 +473,7 @@ export default function Events(...args[]):  {
               <h2 className="text-3xl font-bold text-white mb-4">Past Events</h2>"
               <p className="text-zion-slate-light">Missed an event? Check out our past events and stay updated</p>;
             </motion.div>;
-;"
+";
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
               {pastEvents.map((event, index {;
                 const CategoryIcon = getCategoryIcon(event.category);
@@ -545,7 +542,7 @@ export default function Events(...args[]):  {
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>"
                       <div className="text-right">"
-                        <div className="text-sm text-zion-slate-light">Contact us for future events</div>;"
+                        <div className="text-sm text-zion-slate-light">Contact us for future events</div>";
                         <div className="text-zion-cyan font-medium">+1 302 464 0950</div>;
                       </div>;
                     </div>;

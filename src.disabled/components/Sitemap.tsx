@@ -1,8 +1,17 @@
-import React, { useState } from
-  'react'; import { Link } from
-  'react-router-dom'; import { motion } from
+import React, { useState } from;
+  'react'; import { Link } from;
+  'react-router-dom'; import { motion } from;
   'framer-motion'; import { ; Search,; ChevronDown,; ChevronRight,; ExternalLink,; Map,; Globe,; Code,; Brain,; Cloud,; Shield,; Users,; BookOpen,; FileText,; MessageCircle,; Phone,; Mail,; MapPin,; Clock,; Star; } from
-  'lucide-react'; ; interface SitemapSection {; title: string; icon: React.ComponentType<any>; links: Array<{; name: string; href: string; description?: string; external?: boolean; featured?: boolean; }>; }; export const Sitemap: React.FC = () => {; const [searchQuery, setSearchQuery] = useState('
+  'lucide-react'; ; interface SitemapSection {
+   title: string;
+   icon: React.ComponentType<any>;
+   links: Array<{;
+   name: string;
+   href: string;
+   description?: string;
+   external?: boolean;
+   featured?: boolean;
+}>; }; export const Sitemap: React.FC = () => {; const [searchQuery, setSearchQuery] = useState('
   '); const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set()); ; const toggleSection = (sectionTitle: string) => {; const newExpanded = new Set(expandedSections); if (newExpanded.has(sectionTitle)) {; newExpanded.delete(sectionTitle); } else {; newExpanded.add(sectionTitle); }; setExpandedSections(newExpanded); }; ; const sitemapData: SitemapSection[] = [; {; title: 'Main Pages
   ',; icon: Globe,; links: [; { name:,
   Home

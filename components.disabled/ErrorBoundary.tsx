@@ -1,13 +1,14 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import Link from 'next/link';''interface Props {children: ReactNode;
-  fallback?: ReactNode;
+import Link from 'next/link'';interface Props {
+  children: ReactNode;
+   fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+   error?: Error;
+   errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -27,10 +28,9 @@ error, errorInfo,
 
     // Log error to monitoring service
     console.error(,
-  Error caught by boundary: , error, errorInfo);' 
-  '    // In production, you would send this to your error tracking service
+  Error caught by boundary: , error, errorInfo)';    // In production, you would send this to your error tracking service
     if (process.env.NODE_ENV === 'production
-  ') {'      // Example: Sentry.captureException(error, { extra: errorInfo });'    }}
+  ') {'      // Example: Sentry.captureException(error, { extra: errorInfo })';    }}
 
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });

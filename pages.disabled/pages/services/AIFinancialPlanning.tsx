@@ -55,19 +55,19 @@ import { DollarSign,
   Lightbulb,
   Wallet,
   Receipt,
-  Banknote'
+  Banknote';
  } from 'lucide-react.ts';
 
 export default function AIFinancialPlanning(...args: any[]): any {}
     },;
     {;
-      icon: Activity,;""
-      title: "Tax Optimization",;""
+      icon: Activity,';
+      title: "Tax Optimization",';
       description: "Intelligent tax planning and optimization to maximize savings and minimize liabilities."};
   ]},;
     {;
-      icon: Clock,;""
-      title: "Time Savings",;""
+      icon: Clock,';
+      title: "Time Savings",';
       description: "Automate financial tasks and focus on what matters most with intelligent automation."};
   ];
 
@@ -121,18 +121,18 @@ export default function AIFinancialPlanning(...args: any[]): any {}
         "Dedicated support",""
         "Advanced reporting",""
         "API access",""
-        "Custom integrations",;""
-        "Multi-account support",;""
+        "Custom integrations",';
+        "Multi-account support",';
         "Tax filing assistance";
 :pages.disabled/pages/services/AIFinancialPlanning.tsx      cta: "Contact Sales",;
       popular: false};
-  ]},;"
-      ],;""
+  ]},";
+      ],';
       cta: "Contact Sales",;
       popular: false};
   ]},;
-    {;""
-      industry: "Investment Management",;"      description: "Build and manage investment portfolios with AI-driven insights",;
+    {';
+      industry: "Investment Management",";      description: "Build and manage investment portfolios with AI-driven insights",;
       icon: TrendingUp};
   ];
 :pages.disabled/pages/services/AIFinancialPlanning.tsx
@@ -174,23 +174,23 @@ export default function AIFinancialPlanning(...args: any[]): any {}
     {
 "
 ""
-      name: "Payment Platforms",;""
-      platforms: ["PayPal", "Venmo", "Square", "Stripe"]},;"
-    {;""
-      name: "Cryptocurrency",;""
+      name: "Payment Platforms",';
+      platforms: ["PayPal", "Venmo", "Square", "Stripe"]},";
+    {';
+      name: "Cryptocurrency",';
       platforms: ["Coinbase", "Binance", "Kraken", "Gemini"]};
-  ]},;"
+  ]},";
     {}
 ""
-      name: "Payment Platforms",;""
+      name: "Payment Platforms",';
       platforms: ["PayPal", "Venmo", "Square", "Stripe"]},;
-    {;""
-      name: "Cryptocurrency",;""
+    {';
+      name: "Cryptocurrency",';
       platforms: ["Coinbase", "Binance", "Kraken", "Gemini"]};
   ]},;
-    {;""
-      metric: "3x",;""
-      label: "Faster Planning",;""
+    {';
+      metric: "3x",';
+      label: "Faster Planning",';
       description: "Faster financial planning process"};
   ];
 :pages.disabled/pages/services/AIFinancialPlanning.tsx
@@ -216,13 +216,13 @@ export default function AIFinancialPlanning(...args: any[]): any {}
     {
 "
 :pages.disabled/pages/services/AIFinancialPlanning.tsx
-      category: "Tax Planning",;"
+      category: "Tax Planning",";
     {}
 ""
-      category: "Tax Planning",;""
+      category: "Tax Planning",';
       areas: ["Deduction Optimization", "Tax Strategy", "Filing Assistance", "Year-round Planning"]},;
-    {;""
-      category: "Goal Planning",;""
+    {';
+      category: "Goal Planning",';
       areas: ["Retirement Planning", "Debt Management", "Emergency Fund", "Major Purchases"]};  ];
 
   return (""
@@ -247,11 +247,11 @@ export default function AIFinancialPlanning(...args: any[]): any {}
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-transparent to-teal-900/20"></div>
         "
 >""
-      category: "Tax Planning",;""
-      areas: ["Deduction Optimization", "Tax Strategy", "Filing Assistance", "Year-round Planning"]},;"
-    {;""
-      category: "Goal Planning",;""
-      areas: ["Retirement Planning", "Debt Management", "Emergency Fund", "Major Purchases"]};  ];"
+      category: "Tax Planning",';
+      areas: ["Deduction Optimization", "Tax Strategy", "Filing Assistance", "Year-round Planning"]},";
+    {';
+      category: "Goal Planning",';
+      areas: ["Retirement Planning", "Debt Management", "Emergency Fund", "Major Purchases"]};  ]";
   return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO""
@@ -1209,7 +1209,7 @@ export default function AIFinancialPlanning(...args: any[]): any {}
         </div>;
       </section>;
 :pages.disabled/pages/services/AIFinancialPlanning.tsx
-    </div>;'"`
+    </div>'"`;
   )}'"`'"`
     </div>;
   )}'"`

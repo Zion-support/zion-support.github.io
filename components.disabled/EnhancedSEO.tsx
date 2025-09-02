@@ -1,17 +1,18 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';''interface SEOProps {title?: string;
-  description?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  keywords?: string[];
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  noindex?: boolean;
-  nofollow?: boolean;
+import { useRouter } from 'next/router'';interface SEOProps {
+  title?: string;
+   description?: string;
+   image?: string;
+   url?: string;
+   type?: string;
+   keywords?: string[];
+   author?: string;
+   publishedTime?: string;
+   modifiedTime?: string;
+   section?: string;
+   tags?: string[];
+   noindex?: boolean;
+   nofollow?: boolean;
 }
 
 const defaultSEO = {;
@@ -35,7 +36,7 @@ const defaultSEO = {;
   ',' 
   'micro SaaS',
   'Zion Tech Group''  ], author: 'Zion Tech Group,
-  '};'
+  '}';
 export const EnhancedSEO: React.FC<SEOProps> = ({
   title = defaultSEO.title, description = defaultSEO.description,
   image = defaultSEO.image, url,
@@ -45,13 +46,13 @@ export const EnhancedSEO: React.FC<SEOProps> = ({
   tags, noindex = false,
   nofollow = false, }) => {
   const router = useRouter();
-  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`;`  const fullTitle = title === defaultSEO.title ? title : `${title} | Zion Tech Group`;`
+  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`;  const fullTitle = title === defaultSEO.title ? title : `${title} | Zion Tech Group`;
   const robotsContent = [;
     noindex ?,
   noindex': 'index, nofollow ?,
   nofollow': 'follow,
   '  ].join(',
-  ');''  return (
+  ')';  return (
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>

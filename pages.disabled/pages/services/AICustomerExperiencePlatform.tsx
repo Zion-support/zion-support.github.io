@@ -39,17 +39,12 @@ import { Users,
   Target,
   MessageCircle,
   Bot,
-  Headphones'
+  Headphones';
  } from 'lucide-react';
 ;
 export { function };
 export default function AICustomerExperiencePlatform(...args[]):  {}
-    'Intelligent chatbot with natural language processing',;
-    'Personalized recommendation engine',;
-    'Omnichannel customer interaction tracking',;
-    'Predictive customer behavior analytics',;
-    'Automated customer feedback analysis',;
-    'Integration with major CRM and marketing platforms';
+    'Intelligent chatbot with natural language processing',';Personalized recommendation engine',';Omnichannel customer interaction tracking',';Predictive customer behavior analytics',';Automated customer feedback analysis',';Integration with major CRM and marketing platforms';
   ]},;
     {}
       title: 'AI Platform Implementation',
@@ -60,30 +55,9 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
       details: ['Unlimited interactions',Unlimited team members',Custom AI models',24/7 dedicated support'] },;
-  ];
-
-    'E-commerce customer experience optimization',;
-    'SaaS product user engagement tracking',;
-    'Financial services customer journey mapping',;
-    'Healthcare patient experience improvement',;
-    'Retail customer satisfaction enhancement',;
-    'B2B customer relationship management';
-  ];
-
-    'Increase customer satisfaction scores by 25-40%',;
-    'Improve customer retention rates by 30-50%',;
-    'Reduce customer service costs by 35-45%',;
-    'Boost customer lifetime value by 20-35%',;
-    'Enhance brand loyalty and advocacy',;
-    'Gain actionable insights for product development';
-  ];
-
-    'Customer Satisfaction Score (CSAT),;
-    'Net Promoter Score (NPS),;
-    'Customer Effort Score (CES),;
-    'Customer Lifetime Value (CLV),;
-    'Customer Churn Rate',;
-    'First Response Time';
+  ]';E-commerce customer experience optimization',';SaaS product user engagement tracking',';Financial services customer journey mapping',';Healthcare patient experience improvement',';Retail customer satisfaction enhancement',';B2B customer relationship management';
+  ]';Increase customer satisfaction scores by 25-40%',';Improve customer retention rates by 30-50%',';Reduce customer service costs by 35-45%',';Boost customer lifetime value by 20-35%',';Enhance brand loyalty and advocacy',';Gain actionable insights for product development';
+  ]';Customer Satisfaction Score (CSAT),';Net Promoter Score (NPS),';Customer Effort Score (CES),';Customer Lifetime Value (CLV),';Customer Churn Rate',';First Response Time';
   ];
 
   return (""
@@ -177,7 +151,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">""
                 <MessageCircle className="w-5 h-5 text-pink-600 mr-3"  />"                <span className="text-gray-700">{useCase}</span>
               </div>"
-            </div>;""
+            </div>';
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Customer Experience Platform"
             </h1>""
@@ -208,7 +182,7 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
               <div key={useCase} className="flex items-center p-4 bg-white rounded-lg border border-gray-200">""
                 <MessageCircle className="w-5 h-5 text-pink-600 mr-3"  />"                <span className="text-gray-700">{useCase}</span>
               </div>
-            </div>;""
+            </div>';
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               AI Customer Experience Platform;
             </h1>""
@@ -247,11 +221,11 @@ export default function AICustomerExperiencePlatform(...args[]):  {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/AICustomerExperiencePlatform.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}

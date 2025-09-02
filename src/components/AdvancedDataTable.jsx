@@ -1,12 +1,12 @@
-import { useState, useMemo, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import { useState, useMemo, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp, ChevronDown, Search, Filter, Download, Eye, Edit, Trash2, ArrowUpDown } from 'lucide-react';
 import { useVirtualScroll } from "../hooks/useVirtualScroll.jsx";
 ;
 export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = true, enableSorting = true, enablePagination = true, enableSelection = false, enableActions = false, enableExport = false, pageSize = 20, className = '', onRowClick, onSelectionChange, onExport }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
+    })';
     // State management''
     const [searchQuery, setSearchQuery] = useState('');
     const [sortConfig, setSortConfig] = useState(null);
@@ -30,13 +30,13 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 switch (filter.operator) {}
 '
                     case 'contains': any;
-                        return value.includes(filterValue);'
+                        return value.includes(filterValue)';
                     case 'equals': any;
-                        return value === filterValue;'
+                        return value === filterValue';
                     case 'starts_with': any;
-                        return value.startsWith(filterValue);'
+                        return value.startsWith(filterValue)';
                     case 'ends_with': any;
-                        return value.endsWith(filterValue);'
+                        return value.endsWith(filterValue)';
                     case 'regex': any;
                         try {}
 '
@@ -82,17 +82,16 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
                 return prev.direction === 'asc'''''
                     ? { key, direction: 'desc' }''
                     : null}'''
-            return { key, direction: 'asc' }});'''
+            return { key, direction: 'asc' }})';'
         trackEvent('table',column_sorted', String(key))}, [enableSorting, trackEvent]);
     // Handle filter change;
     const handleFilterChange = useCallback((key, value, operator) => {}
         setFilters(prev => {}
             const newFilters = prev.filter(f => f.key !== key);
             if(value.trim()) {}
-                newFilters.push({ key, value, operator });
-'
-            return newFilters;''
-        });'''
+                newFilters.push({ key, value, operator })';
+            return newFilters';
+        })';'
         trackEvent('table',filter_applied', String(key), null, { operator, value });
     }, [trackEvent]);
     // Handle selection;
@@ -121,7 +120,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             onExport(processedData)}
         else {}
             // Default CSV export;
-            const csvContent = generateCSV(processedData, columns);'
+            const csvContent = generateCSV(processedData, columns)';
             downloadCSV(csvContent,table-export.csv')}'
         trackEvent('table',data_exported',export_completed', processedData.length)}, [processedData, columns, onExport, trackEvent]);
     // Generate CSV content;
@@ -132,16 +131,16 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
         const headers = columns.map(col => col.header).join(',);
         const rows = data.map(item => columns.map(col => {}
 '"""
-            const value = item[col.key];'"'"""
-            return typeof value === 'string' && value.includes(',) ? `"${value}"` : value}).join(',));'
+            const value = item[col.key]'';"""
+            return typeof value === 'string' && value.includes(',) ? `"${value}"` : value}).join(',))';
         return [headers, ...rows].join('\n')};
     // Download CSV;
     const downloadCSV = (content, filename) => {}
 '
 ''
 '''
-        const blob = new Blob([content], { type: 'text/csv' });''
-        const url = window.URL.createObjectURL(blob);'''
+        const blob = new Blob([content], { type: 'text/csv' })';
+        const url = window.URL.createObjectURL(blob)';'
         const a = document.createElement('a');
         a.href = url;
         a.download = filename;
@@ -164,7 +163,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             return column.render(value, item, index)}'`'`
         return (<span className={`truncate ${column.align === 'center' ? 'text-center' : column.align === 'right' ? 'text-right' : 'text-left'}`}>
         {value}`
-      </span>)};``
+      </span>)}`;
     return (<div className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden ${className}`}>"""
       {/* Header Controls */}""""
       <div className="p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-700">""""
@@ -205,8 +204,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 
 }} exit = {}
   { opacity: 0,
-  height: 0;
-"""
+  height: 0';"
 """"
 }} className="mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg border border-gray-200 dark:border-gray-500">""""
               <h4 className="font-medium text-gray-900 dark:text-white mb-3">Advanced Filters</h4>""""
@@ -268,8 +266,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-'`
+  y: 0'`;
 }} className={`flex items - center px - 4 py - 3 border - b border - gray - 100 dark:border - gray - 600 hover:bg - gray - 50 dark:hover:bg - gray - 700 transition - colors ${onRowClick ? 'cursor - pointer' : ''} ${selectedItems.has (String (item.id || JSON.stringify (item) ) ) ? 'bg - blue - 50 dark:bg - blue - 900 / 20' : ''}`} onClick = { () => onRowClick?. (item,
   index) }>"""
                 {enableSelection && (<div className="w - 8 mr - 2">"""
@@ -341,7 +338,7 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
 `
 `'`
 `'`'`
-                const page = i + 1;`'`'`'`
+                const page = i + 1`;'`'`'`
                 return (<button key={page} onClick={() => setCurrentPage(page)} className={`px-3 py-1 text-sm rounded transition-colors ${currentPage === page''`'`'`
                         ? 'bg-blue-500 text-white''`'`'`'`
                         : 'border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
@@ -360,5 +357,5 @@ export const AdvancedDataTable = ({ data, columns, height = 500, enableSearch = 
             </div>
           </div>
         </div>)}
-    </div>)};'"`
+    </div>)}'"`;
 '"`'"`

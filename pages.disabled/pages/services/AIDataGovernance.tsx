@@ -51,14 +51,14 @@ import { Shield,
   EyeOff,
   EyeOn,
   LockOpen,
-  LockClosed'
+  LockClosed';
  } from 'lucide-react';
 ;
 const AIDataGovernance: React.FC = (): JSX.Element => {}
     {;
-      icon: Users,;""
-      title: "Data Lineage Tracking",;""
-      description: "Complete audit trail showing data origins, transformations, and usage patterns",;""
+      icon: Users,';
+      title: "Data Lineage Tracking",';
+      description: "Complete audit trail showing data origins, transformations, and usage patterns",';
       color: "from-yellow-500 to-orange-500"};
   ];
 
@@ -70,14 +70,13 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       period: "/month",""
       description: "Essential data governance for small to medium organizations",
 :pages.disabled/pages/services/AIDataGovernance.tsx
-      features[;"
-        "Up to 10TB data management","
+      features[';Up to 10TB data management","
         "Basic AI classification","
         "Standard access controls","
         "Compliance templates","
         "Email support","
         "Basic reporting","
-        "5 user licenses"      features[;""
+        "5 user licenses"      features[';
         "Up to 10TB data management",""
         "Basic AI classification",""
         "Standard access controls",""
@@ -85,7 +84,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
         "Email support",""
         "Basic reporting",""
         "5 user licenses""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: false;
     },
@@ -100,7 +99,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AIDataGovernance.tsx
       description: "Advanced data governance for growing enterprises","
       description: "Advanced data governance for growing enterprises",
-      features[;""
+      features[';
         "Up to 100TB data management",""
         "Advanced AI classification",""
         "Custom access policies",""
@@ -110,7 +109,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
         "Unlimited users",""
         "API access",""
         "Custom integrations""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: true;
     },
@@ -125,35 +124,34 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AIDataGovernance.tsx
       description: "Comprehensive data governance for large organizations","
       description: "Comprehensive data governance for large organizations",
-      features[;""
+      features[';
         "Unlimited data management",""
         "Custom AI models",""
         "Advanced security features",""
         "Multi-tenant support",""
         "Dedicated support team",""
-        "Custom development",;""
-        "SLA guarantees",;""
+        "Custom development",';
+        "SLA guarantees",';
 :pages.disabled/pages/services/AIDataGovernance.tsx
-        "On-premise option";"
-        "On-premise option";
-      ],;""
+        "On-premise option"';On-premise option";
+      ],';
       cta: "Contact Sales",;
       popular: false};
   ];
 :pages.disabled/pages/services/AIDataGovernance.tsx
-    {;"
+    {";
 
     {;
-      icon: Clock,;""
-      title: "Real-time Monitoring",;""
-      description: "Instant alerts and proactive threat prevention",;""
+      icon: Clock,';
+      title: "Real-time Monitoring",';
+      description: "Instant alerts and proactive threat prevention",';
       metric: "24/7"};
 :pages.disabled/pages/services/AIDataGovernance.tsx
-  ];"
-    {;""
-      name: "SOC 2",;""
-      description: "Service Organization Control 2 compliance",;"
-      icon: CheckCircle,;""
+  ]";
+    {';
+      name: "SOC 2",';
+      description: "Service Organization Control 2 compliance",";
+      icon: CheckCircle,';
       color: "from-yellow-500 to-orange-500"};
   ];
   const useCases = [
@@ -186,10 +184,10 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AIDataGovernance.tsx
   ];
 
-    {;""
-      name: "SOC 2",;""
+    {';
+      name: "SOC 2",';
       description: "Service Organization Control 2 compliance",;
-      icon: CheckCircle,;""
+      icon: CheckCircle,';
       color: "from-yellow-500 to-orange-500"};
   ];
 
@@ -218,11 +216,11 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       icon: ShieldCheck,""
       color: "from-purple-500 to-pink-500""
     },
-    {;""
-      industry: "Technology",;""
-      title: "Intellectual Property",;""
+    {';
+      industry: "Technology",';
+      title: "Intellectual Property",';
       description: "Protect trade secrets and proprietary data with advanced classification",;
-      icon: Cpu,;""
+      icon: Cpu,';
       color: "from-orange-500 to-red-500"};  ];
 
   return (""
@@ -310,11 +308,11 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
           </div>
         </div>
 :pages.disabled/pages/services/AIDataGovernance.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -392,7 +390,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 bg-slate-800/50">;""
+      <section className="py-20 bg-slate-800/50">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -480,7 +478,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Compliance Frameworks Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -566,7 +564,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 bg-slate-800/50">;""
+      <section className="py-20 bg-slate-800/50">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -659,7 +657,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -728,7 +726,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
                     : 'bg-slate-800/50 border border-slate-700/50'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
@@ -786,7 +784,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-slate-800/50">;""
+      <section className="py-20 bg-slate-800/50">';
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
@@ -840,7 +838,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       </section>;
     </div>;
 :pages.disabled/pages/services/AIDataGovernance.tsx
-  )};'"`
+  )}'"`;
 export default AIDataGovernance}}}}}}'"`'"`
   )};
 

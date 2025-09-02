@@ -1,19 +1,18 @@
-<<<<<<< HEAD:pages.disabled_auto/services/index.tsx
-import React from,
+:pages.disabled_auto/services/index.tsx
+import React from,;
   react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../../components/layout/MainLayout';
-import { services, getServicesByCategory } from
+import { services, getServicesByCategory } from;
   '../../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from;
   'lucide-react';
-import Link from
+import Link from;
   'next/link';
-import { motion } from
+import { motion } from;
   'framer-motion';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -31,11 +30,10 @@ import {
   Clock,
   DollarSign,
   Target,
-  Rocket,
+  Rocket,;
 } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/index.tsx
 const ServicesPage: NextPage = () => {
   const microSaasServices = getServicesByCategory(
   'micro-saas');
@@ -59,7 +57,7 @@ const ServicesPage: NextPage = () => {
   const benefits = [
     {
       icon: <DollarSign className="w-8 h-8" />,
-<<<<<<< HEAD:pages.disabled_auto/services/index.tsx
+:pages.disabled_auto/services/index.tsx
       title:,
   Competitive Pricing',
       description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
@@ -82,7 +80,6 @@ const ServicesPage: NextPage = () => {
   Expert Support',
       description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
     }
-=======
       title: 'Competitive Pricing',
       description:
         'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.',
@@ -105,7 +102,6 @@ const ServicesPage: NextPage = () => {
       description:
         '24/7 expert support from our experienced team of developers, engineers, and AI specialists.',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/index.tsx
   ];
 
   return (

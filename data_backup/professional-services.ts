@@ -1,18 +1,17 @@
 export interface ProfessionalService {
   id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-address: string;
-  };export const professionalServices: ProfessionalService[] = [
+   name: string;
+   tagline: string;
+   price: string;
+   description: string;
+   features: string[];
+   link: string;
+   category: string;
+   realImplementation: boolean;
+   contactInfo: { mobile: string;
+   email: string;
+   address: string;
+};export const professionalServices: ProfessionalService[] = [
   {
     id: "it-consulting",
     name: "IT Consulting Services",

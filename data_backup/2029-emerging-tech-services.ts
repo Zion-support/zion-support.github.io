@@ -1,18 +1,17 @@
 export interface EmergingTechService2029 {
   id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-address: string;
-  };export const emergingTechServices2029: EmergingTechService2029[] = [
+   name: string;
+   tagline: string;
+   price: string;
+   description: string;
+   features: string[];
+   link: string;
+   category: string;
+   realImplementation: boolean;
+   contactInfo: { mobile: string;
+   email: string;
+   address: string;
+};export const emergingTechServices2029: EmergingTechService2029[] = [
   {
     id: "2029-emerging-tech-service",
     name: "2029 Emerging Tech Service Platform",

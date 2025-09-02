@@ -1,5 +1,3 @@
-<<<<<<< HEAD:src.pages.disabled/DisputeManagement.jsx
+:src.pages.disabled/DisputeManagement.jsx
 import React from 'react'; export default function DisputeManagement () { const [activeTab, setActiveTab] = useState ("overview") ; return (<> <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https:
-=======
 import React from 'react'; export default function DisputeManagement () { const [activeTab, setActiveTab] = useState ("overview") ; return (<> <SEO title="Dispute Management | Zion Tech Group" description="Admin dashboard for managing and resolving marketplace disputes and conflicts" keywords="dispute management, admin dashboard, conflict resolution, marketplace admin, Zion Tech Group" canonical="https:"""";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/DisputeManagement.jsx

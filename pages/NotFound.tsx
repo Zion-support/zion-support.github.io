@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-import React from
+import React from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
-import { SEO } from
+import { SEO } from;
   '../components/SEO';
-import { Button } from
+import { Button } from;
   '../components/ui/Button';
-import { Card } from
+import { Card } from;
   '../components/ui/Card';
-import { 
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  Home,
+import {   Home,
   ArrowLeft,
   Phone,
   Mail,
@@ -29,15 +19,9 @@ import {
   DollarSign,
   Calendar,
   Award,
-<<<<<<< HEAD
   Shield
-} from
+} from;
   'lucide-react';
-=======
-  Shield,
-} from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-
 const NotFound: React.FC = () => {
   const quickLinks = [
     { name: 'Home', url: '/', icon: Home },
@@ -54,17 +38,10 @@ const NotFound: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
-<<<<<<< HEAD
       <SEO 
         title="Page Not Found - Zion Tech Group" 
         description="The page you
-  're looking for doesn't exist. Find what you need with our helpful navigation and search options."
-=======
-      <SEO
-        title="Page Not Found - Zion Tech Group"
-        description="The page you're looking for doesn't exist. Find what you need with our helpful navigation and search options."
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      />
+  're looking for doesn't exist. Find what you need with our helpful navigation and search options."      />
 
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
@@ -95,23 +72,13 @@ const NotFound: React.FC = () => {
               Page Not Found
             </h2>
             <p className="text-xl text-gray-300 mb-6">
-<<<<<<< HEAD
               Sorry, the page you
   're looking for doesn't exist or has been moved.
             </p>
             <p className="text-gray-400">
               Don
   't worry, we'll help you find what you
-  're looking for.
-=======
-              Sorry, the page you&apos;re looking for doesn&apos;t exist or has
-              been moved.
-            </p>
-            <p className="text-gray-400">
-              Don&apos;t worry, we&apos;ll help you find what you&apos;re
-              looking for.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-            </p>
+  're looking for.            </p>
           </motion.div>
 
           {/* Action Buttons */}

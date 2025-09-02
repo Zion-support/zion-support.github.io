@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIMicroservices.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMicroservices() {
-    'Automated microservices monitoring and alerting',;'
-    'Predictive analytics for microservices scaling',;'
-    'Smart microservices security and compliance',;'
-    'AI-driven microservices automation and orchestration',;'
-    'Real-time microservices analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMicroservices(function AIMicroservices() {): any {}
-    'Automated microservices monitoring and alerting',;
-    'Predictive analytics for microservices scaling',;
-    'Smart microservices security and compliance',;
-    'AI-driven microservices automation and orchestration',;
-    'Real-time microservices analytics and insights',;
-    'Custom AI models for microservices applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMicroservices() {;
+    'Automated microservices monitoring and alerting',';Predictive analytics for microservices scaling',';Smart microservices security and compliance',';AI-driven microservices automation and orchestration',';Real-time microservices analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIMicroservices(function AIMicroservices() {): any {};
+    'Automated microservices monitoring and alerting',';Predictive analytics for microservices scaling',';Smart microservices security and compliance',';AI-driven microservices automation and orchestration',';Real-time microservices analytics and insights',';Custom AI models for microservices applications';
 <:pages.disabled/pages/services/AIMicroservices.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited storage',Custom AI models',Full microservices suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Microservices optimization',;'
-    'Microservices management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Microservices scaling and management';
-  ];
-
-  '
-    'Improve microservices performance by 50-80%',;'
-    'Reduce microservices deployment time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance microservices reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale microservices operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Microservices optimization',';Microservices management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Microservices scaling and management';
+  ]';Improve microservices performance by 50-80%',';Reduce microservices deployment time by 40-70%',';Cut operational costs by 35-65%',';Enhance microservices reliability and scalability',';Optimize resource utilization',';Scale microservices operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-lime-600 text-lime-600 rounded-lg hover:bg-lime-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIMicroservices.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

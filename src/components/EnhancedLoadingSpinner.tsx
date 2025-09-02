@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 import React from 'react'
 import { motion     } from 'framer-motion'
 
 interface EnhancedLoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg'
-  text?: string
-  className?: string
+  size?: 'sm' | 'md' | 'lg' text?: string className?: string;
 }
 
 export default function EnhancedLoadingSpinner({ 
@@ -78,5 +75,4 @@ export default function EnhancedLoadingSpinner({
     </div>
   )
 }
-=======
->>>>>>> pr-10728
+;

@@ -1,6 +1,6 @@
-import React from 'react';'
-import { motion } from 'framer-motion';'
-import { Link } from 'react-router-dom';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 const ServiceCard = ({ title, description, icon, price, category, features, isPopular = false, isNew = false, href = '/services' }) => {}
     const cardVariants = {}
   hidden: { opacity: 0, y: 20,
@@ -64,15 +64,14 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
                 duration: 0.3,""""
                 ease: "backOut"""
 """
-    };""""
-    return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">;"""
+    }';""
+    return (<motion.div variants={cardVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="group relative h-full">';"
       {/* Enhanced Popular Badge */}""""
       {isPopular && (<motion.div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10" initial={{ scale: 0 }} animate={{ scale: 1 }} transition = {}
 """
 """"
   { delay: 0.2, type: "spring",
-  stiffness: 300;
-"""
+  stiffness: 300';"
 }}>""""
           <div className="bg-gradient-to-r from-zion-cyan via-zion-blue to-zion-purple text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-pulse">
             ⭐ Most Popular;
@@ -90,8 +89,7 @@ const ServiceCard = ({ title, description, icon, price, category, features, isPo
 """
 """"
   { delay: 0.3, type: "spring",
-  stiffness: 300;
-"""
+  stiffness: 300';"
 }}>""""
           <div className="bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg animate-bounce">
             🆕 New;

@@ -1,79 +1,30 @@
 export interface RealAdditionService2025Q3 {
-	id: string;
-	name: string;
-	tagline: string;
-	description: string;
-	price: string;
-	period: string;
-	category: string;
-	features: string[];
-	popular?: boolean;
-	link: string;
-	trialDays?: number;
-	setupTime?: string;
-	realService: boolean;
-	technology?: string[];
-	integrations?: string[];
-	useCases?: string[];
-	roi?: string;
-	competitors?: string[];
-	marketSize?: string;
-	growthRate?: string;
-	launchDate?: string;
-	customers?: number;
-	rating?: number;
-reviews?: number;export const realAdditions2025Q3: RealAdditionService2025Q3[] = [
-	{
-		id:,
-  ai-email-copilot',
-		name: 'AI Email Responder Copilot,
-		tagline:,
-  Auto-draft, classify, and reply to inbound emails with policy guardrails',
-		description: Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync.,
-  ,
-		price: '$79,
-		period:,
-  /month',
-		category: 'AI Assistants,
-		features[
-  'Priority inbox and intent detection',
-  'Policy-aware auto-drafting with approvals',
-  'CRM sync and follow-up reminders',
-  'Tone and brand voice controls',
-  'Analytics and SLA tracking'
-		],
-		popular: true,
-		link:,
-  https: //ziontechgroup.com/ai-email-copilot,
-		trialDays: 14,
-		setupTime:
-  '30 minutes',
-		realService: true,
-		technology[,
-  Next.js',
-  'OpenAI',
-  'PostgreSQL'],
-		integrations[
-  'Gmail',
-  'Outlook',
-  'HubSpot',
-  'Salesforce'],
-		useCases[
-  'Shared inboxes',
-  'Lead response',
-  'Support triage'],
-		roi: 'Cut average first response by 60%,
-		competitors[,
-  Superhuman AI',
-  'Gmail HelpMeWrite'],
-		marketSize: '$10B+ email productivity,
-		growthRate:,
-  20% CAGR',
-		launchDate: '2025-06-01,
-		customers: 140,
-		rating: 4.7,
-		reviews: 62
-	},
+  id: string;
+   name: string;
+   tagline: string;
+   description: string;
+   price: string;
+   period: string;
+   category: string;
+   features: string[];
+   popular?: boolean;
+   link: string;
+   trialDays?: number;
+   setupTime?: string;
+   realService: boolean;
+   technology?: string[];
+   integrations?: string[];
+   useCases?: string[];
+   roi?: string;
+   competitors?: string[];
+   marketSize?: string;
+   growthRate?: string;
+   launchDate?: string;
+   customers?: number;
+   rating?: number;
+   reviews?: number;
+  export const realAdditions2025Q3: RealAdditionService2025Q3[] = [ { id:, ai-email-copilot', name: 'AI Email Responder Copilot, tagline:, Auto-draft, classify, and reply to inbound emails with policy guardrails', description: Reduce response times with an AI copilot that prioritizes, drafts, and routes emails across shared inboxes. Includes approval flows, tone controls, and CRM sync., , price: '$79, period:, /month', category: 'AI Assistants, features[ 'Priority inbox and intent detection', 'Policy-aware auto-drafting with approvals', 'CRM sync and follow-up reminders', 'Tone and brand voice controls', 'Analytics and SLA tracking' ], popular: true, link:, https: //ziontechgroup.com/ai-email-copilot, trialDays: 14, setupTime: '30 minutes', realService: true, technology[, Next.js', 'OpenAI', 'PostgreSQL'], integrations[ 'Gmail', 'Outlook', 'HubSpot', 'Salesforce'], useCases[ 'Shared inboxes', 'Lead response', 'Support triage'], roi: 'Cut average first response by 60%, competitors[, Superhuman AI', 'Gmail HelpMeWrite'], marketSize: '$10B+ email productivity, growthRate:, 20% CAGR', launchDate: '2025-06-01, customers: 140, rating: 4.7, reviews: 62;
+},
 	{
 		id:,
   affiliate-tracking-lite',

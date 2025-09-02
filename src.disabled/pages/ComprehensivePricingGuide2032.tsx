@@ -1,8 +1,8 @@
-import React, { useState } from,
-  react'; import { motion } from
-  'framer-motion'; import { Helmet } from
+import React, { useState } from,;
+  react'; import { motion } from;
+  'framer-motion'; import { Helmet } from;
   'react-helmet-async'; import { ; Brain,; Shield,; Zap,; Cpu,; Database,; Network,; Globe,; ArrowRight,; CheckCircle,; Star,; Users,; Rocket,; Target,; Lightbulb,; Atom,; Lock,; BarChart3,; Code,; Server,; Wifi,; ShieldCheck,; Bot,; Workflow,; Eye,; Sparkles,; Phone,; Mail,; MapPin,; Clock,; DollarSign,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; FileText,; MessageCircle,; Search,; BarChart,; Users2,; Settings,; Palette,; TrendingUp,; Scale,; Gauge,; Briefcase,; Building,; Car,; Factory,; Plane,; Ship,; Train,; Truck,; Warehouse,; Store,; ShoppingCart,; CreditCard,; ChartLine,; Award,; Trophy,; Crown,; Diamond,; Gem,; Cloud,; Filter,; Download,; Print,; Share2,; Bookmark,; Heart,; ThumbsUp,; ThumbsDown,; MessageSquare,; Calendar,; Clock,; Timer,; Stopwatch,; Sunrise,; Sunset,; Moon,; Sun,; Cloud,; CloudRain,; CloudSnow,; CloudLightning,; Wind,; Thermometer,; Droplets,; Umbrella,; Snowflake,; Zap,; Flame,; Fire,; Sparkles,; Star,; Planet,; Galaxy,; Universe,; Infinity,; Loop,; Refresh,; RotateCcw,; RotateCw,; Repeat,; Shuffle,; SkipBack,; SkipForward,; Play,; Pause,; Stop,; Record,; Mic,; Video,; Camera,; Image,; Film,; Music,; Headphones,; Speaker,; Volume,; Mute,; Unmute,; Maximize,; Minimize,; Fullscreen,; ExitFullscreen,; Expand,; Compress,; Move,; Drag,; Hand,; Pointer,; MousePointer,; MousePointer2,; MousePointerClick,; MousePointerClick2,; MousePointerOff,; MousePointerOff2,; MousePointerQuestion,; MousePointerQuestion2,; MousePointerX,; MousePointerX2,; MousePointerCheck,; MousePointerCheck2,; MousePointerMinus,; MousePointerMinus2,; MousePointerPlus,; MousePointerPlus2,; MousePointerSearch,; MousePointerSearch2,; MousePointerText,; MousePointerText2,; MousePointerCode,; MousePointerCode2,; MousePointerEdit,; MousePointerEdit2,; MousePointerMove,; MousePointerMove2; } from
-  'lucide-react'; import { INNOVATIVE_SERVICES } from
+  'lucide-react'; import { INNOVATIVE_SERVICES } from;
   '../data/servicesData'; ; export default function ComprehensivePricingGuide2032() {; const [selectedCategory, setSelectedCategory] = useState(
   'all'); const [priceRange, setPriceRange] = useState(
   'all'); const [sortBy, setSortBy] = useState(
@@ -73,4 +73,4 @@ import React, { useState } from,
   'Revolutionary': 3 }; return innovationOrder[a.innovationLevel] - innovationOrder[b.innovationLevel]; case,
   delivery': ; const aDelivery = parseInt(a.estimatedDelivery.split(
   '-')[0]); const bDelivery = parseInt(b.estimatedDelivery.split(
-  '-)[0]); return aDelivery - bDelivery; default:; return 0; }; }); ; const contactInfo = {; phone: "+1 302 464 0950", ";"";" email: "kleber@ziontechgroup.com", ";"";" website: "https:"""
+  '-)[0]); return aDelivery - bDelivery; default:; return 0; }; }); ; const contactInfo = {; phone: "+1 302 464 0950", "';"; email: "kleber@ziontechgroup.com", "';"; website: "https:"""

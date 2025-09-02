@@ -1,8 +1,8 @@
-import { describe, it, expect, vi } from
+import { describe, it, expect, vi } from;
   'vitest';
-import apiClient from
+import apiClient from;
   '@/services/apiClient';
-import { supabase } from
+import { supabase } from;
   '@/integrations/supabase/client';
 
 vi.mock(

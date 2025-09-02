@@ -174,7 +174,7 @@ class BuildHealthMonitor {
   async hasNextJSImports() {
     try {
       const result = execSync(
-        `find src -type f \\( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" \\) -exec grep -l "next/" {} \\;`,
+        `find src -type f \\( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" \\) -exec grep -l "next/" {} \\`;,
         { cwd: this.projectRoot, encoding: 'utf8
   ' }
       );
@@ -286,7 +286,7 @@ class BuildHealthMonitor {
   }
 
   async fixNextJSImports() {
-    this.log('Running Next.js import fix script...
+    this.log('Running Next.js import fix script...;
   ');
     
     try {
@@ -315,21 +315,21 @@ class BuildHealthMonitor {
         pattern: /import\s+Link\s+from\s+[
   '"]next\/link["];?/g,
         replacement:
-  'import { Link } from \'react-router-dom\
+  'import { Link } from \'react-router-dom\;
   ';
       },
       {
         pattern: /import\s+\{\s*useRouter\s*\}\s+from\s+[,
   "]next\/router[
   '"];?/g,
-        replacement: import { useNavigate } from \,
+        replacement: import { useNavigate } from \,;
   react-router-dom\';
       },
       {
         pattern: /import\s+Head\s+from\s+[
   '"]next\/head["];?/g,
         replacement:
-  'import { Helmet } from \'react-helmet-async\
+  'import { Helmet } from \'react-helmet-async\;
   ';
       }
     ];
@@ -428,12 +428,12 @@ class BuildHealthMonitor {
   }
 
   generateCleanViteConfig() {
-    return `import { defineConfig } from 'vite
+    return `import { defineConfig } from 'vite;
   ';
-import react from '@vitejs/plugin-react
+import react from '@vitejs/plugin-react;
   ';
 import { resolve } from 'path
-  '
+  ';
 ;
 export { defineConfig };
 export default defineConfig({

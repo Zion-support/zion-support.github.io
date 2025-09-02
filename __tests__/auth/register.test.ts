@@ -1,10 +1,10 @@
-import { describe, expect, test, vi, beforeEach } from
+import { describe, expect, test, vi, beforeEach } from;
   'vitest';
-import handler from
+import handler from;
   '@/pages/api/auth/register'; // Assuming this is the Next.js API handler
-import { z } from
+import { z } from;
   'zod'; // Used by the handler
-import type { NextApiRequest, NextApiResponse } from
+import type { NextApiRequest, NextApiResponse } from;
   'next';
 
 // Mock the Supabase client

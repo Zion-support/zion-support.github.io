@@ -1,9 +1,9 @@
-import React, { useMemo, useState } from
-  'react.ts'; import { Link } from
-  'react-router-dom.ts'; import { motion } from
+import React, { useMemo, useState } from;
+  'react.ts'; import { Link } from;
+  'react-router-dom.ts'; import { motion } from;
   'framer-motion.ts'; import { Search,; ArrowRight,; DollarSign,; ExternalLink,; Workflow,; MessageSquare,; Globe,; Brain,; Shield,; Cloud,; Cpu,; Zap,; Rocket,; Heart,; Lock,; Users,; BarChart3,; Target,; TrendingUp,; Award,; Star,; CheckCircle,; Clock,; Phone,; Mail,; MapPin; } from
-  'lucide-react'; import SEO from
-  '@/components/SEO'; import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from
+  'lucide-react'; import SEO from;
+  '@/components/SEO'; import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from;
   '../data/innovativeMicroSaasServices2026'; ; const Services2026: React.FC = (): JSX.Element => {; const [query, setQuery] = useState(,
   '); const [selectedCategory, setSelectedCategory] = useState('all
   '); const [sortBy, setSortBy] = useState('innovation
@@ -30,4 +30,4 @@ import React, { useMemo, useState } from
   Sustainability
   ').length },; { id: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;AI & IoT, name:
   'AI & IoT', icon: BarChart3, count: allServices.filter(s => s.category ===
-  'AI & IoT').length }; ]; ; const filteredAndSorted = useMemo(() => {; let filtered = allServices; ;''
+  'AI & IoT').length }; ]; ; const filteredAndSorted = useMemo(() => {; let filtered = allServices; ';

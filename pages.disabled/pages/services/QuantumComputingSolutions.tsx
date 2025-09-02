@@ -57,7 +57,7 @@ import {}
   Globe2,
   Wifi,
   Bluetooth,
-  Radio''
+  Radio'';
 } from 'lucide-react';
 ;
 export { function };
@@ -568,7 +568,7 @@ export default function QuantumComputingSolutions(...args: unknown[]): unknown {
       </section>
     </div>
 :pages.disabled/pages/services/QuantumComputingSolutions.tsx
-  );'"`
+  )'"`;
 </div>}}}</motion.div></motion.div>}'"`'"`
   );
 </div>}}}</motion.div></motion.div>}'"`

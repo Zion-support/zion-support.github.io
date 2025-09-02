@@ -1,15 +1,13 @@
-import { useState, useEffect } from,
+import { useState, useEffect } from,;
   react';
-import { Settings, Eye, Zap, X, Volume2, Keyboard, Monitor } from
+import { Settings, Eye, Zap, X, Volume2, Keyboard, Monitor } from;
   'lucide-react';
-import { useAccessibility } from
+import { useAccessibility } from;
   '../hooks/useAccessibility';
-interface AccessibilityControlsProps {;
-  className?: string;
-  position?:
-  'top-right' |
-  'bottom-right' |
-  'floating};
+interface AccessibilityControlsProps {
+   className?: string;
+   position?: 'top-right' | 'bottom-right' | 'floating;
+};
 export const AccessibilityControls: React.FC<AccessibilityControlsProps> = ({;
   className =,
   ',;

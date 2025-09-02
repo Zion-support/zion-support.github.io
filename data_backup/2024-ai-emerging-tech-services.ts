@@ -1,36 +1,36 @@
 import { ServiceVariant } from "../types/service-variants";
 export interface AIEmergingTechService {
   id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  popular: boolean;
-  icon: string;
-  color: string;
-  textColor: string;
-  link: string;
-  marketPosition: string;
-  targetAudience: string;
-  trialDays: number;
-  setupTime: string;
-  category: string;
-  realService: boolean;
-  technology: string;
-  integrations: string;
-  useCases: string;
-  roi: string;
-  competitors: string;
-  marketSize: string;
-  growthRate: string;
-  variant: ServiceVariant;
-  contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website: string};
+   name: string;
+   tagline: string;
+   price: string;
+   period: string;
+   description: string;
+   features: string[];
+   popular: boolean;
+   icon: string;
+   color: string;
+   textColor: string;
+   link: string;
+   marketPosition: string;
+   targetAudience: string;
+   trialDays: number;
+   setupTime: string;
+   category: string;
+   realService: boolean;
+   technology: string;
+   integrations: string;
+   useCases: string;
+   roi: string;
+   competitors: string;
+   marketSize: string;
+   growthRate: string;
+   variant: ServiceVariant;
+   contactInfo: { mobile: string;
+   email: string;
+   address: string;
+   website: string;
+};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
@@ -41,7 +41,7 @@ export interface AIEmergingTechService {
 export const aiEmergingTechServices: AIEmergingTechService[] = [
   // AI-Powered Video Generation Platform
   {
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'ai-video-generation-platform',
     name: 'AI Video Generation Platform',
     tagline: 'Create professional videos with AI in minutes',
@@ -60,7 +60,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Social media optimization',
       'API access for developers'
     ,
-=======
     id:,
   ai-video-generation-platform',
     name: 'AI Video Generation Platform,
@@ -83,7 +82,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   'Social media optimization',
   'API access for developers'
     ],
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     popular: true,
     icon:,
   🎬',
@@ -100,7 +98,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   30 minutes',
     category: 'AI & Content Creation,
     realService: true,
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, TensorFlow, PyTorch, React, Node.js, AWS, GPU clusters',
     integrations: 'YouTube, Vimeo, Facebook, Instagram, TikTok, Adobe Premiere',
     useCases: 'Marketing videos, Social media content, Product demos, Training videos, Brand storytelling',
@@ -109,7 +107,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$3.2B market',
     growthRate: '45% annual growth',
     variant: 'ai-futuristic',
-=======
     technology:,
   Python, TensorFlow, PyTorch, React, Node.js, AWS, GPU clusters',
     integrations: YouTube, Vimeo, Facebook, Instagram, TikTok, Adobe Premiere,
@@ -123,7 +120,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     growthRate:,
   45% annual growth',
     variant: 'ai-futuristic,
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -142,7 +138,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   },
   // Quantum Machine Learning Platform
   {
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'quantum-machine-learning-platform',
     name: 'Quantum Machine Learning Platform',
     tagline: 'Harness quantum computing for advanced ML',
@@ -161,7 +157,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Research collaboration tools',
       'Educational resources'
     ,
-=======
     id:,
   quantum-machine-learning-platform',
     name: 'Quantum Machine Learning Platform,
@@ -184,7 +179,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   'Research collaboration tools',
   'Educational resources'
     ],
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     popular: true,
     icon:,
   ⚛️',
@@ -201,7 +195,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   1 day',
     category: 'Quantum Computing,
     realService: true,
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, Qiskit, Cirq, TensorFlow Quantum, React, Node.js, AWS',
     integrations: 'IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum',
     useCases: 'Drug discovery, Financial modeling, Logistics optimization, Climate modeling, AI research',
@@ -210,7 +204,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$1.8B market',
     growthRate: '65% annual growth',
     variant: 'quantum-futuristic',
-=======
     technology:,
   Python, Qiskit, Cirq, TensorFlow Quantum, React, Node.js, AWS',
     integrations: IBM Quantum, Amazon Braket, Google Quantum, Microsoft Azure Quantum,
@@ -224,7 +217,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     growthRate:,
   65% annual growth',
     variant: 'quantum-futuristic,
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -243,7 +235,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   },
   // AI-Powered Cybersecurity Platform
   {
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'ai-cybersecurity-platform',
     name: 'AI-Powered Cybersecurity Platform',
     tagline: 'Next-generation threat detection and response',
@@ -262,7 +254,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Mobile security monitoring',
       'Cloud security integration'
     ,
-=======
     id:,
   ai-cybersecurity-platform',
     name: 'AI-Powered Cybersecurity Platform,
@@ -285,7 +276,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   'Mobile security monitoring',
   'Cloud security integration'
     ],
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     popular: true,
     icon:,
   🛡️',
@@ -302,7 +292,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   1 day',
     category: 'Cybersecurity,
     realService: true,
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, TensorFlow, PyTorch, React, Node.js, AWS, Kubernetes',
     integrations: 'SIEM systems, EDR solutions, Firewalls, Cloud platforms, Identity providers',
     useCases: 'Threat detection, Incident response, Compliance monitoring, Security automation, Risk assessment',
@@ -311,7 +301,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$173.5B market',
     growthRate: '18.3% annual growth',
     variant: 'enterprise-futuristic',
-=======
     technology:,
   Python, TensorFlow, PyTorch, React, Node.js, AWS, Kubernetes',
     integrations: SIEM systems, EDR solutions, Firewalls, Cloud platforms, Identity providers,
@@ -325,7 +314,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     growthRate:,
   18.3% annual growth',
     variant: 'enterprise-futuristic,
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -344,7 +332,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   },
   // Autonomous Robotics Platform
   {
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'autonomous-robotics-platform',
     name: 'Autonomous Robotics Platform',
     tagline: 'Build and deploy intelligent robots',
@@ -363,7 +351,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Remote operation tools',
       'Integration APIs'
     ,
-=======
     id:,
   autonomous-robotics-platform',
     name: 'Autonomous Robotics Platform,
@@ -386,7 +373,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   'Remote operation tools',
   'Integration APIs'
     ],
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     popular: true,
     icon:,
   🤖',
@@ -403,7 +389,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   2 weeks',
     category: 'Robotics & Automation,
     realService: true,
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, ROS, TensorFlow, PyTorch, React, Node.js, AWS, IoT platforms',
     integrations: 'Manufacturing systems, Warehouse management, Healthcare systems, Research platforms',
     useCases: 'Manufacturing automation, Warehouse logistics, Healthcare assistance, Research automation, Service robots',
@@ -412,7 +398,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$23.9B market',
     growthRate: '25.8% annual growth',
     variant: 'autonomous-futuristic',
-=======
     technology:,
   Python, ROS, TensorFlow, PyTorch, React, Node.js, AWS, IoT platforms',
     integrations: Manufacturing systems, Warehouse management, Healthcare systems, Research platforms,
@@ -426,7 +411,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     growthRate:,
   25.8% annual growth',
     variant: 'autonomous-futuristic,
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -445,7 +429,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   },
   // Blockchain AI Platform
   {
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'blockchain-ai-platform',
     name: 'Blockchain AI Platform',
     tagline: 'Decentralized AI for the future',
@@ -464,7 +448,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Decentralized governance',
       'AI audit trails'
     ,
-=======
     id:,
   blockchain-ai-platform',
     name: 'Blockchain AI Platform,
@@ -487,7 +470,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   'Decentralized governance',
   'AI audit trails'
     ],
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     popular: true,
     icon:,
   🔗',
@@ -504,7 +486,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   1 week',
     category: 'Blockchain & AI,
     realService: true,
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, Solidity, TensorFlow, PyTorch, React, Node.js, Ethereum, Polygon',
     integrations: 'Ethereum, Polygon, Binance Smart Chain, IPFS, MetaMask, WalletConnect',
     useCases: 'Decentralized AI training, Privacy-preserving ML, AI model marketplace, Cross-chain AI, DeFi AI',
@@ -513,7 +495,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$2.1B market',
     growthRate: '52% annual growth',
     variant: 'blockchain-futuristic',
-=======
     technology:,
   Python, Solidity, TensorFlow, PyTorch, React, Node.js, Ethereum, Polygon',
     integrations: Ethereum, Polygon, Binance Smart Chain, IPFS, MetaMask, WalletConnect,
@@ -527,7 +508,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     growthRate:,
   52% annual growth',
     variant: 'blockchain-futuristic,
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -546,7 +526,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   },
   // Edge AI Computing Platform
   {
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'edge-ai-computing-platform',
     name: 'Edge AI Computing Platform',
     tagline: 'AI at the edge for real-time processing',
@@ -565,7 +545,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Multi-device coordination',
       'API for edge applications'
     ,
-=======
     id:,
   edge-ai-computing-platform',
     name: 'Edge AI Computing Platform,
@@ -588,7 +567,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   'Multi-device coordination',
   'API for edge applications'
     ],
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     popular: true,
     icon:,
   🌐',
@@ -605,7 +583,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   1 week',
     category: 'Edge Computing & AI,
     realService: true,
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, TensorFlow Lite, ONNX, React, Node.js, AWS IoT, Kubernetes',
     integrations: 'AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP, HTTP/2',
     useCases: 'Smart manufacturing, Autonomous vehicles, Healthcare monitoring, Smart cities, Retail analytics',
@@ -614,7 +592,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$12.1B market',
     growthRate: '38.9% annual growth',
     variant: 'edge-futuristic',
-=======
     technology:,
   Python, TensorFlow Lite, ONNX, React, Node.js, AWS IoT, Kubernetes',
     integrations: AWS IoT, Azure IoT, Google Cloud IoT, MQTT, CoAP, HTTP/2,
@@ -628,7 +605,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     growthRate:,
   38.9% annual growth',
     variant: 'edge-futuristic,
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -647,7 +623,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   },
   // AI-Powered Drug Discovery Platform
   {
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'ai-drug-discovery-platform',
     name: 'AI-Powered Drug Discovery Platform',
     tagline: 'Accelerate drug discovery with AI',
@@ -666,7 +642,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Patent analysis',
       'Research collaboration network'
     ,
-=======
     id:,
   ai-drug-discovery-platform',
     name: 'AI-Powered Drug Discovery Platform,
@@ -689,7 +664,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   'Patent analysis',
   'Research collaboration network'
     ],
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     popular: true,
     icon:,
   🧬',
@@ -706,7 +680,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   2 weeks',
     category: 'Biotech & AI,
     realService: true,
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, TensorFlow, PyTorch, RDKit, OpenMM, React, Node.js, AWS',
     integrations: 'Research databases, Laboratory systems, Clinical trial platforms, Patent databases',
     useCases: 'Drug discovery, Target identification, Clinical trial design, Drug repurposing, Research collaboration',
@@ -715,7 +689,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$1.2B market',
     growthRate: '42% annual growth',
     variant: 'biotech-futuristic',
-=======
     technology:,
   Python, TensorFlow, PyTorch, RDKit, OpenMM, React, Node.js, AWS',
     integrations: Research databases, Laboratory systems, Clinical trial platforms, Patent databases,
@@ -729,7 +702,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     growthRate:,
   42% annual growth',
     variant: 'biotech-futuristic,
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -748,7 +720,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   },
   // AI-Powered Climate Modeling Platform
   {
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     id: 'ai-climate-modeling-platform',
     name: 'AI-Powered Climate Modeling Platform',
     tagline: 'Predict climate change with AI precision',
@@ -767,7 +739,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
       'Collaborative research platform',
       'Public awareness tools'
     ,
-=======
     id:,
   ai-climate-modeling-platform',
     name: 'AI-Powered Climate Modeling Platform,
@@ -790,7 +761,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   'Collaborative research platform',
   'Public awareness tools'
     ],
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     popular: true,
     icon:,
   🌍',
@@ -807,7 +777,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
   1 week',
     category: 'Climate Tech & AI,
     realService: true,
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
     technology: 'Python, TensorFlow, PyTorch, Climate models, React, Node.js, AWS, GPU clusters',
     integrations: 'Climate databases, Satellite data, Weather stations, GIS systems, Policy databases',
     useCases: 'Climate prediction, Risk assessment, Adaptation planning, Policy development, Research collaboration',
@@ -816,7 +786,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     marketSize: '$1.8B market',
     growthRate: '35% annual growth',
     variant: 'simulation-futuristic',
-=======
     technology:,
   Python, TensorFlow, PyTorch, Climate models, React, Node.js, AWS, GPU clusters',
     integrations: Climate databases, Satellite data, Weather stations, GIS systems, Policy databases,
@@ -830,7 +799,6 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     growthRate:,
   35% annual growth',
     variant: 'simulation-futuristic,
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts
     contactInfo: {
       mobile:,
   +1 302 464 0950',
@@ -846,9 +814,7 @@ export const aiEmergingTechServices: AIEmergingTechService[] = [
     customers: 420,
     rating: 4.8,
     reviews: 280
-<<<<<<< HEAD:data_backup/2024-ai-emerging-tech-services.ts
+:data_backup/2024-ai-emerging-tech-services.ts
 ;}}
-=======
   }
 ];
->>>>>>> origin/main:data/2024-ai-emerging-tech-services.ts

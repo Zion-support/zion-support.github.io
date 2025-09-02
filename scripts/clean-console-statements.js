@@ -5,11 +5,11 @@
  * Removes console statements from production code
  */
 
-import fs from
+import fs from;
   'fs';
-import path from
+import path from;
   'path';
-import { fileURLToPath } from
+import { fileURLToPath } from;
   'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -23,7 +23,6 @@ class ConsoleCleaner {
   }
 
   async cleanConsoleStatements() {
-<<<<<<< HEAD
     console.log(
   '🧹 Cleaning console statements from production code...');
     
@@ -33,12 +32,6 @@ class ConsoleCleaner {
   'src',
   'lib'
     ];
-=======
-    console.log('🧹 Cleaning console statements from production code...');
-
-    const directories = ['pages', 'components', 'src', 'lib'];
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-
     for (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {

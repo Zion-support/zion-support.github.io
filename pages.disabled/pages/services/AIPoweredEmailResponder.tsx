@@ -5,28 +5,14 @@
         <header className="mb-10">""
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-            AI-Powered Email Responder"</h1>""
-=======
-            AI-Powered Email Responder"
-            AI-Powered Email Responder;
-          </h1>""
->>>>>>> pr-10728
-          <p className="mt-4 text-lg text-slate-300 max-w-3xl">
+            AI-Powered Email Responder"</h1>""          <p className="mt-4 text-lg text-slate-300 max-w-3xl">
             Reduce response times and triage inboxes with an on-brand,
             compliant, and secure AI assistant that drafts and automates;
             replies, prioritizes important threads, and escalates to humans when;
             needed.
           </p>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-        </header>"""
-=======
-        </header>"
-        </header>
-""
->>>>>>> pr-10728
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">""
+        </header>"""        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">""
           <div className="lg:col-span-2 space-y-8">""
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">Key Capabilities</h2>""
@@ -45,26 +31,7 @@
                   Integrations: Gmail, Outlook 365, Zendesk, HubSpot"
                 </li>""
                 <li className="p-3 rounded-lg bg-slate-800/50">
-<<<<<<< HEAD
-                  Approval workflows with human-in-the-loop (HITL)"</li>""
-=======
-                  Approval workflows with human-in-the-loop (HITL)"
-                  Intelligent drafting with knowledge-base grounding;
-                </li>""
-                <li className="p-3 rounded-lg bg-slate-800/50">
-                  Auto-tagging, prioritization, and SLA-aware routing;
-                </li>""
-                <li className="p-3 rounded-lg bg-slate-800/50">
-                  Tone and policy controls, redaction, PII safeguards;
-                </li>""
-                <li className="p-3 rounded-lg bg-slate-800/50">
-                  Integrations: Gmail, Outlook 365, Zendesk, HubSpot;
-                </li>""
-                <li className="p-3 rounded-lg bg-slate-800/50">
-                  Approval workflows with human-in-the-loop (HITL)
-                </li>""
->>>>>>> pr-10728
-                <li className="p-3 rounded-lg bg-slate-800/50">
+                  Approval workflows with human-in-the-loop (HITL)"</li>""                <li className="p-3 rounded-lg bg-slate-800/50">
                   Analytics: response time, CSAT proxy, deflection rate;
                 </li>
               </ul>
@@ -73,18 +40,7 @@
 ""
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">
-<<<<<<< HEAD
-                Pricing (avg market ranges)"</h2>""
-=======
-                Pricing (avg market ranges)"
-            </div>
-""
-            <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
-              <h2 className="text-2xl font-semibold mb-3">
-                Pricing (avg market ranges)
-              </h2>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-slate-300">
+                Pricing (avg market ranges)"</h2>""              <ul className="space-y-2 text-slate-300">
                 <li>Starter: $299–$499/mo — up to 3 inboxes, 10k emails/mo</li>
                 <li>
                   Growth: $799–$1,499/mo — 10 inboxes, 50k emails/mo, basic HITL;
@@ -96,128 +52,50 @@
                 <li>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
                   Enterprise: Custom — on-prem/VPC, DLP, custom compliance
-<<<<<<< HEAD
-                </li>"</ul>""
-=======
-                </li>"
-                  Enterprise: Custom — on-prem/VPC, DLP, custom compliance;
-                </li>
-              </ul>""
->>>>>>> pr-10728
-              <p className="mt-3 text-sm text-slate-400">
+                </li>"</ul>""              <p className="mt-3 text-sm text-slate-400">
                 Benchmarks informed by public pricing from common CX platforms;
                 and AI add-ons.
               </p>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-            </div>"""
-=======
-            </div>"
-            </div>
-""
->>>>>>> pr-10728
-            <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
+            </div>"""            <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>""
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-                <li>"<a""
-=======
-                <li>"
-                <li>
-                  <a""
->>>>>>> pr-10728
-                    className="hover:underline""
+                <li>"<a""                    className="hover:underline""
                     href="https://workspace.google.com/marketplace""
                     target="_blank""
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-                    rel="noreferrer">
-=======
-                    rel="noreferrer"
-                    rel="noreferrer""
-                  >
->>>>>>> pr-10728
-                    Google Workspace Marketplace;
+                    rel="noreferrer">                    Google Workspace Marketplace;
                   </a>
                 </li>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-                <li>"<a""
-=======
-                <li>"
-                <li>
-                  <a""
->>>>>>> pr-10728
-                    className="hover:underline""
+                <li>"<a""                    className="hover:underline""
                     href="https://learn.microsoft.com/exchange/""
                     target="_blank""
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-                    rel="noreferrer">
-=======
-                    rel="noreferrer"
-                    rel="noreferrer""
-                  >
->>>>>>> pr-10728
-                    Microsoft Exchange/Outlook documentation;
+                    rel="noreferrer">                    Microsoft Exchange/Outlook documentation;
                   </a>
                 </li>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-                <li>"<a""
-=======
-                <li>"
-                <li>
-                  <a""
->>>>>>> pr-10728
-                    className="hover:underline""
+                <li>"<a""                    className="hover:underline""
                     href="https://platform.openai.com/docs""
                     target="_blank""
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-                    rel="noreferrer">
-=======
-                    rel="noreferrer"
-                    rel="noreferrer""
-                  >
->>>>>>> pr-10728
-                    OpenAI Platform docs;
+                    rel="noreferrer">                    OpenAI Platform docs;
                   </a>
                 </li>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-                <li>"<a""
-=======
-                <li>"
-                <li>
-                  <a""
->>>>>>> pr-10728
-                    className="hover:underline""
+                <li>"<a""                    className="hover:underline""
                     href="https://developers.google.com/gmail/api""
                     target="_blank""
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-                    rel="noreferrer">
-=======
-                    rel="noreferrer"
-                    rel="noreferrer""
-                  >
->>>>>>> pr-10728
-                    Gmail API;
+                    rel="noreferrer">                    Gmail API;
                   </a>
                 </li>
               </ul>
             </div>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
-          </div>"""
-=======
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
-          <aside className="space-y-6">""
+          </div>"""          <aside className="space-y-6">""
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h3 className="text-xl font-semibold">Get a Quote</h3>""
               <p className="mt-2 text-slate-300">
@@ -229,21 +107,7 @@
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:from-cyan-500 hover:to-blue-600"
               >
                 Contact Us
-<<<<<<< HEAD
-              </a>"</div>""
-=======
-              </a>"
-                Call +1 302 464 0950 or email kleber@ziontechgroup.com;
-              </p>
-              <a""
-                href="/contact""
-                className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:from-cyan-500 hover:to-blue-600""
-              >
-                Contact Us;
-              </a>
-            </div>""
->>>>>>> pr-10728
-            <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
+              </a>"</div>""            <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h3 className="text-xl font-semibold">Implementation</h3>""
               <ul className="mt-2 space-y-2 text-slate-300">
                 <li>2–4 weeks typical deployment</li>
@@ -257,11 +121,4 @@
     </div>
   )};
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-export default AIPoweredEmailResponder;"
-<<<<<<< HEAD
-  '"'"
-=======
-'"'"
-export default AIPoweredEmailResponder;
-'""
->>>>>>> pr-10728
+export default AIPoweredEmailResponder';"'"

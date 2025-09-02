@@ -1,6 +1,6 @@
-import React, { useState, useRef, useEffect } from,
+import React, { useState, useRef, useEffect } from,;
   react';
-import { motion, AnimatePresence } from
+import { motion, AnimatePresence } from;
   'framer-motion';
 import { 
   Send, 
@@ -15,36 +15,26 @@ import {
   Star,
   Clock,
   Shield
-} from
+} from;
   'lucide-react';
 
 interface ContactFormData {
-
   firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  company: string;
-  website: string;
-  service: string;
-  budget: string;
-  timeline: string;
-  message: string;
-  priority:
-  'low' |
-  'medium' |
-  'high' |
-  'urgent;
-
+   lastName: string;
+   email: string;
+   phone: string;
+   company: string;
+   website: string;
+   service: string;
+   budget: string;
+   timeline: string;
+   message: string;
+   priority: 'low' | 'medium' | 'high' | 'urgent;
 }
 
 interface ContactFormProps {
-  // Add your props here
-
-
-  onSubmit?: data: ContactFormData void;
-  className?: string;
-
+  // Add your props here onSubmit?: data: ContactFormData void;
+   className?: string;
 }
 ;
 const EnhancedContactForm: React.FC<ContactFormProps> = {

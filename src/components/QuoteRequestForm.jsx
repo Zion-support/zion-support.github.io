@@ -9,7 +9,7 @@ import {}
   Phone,
   Building,'
   Send,''
-  CheckCircle,'''
+  CheckCircle,''';
   AlertCircle} from 'lucide-react';
 
 export const QuoteRequestForm = () => {}
@@ -33,8 +33,7 @@ export const QuoteRequestForm = () => {}
 
   const [isSubmitting, setIsSubmitting] = useState (false) ;
   const [isSubmitted, setIsSubmitted] = useState (false) ;
-  const [errors, setErrors] = useState ({}) ;
-'
+  const [errors, setErrors] = useState ({}) ';
   const serviceTypes = [''
     { value: 'ai-services', label: 'AI & Machine Learning Services' },'
     { value: 'it-solutions', label: 'IT Infrastructure & Solutions' },'
@@ -43,8 +42,7 @@ export const QuoteRequestForm = () => {}
     { value: 'consulting', label: 'IT Consulting & Strategy' },'
     { value: 'custom-development', label: 'Custom Software Development' },'
     { value: 'other', label: 'Other Services' }
-  ];
-'
+  ]';
   const timelineOptions = [''
     { value: 'asap', label: 'ASAP (Within 1 week)},'
     { value: '1-2-weeks', label: '1-2 weeks' },'
@@ -52,8 +50,7 @@ export const QuoteRequestForm = () => {}
     { value: '2-3-months', label: '2-3 months' },'
     { value: '3-6-months', label: '3-6 months' },'
     { value: '6-months-plus', label: '6+ months' }
-  ];
-'
+  ]';
   const budgetRanges = [''
     { value: 'under-5k', label: 'Under $5,000' },'
     { value: '5k-10k', label: '$5,000 - $10,000' },'
@@ -62,8 +59,7 @@ export const QuoteRequestForm = () => {}
     { value: '50k-100k', label: '$50,000 - $100,000' },'
     { value: '100k-plus', label: '$100,000+' },'
     { value: 'to-be-discussed', label: 'To be discussed' }
-  ];
-'
+  ]';
   const urgencyLevels = [''
     { value: 'low', label: 'Low - Planning phase' },'
     { value: 'medium', label: 'Medium - Ready to start soon' },'
@@ -88,8 +84,8 @@ export const QuoteRequestForm = () => {}
     const newErrors = {};
 
     if (!formData.firstName.trim())'
-      newErrors.firstName = 'First name is required';'
-    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';'
+      newErrors.firstName = 'First name is required';
+    if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required';
     if (!formData.email.trim()) newErrors.email = 'Email is required';
     if (!formData.company.trim())'
       newErrors.company = 'Company name is required';
@@ -428,8 +424,7 @@ export const QuoteRequestForm = () => {}
             <Button""""
               type="submit""""
               disabled={isSubmitting}""""
-              className="px-8 py-3 text-lg"""
-            >
+              className="px-8 py-3 text-lg ">
               {isSubmitting ? ("""
                 <>""""
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
@@ -445,5 +440,5 @@ export const QuoteRequestForm = () => {}
         </form>
       </CardContent>
     </Card>) ;
-};'"""
+}'';"
 '"'"""

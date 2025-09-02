@@ -1,11 +1,11 @@
-import React from 'react';'''
-import Link from 'next/link';'''
-import { MessageSquare } from 'lucide-react';'''
+import React from 'react'';
+import Link from 'next/link'';
+import { MessageSquare } from 'lucide-react'';
 import { Button } from '@/components/ui/button';
 import {}
   Tooltip,
   TooltipContent,
-  TooltipProvider,'
+  TooltipProvider,';
   TooltipTrigger} from '@/components/ui/tooltip';
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {}
   return()

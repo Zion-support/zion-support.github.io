@@ -1,6 +1,6 @@
-import React from,
+import React from,;
   react';
-import { render, screen, fireEvent, waitFor } from
+import { render, screen, fireEvent, waitFor } from;
   '@testing-library/react';
 import
   '@testing-library/jest-dom';
@@ -9,11 +9,11 @@ import {
   Routes,
   Route,
   MemoryRouter,
-} from
+} from;
   'react-router-dom';
-import ResetPassword from
+import ResetPassword from;
   '../../src/pages/ResetPassword'; // Adjust path as necessary
-// import * as authService from
+// import * as authService from;
   '../../src/services/auth'; // Adjust path
 
 // Mock react-router-dom

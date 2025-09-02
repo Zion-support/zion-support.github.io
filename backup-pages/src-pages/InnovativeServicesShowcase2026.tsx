@@ -1,11 +1,11 @@
 
 ,
   const [selectedCategory, setSelectedCategory] = useState('all
-  ');'
+  ')';
   const [searchQuery, setSearchQuery] = useState('
-  ');'
+  ')';
   const [selectedCategory, setSelectedCategory] = useState(
-  'All');'
+  'All')';
   const [sortBy, setSortBy] = useState(
   'innovation');
 
@@ -52,27 +52,27 @@
   ': ;
         return <Cpu className="w-5 h-5"  />;
       case 'Quantum Computing
-  ':;"
+  ':";
         return <Zap className="w-5 h-5"  />;
       case 'Blockchain
-  ':;"
+  ':";
         return <Database className="w-5 h-5"  />;
       case 'Cybersecurity
-  ':;"
+  ':";
         return <Shield className="w-5 h-5"  />;
       case 'IoT
-  ':;"
+  ':";
         return <Globe className="w-5 h-5"  />;
       case 'AI & Content
-  ':;"
+  ':";
         return <Cpu className="w-5 h-5"  />;
       case 'DevOps
-  ':;"
+  ':";
         return <Database className="w-5 h-5"  />;
       case 'Finance
-  ':;"
+  ':";
         return <TrendingUp className="w-5 h-5"  />;
-      case 'Sustainability:;"
+      case 'Sustainability:";
         return <Leaf className="w-5 h-5"  />;
       default:
         return 0}
@@ -277,7 +277,7 @@
                 </div>
 
                 {/* Pricing and ROI */}"
-                <div className="flex items-center justify-between mb-4">;"
+                <div className="flex items-center justify-between mb-4">";
                   <div className="text-2xl font-bold text-cyan-400">
                     ${service.price.toLocaleString()}"
                     <span className="text-sm text-slate-400 font-normal">/mo</span>
@@ -477,5 +477,4 @@
         </div>;
       </section>;
     </div>;) };
-export default InnovativeServicesShowcase2026;
-'"`
+export default InnovativeServicesShowcase2026'"`;

@@ -14,67 +14,25 @@ const sampleTitles = [
 
 export function generateRandomListing () : MarketplaceItem {}
 export function generateRandomListings (count: number) : MarketplaceItem[] {}
-  'Quantum Computing Hardware',;
-  'Data Science Consulting',;
-  'Blockchain Development Service',;
-  'Machine Learning Platform',;
-  'DevOps Automation Tool',;
-  'Quantum Computing Hardware',;'
-  'Data Science Consulting',;'
-  'Blockchain Development Service',;'
-  'Machine Learning Platform',;'
-  'DevOps Automation Tool',;'
-  'Network Security Solution';
-];
-
-'
-  'State - of - the - art quantum computing components for research and development.',;'
-  'Expert data science consulting services for machine learning and analytics projects.',;'
-  'Blockchain development and implementation services for decentralized applications.',;'
-  'Machine learning platform with pre - trained models and custom training capabilities.',;'
-  'DevOps automation tools for continuous integration and deployment pipelines.',;'
-  'Network security solution with advanced threat detection and prevention.';
-];
-
-'
-  ['Quantum',Research',Hardware'],;'
-  ['Data Science',Machine Learning',Consulting'],;'
-  ['Blockchain',Development',DApps'],;'
-  ['Machine Learning',AI',Platform'],;'
-  ['DevOps',Automation',CI / CD'],;'
+  'Quantum Computing Hardware',';Data Science Consulting',';Blockchain Development Service',';Machine Learning Platform',';DevOps Automation Tool',';Quantum Computing Hardware',';Data Science Consulting',';Blockchain Development Service',';Machine Learning Platform',';DevOps Automation Tool',';Network Security Solution';
+]';State - of - the - art quantum computing components for research and development.',';Expert data science consulting services for machine learning and analytics projects.',';Blockchain development and implementation services for decentralized applications.',';Machine learning platform with pre - trained models and custom training capabilities.',';DevOps automation tools for continuous integration and deployment pipelines.',';Network security solution with advanced threat detection and prevention.';
+]';
+  ['Quantum',Research',Hardware'],';
+  ['Data Science',Machine Learning',Consulting'],';
+  ['Blockchain',Development',DApps'],';
+  ['Machine Learning',AI',Platform'],';
+  ['DevOps',Automation',CI / CD'],';
   ['Network',Security',Threat Detection'];
-];
-
-'
-  'https://images.unsplash.com / photo - 1451187580459 - 43490279c0fa?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2072 & q=80',;'
-  'https://images.unsplash.com / photo - 1563013544 - 824ae1b704d3?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80',;'
-  'https://images.unsplash.com / photo - 1576091160399 - 112ba8d25d1f?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80',;'
-  'https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80',;'
-  'https://images.unsplash.com / photo - 1449824913935 - 59a10b8d2000?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80',;'
-  'https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80';
+]';https://images.unsplash.com / photo - 1451187580459 - 43490279c0fa?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2072 & q=80',';https://images.unsplash.com / photo - 1563013544 - 824ae1b704d3?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80',';https://images.unsplash.com / photo - 1576091160399 - 112ba8d25d1f?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80',';https://images.unsplash.com / photo - 1551288049 - bebda4e38f71?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80',';https://images.unsplash.com / photo - 1449824913935 - 59a10b8d2000?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80',';https://images.unsplash.com / photo - 1507003211169 - 0a1dd7228f2d?ixlib = rb - 4.0.3 & auto = format & fit = crop & w=2070 & q=80';
 ];
 
 :pages.disabled/utils/generateRandomListing.tsx
 const categories: Array < any> = ['
 const categories: Array < any> = []
   'products',talent',equipment',services'
-];
-
-'
-  '$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
-];
-
-'
-  'San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';
-];
-
-'
-  'QuantumTech Labs',;'
-  'CloudMasters Inc',;'
-  'IoT Solutions Pro',;'
-  'DataGenius Consulting',;'
-  'Innovation Labs',;'
-  'FutureTech Systems';
+]';$500',$1,200',$2,500',$5,000',$8,500',$15,000',$25,000',$50,000';
+]';San Francisco, CA',New York, NY',Austin, TX',Seattle, WA',Boston, MA',Remote';
+]';QuantumTech Labs',';CloudMasters Inc',';IoT Solutions Pro',';DataGenius Consulting',';Innovation Labs',';FutureTech Systems';
 ];
 
   
@@ -108,10 +66,10 @@ const categories: Array < any> = []
     seller: {}
       name: sellerName || 'Default Seller',
       rating: 4.0 + Math.random () * 1.0,;
-      verified: Math.random () > 0.3},;'
-    location: location || 'Remote',;'
-    availability: Math.random () > 0.8 ? 'limited' : 'available',;'`
-    deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor (Math.random () * 8) + 2}-${Math.floor (Math.random () * 4) + 4} weeks`,;'`
+      verified: Math.random () > 0.3},';
+    location: location || 'Remote',';
+    availability: Math.random () > 0.8 ? 'limited' : 'available','`;
+    deliveryTime: category === 'talent' ? 'Immediate' : `${Math.floor (Math.random () * 8) + 2}-${Math.floor (Math.random () * 4) + 4} weeks`,'`;
     warranty: category === 'talent' ? 'N / A' : `${Math.floor (Math.random () * 3) + 1} year${Math.floor (Math.random () * 3) + 1 > 1 ? 's' : ''}`};
 
   const listings: MarketplaceItem[] = [];

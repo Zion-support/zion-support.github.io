@@ -1,6 +1,6 @@
-import { render, screen } from
+import { render, screen } from;
   '@testing-library/react';
-import StarRating from
+import StarRating from;
   '@/components/StarRating';
 
 test(

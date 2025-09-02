@@ -1,4 +1,4 @@
-import { createClient } from,
+import { createClient } from,;
   @supabase/supabase-js';
 const supabaseUrl = process.env.SUPABASE_URL ||
   '
@@ -21,16 +21,14 @@ export default async function handler(req, res) {
 ''
 ''
   '
-        res.status(400).json({ error: 'Missing id });'
-        return;'
-  '
+        res.status(400).json({ error: 'Missing id })';
+        return';
     }''
   '
     if (req.method === 'PATCH
   ') {
 '
-        const { read } = req.body || {};'
-  '
+        const { read } = req.body || {}';
         const { error } = await supabase''
   '
             .from('notifications
@@ -44,9 +42,8 @@ export default async function handler(req, res) {
             res.status(500).json({ error: error.message });
             return;
         }
-        res.status(200).json({ success: true });'
-        return;'
-  '
+        res.status(200).json({ success: true })';
+        return';
     }''
   '
     if (req.method === 'DELETE
@@ -70,7 +67,7 @@ export default async function handler(req, res) {
         res.status(200).json({ success: true });
         return;
     }
-    res.status(405).end();'
+    res.status(405).end()';
 }'
   '
 '''

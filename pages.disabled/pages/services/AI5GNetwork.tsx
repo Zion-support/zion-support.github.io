@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AI5GNetwork.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AI5GNetwork() {
-    'Automated 5G monitoring and alerting',;'
-    'Predictive analytics for 5G scaling',;'
-    'Smart 5G security and compliance',;'
-    'AI-driven 5G automation and orchestration',;'
-    'Real-time 5G analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AI5GNetwork(function AI5GNetwork() {): any {}
-    'Automated 5G monitoring and alerting',;
-    'Predictive analytics for 5G scaling',;
-    'Smart 5G security and compliance',;
-    'AI-driven 5G automation and orchestration',;
-    'Real-time 5G analytics and insights',;
-    'Custom AI models for 5G applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AI5GNetwork() {;
+    'Automated 5G monitoring and alerting',';Predictive analytics for 5G scaling',';Smart 5G security and compliance',';AI-driven 5G automation and orchestration',';Real-time 5G analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AI5GNetwork(function AI5GNetwork() {): any {};
+    'Automated 5G monitoring and alerting',';Predictive analytics for 5G scaling',';Smart 5G security and compliance',';AI-driven 5G automation and orchestration',';Real-time 5G analytics and insights',';Custom AI models for 5G applications';
 <:pages.disabled/pages/services/AI5GNetwork.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$3,999/mo', ';
       details: ['Unlimited storage',Custom AI models',Full 5G suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    '5G optimization',;'
-    '5G network management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    '5G scaling and management';
-  ];
-
-  '
-    'Improve 5G performance by 50-80%',;'
-    'Reduce 5G deployment time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance 5G reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale 5G operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';5G optimization',';5G network management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';5G scaling and management';
+  ]';Improve 5G performance by 50-80%',';Reduce 5G deployment time by 40-70%',';Cut operational costs by 35-65%',';Enhance 5G reliability and scalability',';Optimize resource utilization',';Scale 5G operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AI5GNetwork.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

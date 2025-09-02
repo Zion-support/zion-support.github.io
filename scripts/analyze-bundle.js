@@ -1,9 +1,9 @@
 #!/usr/bin/env node
-import { execSync } from,
+import { execSync } from,;
   child_process';
-import fs from
+import fs from;
   'fs';
-import path from
+import path from;
   'path';
 const BUNDLE_ANALYZER_PACKAGE =
   '@next/bundle-analyzer';

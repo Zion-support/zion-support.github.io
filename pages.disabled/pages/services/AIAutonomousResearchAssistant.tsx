@@ -78,7 +78,7 @@ import {
   MessageCircle,
   Phone,
   Mail,
-  MapPin'
+  MapPin';
 } from 'lucide-react';
 ;
 export { function };
@@ -423,7 +423,7 @@ export default function AIAutonomousResearchAssistant(function AIAutonomousResea
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -579,7 +579,7 @@ export default function AIAutonomousResearchAssistant(function AIAutonomousResea
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-black/20">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -641,7 +641,7 @@ export default function AIAutonomousResearchAssistant(function AIAutonomousResea
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}

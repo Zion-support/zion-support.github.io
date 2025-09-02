@@ -1,8 +1,8 @@
 import,
   ./globals.css';
-import type { ReactNode } from
+import type { ReactNode } from;
   'react';
-import { Navigation } from
+import { Navigation } from;
   '@/components/Navigation';
 
 export const metadata = {

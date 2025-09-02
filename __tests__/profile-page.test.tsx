@@ -1,20 +1,19 @@
-import { render, screen, fireEvent, waitFor } from
+import { render, screen, fireEvent, waitFor } from;
   '@testing-library/react';
-import Profile from
+import Profile from;
   '@/pages/Profile';
-import { vi, expect, test, beforeEach, afterEach } from
+import { vi, expect, test, beforeEach, afterEach } from;
   'vitest'; // Added beforeEach, afterEach
 
 // Define the UserProfile structure based on usage
 interface UserProfile {
   id: string;
-  name: string;
-  email: string;
-  avatarUrl: string;
-  notifications: {
-    email: boolean;
-    push: boolean;
-  };
+   name: string;
+   email: string;
+   avatarUrl: string;
+   notifications: { email: boolean;
+   push: boolean;
+};
   // Add other fields if present in the actual profile
 }
 

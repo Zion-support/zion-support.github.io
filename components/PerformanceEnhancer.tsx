@@ -5,12 +5,12 @@ import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceMetrics {
   fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
-  loadTime: number | null;
-  memoryUsage: number | null;
+   lcp: number | null;
+   fid: number | null;
+   cls: number | null;
+   ttfb: number | null;
+   loadTime: number | null;
+   memoryUsage: number | null;
 }
 
 const PerformanceEnhancer: React.FC = () => {

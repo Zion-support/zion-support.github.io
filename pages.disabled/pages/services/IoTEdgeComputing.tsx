@@ -11,7 +11,7 @@ import {}
   FileText,
   Network,
   Server,
-  Router,
+  Router,;
   Satellite} from 'lucide-react';
 ;
 export { function };

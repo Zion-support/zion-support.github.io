@@ -15,7 +15,7 @@ ArrowRight,
   Twitter,
   Github,
   Facebook,
-  Instagram} from
+  Instagram} from;
   'lucide-react.ts';
 
 export function ContactPage(...args: any[]): any {

@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityConsulting.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting() {
-    'Automated security analysis and recommendations',;'
-    'Predictive analytics for consulting needs',;'
-    'Smart consulting framework management',;'
-    'AI-driven consulting automation and orchestration',;'
-    'Real-time consulting performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting(function AISecurityConsulting() {): any {}
-    'Automated security analysis and recommendations',;
-    'Predictive analytics for consulting needs',;
-    'Smart consulting framework management',;
-    'AI-driven consulting automation and orchestration',;
-    'Real-time consulting performance tracking',;
-    'Custom AI models for consulting applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting() {;
+    'Automated security analysis and recommendations',';Predictive analytics for consulting needs',';Smart consulting framework management',';AI-driven consulting automation and orchestration',';Real-time consulting performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityConsulting(function AISecurityConsulting() {): any {};
+    'Automated security analysis and recommendations',';Predictive analytics for consulting needs',';Smart consulting framework management',';AI-driven consulting automation and orchestration',';Real-time consulting performance tracking',';Custom AI models for consulting applications';
 <:pages.disabled/pages/services/AISecurityConsulting.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$4,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$4,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$4,999/mo', ';
       details: ['Unlimited hours',Custom AI models',Full consulting suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security consulting optimization',;'
-    'Consulting strategy management and execution',;'
-    'Security analysis and recommendations',;'
-    'Consulting framework management and automation',;'
-    'Consulting automation and orchestration',;'
-    'Consulting scaling and management';
-  ];
-
-  '
-    'Improve security consulting performance by 50-80%',;'
-    'Reduce consulting delivery time by 40-70%',;'
-    'Cut security consulting costs by 35-65%',;'
-    'Enhance security consulting reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security consulting operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security consulting optimization',';Consulting strategy management and execution',';Security analysis and recommendations',';Consulting framework management and automation',';Consulting automation and orchestration',';Consulting scaling and management';
+  ]';Improve security consulting performance by 50-80%',';Reduce consulting delivery time by 40-70%',';Cut security consulting costs by 35-65%',';Enhance security consulting reliability and scalability',';Optimize resource utilization',';Scale security consulting operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-cyan-600 text-cyan-600 rounded-lg hover:bg-cyan-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityConsulting.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

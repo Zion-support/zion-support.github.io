@@ -41,7 +41,7 @@ import { Brain,
   PenTool,
   Users as UsersIcon,
   Award,
-  Lightbulb'
+  Lightbulb';
  } from 'lucide-react';
 ;
 export { function };
@@ -52,31 +52,31 @@ export default function AIEducationPlatform(...args[]):  {}
     "Automated assessment and grading",""
     "Real-time student progress tracking",""
     "Adaptive learning algorithms",""
-    "Interactive virtual classrooms",;""
-    "AI tutoring and homework help",;""
-    "Content creation and curation",;""
-    "Student engagement analytics",;""
-    "Parent and teacher dashboards",;""
-    "Multi-language support",;""
+    "Interactive virtual classrooms",';
+    "AI tutoring and homework help",';
+    "Content creation and curation",';
+    "Student engagement analytics",';
+    "Parent and teacher dashboards",';
+    "Multi-language support",';
     "Accessibility and inclusion tools";
   ];
 
-  const benefits: any = [;""
-    "Improve learning outcomes by 40%",;""
-    "Reduce teacher workload by 50%",;""
-    "Increase student engagement by 60%",;""
-    "Personalize education for every student",;""
+  const benefits: any = [';
+    "Improve learning outcomes by 40%",';
+    "Reduce teacher workload by 50%",';
+    "Increase student engagement by 60%",';
+    "Personalize education for every student",';
     "Scale quality education globally";
   ];
 
   const useCases: any = [""
     "K-12 schools and districts",""
-    "Higher education institutions",;""
-    "Corporate training programs",;""
-    "Online learning platforms",;""
-    "Special education programs",;""
-    "Language learning schools",;""
-    "Professional certification",;""
+    "Higher education institutions",';
+    "Corporate training programs",';
+    "Online learning platforms",';
+    "Special education programs",';
+    "Language learning schools",';
+    "Professional certification",';
     "Skills development programs";
   ];
 
@@ -88,20 +88,19 @@ export default function AIEducationPlatform(...args[]):  {}
       period: "/month",""
       description: "Perfect for individual schools and small districts",
 :pages.disabled/pages/services/AIEducationPlatform.tsx
-      features[;"
-        "AI learning paths (up to 500 students)","
+      features[';AI learning paths (up to 500 students)","
         "Basic content recommendation","
         "Assessment tools","
         "Progress tracking","
         "Email support","
-        "Up to 50 teachers"      features[;""
+        "Up to 50 teachers"      features[';
         "AI learning paths (up to 500 students)",""
         "Basic content recommendation",""
         "Assessment tools",""
         "Progress tracking",""
         "Email support",""
         "Up to 50 teachers""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: false;
     },
@@ -116,7 +115,7 @@ export default function AIEducationPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIEducationPlatform.tsx
       description: "Ideal for school districts and larger institutions","
       description: "Ideal for school districts and larger institutions",
-      features[;""
+      features[';
         "AI learning paths (unlimited students)",""
         "Advanced content recommendation",""
         "Comprehensive analytics",""
@@ -124,7 +123,7 @@ export default function AIEducationPlatform(...args[]):  {}
         "Priority support",""
         "Up to 500 teachers",""
         "API access""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: true;
     },
@@ -139,17 +138,16 @@ export default function AIEducationPlatform(...args[]):  {}
 :pages.disabled/pages/services/AIEducationPlatform.tsx
       description: "For large educational organizations and corporations","
       description: "For large educational organizations and corporations",
-      features[;""
+      features[';
         "Custom AI model training",""
         "White-label solutions",""
         "Advanced integrations",""
         "Custom content creation",""
-        "Dedicated account manager",;""
-        "24/7 phone support",;""
+        "Dedicated account manager",';
+        "24/7 phone support",';
 :pages.disabled/pages/services/AIEducationPlatform.tsx
-        "Unlimited users";"
-        "Unlimited users";
-      ],;""
+        "Unlimited users"';Unlimited users";
+      ],';
       cta: "Contact Sales",;
       popular: false};
 :pages.disabled/pages/services/AIEducationPlatform.tsx
@@ -257,7 +255,7 @@ export default function AIEducationPlatform(...args[]):  {}
       </section>
 
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -359,7 +357,7 @@ export default function AIEducationPlatform(...args[]):  {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -461,7 +459,7 @@ export default function AIEducationPlatform(...args[]):  {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -563,7 +561,7 @@ export default function AIEducationPlatform(...args[]):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -655,7 +653,7 @@ export default function AIEducationPlatform(...args[]):  {}
                     : 'border-gray-700'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
@@ -714,7 +712,7 @@ export default function AIEducationPlatform(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -789,7 +787,7 @@ export default function AIEducationPlatform(...args[]):  {}
       </section>
 
       {/* Contact Info */}""
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;""
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">';
         <div className="max-w-4xl mx-auto text-center">""
           <p className="text-gray-400 mb-4">
 :pages.disabled/pages/services/AIEducationPlatform.tsx

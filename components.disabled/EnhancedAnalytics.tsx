@@ -8,13 +8,15 @@ import {
   Monitor, Tablet,
   Download, Share2,
   Heart, MessageCircle
-} from
-  'lucide-react';'
-  'interface AnalyticsData {pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  avgSessionDuration: number;
-  topPages: Array<{ page: string; views: number }>;
+} from;
+  'lucide-react'';interface AnalyticsData {
+  pageViews: number;
+   uniqueVisitors: number;
+   bounceRate: number;
+   avgSessionDuration: number;
+   topPages: Array<{ page: string;
+   views: number;
+}>;
   trafficSources: Array<{ source: string; percentage: number }>;
   deviceTypes: Array<{ device: string; percentage: number }>;
 userEngagement: {;scrollDepth: number;
@@ -28,8 +30,8 @@ userEngagement: {;scrollDepth: number;
 
 interface EnhancedAnalyticsProps {
   showRealTime?: boolean;
-  autoRefresh?: boolean;
-  refreshInterval?: number;
+   autoRefresh?: boolean;
+   refreshInterval?: number;
 }
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
@@ -43,7 +45,7 @@ const [timeRange, setTimeRange] = useState<'24h
   ' | '30d
   ' | '90d
   '>('24h
-  ');''  // Mock data generator - replace with real analytics API
+  ')';  // Mock data generator - replace with real analytics API
   const generateMockAnalytics = useCallback((): AnalyticsData => {;const baseViews = Math.floor(Math.random() * 1000) + 500;
     const baseVisitors = Math.floor(baseViews * 0.7);
     
@@ -105,20 +107,20 @@ console.error(,
 
 const formatNumber = (num: number): string => {;
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M
-  ';'    if (num >= 1000) return (num / 1000).toFixed(1) +
-  'K';'    return num.toString();  };
+  ';    if (num >= 1000) return (num / 1000).toFixed(1) +
+  'K';    return num.toString();  };
 
   const formatDuration = (seconds: number): string => {;
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
     return `${minutes}: ${remainingSeconds.toString().padStart(2,
 ,
-  0')}`;'  };'`  const getDeviceIcon = (device: string) => {;
+  0')}`';  }'`;  const getDeviceIcon = (device: string) => {;
     switch (device.toLowerCase()) {
       case
-  'desktop': return Monitor;'      case
-  'mobile': return Smartphone;'      case
-  'tablet': return Tablet;'      default: return Globe;    }};
+  'desktop': return Monitor';      case
+  'mobile': return Smartphone';      case
+  'tablet': return Tablet';      default: return Globe;    }};
 
   if (!analytics) {
     return (
@@ -197,7 +199,7 @@ className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-20
           <div className="space-y-3">"            {analytics.trafficSources.map((source, index) => ("              <div key={source.source} className="space-y-1">"                <div className="flex items-center justify-between">"                  <span className="text-sm text-gray-700 dark: text-gray-300">"                    {source.source}"                  </span>
                   <span className="text-sm font-semibold text-gray-900 dark:text-white">"                    {source.percentage}%"                  </span>
                 </div>
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">"                  <div"                    className="bg-blue-500 h-2 rounded-full transition-all duration-500""                    style={{ width: `${source.percentage}%` }}"                  ></div>`                </div></div>
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">"                  <div"                    className="bg-blue-500 h-2 rounded-full transition-all duration-500                     style={{ width: `${source.percentage}%` }}"></div>`                </div></div>
             ))}
           </div>
         </motion.div>

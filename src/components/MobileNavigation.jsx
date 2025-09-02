@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';'''
-import { Link, useLocation } from 'react-router-dom';'''
+import React, { useState, useEffect, useRef } from 'react'';
+import { Link, useLocation } from 'react-router-dom'';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, onToggle }) => {}
-    const [activeDropdown, setActiveDropdown] = useState(null);'
+import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, onToggle }) => {};
+    const [activeDropdown, setActiveDropdown] = useState(null)';
     const [searchQuery, setSearchQuery] = useState('');
     const location = useLocation();
     const menuRef = useRef(null);
@@ -19,13 +19,13 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 '
 ''
 '''
-            document.addEventListener('mousedown', handleClickOutside);'''
+            document.addEventListener('mousedown', handleClickOutside)';'
             document.body.style.overflow = 'hidden'}
         return () => {}
 '
 ''
 '''
-            document.removeEventListener('mousedown', handleClickOutside);'''
+            document.removeEventListener('mousedown', handleClickOutside)';'
             document.body.style.overflow = 'unset'}}, [isOpen, onToggle]);
     const navigationItems = []
         {}
@@ -34,7 +34,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 '''
             label: 'Services','''
             href: '/services',''
-            children[;'''
+            children[';'
                 { label: 'AI & Machine Learning', href: '/services/ai' },'''
                 { label: 'Quantum Computing', href: '/services/quantum' },'''
                 { label: 'Cybersecurity', href: '/services/cybersecurity' },'''
@@ -49,7 +49,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 '''
             label: 'Solutions','''
             href: '/solutions',''
-            children[;'''
+            children[';'
                 { label: 'Enterprise Solutions', href: '/solutions/enterprise' },'''
                 { label: 'Startup Solutions', href: '/solutions/startup' },'''
                 { label: 'Government Solutions', href: '/solutions/government' },'''
@@ -62,7 +62,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 '''
             label: 'Industries','''
             href: '/industries',''
-            children[;'''
+            children[';'
                 { label: 'Technology', href: '/industries/technology' },'''
                 { label: 'Healthcare', href: '/industries/healthcare' },'''
                 { label: 'Finance', href: '/industries/finance' },'''
@@ -76,7 +76,7 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
 '''
             label: 'Comp','''
             href: '/about',''
-            children[;'''
+            children[';'
                 { label: 'About Us', href: '/about' },'''
                 { label: 'Careers', href: '/careers' },'''
                 { label: 'News', href: '/news' },'''
@@ -88,10 +88,10 @@ import { X, ChevronDown, Search, User, Bell const MobileNavigation = ({ isOpen, 
     const toggleDropdown = (label) => {}
         setActiveDropdown(activeDropdown === label ? null : label)};
     const handleSearch = (e) => {}
-        e.preventDefault();'
+        e.preventDefault()';
         // Implement search functionality''
         // // // // // // // // console.log('Search query:', searchQuery);
-    };'
+    }';
         // console.log('Search query:', searchQuery)};
     const menuVariants = {}
   closed: {}

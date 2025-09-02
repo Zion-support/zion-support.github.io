@@ -20,4 +20,4 @@ export type ServiceItem = {; id: string; title: string; description: string; cat
   'Healthcare Tech' |
   'Education Tech' |
   'Legal Tech' |
-  'Real Estate Tech'; price: string;'
+  'Real Estate Tech'; price: string';

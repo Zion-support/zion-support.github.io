@@ -1,9 +1,9 @@
-<<<<<<< HEAD:src.disabled/components/PricingSection.tsx
-import React, { useState } from
+:src.disabled/components/PricingSection.tsx
+import React, { useState } from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
-import { Link } from
+import { Link } from;
   'react-router-dom';
 import { 
   Check, 
@@ -15,7 +15,7 @@ import {
   Crown,
   Rocket,
   Building
-} from
+} from;
   'lucide-react';
 
 export const PricingSection: React.FC = () => {
@@ -309,7 +309,6 @@ export const PricingSection: React.FC = () => {
     </section>
   );
 };
-=======
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export const PricingSection: React.FC = () => {;
@@ -322,35 +321,21 @@ import { motion } from 'framer - motion';
     {;
       name: 'Starter', icon: Rocket,;
       description: 'Perfect for small businesses and startups', price: billingCycle === 'annual' ? 299 : 349,;
-      originalPrice: billingCycle === 'annual' ? 399 : 449, features: [;
-        'AI - powered analytics dashboard',;
-        'Basic cloud infrastructure', '24 / 7 email support',;
-        'Monthly performance reports', 'Basic security features',;
-        'Up to 5 team members';
+      originalPrice: billingCycle === 'annual' ? 399 : 449, features: [';AI - powered analytics dashboard',';Basic cloud infrastructure', '24 / 7 email support',';Monthly performance reports', 'Basic security features',';Up to 5 team members';
       ], cta: 'Get Started',;
       popular: false, color: 'from - blue - 500 to - cyan - 500';
     },;
     {;
       name: 'Professional', icon: Building,;
       description: 'Ideal for growing businesses', price: billingCycle === 'annual' ? 799 : 899,;
-      originalPrice: billingCycle === 'annual' ? 999 : 1099, features: [;
-        'Everything in Starter',;
-        'Advanced AI & ML capabilities', 'Custom integrations',;
-        'Priority support (4hr response) ', 'Advanced security & compliance',;
-        'Up to 25 team members', 'Custom reporting',;
-        'API access';
+      originalPrice: billingCycle === 'annual' ? 999 : 1099, features: [';Everything in Starter',';Advanced AI & ML capabilities', 'Custom integrations',';Priority support (4hr response) ', 'Advanced security & compliance',';Up to 25 team members', 'Custom reporting',';API access';
       ], cta: 'Start Free Trial',;
       popular: true, color: 'from - purple - 500 to - pink - 500';
     },;
     {;
       name: 'Enterprise', icon: Crown,;
       description: 'For large organizations with complex needs', price: 'Custom',;
-      originalPrice: null, features: [;
-        'Everything in Professional',;
-        'Custom AI model training', 'Dedicated account manager',;
-        '24 / 7 phone & chat support', 'SOC 2 compliance',;
-        'Unlimited team members', 'Custom SLA guarantees',;
-        'On - premise deployment options', 'White - label solutions';
+      originalPrice: null, features: [';Everything in Professional',';Custom AI model training', 'Dedicated account manager',';24 / 7 phone & chat support', 'SOC 2 compliance',';Unlimited team members', 'Custom SLA guarantees',';On - premise deployment options', 'White - label solutions';
       ], cta: 'Contact Sales',;
       popular: false, color: 'from - yellow - 500 to - orange - 500';
     };
@@ -364,8 +349,7 @@ import { motion } from 'framer - motion';
       <div role="button" className="absolute inset - 0">";
         <div role="button" className="absolute top - 0 left - 0 w - 96 h - 96 bg - zion - cyan / 5 rounded - full blur - 3xl"></div>";
         <div role="button" className="absolute bottom - 0 right - 0 w - 96 h - 96 bg - zion - purple / 5 rounded - full blur - 3xl"></div>;
-      </div>;
-";
+      </div>";;
       <div role="button" className="relative z - 10 max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8">;
         {/* Section Header */};
         <motion.div;
@@ -532,5 +516,4 @@ import { motion } from 'framer - motion';
         </motion.div>;
       </div>;
     </section>;) ;
-};";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/PricingSection.tsx
+}";;

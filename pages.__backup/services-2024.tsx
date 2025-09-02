@@ -1,48 +1,22 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from,
-  react';import Head from
+import React, { useState, useMemo } from,;
+  react';import Head from;
   'next/head';
-import { motion } from
+import { motion } from;
   'framer-motion';
 import { 
   Search, Filter, Star, Users, TrendingUp, 
   Brain, Atom, Cpu, Shield, Database, Cloud,
   ArrowRight, CheckCircle, Zap, Sparkles
-} from
+} from;
   'lucide-react';
-import UltraFuturisticBackground2034 from
+import UltraFuturisticBackground2034 from;
   '../components/ui/UltraFuturisticBackground2034';
-import Link from
+import Link from;
   'next/link';
-=======
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import {
-  Search,
-  Filter,
-  Star,
-  Users,
-  TrendingUp,
-  Brain,
-  Atom,
-  Cpu,
-  Shield,
-  Database,
-  Cloud,
-  ArrowRight,
-  CheckCircle,
-  Zap,
-  Sparkles,
-} from 'lucide-react';
-import UltraFuturisticBackground2034 from '../components/ui/UltraFuturisticBackground2034';
-import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-
 // Import the new 2024 services
-import { realMicroSaasServices2024 } from
+import { realMicroSaasServices2024 } from;
   '../data/2024-real-micro-saas-services';
-import { innovativeITServices2024 } from
+import { innovativeITServices2024 } from;
   '../data/2024-innovative-it-services';
 
 // Combine all services
@@ -52,7 +26,6 @@ const allServices = [
 ];
 const serviceCategories = [
   {
-<<<<<<< HEAD
     id: 'ai-services,
     title:,
   🧠 AI & Machine Learning',
@@ -69,28 +42,10 @@ const serviceCategories = [
     id: 'quantum-security,
     title:,
   ⚛️ Quantum & Security',
-    description: 'Future-proof quantum-resistant encryption and blockchain solutions,
-=======
-    id: 'ai-services',
-    title: '🧠 AI & Machine Learning',
-    description:
-      'Revolutionary AI-powered solutions for business automation and intelligence',
-    icon: Brain,
-    color: 'from-violet-500 to-purple-500',
-    services: realMicroSaasServices2024.filter(s => s.category.includes('AI')),
-    gradient: 'from-violet-500/20 to-indigo-500/20',
-  },
-  {
-    id: 'quantum-security',
-    title: '⚛️ Quantum & Security',
-    description:
-      'Future-proof quantum-resistant encryption and blockchain solutions',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    icon: Atom,
+    description: 'Future-proof quantum-resistant encryption and blockchain solutions,    icon: Atom,
     color:,
   from-indigo-500 to-blue-500',
     services: [
-<<<<<<< HEAD
       ...realMicroSaasServices2024.filter(s => s.category.includes(
   'Quantum') || s.category.includes(
   'Blockchain)),
@@ -112,79 +67,39 @@ const serviceCategories = [
   'Enterprise') || s.category.includes(
   'DevOps)),
     gradient:,
-  from-blue-500/20 to-teal-500/20'
-=======
-      ...realMicroSaasServices2024.filter(
-        s => s.category.includes('Quantum') || s.category.includes('Blockchain')
-      ),
-      ...innovativeITServices2024.filter(s => s.category.includes('Security')),
-    ],
-    gradient: 'from-indigo-500/20 to-cyan-500/20',
-  },
-  {
-    id: 'enterprise-it',
-    title: '🏙️ Enterprise IT Solutions',
-    description:
-      'Autonomous operations and intelligent infrastructure management',
-    icon: Cpu,
-    color: 'from-blue-500 to-cyan-500',
-    services: innovativeITServices2024.filter(
-      s => s.category.includes('Enterprise') || s.category.includes('DevOps')
-    ),
-    gradient: 'from-blue-500/20 to-teal-500/20',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  },
+  from-blue-500/20 to-teal-500/20'  },
   {
     id: 'api-development,
     title:,
   🔌 API & Development',
     description: 'Intelligent API management and development tools,
     icon: Code,
-<<<<<<< HEAD
     color:,
   from-teal-500 to-emerald-500',
     services: innovativeITServices2024.filter(s => s.category.includes(
   'API') || s.category.includes(
   'Development)),
     gradient:,
-  from-teal-500/20 to-green-500/20'
-=======
-    color: 'from-teal-500 to-emerald-500',
-    services: innovativeITServices2024.filter(
-      s => s.category.includes('API') || s.category.includes('Development')
-    ),
-    gradient: 'from-teal-500/20 to-green-500/20',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  },
+  from-teal-500/20 to-green-500/20'  },
   {
     id: 'business-analytics,
     title:,
   💰 Business & Analytics',
     description: 'AI-powered business intelligence and optimization solutions,
     icon: BarChart,
-<<<<<<< HEAD
     color:,
   from-green-500 to-yellow-500',
     services: realMicroSaasServices2024.filter(s => s.category.includes(
   'Business') || s.category.includes(
   'Analytics)),
     gradient:,
-  from-green-500/20 to-orange-500/20'
-=======
-    color: 'from-green-500 to-yellow-500',
-    services: realMicroSaasServices2024.filter(
-      s => s.category.includes('Business') || s.category.includes('Analytics')
-    ),
-    gradient: 'from-green-500/20 to-orange-500/20',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  },
+  from-green-500/20 to-orange-500/20'  },
   {
     id: 'marketing-automation,
     title:,
   📱 Marketing & Automation',
     description: 'Intelligent marketing automation and social media management,
     icon: Target,
-<<<<<<< HEAD
     color:,
   from-orange-500 to-red-500',
     services: realMicroSaasServices2024.filter(s => s.category.includes(
@@ -192,16 +107,7 @@ const serviceCategories = [
   'Social)),
     gradient:,
   from-orange-500/20 to-pink-500/20'
-  }
-=======
-    color: 'from-orange-500 to-red-500',
-    services: realMicroSaasServices2024.filter(
-      s => s.category.includes('Marketing') || s.category.includes('Social')
-    ),
-    gradient: 'from-orange-500/20 to-pink-500/20',
-  },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-];
+  }];
 
 export default function Services2024Page() {
   const [searchTerm, setSearchTerm] = useState('
@@ -213,7 +119,6 @@ export default function Services2024Page() {
   const [sortBy, setSortBy] = useState('popularity
   ');
 
-<<<<<<< HEAD
   const filteredServices = serviceCategories.flatMap(category => category.services).filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -276,90 +181,7 @@ const categories = [
     { id: 'customer, name: 'Customer Success
   ', icon: CheckCircle, count: allServices.filter(s => s.variant.includes(,
   customer
-  ')).length }
-=======
-  const filteredServices = serviceCategories
-    .flatMap(category => category.services)
-    .filter(service => {
-      const matchesSearch =
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase());
-
-      const matchesCategory =
-        selectedCategory === 'all' ||
-        service.category.toLowerCase().includes(selectedCategory.toLowerCase());
-
-      const matchesPrice =
-        priceRange === 'all' ||
-        (priceRange === 'low' &&
-          parseInt(service.price.replace('$', '')) < 200) ||
-        (priceRange === 'medium' &&
-          parseInt(service.price.replace('$', '')) >= 200 &&
-          parseInt(service.price.replace('$', '')) < 500) ||
-        (priceRange === 'high' &&
-          parseInt(service.price.replace('$', '')) >= 500);
-
-      return matchesSearch && matchesCategory && matchesPrice;
-    });
-
-  const categories = [
-    {
-      id: 'all',
-      name: 'All Services',
-      icon: Sparkles,
-      count: allServices.length,
-    },
-    {
-      id: 'ai',
-      name: 'AI & ML',
-      icon: Brain,
-      count: allServices.filter(s => s.variant.includes('ai')).length,
-    },
-    {
-      id: 'quantum',
-      name: 'Quantum & Security',
-      icon: Shield,
-      count: allServices.filter(s => s.variant.includes('security')).length,
-    },
-    {
-      id: 'it',
-      name: 'Enterprise IT',
-      icon: Cpu,
-      count: allServices.filter(s => s.variant.includes('it')).length,
-    },
-    {
-      id: 'api',
-      name: 'API & Development',
-      icon: Database,
-      count: allServices.filter(s => s.variant.includes('api')).length,
-    },
-    {
-      id: 'cloud',
-      name: 'Cloud & DevOps',
-      icon: Cloud,
-      count: allServices.filter(s => s.variant.includes('cloud')).length,
-    },
-    {
-      id: 'marketing',
-      name: 'Marketing & SEO',
-      icon: TrendingUp,
-      count: allServices.filter(s => s.variant.includes('marketing')).length,
-    },
-    {
-      id: 'project',
-      name: 'Project Management',
-      icon: Users,
-      count: allServices.filter(s => s.variant.includes('project')).length,
-    },
-    {
-      id: 'customer',
-      name: 'Customer Success',
-      icon: CheckCircle,
-      count: allServices.filter(s => s.variant.includes('customer')).length,
-    },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  ')).length }  ];
 
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai
@@ -381,7 +203,6 @@ const categories = [
   };
 
   const getVariantColor = (variant: string) => {
-<<<<<<< HEAD
     if (variant.includes('ai
   ')) return 'from-blue-500 to-cyan-500
   ';
@@ -408,21 +229,7 @@ const categories = [
   ';
     return 'from-gray-500 to-slate-500
   ';
-  };return (
-=======
-    if (variant.includes('ai')) return 'from-blue-500 to-cyan-500';
-    if (variant.includes('security')) return 'from-red-500 to-pink-500';
-    if (variant.includes('it')) return 'from-green-500 to-emerald-500';
-    if (variant.includes('api')) return 'from-purple-500 to-violet-500';
-    if (variant.includes('cloud')) return 'from-indigo-500 to-blue-500';
-    if (variant.includes('marketing')) return 'from-yellow-500 to-orange-500';
-    if (variant.includes('project')) return 'from-teal-500 to-cyan-500';
-    if (variant.includes('customer')) return 'from-pink-500 to-rose-500';
-    return 'from-gray-500 to-slate-500';
-  };
-  return (
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    <>
+  };return (    <>
       <Head>
         <title>2024 Revolutionary Services - Zion Tech Group</title>
         <meta
@@ -546,7 +353,6 @@ const categories = [
                     <option value="customers">Sort by Customers</option>
                   </select>
                   <button
-<<<<<<< HEAD
                     onClick={() => setSortOrder(sortOrder ===,
   asc
   ' ? 'desc
@@ -554,16 +360,7 @@ const categories = [
                     {sortOrder ===,
   asc
   ' ? '↑
-  ': '↓}
-=======
-                    onClick={() =>
-                      setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')
-                    }
-                    className="px-4 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-200"
-                  >
-                    {sortOrder === 'asc' ? '↑' : '↓'}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-                  </button>
+  ': '↓}                  </button>
                 </div>
               </div>
             </div>
@@ -682,17 +479,10 @@ const categories = [
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
                         </Link>
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
-<<<<<<< HEAD
                           {service.variant.replace('-futuristic
   ', '').replace(
   '-',
-  ' ')}
-=======
-                          {service.variant
-                            .replace('-futuristic', '')
-                            .replace('-', ' ')}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-                        </div>
+  ' ')}                        </div>
                       </div>
                     </div>
                   </motion.div>

@@ -1,23 +1,19 @@
-import React from
+import React from;
   'react';
-import Head from
+import Head from;
   'next/head';
-import EnhancedNavigation from
+import EnhancedNavigation from;
   '../EnhancedNavigation';
-import EnhancedFooter from
+import EnhancedFooter from;
   '../EnhancedFooter';
 
 interface EnhancedLayoutProps {
-  // Add your props here
-
-
-  children: React.ReactNode;
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
-  structuredData?: object;
-
+  // Add your props here children: React.ReactNode;
+   title?: string;
+   description?: string;
+   keywords?: string;
+   ogImage?: string;
+   structuredData?: object;
 }
 ;
 const EnhancedLayout: React.FC<EnhancedLayoutProps> = {

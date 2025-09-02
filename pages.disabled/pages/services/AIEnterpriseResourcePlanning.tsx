@@ -23,7 +23,7 @@ import { Brain,
   ArrowRight,
   Target,
   PieChart,
-  Activity'
+  Activity';
   } from 'lucide-react.ts';
 };
   ];
@@ -34,8 +34,7 @@ import { Brain,
       name: "Starter Plan","
       price: "$2,999","
       period: "/month",
-      features[;"
-        "Core ERP modules","
+      features[';Core ERP modules","
         "AI-powered analytics","
         "Basic automation","
         "Standard support","
@@ -48,7 +47,7 @@ import { Brain,
       name: "Professional Plan",""
       price: "$5,999",""
       period: "/month","
-      features[;""
+      features[';
         "Advanced AI capabilities",""
         "Custom integrations",""
         "Advanced automation",""
@@ -64,7 +63,7 @@ import { Brain,
       name: "Enterprise Plan",""
       price: "$12,999",""
       period: "/month","
-      features[;""
+      features[';
         "Full AI suite",""
         "Unlimited users",""
         "Custom development",""
@@ -92,7 +91,7 @@ import { Brain,
       industry: "Financial Services",""
       description: "Optimize risk management, compliance, and customer relationship management",""
       benefits["Enhanced risk assessment", "Improved regulatory compliance", "Better customer insights"]};
-  ];"
+  ]";
   const technologies = [""
     "Machine Learning & AI",""
     "Cloud Computing",""
@@ -100,7 +99,7 @@ import { Brain,
     "IoT Integration",""
     "Blockchain Security",""
     "API-First Architecture",""
-    "Real-time Processing",;"    "Predictive Analytics";
+    "Real-time Processing",';Predictive Analytics";
 :pages.disabled/pages/services/AIEnterpriseResourcePlanning.tsx
   ];
 
@@ -607,5 +606,5 @@ import { Brain,
         </div>
       </section>;
     </div>;
-  )};'"`
-export default AIEnterpriseResourcePlanning;'"`'"`
+  )}'"`;
+export default AIEnterpriseResourcePlanning'"`;'"`

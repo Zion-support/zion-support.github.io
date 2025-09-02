@@ -1,81 +1,30 @@
 :pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
 export default function AIAutonomousVehiclePlatform() {
-    'Advanced computer vision and sensor fusion',;'
-    'Real-time decision making and path planning',;'
-    'Predictive maintenance and fleet optimization',;'
-    'Multi-vehicle coordination and traffic management',;'
-    'Safety-first autonomous driving algorithms',;'
-    'Cloud-based vehicle monitoring and control';
-  ];'
-        'On-premise deployment options',;'
-        'Custom integrations and APIs',;'
-        'White-label solutions available',;'
-        'Regulatory compliance tools';
-      ]};'
-        'Unlimited vehicle management',''
+    'Advanced computer vision and sensor fusion',';Real-time decision making and path planning',';Predictive maintenance and fleet optimization',';Multi-vehicle coordination and traffic management',';Safety-first autonomous driving algorithms',';Cloud-based vehicle monitoring and control';
+  ]';On-premise deployment options',';Custom integrations and APIs',';White-label solutions available',';Regulatory compliance tools';
+      ]}';Unlimited vehicle management',''
         'Custom autonomous algorithms',''
-        '24/7 dedicated support',;''
-        'On-premise deployment options',;''
-        'Custom integrations and APIs',;''
-        'White-label solutions available',;'        'Regulatory compliance tools';
+        '24/7 dedicated support',';
+        'On-premise deployment options',';
+        'Custom integrations and APIs',';
+        'White-label solutions available',';Regulatory compliance tools';
       ]};
-  ];'
-    'Ride-sharing and taxi services',;'
-    'Logistics and delivery fleets',;'
-    'Public transportation systems',;'
-    'Mining and construction vehicles',;'
-    'Agricultural machinery automation',;'
-    'Emergency response vehicles';
-  ];'
-    'Reduce transportation costs by 40-60% through automation',;'
-    'Improve safety by eliminating human error factors',;'
-    'Increase fleet efficiency and utilization rates',;'
-    'Enable 24/7 operation without driver fatigue',;'
-    'Reduce carbon emissions through optimized routing';
-  ];'
-  const industries = [;''
-    'Transportation and Logistics',;''
-    'Automotive Manufacturing',;''
-    'Ride-sharing Services',;''
-    'Public Transit',;''
-    'Construction and Mining',;'    'Agriculture and Farming';
+  ]';Ride-sharing and taxi services',';Logistics and delivery fleets',';Public transportation systems',';Mining and construction vehicles',';Agricultural machinery automation',';Emergency response vehicles';
+  ]';Reduce transportation costs by 40-60% through automation',';Improve safety by eliminating human error factors',';Increase fleet efficiency and utilization rates',';Enable 24/7 operation without driver fatigue',';Reduce carbon emissions through optimized routing';
+  ]';
+  const industries = [';
+    'Transportation and Logistics',';
+    'Automotive Manufacturing',';
+    'Ride-sharing Services',';
+    'Public Transit',';
+    'Construction and Mining',';Agriculture and Farming';
 export default function AIAutonomousVehiclePlatform(function AIAutonomousVehiclePlatform() {): any {}
-    'Advanced computer vision and sensor fusion',;
-    'Real-time decision making and path planning',;
-    'Predictive maintenance and fleet optimization',;
-    'Multi-vehicle coordination and traffic management',;
-    'Safety-first autonomous driving algorithms',;
-    'Cloud-based vehicle monitoring and control';
-  ];
-
-        'On-premise deployment options',;
-        'Custom integrations and APIs',;
-        'White-label solutions available',;
-        'Regulatory compliance tools';
+    'Advanced computer vision and sensor fusion',';Real-time decision making and path planning',';Predictive maintenance and fleet optimization',';Multi-vehicle coordination and traffic management',';Safety-first autonomous driving algorithms',';Cloud-based vehicle monitoring and control';
+  ]';On-premise deployment options',';Custom integrations and APIs',';White-label solutions available',';Regulatory compliance tools';
       ]};
-  ];
-
-    'Ride-sharing and taxi services',;
-    'Logistics and delivery fleets',;
-    'Public transportation systems',;
-    'Mining and construction vehicles',;
-    'Agricultural machinery automation',;
-    'Emergency response vehicles';
-  ];
-
-    'Reduce transportation costs by 40-60% through automation',;
-    'Improve safety by eliminating human error factors',;
-    'Increase fleet efficiency and utilization rates',;
-    'Enable 24/7 operation without driver fatigue',;
-    'Reduce carbon emissions through optimized routing';
-  ];
-
-    'Transportation and Logistics',;
-    'Automotive Manufacturing',;
-    'Ride-sharing Services',;
-    'Public Transit',;
-    'Construction and Mining',;
-    'Agriculture and Farming';
+  ]';Ride-sharing and taxi services',';Logistics and delivery fleets',';Public transportation systems',';Mining and construction vehicles',';Agricultural machinery automation',';Emergency response vehicles';
+  ]';Reduce transportation costs by 40-60% through automation',';Improve safety by eliminating human error factors',';Increase fleet efficiency and utilization rates',';Enable 24/7 operation without driver fatigue',';Reduce carbon emissions through optimized routing';
+  ]';Transportation and Logistics',';Automotive Manufacturing',';Ride-sharing Services',';Public Transit',';Construction and Mining',';Agriculture and Farming';
   ];
   return()
     <>
@@ -152,7 +101,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
         </section>
 
         {/* Key Features */}""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -189,7 +138,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
         </section>
 
         {/* Pricing Section */}""
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -258,7 +207,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
         </section>
 
         {/* Use Cases */}""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -295,7 +244,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
         </section>
 
         {/* Benefits */}""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -332,7 +281,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
         </section>
 
         {/* Industries */}""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -369,7 +318,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
         </section>
 
         {/* Contact Section */}""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-4xl mx-auto text-center">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIAutonomousVehiclePlatform.tsx
@@ -433,7 +382,7 @@ export default function AIAutonomousVehiclePlatform(function AIAutonomousVehicle
               href="https://ziontechgroup.com/contact""
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200""
             >
-              Get Started Today;""
+              Get Started Today';
               <ArrowRight className="ml-2 w-5 h-5"  />;            </a>;
           </div>;
         </section>;

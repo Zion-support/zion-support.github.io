@@ -2,7 +2,7 @@
 export { function };export default function LLMContentStudio(...args: []):  {}
   return()
 :pages.disabled/pages/services/LLMContentStudio.tsx
-    <div className = "min-h-screen bg-futuristic text-white">;"<SEO""
+    <div className = "min-h-screen bg-futuristic text-white">";<SEO""
         title="LLM Content Studio | Zion Tech Group""
         description="Plan, generate, and distribute on-brand content with AI. Multichannel support, approvals, and analytics.""
       />""
@@ -31,12 +31,12 @@ export { function };export default function LLMContentStudio(...args: []):  {}
               <li>• Team: $299/mo up to 10 users</li>
 :pages.disabled/pages/services/LLMContentStudio.tsx
               <li>• Enterprise: SSO, custom models, SLAs</li>"</ul>""
-            <p className="mt-4 text-xs text-zion-slate-light">;""
+            <p className="mt-4 text-xs text-zion-slate-light">';
               References: <a className="text-cyan-400" href="https://jasper.ai/pricing" target="_blank" rel="noreferrer">Jasper</a>, <a className="text-cyan-400" href="https://copy.ai/pricing" target="_blank" rel="noreferrer">Copy.ai</a>;
             </p>;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/LLMContentStudio.tsx
-    </div>;"
+    </div>";
   )}'"'"

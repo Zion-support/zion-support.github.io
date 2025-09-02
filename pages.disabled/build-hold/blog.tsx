@@ -1,13 +1,13 @@
 React from
   'react';
-import { motion } from
-  'framer-motion';'{ SEO } from
+import { motion } from;
+  'framer-motion';{ SEO } from
   '../components/SEO';
-import { Button } from
-  '../components/ui/Button';'{ Card } from
+import { Button } from;
+  '../components/ui/Button';{ Card } from
   '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';'import { ;'  Calendar, Clock,
+import { Badge } from;
+  '../components/ui/Badge';import { ';  Calendar, Clock,
   User, ArrowRight,
   Search, Filter,
   Tag, BookOpen,
@@ -21,8 +21,7 @@ import { Badge } from
   Target, Globe,
   Phone, Mail
 } from
-  'lucide-react';'
-  'const Blog: React.FC = () => {
+  'lucide-react'';const Blog: React.FC = () => {
   const blogPosts = [;
     {;
       id: 1, title: "The Future of AI in Business: 2025 Trends and Predictions","      excerpt: "Explore the latest AI trends shaping the business landscape in 2025 and how companies can leverage these technologies for competitive advantage.", author: "Sarah Johnson","      date: "2025-01-15", readTime: "8 min read","      category: "AI Trends", image: "/api/placeholder/600/400","      tags: ["AI", "Business", "Trends", "2025"], featured: true"    },"    {;
@@ -33,7 +32,7 @@ import { Badge } from
       id: 6, title: "Data Analytics and Machine Learning: Driving Business Intelligence","      excerpt: "Explore how advanced analytics and machine learning are transforming business intelligence and decision-making processes.", author: "James Wilson","      date: "2025-01-03", readTime: "11 min read","      category: "Analytics", image: "/api/placeholder/600/400","      tags: ["Data Analytics", "Machine Learning", "Business Intelligence"], featured: false"    }"  ];
 
   const categories = [;
-    { name: "All", count: 24, active: true }, { name: "AI Trends", count: 6, active: false },"    { name: "Technical", count: 8, active: false }, { name: "Security", count: 4, active: false },"    { name: "Cloud", count: 3, active: false }, { name: "Customer Experience", count: 2, active: false },"    { name: "Analytics", count: 1, active: false }"  ];"
+    { name: "All", count: 24, active: true }, { name: "AI Trends", count: 6, active: false },"    { name: "Technical", count: 8, active: false }, { name: "Security", count: 4, active: false },"    { name: "Cloud", count: 3, active: false }, { name: "Customer Experience", count: 2, active: false },"    { name: "Analytics", count: 1, active: false }"  ]";
   const featuredPost = blogPosts.find(post => post.featured);
 
   return (

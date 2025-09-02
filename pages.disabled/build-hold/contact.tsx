@@ -1,25 +1,23 @@
-React, { useState } from
+import React, { useState  } from;
   'react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../components/layout/MainLayout';
-import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from
-  'lucide-react';'
-  'const ContactPage: NextPage = () => {
+import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from;
+  'lucide-react'';const ContactPage: NextPage = () => {
   const [formData, setFormData] = useState({;
     name:,
   ', email: ','    company:,
   ', phone: ',
 ,
   service: ', message: ''
-  '  });'
+  '  })';
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<
   'idle' |
   'success' |
   'error'>(
-  'idle');'
-  '  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
+  'idle')';  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {;
     setFormData({
       ...formData, [e.target.name]: e.target.value
     });
@@ -34,12 +32,12 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from
       setIsSubmitting(false);
       setSubmitStatus(,
   success
-  ');'      setFormData({
+  ')';      setFormData({
   '        name: ', email:,
   ','        company: ', phone:,
   ',
   '        service: ', message: ''
-  '      });'    }, 2000);
+  '      })';    }, 2000);
   };
 
   const contactInfo = [;
@@ -193,7 +191,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send } from
   'AI Cybersecurity Threat Intelligence',
   'AI Augmented Reality Solutions',
   '    ' 
-  'Other''  ];'
+  'Other''  ]';
   return (
     <MainLayout
       title="Contact Us - Zion Tech Group""      description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&apos;re here to help transform your business."'

@@ -1,11 +1,11 @@
-import React, { useState } from 'react';'''
+import React, { useState } from 'react'';
 import { motion, AnimatePresence } from 'framer-motion';
 import {}
   PlusIcon,
   XMarkIcon,
   ChatBubbleLeftRightIcon,
-  PhoneIcon,'
-  EnvelopeIcon} from '@heroicons/react/24/outline';'
+  PhoneIcon,';
+  EnvelopeIcon} from '@heroicons/react/24/outline';
 const FloatingActionButton = ({ className = '' }) => {}
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -43,8 +43,7 @@ const FloatingActionButton = ({ className = '' }) => {}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}"""
                 transition={{ delay: index * 0.1 }}""""
-                className="flex items-center space-x-3"""
-              >
+                className="flex items-center space-x-3 ">
                 <motion.button`
                   onClick={item.action}``
                   className={`${item.color} text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110`}
@@ -57,8 +56,7 @@ const FloatingActionButton = ({ className = '' }) => {}
                 <motion.span;
                   initial={{ opacity: 0, x: -10 }}"""
                   animate={{ opacity: 1, x: 0 }}""""
-                  className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap"""
-                >
+                  className="bg-white text-gray-800 px-3 py-2 rounded-lg shadow-lg text-sm font-medium whitespace-nowrap ">
                   {item.label}
                 </motion.span>
               </motion.div>

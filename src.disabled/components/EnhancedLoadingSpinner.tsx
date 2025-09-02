@@ -1,10 +1,8 @@
-<<<<<<< HEAD:src.disabled/components/EnhancedLoadingSpinner.tsx
+:src.disabled/components/EnhancedLoadingSpinner.tsx
 import React from,
-  react''import { motion } from
-  'framer-motion'';'interface EnhancedLoadingSpinnerProps {
-  size?: 'sm' |
-  'md' |
-  'lg''  text?: string  className?: string
+  react''import { motion } from;
+  'framer-motion'';interface EnhancedLoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg'' text?: string className?: string;
 }
 
 export default function EnhancedLoadingSpinner({ 
@@ -46,18 +44,17 @@ export default function EnhancedLoadingSpinner({
             key={i}
             className="w-2 h-2 bg-blue-600 rounded-full""            animate={{ "              scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5]
             }}
-=======
-import React from 'react''import { motion } from 'framer - motion';';'interface EnhancedLoadingSpinnerProps {';
-export default React.memo(/**
- * EnhancedLoadingSpinner function
- * @param {*} params - Function parameters
+import React from 'react''import { motion } from 'framer - motion';;interface EnhancedLoadingSpinnerProps {
+  ';
+   export default React.memo(/** * EnhancedLoadingSpinner function * @param {*;
+} params - Function parameters
  * @returns {*} Function return value
  */
 function EnhancedLoadingSpinner ({;
 
   size?: 'sm' | 'md' | 'lg''  text?: string'  className?: string;
 };
-  size = 'md', text = 'Loading...','  className = '''}: EnhancedLoadingSpinnerProps) {'  const sizeClasses = {;';
+  size = 'md', text = 'Loading...','  className = '''}: EnhancedLoadingSpinnerProps) {'  const sizeClasses = {';;
     sm: 'w - 8 h - 8', md: 'w - 12 h - 12','    lg: 'w - 16 h - 16''  }'';
   const textSizes = {;
     sm: 'text - sm', md: 'text - base','    lg: 'text - lg''  }'';
@@ -83,9 +80,8 @@ function EnhancedLoadingSpinner ({;
             key={i}";
             className="w - 2 h - 2 bg - blue - 600 rounded - full""            animate={{ "              scale: [1, 1.5, 1], opacity: [0.5, 1, 0.5];
             }};
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/EnhancedLoadingSpinner.tsx
             transition={{ ;
-              duration: 1.5, repeat: Infinity, ;";
+              duration: 1.5, repeat: Infinity, ";;
               delay: i * 0.2, ease: "easeInOut""            }}"          />) ) };
       </div>;
     </div>;) ;

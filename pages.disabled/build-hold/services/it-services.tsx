@@ -1,16 +1,15 @@
 React from,
   react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../../components/layout/MainLayout';
-import { getServicesByCategory } from
-  '../../data/services';'{ ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from
+import { getServicesByCategory } from;
+  '../../data/services';{ ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from
   'lucide-react';
-import Link from
-  'next/link';'
-  'const ITServicesPage: NextPage = () => {
+import Link from;
+  'next/link'';const ITServicesPage: NextPage = () => {
   const itServices = getServicesByCategory('it-services
-  ');'  const benefits = [;
+  ')';  const benefits = [;
     {
       icon: <Shield className="w-8 h-8" />, title:,
   Enterprise Security',

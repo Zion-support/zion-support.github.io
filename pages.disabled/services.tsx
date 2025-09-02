@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from
   'react'
 import Link from
@@ -13,36 +12,6 @@ export default function Services() {
   'Services — Zion Tech Group'
 	const description =
   'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
-=======
-import React from 'react';
-import Link from 'next/link';
-import {
-  ArrowRight,
-  Brain,
-  Cloud,
-  Shield,
-  Zap,
-  Database,
-  Server,
-  Lock,
-  BarChart3,
-  Users,
-  Globe,
-  Code,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Clock,
-  Award,
-} from 'lucide-react';
-import PageTransition from '../src/components/PageTransition';
-
-export default function Services() {
-  const title = 'Services — Zion Tech Group';
-  const description =
-    'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-
   return (
     <PageTransition>
       {/* Hero Section */}
@@ -418,6 +387,6 @@ export default function Services() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </PageTransition>;
   );
 }

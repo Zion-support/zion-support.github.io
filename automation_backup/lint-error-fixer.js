@@ -1,15 +1,15 @@
 #!/usr/bin/env node;
-import fs from
+import fs from;
   'fs';
-import path from
+import path from;
   'path';
-import { execSync } from
+import { execSync } from;
   'child_process';
-import { fileURLToPath } from
+import { fileURLToPath } from;
   'url';
-import { dirname } from
+import { dirname } from;
   'path';
-import { globSync } from
+import { globSync } from;
   'glob';
 const __dirname = dirname(__filename);
 class LintErrorFixer {;
@@ -139,14 +139,10 @@ class LintErrorFixer {;
   🔧 Starting comprehensive lint error fix...
   ');
 ;
-    const patterns = [;
-      'pages/**/*.{js,jsx,ts,tsx}
-  ',;
-      'components/**/*.{js,jsx,ts,tsx}
-  ',;
-      'utils/**/*.{js,jsx,ts,tsx}
-  ',;
-      'hooks/**/*.{js,jsx,ts,tsx}
+    const patterns = [';pages/**/*.{js,jsx,ts,tsx}
+  ',';components/**/*.{js,jsx,ts,tsx}
+  ',';utils/**/*.{js,jsx,ts,tsx}
+  ',';hooks/**/*.{js,jsx,ts,tsx}
   ';
     ];
     let totalFiles = 0;

@@ -1,5 +1,5 @@
-import { useState, useEffect, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import { useState, useEffect, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User, MessageSquare, Building } from 'lucide-react';
 ;
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
@@ -55,7 +55,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             return null}'
         // Type-specific validation''
         if (typeof value === 'string') {}
-            const stringValue = value.trim();'
+            const stringValue = value.trim()';
             // Email validation''
             if (field.type === 'email' && stringValue) {}
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -155,7 +155,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
 '
 ''
 '''
-                trackEvent('form',submission_success',form_completed');'''
+                trackEvent('form',submission_success',form_completed')';'
                 trackConversion('form_submission', 1, { formType: title })}
             setIsSubmitted(true);
             // Reset form after successful submission;
@@ -186,15 +186,15 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         switch(field.type) {}
 '"""
 '"'"""
-            case 'email': return <Mail className="w-4 h-4"/>;'"'"""
-            case 'tel': return <Phone className="w-4 h-4"/>;'"'"""
-            case 'textarea': return <MessageSquare className="w-4 h-4"/>;'"'"""
-            case 'select': return <Building className="w-4 h-4"/>;""""
+            case 'email': return <Mail className="w-4 h-4"/>'';"""
+            case 'tel': return <Phone className="w-4 h-4"/>'';"""
+            case 'textarea': return <MessageSquare className="w-4 h-4"/>'';"""
+            case 'select': return <Building className="w-4 h-4"/>';""
             default: return <User className="w-4 h-4"/>}
     }, []);
     // Render field;
     const renderField = useCallback((field) => {}
-        const fieldValidation = validation[field.name];'
+        const fieldValidation = validation[field.name]';
         const isPasswordField = field.name.toLowerCase().includes('password');
         return (<motion.div key={field.name} initial = {}
   { opacity: 0,
@@ -359,5 +359,5 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             </motion.div>) }
         </AnimatePresence>
       </form>
-    </motion.div>)};'"`
+    </motion.div>)}'"`;
 '"`'"`

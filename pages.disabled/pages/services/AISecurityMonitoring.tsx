@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityMonitoring.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMonitoring() {
-    'Automated security threat detection and assessment',;'
-    'Predictive analytics for monitoring needs',;'
-    'Smart monitoring framework management',;'
-    'AI-driven monitoring automation and orchestration',;'
-    'Real-time monitoring performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMonitoring(function AISecurityMonitoring() {): any {}
-    'Automated security threat detection and assessment',;
-    'Predictive analytics for monitoring needs',;
-    'Smart monitoring framework management',;
-    'AI-driven monitoring automation and orchestration',;
-    'Real-time monitoring performance tracking',;
-    'Custom AI models for monitoring applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMonitoring() {;
+    'Automated security threat detection and assessment',';Predictive analytics for monitoring needs',';Smart monitoring framework management',';AI-driven monitoring automation and orchestration',';Real-time monitoring performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMonitoring(function AISecurityMonitoring() {): any {};
+    'Automated security threat detection and assessment',';Predictive analytics for monitoring needs',';Smart monitoring framework management',';AI-driven monitoring automation and orchestration',';Real-time monitoring performance tracking',';Custom AI models for monitoring applications';
 <:pages.disabled/pages/services/AISecurityMonitoring.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited systems',Custom AI models',Full monitoring suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security monitoring optimization',;'
-    'Monitoring strategy management and execution',;'
-    'Security threat detection and assessment',;'
-    'Monitoring framework management and automation',;'
-    'Monitoring automation and orchestration',;'
-    'Monitoring scaling and management';
-  ];
-
-  '
-    'Improve security monitoring performance by 50-80%',;'
-    'Reduce threat detection time by 40-70%',;'
-    'Cut security monitoring costs by 35-65%',;'
-    'Enhance security monitoring reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security monitoring operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security monitoring optimization',';Monitoring strategy management and execution',';Security threat detection and assessment',';Monitoring framework management and automation',';Monitoring automation and orchestration',';Monitoring scaling and management';
+  ]';Improve security monitoring performance by 50-80%',';Reduce threat detection time by 40-70%',';Cut security monitoring costs by 35-65%',';Enhance security monitoring reliability and scalability',';Optimize resource utilization',';Scale security monitoring operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-slate-600 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityMonitoring.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

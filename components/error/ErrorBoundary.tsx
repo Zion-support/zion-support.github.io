@@ -2,14 +2,14 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+   fallback?: ReactNode;
+   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+   error?: Error;
+   errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {

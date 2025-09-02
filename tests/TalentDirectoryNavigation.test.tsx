@@ -1,12 +1,12 @@
-import { render, screen, fireEvent } from
+import { render, screen, fireEvent } from;
   '@testing-library/react';
-import { MemoryRouter, Routes, Route } from
+import { MemoryRouter, Routes, Route } from;
   'react-router-dom';
-import { QueryClient, QueryClientProvider } from
+import { QueryClient, QueryClientProvider } from;
   '@tanstack/react-query';
-import TalentDirectory from
+import TalentDirectory from;
   '@/pages/TalentDirectory';
-import TalentDetail from
+import TalentDetail from;
   '@/pages/TalentDetail';
 
 function renderWithRouter() {

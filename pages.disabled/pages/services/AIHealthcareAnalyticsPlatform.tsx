@@ -158,7 +158,7 @@ import {}
   CloudFog10,
   CloudHail10,
   CloudSnow10,
-  CloudSleet10''
+  CloudSleet10'';
 } from 'lucide-react';
 
 :pages.disabled/pages/services/AIHealthcareAnalyticsPlatform.tsx
@@ -763,6 +763,5 @@ export default function AIHealthcareAnalyticsPlatform(function AIHealthcareAnaly
         </div>
       </section>
     </div>
-  )};
-'"`
+  )}'"`;
 export default AIHealthcareAnalyticsPlatform}}}}}'"`'"`

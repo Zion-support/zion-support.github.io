@@ -4,8 +4,8 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {
 export default function BlockchainEnterpriseSolutions(...args[]):  {}
     {;
       icon: TrendingUp,;
-      title: 'Cost Efficiency',;'
-      description: 'Reduce intermediaries and streamline business processes',;'
+      title: 'Cost Efficiency',';
+      description: 'Reduce intermediaries and streamline business processes',';
       color: 'from-indigo-500 to-purple-500'};
   ]},;
 :pages.disabled/pages/services/BlockchainEnterpriseSolutions.tsx
@@ -23,18 +23,18 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
       features['Network setup',Node configuration',Security implementation',Monitoring']},;
     {
 '
-      features['Protocol development',Liquidity management',Risk assessment',Integration']};'
-      title: 'DeFi Solutions',;'
-      description: 'Decentralized finance applications and protocols',;'
-      price: 'From $20,000',;'
+      features['Protocol development',Liquidity management',Risk assessment',Integration']}';
+      title: 'DeFi Solutions',';
+      description: 'Decentralized finance applications and protocols',';
+      price: 'From $20,000',';
       features: ['Protocol development',Liquidity management',Risk assessment',Integration']};
-  ];'
-  const useCases = [;''
-    { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },;''
-    { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },;''
-    { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },;''
-    { name: 'Real Estate', icon: FileText, description: 'Property records and title management' },;''
-    { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },;'    { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' };
+  ]';
+  const useCases = [';
+    { name: 'Supply Chain', icon: Network, description: 'End-to-end traceability and transparency' },';
+    { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },';
+    { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },';
+    { name: 'Real Estate', icon: FileText, description: 'Property records and title management' },';
+    { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },';    { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' };
     {}
       title: 'Smart Contract Development',
       description: 'Custom smart contracts for business automation and compliance',
@@ -171,7 +171,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
       </section>
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -279,7 +279,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
       </section>
 
       {/* Services & Pricing */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -406,7 +406,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
       </section>
 
       {/* Use Cases */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -516,7 +516,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20">;""
+      <section className="py-20 bg-gradient-to-r from-purple-600/20 to-pink-600/20">';
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial = {}

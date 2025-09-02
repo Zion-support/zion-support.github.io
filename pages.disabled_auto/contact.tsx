@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Send, CheckCircle, Loader2 }
 
 const ContactPage: NextPage = () => {
   const [formData, setFormData] = useState({
-<<<<<<< HEAD:pages.disabled_auto/contact.tsx
+:pages.disabled_auto/contact.tsx
     name:,
   ',
     email: ',
@@ -15,11 +15,9 @@ const ContactPage: NextPage = () => {
     service:,
   ',
     message: '
-=======
     name: '', email: '',
     company: '', phone: '',
     service: '', message: ''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/contact.tsx
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -45,7 +43,7 @@ const ContactPage: NextPage = () => {
       setSubmitStatus(,
   success');
       setFormData({
-<<<<<<< HEAD:pages.disabled_auto/contact.tsx
+:pages.disabled_auto/contact.tsx
         name: ',
         email:,
   ',
@@ -54,18 +52,16 @@ const ContactPage: NextPage = () => {
   ',
         service: ',
         message: ''
-=======
         name: '', email: '',
         company: '', phone: '',
         service: '', message: ''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/contact.tsx
       });
     }, 2000);
   };
 
   const contactInfo = [
     {
-<<<<<<< HEAD:pages.disabled_auto/contact.tsx
+:pages.disabled_auto/contact.tsx
       icon: <Phone className="w-6 h-6" />,
       title:,
   Phone',
@@ -94,7 +90,6 @@ const ContactPage: NextPage = () => {
       title:,
   Business Hours',
       details: 'Mon-Fri: 9AM-6PM EST,
-=======
       icon: <Phone className="w-6 h-6" />, title: 'Phone',
       details: '+1 302 464 0950', link: 'tel:+13024640950'
     },
@@ -109,13 +104,12 @@ const ContactPage: NextPage = () => {
     }, {
       icon: <Clock className="w-6 h-6" />,
       title: 'Business Hours', details: 'Mon-Fri: 9AM-6PM EST',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/contact.tsx
       link: null
     }
   ];
 
   const services = [
-<<<<<<< HEAD:pages.disabled_auto/contact.tsx
+:pages.disabled_auto/contact.tsx
     // Micro SaaS Services,
   AI Content Generator Pro',
   'Social Media Scheduler Pro',
@@ -224,7 +218,6 @@ const ContactPage: NextPage = () => {
   'AI Cybersecurity Threat Intelligence',
   'AI Augmented Reality Solutions',
   'Other'
-=======
     // Micro SaaS Services
     'AI Content Generator Pro', 'Social Media Scheduler Pro',
     'Email Marketing Automation Suite', 'Smart Invoice Management',
@@ -281,29 +274,24 @@ const ContactPage: NextPage = () => {
     'AI Cybersecurity Threat Intelligence', 'AI Augmented Reality Solutions',
     
     'Other'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/contact.tsx
   ];
 
   return (
     <MainLayout
       title="Contact Us - Zion Tech Group"
-<<<<<<< HEAD:pages.disabled_auto/contact.tsx
+:pages.disabled_auto/contact.tsx
       description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. We
   're here to help transform your business."
-=======
       description="Get in touch with Zion Tech Group for technology solutions, consultations, and support. We&apos;re here to help transform your business."'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/contact.tsx
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">
-<<<<<<< HEAD:pages.disabled_auto/contact.tsx
+:pages.disabled_auto/contact.tsx
               Lets Build Something Amazing Together
-=======
               Let&apos;s Build Something Amazing Together'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/contact.tsx
             </h1>
             <p className="text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed">
               Ready to transform your business with cutting-edge technology? 
@@ -354,12 +342,10 @@ const ContactPage: NextPage = () => {
               {submitStatus ===
   'success' && (
                 <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
-<<<<<<< HEAD:pages.disabled_auto/contact.tsx
+:pages.disabled_auto/contact.tsx
                   Thank you for your message! We
   'll get back to you within 24 hours.
-=======
                   Thank you for your message! We&apos;ll get back to you within 24 hours.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/contact.tsx
                 </div>
               )}
 
@@ -532,12 +518,10 @@ const ContactPage: NextPage = () => {
               <div className="bg-blue-50 rounded-lg p-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Response Guarantee</h3>
                 <p className="text-gray-600 mb-4">
-<<<<<<< HEAD:pages.disabled_auto/contact.tsx
+:pages.disabled_auto/contact.tsx
                   We understand that time is valuable. That
   's why we guarantee a response within 24 hours 
-=======
                   We understand that time is valuable. That&apos;s why we guarantee a response within 24 hours '
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/contact.tsx
                   for all inquiries.
                 </p>
                 <div className="flex items-center text-blue-600">

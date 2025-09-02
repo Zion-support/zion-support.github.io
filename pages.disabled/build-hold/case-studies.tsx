@@ -1,13 +1,13 @@
 React from
   'react';
-import { motion } from
-  'framer-motion';'{ SEO } from
+import { motion } from;
+  'framer-motion';{ SEO } from
   '../components/SEO';
-import { Button } from
-  '../components/ui/Button';'{ Card } from
+import { Button } from;
+  '../components/ui/Button';{ Card } from
   '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';'import { ;'  TrendingUp, Users,
+import { Badge } from;
+  '../components/ui/Badge';import { ';  TrendingUp, Users,
   DollarSign, Clock,
   Target, CheckCircle,
   ArrowRight, Star,
@@ -20,8 +20,7 @@ import { Badge } from
   Download, Share2,
   Filter, Search
 } from
-  'lucide-react';'
-  'const CaseStudies: React.FC = () => {
+  'lucide-react'';const CaseStudies: React.FC = () => {
   const caseStudies = [;
     {;
       id: 1, title: "AI-Powered Supply Chain Optimization for Global Manufacturing","      company: "TechCorp Industries", industry: "Manufacturing","      challenge: "Inefficient supply chain operations leading to 30% inventory waste and delayed deliveries", solution: "Implemented AI-driven demand forecasting and autonomous logistics optimization","      results: ["        "40% reduction in inventory costs", "60% improvement in delivery times","        "25% increase in customer satisfaction", "$2.5M annual cost savings""      ], duration: "6 months","      teamSize: "12 experts", technologies: ["Machine Learning", "IoT", "Predictive Analytics", "Cloud Computing"], image: "/api/placeholder/600/400","      featured: true"    }, {;
@@ -38,7 +37,7 @@ import { Badge } from
   ];
 
   const industries = [;
-    { name: "All Industries", count: 24, active: true }, { name: "Manufacturing", count: 6, active: false },"    { name: "Healthcare", count: 4, active: false }, { name: "Financial Services", count: 5, active: false },"    { name: "Retail", count: 3, active: false }, { name: "Energy", count: 3, active: false },"    { name: "Education", count: 2, active: false }, { name: "Other", count: 1, active: false }"  ];"
+    { name: "All Industries", count: 24, active: true }, { name: "Manufacturing", count: 6, active: false },"    { name: "Healthcare", count: 4, active: false }, { name: "Financial Services", count: 5, active: false },"    { name: "Retail", count: 3, active: false }, { name: "Energy", count: 3, active: false },"    { name: "Education", count: 2, active: false }, { name: "Other", count: 1, active: false }"  ]";
   const featuredCaseStudy = caseStudies.find(study => study.featured);
 
   return (

@@ -221,7 +221,7 @@ class BuildAutomation {
       try {
         if (error.includes('next/
   ')) {
-          // Next.js import issue
+          // Next.js import issue;
           await this.fixNextJSImports();
           fixes.push('Fixed Next.js imports
   ');
@@ -287,27 +287,27 @@ class BuildAutomation {
 
   async runInlineNextJSFix() {
     this.log(,
-  Running inline Next.js import fixes...
+  Running inline Next.js import fixes...;
   ');
 
     const replacements = [
       {
         pattern: /import\s+Link\s+from\s+['"]next\/link["];?/g,
-        replacement: "import { Link } from 'react-router-dom
-  ';",
+        replacement: "import { Link } from 'react-router-dom;
+  '";,
       },
       {
         pattern:
           /import\s+\{\s*useRouter\s*\}\s+from\s+['"]next\/router[
   '"];?/g,
         replacement: "import { useNavigate } from,
-  react-router-dom
-  ';",
+  react-router-dom;
+  '";,
       },
       {
         pattern: /import\s+Head\s+from\s+['"]next\/head["];?/g,
-        replacement: "import { Helmet } from 'react-helmet-async
-  ';",
+        replacement: "import { Helmet } from 'react-helmet-async;
+  '";,
       },
     ];
 
@@ -452,12 +452,12 @@ class BuildAutomation {
   }
 
   generateDefaultViteConfig() {
-    return `import { defineConfig } from 'vite
+    return `import { defineConfig } from 'vite;
   ';
-import react from '@vitejs/plugin-react
+import react from '@vitejs/plugin-react;
   ';
 import { resolve } from 'path
-  '
+  ';
 ;
 export { defineConfig };
 export default defineConfig({

@@ -26,7 +26,7 @@ import {
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon} from,
+  Globe as GlobeIcon} from,;
   lucide-react';
 export default function ServicesPage() {
 
@@ -47,9 +47,9 @@ export default function ServicesPage() {
   
       case 'price-high
   ': return b.price - a.price;
-return a.price - b.price;'      case
+return a.price - b.price';      case
   'price-high':
-        return b.price - a.price;'
+        return b.price - a.price';
       case
   'newest':
         return (

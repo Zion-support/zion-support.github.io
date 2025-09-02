@@ -30,7 +30,7 @@ import {}
   Rocket,
   Building2,
   Cpu,
-  Network'
+  Network';
  } from 'lucide-react';
 ;
 export { function };
@@ -49,13 +49,13 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx
     {
 '
-      features['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};'
-      title: 'System Integration',;'
+      features['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']}';
+      title: 'System Integration',';
     {}
       features['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};
       title: 'System Integration',;
       description: 'Seamlessly connect your existing systems and third-party services for improved efficiency.',;
-              icon: GitFork,;'
+              icon: GitFork,';
       features: ['Legacy System Integration',Third-party APIs',Data Synchronization',Workflow Automation']};
   ]},;
 :pages.disabled/pages/services/CustomDevelopment.tsx
@@ -92,29 +92,27 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx
     {
 '
-      stack['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};'
-      title: 'Database',;'
+      stack['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']}';
+      title: 'Database',';
     {}
       stack['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
       title: 'Database',;
       description: 'Modern database solutions for data storage and management.',;
-      icon: Database,;'
+      icon: Database,';
       stack: ['PostgreSQL',MongoDB',MySQL',Redis',Elasticsearch']};
 :pages.disabled/pages/services/CustomDevelopment.tsx
-  ]},;'
-    {;''
-      title: 'Support & Maintenance',;'      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
+  ]},';
+    {';
+      title: 'Support & Maintenance',';      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
       icon: Settings};
-  ];'
-  const industries = [;'    'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
+  ]';
+  const industries = [';Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';
   ]},;
     {;
       title: 'Support & Maintenance',;
       description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
       icon: Settings};
-  ];
-
-    'Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
+  ]';Healthcare',Finance',Manufacturing',Retail',Government',Education',Transportation',Energy';
   ];
   return()
 :pages.disabled/pages/services/CustomDevelopment.tsx
@@ -198,7 +196,7 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* Services Overview */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="text-center mb-16"
@@ -212,7 +210,7 @@ export default function CustomDevelopment(...args[]):  {}
       </section>
 
       {/* Services Overview */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="text-center mb-16""
@@ -331,7 +329,7 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* Technology Stack */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="text-center mb-16"
@@ -345,7 +343,7 @@ export default function CustomDevelopment(...args[]):  {}
       </section>
 
       {/* Technology Stack */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="text-center mb-16""
@@ -453,7 +451,7 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* Benefits Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="text-center mb-16"
@@ -467,7 +465,7 @@ export default function CustomDevelopment(...args[]):  {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="text-center mb-16""
@@ -563,7 +561,7 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* Industries Section */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="text-center mb-16"
@@ -577,7 +575,7 @@ export default function CustomDevelopment(...args[]):  {}
       </section>
 
       {/* Industries Section */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="text-center mb-16""
@@ -665,7 +663,7 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* Development Process */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="text-center mb-16"
@@ -679,7 +677,7 @@ export default function CustomDevelopment(...args[]):  {}
       </section>
 
       {/* Development Process */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="text-center mb-16""
@@ -782,7 +780,7 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx
       </section>"
       {/* CTA Section */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">"
           <motion.div""
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center"
@@ -796,7 +794,7 @@ export default function CustomDevelopment(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-zion-slate-dark/30">;""
+      <section className="py-20 bg-zion-slate-dark/30">';
         <div className="container mx-auto px-4">
           <motion.div""
             className="bg-gradient-to-r from-zion-cyan/20 to-zion-purple/20 border border-zion-cyan/30 rounded-2xl p-12 text-center""

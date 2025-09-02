@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false) ; const [isAnalyzing, setIsAnalyzing] = useState (false) ; const [report, setReport] = useState (null) ; const [selectedPage, setSelectedPage] = useState (null) ; const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) ; try {'';
-=======
-import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState(false); const [isAnalyzing, setIsAnalyzing] = useState(false); const [report, setReport] = useState(null); const [selectedPage, setSelectedPage] = useState(null); const analyzeSEO = useCallback(async () => { setIsAnalyzing(true) ; try {
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
-import React, { useState, useEffect, useCallback } from 'react';'''
+import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false) ; const [isAnalyzing, setIsAnalyzing] = useState (false) ; const [report, setReport] = useState (null) ; const [selectedPage, setSelectedPage] = useState (null) ; const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) ; try {'';import React, { useState, useEffect, useCallback } from 'react'';
 import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
 const SEOOptimizer = () => {}
     const [isOpen, setIsOpen] = useState (false) ;
@@ -24,9 +17,9 @@ const SEOOptimizer = () => {}
                     url: '/','''
                     title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services','''
                     metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.','''
-                    headings['AI-Powered Business Solutions',Comprehensive IT Services',Micro-SaaS Solutions'],;'''
-                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],;'''
-                    links['/services',/ai-solutions',/about',/contact'],;'''
+                    headings['AI-Powered Business Solutions',Comprehensive IT Services',Micro-SaaS Solutions'],';'
+                    images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],';'
+                    links['/services',/ai-solutions',/about',/contact'],';'
                     keywords['AI solutions',quantum computing',cybersecurity',digital transformation'];
                 },;
                 {}
@@ -36,9 +29,9 @@ const SEOOptimizer = () => {}
                     url: '/services','''
                     title: 'Our Services - Comprehensive Technology Solutions','''
                     metaDescription: 'Comprehensive technology services including AI solutions, cloud infrastructure, cybersecurity, and digital transformation.','''
-                    headings['AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation'],;'''
-                    images['/images/services-overview.jpg'],;'''
-                    links['/ai-solutions',/cloud-devops',/cybersecurity',/about'],;'''
+                    headings['AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation'],';'
+                    images['/images/services-overview.jpg'],';'
+                    links['/ai-solutions',/cloud-devops',/cybersecurity',/about'],';'
                     keywords['technology services',AI solutions',cloud infrastructure',cybersecurity'];
                 },;
                 {}
@@ -48,9 +41,9 @@ const SEOOptimizer = () => {}
                     url: '/ai-solutions','''
                     title: 'AI Solutions - Artificial Intelligence Services','''
                     metaDescription: 'Cutting-edge artificial intelligence solutions including machine learning, predictive analytics, and AI automation.','''
-                    headings['Machine Learning',Predictive Analytics',AI Automation',Business Intelligence'],;'''
-                    images['/images/ai-solutions.jpg'],;'''
-                    links['/services',/about',/contact'],;'''
+                    headings['Machine Learning',Predictive Analytics',AI Automation',Business Intelligence'],';'
+                    images['/images/ai-solutions.jpg'],';'
+                    links['/services',/about',/contact'],';'
                     keywords['artificial intelligence',machine learning',predictive analytics',AI automation'];
                 }
             ];
@@ -136,7 +129,7 @@ const SEOOptimizer = () => {}
         else if(page.keywords.length >= 1) {}
             score += 5}
         // URL structure (0-15 points)
-        maxScore += 15;'
+        maxScore += 15';
         if (page.url === '/' || page.url.includes('-')) {}
             score += 15}
         else if(page.url.length > 0) {}
@@ -188,7 +181,7 @@ const SEOOptimizer = () => {}
             issues.push('URL could be more SEO-friendly (consider using hyphens))}
         return issues};
     const generateSEORecommendations = (issues) => {}
-        const recommendations = [];'
+        const recommendations = []';
         if (issues.some(issue => issue.includes('Title'))) {}
 '
             recommendations.push('Optimize page titles with relevant keywords and compelling copy')}'
@@ -212,8 +205,8 @@ const SEOOptimizer = () => {}
 ''
 '''
             recommendations.push('Use SEO-friendly URLs with hyphens and descriptive terms')}'''
-        recommendations.push('Ensure content is unique, valuable, and addresses user intent');'''
-        recommendations.push('Implement structured data markup for better search engine understanding');'''
+        recommendations.push('Ensure content is unique, valuable, and addresses user intent')';'
+        recommendations.push('Implement structured data markup for better search engine understanding')';'
         recommendations.push('Optimize page loading speed for better user experience and SEO');
         return recommendations};
     const generateSummary = (pageAnalyses, topIssues) => {}
@@ -249,20 +242,20 @@ const SEOOptimizer = () => {}
         return summary};
     const exportSEOReport = () => {}
         if (!report)
-            return;'
+            return';
         const csvContent = [''
             ['Page URL',Title',SEO Score',Issues',Recommendations'],
             ...report.pageAnalyses.map(page => [page.pageUrl,'
                 page.title,''
                 page.score.toString(),'''`
-                page.issues.join('; '),''`'`
-                page.recommendations.join('; ')'`'`'`
+                page.issues.join(';),''`'`
+                page.recommendations.join(';)'`'`'`
             ])'`'`'`'`
-        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n');'''
-        const blob = new Blob([csvContent], { type: 'text/csv' });''
-        const url = window.URL.createObjectURL(blob);'''
-        const a = document.createElement('a');''
-        a.href = url;'''
+        ].map(row => row.map(cell => `"${cell}"`).join(',)).join('\n')';'
+        const blob = new Blob([csvContent], { type: 'text/csv' })';
+        const url = window.URL.createObjectURL(blob)';'
+        const a = document.createElement('a')';
+        a.href = url';'
         a.download = 'seo-optimization-report.csv';
         a.click();
         window.URL.revokeObjectURL(url)};
@@ -272,7 +265,7 @@ const SEOOptimizer = () => {}
         if (score >= 60)'
             return 'text-yellow-600 bg-yellow-50 border-yellow-200';
         if (score >= 40)'
-            return 'text-orange-600 bg-orange-50 border-orange-200';'
+            return 'text-orange-600 bg-orange-50 border-orange-200';
         return 'text-red-600 bg-red-50 border-red-200'};
     const getScoreText = (score) => {}
         if (score >= 80)'
@@ -280,8 +273,8 @@ const SEOOptimizer = () => {}
         if (score >= 60)'
             return 'Good';
         if (score >= 40)'
-            return 'Fair';'"""
-        return 'Poor'};""""
+            return 'Fair'';"
+        return 'Poor'}';""
     return (<div className="fixed bottom-6 right-24 z-50">"""
       {/* Floating Action Button */}""""
       <button onClick={() => setIsOpen(!isOpen)} className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105" aria-label="Toggle SEO Optimizer">""""
@@ -469,4 +462,3 @@ export { SEOOptimizer };
 export { SEOOptimizer };
 
 export { SEOOptimizer };
->>>>>>> pr-10728

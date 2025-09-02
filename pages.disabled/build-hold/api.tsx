@@ -1,12 +1,11 @@
 React from,
   react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../components/layout/MainLayout';
-import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
-  'lucide-react';'import Link from
-  'next/link';'
-  'const API: NextPage = () => {
+import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
+  'lucide-react';import Link from;
+  'next/link'';const API: NextPage = () => {
   const apiEndpoints = [;
     {;
       method: 'GET, endpoint:,
@@ -56,7 +55,7 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
   ', icon: '🐹 }, { name:,
   Ruby
   ', version: '1.1.0, icon: '💎
-  ' }'  ];'
+  ' }'  ]';
   return (
     <MainLayout
       title="API Reference - Zion Tech Group""      description="Complete API reference and documentation for Zion Tech Group services.""    >"      {/* Hero Section */}

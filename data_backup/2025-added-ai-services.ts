@@ -70,7 +70,7 @@ export const addedAIServices2025: InnovativeAIService[] = [
     marketPosition: 'Practical guardrails and reporting for CIO/CISO requirements',
     targetAudience: 'Enterprise compliance, security, and data leaders',
     trialDays: 7,
-    setupTime: '3–5 weeks',
+    setupTime: '3–5 weeks',;
     category: 'AI Governance',;
     realService: true,;
     technology: ['Vector DB', 'Policy engine', 'Eval harness'],;

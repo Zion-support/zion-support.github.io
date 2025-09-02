@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from,
-  react'; import { Link } from
-  'react-router-dom'; import { motion } from
+import React, { useState, useEffect } from,;
+  react'; import { Link } from;
+  'react-router-dom'; import { motion } from;
   'framer-motion'; import {; Brain,; Zap,; Shield,; Rocket,; Cloud,; Globe,; Code,; Database,; Network,; Lock,; Cpu,; BarChart3,; Users,; Target,; ArrowRight,; CheckCircle,; Star,; TrendingUp,; Server,; Search,; Filter,; Grid,; List; } from
   'lucide-react'; ; export default function ServicesPage() {; const [activeCategory, setActiveCategory] = useState(
   'all'); const [searchQuery, setSearchQuery] = useState('

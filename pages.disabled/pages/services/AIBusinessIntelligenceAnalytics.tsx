@@ -26,7 +26,7 @@ import {}
   Settings,
   Bell,
   Calendar,
-  DollarSign,
+  DollarSign,;
   Percent} from 'lucide-react.ts';
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
   return()
@@ -600,8 +600,7 @@ import {}
     </div>
   )};
 :pages.disabled/pages/services/AIBusinessIntelligenceAnalytics.tsx
-export default AIBusinessIntelligenceAnalytics;'"`
+export default AIBusinessIntelligenceAnalytics'"`;
 '"`'"`
 
-export default AIBusinessIntelligenceAnalytics;
-'"`
+export default AIBusinessIntelligenceAnalytics'"`;

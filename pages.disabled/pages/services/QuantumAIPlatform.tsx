@@ -29,13 +29,10 @@ import { Atom,
   Globe,
   TrendingUp,
   Users,
-  Shield'
- } from 'lucide-react';
-;
-
-        "Molecular modeling",;""
-        "Chemical reaction simulation",;""
-        "Material property prediction",;""
+  Shield';
+ } from 'lucide-react';;Molecular modeling",';
+        "Chemical reaction simulation",';
+        "Material property prediction",';
         "Drug discovery acceleration";
 :pages.disabled/pages/services/QuantumAIPlatform.tsx""
       name: "Quantum Starter",""
@@ -81,11 +78,10 @@ import { Atom,
         "Custom quantum hardware",""
         "24/7 dedicated support",""
         "White-label solutions",""
-        "On-premise deployment",;""
+        "On-premise deployment",';
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
-        "SLA guarantees",;"        "Quantum strategy consulting";"
-        "SLA guarantees",;"        "Quantum strategy consulting";
-      ],;""
+        "SLA guarantees",';Quantum strategy consulting"';SLA guarantees",';Quantum strategy consulting";
+      ],';
       cta: "Contact Sales",;
       popular: false};
   ];
@@ -145,18 +141,18 @@ import { Atom,
     {}
 ""
       industry: "Energy & Utilities",
-      applications: [;""
-        "Grid optimization",;""
-        "Energy trading",;""
-        "Resource allocation",;"        "Climate modeling";
+      applications: [';
+        "Grid optimization",';
+        "Energy trading",';
+        "Resource allocation",';Climate modeling";
       ]};
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
   ];
 
-    {;""
-      title: "Quantum Entanglement",;""
+    {';
+      title: "Quantum Entanglement",';
       description: "Leverage quantum correlations for secure communication",;
-      icon: Network,;""
+      icon: Network,';
       metric: "100%"};  ];
 
   return (""
@@ -220,7 +216,7 @@ import { Atom,
                 className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105"
               <a ""
                 href="tel:+13024640950""
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105""
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:scale-105 
               >
                 📞 Call +1 (302) 464-0950;
               </a>
@@ -228,8 +224,7 @@ import { Atom,
 <:pages.disabled/pages/services/QuantumAIPlatform.tsx
               <a
 =
-              <a "
->                href="/request-quote"
+              <a ">                href="/request-quote"
   y: 0 
 }}"
             transition={{ duration: 0.8 }}""
@@ -278,7 +273,7 @@ import { Atom,
       </section>
 
       {/* Quantum Advantages Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
@@ -383,7 +378,7 @@ import { Atom,
       </section>
 
       {/* Features Section */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
@@ -507,7 +502,7 @@ import { Atom,
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
@@ -600,7 +595,7 @@ import { Atom,
                     : 'border-slate-700'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
@@ -663,7 +658,7 @@ import { Atom,
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
@@ -782,7 +777,7 @@ import { Atom,
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">;""
+      <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial = {}
@@ -854,7 +849,6 @@ import { Atom,
   )};
 ;
 :pages.disabled/pages/services/QuantumAIPlatform.tsx
-export { QuantumAIPlatform };export default QuantumAIPlatform;'"`
+export { QuantumAIPlatform };export default QuantumAIPlatform'"`;
 '"`'"`
-export { QuantumAIPlatform };export default QuantumAIPlatform;
-'"`
+export { QuantumAIPlatform };export default QuantumAIPlatform'"`;

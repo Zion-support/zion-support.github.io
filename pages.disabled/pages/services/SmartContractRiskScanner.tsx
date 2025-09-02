@@ -39,7 +39,7 @@ import {}
   FileText,
   Settings,
   Users,
-  TrendingUp''
+  TrendingUp'';
  } from 'lucide-react';
 ;
 export { function };
@@ -48,46 +48,39 @@ export default function SmartContractRiskScanner(...args: []):  {
 
 export default function SmartContractRiskScanner(...args: []):  {}
     {;
-      icon: Code,;'
-      title: 'Smart Contract Analysis',;'
-      description: 'Deep code analysis and optimization recommendations for smart contracts',;'
+      icon: Code,';
+      title: 'Smart Contract Analysis',';
+      description: 'Deep code analysis and optimization recommendations for smart contracts',';
       benefits: ['Code quality metrics',Gas optimization',Best practices',Performance analysis']};
   ];
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
-    {;'
-      title: 'Logic Vulnerabilities',;'
+    {';
+      title: 'Logic Vulnerabilities',';
 
     {;
       title: 'Logic Vulnerabilities',;
       description: 'Identify logical flaws and business logic vulnerabilities',;
-      icon: Lightbulb,;'
+      icon: Lightbulb,';
       features: ['Business logic analysis',State machine validation',Flow control analysis',Edge case testing']};
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
-  ];'
-        'On-premise deployment',;'
-        'Compliance certifications';
-      ],;'
-        'Unlimited smart contracts',''
+  ]';On-premise deployment',';Compliance certifications';
+      ],';Unlimited smart contracts',''
         'Custom security frameworks',''
         'White-label solutions',''
         'Dedicated infrastructure',''
         '24/7 dedicated support',''
-        'Custom integrations',;''
-        'On-premise deployment',;'        'Compliance certifications';'
-      ],;''
+        'Custom integrations',';
+        'On-premise deployment',';Compliance certifications';
+      ],';
       cta: 'Contact Sales',;
       popular: false};
   ];
-  ;'
-''
+  ';'
   marketSize: '$2.8 billion',''
     growthRate: '23.4% CAGR',''
     averageMarketPrice: '$500-$2,000/month',''
     setupTime: '1-2 weeks',;  ;
-  ];
-
-        'On-premise deployment',;
-        'Compliance certifications';
+  ]';On-premise deployment',';Compliance certifications';
       ],;
       cta: 'Contact Sales',;
       popular: false};
@@ -109,36 +102,18 @@ export default function SmartContractRiskScanner(...args: []):  {}
     'Binance Smart Chain',;
 =
   
->    'Polygon',;
-    'Solana',;
-    'Avalanche',;
-    'Arbitrum',;
-    'Optimism',;
+>    'Polygon',';Solana',';Avalanche',';Arbitrum',';Optimism',;
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
-  ;'
-  roi: '300-500% within 6 months'}};'
-    'Polygon',;'
-    'Solana',;'
-    'Avalanche',;'
-    'Arbitrum',;'
-    'Optimism',;'
-    'Base';
-  ];'
-  const securityStandards = [;''
-    'OWASP Top 10',;''
-    'Smart Contract Security Verification Standard',;''
-    'Ethereum Security Best Practices',;''
-    'DeFi Security Guidelines',;''
-    'ISO 27001 Compliance',;'    'SOC 2 Type II';
-    'Base';
-  ];
-
-    'OWASP Top 10',;
-    'Smart Contract Security Verification Standard',;
-    'Ethereum Security Best Practices',;
-    'DeFi Security Guidelines',;
-    'ISO 27001 Compliance',;
-    'SOC 2 Type II';
+  ';
+  roi: '300-500% within 6 months'}}';Polygon',';Solana',';Avalanche',';Arbitrum',';Optimism',';Base';
+  ]';
+  const securityStandards = [';
+    'OWASP Top 10',';
+    'Smart Contract Security Verification Standard',';
+    'Ethereum Security Best Practices',';
+    'DeFi Security Guidelines',';
+    'ISO 27001 Compliance',';SOC 2 Type II';Base';
+  ]';OWASP Top 10',';Smart Contract Security Verification Standard',';Ethereum Security Best Practices',';DeFi Security Guidelines',';ISO 27001 Compliance',';SOC 2 Type II';
   ];
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
 
@@ -252,7 +227,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
       </section>
 
       {/* Market Information */}""
-      <section className="py-16 px-4">;""
+      <section className="py-16 px-4">';
         <div className="container mx-auto max-w-7xl">""
           <div className="grid grid-cols-1 md: grid-cols-5 gap-6">
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
@@ -301,7 +276,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
       </section>
 
       {/* Features Section */}""
-      <section className="py-20 px-4">;""
+      <section className="py-20 px-4">';
         <div className="container mx-auto max-w-7xl">
           <motion.div;
             initial = {}
@@ -425,7 +400,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
       </section>
 
       {/* Scanning Capabilities Section */}""
-      <section className="py-20 px-4 bg-slate-800/30">;""
+      <section className="py-20 px-4 bg-slate-800/30">';
         <div className="container mx-auto max-w-7xl">
           <motion.div;
             initial = {}
@@ -542,7 +517,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
       </section>
 
       {/* Supported Networks Section */}""
-      <section className="py-20 px-4">;""
+      <section className="py-20 px-4">';
         <div className="container mx-auto max-w-7xl">
           <motion.div;
             initial = {}
@@ -645,7 +620,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
       </section>
 
       {/* Security Standards Section */}""
-      <section className="py-20 px-4 bg-slate-800/30">;""
+      <section className="py-20 px-4 bg-slate-800/30">';
         <div className="container mx-auto max-w-7xl">
           <motion.div;
             initial = {}
@@ -748,7 +723,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 px-4">;""
+      <section className="py-20 px-4">';
         <div className="container mx-auto max-w-7xl">
           <motion.div;
             initial = {}
@@ -845,7 +820,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
                     : 'border-slate-700'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
@@ -907,7 +882,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 px-4 bg-gradient-to-r from-red-600/20 to-orange-600/20">;""
+      <section className="py-20 px-4 bg-gradient-to-r from-red-600/20 to-orange-600/20">';
         <div className="container mx-auto max-w-7xl text-center">
           <motion.div;
             initial = {}
@@ -977,7 +952,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
         </div>;
       </section>;
 :pages.disabled/pages/services/SmartContractRiskScanner.tsx
-    </div>;'"`
+    </div>'"`;
   )}}}}}'"`'"`
     </div>;
   )}}}}}'"`

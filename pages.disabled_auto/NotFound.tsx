@@ -1,12 +1,12 @@
-import React from
+import React from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
-import { SEO } from
+import { SEO } from;
   '../components/SEO';
-import { Button } from
+import { Button } from;
   '../components/ui/Button';
-import { Card } from
+import { Card } from;
   '../components/ui/Card';
 import { 
   Home,
@@ -24,7 +24,7 @@ import {
   Calendar,
   Award,
   Shield
-} from
+} from;
   'lucide-react';
 
 const NotFound: React.FC = () => {

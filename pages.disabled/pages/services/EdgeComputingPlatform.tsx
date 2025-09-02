@@ -71,14 +71,14 @@ import { Cpu,
   Thermometer,
   Droplets,
   Umbrella,
-  MapPin'
+  MapPin';
  } from 'lucide-react';
 ;
 const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
     {;
-      icon: Shield,;""
-      title: "Edge Security",;""
-      description: "Advanced security protocols and encryption for edge computing environments",;""
+      icon: Shield,';
+      title: "Edge Security",';
+      description: "Advanced security protocols and encryption for edge computing environments",';
       color: "from-yellow-500 to-orange-500"};
   ];
 
@@ -132,22 +132,22 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
         "Advanced security features",""
         "Multi-tenant support",""
         "Dedicated support team",""
-        "Custom development",;""
-        "SLA guarantees",;""
+        "Custom development",';
+        "SLA guarantees",';
         "On-premise option";
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx      cta: "Contact Sales",;
       popular: false};
   ];
-    {;"
-      ],;""
+    {";
+      ],';
       cta: "Contact Sales",;
       popular: false};
   ];
 
     {;
-      icon: Users,;""
-      title: "Global Scale",;""
-      description: "Deploy edge nodes worldwide for optimal user experience",;""
+      icon: Users,';
+      title: "Global Scale",';
+      description: "Deploy edge nodes worldwide for optimal user experience",';
       metric: "200+"};
   ];
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
@@ -179,10 +179,10 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       icon: Factory,""
       color: "from-purple-500 to-pink-500"
     },"
-    {;""
-      industry: "Healthcare",;""
-      title: "Remote Monitoring",;""
-      description: "Real-time patient monitoring and emergency response systems",;"
+    {';
+      industry: "Healthcare",';
+      title: "Remote Monitoring",';
+      description: "Real-time patient monitoring and emergency response systems",";
 
   const useCases: any = []
     {}
@@ -209,19 +209,19 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       icon: Factory,""
       color: "from-purple-500 to-pink-500""
     },
-    {;""
-      industry: "Healthcare",;""
-      title: "Remote Monitoring",;""
+    {';
+      industry: "Healthcare",';
+      title: "Remote Monitoring",';
       description: "Real-time patient monitoring and emergency response systems",;
-      icon: Heart,;""
+      icon: Heart,';
       color: "from-orange-500 to-red-500"};
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
   ];
 
-    {;""
-      region: "Latin America",;""
+    {';
+      region: "Latin America",';
       cities: ["São Paulo", "Mexico City", "Buenos Aires", "Lima", "Bogotá"],;
-      icon: MapPin,;""
+      icon: MapPin,';
       color: "from-orange-500 to-red-500"};  ];
 
   return (""
@@ -309,11 +309,11 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
           </div>
         </div>
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -391,7 +391,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 bg-slate-800/50">;""
+      <section className="py-20 bg-slate-800/50">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -479,7 +479,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -572,7 +572,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Edge Locations Section */}""
-      <section className="py-20 bg-slate-800/50">;""
+      <section className="py-20 bg-slate-800/50">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -662,7 +662,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -731,7 +731,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
                     : 'bg-slate-800/50 border border-slate-700/50'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-blue-500 to-green-500 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
@@ -789,7 +789,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-slate-800/50">;""
+      <section className="py-20 bg-slate-800/50">';
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial = {}
@@ -843,7 +843,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       </section>;
     </div>;
 :pages.disabled/pages/services/EdgeComputingPlatform.tsx
-  )};'"`
+  )}'"`;
 export default EdgeComputingPlatform}}}}}}'"`'"`
   )};
 

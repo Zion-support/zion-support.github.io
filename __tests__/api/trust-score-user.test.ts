@@ -1,8 +1,8 @@
-import { createMocks, createRequest, createResponse } from
+import { createMocks, createRequest, createResponse } from;
   'node-mocks-http';
-import type { NextApiRequest, NextApiResponse } from
+import type { NextApiRequest, NextApiResponse } from;
   'next';
-import handler from
+import handler from;
   '../../pages/api/trust/score/[userId]'; // Adjust path as needed
 
 // Mock the Supabase client
@@ -227,7 +227,7 @@ describe(,
   test(
   'handler initializes Supabase client (conceptual check)', () => {
     // This test just ensures the module doesn't crash on import due to env var issues.
-    // Actual Supabase client functionality is tested by the other cases via mocks.
+    // Actual Supabase client functionality is tested by the other cases via mocks.;
     expect(handler).toBeDefined();
   });
 });

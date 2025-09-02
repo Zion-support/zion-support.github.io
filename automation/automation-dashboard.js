@@ -237,8 +237,7 @@ const systems = Array.from(this.automationSystems.values());
                         <p>Last Run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() :,
   Never'}</p>;
                     </div>;
-                </div>;
-            `).join('
+                </div>`;).join('
   ')};
         </div>;
         <!-- Alerts -->;
@@ -257,8 +256,7 @@ const systems = Array.from(this.automationSystems.values());
                     <span class=,
   text-xs ml-2
   '>${new Date(alert.timestamp).toLocaleString()}</span>;
-                </div>;
-            `).join(''): '<p class='text-gray-500
+                </div>`;).join(''): '<p class='text-gray-500
   '>No alerts</p>};
         </div>;
         <!-- Performance Chart -->;

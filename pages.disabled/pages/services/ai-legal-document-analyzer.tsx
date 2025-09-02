@@ -20,7 +20,7 @@ import {}
   Download,
   Share2,
   Phone,
-  Mail,
+  Mail,;
   MapPin} from 'lucide-react';
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx
   return()
@@ -546,8 +546,7 @@ import {}
     </div>
   )};
 :pages.disabled/pages/services/ai-legal-document-analyzer.tsx
-export default AILegalDocumentAnalyzer;'"`
+export default AILegalDocumentAnalyzer'"`;
 '"`'"`
 
-export default AILegalDocumentAnalyzer;
-'"`
+export default AILegalDocumentAnalyzer'"`;

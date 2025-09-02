@@ -1,11 +1,10 @@
-React, { useState } from
+import React, { useState  } from;
   'react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../components/layout/MainLayout';
-import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from
-  'lucide-react';'
-  'const FAQ: NextPage = () => {
+import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from;
+  'lucide-react'';const FAQ: NextPage = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
   const toggleItem = (index: number) => {;
@@ -98,7 +97,7 @@ import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from
                     const isOpen = openItems.includes(globalIndex);
                     
                     return (
-                      <div key={itemIndex} className="border border-gray-200 rounded-lg">"                        <button"                          className="w-full px-6 py-4 text-left flex justify-between items-center hover: bg-gray-50 transition-colors""                          onClick={() => toggleItem(globalIndex)}"                        >
+                      <div key={itemIndex} className="border border-gray-200 rounded-lg">"                        <button"                          className="w-full px-6 py-4 text-left flex justify-between items-center hover: bg-gray-50 transition-colors                           onClick={() => toggleItem(globalIndex)}">
                           <span className="font-semibold text-gray-900">{item.question}</span>"                          {isOpen ? ("                            <ChevronUp className="w-5 h-5 text-gray-500" />"                          ) : ("                            <ChevronDown className="w-5 h-5 text-gray-500" />"                          )}"                        </button>
                         {isOpen && (
                           <div className="px-6 pb-4">"                            <p className="text-gray-600 leading-relaxed">{item.answer}</p>"                          </div>"                        )}

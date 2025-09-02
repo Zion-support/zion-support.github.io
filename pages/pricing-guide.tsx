@@ -1,15 +1,14 @@
-<<<<<<< HEAD
-import React from
+import React from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
-import { SEO } from
+import { SEO } from;
   '../components/SEO';
-import { Button } from
+import { Button } from;
   '../components/ui/Button';
-import { Card } from
+import { Card } from;
   '../components/ui/Card';
-import { Badge } from
+import { Badge } from;
   '../components/ui/Badge';
 import { 
   CheckCircle, 
@@ -19,25 +18,7 @@ import {
   Users, 
   Globe, 
   Phone, 
-  Mail, 
-=======
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Button } from '../components/ui/Button';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
-import {
-  CheckCircle,
-  Star,
-  Zap,
-  Shield,
-  Users,
-  Globe,
-  Phone,
-  Mail,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  ArrowRight,
+  Mail,   ArrowRight,
   DollarSign,
   TrendingUp,
   Award,
@@ -55,18 +36,11 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-<<<<<<< HEAD
-  HelpCircle
-<<<<<<< HEAD
-=======
-  HelpCircle,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+  HelpCircle;
 } from 'lucide-react';
 import { Network } from 'lucide-react';
-=======
 } from
   'lucide-react';
->>>>>>> origin/main
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [

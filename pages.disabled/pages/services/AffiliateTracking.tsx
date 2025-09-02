@@ -30,16 +30,12 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 '
       title: 'Analytics & BI','
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
-  ];'
-        'Unlimited partners and campaigns',;'
-        'SAML SSO and audit trails',;'
-        'Custom data retention + warehouse sync',;'
-        'Dedicated CSM and 99.9% SLA';
-      ]};'
-      bullets: [;''
-        'Unlimited partners and campaigns',;''
-        'SAML SSO and audit trails',;''
-        'Custom data retention + warehouse sync',;'        'Dedicated CSM and 99.9% SLA';
+  ]';Unlimited partners and campaigns',';SAML SSO and audit trails',';Custom data retention + warehouse sync',';Dedicated CSM and 99.9% SLA';
+      ]}';
+      bullets: [';
+        'Unlimited partners and campaigns',';
+        'SAML SSO and audit trails',';
+        'Custom data retention + warehouse sync',';Dedicated CSM and 99.9% SLA';
 export default function AffiliateTracking(...args: unknown[]): unknown {  const features: { title: string; description: string }[] = []
     {}
       title: 'Multi-channel attribution',
@@ -65,12 +61,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
       title: 'Analytics & BI',
       description: 'Cohort LTV, ROAS by partner, incremental lift analysis, and predictive recruiting scoring.'
 
-  ];
-
-        'Unlimited partners and campaigns',;
-        'SAML SSO and audit trails',;
-        'Custom data retention + warehouse sync',;
-        'Dedicated CSM and 99.9% SLA';
+  ]';Unlimited partners and campaigns',';SAML SSO and audit trails',';Custom data retention + warehouse sync',';Dedicated CSM and 99.9% SLA';
       ]};
   ];
   return()
@@ -153,11 +144,11 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
           </div>
         </div>
 :pages.disabled/pages/services/AffiliateTracking.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Feature grid */}""
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 :pages.disabled/pages/services/AffiliateTracking.tsx
@@ -207,7 +198,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
       </section>
 
       {/* Market context */}""
-      <section className="py-8 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-8 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto bg-gradient-to-br from-zion-blue-dark/30 to-zion-purple/30 border border-zion-blue-light/20 rounded-2xl p-6">""
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">""
             <div className="flex items-center gap-3">""
@@ -240,7 +231,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
       </section>
 
       {/* Plans */}""
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 :pages.disabled/pages/services/AffiliateTracking.tsx
@@ -277,12 +268,12 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 }}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
 
-                {i === 1 && (;"
+                {i === 1 && (";
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">"
   delay: i * 0.05 
 }}'
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}"
-                {i === 1 && (;""
+                {i === 1 && (';
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">""
                     <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2">Most Popular</Badge>
                   </div>
@@ -291,7 +282,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 }}
                 className={`relative rounded-2xl p-8 ${i === 1 ? 'bg-gradient-to-br from-zion-purple/20 to-zion-cyan/20 border-2 border-zion-purple' : 'bg-zion-slate-dark/30 border border-zion-blue-light/20'}`}
 
-                {i === 1 && (;""
+                {i === 1 && (';
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2">""
                     <Badge className="bg-gradient-to-r from-zion-purple to-zion-cyan text-white px-4 py-2">Most Popular</Badge>
                   </div>
@@ -331,7 +322,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
 :pages.disabled/pages/services/AffiliateTracking.tsx
       </section>"
       {/* CTA */}""
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-12 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">"
           <div>""
             <h3 className="text-white text-xl font-semibold">Want a tailored affiliate strategy?</h3>""
@@ -343,7 +334,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
       </section>
 
       {/* CTA */}""
-      <section className="py-12 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-12 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto bg-zion-purple/20 border border-zion-purple/30 rounded-2xl p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div>""
             <h3 className="text-white text-xl font-semibold">Want a tailored affiliate strategy?</h3>""
@@ -363,7 +354,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
       </section>
 
       {/* References */}""
-      <section className="py-8 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-8 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">""
           <h3 className="text-white text-lg font-semibold mb-4">Helpful links</h3>""
 :pages.disabled/pages/services/AffiliateTracking.tsx

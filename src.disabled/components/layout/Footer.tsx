@@ -1,6 +1,6 @@
-import React from
-  'react'; import { Link } from
-  'react-router-dom'; import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp } from
+import React from;
+  'react'; import { Link } from;
+  'react-router-dom'; import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, ArrowUp } from;
   'lucide-react'; export default function Footer() { const scrollToTop = () => { window.scrollTo({ top: 0, behavior:,
   smooth' }); }; const currentYear = new Date().getFullYear(); const footerLinks = { services: [ { name:
   'AI & Machine Learning, href:,

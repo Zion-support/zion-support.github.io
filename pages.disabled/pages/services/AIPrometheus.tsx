@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIPrometheus.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus() {
-    'Automated Prometheus monitoring and alerting',;'
-    'Predictive analytics for Prometheus scaling',;'
-    'Smart Prometheus security and compliance',;'
-    'AI-driven Prometheus automation and orchestration',;'
-    'Real-time Prometheus analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus(function AIPrometheus() {): any {}
-    'Automated Prometheus monitoring and alerting',;
-    'Predictive analytics for Prometheus scaling',;
-    'Smart Prometheus security and compliance',;
-    'AI-driven Prometheus automation and orchestration',;
-    'Real-time Prometheus analytics and insights',;
-    'Custom AI models for Prometheus applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus() {;
+    'Automated Prometheus monitoring and alerting',';Predictive analytics for Prometheus scaling',';Smart Prometheus security and compliance',';AI-driven Prometheus automation and orchestration',';Real-time Prometheus analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPrometheus(function AIPrometheus() {): any {};
+    'Automated Prometheus monitoring and alerting',';Predictive analytics for Prometheus scaling',';Smart Prometheus security and compliance',';AI-driven Prometheus automation and orchestration',';Real-time Prometheus analytics and insights',';Custom AI models for Prometheus applications';
 <:pages.disabled/pages/services/AIPrometheus.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited storage',Custom AI models',Full Prometheus suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Prometheus optimization',;'
-    'Prometheus management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Prometheus scaling and management';
-  ];
-
-  '
-    'Improve Prometheus performance by 50-80%',;'
-    'Reduce Prometheus query time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Prometheus reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale Prometheus operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Prometheus optimization',';Prometheus management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Prometheus scaling and management';
+  ]';Improve Prometheus performance by 50-80%',';Reduce Prometheus query time by 40-70%',';Cut operational costs by 35-65%',';Enhance Prometheus reliability and scalability',';Optimize resource utilization',';Scale Prometheus operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-yellow-600 text-yellow-600 rounded-lg hover:bg-yellow-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIPrometheus.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

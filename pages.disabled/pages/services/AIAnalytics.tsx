@@ -5,12 +5,12 @@ export default function AIAnalytics(...args[]):  {}
     },;
     {;
       icon: Eye,;
-      title: 'Data Visualization',;'
+      title: 'Data Visualization',';
       description: 'Clear and intuitive data presentation'};
 :pages.disabled/pages/services/AIAnalytics.tsx
-  ]},;'
-    {;''
-      title: 'Computer Vision',;'      description: 'Image and video analysis with AI',;
+  ]},';
+    {';
+      title: 'Computer Vision',';      description: 'Image and video analysis with AI',;
   ]},;
     {;
       title: 'Computer Vision',;
@@ -93,11 +93,11 @@ export default function AIAnalytics(...args[]):  {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/AIAnalytics.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -199,7 +199,7 @@ export default function AIAnalytics(...args[]):  {}
       </section>
 
       {/* Services Section */}""
-      <section className="py-20 bg-white/5">;""
+      <section className="py-20 bg-white/5">';
         <div className="container-responsive">
           <motion.div;
             initial = {}
@@ -304,7 +304,7 @@ export default function AIAnalytics(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container-responsive">
           <motion.div;
             initial = {}

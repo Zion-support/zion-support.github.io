@@ -7,7 +7,7 @@ export default function Page() {}
           </div>`
           <div className={`absolute inset-0 bg-gradient-to-r ${stat.color} rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
         </div>`
-import React, { memo, useEffect, useState } from 'react';'
+import React, { memo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 const HeroStats = memo(({ stats }) => (<div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-6xl mx-auto">""""
     {stats.map((stat, index) => (<div key={index} className="text-center animate-fade-in-up group" style={{ animationDelay: `${index * 0.2}s` }} role="region" aria-label={`${stat.label} statistics`}>""""
@@ -31,7 +31,7 @@ const PerformanceOptimizedHero = memo(() => {}
         const loadTimer = setTimeout(() => setIsLoaded(true), 500);
         return () => {}
             clearTimeout(timer);
-            clearTimeout(loadTimer)}}, []);"""
+            clearTimeout(loadTimer)}}, [])';"
     const stats = [""""
         { number: "100+", label: "AI Services", icon: "🤖", color: "from-cyan-400 to-blue-400" },""""
         { number: "150+", label: "Micro SAAS Solutions", icon: "💻", color: "from-blue-400 to-purple-400" },""""
@@ -107,7 +107,7 @@ const PerformanceOptimizedHero = memo(() => {}
           <div className="absolute top-1/2 left-20 w-1 h-1 bg-purple-400 rounded-full animate-bounce" aria-hidden="true"></div>""""
           <div className="absolute top-1/3 right-1/3 w-2 h-2 bg-green-400 rounded-full animate-ping animation-delay-1000" aria-hidden="true"></div>
         </>)}
-    </section>)});'
+    </section>)})';
 PerformanceOptimizedHero.displayName = 'PerformanceOptimizedHero';
 export default PerformanceOptimizedHero;
 }

@@ -1,13 +1,13 @@
 React from
   'react';
-import { motion } from
-  'framer-motion';'{ SEO } from
+import { motion } from;
+  'framer-motion';{ SEO } from
   '../components/SEO';
-import { Button } from
-  '../components/ui/Button';'{ Card } from
+import { Button } from;
+  '../components/ui/Button';{ Card } from
   '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';'import { ;'  Calendar, Clock,
+import { Badge } from;
+  '../components/ui/Badge';import { ';  Calendar, Clock,
   Users, Play,
   ArrowRight, Search,
   Filter, Tag,
@@ -22,8 +22,7 @@ import { Badge } from
   Download, Bookmark,
   ExternalLink
 } from
-  'lucide-react';'
-  'const Webinars: React.FC = () => {
+  'lucide-react'';const Webinars: React.FC = () => {
   const webinars = [;
     {;
       id: 1, title: "AI Revolution in Business: Strategies for 2025","      description: "Join our experts as they discuss the latest AI trends and how businesses can leverage these technologies for competitive advantage.", speaker: "Dr. Sarah Johnson","      speakerTitle: "Chief AI Officer", speakerCompany: "Zion Tech Group","      date: "2025-02-15", time: "2:00 PM EST","      duration: "60 minutes", category: "AI Strategy","      attendees: 1250, rating: 4.9,"      image: "/api/placeholder/600/400", tags: ["AI Strategy", "Business Innovation", "Future Trends", "Leadership"], featured: true,"      status: "upcoming", registrationUrl: "/webinars/ai-revolution-2025""    },"    {;
@@ -34,7 +33,7 @@ import { Badge } from
       id: 6, title: "Digital Transformation: A Roadmap for Modern Organizations","      description: "Complete roadmap for organizations looking to embrace digital transformation and leverage emerging technologies.", speaker: "James Wilson","      speakerTitle: "Digital Transformation Consultant", speakerCompany: "Zion Tech Group","      date: "2025-01-22", time: "1:30 PM EST","      duration: "65 minutes", category: "Digital Transformation","      attendees: 1350, rating: 4.9,"      image: "/api/placeholder/600/400", tags: ["Digital Transformation", "Strategy", "Technology", "Innovation"], featured: false,"      status: "recorded", recordingUrl: "/webinars/digital-transformation-roadmap-recording""    }"  ];
 
   const categories = [;
-    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false },"    { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false },"    { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false },"    { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }"  ];"
+    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false },"    { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false },"    { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false },"    { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }"  ]";
   const featuredWebinar = webinars.find(webinar => webinar.featured);
 
   return (

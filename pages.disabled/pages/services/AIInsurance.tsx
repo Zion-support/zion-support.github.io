@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIInsurance.tsx
-import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance() {
-    'Automated policy management and customer service',;'
-    'Predictive analytics for risk modeling and pricing',;'
-    'Real-time customer behavior analysis and risk scoring',;'
-    'Smart document processing and compliance monitoring',;'
-    'Integration with major insurance management systems',;'
-import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance(function AIInsurance() {): any {}
-    'Automated policy management and customer service',;
-    'Predictive analytics for risk modeling and pricing',;
-    'Real-time customer behavior analysis and risk scoring',;
-    'Smart document processing and compliance monitoring',;
-    'Integration with major insurance management systems',;
-    'Custom AI models for insurance-specific insights';
+import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance() {;
+    'Automated policy management and customer service',';Predictive analytics for risk modeling and pricing',';Real-time customer behavior analysis and risk scoring',';Smart document processing and compliance monitoring',';Integration with major insurance management systems',';
+import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Lock, FileText, BarChart3 export default function AIInsurance(function AIInsurance() {): any {};
+    'Automated policy management and customer service',';Predictive analytics for risk modeling and pricing',';Real-time customer behavior analysis and risk scoring',';Smart document processing and compliance monitoring',';Integration with major insurance management systems',';Custom AI models for insurance-specific insights';
 <:pages.disabled/pages/services/AIInsurance.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
 >    { ;
       name: 'Large Insurer', ;
       price: '$3,999/mo', ;
-    { ;'
-      name: 'Large Insurer', ;'
-      price: '$3,999/mo', ;'
+    { ';
+      name: 'Large Insurer', ';
+      price: '$3,999/mo', ';
       details: ['Unlimited policies',Custom AI models',Full system integration',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Automated underwriting and risk assessment',;'
-    'Claims processing and fraud detection',;'
-    'Customer service and policy management',;'
-    'Risk modeling and pricing optimization',;'
-    'Compliance monitoring and reporting',;'
-    'Customer retention and cross-selling';
-  ];
-
-  '
-    'Reduce claims processing time by 60-80%',;'
-    'Improve fraud detection accuracy by 40-60%',;'
-    'Cut operational costs by 25-40%',;'
-    'Optimize pricing for maximum profitability',;'
-    'Enhance customer experience and satisfaction',;'
-    'Scale insurance operations efficiently';
-  ];
-
-  '
-    'Property & Casualty Insurance',;'
-    'Life & Health Insurance',;'
-    'Auto Insurance',;'
-    'Commercial Insurance',;'
-    'Reinsurance',;'
-    'Insurance Brokers';
+  ]';Automated underwriting and risk assessment',';Claims processing and fraud detection',';Customer service and policy management',';Risk modeling and pricing optimization',';Compliance monitoring and reporting',';Customer retention and cross-selling';
+  ]';Reduce claims processing time by 60-80%',';Improve fraud detection accuracy by 40-60%',';Cut operational costs by 25-40%',';Optimize pricing for maximum profitability',';Enhance customer experience and satisfaction',';Scale insurance operations efficiently';
+  ]';Property & Casualty Insurance',';Life & Health Insurance',';Auto Insurance',';Commercial Insurance',';Reinsurance',';Insurance Brokers';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Shield, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Za
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIInsurance.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIPenetrationTesting.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting() {
-    'Automated security assessment and reporting',;'
-    'Predictive analytics for security risks',;'
-    'Smart testing methodology and planning',;'
-    'AI-driven testing automation and orchestration',;'
-    'Real-time testing analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting(function AIPenetrationTesting() {): any {}
-    'Automated security assessment and reporting',;
-    'Predictive analytics for security risks',;
-    'Smart testing methodology and planning',;
-    'AI-driven testing automation and orchestration',;
-    'Real-time testing analytics and insights',;
-    'Custom AI models for testing applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting() {;
+    'Automated security assessment and reporting',';Predictive analytics for security risks',';Smart testing methodology and planning',';AI-driven testing automation and orchestration',';Real-time testing analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIPenetrationTesting(function AIPenetrationTesting() {): any {};
+    'Automated security assessment and reporting',';Predictive analytics for security risks',';Smart testing methodology and planning',';AI-driven testing automation and orchestration',';Real-time testing analytics and insights',';Custom AI models for testing applications';
 <:pages.disabled/pages/services/AIPenetrationTesting.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$4,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$4,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$4,999/mo', ';
       details: ['Unlimited applications',Custom AI models',Full testing suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Penetration testing optimization',;'
-    'Vulnerability discovery and exploitation',;'
-    'Security assessment and reporting',;'
-    'Testing methodology and planning',;'
-    'Testing automation and orchestration',;'
-    'Testing scaling and management';
-  ];
-
-  '
-    'Improve penetration testing performance by 50-80%',;'
-    'Reduce testing completion time by 40-70%',;'
-    'Cut testing operational costs by 35-65%',;'
-    'Enhance testing reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale testing operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Penetration testing optimization',';Vulnerability discovery and exploitation',';Security assessment and reporting',';Testing methodology and planning',';Testing automation and orchestration',';Testing scaling and management';
+  ]';Improve penetration testing performance by 50-80%',';Reduce testing completion time by 40-70%',';Cut testing operational costs by 35-65%',';Enhance testing reliability and scalability',';Optimize resource utilization',';Scale testing operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-gray-600 text-gray-600 rounded-lg hover:bg-gray-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIPenetrationTesting.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

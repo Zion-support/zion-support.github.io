@@ -1,8 +1,8 @@
-import React, { useState } from 'react';'''
-import { motion } from 'framer-motion';'''
+import React, { useState } from 'react'';
+import { motion } from 'framer-motion'';
 import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";""""
-import { Button } from "./ui/button";""""
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card"';""
+import { Button } from "./ui/button"';""
 import { Badge } from "./ui/badge";
 const AdvancedServiceRecommendation = () => {}
     const [clientProfile, setClientProfile] = useState({}
@@ -17,24 +17,24 @@ const AdvancedServiceRecommendation = () => {}
         primaryGoals[],;
         challenges[];
     });
-    const [recommendations, setRecommendations] = useState([]);'
-    const [isAnalyzing, setIsAnalyzing] = useState(false);''
-    const [showResults, setShowResults] = useState(false);'''
+    const [recommendations, setRecommendations] = useState([])';
+    const [isAnalyzing, setIsAnalyzing] = useState(false)';
+    const [showResults, setShowResults] = useState(false)';'
     const industries = [''''
         'Technology',Healthcare',Financial Services',Manufacturing',Retail',Education',Government',Energy',Transportation',Media'''
-    ];'''
+    ]';'
     const compSizes = [''''
         'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)''
-    ];'''
+    ]';'
     const budgets = [''''
         'Under $50K',$50K-$200K',$200K-$500K',$500K-$1M',$1M+'''
-    ];'''
+    ]';'
     const technologyMaturityLevels = [''''
         'Early Adopter',Growing',Mature',Advanced',Innovation Leader'''
-    ];'''
+    ]';'
     const primaryGoals = [''''
         'Cost Reduction',Revenue Growth',Operational Efficiency',Digital Transformation',Innovation',Competitive Advantage',Customer Experience',Risk Management',Sustainability'''
-    ];'''
+    ]';'
     const challenges = [''''
         'Legacy Systems',Data Security',Scalability Issues',Talent Shortage',Regulatory Compliance',Integration Complexity',Performance Issues',Cost Management',Technology Debt'
     ];
@@ -49,11 +49,11 @@ const AdvancedServiceRecommendation = () => {}
             category: 'ai','''
             price: '$25,000/month','''
             duration: '6-12 months','''
-            tags['AI',CRM',Automation',Analytics'],;'''
-            features['AI-powered insights',Automated workflows',Predictive analytics'],;'''
-            benefits['Improved customer retention',Increased sales efficiency',Better decision making'],;'''
-            technology['AI/ML',Cloud Computing',Big Data',Automation'],;'''
-            targetAudience['Enterprise',Financial Services',Healthcare',Technology Companies'],;'''
+            tags['AI',CRM',Automation',Analytics'],';'
+            features['AI-powered insights',Automated workflows',Predictive analytics'],';'
+            benefits['Improved customer retention',Increased sales efficiency',Better decision making'],';'
+            technology['AI/ML',Cloud Computing',Big Data',Automation'],';'
+            targetAudience['Enterprise',Financial Services',Healthcare',Technology Companies'],';'
             image: '/images/services/ai-crm.jpg','''
             link: 'https://ziontechgroup.com/services/ai-crm-platform','''
             contactInfo: '+1 302 464 0950','''
@@ -69,11 +69,11 @@ const AdvancedServiceRecommendation = () => {}
             category: 'quantum','''
             price: '$150,000/month','''
             duration: '12-18 months','''
-            tags['Quantum Computing',Research',Optimization'],;'''
-            features['Quantum processors access',Algorithm development',Research support'],;'''
-            benefits['Solve intractable problems',Research acceleration',Competitive advantage'],;'''
-            technology['Quantum Computing',Quantum Algorithms',Research Tools'],;'''
-            targetAudience['Research Institutions',Pharmaceutical Companies',Financial Services'],;'''
+            tags['Quantum Computing',Research',Optimization'],';'
+            features['Quantum processors access',Algorithm development',Research support'],';'
+            benefits['Solve intractable problems',Research acceleration',Competitive advantage'],';'
+            technology['Quantum Computing',Quantum Algorithms',Research Tools'],';'
+            targetAudience['Research Institutions',Pharmaceutical Companies',Financial Services'],';'
             image: '/images/services/quantum-computing.jpg','''
             link: 'https://ziontechgroup.com/services/quantum-computing-service','''
             contactInfo: '+1 302 464 0950','''
@@ -89,11 +89,11 @@ const AdvancedServiceRecommendation = () => {}
             category: 'blockchain','''
             price: '$75,000/month','''
             duration: '8-14 months','''
-            tags['Blockchain',Supply Chain',Transparency'],;'''
-            features['End-to-end tracking',Smart contracts',Transparency'],;'''
-            benefits['Enhanced transparency',Reduced fraud',Improved efficiency'],;'''
-            technology['Blockchain',Smart Contracts',IoT',Cloud Computing'],;'''
-            targetAudience['Manufacturing',Retail',Logistics',Food & Beverage'],;'''
+            tags['Blockchain',Supply Chain',Transparency'],';'
+            features['End-to-end tracking',Smart contracts',Transparency'],';'
+            benefits['Enhanced transparency',Reduced fraud',Improved efficiency'],';'
+            technology['Blockchain',Smart Contracts',IoT',Cloud Computing'],';'
+            targetAudience['Manufacturing',Retail',Logistics',Food & Beverage'],';'
             image: '/images/services/blockchain-supply-chain.jpg','''
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain','''
             contactInfo: '+1 302 464 0950','''
@@ -106,36 +106,36 @@ const AdvancedServiceRecommendation = () => {}
         if (service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {}
             score += 25}'
         // Budget compatibility'
-        const servicePrice = parseInt(service.price.replace(/[^0-9]/g,));'
+        const servicePrice = parseInt(service.price.replace(/[^0-9]/g,))';
         if (profile.budget === 'Under $50K' && servicePrice < 50)
-            score += 20;'
+            score += 20';
         else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200)
-            score += 20;'
+            score += 20';
         else if (profile.budget === '$200K-$500K' && servicePrice >= 200 && servicePrice < 500)
-            score += 20;'
+            score += 20';
         else if (profile.budget === '$500K-$1M' && servicePrice >= 500 && servicePrice < 1000)
-            score += 20;'
+            score += 20';
         else if (profile.budget === '$1M+' && servicePrice >= 1000)
-            score += 20;'
+            score += 20';
         // Timeline compatibility''
-        const serviceDuration = parseInt(service.duration.split('-')[0]);'
+        const serviceDuration = parseInt(service.duration.split('-')[0])';
         if (profile.timeline === 'Immediate (0-3 months)' && serviceDuration <= 3)
-            score += 15;'
+            score += 15';
         else if (profile.timeline === 'Short-term (3-6 months)' && serviceDuration <= 6)
-            score += 15;'
+            score += 15';
         else if (profile.timeline === 'Medium-term (6-12 months)' && serviceDuration <= 12)
-            score += 15;'
+            score += 15';
         else if (profile.timeline === 'Long-term (12+ months)' && serviceDuration > 12)
-            score += 15;'
+            score += 15';
         // Technology maturity alignment''
         if (profile.technologyMaturity === 'Innovation Leader' && service.category === 'quantum')
-            score += 20;'
+            score += 20';
         else if (profile.technologyMaturity === 'Advanced' && ['ai',blockchain'].includes(service.category))
-            score += 20;'
+            score += 20';
         else if (profile.technologyMaturity === 'Mature' && ['iot',edge-computing'].includes(service.category))
-            score += 20;'
+            score += 20';
         else if (profile.technologyMaturity === 'Growing' && ['cloud-services',web-development'].includes(service.category))
-            score += 20;'
+            score += 20';
         else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services',consulting'].includes(service.category))
             score += 20;
         // Goal alignment;
@@ -152,14 +152,14 @@ const AdvancedServiceRecommendation = () => {}
                 if (matchScore >= 80)'
                     priority = 'High';
                 else if (matchScore >= 60)'
-                    priority = 'Medium';'
+                    priority = 'Medium';
                 else''
                     priority = 'Low';
-                let complexity;'
+                let complexity';
                 if (service.category === 'quantum' || service.category === 'ai')'
-                    complexity = 'Complex';'
+                    complexity = 'Complex';
                 else if (service.category === 'blockchain' || service.category === 'iot')'
-                    complexity = 'Moderate';'
+                    complexity = 'Moderate';
                 else''
                     complexity = 'Simple';
                 const reasoning = []
@@ -167,9 +167,9 @@ const AdvancedServiceRecommendation = () => {}
                     `Budget alignment with ${clientProfile.budget} range`,``
                     `Timeline compatibility with ${clientProfile.timeline} expectations`,``
                     `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`
-                ];'
+                ]';
                 const expectedROI = matchScore >= 80 ? 'High ROI expected' :''
-                    matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated';'
+                    matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated';
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :''
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months';
                 return {}
@@ -189,9 +189,9 @@ const AdvancedServiceRecommendation = () => {}
 '
 ''
 '''
-            case 'High': return 'bg-red-100 text-red-800';'''
-            case 'Medium': return 'bg-yellow-100 text-yellow-800';'''
-            case 'Low': return 'bg-green-100 text-green-800';'''
+            case 'High': return 'bg-red-100 text-red-800'';
+            case 'Medium': return 'bg-yellow-100 text-yellow-800'';
+            case 'Low': return 'bg-green-100 text-green-800'';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const getComplexityColor = (complexity) => {}
@@ -199,15 +199,15 @@ const AdvancedServiceRecommendation = () => {}
 '
 ''
 '''
-            case 'Complex': return 'bg-red-100 text-red-800';'''
-            case 'Moderate': return 'bg-yellow-100 text-yellow-800';'''
-            case 'Simple': return 'bg-green-100 text-green-800';'''
+            case 'Complex': return 'bg-red-100 text-red-800'';
+            case 'Moderate': return 'bg-yellow-100 text-yellow-800'';
+            case 'Simple': return 'bg-green-100 text-green-800'';
             default: return 'bg-gray-100 text-gray-800'}
     };
     const isFormComplete = () => {}
         return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&
             clientProfile.timeline && clientProfile.technologyMaturity &&"""
-            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};""""
+            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}';""
     return (<div className="max-w-7xl mx-auto p-6">
       {/* Header */}
       <motion.div initial = {}
@@ -215,8 +215,7 @@ const AdvancedServiceRecommendation = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} className="text-center mb-8">""""
         <h1 className="text-4xl font-bold text-zion-blue-dark mb-4">
@@ -232,8 +231,7 @@ const AdvancedServiceRecommendation = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.1 }} className="bg-white rounded-lg shadow-lg p-6 mb-8">""""
         <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2">""""
@@ -246,8 +244,7 @@ const AdvancedServiceRecommendation = () => {}
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Industry</label>
             <select value={clientProfile.industry} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev,
-  industry: e.target.value;
-"""
+  industry: e.target.value';"
 """"
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">""""
               <option value="">Select Industry</option>
@@ -260,8 +257,7 @@ const AdvancedServiceRecommendation = () => {}
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Company Size</label>
             <select value={clientProfile.companySize} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev,
-  companySize: e.target.value;
-"""
+  companySize: e.target.value';"
 """"
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">""""
               <option value="">Select Company Size</option>
@@ -274,8 +270,7 @@ const AdvancedServiceRecommendation = () => {}
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Budget Range</label>
             <select value={clientProfile.budget} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev,
-  budget: e.target.value;
-"""
+  budget: e.target.value';"
 """"
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">""""
               <option value="">Select Budget Range</option>
@@ -288,8 +283,7 @@ const AdvancedServiceRecommendation = () => {}
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Implementation Timeline</label>
             <select value={clientProfile.timeline} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev,
-  timeline: e.target.value;
-"""
+  timeline: e.target.value';"
 """"
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">""""
               <option value="">Select Timeline</option>
@@ -302,8 +296,7 @@ const AdvancedServiceRecommendation = () => {}
             <label className="block text-sm font-medium text-zion-slate-dark mb-2">Technology Maturity Level</label>
             <select value={clientProfile.technologyMaturity} onChange = {}
   (e) => setClientProfile(prev => ({ ...prev,
-  technologyMaturity: e.target.value;
-"""
+  technologyMaturity: e.target.value';"
 """"
 }))} className="w-full p-3 border border-zion-slate-light rounded-md">""""
               <option value="">Select Technology Maturity</option>
@@ -373,8 +366,7 @@ const AdvancedServiceRecommendation = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 }} transition={{ delay: 0.2 }}>""""
           <h2 className="text-2xl font-bold text-zion-blue-dark mb-6 text-center">
             Your Personalized Service Recommendations;
@@ -386,8 +378,7 @@ const AdvancedServiceRecommendation = () => {}
   x: -20;
 }} animate = {}
   { opacity: 1,
-  x: 0;
-"""
+  x: 0';"
 }} transition={{ delay: 0.1 * index }}>""""
                 <Card className="hover:shadow-lg transition-shadow">"""
                   <CardHeader>""""
@@ -486,8 +477,7 @@ const AdvancedServiceRecommendation = () => {}
   y: 20;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} transition={{ delay: 0.4 }} className="mt-12 text-center">""""
             <div className="bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white">""""

@@ -6,13 +6,13 @@
  * Checks and updates project dependencies
  */
 
-import fs from,
+import fs from,;
   fs';
-import path from
+import path from;
   'path';
-import { fileURLToPath } from
+import { fileURLToPath } from;
   'url';
-import { execSync } from
+import { execSync } from;
   'child_process';
 
 const __filename = fileURLToPath(import.meta.url);

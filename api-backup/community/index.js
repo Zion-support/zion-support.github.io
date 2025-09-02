@@ -167,18 +167,16 @@ export default function handler(req, res) {
     if (req.method !== 'GET
   ') {
 
-        res.status(405).end();'
-        return;'
-  '
+        res.status(405).end()';
+        return';
     }''
   '
     const { category, limit = '20
   ', offset = '0
   ' } = req.query;
-    const lim = parseInt(Array.isArray(limit) ? limit[0] : limit, 10);'
-    const off = parseInt(Array.isArray(offset) ? offset[0] : offset, 10);'
-  '
-    let filtered = mockPosts;''
+    const lim = parseInt(Array.isArray(limit) ? limit[0] : limit, 10)';
+    const off = parseInt(Array.isArray(offset) ? offset[0] : offset, 10)';
+    let filtered = mockPosts';
   '
     if (category && typeof category === 'string
   ') {
@@ -186,7 +184,7 @@ export default function handler(req, res) {
         filtered = mockPosts.filter(p => p.categoryId === category);
     }
     const paged = filtered.slice(off, off + lim);
-    res.status(200).json({ posts: paged });'"
+    res.status(200).json({ posts: paged })'";
 }
   '"'"
   '"'"'"

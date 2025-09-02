@@ -1,12 +1,12 @@
-import React, { useState, useCallback } from 'react';'
-import { motion, AnimatePresence } from 'framer-motion';'
+import React, { useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Brain, Play, Square, Download, Upload, BarChart3, TrendingUp, Activity, Zap, Target, CheckCircle, XCircle, Loader2, Plus, Eye, Trash2 } from 'lucide-react';
 ;
 ;
 export const MachineLearningDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({        enableTracking: true,
         enableUserBehaviorTracking: true;
-    });'
+    })';
     const [activeTab, setActiveTab] = useState('overview');
     const [showCreateModel, setShowCreateModel] = useState(false);
     const [showImportModel, setShowImportModel] = useState(false);
@@ -32,9 +32,9 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 name: newModelForm.name,
                 type: newModelForm.type,
                 framework: newModelForm.framework;
-            });'
+            })';
             setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' });
-            setShowCreateModel(false);'
+            setShowCreateModel(false)';
             trackEvent('ml',dashboard',model_created')}
     }, [newModelForm, createModel, trackEvent]);
     const hyperparameters = {}
@@ -45,7 +45,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 
 };
         try {}
-            await startTraining(modelId, hyperparameters);'
+            await startTraining(modelId, hyperparameters)';
             trackEvent('ml',dashboard',training_started')}
         catch (error) {}
 '
@@ -54,21 +54,21 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             // console.error('Training failed:', error)}
     }, [startTraining, trackEvent]);
     const handleStopTraining = useCallback((jobId) => {}
-        stopTraining(jobId);'
+        stopTraining(jobId)';
         trackEvent('ml',dashboard',training_stopped')}, [stopTraining, trackEvent]);
     const handleDeployModel = useCallback((modelId) => {}
-        deployModel(modelId);'
+        deployModel(modelId)';
         trackEvent('ml',dashboard',model_deployed')}, [deployModel, trackEvent]);
     const handleArchiveModel = useCallback((modelId) => {}
-        archiveModel(modelId);'
+        archiveModel(modelId)';
         trackEvent('ml',dashboard',model_archived')}, [archiveModel, trackEvent]);
     const handleMakePrediction = useCallback(async () => {}
         if(predictionForm.modelId && predictionForm.input.trim()) {}
             try {}
                 const input = JSON.parse(predictionForm.input);
-                const result = await makePrediction(predictionForm.modelId, input);'
-                // console.log('Prediction result:', result);'
-                setPredictionForm({ modelId: '', input: '' });'
+                const result = await makePrediction(predictionForm.modelId, input)';
+                // console.log('Prediction result:', result)';
+                setPredictionForm({ modelId: '', input: '' })';
                 trackEvent('ml',dashboard',prediction_made')}
             catch (error) {}
 '
@@ -80,7 +80,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
     const handleExportModel = useCallback((modelId) => {}
         try {}
             const modelData = exportModel(modelId);
-            navigator.clipboard.writeText(modelData);'
+            navigator.clipboard.writeText(modelData)';
             trackEvent('ml',dashboard',model_exported')}
         catch (error) {}
 '
@@ -96,7 +96,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 try {}
                     const modelData = e.target?.result;
                     importModel(modelData);
-                    setShowImportModel(false);'
+                    setShowImportModel(false)';
                     trackEvent('ml',dashboard',model_imported')}
                 catch (error) {}
 '
@@ -111,10 +111,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 '
 ''
 '''
-            case 'deployed': return 'text-green-600 bg-green-100';'''
-            case 'ready': return 'text-blue-600 bg-blue-100';'''
-            case 'training': return 'text-yellow-600 bg-yellow-100';'''
-            case 'archived': return 'text-gray-600 bg-gray-100';'''
+            case 'deployed': return 'text-green-600 bg-green-100'';
+            case 'ready': return 'text-blue-600 bg-blue-100'';
+            case 'training': return 'text-yellow-600 bg-yellow-100'';
+            case 'archived': return 'text-gray-600 bg-gray-100'';
             default: return 'text-gray-600 bg-gray-100'}
     };
     const getJobStatusColor = (status) => {}
@@ -122,22 +122,22 @@ export const MachineLearningDashboard = ({ className = '' }) => {
 '
 ''
 '''
-            case 'running': return 'text-blue-600 bg-blue-100';'''
-            case 'completed': return 'text-green-600 bg-green-100';'''
-            case 'failed': return 'text-red-600 bg-red-100';'''
-            case 'pending': return 'text-yellow-600 bg-yellow-100';'''
+            case 'running': return 'text-blue-600 bg-blue-100'';
+            case 'completed': return 'text-green-600 bg-green-100'';
+            case 'failed': return 'text-red-600 bg-red-100'';
+            case 'pending': return 'text-yellow-600 bg-yellow-100'';
             default: return 'text-gray-600 bg-gray-100'}
     };
     const getModelTypeIcon = (type) => {}
         switch(type) {}
 '"""
 '"'"""
-            case 'classification': return <Target className="w-4 h-4"/>;'"'"""
-            case 'regression': return <TrendingUp className="w-4 h-4"/>;'"'"""
-            case 'clustering': return <Activity className="w-4 h-4"/>;'"'"""
-            case 'nlp': return <Brain className="w-4 h-4"/>;'"'"""
-            case 'computer_vision': return <Eye className="w-4 h-4"/>;'"'"""
-            case 'recommendation': return <Zap className="w-4 h-4"/>;""""
+            case 'classification': return <Target className="w-4 h-4"/>'';"""
+            case 'regression': return <TrendingUp className="w-4 h-4"/>'';"""
+            case 'clustering': return <Activity className="w-4 h-4"/>'';"""
+            case 'nlp': return <Brain className="w-4 h-4"/>'';"""
+            case 'computer_vision': return <Eye className="w-4 h-4"/>'';"""
+            case 'recommendation': return <Zap className="w-4 h-4"/>';""
             default: return <Brain className="w-4 h-4"/>}
     };
     return (<div className={`bg-white dark:bg-gray-900 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 ${className}`}>"""
@@ -475,7 +475,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
               <div className="space-y-4">
                 {trainingJobs.map((job) => {}
 """
-                const model = models.find(m => m.id === job.modelId);""""
+                const model = models.find(m => m.id === job.modelId)';""
                 return (<div key={job.id} className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">""""
                       <div className="flex items-center justify-between mb-3">""""
                         <div className="flex items-center space-x-3">""""
@@ -589,7 +589,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 <div className="space-y-3">
                   {predictions.slice(0, 5).map((prediction) => {}
 """
-                const model = models.find(m => m.id === prediction.modelId);""""
+                const model = models.find(m => m.id === prediction.modelId)';""
                 return (<div key={prediction.id} className="bg-white dark:bg-gray-700 p-3 rounded-lg">""""
                         <div className="flex items-center justify-between mb-2">""""
                           <div className="flex items-center space-x-2">""""
@@ -685,5 +685,5 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             </motion.div>) }
         </AnimatePresence>
       </div>
-    </div>)};'"`
+    </div>)}'"`;
 '"`'"`

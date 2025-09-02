@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityMaintenance.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance() {
-    'Automated security updates and patch management',;'
-    'Predictive analytics for maintenance needs',;'
-    'Smart maintenance framework management',;'
-    'AI-driven maintenance automation and orchestration',;'
-    'Real-time maintenance performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance(function AISecurityMaintenance() {): any {}
-    'Automated security updates and patch management',;
-    'Predictive analytics for maintenance needs',;
-    'Smart maintenance framework management',;
-    'AI-driven maintenance automation and orchestration',;
-    'Real-time maintenance performance tracking',;
-    'Custom AI models for maintenance applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance() {;
+    'Automated security updates and patch management',';Predictive analytics for maintenance needs',';Smart maintenance framework management',';AI-driven maintenance automation and orchestration',';Real-time maintenance performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityMaintenance(function AISecurityMaintenance() {): any {};
+    'Automated security updates and patch management',';Predictive analytics for maintenance needs',';Smart maintenance framework management',';AI-driven maintenance automation and orchestration',';Real-time maintenance performance tracking',';Custom AI models for maintenance applications';
 <:pages.disabled/pages/services/AISecurityMaintenance.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited systems',Custom AI models',Full maintenance suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security maintenance optimization',;'
-    'Maintenance strategy management and execution',;'
-    'Security updates and patch management',;'
-    'Maintenance framework management and automation',;'
-    'Maintenance automation and orchestration',;'
-    'Maintenance scaling and management';
-  ];
-
-  '
-    'Improve security maintenance performance by 50-80%',;'
-    'Reduce maintenance completion time by 40-70%',;'
-    'Cut security maintenance costs by 35-65%',;'
-    'Enhance security maintenance reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security maintenance operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security maintenance optimization',';Maintenance strategy management and execution',';Security updates and patch management',';Maintenance framework management and automation',';Maintenance automation and orchestration',';Maintenance scaling and management';
+  ]';Improve security maintenance performance by 50-80%',';Reduce maintenance completion time by 40-70%',';Cut security maintenance costs by 35-65%',';Enhance security maintenance reliability and scalability',';Optimize resource utilization',';Scale security maintenance operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-rose-600 text-rose-600 rounded-lg hover:bg-rose-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityMaintenance.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

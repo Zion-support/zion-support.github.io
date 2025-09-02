@@ -1,7 +1,7 @@
-<<<<<<< HEAD:src.disabled/pages/sitemap.tsx
-import React from
+:src.disabled/pages/sitemap.tsx
+import React from;
   'react';
-import { Link } from
+import { Link } from;
   'react-router-dom';
 
 export default function Sitemap() {
@@ -26,7 +26,6 @@ export default function Sitemap() {
   );
 }
 
-=======
 import { Link } from 'react - router - dom';
 import React from 'react';
 export default React.memo(function Sitemap () {;
@@ -41,6 +40,4 @@ export default React.memo(function Sitemap () {;
           <li key={r}><Link to={r}>{r}</Link></li>;) ) };
       </ul>;
     </div>;) ;
-};
-";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/sitemap.tsx
+}";;

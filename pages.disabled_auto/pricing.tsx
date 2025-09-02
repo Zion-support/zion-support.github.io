@@ -1,15 +1,15 @@
-<<<<<<< HEAD:pages.disabled_auto/pricing.tsx
-import React from
+:pages.disabled_auto/pricing.tsx
+import React from;
   'react';
-import { motion } from
+import { motion } from;
   'framer-motion';
-import { SEO } from
+import { SEO } from;
   '../components/SEO';
-import { Button } from
+import { Button } from;
   '../components/ui/Button';
-import { Card } from
+import { Card } from;
   '../components/ui/Card';
-import { Badge } from
+import { Badge } from;
   '../components/ui/Badge';
 import { 
   CheckCircle, 
@@ -19,8 +19,7 @@ import {
   Users, 
   Globe, 
   Phone, 
-  Mail, 
-=======
+  Mail, ;
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -36,7 +35,6 @@ import {
   Globe,
   Phone,
   Mail,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
   ArrowRight,
   DollarSign,
   TrendingUp,
@@ -50,14 +48,12 @@ import {
   BarChart3,
   Rocket,
   Heart,
-<<<<<<< HEAD:pages.disabled_auto/pricing.tsx
+:pages.disabled_auto/pricing.tsx
   Sparkles
-} from
+} from;
   'lucide-react';
-=======
   Sparkles,
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
 
 const Pricing: React.FC = () => {
   const pricingPlans = [
@@ -216,14 +212,12 @@ const Pricing: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="relative"
               >
-<<<<<<< HEAD:pages.disabled_auto/pricing.tsx
+:pages.disabled_auto/pricing.tsx
                 <Card className={`p-8 h-full ${plan.popular ?,
   ring-2 ring-purple-500 scale-105': '}`}>
-=======
                 <Card
                   className={`p-8 h-full ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}
                 >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">

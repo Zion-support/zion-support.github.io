@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIIncidentResponse.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIncidentResponse() {
-    'Automated incident triage and prioritization',;'
-    'Predictive analytics for incident prevention',;'
-    'Smart response automation and orchestration',;'
-    'AI-driven incident investigation and forensics',;'
-    'Real-time incident analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIncidentResponse(function AIIncidentResponse() {): any {}
-    'Automated incident triage and prioritization',;
-    'Predictive analytics for incident prevention',;
-    'Smart response automation and orchestration',;
-    'AI-driven incident investigation and forensics',;
-    'Real-time incident analytics and insights',;
-    'Custom AI models for incident applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIncidentResponse() {;
+    'Automated incident triage and prioritization',';Predictive analytics for incident prevention',';Smart response automation and orchestration',';AI-driven incident investigation and forensics',';Real-time incident analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIIncidentResponse(function AIIncidentResponse() {): any {};
+    'Automated incident triage and prioritization',';Predictive analytics for incident prevention',';Smart response automation and orchestration',';AI-driven incident investigation and forensics',';Real-time incident analytics and insights',';Custom AI models for incident applications';
 <:pages.disabled/pages/services/AIIncidentResponse.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$3,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$3,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$3,999/mo', ';
       details: ['Unlimited incidents',Custom AI models',Full incident suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Incident response optimization',;'
-    'Threat detection and analysis',;'
-    'Incident triage and prioritization',;'
-    'Response automation and orchestration',;'
-    'Incident investigation and forensics',;'
-    'Incident scaling and management';
-  ];
-
-  '
-    'Improve incident response performance by 50-80%',;'
-    'Reduce incident resolution time by 40-70%',;'
-    'Cut incident operational costs by 35-65%',;'
-    'Enhance incident response reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale incident response operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Incident response optimization',';Threat detection and analysis',';Incident triage and prioritization',';Response automation and orchestration',';Incident investigation and forensics',';Incident scaling and management';
+  ]';Improve incident response performance by 50-80%',';Reduce incident resolution time by 40-70%',';Cut incident operational costs by 35-65%',';Enhance incident response reliability and scalability',';Optimize resource utilization',';Scale incident response operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIIncidentResponse.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

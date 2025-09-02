@@ -1,9 +1,9 @@
-import { loginUser } from,
+import { loginUser } from,;
   @/services/authService'; // registerUser removed as it
   's not the focus
-import { NextApiRequest, NextApiResponse } from 'next
+import { NextApiRequest, NextApiResponse } from 'next;
   ';
-import { vi, Mock, describe, it, expect, beforeEach, afterEach } from 'vitest
+import { vi, Mock, describe, it, expect, beforeEach, afterEach } from 'vitest;
   ';
 
 // Mock Supabase client
@@ -40,7 +40,7 @@ vi.mock('@supabase/supabase-js, async importOriginal => {
 });
 
 // Import the handler
-import loginHandler from '../../pages/api/auth/login
+import loginHandler from '../../pages/api/auth/login;
   ';
 
 // Import the mock functions from the mocked module

@@ -27,14 +27,14 @@ import {}
   Rocket,
   Star,
 <:pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-  CheckCircle,
+  CheckCircle,;
 import { SEO } from "../../components/SEO";
 import {
   Shield,
   CheckCircle,
   BarChart3,
   Zap,
-=
+=;
   CheckCircle,;
   Shield, 
   CheckCircle, 
@@ -116,7 +116,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       icon: Network,'
       title: 'Network Security Monitoring','
       description: 'Real-time network traffic analysis and anomaly detection using AI algorithms'
-      icon: Brain,;""
+      icon: Brain,';
       title: "AI-Powered Threat Detection","      description: "Advanced machine learning algorithms that identify and analyze cyber threats in real-time"
     },
     {
@@ -149,7 +149,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {
       title: "Security Orchestration",""
       description: "Automated security workflows that coordinate responses across multiple security tools"
     }
-  ];"
+  ]";
 export default function AICybersecurityThreatIntelligence(...args[]):  {}
   const features: any = []
     {}
@@ -160,7 +160,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
       icon: Network,
       title: 'Network Security Monitoring',
       description: 'Real-time network traffic analysis and anomaly detection using AI algorithms'
-      icon: Brain,;""
+      icon: Brain,';
       title: "AI-Powered Threat Detection","      description: "Advanced machine learning algorithms that identify and analyze cyber threats in real-time""
     },
     {}
@@ -200,7 +200,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 "
     {}
 ""
-      title: "Incident Response Automation",;""
+      title: "Incident Response Automation",';
       description: "Automated response workflows that minimize threat impact and recovery time",
       icon: Zap;
     },
@@ -209,7 +209,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 "
     {}
 ""
-      title: "Compliance Reporting",;""
+      title: "Compliance Reporting",';
       description: "Automated compliance reports for SOC 2, ISO 27001, GDPR, and other standards",
       icon: FileText;
     }
@@ -222,7 +222,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
   const threatTypes: any = []
     {}
 ""
-      title: "Ransomware Attacks",;"      description: "AI detection and prevention of ransomware before encryption occurs",
+      title: "Ransomware Attacks",";      description: "AI detection and prevention of ransomware before encryption occurs",
       icon: Lock;
     },
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
@@ -230,7 +230,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 "
     {}
 ""
-      title: "Phishing Campaigns",;""
+      title: "Phishing Campaigns",';
       description: "Advanced detection of sophisticated phishing attempts and social engineering",
       icon: Mail;
     },
@@ -239,7 +239,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 "
     {}
 ""
-      title: "DDoS Attacks",;""
+      title: "DDoS Attacks",';
       description: "Real-time detection and mitigation of distributed denial of service attacks",
       icon: Network;
     },
@@ -248,7 +248,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 "
     {}
 ""
-      title: "Insider Threats",;""
+      title: "Insider Threats",';
       description: "Behavioral analysis to identify malicious insider activities",
       icon: Users;
     },
@@ -257,7 +257,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 "
     {}
 ""
-      title: "Zero-Day Exploits",;""
+      title: "Zero-Day Exploits",';
       description: "AI-powered detection of previously unknown vulnerabilities and exploits",
       icon: AlertTriangle;
     },
@@ -266,7 +266,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 "
     {}
 ""
-      title: "Advanced Persistent Threats",;""
+      title: "Advanced Persistent Threats",';
       description: "Long-term threat detection and response for sophisticated attackers",
       icon: Target;
     }
@@ -424,12 +424,12 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
   delay: 0.2;
 }}""
             className="grid grid-cols-2 md:grid-cols-4 gap-8";
-          >;""
-            <div className="text-center">;""
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>;""
+          >';
+            <div className="text-center">';
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>';
               <div className="text-slate-400">Threat Detection</div>;
-            </div>;""
-            <div className="text-center">;""
+            </div>';
+            <div className="text-center">';
               <div className="text-3xl font-bold text-white mb-2">&lt;100ms</div>""
               <div className = "text-slate-400">Response Time</div>
             </div>""
@@ -442,13 +442,13 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
               <div className="text-3xl font-bold text-white mb-2">24/7</div>"
   delay: 0.2 "
 }}""
-            className="grid grid-cols-2 md:grid-cols-4 gap-8";"
-          >;""
-            <div className="text-center">;""
-              <div className="text-3xl font-bold text-white mb-2">99.9%</div>;""
-              <div className="text-slate-400">Threat Detection</div>;"
-            </div>;""
-            <div className="text-center">;""
+            className="grid grid-cols-2 md:grid-cols-4 gap-8"";
+          >';
+            <div className="text-center">';
+              <div className="text-3xl font-bold text-white mb-2">99.9%</div>';
+              <div className="text-slate-400">Threat Detection</div>";
+            </div>';
+            <div className="text-center">';
               <div className="text-3xl font-bold text-white mb-2">&lt;100ms</div>""
               <div className = "text-slate-400">Response Time</div>"
             </div>""
@@ -844,13 +844,11 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
               enterprise-grade pricing structure.
             </p>
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-          </motion.div>;"
-""
+          </motion.div>';"
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index()
               <motion.div
-          </motion.div>;
-""
+          </motion.div>';
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingTiers.map((tier, index (
               <motion.div;
@@ -874,16 +872,16 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
 >                }`}
 
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx
-                {plan.popular && (;"
+                {plan.popular && (";
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
 '
                   plan.popular ''
                     ? 'border-red-500/50 bg-red-500/5' ''`
                     : 'border-slate-700/50'``
                 }`}"
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;

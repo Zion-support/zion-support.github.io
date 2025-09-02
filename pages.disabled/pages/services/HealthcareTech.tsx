@@ -4,23 +4,23 @@ export default function HealthcareTech(...args: []):  {
 export default function HealthcareTech(...args: []):  {}
     {;
       icon: Activity,;
-      title: 'Predictive Analytics',;'
-      description: 'Early warning systems and preventive care insights',;'
+      title: 'Predictive Analytics',';
+      description: 'Early warning systems and preventive care insights',';
       color: 'from-indigo-500 to-purple-500'};
   ];
 :pages.disabled/pages/services/HealthcareTech.tsx
-    {;'
-      title: 'Medical Device Integration',;'
-      description: 'IoT integration for medical devices and wearables',;'
-      price: 'From $18,000',;'
+    {';
+      title: 'Medical Device Integration',';
+      description: 'IoT integration for medical devices and wearables',';
+      price: 'From $18,000',';
       features: ['Device connectivity',Data collection',Real-time monitoring',Alert systems']};
-  ];'
-  const applications = [;''
-    { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },;''
-    { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },;''
-    { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },;''
-    { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },;''
-    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },;'    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
+  ]';
+  const applications = [';
+    { name: 'Diagnostics', icon: Microscope, description: 'AI-powered disease detection' },';
+    { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },';
+    { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },';
+    { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },';
+    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },';    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' };
 
     {;
       title: 'Medical Device Integration',;
@@ -147,7 +147,7 @@ export default function HealthcareTech(...args: []):  {}
       </section>
 
       {/* Features Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -255,7 +255,7 @@ export default function HealthcareTech(...args: []):  {}
       </section>
 
       {/* Services & Pricing */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -383,7 +383,7 @@ export default function HealthcareTech(...args: []):  {}
       </section>
 
       {/* Applications */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -493,7 +493,7 @@ export default function HealthcareTech(...args: []):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">;""
+      <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">';
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial = {}
@@ -563,7 +563,7 @@ export default function HealthcareTech(...args: []):  {}
         </div>;
       </section>;
 :pages.disabled/pages/services/HealthcareTech.tsx
-    </div>;'"`
+    </div>'"`;
   )}}}}'"`'"`
     </div>;
   )}}}}'"`

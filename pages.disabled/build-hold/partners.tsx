@@ -1,12 +1,11 @@
 React from
   'react';
-import type { NextPage } from
-  'next';'MainLayout from
+import type { NextPage } from;
+  'next';MainLayout from
   '../components/layout/MainLayout';
-import { Handshake, Award, Users, Globe, Star, CheckCircle } from
-  'lucide-react';'import Link from
-  'next/link';'
-  'const Partners: NextPage = () => {
+import { Handshake, Award, Users, Globe, Star, CheckCircle } from;
+  'lucide-react';import Link from;
+  'next/link'';const Partners: NextPage = () => {
   const partnerTypes = [;
     {;
       icon: Handshake, title:,

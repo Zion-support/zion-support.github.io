@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIRedis.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIRedis() {
-    'Automated Redis monitoring and alerting',;'
-    'Predictive analytics for Redis scaling',;'
-    'Smart Redis security and compliance',;'
-    'AI-driven Redis automation and orchestration',;'
-    'Real-time Redis analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIRedis(function AIRedis() {): any {}
-    'Automated Redis monitoring and alerting',;
-    'Predictive analytics for Redis scaling',;
-    'Smart Redis security and compliance',;
-    'AI-driven Redis automation and orchestration',;
-    'Real-time Redis analytics and insights',;
-    'Custom AI models for Redis applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIRedis() {;
+    'Automated Redis monitoring and alerting',';Predictive analytics for Redis scaling',';Smart Redis security and compliance',';AI-driven Redis automation and orchestration',';Real-time Redis analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIRedis(function AIRedis() {): any {};
+    'Automated Redis monitoring and alerting',';Predictive analytics for Redis scaling',';Smart Redis security and compliance',';AI-driven Redis automation and orchestration',';Real-time Redis analytics and insights',';Custom AI models for Redis applications';
 <:pages.disabled/pages/services/AIRedis.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited storage',Custom AI models',Full Redis suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Redis optimization',;'
-    'Redis management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Redis scaling and management';
-  ];
-
-  '
-    'Improve Redis performance by 50-80%',;'
-    'Reduce Redis latency by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Redis reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale Redis operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Redis optimization',';Redis management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Redis scaling and management';
+  ]';Improve Redis performance by 50-80%',';Reduce Redis latency by 40-70%',';Cut operational costs by 35-65%',';Enhance Redis reliability and scalability',';Optimize resource utilization',';Scale Redis operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIRedis.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from
+import React, { useState, useEffect } from;
   'react';
-import { Link, useLocation } from
+import { Link, useLocation } from;
   'react-router-dom';
-import { motion, AnimatePresence } from
+import { motion, AnimatePresence } from;
   'framer-motion';
-import { Menu, X, ChevronDown } from
+import { Menu, X, ChevronDown } from;
   'lucide-react';
 const Header: React.FC = () => {;
 

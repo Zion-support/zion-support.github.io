@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIVirtualReality.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIVirtualReality() {
-    'Automated VR monitoring and alerting',;'
-    'Predictive analytics for VR scaling',;'
-    'Smart VR security and compliance',;'
-    'AI-driven VR automation and orchestration',;'
-    'Real-time VR analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIVirtualReality(function AIVirtualReality() {): any {}
-    'Automated VR monitoring and alerting',;
-    'Predictive analytics for VR scaling',;
-    'Smart VR security and compliance',;
-    'AI-driven VR automation and orchestration',;
-    'Real-time VR analytics and insights',;
-    'Custom AI models for VR applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIVirtualReality() {;
+    'Automated VR monitoring and alerting',';Predictive analytics for VR scaling',';Smart VR security and compliance',';AI-driven VR automation and orchestration',';Real-time VR analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIVirtualReality(function AIVirtualReality() {): any {};
+    'Automated VR monitoring and alerting',';Predictive analytics for VR scaling',';Smart VR security and compliance',';AI-driven VR automation and orchestration',';Real-time VR analytics and insights',';Custom AI models for VR applications';
 <:pages.disabled/pages/services/AIVirtualReality.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited storage',Custom AI models',Full VR suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'VR optimization',;'
-    'VR content management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'VR scaling and management';
-  ];
-
-  '
-    'Improve VR performance by 50-80%',;'
-    'Reduce VR development time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance VR reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale VR operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';VR optimization',';VR content management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';VR scaling and management';
+  ]';Improve VR performance by 50-80%',';Reduce VR development time by 40-70%',';Cut operational costs by 35-65%',';Enhance VR reliability and scalability',';Optimize resource utilization',';Scale VR operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIVirtualReality.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

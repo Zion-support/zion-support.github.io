@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';'''
+import React, { useState, useCallback } from 'react'';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Shield, AlertTriangle, CheckCircle, XCircle, Download, Settings, RefreshCw, Loader2, FileText, BarChart3, Clock, Play, Square } from 'lucide-react';
 ;
@@ -96,8 +96,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
           <button;
             onClick={handleCheckCompliance}"""
             disabled={isComplianceChecking}""""
-            className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50"""
-          >"""
+            className="flex items-center space-x-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 disabled:opacity-50 ">"""
             {isComplianceChecking ? (""""
               <Loader2 className="w-4 h-4 animate-spin" />"""
             ) : (""""
@@ -192,8 +191,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}"""
               exit={{ opacity: 0, y: -20 }}""""
-              className="space-y-6"""
-            >"""
+              className="space-y-6 ">"""
               {/* Key Metrics */}""""
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">""""
                 <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">""""
@@ -319,8 +317,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                       details: 'Test security event','
                       status: 'new'})"""
                   }""""
-                  className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700"""
-                >
+                  className="px-3 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 ">
                   Add Test Event;
                 </button>
               </div>"""
@@ -399,8 +396,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                 </h3>
                 <button"""
                   onClick={handleAddComplianceRule}""""
-                  className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700"""
-                >
+                  className="px-3 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700 ">
                   Add Rule;
                 </button>
               </div>"""
@@ -570,8 +566,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                   </p>
                   <button"""
                     onClick={handleGenerateReport}""""
-                    className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700"""
-                  >"""
+                    className="w-full px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 ">"""
                     {copied ? (""""
                       <span className="flex items-center justify-center space-x-2">""""
                         <CheckCircle className="w-4 h-4" />
@@ -662,5 +657,5 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
       </AnimatePresence>
     </div>
   );
-};'"`
+}'"`;
 '"`'"`

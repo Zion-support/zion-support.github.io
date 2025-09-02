@@ -167,21 +167,7 @@ class FileIntegrityMonitor {;
     return issues;
 ;
   async checkMissingCriticalFiles() {;
-    const criticalFiles = [;
-
-  'package.json',;
-
-  'vite.config.ts',;
-
-  'tsconfig.json',;
-
-  'src/main.tsx',;
-
-  'index.html',;
-
-  'tailwind.config.js',;
-
-  'postcss.config.js';
+    const criticalFiles = [';package.json',';vite.config.ts',';tsconfig.json',';src/main.tsx',';index.html',';tailwind.config.js',';postcss.config.js';
     ];
 ;
     const missingFiles = [];
@@ -250,13 +236,7 @@ class FileIntegrityMonitor {;
     const permissionIssues = [];
 ;
     try {;
-      const criticalFiles = [;
-
-  'package.json',;
-
-  'vite.config.ts',;
-
-  'src/main.tsx';
+      const criticalFiles = [';package.json',';vite.config.ts',';src/main.tsx';
 
       ];
 ;
@@ -313,19 +293,7 @@ class FileIntegrityMonitor {;
 ;
     try {;
       // Check for essential directories;
-      const essentialDirs = [;
-
-  'src',;
-
-  'src/components',;
-
-  'src/pages',;
-
-  'src/utils',;
-
-  'public',;
-
-  'logs';
+      const essentialDirs = [';src',';src/components',';src/pages',';src/utils',';public',';logs';
       ];
 ;
       for (const dir of essentialDirs) {;
@@ -450,9 +418,7 @@ class FileIntegrityMonitor {;
   dev': 'vite,;,
   build': 'tsc && vite build,;,
   lint': eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0,
-  ,;
-
-  'preview': 'vite preview;
+  ,';preview': 'vite preview;
       },;
       dependencies: {;,
   react': '^18.2.0,;,
@@ -492,55 +458,29 @@ class FileIntegrityMonitor {;
     );
 ;
   async createViteConfig() {;
-    const config = `import { defineConfig } from
+    const config = `import { defineConfig } from;
   'vite';
-import react from
+import react from;
   '@vitejs/plugin-react';
-import { resolve } from
+import { resolve } from;
   'path';
 ;
 export default defineConfig({;
   plugins: [react()],;
   resolve: {;
-    alias: {;
-
-  '@': resolve(__dirname,
-  'src'),;
-
-  '@components': resolve(__dirname,
-  'src/components'),;
-
-  '@pages': resolve(__dirname,
-  'src/pages'),;
-
-  '@layout': resolve(__dirname,
-  'src/layout'),;
-
-  '@utils': resolve(__dirname,
-  'src/utils'),;
-
-  '@hooks': resolve(__dirname,
-  'src/hooks'),;
-
-  '@types': resolve(__dirname,
-  'src/types'),;
-
-  '@assets': resolve(__dirname,
-  'src/assets'),;
-
-  '@styles': resolve(__dirname,
-  'src/styles'),;
-
-  '@data': resolve(__dirname,
-  'src/data'),;
-
-  '@services': resolve(__dirname,
-  'src/services'),;
-
-  '@context': resolve(__dirname,
-  'src/context'),;
-
-  '@constants': resolve(__dirname,
+    alias: {';@': resolve(__dirname,
+  'src'),';@components': resolve(__dirname,
+  'src/components'),';@pages': resolve(__dirname,
+  'src/pages'),';@layout': resolve(__dirname,
+  'src/layout'),';@utils': resolve(__dirname,
+  'src/utils'),';@hooks': resolve(__dirname,
+  'src/hooks'),';@types': resolve(__dirname,
+  'src/types'),';@assets': resolve(__dirname,
+  'src/assets'),';@styles': resolve(__dirname,
+  'src/styles'),';@data': resolve(__dirname,
+  'src/data'),';@services': resolve(__dirname,
+  'src/services'),';@context': resolve(__dirname,
+  'src/context'),';@constants': resolve(__dirname,
 ,
   src/constants');
 ;
@@ -566,45 +506,17 @@ export default defineConfig({;
     );
 ;
   async createTsConfig() {;
-    const config = `{;
-
-  'compilerOptions': {;
-
-  'target':
-  'ES2020,;
-
-  'useDefineForClassFields': true,;,
+    const config = `{';compilerOptions': {';target':
+  'ES2020,';useDefineForClassFields': true,;,
   lib': [
   'ES2020,
 ,
   DOM',
-  'DOM.Iterable'],;
-
-  'module': 'ESNext,;
-
-  'skipLibCheck': true,;,
-  moduleResolution': 'bundler,;
-
-  'allowImportingTsExtensions': true,;
-
-  'resolveJsonModule': true,;
-
-  'isolatedModules': true,;
-
-  'noEmit': true,;,
-  jsx': 'react-jsx,;
-
-  'strict': true,;
-
-  'noUnusedLocals': true,;
-
-  'noUnusedParameters': true,;
-
-  'noFallthroughCasesInSwitch': true,;,
+  'DOM.Iterable'],';module': 'ESNext,';skipLibCheck': true,;,
+  moduleResolution': 'bundler,';allowImportingTsExtensions': true,';resolveJsonModule': true,';isolatedModules': true,';noEmit': true,;,
+  jsx': 'react-jsx,';strict': true,';noUnusedLocals': true,';noUnusedParameters': true,';noFallthroughCasesInSwitch': true,;,
   baseUrl': '.,;,
-  paths': {;
-
-  '@/*': [
+  paths': {';@/*': [
   'src/*],;,
   @components/*': [
   'src/components/*],;,
@@ -646,15 +558,15 @@ export default defineConfig({;
     );
 ;
   async createMainTsx() {;
-    const mainTsx = `import React from
+    const mainTsx = `import React from;
   'react';
-import ReactDOM from
+import ReactDOM from;
   'react-dom/client';
-import { BrowserRouter } from
+import { BrowserRouter } from;
   'react-router-dom';
-import { HelmetProvider } from
+import { HelmetProvider } from;
   'react-helmet-async';
-import App from
+import App from;
   './App.tsx';
 import
   './index.css';
@@ -719,11 +631,7 @@ ReactDOM.createRoot(document.getElementById(
     const config = `/** @type {import(
   'tailwindcss').Config} */;
 export default {;
-  content: [;
-
-  './index.html,;
-
-  './src/**/*.{js,ts,jsx,tsx}',;
+  content: [';./index.html,';./src/**/*.{js,ts,jsx,tsx}',;
   ],;
   theme: {;
     extend: { /* empty */ },;

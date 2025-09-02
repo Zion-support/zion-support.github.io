@@ -1,6 +1,6 @@
-import { defineConfig } from,
+import { defineConfig } from,;
   vitest/config';
-import path from
+import path from;
   'node: path';
 
 export default defineConfig({

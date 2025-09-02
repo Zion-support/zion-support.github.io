@@ -18,7 +18,7 @@ import {}
   MapPin,
   ExternalLink,
   Rocket,
-  Microscope,
+  Microscope,;
   TestTube} from 'lucide-react.ts';
 :pages.disabled/pages/services/QuantumComputingElite.tsx
 const QuantumComputingElite: React.FC = (): JSX.Element => {
@@ -540,8 +540,7 @@ const QuantumComputingElite: React.FC = (): JSX.Element => {}
     </div>
   )};
 :pages.disabled/pages/services/QuantumComputingElite.tsx
-export default QuantumComputingElite;'"`
+export default QuantumComputingElite'"`;
 '"`'"`
 
-export default QuantumComputingElite;
-'"`
+export default QuantumComputingElite'"`;

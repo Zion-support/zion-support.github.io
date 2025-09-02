@@ -33,7 +33,7 @@ import {}
   Clock,
   DollarSign,
   Target,
-  Award''
+  Award'';
  } from 'lucide-react';
 ;
 export { function };
@@ -91,9 +91,9 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       benefits['Plagiarism detection',Content filtering',Quality scoring',Compliance checking']},;
     {}
       benefits['Real-time editing',Approval workflows',Version history',Team analytics']};
-      icon: Users,;'
-      title: 'Team Collaboration',;'
-      description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',;'
+      icon: Users,';
+      title: 'Team Collaboration',';
+      description: 'Collaborative workspace for teams to create, edit, and manage content with version control and approval workflows.',';
       benefits: ['Real-time editing',Approval workflows',Version history',Team analytics']};
   ]},;
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
@@ -111,10 +111,10 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       metrics['70% increase in content output',45% reduction in editorial time',40% improvement in reader engagement']},;
     {
 '
-      metrics['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};'
-      industry: 'Corporate Communications',;'
-      title: 'Business Content',;'
-      description: 'Create professional reports, presentations, and corporate communications with consistent branding.',;'
+      metrics['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']}';
+      industry: 'Corporate Communications',';
+      title: 'Business Content',';
+      description: 'Create professional reports, presentations, and corporate communications with consistent branding.',';
       metrics: ['55% faster report creation',50% improvement in brand consistency',35% reduction in review cycles']};
   ];
     {}
@@ -136,39 +136,23 @@ export default function AIContentGenerationPlatform(...args[]):  {}
   ];
 
     {;
-      icon: TrendingUp,;'
-      title: 'Scalability',;'
-      description: 'Scale content production without proportional increases in resources.',;'
+      icon: TrendingUp,';
+      title: 'Scalability',';
+      description: 'Scale content production without proportional increases in resources.',';
       value: '10x'};
 :pages.disabled/pages/services/AIContentGenerationPlatform.tsx
-  ];'
-    'Machine Learning',;'
-    'Cloud Computing',;'
-    'Real-time Processing',;'
-    'API Integration',;'
-    'Content Management',;'
-    'Analytics & Insights';
-  ];'
-        '10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
-      ],;'
-      features[;''
+  ]';Machine Learning',';Cloud Computing',';Real-time Processing',';API Integration',';Content Management',';Analytics & Insights';
+  ]';10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
+      ],';
+      features[';
         '10,000 words per month',''
         '100 AI-generated images',''
         '5 video generations',''
         'Basic templates',''
         'Email support','        'Standard quality output''
-      ],;''
-  ];
-
-    'Machine Learning',;
-    'Cloud Computing',;
-    'Real-time Processing',;
-    'API Integration',;
-    'Content Management',;
-    'Analytics & Insights';
-  ];
-
-        '10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
+      ],';
+  ]';Machine Learning',';Cloud Computing',';Real-time Processing',';API Integration',';Content Management',';Analytics & Insights';
+  ]';10,000 words per month',100 AI-generated images',5 video generations',Basic templates',Email support',Standard quality output'
       ],;
       cta: 'Start Free Trial',
       popular: false;
@@ -184,9 +168,8 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       price: '$299',
       period: '/month',
       description: 'Ideal for growing businesses and marketing teams',
-      features[;'
-        '100,000 words per month',1,000 AI-generated images',50 video generations',Advanced templates',Priority support',High-quality output',Team collaboration',Brand voice training'
-      ],;'
+      features[';100,000 words per month',1,000 AI-generated images',50 video generations',Advanced templates',Priority support',High-quality output',Team collaboration',Brand voice training'
+      ],';
       cta: 'Start Free Trial',
       popular: true;
     },
@@ -201,11 +184,8 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       price: '$999',
       period: '/month',
       description: 'For large organizations with high-volume content needs',
-      features[;'
-        'Unlimited words',Unlimited images',Unlimited videos',Custom templates',Dedicated support',Highest quality output',Advanced analytics',;'
-        'Custom integrations',;'
-        'SLA guarantees';
-      ],;'
+      features[';Unlimited words',Unlimited images',Unlimited videos',Custom templates',Dedicated support',Highest quality output',Advanced analytics',';Custom integrations',';SLA guarantees';
+      ],';
       cta: 'Contact Sales',;
       popular: false};
   ];
@@ -336,13 +316,13 @@ export default function AIContentGenerationPlatform(...args[]):  {}
 =
   delay: 0.2 }}"            className="grid grid-cols-2 md:grid-cols-4 gap-8"
 "
-            <div className="text-center">;"
+            <div className="text-center">";
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>"
 >            transition = {}
   { duration: 0.8,
   delay: 0.2 }}"            className="grid grid-cols-2 md:grid-cols-4 gap-8""
 ""
-            <div className="text-center">;""
+            <div className="text-center">';
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>""
               <div className="text-slate-400">Time Savings</div>
             </div>""
@@ -360,7 +340,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
   { duration: 0.8,"
   delay: 0.2 }}"            className="grid grid-cols-2 md:grid-cols-4 gap-8""
 ""
-            <div className="text-center">;""
+            <div className="text-center">';
               <div className="text-3xl font-bold text-white mb-2">80-90%</div>""
               <div className="text-slate-400">Time Savings</div>"
             </div>""
@@ -386,7 +366,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       </section>
 
       {/* Features Section */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -506,7 +486,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -620,7 +600,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 bg-slate-800/30">;""
+      <section className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -735,7 +715,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       </section>
 
       {/* Technologies Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -835,7 +815,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section id="pricing" className="py-20 bg-slate-800/30">;""
+      <section id="pricing" className="py-20 bg-slate-800/30">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -930,7 +910,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
                     : 'border-slate-700/50 hover:border-purple-400/50'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-400 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -991,7 +971,7 @@ export default function AIContentGenerationPlatform(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20">;""
+      <section className="py-20">';
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial = {}

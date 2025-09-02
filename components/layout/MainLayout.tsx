@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
@@ -8,17 +7,13 @@ import SEOEnhancer from '../SEOEnhancer';
 
 interface MainLayoutProps {
   children: React.ReactNode;
-  title?: string;
-=======
-import React from 'react';'import Header from './Header';'import Footer from './Footer';'import PerformanceOptimizer from '../PerformanceOptimizer';'import AccessibilityEnhancer from '../AccessibilityEnhancer';'import SEOEnhancer from '../SEOEnhancer';''interface MainLayoutProps {children: React.ReactNode;title?: string;'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  description?: string;
-  keywords?: string;
-  ogImage?: string;
+   title?: string;
+   description?: string;
+   keywords?: string;
+   ogImage?: string;
 }
 
 const MainLayout: React.FC<MainLayoutProps> = ({
-<<<<<<< HEAD
   children,
   title = 'Zion Tech Group - Leading Technology Solutions Provider',
   description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.',
@@ -26,11 +21,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
   ogImage = '/og-image.jpg'
 }) => {
   return (
-    <>
-=======
-children, title = 'Zion Tech Group - Leading Technology Solutions Provider','  description = 'Zion Tech Group provides cutting-edge technology solutions for modern businesses. From AI development to cloud architecture, we help companies transform their digital presence.','  keywords = 'technology solutions, AI development, cloud architecture, digital transformation, micro SaaS, IT services','  ogImage = '/og-image.jpg''}) => {'  return (<>'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      <SEOEnhancer 
+    <>      <SEOEnhancer 
         title={title}
         description={description}
         keywords={keywords}
@@ -39,7 +30,6 @@ children, title = 'Zion Tech Group - Leading Technology Solutions Provider','  d
       
       <PerformanceOptimizer 
         preloadImages={[
-<<<<<<< HEAD
           '/hero-bg.jpg',
           '/services-bg.jpg',
           '/team-bg.jpg'
@@ -47,12 +37,7 @@ children, title = 'Zion Tech Group - Leading Technology Solutions Provider','  d
         preloadFonts={[
           'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
         ]}
-      />
-=======
-'/hero-bg.jpg', '/services-bg.jpg','          '/team-bg.jpg''        ]}'        preloadFonts={['
-          'https: //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap''        ]}'      />
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      
+      />      
       <AccessibilityEnhancer>
         <div className="min-h-screen flex flex-col">
           <Header />

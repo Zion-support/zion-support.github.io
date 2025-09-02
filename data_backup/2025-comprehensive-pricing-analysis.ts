@@ -1,17 +1,17 @@
 export interface PricingAnalysis {
   serviceId: string;
-  serviceName: string;
-  category: string;
-  currentPrice: string;
-  period: string;
-  marketAnalysis: {
-    averageMarketPrice: string;
-    priceRange: string;
-    competitivePosition: string;
-    valueProposition: string;
-    targetMarket: string;
-    marketSize: string;
-    growthRate: string};
+   serviceName: string;
+   category: string;
+   currentPrice: string;
+   period: string;
+   marketAnalysis: { averageMarketPrice: string;
+   priceRange: string;
+   competitivePosition: string;
+   valueProposition: string;
+   targetMarket: string;
+   marketSize: string;
+   growthRate: string;
+};
   pricingStrategy: {
     strategy: string;
     justification: string;

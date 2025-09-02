@@ -1,24 +1,20 @@
 'use client,
-  ;'''''
-  'import Image from 'next/image
-  ;
-
-'
-  'interface OptimizedImageProps {src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  className?: string;
-priority?: boolean;''
-  '  quality?: number;''
-  '  placeholder?: 'blur
-  ' | 'empty
-  ;
- blurDataURL?: string;  sizes?: string;fill?: boolean;
-  style?: React.CSSProperties;
-  onClick?: () => void;
-  onLoad?: () => void;
-  onError?: () => void;
+  ';'''
+  'import Image from 'next/image;
+  ';interface OptimizedImageProps {
+  src: string;
+   alt: string;
+   width?: number;
+   height?: number;
+   className?: string;
+   priority?: boolean'; ' quality?: number'; ' placeholder?: 'blur ' | 'empty ;
+   blurDataURL?: string;
+   sizes?: string;
+  fill?: boolean;
+   style?: React.CSSProperties;
+   onClick?: () => void;
+   onLoad?: () => void;
+   onError?: () => void;
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
@@ -90,7 +86,7 @@ return();
   '        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}',
   '        style={{ width: fill ? '100% : width, height: fill ? '100%
   ' : height }}'      />
-  '    );`  }
+  '    )`;  }
 
   return();
     <div``      ref={imageRef}```      className={`relative ${className}`}`      style={style}
@@ -109,19 +105,12 @@ width={fill ? undefined : width}``        height={fill ? undefined : height}``` 
         fill={fill}
         onLoad={handleLoad}
         onError={handleError}
-<<<<<<< HEAD
         style={{,
   ''''
   '          objectFit: fill ? 'cover
   ' : 'contain}}'      />
   '
-      {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20">"""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>"        </div>"      )}</div>
-=======
-        style={{
-''''''          objectFit: fill ? 'cover' : 'contain'}}'      />'
-      {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20">"""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>"        </div>"      )}</div>"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  );
+      {/* Loading spinner */}"""      {isLoading && ("""        <div className="absolute inset-0 flex items-center justify-center z-20">"""          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>"        </div>"      )}</div>  );
 };
 
 // HOC for wrapping components with image optimization;
@@ -131,10 +120,5 @@ export const withImageOptimization = <P extends object>(;Component: React.Compon
   return (props: P) => (
     <Component {...props} />
   );
-};
-<<<<<<< HEAD
-'"`
-  '""export default OptimizedImage;'"`'"`""`
-=======
-'"`'""export default OptimizedImage;'"`'"`""`"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+}'"`;
+  '""export default OptimizedImage'"`;'"`""`

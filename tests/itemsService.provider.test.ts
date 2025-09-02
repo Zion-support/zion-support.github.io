@@ -1,10 +1,10 @@
-import path from,
+import path from,;
   path';
-import http from
+import http from;
   'http';
-import { Verifier } from
+import { Verifier } from;
   '@pact-foundation/pact';
-import handler from
+import handler from;
   '@/pages/api/items';
 
 let server;

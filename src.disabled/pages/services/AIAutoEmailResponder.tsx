@@ -2,7 +2,7 @@
 export { function };export default function AIAutoEmailResponder(...args[]):  {}
   return()
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
-    <div className = "min-h-screen bg-futuristic text-white">;"<SEO""
+    <div className = "min-h-screen bg-futuristic text-white">";<SEO""
         title="AI Auto Email Responder | Zion Tech Group""
         description="Automate customer email replies with secure AI, sentiment detection, intent routing, and CRM logging.""
       />""
@@ -15,9 +15,9 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
           (VPC, data redaction, PII filtering) and human-in-the-loop approvals included.
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
         </p>"""
-        <div className="grid gap-8 md:grid-cols-2 mt-10">;""
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;""
-            <h2 className="text-xl font-semibold mb-3">Key Capabilities</h2>;""
+        <div className="grid gap-8 md:grid-cols-2 mt-10">';
+          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">';
+            <h2 className="text-xl font-semibold mb-3">Key Capabilities</h2>';
             <ul className="space-y-2 text-sm text-zion-slate-light">;
               <li>• Intent/sentiment detection, priority triage</li>;
               <li>• Multi-lingual drafting with brand tone controls</li>;
@@ -42,10 +42,10 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
             </p>;
           </div>;
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
-        </div>;";""
-        <div className="mt-10 grid gap-8 md:grid-cols-3">;""
-          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">;""
-            <h3 className="font-semibold mb-2">Time-to-Value</h3>;""
+        </div>';;"
+        <div className="mt-10 grid gap-8 md:grid-cols-3">';
+          <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">';
+            <h3 className="font-semibold mb-2">Time-to-Value</h3>';
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx
             <p className="text-sm text-zion-slate-light">Deploy pilot in 7 days; typical 35–60% faster responses.</p>"
           </div>""

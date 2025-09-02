@@ -1,81 +1,30 @@
 :pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx
 export default function AIMetaverseDevelopmentPlatform() {
-    'AI-powered 3D world generation and design',;'
-    'Intelligent avatar creation and customization',;'
-    'Real-time virtual environment optimization',;'
-    'Advanced spatial computing and AR/VR integration',;'
-    'AI-driven social interaction and engagement',;'
-    'Metaverse economy and NFT marketplace tools';
-  ];'
-        'On-premise deployment options',;'
-        'Custom integrations and APIs',;'
-        'White-label solutions available',;'
-        'Enterprise security features';
-      ]};'
-        'Unlimited virtual worlds',''
+    'AI-powered 3D world generation and design',';Intelligent avatar creation and customization',';Real-time virtual environment optimization',';Advanced spatial computing and AR/VR integration',';AI-driven social interaction and engagement',';Metaverse economy and NFT marketplace tools';
+  ]';On-premise deployment options',';Custom integrations and APIs',';White-label solutions available',';Enterprise security features';
+      ]}';Unlimited virtual worlds',''
         'Custom AI algorithms',''
-        '24/7 dedicated support',;''
-        'On-premise deployment options',;''
-        'Custom integrations and APIs',;''
-        'White-label solutions available',;'        'Enterprise security features';
+        '24/7 dedicated support',';
+        'On-premise deployment options',';
+        'Custom integrations and APIs',';
+        'White-label solutions available',';Enterprise security features';
       ]};
-  ];'
-    'Virtual events and conferences',;'
-    'Gaming and entertainment platforms',;'
-    'Virtual real estate and architecture',;'
-    'Remote work and collaboration spaces',;'
-    'Education and training environments',;'
-    'Social networking and communities';
-  ];'
-    'Reduce development time by 50-70% with AI automation',;'
-    'Create immersive experiences that increase user engagement',;'
-    'Scale virtual worlds efficiently with intelligent optimization',;'
-    'Enable cross-platform compatibility and accessibility',;'
-    'Build sustainable metaverse economies and ecosystems';
-  ];'
-  const industries = [;''
-    'Gaming and Entertainment',;''
-    'Real Estate and Architecture',;''
-    'Education and Training',;''
-    'Healthcare and Telemedicine',;''
-    'Retail and E-commerce',;'    'Corporate and Enterprise';
+  ]';Virtual events and conferences',';Gaming and entertainment platforms',';Virtual real estate and architecture',';Remote work and collaboration spaces',';Education and training environments',';Social networking and communities';
+  ]';Reduce development time by 50-70% with AI automation',';Create immersive experiences that increase user engagement',';Scale virtual worlds efficiently with intelligent optimization',';Enable cross-platform compatibility and accessibility',';Build sustainable metaverse economies and ecosystems';
+  ]';
+  const industries = [';
+    'Gaming and Entertainment',';
+    'Real Estate and Architecture',';
+    'Education and Training',';
+    'Healthcare and Telemedicine',';
+    'Retail and E-commerce',';Corporate and Enterprise';
 export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevelopmentPlatform() {): any {}
-    'AI-powered 3D world generation and design',;
-    'Intelligent avatar creation and customization',;
-    'Real-time virtual environment optimization',;
-    'Advanced spatial computing and AR/VR integration',;
-    'AI-driven social interaction and engagement',;
-    'Metaverse economy and NFT marketplace tools';
-  ];
-
-        'On-premise deployment options',;
-        'Custom integrations and APIs',;
-        'White-label solutions available',;
-        'Enterprise security features';
+    'AI-powered 3D world generation and design',';Intelligent avatar creation and customization',';Real-time virtual environment optimization',';Advanced spatial computing and AR/VR integration',';AI-driven social interaction and engagement',';Metaverse economy and NFT marketplace tools';
+  ]';On-premise deployment options',';Custom integrations and APIs',';White-label solutions available',';Enterprise security features';
       ]};
-  ];
-
-    'Virtual events and conferences',;
-    'Gaming and entertainment platforms',;
-    'Virtual real estate and architecture',;
-    'Remote work and collaboration spaces',;
-    'Education and training environments',;
-    'Social networking and communities';
-  ];
-
-    'Reduce development time by 50-70% with AI automation',;
-    'Create immersive experiences that increase user engagement',;
-    'Scale virtual worlds efficiently with intelligent optimization',;
-    'Enable cross-platform compatibility and accessibility',;
-    'Build sustainable metaverse economies and ecosystems';
-  ];
-
-    'Gaming and Entertainment',;
-    'Real Estate and Architecture',;
-    'Education and Training',;
-    'Healthcare and Telemedicine',;
-    'Retail and E-commerce',;
-    'Corporate and Enterprise';
+  ]';Virtual events and conferences',';Gaming and entertainment platforms',';Virtual real estate and architecture',';Remote work and collaboration spaces',';Education and training environments',';Social networking and communities';
+  ]';Reduce development time by 50-70% with AI automation',';Create immersive experiences that increase user engagement',';Scale virtual worlds efficiently with intelligent optimization',';Enable cross-platform compatibility and accessibility',';Build sustainable metaverse economies and ecosystems';
+  ]';Gaming and Entertainment',';Real Estate and Architecture',';Education and Training',';Healthcare and Telemedicine',';Retail and E-commerce',';Corporate and Enterprise';
   ];
   return()
     <>
@@ -152,7 +101,7 @@ export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevel
         </section>
 
         {/* Key Features */}""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -189,7 +138,7 @@ export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevel
         </section>
 
         {/* Pricing Section */}""
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -258,7 +207,7 @@ export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevel
         </section>
 
         {/* Use Cases */}""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -295,7 +244,7 @@ export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevel
         </section>
 
         {/* Benefits */}""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -332,7 +281,7 @@ export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevel
         </section>
 
         {/* Industries */}""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -369,7 +318,7 @@ export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevel
         </section>
 
         {/* Contact Section */}""
-        <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">';
           <div className="max-w-4xl mx-auto text-center">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIMetaverseDevelopmentPlatform.tsx
@@ -433,7 +382,7 @@ export default function AIMetaverseDevelopmentPlatform(function AIMetaverseDevel
               href="https://ziontechgroup.com/contact""
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200""
             >
-              Get Started Today;""
+              Get Started Today';
               <ArrowRight className="ml-2 w-5 h-5"  />;            </a>;
           </div>;
         </section>;

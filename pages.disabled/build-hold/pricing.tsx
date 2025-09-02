@@ -1,13 +1,13 @@
 React from
   'react';
-import { motion } from
-  'framer-motion';'{ SEO } from
+import { motion } from;
+  'framer-motion';{ SEO } from
   '../components/SEO';
-import { Button } from
-  '../components/ui/Button';'{ Card } from
+import { Button } from;
+  '../components/ui/Button';{ Card } from
   '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';'import { ;'  CheckCircle, Star, 
+import { Badge } from;
+  '../components/ui/Badge';import { ';  CheckCircle, Star, 
   Zap, Shield, 
   Users, Globe, 
   Phone, Mail, 
@@ -19,8 +19,7 @@ import { Badge } from
   BarChart3, Rocket,
   Heart, Sparkles
 } from
-  'lucide-react';'
-  'const Pricing: React.FC = () => {
+  'lucide-react'';const Pricing: React.FC = () => {
   const pricingPlans = [;
     {;
       name: "Starter", price: "$299","      period: "/month", description: "Perfect for small businesses getting started with AI","      features: ["        "AI-powered analytics dashboard", "Basic automation tools","        "Email support", "Up to 5 team members","        "Standard integrations", "Monthly reports""      ], popular: false,"      color: "from-blue-500 to-cyan-500", buttonText: "Get Started","      buttonVariant: "outline" as const"    }, {"      name: "Professional","      price: "$799", period: "/month","      description: "Ideal for growing businesses with advanced needs", features: ["        "Advanced AI analytics","        "Custom automation workflows", "Priority support","        "Up to 25 team members", "Advanced integrations","        "Real-time reporting", "API access","        "Custom branding""      ], popular: true,"      color: "from-purple-500 to-pink-500", buttonText: "Start Free Trial","      buttonVariant: "default" as const"    }, {"      name: "Enterprise","      price: "Custom", period: "","      description: "Tailored solutions for large organizations", features: ["        "Unlimited AI capabilities","        "Custom AI model training", "Dedicated support team","        "Unlimited team members", "White-label solutions","        "Advanced security", "Custom integrations","        "24/7 phone support", "SLA guarantee""      ], popular: false,"      color: "from-orange-500 to-red-500", buttonText: "Contact Sales","      buttonVariant: "outline" as const"    }"  ];

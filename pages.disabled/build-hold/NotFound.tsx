@@ -1,12 +1,12 @@
 React from
   'react';
-import { motion } from
-  'framer-motion';'{ SEO } from
+import { motion } from;
+  'framer-motion';{ SEO } from
   '../components/SEO';
-import { Button } from
-  '../components/ui/Button';'{ Card } from
+import { Button } from;
+  '../components/ui/Button';{ Card } from
   '../components/ui/Card';
-import { ;'  Home, ArrowLeft,
+import { ';  Home, ArrowLeft,
   Search, HelpCircle,
   Phone, Mail,
   Globe, FileText,
@@ -15,10 +15,9 @@ import { ;'  Home, ArrowLeft,
   Calendar, Award,
   Shield
 } from
-  'lucide-react';'
-  'const NotFound: React.FC = () => {
+  'lucide-react'';const NotFound: React.FC = () => {
   const quickLinks = [;
-    { name: "Home", url: "/", icon: Home }, { name: "Services", url: "/services", icon: Briefcase },"    { name: "About", url: "/about", icon: Users }, { name: "Contact", url: "/contact", icon: Phone },"    { name: "Blog", url: "/blog", icon: BookOpen }, { name: "Pricing", url: "/pricing", icon: DollarSign },"    { name: "Team", url: "/team", icon: Award }, { name: "Webinars", url: "/webinars", icon: Calendar },"    { name: "White Papers", url: "/white-papers", icon: FileText }, { name: "Privacy Policy", url: "/privacy", icon: Shield }"  ];"
+    { name: "Home", url: "/", icon: Home }, { name: "Services", url: "/services", icon: Briefcase },"    { name: "About", url: "/about", icon: Users }, { name: "Contact", url: "/contact", icon: Phone },"    { name: "Blog", url: "/blog", icon: BookOpen }, { name: "Pricing", url: "/pricing", icon: DollarSign },"    { name: "Team", url: "/team", icon: Award }, { name: "Webinars", url: "/webinars", icon: Calendar },"    { name: "White Papers", url: "/white-papers", icon: FileText }, { name: "Privacy Policy", url: "/privacy", icon: Shield }"  ]";
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">"      <SEO "        title="Page Not Found - Zion Tech Group" "        description="The page you&apos;re looking for doesn&apos;t exist. Find what you need with our helpful navigation and search options.""      />"      
       <div className="max-w-4xl mx-auto text-center">"        <motion.div"          initial={{ opacity: 0, y: 20 }}
@@ -48,7 +47,7 @@ import { ;'  Home, ArrowLeft,
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12""          >"            <Button 
-              size="lg" "              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white""              onClick={() => window.history.back()}"            >
+              size="lg" "              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white               onClick={() => window.history.back()}">
               <ArrowLeft className="w-5 h-5 mr-2" />"              Go Back"            </Button>
             <Button 
               size="lg" "              variant="outline""              onClick={() => window.location.href = '/

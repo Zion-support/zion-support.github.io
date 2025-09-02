@@ -1,6 +1,6 @@
-import React, { useState } from
+import React, { useState } from;
   'react';
-import { Link, useLocation } from
+import { Link, useLocation } from;
   'react-router-dom';
 import {
   Home,
@@ -33,13 +33,14 @@ import {
   PieChart,
   BarChart,
   X,
-} from
+} from;
   'lucide-react';
 
 interface SidebarItem {
   name: string;
-  path: string;
-  icon: React.ComponentType<{ className?: string }>;
+   path: string;
+   icon: React.ComponentType<{ className?: string;
+}>;
   children?: SidebarItem[];
   badge?: string;
   external?: boolean;
@@ -334,7 +335,7 @@ export function Sidebar() {
 
 interface SidebarProps {
   isOpen: boolean;
-  onClose: () => void;
+   onClose: () => void;
 }
 
 export default function SidebarWrapper({ isOpen, onClose }: SidebarProps) {

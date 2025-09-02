@@ -1,17 +1,16 @@
-<<<<<<< HEAD:pages.disabled_auto/services/it-services.tsx
-import React from,
+:pages.disabled_auto/services/it-services.tsx
+import React from,;
   react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../../components/layout/MainLayout';
-import { getServicesByCategory } from
+import { getServicesByCategory } from;
   '../../data/services';
-import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from
+import { ArrowRight, CheckCircle, Shield, Zap, Users, Globe } from;
   'lucide-react';
-import Link from
+import Link from;
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -22,10 +21,9 @@ import {
   Shield,
   Zap,
   Users,
-  Globe,
+  Globe,;
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/it-services.tsx
 
 const ITServicesPage: NextPage = () => {
   const itServices = getServicesByCategory(
@@ -34,7 +32,7 @@ const ITServicesPage: NextPage = () => {
   const benefits = [
     {
       icon: <Shield className="w-8 h-8" />,
-<<<<<<< HEAD:pages.disabled_auto/services/it-services.tsx
+:pages.disabled_auto/services/it-services.tsx
       title:,
   Enterprise Security',
       description: 'Bank-level security protocols and compliance standards to protect your business data.
@@ -57,7 +55,6 @@ const ITServicesPage: NextPage = () => {
   Global Support',
       description: '24/7 support and monitoring to ensure your systems run smoothly.
     }
-=======
       title: 'Enterprise Security',
       description:
         'Bank-level security protocols and compliance standards to protect your business data.',
@@ -80,7 +77,6 @@ const ITServicesPage: NextPage = () => {
       description:
         '24/7 support and monitoring to ensure your systems run smoothly.',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/it-services.tsx
   ];
 
   return (

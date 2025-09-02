@@ -1,22 +1,21 @@
-<<<<<<< HEAD:src.disabled/components/layout/EnhancedSidebar.tsx
-import React from
+:src.disabled/components/layout/EnhancedSidebar.tsx
+import React from;
   'react';
-import { Link, useLocation } from
+import { Link, useLocation } from;
   'react-router-dom';
 
 interface SidebarProps {
-=======
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+  import React from 'react';
+   import { Link, useLocation;
+} from 'react-router-dom';
 ;
-interface SidebarProps {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx
-  isOpen: boolean;
-  onClose: () => void;
+interface SidebarProps {
+   isOpen: boolean;
+   onClose: () => void;
 };
 export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
   const location = useLocation();
-<<<<<<< HEAD:src.disabled/components/layout/EnhancedSidebar.tsx
+:src.disabled/components/layout/EnhancedSidebar.tsx
 
   const items = [
     { label:,
@@ -31,7 +30,6 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
   About', href: '/about },
     { label:,
   Contact', href: '/contact }
-=======
 ;
   const items = [;
     { label: 'Home', href: '/' },;
@@ -40,11 +38,10 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
     { label: 'Request Quote', href: '/request-quote' },;
     { label: 'About', href: '/about' },;
     { label: 'Contact', href: '/contact' };
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx
   ];
 ;
   if (!isOpen) return null;
-<<<<<<< HEAD:src.disabled/components/layout/EnhancedSidebar.tsx
+:src.disabled/components/layout/EnhancedSidebar.tsx
 
   return (
     <aside className="fixed inset-y-0 left-0 z-40 w-72 bg-white border-r border-gray-200 shadow-lg">
@@ -67,7 +64,6 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
         ))}
       </nav>
     </aside>
-=======
 ;
   return (;
     <aside className="fixed inset-y-0 left-0 z-40 w-72 bg-white border-r border-gray-200 shadow-lg">";
@@ -89,7 +85,6 @@ export function EnhancedSidebar({ isOpen, onClose }: SidebarProps) {;
         ))};
       </nav>;
     </aside>;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/layout/EnhancedSidebar.tsx
   );
 };
-export default EnhancedSidebar;";
+export default EnhancedSidebar";;

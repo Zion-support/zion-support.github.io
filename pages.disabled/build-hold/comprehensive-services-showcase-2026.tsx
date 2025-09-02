@@ -3,8 +3,8 @@ import React, { useState } from,
   react''import { Link } from
   'react-router-dom''import { ArrowRight, Star, Users, TrendingUp, Clock, Shield, Zap, Brain, Cloud, Database, Code, Building, Rocket } from
   'lucide-react''import PageTransition from
-  '../src/components/PageTransition''import { comprehensiveExpandedServices, serviceCategories } from
-  '../data/comprehensive-2026-expanded-services'';'export default function ComprehensiveServicesShowcase2026() {
+  '../src/components/PageTransition''import { comprehensiveExpandedServices, serviceCategories } from;
+  '../data/comprehensive-2026-expanded-services'';export default function ComprehensiveServicesShowcase2026() {
 	const title =
   'Comprehensive Services Showcase 2026 — Zion Tech Group''	const description =
   'Explore our expanded portfolio of AI, cloud, data, and emerging technology solutions designed to transform your business.''

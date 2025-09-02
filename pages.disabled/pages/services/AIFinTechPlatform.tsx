@@ -15,7 +15,7 @@ import {}
   Users,
   Database,
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-  Lock,''
+  Lock,'';
   PieChart} from 'lucide-react.ts';              AI-Powered FinTech
             </Badge>""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400 bg-clip-text text-transparent">
@@ -845,8 +845,6 @@ const AIFinTechPlatform: React.FC = (): JSX.Element => {}
     </div>
   )};
 :pages.disabled/pages/services/AIFinTechPlatform.tsx
-export default AIFinTechPlatform;'"
-'"'"
+export default AIFinTechPlatform'';"'"
 
-export default AIFinTechPlatform;
-'""
+export default AIFinTechPlatform'';

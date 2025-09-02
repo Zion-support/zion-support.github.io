@@ -75,13 +75,13 @@ export default function CybersecurityServicesPage(...args: any[]): any {
 ,
   case 'one-time
   ': return 'One-time
-  ';'
+  ';
       case
   'monthly': return
-  'Monthly';'
+  'Monthly';
       case
   'hourly': return
-  'Hourly';'      case
+  'Hourly';      case
   'project-based': return
   'Project-based;
       default: return model}
@@ -455,11 +455,11 @@ function SecurityServiceCard(...args: any[]): any {,
     switch (model) {
   '"
       case 'monthly
-  ': return <Clock className="w-4 h-4"  />;'"
+  ': return <Clock className="w-4 h-4"  />'";
       case
-  'hourly': return <Zap className="w-4 h-4"  />;'"
+  'hourly': return <Zap className="w-4 h-4"  />'";
       case
-  'project-based: return <Zap className="w-4 h-4"  />;"
+  'project-based: return <Zap className="w-4 h-4"  />";
       default: return <DollarSign className="w-4 h-4"  />}
   };
 
@@ -476,13 +476,13 @@ function SecurityServiceCard(...args: any[]): any {,
 ,
   case 'one-time
   ': return 'One-time
-  ';'
+  ';
       case
   'monthly': return
-  'Monthly';'
+  'Monthly';
       case
   'hourly': return
-  'Hourly';'      case
+  'Hourly';      case
   'project-based': return
   'Project-based;
       default: return model}

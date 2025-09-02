@@ -1,18 +1,17 @@
 export interface Innovative2025Service {
   id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
-  contactInfo: {
-    mobile: string;
-    email: string;
-address: string;
-  };export const innovative2025Services: Innovative2025Service[] = [
+   name: string;
+   tagline: string;
+   price: string;
+   description: string;
+   features: string[];
+   link: string;
+   category: string;
+   realImplementation: boolean;
+   contactInfo: { mobile: string;
+   email: string;
+   address: string;
+};export const innovative2025Services: Innovative2025Service[] = [
   {
     id: "ai-innovation-hub",
     name: "AI Innovation Hub",

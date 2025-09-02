@@ -1,7 +1,6 @@
-import { useState } from 'react';''
-import { motion  } from 'framer-motion';'
-;''
-import { useState } from 'react';'''
+import { useState } from 'react'';
+import { motion  } from 'framer-motion';;'
+import { useState } from 'react'';
 import { motion } from 'framer-motion';
 import { Calculator, Clock, CheckCircle, AlertCircle, Send, Phone, Mail, MapPin, Star, Users, Zap, Shield, Brain, Cloud, Smartphone, Globe, Database, BarChart3, Palette, Code, Server, Wifi, Briefcase export { function };
 export default function RequestQuote() {}
@@ -19,8 +18,8 @@ export default function RequestQuote() {}
         timeline: '','''
         description: '','''
         urgency: 'medium'''
-    });'''
-    const [submissionStatus, setSubmissionStatus] = useState('idle');'''
+    })';'
+    const [submissionStatus, setSubmissionStatus] = useState('idle')';'
     const projectTypes = [''''
         { value: 'web-development', label: 'Web Development', icon: Globe, description: 'Custom websites and web applications' },'''
         { value: 'mobile-app', label: 'Mobile App Development', icon: Smartphone, description: 'iOS and Android applications' },'''
@@ -34,7 +33,7 @@ export default function RequestQuote() {}
         { value: 'network-infrastructure', label: 'Network Infrastructure', icon: Wifi, description: 'Network design and setup' },'''
         { value: 'database-design', label: 'Database Design', icon: Database, description: 'Database architecture and optimization' },'''
         { value: 'consulting', label: 'IT Consulting', icon: Briefcase, description: 'Strategic technology guidance' }''
-    ];'''
+    ]';'
     const budgetRanges = [''''
         { value: 'under-10k', label: 'Under $10,000', description: 'Small projects and MVPs' },'''
         { value: '10k-25k', label: '$10,000 - $25,000', description: 'Medium-sized applications' },'''
@@ -42,7 +41,7 @@ export default function RequestQuote() {}
         { value: '50k-100k', label: '$50,000 - $100,000', description: 'Enterprise solutions' },'''
         { value: '100k-plus', label: '$100,000+', description: 'Large-scale projects' },'''
         { value: 'custom', label: 'Custom Pricing', description: 'Let\'s discuss your needs' }''
-    ];'''
+    ]';'
     const timelineOptions = [''''
         { value: 'asap', label: 'ASAP', description: 'Immediate start required' },'''
         { value: '1-2-weeks', label: '1-2 Weeks', description: 'Quick turnaround needed' },'''
@@ -50,7 +49,7 @@ export default function RequestQuote() {}
         { value: '2-3-months', label: '2-3 Months', description: 'Complex project timeline' },'''
         { value: '3-plus-months', label: '3+ Months', description: 'Long-term project' },'''
         { value: 'flexible', label: 'Flexible', description: 'Timeline can be discussed' }''
-    ];'''
+    ]';'
     const urgencyLevels = [''''
         { value: 'low', label: 'Low', description: 'No immediate deadline', color: 'text-green-400' },'''
         { value: 'medium', label: 'Medium', description: 'Standard project timeline', color: 'text-yellow-400' },'''
@@ -64,7 +63,7 @@ export default function RequestQuote() {}
             [name]: value;
         }))};
     const handleSubmit = async(e) => {}
-        e.preventDefault();'
+        e.preventDefault()';
         setSubmissionStatus('submitting');
         // Simulate API call;
         setTimeout(() => {}
@@ -88,7 +87,7 @@ export default function RequestQuote() {}
                     timeline: '','''
                     description: '','''
                     urgency: 'medium'''
-                });'''
+                })';'
                 setSubmissionStatus('idle')}, 3000)}, 2000)};
     const isFormValid = formData.firstName && formData.lastName && formData.email && formData.projectType;
     return (<div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">"""
@@ -100,8 +99,7 @@ export default function RequestQuote() {}
   y: 30;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 }} transition={{ duration: 0.8 }}>""""
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl p-4 mb-8">""""
               <Calculator className="w-10 h-10 text-white"/>"""
@@ -124,8 +122,7 @@ export default function RequestQuote() {}
   y: 0;
 }} transition = {}
   { duration: 0.6,
-  delay: 0.1;
-"""
+  delay: 0.1';"
 """"
 }} className="flex items-center justify-center space-x-3 text-white/80">""""
                 <Clock className="w-5 h-5 text-cyan-400"/>
@@ -139,8 +136,7 @@ export default function RequestQuote() {}
   y: 0;
 }} transition = {}
   { duration: 0.6,
-  delay: 0.2;
-"""
+  delay: 0.2';"
 """"
 }} className="flex items-center justify-center space-x-3 text-white/80">""""
                 <CheckCircle className="w-5 h-5 text-green-400"/>
@@ -154,8 +150,7 @@ export default function RequestQuote() {}
   y: 0;
 }} transition = {}
   { duration: 0.6,
-  delay: 0.3;
-"""
+  delay: 0.3';"
 """"
 }} className="flex items-center justify-center space-x-3 text-white/80">""""
                 <Calculator className="w-5 h-5 text-purple-400"/>
@@ -177,8 +172,7 @@ export default function RequestQuote() {}
   x: -30;
 }} whileInView = {}
   { opacity: 1,
-  x: 0;
-"""
+  x: 0';"
 """"
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">""""
                 <h2 className="text-3xl font-bold text-white mb-8">Project Details</h2>"""
@@ -295,8 +289,7 @@ export default function RequestQuote() {}
   y: 10;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} className="flex items-center p-4 bg-green-500/20 border border-green-500/50 rounded-lg">""""
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3"/>""""
@@ -310,8 +303,7 @@ export default function RequestQuote() {}
   y: 10;
 }} animate = {}
   { opacity: 1,
-  y: 0;
-"""
+  y: 0';"
 """"
 }} className="flex items-center p-4 bg-red-500/20 border border-red-500/50 rounded-lg">""""
                       <AlertCircle className="w-5 h-5 text-red-400 mr-3"/>""""
@@ -330,8 +322,7 @@ export default function RequestQuote() {}
   x: 30;
 }} whileInView = {}
   { opacity: 1,
-  x: 0;
-"""
+  x: 0';"
 """"
 }} viewport={{ once: true }} transition={{ duration: 0.8 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">""""
                 <h3 className="text-xl font-bold text-white mb-4">Get in Touch</h3>""""
@@ -359,8 +350,7 @@ export default function RequestQuote() {}
   x: 0;
 }} viewport={{ once: true }} transition = {}
   { duration: 0.8,
-  delay: 0.2;
-"""
+  delay: 0.2';"
 """"
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">""""
                 <h3 className="text-xl font-bold text-white mb-4">Why Choose Us</h3>""""
@@ -404,8 +394,7 @@ export default function RequestQuote() {}
   x: 0;
 }} viewport={{ once: true }} transition = {}
   { duration: 0.8,
-  delay: 0.4;
-"""
+  delay: 0.4';"
 """"
 }} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">""""
                 <h3 className="text-xl font-bold text-white mb-4">Our Process</h3>""""

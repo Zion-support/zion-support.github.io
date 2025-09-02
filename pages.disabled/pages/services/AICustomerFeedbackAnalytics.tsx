@@ -40,19 +40,19 @@ import { MessageSquare,
   Activity,
   ShoppingCart,
   Shield,
-  Settings'
+  Settings';
  } from 'lucide-react.ts';
 
 export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
     },;
     {;
-      icon: Activity,;""
-      title: "Automated Reporting",;""
+      icon: Activity,';
+      title: "Automated Reporting",';
       description: "Generate comprehensive reports and alerts for stakeholders with actionable insights and recommendations."};
   ]},;
     {;
-      icon: Clock,;""
-      title: "Time Savings",;""
+      icon: Clock,';
+      title: "Time Savings",';
       description: "Automate feedback analysis and reporting, saving hours of manual work each week."};
   ];
 
@@ -105,18 +105,18 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
         "Dedicated account manager",""
         "White-label solutions",""
         "Advanced security features",""
-        "Custom reporting",;""
-        "On-premise deployment options",;""
+        "Custom reporting",';
+        "On-premise deployment options",';
         "SLA guarantees";
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx      cta: "Contact Sales",;
       popular: false};
-  ]},;"
-      ],;""
+  ]},";
+      ],';
       cta: "Contact Sales",;
       popular: false};
   ]},;
-    {;""
-      industry: "Manufacturing",;"      description: "Track customer satisfaction with products, service quality, and identify improvement areas",;
+    {';
+      industry: "Manufacturing",";      description: "Track customer satisfaction with products, service quality, and identify improvement areas",;
       icon: Settings};
   ];
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx
@@ -158,13 +158,13 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
     {
 "
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx
-      name: "Review Platforms",;"
+      name: "Review Platforms",";
     {}
 ""
-      name: "Review Platforms",;""
+      name: "Review Platforms",';
       platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"]},;
-    {;""
-      name: "Analytics Tools",;""
+    {';
+      name: "Analytics Tools",';
       platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"]};  ];
 
   return (""
@@ -189,11 +189,11 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-purple-900/20"></div>
         "
 >""
-      name: "Review Platforms",;""
-      platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"]},;"
-    {;""
-      name: "Analytics Tools",;""
-      platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"]};  ];"
+      name: "Review Platforms",';
+      platforms: ["Google Reviews", "Yelp", "Trustpilot", "G2"]},";
+    {';
+      name: "Analytics Tools",';
+      platforms: ["Google Analytics", "Mixpanel", "Amplitude", "Hotjar"]};  ]";
   return (""
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       <SEO""
@@ -977,7 +977,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
         </div>;
       </section>;
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx
-    </div>;'"`
+    </div>'"`;
   )}'"`'"`
     </div>;
   )}'"`

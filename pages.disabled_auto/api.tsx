@@ -1,15 +1,14 @@
-<<<<<<< HEAD:pages.disabled_auto/api.tsx
-import React from,
+:pages.disabled_auto/api.tsx
+import React from,;
   react';
-import type { NextPage } from
+import type { NextPage } from;
   'next';
-import MainLayout from
+import MainLayout from;
   '../components/layout/MainLayout';
-import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
+import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from;
   'lucide-react';
-import Link from
+import Link from;
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -21,15 +20,14 @@ import {
   Shield,
   Zap,
   BookOpen,
-  ExternalLink,
+  ExternalLink,;
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
 
 const API: NextPage = () => {
   const apiEndpoints = [
     {
-<<<<<<< HEAD:pages.disabled_auto/api.tsx
+:pages.disabled_auto/api.tsx
       method:
   'GET,
       endpoint:,
@@ -96,7 +94,6 @@ const API: NextPage = () => {
     { name:,
   Ruby', version: '1.1.0, icon:
   '💎' }
-=======
       method: 'GET',
       endpoint: '/api/v1/users',
       description: 'Retrieve user information',
@@ -141,7 +138,6 @@ const API: NextPage = () => {
     { name: 'Java', version: '1.3.0', icon: '☕' },
     { name: 'Go', version: '1.2.0', icon: '🐹' },
     { name: 'Ruby', version: '1.1.0', icon: '💎' },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
   ];
 
   return (
@@ -324,7 +320,7 @@ const API: NextPage = () => {
                     {apiEndpoints.map((endpoint, index) => (
                       <tr key={index} className="hover: bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap">
-<<<<<<< HEAD:pages.disabled_auto/api.tsx
+:pages.disabled_auto/api.tsx
                           <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
                             endpoint.method ===,
   GET' ?
@@ -336,7 +332,6 @@ const API: NextPage = () => {
   'bg-yellow-100 text-yellow-800' :
   'bg-red-100 text-red-800
                           }`}>
-=======
                           <span
                             className={`px-2 py-1 text-xs font-semibold rounded-full ${
                               endpoint.method === 'GET'
@@ -348,7 +343,6 @@ const API: NextPage = () => {
                                     : 'bg-red-100 text-red-800'
                             }`}
                           >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                             {endpoint.method}
                           </span>
                         </td>

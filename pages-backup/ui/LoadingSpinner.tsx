@@ -7,9 +7,7 @@ type LoadingSpinnerProps = {
   'lg' |
   'xl';
   className?: string;
-  text?: string};
-
-      "
+  text?: string}";
       <span className="sr-only">Loading...</span>
     </div>
   );

@@ -2,16 +2,16 @@ import React, { useEffect, useCallback, useState } from 'react';
 
 interface ModernUIEnhancerProps {
   children?: React.ReactNode;
-  enabled?: boolean;
-  enableDarkMode?: boolean;
-  enableThemeSystem?: boolean;
-  enableGlassmorphism?: boolean;
-  enableGradients?: boolean;
-  enableAnimations?: boolean;
-  enableCustomCursor?: boolean;
-  enableLoadingStates?: boolean;
-  enableScrollProgress?: boolean;
-  enableMicroInteractions?: boolean;
+   enabled?: boolean;
+   enableDarkMode?: boolean;
+   enableThemeSystem?: boolean;
+   enableGlassmorphism?: boolean;
+   enableGradients?: boolean;
+   enableAnimations?: boolean;
+   enableCustomCursor?: boolean;
+   enableLoadingStates?: boolean;
+   enableScrollProgress?: boolean;
+   enableMicroInteractions?: boolean;
 }
 
 export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({ 
@@ -230,8 +230,7 @@ export const ModernUIEnhancer: React.FC<ModernUIEnhancerProps> = ({
       height: 3px;
       background: var(--gradient-primary);
       z-index: 9999;
-      transition: width 0.1s ease;
-    `;
+      transition: width 0.1s ease`;;
     document.body.appendChild(progressBar);
 
     const updateScrollProgress = () => {

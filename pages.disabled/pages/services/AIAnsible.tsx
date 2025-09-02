@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIAnsible.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAnsible() {
-    'Automated Ansible monitoring and alerting',;'
-    'Predictive analytics for Ansible scaling',;'
-    'Smart Ansible security and compliance',;'
-    'AI-driven Ansible automation and orchestration',;'
-    'Real-time Ansible analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAnsible(function AIAnsible() {): any {}
-    'Automated Ansible monitoring and alerting',;
-    'Predictive analytics for Ansible scaling',;
-    'Smart Ansible security and compliance',;
-    'AI-driven Ansible automation and orchestration',;
-    'Real-time Ansible analytics and insights',;
-    'Custom AI models for Ansible applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAnsible() {;
+    'Automated Ansible monitoring and alerting',';Predictive analytics for Ansible scaling',';Smart Ansible security and compliance',';AI-driven Ansible automation and orchestration',';Real-time Ansible analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIAnsible(function AIAnsible() {): any {};
+    'Automated Ansible monitoring and alerting',';Predictive analytics for Ansible scaling',';Smart Ansible security and compliance',';AI-driven Ansible automation and orchestration',';Real-time Ansible analytics and insights',';Custom AI models for Ansible applications';
 <:pages.disabled/pages/services/AIAnsible.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$1,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,999/mo', ';
       details: ['Unlimited storage',Custom AI models',Full Ansible suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Ansible optimization',;'
-    'Ansible management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Ansible scaling and management';
-  ];
-
-  '
-    'Improve Ansible performance by 50-80%',;'
-    'Reduce Ansible deployment time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance Ansible reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale Ansible operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Ansible optimization',';Ansible management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Ansible scaling and management';
+  ]';Improve Ansible performance by 50-80%',';Reduce Ansible deployment time by 40-70%',';Cut operational costs by 35-65%',';Enhance Ansible reliability and scalability',';Optimize resource utilization',';Scale Ansible operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIAnsible.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

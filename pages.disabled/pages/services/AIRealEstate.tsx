@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIRealEstate.tsx
-import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate() {
-    'Automated market trend forecasting',;'
-    'Predictive analytics for investment opportunities',;'
-    'Smart contract automation and management',;'
-    'Virtual property tours and 3D visualization',;'
-    'Integration with major real estate platforms',;'
-import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate(function AIRealEstate() {): any {}
-    'Automated market trend forecasting',;
-    'Predictive analytics for investment opportunities',;
-    'Smart contract automation and management',;
-    'Virtual property tours and 3D visualization',;
-    'Integration with major real estate platforms',;
-    'Custom AI models for local market insights';
+import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate() {;
+    'Automated market trend forecasting',';Predictive analytics for investment opportunities',';Smart contract automation and management',';Virtual property tours and 3D visualization',';Integration with major real estate platforms',';
+import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, Building, BarChart3 export default function AIRealEstate(function AIRealEstate() {): any {};
+    'Automated market trend forecasting',';Predictive analytics for investment opportunities',';Smart contract automation and management',';Virtual property tours and 3D visualization',';Integration with major real estate platforms',';Custom AI models for local market insights';
 <:pages.disabled/pages/services/AIRealEstate.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
 >    { ;
       name: 'Enterprise', ;
       price: '$1,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$1,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$1,499/mo', ';
       details: ['Unlimited properties',Custom AI models',Full platform integration',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Residential property valuation and sales',;'
-    'Commercial real estate investment analysis',;'
-    'Property management and optimization',;'
-    'Market research and trend analysis',;'
-    'Investment portfolio management',;'
-    'Development project feasibility studies';
-  ];
-
-  '
-    'Improve property valuation accuracy by 25-40%',;'
-    'Reduce time-to-sale by 30-50%',;'
-    'Increase commission revenue by 20-35%',;'
-    'Optimize pricing strategies for maximum profit',;'
-    'Enhance client satisfaction and retention',;'
-    'Scale operations without additional staff';
-  ];
-
-  '
-    'Residential Real Estate',;'
-    'Commercial Real Estate',;'
-    'Property Management',;'
-    'Real Estate Investment',;'
-    'Development & Construction',;'
-    'Property Technology';
+  ]';Residential property valuation and sales',';Commercial real estate investment analysis',';Property management and optimization',';Market research and trend analysis',';Investment portfolio management',';Development project feasibility studies';
+  ]';Improve property valuation accuracy by 25-40%',';Reduce time-to-sale by 30-50%',';Increase commission revenue by 20-35%',';Optimize pricing strategies for maximum profit',';Enhance client satisfaction and retention',';Scale operations without additional staff';
+  ]';Residential Real Estate',';Commercial Real Estate',';Property Management',';Real Estate Investment',';Development & Construction',';Property Technology';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Home, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap,
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-amber-600 text-amber-600 rounded-lg hover:bg-amber-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIRealEstate.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

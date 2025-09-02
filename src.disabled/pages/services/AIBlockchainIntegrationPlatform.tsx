@@ -1,7 +1,7 @@
-import React from
-  'react'; import { motion } from
-  'framer-motion'; import { Link, Shield, Zap, CheckCircle, Star, Users, Globe, Lock, Database, Network, BarChart3, ArrowRight, Sparkles, Target, Rocket, TrendingUp, Activity, Microscope, Brain, CircuitBoard, Layers, Workflow, Settings, Play, Coins, Wallet, FileText, Key, Smartphone, Building, CreditCard, PieChart } from
-  'lucide-react'; import { SEO } from
+import React from;
+  'react'; import { motion } from;
+  'framer-motion'; import { Link, Shield, Zap, CheckCircle, Star, Users, Globe, Lock, Database, Network, BarChart3, ArrowRight, Sparkles, Target, Rocket, TrendingUp, Activity, Microscope, Brain, CircuitBoard, Layers, Workflow, Settings, Play, Coins, Wallet, FileText, Key, Smartphone, Building, CreditCard, PieChart } from;
+  'lucide-react'; import { SEO } from;
   '../../components/SEO'; const AIBlockchainIntegrationPlatform = () => { const features = [ { icon: Link, title:,
   Smart Contract Automation', description: AI-powered smart contract development, deployment, and management with automated optimization' }, { icon: Shield, title:,
   Blockchain Security', description: Advanced security protocols, vulnerability detection, and threat prevention for blockchain networks' }, { icon: Zap, title:,

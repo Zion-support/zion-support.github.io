@@ -1,9 +1,9 @@
-import React, { useState } from 'react';'''
+import React, { useState } from 'react'';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const Navigation = () => {}
+import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const Navigation = () => {};
     const [isOpen, setIsOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
-    const location = useLocation();'
+    const location = useLocation()';
     const navigationItems = [''
         { name: 'Home', href: '/', icon: Globe },'
         { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },'
@@ -14,7 +14,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
         {}
 '
             name: 'AI & Machine Learning',
-            services[;'
+            services[';
                 { name: 'AI-Powered CRM', href: '/comprehensive-services#ai-powered-crm' },'
                 { name: 'Quantum Computing', href: '/comprehensive-services#quantum-computing-simulation' },'
                 { name: 'Edge AI Computing', href: '/comprehensive-services#edge-ai-computing' }
@@ -23,7 +23,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
         {}
 '
             name: 'Emerging Technologies',
-            services[;'
+            services[';
                 { name: 'Blockchain Solutions', href: '/comprehensive-services#blockchain-supply-chain' },'
                 { name: 'AR/VR Business', href: '/comprehensive-services#ar-vr-business-solutions' },'
                 { name: 'IoT Intelligence', href: '/comprehensive-services#iot-intelligence-hub' }
@@ -32,7 +32,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
         {}
 '
             name: 'Industry Solutions',
-            services[;'
+            services[';
                 { name: 'Healthcare IT', href: '/comprehensive-services#healthcare-it-solutions' },'
                 { name: 'FinTech Solutions', href: '/comprehensive-services#fintech-solutions-pro' },'
                 { name: 'GreenTech Analytics', href: '/comprehensive-services#greentech-analytics' }
@@ -116,7 +116,7 @@ import { Menu, X, Phone, Globe, Brain, Zap, Shield, Building, ChevronDown const 
           <div className="px-2 pt-2 pb-3 space-y-1 bg-zion-blue-dark border-t border-zion-blue-light/30">
             {navigationItems.map((item) => {}
 `
-                const Icon = item.icon;``
+                const Icon = item.icon`;
                 return (<Link key={item.name} to={item.href} className={`flex items-center space-x-2 px-3 py-2 rounded-lg text-base font-medium transition-colors ${isActive(item.href)'`
                         ? 'text-zion-cyan bg-zion-cyan/10''`'"`
                         : 'text-zion-slate-light hover:text-white hover:bg-white/10'}`} onClick={() => setIsOpen(false)}>""""

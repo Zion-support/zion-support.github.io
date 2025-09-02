@@ -34,7 +34,7 @@ import { Brain,
   DollarSign,
   Shield,
   Headphones,
-  Rocket'
+  Rocket';
  } from 'lucide-react';
 ;
 export { function };
@@ -45,31 +45,31 @@ export default function AIContentMarketingAutomation(...args[]):  {}
     "Intelligent audience targeting and segmentation",""
     "Real-time performance analytics and optimization",""
     "SEO-optimized content creation",""
-    "Social media scheduling and automation",;""
-    "Email marketing campaign automation",;""
-    "Content calendar management",;""
-    "Brand voice consistency maintenance",;""
-    "A/B testing and optimization",;""
-    "Competitor analysis and insights",;""
+    "Social media scheduling and automation",';
+    "Email marketing campaign automation",';
+    "Content calendar management",';
+    "Brand voice consistency maintenance",';
+    "A/B testing and optimization",';
+    "Competitor analysis and insights",';
     "ROI tracking and attribution modeling";
   ];
 
-  const benefits: any = [;""
-    "Increase content production by 300%",;""
-    "Improve engagement rates by 45%",;""
-    "Reduce content creation costs by 60%",;""
-    "Boost SEO rankings by 35%",;""
+  const benefits: any = [';
+    "Increase content production by 300%",';
+    "Improve engagement rates by 45%",';
+    "Reduce content creation costs by 60%",';
+    "Boost SEO rankings by 35%",';
     "Automate 80% of marketing workflows";
   ];
 
   const useCases: any = [""
     "E-commerce content marketing",""
-    "B2B lead generation campaigns",;""
-    "Social media management",;""
-    "Email marketing automation",;""
-    "Blog and article creation",;""
-    "Video content marketing",;""
-    "Influencer collaboration",;""
+    "B2B lead generation campaigns",';
+    "Social media management",';
+    "Email marketing automation",';
+    "Blog and article creation",';
+    "Video content marketing",';
+    "Influencer collaboration",';
     "Event marketing campaigns";
   ];
 
@@ -81,18 +81,17 @@ export default function AIContentMarketingAutomation(...args[]):  {}
       period: "/month",""
       description: "Perfect for small businesses and startups",
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx
-      features[;"
-        "AI content generation (50 pieces/month)","
+      features[';AI content generation (50 pieces/month)","
         "Basic social media automation","
         "Email campaign templates","
         "Basic analytics dashboard","
-        "Email support"      features[;""
+        "Email support"      features[';
         "AI content generation (50 pieces/month)",""
         "Basic social media automation",""
         "Email campaign templates",""
         "Basic analytics dashboard",""
         "Email support""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: false;
     },
@@ -107,14 +106,14 @@ export default function AIContentMarketingAutomation(...args[]):  {}
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       description: "Ideal for growing businesses and marketing teams","
       description: "Ideal for growing businesses and marketing teams",
-      features[;""
+      features[';
         "AI content generation (200 pieces/month)",""
         "Advanced social media automation",""
         "Multi-channel distribution",""
         "Advanced analytics and reporting",""
         "SEO optimization tools",""
         "Priority support""
-      ],;""
+      ],';
       cta: "Start Free Trial",
       popular: true;
     },
@@ -129,17 +128,16 @@ export default function AIContentMarketingAutomation(...args[]):  {}
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx
       description: "For large organizations with complex needs","
       description: "For large organizations with complex needs",
-      features[;""
+      features[';
         "Unlimited AI content generation",""
         "Custom AI model training",""
         "Advanced audience targeting",""
         "White-label solutions",""
-        "API access",;""
-        "Dedicated account manager",;""
+        "API access",';
+        "Dedicated account manager",';
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx
-        "24/7 phone support";"
-        "24/7 phone support";
-      ],;""
+        "24/7 phone support"';24/7 phone support";
+      ],';
       cta: "Contact Sales",;
       popular: false};
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx
@@ -247,7 +245,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
       </section>
 
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -349,7 +347,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -451,7 +449,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -543,7 +541,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
                     : 'border-gray-700'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-medium">
                       Most Popular;
@@ -602,7 +600,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div;
             initial = {}
@@ -704,7 +702,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial = {}
@@ -779,7 +777,7 @@ export default function AIContentMarketingAutomation(...args[]):  {}
       </section>
 
       {/* Contact Info */}""
-      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">;""
+      <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gray-800/50">';
         <div className="max-w-4xl mx-auto text-center">""
           <p className="text-gray-400 mb-4">
 :pages.disabled/pages/services/AIContentMarketingAutomation.tsx

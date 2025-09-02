@@ -1,9 +1,9 @@
 
 interface FAQItem {
-
   question: string;
-  answer: string;
-  category: string}
+   answer: string;
+   category: string;
+}
 ;
 const helpSections: HelpSection[] = [
   {
@@ -397,7 +397,7 @@ export function HelpCenter() {
 
     if (query.trim() === '
   ') {
-setSearchQuery(query);'    if (query.trim() === '
+setSearchQuery(query)';    if (query.trim() === '
   ') {
 
       setFilteredFAQs(faqData);
@@ -548,7 +548,7 @@ setSearchQuery(query);'    if (query.trim() === '
       </div>
 
       {/* Main Content */}"
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">;"
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">";
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Help Sections */}"
           <div className="lg:col-span-2">
@@ -710,5 +710,4 @@ setSearchQuery(query);'    if (query.trim() === '
         </motion.div>
       </div>
     </div>) }
-export default HelpCenter;
-'"`
+export default HelpCenter'"`;

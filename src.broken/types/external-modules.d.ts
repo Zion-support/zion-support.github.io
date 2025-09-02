@@ -18,18 +18,12 @@ declare module,
 declare module
   'react-day-picker' {
   export interface DateRange {
-    from?: Date;
-    to?: Date;
-  // Minimal placeholder for the DayPicker component used in the app
-  // The actual library provides full typings but we stub them here so the
-  // TypeScript compiler can understand the imports without requiring the real
-  // type definitions.
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-  export const DayPicker: any;declare module
-  'sonner';
-declare module
-  'lucide-react {
-  import { FC, SVGProps } from
+  from?: Date;
+   to?: Date;
+   // Minimal placeholder for the DayPicker component used in the app // The actual library provides full typings but we stub them here so the // TypeScript compiler can understand the imports without requiring the real // type definitions. // eslint-disable-next-line @typescript-eslint/no-explicit-any export const DayPicker: any;
+  declare module 'sonner';
+   declare module 'lucide-react { import { FC, SVGProps;
+} from;
   'react';
   export interface LucideProps extends SVGProps<SVGSVGElement> {
     color?: string;
@@ -176,7 +170,7 @@ handleSubmit: any
   export const FormProvider: ComponentType<FormProviderProps<any>>
   export function useFormContext<
     TFieldValues extends FieldValues = FieldValues,
-  >(): UseFormReturn<TFieldValues>declare module
+  >(): UseFormReturn<TFieldValues>declare module;
   'react-i18next';
 declare module
   'react-dom/client';

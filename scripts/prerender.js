@@ -1,12 +1,12 @@
-import { readFileSync, writeFileSync } from
+import { readFileSync, writeFileSync } from;
   'fs';
-import path, { resolve } from
+import path, { resolve } from;
   'path';
-import { build } from
+import { build } from;
   'esbuild';
-import React from
+import React from;
   'react';
-import { renderToString } from
+import { renderToString } from;
   'react-dom/server';
 async function prerender() {
   const result = await build({

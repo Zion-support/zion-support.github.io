@@ -1,11 +1,10 @@
 type { NextPage } from
   'next';
-import Layout from
-  '../../components/Layout';'Link from
+import Layout from;
+  '../../components/Layout';Link from
   'next/link';
-import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from
-  'lucide-react';'
-  'const EnterpriseSolutions: NextPage = () => {
+import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from;
+  'lucide-react'';const EnterpriseSolutions: NextPage = () => {
   return (
     <Layout
       title="Enterprise Solutions - Zion Tech Group""      description="Transform your enterprise with scalable, secure, and innovative technology solutions. Expert enterprise consulting from Zion Tech Group.""    >"      {/* Hero Section */}

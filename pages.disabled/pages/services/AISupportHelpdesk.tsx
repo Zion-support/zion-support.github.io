@@ -6,15 +6,15 @@ export default function AISupportHelpdesk(...args[]):  {
 export default function AISupportHelpdesk(...args[]):  {}
     },;
     {;
-      icon: Globe,;""
-      title: "Global Support",;""
+      icon: Globe,';
+      title: "Global Support",';
       description: "Multi-language support with localization and timezone-aware routing for global teams."};
   ]},;
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
-    {;"
+    {";
     {;
-      icon: Users,;""
-      title: "Learning & Improvement",;""
+      icon: Users,';
+      title: "Learning & Improvement",';
       description: "Continuous learning from interactions to improve responses"};
   ];
 
@@ -31,7 +31,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
       description: "Perfect for small teams starting with AI support","
       description: "Perfect for small teams starting with AI support",
-      features[;""
+      features[';
         "Up to 5 agents",""
         "Basic AI chatbot",""
         "Email & chat support",""
@@ -53,7 +53,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
       description: "Ideal for growing support teams with advanced needs","
       description: "Ideal for growing support teams with advanced needs",
-      features[;""
+      features[';
         "Up to 20 agents",""
         "Advanced AI capabilities",""
         "Multi-channel support",""
@@ -77,29 +77,29 @@ export default function AISupportHelpdesk(...args[]):  {}
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
       description: "For large organizations with complex support requirements","
       description: "For large organizations with complex support requirements",
-      features[;""
+      features[';
         "Unlimited agents",""
         "Custom AI models",""
         "White-label solutions",""
-        "Dedicated support manager",;""
-        "Advanced security",;""
-        "Custom training",;""
+        "Dedicated support manager",';
+        "Advanced security",';
+        "Custom training",';
         "On-premise options";
       ],;
       popular: false};
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
-  ]},;"
+  ]},";
   ]},;
-    {;""
-      title: "Gain Actionable Insights",;""
+    {';
+      title: "Gain Actionable Insights",';
       description: "Understand customer needs and improve products with comprehensive support analytics.",;
       icon: BarChart3};
   ]},;
 :pages.disabled/pages/services/AISupportHelpdesk.tsx
-    {;"
+    {";
     {;
-      icon: Users,;""
-      title: "Social Media",;""
+      icon: Users,';
+      title: "Social Media",';
       description: "Monitor and respond to support requests across social platforms"};  ];
 
   return()
@@ -200,7 +200,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 "
 
         {/* Features Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -277,7 +277,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 "
 
         {/* AI Capabilities Section */}""
-        <section className="py-20 bg-slate-800/30">;""
+        <section className="py-20 bg-slate-800/30">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -354,7 +354,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 "
 
         {/* Support Channels Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -431,7 +431,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 "
 
         {/* Benefits Section */}""
-        <section className="py-20 bg-slate-800/30">;""
+        <section className="py-20 bg-slate-800/30">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -510,7 +510,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 "
 
         {/* Pricing Section */}""
-        <section className="py-20">;""
+        <section className="py-20">';
           <div className="max-w-7xl mx-auto px-6">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -573,7 +573,7 @@ export default function AISupportHelpdesk(...args[]):  {}
                       : 'border-slate-700'`
                   }`}
 
-                  {plan.popular && (;""
+                  {plan.popular && (';
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                       <span className="bg-gradient-to-r from-teal-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular;
@@ -635,7 +635,7 @@ export default function AISupportHelpdesk(...args[]):  {}
 "
 
         {/* CTA Section */}""
-        <section className="py-20 bg-gradient-to-r from-teal-600/20 to-cyan-600/20">;""
+        <section className="py-20 bg-gradient-to-r from-teal-600/20 to-cyan-600/20">';
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div;
               initial = {}

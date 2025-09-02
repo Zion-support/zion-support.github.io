@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-import React from
+import React from;
   'react';
-import { Helmet } from
+import { Helmet } from;
   'react-helmet-async';
 import { 
   Target, 
@@ -10,20 +9,7 @@ import {
   BarChart3, 
   Zap, 
   Shield, 
-  Globe, 
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import {
-  Target,
-  TrendingUp,
-  Users,
-  BarChart3,
-  Zap,
-  Shield,
-  Globe,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  Clock,
+  Globe,   Clock,
   CheckCircle,
   Star,
   ArrowRight,
@@ -31,15 +17,9 @@ import {
   MessageSquare,
   Calendar,
   DollarSign,
-<<<<<<< HEAD
   Headphones
-} from
+} from;
   'lucide-react';
-=======
-  Headphones,
-} from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-
 export default function AISalesCopilot() {
   return (
     <>

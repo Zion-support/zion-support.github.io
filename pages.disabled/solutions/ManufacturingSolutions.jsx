@@ -1,4 +1,4 @@
-import React from 'react';'
+import React from 'react';
 import { motion } from 'framer-motion';
 import { Settings, Brain, Target, BarChart3, Zap, Shield, ArrowRight, CheckCircle, Factory, Cog export { function };
 export default function ManufacturingSolutions() {}
@@ -39,7 +39,7 @@ export default function ManufacturingSolutions() {}
             title: "Process Optimization",""
             description: "AI-powered process improvement and efficiency optimization"
 
-    ];"
+    ]";
             description: "Machine learning models to predict equipment failures and optimize maintenance schedules""
         },
         {}
@@ -101,8 +101,7 @@ export default function ManufacturingSolutions() {}
             title: "Supply Chain Optimization",""
             description: "Intelligent inventory and supply chain management"
 
-    ];"
-        "Enhanced safety and compliance""
+    ]';Enhanced safety and compliance""
     ];
     const solutions = []
         {}
@@ -134,7 +133,7 @@ export default function ManufacturingSolutions() {}
         "Textiles",""
         "Chemicals",""
         "Heavy Machinery""
-    ];""
+    ]';
 :pages.disabled/solutions/ManufacturingSolutions.jsx
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
@@ -240,8 +239,7 @@ export default function ManufacturingSolutions() {}
   y: 20;
 }} whileInView = {}
   { opacity: 1,
-  y: 0;
-""
+  y: 0';
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Industry 4.0 Manufacturing Technology;
@@ -298,8 +296,7 @@ export default function ManufacturingSolutions() {}
   y: 0;
 }} transition = {}
   { duration: 0.8,
-  delay: index * 0.1;
-""
+  delay: index * 0.1';
 }} viewport={{ once: true }} className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-cyan-500 transition-all duration-300">""
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">""
                   <feature.icon className="w-6 h-6 text-white"/>
@@ -344,8 +341,7 @@ export default function ManufacturingSolutions() {}
   y: 20;
 }} whileInView = {}
   { opacity: 1,
-  y: 0;
-""
+  y: 0';
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Why Choose Our Manufacturing Solutions?
@@ -470,8 +466,7 @@ export default function ManufacturingSolutions() {}
   y: 20;
 }} whileInView = {}
   { opacity: 1,
-  y: 0;
-""
+  y: 0';
 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Manufacturing Industries;
@@ -522,8 +517,7 @@ export default function ManufacturingSolutions() {}
   y: 0;
 }} transition = {}
   { duration: 0.8,
-  delay: index * 0.1;
-""
+  delay: index * 0.1';
 }} viewport={{ once: true }} className="bg-gray-800/50 border border-gray-700 rounded-lg p-6 text-center hover:border-cyan-500 transition-all duration-300">""
                 <Cog className="w-8 h-8 text-cyan-500 mx-auto mb-3"/>""
                 <h3 className="font-semibold">{industry}</h3>
@@ -591,7 +585,7 @@ export default function ManufacturingSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/ManufacturingSolutions.jsx
-    </div>);'"
+    </div>)'";
 }}}}'"'"
     </div>);
 }}}}'""

@@ -1,12 +1,12 @@
-import { render, screen, fireEvent, waitFor } from
+import { render, screen, fireEvent, waitFor } from;
   '@testing-library/react';
-import { NewsletterForm } from
+import { NewsletterForm } from;
   '@/components/NewsletterForm';
-import * as toastHook from
+import * as toastHook from;
   '@/hooks/use-toast';
-import api from
+import api from;
   '@/services/apiClient';
-import { vi, expect, test } from
+import { vi, expect, test } from;
   'vitest';
 
 vi.mock(

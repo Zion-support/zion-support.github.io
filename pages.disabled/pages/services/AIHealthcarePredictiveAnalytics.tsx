@@ -49,7 +49,7 @@ import { Heart,
   FileText,
   UserCheck,
   Clipboard,
-  TestTube'
+  TestTube';
 } from 'lucide-react';
 ;
 export { function };
@@ -91,27 +91,20 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
 =
   }},;
 >    {;
-      icon: BarChart3,;'
-      title: 'Advanced Clinical Insights',;'
+      icon: BarChart3,';
+      title: 'Advanced Clinical Insights',';
       description: 'Generate actionable insights from complex medical data and research'};
-  ];'
-    'Reduce readmission rates by 35%',;'
-    'Improve early detection by 60%',;'
-    'Cut healthcare costs by 25%',;'
-    'Enhance patient outcomes by 45%',;'
-    'Streamline clinical workflows',;'
-    'Enable proactive care delivery';
-  ];'
-        'Up to 1,000 patients',Basic predictive analytics',Standard risk scoring',Email support',Basic reporting',Up to 10 user licenses',Core integrations'
-      ],;'
-      features[;''
+  ]';Reduce readmission rates by 35%',';Improve early detection by 60%',';Cut healthcare costs by 25%',';Enhance patient outcomes by 45%',';Streamline clinical workflows',';Enable proactive care delivery';
+  ]';Up to 1,000 patients',Basic predictive analytics',Standard risk scoring',Email support',Basic reporting',Up to 10 user licenses',Core integrations'
+      ],';
+      features[';
         'Up to 1,000 patients',''
         'Basic predictive analytics',''
         'Standard risk scoring',''
         'Email support',''
         'Basic reporting',''
         'Up to 10 user licenses','        'Core integrations''
-      ],;''
+      ],';
       cta: 'Start Free Trial',
       popular: false
     },
@@ -121,9 +114,8 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
       price: '$1,799','
       period: '/month','
       description: 'Ideal for growing healthcare organizations',
-      features[;'
-        'Up to 10,000 patients',Advanced AI analytics',Real-time monitoring',Priority support',Custom reporting',Up to 50 user licenses',Advanced integrations',API access',Custom workflows',Advanced AI models'
-      ],;'
+      features[';Up to 10,000 patients',Advanced AI analytics',Real-time monitoring',Priority support',Custom reporting',Up to 50 user licenses',Advanced integrations',API access',Custom workflows',Advanced AI models'
+      ],';
       cta: 'Start Free Trial',
       popular: true
     },
@@ -133,29 +125,26 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
       price: '$4,999','
       period: '/month','
       description: 'For large healthcare systems with complex needs',
-      features[;'
-        'Unlimited patients',Premium AI analytics',24/7 dedicated support',Custom dashboards',Unlimited user licenses',Enterprise integrations',Advanced AI models',On-premise deployment option',Dedicated healthcare consultant',Custom training programs',;'
-        'White-label solutions',;'
-        'Multi-tenant architecture';
-      ],;'
+      features[';Unlimited patients',Premium AI analytics',24/7 dedicated support',Custom dashboards',Unlimited user licenses',Enterprise integrations',Advanced AI models',On-premise deployment option',Dedicated healthcare consultant',Custom training programs',';White-label solutions',';Multi-tenant architecture';
+      ],';
       cta: 'Contact Sales',;
       popular: false};
   ]},;
-    {;'
-      title: 'Geriatrics',;'
+    {';
+      title: 'Geriatrics',';
       description: 'Aging-related health decline prediction and prevention',;
       icon: UserCheck};
-  ]},;'
-    {;''
-      title: 'Insurance Companies',;'      description: 'Risk assessment and claims prediction for health insurers',;
+  ]},';
+    {';
+      title: 'Insurance Companies',';      description: 'Risk assessment and claims prediction for health insurers',;
       icon: Shield};
-  ];'
-  const complianceFeatures = [;''
-    'HIPAA Compliance',;''
-    'HITECH Act Support',;''
-    'SOC 2 Type II Certified',;''
-    'GDPR Compliance',;''
-    'FDA Guidelines Adherence',;'    'Clinical Trial Compliance';
+  ]';
+  const complianceFeatures = [';
+    'HIPAA Compliance',';
+    'HITECH Act Support',';
+    'SOC 2 Type II Certified',';
+    'GDPR Compliance',';
+    'FDA Guidelines Adherence',';Clinical Trial Compliance';
   ];
 :pages.disabled/pages/services/AIHealthcarePredictiveAnalytics.tsx
 
@@ -218,9 +207,9 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
             </div>
           </motion.div>
         </div>
-      </section>;"
+      </section>";
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -307,7 +296,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
         </div>
       </section>"
       {/* Clinical Applications Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -394,7 +383,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
         </div>
       </section>"
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -473,7 +462,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
         </div>
       </section>"
       {/* Compliance Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -552,7 +541,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
         </div>
       </section>"
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -639,7 +628,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
         </div>
       </section>"
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -711,7 +700,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
                     ? 'border-red-500/50 bg-gradient-to-br from-red-900/20 to-pink-900/20'''`
                     : 'border-slate-700/50'``
                 }`}"
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -750,7 +739,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
         </div>
       </section>"
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -795,7 +784,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {
         </div>
       </section>"
       {/* Contact Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {

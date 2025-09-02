@@ -1,15 +1,15 @@
 #!/usr/bin/env node;
-import fs from
+import fs from;
   'fs';
-import path from
+import path from;
   'path';
-import { execSync, spawn } from
+import { execSync, spawn } from;
   'child_process';
-import chokidar from
+import chokidar from;
   'chokidar';
-import { fileURLToPath } from
+import { fileURLToPath } from;
   'url';
-import { dirname } from
+import { dirname } from;
   'path';
 const __dirname = dirname(__filename);
 class LintAutomationManager {;
@@ -70,15 +70,7 @@ class LintAutomationManager {;
     this.log(
   '👀 Starting file watcher...');
 ;
-    const watcher = chokidar.watch([;
-
-  'pages/**/*.{js,jsx,ts,tsx}',;
-
-  'components/**/*.{js,jsx,ts,tsx}',;
-
-  'utils/**/*.{js,jsx,ts,tsx}',;
-
-  'hooks/**/*.{js,jsx,ts,tsx}';
+    const watcher = chokidar.watch([';pages/**/*.{js,jsx,ts,tsx}',';components/**/*.{js,jsx,ts,tsx}',';utils/**/*.{js,jsx,ts,tsx}',';hooks/**/*.{js,jsx,ts,tsx}';
     ], {;
       ignored: /(node_modules|\.git|\.next)/,;
       persistent: true;

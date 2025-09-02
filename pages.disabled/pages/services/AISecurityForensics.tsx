@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AISecurityForensics.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics() {
-    'Automated incident investigation and reconstruction',;'
-    'Predictive analytics for forensic needs',;'
-    'Smart forensics framework management',;'
-    'AI-driven forensics automation and orchestration',;'
-    'Real-time forensics performance tracking',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics(function AISecurityForensics() {): any {}
-    'Automated incident investigation and reconstruction',;
-    'Predictive analytics for forensic needs',;
-    'Smart forensics framework management',;
-    'AI-driven forensics automation and orchestration',;
-    'Real-time forensics performance tracking',;
-    'Custom AI models for forensics applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics() {;
+    'Automated incident investigation and reconstruction',';Predictive analytics for forensic needs',';Smart forensics framework management',';AI-driven forensics automation and orchestration',';Real-time forensics performance tracking',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AISecurityForensics(function AISecurityForensics() {): any {};
+    'Automated incident investigation and reconstruction',';Predictive analytics for forensic needs',';Smart forensics framework management',';AI-driven forensics automation and orchestration',';Real-time forensics performance tracking',';Custom AI models for forensics applications';
 <:pages.disabled/pages/services/AISecurityForensics.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$4,999/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$4,999/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$4,999/mo', ';
       details: ['Unlimited investigations',Custom AI models',Full forensics suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Security forensics optimization',;'
-    'Digital evidence analysis and processing',;'
-    'Incident investigation and reconstruction',;'
-    'Forensics framework management and automation',;'
-    'Forensics automation and orchestration',;'
-    'Forensics scaling and management';
-  ];
-
-  '
-    'Improve security forensics performance by 50-80%',;'
-    'Reduce investigation time by 40-70%',;'
-    'Cut security forensics costs by 35-65%',;'
-    'Enhance security forensics reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale security forensics operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Security forensics optimization',';Digital evidence analysis and processing',';Incident investigation and reconstruction',';Forensics framework management and automation',';Forensics automation and orchestration',';Forensics scaling and management';
+  ]';Improve security forensics performance by 50-80%',';Reduce investigation time by 40-70%',';Cut security forensics costs by 35-65%',';Enhance security forensics reliability and scalability',';Optimize resource utilization',';Scale security forensics operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-slate-600 text-slate-600 rounded-lg hover:bg-slate-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AISecurityForensics.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

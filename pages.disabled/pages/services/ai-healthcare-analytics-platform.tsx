@@ -29,7 +29,7 @@ import { Heart,
   Eye,
   PieChart,
   TrendingUp,
-  AlertTriangle'
+  AlertTriangle';
  } from 'lucide-react';
 ;
 export { function };
@@ -41,12 +41,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
       icon: Eye,;
       title: 'Medical Image Analysis',;
       description: 'AI-powered analysis of X-rays, MRIs, and CT scans for faster, more accurate diagnosis'};
-  ];
-
-  
-        'On-premise options',;
-        'SLA guarantees',;
-        'Custom integrations';
+  ]';On-premise options',';SLA guarantees',';Custom integrations';
       ],;
       popular: false};
   ]},;
@@ -105,9 +100,9 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
             </div>
           </motion.div>
         </div>
-      </section>;"
+      </section>";
       {/* Features Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -188,7 +183,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
         </div>
       </section>"
       {/* Benefits Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -269,7 +264,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
         </div>
       </section>"
       {/* Use Cases Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -350,7 +345,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
         </div>
       </section>"
       {/* Compliance Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -423,7 +418,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
         </div>
       </section>"
       {/* Pricing Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">';
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -489,7 +484,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
                     ? 'border-blue-500 ring-2 ring-blue-500/20'''`
                     : 'border-gray-700'``
                 }`}"
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
@@ -528,7 +523,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
         </div>
       </section>"
       {/* CTA Section */}""
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">;""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800/30">';
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
@@ -578,5 +573,5 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
           </motion.div>;
         </div>;
       </section>;
-    </div>;'"`
+    </div>'"`;
   )}}}}}}'"`'"`

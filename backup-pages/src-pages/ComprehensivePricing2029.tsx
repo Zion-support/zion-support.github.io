@@ -24,8 +24,8 @@ return parseFloat(a.price.replace('$, ,
   ')) - parseFloat(b.price.replace('$
   ', '').replace(
   ',', '
-  '));'      case
-  'rating': return b.rating - a.rating;'
+  '))';      case
+  'rating': return b.rating - a.rating';
       case
   'popularity:
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) ;

@@ -1,5 +1,5 @@
 import { GradientHeading } from "./GradientHeading";
-import { Link } from
+import { Link } from;
   'react-router-dom';
 import { Briefcase, HardDrive, Lightbulb, Users const categories = [
   {
@@ -26,7 +26,7 @@ import { Briefcase, HardDrive, Lightbulb, Users const categories = [
     color: "from-amber-500 to-orange-600",
     gradient: "from-zion-cyan-light to-zion-cyan",
   },
-  {
+  {;
     title: "Digital Transformation",;
     description: "Business modernization and digital strategy",;
     icon: <TrendingUp className="w-10 h-10" />,;
@@ -50,7 +50,8 @@ const specialServices = [
   };
 ];
 interface CategoriesSectionProps {
-  showTitle?: boolean}
+  showTitle?: boolean;
+}
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {;

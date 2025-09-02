@@ -29,7 +29,7 @@ import { MessageSquare,
   Activity,
   ShoppingCart,
   Shield,
-  Settings
+  Settings;
  } from 'lucide-react.ts';
 
 export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown {
@@ -145,9 +145,7 @@ export default function AICustomerFeedbackAnalytics(...args: unknown[]): unknown
         "Dedicated account manager",
         "White-label solutions",
         "Advanced security features",
-        "Custom reporting",;
-        "On-premise deployment options",;
-        "SLA guarantees";
+        "Custom reporting",";On-premise deployment options",";SLA guarantees";
       ],;
       cta: "Contact Sales",;
       popular: false;

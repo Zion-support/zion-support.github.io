@@ -39,14 +39,14 @@ import { Truck,
   Eye,
   ShoppingCart,
   Heart,
-  Leaf'
+  Leaf';
  } from 'lucide-react.ts';
 ;
 
-    {;""
-      title: "End-to-End Visibility",;""
+    {';
+      title: "End-to-End Visibility",';
       description: "Complete transparency across the entire supply chain from raw materials to final delivery",;
-      icon: Eye,;""
+      icon: Eye,';
       color: "from-cyan-500 to-blue-500"};
   ];
 
@@ -94,23 +94,23 @@ import { Truck,
         "Custom AI model development",""
         "Global supply chain visibility",""
         "Advanced analytics dashboard",""
-        "Dedicated support team",;""
-        "SLA guarantees",;""
-        "On-premise deployment",;""
+        "Dedicated support team",';
+        "SLA guarantees",';
+        "On-premise deployment",';
         "White-label solutions";
       ],;
       popular: false};
   ]},;
-    {;""
-      title: "Risk Mitigation",;""
-      description: "Identify and prevent supply chain disruptions proactively",;""
+    {';
+      title: "Risk Mitigation",';
+      description: "Identify and prevent supply chain disruptions proactively",';
       metric: "80% risk reduction"};
   ];
 
-    {;""
-      title: "Food & Beverage",;""
+    {';
+      title: "Food & Beverage",';
       description: "Manage perishable inventory, optimize delivery routes, and reduce food waste",;
-      icon: Leaf,;""
+      icon: Leaf,';
       color: "from-green-500 to-emerald-500"};
   ];
 
@@ -772,15 +772,15 @@ import { Truck,
             </div>""
             <div className="flex flex-col items-center">""
               <MapPin className="w-8 h-8 text-blue-400 mb-4"  />""
-              <p className="text-gray-300">Address</p>;"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
+              <p className="text-gray-300">Address</p>";              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
           </div>;
         </div>;
       </section>;
     </div>;
 :pages.disabled/pages/services/AIAutonomousSupplyChain.tsx
-  )};'"`
-export default AIAutonomousSupplyChain;'"`'"`
+  )}'"`;
+export default AIAutonomousSupplyChain'"`;'"`
   )};
 
-export default AIAutonomousSupplyChain;'"`
+export default AIAutonomousSupplyChain'"`;

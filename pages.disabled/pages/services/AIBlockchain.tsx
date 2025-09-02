@@ -1,17 +1,8 @@
 :pages.disabled/pages/services/AIBlockchain.tsx
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIBlockchain() {
-    'Automated blockchain monitoring and alerting',;'
-    'Predictive analytics for blockchain scaling',;'
-    'Smart blockchain security and compliance',;'
-    'AI-driven blockchain automation and orchestration',;'
-    'Real-time blockchain analytics and insights',;'
-import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIBlockchain(function AIBlockchain() {): any {}
-    'Automated blockchain monitoring and alerting',;
-    'Predictive analytics for blockchain scaling',;
-    'Smart blockchain security and compliance',;
-    'AI-driven blockchain automation and orchestration',;
-    'Real-time blockchain analytics and insights',;
-    'Custom AI models for blockchain applications';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIBlockchain() {;
+    'Automated blockchain monitoring and alerting',';Predictive analytics for blockchain scaling',';Smart blockchain security and compliance',';AI-driven blockchain automation and orchestration',';Real-time blockchain analytics and insights',';
+import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, Zap, Shield, FileText, BarChart3 export default function AIBlockchain(function AIBlockchain() {): any {};
+    'Automated blockchain monitoring and alerting',';Predictive analytics for blockchain scaling',';Smart blockchain security and compliance',';AI-driven blockchain automation and orchestration',';Real-time blockchain analytics and insights',';Custom AI models for blockchain applications';
 <:pages.disabled/pages/services/AIBlockchain.tsx
   ];
 
@@ -32,37 +23,13 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
 >    { ;
       name: 'Enterprise', ;
       price: '$2,499/mo', ;
-    { ;'
-      name: 'Enterprise', ;'
-      price: '$2,499/mo', ;'
+    { ';
+      name: 'Enterprise', ';
+      price: '$2,499/mo', ';
       details: ['Unlimited storage',Custom AI models',Full blockchain suite',24/7 dedicated support'] },;
-  ];
-
-  '
-    'Blockchain optimization',;'
-    'Smart contract management',;'
-    'Performance monitoring and analytics',;'
-    'Security and compliance monitoring',;'
-    'Automation and orchestration',;'
-    'Blockchain scaling and management';
-  ];
-
-  '
-    'Improve blockchain performance by 50-80%',;'
-    'Reduce transaction processing time by 40-70%',;'
-    'Cut operational costs by 35-65%',;'
-    'Enhance blockchain reliability and scalability',;'
-    'Optimize resource utilization',;'
-    'Scale blockchain operations efficiently';
-  ];
-
-  '
-    'Software Development',;'
-    'E-commerce & Retail',;'
-    'Financial Services',;'
-    'Healthcare & Life Sciences',;'
-    'Media & Entertainment',;'
-    'Technology & SaaS';
+  ]';Blockchain optimization',';Smart contract management',';Performance monitoring and analytics',';Security and compliance monitoring',';Automation and orchestration',';Blockchain scaling and management';
+  ]';Improve blockchain performance by 50-80%',';Reduce transaction processing time by 40-70%',';Cut operational costs by 35-65%',';Enhance blockchain reliability and scalability',';Optimize resource utilization',';Scale blockchain operations efficiently';
+  ]';Software Development',';E-commerce & Retail',';Financial Services',';Healthcare & Life Sciences',';Media & Entertainment',';Technology & SaaS';
   ];
 
   return()
@@ -220,14 +187,14 @@ import { Database, Brain, Check, ExternalLink, Phone, Mail, ArrowRight, Target, 
             </a>""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-sky-600 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">""
               <Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com            </a>
-          </div>;""
+          </div>';
           <div className="mt-4 text-sm text-gray-500">;
             Address: 364 E Main St STE 1008, Middletown DE 19709;
           </div>;
         </div>;
       </section>;
 :pages.disabled/pages/services/AIBlockchain.tsx
-    </div>;'"
+    </div>'";
   )}}'"'"
     </div>;
   )}}'""

@@ -17,27 +17,26 @@ const IoTServices = () => {
       features: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"],
 :pages.disabled/pages/services/IoTServices.tsx
       icon: Wifi
-    },"{;""
-      title: "IoT Data Management",;""
-      description: "Comprehensive data collection, processing, and analytics for IoT devices.",;""
-      price: "From $6,500/month",;"      features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],;
+    },"{';
+      title: "IoT Data Management",';
+      description: "Comprehensive data collection, processing, and analytics for IoT devices.",';
+      price: "From $6,500/month",";      features: ["Data collection", "Real-time processing", "Cloud storage", "Data analytics"],;
       icon: Database};
   ];
 
 :pages.disabled/pages/services/IoTServices.tsx
   "
-    {;""
-      name: "Security & Privacy",;""
-      description: "Enterprise-grade IoT security solutions",;"
-      icon: Shield,;""
+    {';
+      name: "Security & Privacy",';
+      description: "Enterprise-grade IoT security solutions",";
+      icon: Shield,';
       features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]};
-  ];
-"
-  const benefits = [;"""Real-time monitoring and control capabilities",;""
-    "Improved operational efficiency and automation",;""
-    "Enhanced data collection and insights",;""
-    "Reduced operational costs and manual work",;""
-    "Scalable and flexible IoT infrastructure",;"    "Better decision-making with real-time data";
+  ]";
+  const benefits = [';"Real-time monitoring and control capabilities",';
+    "Improved operational efficiency and automation",';
+    "Enhanced data collection and insights",';
+    "Reduced operational costs and manual work",';
+    "Scalable and flexible IoT infrastructure",';Better decision-making with real-time data";
   ];
 :pages.disabled/pages/services/IoTServices.tsx
 "
@@ -202,5 +201,5 @@ const IoTServices = () => {
   )};
 ;
 :pages.disabled/pages/services/IoTServices.tsx
-export { IoTServices };'"
+export { IoTServices }'";
 export default IoTServices}}}'"'"

@@ -29,39 +29,39 @@ import { Shield,
   Globe,
   Rocket,
   Eye,
-  Cpu'
+  Cpu';
  } from 'lucide-react';
 ;
 const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
     },;
     {;
-      icon: Target,;""
-      title: "Adaptive Learning",;""
+      icon: Target,';
+      title: "Adaptive Learning",';
       description: "Self-improving AI models that continuously learn from new fraud patterns and adapt to evolving threats in real-time."};
   ];
 
-  const benefits: any = [;""
-    "Reduce fraud losses by 85-95%",;""
-    "Improve detection accuracy by 40%",;""
-    "Reduce false positives by 60%",;""
-    "Save $100K+ annually on fraud prevention",;""
+  const benefits: any = [';
+    "Reduce fraud losses by 85-95%",';
+    "Improve detection accuracy by 40%",';
+    "Reduce false positives by 60%",';
+    "Save $100K+ annually on fraud prevention",';
     "Comply with PCI DSS, SOC 2, and GDPR requirements";
   ];
 
-  const useCases: any = [;""
-    "Credit Card Fraud",;""
-    "Banking & Financial Services",;""
-    "E-commerce & Retail",;""
-    "Insurance Claims",;""
-    "Healthcare Billing",;""
+  const useCases: any = [';
+    "Credit Card Fraud",';
+    "Banking & Financial Services",';
+    "E-commerce & Retail",';
+    "Insurance Claims",';
+    "Healthcare Billing",';
     "Cryptocurrency Transactions";
   ];
 
-  const integrations: any = [;""
-    "Stripe, PayPal, Square",;""
-    "Visa, Mastercard, American Express",;""
-    "Banking APIs (Plaid, Yodlee)",;""
-    "QuickBooks, Xero, NetSuite",;""
+  const integrations: any = [';
+    "Stripe, PayPal, Square",';
+    "Visa, Mastercard, American Express",';
+    "Banking APIs (Plaid, Yodlee)",';
+    "QuickBooks, Xero, NetSuite",';
     "Salesforce, HubSpot, Pipedrive";
   ];
 
@@ -85,9 +85,9 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
 "
     {}
 ""
-      plan: "Enterprise"};""
-      price: "Custom",;""
-      period: "",;""
+      plan: "Enterprise"}';
+      price: "Custom",';
+      period: "",';
       features: ["Unlimited transactions", "Custom AI models", "White-label solution", "Dedicated support", "SLA guarantees"],;
       popular: false};
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
@@ -189,11 +189,11 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
           </motion.div>
         </div>
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-      </section>;"
+      </section>";
       </section>;
 
       {/* Features Section */}""
-      <section className="py-20 bg-slate-800/50">;""
+      <section className="py-20 bg-slate-800/50">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -315,7 +315,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Benefits Section */}""
-      <section className="py-20 bg-slate-900">;""
+      <section className="py-20 bg-slate-900">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -418,7 +418,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Use Cases Section */}""
-      <section className="py-20 bg-slate-800/50">;""
+      <section className="py-20 bg-slate-800/50">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -521,7 +521,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Integrations Section */}""
-      <section className="py-20 bg-slate-900">;""
+      <section className="py-20 bg-slate-900">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -625,7 +625,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Pricing Section */}""
-      <section className="py-20 bg-slate-800/50">;""
+      <section className="py-20 bg-slate-800/50">';
         <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
@@ -730,7 +730,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
                     : 'border-slate-700'`
                 }`}
 
-                {plan.popular && (;""
+                {plan.popular && (';
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -771,7 +771,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
                 <button className="w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 ${}
                   plan.popular'
                     ? 'bg-gradient-to-r from-red-500 to-orange-500 text-white hover:from-red-600 hover:to-orange-600''
-                    : 'bg-slate-700 text-white hover:bg-slate-600'""
+                    : 'bg-slate-700 text-white hover:bg-slate-600' 
                 }">
                   Get Started;
                 </button>
@@ -784,7 +784,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
       </section>
 
       {/* CTA Section */}""
-      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">;""
+      <section className="py-20 bg-gradient-to-r from-red-600 to-orange-600">';
         <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial = {}
@@ -850,7 +850,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
       </section>
 
       {/* Contact Info */}""
-      <section className="py-16 bg-slate-900">;""
+      <section className="py-16 bg-slate-900">';
         <div className="container mx-auto px-4 text-center">""
           <div className="max-w-2xl mx-auto">""
             <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>""
@@ -897,7 +897,7 @@ const AIFinancialFraudDetection: React.FC = (): JSX.Element => {}
       </section>;
     </div>;
 :pages.disabled/pages/services/AIFinancialFraudDetection.tsx
-  )};'"`
+  )}'"`;
 export default AIFinancialFraudDetection}}}'"`'"`
   )};
 

@@ -32,7 +32,7 @@ import {
   Globe,
   Smartphone,
   Monitor,
-  Tablet
+  Tablet;
 } from 'lucide-react';
 
 const AIEmailAutomationSuite = () => {

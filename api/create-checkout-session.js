@@ -1,6 +1,6 @@
-import Stripe from,
+import Stripe from,;
   stripe';
-import { withErrorLogging } from
+import { withErrorLogging } from;
   './withErrorLogging.cjs';
 
 const PROD_DOMAIN =

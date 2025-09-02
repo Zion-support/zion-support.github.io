@@ -127,7 +127,7 @@ import {
   WrenchIcon5,
   ToolIcon5,
   HammerIcon5,
-  ScrewdriverIcon5} from
+  ScrewdriverIcon5} from;
   'lucide-react.ts';
 export function RevolutionaryServicesPage(...args: any[]): any {
 
@@ -157,9 +157,9 @@ export function RevolutionaryServicesPage(...args: any[]): any {
 
       case 'price-low
   ': return a.price - b.price;
-return a.title.localeCompare(b.title);'      case
+return a.title.localeCompare(b.title)';      case
   'price-low':
-        return a.price - b.price;'
+        return a.price - b.price';
       case
   'price-high':
         return b.price - a.price;

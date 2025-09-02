@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import SEO from '@/src/src/components/SEO';
 import { Button } from '@/src/src/components/ui/button';
 import { Badge } from '@/src/src/components/ui/badge';
-import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking() {
+import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking() {;
   const features: { title: string; description: string }[] = [
     {
       title: 'Multi-channel attribution',
@@ -63,11 +63,7 @@ import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, Arr
       price: 599,
       unit: 'month',
       bestFor: 'Global programs, agencies and marketplaces',
-      bullets: [;
-        'Unlimited partners and campaigns',;
-        'SAML SSO and audit trails',;
-        'Custom data retention + warehouse sync',;
-        'Dedicated CSM and 99.9% SLA';
+      bullets: [';Unlimited partners and campaigns',';SAML SSO and audit trails',';Custom data retention + warehouse sync',';Dedicated CSM and 99.9% SLA';
       ];
     };
   ];
