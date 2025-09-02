@@ -10,14 +10,26 @@ const ConsultingServices = () => {}
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">""
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
 :pages.disabled/pages/services/ConsultingServices.jsx
+<<<<<<< HEAD
             Technology Consulting Services"</h1>""
+=======
+            Technology Consulting Services"
+            Technology Consulting Services;
+          </h1>""
+>>>>>>> pr-10728
           <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
             Strategic technology consulting to help you make informed decisions;
             and achieve your goals.
           </p>
         </div>
 :pages.disabled/pages/services/ConsultingServices.jsx
+<<<<<<< HEAD
       </section>"""
+=======
+      </section>"
+      </section>
+""
+>>>>>>> pr-10728
       <section className="py-20">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
@@ -30,7 +42,20 @@ const ConsultingServices = () => {}
           </p>"
           <Link""
             to="/contact""
+<<<<<<< HEAD
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
+=======
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
+            Coming Soon;
+          </h2>""
+          <p className="text-xl text-slate-600 mb-8">
+            We're developing comprehensive consulting services. Check back soon!
+          </p>
+          <Link""
+            to="/contact""
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300""
+          >
+>>>>>>> pr-10728
             Contact Us;
           </Link>
         </div>
@@ -40,4 +65,10 @@ const ConsultingServices = () => {}
 };
 :pages.disabled/pages/services/ConsultingServices.jsx
 export default ConsultingServices;'"
+<<<<<<< HEAD
   '"'"
+=======
+'"'"
+export default ConsultingServices;
+'""
+>>>>>>> pr-10728

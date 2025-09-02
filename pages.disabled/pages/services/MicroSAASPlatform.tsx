@@ -53,30 +53,79 @@ export default function MicroSAASPlatform(...args: any[]): any {
           href="https://ziontechgroup.com/services/micro-saas-platform"
         />
       </Helmet>
+<<<<<<< HEAD
 "{/* Hero Section */}""
+=======
+"
+export default function MicroSAASPlatform(...args: any[]): any {}
+  return()    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-purple-50 to-indigo-50">
+      <Helmet>
+        <title>Micro SAAS Platform - Zion Tech Group</title>
+        <meta""
+          name="description""
+          content="Build and launch micro SAAS applications in weeks with our comprehensive platform. Rapid development, AI features, and enterprise-grade infrastructure.""
+        />
+        <meta""
+          name="keywords""
+          content="micro SAAS, rapid development, SAAS platform, application development, cloud platform, business software""
+        />
+        <link""
+          rel="canonical""
+          href="https://ziontechgroup.com/services/micro-saas-platform""
+        />
+      </Helmet>
+
+      {/* Hero Section */}""
+>>>>>>> pr-10728
       <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20 lg:py-32">""
         <div className="absolute inset-0 bg-black/30"></div>""
         <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-indigo-600/20 to-blue-600/20"></div>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
 "{/* Background Elements */}""
+=======
+"
+
+        {/* Background Elements */}""
+>>>>>>> pr-10728
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden">""
           <div className="absolute top-20 left-10 w-72 h-72 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>""
           <div className="absolute top-40 right-20 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>""
           <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
         </div>"""
+=======
+        </div>"
+        </div>
+""
+>>>>>>> pr-10728
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white/90 backdrop-blur-sm mb-8">""
             <Rocket className="w-4 h-4 text-purple-300"  />            <span>Micro SAAS Platform</span>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
           </div>"
 ""
+<<<<<<< HEAD
           <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">"Build & Launch""
+=======
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">"
+          </div>
+""
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Build & Launch""
+>>>>>>> pr-10728
             <span className="block bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
               Micro SAAS in Weeks;
             </span>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
           </h1>"""
+=======
+          </h1>"
+          </h1>
+""
+>>>>>>> pr-10728
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto mb-10 leading-relaxed">
             Transform your business idea into a profitable micro SAAS;
             application with our comprehensive platform. Rapid development,
@@ -93,12 +142,35 @@ export default function MicroSAASPlatform(...args: any[]): any {
               <ArrowRight className="w-5 h-5"  />            </a>"
             <a""
               href="#demo""
+<<<<<<< HEAD
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
+=======
+              className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+          </p>
+""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a""
+              href="/contact""
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl""
+            >
+              Start Building""
+              <ArrowRight className="w-5 h-5"  />            </a>
+            <a""
+              href="#demo""
+              className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm""
+            >
+>>>>>>> pr-10728
               Watch Demo;
             </a>
           </div>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
 "{/* Trust Indicators */}""
+=======
+"
+
+          {/* Trust Indicators */}""
+>>>>>>> pr-10728
           <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-white/70">""
             <div className="flex items-center gap-2">""
               <CheckCircle className="w-5 h-5 text-green-400"  />
@@ -107,7 +179,17 @@ export default function MicroSAASPlatform(...args: any[]): any {
             </div>""
             <div className="flex items-center gap-2">""
               <Shield className="w-5 h-5 text-blue-400"  />
+<<<<<<< HEAD
               <span>Enterprise Security</span>"</div>""
+=======
+              <span>Enterprise Security</span>"
+              <span>10x Faster Development</span>
+            </div>""
+            <div className="flex items-center gap-2">""
+              <Shield className="w-5 h-5 text-blue-400"  />
+              <span>Enterprise Security</span>
+            </div>""
+>>>>>>> pr-10728
             <div className="flex items-center gap-2">""
               <Users className="w-5 h-5 text-purple-400"  />              <span>500+ Successful Launches</span>
             </div>
@@ -115,13 +197,25 @@ export default function MicroSAASPlatform(...args: any[]): any {
         </div>
       </section>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
 "{/* Features Section */}""
+=======
+"
+
+      {/* Features Section */}""
+>>>>>>> pr-10728
       <section className="py-20 lg:py-32">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
               Platform Features That Accelerate Development"</h2>""
+=======
+              Platform Features That Accelerate Development"
+              Platform Features That Accelerate Development;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our micro SAAS platform provides everything you need to build,
               launch, and scale your application with enterprise-grade quality;
@@ -130,7 +224,15 @@ export default function MicroSAASPlatform(...args: any[]): any {
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
           </div>"
 ""
+<<<<<<< HEAD
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8 lg:gap-12">"{features.map((feature, index) => (""
+=======
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8 lg:gap-12">"
+          </div>
+""
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8 lg:gap-12">
+            {features.map((feature, index) => (""
+>>>>>>> pr-10728
               <div key={index} className="group">""
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100">""
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""
@@ -147,7 +249,24 @@ export default function MicroSAASPlatform(...args: any[]): any {
 ""
                   <ul className="space-y-3">
                     {feature.benefits.map((benefit, idx) => (
+<<<<<<< HEAD
                       <li"key={idx}""
+=======
+                      <li"
+                  </div>
+""
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>""
+                  <p className="text-gray-600 mb-6 leading-relaxed">
+                    {feature.description}
+                  </p>
+""
+                  <ul className="space-y-3">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li;
+                        key={idx}""
+>>>>>>> pr-10728
                         className="flex items-center gap-3 text-gray-700""
                       >""
                         <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />                        <span>{benefit}</span>
@@ -161,13 +280,25 @@ export default function MicroSAASPlatform(...args: any[]): any {
         </div>
       </section>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
 "{/* Platform Capabilities Section */}""
+=======
+"
+
+      {/* Platform Capabilities Section */}""
+>>>>>>> pr-10728
       <section className="py-20 lg:py-32 bg-white">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
               Comprehensive Development Platform"</h2>""
+=======
+              Comprehensive Development Platform"
+              Comprehensive Development Platform;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Everything you need to build a complete micro SAAS application,
               from frontend to backend, with built-in security and scalability.
@@ -177,13 +308,29 @@ export default function MicroSAASPlatform(...args: any[]): any {
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
             {platformCapabilities.map((capability, index) => (
+<<<<<<< HEAD
               <div"key={index}""
+=======
+              <div"
+          </div>
+""
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {platformCapabilities.map((capability, index) => (
+              <div;
+                key={index}""
+>>>>>>> pr-10728
                 className="bg-gradient-to-br from-gray-50 to-purple-50 rounded-2xl p-8 border border-gray-200""
               >""
                 <div className="flex items-center gap-4 mb-6">""
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-xl flex items-center justify-center">""
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
                     <capability.icon className="w-8 h-8 text-white" />"</div>""
+=======
+                    <capability.icon className="w-8 h-8 text-white" />"
+                    <capability.icon className="w-8 h-8 text-white" />
+                  </div>""
+>>>>>>> pr-10728
                   <h3 className="text-2xl font-bold text-gray-900">
                     {capability.title}
                   </h3>
@@ -194,7 +341,19 @@ export default function MicroSAASPlatform(...args: any[]): any {
 ""
                 <ul className="space-y-3">
                   {capability.features.map((feature, idx) => (
+<<<<<<< HEAD
                     <li"key={idx}""
+=======
+                    <li"
+                </div>
+""
+                <p className="text-gray-600 mb-6">{capability.description}</p>
+""
+                <ul className="space-y-3">
+                  {capability.features.map((feature, idx) => (
+                    <li;
+                      key={idx}""
+>>>>>>> pr-10728
                       className="flex items-center gap-3 text-gray-700""
                     >""
                       <Code className="w-5 h-5 text-purple-500 flex-shrink-0"  />                      <span>{feature}</span>
@@ -207,13 +366,25 @@ export default function MicroSAASPlatform(...args: any[]): any {
         </div>
       </section>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
 "{/* Use Cases Section */}""
+=======
+"
+
+      {/* Use Cases Section */}""
+>>>>>>> pr-10728
       <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-purple-50">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
               Proven Use Cases"</h2>""
+=======
+              Proven Use Cases"
+              Proven Use Cases;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               See how entrepreneurs and businesses are using our platform to;
               build successful micro SAAS applications across various;
@@ -224,7 +395,17 @@ export default function MicroSAASPlatform(...args: any[]): any {
 ""
           <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
+<<<<<<< HEAD
               <div"key={index}""
+=======
+              <div"
+          </div>
+""
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
+            {useCases.map((useCase, index) => (
+              <div;
+                key={index}""
+>>>>>>> pr-10728
                 className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200""
               >""
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -235,7 +416,19 @@ export default function MicroSAASPlatform(...args: any[]): any {
 ""
                 <div className="space-y-3">
                   {useCase.metrics.map((metric, idx) => (
+<<<<<<< HEAD
                     <div"key={idx}""
+=======
+                    <div"
+                  {useCase.title}
+                </h3>""
+                <p className="text-gray-600 mb-6">{useCase.description}</p>
+""
+                <div className="space-y-3">
+                  {useCase.metrics.map((metric, idx) => (
+                    <div;
+                      key={idx}""
+>>>>>>> pr-10728
                       className="flex items-center gap-3 text-gray-700""
                     >""
                       <TrendingUp className="w-5 h-5 text-purple-500 flex-shrink-0"  />"                      <span className="font-semibold">{metric}</span>
@@ -248,13 +441,25 @@ export default function MicroSAASPlatform(...args: any[]): any {
         </div>
       </section>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
 "{/* Development Process Section */}""
+=======
+"
+
+      {/* Development Process Section */}""
+>>>>>>> pr-10728
       <section className="py-20 lg:py-32 bg-white">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
               From Idea to Launch in 8-12 Weeks"</h2>""
+=======
+              From Idea to Launch in 8-12 Weeks"
+              From Idea to Launch in 8-12 Weeks;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Our proven development process ensures you can build and launch;
               your micro SAAS application quickly and efficiently.
@@ -269,7 +474,22 @@ export default function MicroSAASPlatform(...args: any[]): any {
                   {phase.step}"
                 </div>""
                 <h3 className="text-xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
                   {phase.title}"</h3>""
+=======
+                  {phase.title}"
+          </div>
+""
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
+            {developmentProcess.map((phase, index) => (""
+              <div key={index} className="text-center group">""
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white group-hover:scale-110 transition-transform duration-300">
+                  {phase.step}
+                </div>""
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  {phase.title}
+                </h3>""
+>>>>>>> pr-10728
                 <p className="text-gray-600 mb-3">{phase.description}</p>""
                 <div className="inline-flex items-center gap-2 text-purple-600 font-semibold">""
                   <Clock className="w-4 h-4"  />                  <span>{phase.duration}</span>
@@ -280,24 +500,43 @@ export default function MicroSAASPlatform(...args: any[]): any {
         </div>
       </section>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
 "{/* Pricing Section */}""
+=======
+"
+
+      {/* Pricing Section */}""
+>>>>>>> pr-10728
       <section className="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-purple-50">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
               Transparent Platform Pricing"</h2>""
+=======
+              Transparent Platform Pricing"
+              Transparent Platform Pricing;
+            </h2>""
+>>>>>>> pr-10728
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Choose the plan that best fits your development needs. All plans;
               include our core platform features and dedicated support.
             </p>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
           </div>"""
+=======
+          </div>"
+          </div>
+""
+>>>>>>> pr-10728
           <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
               <div;
                 key={index}
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
                 className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${,
   plan.popular''
                     ?
@@ -305,6 +544,22 @@ export default function MicroSAASPlatform(...args: any[]): any {
   '`: 'border-gray-200``
                 }`}
               >"{plan.popular && (""
+=======
+                className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${
+'
+                  plan.popular''
+                    ? 'border-purple-500 ring-4 ring-purple-500/20'''`
+                    : 'border-gray-200'``
+                }`}
+              >"
+                className={`relative bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 ${}
+                  plan.popular'
+                    ? 'border-purple-500 ring-4 ring-purple-500/20''
+                    : 'border-gray-200'`
+                }`}
+              >
+                {plan.popular && (""
+>>>>>>> pr-10728
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
@@ -329,7 +584,31 @@ export default function MicroSAASPlatform(...args: any[]): any {
 ""
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, idx) => (
+<<<<<<< HEAD
                     <li"key={idx}""
+=======
+                    <li"
+                )}
+""
+                <div className="text-center mb-8">""
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {plan.name}
+                  </h3>""
+                  <p className="text-gray-600 mb-4">{plan.description}</p>
+""
+                  <div className="flex items-baseline justify-center gap-1">""
+                    <span className="text-4xl font-bold text-gray-900">
+                      {plan.price}
+                    </span>""
+                    <span className="text-gray-600">{plan.period}</span>
+                  </div>
+                </div>
+""
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, idx) => (
+                    <li;
+                      key={idx}""
+>>>>>>> pr-10728
                       className="flex items-center gap-3 text-gray-700""
                     >""
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0"  />                      <span>{feature}</span>
@@ -340,19 +619,41 @@ export default function MicroSAASPlatform(...args: any[]): any {
 "
                 <a""`
                   href="/contact"``
+<<<<<<< HEAD
                   className={`w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${,
   plan.popular'
   '
                       ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white hover: from-purple-600 hover:to-indigo-700''
   '`
                       : 'bg-gray-900 text-white hover:bg-gray-800``}`}
+=======
+                  className={`w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+'
+                    plan.popular''
+                      ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white hover:from-purple-600 hover:to-indigo-700'''`
+                      : 'bg-gray-900 text-white hover:bg-gray-800'``
+
+                <a""
+                  href="/contact"`
+                  className={`w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${}
+                    plan.popular'
+                      ? 'bg-gradient-to-r from-purple-500 to-indigo-600 text-white hover:from-purple-600 hover:to-indigo-700''
+                      : 'bg-gray-900 text-white hover:bg-gray-800'`
+                  }`}
+>>>>>>> pr-10728
                 >
                   {plan.cta}
                 </a>
               </div>
             ))}
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
           </div>"""
+=======
+          </div>"
+          </div>
+""
+>>>>>>> pr-10728
           <div className="text-center mt-12">""
             <p className="text-gray-600 mb-4">
               Need a custom development solution?
@@ -361,18 +662,40 @@ export default function MicroSAASPlatform(...args: any[]): any {
             <a""
               href="/contact""
               className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold"
+<<<<<<< HEAD
             >"Contact our development team""
+=======
+            >"
+            </p>
+            <a""
+              href="/contact""
+              className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 font-semibold""
+            >
+              Contact our development team""
+>>>>>>> pr-10728
               <ArrowRight className="w-4 h-4"  />            </a>
           </div>
         </div>
       </section>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
 "{/* CTA Section */}""
+=======
+"
+
+      {/* CTA Section */}""
+>>>>>>> pr-10728
       <section className="py-20 lg:py-32 bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h2 className="text-3xl md:text-5xl font-bold mb-6">
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
+<<<<<<< HEAD
             Ready to Build Your Micro SAAS?"</h2>""
+=======
+            Ready to Build Your Micro SAAS?"
+            Ready to Build Your Micro SAAS?
+          </h2>""
+>>>>>>> pr-10728
           <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-10">
             Join hundreds of entrepreneurs and businesses already building;
             successful micro SAAS applications with our platform. Start your;
@@ -389,11 +712,34 @@ export default function MicroSAASPlatform(...args: any[]): any {
               <ArrowRight className="w-5 h-5"  />            </a>"
             <a""
               href="/contact""
+<<<<<<< HEAD
               className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm">
               Schedule Consultation;
             </a>
 :pages.disabled/pages/services/MicroSAASPlatform.tsx
           </div>"""
+=======
+              className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+          </p>
+""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a""
+              href="/contact""
+              className="inline-flex items-center gap-2 bg-white text-purple-900 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105""
+            >
+              Start Building""
+              <ArrowRight className="w-5 h-5"  />            </a>
+            <a""
+              href="/contact""
+              className="inline-flex items-center gap-2 border-2 border-white/30 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm""
+            >
+              Schedule Consultation;
+            </a>
+:pages.disabled/pages/services/MicroSAASPlatform.tsx
+          </div>"
+          </div>
+""
+>>>>>>> pr-10728
           <div className="mt-12 flex flex-wrap justify-center items-center gap-8 text-white/70">""
             <div className="flex items-center gap-2">""
               <Clock className="w-5 h-5 text-purple-400"  />
@@ -402,7 +748,17 @@ export default function MicroSAASPlatform(...args: any[]): any {
             </div>""
             <div className="flex items-center gap-2">""
               <Shield className="w-5 h-5 text-green-400"  />
+<<<<<<< HEAD
               <span>No setup fees</span>"</div>""
+=======
+              <span>No setup fees</span>"
+              <span>14-day free trial</span>
+            </div>""
+            <div className="flex items-center gap-2">""
+              <Shield className="w-5 h-5 text-green-400"  />
+              <span>No setup fees</span>
+            </div>""
+>>>>>>> pr-10728
             <div className="flex items-center gap-2">""
               <Users className="w-5 h-5 text-blue-400"  />              <span>Expert development support</span>
             </div>

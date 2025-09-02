@@ -1,3 +1,4 @@
+<<<<<<< HEAD:src.disabled/pages/services/AIMarketingAutomationSuite.tsx
 
 export default function AIMarketingAutomationSuite(...args: unknown[]): unknown {
   const features = [
@@ -212,3 +213,5 @@ export default function AIMarketingAutomationSuite(...args: unknown[]): unknown 
     </div>
   );
 }
+=======
+>>>>>>> pr-10728:src/pages/services/AIMarketingAutomationSuite.tsx

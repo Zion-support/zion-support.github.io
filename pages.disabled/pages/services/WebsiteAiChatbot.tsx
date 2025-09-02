@@ -4,7 +4,13 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
     <SEO title="Website AI Chatbot - Zion Tech Group" description="24/7 on-site AI assistant that answers, qualifies, and books meetings."  />""
     <section className="container mx-auto px-4 py-12">""
 :pages.disabled/pages/services/WebsiteAiChatbot.tsx
+<<<<<<< HEAD
       <h1 className="text-4xl font-bold mb-4">Website AI Chatbot</h1>"      <p className="text-slate-300 max-w-3xl">Deploy an AI chatbot trained on your docs, pages, and FAQs. Deflect support tickets, qualify prospects, and handoff to live agents with transcripts.</p>"</section>""
+=======
+      <h1 className="text-4xl font-bold mb-4">Website AI Chatbot</h1>"      <p className="text-slate-300 max-w-3xl">Deploy an AI chatbot trained on your docs, pages, and FAQs. Deflect support tickets, qualify prospects, and handoff to live agents with transcripts.</p>"
+      <h1 className="text-4xl font-bold mb-4">Website AI Chatbot</h1>"      <p className="text-slate-300 max-w-3xl">Deploy an AI chatbot trained on your docs, pages, and FAQs. Deflect support tickets, qualify prospects, and handoff to live agents with transcripts.</p>
+    </section>""
+>>>>>>> pr-10728
     <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Capabilities</h3>""
@@ -14,7 +20,13 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
           <li>Calendly/HubSpot Meetings integration</li>
           <li>Multilingual support</li>
 :pages.disabled/pages/services/WebsiteAiChatbot.tsx
+<<<<<<< HEAD
         </ul>"</div>""
+=======
+        </ul>"
+        </ul>
+      </div>""
+>>>>>>> pr-10728
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Integrations</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
@@ -22,7 +34,13 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
           <li>Slack, Microsoft Teams</li>
           <li>Google Analytics, Segment</li>
 :pages.disabled/pages/services/WebsiteAiChatbot.tsx
+<<<<<<< HEAD
         </ul>"</div>""
+=======
+        </ul>"
+        </ul>
+      </div>""
+>>>>>>> pr-10728
       <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Pricing</h3>""
         <ul className="text-slate-300 space-y-1">
@@ -31,7 +49,13 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
           <li>Enterprise: custom, SSO + analytics</li>
         </ul>;
 :pages.disabled/pages/services/WebsiteAiChatbot.tsx
+<<<<<<< HEAD
       </div>;"</section>;""
+=======
+      </div>;"
+      </div>;
+    </section>;""
+>>>>>>> pr-10728
     <section className="container mx-auto px-4 pb-16">;""
       <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Get started</a>;
     </section>;
@@ -42,4 +66,10 @@ export { WebsiteAiChatbot };
 export default WebsiteAiChatbot;
 :pages.disabled/pages/services/WebsiteAiChatbot.tsx
 "
+<<<<<<< HEAD
   '"'"
+=======
+'"'"
+
+'""
+>>>>>>> pr-10728

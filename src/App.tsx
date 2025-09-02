@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -889,3 +890,5 @@ import { ErrorBoundary } from 'react-error-boundary';
 
 export default App;
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
+=======
+>>>>>>> pr-10728

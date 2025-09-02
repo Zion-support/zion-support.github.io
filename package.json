@@ -113,6 +113,7 @@
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@eslint/js": "^9.32.0",
     "@rollup/rollup-linux-x64-gnu": "^4.50.0",
     "@testing-library/jest-dom": "^6.6.4",
@@ -150,6 +151,28 @@
     "node": ">=18.18.0 <=22.x",
     "npm": ">=10.0.0"
 >>>>>>> origin/main
+=======
+    "@netlify/plugin-nextjs": "^5.12.1",
+    "@next/bundle-analyzer": "^13.5.6",
+    "@tailwindcss/postcss": "^4.1.12",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^13.4.0",
+    "@types/node": "^20.8.0",
+    "@types/react": "19.1.12",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^13.5.6",
+    "glob": "^11.0.3",    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^30.0.5",
+    "node-cron": "^4.2.1",
+    "postcss": "^8.4.31",
+    "postcss-preset-env": "^10.3.1",
+    "prettier": "^3.0.3",
+    "tailwindcss": "^3.3.5",    "typescript": "5.9.2"
+>>>>>>> pr-10728
   }
 }
 =======

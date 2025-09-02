@@ -7,7 +7,13 @@ import { Box, Cpu, Zap, Globe, Rocket, Shield } from
 const QuantumTechnology = () => {}
   return()
 :pages.disabled/pages/services/QuantumTechnology.jsx
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"{/* Hero Section */}""
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      {/* Hero Section */}""
+>>>>>>> pr-10728
       <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center">""
@@ -36,7 +42,32 @@ const QuantumTechnology = () => {}
               </Link>"
               <Link""
                 to="/quantum-services""
+<<<<<<< HEAD
                 className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
+=======
+                className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
+              </div>
+            </div>""
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+              Quantum Technology;
+            </h1>""
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Harness the power of quantum computing to solve complex problems;
+              that are impossible for classical computers. Experience the future'
+              of computation with Zion Tech Group's quantum solutions.
+            </p>""
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link""
+                to="/contact""
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg""
+              >
+                Get Started;
+              </Link>
+              <Link""
+                to="/quantum-services""
+                className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg""
+              >
+>>>>>>> pr-10728
                 Explore Services;
               </Link>
             </div>
@@ -51,28 +82,64 @@ const QuantumTechnology = () => {}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
             <div>""
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
+<<<<<<< HEAD
                 What is Quantum Computing?"</h2>""
+=======
+                What is Quantum Computing?"
+
+      {/* What is Quantum Computing Section */}""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+        <div className="max-w-7xl mx-auto">""
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>""
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                What is Quantum Computing?
+              </h2>""
+>>>>>>> pr-10728
               <p className="text-lg text-gray-300 mb-6">
                 Quantum computing leverages the principles of quantum mechanics;
                 to process information in ways that classical computers cannot.
 :pages.disabled/pages/services/QuantumTechnology.jsx
                 By using quantum bits (qubits) that can exist in multiple states
                 simultaneously, quantum computers can solve complex problems
+<<<<<<< HEAD
                 exponentially faster."</p>""
+=======
+                exponentially faster."
+                By using quantum bits (qubits) that can exist in multiple states;
+                simultaneously, quantum computers can solve complex problems;
+                exponentially faster.
+              </p>""
+>>>>>>> pr-10728
               <div className="space-y-4">""
                 <div className="flex items-center space-x-3">""
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>""
                   <span className="text-gray-300">
 :pages.disabled/pages/services/QuantumTechnology.jsx
                     Superposition - Qubits can be in multiple states at once
+<<<<<<< HEAD
                   </span>"</div>""
+=======
+                  </span>"
+                    Superposition - Qubits can be in multiple states at once;
+                  </span>
+                </div>""
+>>>>>>> pr-10728
                 <div className="flex items-center space-x-3">""
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>""
                   <span className="text-gray-300">
 :pages.disabled/pages/services/QuantumTechnology.jsx
                     Entanglement - Qubits can be correlated across vast
                     distances
+<<<<<<< HEAD
                   </span>"</div>""
+=======
+                  </span>"
+                    Entanglement - Qubits can be correlated across vast;
+                    distances;
+                  </span>
+                </div>""
+>>>>>>> pr-10728
                 <div className="flex items-center space-x-3">""
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>""
                   <span className="text-gray-300">
@@ -81,7 +148,13 @@ const QuantumTechnology = () => {}
                   </span>
                 </div>
 :pages.disabled/pages/services/QuantumTechnology.jsx
+<<<<<<< HEAD
               </div>"</div>""
+=======
+              </div>"
+              </div>
+            </div>""
+>>>>>>> pr-10728
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30">""
               <div className="text-center">""
                 <CpuChipIcon className="h-24 w-24 text-purple-400 mx-auto mb-4" />""
@@ -96,12 +169,24 @@ const QuantumTechnology = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/QuantumTechnology.jsx
+<<<<<<< HEAD
 "{/* Quantum Services Section */}""
+=======
+"
+
+      {/* Quantum Services Section */}""
+>>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
 :pages.disabled/pages/services/QuantumTechnology.jsx
+<<<<<<< HEAD
             Our Quantum Services"</h2>""
+=======
+            Our Quantum Services"
+            Our Quantum Services;
+          </h2>""
+>>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">""
               <div className="p-3 bg-purple-600/20 rounded-lg w-fit mb-4">""
@@ -109,7 +194,16 @@ const QuantumTechnology = () => {}
                 <Box className="h-8 w-8 text-purple-400" />"
               </div>""
               <h3 className="text-xl font-semibold mb-3">
+<<<<<<< HEAD
                 Quantum Neural Networks"</h3>""
+=======
+                Quantum Neural Networks"
+                <Box className="h-8 w-8 text-purple-400" />
+              </div>""
+              <h3 className="text-xl font-semibold mb-3">
+                Quantum Neural Networks;
+              </h3>""
+>>>>>>> pr-10728
               <p className="text-gray-300">
                 Advanced quantum machine learning algorithms for pattern;
                 recognition and data analysis.
@@ -122,7 +216,20 @@ const QuantumTechnology = () => {}
                 <Zap className="h-8 w-8 text-blue-400" />"
               </div>""
               <h3 className="text-xl font-semibold mb-3">
+<<<<<<< HEAD
                 Quantum Edge Computing"</h3>""
+=======
+                Quantum Edge Computing"
+            </div>
+""
+            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">""
+              <div className="p-3 bg-blue-600/20 rounded-lg w-fit mb-4">""
+                <Zap className="h-8 w-8 text-blue-400" />
+              </div>""
+              <h3 className="text-xl font-semibold mb-3">
+                Quantum Edge Computing;
+              </h3>""
+>>>>>>> pr-10728
               <p className="text-gray-300">
                 Distributed quantum computing solutions for real-time processing;
                 at the edge.
@@ -135,7 +242,20 @@ const QuantumTechnology = () => {}
                 <Globe className="h-8 w-8 text-green-400" />"
               </div>""
               <h3 className="text-xl font-semibold mb-3">
+<<<<<<< HEAD
                 Quantum Cloud Infrastructure"</h3>""
+=======
+                Quantum Cloud Infrastructure"
+            </div>
+""
+            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">""
+              <div className="p-3 bg-green-600/20 rounded-lg w-fit mb-4">""
+                <Globe className="h-8 w-8 text-green-400" />
+              </div>""
+              <h3 className="text-xl font-semibold mb-3">
+                Quantum Cloud Infrastructure;
+              </h3>""
+>>>>>>> pr-10728
               <p className="text-gray-300">
                 Scalable quantum computing resources accessible through cloud;
                 platforms.
@@ -148,7 +268,20 @@ const QuantumTechnology = () => {}
                 <Rocket className="h-8 w-8 text-orange-400" />"
               </div>""
               <h3 className="text-xl font-semibold mb-3">
+<<<<<<< HEAD
                 Quantum Financial Trading"</h3>""
+=======
+                Quantum Financial Trading"
+            </div>
+""
+            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">""
+              <div className="p-3 bg-orange-600/20 rounded-lg w-fit mb-4">""
+                <Rocket className="h-8 w-8 text-orange-400" />
+              </div>""
+              <h3 className="text-xl font-semibold mb-3">
+                Quantum Financial Trading;
+              </h3>""
+>>>>>>> pr-10728
               <p className="text-gray-300">
                 High-frequency trading algorithms powered by quantum computing;
                 for market advantage.
@@ -161,7 +294,20 @@ const QuantumTechnology = () => {}
                 <Shield className="h-8 w-8 text-cyan-400" />"
               </div>""
               <h3 className="text-xl font-semibold mb-3">
+<<<<<<< HEAD
                 Quantum Cryptography"</h3>""
+=======
+                Quantum Cryptography"
+            </div>
+""
+            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">""
+              <div className="p-3 bg-cyan-600/20 rounded-lg w-fit mb-4">""
+                <Shield className="h-8 w-8 text-cyan-400" />
+              </div>""
+              <h3 className="text-xl font-semibold mb-3">
+                Quantum Cryptography;
+              </h3>""
+>>>>>>> pr-10728
               <p className="text-gray-300">
                 Unbreakable encryption systems based on quantum mechanical;
                 principles.
@@ -174,7 +320,20 @@ const QuantumTechnology = () => {}
                 <Cpu className="h-8 w-8 text-pink-400" />"
               </div>""
               <h3 className="text-xl font-semibold mb-3">
+<<<<<<< HEAD
                 Quantum Optimization"</h3>""
+=======
+                Quantum Optimization"
+            </div>
+""
+            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300">""
+              <div className="p-3 bg-pink-600/20 rounded-lg w-fit mb-4">""
+                <Cpu className="h-8 w-8 text-pink-400" />
+              </div>""
+              <h3 className="text-xl font-semibold mb-3">
+                Quantum Optimization;
+              </h3>""
+>>>>>>> pr-10728
               <p className="text-gray-300">
                 Solve complex optimization problems in logistics, manufacturing,
                 and supply chain.
@@ -184,12 +343,24 @@ const QuantumTechnology = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/QuantumTechnology.jsx
+<<<<<<< HEAD
 "{/* Applications Section */}""
+=======
+"
+
+      {/* Applications Section */}""
+>>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
 :pages.disabled/pages/services/QuantumTechnology.jsx
+<<<<<<< HEAD
             Quantum Computing Applications"</h2>""
+=======
+            Quantum Computing Applications"
+            Quantum Computing Applications;
+          </h2>""
+>>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
             <div className="space-y-6">""
               <h3 className="text-2xl font-semibold mb-4">
@@ -198,7 +369,17 @@ const QuantumTechnology = () => {}
               </h3>""
               <div className="space-y-4">""
                 <div className="flex items-start space-x-3">""
+<<<<<<< HEAD
                   <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"<div>""
+=======
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"
+                Scientific Research;
+              </h3>""
+              <div className="space-y-4">""
+                <div className="flex items-start space-x-3">""
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                  <div>""
+>>>>>>> pr-10728
                     <h4 className="font-semibold">Drug Discovery</h4>""
                     <p className="text-gray-300">
                       Simulate molecular interactions for pharmaceutical;
@@ -208,7 +389,16 @@ const QuantumTechnology = () => {}
                   </div>"
                 </div>""
                 <div className="flex items-start space-x-3">""
+<<<<<<< HEAD
                   <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"<div>""
+=======
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"
+                  </div>
+                </div>""
+                <div className="flex items-start space-x-3">""
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                  <div>""
+>>>>>>> pr-10728
                     <h4 className="font-semibold">Climate Modeling</h4>""
                     <p className="text-gray-300">
                       Complex climate simulations for environmental research;
@@ -217,7 +407,16 @@ const QuantumTechnology = () => {}
                   </div>"
                 </div>""
                 <div className="flex items-start space-x-3">""
+<<<<<<< HEAD
                   <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"<div>""
+=======
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"
+                  </div>
+                </div>""
+                <div className="flex items-start space-x-3">""
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                  <div>""
+>>>>>>> pr-10728
                     <h4 className="font-semibold">Material Science</h4>""
                     <p className="text-gray-300">
                       Design new materials with specific properties;
@@ -233,7 +432,21 @@ const QuantumTechnology = () => {}
               </h3>""
               <div className="space-y-4">""
                 <div className="flex items-start space-x-3">""
+<<<<<<< HEAD
                   <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"<div>""
+=======
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"
+              </div>
+            </div>""
+            <div className="space-y-6">""
+              <h3 className="text-2xl font-semibold mb-4">
+                Business & Industry;
+              </h3>""
+              <div className="space-y-4">""
+                <div className="flex items-start space-x-3">""
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                  <div>""
+>>>>>>> pr-10728
                     <h4 className="font-semibold">Financial Modeling</h4>""
                     <p className="text-gray-300">
                       Risk assessment and portfolio optimization;
@@ -242,7 +455,16 @@ const QuantumTechnology = () => {}
                   </div>"
                 </div>""
                 <div className="flex items-start space-x-3">""
+<<<<<<< HEAD
                   <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"<div>""
+=======
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"
+                  </div>
+                </div>""
+                <div className="flex items-start space-x-3">""
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                  <div>""
+>>>>>>> pr-10728
                     <h4 className="font-semibold">Supply Chain Optimization</h4>""
                     <p className="text-gray-300">
                       Complex logistics and routing problems;
@@ -251,7 +473,16 @@ const QuantumTechnology = () => {}
                   </div>"
                 </div>""
                 <div className="flex items-start space-x-3">""
+<<<<<<< HEAD
                   <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"<div>""
+=======
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>"
+                  </div>
+                </div>""
+                <div className="flex items-start space-x-3">""
+                  <div className="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                  <div>""
+>>>>>>> pr-10728
                     <h4 className="font-semibold">Machine Learning</h4>""
                     <p className="text-gray-300">
                       Enhanced AI algorithms and pattern recognition;
@@ -264,23 +495,48 @@ const QuantumTechnology = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/QuantumTechnology.jsx
+<<<<<<< HEAD
 "{/* Benefits Section */}""
+=======
+"
+
+      {/* Benefits Section */}""
+>>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
 :pages.disabled/pages/services/QuantumTechnology.jsx
+<<<<<<< HEAD
             Why Choose Quantum Computing?"</h2>""
+=======
+            Why Choose Quantum Computing?"
+            Why Choose Quantum Computing?
+          </h2>""
+>>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
             <div className="space-y-6">""
               <div className="flex items-start space-x-4">""
 :pages.disabled/pages/services/QuantumTechnology.jsx
+<<<<<<< HEAD
                 <div className="bg-purple-600/20 p-2 rounded-lg">"<svg""
+=======
+                <div className="bg-purple-600/20 p-2 rounded-lg">"
+                <div className="bg-purple-600/20 p-2 rounded-lg">
+                  <svg""
+>>>>>>> pr-10728
                     className="h-6 w-6 text-purple-400""
                     fill="none""
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/QuantumTechnology.jsx
                     stroke="currentColor"
+<<<<<<< HEAD
                   >"<path""
+=======
+                  >"
+                    stroke="currentColor""
+                  >
+                    <path""
+>>>>>>> pr-10728
                       strokeLinecap="round""
                       strokeLinejoin="round""
                       strokeWidth={2}""
@@ -291,7 +547,19 @@ const QuantumTechnology = () => {}
                 </div>"
                 <div>""
                   <h4 className="text-lg font-semibold mb-2">
+<<<<<<< HEAD
                     Exponential Speed"</h4>""
+=======
+                    Exponential Speed"
+                      d="M5 13l4 4L19 7""
+                    />
+                  </svg>
+                </div>
+                <div>""
+                  <h4 className="text-lg font-semibold mb-2">
+                    Exponential Speed;
+                  </h4>""
+>>>>>>> pr-10728
                   <p className="text-gray-300">
                     Solve problems in minutes that would take classical;
                     computers years.
@@ -300,13 +568,29 @@ const QuantumTechnology = () => {}
                 </div>"
               </div>""
               <div className="flex items-start space-x-4">""
+<<<<<<< HEAD
                 <div className="bg-purple-600/20 p-2 rounded-lg">"<svg""
+=======
+                <div className="bg-purple-600/20 p-2 rounded-lg">"
+                </div>
+              </div>""
+              <div className="flex items-start space-x-4">""
+                <div className="bg-purple-600/20 p-2 rounded-lg">
+                  <svg""
+>>>>>>> pr-10728
                     className="h-6 w-6 text-purple-400""
                     fill="none""
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/QuantumTechnology.jsx
                     stroke="currentColor"
+<<<<<<< HEAD
                   >"<path""
+=======
+                  >"
+                    stroke="currentColor""
+                  >
+                    <path""
+>>>>>>> pr-10728
                       strokeLinecap="round""
                       strokeLinejoin="round""
                       strokeWidth={2}""
@@ -317,7 +601,19 @@ const QuantumTechnology = () => {}
                 </div>"
                 <div>""
                   <h4 className="text-lg font-semibold mb-2">
+<<<<<<< HEAD
                     Complex Problem Solving"</h4>""
+=======
+                    Complex Problem Solving"
+                      d="M5 13l4 4L19 7""
+                    />
+                  </svg>
+                </div>
+                <div>""
+                  <h4 className="text-lg font-semibold mb-2">
+                    Complex Problem Solving;
+                  </h4>""
+>>>>>>> pr-10728
                   <p className="text-gray-300">
                     Handle problems that are impossible for classical computers.
                   </p>
@@ -325,13 +621,29 @@ const QuantumTechnology = () => {}
                 </div>"
               </div>""
               <div className="flex items-start space-x-4">""
+<<<<<<< HEAD
                 <div className="bg-purple-600/20 p-2 rounded-lg">"<svg""
+=======
+                <div className="bg-purple-600/20 p-2 rounded-lg">"
+                </div>
+              </div>""
+              <div className="flex items-start space-x-4">""
+                <div className="bg-purple-600/20 p-2 rounded-lg">
+                  <svg""
+>>>>>>> pr-10728
                     className="h-6 w-6 text-purple-400""
                     fill="none""
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/QuantumTechnology.jsx
                     stroke="currentColor"
+<<<<<<< HEAD
                   >"<path""
+=======
+                  >"
+                    stroke="currentColor""
+                  >
+                    <path""
+>>>>>>> pr-10728
                       strokeLinecap="round""
                       strokeLinejoin="round""
                       strokeWidth={2}""
@@ -342,7 +654,19 @@ const QuantumTechnology = () => {}
                 </div>"
                 <div>""
                   <h4 className="text-lg font-semibold mb-2">
+<<<<<<< HEAD
                     Future-Proof Technology"</h4>""
+=======
+                    Future-Proof Technology"
+                      d="M5 13l4 4L19 7""
+                    />
+                  </svg>
+                </div>
+                <div>""
+                  <h4 className="text-lg font-semibold mb-2">
+                    Future-Proof Technology;
+                  </h4>""
+>>>>>>> pr-10728
                   <p className="text-gray-300">
                     Stay ahead of the curve with cutting-edge quantum solutions.
                   </p>
@@ -352,13 +676,30 @@ const QuantumTechnology = () => {}
             </div>""
             <div className="space-y-6">""
               <div className="flex items-start space-x-4">""
+<<<<<<< HEAD
                 <div className="bg-purple-600/20 p-2 rounded-lg">"<svg""
+=======
+                <div className="bg-purple-600/20 p-2 rounded-lg">"
+              </div>
+            </div>""
+            <div className="space-y-6">""
+              <div className="flex items-start space-x-4">""
+                <div className="bg-purple-600/20 p-2 rounded-lg">
+                  <svg""
+>>>>>>> pr-10728
                     className="h-6 w-6 text-purple-400""
                     fill="none""
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/QuantumTechnology.jsx
                     stroke="currentColor"
+<<<<<<< HEAD
                   >"<path""
+=======
+                  >"
+                    stroke="currentColor""
+                  >
+                    <path""
+>>>>>>> pr-10728
                       strokeLinecap="round""
                       strokeLinejoin="round""
                       strokeWidth={2}""
@@ -369,7 +710,19 @@ const QuantumTechnology = () => {}
                 </div>"
                 <div>""
                   <h4 className="text-lg font-semibold mb-2">
+<<<<<<< HEAD
                     Cost Efficiency"</h4>""
+=======
+                    Cost Efficiency"
+                      d="M5 13l4 4L19 7""
+                    />
+                  </svg>
+                </div>
+                <div>""
+                  <h4 className="text-lg font-semibold mb-2">
+                    Cost Efficiency;
+                  </h4>""
+>>>>>>> pr-10728
                   <p className="text-gray-300">
                     Reduce computational costs for complex problem solving.
                   </p>
@@ -377,13 +730,29 @@ const QuantumTechnology = () => {}
                 </div>"
               </div>""
               <div className="flex items-start space-x-4">""
+<<<<<<< HEAD
                 <div className="bg-purple-600/20 p-2 rounded-lg">"<svg""
+=======
+                <div className="bg-purple-600/20 p-2 rounded-lg">"
+                </div>
+              </div>""
+              <div className="flex items-start space-x-4">""
+                <div className="bg-purple-600/20 p-2 rounded-lg">
+                  <svg""
+>>>>>>> pr-10728
                     className="h-6 w-6 text-purple-400""
                     fill="none""
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/QuantumTechnology.jsx
                     stroke="currentColor"
+<<<<<<< HEAD
                   >"<path""
+=======
+                  >"
+                    stroke="currentColor""
+                  >
+                    <path""
+>>>>>>> pr-10728
                       strokeLinecap="round""
                       strokeLinejoin="round""
                       strokeWidth={2}""
@@ -394,7 +763,19 @@ const QuantumTechnology = () => {}
                 </div>"
                 <div>""
                   <h4 className="text-lg font-semibold mb-2">
+<<<<<<< HEAD
                     Innovation Leadership"</h4>""
+=======
+                    Innovation Leadership"
+                      d="M5 13l4 4L19 7""
+                    />
+                  </svg>
+                </div>
+                <div>""
+                  <h4 className="text-lg font-semibold mb-2">
+                    Innovation Leadership;
+                  </h4>""
+>>>>>>> pr-10728
                   <p className="text-gray-300">
                     Lead your industry with quantum-powered innovation.
                   </p>
@@ -402,13 +783,29 @@ const QuantumTechnology = () => {}
                 </div>"
               </div>""
               <div className="flex items-start space-x-4">""
+<<<<<<< HEAD
                 <div className="bg-purple-600/20 p-2 rounded-lg">"<svg""
+=======
+                <div className="bg-purple-600/20 p-2 rounded-lg">"
+                </div>
+              </div>""
+              <div className="flex items-start space-x-4">""
+                <div className="bg-purple-600/20 p-2 rounded-lg">
+                  <svg""
+>>>>>>> pr-10728
                     className="h-6 w-6 text-purple-400""
                     fill="none""
                     viewBox="0 0 24 24""
 :pages.disabled/pages/services/QuantumTechnology.jsx
                     stroke="currentColor"
+<<<<<<< HEAD
                   >"<path""
+=======
+                  >"
+                    stroke="currentColor""
+                  >
+                    <path""
+>>>>>>> pr-10728
                       strokeLinecap="round""
                       strokeLinejoin="round""
                       strokeWidth={2}""
@@ -419,7 +816,19 @@ const QuantumTechnology = () => {}
                 </div>"
                 <div>""
                   <h4 className="text-lg font-semibold mb-2">
+<<<<<<< HEAD
                     Competitive Advantage"</h4>""
+=======
+                    Competitive Advantage"
+                      d="M5 13l4 4L19 7""
+                    />
+                  </svg>
+                </div>
+                <div>""
+                  <h4 className="text-lg font-semibold mb-2">
+                    Competitive Advantage;
+                  </h4>""
+>>>>>>> pr-10728
                   <p className="text-gray-300">
                     Gain significant advantages over competitors using classical;
                     computing.
@@ -431,7 +840,13 @@ const QuantumTechnology = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/QuantumTechnology.jsx
+<<<<<<< HEAD
 "{/* CTA Section */}""
+=======
+"
+
+      {/* CTA Section */}""
+>>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-600/20 to-pink-600/20">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
@@ -451,7 +866,28 @@ const QuantumTechnology = () => {}
             </Link>"
             <Link""
               to="/quantum-services""
+<<<<<<< HEAD
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg">
+=======
+              className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg"
+            Ready for the Quantum Revolution?
+          </h2>""
+          <p className="text-xl text-gray-300 mb-8">
+            Transform your business with the power of quantum computing. Contact;
+            Zion Tech Group today.
+          </p>""
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link""
+              to="/contact""
+              className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 text-lg""
+            >
+              Schedule a Consultation;
+            </Link>
+            <Link""
+              to="/quantum-services""
+              className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg""
+            >
+>>>>>>> pr-10728
               View All Services;
             </Link>
           </div>
@@ -463,4 +899,10 @@ const QuantumTechnology = () => {}
 export { QuantumTechnology };
 :pages.disabled/pages/services/QuantumTechnology.jsx
 export default QuantumTechnology;'"
+<<<<<<< HEAD
   '"'"
+=======
+'"'"
+export default QuantumTechnology;
+'""
+>>>>>>> pr-10728

@@ -16,7 +16,16 @@ const $service = () => {}
             </div>"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
             $service"</h1>""
+=======
+            $service"
+            </div>
+          </div>""
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+            $service;
+          </h1>""
+>>>>>>> pr-10728
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             This service page is under development. Contact us for more;
             information.
@@ -24,7 +33,16 @@ const $service = () => {}
           </p>"
           <Link""
             to="/contact""
+<<<<<<< HEAD
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
+=======
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
+          </p>
+          <Link""
+            to="/contact""
+            className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg""
+          >
+>>>>>>> pr-10728
             Contact Us for More Information;
           </Link>
         </div>
@@ -34,4 +52,10 @@ const $service = () => {}
 };
 :pages.disabled/pages/services/AutonomousBusinessOperationsPlatform.jsx
 export default $service;'"
+<<<<<<< HEAD
   '"'"
+=======
+'"'"
+export default $service;
+'""
+>>>>>>> pr-10728

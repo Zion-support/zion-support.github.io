@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages-backup/ui/LoadingSkeleton.tsx
 
   className = '
   ', 
@@ -164,3 +165,5 @@ export function GridSkeleton(...args: any[]): any {
     </div>
   )}
 '"`
+=======
+>>>>>>> pr-10728:src/components/ui/LoadingSkeleton.tsx

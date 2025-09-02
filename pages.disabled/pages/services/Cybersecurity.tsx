@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 import React from
   'react';
 import { Link } from
   'react-router-dom';
 import { motion } from
   'framer-motion';
+=======
+:src/pages/services/AISolutions.tsx
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+>>>>>>> pr-10728
 import {
   Shield,
   Lock,
