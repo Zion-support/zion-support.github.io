@@ -38,7 +38,6 @@ import {
   ArrowRight
 } from
   'lucide-react';
-=======
   Linkedin, Twitter,
   Mail, Globe,
   Award, Star,
@@ -52,7 +51,6 @@ import {
   Heart, Sparkles,
   CheckCircle, ArrowRight
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -128,9 +126,7 @@ const Team: React.FC = () => {
       title: "Innovation First",
       description: "We push the boundaries of what
   's possible with AI and technology",
-=======
       title: "Innovation First", description: "We push the boundaries of what&apos;s possible with AI and technology", '
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
       icon: Brain
     },
     {

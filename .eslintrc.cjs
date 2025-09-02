@@ -1,17 +1,4 @@
 module.exports = {
-<<<<<<< HEAD
-  extends: [
-    "next/core-web-vitals"
-  ],
-  rules: {
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn",
-    "no-unused-vars": [
-      "warn",
-      { argsIgnorePattern: "^_" }
-    ]
-  }
-=======
   env: {
     browser: true,
     es2021: true,
@@ -56,5 +43,4 @@ module.exports = {
     '**/*.backup',
     '**/*.tsbackup',
   ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 };

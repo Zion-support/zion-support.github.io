@@ -20,7 +20,6 @@ import {
   Globe, 
   Phone, 
   Mail, 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -36,7 +35,6 @@ import {
   Globe,
   Phone,
   Mail,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
   ArrowRight,
   DollarSign,
   TrendingUp,
@@ -54,10 +52,8 @@ import {
   Sparkles
 } from
   'lucide-react';
-=======
   Sparkles,
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
 
 const Pricing: React.FC = () => {
   const pricingPlans = [
@@ -219,11 +215,9 @@ const Pricing: React.FC = () => {
 <<<<<<< HEAD:pages.disabled_auto/pricing.tsx
                 <Card className={`p-8 h-full ${plan.popular ?,
   ring-2 ring-purple-500 scale-105': '}`}>
-=======
                 <Card
                   className={`p-8 h-full ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}
                 >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/pricing.tsx
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">

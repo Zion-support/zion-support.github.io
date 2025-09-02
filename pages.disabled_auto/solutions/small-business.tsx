@@ -9,7 +9,6 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from
   'lucide-react';
 import Link from
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -24,7 +23,6 @@ import {
   Clock,
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
 
 const SmallBusiness: NextPage = () => {
   const solutions = [
@@ -41,14 +39,12 @@ const SmallBusiness: NextPage = () => {
   'Financial reporting',
   'Team collaboration tools'
       ]
-=======
       features: [
         'Customer relationship management',
         'Inventory tracking',
         'Financial reporting',
         'Team collaboration tools',
       ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
     },
     {
       title: 'AI-Powered Customer Support,
@@ -62,14 +58,12 @@ const SmallBusiness: NextPage = () => {
   'Knowledge base integration',
   'Performance analytics'
       ]
-=======
       features: [
         '24/7 chatbot support',
         'Ticket management system',
         'Knowledge base integration',
         'Performance analytics',
       ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
     },
     {
       title: 'Digital Marketing Automation,
@@ -83,14 +77,12 @@ const SmallBusiness: NextPage = () => {
   'Content generation',
   'Lead nurturing automation'
       ]
-=======
       features: [
         'Email marketing campaigns',
         'Social media management',
         'Content generation',
         'Lead nurturing automation',
       ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
     },
     {
       title: 'Cybersecurity Protection,
@@ -105,14 +97,12 @@ const SmallBusiness: NextPage = () => {
   'Employee training'
       ]
     }
-=======
         'Data encryption',
         'Regular security audits',
         'Backup and recovery',
         'Employee training',
       ],
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
   ];
 
   const benefits = [
@@ -141,7 +131,6 @@ const SmallBusiness: NextPage = () => {
   Dedicated Support',
       description: 'Personal support team for your business needs
     }
-=======
       title: 'Cost Effective',
       description:
         'Reduce operational costs by up to 40% with our efficient solutions',
@@ -161,7 +150,6 @@ const SmallBusiness: NextPage = () => {
       title: 'Dedicated Support',
       description: 'Personal support team for your business needs',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
   ];
 
   const pricing = [
@@ -180,7 +168,6 @@ const SmallBusiness: NextPage = () => {
   'Standard security features',
   'Monthly reporting'
       ]
-=======
       name: 'Starter',
       price: '$299',
       period: '/month',
@@ -192,7 +179,6 @@ const SmallBusiness: NextPage = () => {
         'Standard security features',
         'Monthly reporting',
       ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
     },
     {
       name: 'Growth,
@@ -211,7 +197,6 @@ const SmallBusiness: NextPage = () => {
   'Advanced analytics',
   'Custom integrations'
       ]
-=======
         'Up to 15 users',
         'Advanced CRM features',
         'AI customer support',
@@ -219,7 +204,6 @@ const SmallBusiness: NextPage = () => {
         'Advanced analytics',
         'Custom integrations',
       ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
     },
     {
       name: 'Professional,
@@ -238,7 +222,6 @@ const SmallBusiness: NextPage = () => {
   'Advanced security features'
       ]
     }
-=======
         'Unlimited users',
         'Full feature access',
         'Dedicated account manager',
@@ -247,7 +230,6 @@ const SmallBusiness: NextPage = () => {
         'Advanced security features',
       ],
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/small-business.tsx
   ];
 
   return (

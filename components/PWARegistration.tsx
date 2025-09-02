@@ -36,48 +36,19 @@ const handleAppInstalled = () => {;setIsInstalled(true);
       setDeferredPrompt(null);
     };
 
-<<<<<<< HEAD
-window.addEventListener(,
-  beforeinstallprompt', handleBeforeInstallPrompt);'    window.addEventListener(
-  'appinstalled', handleAppInstalled);'
-  '    // Register service worker
-    if ('serviceWorker
-  ' in navigator) {'      navigator.serviceWorker.register(
-  '/sw.js')
-  '        .then((registration) => {'          console.log(
-  'Service Worker registered successfully: , registration);,
-  })
-  '        .catch((error) => {
-          console.log('Service Worker registration failed: , error);'        });'    }
-
-    return () => {
-      window.removeEventListener(
-  'beforeinstallprompt', handleBeforeInstallPrompt);'      window.removeEventListener(
-  'appinstalled', handleAppInstalled);'    };'  }, []);
-=======
 window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);'    window.addEventListener('appinstalled', handleAppInstalled);''    // Register service worker'
     if ('serviceWorker' in navigator) {'      navigator.serviceWorker.register('/sw.js')'        .then((registration) => {'          console.log('Service Worker registered successfully: ', registration);'        })'        .catch((error) => {'
           console.log('Service Worker registration failed: ', error);'        });'    }
 
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);'      window.removeEventListener('appinstalled', handleAppInstalled);'    };'  }, []);'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 
   const handleInstallClick = async () => {;if (!deferredPrompt) return;
 
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     
-<<<<<<< HEAD
-if (outcome ===
-  'accepted') {
-  '      console.log('User accepted the install prompt
-  ');'    } else {
-  '      console.log('User dismissed the install prompt
-  ');'    }'setDeferredPrompt(null);
-=======
 if (outcome === 'accepted') {'      console.log('User accepted the install prompt');'    } else {'      console.log('User dismissed the install prompt');'    }'setDeferredPrompt(null);'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     setShowInstallPrompt(false);
   };
 

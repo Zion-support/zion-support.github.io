@@ -9,7 +9,6 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
   'lucide-react';
 import Link from
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -24,7 +23,6 @@ import {
   ExternalLink,
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
 
 const API: NextPage = () => {
   const apiEndpoints = [
@@ -96,7 +94,6 @@ const API: NextPage = () => {
     { name:,
   Ruby', version: '1.1.0, icon:
   '💎' }
-=======
       method: 'GET',
       endpoint: '/api/v1/users',
       description: 'Retrieve user information',
@@ -141,7 +138,6 @@ const API: NextPage = () => {
     { name: 'Java', version: '1.3.0', icon: '☕' },
     { name: 'Go', version: '1.2.0', icon: '🐹' },
     { name: 'Ruby', version: '1.1.0', icon: '💎' },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
   ];
 
   return (
@@ -336,7 +332,6 @@ const API: NextPage = () => {
   'bg-yellow-100 text-yellow-800' :
   'bg-red-100 text-red-800
                           }`}>
-=======
                           <span
                             className={`px-2 py-1 text-xs font-semibold rounded-full ${
                               endpoint.method === 'GET'
@@ -348,7 +343,6 @@ const API: NextPage = () => {
                                     : 'bg-red-100 text-red-800'
                             }`}
                           >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                             {endpoint.method}
                           </span>
                         </td>

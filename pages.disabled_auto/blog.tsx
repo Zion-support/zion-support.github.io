@@ -12,7 +12,6 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -20,7 +19,6 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
   Calendar,
   Clock,
   User,
@@ -50,10 +48,8 @@ import {
   Mail
 } from
   'lucide-react';
-=======
   Mail,
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
 
 const Blog: React.FC = () => {
   const blogPosts = [
@@ -340,11 +336,9 @@ const Blog: React.FC = () => {
                           category.active 
                             ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
-=======
                           category.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
                         }`}
                       >
                         <span>{category.name}</span>

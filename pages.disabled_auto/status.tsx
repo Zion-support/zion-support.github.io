@@ -7,7 +7,6 @@ import MainLayout from
   '../components/layout/MainLayout';
 import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from
   'lucide-react';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -21,7 +20,6 @@ import {
   Database,
   Cloud,
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
 
 const Status: NextPage = () => {
   const services = [
@@ -84,7 +82,6 @@ const Status: NextPage = () => {
       lastIncident:,
   No incidents in the past 30 days'
     }
-=======
       name: 'Web Application',
       status: 'operational',
       uptime: '99.9%',
@@ -126,7 +123,6 @@ const Status: NextPage = () => {
       responseTime: '30ms',
       lastIncident: 'No incidents in the past 30 days',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
   ];
 
   const getStatusIcon = (status: string) => {
@@ -188,7 +184,6 @@ const Status: NextPage = () => {
       impact:
   'minor'
     }
-=======
       title: 'Scheduled Maintenance - API Services',
       status: 'resolved',
       date: '2025-01-20',
@@ -205,7 +200,6 @@ const Status: NextPage = () => {
         'Temporary performance degradation in database queries has been resolved.',
       impact: 'minor',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
   ];
 
   return (
@@ -242,10 +236,8 @@ const Status: NextPage = () => {
 <<<<<<< HEAD:pages.disabled_auto/status.tsx
                 All services are running normally. We
   're monitoring our systems 24/7 to ensure optimal performance.
-=======
                 All services are running normally. We&apos;re monitoring our
                 systems 24/7 to ensure optimal performance.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
               </p>
             </div>
 
@@ -384,7 +376,6 @@ const Status: NextPage = () => {
   ' ? 'bg-yellow-100 text-yellow-800
   ': 'bg-red-100 text-red-800
                           }`}>
-=======
                           <span
                             className={`px-2 py-1 rounded-full text-xs font-medium ${
                               incident.impact === 'minor'
@@ -392,7 +383,6 @@ const Status: NextPage = () => {
                                 : 'bg-red-100 text-red-800'
                             }`}
                           >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/status.tsx
                             {incident.impact} impact
                           </span>
                         </div>

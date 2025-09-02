@@ -10,14 +10,12 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/privacy.tsx
   Shield,
   Lock,
   Eye,
@@ -37,10 +35,8 @@ import {
   ArrowRight
 } from
   'lucide-react';
-=======
   ArrowRight,
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/privacy.tsx
 
 const Privacy: React.FC = () => {
   const lastUpdated = '2025-01-15';

@@ -32,9 +32,7 @@ const RequestQuote: React.FC = () => {
   );
 };
 
-=======
 import React from 'react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/RequestQuote.tsx
 export default RequestQuote;
 
 ;

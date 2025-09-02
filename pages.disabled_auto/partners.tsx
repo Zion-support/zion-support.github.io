@@ -9,7 +9,6 @@ import { Handshake, Award, Users, Globe, Star, CheckCircle } from
   'lucide-react';
 import Link from
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -22,7 +21,6 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
 
 const Partners: NextPage = () => {
   const partnerTypes = [
@@ -67,7 +65,6 @@ const Partners: NextPage = () => {
   'Regional support',
   'Cultural adaptation']
     }
-=======
       title: 'Strategic Partners',
       description:
         'Long-term partnerships that drive mutual growth and innovation.',
@@ -100,7 +97,6 @@ const Partners: NextPage = () => {
       description: 'International partnerships for worldwide market presence.',
       benefits: ['Local expertise', 'Regional support', 'Cultural adaptation'],
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
   ];
 
   const currentPartners = [
@@ -153,7 +149,6 @@ const Partners: NextPage = () => {
       category:
   'Technology Partner'
     }
-=======
       name: 'Microsoft',
       logo: '/api/placeholder/200/100',
       description: 'Cloud infrastructure and AI services partnership',
@@ -189,7 +184,6 @@ const Partners: NextPage = () => {
       description: 'CRM and customer experience solutions',
       category: 'Technology Partner',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
   ];
 
   const partnershipBenefits = [
@@ -218,7 +212,6 @@ const Partners: NextPage = () => {
   Comprehensive Support',
       description: 'Access to expert support and resources from our partner ecosystem.
     }
-=======
       title: 'Access to Cutting-Edge Technology',
       description:
         'Leverage the latest innovations and technologies from our partners.',
@@ -241,7 +234,6 @@ const Partners: NextPage = () => {
       description:
         'Access to expert support and resources from our partner ecosystem.',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
   ];
 
   return (
@@ -313,10 +305,8 @@ const Partners: NextPage = () => {
 <<<<<<< HEAD:pages.disabled_auto/partners.tsx
                 We
   're proud to work with industry leaders and innovative companies across the globe.
-=======
                 We&apos;re proud to work with industry leaders and innovative
                 companies across the globe.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/partners.tsx
               </p>
             </div>
 

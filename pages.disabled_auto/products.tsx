@@ -9,7 +9,6 @@ import Link from
   'next/link';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from
   'lucide-react';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -23,7 +22,6 @@ import {
   Globe,
   Shield,
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
 
 const Products: NextPage = () => {
   const products = [
@@ -40,7 +38,6 @@ const Products: NextPage = () => {
   'Custom dashboard creation',
   'Automated reporting',
   'Multi-source data integration'
-=======
       title: 'AI Business Intelligence Platform',
       description:
         'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
@@ -50,7 +47,6 @@ const Products: NextPage = () => {
         'Custom dashboard creation',
         'Automated reporting',
         'Multi-source data integration',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $299/month,
       category:
@@ -71,7 +67,6 @@ const Products: NextPage = () => {
   'Cost optimization analysis',
   'Security compliance checks',
   '24/7 migration support'
-=======
       users: '500+',
       image: '/products/ai-bi-platform.jpg',
     },
@@ -85,7 +80,6 @@ const Products: NextPage = () => {
         'Cost optimization analysis',
         'Security compliance checks',
         '24/7 migration support',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $199/month,
       category:
@@ -106,7 +100,6 @@ const Products: NextPage = () => {
   'Compliance reporting',
   'Security awareness training',
   '24/7 SOC support'
-=======
       users: '300+',
       image: '/products/cloud-migration.jpg',
     },
@@ -120,7 +113,6 @@ const Products: NextPage = () => {
         'Compliance reporting',
         'Security awareness training',
         '24/7 SOC support',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $399/month,
       category:
@@ -141,7 +133,6 @@ const Products: NextPage = () => {
   'User management system',
   'Analytics dashboard',
   'Deployment automation'
-=======
       users: '200+',
       image: '/products/cybersecurity-monitoring.jpg',
     },
@@ -155,7 +146,6 @@ const Products: NextPage = () => {
         'User management system',
         'Analytics dashboard',
         'Deployment automation',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $149/month,
       category:
@@ -176,7 +166,6 @@ const Products: NextPage = () => {
   'Workflow optimization',
   'Change management tools',
   'ROI tracking'
-=======
       users: '150+',
       image: '/products/micro-saas-kit.jpg',
     },
@@ -190,7 +179,6 @@ const Products: NextPage = () => {
         'Workflow optimization',
         'Change management tools',
         'ROI tracking',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $249/month,
       category:
@@ -211,7 +199,6 @@ const Products: NextPage = () => {
   'Real-time processing',
   'Data synchronization',
   'Remote monitoring'
-=======
       users: '400+',
       image: '/products/digital-transformation.jpg',
     },
@@ -225,7 +212,6 @@ const Products: NextPage = () => {
         'Real-time processing',
         'Data synchronization',
         'Remote monitoring',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
       ],
       pricing: 'Starting at $179/month,
       category:
@@ -246,7 +232,6 @@ const Products: NextPage = () => {
   'SaaS Development',
   'Digital Transformation',
   'IoT & Edge Computing'
-=======
       users: '100+',
       image: '/products/iot-edge-platform.jpg',
     },
@@ -260,7 +245,6 @@ const Products: NextPage = () => {
     'SaaS Development',
     'Digital Transformation',
     'IoT & Edge Computing',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
   ];
 
   return (
@@ -297,11 +281,9 @@ const Products: NextPage = () => {
                   index === 0 
                     ?,
   bg-blue-600 text-white': 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600
-=======
                   index === 0
                     ? 'bg-blue-600 text-white'
                     : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
                 }`}
               >
                 {category}
@@ -371,11 +353,9 @@ const Products: NextPage = () => {
                       href={`/products/${product.title.toLowerCase().replace(/\s+/g,
   '-')}`}
                       className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
-=======
                     <Link
                       href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}
                       className="flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
                     >
                       Learn More
                     </Link>

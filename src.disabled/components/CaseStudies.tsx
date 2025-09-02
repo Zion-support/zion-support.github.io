@@ -3,7 +3,6 @@ import React from
   'react''import { motion } from
   'framer-motion''import { CheckCircle, TrendingUp, Users, DollarSign } from
   'lucide-react'';'interface CaseStudy {
-=======
 import React from 'react''import { motion } from 'framer - motion';'import { CheckCircle, TrendingUp, Users, DollarSign } from 'lucide - react';';'interface CaseStudy {;
 export default React.memo(/**
  * CaseStudies function
@@ -12,7 +11,6 @@ export default React.memo(/**
  */
 function CaseStudies () {;
 
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/CaseStudies.tsx
   id: string,;
   title: string, description: string,;
   industry: string, results: {;
@@ -148,7 +146,6 @@ className="text-center mt-12""          initial={{ opacity: 0, y: 20 }}"        
     </section>
   )
 }
-=======
     id: '1', title: 'AI - Powered Customer Service Automation','    description: 'Implemented multi - agent AI system for enterprise customer service, reducing response time and improving satisfaction.','    industry: 'E - commerce', results: ['      { metric: 'Response Time', value: '85% faster', icon: <TrendingUp className="w - 5 h - 5" /> },"      { metric: 'Customer Satisfaction', value: '+32%', icon: <CheckCircle className="w - 5 h - 5" /> }, { metric: 'Cost Reduction', value: '40%', icon: <DollarSign className="w - 5 h - 5" /> }"    ], technologies: ['OpenAI GPT - 4', 'LangChain', 'React', 'Node.js', 'PostgreSQL'], duration: '3 months''  },'  {;'";
     id: '2', title: 'Cloud - Native Data Platform Migration','    description: 'Migrated legacy data infrastructure to modern cloud - native platform with real - time analytics capabilities.', industry: 'Financial Services','    results: ['      { metric: 'Processing Speed', value: '10x faster', icon: <TrendingUp className="w - 5 h - 5" /> }, { metric: 'Scalability', value: 'Unlimited', icon: <Users className="w - 5 h - 5" /> },"      { metric: 'Infrastructure Cost', value: '-60%', icon: <DollarSign className="w - 5 h - 5" /> }"    ], technologies: ['AWS', 'Kubernetes', 'Apache Kafka', 'Apache Spark', 'Terraform'], duration: '6 months''  },'  {;'";
     id: '3', title: 'Zero - Trust Cybersecurity Implementation','    description: 'Deployed comprehensive zero - trust security framework with automated threat detection and response.', industry: 'Healthcare','    results: ['      { metric: 'Security Incidents', value: '-95%', icon: <CheckCircle className="w - 5 h - 5" /> }, { metric: 'Compliance Score', value: '99.9%', icon: <CheckCircle className="w - 5 h - 5" /> },"      { metric: 'Detection Time', value: 'Real - time', icon: <TrendingUp className="w - 5 h - 5" /> }"    ], technologies: ['Okta', 'CrowdStrike', 'Splunk', 'AWS GuardDuty', 'Python'], duration: '4 months''  }']';
@@ -213,4 +210,3 @@ className="text - center mt - 12""          initial={{ opacity: 0, y: 20 }}"    
       </div>;
     </section>;) ;
 }";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/CaseStudies.tsx

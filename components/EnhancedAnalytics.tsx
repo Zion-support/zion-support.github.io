@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-React, { useEffect, useState, useCallback } from
-  'react';
-import { motion, AnimatePresence } from 'lucide-react';
-  'framer-motion';'import { ;'  BarChart3, Users, 
-=======
 import React, { useEffect, useState, useCallback } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { ;'  BarChart3, Users, '
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   Eye, MousePointer, 
   Clock, TrendingUp, 
   Globe, Smartphone,
@@ -108,15 +101,7 @@ console.error(,
   }, [fetchAnalytics, autoRefresh, refreshInterval, timeRange]);
 
 const formatNumber = (num: number): string => {;
-<<<<<<< HEAD
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M
-  ;
-   if (num >= 1000) return (num / 1000).toFixed(1) +
-  'K;
-   return num.toString();  };
-=======
     if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';'    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';'    return num.toString();'  };'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 
   const formatDuration = (seconds: number): string => {;
     const minutes = Math.floor(seconds / 60);
@@ -189,14 +174,7 @@ className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-20
           className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow border border-gray-200 dark:border-gray-700""        >"          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">"            Top Pages"          </h3>
           <div className="space-y-3">"            {analytics.topPages.map((page, index) => ("              <div key={page.page} className="flex items-center justify-between">"                <div className="flex items-center space-x-3">"                  <div className="w-8 h-8 bg-blue-100 dark: bg-blue-900 rounded-full flex items-center justify-center">"                    <span className="text-sm font-bold text-blue-600 dark:text-blue-400">"                      {index + 1}"                    </span>"
                   </div>
-<<<<<<< HEAD
-                  <span className="text-sm text-gray-700 dark:text-gray-300">"                    {page.page ===
-  '/' ?
-  'Home' : page.page}
-  '                  </span>'                </div>
-=======
                   <span className="text-sm text-gray-700 dark:text-gray-300">"                    {page.page === '/' ? 'Home' : page.page}'                  </span>'                </div>"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
                 <span className="text-sm font-semibold text-gray-900 dark:text-white">"                  {formatNumber(page.views)}"                </span></div>
             ))}
           </div>

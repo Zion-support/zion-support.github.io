@@ -11,7 +11,6 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, Shield } from
   'lucide-react';
 import Link from
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -25,7 +24,6 @@ import {
   Shield,
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/micro-saas.tsx
 
 const MicroSaasPage: NextPage = () => {
   const microSaasServices = getServicesByCategory(
@@ -57,7 +55,6 @@ const MicroSaasPage: NextPage = () => {
   Proven Results',
       description: 'Track record of successful implementations with measurable ROI for our clients.
     }
-=======
       title: 'Lightning Fast Setup',
       description:
         'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.',
@@ -80,7 +77,6 @@ const MicroSaasPage: NextPage = () => {
       description:
         'Track record of successful implementations with measurable ROI for our clients.',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/micro-saas.tsx
   ];
 
   return (

@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useMemo } from,
-  react';
-import Head from
-  'next/head';
-import Link from
-  'next/link';
-import { motion, AnimatePresence } from
-  'framer-motion';
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, Search as SearchIcon, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain as BrainIcon, Atom as AtomIcon, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon2, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon2, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon2, Atom as AtomIcon2, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from
-  'lucide-react';
-
-import UltraFuturisticBackground from
-  '../components/ui/UltraFuturisticBackground';
-import UltraFuturisticCard from
-  '../components/ui/UltraFuturisticCard';
-import { innovative2026MicroSaasServicesV2 } from
-  '../data/innovative-2026-micro-saas-v2';import { emergingTech2026ServicesV2 } from
-  '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from
-  '../data/enterprise-it-2026-services-v2';
-=======
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -135,7 +113,6 @@ import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
 import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 
 export default function Services2026ShowcasePage() {
   const [searchTerm, setSearchTerm] = useState('
@@ -148,140 +125,6 @@ export default function Services2026ShowcasePage() {
   ');
 
   // Map service variants to supported card variants
-<<<<<<< HEAD
-  const mapServiceVariantToCardVariant = (serviceVariant: string): 'default
-  ' | 'holographic
-  ' | 'quantum
-  ' | 'cyberpunk
-  ' | 'neural
-  ' | 'quantum-holographic
-  ' | 'quantum-advanced
-  ' | 'holographic-advanced
-  ' | 'neural-quantum
-  ' | 'quantum-cyberpunk
-  ' | 'holographic-neural
-  ' | 'quantum-holographic-advanced
-  ' | 'quantum-matrix
-  ' | 'neural-cyberpunk
-  ' | 'holographic-quantum
-  ' | 'quantum-neural-advanced
-  ' | 'cyberpunk-holographic
-  ' | 'quantum-space
-  ' | 'ai-futuristic
-  ' | 'quantum-entanglement
-  ' | 'holographic-matrix
-  ' | 'neural-quantum-cyberpunk
-  ' | 'enterprise-futuristic
-  ' | 'quantum-futuristic
-  ' | 'holographic-futuristic
-  ' | 'quantum-iot
-  ' | 'quantum-logistics
-  ' | 'quantum-financial
-  ' | 'quantum-energy
-  ' | 'quantum-neural
-  ' | 'quantum-cyberpunk
-  ' => {
-    if (serviceVariant.includes('quantum
-  ') && serviceVariant.includes('ai
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('quantum
-  ')) return 'quantum
-  ';
-    if (serviceVariant.includes('ai
-  ')) return 'ai-futuristic
-  ';
-    if (serviceVariant.includes('holographic
-  ')) return 'holographic
-  ';
-    if (serviceVariant.includes('neural
-  ')) return 'neural
-  ';
-    if (serviceVariant.includes('cyberpunk
-  ')) return 'cyberpunk
-  ';
-    if (serviceVariant.includes('enterprise
-  ')) return 'enterprise-futuristic
-  ';
-    if (serviceVariant.includes('cloud
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('security
-  ')) return 'cyberpunk
-  ';
-    if (serviceVariant.includes('data
-  ')) return 'neural
-  ';
-    if (serviceVariant.includes('mobility
-  ')) return 'holographic
-  ';
-    if (serviceVariant.includes('network
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('backup
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('itsm
-  ')) return 'enterprise-futuristic
-  ';
-    if (serviceVariant.includes('monitoring
-  ')) return 'neural
-  ';
-    if (serviceVariant.includes('blockchain
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('metaverse
-  ')) return 'holographic
-  ';
-    if (serviceVariant.includes('iot
-  ')) return 'quantum-iot
-  ';
-    if (serviceVariant.includes('edge
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('ar
-  ')) return 'holographic
-  ';
-    if (serviceVariant.includes('digital-twin
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('5g
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('biometric
-  ')) return 'cyberpunk
-  ';
-    if (serviceVariant.includes('autonomous
-  ')) return 'ai-futuristic
-  ';
-    if (serviceVariant.includes('revolutionary
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('consulting
-  ')) return 'enterprise-futuristic
-  ';
-    if (serviceVariant.includes('api
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('integration
-  ')) return 'quantum-advanced
-  ';
-    if (serviceVariant.includes('analytics
-  ')) return 'neural
-  ';
-    return 'default;
-  };
-
-  const contactInfo = {
-    mobile:,
-  +1 302 464 0950
-  ',
-    email: 'kleber@ziontechgroup.com,
-    address:,
-  364 E Main St STE 1008 Middletown DE 19709
-  ',
-    website: 'https://ziontechgroup.com
-=======
   const mapServiceVariantToCardVariant = (
     serviceVariant: string
   ):
@@ -354,7 +197,6 @@ export default function Services2026ShowcasePage() {
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   };
 
   // Combine all 2026 services
@@ -366,76 +208,6 @@ export default function Services2026ShowcasePage() {
 
   // Enhanced categories for 2026
   const categories = [
-<<<<<<< HEAD
-    { id:,
-  all
-  ', name: 'All 2026 Services, icon: '🚀
-  ', count: all2026Services.length },
-    { id:,
-  ai
-  ', name: 'AI & Machine Learning, icon:,
-  🧠
-  ', count: all2026Services.filter(s => s.category.includes('AI)).length },
-    { id:,
-  quantum
-  ', name: 'Quantum & Emerging Tech, icon:,
-  ⚛️
-  ', count: all2026Services.filter(s => s.category.includes('Quantum
-  ') || s.category.includes('Emerging)).length },
-    { id:,
-  enterprise
-  ', name: 'Enterprise IT, icon:,
-  🏢
-  ', count: all2026Services.filter(s => s.category.includes('Enterprise
-  ') || s.category.includes('IT)).length },
-    { id:,
-  micro-saas
-  ', name: 'Micro SaaS, icon:,
-  💻
-  ', count: all2026Services.filter(s => s.category.includes('SaaS)).length }
-  ];
-
-  const priceRanges = [
-    { id:,
-  all
-  ', name: 'All Prices, range:,
-  All
-  ' },
-    { id: 'low, name:,
-  Under $1K/month
-  ', range: 'Under $1K },
-    { id:,
-  medium
-  ', name: '$1K - $5K/month, range:,
-  $1K - $5K
-  ' },
-    { id: 'high, name:,
-  $5K - $20K/month
-  ', range: '$5K - $20K },
-    { id:,
-  premium
-  ', name: '$20K+/month, range:,
-  $20K+
-  ' }
-  ];
-
-  const sortOptions = [
-    { id: 'name, name:,
-  Name A-Z
-  ' },
-    { id: 'price-low, name:,
-  Price Low to High
-  ' },
-    { id: 'price-high, name:,
-  Price High to Low
-  ' },
-    { id: 'popularity, name:,
-  Most Popular
-  ' },
-    { id: 'newest, name:,
-  Newest First
-  ' }
-=======
     {
       id: 'all',
       name: 'All 2026 Services',
@@ -486,7 +258,6 @@ export default function Services2026ShowcasePage() {
     { id: 'price-high', name: 'Price High to Low' },
     { id: 'popularity', name: 'Most Popular' },
     { id: 'newest', name: 'Newest First' },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   ];
 
   // Filter and sort services
@@ -509,22 +280,6 @@ export default function Services2026ShowcasePage() {
     if (selectedCategory !== 'all
   ') {
       filtered = filtered.filter(service => {
-<<<<<<< HEAD
-        if (selectedCategory === 'ai
-  ') return service.category.includes('AI
-  ');
-        if (selectedCategory === 'quantum
-  ') return service.category.includes('Quantum
-  ') || service.category.includes('Emerging
-  ');
-        if (selectedCategory === 'enterprise
-  ') return service.category.includes('Enterprise
-  ') || service.category.includes('IT
-  ');
-        if (selectedCategory === 'micro-saas
-  ') return service.category.includes('SaaS
-  ');
-=======
         if (selectedCategory === 'ai') return service.category.includes('AI');
         if (selectedCategory === 'quantum')
           return (
@@ -538,7 +293,6 @@ export default function Services2026ShowcasePage() {
           );
         if (selectedCategory === 'micro-saas')
           return service.category.includes('SaaS');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         return true;
       });
     }
@@ -547,20 +301,6 @@ export default function Services2026ShowcasePage() {
     if (selectedPriceRange !== 'all
   ') {
       filtered = filtered.filter(service => {
-<<<<<<< HEAD
-        const price = parseInt(service.price.replace('$
-  ', '').replace(
-  ',', '
-  '));
-        if (selectedPriceRange === 'low
-  ') return price < 1000;
-        if (selectedPriceRange === 'medium
-  ') return price >= 1000 && price < 5000;
-        if (selectedPriceRange === 'high
-  ') return price >= 5000 && price < 20000;
-        if (selectedPriceRange === 'premium
-  ') return price >= 20000;
-=======
         const price = parseInt(service.price.replace('$', '').replace(',', ''));
         if (selectedPriceRange === 'low') return price < 1000;
         if (selectedPriceRange === 'medium')
@@ -568,7 +308,6 @@ export default function Services2026ShowcasePage() {
         if (selectedPriceRange === 'high')
           return price >= 5000 && price < 20000;
         if (selectedPriceRange === 'premium') return price >= 20000;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         return true;
       });
     }
@@ -576,28 +315,6 @@ export default function Services2026ShowcasePage() {
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
-<<<<<<< HEAD
-        case 'price-low
-  ': return parseInt(a.price.replace('$, ,
-  ').replace(
-  ',', '
-  ')) - parseInt(b.price.replace('$
-  ', '').replace(
-  ',', '
-  '));
-        case 'price-high
-  ': return parseInt(b.price.replace('$, ,
-  ').replace(
-  ',', '
-  ')) - parseInt(a.price.replace('$
-  ', '').replace(
-  ',', '
-  '));
-        case 'popularity
-  ': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
-        case 'newest:
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
-=======
         case 'price-low':
           return (
             parseInt(a.price.replace('$', '').replace(',', '')) -
@@ -614,7 +331,6 @@ export default function Services2026ShowcasePage() {
           return (
             new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
           );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         default:
           return a.name.localeCompare(b.name);
       }
@@ -780,11 +496,6 @@ export default function Services2026ShowcasePage() {
               {/* Results Count */}
               <div className="text-center">
                 <p className="text-gray-400">
-<<<<<<< HEAD
-                  Showing <span className="text-purple-400 font-semibold">{filteredServices.length}</span> of{' 
-  '}
-                  <span className="text-purple-400 font-semibold">{all2026Services.length}</span> 2026 services
-=======
                   Showing{' '}
                   <span className="text-purple-400 font-semibold">
                     {filteredServices.length}
@@ -794,7 +505,6 @@ export default function Services2026ShowcasePage() {
                     {all2026Services.length}
                   </span>{' '}
                   2026 services
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
                 </p>
               </div>
             </div>
@@ -818,22 +528,12 @@ export default function Services2026ShowcasePage() {
                   <button
                     onClick={() => {
                       setSearchTerm('');
-<<<<<<< HEAD
-                      setSelectedCategory(
-  'all');
-                      setSelectedPriceRange(
-  'all');
-                      setSortBy(
-  'name');
-                    }} className="bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-xl hover:from-gray-500 hover:to-gray-600 transition-all duration-200">
-=======
                       setSelectedCategory('all');
                       setSelectedPriceRange('all');
                       setSortBy('name');
                     }}
                     className="bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-xl hover:from-gray-500 hover:to-gray-600 transition-all duration-200"
                   >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
                     Clear Filters
                   </button>
                 </motion.div>

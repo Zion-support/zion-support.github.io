@@ -309,7 +309,6 @@ export const PricingSection: React.FC = () => {
     </section>
   );
 };
-=======
 import { Link } from 'react - router - dom';
 import React, { useState } from 'react';
 export const PricingSection: React.FC = () => {;
@@ -533,4 +532,3 @@ import { motion } from 'framer - motion';
       </div>;
     </section>;) ;
 };";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/PricingSection.tsx

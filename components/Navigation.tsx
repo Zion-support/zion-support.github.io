@@ -12,26 +12,34 @@ const Navigation: React.FC = () => {
       name: 'Services', 
       href: '/services',
       dropdown: [
-        { name: 'AI Development', href: '/services/ai-model-development-chat' },
-        { name: 'Cloud Solutions', href: '/services/cloud-migration-services-chat' },
-        { name: 'Web Development', href: '/services/web-application-development-chat' },
-        { name: 'Mobile Apps', href: '/services/mobile-app-development-chat' },
-        { name: 'Data Analytics', href: '/services/business-intelligence-chat' },
-        { name: 'Cybersecurity', href: '/services/network-security-chat' }
+        { name: 'All Services', href: '/services' },
+        { name: 'AI Services', href: '/services#ai' },
+        { name: 'IT Services', href: '/services#it' },
+        { name: 'SaaS Solutions', href: '/services#saas' },
+        { name: 'Cybersecurity', href: '/services#cybersecurity' },
+        { name: 'IoT Solutions', href: '/services#iot' },
+        { name: 'Blockchain', href: '/services#blockchain' },
+        { name: 'AR/VR', href: '/services#ar-vr' },
+        { name: 'Automation', href: '/services#automation' }
       ]
     },
     { 
       name: 'Solutions', 
-      href: '/products',
+      href: '/solutions',
       dropdown: [
-        { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
-        { name: 'IoT Platforms', href: '/iot-platforms' },
-        { name: 'AI-Powered Systems', href: '/services/ai-model-development-chat' }
+        { name: 'AI Chatbots', href: '/services/ai-chatbots' },
+        { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
+        { name: 'Cloud Migration', href: '/services/cloud-migration' },
+        { name: 'DevOps Automation', href: '/services/devops' },
+        { name: 'Custom CRM', href: '/services/crm-solutions' },
+        { name: 'E-commerce Platform', href: '/services/ecommerce-platform' },
+        { name: 'Security Audit', href: '/services/security-audit' },
+        { name: 'Zero Trust Security', href: '/services/zero-trust' }
       ]
     },
     { name: 'About', href: '/about' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Talent', href: '/talent' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' }
   ];
 

@@ -11,7 +11,6 @@ import { ArrowRight, CheckCircle, Brain, Zap, Users, Shield } from
   'lucide-react';
 import Link from
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -25,7 +24,6 @@ import {
   Shield,
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-services.tsx
 
 const AIServicesPage: NextPage = () => {
   const aiServices = getServicesByCategory(
@@ -57,7 +55,6 @@ const AIServicesPage: NextPage = () => {
   Scalable Solutions',
       description: 'AI solutions that grow with your business and adapt to changing needs.
     }
-=======
       title: 'Advanced AI',
       description:
         'Cutting-edge machine learning and AI technologies to solve complex business problems.',
@@ -80,7 +77,6 @@ const AIServicesPage: NextPage = () => {
       description:
         'AI solutions that grow with your business and adapt to changing needs.',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/ai-services.tsx
   ];
 
   return (

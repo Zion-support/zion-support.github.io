@@ -33,10 +33,8 @@ export default async function handler(
     // Log the web vitals data (in production, you,
   d send this to your analytics service)
     console.log('Web Vitals: , {
-=======
     // Log the web vitals data (in production, you&apos;d send this to your analytics service)'
     console.log('Web Vitals: ', {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api/analytics/web-vitals.ts
       metric: data.name,
       value: data.value,
       url: data.url,
@@ -52,13 +50,11 @@ export default async function handler(
       success: true, 
       message:
   'Web vitals data received',
-=======
 
     // For now, we&apos;ll just acknowledge receipt'
     res.status(200).json({
       success: true,
       message: 'Web vitals data received',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api/analytics/web-vitals.ts
       metric: data.name,
       value: data.value,
     });
@@ -68,9 +64,7 @@ export default async function handler(
   'Error processing web vitals:,
   , error);
     res.status(500).json({ error: 'Internal server error });
-=======
     console.error('Error processing web vitals: ', error);
     res.status(500).json({ error: 'Internal server error' });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api/analytics/web-vitals.ts
   }
 }

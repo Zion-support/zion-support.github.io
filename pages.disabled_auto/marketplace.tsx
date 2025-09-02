@@ -19,7 +19,6 @@ const MarketplacePage: React.FC = () => {
   Hardware and infrastructure.' },
     { title: 'Services, href:,
   /marketplace/services', description: 'Professional and managed services. },
-=======
     {
       title: 'Products',
       href: '/marketplace/products',
@@ -40,7 +39,6 @@ const MarketplacePage: React.FC = () => {
       href: '/marketplace/services',
       description: 'Professional and managed services.',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/marketplace.tsx
   ];
 
   return (

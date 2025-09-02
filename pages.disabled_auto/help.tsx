@@ -9,7 +9,6 @@ import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } f
   'lucide-react';
 import Link from
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -24,7 +23,6 @@ import {
   Download,
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
 
 const Help: NextPage = () => {
   const helpCategories = [
@@ -40,13 +38,11 @@ const Help: NextPage = () => {
   'Understanding our services',
   'First steps guide'
       ]
-=======
         'Welcome to Zion Tech Group',
         'Setting up your account',
         'Understanding our services',
         'First steps guide',
       ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
     },
     {
       icon: FileText,
@@ -60,13 +56,11 @@ const Help: NextPage = () => {
   'Billing and payments',
   'Security best practices'
       ]
-=======
         'Service management',
         'Account settings',
         'Billing and payments',
         'Security best practices',
       ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
     },
     {
       icon: Video,
@@ -93,7 +87,6 @@ const Help: NextPage = () => {
   'Service-specific FAQs'
       ]
     }
-=======
         'Platform overview',
         'Service configuration',
         'Troubleshooting common issues',
@@ -111,7 +104,6 @@ const Help: NextPage = () => {
         'Service-specific FAQs',
       ],
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
   ];
 
   const popularArticles = [
@@ -148,7 +140,6 @@ const Help: NextPage = () => {
   Account',
       views: '521 views
     }
-=======
       title: 'How to get started with our services',
       category: 'Getting Started',
       views: '1.2k views',
@@ -173,7 +164,6 @@ const Help: NextPage = () => {
       category: 'Account',
       views: '521 views',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
   ];
 
   const supportOptions = [
@@ -205,7 +195,6 @@ const Help: NextPage = () => {
   Response within 24 hours',
       action: 'Send Email
     }
-=======
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       availability: 'Available 24/7',
@@ -225,7 +214,6 @@ const Help: NextPage = () => {
       availability: 'Response within 24 hours',
       action: 'Send Email',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/help.tsx
   ];
 
   return (

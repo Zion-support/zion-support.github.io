@@ -12,7 +12,6 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -20,7 +19,6 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
   Calendar,
   Clock,
   Users,
@@ -51,10 +49,8 @@ import {
   ExternalLink
 } from
   'lucide-react';
-=======
   ExternalLink,
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
 
 const Webinars: React.FC = () => {
   const webinars = [
@@ -290,11 +286,9 @@ const Webinars: React.FC = () => {
                         {featuredWebinar.status ===,
   upcoming' ?
   'Register Now': 'Watch Recording}
-=======
                         {featuredWebinar.status === 'upcoming'
                           ? 'Register Now'
                           : 'Watch Recording'}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                       </Button>
                     </div>
                   </div>
@@ -308,7 +302,6 @@ const Webinars: React.FC = () => {
                         {featuredWebinar.status ===,
   upcoming' ?
   'Upcoming': 'Recorded}
-=======
                       <Badge variant="outline" className="mr-3">
                         {featuredWebinar.category}
                       </Badge>
@@ -323,7 +316,6 @@ const Webinars: React.FC = () => {
                         {featuredWebinar.status === 'upcoming'
                           ? 'Upcoming'
                           : 'Recorded'}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                       </Badge>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">
@@ -373,11 +365,9 @@ const Webinars: React.FC = () => {
                         {featuredWebinar.status ===,
   upcoming' ?
   'Register Now': 'Watch Recording}
-=======
                         {featuredWebinar.status === 'upcoming'
                           ? 'Register Now'
                           : 'Watch Recording'}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
@@ -504,7 +494,6 @@ const Webinars: React.FC = () => {
                               </Button>
                               <Button variant="outline" size="sm">
                                 <Share2 className="w-4 h-4" />
-=======
                   {webinars
                     .filter(webinar => !webinar.featured)
                     .map((webinar, index) => (
@@ -549,7 +538,6 @@ const Webinars: React.FC = () => {
                                 {webinar.status === 'upcoming'
                                   ? 'Register'
                                   : 'Watch'}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                               </Button>
                             </div>
                           </div>
@@ -651,11 +639,9 @@ const Webinars: React.FC = () => {
                           category.active 
                             ?,
   bg-gradient-to-r from-blue-500 to-purple-600 text-white': 'text-gray-300 hover:bg-slate-700
-=======
                           category.active
                             ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white'
                             : 'text-gray-300 hover:bg-slate-700'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/webinars.tsx
                         }`}
                       >
                         <span>{category.name}</span>

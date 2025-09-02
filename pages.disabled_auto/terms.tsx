@@ -26,7 +26,6 @@ import {
   BookOpen
 } from
   'lucide-react';
-=======
   FileText, Scale,
   AlertTriangle, CheckCircle,
   Calendar, Globe,
@@ -35,7 +34,6 @@ import {
   Users, DollarSign,
   Clock, BookOpen
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
 
 const Terms: React.FC = () => {
   const lastUpdated = "2025-01-15";
@@ -85,10 +83,8 @@ const Terms: React.FC = () => {
         "We are not liable for any indirect, incidental, or consequential damages",
         "Our total liability is limited to the amount paid for the specific service",
         "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
-=======
         "Our services are provided 'as is' without warranties of any kind", "We are not liable for any indirect, incidental, or consequential damages",
         "Our total liability is limited to the amount paid for the specific service", "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
       ]
     }
   ];
@@ -104,9 +100,7 @@ const Terms: React.FC = () => {
 <<<<<<< HEAD:pages.disabled_auto/terms.tsx
         description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group
   's AI services and solutions."
-=======
         description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group&apos;s AI services and solutions."'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
       />
       
       {/* Hero Section */}

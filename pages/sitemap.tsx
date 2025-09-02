@@ -14,83 +14,6 @@ import {
   Filter, Calendar,
   Star, TrendingUp,
   Brain, Cloud,
-<<<<<<< HEAD
-  Database, Zap,
-  Lock, Code,
-  Smartphone, Monitor,
-  Server, Network
-} from 'lucide-react';
-
-const SitemapPage: React.FC = () => {
-  const siteStructure = [
-    {
-      category: 'Main Pages',
-      icon: Home,
-      pages: [
-        { name: 'Home', path: '/', description: 'Main landing page' },
-        { name: 'About', path: '/about', description: 'About Zion Tech Group' },
-        { name: 'Contact', path: '/contact', description: 'Contact information' },
-        { name: 'Pricing', path: '/pricing', description: 'Service pricing' },
-        { name: 'Careers', path: '/careers', description: 'Job opportunities' }
-      ]
-    },
-    {
-      category: 'Services',
-      icon: Briefcase,
-      pages: [
-        { name: 'AI Services', path: '/ai-services', description: 'Artificial Intelligence solutions' },
-        { name: 'IT Services', path: '/it-services', description: 'Information Technology services' },
-        { name: 'Micro SaaS', path: '/micro-saas', description: 'Micro Software as a Service' },
-        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud computing solutions' },
-        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security services' },
-        { name: 'Infrastructure', path: '/infrastructure', description: 'IT infrastructure services' }
-      ]
-    },
-    {
-      category: 'Resources',
-      icon: BookOpen,
-      pages: [
-        { name: 'Case Studies', path: '/case-studies', description: 'Success stories and case studies' },
-        { name: 'White Papers', path: '/white-papers', description: 'Technical white papers' },
-        { name: 'Webinars', path: '/webinars', description: 'Educational webinars' },
-        { name: 'Blog', path: '/blog', description: 'Latest news and insights' },
-        { name: 'Documentation', path: '/documentation', description: 'Technical documentation' }
-      ]
-    },
-    {
-      category: 'Company',
-      icon: Users,
-      pages: [
-        { name: 'Team', path: '/team', description: 'Meet our team' },
-        { name: 'Partners', path: '/partners', description: 'Our partners' },
-        { name: 'FAQ', path: '/faq', description: 'Frequently asked questions' },
-        { name: 'Help', path: '/help', description: 'Help and support' }
-      ]
-    },
-    {
-      category: 'Legal',
-      icon: Shield,
-      pages: [
-        { name: 'Privacy Policy', path: '/privacy', description: 'Privacy policy and data protection' },
-        { name: 'Terms of Service', path: '/terms', description: 'Terms and conditions' },
-        { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
-      ]
-    }
-  ];
-
-  return (
-    <>
-      <SEO 
-        title="Sitemap"
-        description="Complete sitemap of Zion Tech Group website. Find all pages, services, and resources in one place."
-        keywords="sitemap, website navigation, pages, services, resources"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-=======
   Database, Network,
   Zap, Target,
   CheckCircle
@@ -107,21 +30,10 @@ const SitemapPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"      <SEO "        title="Sitemap - Zion Tech Group" "        description="Navigate through all pages and content on the Zion Tech Group website. Find what you&apos;re looking for quickly and easily."''      />'      '"
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">"        <div className="max-w-7xl mx-auto text-center">"          <motion.div"            initial={{ opacity: 0, y: 20 }}"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-<<<<<<< HEAD
-            <div className="flex items-center justify-center mb-6">
-              <Map className="h-12 w-12 text-blue-600 mr-4" />
-              <h1 className="text-4xl font-bold text-gray-900">Website Sitemap</h1>
-            </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Navigate through all pages and sections of the Zion Tech Group website. 
-              Find exactly what you're looking for with our comprehensive site structure.
-            </p>
-=======
             <Badge variant="secondary" className="mb-4">"              <Map className="w-4 h-4 mr-2" />"              Site Navigation"            </Badge>"
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">"              Sitemap"            </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"              Find all pages and content on our website. Navigate through our services, resources, and information easily."            </p>
@@ -137,61 +49,18 @@ const SitemapPage: React.FC = () => {
             <div className="flex gap-2">"              <Badge variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">"                All Pages"              </Badge>"
               <Badge variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">"                Services"              </Badge>
               <Badge variant="outline" className="cursor-pointer hover:bg-blue-500 hover:text-white transition-colors">"                Resources"              </Badge></div>
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
           </motion.div>
 
-<<<<<<< HEAD
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {siteStructure.map((section, index) => (
-              <motion.div
-                key={section.category}
-=======
       {/* Sitemap Content */}
 <section className="py-20 px-4 sm:px-6 lg:px-8">"        <div className="max-w-7xl mx-auto">"          <motion.div"            initial={{ opacity: 0, y: 20 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="space-y-16""          >"            {categories.map((category, categoryIndex) => (<motion.div
                 key={category.name}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-<<<<<<< HEAD
-                <Card className="h-full">
-                  <CardHeader>
-                    <div className="flex items-center mb-4">
-                      <section.icon className="h-6 w-6 text-blue-600 mr-3" />
-                      <CardTitle className="text-xl">{section.category}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3">
-                      {section.pages.map((page, pageIndex) => (
-                        <motion.div
-                          key={page.path}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.4, delay: (index * 0.1) + (pageIndex * 0.05) }}
-                          className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                        >
-                          <div className="flex-1">
-                            <a 
-                              href={page.path}
-                              className="text-blue-600 hover:text-blue-800 font-medium flex items-center"
-                            >
-                              {page.name}
-                              <ExternalLink className="h-4 w-4 ml-2" />
-                            </a>
-                            <p className="text-sm text-gray-600 mt-1">{page.description}</p>
-                          </div>
-                          <ArrowRight className="h-4 w-4 text-gray-400" />
-                        </motion.div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-=======
 <div className="text-center mb-8">"                  <h2 className="text-3xl font-bold text-white mb-4">{category.name}</h2>"                  <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>"                </div>"
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">"                  {category.pages.map((page, pageIndex) => ("                    <motion.divkey={page.url}
                       initial={{ opacity: 0, y: 20 }}
@@ -206,45 +75,10 @@ const SitemapPage: React.FC = () => {
                     </motion.div>
                   ))}
                 </div>
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
               </motion.div>
             ))}
           </div>
 
-<<<<<<< HEAD
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className="mt-12 text-center"
-          >
-            <Card className="max-w-2xl mx-auto">
-              <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Can't find what you're looking for?
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  Use our search functionality or contact us directly for assistance.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a 
-                    href="/contact"
-                    className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center"
-                  >
-                    <Phone className="h-4 w-4 mr-2" />
-                    Contact Us
-                  </a>
-                  <a 
-                    href="/help"
-                    className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors flex items-center justify-center"
-                  >
-                    <Search className="h-4 w-4 mr-2" />
-                    Get Help
-                  </a>
-                </div>
-              </CardContent>
-            </Card>
-=======
       {/* Quick Stats */}
 <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">"        <div className="max-w-7xl mx-auto">"          <motion.div"            initial={{ opacity: 0, y: 20 }}"
             animate={{ opacity: 1, y: 0 }}
@@ -279,12 +113,10 @@ className="text-center""            >"              <div className="p-6 rounded-
             <div className="flex flex-col sm: flex-row gap-4 justify-center">"              <a"                href="/contact""                className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity""              >"                <Phone className="w-5 h-5 mr-2" />"                Contact Support"              </a>"
               <a
                 href="/services""                className="inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors""              >"                <Briefcase className="w-5 h-5 mr-2" />"                Browse Services"              </a></div>"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
           </motion.div>
         </div>
       </div>
     </>
-=======
 
 const Sitemap: React.FC = () => {
   const links = [
@@ -319,7 +151,6 @@ const Sitemap: React.FC = () => {
         ))}
       </ul>
     </div>
->>>>>>> main
   );
 };
 

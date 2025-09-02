@@ -2,11 +2,9 @@
 import React, { Component, ErrorInfo, ReactNode } from
   'react';'
   'interface Props {
-=======
 import React, { Component, ErrorInfo, ReactNode } from 'react';''interface Props {;
 export class ErrorBoundary extends Component < Props, State> {;
 
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ErrorBoundary.tsx
   children: ReactNode;
   fallback?: ReactNode;
  }interface State {;
@@ -38,7 +36,6 @@ console.error(,
       );
     }
 
-=======
     hasError: false;
   };public static getDerivedStateFromError (error: Error) : State {return { hasError: true, error };
   };
@@ -54,7 +51,6 @@ console.error ('ErrorBoundary caught an error: ', error, errorInfo) ;'    '    /
           </div>;
         </div>;) ;
     };
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ErrorBoundary.tsx
     return this.props.children;
   };
 }";

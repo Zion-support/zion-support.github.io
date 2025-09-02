@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 
 export const Sidebar: React.FC = () => {
@@ -40,5 +38,4 @@ export const Sidebar: React.FC = () => {
     </aside>
   );
 };
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
 

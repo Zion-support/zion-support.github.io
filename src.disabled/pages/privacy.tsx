@@ -1,10 +1,8 @@
 <<<<<<< HEAD:src.disabled/pages/privacy.tsx
 import React from
   'react';
-=======
 import React from 'react';
 export default React.memo(function Privacy () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/privacy.tsx
 
 ;
   return (;

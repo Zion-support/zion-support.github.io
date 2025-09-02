@@ -76,7 +76,6 @@ const AIAutonomousVehiclePlatform = () => {
       icon: Cloud,
       color: "text-indigo-400"
     }
-=======
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -107,7 +106,6 @@ const AIAutonomousVehiclePlatform = () => {;
       description: "Seamless cloud connectivity for updates, data sharing, and fleet management", icon: Cloud,";
       color: "text-indigo-400";
     };
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-autonomous-vehicle-platform.tsx
   ];
 ;
   const useCases = [;
@@ -549,7 +547,6 @@ const AIAutonomousVehiclePlatform = () => {;
         </div>
       </section>
     </div>
-=======
 ;
   return (";
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">;
@@ -906,7 +903,6 @@ const AIAutonomousVehiclePlatform = () => {;
         </div>;
       </section>;
     </div>;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-autonomous-vehicle-platform.tsx
   );
 };
 ;

@@ -24,9 +24,7 @@ const FAQ: NextPage = () => {
       title:,
   General Questions',
       questions: [
-=======
       title: 'General Questions', questions: [
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
         {
           question:
   'What services does Zion Tech Group offer?,
@@ -123,7 +121,6 @@ const FAQ: NextPage = () => {
           question: 'What technologies do you work with?,
           answer:
   'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
-=======
           question: 'How long has Zion Tech Group been in business?', answer: 'Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'
         }, {
           question: 'What industries do you serve?',
@@ -179,7 +176,6 @@ const FAQ: NextPage = () => {
         },
         {
           question: 'What technologies do you work with?', answer: 'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
         }
       ]
     }
@@ -191,9 +187,7 @@ const FAQ: NextPage = () => {
 <<<<<<< HEAD:pages.disabled_auto/faq.tsx
       description="Find answers to common questions about Zion Tech Group
   's services, pricing, and support. Get the information you need to make informed decisions about your technology needs."
-=======
       description="Find answers to common questions about Zion Tech Group&apos;s services, pricing, and support. Get the information you need to make informed decisions about your technology needs."'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
       keywords="FAQ, frequently asked questions, support, help, services, pricing, technical support"
     >
       <div className="min-h-screen bg-gray-50">

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from
-  'react';
-=======
 import React from 'react';
 export default React.memo(/**
  * PageTransition function
@@ -9,7 +5,6 @@ export default React.memo(/**
  * @returns {*} Function return value
  */
 function PageTransition ({ children }: PageTransitionProps) {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 
 ;
 type PageTransitionProps = {;

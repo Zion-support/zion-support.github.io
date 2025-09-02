@@ -7,7 +7,6 @@ import MainLayout from
   '../components/layout/MainLayout';
 import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from
   'lucide-react';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
@@ -19,7 +18,6 @@ import {
   Database,
   CheckCircle,
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
 
 const Cookies: NextPage = () => {
   const cookieTypes = [
@@ -64,7 +62,6 @@ const Cookies: NextPage = () => {
   'Campaign tracking',
   'Conversion measurement']
     }
-=======
       title: 'Essential Cookies',
       description:
         'These cookies are necessary for the website to function and cannot be switched off.',
@@ -91,7 +88,6 @@ const Cookies: NextPage = () => {
         'These cookies are used to deliver relevant advertisements and marketing campaigns.',
       examples: ['Ad targeting', 'Campaign tracking', 'Conversion measurement'],
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
   ];
 
   const cookieFeatures = [
@@ -114,7 +110,6 @@ const Cookies: NextPage = () => {
   Transparency',
       description: 'We provide clear information about the cookies we use.
     }
-=======
       title: 'Cookie Consent',
       description:
         'We obtain your consent before setting non-essential cookies.',
@@ -129,7 +124,6 @@ const Cookies: NextPage = () => {
       title: 'Transparency',
       description: 'We provide clear information about the cookies we use.',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/cookies.tsx
   ];
 
   return (

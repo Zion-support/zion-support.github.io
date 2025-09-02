@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-React, { useState } from
-  'react';
-import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
-  'lucide-react';'
-  'interface FormData {name: string;
-=======
 import React, { useState } from 'react';'import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';''interface FormData {name: string;'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   email: string;
   company: string;
   service: string;
@@ -25,21 +17,7 @@ const [formData, setFormData] = useState<FormData>({;
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const services = [;
-<<<<<<< HEAD
-
-  'AI & Machine Learning',
-  'Cloud & DevOps',
-  '    'Cybersecurity
-  ', 'Web Development
-  ',' 
-  'Mobile Development',
-  'Data Analytics',
-  '    'Digital Transformation
-  ', 'Other
-  ','  ];'
-=======
     'AI & Machine Learning', 'Cloud & DevOps','    'Cybersecurity', 'Web Development','    'Mobile Development', 'Data Analytics','    'Digital Transformation', 'Other','  ];''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   const validateForm = (): boolean => {;const newErrors: Partial<FormData> = {};
 
     if (!formData.name.trim()) {
@@ -115,23 +93,12 @@ name:,
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""      >"        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />"        <h3 className="text-2xl font-bold text-green-800 mb-2">"          Message Sent!"        </h3>
-        <p className="text-green-600">"          Thank you for reaching out. We&apos;ll get back to you within 24 hours.'
-  '        </p>'      </motion.div>);
-  }
-
-  return (
-<div className="bg-white rounded-xl shadow-xl p-8">"      <div className="text-center mb-8">"        <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>"        <p className="text-gray-600 max-w-2xl mx-auto">"          Ready to transform your business? Let&apos;s discuss how our technology'
-  '          solutions can drive your success.'        </p>
-=======
 className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""      >"        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />"        <h3 className="text-2xl font-bold text-green-800 mb-2">"          Message Sent!"        </h3>"
         <p className="text-green-600">"          Thank you for reaching out. We&apos;ll get back to you within 24 hours.''        </p>'      </motion.div>);'"
   }
 
   return (
 <div className="bg-white rounded-xl shadow-xl p-8">"      <div className="text-center mb-8">"        <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>"        <p className="text-gray-600 max-w-2xl mx-auto">"          Ready to transform your business? Let&apos;s discuss how our technology''          solutions can drive your success.'        </p>'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
       </div>
 
       <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">"        <div>"          <h3 className="text-xl font-semibold text-gray-900 mb-4">"            Contact Information"          </h3>

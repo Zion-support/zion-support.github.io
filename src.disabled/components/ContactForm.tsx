@@ -42,7 +42,6 @@ export const ContactForm: React.FC = () => {
   ');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-=======
 import React, { useState } from 'react';
 export const ContactForm: React.FC = () => {;
 import { motion } from 'framer - motion';
@@ -69,7 +68,6 @@ import { motion } from 'framer - motion';
     e: React.ChangeEvent<;
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement;
     >;) => {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.tsx
     const { name, value } = e.target;
     setFormData (prev => ({;
       ...prev,;
@@ -400,7 +398,6 @@ import { motion } from 'framer - motion';
     </div>
   );
 };
-=======
 ;
   const handleSubmit = async (e: React.FormEvent) => {;
     e.preventDefault () ;
@@ -741,4 +738,3 @@ import { motion } from 'framer - motion';
     </div>;) ;
 };
 ";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/components/ContactForm.tsx

@@ -5,20 +5,8 @@ import { motion } from 'lucide-react';
   'lucide-react';'
   'const ContactFormEnhanced: React.FC = () => {
   const [formData, setFormData] = useState({;
-<<<<<<< HEAD
-    name:,
-  ', email: ','    subject:,
-  ', message: ''  });'  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-  'idle' |
-  'success' |
-  'error'>(
-  'idle');'
-  '  const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
-=======
     name: '', email: '','    subject: '', message: '''  });'  const [isSubmitting, setIsSubmitting] = useState(false);'
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');''  const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     setIsSubmitting(true);
     
     // Simulate API call

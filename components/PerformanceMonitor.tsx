@@ -12,20 +12,8 @@ const PerformanceMonitor: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-<<<<<<< HEAD
-if (typeof window ===,
-  undefined
-  ') return;''    // Only show in development or for admin users
-    const isDev = process.env.NODE_ENV ===
-  'development;
-   const isAdmin = localStorage.getItem(
-  'admin_mode') ===
-  'true';'
-  '    if (!isDev && !isAdmin) return;
-=======
 if (typeof window === 'undefined') return;''    // Only show in development or for admin users
     const isDev = process.env.NODE_ENV === 'development';'    const isAdmin = localStorage.getItem('admin_mode') === 'true';'    '    if (!isDev && !isAdmin) return;'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 
     const observer = new PerformanceObserver((list) => {;const entries = list.getEntries();
       

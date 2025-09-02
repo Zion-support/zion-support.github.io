@@ -9,7 +9,6 @@ import { TrendingUp, Cloud, Database, Users, Zap, Shield, Target, CheckCircle } 
   'lucide-react';
 import Link from
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -24,7 +23,6 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
 
 const DigitalTransformation: NextPage = () => {
   const transformationServices = [
@@ -95,7 +93,6 @@ const DigitalTransformation: NextPage = () => {
   'Higher retention',
   'Improved loyalty']
     }
-=======
       title: 'Cloud Migration',
       description:
         'Seamlessly migrate your infrastructure to the cloud for improved scalability and cost efficiency.',
@@ -166,7 +163,6 @@ const DigitalTransformation: NextPage = () => {
         'Improved loyalty',
       ],
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
   ];
 
   const transformationStages = [
@@ -232,7 +228,6 @@ const DigitalTransformation: NextPage = () => {
     { metric:,
   75%', label: 'Time Savings, description:
   'Reduction in time-to-market for new products' }
-=======
       stage: 'Assessment',
       title: 'Current State Analysis',
       description:
@@ -317,7 +312,6 @@ const DigitalTransformation: NextPage = () => {
       label: 'Time Savings',
       description: 'Reduction in time-to-market for new products',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/digital-transformation.tsx
   ];
 
   return (

@@ -13,7 +13,6 @@ import Link from
   'next/link';
 import { motion } from
   'framer-motion';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -35,7 +34,6 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/index.tsx
 const ServicesPage: NextPage = () => {
   const microSaasServices = getServicesByCategory(
   'micro-saas');
@@ -82,7 +80,6 @@ const ServicesPage: NextPage = () => {
   Expert Support',
       description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
     }
-=======
       title: 'Competitive Pricing',
       description:
         'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.',
@@ -105,7 +102,6 @@ const ServicesPage: NextPage = () => {
       description:
         '24/7 expert support from our experienced team of developers, engineers, and AI specialists.',
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/services/index.tsx
   ];
 
   return (

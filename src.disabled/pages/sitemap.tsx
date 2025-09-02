@@ -26,7 +26,6 @@ export default function Sitemap() {
   );
 }
 
-=======
 import { Link } from 'react - router - dom';
 import React from 'react';
 export default React.memo(function Sitemap () {;
@@ -43,4 +42,3 @@ export default React.memo(function Sitemap () {;
     </div>;) ;
 };
 ";
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/sitemap.tsx

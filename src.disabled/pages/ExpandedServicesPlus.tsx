@@ -67,9 +67,7 @@ import React from
     </div>
   );
 }
-=======
 import React from 'react';''export default React.memo(function ExpandedServicesPlus () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ExpandedServicesPlus.tsx
 
   return (;
     <div className="min - h-screen bg - slate - 950 text - slate - 100">"      <section className="py - 12 border - b border - slate - 800">"        <div className="container mx - auto px - 4 sm: px - 6 lg:px - 8">"          <div className="mb - 6 inline - flex items - center rounded - full border border - slate - 700 bg - slate - 800 / 60 px - 4 py - 1 text - sm text - slate - 300">"            Zion Tech Group • Expanded Services Catalog"          </div>"";

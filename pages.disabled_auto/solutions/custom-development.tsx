@@ -9,7 +9,6 @@ import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } fr
   'lucide-react';
 import Link from
   'next/link';
-=======
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
@@ -24,7 +23,6 @@ import {
   CheckCircle,
 } from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/custom-development.tsx
 
 const CustomDevelopment: NextPage = () => {
   const developmentServices = [
@@ -95,7 +93,6 @@ const CustomDevelopment: NextPage = () => {
   'Data validation',
   'Security audits']
     }
-=======
       title: 'Web Application Development',
       description:
         'Custom web applications built with modern frameworks and technologies.',
@@ -166,7 +163,6 @@ const CustomDevelopment: NextPage = () => {
         'Security audits',
       ],
     },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/custom-development.tsx
   ];
 
   const developmentProcess = [
@@ -237,7 +233,6 @@ const CustomDevelopment: NextPage = () => {
   Cloud' },
     { name: 'Docker, category:
   'DevOps' }
-=======
       step: '01',
       title: 'Discovery & Planning',
       description:
@@ -287,7 +282,6 @@ const CustomDevelopment: NextPage = () => {
     { name: 'AWS', category: 'Cloud' },
     { name: 'Azure', category: 'Cloud' },
     { name: 'Docker', category: 'DevOps' },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/custom-development.tsx
   ];
 
   return (

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-/** @type {import(
-  'next').NextConfig} */
-=======
 /** @type {import('next').NextConfig} */
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
@@ -16,24 +10,13 @@ const nextConfig = {
     ignoreDuringBuilds: true,
   },
 <<<<<<< HEAD:next.config.js
-=======
   typescript: {
-<<<<<<< HEAD
-    ignoreBuildErrors: true,},
->>>>>>> origin/main:next.config.cjs
-  images: {
-    domains: ['ziontechgroup.com'],
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-=======
     // Allow production builds to successfully complete even if
     // there are type errors.
     ignoreBuildErrors: true,
   },
   images: {
     domains: ['ziontechgroup.com'],
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
     unoptimized: true,
   },
   compiler: {
@@ -43,7 +26,6 @@ const nextConfig = {
     // Completely exclude problematic directories from the build
 <<<<<<< HEAD:next.config.js
     // Keep default TS/JS handling; we already ignore build errors via config
-=======
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -61,7 +43,6 @@ const nextConfig = {
         /hardhat/,
       ],
     });
->>>>>>> origin/main:next.config.cjs
     
     // Add fallback for problematic modules
     config.resolve.fallback = {
@@ -85,7 +66,6 @@ const nextConfig = {
 };
 
 export default nextConfig;
-=======
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -125,4 +105,3 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1

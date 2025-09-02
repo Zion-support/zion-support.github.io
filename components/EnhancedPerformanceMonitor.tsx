@@ -75,14 +75,7 @@ const navigationEntry = performance.getEntriesByType(
         }
 
         // Calculate FMP (First Meaningful Paint)
-<<<<<<< HEAD
-        const paintEntries = performance.getEntriesByType('paint
-  ');'        const fmpEntry = paintEntries.find(entry => entry.name ===
-  'first-meaningful-paint');'        if (fmpEntry) {
-  '          metrics.fmp = Math.round(fmpEntry.startTime);}
-=======
         const paintEntries = performance.getEntriesByType('paint');'        const fmpEntry = paintEntries.find(entry => entry.name === 'first-meaningful-paint');'        if (fmpEntry) {'          metrics.fmp = Math.round(fmpEntry.startTime);}'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
 
         // Calculate TTI (Time to Interactive) - simplified
         metrics.tti = Math.round(performance.now());
@@ -206,13 +199,7 @@ const getScoreColor = (score: number): string => {;
             {alerts.length > 0 && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-animate={{ opacity: 1, height:
-  'auto' }}
-  '                exit={{ opacity: 0, height: 0 }}'                className="space-y-2""              >"                <h4 className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center">"                  <AlertTriangle className="w-4 h-4 mr-1" />"                  Performance Alerts"                </h4>{alerts.map((alert, index) => (
-=======
 animate={{ opacity: 1, height: 'auto' }}'                exit={{ opacity: 0, height: 0 }}'                className="space-y-2""              >"                <h4 className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center">"                  <AlertTriangle className="w-4 h-4 mr-1" />"                  Performance Alerts"                </h4>{alerts.map((alert, index) => ("
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}
