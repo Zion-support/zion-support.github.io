@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
-import { services, getServicesByCategory } from '../../data/services';
+import { getServicesByCategory } from '../../data/services';
 import { ArrowRight, CheckCircle, Star, Clock, Users, Shield } from 'lucide-react';
 import Link from 'next/link';
 

@@ -1,21 +1,11 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { services, getServicesByCategory } from '../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe } from 'lucide-react';
+
+import { Zap, Shield, Globe } from 'lucide-react';
 import Link from 'next/link';
 
 const Home: NextPage = () => {
-  const microSaasServices = getServicesByCategory('micro-saas');
-  const itServices = getServicesByCategory('it-services');
-  const aiServices = getServicesByCategory('ai-services');
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' },
-  ];
 
   return (
     <MainLayout>

@@ -1,11 +1,11 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Enhanced Components
 import { ErrorBoundary } from './components/ErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
+
 import AccessibilityEnhancer from './components/accessibility/AccessibilityEnhancer';
 import SEOOptimizer from './components/SEOOptimizer';
 import { SmartNotificationSystem } from './components/SmartNotificationSystem';
