@@ -283,6 +283,179 @@ const Home: NextPage = () => {
         </div>
       </section>
 
+      {/* Innovative Services Showcase */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Cutting-Edge Innovation</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Discover our latest breakthrough technologies that are revolutionizing industries and shaping the future
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Quantum Computing */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">⚛️</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Quantum Cloud Computing</h3>
+              <p className="text-gray-600 mb-4">
+                Access cutting-edge quantum processors for optimization, cryptography, and scientific research. 
+                Experience exponential computational power with our quantum cloud infrastructure.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting at $5,000/month</span>
+                <Link href="/services/quantum-cloud-computing" className="text-blue-600 hover:text-blue-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* AI Brain-Computer Interface */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🧠</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">AI Brain-Computer Interface</h3>
+              <p className="text-gray-600 mb-4">
+                Revolutionary AI-powered BCI development for medical applications, assistive technology, 
+                and human-computer interaction. Breakthrough technology for improved patient outcomes.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting at $100,000</span>
+                <Link href="/services/ai-brain-computer-interface" className="text-blue-600 hover:text-blue-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Metaverse Development */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🥽</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">Metaverse Development</h3>
+              <p className="text-gray-600 mb-4">
+                Comprehensive metaverse development including virtual worlds, NFT marketplaces, 
+                and immersive experiences using cutting-edge VR/AR technology.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting at $30,000</span>
+                <Link href="/services/metaverse-development" className="text-blue-600 hover:text-blue-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* AI Video Editor */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🎬</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">AI Video Editor Pro</h3>
+              <p className="text-gray-600 mb-4">
+                Revolutionary AI-powered video editing platform that automatically creates professional videos 
+                from raw footage with intelligent scene detection and editing.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting at $49/month</span>
+                <Link href="/services/ai-video-editor" className="text-blue-600 hover:text-blue-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* AI Space Mission Planning */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">AI Space Mission Planning</h3>
+              <p className="text-gray-600 mb-4">
+                Advanced AI system for space mission planning, satellite constellation optimization, 
+                and space resource management using machine learning.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting at $500,000</span>
+                <Link href="/services/ai-space-mission-planning" className="text-blue-600 hover:text-blue-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* AI Personalized Medicine */}
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.02 }}
+            >
+              <div className="text-4xl mb-4">🏥</div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">AI Personalized Medicine</h3>
+              <p className="text-gray-600 mb-4">
+                Advanced AI platform for personalized medicine that analyzes genetic data, medical history, 
+                and lifestyle factors to provide tailored treatment recommendations.
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-500">Starting at $75,000</span>
+                <Link href="/services/ai-personalized-medicine" className="text-blue-600 hover:text-blue-700 font-semibold">
+                  Learn More →
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.div 
+            className="text-center mt-12"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+            viewport={{ once: true }}
+          >
+            <Link href="/services" className="group">
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 mx-auto">
+                Explore All Services
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </button>
+            </Link>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact Information Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">

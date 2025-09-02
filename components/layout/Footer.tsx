@@ -9,6 +9,16 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SaaS',
       services: [
+        { name: 'AI Video Editor Pro', href: '/services/ai-video-editor' },
+        { name: 'Smart Contract Auditor', href: '/services/smart-contract-auditor' },
+        { name: 'AI Code Reviewer', href: '/services/ai-code-reviewer' },
+        { name: 'AI Translation Platform', href: '/services/ai-translation-platform' },
+        { name: 'AI Data Visualization', href: '/services/ai-data-visualization' },
+        { name: 'AI Voice Cloning Studio', href: '/services/ai-voice-cloning' },
+        { name: 'AI 3D Model Generator', href: '/services/ai-3d-model-generator' },
+        { name: 'AI Music Composer Pro', href: '/services/ai-music-composer' },
+        { name: 'AI Website Builder Pro', href: '/services/ai-website-builder' },
+        { name: 'AI Customer Insights', href: '/services/ai-customer-insights' },
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
         { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
         { name: 'Mobile Survey Platform', href: '/services/mobile-survey-platform' },
@@ -29,6 +39,11 @@ const Footer: React.FC = () => {
     {
       title: 'IT Services',
       services: [
+        { name: 'Quantum Cloud Computing', href: '/services/quantum-cloud-computing' },
+        { name: 'Autonomous Systems Architecture', href: '/services/autonomous-systems-architecture' },
+        { name: 'Metaverse Development', href: '/services/metaverse-development' },
+        { name: 'AI Infrastructure Optimization', href: '/services/ai-infrastructure-optimization' },
+        { name: 'Cyber-Physical Systems', href: '/services/cyber-physical-systems' },
         { name: 'Cloud Migration', href: '/services/cloud-migration' },
         { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },
         { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
@@ -47,6 +62,11 @@ const Footer: React.FC = () => {
     {
       title: 'AI Services',
       services: [
+        { name: 'AI Brain-Computer Interface', href: '/services/ai-brain-computer-interface' },
+        { name: 'AI Space Mission Planning', href: '/services/ai-space-mission-planning' },
+        { name: 'AI Climate Optimization', href: '/services/ai-climate-optimization' },
+        { name: 'AI Personalized Medicine', href: '/services/ai-personalized-medicine' },
+        { name: 'AI Autonomous Trading', href: '/services/ai-autonomous-trading' },
         { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
         { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
         { name: 'AI Space Exploration', href: '/services/ai-space-exploration' },

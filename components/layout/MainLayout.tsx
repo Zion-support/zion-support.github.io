@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import FloatingContactWidget from '../FloatingContactWidget';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -109,6 +110,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         </main>
         <Footer />
       </div>
+      <FloatingContactWidget />
     </>
   );
 };

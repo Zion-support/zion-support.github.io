@@ -47,22 +47,28 @@ const Header: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       {/* Top bar with contact info */}
-      <div className="bg-blue-900 text-white py-2">
+      <div className="bg-gradient-to-r from-blue-900 to-purple-900 text-white py-3">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col sm:flex-row justify-between items-center text-sm">
-            <div className="flex items-center space-x-4 mb-2 sm:mb-0">
+          <div className="flex flex-col lg:flex-row justify-between items-center text-sm">
+            <div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-2 lg:mb-0">
               <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                <Phone className="w-4 h-4 text-blue-300" />
+                <a href="tel:+13024640950" className="hover:text-blue-300 transition-colors">
+                  +1 302 464 0950
+                </a>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <Mail className="w-4 h-4 text-blue-300" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-300 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <MapPin className="w-4 h-4 text-blue-300" />
+              <span className="text-center lg:text-left">
+                364 E Main St STE 1008, Middletown DE 19709
+              </span>
             </div>
           </div>
         </div>
