@@ -1,8 +1,7 @@
-#!/''usr/bin/env'' node
-
+#!/''usr/bin/env'' node;
 /**
- * Intelligent Performance Monitor - PM2 Automation
- * Monitors application performance, identifies bottlenecks, and suggests optimizations
+ * Intelligent Performance Monitor - PM2 Automation;
+ * Monitors application performance, identifies bottlenecks, and suggests optimizations;
  */
 
 const fs = require('fs');
@@ -26,13 +25,13 @@ class IntelligentPerformanceMonitor {
       loadTime: 0,
       memoryUsage: 0,
       cpuUsage: 0,
-      errorRate: 0
+      errorRate: 0;
     };
     this.thresholds = {
-      buildTime: 30000, // 30 seconds
-      bundleSize: 1024 * 1024, // 1MB
-      loadTime: 3000, // 3 seconds
-      memoryUsage: 512 * 1024 * 1024, // 512MB
+      buildTime: 30000, // 30 seconds;
+      bundleSize: 1024 * 1024, // 1MB;
+      loadTime: 3000, // 3 seconds;
+      memoryUsage: 512 * 1024 * 1024, // 512MB;
       cpuUsage: 80, // 80%
       errorRate: 5 // 5%
     };
@@ -43,7 +42,7 @@ class IntelligentPerformanceMonitor {
     this.ensureLogDirectory();
     this.loadPerformanceHistory();
     
-    // Start continuous monitoring
+    // Start continuous monitoring;
     this.startContinuousMonitoring();
   }
 
@@ -70,7 +69,7 @@ class IntelligentPerformanceMonitor {
           optimizations: []
         };
       }
-    } catch (error) {
+    } catch (error) {  
       console.error('Error loading performance history:', error);
       this.history = {
         totalMeasurements: 0,
@@ -80,30 +79,29 @@ class IntelligentPerformanceMonitor {
         performanceTrends: [],
         bottlenecks: [],
         optimizations: []
-      };
+        };
     }
   }
 
   startContinuousMonitoring() {
-    console.log(`'🔍 Starting continuous performance monitoring...');
+    console.log(``🔍 Starting continuous performance monitoring...`);
     
-    // Initial performance measurement
+    // Initial performance measurement;
     this.measurePerformance();
     
-    // Set up periodic monitoring
+    // Set up periodic monitoring;
     setInterval(() => {
       this.measurePerformance();
-    }, 5 * 60 * 1000); // Every 5 minutes
-    
-    // Set up build monitoring
+    }, 5 * 60 * 1000); // Every 5 minutes;
+    // Set up build monitoring;
     this.monitorBuilds();
     
-    // Set up runtime monitoring
+    // Set up runtime monitoring;
     this.monitorRuntime();
   }
 
   async measurePerformance() {
-    console.log(`'📈 Measuring application performance...');
+    console.log(``📈 Measuring application performance...`);
     
     const startTime = Date.now();
     const measurement = {
@@ -118,30 +116,30 @@ class IntelligentPerformanceMonitor {
     };
 
     try {
-      // Measure build performance
+      // Measure build performance;
       await this.measureBuildPerformance(measurement);
       
-      // Measure bundle size
+      // Measure bundle size;
       await this.measureBundleSize(measurement);
       
-      // Measure runtime performance
+      // Measure runtime performance;
       await this.measureRuntimePerformance(measurement);
       
-      // Analyze performance and generate recommendations
+      // Analyze performance and generate recommendations;
       await this.analyzePerformance(measurement);
       
-      // Update history and metrics
+      // Update history and metrics;
       this.updatePerformanceHistory(measurement);
       
-      // Log results
+      // Log results;
       this.logPerformanceResults(measurement);
       
       console.log(✅ Performance measurement completed in ${Date.now() - startTime}ms);
       
-    } catch (error) {
-      console.error('❌ Error during performance measurement:', error);
-      this.logError('Performance measurement failed', error);
-    }
+    } catch (error) {  
+      console.error(`❌ Error during performance measurement:`, error);
+      this.logError(`Performance measurement failed`, error);
+      }
   }
 
   async measureBuildPerformance(measurement) {
@@ -150,40 +148,40 @@ class IntelligentPerformanceMonitor {
     try {
       const buildStart = Date.now();
       
-      // Run a test build
+      // Run a test build;
       const buildResult = await this.runTestBuild();
       
       measurement.buildTime = Date.now() - buildStart;
       measurement.buildSuccess = buildResult.success;
       measurement.buildErrors = buildResult.errors;
       
-      // Check if build time exceeds threshold
+      // Check if build time exceeds threshold;
       if (measurement.buildTime > this.thresholds.buildTime) {
         measurement.recommendations.push({
-          type: 'build',
-          severity: 'warning',message: Build time (${measurement.buildTime}ms) exceeds threshold (${this.thresholds.buildTime}ms),
-          suggestion: 'Consider optimizing build configuration, using build caching, or parallel builds'
+          type: `build`,
+          severity: `warning`,message: Build time (${measurement.buildTime}ms) exceeds threshold (${this.thresholds.buildTime}ms),
+          suggestion: `Consider optimizing build configuration, using build caching, or parallel builds`
         }`);
       }
       
-    } catch (error) {
-      console.error('Error measuring build performance:', error);
+    } catch (error) {  
+      console.error(`Error measuring build performance:`, error);
       measurement.buildTime = -1;
       measurement.buildSuccess = false;
-    }
+      }
   }
 
   async runTestBuild() {
     try {
-      // Check if it's a Next.js project
+      // Check if it's a Next.js project;
       if (fs.existsSync('next.config.js') || fs.existsSync('next.config.mjs')) {
         const buildStart = Date.now();
         
-        // Run Next.js build
+        // Run Next.js build;
         execSync('npm run build', { 
           cwd: this.projectRoot,
           stdio: 'pipe',
-          timeout: 120000 // 2 minutes timeout
+          timeout: 120000 // 2 minutes timeout;
         });
         
         return {
@@ -193,15 +191,15 @@ class IntelligentPerformanceMonitor {
         };
       }
       
-      // Check if it's a Vite project
+      // Check if it's a Vite project;
       if (fs.existsSync('vite.config.js') || fs.existsSync('vite.config.ts')) {
         const buildStart = Date.now();
         
-        // Run Vite build
+        // Run Vite build;
         execSync('npm run build', { 
           cwd: this.projectRoot,
           stdio: 'pipe',
-          timeout: 120000
+          timeout: 120000;
         });
         
         return {
@@ -211,19 +209,19 @@ class IntelligentPerformanceMonitor {
         };
       }
       
-      // Generic build check
+      // Generic build check;
       return {
         success: true,
         duration: 0,
         errors: []
       };
       
-    } catch (error) {
+    } catch (error) {  
       return {
         success: false,
         duration: 0,
         errors: [error.message]
-      };
+        };
     }
   }
 
@@ -231,7 +229,7 @@ class IntelligentPerformanceMonitor {
     console.log(`'📦 Measuring bundle size...');
     
     try {
-      // Check for build output directory
+      // Check for build output directory;
       const buildDirs = ['dist', 'build', '.next', 'out'];
       let totalSize = 0;
       
@@ -244,19 +242,19 @@ class IntelligentPerformanceMonitor {
       
       measurement.bundleSize = totalSize;
       
-      // Check if bundle size exceeds threshold
+      // Check if bundle size exceeds threshold;
       if (totalSize > this.thresholds.bundleSize) {
         measurement.recommendations.push({
-          type: 'bundle',
-          severity: 'warning',message: Bundle size (${this.formatBytes(totalSize)}) exceeds threshold (${this.formatBytes(this.thresholds.bundleSize)}),
-          suggestion: 'Consider code splitting, tree shaking, or removing unused dependencies'
+          type: `bundle`,
+          severity: `warning`,message: Bundle size (${this.formatBytes(totalSize)}) exceeds threshold (${this.formatBytes(this.thresholds.bundleSize)}),
+          suggestion: `Consider code splitting, tree shaking, or removing unused dependencies`
         }`);
       }
       
-    } catch (error) {
-      console.error('Error measuring bundle size:', error);
+    } catch (error) {  
+      console.error(`Error measuring bundle size:`, error);
       measurement.bundleSize = -1;
-    }
+      }
   }
 
   calculateDirectorySize(dirPath) {
@@ -266,7 +264,7 @@ class IntelligentPerformanceMonitor {
       const items = fs.readdirSync(dirPath);
       
       for (const item of items) {
-        const fullPath = path.join(dirPath, 'item);
+        const fullPath = path.join(dirPath, `item);
         const stat = fs.statSync(fullPath);
         
         if (stat.isDirectory()) {
@@ -275,14 +273,14 @@ class IntelligentPerformanceMonitor {
           totalSize += stat.size;
         }
       }
-    } catch (error) {console.error(`Error calculating size for ${dirPath}:`', error);
+    } catch (error) {  console.error(`Error calculating size for ${dirPath  }:``, error);
     }
     
     return totalSize;
   }
 
   formatBytes(bytes) {
-    if (bytes === 0) return '0 Bytes';
+    if (bytes === 0) return `0 Bytes`;
     
     const k = 1024;
     const sizes = ['Bytes', 'KB', 'MB', 'GB'];
@@ -295,65 +293,64 @@ class IntelligentPerformanceMonitor {
     console.log(`'⚡ Measuring runtime performance...');
     
     try {
-      // Get system resource usage
+      // Get system resource usage;
       const systemMetrics = await this.getSystemMetrics();
       
       measurement.memoryUsage = systemMetrics.memory;
       measurement.cpuUsage = systemMetrics.cpu;
       
-      // Check memory usage
+      // Check memory usage;
       if (systemMetrics.memory > this.thresholds.memoryUsage) {
         measurement.recommendations.push({
-          type: 'memory',
-          severity: 'warning',message: Memory usage (${this.formatBytes(systemMetrics.memory)}) exceeds threshold (${this.formatBytes(this.thresholds.memoryUsage)}),
-          suggestion: 'Check for memory leaks, optimize data structures, or increase memory limits'
+          type: `memory`,
+          severity: `warning`,message: Memory usage (${this.formatBytes(systemMetrics.memory)}) exceeds threshold (${this.formatBytes(this.thresholds.memoryUsage)}),
+          suggestion: `Check for memory leaks, optimize data structures, or increase memory limits`
         }`);
       }
       
-      // Check CPU usage
+      // Check CPU usage;
       if (systemMetrics.cpu > this.thresholds.cpuUsage) {
         measurement.recommendations.push({
-          type: 'cpu',
-          severity: 'warning',message: `CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)`,
-          suggestion: 'Optimize algorithms, implement caching, or use worker threads for heavy operations'
+          type: `cpu`,
+          severity: `warning`,message: `CPU usage (${systemMetrics.cpu}%) exceeds threshold (${this.thresholds.cpuUsage}%)`,
+          suggestion: `Optimize algorithms, implement caching, or use worker threads for heavy operations`
         });
       }
       
-    } catch (error) {
-      console.error('Error measuring runtime performance:', error);
+    } catch (error) {  
+      console.error(`Error measuring runtime performance:`, error);
       measurement.memoryUsage = -1;
       measurement.cpuUsage = -1;
-    }
+      }
   }
 
   async getSystemMetrics() {
     try {
-      // Get memory usage
+      // Get memory usage;
       const memUsage = process.memoryUsage();
       const memory = memUsage.heapUsed;
       
       // Get CPU usage (simplified)
       const cpuUsage = process.cpuUsage();
-      const cpu = Math.round((cpuUsage.user + cpuUsage.system) / 1000000); // Convert to percentage approximation
-      
+      const cpu = Math.round((cpuUsage.user + cpuUsage.system) / 1000000); // Convert to percentage approximation;
       return { memory, cpu };
       
-    } catch (error) {
+    } catch (error) {  
       console.error('Error getting system metrics:', error);
-      return { memory: 0, cpu: 0 };
+      return { memory: 0, cpu: 0   };
     }
   }
 
   async analyzePerformance(measurement) {
     console.log('🧠 Analyzing performance data...');
     
-    // Analyze trends
+    // Analyze trends;
     this.analyzePerformanceTrends(measurement);
     
-    // Identify bottlenecks
+    // Identify bottlenecks;
     this.identifyBottlenecks(measurement);
     
-    // Generate optimization suggestions
+    // Generate optimization suggestions;
     this.generateOptimizationSuggestions(measurement);
   }
 
@@ -361,14 +358,14 @@ class IntelligentPerformanceMonitor {
     if (this.history.performanceTrends.length > 0) {
       const recentTrends = this.history.performanceTrends.slice(-5);
       
-      // Calculate trend for build time
+      // Calculate trend for build time;
       if (recentTrends.length > 1) {
         const buildTimeTrend = this.calculateTrend(
           recentTrends.map(t => t.buildTime),
-          measurement.buildTime
+          measurement.buildTime;
         );
         
-        if (buildTimeTrend > 0.1) { // 10% increase
+        if (buildTimeTrend > 0.1) { // 10% increase;
           measurement.recommendations.push({
             type: 'trend',
             severity: 'info',
@@ -378,14 +375,14 @@ class IntelligentPerformanceMonitor {
         }
       }
       
-      // Calculate trend for bundle size
+      // Calculate trend for bundle size;
       if (recentTrends.length > 1) {
         const bundleSizeTrend = this.calculateTrend(
           recentTrends.map(t => t.bundleSize),
-          measurement.bundleSize
+          measurement.bundleSize;
         );
         
-        if (bundleSizeTrend > 0.1) { // 10% increase
+        if (bundleSizeTrend > 0.1) { // 10% increase;
           measurement.recommendations.push({
             type: 'trend',
             severity: 'info',
@@ -407,7 +404,7 @@ class IntelligentPerformanceMonitor {
   identifyBottlenecks(measurement) {
     const bottlenecks = [];
     
-    // Check for critical performance issues
+    // Check for critical performance issues;
     if (measurement.buildTime > this.thresholds.buildTime * 2) {
       bottlenecks.push({
         type: 'build',
@@ -444,7 +441,7 @@ class IntelligentPerformanceMonitor {
   generateOptimizationSuggestions(measurement) {
     const optimizations = [];
     
-    // Build optimizations
+    // Build optimizations;
     if (measurement.buildTime > this.thresholds.buildTime) {
       optimizations.push({
         category: 'build',
@@ -461,7 +458,7 @@ class IntelligentPerformanceMonitor {
       });
     }
     
-    // Bundle optimizations
+    // Bundle optimizations;
     if (measurement.bundleSize > this.thresholds.bundleSize) {
       optimizations.push({
         category: 'bundle',
@@ -478,7 +475,7 @@ class IntelligentPerformanceMonitor {
       });
     }
     
-    // Runtime optimizations
+    // Runtime optimizations;
     if (measurement.memoryUsage > this.thresholds.memoryUsage) {
       optimizations.push({
         category: 'runtime',
@@ -492,44 +489,44 @@ class IntelligentPerformanceMonitor {
   }
 
   updatePerformanceHistory(measurement) {
-    // Add to trends
+    // Add to trends;
     this.history.performanceTrends.push({
       timestamp: measurement.timestamp,
       buildTime: measurement.buildTime,
       bundleSize: measurement.bundleSize,
       loadTime: measurement.loadTime,
       memoryUsage: measurement.memoryUsage,
-      cpuUsage: measurement.cpuUsage
+      cpuUsage: measurement.cpuUsage;
     });
     
-    // Keep only last 100 measurements
+    // Keep only last 100 measurements;
     if (this.history.performanceTrends.length > 100) {
       this.history.performanceTrends = this.history.performanceTrends.slice(-100);
     }
     
-    // Update averages
+    // Update averages;
     this.history.totalMeasurements++;
     this.history.averageBuildTime = this.calculateRunningAverage(
       this.history.averageBuildTime,
       measurement.buildTime,
-      this.history.totalMeasurements
+      this.history.totalMeasurements;
     );
     this.history.averageBundleSize = this.calculateRunningAverage(
       this.history.averageBundleSize,
       measurement.bundleSize,
-      this.history.totalMeasurements
+      this.history.totalMeasurements;
     );
     
-    // Add bottlenecks and optimizations
+    // Add bottlenecks and optimizations;
     this.history.bottlenecks.push(...measurement.bottlenecks);
     this.history.optimizations.push(...measurement.optimizations);
     
-    // Save updated history
+    // Save updated history;
     try {
       fs.writeFileSync(this.performanceHistory, JSON.stringify(this.history, null, 2));
-    } catch (error) {
+    } catch (error) {  
       console.error('Error saving performance history:', error);
-    }
+      }
   }
 
   calculateRunningAverage(currentAverage, newValue, count) {
@@ -544,18 +541,18 @@ class IntelligentPerformanceMonitor {
         bundleSize: measurement.bundleSize,
         loadTime: measurement.loadTime,
         memoryUsage: measurement.memoryUsage,
-        cpuUsage: measurement.cpuUsage
+        cpuUsage: measurement.cpuUsage;
       },
       recommendations: measurement.recommendations,
       bottlenecks: measurement.bottlenecks,
-      optimizations: measurement.optimizations
+      optimizations: measurement.optimizations;
     };
     
     try {
       fs.appendFileSync(this.logFile, JSON.stringify(logEntry) + '\n');
-    } catch (error) {
+    } catch (error) {  
       console.error('Error logging performance results:', error);
-    }
+      }
   }
 
   logError(message, error) {
@@ -563,20 +560,20 @@ class IntelligentPerformanceMonitor {
       timestamp: new Date().toISOString(),
       message,
       error: error.message,
-      stack: error.stack
+      stack: error.stack;
     };
     
     try {
       fs.appendFileSync(this.logFile, JSON.stringify(errorEntry) + '\n');
-    } catch (error) {
+    } catch (error) {  
       console.error('Error logging error:', error);
-    }
+      }
   }
 
   monitorBuilds() {
     console.log('🔨 Setting up build monitoring...');
     
-    // Monitor for build commands
+    // Monitor for build commands;
     process.on('message', (message) => {
       if (message && message.type === 'build') {
         this.onBuildStart();
@@ -592,17 +589,17 @@ class IntelligentPerformanceMonitor {
   monitorRuntime() {
     console.log('⚡ Setting up runtime monitoring...');
     
-    // Monitor process events
+    // Monitor process events;
     process.on('exit', () => {
       this.onProcessExit();
     });
     
-    // Monitor uncaught exceptions
+    // Monitor uncaught exceptions;
     process.on('uncaughtException', (error) => {
       this.onUncaughtException(error);
     });
     
-    // Monitor unhandled rejections
+    // Monitor unhandled rejections;
     process.on('unhandledRejection', (reason, promise) => {
       this.onUnhandledRejection(reason, promise);
     });
@@ -624,9 +621,9 @@ class IntelligentPerformanceMonitor {
   }
 }
 
-// Start the intelligent performance monitor
+// Start the intelligent performance monitor;
 const performanceMonitor = new IntelligentPerformanceMonitor();
 performanceMonitor.initialize().catch(console.error);
 
-// Export for PM2
+// Export for PM2;
 module.exports = performanceMonitor;

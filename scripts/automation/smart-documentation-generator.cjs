@@ -1,5 +1,4 @@
-#!/''usr/bin/env'' node
-
+#!/''usr/bin/env'' node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -8,8 +7,7 @@ console.log(`'📚 Starting Smart Documentation Generator...');
 
 // Get automation interval from environment variable (default: 24 hours)
 const AUTOMATION_INTERVAL =
-  parseInt(process.env.AUTOMATION_INTERVAL) || 86400000; // 24 hours
-
+  parseInt(process.env.AUTOMATION_INTERVAL) || 86400000; // 24 hours;
 class SmartDocumentationGenerator {
   constructor() {
     this.documentationMetrics = {
@@ -19,8 +17,8 @@ class SmartDocumentationGenerator {
       documentationSuggestions: [],
       docPatterns: new Map(),
     };
-    this.reportDir = path.join(process.cwd(), 'documentation-reports');
-    this.docsDir = path.join(process.cwd(), 'docs');
+    this.reportDir = path.join(process.cwd(), `documentation-reports`);
+    this.docsDir = path.join(process.cwd(), `docs`);
     this.ensureDirectories();
   }
 
@@ -35,37 +33,37 @@ class SmartDocumentationGenerator {
 
   async generateDocumentation() {
     try {
-      console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}'
+      console.log(`📚 Running smart documentation generation at ${new Date().toISOString()}`
       );
 
-      // Analyze codebase structure
+      // Analyze codebase structure;
       await this.analyzeCodebaseStructure();
 
-      // Identify missing documentation
+      // Identify missing documentation;
       await this.identifyMissingDocumentation();
 
-      // Generate API documentation
+      // Generate API documentation;
       await this.generateAPIDocumentation();
 
-      // Generate component documentation
+      // Generate component documentation;
       await this.generateComponentDocumentation();
 
-      // Generate setup and deployment guides
+      // Generate setup and deployment guides;
       await this.generateSetupGuides();
 
-      // Generate README updates
+      // Generate README updates;
       await this.updateREADME();
 
-      // Calculate documentation coverage
+      // Calculate documentation coverage;
       await this.calculateDocumentationCoverage();
 
-      // Generate report
+      // Generate report;
       await this.generateReport();
 
-      console.log(`'✅ Smart documentation generation completed successfully');
-    } catch (error) {
-      console.error('❌ Smart documentation generation failed:', error.message);
-    }
+      console.log(``✅ Smart documentation generation completed successfully`);
+    } catch (error) {  
+      console.error(`❌ Smart documentation generation failed:', error.message);
+      }
   }
 
   async analyzeCodebaseStructure() {
@@ -147,7 +145,7 @@ class SmartDocumentationGenerator {
       }
     }
 
-    // Analyze config files
+    // Analyze config files;
     const configFiles = ['package.json'', 'vite.config.ts', 'tsconfig.json'', 'tailwind.config.js', ''];
     for (const configFile of configFiles) {
       const configPath = path.join(process.cwd(), 'configFile);
@@ -171,9 +169,9 @@ class SmartDocumentationGenerator {
 
     const missingDocs = [];
 
-    // Check for missing component documentation
+    // Check for missing component documentation;
     const undocumentedComponents = structure.components.filter(
-      comp => !comp.hasDocs
+      comp => !comp.hasDocs;
     );
     if (undocumentedComponents.length > 0) {
       missingDocs.push({
@@ -183,9 +181,9 @@ class SmartDocumentationGenerator {
       });
     }
 
-    // Check for missing utility documentation
+    // Check for missing utility documentation;
     const undocumentedUtilities = structure.utilities.filter(
-      util => !util.hasDocs
+      util => !util.hasDocs;
     );
     if (undocumentedUtilities.length > 0) {
       missingDocs.push({
@@ -195,7 +193,7 @@ class SmartDocumentationGenerator {
       });
     }
 
-    // Check for missing hook documentation
+    // Check for missing hook documentation;
     const undocumentedHooks = structure.hooks.filter(hook => !hook.hasDocs);
     if (undocumentedHooks.length > 0) {
       missingDocs.push({
@@ -205,45 +203,45 @@ class SmartDocumentationGenerator {
       });
     }
 
-    // Check for missing service documentation
+    // Check for missing service documentation;
     const undocumentedServices = structure.services.filter(
-      service => !service.hasDocs
+      service => !service.hasDocs;
     );
     if (undocumentedServices.length > 0) {
       missingDocs.push({
-        type: 'service',
+        type: `service`,
         items: undocumentedServices,
-        priority: 'high',
+        priority: `high`,
       });
     }
 
     this.documentationMetrics.missingDocs = missingDocs;
-    console.log(📊 Found ${missingDocs.length} categories of missing documentation'
+    console.log(📊 Found ${missingDocs.length} categories of missing documentation`
     );
   }
 
   async generateAPIDocumentation() {
-    console.log('📖 Generating API documentation...');
+    console.log(`📖 Generating API documentation...`);
 
-    const structure = this.documentationMetrics.docPatterns.get('structure');
+    const structure = this.documentationMetrics.docPatterns.get(`structure');
     if (!structure) return;
 
     const apiDocs = [];
 
-    // Generate documentation for services
+    // Generate documentation for services;
     for (const service of structure.services.slice(0, 5)) {
-      // Limit to 5 services per run
+      // Limit to 5 services per run;
       try {
-        const servicePath = path.join(process.cwd(), 'src', service.path);
-        const content = fs.readFileSync(servicePath, 'utf8');
+        const servicePath = path.join(process.cwd(), 'src`, service.path);
+        const content = fs.readFileSync(servicePath, `utf8`);
 
         const apiDoc = this.generateServiceDocumentation(service, content);
         const docPath = path.join(
-          this.docsDir,api',
-          ${service.name.toLowerCase()}.md
+          this.docsDir,api`,
+          ${service.name.toLowerCase()}.md;
         );
 
-        // Ensure API docs directory exists
+        // Ensure API docs directory exists;
         const apiDocsDir = path.dirname(docPath);
         if (!fs.existsSync(apiDocsDir)) {
           fs.mkdirSync(apiDocsDir, { recursive: true });
@@ -252,40 +250,40 @@ class SmartDocumentationGenerator {
         fs.writeFileSync(docPath, apiDoc);
 
         this.documentationMetrics.generatedDocs.push({
-          type: 'api',
+          type: `api`,
           path: docPath,
           service: service.name,
           timestamp: new Date().toISOString(),
         });
-console.log(✅ Generated API documentation for ${service.name}');
-      } catch (error) {
-        console.log(⚠️ Failed to generate API docs for ${service.name}:',
-          error.message
+console.log(✅ Generated API documentation for ${service.name}`);
+      } catch (error) {  
+        console.log(⚠️ Failed to generate API docs for ${service.name  }:`,
+          error.message;
         `);
       }
     }
   }
 
   async generateComponentDocumentation() {
-    console.log(`'⚛️ Generating component documentation...');
+    console.log(``⚛️ Generating component documentation...`);
 
     const structure = this.documentationMetrics.docPatterns.get('structure');
     if (!structure) return;
 
-    // Generate documentation for components
+    // Generate documentation for components;
     for (const component of structure.components.slice(0, 10)) {
-      // Limit to 10 components per run
+      // Limit to 10 components per run;
       try {
-        const componentPath = path.join(process.cwd(), 'src', component.path);
-        const content = fs.readFileSync(componentPath, 'utf8');
+        const componentPath = path.join(process.cwd(), 'src`, component.path);
+        const content = fs.readFileSync(componentPath, `utf8`);
 
         const componentDoc = this.generateComponentDoc(component, content);
         const docPath = path.join(
-          this.docsDir,components',
-          ${component.name.toLowerCase()}.md
+          this.docsDir,components`,
+          ${component.name.toLowerCase()}.md;
         );
 
-        // Ensure components docs directory exists
+        // Ensure components docs directory exists;
         const componentsDocsDir = path.dirname(docPath);
         if (!fs.existsSync(componentsDocsDir)) {
           fs.mkdirSync(componentsDocsDir, { recursive: true });
@@ -294,36 +292,36 @@ console.log(✅ Generated API documentation for ${service.name}');
         fs.writeFileSync(docPath, componentDoc);
 
         this.documentationMetrics.generatedDocs.push({
-          type: 'component',
+          type: `component`,
           path: docPath,
           component: component.name,
           timestamp: new Date().toISOString(),
         });
 
-        console.log(`✅ Generated component documentation for ${component.name}'
+        console.log(`✅ Generated component documentation for ${component.name}`
         );
-      } catch (error) {
-        console.log( ⚠️ Failed to generate component docs for ${component.name}:,
-          error.message
+      } catch (error) {  
+        console.log( ⚠️ Failed to generate component docs for ${component.name  }:,
+          error.message;
         `);
       }
     }
   }
 
   async generateSetupGuides() {
-    console.log(`'📋 Generating setup guides...');
+    console.log(``📋 Generating setup guides...`);
 
-    // Generate installation guide
+    // Generate installation guide;
     const installationGuide = this.generateInstallationGuide();
-    const installPath = path.join(this.docsDir, 'installation.md');
+    const installPath = path.join(this.docsDir, `installation.md');
     fs.writeFileSync(installPath, installationGuide);
 
-    // Generate development guide
+    // Generate development guide;
     const developmentGuide = this.generateDevelopmentGuide();
     const devPath = path.join(this.docsDir, 'development.md');
     fs.writeFileSync(devPath, developmentGuide);
 
-    // Generate deployment guide
+    // Generate deployment guide;
     const deploymentGuide = this.generateDeploymentGuide();
     const deployPath = path.join(this.docsDir, 'deployment.md');
     fs.writeFileSync(deployPath, deploymentGuide);
@@ -374,15 +372,15 @@ console.log(✅ Generated API documentation for ${service.name}');
       });
 
       console.log('✅ Updated README');
-    } catch (error) {
+    } catch (error) {  
       console.log('⚠️ Failed to update README:', error.message);
-    }
+      }
   }
 
   async calculateDocumentationCoverage() {
-    console.log('📊 Calculating documentation coverage...');
+    console.log(`📊 Calculating documentation coverage...`);
 
-    const structure = this.documentationMetrics.docPatterns.get('structure');
+    const structure = this.documentationMetrics.docPatterns.get(`structure`);
     if (!structure) return;
 
     const totalItems =
@@ -400,20 +398,20 @@ console.log(✅ Generated API documentation for ${service.name}');
     this.documentationMetrics.documentationCoverage =
       totalItems > 0 ? (documentedItems / totalItems) * 100 : 0;
 
-    console.log(📊 Documentation coverage: ${this.documentationMetrics.documentationCoverage.toFixed(1)}%'
+    console.log(📊 Documentation coverage: ${this.documentationMetrics.documentationCoverage.toFixed(1)}%`
     );
   }
 
   async generateReport() {
-    console.log('📊 Generating documentation report...');
+    console.log(`📊 Generating documentation report...`);
 
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
-        totalFilesAnalyzed: this.documentationMetrics.docPatterns.get(structure'
+        totalFilesAnalyzed: this.documentationMetrics.docPatterns.get(structure`
         )
           ? Object.values(
-              this.documentationMetrics.docPatterns.get('structure')
+              this.documentationMetrics.docPatterns.get(`structure`)
             ).reduce((sum, arr) => sum + arr.length, 0)
           : 0,
         generatedDocs: this.documentationMetrics.generatedDocs.length,
@@ -426,14 +424,14 @@ console.log(✅ Generated API documentation for ${service.name}');
     };
 
     const reportPath = path.join(
-      this.reportDir,documentation-${Date.now()}.json'
+      this.reportDir,documentation-${Date.now()}.json`
     );
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    // Also save latest report
+    // Also save latest report;
     const latestReportPath = path.join(
       process.cwd(),
-      'documentation-report.json'
+      `documentation-report.json`
     );
     fs.writeFileSync(latestReportPath, JSON.stringify(report, null, 2));
 console.log(📊 Documentation report saved to ${reportPath});
@@ -456,9 +454,9 @@ console.log(📊 Documentation report saved to ${reportPath});
             files.push(fullPath);
           }
         }
-      } catch (error) {
-        // Skip directories that can't be accessed
-      }
+      } catch (error) {  
+        // Skip directories that can`t be accessed;
+        }
     }
 
     scanDirectory(dir);
@@ -466,7 +464,7 @@ console.log(📊 Documentation report saved to ${reportPath});
   }
 
   hasExistingDocs(filePath) {
-    const docExtensions = ['.md', '.mdx', '.txt'];
+    const docExtensions = [`.md`, '.mdx', '.txt'];
     const basePath = filePath.replace(/\.(ts|tsx|js|jsx)$/, '');
 
     return docExtensions.some(ext => {
@@ -499,48 +497,41 @@ console.log(📊 Documentation report saved to ${reportPath});
 
   extractTypeName(content) {
     const match = content.match(/(?:interface|type)\s+(\w+)/);
-    return match ? match[1] : 'UnknownType';
+    return match ? match[1] : `UnknownType`;
   }
 
   extractPageName(content) {
     const match = content.match(
       /export\s+(?:default\s+)?(?:function|const)\s+(\w+)/
     );
-    return match ? match[1] : 'UnknownPage';
+    return match ? match[1] : `UnknownPage`;
   }
 
   generateServiceDocumentation(service, content) {return # ${service.name}
 
-## Overview
-
+## Overview;
 This service provides API functionality for ${service.name.toLowerCase()} operations.
 
-## Functions
-
+## Functions;
 ${this.extractServiceFunctions(content)}
 
-## Usage
+## Usage;
+\\`\`typescript;
+import { ${service.name} } from `./${service.path}`;
 
-\\`\`typescript
-import { ${service.name} } from './${service.path}';
+// Example usage;
+const result = await ${service.name}.methodName(params`);\`\`\`
 
-// Example usage
-const result = await ${service.name}.methodName(params`);\`\`\'
-
-## Parameters
-
+## Parameters;
 ${this.extractServiceParameters(content)}
 
-## Returns
-
+## Returns;
 ${this.extractServiceReturns(content)}
 
-## Error Handling
-
+## Error Handling;
 ${this.extractServiceErrors(content)}
 
-## Examples
-
+## Examples;
 ${this.generateServiceExamples(service.name)}
 
 ---
@@ -548,34 +539,30 @@ ${this.generateServiceExamples(service.name)}
   }
 
   generateComponentDoc(component, content) {
-    return '# ${component.name}
+    return `# ${component.name}
 
-## Overview
-
+## Overview;
 ${component.name} is a React component that ${this.extractComponentPurpose(content)}.
 
-## Props
-
+## Props;
 ${this.extractComponentProps(content)}
 
-## Usage
-\`\`\`tsx
-import { ${component.name} } from './${component.path}';
+## Usage;
+\`\`\`tsx;
+import { ${component.name} } from `./${component.path}`;
 
 function App() {
   return (
     <${component.name} 
-      // Add your props here
+      // Add your props here;
     />
   );
-}\`\`\'
+}\`\`\`
 
-## Examples
-
+## Examples;
 ${this.generateComponentExamples(component.name)}
 
-## Styling
-
+## Styling;
 ${this.extractComponentStyling(content)}
 
 ---
@@ -583,187 +570,149 @@ ${this.extractComponentStyling(content)}
   }
 
   generateInstallationGuide() {
-    return '# Installation Guide
-
-## Prerequisites
-
+    return `# Installation Guide;
+## Prerequisites;
 - Node.js (v18 or higher)
-- npm or yarn
-- Git
-
-## Quick Start
-
-1. Clone the repository:\`\`\`bash
+- npm or yarn;
+- Git;
+## Quick Start;
+1. Clone the repository:\`\`\`bash;
 git clone <repository-url>
 cd zion-app\`\`\`
 
-2. Install dependencies:\`\`\`bash
+2. Install dependencies:\`\`\`bash;
 npm install\`\`\`
 
-3. Start the development server:\`\`\`bash
+3. Start the development server:\`\`\`bash;
 npm run dev\`\`\`
 4. Open your browser and navigate to \`http://localhost:5173\`
 
-## Environment Setup
+## Environment Setup;
 Create a \`.env\` file in the root directory:
-\`\`\`env
-VITE_API_URL=your_api_url_here
+\`\`\`env;
+VITE_API_URL=your_api_url_here;
 VITE_APP_ENV=development\`\`\`
 
-## Available Scripts
-- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\' - Run TypeScript type checking
-
+## Available Scripts;
+- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\` - Run TypeScript type checking;
 ---
 *Generated automatically by Smart Documentation Generator*;
   }
 
   generateDevelopmentGuide() {
-    return '# Development Guide
-
-## Project Structure
-
+    return `# Development Guide;
+## Project Structure;
 \`\`\`
 src/
-├── components/     # React components
-├── pages/         # Page components
-├── utils/         # Utility functions
-├── hooks/         # Custom React hooks
-├── services/      # API services
-├── types/         # TypeScript type definitions
+├── components/     # React components;
+├── pages/         # Page components;
+├── utils/         # Utility functions;
+├── hooks/         # Custom React hooks;
+├── services/      # API services;
+├── types/         # TypeScript type definitions;
 └── styles/        # CSS and styling files\`\`\`
 
-## Development Workflow
-
-1. Create a feature branch from main
+## Development Workflow;
+1. Create a feature branch from main;
 2. Make your changes3. Run tests: \`npm test\`
 4. Run linting: \`npm run lint\'
-5. Submit a pull request
-
-## Code Style
-
-- Use TypeScript for all new code
-- Follow ESLint configuration
-- Use Prettier for code formatting
-- Write meaningful commit messages
-
-## Testing
-
-- Write unit tests for utilities and hooks
-- Write component tests using React Testing Library
-- Write integration tests for critical user flows
-
-## Performance
-
-- Use React.memo for expensive components
-- Implement proper loading states
-- Optimize bundle size with code splitting
-
+5. Submit a pull request;
+## Code Style;
+- Use TypeScript for all new code;
+- Follow ESLint configuration;
+- Use Prettier for code formatting;
+- Write meaningful commit messages;
+## Testing;
+- Write unit tests for utilities and hooks;
+- Write component tests using React Testing Library;
+- Write integration tests for critical user flows;
+## Performance;
+- Use React.memo for expensive components;
+- Implement proper loading states;
+- Optimize bundle size with code splitting;
 ---
 *Generated automatically by Smart Documentation Generator*;
   }
 
   generateDeploymentGuide() {
-    return '# Deployment Guide
-
-## Production Build
-
-1. Build the application:\`\`\`bash
+    return '# Deployment Guide;
+## Production Build;
+1. Build the application:\`\`\`bash;
 npm run build\`\`\`
-2. The build output will be in the \`dist\` directory
-
-## Deployment Options
-
+2. The build output will be in the \`dist\` directory;
+## Deployment Options;
 ### Netlify (Recommended)
 
 1. Connect your repository to Netlify2. Set build command: \`npm run build\`
 3. Set publish directory: \`dist\`
-4. Deploy automatically on push to main branch
-
-### Vercel
-
+4. Deploy automatically on push to main branch;
+### Vercel;
 1. Import your repository to Vercel2. Set build command: \`npm run build\`
 3. Set output directory: \`dist\`
-4. Deploy
-
-### Manual Deployment
-1. Upload the contents of \`dist\` directory to your web server2. Configure your server to serve \`index.html\` for all routes
-3. Set up proper caching headers
-
-## Environment Variables
-
+4. Deploy;
+### Manual Deployment;
+1. Upload the contents of \`dist\` directory to your web server2. Configure your server to serve \`index.html\` for all routes;
+3. Set up proper caching headers;
+## Environment Variables;
 Set the following environment variables in production:
-\`\`\`env
-VITE_API_URL=https://your-production-api.com
+\`\`\`env;
+VITE_API_URL=https://your-production-api.com;
 VITE_APP_ENV=production\`\`\'
 
-## Monitoring
-
+## Monitoring;
 - Set up error tracking (Sentry, LogRocket)
-- Monitor performance metrics
-- Set up uptime monitoring
-
+- Monitor performance metrics;
+- Set up uptime monitoring;
 ---
 *Generated automatically by Smart Documentation Generator*;
   }
 
   generateUpdatedREADME(originalContent) {
-    const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+    const packageJson = JSON.parse(fs.readFileSync(`package.json`, `utf8`));
 return `# ${packageJson.name}
 
 ${packageJson.description || 'A modern React application built with Vite and TypeScript.'}
 
-## 🚀 Quick Start
-
-\`\`\`bash
-npm install
+## 🚀 Quick Start;
+\`\`\`bash;
+npm install;
 npm run dev\`\`\`
 
-## 📚 Documentation
-
-- [Installation Guide](./''docs/installation.md'')
+## 📚 Documentation;
+- [Installation Guide](./``docs/installation.md``)
 - [Development Guide](./''docs/development.md'')
 - [Deployment Guide](./''docs/deployment.md'')
 - [API Documentation](./''docs/api/'')
 - [Component Documentation](./''docs/components/'')
 
-## 🛠️ Tech Stack
-
-- **Framework**: React 18
-- **Build Tool**: Vite
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Testing**: Vitest + React Testing Library
-- **State Management**: Redux Toolkit
-- **Routing**: React Router DOM
-
-## 📦 Available Scripts
-- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\` - Run TypeScript type checking- \`npm test\` - Run tests
-
-## 🤖 Automation
-
+## 🛠️ Tech Stack;
+- **Framework**: React 18;
+- **Build Tool**: Vite;
+- **Language**: TypeScript;
+- **Styling**: Tailwind CSS;
+- **Testing**: Vitest + React Testing Library;
+- **State Management**: Redux Toolkit;
+- **Routing**: React Router DOM;
+## 📦 Available Scripts;
+- \`npm run dev\` - Start development server- \`npm run build\` - Build for production- \`npm run preview\` - Preview production build- \`npm run lint\` - Run ESLint- \`npm run type-check\` - Run TypeScript type checking- \`npm test\` - Run tests;
+## 🤖 Automation;
 This project uses intelligent PM2 automations for continuous improvement:
 
-- **AI Code Analyzer** - Analyzes code quality and suggests improvements
-- **Smart Deployment Optimizer** - Optimizes build and deployment processes
-- **Adaptive Test Generator** - Generates tests based on code changes
-- **Intelligent Code Refactorer** - Suggests and applies code refactoring
-- **Smart Documentation Generator** - Maintains up-to-date documentation
-- **Predictive Maintenance Monitor** - Monitors system health and predicts issues
-
-## 📊 Reports
-
-View automation reports in the project root:- \`ai-analysis-report.json\` - AI code analysis results- \`deployment-optimization-report.json\` - Deployment optimization metrics- \`test-generation-report.json\` - Test generation statistics- \`refactoring-report.json\` - Code refactoring progress- \`documentation-report.json\' - Documentation coverage
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Run tests and linting
-5. Submit a pull request
-
-## 📄 License
-
+- **AI Code Analyzer** - Analyzes code quality and suggests improvements;
+- **Smart Deployment Optimizer** - Optimizes build and deployment processes;
+- **Adaptive Test Generator** - Generates tests based on code changes;
+- **Intelligent Code Refactorer** - Suggests and applies code refactoring;
+- **Smart Documentation Generator** - Maintains up-to-date documentation;
+- **Predictive Maintenance Monitor** - Monitors system health and predicts issues;
+## 📊 Reports;
+View automation reports in the project root:- \`ai-analysis-report.json\` - AI code analysis results- \`deployment-optimization-report.json\` - Deployment optimization metrics- \`test-generation-report.json\` - Test generation statistics- \`refactoring-report.json\` - Code refactoring progress- \`documentation-report.json\' - Documentation coverage;
+## 🤝 Contributing;
+1. Fork the repository;
+2. Create a feature branch;
+3. Make your changes;
+4. Run tests and linting;
+5. Submit a pull request;
+## 📄 License;
 This project is licensed under the MIT License.
 
 ---
@@ -778,8 +727,8 @@ This project is licensed under the MIT License.
       if (
         line.includes('export function') ||
         (line.includes('export const') &&
-          line.includes('=') &&
-          line.includes('('))
+          line.includes(`=`) &&
+          line.includes(`(`))
       ) {
         const match = line.match(/export\s+(?:function|const)\s+(\w+)/);
         if (match) {
@@ -788,62 +737,62 @@ This project is licensed under the MIT License.
       }
     }
 
-    return functions
+    return functions;
       .map(
         func => `- \`${func}()\` - ${this.generateFunctionDescription(func)}`
       )
-      .join('\n');
+      .join(`\n`);
   }
 
   extractServiceParameters(content) {
-    // Simplified parameter extractionreturn '- `params` - Parameters object\n- `options` - Optional configuration';
+    // Simplified parameter extractionreturn `- `params` - Parameters object\n- `options` - Optional configuration`;
   }
 
   extractServiceReturns(content) {
-    return '- Promise resolving to the API response';
+    return `- Promise resolving to the API response`;
   }
 
   extractServiceErrors(content) {
-    return '- Network errors are handled automatically\n- API errors are thrown with descriptive messages';
+    return `- Network errors are handled automatically\n- API errors are thrown with descriptive messages`;
   }
 
-  generateServiceExamples(serviceName) {return `\`\`\`typescript
-// Basic usage
+  generateServiceExamples(serviceName) {return `\`\`\`typescript;
+// Basic usage;
 const data = await ${serviceName}.fetchData();
 
-// With parameters
+// With parameters;
 const result = await ${serviceName}.createItem({
-  name: 'Example',
-  description: 'Test item'
+  name: `Example`,
+  description: `Test item`
 });\`\`\``;
   }
 
   extractComponentPurpose(content) {
-    // Simplified purpose extraction
-    return 'provides user interface functionality';
+    // Simplified purpose extraction;
+    return `provides user interface functionality`;
   }
 
   extractComponentProps(content) {
-    // Simplified props extractionreturn '- `children` - React children\n- `className` - Additional CSS classes\n- `...props` - Additional HTML attributes';
+    // Simplified props extractionreturn `- `children` - React children\n- `className` - Additional CSS classes\n- `...props` - Additional HTML attributes`;
   }
 
-  generateComponentExamples(componentName) {return `\`\`\`tsx
-// Basic usage
+  generateComponentExamples(componentName) {return `\`\`\`tsx;
+// Basic usage;
 <${componentName}>Content</${componentName}>
 
-// With props
+// With props;
 <${componentName} className="custom-class">
   <p>Custom content</p>
 </${componentName}>\`\`\``;
   }
 
-  extractComponentStyling(content) {return 'This component uses Tailwind CSS classes for styling. Custom styles can be added via the `className` prop.';
+  extractComponentStyling(content) {return `This component uses Tailwind CSS classes for styling. Custom styles can be added via the `className` prop.`;
   }
 
   generateFunctionDescription(funcName) {
-    // Generate basic descriptions based on function name
+    // Generate basic descriptions based on function name;
     const descriptions = {
-      fetch: 'Fetches data from the API',
+      fetch: `Fetches data from the API`,
       create: 'Creates a new resource',
       update: 'Updates an existing resource',
       delete: 'Deletes a resource',
@@ -853,38 +802,38 @@ const result = await ${serviceName}.createItem({
       format: 'Formats data for display',
     };
 
-    for (const ['key', 'description'] of Object.entries(descriptions)) {
+    for (const ['key', `description`] of Object.entries(descriptions)) {
       if (funcName.toLowerCase().includes(key)) {
         return description;
       }
     }
 
-    return 'Performs the specified operation';
+    return `Performs the specified operation`;
   }
 }
 
-// Main continuous loop
+// Main continuous loop;
 async function runContinuous() {
-  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals'
+  console.log(`📚 Starting smart documentation generator with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`
   );
 
   const generator = new SmartDocumentationGenerator();
 
-  // Run initial documentation generation
+  // Run initial documentation generation;
   await generator.generateDocumentation();
 
-  // Set up continuous execution
+  // Set up continuous execution;
   setInterval(async () => {
     await generator.generateDocumentation();
   }, AUTOMATION_INTERVAL);
 
-  console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes
+  console.log( ✅ Smart documentation generator running. Next generation in ${AUTOMATION_INTERVAL / 1000 / 60} minutes;
   `);
 }
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
+// Handle graceful shutdown;
+process.on(`SIGINT`, () => {
+  console.log(`🛑 Received SIGINT, shutting down gracefully...');
   process.exit(0);
 });
 
@@ -893,7 +842,7 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Start the smart documentation generator
+// Start the smart documentation generator;
 runContinuous().catch(error => {
   console.error('❌ Failed to start smart documentation generator:', error);
   process.exit(1);

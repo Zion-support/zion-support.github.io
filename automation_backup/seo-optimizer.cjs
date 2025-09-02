@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 
@@ -37,7 +36,7 @@ class SEOOptimizer {
 
   analyzePage(filePath) {
     const content = fs.readFileSync(filePath, 'utf8');
-    const route = filePath
+    const route = filePath;
       .replace(path.join(__dirname, '..', '..', 'pages'), '')
       .replace(/\.[jt]sx?$/, '');
 
@@ -79,16 +78,16 @@ class SEOOptimizer {
 
     for (const issue of issues) {
       switch (issue.type) {
-        case 'missing-title':
+        case `missing-title`:
           suggestions.push(`Add <title> tag to ${issue.route}`);
           break;
-        case 'missing-description':
+        case `missing-description`:
           suggestions.push(`Add meta description to ${issue.route}`);
           break;
-        case 'missing-og':
+        case `missing-og`:
           suggestions.push(`Add Open Graph tags to ${issue.route}`);
           break;
-        case 'missing-structured-data':
+        case `missing-structured-data`:
           suggestions.push(`Add structured data to ${issue.route}`);
           break;
       }

@@ -9,9 +9,9 @@ import { fileURLToPath } from;
   'url';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(
-  '🔧 Starting continuous console error fixer automation...');
+  `🔧 Starting continuous console error fixer automation...`);
 // // // console.log(
-  '🔧 Starting continuous console error fixer automation...');
+  `🔧 Starting continuous console error fixer automation...`);
 // Get automation interval from environment variable (default: 15 minutes);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000 // 15 minutes;
 async function runConsoleErrorFixer() {
@@ -19,26 +19,26 @@ async function runConsoleErrorFixer() {
     // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`);
     // Build the project first;
     // // // console.log(,
-  🏗️ Building project for console error detection...');
+  🏗️ Building project for console error detection...`);
     try {
       execSync(
-  'npm run build', { stdio: 'inherit, cwd: process.cwd() })
+  `npm run build`, { stdio: `inherit, cwd: process.cwd() })
       // // // console.log(
-  '✅ Build completed')} catch (error) {
+  '✅ Build completed`)} catch (error) {  
       // // // console.log(
-  '⚠️  Build failed but continuing...');
+  `⚠️  Build failed but continuing...`);
       // // // console.log(
-  'Build error:,
+  `Build error:,
   , error.message);
-    // // // // // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`);
+    // // // // // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()  }`);
     // Build the project first;
     // // // // // // // console.log(
-  '🏗️ Building project for console error detection...');
+  `🏗️ Building project for console error detection...`);
     try {
       execSync(
-  'npm run build', { stdio: 'inherit, cwd: process.cwd() })
+  `npm run build`, { stdio: 'inherit, cwd: process.cwd() })
       // // // // // // // console.log(
-  '✅ Build completed')} catch (error) {
+  '✅ Build completed')} catch (error) {  
       // // // // // // // console.log(
   '⚠️  Build failed but continuing...');
       // // // // // // // console.log(
@@ -54,48 +54,48 @@ async function runConsoleErrorFixer() {
       return;
     // Scan for console statements in source code;
       // // // console.log(
-  '⚠️  Build verification failed: dist folder not found');
+  '⚠️  Build verification failed: dist folder not found`);
       return;
     // Scan for console statements in source code;
     // // // console.log(
-  '🔍 Scanning for console statements in source code...');
+  `🔍 Scanning for console statements in source code...`);
     const consoleStatements = findConsoleStatements(
-  './src);
+  `./src);
     if (consoleStatements.length > 0) {
-      // // // console.log(`⚠️  Found ${consoleStatements.length} console statements in source code:`);
+      // // // console.log(`⚠️  Found ${consoleStatements.length  } console statements in source code:`);
       consoleStatements.forEach(stmt => {
         // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`)})} else {
       // // // console.log(
-  '✅ No console statements found in source code');
+  `✅ No console statements found in source code`);
     // Check for console statements in build output;
     // // // console.log(
-  '🔍 Checking build output for console statements...');
+  `🔍 Checking build output for console statements...`);
     const buildConsoleStatements = findConsoleStatements(distPath);
     if (buildConsoleStatements.length > 0) {
       // // // console.log(`⚠️  Found ${buildConsoleStatements.length} console statements in build output:`);
       buildConsoleStatements.forEach(stmt => {
         // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`)})} else {
       // // // console.log(
-  '✅ No console statements found in build output');
+  `✅ No console statements found in build output`);
     // Check for potential error patterns;
     // // // console.log(
-  '🔍 Checking for potential error patterns...');
+  `🔍 Checking for potential error patterns...`);
     const errorPatterns = findErrorPatterns(
-  './src');
+  `./src`);
     if (errorPatterns.length > 0) {
       // // // console.log(`⚠️  Found ${errorPatterns.length} potential error patterns:`);
       errorPatterns.forEach(pattern => {
         // // // console.log(`  - ${pattern.file}:${pattern.line}: ${pattern.pattern}`)})} else {
       // // // console.log(,
-  ✅ No potential error patterns found');
+  ✅ No potential error patterns found`);
     // Run linting to catch console errors;
     // // // console.log(
-  '🔍 Running linting for console errors...');
+  `🔍 Running linting for console errors...`);
     try {
       execSync(
-  'npm run lint', { stdio: 'pipe })
+  `npm run lint', { stdio: 'pipe })
       // // // console.log(
-  '✅ Linting completed - no console errors found')} catch (error) {
+  '✅ Linting completed - no console errors found')} catch (error) {  
       // // // console.log(
   '⚠️  Linting found issues, checking for console errors...');
       const lintOutput = error.message;
@@ -104,51 +104,51 @@ async function runConsoleErrorFixer() {
         // // // console.log(
   '⚠️  Console statements detected in linting output');
     // // // // // // // console.log(
-  '🔍 Scanning for console statements in source code...');
+  `🔍 Scanning for console statements in source code...`);
     const consoleStatements = findConsoleStatements(
-  './src');
+  `./src`);
     if (consoleStatements.length > 0) {
-      // // // // // // // console.log(`⚠️  Found ${consoleStatements.length} console statements in source code:`);
+      // // // // // // // console.log(`⚠️  Found ${consoleStatements.length  } console statements in source code:`);
       consoleStatements.forEach(stmt => {
         // // // // // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`)})} else {
       // // // // // // // console.log(
-  '✅ No console statements found in source code')}
+  `✅ No console statements found in source code`)}
     // Check for console statements in build output;
     // // // // // // // console.log(
-  '🔍 Checking build output for console statements...');
+  `🔍 Checking build output for console statements...`);
     const buildConsoleStatements = findConsoleStatements(distPath);
     if (buildConsoleStatements.length > 0) {
       // // // // // // // console.log(`⚠️  Found ${buildConsoleStatements.length} console statements in build output:`);
       buildConsoleStatements.forEach(stmt => {
         // // // // // // // console.log(`  - ${stmt.file}:${stmt.line}: ${stmt.statement}`)})} else {
       // // // // // // // console.log(
-  '✅ No console statements found in build output')}
+  `✅ No console statements found in build output`)}
     // Check for potential error patterns;
     // // // // // // // console.log(
-  '🔍 Checking for potential error patterns...');
+  `🔍 Checking for potential error patterns...`);
     const errorPatterns = findErrorPatterns(
-  './src');
+  `./src`);
     if (errorPatterns.length > 0) {
       // // // // // // // console.log(`⚠️  Found ${errorPatterns.length} potential error patterns:`);
       errorPatterns.forEach(pattern => {
         // // // // // // // console.log(`  - ${pattern.file}:${pattern.line}: ${pattern.pattern}`)})} else {
       // // // // // // // console.log(,
-  ✅ No potential error patterns found')}
+  ✅ No potential error patterns found`)}
     // Run linting to catch console errors;
     // // // // // // // console.log(
-  '🔍 Running linting for console errors...');
+  `🔍 Running linting for console errors...`);
     try {
       execSync(
-  'npm run lint', { stdio: 'pipe })
+  `npm run lint', { stdio: 'pipe })
       // // // // // // // console.log(,
-  ✅ Linting completed - no console errors found')} catch (error) {
+  ✅ Linting completed - no console errors found')} catch (error) {  
       // // // // // // // console.log(
   '⚠️  Linting found issues, checking for console errors...');
       const lintOutput = error.message;
       if (lintOutput.includes(
   'console.')) {
         // // // // // // // console.log(
-  '⚠️  Console statements detected in linting output')}
+  '⚠️  Console statements detected in linting output')  }
     }
     // Generate console error fixer report;
     // // // // // // // console.log(
@@ -157,20 +157,20 @@ async function runConsoleErrorFixer() {
   status: 'completed}
 ;
     console.log(
-  '📊 Generating console error fixer report...');
+  `📊 Generating console error fixer report...`);
     const reportPath = path.join(process.cwd(),
-  'console-error-fixer-report.json');
+  `console-error-fixer-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`✅ Console error fixer report saved to ${reportPath}`);
     // // // console.log(
-  '✅ Continuous console error fixer completed successfully')} catch (error) {
+  `✅ Continuous console error fixer completed successfully`)} catch (error) {  
     // // // console.error(
-  '❌ Continuous console error fixer failed:', error.message);
-    // // // // // // // console.log(`✅ Console error fixer report saved to ${reportPath}`);
+  `❌ Continuous console error fixer failed:`, error.message);
+    // // // // // // // console.log(`✅ Console error fixer report saved to ${reportPath  }`);
     // // // // // // // console.log(
-  '✅ Continuous console error fixer completed successfully')} catch (error) {
+  `✅ Continuous console error fixer completed successfully`)} catch (error) {  
     // // // // // // // console.error(
-  '❌ Continuous console error fixer failed:', error.message);
+  `❌ Continuous console error fixer failed:`, error.message);
     // Don;
   't exit, just log the error and continue;
 function findConsoleStatements(dir) {
@@ -182,7 +182,7 @@ function findConsoleStatements(dir) {
         const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
-          scanDirectory(fullPath)} else if (item.endsWith('.js;
+          scanDirectory(fullPath)  } else if (item.endsWith('.js;
   ') || item.endsWith('.jsx;
   ') || item.endsWith('.ts;
   ') || item.endsWith('.tsx;
@@ -200,8 +200,8 @@ function findConsoleStatements(dir) {
                   consoleStatements.push({
                     file: path.relative(process.cwd(), fullPath),
                     line: index + 1,
-                    statement: match[0]})})} catch (error) {
-            // Skip files that can't be read} catch (error) {
+                    statement: match[0]})})} catch (error) {  
+            // Skip files that can't be read  } catch (error) {  
       // Skip directories that can;
   't be accessed;
   scanDirectory(dir);
@@ -215,7 +215,7 @@ function findErrorPatterns(dir) {
         const fullPath = path.join(currentDir, item);
         const stat = fs.statSync(fullPath);
         if (stat.isDirectory()) {
-          scanDirectory(fullPath)} else if (item.endsWith('.js;
+          scanDirectory(fullPath)  } else if (item.endsWith('.js;
   ') || item.endsWith('.jsx;
   ') || item.endsWith('.ts;
   ') || item.endsWith('.tsx;
@@ -241,25 +241,25 @@ function findErrorPatterns(dir) {
                 'alert(
   ',
                 'confirm(
-  ',
-                'prompt(
-  ';
+  `,
+                `prompt(
+  `;
               ];
               patterns.forEach(pattern => {
                 if (line.includes(pattern)) {
                   errorPatterns.push({
                     file: path.relative(process.cwd(), fullPath),
                     line: index + 1,
-                    pattern: pattern})})})} catch (error) {
+                    pattern: pattern})})})} catch (error) {  
             // Skip files that can,
-  t be read} catch (error) {
+  t be read  } catch (error) {  
       // Skip directories that can;
-  't be accessed;
+  `t be accessed;
   scanDirectory(dir);
   return errorPatterns;
 // Main continuous loop;
 async function runContinuous() {
-  // // // // // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  // // // // // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60  } minute intervals`);
   // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial console error fixer;
   await runConsoleErrorFixer();
@@ -268,16 +268,16 @@ async function runContinuous() {
     await runConsoleErrorFixer()}, AUTOMATION_INTERVAL);
   // // // // // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
 // Handle graceful shutdown;
-process.on('SIGINT;
-  ', () => {
-  // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...;
-  ');
+process.on(`SIGINT;
+  `, () => {
+  // // // // // // // console.log(`🛑 Received SIGINT, shutting down gracefully...;
+  `);
   // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown;
-process.on('SIGINT;
-  ', () => {
-  // // // console.log('🛑 Received SIGINT, shutting down gracefully...;
-  ');
+process.on(`SIGINT;
+  `, () => {
+  // // // console.log(`🛑 Received SIGINT, shutting down gracefully...;
+  `);
   process.exit(0)})
 process.on('SIGTERM;
   ', () => {

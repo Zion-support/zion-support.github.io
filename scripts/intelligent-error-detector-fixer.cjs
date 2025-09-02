@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -21,11 +20,11 @@ class IntelligentErrorDetectorFixer {
     }
   }
 
-  log(message, level = 'info') {
+  log(message, level = `info`) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + `\n`);
   }
 
   initializeErrorPatterns() {
@@ -144,7 +143,7 @@ class IntelligentErrorDetectorFixer {
       let fixesApplied = 0;
       const fileFixes = [];
 
-      // Apply all error patterns
+      // Apply all error patterns;
       for (const [category, patterns] of Object.entries(this.patterns)) {
         for (const pattern of patterns) {
           const matches = fixedContent.match(pattern.pattern);
@@ -164,10 +163,10 @@ class IntelligentErrorDetectorFixer {
         }
       }
 
-      // Write fixed content back to file if changes were made
+      // Write fixed content back to file if changes were made;
       if (fixesApplied > 0) {
-        fs.writeFileSync(filePath, fixedContent, 'utf8');
-        this.log(`✅ Fixed ${fixesApplied} issues in ${filePath}`, 'success');
+        fs.writeFileSync(filePath, fixedContent, `utf8`);
+        this.log(`✅ Fixed ${fixesApplied} issues in ${filePath}`, `success`);
 
         this.fixes.push({
           file: filePath,
@@ -177,8 +176,8 @@ class IntelligentErrorDetectorFixer {
       }
 
       return { success: true, fixesApplied, fixes: fileFixes };
-    } catch (error) {
-      this.log(`❌ Error processing ${filePath}: ${error.message}`, 'error');
+    } catch (error) { 
+      this.log(`❌ Error processing ${filePath }: ${error.message}`, `error`);
       this.errors.push({
         file: filePath,
         error: error.message,
@@ -196,10 +195,10 @@ class IntelligentErrorDetectorFixer {
         encoding: 'utf8',
         timeout: 120000,
       });
-      this.log('✅ ESLint auto-fix completed', 'success');
+      this.log('✅ ESLint auto-fix completed', `success`);
       return { success: true };
-    } catch (error) {
-      this.log(`⚠️ ESLint auto-fix failed: ${error.message}`, 'warning');
+    } catch (error) { 
+      this.log(`⚠️ ESLint auto-fix failed: ${error.message }`, `warning`);
       return { success: false, error: error.message };
     }
   }
@@ -213,10 +212,10 @@ class IntelligentErrorDetectorFixer {
         encoding: 'utf8',
         timeout: 120000,
       });
-      this.log('✅ Prettier formatting completed', 'success');
+      this.log('✅ Prettier formatting completed', `success`);
       return { success: true };
-    } catch (error) {
-      this.log(`⚠️ Prettier formatting failed: ${error.message}`, 'warning');
+    } catch (error) { 
+      this.log(`⚠️ Prettier formatting failed: ${error.message }`, `warning`);
       return { success: false, error: error.message };
     }
   }
@@ -230,10 +229,10 @@ class IntelligentErrorDetectorFixer {
         encoding: 'utf8',
         timeout: 300000,
       });
-      this.log('✅ Build validation successful', 'success');
+      this.log('✅ Build validation successful', `success`);
       return { success: true };
-    } catch (error) {
-      this.log(`❌ Build validation failed: ${error.message}`, 'error');
+    } catch (error) { 
+      this.log(`❌ Build validation failed: ${error.message }`, `error`);
       return { success: false, error: error.message };
     }
   }
@@ -247,7 +246,7 @@ class IntelligentErrorDetectorFixer {
         filesWithErrors: this.errors.length,
         totalFixesApplied: this.fixes.reduce(
           (sum, fix) => sum + fix.fixesApplied,
-          0
+          0;
         ),
       },
       fixes: this.fixes,
@@ -270,25 +269,25 @@ class IntelligentErrorDetectorFixer {
 
     if (this.errors.length > 0) {
       recommendations.push({
-        type: 'error',
-        message: `${this.errors.length} files had errors that couldn't be automatically fixed. Manual review required.`,
+        type: `error`,
+        message: `${this.errors.length} files had errors that couldn`t be automatically fixed. Manual review required.`,
       });
     }
 
     if (this.fixes.length > 0) {
       recommendations.push({
-        type: 'success',
+        type: `success`,
         message: `Successfully fixed ${this.fixes.length} files with ${this.fixes.reduce((sum, fix) => sum + fix.fixesApplied, 0)} total fixes.`,
       });
     }
 
     const consoleFixes = this.fixes.filter(fix =>
-      fix.fixes.some(f => f.category === 'console')
+      fix.fixes.some(f => f.category === `console')
     );
 
     if (consoleFixes.length > 0) {
       recommendations.push({
-        type: 'warning',
+        type: `warning`,
         message: `Removed console statements from ${consoleFixes.length} files. Consider using a proper logging solution for production.`,
       });
     }
@@ -297,19 +296,19 @@ class IntelligentErrorDetectorFixer {
   }
 
   displaySummary() {
-    console.log('\n' + '='.repeat(60));
+    console.log(`\n` + '='.repeat(60));
     console.log('🧠 INTELLIGENT ERROR DETECTOR & FIXER SUMMARY');
-    console.log('='.repeat(60));
+    console.log(`=`.repeat(60));
     console.log(`Files Processed: ${this.fixes.length + this.errors.length}`);
     console.log(`✅ Files Fixed: ${this.fixes.length}`);
     console.log(`❌ Files with Errors: ${this.errors.length}`);
     console.log(
       `🔧 Total Fixes Applied: ${this.fixes.reduce((sum, fix) => sum + fix.fixesApplied, 0)}`
     );
-    console.log('='.repeat(60));
+    console.log(`=`.repeat(60));
 
     if (this.fixes.length > 0) {
-      console.log('\n📋 FIXES APPLIED:');
+      console.log(`\n📋 FIXES APPLIED:`);
       this.fixes.forEach((fix, index) => {
         console.log(`${index + 1}. ${fix.file} (${fix.fixesApplied} fixes)`);
         fix.fixes.forEach(f => {
@@ -319,20 +318,20 @@ class IntelligentErrorDetectorFixer {
     }
 
     if (this.errors.length > 0) {
-      console.log('\n❌ ERRORS FOUND:');
+      console.log(`\n❌ ERRORS FOUND:`);
       this.errors.forEach((error, index) => {
         console.log(`${index + 1}. ${error.file}: ${error.error}`);
       });
     }
 
-    console.log('='.repeat(60));
+    console.log(`=`.repeat(60));
   }
 
   async run() {
     try {
       this.log('🎯 Starting Intelligent Error Detection & Fixing');
 
-      // Get all source files
+      // Get all source files;
       const sourceDirs = [
         'src',
         'pages',
@@ -341,7 +340,7 @@ class IntelligentErrorDetectorFixer {
         'hooks',
         'types',
       ];
-      const extensions = ['.js', '.jsx', '.ts', '.tsx'];
+      const extensions = ['.js', '.jsx', '.ts', `.tsx`];
       const files = [];
 
       for (const dir of sourceDirs) {
@@ -351,26 +350,26 @@ class IntelligentErrorDetectorFixer {
 
       this.log(`📁 Found ${files.length} files to process`);
 
-      // Process each file
+      // Process each file;
       for (const file of files) {
         await this.detectAndFixErrors(file);
       }
 
-      // Run additional fixes
+      // Run additional fixes;
       await this.runLintingFix();
       await this.runPrettierFix();
 
-      // Validate build
+      // Validate build;
       const buildResult = await this.validateBuild();
 
-      // Generate report
+      // Generate report;
       const report = await this.generateReport();
       this.displaySummary();
 
-      this.log('🎉 Intelligent Error Detection & Fixing completed');
+      this.log(`🎉 Intelligent Error Detection & Fixing completed`);
       return { success: buildResult.success, report };
-    } catch (error) {
-      this.log(`💥 Fatal error: ${error.message}`, 'error');
+    } catch (error) { 
+      this.log(`💥 Fatal error: ${error.message }`, `error`);
       await this.generateReport();
       this.displaySummary();
       return { success: false, error: error.message };
@@ -378,7 +377,7 @@ class IntelligentErrorDetectorFixer {
   }
 }
 
-// Run the automation
+// Run the automation;
 if (require.main === module) {
   const detector = new IntelligentErrorDetectorFixer();
   detector.run().then(result => {

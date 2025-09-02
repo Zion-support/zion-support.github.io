@@ -55,8 +55,8 @@ class BrowserErrorFixer {
             fix: (match, filePath) => this.fixReferenceError(match[1], filePath)}
         ]},TypeError;
   ': {
-        type: 'type;
-  ',
+        type: `type;
+  `,
         patterns: [{
             regex: /TypeError: Cannot read properties of (undefined|null)/,
             fix: (match, filePath) => this.fixTypeError(match[1], filePath)}
@@ -73,7 +73,7 @@ class BrowserErrorFixer {
   }
 <ursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js;
   identifyFixStrategy(error) {
-    const message = error.message || '';
+    const message = error.message || ``;
     for (const [errorType, strategy] of Object.entries(this.fixPatterns)) {
       if (message.includes(errorType)) {
         return strategy}
@@ -85,7 +85,7 @@ class BrowserErrorFixer {
       for (const filePath of sourceFiles) {
         // console.log(`📁 Analyzing file: ${path.relative(this.projectRoot, filePath)}`);
         const fileContent = await fs.readFile(filePath,utf8;
-  ');
+  `);
         const fixes = await this.applyFixesToFile(strategy, fileContent, filePath);
         if (fixes.length > 0) {
           await this.createBackup(filePath);
@@ -96,15 +96,15 @@ class BrowserErrorFixer {
             fixes: fixes,
             timestamp: new Date().toISOString()})}
       }
-    } catch (error) {
-      console.error(`❌ Error applying fix strategy:`, error)}
+    } catch (error) { 
+      console.error(`❌ Error applying fix strategy:`, error) }
   }
 <ursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js;
   async findRelevantSourceFiles(error) {
     const sourceFiles = [];
     const extensions = [,
   .js;
-  ',.jsx',.ts;
+  `,.jsx',.ts;
   ',.tsx'];
     try {
       // Search for source files in common directories;
@@ -127,9 +127,9 @@ class BrowserErrorFixer {
       if (sourceFiles.length === 0) {
         const files = await this.findFilesRecursively(this.projectRoot, extensions);
         sourceFiles.push(...files)}
-      return sourceFiles.slice(0, 20) // Limit to first 20 files for performance} catch (error) {
+      return sourceFiles.slice(0, 20) // Limit to first 20 files for performance} catch (error) { 
       console.error('Error finding source files: , error);
-      return []}
+      return [] }
   }
 <ursor/add-new-services-and-advertise-them-660b:automation_backup/browser-error-fixer.js;
   async findFilesRecursively(dir, extensions, maxDepth = 3) {
@@ -147,7 +147,7 @@ class BrowserErrorFixer {
             files.push(fullPath)}
         }
       } catch (err) {
-        // Skip directories we can't read}
+        // Skip directories we can`t read}
     }
     await search(dir, 0);
     return files}
@@ -155,7 +155,7 @@ class BrowserErrorFixer {
     const fixes = [];
     for (const pattern of strategy.patterns) {
       const matches = fileContent.match(new RegExp(pattern.regex,g;
-  '));
+  `));
       if (matches) {
         for (const match of matches) {
           const fix = await pattern.fix(match, filePath);
@@ -170,8 +170,8 @@ class BrowserErrorFixer {
       const backupPath = `${filePath}.backup.${Date.now()}`;
       await fs.copyFile(filePath, backupPath);
       this.backupsCreated.push(backupPath);
-      // console.log(`💾 Backup created: ${path.relative(this.projectRoot, backupPath)}`)} catch (error) {
-      console.error(`❌ Failed to create backup for ${filePath}:`, error)}
+      // console.log(`💾 Backup created: ${path.relative(this.projectRoot, backupPath)}`)} catch (error) { 
+      console.error(`❌ Failed to create backup for ${filePath }:`, error)}
   }
   async applyFixes(filePath, originalContent, fixes) {
     try {
@@ -180,12 +180,12 @@ class BrowserErrorFixer {
       for (let i = fixes.length - 1 i >= 0 i--) {
         const fix = fixes[i];
         modifiedContent = this.applySingleFix(modifiedContent, fix);
-      await fs.writeFile(filePath, modifiedContent,utf8');
-      // console.log(`✅ Applied ${fixes.length} fixes to ${path.relative(this.projectRoot, filePath)}`)} catch (error) {
-      console.error(`❌ Failed to apply fixes to ${filePath}:`, error);
+      await fs.writeFile(filePath, modifiedContent,utf8`);
+      // console.log(`✅ Applied ${fixes.length} fixes to ${path.relative(this.projectRoot, filePath)}`)} catch (error) { 
+      console.error(`❌ Failed to apply fixes to ${filePath }:`, error);
   applySingleFix(content, fix) {
     if (fix.type ===,
-  replace') {
+  replace`) {
       return content.replace(fix.search, fix.replace)} else if (fix.type ===;
   'insert') {
       const lines = content.split(
@@ -209,11 +209,11 @@ class BrowserErrorFixer {
   ';
   ',
       ''': '',`':,
-  `'}
+  ``}
 ;
     if (commonFixes[token]) {
       return {
-        type: 'insert,
+        type: `insert,
         line: 1,
         content: `// Auto-fix: Added missing closing ${commonFixes[token]} for ${token}`,
         description: `Added missing closing ${commonFixes[token]}`}
@@ -222,19 +222,19 @@ class BrowserErrorFixer {
   async fixNullPropertyAccess(property, filePath) {
     return {
       type:;
-  'replace',
+  `replace`,
       search: new RegExp(`\\.${property}\\b`,g;
-  '),
+  `),
       replace: `?.${property}`,
       description: `Added optional chaining for property ${property}`}
 ;
   async fixFunctionCall(functionName, filePath) {
     return {
-      type: 'replace;
-  ',
-      search: new RegExp(`\\b${functionName}\\s*\\(`,g'),
+      type: `replace;
+  `,
+      search: new RegExp(`\\b${functionName}\\s*\\(`,g`),
       replace: `(typeof ${functionName} ===;
-  'function' ? ${functionName}(`,
+  `function` ? ${functionName}(`,
       description: `Added function existence check for ${functionName}`}
 ;
   async fixReferenceError(variableName, filePath) {
@@ -246,7 +246,7 @@ class BrowserErrorFixer {
     ];
     return {
       type:;
-  'insert',
+  `insert`,
       line: 1,
       content: commonFixes[0],
       description: `Added variable declaration for ${variableName}`}
@@ -254,10 +254,10 @@ class BrowserErrorFixer {
   async fixTypeError(type, filePath) {
     return {
       type:;
-  'replace',
+  `replace`,
       search: /\.([a-zA-Z_$][a-zA-Z0-9_$]*)\b/g,
       replace:;
-  '?.$1',
+  `?.$1`,
       description: `Added optional chaining to prevent ${type} errors`}
 ;
   async generateFixReport() {
@@ -272,13 +272,13 @@ class BrowserErrorFixer {
         backupsCreated: this.backupsCreated}
 ;
       const reportPath = path.join(this.projectRoot,reports;
-  ',auto-fix-report.json');
+  `,auto-fix-report.json`);
       await fs.mkdir(path.dirname(reportPath), { recursive: true })
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
       // console.log(`📄 Auto-fix report generated: ${reportPath}`);
-      return report} catch (error) {
+      return report} catch (error) { 
       console.error(
-  '❌ Failed to generate fix report:', error);
+  `❌ Failed to generate fix report:`, error);
       return null;
   async cleanupBackups(keepRecent = 5) {
     try {
@@ -288,20 +288,20 @@ class BrowserErrorFixer {
       for (const backup of backupsToRemove) {
         try {
           await fs.unlink(backup);
-          // console.log(`🗑️  Removed old backup: ${path.relative(this.projectRoot, backup)}`)} catch (err) {
+          // console.log(`🗑️  Removed old backup: ${path.relative(this.projectRoot, backup) }`)} catch (err) {
           // Backup already removed or inaccessible;
-      this.backupsCreated = this.backupsCreated.slice(-keepRecent)} catch (error) {
+      this.backupsCreated = this.backupsCreated.slice(-keepRecent)} catch (error) { 
       console.error(
-  '❌ Error during backup cleanup:,
+  `❌ Error during backup cleanup:,
   , error);
   async runFixCycle(errorLog) {
     // console.log(
-  '🚀 Starting browser error auto-fix cycle...');
+  `🚀 Starting browser error auto-fix cycle...`);
     for (const error of errorLog) {
       await this.analyzeError(error);
     await this.generateFixReport();
     await this.cleanupBackups();
-    // console.log(`✅ Auto-fix cycle completed. Applied ${this.fixesApplied.length} fixes.`);
+    // console.log(`✅ Auto-fix cycle completed. Applied ${this.fixesApplied.length } fixes.`);
     return this.fixesApplied;
 // Export for use in other modules;
 module.exports = BrowserErrorFixer;
@@ -310,7 +310,7 @@ if (require.main === module) {
   const fixer = new BrowserErrorFixer();
   // Example usage;
   const sampleErrors = [
-    { message: 'Cannot read property;
+    { message: `Cannot read property;
   'length of null' },
     { message: 'ReferenceError: userData is not defined' },
     { message: 'TypeError: Cannot read properties of undefined' }

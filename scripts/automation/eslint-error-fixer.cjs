@@ -1,5 +1,4 @@
-#!/''usr/bin/env'' node
-
+#!/''usr/bin/env'' node;
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -12,10 +11,10 @@ class ESLintErrorFixer {
     );
     this.errorLogFile = path.join(
       this.projectRoot,
-      ''automation/logs/eslint-error-fixer-error.log'''
+      ''automation/logs/eslint-error-fixer-error.log''`
     );
     this.reportFile = path.join(
-      this.projectRoot,eslint-error-fixer-report.json'
+      this.projectRoot,eslint-error-fixer-report.json`
     );
 
     this.ensureLogsDirectory();
@@ -35,13 +34,13 @@ class ESLintErrorFixer {
     }
   }
 
-  log(message, type = 'info') {
+  log(message, type = `info`) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}\n`;
 
     fs.appendFileSync(this.logFile, logMessage);
 
-    if (type === 'error') {
+    if (type === `error`) {
       fs.appendFileSync(this.errorLogFile, logMessage);
     }
 console.log(`[${type.toUpperCase()}] ${message}`);
@@ -50,13 +49,13 @@ console.log(`[${type.toUpperCase()}] ${message}`);
   async runCommand(command, options = {}) {
     return new Promise((resolve, reject) => {
       const child = spawn(command, options.args || [], {
-        stdio: 'pipe',
+        stdio: `pipe`,
         shell: true,
         cwd: this.projectRoot,
         ...options,
       });
 
-      let stdout = '';
+      let stdout = ``;
       let stderr = '';
 
       child.stdout.on('data', data => {
@@ -85,17 +84,17 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     this.log('Detecting ESLint errors...');
 
     try {
-      const result = await this.runCommand('npm', { args: ['run', 'lint'] });
-      this.log('No ESLint errors detected');
+      const result = await this.runCommand('npm', { args: ['run', `lint`] });
+      this.log(`No ESLint errors detected`);
       return [];
-    } catch (error) {this.log(`ESLint errors detected: ${error.stderr}`, 'error');
+    } catch (error) {  this.log(`ESLint errors detected: ${error.stderr  }`, `error`);
       return this.parseESLintErrors(error.stderr);
     }
   }
 
   parseESLintErrors(stderr) {
     const errors = [];
-    const lines = stderr.split('\n');
+    const lines = stderr.split(`\n`);
 
     for (const line of lines) {
       if (line.includes('error')) {
@@ -106,9 +105,9 @@ console.log(`[${type.toUpperCase()}] ${message}`);
             file: match[1],
             line: parseInt(match[3]),
             column: parseInt(match[4]),
-            message: line.split(' - ')[1] || line,
+            message: line.split(` - `)[1] || line,
             rule: ruleMatch ? ruleMatch[1] : null,
-            type: 'eslint',
+            type: `eslint`,
           });
         }
       }
@@ -119,26 +118,26 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 
   async fixESLintErrors(errors) {this.log(`Fixing ${errors.length} ESLint errors...`);
 
-    // First try auto-fix
+    // First try auto-fix;
     try {
-      await this.runCommand('npm', { args: ['run', 'lint', '--', '--fix'] });
-      this.log('ESLint auto-fix completed');
+      await this.runCommand(`npm`, { args: [`run`, 'lint', '--', '--fix'] });
+      this.log(`ESLint auto-fix completed`);
 
-      // Check if auto-fix resolved all issues
+      // Check if auto-fix resolved all issues;
       const remainingErrors = await this.detectESLintErrors();
       if (remainingErrors.length === 0) {
-        this.log('All ESLint errors were auto-fixed');
+        this.log(`All ESLint errors were auto-fixed`);
         return;
       }
 
-      this.log(${remainingErrors.length} errors remain after auto-fix, applying manual fixes'
+      this.log(${remainingErrors.length} errors remain after auto-fix, applying manual fixes`
       );
       errors = remainingErrors;
-    } catch (error) {
-      this.log('ESLint auto-fix failed, applying manual fixes', 'warn');
-    }
+    } catch (error) {  
+      this.log(`ESLint auto-fix failed, applying manual fixes`, `warn`);
+      }
 
-    // Apply manual fixes for remaining errors
+    // Apply manual fixes for remaining errors;
     for (const error of errors) {
       try {
         await this.fixESLintError(error);
@@ -157,14 +156,14 @@ console.log(`[${type.toUpperCase()}] ${message}`);
   }
 
   async fixESLintError(error) {
-    if (!fs.existsSync(error.file)) {this.log(`File not found: ${error.file}`, 'warn');
+    if (!fs.existsSync(error.file)) {this.log(`File not found: ${error.file}`, `warn`);
       return;
     }
 
-    const content = fs.readFileSync(error.file, 'utf8');
+    const content = fs.readFileSync(error.file, `utf8');
     const lines = content.split('\n');
 
-    // Handle different ESLint error types
+    // Handle different ESLint error types;
     if (
       error.rule === 'no-unused-vars' ||
       error.message.includes('unused variable')
@@ -186,7 +185,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
       await this.fixConsoleError(error, lines);
     } else if (
       error.rule === 'prefer-const' ||
-      error.message.includes('prefer const')
+      error.message.includes('prefer const`)
     ) {
       await this.fixPreferConstError(error, lines);
     } else {
@@ -199,15 +198,15 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 
     const targetLine = lines[error.line - 1];
     const varMatch = error.message.match(
-      /['"]([^'"]+)['"] is defined but never used/
+      /[`"]([^`"]+)[`"] is defined but never used/
     );
 
     if (varMatch) {
       const varName = varMatch[1];
 
-      // Remove unused variable declaration
-      const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^;]+;?`, 'g'),
-        ''
+      // Remove unused variable declaration;
+      const fixedLine = targetLine.replace(new RegExp(`(const|let|var)\\s+${varName}\\s*=\\s*[^;]+;?`, `g`),
+        ``
       );
 
       if (fixedLine !== targetLine) {
@@ -222,7 +221,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 
     const targetLine = lines[error.line - 1];
 
-    // Add missing semicolon if line doesn't end with one
+    // Add missing semicolon if line doesn't end with one;
     if (
       !targetLine.trim().endsWith(';') &&
       !targetLine.trim().endsWith('{') &&
@@ -244,7 +243,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 
     const targetLine = lines[error.line - 1];
 
-    // Convert single quotes to double quotes or vice versa
+    // Convert single quotes to double quotes or vice versa;
     if (error.message.includes('single quotes')) {
       const fixedLine = targetLine.replace(/'/g, '"');
       if (fixedLine !== targetLine) {
@@ -284,7 +283,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 
     const targetLine = lines[error.line - 1];
 
-    // Comment out console statements
+    // Comment out console statements;
     if (targetLine.includes('console.')) {
       const fixedLine = '// ' + targetLine;
       lines[error.line - 1] = fixedLine;
@@ -297,7 +296,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 
     const targetLine = lines[error.line - 1];
 
-    // Convert let to const
+    // Convert let to const;
     if (targetLine.includes('let ')) {
       const fixedLine = targetLine.replace(/let /g, 'const ');
       if (fixedLine !== targetLine) {
@@ -312,16 +311,16 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 
     const targetLine = lines[error.line - 1];
 
-    // Generic fixes for common ESLint issues
+    // Generic fixes for common ESLint issues;
     let fixedLine = targetLine;
 
-    // Remove trailing spaces
+    // Remove trailing spaces;
     fixedLine = fixedLine.replace(/\s+$/, '');
 
-    // Fix multiple spaces
+    // Fix multiple spaces;
     fixedLine = fixedLine.replace(/[ ]{2,}/g, ' ');
 
-    // Fix missing spaces around operators
+    // Fix missing spaces around operators;
     fixedLine = fixedLine.replace(/([^=!<>])=([^=])/g, '$1 = $2');
     fixedLine = fixedLine.replace(/([^=!<>])==([^=])/g, '$1 == $2');
     fixedLine = fixedLine.replace(/([^=!<>])===([^=])/g, '$1 === $2');
@@ -340,7 +339,7 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     if (fs.existsSync(eslintConfigPath)) {
       let config = fs.readFileSync(eslintConfigPath, 'utf8');
 
-      // Update rules to be less strict for error fixing
+      // Update rules to be less strict for error fixing;
       const updatedConfig = 'module.exports = {
   env: {
     browser: true,
@@ -361,12 +360,12 @@ console.log(`[${type.toUpperCase()}] ${message}`);
   },
   settings: {
     react: {
-      version: 'detect',
+      version: `detect`,
     },
   },};`;
 
       fs.writeFileSync(eslintConfigPath, updatedConfig);
-      this.log('Updated ESLint configuration for error fixing');
+      this.log(`Updated ESLint configuration for error fixing`);
     }
   }
 
@@ -395,8 +394,8 @@ console.log(`[${type.toUpperCase()}] ${message}`);
 
     if (this.errors.length > 0) {
       recommendations.push({
-        priority: 'high',
-        message: 'Consider updating ESLint configuration',
+        priority: `high`,
+        message: `Consider updating ESLint configuration`,
         action: 'Review ESLint rules and update configuration',
       });
     }
@@ -416,36 +415,36 @@ console.log(`[${type.toUpperCase()}] ${message}`);
     this.log('Starting ESLint Error Fixer...');
 
     try {
-      // Update ESLint configuration
+      // Update ESLint configuration;
       await this.updateESLintConfig();
 
-      // Detect ESLint errors
+      // Detect ESLint errors;
       this.errors = await this.detectESLintErrors();
 
       if (this.errors.length > 0) {
-        // Fix ESLint errors
+        // Fix ESLint errors;
         await this.fixESLintErrors(this.errors);
       } else {
-        this.log('No ESLint errors detected');
+        this.log(`No ESLint errors detected`);
       }
 
       const report = this.generateReport();
-      this.log('ESLint Error Fixer completed successfully');
+      this.log(`ESLint Error Fixer completed successfully`);
 
       return report;
-    } catch (error) {this.log(`ESLint Error Fixer failed: ${error.message}`, 'error');
+    } catch (error) {  this.log(`ESLint Error Fixer failed: ${error.message  }`, `error`);
       throw error;
     }
   }
 }
 
-// Run the ESLint error fixer
+// Run the ESLint error fixer;
 if (require.main === module) {
   const fixer = new ESLintErrorFixer();
-  fixer
+  fixer;
     .run()
     .then(report => {
-      console.log('ESLint Error Fixer completed successfully');
+      console.log(`ESLint Error Fixer completed successfully`);
       process.exit(0);
     })
     .catch(error => {

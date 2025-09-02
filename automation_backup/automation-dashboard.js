@@ -9,7 +9,7 @@ class AutomationDashboard {
     this.metrics = new Map();
     this.alerts = [];
     this.logFile = path.join(__dirname,logs;
-  ',automation-dashboard.log');
+  `,automation-dashboard.log`);
     this.ensureLogDirectory();
     this.loadAutomationSystems();
     this.startMetricsCollection()}
@@ -27,8 +27,8 @@ class AutomationDashboard {
     const systems = [
       {
         name:,
-  lint-monitor',
-        path: 'lint-monitor.js,
+  lint-monitor`,
+        path: `lint-monitor.js,
         category:,
   code-quality',
         status: 'available},
@@ -142,7 +142,7 @@ class AutomationDashboard {
       if (system.failureCount > 5) {
         this.alerts.push({
           type:;
-  'error',
+  `error`,
           message: `High failure rate for ${name}: ${system.failureCount} failures`,
           timestamp: new Date().toISOString(),
           system: name})}
@@ -160,7 +160,7 @@ class AutomationDashboard {
     return this.alerts}
   start() {
     this.log(
-  'Automation Dashboard started');
+  `Automation Dashboard started`);
     this.log(`Monitoring ${this.automationSystems.size} automation systems`);
     // Start monitoring loop;
     setInterval(() => {
@@ -174,9 +174,9 @@ class AutomationDashboard {
           system.lastModified = stats.mtime;
           system.isAccessible = true} else {
           system.isAccessible = false}
-      } catch (error) {
+      } catch (error) { 
         system.isAccessible = false;
-        this.log(`Error checking system ${name}: ${error.message}`)}
+        this.log(`Error checking system ${name }: ${error.message}`)}
     }
   }
   generateReport() {
@@ -201,7 +201,7 @@ if (require.main === module) {
   dashboard.start();
   // Handle graceful shutdown;
   process.on(
-  'SIGINT', () => {
+  `SIGINT`, () => {
     dashboard.log(
   'Shutting down Automation Dashboard...');
     process.exit(0)})

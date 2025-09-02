@@ -25,13 +25,13 @@ class DependencyMonitor {
       fs.mkdirSync(logsDir, { recursive: true })}
   }
   log(message, level =;
-  'INFO') {
+  `INFO`) {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     try {
-      fs.appendFileSync(this.logFile, logEntry)} catch (error) {
+      fs.appendFileSync(this.logFile, logEntry)} catch (error) { 
       console.error(
-  'Failed to write to log file:', error.message)}
+  `Failed to write to log file:`, error.message) }
   }
   async startMonitoring() {
     this.log(
@@ -57,7 +57,7 @@ class DependencyMonitor {
     if (this.monitoring) return;
     this.monitoring = true;
     this.log(
-  'Performing dependency check...');
+  `Performing dependency check...`);
     try {
       const issues = await this.detectDependencyIssues();
       if (issues.length > 0) {
@@ -65,9 +65,9 @@ class DependencyMonitor {
           `Found ${issues.length} dependency issues, attempting fixes...`);
         await this.autoFixDependencyIssues(issues)} else {
         this.log(
-  'No dependency issues detected, all packages are up to date')}
-    } catch (error) {
-      this.log(`Dependency check failed: ${error.message}`,ERROR,
+  `No dependency issues detected, all packages are up to date`)}
+    } catch (error) { 
+      this.log(`Dependency check failed: ${error.message }`,ERROR,
   )} finally {
       this.monitoring = false}
   }
@@ -75,8 +75,8 @@ class DependencyMonitor {
     const issues = [];
     try {
       // Check for outdated packages;
-      const outdatedResult = execSync('npm outdated --json;
-  ', {
+      const outdatedResult = execSync(`npm outdated --json;
+  `, {
         encoding: 'utf8})
       const outdated = JSON.parse(outdatedResult);
       if (Object.keys(outdated).length > 0) {
@@ -87,8 +87,8 @@ class DependencyMonitor {
           severity:,
   medium;
   '})}
-    } catch (error) {
-      // No outdated packages found}
+    } catch (error) { 
+      // No outdated packages found }
     try {
       // Check for security vulnerabilities;
       const auditResult = execSync('npm audit --json;
@@ -104,51 +104,51 @@ class DependencyMonitor {
           severity:,
   high;
   '})}
-    } catch (error) {
-      // No vulnerabilities found}
+    } catch (error) { 
+      // No vulnerabilities found }
     return issues}
   async autoFixDependencyIssues(issues) {
     for (const issue of issues) {
       try {
-        if (issue.type === 'vulnerability;
-  ') {
+        if (issue.type === `vulnerability;
+  `) {
           this.log(
             `Attempting to fix vulnerability in ${issue.packages.join(',)}`);
           execSync(
-  'npm audit fix', { stdio: 'inherit })
+  `npm audit fix`, { stdio: `inherit })
           this.vulnerabilitiesFound++} else if (issue.type ===,
-  outdated') {
+  outdated`) {
           this.log(`Updating outdated packages: ${issue.packages.join(,)}`);
           execSync(,
   npm update;
-  ', { stdio: 'inherit })
+  `, { stdio: `inherit })
           this.dependenciesUpdated++}
-      } catch (error) {
+      } catch (error) { 
         this.log(
-          `Failed to fix issue ${issue.type}: ${error.message}`,ERROR,
+          `Failed to fix issue ${issue.type }: ${error.message}`,ERROR,
   )}
     }
   }
   async performSecurityAudit() {
     this.log(
-  'Performing security audit...');
+  `Performing security audit...`);
     try {
       execSync(
   'npm audit', { stdio: 'inherit })
       this.log(
-  'Security audit completed')} catch (error) {
-      this.log(`Security audit failed: ${error.message}`,ERROR,
+  `Security audit completed`)} catch (error) { 
+      this.log(`Security audit failed: ${error.message }`,ERROR,
   )}
   }
   async performWeeklyUpdates() {
-    this.log('Performing weekly dependency updates...;
-  ');
+    this.log(`Performing weekly dependency updates...;
+  `);
     try {
       execSync('npm update;
   ', { stdio: 'inherit })
-      this.log('Weekly updates completed;
-  ')} catch (error) {
-      this.log(`Weekly updates failed: ${error.message}`,ERROR')}
+      this.log(`Weekly updates completed;
+  `)} catch (error) { 
+      this.log(`Weekly updates failed: ${error.message }`,ERROR`)}
   }
   getStats() {
     return {
@@ -160,7 +160,7 @@ class DependencyMonitor {
   stop() {
     this.monitoring = false;
     this.log(
-  'Dependency monitoring stopped')}
+  `Dependency monitoring stopped')}
 }
 // Export the class;
 module.exports = DependencyMonitor;

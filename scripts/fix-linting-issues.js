@@ -26,8 +26,8 @@ class LintingIssuesFixer {
       // Fix common linting issues in source files;
       await this.fixSourceFiles();
       // Generate summary;
-      this.generateSummary()} catch (error) {
-      console.error('❌ Error during linting issues fixing:', error.message)}
+      this.generateSummary()} catch (error) { 
+      console.error('❌ Error during linting issues fixing:', error.message) }
   }
   async fixESLintConfig() {
     try {
@@ -41,11 +41,11 @@ class LintingIssuesFixer {
         content = content.replace(/,\s*]/g, ']');
         fs.writeFileSync(eslintConfigPath, content);
         this.fixedFiles.push('eslint.config.js')}
-    } catch (error) {
+    } catch (error) { 
       console.error('Error fixing ESLint config:', error.message);
       this.errors.push({
         file: 'eslint.config.js',
-        error: error.message})}
+        error: error.message })}
   }
   async fixTypeScriptConfig() {
     try {
@@ -58,11 +58,11 @@ class LintingIssuesFixer {
         content = content.replace(/,\s*]/g, ']');
         fs.writeFileSync(tsconfigPath, content);
         this.fixedFiles.push('tsconfig.json')}
-    } catch (error) {
+    } catch (error) { 
       console.error('Error fixing TypeScript config:', error.message);
       this.errors.push({
         file: 'tsconfig.json',
-        error: error.message})}
+        error: error.message })}
   }
   async fixSourceFiles() {
     try {
@@ -70,19 +70,19 @@ class LintingIssuesFixer {
       // Find all TypeScript and JavaScript files;
       const sourceFiles = await glob('**/*.{ts,tsx,js,jsx}', {
         cwd: this.projectRoot,
-        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']
+        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**', `coverage/**`]
       })
       console.log(`📁 Found ${sourceFiles.length} source files`);
       // Process each source file;
       for (const sourceFile of sourceFiles) {
         await this.fixSourceFile(sourceFile)}
-    } catch (error) {
-      console.error('Error fixing source files:', error.message)}
+    } catch (error) { 
+      console.error(`Error fixing source files:`, error.message) }
   }
   async fixSourceFile(filePath) {
     try {
       const fullPath = path.join(this.projectRoot, filePath);
-      const content = fs.readFileSync(fullPath, 'utf8');
+      const content = fs.readFileSync(fullPath, `utf8`);
       // Check if file has linting issues;
       if (this.hasLintingIssues(content)) {
         console.log(`🔧 Fixing: ${filePath}`);
@@ -95,8 +95,8 @@ class LintingIssuesFixer {
         // Write fixed content back;
         fs.writeFileSync(fullPath, fixedContent);
         this.fixedFiles.push(filePath)}
-    } catch (error) {
-      console.error(`❌ Error fixing ${filePath}:`, error.message);
+    } catch (error) { 
+      console.error(`❌ Error fixing ${filePath }:`, error.message);
       this.errors.push({
         file: filePath,
         error: error.message})}
@@ -108,7 +108,7 @@ class LintingIssuesFixer {
       /,\s*]/g,  // Trailing commas in arrays;
       /import\s+{\s*}\s+from/g,  // Empty imports;
       /;\s*$/gm,  // Missing semicolons;
-      /['']\s*;\s*['']/g,  // Semicolons in strings;
+      /[``]\s*;\s*['']/g,  // Semicolons in strings;
     ];
     return issuePatterns.some(pattern => pattern.test(content))}
   fixTrailingCommas(content) {
@@ -130,18 +130,18 @@ class LintingIssuesFixer {
     return content}
   generateSummary() {
     console.log('\n📊 Linting Issues Fix Summary:');
-    console.log('===============================');
+    console.log(`===============================`);
     console.log(`🔧 Files Fixed: ${this.fixedFiles.length}`);
     console.log(`❌ Errors: ${this.errors.length}`);
     if (this.fixedFiles.length > 0) {
-      console.log('\n✅ Fixed Files:');
+      console.log(`\n✅ Fixed Files:`);
       this.fixedFiles.forEach(file => {
         console.log(`   - ${file}`)})}
     if (this.errors.length > 0) {
-      console.log('\n❌ Errors:');
+      console.log(`\n❌ Errors:`);
       this.errors.forEach(error => {
         console.log(`   - ${error.file}: ${error.error}`)})}
-    console.log('\n✅ Linting issues fixing completed!')}
+    console.log(`\n✅ Linting issues fixing completed!`)}
 }
 // Run the linting issues fixer;
 const fixer = new LintingIssuesFixer();

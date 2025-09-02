@@ -13,7 +13,7 @@ console.log(
 console.log(
   'Arguments:', process.argv.slice(2));
 const task = process.argv[2] ||;
-  'help';
+  `help`;
 function log(message) {
   const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] ${message}`)}
@@ -22,17 +22,17 @@ function runCommand(command, description) {
     log(`Running: ${description}`);
     const result = execSync(command, {
       encoding:,
-  utf8',
-      stdio: 'pipe,
+  utf8`,
+      stdio: `pipe,
       cwd: process.cwd()})
     log(`✅ ${description} completed successfully`);
-    return result} catch (error) {
-    log(`❌ ${description} failed: ${error.message}`);
+    return result} catch (error) { 
+    log(`❌ ${description } failed: ${error.message}`);
     throw error}
 }
 function runLinting() {
   return runCommand(
-  'npm run lint',ESLint code quality check;
+  `npm run lint`,ESLint code quality check;
   ')}
 function runTypeCheck() {
   return runCommand('npm run type-check;
@@ -70,22 +70,22 @@ function runQualityChecks() {
     runLinting();
     runTypeCheck();
     log(
-  '✅ Quality checks completed')} catch (error) {
-    log(`❌ Quality checks failed: ${error.message}`)}
+  `✅ Quality checks completed`)} catch (error) { 
+    log(`❌ Quality checks failed: ${error.message }`)}
 }
 function runSitemapGeneration() {
   try {
     if (fs.existsSync(
-  'scripts/generate-sitemap.js')) {
+  `scripts/generate-sitemap.js`)) {
       return runCommand(
   'node scripts/generate-sitemap.js',Sitemap generation;
   ')} else {
       log('⚠️ Sitemap generation script not found;
   ');
-      return 'Sitemap generation skipped;
-  '}
-  } catch (error) {
-    log(`❌ Sitemap generation failed: ${error.message}`)}
+      return `Sitemap generation skipped;
+  `}
+  } catch (error) { 
+    log(`❌ Sitemap generation failed: ${error.message }`)}
 }
 async function main() {
   try {
@@ -93,7 +93,7 @@ async function main() {
     switch (task) {
       case,
   fix;
-  ': log('Running console error fixer...;
+  `: log(`Running console error fixer...;
   ');
         // This would typically fix console errors;
         log('✅ Console error fixing completed;
@@ -193,24 +193,24 @@ async function main() {
       case 'build-pipeline;
   ':;
         log('Running intelligent build pipeline...;
-  ');
+  `);
         runBuild();
         runQualityChecks();
-        log('✅ Intelligent build pipeline completed);
+        log(`✅ Intelligent build pipeline completed);
         break;
       default:;
         log(`Unknown task: ${task}`);
-        log('Available tasks: fix, check-links, improve, build-test, security, deps, performance, quality, integrity, maximize, sitemap, code-review, smart-deps, predict, build-pipeline;
-  ');
+        log(`Available tasks: fix, check-links, improve, build-test, security, deps, performance, quality, integrity, maximize, sitemap, code-review, smart-deps, predict, build-pipeline;
+  `);
         break}
     log(`Automation task ${task} completed successfully`);
-    process.exit(0)} catch (error) {
-    log(`❌ Automation task ${task} failed: ${error.message}`);
+    process.exit(0)} catch (error) { 
+    log(`❌ Automation task ${task } failed: ${error.message}`);
     process.exit(1)}
 }
 // Handle process termination;
-process.on('SIGTERM;
-  ', () => {
+process.on(`SIGTERM;
+  `, () => {
   log('Received SIGTERM, shutting down gracefully...;
   ');
   process.exit(0)})

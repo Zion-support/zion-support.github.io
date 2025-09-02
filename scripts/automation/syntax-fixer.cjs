@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
@@ -8,7 +7,7 @@ class SyntaxFixer {
   constructor() {
     this.projectRoot = '/workspace';
     this.logDir = path.join(this.projectRoot, 'logs');
-    this.backupDir = path.join(this.projectRoot, 'backups');
+    this.backupDir = path.join(this.projectRoot, 'backups`);
     this.fixesApplied = 0;
     this.filesProcessed = 0;
     
@@ -25,8 +24,8 @@ class SyntaxFixer {
   }
 
   setupSignalHandlers() {
-    process.on('SIGTERM', () => this.shutdown());
-    process.on('SIGINT', () => this.shutdown());
+    process.on(`SIGTERM`, () => this.shutdown());
+    process.on(`SIGINT`, () => this.shutdown());
   }
 
   log(level, ...args) {
@@ -34,8 +33,8 @@ class SyntaxFixer {
     const message = `[${timestamp}] [${level.toUpperCase()}] ${args.join(' ')}`;
     console.log(message);
     
-    const logFile = path.join(this.logDir, 'syntax-fixer.log');
-    fs.appendFileSync(logFile, message + '\\n');
+    const logFile = path.join(this.logDir, `syntax-fixer.log`);
+    fs.appendFileSync(logFile, message + `\\n`);
   }
 
   createBackup(filePath) {
@@ -50,8 +49,8 @@ class SyntaxFixer {
       
       fs.copyFileSync(filePath, backupPath);
       return backupPath;
-    } catch (error) {
-      this.log('error', `Failed to create backup for ${filePath}:`, error.message);
+    } catch (error) {  
+      this.log(`error`, `Failed to create backup for ${filePath  }:`, error.message);
       return null;
     }
   }
@@ -60,16 +59,16 @@ class SyntaxFixer {
     let fixed = content;
     let changes = 0;
     
-    // Fix unterminated single quotes at end of lines
-    fixed = fixed.replace(/^([^'\\n]*)'([^'\\n]*)$/gm, (match, before, after) => {
-      if (!after.includes("'")) {
+    // Fix unterminated single quotes at end of lines;
+    fixed = fixed.replace(/^([^`\\n]*)`([^`\\n]*)$/gm, (match, before, after) => {
+      if (!after.includes("`")) {
         changes++;
-        return before + "'" + after + "'";
+        return before + "`" + after + "'";
       }
       return match;
     });
     
-    // Fix unterminated double quotes at end of lines
+    // Fix unterminated double quotes at end of lines;
     fixed = fixed.replace(/^([^"\\n]*)"([^"\\n]*)$/gm, (match, before, after) => {
       if (!after.includes('"')) {
         changes++;
@@ -85,12 +84,12 @@ class SyntaxFixer {
     let fixed = content;
     let changes = 0;
     
-    // Remove merge conflict markers and take the HEAD version
-    const mergeConflictPattern = /      changes++;
+    // Remove merge conflict markers and take the HEAD version;
+    const mergeConflictPattern = /^\s*<<<<<<<|^\s*=======|^\s*>>>>>>>/
       return headContent;
     });
     
-    // Remove standalone conflict markers
+    // Remove standalone conflict markers;
     fixed = fixed.replace(/^    fixed = fixed.replace(/^=======\\n/gm, () => { changes++; return ''; });
     fixed = fixed.replace(/^    
     return { content: fixed, changes };
@@ -100,10 +99,10 @@ class SyntaxFixer {
     let fixed = content;
     let changes = 0;
     
-    // Fix extra semicolons
+    // Fix extra semicolons;
     fixed = fixed.replace(/;;+/g, () => { changes++; return ';'; });
     
-    // Fix missing semicolons at end of import statements
+    // Fix missing semicolons at end of import statements;
     fixed = fixed.replace(/^(import .+from .+)$/gm, (match) => {
       if (!match.endsWith(';')) {
         changes++;
@@ -112,10 +111,10 @@ class SyntaxFixer {
       return match;
     });
     
-    // Fix space around assignment operators
+    // Fix space around assignment operators;
     fixed = fixed.replace(/(\\w)=([^=])/g, (match, before, after) => {
       changes++;
-      return before + ' = ' + after;
+      return before + ` = ` + after;
     });
     
     return { content: fixed, changes };
@@ -125,13 +124,13 @@ class SyntaxFixer {
     let fixed = content;
     let changes = 0;
     
-    // Replace CommonJS require with ES6 imports where appropriate
-    fixed = fixed.replace(/const\\s+(\\w+)\\s*=\\s*require\\(['"]([^'"]+)['"]\\);?/g, (match, varName, moduleName) => {
+    // Replace CommonJS require with ES6 imports where appropriate;
+    fixed = fixed.replace(/const\\s+(\\w+)\\s*=\\s*require\\([`"]([^`"]+)[`"]\\);?/g, (match, varName, moduleName) => {
       changes++;
-      return `import ${varName} from '${moduleName}';`;
+      return `import ${varName} from `${moduleName}`;`;
     });
     
-    // Fix module.exports to export default
+    // Fix module.exports to export default;
     fixed = fixed.replace(/module\\.exports\\s*=\\s*(.+);?/g, (match, value) => {
       changes++;
       return `export default ${value};`;
@@ -144,14 +143,14 @@ class SyntaxFixer {
     let fixed = content;
     let changes = 0;
     
-    // Remove lines with parsing errors
-    fixed = fixed.replace(/.*Parsing error:.*\\n/g, () => { changes++; return ''; });
+    // Remove lines with parsing errors;
+    fixed = fixed.replace(/.*Parsing error:.*\\n/g, () => { changes++; return ``; });
     
-    // Remove lines that are clearly corrupted
-    fixed = fixed.replace(/.*Unterminated string literal.*\\n/g, () => { changes++; return ''; });
+    // Remove lines that are clearly corrupted;
+    fixed = fixed.replace(/.*Unterminated string literal.*\\n/g, () => { changes++; return ``; });
     
-    // Remove empty quotes at end of file
-    fixed = fixed.replace(/["']\\s*$/, () => { changes++; return ''; });
+    // Remove empty quotes at end of file;
+    fixed = fixed.replace(/["`]\\s*$/, () => { changes++; return ''; });
     
     return { content: fixed, changes };
   }
@@ -159,28 +158,28 @@ class SyntaxFixer {
   generateFixedContent(filePath, originalContent) {
     const ext = path.extname(filePath);
     
-    // Determine if this should be a TypeScript or JavaScript file
+    // Determine if this should be a TypeScript or JavaScript file;
     const shouldBeTypeScript = filePath.includes('.tsx') || filePath.includes('.ts');
     const shouldBeJavaScript = filePath.includes('.jsx') || filePath.includes('.js');
     
     if (originalContent.trim().length === 0) {
-      // Generate basic file structure for empty files
+      // Generate basic file structure for empty files;
       if (shouldBeTypeScript && filePath.includes('components')) {
         return this.generateBasicReactComponent(path.basename(filePath, ext));
-      } else if (shouldBeJavaScript && filePath.includes('utils')) {
+      } else if (shouldBeJavaScript && filePath.includes('utils`)) {
         return this.generateBasicUtility(path.basename(filePath, ext));
       }
     }
     
-    return null; // Return null if no template available
+    return null; // Return null if no template available;
   }
 
   generateBasicReactComponent(componentName) {
-    const name = componentName.replace(/[^a-zA-Z0-9]/g, '');
-    return `import React from 'react';
+    const name = componentName.replace(/[^a-zA-Z0-9]/g, ``);
+    return `import React from `react`;
 
 interface ${name}Props {
-  // Add props here
+  // Add props here;
 }
 
 const ${name}: React.FC<${name}Props> = () => {
@@ -197,11 +196,10 @@ export default ${name};
   }
 
   generateBasicUtility(utilityName) {
-    const name = utilityName.replace(/[^a-zA-Z0-9]/g, '');
-    return `// ${name} utility functions
-
+    const name = utilityName.replace(/[^a-zA-Z0-9]/g, ``);
+    return `// ${name} utility functions;
 export const ${name.toLowerCase()} = {
-  // Add utility functions here
+  // Add utility functions here;
 };
 
 export default ${name.toLowerCase()};
@@ -213,33 +211,33 @@ export default ${name.toLowerCase()};
       this.filesProcessed++;
       
       if (!fs.existsSync(filePath)) {
-        this.log('warn', `File not found: ${filePath}`);
+        this.log(`warn`, `File not found: ${filePath}`);;
         return false;
       }
       
-      const originalContent = fs.readFileSync(filePath, 'utf8');
+      const originalContent = fs.readFileSync(filePath, `utf8`);
       const backupPath = this.createBackup(filePath);
       
       if (!backupPath) {
-        this.log('error', `Could not create backup for ${filePath}, skipping fix`);
+        this.log(`error`, `Could not create backup for ${filePath}, skipping fix`);;
         return false;
       }
       
       let content = originalContent;
       let totalChanges = 0;
       
-      // Apply various fixes
+      // Apply various fixes;
       const fixes = [
         this.fixMergeConflicts(content),
         this.fixUnterminatedStrings,
         this.removeCorruptContent,
         this.fixModuleSystemErrors,
-        this.fixCommonSyntaxErrors
+        this.fixCommonSyntaxErrors;
       ];
       
       for (let i = 0; i < fixes.length; i++) {
         let result;
-        if (typeof fixes[i] === 'function') {
+        if (typeof fixes[i] === `function`) {
           result = fixes[i](content);
         } else {
           result = fixes[i];
@@ -251,27 +249,27 @@ export default ${name.toLowerCase()};
         }
       }
       
-      // If content is still severely corrupted, try to generate new content
-      if (content.trim().length === 0 || content.includes('Unterminated string literal')) {
+      // If content is still severely corrupted, try to generate new content;
+      if (content.trim().length === 0 || content.includes(`Unterminated string literal`)) {
         const generatedContent = this.generateFixedContent(filePath, originalContent);
         if (generatedContent) {
           content = generatedContent;
           totalChanges++;
-          this.log('info', `Generated new content for ${filePath}`);
+          this.log(`info`, `Generated new content for ${filePath}`);;
         }
       }
       
-      // Only write if changes were made
+      // Only write if changes were made;
       if (totalChanges > 0) {
         fs.writeFileSync(filePath, content);
         this.fixesApplied += totalChanges;
-        this.log('info', `Fixed ${filePath} (${totalChanges} changes)`);
+        this.log(`info`, `Fixed ${filePath} (${totalChanges} changes)`);;
         return true;
       }
       
       return false;
-    } catch (error) {
-      this.log('error', `Failed to fix file ${filePath}:`, error.message);
+    } catch (error) {  
+      this.log(`error`, `Failed to fix file ${filePath  }:`, error.message);
       return false;
     }
   }
@@ -284,25 +282,25 @@ export default ${name.toLowerCase()};
         const itemPath = path.join(dirPath, item);
         const stat = fs.statSync(itemPath);
         
-        if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        if (stat.isDirectory() && !item.startsWith(`.`) && item !== `node_modules`) {
           await this.scanAndFixDirectory(itemPath);
         } else if (item.match(/\\.(ts|tsx|js|jsx)$/)) {
           await this.fixFile(itemPath);
         }
       }
-    } catch (error) {
-      this.log('error', `Error scanning directory ${dirPath}:`, error.message);
+    } catch (error) {  
+      this.log(`error`, `Error scanning directory ${dirPath  }:`, error.message);
     }
   }
 
   async run() {
-    this.log('info', 'Syntax Fixer starting...');
+    this.log(`info`, `Syntax Fixer starting...`);
     
     const startTime = Date.now();
     this.fixesApplied = 0;
     this.filesProcessed = 0;
     
-    const srcDir = path.join(this.projectRoot, 'src');
+    const srcDir = path.join(this.projectRoot, `src`);
     if (fs.existsSync(srcDir)) {
       await this.scanAndFixDirectory(srcDir);
     }
@@ -310,23 +308,23 @@ export default ${name.toLowerCase()};
     const endTime = Date.now();
     const duration = Math.round((endTime - startTime) / 1000);
     
-    this.log('info', `Syntax fixing completed in ${duration}s`);
-    this.log('info', `Files processed: ${this.filesProcessed}`);
-    this.log('info', `Fixes applied: ${this.fixesApplied}`);
+    this.log(`info`, `Syntax fixing completed in ${duration}s`);;
+    this.log(`info`, `Files processed: ${this.filesProcessed}`);;
+    this.log(`info`, `Fixes applied: ${this.fixesApplied}`);;
     
-    // Generate report
+    // Generate report;
     const report = {
       timestamp: new Date().toISOString(),
       duration,
       filesProcessed: this.filesProcessed,
       fixesApplied: this.fixesApplied,
-      status: 'completed'
+      status: `completed`
     };
     
-    const reportFile = path.join(this.projectRoot, 'syntax-error-fixer-report.json');
+    const reportFile = path.join(this.projectRoot, `syntax-error-fixer-report.json`);
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
     
-    // Reset counters for next run
+    // Reset counters for next run;
     this.fixesApplied = 0;
     this.filesProcessed = 0;
     
@@ -334,9 +332,9 @@ export default ${name.toLowerCase()};
   }
 
   async runContinuously() {
-    this.log('info', 'Syntax Fixer running in continuous mode...');
+    this.log(`info', 'Syntax Fixer running in continuous mode...');
     
-    // Run initial fix
+    // Run initial fix;
     await this.run();
     
     // Set up interval to run every 6 hours (21600000 ms)
@@ -345,10 +343,10 @@ export default ${name.toLowerCase()};
       await this.run();
     }, 6 * 60 * 60 * 1000);
     
-    // Keep the process alive
+    // Keep the process alive;
     setInterval(() => {
       this.log('info', 'Syntax Fixer heartbeat - running normally');
-    }, 60 * 60 * 1000); // Heartbeat every hour
+    }, 60 * 60 * 1000); // Heartbeat every hour;
   }
 
   shutdown() {
@@ -357,7 +355,7 @@ export default ${name.toLowerCase()};
   }
 }
 
-// Run the fixer in continuous mode
+// Run the fixer in continuous mode;
 const fixer = new SyntaxFixer();
 fixer.runContinuously().then(() => {
   fixer.log('info', 'Syntax Fixer started in continuous mode');

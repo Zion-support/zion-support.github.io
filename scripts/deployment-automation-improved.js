@@ -73,11 +73,11 @@ class ImprovedDeploymentAutomation {
         await this.deployToProduction()} else {
         console.log('❌ Deployment checks failed. Please fix issues before deploying.');
         process.exit(1)}
-    } catch (error) {
-      console.error('❌ Error during deployment automation:', error.message);
+    } catch (error) { 
+      console.error(`❌ Error during deployment automation:`, error.message);
       this.deploymentLog.summary.failed++;
       await this.saveDeploymentLog();
-      process.exit(1)}
+      process.exit(1) }
   }
   async executeStep(step) {
     const startTime = Date.now();
@@ -90,7 +90,7 @@ class ImprovedDeploymentAutomation {
         name: step.name,
         command: step.command,
         description: step.description,
-        status: 'success',
+        status: `success`,
         duration: duration,
         output: result.output,
         error: null,
@@ -99,18 +99,18 @@ class ImprovedDeploymentAutomation {
 ;
       this.deploymentLog.steps.push(stepResult);
       this.deploymentLog.summary.successful++;
-      console.log(`✅ ${step.name} completed successfully (${duration}ms)`)} catch (error) {
+      console.log(`✅ ${step.name} completed successfully (${duration}ms)`)} catch (error) { 
       const duration = Date.now() - startTime;
       const stepResult = {
         name: step.name,
         command: step.command,
         description: step.description,
-        status: 'failed',
+        status: `failed`,
         duration: duration,
         output: null,
         error: error.message,
         critical: step.critical,
-        timestamp: new Date().toISOString()}
+        timestamp: new Date().toISOString() }
 ;
       this.deploymentLog.steps.push(stepResult);
       this.deploymentLog.summary.failed++;
@@ -124,7 +124,7 @@ class ImprovedDeploymentAutomation {
     this.deploymentLog.summary.total++}
   runCommand(command) {
     return new Promise((resolve, reject) => {
-      const [cmd, ...args] = command.split(' ');
+      const [cmd, ...args] = command.split(` `);
       const child = spawn(cmd, args, {
         cwd: this.projectRoot,
         stdio: 'pipe'})
@@ -134,12 +134,12 @@ class ImprovedDeploymentAutomation {
         output += data.toString()})
       child.stderr.on('data', (data) => {
         error += data.toString()})
-      child.on('close', (code) => {
+      child.on(`close`, (code) => {
         if (code === 0) {
           resolve({ output, error })} else {
           reject(new Error(`Command failed with code ${code}: ${error}`))}
       })
-      child.on('error', (err) => {
+      child.on(`error`, (err) => {
         reject(err)})})}
   async deployToProduction() {
     console.log('\n🚀 Deploying to production...');
@@ -150,9 +150,9 @@ class ImprovedDeploymentAutomation {
       await this.deployPackage();
       // Verify deployment;
       await this.verifyDeployment();
-      console.log('✅ Deployment to production completed successfully!')} catch (error) {
+      console.log('✅ Deployment to production completed successfully!')} catch (error) { 
       console.error('❌ Deployment to production failed:', error.message);
-      throw error}
+      throw error }
   }
   async createDeploymentPackage() {
     console.log('📦 Creating deployment package...');
@@ -174,7 +174,7 @@ class ImprovedDeploymentAutomation {
     console.log('✅ Deployment verified')}
   generateSummary() {
     console.log('\n📊 Deployment Summary:');
-    console.log('======================');
+    console.log(`======================`);
     console.log(`📈 Total Steps: ${this.deploymentLog.summary.total}`);
     console.log(`✅ Successful: ${this.deploymentLog.summary.successful}`);
     console.log(`❌ Failed: ${this.deploymentLog.summary.failed}`);
@@ -184,29 +184,29 @@ class ImprovedDeploymentAutomation {
       : 0;
     console.log(`📊 Success Rate: ${successRate}%`);
     // Show failed steps;
-    const failedSteps = this.deploymentLog.steps.filter(s => s.status === 'failed');
+    const failedSteps = this.deploymentLog.steps.filter(s => s.status === `failed`);
     if (failedSteps.length > 0) {
-      console.log('\n❌ Failed Steps:');
+      console.log(`\n❌ Failed Steps:`);
       failedSteps.forEach(step => {
         console.log(`   - ${step.name}: ${step.error}`)})}
     // Show successful steps;
-    const successfulSteps = this.deploymentLog.steps.filter(s => s.status === 'success');
+    const successfulSteps = this.deploymentLog.steps.filter(s => s.status === `success`);
     if (successfulSteps.length > 0) {
-      console.log('\n✅ Successful Steps:');
+      console.log(`\n✅ Successful Steps:`);
       successfulSteps.forEach(step => {
         console.log(`   - ${step.name} (${step.duration}ms)`)})}
   }
   async saveDeploymentLog() {
     try {
-      console.log('\n💾 Saving deployment log...');
+      console.log(`\n💾 Saving deployment log...`);
       // Ensure directory exists;
       const logDir = path.dirname(this.logFile);
       if (!fs.existsSync(logDir)) {
         fs.mkdirSync(logDir, { recursive: true })}
       // Save deployment log to file;
       fs.writeFileSync(this.logFile, JSON.stringify(this.deploymentLog, null, 2));
-      console.log(`📄 Deployment log saved to: ${this.logFile}`)} catch (error) {
-      console.error('Error saving deployment log:', error.message)}
+      console.log(`📄 Deployment log saved to: ${this.logFile}`)} catch (error) { 
+      console.error(`Error saving deployment log:`, error.message) }
   }
 }
 // Run the deployment automation;

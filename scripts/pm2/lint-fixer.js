@@ -16,12 +16,12 @@ class IntelligentLintFixer {
     this.warningsFixed = 0;
     this.startTime = Date.now();
   log(message, level =;
-  'INFO') {
+  `INFO`) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}\n`;
   isLintableFile(filePath) {
     const extensions = [
-  '.js',.jsx;
+  `.js`,.jsx;
   ',.ts',.tsx;
   ',.vue'];
     return extensions.some(ext => filePath.endsWith(ext))}

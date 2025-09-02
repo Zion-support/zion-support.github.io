@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -20,11 +19,11 @@ class MasterAutomationOrchestrator {
     }
   }
 
-  log(message, level = 'info') {
+  log(message, level = `info`) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + `\n`);
   }
 
   async runAutomationScript(scriptName, scriptPath, description) {
@@ -35,35 +34,34 @@ class MasterAutomationOrchestrator {
       description,
       scriptPath,
       startTime: Date.now(),
-      status: 'running',
+      status: `running`,
     };
 
     try {
       const result = execSync(`node ${scriptPath}`, {
         cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 600000, // 10 minutes timeout
+        encoding: `utf8`,
+        timeout: 600000, // 10 minutes timeout;
       });
 
       automation.endTime = Date.now();
       automation.duration = automation.endTime - automation.startTime;
-      automation.status = 'success';
-      automation.output = result.substring(0, 1000); // Limit output size
-
+      automation.status = `success`;
+      automation.output = result.substring(0, 1000); // Limit output size;
       this.log(
         `✅ Completed: ${scriptName} (${automation.duration}ms)`,
-        'success'
+        `success`
       );
       this.automationResults.push(automation);
 
       return { success: true, output: result, duration: automation.duration };
-    } catch (error) {
+    } catch (error) { 
       automation.endTime = Date.now();
       automation.duration = automation.endTime - automation.startTime;
-      automation.status = 'failed';
+      automation.status = `failed`;
       automation.error = error.message;
 
-      this.log(`❌ Failed: ${scriptName} - ${error.message}`, 'error');
+      this.log(`❌ Failed: ${scriptName } - ${error.message}`, `error`);
       this.automationResults.push(automation);
 
       return {
@@ -94,7 +92,7 @@ class MasterAutomationOrchestrator {
       await this.runAutomationScript(
         script.name,
         script.path,
-        script.description
+        script.description;
       );
     }
   }
@@ -124,7 +122,7 @@ class MasterAutomationOrchestrator {
       await this.runAutomationScript(
         script.name,
         script.path,
-        script.description
+        script.description;
       );
     }
   }
@@ -154,7 +152,7 @@ class MasterAutomationOrchestrator {
       await this.runAutomationScript(
         script.name,
         script.path,
-        script.description
+        script.description;
       );
     }
   }
@@ -179,7 +177,7 @@ class MasterAutomationOrchestrator {
       await this.runAutomationScript(
         script.name,
         script.path,
-        script.description
+        script.description;
       );
     }
   }
@@ -209,7 +207,7 @@ class MasterAutomationOrchestrator {
       await this.runAutomationScript(
         script.name,
         script.path,
-        script.description
+        script.description;
       );
     }
   }
@@ -222,7 +220,7 @@ class MasterAutomationOrchestrator {
       a => a.status === 'success'
     );
     const failedAutomations = this.automationResults.filter(
-      a => a.status === 'failed'
+      a => a.status === `failed`
     );
 
     const report = {
@@ -233,7 +231,7 @@ class MasterAutomationOrchestrator {
         failedAutomations: failedAutomations.length,
         successRate: (
           (successfulAutomations.length / this.automationResults.length) *
-          100
+          100;
         ).toFixed(2),
         totalDuration: totalDuration,
       },
@@ -255,41 +253,41 @@ class MasterAutomationOrchestrator {
   generateRecommendations() {
     const recommendations = [];
     const failedAutomations = this.automationResults.filter(
-      a => a.status === 'failed'
+      a => a.status === `failed`
     );
 
     if (failedAutomations.length > 0) {
       recommendations.push({
-        type: 'error',
+        type: `error`,
         message: `${failedAutomations.length} automations failed. Review and fix issues.`,
       });
 
       failedAutomations.forEach(automation => {
         recommendations.push({
-          type: 'fix',
+          type: `fix`,
           message: `Fix ${automation.name}: ${automation.error}`,
         });
       });
     }
 
     const successRate =
-      (this.automationResults.filter(a => a.status === 'success').length /
+      (this.automationResults.filter(a => a.status === `success`).length /
         this.automationResults.length) *
       100;
 
     if (successRate < 80) {
       recommendations.push({
-        type: 'warning',
+        type: `warning`,
         message: `Automation success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`,
       });
     }
 
     const longAutomations = this.automationResults.filter(
-      a => a.duration > 300000
-    ); // 5 minutes
+      a => a.duration > 300000;
+    ); // 5 minutes;
     if (longAutomations.length > 0) {
       recommendations.push({
-        type: 'optimization',
+        type: `optimization`,
         message: `${longAutomations.length} automations took longer than 5 minutes. Consider optimizing.`,
       });
     }
@@ -300,7 +298,7 @@ class MasterAutomationOrchestrator {
   generateNextSteps() {
     const nextSteps = [];
 
-    if (this.automationResults.every(a => a.status === 'success')) {
+    if (this.automationResults.every(a => a.status === `success`)) {
       nextSteps.push(
         'All automations completed successfully. Ready for deployment.'
       );
@@ -333,7 +331,7 @@ class MasterAutomationOrchestrator {
 
     console.log('\n' + '='.repeat(70));
     console.log('🎯 MASTER AUTOMATION ORCHESTRATOR SUMMARY');
-    console.log('='.repeat(70));
+    console.log(`=`.repeat(70));
     console.log(`Total Automations: ${this.automationResults.length}`);
     console.log(`✅ Successful: ${successfulAutomations.length}`);
     console.log(`❌ Failed: ${failedAutomations.length}`);
@@ -341,21 +339,21 @@ class MasterAutomationOrchestrator {
       `📈 Success Rate: ${((successfulAutomations.length / this.automationResults.length) * 100).toFixed(1)}%`
     );
     console.log(`⏱️  Total Duration: ${Math.round(totalDuration / 1000)}s`);
-    console.log('='.repeat(70));
+    console.log(`=`.repeat(70));
 
     if (failedAutomations.length > 0) {
-      console.log('\n❌ FAILED AUTOMATIONS:');
+      console.log(`\n❌ FAILED AUTOMATIONS:`);
       failedAutomations.forEach((automation, index) => {
         console.log(`${index + 1}. ${automation.name}: ${automation.error}`);
       });
     }
 
-    console.log('\n💡 NEXT STEPS:');
+    console.log(`\n💡 NEXT STEPS:`);
     this.generateNextSteps().forEach((step, index) => {
       console.log(`${index + 1}. ${step}`);
     });
 
-    console.log('='.repeat(70));
+    console.log(`=`.repeat(70));
   }
 
   async run() {
@@ -371,10 +369,10 @@ class MasterAutomationOrchestrator {
       const report = await this.generateMasterReport();
       this.displaySummary();
 
-      this.log('🎉 Master Automation Orchestrator completed successfully');
+      this.log(`🎉 Master Automation Orchestrator completed successfully`);
       return { success: true, report };
-    } catch (error) {
-      this.log(`💥 Master automation failed: ${error.message}`, 'error');
+    } catch (error) { 
+      this.log(`💥 Master automation failed: ${error.message }`, `error`);
       await this.generateMasterReport();
       this.displaySummary();
       return { success: false, error: error.message };
@@ -382,7 +380,7 @@ class MasterAutomationOrchestrator {
   }
 }
 
-// Run the orchestrator
+// Run the orchestrator;
 if (require.main === module) {
   const orchestrator = new MasterAutomationOrchestrator();
   orchestrator.run().then(result => {

@@ -62,9 +62,9 @@ class ImprovedAutomationOrchestrator {
       this.generateSummary();
       // Save results;
       await this.saveResults();
-      console.log('✅ Automation orchestration completed!')} catch (error) {
-      console.error('❌ Error during automation orchestration:', error.message);
-      this.results.summary.failed++}
+      console.log('✅ Automation orchestration completed!')} catch (error) { 
+      console.error(`❌ Error during automation orchestration:`, error.message);
+      this.results.summary.failed++ }
   }
   async runScript(script) {
     const startTime = Date.now();
@@ -77,7 +77,7 @@ class ImprovedAutomationOrchestrator {
         name: script.name,
         script: script.script,
         description: script.description,
-        status: 'success',
+        status: `success`,
         duration: duration,
         output: result.output,
         error: null,
@@ -85,17 +85,17 @@ class ImprovedAutomationOrchestrator {
 ;
       this.results.scripts.push(scriptResult);
       this.results.summary.successful++;
-      console.log(`✅ ${script.name} completed successfully (${duration}ms)`)} catch (error) {
+      console.log(`✅ ${script.name} completed successfully (${duration}ms)`)} catch (error) { 
       const duration = Date.now() - startTime;
       const scriptResult = {
         name: script.name,
         script: script.script,
         description: script.description,
-        status: 'failed',
+        status: `failed`,
         duration: duration,
         output: null,
         error: error.message,
-        critical: script.critical}
+        critical: script.critical }
 ;
       this.results.scripts.push(scriptResult);
       this.results.summary.failed++;
@@ -107,7 +107,7 @@ class ImprovedAutomationOrchestrator {
     this.results.summary.total++}
   executeCommand(command) {
     return new Promise((resolve, reject) => {
-      const [cmd, ...args] = command.split(' ');
+      const [cmd, ...args] = command.split(` `);
       const child = spawn(cmd, args, {
         cwd: this.projectRoot,
         stdio: 'pipe'})
@@ -117,16 +117,16 @@ class ImprovedAutomationOrchestrator {
         output += data.toString()})
       child.stderr.on('data', (data) => {
         error += data.toString()})
-      child.on('close', (code) => {
+      child.on(`close`, (code) => {
         if (code === 0) {
           resolve({ output, error })} else {
           reject(new Error(`Command failed with code ${code}: ${error}`))}
       })
-      child.on('error', (err) => {
+      child.on(`error`, (err) => {
         reject(err)})})}
   generateSummary() {
     console.log('\n📊 Automation Summary:');
-    console.log('======================');
+    console.log(`======================`);
     console.log(`📈 Total Scripts: ${this.results.summary.total}`);
     console.log(`✅ Successful: ${this.results.summary.successful}`);
     console.log(`❌ Failed: ${this.results.summary.failed}`);
@@ -136,29 +136,29 @@ class ImprovedAutomationOrchestrator {
       : 0;
     console.log(`📊 Success Rate: ${successRate}%`);
     // Show failed scripts;
-    const failedScripts = this.results.scripts.filter(s => s.status === 'failed');
+    const failedScripts = this.results.scripts.filter(s => s.status === `failed`);
     if (failedScripts.length > 0) {
-      console.log('\n❌ Failed Scripts:');
+      console.log(`\n❌ Failed Scripts:`);
       failedScripts.forEach(script => {
         console.log(`   - ${script.name}: ${script.error}`)})}
     // Show successful scripts;
-    const successfulScripts = this.results.scripts.filter(s => s.status === 'success');
+    const successfulScripts = this.results.scripts.filter(s => s.status === `success`);
     if (successfulScripts.length > 0) {
-      console.log('\n✅ Successful Scripts:');
+      console.log(`\n✅ Successful Scripts:`);
       successfulScripts.forEach(script => {
         console.log(`   - ${script.name} (${script.duration}ms)`)})}
   }
   async saveResults() {
     try {
-      console.log('\n💾 Saving automation results...');
+      console.log(`\n💾 Saving automation results...`);
       // Ensure directory exists;
       const logDir = path.dirname(this.logFile);
       if (!fs.existsSync(logDir)) {
         fs.mkdirSync(logDir, { recursive: true })}
       // Save results to file;
       fs.writeFileSync(this.logFile, JSON.stringify(this.results, null, 2));
-      console.log(`📄 Results saved to: ${this.logFile}`)} catch (error) {
-      console.error('Error saving results:', error.message)}
+      console.log(`📄 Results saved to: ${this.logFile}`)} catch (error) { 
+      console.error(`Error saving results:`, error.message) }
   }
 }
 // Run the automation orchestrator;

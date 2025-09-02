@@ -28,14 +28,14 @@ class BuildAutomation {
       fs.mkdirSync(logsDir, { recursive: true })}
   }
   log(message, level =;
-  'INFO') {
+  `INFO`) {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     // // console.log(logEntry.trim());
     try {
-      fs.appendFileSync(this.logFile, logEntry)} catch (error) {
+      fs.appendFileSync(this.logFile, logEntry)} catch (error) { 
       console.error(
-  'Failed to write to log file:', error.message)}
+  `Failed to write to log file:`, error.message) }
   }
   async startAutomation() {
     this.log(
@@ -70,16 +70,16 @@ class BuildAutomation {
   'Build test successful')} else {
         this.buildFailures++;
         this.log(
-  'Build test failed, attempting to fix...');
+  `Build test failed, attempting to fix...`);
         await this.autoFixBuildIssues(buildResult.errors)}
-    } catch (error) {
-      this.log(`Build test failed: ${error.message}`,ERROR;
-  ');
+    } catch (error) { 
+      this.log(`Build test failed: ${error.message }`,ERROR;
+  `);
       this.buildFailures++} finally {
       this.monitoring = false}
   }
   async testBuild() {
-    this.log('Testing build process...;
+    this.log(`Testing build process...;
   ');
     try {
       const startTime = Date.now();
@@ -95,8 +95,8 @@ class BuildAutomation {
       execSync('npm run build;
   ', {
         cwd: this.projectRoot,
-        stdio: 'pipe;
-  ',
+        stdio: `pipe;
+  `,
         timeout: 300000, // 5 minutes})
       const buildTime = Date.now() - startTime;
       this.log(`Build successful in ${buildTime}ms`);
@@ -104,9 +104,9 @@ class BuildAutomation {
         success: true,
         buildTime,
         timestamp: new Date().toISOString()}
-    } catch (error) {
+    } catch (error) { 
       const errorOutput = error.stderr || error.stdout || error.message;
-      this.log(`Build failed: ${errorOutput}`,ERROR');
+      this.log(`Build failed: ${errorOutput }`,ERROR`);
       return {
         success: false,
         errors: this.parseBuildErrors(errorOutput),
@@ -116,7 +116,7 @@ class BuildAutomation {
   parseBuildErrors(errorOutput) {
     const errors = [];
     const lines = errorOutput.toString().split(
-  '\n');
+  `\n');
     for (const line of lines) {
       if(
         line.includes(
@@ -130,7 +130,7 @@ class BuildAutomation {
     return errors.slice(0, 20) // Limit to first 20 errors}
   async autoFixBuildIssues(errors) {
     this.log(
-  'Attempting to auto-fix build issues...');
+  `Attempting to auto-fix build issues...`);
     try {
       // Analyze errors and apply fixes;
       const fixes = await this.analyzeAndFixErrors(errors);
@@ -140,24 +140,24 @@ class BuildAutomation {
         const retestResult = await this.testBuild();
         if (retestResult.success) {
           this.log(
-  'Build fixed successfully after applying fixes');
+  `Build fixed successfully after applying fixes`);
           this.optimizationsApplied++} else {
           this.log(
   'Build still failing after fixes, creating detailed report');
           await this.createBuildFailureReport(errors, fixes)}
       } else {
         this.log(
-  'No automatic fixes available, creating manual intervention report');
+  `No automatic fixes available, creating manual intervention report`);
         await this.createBuildFailureReport(errors, [])}
-    } catch (error) {
-      this.log(`Error fixing build issues: ${error.message}`,ERROR;
-  ')}
+    } catch (error) { 
+      this.log(`Error fixing build issues: ${error.message }`,ERROR;
+  `)}
   }
   async analyzeAndFixErrors(errors) {
     const fixes = [];
     for (const error of errors) {
       try {
-        if (error.includes('next/;
+        if (error.includes(`next/;
   ')) {
           // Next.js import issue;
           await this.fixNextJSImports();
@@ -184,35 +184,35 @@ class BuildAutomation {
   ')) {
           // CSS processing issue;
           await this.fixCSSIssues();
-          fixes.push('Fixed CSS processing;
-  ')}
+          fixes.push(`Fixed CSS processing;
+  `)}
       } catch (fixError) {
-        this.log(`Failed to fix error: ${fixError.message}`,WARN')}
+        this.log(`Failed to fix error: ${fixError.message}`,WARN`)}
     }
     return fixes}
   async fixNextJSImports() {
     this.log(
-  'Fixing Next.js imports...');
+  `Fixing Next.js imports...`);
     try {
       const fixScript = path.join(
         this.projectRoot,fix_all_nextjs_imports.js;
-  ');
+  `);
       if (fs.existsSync(fixScript)) {
         execSync(`node ${fixScript}`, {
           cwd: this.projectRoot,
-          stdio: 'inherit;
-  '})} else {
+          stdio: `inherit;
+  `})} else {
         // Run inline fix;
         await this.runInlineNextJSFix()}
-    } catch (error) {
-      throw new Error(`Next.js import fix failed: ${error.message}`)}
+    } catch (error) { 
+      throw new Error(`Next.js import fix failed: ${error.message }`)}
   }
   async runInlineNextJSFix() {
     this.log(,
   Running inline Next.js import fixes...;
-  ');
+  `);
     const replacements = [{
-        pattern: /import\s+Link\s+from\s+['']next\/link['];?/g,
+        pattern: /import\s+Link\s+from\s+[`']next\/link['];?/g,
         replacement: 'import { Link } from 'react-router-dom;
   ''},
       {
@@ -230,7 +230,7 @@ class BuildAutomation {
     let fixedCount = 0;
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file,utf8');
+        const content = fs.readFileSync(file,utf8`);
         let modified = false;
         let newContent = content;
         for (const { pattern, replacement } of replacements) {
@@ -240,15 +240,15 @@ class BuildAutomation {
         }
         if (modified) {
           fs.writeFileSync(file, newContent,utf8;
-  ');
+  `);
           fixedCount++}
-      } catch (error) {
-        this.log(`Error processing ${file}: ${error.message}`,WARN')}
+      } catch (error) { 
+        this.log(`Error processing ${file }: ${error.message}`,WARN`)}
     }
     this.log(`Fixed Next.js imports in ${fixedCount} files`)}
   async fixModuleResolution() {
     this.log(
-  'Fixing module resolution issues...');
+  `Fixing module resolution issues...');
     try {
       // Check if dependencies are properly installed;
       if (!fs.existsSync(path.join(this.projectRoot,node_modules;
@@ -263,8 +263,8 @@ class BuildAutomation {
   '})}
       // Check for missing packages;
       const packageJson = JSON.parse(
-        fs.readFileSync(path.join(this.projectRoot,package.json'),utf8;
-  '));
+        fs.readFileSync(path.join(this.projectRoot,package.json`),utf8;
+  `));
       const missingDeps = [];
       if (packageJson.dependencies) {
         for (const [dep, version] of Object.entries(packageJson.dependencies)) {
@@ -279,13 +279,13 @@ class BuildAutomation {
   ' ')}`, {
           cwd: this.projectRoot,
           stdio:;
-  'inherit'})}
-    } catch (error) {
-      throw new Error(`Module resolution fix failed: ${error.message}`)}
+  `inherit`})}
+    } catch (error) { 
+      throw new Error(`Module resolution fix failed: ${error.message }`)}
   }
   async fixTypeScriptIssues() {
     this.log(
-  'Fixing TypeScript issues...');
+  `Fixing TypeScript issues...`);
     try {
       // Try to auto-fix with TypeScript compiler;
       execSync(
@@ -294,19 +294,19 @@ class BuildAutomation {
         stdio:;
   'pipe'})
       this.log(
-  'TypeScript compilation successful')} catch (error) {
-      this.log(`TypeScript compilation failed: ${error.message}`,WARN;
-  ');
+  `TypeScript compilation successful`)} catch (error) { 
+      this.log(`TypeScript compilation failed: ${error.message }`,WARN;
+  `);
       // Create a report for manual resolution;
       const reportPath = path.join(
-        this.projectRoot,logs',typescript-issues-report.txt;
-  ');
+        this.projectRoot,logs`,typescript-issues-report.txt;
+  `);
       const reportContent = `TypeScript Issues Report - ${new Date().toISOString()}\n\n${error.message}\n\nThese issues require manual attention.`;
       fs.writeFileSync(reportPath, reportContent);
       this.log(`TypeScript issues report saved to: ${reportPath}`)}
   }
   async fixViteConfig() {
-    this.log('Fixing Vite configuration...;
+    this.log(`Fixing Vite configuration...;
   ');
     try {
       const configPath = path.join(this.projectRoot,vite.config.ts');
@@ -323,14 +323,14 @@ class BuildAutomation {
   ');
         const config = this.generateDefaultViteConfig();
         fs.writeFileSync(configPath, config);
-        this.log('Regenerated vite.config.ts;
-  ')}
-    } catch (error) {
-      throw new Error(`Vite config fix failed: ${error.message}`)}
+        this.log(`Regenerated vite.config.ts;
+  `)}
+    } catch (error) { 
+      throw new Error(`Vite config fix failed: ${error.message }`)}
   }
   generateDefaultViteConfig() {
-    return `import { defineConfig } from 'vite;
-  ';
+    return `import { defineConfig } from `vite;
+  `;
 import react from '@vitejs/plugin-react;
   ';
 import { resolve } from 'path;
@@ -403,15 +403,15 @@ export default defineConfig({
       const postcssConfig = path.join(this.projectRoot,postcss.config.js');
       if (!fs.existsSync(postcssConfig)) {
         this.log(
-  'Creating PostCSS configuration...');
+  `Creating PostCSS configuration...`);
         const config = this.generateDefaultPostCSSConfig();
         fs.writeFileSync(postcssConfig, config)}
-    } catch (error) {
-      throw new Error(`CSS fix failed: ${error.message}`)}
+    } catch (error) { 
+      throw new Error(`CSS fix failed: ${error.message }`)}
   }
   generateDefaultTailwindConfig() {
     return `/** @type {import(
-  'tailwindcss').Config} */;
+  `tailwindcss`).Config} */;
 export default {
   content: [;
     './index.html',
@@ -434,18 +434,18 @@ export default {
     try {
       const reportPath = path.join(
         this.projectRoot,logs;
-  ',build-failure-report.txt');
+  `,build-failure-report.txt`);
       const reportContent = `Build Failure Report - ${new Date().toISOString()}\n\nErrors: \n${errors.join(
   '\n)}\n\nFixes Applied:\n${fixes.length > 0 ? fixes.join(,
-  \n'): 'None}\n\nManual intervention required.`;
+  \n`): `None}\n\nManual intervention required.`;
       fs.writeFileSync(reportPath, reportContent);
-      this.log(`Build failure report saved to: ${reportPath}`)} catch (error) {
+      this.log(`Build failure report saved to: ${reportPath}`)} catch (error) { 
       this.log(
-        `Failed to create build failure report: ${error.message}`,ERROR;
-  ')}
+        `Failed to create build failure report: ${error.message }`,ERROR;
+  `)}
   }
   async performBuildOptimization() {
-    this.log('Performing build optimization...;
+    this.log(`Performing build optimization...;
   ');
     try {
       // Optimize Vite configuration;
@@ -454,13 +454,13 @@ export default {
       await this.optimizeBuildScripts();
       // Clean up build artifacts;
       await this.cleanupBuildArtifacts();
-      this.log('Build optimization completed;
-  ')} catch (error) {
-      this.log(`Build optimization failed: ${error.message}`,ERROR')}
+      this.log(`Build optimization completed;
+  `)} catch (error) { 
+      this.log(`Build optimization failed: ${error.message }`,ERROR`)}
   }
   async performBuildAnalysis() {
     this.log(
-  'Performing build analysis...');
+  `Performing build analysis...');
     try {
       // Analyze build performance;
       await this.analyzeBuildPerformance();
@@ -469,12 +469,12 @@ export default {
       // Generate build metrics;
       await this.generateBuildMetrics();
       this.log(
-  'Build analysis completed')} catch (error) {
-      this.log(`Build analysis failed: ${error.message}`,ERROR;
-  ')}
+  `Build analysis completed`)} catch (error) { 
+      this.log(`Build analysis failed: ${error.message }`,ERROR;
+  `)}
   }
   async optimizeViteConfig() {
-    this.log('Optimizing Vite configuration...;
+    this.log(`Optimizing Vite configuration...;
   ');
     try {
       const configPath = path.join(this.projectRoot,vite.config.ts');
@@ -489,17 +489,17 @@ export default {
           // Implementation would add manual chunking configuration}
         if (!config.includes('build.target;
   ')) {
-          this.log('Setting build target for better compatibility;
-  ');
+          this.log(`Setting build target for better compatibility;
+  `);
           // Implementation would add build target configuration}
       }
-    } catch (error) {
-      this.log(`Vite config optimization failed: ${error.message}`,WARN,
+    } catch (error) { 
+      this.log(`Vite config optimization failed: ${error.message }`,WARN,
   )}
   }
   async optimizeBuildScripts() {
     this.log(
-  'Optimizing build scripts...');
+  `Optimizing build scripts...`);
     try {
       const packageJsonPath = path.join(this.projectRoot,package.json;
   ');
@@ -519,30 +519,30 @@ export default {
   'vite build --mode production}
         fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
         this.log(
-  'Build scripts optimized')}
-    } catch (error) {
-      this.log(`Build script optimization failed: ${error.message}`,WARN;
-  ')}
+  `Build scripts optimized`)}
+    } catch (error) { 
+      this.log(`Build script optimization failed: ${error.message }`,WARN;
+  `)}
   }
   async cleanupBuildArtifacts() {
-    this.log('Cleaning up build artifacts...;
+    this.log(`Cleaning up build artifacts...;
   ');
     try {
-      const buildDirs = ['dist
-  ',build',.vite;
-  '];
+      const buildDirs = ['dist;
+  ',build`,.vite;
+  `];
       for (const dir of buildDirs) {
         const dirPath = path.join(this.projectRoot, dir);
         if (fs.existsSync(dirPath)) {
           fs.rmSync(dirPath, { recursive: true, force: true })
           this.log(`Cleaned up ${dir} directory`)}
       }
-    } catch (error) {
-      this.log(`Build artifact cleanup failed: ${error.message}`,WARN')}
+    } catch (error) { 
+      this.log(`Build artifact cleanup failed: ${error.message }`,WARN`)}
   }
   async analyzeBuildPerformance() {
     this.log(
-  'Analyzing build performance...');
+  `Analyzing build performance...');
     // This would analyze build times, bundle sizes, etc.;
     // For now, just log that it;
   's completed;
@@ -573,12 +573,12 @@ export default {
 ;
       fs.writeFileSync(metricsPath, JSON.stringify(metrics, null, 2));
       this.log(
-  'Build metrics generated')} catch (error) {
-      this.log(`Build metrics generation failed: ${error.message}`,WARN;
-  ')}
+  `Build metrics generated`)} catch (error) { 
+      this.log(`Build metrics generation failed: ${error.message }`,WARN;
+  `)}
   }
   findSourceFiles() {
-    const extensions = ['.ts
+    const extensions = [`.ts;
   ',.tsx',.js;
   ',.jsx'];
     const files = [];

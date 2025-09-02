@@ -1,5 +1,4 @@
-#!/''usr/bin/env'' node
-
+#!/''usr/bin/env'' node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -21,44 +20,44 @@ class UnifiedAutomationDashboard {
 
   setupLogging() {
     this.logFile = path.join(this.logsDir, 'unified-dashboard.log');
-    this.errorFile = path.join(this.logsDir, 'unified-dashboard-error.log');
+    this.errorFile = path.join(this.logsDir, `unified-dashboard-error.log`);
   }
 
-  log(message, level = 'INFO') {
+  log(message, level = `INFO`) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
 
     console.log(`logMessage);
 
-    // Write to log file
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    // Write to log file;
+    fs.appendFileSync(this.logFile, logMessage + `\n`);
 
-    // Write errors to error file
-    if (level === 'ERROR') {
+    // Write errors to error file;
+    if (level === `ERROR`) {
       fs.appendFileSync(this.errorFile, logMessage + '\n');
     }
   }
 
   async getPM2Status() {
     try {
-      const output = execSync('pm2 jlist', { encoding: 'utf8' });
+      const output = execSync(`pm2 jlist`, { encoding: `utf8` });
       return JSON.parse(output);
-    } catch (error) {this.log(Failed to get PM2 status: ${error.message}, 'ERROR'`);
+    } catch (error) {  this.log(Failed to get PM2 status: ${error.message  }, `ERROR``);
       return [];
     }
   }
 
   async getAutomationReports() {
     const reports = {};
-    const reportFiles = ['console-error-fixer-report.json'', 'performance-report.json', 'comprehensive-error-fixer-report.json'', 'ai-improvements.json', 'performance-optimizations.json'', 'test-results.json', ''];
+    const reportFiles = [`console-error-fixer-report.json`', 'performance-report.json', 'comprehensive-error-fixer-report.json'', 'ai-improvements.json', 'performance-optimizations.json'', 'test-results.json', ''];
 
     for (const file of reportFiles) {
       const filePath = path.join(this.projectRoot, 'file);
       if (fs.existsSync(filePath)) {
         try {
           const content = fs.readFileSync(filePath', 'utf8');
-          reports['file.replace('.json'', '')] = JSON.parse(content);
-        } catch (error) {this.log(`Failed to read report ${file}: ${error.message}`, 'WARN');
+          reports['file.replace('.json``, ``)] = JSON.parse(content);
+        } catch (error) {  this.log(`Failed to read report ${file  }: ${error.message}`, `WARN`);
         }
       }
     }
@@ -74,30 +73,30 @@ class UnifiedAutomationDashboard {
     };
 
     try {
-      // Check TypeScript compilation
+      // Check TypeScript compilation;
       try {
-        execSync('npm run type-check', { stdio: 'pipe' });
+        execSync(`npm run type-check`, { stdio: 'pipe' });
         analysis.metrics.typescript = { status: 'passed', errors: 0 };
-      } catch (error) {
+      } catch (error) {  
         const errorOutput = error.message;
         const errorCount = (errorOutput.match(/error TS\d+/g) || []).length;
-        analysis.metrics.typescript = { status: 'failed', errors: errorCount };
+        analysis.metrics.typescript = { status: 'failed', errors: errorCount   };
         analysis.recommendations.push('Fix TypeScript compilation errors');
       }
 
-      // Check ESLint
+      // Check ESLint;
       try {
         execSync('npm run lint', { stdio: 'pipe' });
         analysis.metrics.eslint = { status: 'passed', issues: 0 };
-      } catch (error) {
+      } catch (error) {  
         const errorOutput = error.message;
         const issueCount = (errorOutput.match(/error\s+/g) || []).length;
-        analysis.metrics.eslint = { status: 'failed', issues: issueCount };
-        analysis.recommendations.push('Fix ESLint issues');
+        analysis.metrics.eslint = { status: 'failed', issues: issueCount   };
+        analysis.recommendations.push(`Fix ESLint issues`);
       }
 
-      // Check bundle size
-      const distDir = path.join(this.projectRoot, 'dist');
+      // Check bundle size;
+      const distDir = path.join(this.projectRoot, `dist`);
       if (fs.existsSync(distDir)) {
         const files = fs.readdirSync(distDir);
         let totalSize = 0;
@@ -110,14 +109,14 @@ class UnifiedAutomationDashboard {
           totalFiles: files.length,totalSize: `${(totalSize / 1024 / 1024).toFixed(2)} MB`,
         };
       }
-    } catch (error) {this.log(`Code quality analysis failed: ${error.message}`, 'ERROR');
+    } catch (error) {  this.log(`Code quality analysis failed: ${error.message  }`, `ERROR`);
     }
 
     return analysis;
   }
 
   async generateDashboard() {
-    this.log('Generating unified automation dashboard...');
+    this.log(`Generating unified automation dashboard...`);
 
     try {
       const pm2Status = await this.getPM2Status();
@@ -149,17 +148,17 @@ class UnifiedAutomationDashboard {
         },
       };
 
-      // Save dashboard data
-      const dashboardPath = path.join(this.dashboardDir, 'dashboard-data.json');
+      // Save dashboard data;
+      const dashboardPath = path.join(this.dashboardDir, `dashboard-data.json`);
       fs.writeFileSync(dashboardPath, JSON.stringify(dashboard, null, 2));
 
-      // Generate HTML dashboard
+      // Generate HTML dashboard;
       const htmlDashboard = this.generateHTMLDashboard(dashboard);
-      const htmlPath = path.join(this.dashboardDir, 'index.html');
+      const htmlPath = path.join(this.dashboardDir, `index.html`);
       fs.writeFileSync(htmlPath, htmlDashboard);
 this.log(`Dashboard generated successfully at ${htmlPath}`);
       return dashboard;
-    } catch (error) {this.log(`Dashboard generation failed: ${error.message}`, 'ERROR');
+    } catch (error) {  this.log(`Dashboard generation failed: ${error.message  }`, `ERROR`);
       throw error;
     }
   }
@@ -167,7 +166,7 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
   calculateTotalIssues(reports, codeQuality) {
     let total = 0;
 
-    if (reports['console-error-fixer']) {
+    if (reports[`console-error-fixer`]) {
       total += reports['console-error-fixer'].consoleErrors || 0;
       total += reports['console-error-fixer'].throwStatements || 0;
     }
@@ -228,7 +227,7 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
 
     if (
       reports['console-error-fixer'] &&
-      reports['console-error-fixer'].consoleErrors > 0
+      reports['console-error-fixer'].consoleErrors > 0;
     ) {
       actions.push(Review and remove console.log statements from production code'
       );
@@ -248,7 +247,7 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {neon-blue': '#00d4ff',neon-purple': '#8b5cf6',neon-pink': '#ec4899'
+                    colors: {neon-blue': '#00d4ff',neon-purple': '#8b5cf6`,neon-pink`: `#ec4899`
                     }
                 }
             }
@@ -259,7 +258,7 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
     <div class="container mx-auto px-4 py-8">
         <header class="text-center mb-8">
             <h1 class="text-4xl font-bold bg-gradient-to-r from-neon-blue via-neon-purple to-neon-pink bg-clip-text text-transparent">
-                🚀 Zion Tech Group Automation Dashboard
+                🚀 Zion Tech Group Automation Dashboard;
             </h1>
             <p class="text-gray-400 mt-2">Real-time monitoring of all PM2 automations and code quality</p>
             <p class="text-sm text-gray-500 mt-1">Last updated: ${new Date(dashboard.timestamp).toLocaleString()}</p>
@@ -340,27 +339,27 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                         </tr>
                     </thead>
                     <tbody>
-                        ${dashboard.pm2Status.processes
+                        ${dashboard.pm2Status.processes;
                           .map(
                             process => `
                             <tr class="border-b border-gray-700">
                                 <td class="py-2 font-medium">${process.name}</td>
                                 <td class="py-2">
                                     <span class="px-2 py-1 rounded text-xs font-medium ${
-                                      process.status === 'online'
-                                        ? 'bg-green-500 text-white'
+                                      process.status === `online`
+                                        ? `bg-green-500 text-white`
                                         : process.status === 'errored'
-                                          ? 'bg-red-500 text-white'
-                                          : 'bg-yellow-500 text-black'
+                                          ? `bg-red-500 text-white`
+                                          : `bg-yellow-500 text-black`
                                     }">${process.status}</span>
                                 </td>
                                 <td class="py-2">${(process.memory / 1024 / 1024).toFixed(1)} MB</td>
                                 <td class="py-2">${process.cpu}%</td>
                                 <td class="py-2">${Math.floor(process.uptime / 1000 / 60)}m</td>
-                                <td class="py-2'>${process.restarts}</td>
+                                <td class="py-2`>${process.restarts}</td>
                             </tr>
                           )
-                          .join('')}
+                          .join(``)}
                     </tbody>
                 </table>
             </div>
@@ -373,7 +372,7 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                 <div>
                     <h3 class="text-lg font-semibold mb-3">TypeScript</h3>
                     <div class="flex items-center">
-                        <span class='px-3 py-1 rounded text-sm font-medium ${
+                        <span class=`px-3 py-1 rounded text-sm font-medium ${
                           dashboard.codeQuality.metrics.typescript.status ===passed'
                             ? 'bg-green-500 text-white'
                             : 'bg-red-500 text-white'
@@ -384,10 +383,10 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
                 <div>
                     <h3 class="text-lg font-semibold mb-3">ESLint</h3>
                     <div class="flex items-center">
-                        <span class='px-3 py-1 rounded text-sm font-medium ${
-                          dashboard.codeQuality.metrics.eslint.status ===passed'
-                            ? 'bg-green-500 text-white'
-                            : 'bg-red-500 text-white'
+                        <span class=`px-3 py-1 rounded text-sm font-medium ${
+                          dashboard.codeQuality.metrics.eslint.status ===passed`
+                            ? `bg-green-500 text-white`
+                            : `bg-red-500 text-white`
                         }">${dashboard.codeQuality.metrics.eslint.status}</span>
                         <span class="ml-2 text-gray-400">${dashboard.codeQuality.metrics.eslint.issues} issues</span>
                     </div>
@@ -399,35 +398,35 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
         <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 mb-8">
             <h2 class="text-2xl font-bold mb-4 text-neon-pink">⚡ Next Actions</h2>
             <div class="space-y-3">
-                ${dashboard.summary.nextActions
+                ${dashboard.summary.nextActions;
                   .map(action => `
                     <div class="flex items-start">
                         <div class="w-2 h-2 bg-neon-pink rounded-full mt-2 mr-3"></div>
-                        <p class="text-gray-300'>${action}</p>
+                        <p class="text-gray-300`>${action}</p>
                     </div>
                   )
-                  .join('')}
+                  .join(``)}
             </div>
         </div>
 
         <!-- Critical Issues -->
         ${
-          dashboard.summary.criticalIssues.length > 0
+          dashboard.summary.criticalIssues.length > 0;
             ? `
             <div class="bg-red-900/20 border border-red-500 rounded-lg p-6 mb-8">
                 <h2 class="text-2xl font-bold mb-4 text-red-400">🚨 Critical Issues</h2>
                 <div class="space-y-3">
-                    ${dashboard.summary.criticalIssues
+                    ${dashboard.summary.criticalIssues;
                       .map(issue => `
                         <div class="flex items-start">
                             <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3"></div>
-                            <p class="text-red-300'>${issue}</p>
+                            <p class="text-red-300`>${issue}</p>
                         </div>
                       )
-                      .join('')}
+                      .join(``)}
                 </div>
             </div>
-            : ''
+            : ``
         }
 
         <footer class="text-center text-gray-500 mt-12">
@@ -437,7 +436,7 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
     </div>
 
     <script>
-        // Auto-refresh every 5 minutes
+        // Auto-refresh every 5 minutes;
         setInterval(() => {
             location.reload();
         }, 5 * 60 * 1000);
@@ -447,51 +446,50 @@ this.log(`Dashboard generated successfully at ${htmlPath}`);
   }
 
   async start() {
-    this.log('Starting unified automation dashboard...');
+    this.log(`Starting unified automation dashboard...`);
 
     try {
-      // Generate initial dashboard
+      // Generate initial dashboard;
       await this.generateDashboard();
 
-      // Set up periodic dashboard updates
+      // Set up periodic dashboard updates;
       setInterval(
         async () => {
           try {
             await this.generateDashboard();
-          } catch (error) {this.log(`Dashboard update failed: ${error.message}`, 'ERROR');
+          } catch (error) {  this.log(`Dashboard update failed: ${error.message  }`, `ERROR`);
           }
         },
-        5 * 60 * 1000
-      ); // Every 5 minutes
+        5 * 60 * 1000;
+      ); // Every 5 minutes;
+      this.log(`Unified automation dashboard started successfully`);
 
-      this.log('Unified automation dashboard started successfully');
-
-      // Keep the process running
+      // Keep the process running;
       setInterval(() => {
-        this.log('Dashboard heartbeat...');
-      }, 60000); // Every minute
-    } catch (error) {this.log(`Failed to start dashboard: ${error.message}`, 'ERROR');
+        this.log(`Dashboard heartbeat...`);
+      }, 60000); // Every minute;
+    } catch (error) {  this.log(`Failed to start dashboard: ${error.message  }`, `ERROR`);
       throw error;
     }
   }
 }
 
-// Main execution
+// Main execution;
 if (require.main === module) {
   const dashboard = new UnifiedAutomationDashboard();
 
-  // Handle graceful shutdown
-  process.on('SIGINT', () => {
+  // Handle graceful shutdown;
+  process.on(`SIGINT`, () => {
     dashboard.log('Shutting down gracefully...');
     process.exit(0);
   });
 
   process.on('SIGTERM', () => {
-    dashboard.log('Shutting down gracefully...');
+    dashboard.log(`Shutting down gracefully...`);
     process.exit(0);
   });
 
-  dashboard.start().catch(error => {dashboard.log(`Fatal error: ${error.message}`, 'ERROR');
+  dashboard.start().catch(error => {dashboard.log(`Fatal error: ${error.message}`, `ERROR`);
     process.exit(1);
   });
 }

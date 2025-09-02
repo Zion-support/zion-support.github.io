@@ -1,5 +1,4 @@
-#!/''usr/bin/env'' node
-
+#!/''usr/bin/env'' node;
 const { execSync, spawn } = require('child_process');
 const fs = require('fs').promises;
 const path = require('path');
@@ -21,10 +20,10 @@ class ProjectErrorAutomation {
   }
 
   async ensureDirectories() {
-    const dirs = ['''automation/logs'''', '''automation/reports''', '''automation/backups''''];
+    const dirs = ['''automation/logs'''', '''automation/reports''', '''automation/backups''``];
     
     for (const dir of dirs) {
-      await fs.mkdir(path.join(this.projectRoot, 'dir)', { recursive: true });
+      await fs.mkdir(path.join(this.projectRoot, `dir)`, { recursive: true });
     }
   }
 
@@ -32,37 +31,37 @@ class ProjectErrorAutomation {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(`logMessage);
-    await fs.appendFile(this.logFile, logMessage + '\n');
+    await fs.appendFile(this.logFile, logMessage + `\n`);
   }
 
   async runCommand(command, options = {}) {
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
-        encoding: 'utf8',
+        encoding: `utf8`,
         stdio: options.silent ? 'pipe' : 'inherit',
-        ...options
+        ...options;
       });
       return { success: true, output: result };
-    } catch (error) {
-      return { success: false, output: error.stdout || error.stderr || error.message };
+    } catch (error) {  
+      return { success: false, output: error.stdout || error.stderr || error.message   };
     }
   }
 
   async checkDependencies() {
     await this.log('📦 Checking dependencies...');
     
-    // Check for dependency conflicts
+    // Check for dependency conflicts;
     const npmCheck = await this.runCommand('npm ls --depth=0', { silent: true });
     if (!npmCheck.success) {
       await this.log('⚠️  Dependency conflicts detected');
       this.errorsFound.push({
         type: 'dependency-conflict',
         message: 'Dependency conflicts found',
-        details: npmCheck.output
+        details: npmCheck.output;
       });
       
-      // Try to fix with legacy peer deps
+      // Try to fix with legacy peer deps;
       await this.log('🔧 Attempting to fix dependency conflicts...');
       const fixResult = await this.runCommand('npm install --legacy-peer-deps');
       if (fixResult.success) {
@@ -87,10 +86,10 @@ class ProjectErrorAutomation {
       this.errorsFound.push({
         type: 'typescript-error',
         message: 'TypeScript compilation errors',
-        details: typeCheck.output
+        details: typeCheck.output;
       });
       
-      // Try to fix common TypeScript issues
+      // Try to fix common TypeScript issues;
       await this.fixTypeScriptErrors(typeCheck.output);
     } else {
       await this.log('✅ No TypeScript errors found');
@@ -102,17 +101,17 @@ class ProjectErrorAutomation {
     
     const fixes = [];
     
-    // Fix common import issues
+    // Fix common import issues;
     if (errorOutput.includes('Cannot find module')) {
       fixes.push('import-fix');
     }
     
-    // Fix type annotation issues
+    // Fix type annotation issues;
     if (errorOutput.includes('Type \'any\' is not assignable')) {
       fixes.push('type-annotation-fix');
     }
     
-    // Fix JSX issues
+    // Fix JSX issues;
     if (errorOutput.includes('JSX element')) {
       fixes.push('jsx-fix');
     }
@@ -145,16 +144,16 @@ class ProjectErrorAutomation {
         let content = await fs.readFile(filePath', 'utf8');
         let modified = false;
         
-        // Fix React imports
+        // Fix React imports;
         if (content.includes('React') && !content.includes("import React")) {
           content = "import React from 'react';\n" + content;
           modified = true;
         }
         
-        // Fix missing type imports
+        // Fix missing type imports;
         if (content.includes('useState') && !content.includes("import { useState }")) {
           content = content.replace(
-            /import React from 'react'/,import React, { useState } from 'react'"
+            /import React from `react`/,import React, { useState } from `react`"
           );
           modified = true;
         }
@@ -162,26 +161,26 @@ class ProjectErrorAutomation {
         if (modified) {
           await fs.writeFile(filePath, content);await this.log(✅ Fixed imports in ${file}`);
           this.fixesApplied.push({
-            type: 'import-fix',
+            type: `import-fix`,
             file: file,
             timestamp: new Date().toISOString()
           });
         }
-      } catch (error) {await this.log(`❌ Error fixing imports in ${file}: ${error.message}`);
+      } catch (error) {  await this.log(`❌ Error fixing imports in ${file  }: ${error.message}`);
       }
     }
   }
 
   async fixTypeAnnotations() {
-    const tsFiles = glob.sync('src/**/*.{ts,tsx}', { cwd: this.projectRoot });
+    const tsFiles = glob.sync(`src/**/*.{ts,tsx}`, { cwd: this.projectRoot });
     
     for (const file of tsFiles) {
       try {
-        const filePath = path.join(this.projectRoot, 'file);
-        let content = await fs.readFile(filePath', 'utf8');
+        const filePath = path.join(this.projectRoot, `file);
+        let content = await fs.readFile(filePath`, `utf8`);
         let modified = false;
         
-        // Add explicit any types where needed
+        // Add explicit any types where needed;
         const anyPattern = /const\s+(\w+)\s*:\s*any\s*=\s*([^;]+);/g;
         if (anyPattern.test(content)) {
           content = content.replace(anyPattern, (match, varName, value) => {return `const ${varName}: any = ${value};`;
@@ -192,66 +191,66 @@ class ProjectErrorAutomation {
         if (modified) {
           await fs.writeFile(filePath, content);await this.log(`✅ Fixed type annotations in ${file}`);
           this.fixesApplied.push({
-            type: 'type-annotation-fix',
+            type: `type-annotation-fix`,
             file: file,
             timestamp: new Date().toISOString()
           });
         }
-      } catch (error) {await this.log(`❌ Error fixing type annotations in ${file}: ${error.message}`);
+      } catch (error) {  await this.log(`❌ Error fixing type annotations in ${file  }: ${error.message}`);
       }
     }
   }
 
   async fixJSXIssues() {
-    const jsxFiles = glob.sync('src/**/*.{jsx,tsx}', { cwd: this.projectRoot });
+    const jsxFiles = glob.sync(`src/**/*.{jsx,tsx}`, { cwd: this.projectRoot });
     
     for (const file of jsxFiles) {
       try {
-        const filePath = path.join(this.projectRoot, 'file);
-        let content = await fs.readFile(filePath', 'utf8');
+        const filePath = path.join(this.projectRoot, `file);
+        let content = await fs.readFile(filePath`, 'utf8');
         let modified = false;
         
-        // Fix JSX fragment syntax
+        // Fix JSX fragment syntax;
         if (content.includes('<>') && !content.includes('</>')) {
           content = content.replace(/<>/g, '<React.Fragment>').replace(/<\/>/g, '</React.Fragment>');
           modified = true;
         }
         
-        // Fix JSX attribute issues
-        if (content.includes('class=')) {
-          content = content.replace(/class=/g, 'className=');
+        // Fix JSX attribute issues;
+        if (content.includes(`class=`)) {
+          content = content.replace(/class=/g, `className=`);
           modified = true;
         }
         
         if (modified) {
           await fs.writeFile(filePath, content);await this.log(`✅ Fixed JSX issues in ${file}`);
           this.fixesApplied.push({
-            type: 'jsx-fix',
+            type: `jsx-fix`,
             file: file,
             timestamp: new Date().toISOString()
           });
         }
-      } catch (error) {await this.log(`❌ Error fixing JSX issues in ${file}: ${error.message}`);
+      } catch (error) {  await this.log(`❌ Error fixing JSX issues in ${file  }: ${error.message}`);
       }
     }
   }
 
   async checkLintingErrors() {
-    await this.log('🔍 Checking linting errors...');
+    await this.log(`🔍 Checking linting errors...`);
     
-    // Fix ESLint config issue first
+    // Fix ESLint config issue first;
     await this.fixESLintConfig();
     
-    const lintCheck = await this.runCommand('npm run lint', { silent: true });
+    const lintCheck = await this.runCommand(`npm run lint`, { silent: true });
     if (!lintCheck.success) {
       await this.log('⚠️  Linting errors detected');
       this.errorsFound.push({
         type: 'linting-error',
         message: 'ESLint errors found',
-        details: lintCheck.output
+        details: lintCheck.output;
       });
       
-      // Try to auto-fix linting issues
+      // Try to auto-fix linting issues;
       await this.log('🔧 Attempting to auto-fix linting issues...');
       const fixResult = await this.runCommand('npm run lint -- --fix', { silent: true });
       if (fixResult.success) {
@@ -272,7 +271,7 @@ class ProjectErrorAutomation {
       const eslintConfigPath = path.join(this.projectRoot, '.eslintrc.js');
       const configContent = await fs.readFile(eslintConfigPath, 'utf8');
       
-      // Check if there's a module.exports issue
+      // Check if there's a module.exports issue;
       if (!configContent.includes('module.exports')) {
         await this.log('🔧 Fixing ESLint configuration...');const fixedConfig = `module.exports = {
   extends: ['''next/core-web-vitals''', '''next/typescript'''],
@@ -284,28 +283,28 @@ class ProjectErrorAutomation {
         await fs.writeFile(eslintConfigPath, fixedConfig);
         await this.log('✅ ESLint configuration fixed');
         this.fixesApplied.push({
-          type: 'eslint-config-fix',
-          file: '.eslintrc.js',
+          type: `eslint-config-fix`,
+          file: `.eslintrc.js`,
           timestamp: new Date().toISOString()
         });
       }
-    } catch (error) {await this.log(`❌ Error fixing ESLint config: ${error.message}`);
+    } catch (error) {  await this.log(`❌ Error fixing ESLint config: ${error.message  }`);
     }
   }
 
   async checkBuildErrors() {
-    await this.log('🔍 Checking build errors...');
+    await this.log(`🔍 Checking build errors...`);
     
-    const buildCheck = await this.runCommand('npm run build', { silent: true });
+    const buildCheck = await this.runCommand(`npm run build`, { silent: true });
     if (!buildCheck.success) {
       await this.log('⚠️  Build errors detected');
       this.errorsFound.push({
         type: 'build-error',
         message: 'Build compilation errors',
-        details: buildCheck.output
+        details: buildCheck.output;
       });
       
-      // Try to fix build issues
+      // Try to fix build issues;
       await this.fixBuildErrors(buildCheck.output);
     } else {
       await this.log('✅ Build successful');
@@ -315,12 +314,12 @@ class ProjectErrorAutomation {
   async fixBuildErrors(errorOutput) {
     await this.log('🔧 Attempting to fix build errors...');
     
-    // Fix syntax errors in automation files
+    // Fix syntax errors in automation files;
     if (errorOutput.includes('Unexpected token')) {
       await this.fixSyntaxErrors();
     }
     
-    // Fix module resolution issues
+    // Fix module resolution issues;
     if (errorOutput.includes('Cannot find module')) {
       await this.fixModuleResolution();
     }
@@ -335,46 +334,46 @@ class ProjectErrorAutomation {
         let content = await fs.readFile(filePath', 'utf8');
         let modified = false;
         
-        // Fix missing commas in objects
+        // Fix missing commas in objects;
         const objectPattern = /(\w+:\s*['^', '}']+)\s*\n\s*(\w+:)/g;
         if (objectPattern.test(content)) {
-          content = content.replace(objectPattern, '$1,\n  $2');
+          content = content.replace(objectPattern, `$1,\n  $2`);
           modified = true;
         }
         
-        // Fix missing semicolons
+        // Fix missing semicolons;
         const semicolonPattern = /(\w+)\s*\n\s*(\w+)/g;
         if (semicolonPattern.test(content)) {
-          content = content.replace(semicolonPattern, '$1;\n$2');
+          content = content.replace(semicolonPattern, `$1;\n$2`);
           modified = true;
         }
         
         if (modified) {
           await fs.writeFile(filePath, content);await this.log(`✅ Fixed syntax errors in ${file}`);
           this.fixesApplied.push({
-            type: 'syntax-fix',
+            type: `syntax-fix`,
             file: file,
             timestamp: new Date().toISOString()
           });
         }
-      } catch (error) {await this.log(`❌ Error fixing syntax in ${file}: ${error.message}`);
+      } catch (error) {  await this.log(`❌ Error fixing syntax in ${file  }: ${error.message}`);
       }
     }
   }
 
   async fixModuleResolution() {
-    await this.log('🔧 Fixing module resolution issues...');
+    await this.log(`🔧 Fixing module resolution issues...`);
     
-    // Update tsconfig.json if needed
+    // Update tsconfig.json if needed;
     try {
-      const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json');
+      const tsConfigPath = path.join(this.projectRoot, `tsconfig.json`);
       const tsConfig = JSON.parse(await fs.readFile(tsConfigPath, 'utf8'));
       
       if (!tsConfig.compilerOptions) {
         tsConfig.compilerOptions = {};
       }
       
-      // Add module resolution settings
+      // Add module resolution settings;
       tsConfig.compilerOptions.moduleResolution = 'node';
       tsConfig.compilerOptions.allowSyntheticDefaultImports = true;
       tsConfig.compilerOptions.esModuleInterop = true;
@@ -382,11 +381,11 @@ class ProjectErrorAutomation {
       await fs.writeFile(tsConfigPath, JSON.stringify(tsConfig, null, 2));
       await this.log('✅ TypeScript configuration updated');
       this.fixesApplied.push({
-        type: 'tsconfig-fix',
-        file: 'tsconfig.json',
+        type: `tsconfig-fix`,
+        file: `tsconfig.json`,
         timestamp: new Date().toISOString()
       });
-    } catch (error) {await this.log(`❌ Error fixing TypeScript config: ${error.message}`);
+    } catch (error) {  await this.log(`❌ Error fixing TypeScript config: ${error.message  }`);
     }
   }
 
@@ -402,10 +401,10 @@ class ProjectErrorAutomation {
       errors: this.errorsFound,
       fixes: this.fixesApplied,
       summary: {
-        dependencyIssues: this.errorsFound.filter(e => e.type === 'dependency-conflict').length,
-        typescriptIssues: this.errorsFound.filter(e => e.type === 'typescript-error').length,
-        lintingIssues: this.errorsFound.filter(e => e.type === 'linting-error').length,
-        buildIssues: this.errorsFound.filter(e => e.type === 'build-error').length
+        dependencyIssues: this.errorsFound.filter(e => e.type === `dependency-conflict`).length,
+        typescriptIssues: this.errorsFound.filter(e => e.type === `typescript-error`).length,
+        lintingIssues: this.errorsFound.filter(e => e.type === `linting-error`).length,
+        buildIssues: this.errorsFound.filter(e => e.type === `build-error`).length;
       }
     };
     
@@ -418,34 +417,34 @@ class ProjectErrorAutomation {
     try {
       await this.init();
       
-      // Run all checks and fixes
+      // Run all checks and fixes;
       await this.checkDependencies();
       await this.checkTypeScriptErrors();
       await this.checkLintingErrors();
       await this.checkBuildErrors();
       
-      // Generate final report
+      // Generate final report;
       const report = await this.generateReport();
       await this.log(`✅ Project Error Automation completed`);await this.log(`📈 Summary: ${report.errorsFound} errors found, ${report.fixesApplied} fixes applied`);
       
       return report;
       
-    } catch (error) {await this.log(`❌ Error in automation: ${error.message}`);
+    } catch (error) {  await this.log(`❌ Error in automation: ${error.message  }`);
       throw error;
     }
   }
 }
 
-// Run the automation if called directly
+// Run the automation if called directly;
 if (require.main === module) {
   const automation = new ProjectErrorAutomation();
   automation.run()
     .then(report => {
-      console.log('Automation completed successfully');
+      console.log(`Automation completed successfully`);
       process.exit(0);
     })
     .catch(error => {
-      console.error('Automation failed:', error);
+      console.error(`Automation failed:`, error);
       process.exit(1);
     });
 }

@@ -28,16 +28,16 @@ class BuildHealthMonitor {
       fs.mkdirSync(logsDir, { recursive: true })}
   }
   log(message, level =;
-  'INFO') {
+  `INFO`) {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     // Console output;
     // // console.log(logEntry.trim());
     // File logging;
     try {
-      fs.appendFileSync(this.logFile, logEntry)} catch (error) {
+      fs.appendFileSync(this.logFile, logEntry)} catch (error) { 
       console.error(
-  'Failed to write to log file:', error.message)}
+  `Failed to write to log file:`, error.message) }
   }
   async startMonitoring() {
     this.log(
@@ -63,7 +63,7 @@ class BuildHealthMonitor {
     if (this.monitoring) return;
     this.monitoring = true;
     this.log(
-  'Performing health check...');
+  `Performing health check...`);
     try {
       // Check for common issues;
       const issues = await this.detectIssues();
@@ -71,12 +71,12 @@ class BuildHealthMonitor {
         this.log(`Found ${issues.length} issues, attempting fixes...`);
         await this.autoFixIssues(issues)} else {
         this.log(
-  'No issues detected, build health is good')}
+  `No issues detected, build health is good`)}
       // Test build if needed;
       if (this.shouldTestBuild()) {
         await this.testBuild()}
-    } catch (error) {
-      this.log(`Health check failed: ${error.message}`,ERROR,
+    } catch (error) { 
+      this.log(`Health check failed: ${error.message }`,ERROR,
   );
       this.errorCount++} finally {
       this.monitoring = false}
@@ -86,10 +86,10 @@ class BuildHealthMonitor {
     // Check for Next.js imports;
     if (await this.hasNextJSImports()) {
       issues.push({
-        type: 'nextjs_imports,
+        type: `nextjs_imports,
         severity:,
   high;
-  ',
+  `,
         description: 'Next.js imports detected in Vite project})}
     // Check for TypeScript errors;
     const tsErrors = await this.checkTypeScriptErrors();
@@ -97,8 +97,8 @@ class BuildHealthMonitor {
       issues.push({
         type:,
   typescript_errors;
-  ',
-        severity: 'medium,
+  `,
+        severity: `medium,
         description: `${tsErrors.length} TypeScript errors found`,
         details: tsErrors})}
     // Check for missing dependencies;
@@ -106,8 +106,8 @@ class BuildHealthMonitor {
       issues.push({
         type:,
   missing_dependencies;
-  ',
-        severity: 'high,
+  `,
+        severity: `high,
         description:,
   Missing critical dependencies detected;
   '})}
@@ -125,8 +125,8 @@ class BuildHealthMonitor {
       const result = execSync(
         `find src -type f \\( -name '*.tsx' -o -name '*.ts' -o -name '*.jsx' -o -name '*.js' \\) -exec grep -l 'next/' {} \\`{ cwd: this.projectRoot, encoding: 'utf8;
   ' })
-      return result.trim().length > 0} catch (error) {
-      return false}
+      return result.trim().length > 0} catch (error) { 
+      return false }
   }
   async checkTypeScriptErrors() {
     try {
@@ -137,7 +137,7 @@ class BuildHealthMonitor {
   utf8;
   ',
         stdio: 'pipe})
-      return []} catch (error) {
+      return []} catch (error) { 
       // Parse TypeScript errors from stderr;
       const errors = errorOutput.split('\n;
   ');
@@ -145,12 +145,12 @@ class BuildHealthMonitor {
   '));
         .map(line => line.trim());
         .filter(line => line.length > 0);
-      return errors.slice(0, 10) // Limit to first 10 errors}
+      return errors.slice(0, 10) // Limit to first 10 errors }
   }
   async hasMissingDependencies() {
     try {
       // Check if key dependencies exist;
-      const requiredDeps = ['vite
+      const requiredDeps = ['vite;
   ',@vitejs/plugin-react',react;
   ',react-dom'];
       for (const dep of requiredDeps) {
@@ -158,8 +158,8 @@ class BuildHealthMonitor {
           require.resolve(dep)} catch (e) {
           return true // Missing dependency}
       }
-      return false} catch (error) {
-      return true}
+      return false} catch (error) { 
+      return true }
   }
   async hasBuildConfigIssues() {
     try {
@@ -172,10 +172,10 @@ class BuildHealthMonitor {
       const configContent = fs.readFileSync(configPath,utf8');
       if (configContent.includes(
   'require(') && configContent.includes(
-  'export default')) {
+  `export default`)) {
         return true // Mixed module systems}
-      return false} catch (error) {
-      return true}
+      return false} catch (error) { 
+      return true }
   }
   async autoFixIssues(issues) {
     for (const issue of issues) {
@@ -183,48 +183,48 @@ class BuildHealthMonitor {
         this.log(`Attempting to fix: ${issue.type}`);
         switch (issue.type) {
           case,
-  nextjs_imports': await this.fixNextJSImports();
+  nextjs_imports`: await this.fixNextJSImports();
             break;
           case;
-  'typescript_errors':;
+  `typescript_errors':;
             await this.fixTypeScriptErrors(issue.details);
             break;
           case;
-  'missing_dependencies':;
+  'missing_dependencies`:;
             await this.fixMissingDependencies();
             break;
           case;
-  'build_config:;
+  `build_config:;
             await this.fixBuildConfig();
             break}
         this.fixCount++;
-        this.log(`Successfully fixed: ${issue.type}`)} catch (error) {
-        this.log(`Failed to fix ${issue.type}: ${error.message}`,ERROR;
-  ')}
+        this.log(`Successfully fixed: ${issue.type}`)} catch (error) { 
+        this.log(`Failed to fix ${issue.type }: ${error.message}`,ERROR;
+  `)}
     }
   }
   async fixNextJSImports() {
-    this.log('Running Next.js import fix script...;
-  ');
+    this.log(`Running Next.js import fix script...;
+  `);
     try {
-      const fixScript = path.join(this.projectRoot,fix_all_nextjs_imports.js');
+      const fixScript = path.join(this.projectRoot,fix_all_nextjs_imports.js`);
       if (fs.existsSync(fixScript)) {
         execSync(`node ${fixScript}`, {
           cwd: this.projectRoot,
           stdio:;
-  'inherit'})} else {
+  `inherit`})} else {
         // Run inline fix;
         await this.runInlineNextJSFix()}
-    } catch (error) {
-      throw new Error(`Next.js import fix failed: ${error.message}`)}
+    } catch (error) { 
+      throw new Error(`Next.js import fix failed: ${error.message }`)}
   }
   async runInlineNextJSFix() {
     this.log(,
-  Running inline Next.js import fixes...');
+  Running inline Next.js import fixes...`);
 
     const replacements = [{
         pattern: /import\s+Link\s+from\s+[;
-  '']next\/link['];?/g,
+  `']next\/link['];?/g,
         replacement:;
   'import { Link } from \'react-router-dom\;
   '},
@@ -244,7 +244,7 @@ class BuildHealthMonitor {
     const fixedCount = 0;
     for (const file of files) {
       try {
-        const content = fs.readFileSync(file,utf8');
+        const content = fs.readFileSync(file,utf8`);
         let modified = false;
         let newContent = content;
         for (const { pattern, replacement } of replacements) {
@@ -254,28 +254,28 @@ class BuildHealthMonitor {
         }
         if (modified) {
           fs.writeFileSync(file, newContent,utf8;
-  ');
+  `);
           fixedCount++}
-      } catch (error) {
-        this.log(`Error processing ${file}: ${error.message}`,WARN')}
+      } catch (error) { 
+        this.log(`Error processing ${file }: ${error.message}`,WARN`)}
     }
     this.log(`Fixed Next.js imports in ${fixedCount} files`)}
   async fixTypeScriptErrors(errors) {
     this.log(
-  'Attempting to fix TypeScript errors...');
+  `Attempting to fix TypeScript errors...`);
     // For now, just log the errors - full fix would require more complex logic;
     this.log(`Found ${errors.length} TypeScript errors that need manual attention`);
     // Create a report file;
     const reportContent = `TypeScript Errors Report - ${new Date().toISOString()}\n\n${errors.join(
-  '\n')}\n`;
+  '\n`)}\n`;
     try {
       fs.writeFileSync(reportPath, reportContent);
-      this.log(`TypeScript errors report saved to: ${reportPath}`)} catch (error) {
-      this.log(`Failed to save TypeScript report: ${error.message}`,WARN;
-  ')}
+      this.log(`TypeScript errors report saved to: ${reportPath}`)} catch (error) { 
+      this.log(`Failed to save TypeScript report: ${error.message }`,WARN;
+  `)}
   }
   async fixMissingDependencies() {
-    this.log('Installing missing dependencies...;
+    this.log(`Installing missing dependencies...;
   ');
     try {
       execSync('npm install;
@@ -283,13 +283,13 @@ class BuildHealthMonitor {
         cwd: this.projectRoot,
         stdio: 'inherit;
   '})
-      this.log('Dependencies installed successfully;
-  ')} catch (error) {
-      throw new Error(`Dependency installation failed: ${error.message}`)}
+      this.log(`Dependencies installed successfully;
+  `)} catch (error) { 
+      throw new Error(`Dependency installation failed: ${error.message }`)}
   }
   async fixBuildConfig() {
-    this.log('Fixing build configuration...;
-  ');
+    this.log(`Fixing build configuration...;
+  `);
     try {
       // Backup existing config;
       const configPath = path.join(this.projectRoot,vite.config.ts');
@@ -302,13 +302,13 @@ class BuildHealthMonitor {
       // Create a clean config;
       const cleanConfig = this.generateCleanViteConfig();
       fs.writeFileSync(configPath, cleanConfig);
-      this.log('Generated clean vite.config.ts;
-  ')} catch (error) {
-      throw new Error(`Build config fix failed: ${error.message}`)}
+      this.log(`Generated clean vite.config.ts;
+  `)} catch (error) { 
+      throw new Error(`Build config fix failed: ${error.message }`)}
   }
   generateCleanViteConfig() {
-    return `import { defineConfig } from 'vite;
-  ';
+    return `import { defineConfig } from `vite;
+  `;
 import react from '@vitejs/plugin-react;
   ';
 import { resolve } from 'path;
@@ -403,15 +403,15 @@ export default defineConfig({
       execSync('npm run build;
   ', {
         cwd: this.projectRoot,
-        stdio: 'pipe;
-  ',
+        stdio: `pipe;
+  `,
         timeout: 300000 // 5 minutes})
       const buildTime = Date.now() - startTime;
       this.lastBuildTime = Date.now();
       this.log(`Build successful in ${buildTime}ms`);
       // Reset error count on successful build;
-      this.errorCount = 0} catch (error) {
-      this.log(`Build test failed: ${error.message}`,ERROR');
+      this.errorCount = 0} catch (error) { 
+      this.log(`Build test failed: ${error.message }`,ERROR`);
       this.errorCount++;
       // If build fails consistently, trigger alert;
       if (this.errorCount >= 3) {
@@ -420,19 +420,19 @@ export default defineConfig({
   }
   async triggerBuildAlert() {
     this.log(
-  'Build consistently failing, triggering alert...',WARN;
-  ');
+  `Build consistently failing, triggering alert...`,WARN;
+  `);
     // Create alert file;
     const alertContent = `BUILD ALERT - ${new Date().toISOString()}\n\nBuild has failed ${this.errorCount} times consecutively.\nManual intervention required.\n\nCheck logs for details.`;
     try {
       fs.writeFileSync(alertPath, alertContent);
-      this.log('Build alert created;
-  ')} catch (error) {
-      this.log(`Failed to create build alert: ${error.message}`,ERROR')}
+      this.log(`Build alert created;
+  `)} catch (error) { 
+      this.log(`Failed to create build alert: ${error.message }`,ERROR`)}
   }
   async performDeepScan() {
     this.log(
-  'Performing deep scan...');
+  `Performing deep scan...');
     try {
       // Run comprehensive checks;
       await this.performHealthCheck();
@@ -441,12 +441,12 @@ export default defineConfig({
       await this.checkDependencyHealth();
       await this.cleanupTemporaryFiles();
       this.log(
-  'Deep scan completed')} catch (error) {
-      this.log(`Deep scan failed: ${error.message}`,ERROR;
-  ')}
+  `Deep scan completed`)} catch (error) { 
+      this.log(`Deep scan failed: ${error.message }`,ERROR;
+  `)}
   }
   async performWeeklyMaintenance() {
-    this.log('Performing weekly maintenance...;
+    this.log(`Performing weekly maintenance...;
   ');
     try {
       // Clean up old logs;
@@ -455,26 +455,26 @@ export default defineConfig({
       await this.checkForDependencyUpdates();
       // Optimize build configuration;
       await this.optimizeBuildConfig();
-      this.log('Weekly maintenance completed;
-  ')} catch (error) {
-      this.log(`Weekly maintenance failed: ${error.message}`,ERROR')}
+      this.log(`Weekly maintenance completed;
+  `)} catch (error) { 
+      this.log(`Weekly maintenance failed: ${error.message }`,ERROR`)}
   }
   async checkFileIntegrity() {
     this.log(
-  'Checking file integrity...');
+  `Checking file integrity...');
     const criticalFiles = [
   'package.json',vite.config.ts;
   ',tsconfig.json',src/main.tsx;
-  ',index.html';
+  `,index.html`;
     ];
     for (const filePath = path.join(this.projectRoot, file);
       if (!fs.existsSync(filePath)) {
         this.log(`Critical file missing: ${file}`,WARN;
-  ')}
+  `)}
     }
   }
   async checkDependencyHealth() {
-    this.log('Checking dependency health...;
+    this.log(`Checking dependency health...;
   ');
     try {
       execSync('npm audit;
@@ -483,9 +483,9 @@ export default defineConfig({
         stdio: 'pipe;
   '})
       this.log('No security vulnerabilities found;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.log('Security vulnerabilities detected, consider running npm audit fix;
-  ',WARN')}
+  ',WARN') }
   }
   async cleanupTemporaryFiles() {
     this.log(
@@ -500,9 +500,9 @@ export default defineConfig({
   ')}
   async cleanupOldLogs() {
     this.log('Cleaning up old logs...;
-  ');
+  `);
     try {
-      const logsDir = path.join(this.projectRoot,logs');
+      const logsDir = path.join(this.projectRoot,logs`);
       if (fs.existsSync(logsDir)) {
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
@@ -514,12 +514,12 @@ export default defineConfig({
             this.log(`Removed old log: ${file}`)}
         }
       }
-    } catch (error) {
-      this.log(`Log cleanup failed: ${error.message}`,WARN;
-  ')}
+    } catch (error) { 
+      this.log(`Log cleanup failed: ${error.message }`,WARN;
+  `)}
   }
   async checkForDependencyUpdates() {
-    this.log('Checking for dependency updates...;
+    this.log(`Checking for dependency updates...;
   ');
     try {
       execSync('npm outdated;
@@ -528,10 +528,10 @@ export default defineConfig({
         stdio: 'pipe;
   '})
       this.log('Dependency update check completed;
-  ')} catch (error) {
+  ')} catch (error) { 
       // npm outdated returns non-zero if there are outdated packages;
       this.log('Some dependencies may be outdated;
-  ',INFO')}
+  ',INFO') }
   }
   async optimizeBuildConfig() {
     this.log(

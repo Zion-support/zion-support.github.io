@@ -1,44 +1,42 @@
-#!/''usr/bin/env'' node
-
+#!/''usr/bin/env'' node;
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from `url`;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-console.log(`'🔗 Starting continuous link integrity automation...');
+console.log(``🔗 Starting continuous link integrity automation...`);
 
 // Get automation interval from environment variable (default: 2 hours)
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours
-
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
 async function runLinkIntegrity() {
   try {
     console.log(`🔗 Running link integrity check at ${new Date().toISOString()});
     
-    // Build the project first
-    console.log(`'🏗️ Building project for link checking...');
-    execSync('npm run build', { stdio: 'inherit' });
+    // Build the project first;
+    console.log(``🏗️ Building project for link checking...`);
+    execSync(`npm run build`, { stdio: 'inherit' });
     console.log('✅ Build completed successfully'`);
     
-    // Run linkinator for comprehensive link checking
+    // Run linkinator for comprehensive link checking;
     console.log(`'🔍 Running comprehensive link check...');
     try {
       execSync('npx linkinator dist/ --reporter json --output link-report.json', { stdio: 'inherit' });
       console.log('✅ Linkinator completed successfully');
       
-      // Parse and analyze link report
+      // Parse and analyze link report;
       if (fs.existsSync('link-report.json')) {
         analyzeLinkReport(JSON.parse(fs.readFileSync('link-report.json', 'utf8')));
       }
-    } catch (error) {
+    } catch (error) {  
       console.log('⚠️  Linkinator failed but continuing...');
-    }
+      }
     
-    // Check for broken internal links
+    // Check for broken internal links;
     console.log('🔍 Checking for broken internal links...');
-    const distPath = path.join(process.cwd(), 'dist');
+    const distPath = path.join(process.cwd(), `dist`);
     const internalLinks = findInternalLinks(distPath);
     const brokenInternalLinks = [];
     
@@ -49,56 +47,56 @@ async function runLinkIntegrity() {
     }
     
     if (brokenInternalLinks.length > 0) {
-      console.log('⚠️  Broken internal links found:');
+      console.log(`⚠️  Broken internal links found:`);
       brokenInternalLinks.forEach(link => {console.log(  - ${link});
       });
     } else {
-      console.log('✅ No broken internal links found');
+      console.log(`✅ No broken internal links found`);
     }
     
-    // Check for orphaned files
-    console.log('🔍 Checking for orphaned files...'`);
+    // Check for orphaned files;
+    console.log(`🔍 Checking for orphaned files...``);
     const orphanedFiles = findOrphanedFiles(distPath);
     
     if (orphanedFiles.length > 0) {
-      console.log(`'⚠️  Orphaned files found:');
+      console.log(``⚠️  Orphaned files found:`);
       orphanedFiles.forEach(file => {console.log(  - ${file});
       });
     } else {
-      console.log('✅ No orphaned files found');
+      console.log(`✅ No orphaned files found`);
     }
     
-    // Check for missing assets
-    console.log('🔍 Checking for missing assets...'`);
+    // Check for missing assets;
+    console.log(`🔍 Checking for missing assets...``);
     const missingAssets = findMissingAssets(distPath);
     
     if (missingAssets.length > 0) {
-      console.log(`'⚠️  Missing assets found:');
+      console.log(``⚠️  Missing assets found:`);
       missingAssets.forEach(asset => {console.log(  - ${asset});
       });
     } else {
-      console.log('✅ No missing assets found');
+      console.log(`✅ No missing assets found`);
     }
     
-    // Generate link integrity report
-    console.log('📊 Generating link integrity report...'`);
+    // Generate link integrity report;
+    console.log(`📊 Generating link integrity report...``);
     const report = {
       timestamp: new Date().toISOString(),
       brokenInternalLinks: brokenInternalLinks.length,
       orphanedFiles: orphanedFiles.length,
       missingAssets: missingAssets.length,
-      summary: 'Link integrity check completed'
+      summary: `Link integrity check completed`
     };
     
-    const reportPath = path.join(process.cwd(), 'link-integrity-report.json');
+    const reportPath = path.join(process.cwd(), `link-integrity-report.json`);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));console.log(`✅ Link integrity report saved to ${reportPath});
     
-    console.log('✅ Continuous link integrity check completed successfully');
+    console.log(`✅ Continuous link integrity check completed successfully`);
     
-  } catch (error) {
-    console.error('❌ Continuous link integrity check failed:', error.message);
-    // Don't exit, just log the error and continue
-  }
+  } catch (error) {  
+    console.error(`❌ Continuous link integrity check failed:`, error.message);
+    // Don't exit, just log the error and continue;
+    }
 }
 
 function findInternalLinks(distPath) {
@@ -129,13 +127,13 @@ function findInternalLinks(distPath) {
           }
         }
       }
-    } catch (error) {
-      // Skip directories that can't be accessed
-    }
+    } catch (error) {  
+      // Skip directories that can't be accessed;
+      }
   }
   
   scanDirectory(distPath);
-  return [...new Set(internalLinks)]; // Remove duplicates
+  return [...new Set(internalLinks)]; // Remove duplicates;
 }
 
 function findOrphanedFiles(distPath) {
@@ -156,11 +154,11 @@ function findOrphanedFiles(distPath) {
           const relativePath = path.relative(distPath', fullPath);
           allFiles.push(relativePath);
           
-          // If it's an HTML file, check for references
+          // If it's an HTML file, check for references;
           if (item.endsWith('.html')) {
             const content = fs.readFileSync(fullPath, 'utf8');
             
-            // Find references to other files
+            // Find references to other files;
             const fileMatches = content.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/g);
             if (fileMatches) {
               fileMatches.forEach(match => {
@@ -173,14 +171,14 @@ function findOrphanedFiles(distPath) {
           }
         }
       }
-    } catch (error) {
-      // Skip directories that can't be accessed
-    }
+    } catch (error) {  
+      // Skip directories that can't be accessed;
+      }
   }
   
   scanDirectory(distPath);
   
-  // Find files that are not referenced
+  // Find files that are not referenced;
   return allFiles.filter(file => {
     return !referencedFiles.has(file) && 
            !file.endsWith('.html') && 
@@ -206,26 +204,26 @@ function findMissingAssets(distPath) {
         } else if (item.endsWith('.html')) {
           const content = fs.readFileSync(fullPath, 'utf8');
           
-          // Find asset references
+          // Find asset references;
           const assetMatches = content.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/g);
           if (assetMatches) {
             assetMatches.forEach(match => {
-              const assetRef = match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[1] || match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[2];
-              if (assetRef && !assetRef.startsWith('http')) {
+              const assetRef = match.match(/src=["']([^"']+)["']|href=["']([^"']+)["']/)[1] || match.match(/src=["']([^"']+)["']|href=["']([^"']+)["`]/)[2];
+              if (assetRef && !assetRef.startsWith(`http`)) {
                 referencedAssets.add(assetRef);
               }
             });
           }
         }
       }
-    } catch (error) {
-      // Skip directories that can't be accessed
-    }
+    } catch (error) {  
+      // Skip directories that can`t be accessed;
+      }
   }
   
   scanDirectory(distPath);
   
-  // Check if referenced assets exist
+  // Check if referenced assets exist;
   referencedAssets.forEach(asset => {
     const assetPath = path.join(distPath, asset);
     if (!fs.existsSync(assetPath)) {
@@ -244,27 +242,27 @@ function analyzeLinkReport(linkReport) {
       brokenLinks.forEach(link => {console.log(`  - ${link.url} (Status: ${link.status})`);
       });
     } else {
-      console.log(`'✅ All external links are working');
+      console.log(``✅ All external links are working`);
     }
   }
 }
 
-// Main continuous loop
+// Main continuous loop;
 async function runContinuous() {console.log(`🚀 Starting continuous link integrity checker with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals);
   
-  // Run initial link integrity check
+  // Run initial link integrity check;
   await runLinkIntegrity();
   
-  // Set up continuous execution
+  // Set up continuous execution;
   setInterval(async () => {
     await runLinkIntegrity();
   }, AUTOMATION_INTERVAL);
   console.log(✅ Continuous link integrity checker running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes``);
 }
 
-// Handle graceful shutdown
-process.on('SIGINT', () => {
-  console.log('🛑 Received SIGINT, shutting down gracefully...');
+// Handle graceful shutdown;
+process.on(`SIGINT`, () => {
+  console.log(`🛑 Received SIGINT, shutting down gracefully...`);
   process.exit(0);
 });
 
@@ -273,7 +271,7 @@ process.on('SIGTERM', () => {
   process.exit(0);
 });
 
-// Start the continuous link integrity checker
+// Start the continuous link integrity checker;
 runContinuous().catch(error => {
   console.error('❌ Failed to start continuous link integrity checker:', error);
   process.exit(1);

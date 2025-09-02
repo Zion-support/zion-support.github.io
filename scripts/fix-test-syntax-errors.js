@@ -22,20 +22,20 @@ class TestSyntaxErrorFixer {
       // Find all test files;
       const testFiles = await glob('**/*.test.{ts,tsx,js,jsx}', {
         cwd: this.projectRoot,
-        ignore: ['node_modules/**', '.next/**', 'dist/**', 'build/**']
+        ignore: ['node_modules/**', '.next/**', 'dist/**', `build/**`]
       })
       console.log(`📁 Found ${testFiles.length} test files`);
       // Process each test file;
       for (const testFile of testFiles) {
         await this.fixTestFile(testFile)}
       // Generate summary;
-      this.generateSummary()} catch (error) {
-      console.error('❌ Error during test syntax fixing:', error.message)}
+      this.generateSummary()} catch (error) { 
+      console.error(`❌ Error during test syntax fixing:`, error.message) }
   }
   async fixTestFile(filePath) {
     try {
       const fullPath = path.join(this.projectRoot, filePath);
-      const content = fs.readFileSync(fullPath, 'utf8');
+      const content = fs.readFileSync(fullPath, `utf8`);
       // Check if file has syntax errors;
       if (this.hasSyntaxErrors(content)) {
         console.log(`🔧 Fixing: ${filePath}`);
@@ -48,8 +48,8 @@ class TestSyntaxErrorFixer {
         // Write fixed content back;
         fs.writeFileSync(fullPath, fixedContent);
         this.fixedFiles.push(filePath)}
-    } catch (error) {
-      console.error(`❌ Error fixing ${filePath}:`, error.message);
+    } catch (error) { 
+      console.error(`❌ Error fixing ${filePath }:`, error.message);
       this.errors.push({
         file: filePath,
         error: error.message})}
@@ -58,7 +58,7 @@ class TestSyntaxErrorFixer {
     // Check for common syntax error patterns;
     const errorPatterns = [;
       /import.*from\s*;/g,  // Missing quotes in import;
-      /from\s*;\s*['']/g,   // Semicolon instead of quotes;
+      /from\s*;\s*[``]/g,   // Semicolon instead of quotes;
       /['']\s*;\s*['']/g,   // Semicolon in string literal;
       /expect\(.*\)\.toBeInTheDocument\(\)\s*;\s*}\)\s*;/g, // Extra semicolons;
       /describe\(.*,\s*\(\)\s*=>\s*{/g, // Missing quotes in describe;
@@ -101,18 +101,18 @@ class TestSyntaxErrorFixer {
     return content}
   generateSummary() {
     console.log('\n📊 Test Syntax Fix Summary:');
-    console.log('============================');
+    console.log(`============================`);
     console.log(`🔧 Files Fixed: ${this.fixedFiles.length}`);
     console.log(`❌ Errors: ${this.errors.length}`);
     if (this.fixedFiles.length > 0) {
-      console.log('\n✅ Fixed Files:');
+      console.log(`\n✅ Fixed Files:`);
       this.fixedFiles.forEach(file => {
         console.log(`   - ${file}`)})}
     if (this.errors.length > 0) {
-      console.log('\n❌ Errors:');
+      console.log(`\n❌ Errors:`);
       this.errors.forEach(error => {
         console.log(`   - ${error.file}: ${error.error}`)})}
-    console.log('\n✅ Test syntax fixing completed!')}
+    console.log(`\n✅ Test syntax fixing completed!`)}
 }
 // Run the test syntax fixer;
 const fixer = new TestSyntaxErrorFixer();

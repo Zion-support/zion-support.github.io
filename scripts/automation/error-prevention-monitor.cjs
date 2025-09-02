@@ -1,5 +1,4 @@
-#!/''usr/bin/env'' node
-
+#!/''usr/bin/env'' node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -15,38 +14,38 @@ class ErrorPreventionMonitor {
   }
 
   ensureDirectories() {
-    ['this.logsPath', 'this.reportsPath'].forEach(dir => {
+    ['this.logsPath', `this.reportsPath`].forEach(dir => {
       if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
       }
     });
   }
 
-  log(message, level = 'INFO') {
+  log(message, level = `INFO`) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
     console.log(`logMessage);
 
-    const logFile = path.join(this.logsPath, 'error-prevention-monitor.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
+    const logFile = path.join(this.logsPath, `error-prevention-monitor.log`);
+    fs.appendFileSync(logFile, logMessage + `\n`);
   }
 
   async scanForPotentialErrors() {
-    this.log('🔍 Scanning for potential errors...');
+    this.log(`🔍 Scanning for potential errors...`);
 
     const potentialErrors = [];
 
-    // Scan source files for common error patterns
+    // Scan source files for common error patterns;
     const sourceFiles = this.findSourceFiles();
 
     for (const filePath of sourceFiles) {
       try {
-        const content = fs.readFileSync(filePath, 'utf8');
+        const content = fs.readFileSync(filePath, `utf8`);
         const errors = this.analyzeFileForPotentialErrors(filePath, content);
         potentialErrors.push(...errors);
-      } catch (error) {
-        this.log(⚠️ Could not read file ${filePath}: ${error.message}',
-          'WARN'
+      } catch (error) {  
+        this.log(⚠️ Could not read file ${filePath  }: ${error.message}`,
+          `WARN`
         );
       }
     }
@@ -65,8 +64,8 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
         if (
           stat.isDirectory() &&
-          !file.startsWith('.') &&
-          !file.startsWith('node_modules')
+          !file.startsWith(`.`) &&
+          !file.startsWith(`node_modules')
         ) {
           scanDirectory(filePath);
         } else if (stat.isFile() && /\.(js|jsx|ts|tsx)$/.test(file)) {
@@ -87,7 +86,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
       const line = lines[i];
       const lineNumber = i + 1;
 
-      // Check for common error patterns
+      // Check for common error patterns;
       if (this.detectUnsafeCode(line)) {
         errors.push({
           file: filePath,
@@ -161,13 +160,13 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
       /<any>/,
       /any\[\]/,
       /Record<string,\s*any>/,
-      /{[^}]*:\s*any['^}]*}/', ''];
+      /{[^}]*:\s*any[`^}]*}/`, ``];
 
     return typeIssuePatterns.some(pattern => pattern.test(line));
   }
 
   async applyPreventiveFixes(potentialErrors) {
-    this.log(🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...'
+    this.log(🔧 Applying preventive fixes for ${potentialErrors.length} potential issues...`
     );
 
     let fixedCount = 0;
@@ -186,7 +185,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
           timestamp: new Date().toISOString(),
         });
       } catch (fixError) {
-        this.log( `❌ Error applying preventive fix: ${fixError.message}',ERROR'
+        this.log( `❌ Error applying preventive fix: ${fixError.message}`,ERROR`
         );
         fixResults.push({
           error,
@@ -213,8 +212,8 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
     }
 
     try {
-      let content = fs.readFileSync(filePath, 'utf8');
-      const lines = content.split('\n');
+      let content = fs.readFileSync(filePath, `utf8`);
+      const lines = content.split(`\n');
       const lineIndex = error.line - 1;
 
       if (lineIndex < 0 || lineIndex >= lines.length) {
@@ -241,7 +240,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
           fixed = fixedLine !== originalLine;
           break;
 
-        case 'type-issue':
+        case `type-issue`:
           fixedLine = await this.fixTypeIssue(originalLine);
           fixed = fixedLine !== originalLine;
           break;
@@ -249,14 +248,14 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
 
       if (fixed) {
         lines[lineIndex] = fixedLine;
-        fs.writeFileSync(filePath, lines.join('\n'));this.log(`✅ Applied preventive fix in ${filePath}:${error.line}');
+        fs.writeFileSync(filePath, lines.join(`\n`));this.log(`✅ Applied preventive fix in ${filePath}:${error.line}`);
         return true;
       }
 
       return false;
     } catch (fixError) {
-      this.log(❌ Failed to apply preventive fix: ${fixError.message}',
-        'ERROR'
+      this.log(❌ Failed to apply preventive fix: ${fixError.message}`,
+        `ERROR`
       );
       return false;
     }
@@ -265,12 +264,12 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
   async fixUnsafeCode(line) {
     let fixedLine = line;
 
-    // Replace eval with safer alternatives
+    // Replace eval with safer alternatives;
     if (line.includes('eval(')) {
       fixedLine = line.replace(/eval\s*\(([^)]+)\)/g, 'JSON.parse($1)');
     }
 
-    // Replace innerHTML with textContent where possible
+    // Replace innerHTML with textContent where possible;
     if (line.includes('.innerHTML =')) {
       fixedLine = line.replace(
         /\.innerHTML\s*=\s*([^;]+)/g,.textContent = $1'
@@ -283,7 +282,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
   async fixMemoryLeak(line) {
     let fixedLine = line;
 
-    // Add cleanup for event listeners
+    // Add cleanup for event listeners;
     if (line.includes('addEventListener')) {
       fixedLine = line.replace(
         /addEventListener\s*\((['^', '']+),\s*(['^', '']+),\s*false\)/g,addEventListener($1, $2, { once: true })'
@@ -296,7 +295,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
   async fixAsyncError(line) {
     let fixedLine = line;
 
-    // Add error handling for promises
+    // Add error handling for promises;
     if (line.includes('.then(') && !line.includes('.catch(')) {
       fixedLine = line + "\n  .catch(error => console.error('Error:', error))";
     }
@@ -307,7 +306,7 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
   async fixTypeIssue(line) {
     let fixedLine = line;
 
-    // Replace any with more specific types
+    // Replace any with more specific types;
     if (line.includes(': any')) {
       fixedLine = line.replace(/: ''any/g'', ': unknown');
     }
@@ -328,18 +327,18 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
         totalIssues: fixResults.totalIssues,
         fixedIssues: fixResults.fixedCount,
         preventionRate:
-          fixResults.totalIssues > 0
+          fixResults.totalIssues > 0;
             ? ((fixResults.fixedCount / fixResults.totalIssues) * 100).toFixed(
-                2
+                2;
               )
             : 100,
       },
       fixResults: fixResults.results,
-      recommendations: ['Review applied fixes to ensure they meet your requirements'', 'Consider adding more specific type annotations', 'Implement proper error handling for async operations'', 'Regularly review code for potential security issues', ''],
+      recommendations: ['Review applied fixes to ensure they meet your requirements'', 'Consider adding more specific type annotations', 'Implement proper error handling for async operations'', 'Regularly review code for potential security issues`, ``],
     };
 
     const reportFile = path.join(
-      this.reportsPath,error-prevention-monitor-report.json'
+      this.reportsPath,error-prevention-monitor-report.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
@@ -348,24 +347,24 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
   }
 
   async run() {
-    this.log('🚀 Starting Error Prevention Monitor...');
+    this.log(`🚀 Starting Error Prevention Monitor...`);
 
     try {
-      // Scan for potential errors
+      // Scan for potential errors;
       const potentialErrors = await this.scanForPotentialErrors();
 
       if (potentialErrors.length === 0) {
-        this.log('🎉 No potential errors detected!');
+        this.log(`🎉 No potential errors detected!`);
         return { success: true, issues: [], fixed: 0 };
       }
 
-      // Apply preventive fixes
+      // Apply preventive fixes;
       const fixResults = await this.applyPreventiveFixes(potentialErrors);
 
-      // Generate report
+      // Generate report;
       const report = await this.generateReport(fixResults);
 
-      this.log('🎉 Error Prevention Monitor completed!');this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
+      this.log(`🎉 Error Prevention Monitor completed!`);this.log(`📊 Applied ${fixResults.fixedCount} preventive fixes`);
 
       return {
         success: fixResults.fixedCount > 0,
@@ -373,13 +372,13 @@ this.log(Found ${potentialErrors.length} potential error patterns`);
         fixed: fixResults.fixedCount,
         report,
       };
-    } catch (error) {this.log(`💥 Error Prevention Monitor failed: ${error.message}`, 'ERROR');
+    } catch (error) {  this.log(`💥 Error Prevention Monitor failed: ${error.message  }`, `ERROR`);
       throw error;
     }
   }
 }
 
-// Run the automation if called directly
+// Run the automation if called directly;
 if (require.main === module) {
   const monitor = new ErrorPreventionMonitor();
   monitor.run().catch(console.error);

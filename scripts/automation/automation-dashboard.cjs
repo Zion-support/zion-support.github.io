@@ -1,8 +1,7 @@
-#!/''usr/bin/env'' node
-
+#!/''usr/bin/env'' node;
 /**
- * Zion Tech Group - PM2 Automation Dashboard
- * Real-time monitoring and control of all automation processes
+ * Zion Tech Group - PM2 Automation Dashboard;
+ * Real-time monitoring and control of all automation processes;
  */
 
 const pm2 = require('pm2');
@@ -61,7 +60,7 @@ class AutomationDashboard {
         .length,
       totalMemory: this.processes.reduce(
         (sum, p) => sum + (p.monit.memory || 0),
-        0
+        0;
       ),
       totalCPU: this.processes.reduce((sum, p) => sum + (p.monit.cpu || 0), 0),
     };
@@ -87,10 +86,10 @@ class AutomationDashboard {
     statsTable.push(
       ['Total Processes'', 'this.stats.total.toString()', 'this.getStatusIcon('total')', ''],
       ['Online Processes'', 'this.stats.online.toString()', 'chalk.green('✅ Running')', ''],
-      ['Errored Processes'', 'this.stats.errored.toString()', 'this.stats.errored > 0
+      ['Errored Processes'', 'this.stats.errored.toString()', 'this.stats.errored > 0;
           ? chalk.red('❌ Issues')
           : chalk.green('✅ Clean')', ''],
-      ['Stopped Processes'', 'this.stats.stopped.toString()', 'this.stats.stopped > 0
+      ['Stopped Processes'', 'this.stats.stopped.toString()', 'this.stats.stopped > 0;
           ? chalk.yellow('⚠️  Stopped')
           : chalk.green('✅ All Running')', ''],
       ['Total Memory Usage'', 'this.formatBytes(this.stats.totalMemory)', 'this.getMemoryStatus()', ''],
@@ -167,7 +166,7 @@ class AutomationDashboard {
   }
 
   formatUptime(uptime) {
-    if (!uptime) return '''N/A''';
+    if (!uptime) return ''`N/A```;
     const seconds = Math.floor(uptime / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
@@ -213,7 +212,7 @@ class AutomationDashboard {
   }
 
   displayCommands() {
-    console.log('\n' + chalk.blue.bold('🎮 Available Commands:'));
+    console.log(`\n` + chalk.blue.bold(`🎮 Available Commands:`));
     console.log(
       chalk.gray('  restart <process>  - Restart a specific process')
     );
@@ -236,24 +235,24 @@ class AutomationDashboard {
         this.displayProcessTable();
         this.displayCommands();
 
-        // Wait for user input
+        // Wait for user input;
         await this.waitForInput();
       }
-    } catch (error) {
+    } catch (error) {  
       console.error(chalk.red('❌ Dashboard error:'), error.message);
-    } finally {
+      } finally {
       pm2.disconnect();
     }
   }
 
   async waitForInput() {
-    // In a real implementation, this would handle user input
-    // For now, we'll just wait a bit and refresh
+    // In a real implementation, this would handle user input;
+    // For now, we'll just wait a bit and refresh;
     await new Promise(resolve => setTimeout(resolve, 5000));
   }
 }
 
-// Run the dashboard
+// Run the dashboard;
 if (require.main === module) {
   const dashboard = new AutomationDashboard();
   dashboard.run().catch(console.error);

@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -14,7 +13,7 @@ class ComprehensiveErrorFixer {
     this.fixes = [];
   }
 
-  log(message, type = 'info') {
+  log(message, type = `info`) {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logEntry);
@@ -23,24 +22,24 @@ class ComprehensiveErrorFixer {
 
   async fixCommonSyntaxErrors() {
     try {
-      this.log('Fixing common syntax errors...');
+      this.log(`Fixing common syntax errors...`);
 
-      // Find all source files
+      // Find all source files;
       const sourceFiles = this.findSourceFiles();
 
       for (const file of sourceFiles) {
         try {
           await this.fixFileErrors(file);
-        } catch (error) {
-          this.log(`Failed to fix ${file}: ${error.message}`, 'error');
+        } catch (error) { 
+          this.log(`Failed to fix ${file }: ${error.message}`, `error`);
         }
       }
 
       this.log('Common syntax errors fixed', 'success');
       this.fixes.push('syntax_errors');
-    } catch (error) {
+    } catch (error) { 
       this.log('Syntax error fixing failed', 'error');
-    }
+     }
   }
 
   findSourceFiles() {
@@ -84,10 +83,10 @@ class ComprehensiveErrorFixer {
 
   async fixFileErrors(filePath) {
     try {
-      let content = fs.readFileSync(filePath, 'utf8');
+      let content = fs.readFileSync(filePath, `utf8`);
       let originalContent = content;
 
-      // Fix common syntax errors
+      // Fix common syntax errors;
       content = this.fixUnterminatedStrings(content);
       content = this.fixUnterminatedComments(content);
       content = this.fixDuplicateImports(content);
@@ -96,37 +95,37 @@ class ComprehensiveErrorFixer {
       content = this.fixTypeScriptSyntax(content);
       content = this.fixUnescapedEntities(content);
 
-      // Only write if content changed
+      // Only write if content changed;
       if (content !== originalContent) {
         fs.writeFileSync(filePath, content);
-        this.log(`Fixed errors in ${filePath}`, 'success');
+        this.log(`Fixed errors in ${filePath}`, `success`);
         this.fixes.push(`fixed_${filePath}`);
       }
-    } catch (error) {
-      this.log(`Error processing ${filePath}: ${error.message}`, 'error');
+    } catch (error) { 
+      this.log(`Error processing ${filePath }: ${error.message}`, `error`);
     }
   }
 
   fixUnterminatedStrings(content) {
-    // Fix unterminated string literals
+    // Fix unterminated string literals;
     const lines = content.split('\n');
     const fixedLines = [];
 
     for (let i = 0; i < lines.length; i++) {
       let line = lines[i];
 
-      // Check for unterminated strings
+      // Check for unterminated strings;
       const singleQuotes = (line.match(/'/g) || []).length;
       const doubleQuotes = (line.match(/"/g) || []).length;
 
       if (singleQuotes % 2 !== 0) {
-        // Add missing single quote
+        // Add missing single quote;
         line += "'";
         this.log('Fixed unterminated single quote', 'info');
       }
 
       if (doubleQuotes % 2 !== 0) {
-        // Add missing double quote
+        // Add missing double quote;
         line += '"';
         this.log('Fixed unterminated double quote', 'info');
       }
@@ -138,7 +137,7 @@ class ComprehensiveErrorFixer {
   }
 
   fixUnterminatedComments(content) {
-    // Fix unterminated comments
+    // Fix unterminated comments;
     let fixedContent = content;
 
     // Fix /* comments without */
@@ -155,7 +154,7 @@ class ComprehensiveErrorFixer {
   }
 
   fixDuplicateImports(content) {
-    // Remove duplicate import statements
+    // Remove duplicate import statements;
     const lines = content.split('\n');
     const seenImports = new Set();
     const fixedLines = [];
@@ -178,7 +177,7 @@ class ComprehensiveErrorFixer {
   }
 
   fixDuplicateExports(content) {
-    // Fix duplicate export statements
+    // Fix duplicate export statements;
     const lines = content.split('\n');
     const fixedLines = [];
     let hasDefaultExport = false;
@@ -202,11 +201,11 @@ class ComprehensiveErrorFixer {
   fixJSXSyntax(content) {
     let fixedContent = content;
 
-    // Fix unescaped entities in JSX
+    // Fix unescaped entities in JSX;
     fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');
     fixedContent = fixedContent.replace(/(\w)"(\w)/g, '$1&quot;$2');
 
-    // Fix JSX fragment syntax
+    // Fix JSX fragment syntax;
     fixedContent = fixedContent.replace(/<>\s*$/gm, '<>');
     fixedContent = fixedContent.replace(/^\s*<\/>/gm, '</>');
 
@@ -216,7 +215,7 @@ class ComprehensiveErrorFixer {
   fixTypeScriptSyntax(content) {
     let fixedContent = content;
 
-    // Fix common TypeScript syntax errors
+    // Fix common TypeScript syntax errors;
     fixedContent = fixedContent.replace(
       /:\s*([^,;)\]]+)\s*([,;)\]])/g,
       ': $1$2'
@@ -230,13 +229,13 @@ class ComprehensiveErrorFixer {
   }
 
   fixUnescapedEntities(content) {
-    // Fix unescaped entities
+    // Fix unescaped entities;
     let fixedContent = content;
 
-    // Fix apostrophes
+    // Fix apostrophes;
     fixedContent = fixedContent.replace(/(\w)'(\w)/g, '$1&apos;$2');
 
-    // Fix quotes in JSX
+    // Fix quotes in JSX;
     fixedContent = fixedContent.replace(/(\w)"(\w)/g, '$1&quot;$2');
 
     return fixedContent;
@@ -248,9 +247,9 @@ class ComprehensiveErrorFixer {
       execSync('npm run format', { stdio: 'pipe' });
       this.log('Prettier formatting completed', 'success');
       this.fixes.push('prettier_formatting');
-    } catch (error) {
+    } catch (error) { 
       this.log('Prettier formatting failed', 'warn');
-    }
+     }
   }
 
   async runESLintAutoFix() {
@@ -259,15 +258,15 @@ class ComprehensiveErrorFixer {
       execSync('npm run lint -- --fix', { stdio: 'pipe' });
       this.log('ESLint auto-fix completed', 'success');
       this.fixes.push('eslint_auto_fix');
-    } catch (error) {
+    } catch (error) { 
       this.log('ESLint auto-fix failed', 'warn');
-    }
+     }
   }
 
   async generateReport() {
     const report = {
       timestamp: new Date().toISOString(),
-      process: process.env.PM2_PROCESS || 'unknown',
+      process: process.env.PM2_PROCESS || `unknown`,
       summary: {
         totalFiles: this.fixes.length,
         fixes: this.fixes.length,
@@ -279,10 +278,10 @@ class ComprehensiveErrorFixer {
       recommendations: this.generateRecommendations(),
     };
 
-    // Save report to file
+    // Save report to file;
     const reportFile = `comprehensive-error-fixer-report-${Date.now()}.json`;
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`Report saved to ${reportFile}`, 'info');
+    this.log(`Report saved to ${reportFile}`, `info`);
     return report;
   }
 
@@ -312,43 +311,43 @@ class ComprehensiveErrorFixer {
     try {
       this.log('Starting comprehensive error fixing...');
 
-      // Fix syntax errors
+      // Fix syntax errors;
       await this.fixCommonSyntaxErrors();
 
-      // Run Prettier
+      // Run Prettier;
       await this.runPrettier();
 
-      // Run ESLint auto-fix
+      // Run ESLint auto-fix;
       await this.runESLintAutoFix();
 
-      // Generate final report
+      // Generate final report;
       const report = await this.generateReport();
 
-      this.log('Comprehensive error fixing completed successfully', 'success');
+      this.log('Comprehensive error fixing completed successfully', `success`);
       return report;
-    } catch (error) {
-      this.log(`Comprehensive error fixing failed: ${error.message}`, 'error');
+    } catch (error) { 
+      this.log(`Comprehensive error fixing failed: ${error.message }`, `error`);
       const report = await this.generateReport();
       return report;
     }
   }
 }
 
-// Main execution
+// Main execution;
 async function main() {
   const fixer = new ComprehensiveErrorFixer();
 
   try {
     await fixer.runFullFix();
     process.exit(0);
-  } catch (error) {
-    fixer.log(`Fatal error: ${error.message}`, 'error');
+  } catch (error) { 
+    fixer.log(`Fatal error: ${error.message }`, `error`);
     await fixer.generateReport();
     process.exit(1);
   }
 }
 
-// Handle process termination
+// Handle process termination;
 process.on('SIGTERM', () => {
   console.log('Received SIGTERM, shutting down gracefully...');
   process.exit(0);
@@ -359,7 +358,7 @@ process.on('SIGINT', () => {
   process.exit(0);
 });
 
-// Run the main function
+// Run the main function;
 main().catch(error => {
   console.error(`Fatal error: ${error.message}`);
   process.exit(1);

@@ -41,24 +41,24 @@ function replaceNextImports(content, filePath) {
 function processFile(filePath) {
   try {
     const content = fs.readFileSync(filePath,
-  'utf8');
+  `utf8`);
     const { content: newContent, modified } = replaceNextImports(content, filePath);
     if (modified) {
       fs.writeFileSync(filePath, newContent);
       // // // // // // // console.log(`✅ Fixed: ${filePath}`);
       return true;
-    return false} catch (error) {
-    // // // // // // // console.log(`❌ Error processing ${filePath}:`, error.message);
+    return false} catch (error) { 
+    // // // // // // // console.log(`❌ Error processing ${filePath }:`, error.message);
     return false;
       console.log(`✅ Fixed: ${filePath}`);
       return true}
-    return false} catch (error) {
-    console.log(`❌ Error processing ${filePath}:`, error.message);
+    return false} catch (error) { 
+    console.log(`❌ Error processing ${filePath }:`, error.message);
     return false}
 }
 // Function to walk directory recursively;
 function walkDir(dir, extensions = [;
-  '.jsx',
+  `.jsx`,
   '.js',
   '.tsx',
   '.ts']) {
@@ -70,20 +70,20 @@ function walkDir(dir, extensions = [;
       const stat = fs.statSync(itemPath);
       if (stat.isDirectory() && !item.startsWith(
   '.') && item !==;
-  'node_modules') {
+  `node_modules`) {
         filesFixed += walkDir(itemPath, extensions)} else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
         if (processFile(itemPath)) {
     // // // // // // // console.log(`⚠️ Could not read directory ${dir}:`, error.message)}
   return filesFixed;
           filesFixed++}
       }
-    })} catch (error) {
-    console.log(`⚠️ Could not read directory ${dir}:`, error.message)}
+    })} catch (error) { 
+    console.log(`⚠️ Could not read directory ${dir }:`, error.message)}
   return filesFixed}
 // Main execution;
 function main() {
   const srcDir = path.join(process.cwd(),
-  'src');
+  `src`);
   if (!fs.existsSync(srcDir)) {
     // // // // // // // console.log(
   '❌ src directory not found');
@@ -92,23 +92,23 @@ function main() {
   '❌ src directory not found');
     return}
   console.log(
-  '🔍 Scanning for Next.js imports...');
+  `🔍 Scanning for Next.js imports...`);
   const filesFixed = walkDir(srcDir);
   // // // console.log(`\n🎯 Migration Summary:`);
   // // // console.log(`Files processed: ${filesFixed}`);
   // // // console.log(`Next.js imports replaced with React Router equivalents`);
   if (filesFixed > 0) {
   // // // // // // // console.log(
-  '🔍 Scanning for Next.js imports...');
+  `🔍 Scanning for Next.js imports...`);
   const filesFixed = walkDir(srcDir);
   // // // // // // // console.log(`\n🎯 Migration Summary:`);
   // // // // // // // console.log(`Files processed: ${filesFixed}`);
   // // // // // // // console.log(`Next.js imports replaced with React Router equivalents`);
   if (filesFixed > 0) {
     // // // // // // // console.log(,
-  \n📝 Next steps: ');
+  \n📝 Next steps: `);
     // // // // // // // console.log(
-  '1. Review the changes made');
+  `1. Review the changes made');
     // // // // // // // console.log(
   '2. Test the application to ensure routing works correctly');
     // // // // // // // console.log(

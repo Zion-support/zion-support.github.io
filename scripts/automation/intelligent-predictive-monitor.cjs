@@ -1,8 +1,7 @@
-#!/''usr/bin/env'' node
-
+#!/''usr/bin/env'' node;
 /**
- * Zion Tech Group - Intelligent Predictive Monitor
- * Uses ML patterns to predict failures and optimize performance
+ * Zion Tech Group - Intelligent Predictive Monitor;
+ * Uses ML patterns to predict failures and optimize performance;
  */
 
 const pm2 = require('pm2');
@@ -51,9 +50,9 @@ class IntelligentPredictiveMonitor {
   async ensureReportDirectory() {
     try {
       await fs.mkdir(this.reportDir, { recursive: true });
-    } catch (error) {
-      console.log(`'Report directory already exists');
-    }
+    } catch (error) {  
+      console.log(``Report directory already exists`);
+      }
   }
 
   startMonitoring() {
@@ -63,7 +62,7 @@ class IntelligentPredictiveMonitor {
       await this.generatePredictions();
       await this.optimizePerformance();
       await this.generateReport();
-    }, 60000); // Every minute
+    }, 60000); // Every minute;
   }
 
   async collectMetrics() {
@@ -86,7 +85,7 @@ class IntelligentPredictiveMonitor {
           })),
         };
 
-        // Store metrics for analysis
+        // Store metrics for analysis;
         this.metrics.memoryUsage.push(
           currentMetrics.processes.reduce((sum, p) => sum + p.memory, 0)
         );
@@ -94,13 +93,13 @@ class IntelligentPredictiveMonitor {
           currentMetrics.processes.reduce((sum, p) => sum + p.cpu, 0)
         );
         this.metrics.errorRates.push(
-          currentMetrics.processes.filter(p => p.status === 'errored').length
+          currentMetrics.processes.filter(p => p.status === `errored`).length;
         );
         this.metrics.uptime.push(
           currentMetrics.processes.reduce((sum, p) => sum + p.uptime, 0)
         );
 
-        // Keep only last 100 data points
+        // Keep only last 100 data points;
         if (this.metrics.memoryUsage.length > 100) {
           this.metrics.memoryUsage.shift();
           this.metrics.cpuUsage.shift();
@@ -116,20 +115,20 @@ class IntelligentPredictiveMonitor {
   async analyzePatterns() {
     if (this.metrics.memoryUsage.length < 10) return;
 
-    // Analyze memory usage patterns
+    // Analyze memory usage patterns;
     const memoryTrend = this.calculateTrend(this.metrics.memoryUsage);
     const cpuTrend = this.calculateTrend(this.metrics.cpuUsage);
     const errorTrend = this.calculateTrend(this.metrics.errorRates);
 
-    // Detect anomalies
+    // Detect anomalies;
     const memoryAnomaly = this.detectAnomaly(this.metrics.memoryUsage);
     const cpuAnomaly = this.detectAnomaly(this.metrics.cpuUsage);
     const errorAnomaly = this.detectAnomaly(this.metrics.errorRates);
 
     console.log(`📊 Pattern Analysis:
       Memory Trend: ${memoryTrend > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
-      CPU Trend: ${cpuTrend > 0 ? '↗️ Increasing' : '↘️ Decreasing'}
-      Error Trend: ${errorTrend > 0 ? '↗️ Increasing' : '↘️ Decreasing'}Anomalies: Memory=${memoryAnomaly}, CPU=${cpuAnomaly}, Errors=${errorAnomaly});
+      CPU Trend: ${cpuTrend > 0 ? `↗️ Increasing` : `↘️ Decreasing`}
+      Error Trend: ${errorTrend > 0 ? `↗️ Increasing` : `↘️ Decreasing`}Anomalies: Memory=${memoryAnomaly}, CPU=${cpuAnomaly}, Errors=${errorAnomaly});
   }
 
   calculateTrend(data) {
@@ -157,22 +156,22 @@ class IntelligentPredictiveMonitor {
   async generatePredictions() {
     if (this.metrics.memoryUsage.length < 10) return;
 
-    // Calculate failure probability based on error rates and resource usage
+    // Calculate failure probability based on error rates and resource usage;
     const errorRate =
       this.metrics.errorRates[this.metrics.errorRates.length - 1];
     const memoryUsage =
       this.metrics.memoryUsage[this.metrics.memoryUsage.length - 1];
     const cpuUsage = this.metrics.cpuUsage[this.metrics.cpuUsage.length - 1];
 
-    // Simple ML-based prediction
+    // Simple ML-based prediction;
     this.predictions.failureProbability = this.calculateFailureProbability(
       errorRate,
       memoryUsage,
-      cpuUsage
+      cpuUsage;
     );
     this.predictions.performanceScore = this.calculatePerformanceScore(
       memoryUsage,
-      cpuUsage
+      cpuUsage;
     );
     this.predictions.optimizationSuggestions =
       this.generateOptimizationSuggestions();
@@ -181,28 +180,27 @@ class IntelligentPredictiveMonitor {
     console.log(🔮 Predictions:
       Failure Probability: ${(this.predictions.failureProbability * 100).toFixed(2)}%
       Performance Score: ${(this.predictions.performanceScore * 100).toFixed(2)}%
-      Next Maintenance: ${this.predictions.nextMaintenance}');
+      Next Maintenance: ${this.predictions.nextMaintenance}`);
   }
 
   calculateFailureProbability(errorRate, memoryUsage, cpuUsage) {
-    // Weighted factors for failure prediction
+    // Weighted factors for failure prediction;
     const errorWeight = 0.4;
     const memoryWeight = 0.3;
     const cpuWeight = 0.3;
 
-    const errorScore = Math.min(errorRate / 10, 1); // Normalize error rate
-    const memoryScore = Math.min(memoryUsage / (1024 * 1024 * 1024), 1); // Normalize to GB
-    const cpuScore = Math.min(cpuUsage / 100, 1); // Normalize CPU percentage
-
+    const errorScore = Math.min(errorRate / 10, 1); // Normalize error rate;
+    const memoryScore = Math.min(memoryUsage / (1024 * 1024 * 1024), 1); // Normalize to GB;
+    const cpuScore = Math.min(cpuUsage / 100, 1); // Normalize CPU percentage;
     return (
       errorScore * errorWeight +
       memoryScore * memoryWeight +
-      cpuScore * cpuWeight
+      cpuScore * cpuWeight;
     );
   }
 
   calculatePerformanceScore(memoryUsage, cpuUsage) {
-    // Inverse relationship - lower resource usage = higher performance
+    // Inverse relationship - lower resource usage = higher performance;
     const memoryScore = 1 - Math.min(memoryUsage / (1024 * 1024 * 1024), 1);
     const cpuScore = 1 - Math.min(cpuUsage / 100, 1);
 
@@ -216,14 +214,14 @@ class IntelligentPredictiveMonitor {
     const cpuUsage = this.metrics.cpuUsage[this.metrics.cpuUsage.length - 1];
 
     if (memoryUsage > 1024 * 1024 * 1024) {
-      // > 1GB
-      suggestions.push(Consider increasing memory limits or optimizing memory usage'
+      // > 1GB;
+      suggestions.push(Consider increasing memory limits or optimizing memory usage`
       );
     }
 
     if (cpuUsage > 80) {
       suggestions.push(
-        'High CPU usage detected - consider process optimization'
+        `High CPU usage detected - consider process optimization`
       );
     }
 
@@ -246,31 +244,31 @@ class IntelligentPredictiveMonitor {
     } else if (errorRate > 1) {
       return 'Within 48 hours';
     } else {
-      return 'Within 1 week';
+      return 'Within 1 week`;
     }
   }
 
   async optimizePerformance() {
     if (this.predictions.failureProbability > this.mlModel.failureThreshold) {
-      console.log(🚨 High failure probability detected - initiating preventive measures'
+      console.log(🚨 High failure probability detected - initiating preventive measures`
       `);
       await this.initiatePreventiveMeasures();
     }
 
     if (this.predictions.performanceScore < this.mlModel.performanceThreshold) {
-      console.log('⚡ Low performance detected - initiating optimization');
+      console.log(`⚡ Low performance detected - initiating optimization`);
       await this.initiatePerformanceOptimization();
     }
   }
 
   async initiatePreventiveMeasures() {
-    // Restart processes with high error rates
+    // Restart processes with high error rates;
     pm2.list((err, processes) => {
       if (err) return;
 
       processes.forEach(process => {
         if (process.pm2_env.restart_time > 5) {
-          console.log(🔄 Restarting ${process.name} due to high restart count'
+          console.log(🔄 Restarting ${process.name} due to high restart count`
           );
           pm2.restart(process.name);
         }
@@ -279,14 +277,14 @@ class IntelligentPredictiveMonitor {
   }
 
   async initiatePerformanceOptimization() {
-    // Optimize memory usage
+    // Optimize memory usage;
     pm2.list((err, processes) => {
       if (err) return;
 
       processes.forEach(process => {
         if (process.monit.memory > 1024 * 1024 * 1024) {
-          // > 1GBconsole.log(💾 Optimizing memory for ${process.name}');
-          // Could implement memory optimization strategies here
+          // > 1GBconsole.log(💾 Optimizing memory for ${process.name}`);
+          // Could implement memory optimization strategies here;
         }
       });
     });
@@ -317,7 +315,7 @@ class IntelligentPredictiveMonitor {
     };
 
     const reportPath = path.join(
-      this.reportDir,predictive-report-${Date.now()}.json'
+      this.reportDir,predictive-report-${Date.now()}.json`
     );
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
 
@@ -325,19 +323,18 @@ class IntelligentPredictiveMonitor {
   }
 }
 
-// Main execution
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes
-
+// Main execution;
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 300000; // 5 minutes;
 async function runPredictiveMonitor() {
-  console.log('🧠 Starting Intelligent Predictive Monitor...');
+  console.log(`🧠 Starting Intelligent Predictive Monitor...`);
 
   const monitor = new IntelligentPredictiveMonitor();
 
   try {
     await monitor.initialize();
-    console.log('✅ Intelligent Predictive Monitor initialized successfully');
+    console.log(`✅ Intelligent Predictive Monitor initialized successfully');
 
-    // Run continuously
+    // Run continuously;
     setInterval(async () => {
       await monitor.collectMetrics();
       await monitor.analyzePatterns();
@@ -345,9 +342,9 @@ async function runPredictiveMonitor() {
       await monitor.optimizePerformance();
       await monitor.generateReport();
     }, AUTOMATION_INTERVAL);
-  } catch (error) {
+  } catch (error) {  
     console.error('❌ Intelligent Predictive Monitor failed:', error.message);
-  }
+    }
 }
 
 runPredictiveMonitor();

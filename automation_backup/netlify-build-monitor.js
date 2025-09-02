@@ -42,7 +42,7 @@ class NetlifyBuildMonitor {
     this.setupFixStrategies();
     this.ensureLogDirectory();
     this.log(
-  'Netlify Build Monitor initialized')}
+  `Netlify Build Monitor initialized`)}
   setupLogging() {
     this.log = message => {
       const timestamp = new Date().toISOString();
@@ -50,20 +50,20 @@ class NetlifyBuildMonitor {
       // console.log(logMessage);
       try {
         fs.appendFileSync(this.config.logFile, logMessage +;
-  '\n')} catch (error) {
+  `\n`)} catch (error) { 
         console.error(
-  'Failed to write to log file:', error.message)}
+  `Failed to write to log file:`, error.message) }
     }
 ;
     this.error = (message, error) => {
       const timestamp = new Date().toISOString();
       const errorMessage = `[${timestamp}] ERROR: ${message}${error ? ` - ${error.message}` :,
-  '}`;
+  `}`;
       console.error(errorMessage);
       try {
-        fs.appendFileSync(this.config.errorFile, errorMessage + '\n;
-  ')} catch (error) {
-        console.error('Failed to write to error log file: , error.message)}
+        fs.appendFileSync(this.config.errorFile, errorMessage + `\n;
+  ')} catch (error) { 
+        console.error('Failed to write to error log file: , error.message) }
     }
   }
   setupIssuePatterns() {
@@ -175,9 +175,9 @@ class NetlifyBuildMonitor {
         this.warn('Netlify configuration not found;
   ')}
       this.log('Health check completed successfully;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.error('Health check failed;
-  ', error)}
+  ', error) }
   }
   async monitorBuildStatus() {
     try {
@@ -197,9 +197,9 @@ class NetlifyBuildMonitor {
       // Check for dependency issues;
       await this.checkDependencyIssues();
       // Check for code quality issues;
-      await this.checkCodeQualityIssues()} catch (error) {
+      await this.checkCodeQualityIssues()} catch (error) { 
       this.error('Build status monitoring failed;
-  ', error)}
+  ', error) }
   }
   async analyzeChanges() {
     try {
@@ -207,14 +207,14 @@ class NetlifyBuildMonitor {
       const changedFiles = this.runCommand('git diff --name-only;
   ', {
         silent: true})
-        .split('\n;
-  ');
+        .split(`\n;
+  `);
         .filter(file => file.trim());
       this.log(`Analyzing ${changedFiles.length} changed files...`);
       for (const file of changedFiles) {
         if(
-          file.endsWith('.ts;
-  ') ||;
+          file.endsWith(`.ts;
+  `) ||;
           file.endsWith('.tsx;
   ') ||;
           file.endsWith('.js;
@@ -223,15 +223,15 @@ class NetlifyBuildMonitor {
   ')) {
           await this.analyzeFile(file)}
       }
-    } catch (error) {
+    } catch (error) { 
       this.error('Change analysis failed;
-  ', error)}
+  `, error) }
   }
   async analyzeFile(filePath) {
     try {
       if (!fs.existsSync(filePath)) {
         return}
-      const content = fs.readFileSync(filePath,utf8');
+      const content = fs.readFileSync(filePath,utf8`);
       // Check for common issues;
       const issues = this.detectIssues(content, filePath);
       if (issues.length > 0) {
@@ -239,26 +239,26 @@ class NetlifyBuildMonitor {
         if (this.config.autoFixEnabled) {
           await this.autoFixFile(filePath, issues)}
       }
-    } catch (error) {
-      this.error(`File analysis failed for ${filePath}`, error)}
+    } catch (error) { 
+      this.error(`File analysis failed for ${filePath }`, error)}
   }
   detectIssues(content, filePath) {
     const issues = [];
     // Check for TypeScript syntax errors;
     if (filePath.endsWith(
-  '.ts') || filePath.endsWith(
-  '.tsx')) {
+  `.ts`) || filePath.endsWith(
+  `.tsx`)) {
       try {
         this.runCommand(`npx tsc --noEmit --skipLibCheck ${filePath}`, {
-          silent: true})} catch (error) {
+          silent: true})} catch (error) { 
         issues.push({ type:;
-  'typescript_error', message: error.message })}
+  `typescript_error`, message: error.message  })}
     }
     // Check for ESLint issues;
     try {
-      this.runCommand(`npx eslint ${filePath} --format=json`, { silent: true })} catch (error) {
+      this.runCommand(`npx eslint ${filePath} --format=json`, { silent: true })} catch (error) { 
       issues.push({ type:;
-  'lint_error', message: error.message })}
+  `lint_error`, message: error.message  })}
     // Check for common code smells;
     if (content.includes(,
   // console.log(') && !filePath.includes(
@@ -272,7 +272,7 @@ class NetlifyBuildMonitor {
   'FIXME:')) {
       issues.push({ type:;
   'code_smell, message:;
-  'TODO/FIXME comment found' })}
+  `TODO/FIXME comment found` })}
     return issues}
   async autoFixFile(filePath, issues) {
     try {
@@ -282,14 +282,14 @@ class NetlifyBuildMonitor {
         if (fixStrategy) {
           await fixStrategy.call(this, filePath, issue)}
       }
-      this.log(`Auto-fix completed for ${filePath}`)} catch (error) {
-      this.error(`Auto-fix failed for ${filePath}`, error)}
+      this.log(`Auto-fix completed for ${filePath}`)} catch (error) { 
+      this.error(`Auto-fix failed for ${filePath }`, error)}
   }
   async checkBuildIssues() {
     try {
       // Check if build would succeed;
       this.log(
-  'Checking build compatibility...');
+  `Checking build compatibility...`);
       // Run a dry build;
       try {
         this.runCommand(
@@ -297,13 +297,13 @@ class NetlifyBuildMonitor {
           silent: true,
           timeout: 60000})
         this.log(,
-  Build compatibility check: OK)} catch (error) {
+  Build compatibility check: OK)} catch (error) { 
         this.log(
   'Build compatibility issues detected, attempting auto-fix...');
-        await this.autoFixBuildIssues(error)}
-    } catch (error) {
+        await this.autoFixBuildIssues(error) }
+    } catch (error) { 
       this.error(
-  'Build issue check failed', error)}
+  'Build issue check failed', error) }
   }
   async checkDependencyIssues() {
     try {
@@ -311,7 +311,7 @@ class NetlifyBuildMonitor {
   'Checking dependency health...');
       // Check for outdated dependencies;
       const outdated = this.runCommand(
-  'npm outdated --json', { silent: true })
+  `npm outdated --json`, { silent: true })
       const outdatedDeps = JSON.parse(outdated);
       if (Object.keys(outdatedDeps).length > 0) {
         this.log(
@@ -320,7 +320,7 @@ class NetlifyBuildMonitor {
           await this.updateDependencies()}
       } else {
         this.log(
-  'Dependencies are up to date')}
+  `Dependencies are up to date`)}
       // Check for security vulnerabilities;
       const audit = this.runCommand(
   'npm audit --json', { silent: true })
@@ -333,9 +333,9 @@ class NetlifyBuildMonitor {
         if (this.config.autoFixEnabled) {
           await this.fixSecurityVulnerabilities()}
       }
-    } catch (error) {
+    } catch (error) { 
       this.error(
-  'Dependency check failed', error)}
+  'Dependency check failed', error) }
   }
   async checkCodeQualityIssues() {
     try {
@@ -347,26 +347,26 @@ class NetlifyBuildMonitor {
   'npx eslint . --ext .js,.jsx,.ts,.tsx --format=json', {
           silent: true})
         this.log(,
-  ESLint check: OK)} catch (error) {
+  ESLint check: OK)} catch (error) { 
         this.log(
   'ESLint issues detected, attempting auto-fix...');
         if (this.config.autoFixEnabled) {
-          await this.fixLintErrors()}
+          await this.fixLintErrors() }
       }
       // Run TypeScript check;
       try {
         this.runCommand(
   'npx tsc --noEmit', { silent: true })
         this.log(,
-  TypeScript check: OK)} catch (error) {
+  TypeScript check: OK)} catch (error) { 
         this.log(
   'TypeScript issues detected, attempting auto-fix...');
         if (this.config.autoFixEnabled) {
-          await this.fixTypeScriptErrors()}
+          await this.fixTypeScriptErrors() }
       }
-    } catch (error) {
+    } catch (error) { 
       this.error(
-  'Code quality check failed', error)}
+  'Code quality check failed', error) }
   }
   // Fix strategies implementation;
   async fixBuildTimeout() {
@@ -381,9 +381,9 @@ class NetlifyBuildMonitor {
       // Update build scripts for better performance;
       await this.updateBuildScripts();
       this.log(
-  'Build timeout issues fixed')} catch (error) {
+  'Build timeout issues fixed')} catch (error) { 
       this.error(
-  'Failed to fix build timeout issues', error)}
+  'Failed to fix build timeout issues', error) }
   }
   async fixDependencyConflicts() {
     this.log(
@@ -400,9 +400,9 @@ class NetlifyBuildMonitor {
       this.runCommand(
   'npm install', { silent: true })
       this.log(
-  'Dependency conflicts fixed')} catch (error) {
+  'Dependency conflicts fixed')} catch (error) { 
       this.error(
-  'Failed to fix dependency conflicts', error)}
+  'Failed to fix dependency conflicts', error) }
   }
   async fixTypeScriptErrors() {
     this.log(
@@ -414,9 +414,9 @@ class NetlifyBuildMonitor {
       // Fix common TypeScript issues;
       await this.fixCommonTypeScriptIssues();
       this.log(
-  'TypeScript errors fixed')} catch (error) {
+  'TypeScript errors fixed')} catch (error) { 
       this.error(
-  'Failed to fix TypeScript errors', error)}
+  'Failed to fix TypeScript errors', error) }
   }
   async fixLintErrors() {
     this.log(
@@ -430,9 +430,9 @@ class NetlifyBuildMonitor {
       this.runCommand(
   'npx prettier --write .', { silent: true })
       this.log(,
-  Lint errors fixed')} catch (error) {
+  Lint errors fixed')} catch (error) { 
       this.error(
-  'Failed to fix lint errors', error)}
+  'Failed to fix lint errors', error) }
   }
   async fixMemoryIssues() {
     this.log(
@@ -443,9 +443,9 @@ class NetlifyBuildMonitor {
       // Optimize build process;
       await this.optimizeBuildProcess();
       this.log(
-  'Memory issues fixed')} catch (error) {
+  'Memory issues fixed')} catch (error) { 
       this.error(
-  'Failed to fix memory issues', error)}
+  'Failed to fix memory issues', error) }
   }
   async fixNetworkIssues() {
     this.log(
@@ -459,9 +459,9 @@ class NetlifyBuildMonitor {
       this.runCommand(
   'npm cache clean --force', { silent: true })
       this.log(
-  'Network issues fixed')} catch (error) {
+  'Network issues fixed')} catch (error) { 
       this.error(
-  'Failed to fix network issues', error)}
+  'Failed to fix network issues', error) }
   }
   async fixPermissionIssues() {
     this.log(
@@ -474,9 +474,9 @@ class NetlifyBuildMonitor {
       this.runCommand(
   'sudo chown -R $(whoami) .', { silent: true })
       this.log(
-  'Permission issues fixed')} catch (error) {
+  'Permission issues fixed')} catch (error) { 
       this.error(
-  'Failed to fix permission issues', error)}
+  'Failed to fix permission issues', error) }
   }
   async fixDiskSpaceIssues() {
     this.log(
@@ -493,9 +493,9 @@ class NetlifyBuildMonitor {
       this.runCommand(
   'git gc --prune=now', { silent: true })
       this.log(
-  'Disk space issues fixed')} catch (error) {
+  'Disk space issues fixed')} catch (error) { 
       this.error(
-  'Failed to fix disk space issues', error)}
+  'Failed to fix disk space issues', error) }
   }
   async updateDependencies() {
     this.log(
@@ -506,7 +506,7 @@ class NetlifyBuildMonitor {
   'npm update', { silent: true })
       // Check for major updates;
       const outdated = this.runCommand(
-  'npm outdated --json', { silent: true })
+  `npm outdated --json`, { silent: true })
       const outdatedDeps = JSON.parse(outdated);
       for (const [dep, info] of Object.entries(outdatedDeps)) {
         if (info.current !== info.latest) {
@@ -514,9 +514,9 @@ class NetlifyBuildMonitor {
           this.runCommand(`npm install ${dep}@latest`, { silent: true })}
       }
       this.log(
-  'Dependencies updated successfully')} catch (error) {
+  `Dependencies updated successfully`)} catch (error) { 
       this.error(
-  'Failed to update dependencies', error)}
+  'Failed to update dependencies', error) }
   }
   async fixSecurityVulnerabilities() {
     this.log(
@@ -539,9 +539,9 @@ class NetlifyBuildMonitor {
         this.runCommand(
   'npm audit fix --force', { silent: true })}
       this.log(
-  'Security vulnerabilities fixed')} catch (error) {
+  'Security vulnerabilities fixed')} catch (error) { 
       this.error(
-  'Failed to fix security vulnerabilities', error)}
+  'Failed to fix security vulnerabilities', error) }
   }
   async optimizeBuildConfig() {
     this.log(
@@ -570,9 +570,9 @@ class NetlifyBuildMonitor {
   next.config.js;
   ', config)}
       this.log('Build configuration optimized;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.error('Failed to optimize build configuration;
-  ', error)}
+  ', error) }
   }
   async updateBuildScripts() {
     this.log('Updating build scripts...;
@@ -594,9 +594,9 @@ class NetlifyBuildMonitor {
       fs.writeFileSync(
   'package.json', JSON.stringify(packageJson, null, 2));
       this.log(
-  'Build scripts updated')} catch (error) {
+  'Build scripts updated')} catch (error) { 
       this.error(
-  'Failed to update build scripts', error)}
+  'Failed to update build scripts', error) }
   }
   async fixCommonTypeScriptIssues() {
     this.log(
@@ -623,9 +623,9 @@ class NetlifyBuildMonitor {
         fs.writeFileSync('tsconfig.json;
   ', JSON.stringify(config, null, 2))}
       this.log('TypeScript configuration updated;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.error('Failed to fix TypeScript issues;
-  ', error)}
+  ', error) }
   }
   async updateMemoryLimits() {
     this.log('Updating memory limits...;
@@ -635,13 +635,13 @@ class NetlifyBuildMonitor {
   ',utf8'));
       // Update build scripts with memory limits;
       if (packageJson.scripts && packageJson.scripts.build) {
-        packageJson.scripts.build = `NODE_OPTIONS='--max-old-space-size=4096' ${packageJson.scripts.build}`}
+        packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`}
       fs.writeFileSync(
-  'package.json', JSON.stringify(packageJson, null, 2));
+  `package.json`, JSON.stringify(packageJson, null, 2));
       this.log(
-  'Memory limits updated')} catch (error) {
+  'Memory limits updated')} catch (error) { 
       this.error(
-  'Failed to update memory limits', error)}
+  'Failed to update memory limits', error) }
   }
   async optimizeBuildProcess() {
     this.log(
@@ -662,9 +662,9 @@ class NetlifyBuildMonitor {
         fs.writeFileSync('next.config.js;
   ', config)}
       this.log('Build process optimized;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.error('Failed to optimize build process;
-  ', error)}
+  ', error) }
   }
   async performDailyMaintenance() {
     this.log('Performing daily maintenance...;
@@ -681,9 +681,9 @@ class NetlifyBuildMonitor {
       // Run security audit;
       await this.fixSecurityVulnerabilities();
       this.log('Daily maintenance completed;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.error('Daily maintenance failed;
-  ', error)}
+  ', error) }
   }
   async performWeeklyOptimization() {
     this.log('Performing weekly optimization...;
@@ -704,9 +704,9 @@ class NetlifyBuildMonitor {
       await this.checkCodeQualityIssues();
       this.log(,
   Weekly optimization completed;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.error('Weekly optimization failed;
-  ', error)}
+  ', error) }
   }
   runCommand(command, options = {}) {
     try {
@@ -714,12 +714,12 @@ class NetlifyBuildMonitor {
         encoding: 'utf8,
         stdio: options.silent ?,
   pipe;
-  ': 'inherit,
+  `: `inherit,
         timeout: options.timeout || 30000,
         cwd: process.cwd()})
-      return result} catch (error) {
+      return result} catch (error) { 
       if (!options.silent) {
-        throw error}
+        throw error }
       return error.stdout || error.stderr || error.message}
   }
   warn(message) {
@@ -729,8 +729,8 @@ class NetlifyBuildMonitor {
     try {
       fs.appendFileSync(this.config.logFile, warnMessage +,
   \n;
-  ')} catch (error) {
-      console.error('Failed to write warning to log file: , error.message)}
+  `)} catch (error) { 
+      console.error(`Failed to write warning to log file: , error.message) }
   }
   async stop() {
     this.isRunning = false;

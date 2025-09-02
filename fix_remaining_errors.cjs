@@ -1,13 +1,11 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs-extra');
 
 async function fixRemainingErrors() {
   console.log('🔧 Fixing remaining TypeScript syntax errors...');
 
-  // Fix specific files with remaining errors
-
-  // Fix utils/api/quoteRequests.ts
+  // Fix specific files with remaining errors;
+  // Fix utils/api/quoteRequests.ts;
   const quoteRequestsPath = 'utils/api/quoteRequests.ts';
   if (await fs.pathExists(quoteRequestsPath)) {
     let content = await fs.readFile(quoteRequestsPath, 'utf8');
@@ -19,7 +17,7 @@ async function fixRemainingErrors() {
     console.log('✅ Fixed quoteRequests.ts');
   }
 
-  // Fix utils/browserExtensionDetector.ts
+  // Fix utils/browserExtensionDetector.ts;
   const browserDetectorPath = 'utils/browserExtensionDetector.ts';
   if (await fs.pathExists(browserDetectorPath)) {
     let content = await fs.readFile(browserDetectorPath, 'utf8');
@@ -31,7 +29,7 @@ async function fixRemainingErrors() {
     console.log('✅ Fixed browserExtensionDetector.ts');
   }
 
-  // Fix utils/data/services.ts
+  // Fix utils/data/services.ts;
   const servicesPath = 'utils/data/services.ts';
   if (await fs.pathExists(servicesPath)) {
     let content = await fs.readFile(servicesPath, 'utf8');
@@ -43,7 +41,7 @@ async function fixRemainingErrors() {
     console.log('✅ Fixed services.ts');
   }
 
-  // Fix utils/sanitizeHtml.ts
+  // Fix utils/sanitizeHtml.ts;
   const sanitizePath = 'utils/sanitizeHtml.ts';
   if (await fs.pathExists(sanitizePath)) {
     let content = await fs.readFile(sanitizePath, 'utf8');
@@ -59,7 +57,7 @@ async function fixRemainingErrors() {
     console.log('✅ Fixed sanitizeHtml.ts');
   }
 
-  // Fix utils/supabase/client.ts
+  // Fix utils/supabase/client.ts;
   const clientPath = 'utils/supabase/client.ts';
   if (await fs.pathExists(clientPath)) {
     let content = await fs.readFile(clientPath, 'utf8');
@@ -71,7 +69,7 @@ async function fixRemainingErrors() {
     console.log('✅ Fixed client.ts');
   }
 
-  // Fix utils/testing-system.ts
+  // Fix utils/testing-system.ts;
   const testingPath = 'utils/testing-system.ts';
   if (await fs.pathExists(testingPath)) {
     let content = await fs.readFile(testingPath, 'utf8');
@@ -102,7 +100,7 @@ async function fixRemainingErrors() {
     console.log('✅ Fixed testing-system.ts');
   }
 
-  // Fix utils/types/service.ts
+  // Fix utils/types/service.ts;
   const servicePath = 'utils/types/service.ts';
   if (await fs.pathExists(servicePath)) {
     let content = await fs.readFile(servicePath, 'utf8');

@@ -12,7 +12,7 @@ class IntelligentOrchestrator {
     this.monitoring = false;
     this.logFile = path.join(__dirname,
   'logs',
-  'intelligent-orchestrator.log');
+  `intelligent-orchestrator.log`);
     this.ensureLogDirectory();
 ;
   log(message) {
@@ -35,7 +35,7 @@ fs.appendFileSync(this.logFile, logMessage);fs.appendFileSync(this.logFile, logM
 loadAutomationSystems() {loadAutomationSystems() {
 const systems = [
       { name:,
-  lint-monitor', path: 'lint-monitor.js, priority:,
+  lint-monitor`, path: `lint-monitor.js, priority:,
   high' },
       { name: 'lint-fixer, path:,
   lint-error-fixer.js', priority: 'high },
@@ -64,7 +64,7 @@ const systems = [
           ...system,
           path: systemPath,
           status:;
-  'available',
+  `available`,
           lastRun: null,
           successRate: 0,
           averageExecutionTime: 0})}
@@ -79,18 +79,18 @@ const startTime = Date.now();const startTime = Date.now();
 try {
       this.log(`🚀 Running system: ${systemName}`);
       const result = execSync(`node,
-  ${system.path}'`, {
-        encoding: 'utf8,
+  ${system.path}``, {
+        encoding: `utf8,
         stdio:;
-  'pipe',
+  `pipe`,
         ...options})
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, true, executionTime);
       this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
-      return { success: true, output: result, executionTime }} catch (error) {
+      return { success: true, output: result, executionTime }} catch (error) { 
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, false, executionTime);
-      this.log(`❌ System failed: ${systemName} - ${error.message}`);
+      this.log(`❌ System failed: ${systemName } - ${error.message}`);
       return { success: false, error: error.message, executionTime }}
   }
 updateSystemMetrics(systemName, success, executionTime) {updateSystemMetrics(systemName, success, executionTime) {
@@ -105,7 +105,7 @@ const system = this.automationSystems.get(systemName);
     system.averageExecutionTime = (currentAvgTime + executionTime) / totalRuns;
     system.lastRun = new Date();
     system.status = success ?,
-  success': 'failed}
+  success`: `failed}
 async runPriorityBasedExecution() {async runPriorityBasedExecution() {
 this.log(
   '🎯 Running priority-based execution...');
@@ -126,7 +126,7 @@ for (const system of systems) {
         results.push({ name: system.name, ...result })
         // Add delay between high-priority systems;
         if (system.priority ===;
-  'high') {
+  `high`) {
           await this.sleep(2000)}
       }
     }
@@ -134,7 +134,7 @@ for (const system of systems) {
     return results}
 async runIntelligentExecution() {async runIntelligentExecution() {
 this.log(
-  '🧠 Running intelligent execution...');
+  `🧠 Running intelligent execution...`);
     // Analyze current state;
     const state = await this.analyzeCurrentState();
     // Determine which systems to run based on state;
@@ -163,20 +163,20 @@ const state = {
     try {
       // Check for lint errors;
       execSync(,
-  npm run lint', { stdio: 'pipe })} catch (error) {
-      state.hasLintErrors = true}
+  npm run lint`, { stdio: `pipe })} catch (error) { 
+      state.hasLintErrors = true }
     try {
       // Check for TypeScript errors;
       execSync(,
-  npx tsc --noEmit', { stdio: 'pipe })} catch (error) {
-      state.hasTypeScriptErrors = true}
+  npx tsc --noEmit', { stdio: 'pipe })} catch (error) { 
+      state.hasTypeScriptErrors = true }
 // Check build time;// Check build time;
 try {
       const buildStart = Date.now();
       execSync(,
   npm run build', { stdio: 'pipe })
-      state.lastBuildTime = Date.now() - buildStart} catch (error) {
-      // Build failed}
+      state.lastBuildTime = Date.now() - buildStart} catch (error) { 
+      // Build failed }
     return state}
 determineOptimalSystems(state) {determineOptimalSystems(state) {
 const systems = [];
@@ -201,7 +201,7 @@ const systems = [];
     const now = Date.now();
     const systemsToCheck = [
   'performance',
-  'content-generator'];
+  `content-generator`];
     for (const system = this.automationSystems.get(systemName);
       if (system && (!system.lastRun || now - system.lastRun.getTime() > 30 * 60 * 1000)) {
         systems.push(systemName)}
@@ -220,7 +220,7 @@ const learningKey = `${systemName}_${JSON.stringify(state)}`;
     this.learningData.set(learningKey, currentData)}
 async runContinuousIntelligence() {async runContinuousIntelligence() {
 this.log(
-  '🔄 Starting continuous intelligent automation...');
+  `🔄 Starting continuous intelligent automation...`);
     // Run initial analysis;
     await this.runIntelligentExecution();
     // Set up continuous monitoring;
@@ -245,7 +245,7 @@ this.log(
           if (filename && (filename.endsWith(
   '.tsx') || filename.endsWith(
   '.ts') || filename.endsWith(
-  '.js'))) {
+  `.js`))) {
             const filePath = path.join(dir, filename);
             this.log(`📝 File changed: ${filePath}`);
             setTimeout(() => {
@@ -254,20 +254,20 @@ this.log(
     }
 ;
     this.log(,
-  ✅ Intelligent file watcher started')}
+  ✅ Intelligent file watcher started`)}
 async handleIntelligentFileChange(filePath) {async handleIntelligentFileChange(filePath) {
 // Analyze the type of change and run appropriate systems;
     const fileName = path.basename(filePath);
     if (fileExtension ===;
-  '.tsx' || fileExtension ===;
-  '.ts') {
+  `.tsx' || fileExtension ===;
+  '.ts`) {
       // Check for lint issues first;
       try {
         execSync(`npx eslint;
-  '${filePath}'`, { stdio: 'pipe })} catch (error) {
-        this.log(`🔧 Auto-fixing issues in: ${filePath}`);
+  `${filePath}``, { stdio: `pipe })} catch (error) { 
+        this.log(`🔧 Auto-fixing issues in: ${filePath }`);
         await this.runSystem(
-  'lint-fixer')}
+  `lint-fixer`)}
 ;
 // If it;
   's a component, consider generating tests;// If it's a component, consider generating tests;
@@ -277,7 +277,7 @@ if (filePath.includes(
   'test-generator');
         if (system && (!system.lastRun || Date.now() - system.lastRun.getTime() > 10 * 60 * 1000)) {
           await this.runSystem(
-  'test-generator')}
+  `test-generator`)}
       }
     }
   }
@@ -314,7 +314,7 @@ for (const [key, data] of this.learningData) {
     return report}
 async optimizeSystems() {async optimizeSystems() {
 this.log(
-  '🔧 Optimizing automation systems...');
+  `🔧 Optimizing automation systems...`);
     const report = this.generateIntelligenceReport();
     // Implement optimizations based on report;
     for (const recommendation of report.recommendations) {
@@ -323,11 +323,11 @@ this.log(
 for (const [name, system] of this.automationSystems) {
       if (system.successRate < 0.7) {
         system.priority =;
-  'high';
+  `high`;
         this.log(`⚠️ Increased priority for ${name} due to low success rate`)} else if (system.successRate > 0.95 && system.priority ===;
-  'high') {
+  `high`) {
         system.priority =;
-  'medium';
+  `medium`;
         this.log(`✅ Decreased priority for ${name} due to high success rate`)}
     }
   }
@@ -335,7 +335,7 @@ for (const [name, system] of this.automationSystems) {
     return new Promise(resolve => setTimeout(resolve, ms))}
   stop() {
     this.log(
-  '🛑 Intelligent orchestrator stopped')}
+  `🛑 Intelligent orchestrator stopped`)}
 getStatus() {getStatus() {
 const status = {
   running: true,
@@ -358,9 +358,9 @@ const command = process.argv[2];
 const subCommand = process.argv[3];
 switch (command) {
   case,
-  run': ;
+  run`: ;
     if (subCommand ===;
-  'priority) {
+  `priority) {
       orchestrator.runPriorityBasedExecution()} else if (subCommand ===,
   intelligent') {
       orchestrator.runIntelligentExecution()} else {

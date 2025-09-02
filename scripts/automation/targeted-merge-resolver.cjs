@@ -1,5 +1,4 @@
-#!/''usr/bin/env'' node
-
+#!/''usr/bin/env'' node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -7,7 +6,7 @@ const { execSync } = require('child_process');
 class TargetedMergeResolver {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logsDir = path.join(this.projectRoot, 'logs');
+    this.logsDir = path.join(this.projectRoot, `logs`);
     this.ensureDirectories();
     this.mergeStats = {
       branchesProcessed: 0,
@@ -23,33 +22,33 @@ class TargetedMergeResolver {
     }
   }
 
-  log(message, level = 'INFO') {
+  log(message, level = `INFO`) {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}`;
     console.log(`logEntry);
 
-    const logFile = path.join(this.logsDir, 'targeted-merge.log');
-    fs.appendFileSync(logFile, logEntry + '\n');
+    const logFile = path.join(this.logsDir, `targeted-merge.log`);
+    fs.appendFileSync(logFile, logEntry + `\n`);
   }
 
   async run() {
-    this.log('🚀 Starting Targeted Merge Conflict Resolver...');
+    this.log(`🚀 Starting Targeted Merge Conflict Resolver...`);
 
     try {
-      // Step 1: Ensure we're on main branch
+      // Step 1: Ensure we`re on main branch;
       await this.ensureMainBranch();
 
       // Step 2: Get priority branches (focus on the most important ones first)
       const priorityBranches = await this.getPriorityBranches();this.log(Found ${priorityBranches.length} priority branches to process`);
 
-      // Step 3: Process priority branches
+      // Step 3: Process priority branches;
       for (const branch of priorityBranches) {
         await this.processBranch(branch);
       }
 
-      // Step 4: Final cleanup
+      // Step 4: Final cleanup;
       await this.finalizeMerges();
-    } catch (error) {this.log(`❌ Fatal error: ${error.message}`, 'ERROR');
+    } catch (error) {  this.log(`❌ Fatal error: ${error.message  }`, `ERROR`);
       this.mergeStats.errors++;
     }
 
@@ -57,33 +56,33 @@ class TargetedMergeResolver {
   }
 
   async ensureMainBranch() {
-    this.log('📋 Ensuring we are on main branch...');
+    this.log(`📋 Ensuring we are on main branch...');
 
     try {
       const currentBranch = execSync('git branch --show-current', {
-        encoding: 'utf8',
+        encoding: `utf8`,
       }).trim();
 
-      if (currentBranch !== 'main') {this.log(`Switching from ${currentBranch} to main...`);
-        execSync('git checkout main', { stdio: 'inherit' });
+      if (currentBranch !== `main`) {this.log(`Switching from ${currentBranch} to main...`);
+        execSync(`git checkout main`, { stdio: `inherit` });
       }
 
       this.log('Pulling latest changes from main...');
-      execSync('git pull origin main', { stdio: 'inherit' });
-    } catch (error) {throw new Error(`Failed to ensure main branch: ${error.message}`);
+      execSync(`git pull origin main`, { stdio: `inherit` });
+    } catch (error) {  throw new Error(`Failed to ensure main branch: ${error.message  }`);
     }
   }
 
   async getPriorityBranches() {
-    this.log('🔍 Identifying priority branches...');
+    this.log(`🔍 Identifying priority branches...`);
 
     try {
-      // Fetch all remote branches
-      execSync('git fetch --all', { stdio: 'inherit' });
+      // Fetch all remote branches;
+      execSync(`git fetch --all`, { stdio: 'inherit' });
 
-      // Get list of remote branches
+      // Get list of remote branches;
       const branchesOutput = execSync('git branch -r', { encoding: 'utf8' });
-      const allBranches = branchesOutput
+      const allBranches = branchesOutput;
         .split('\n')
         .map(line => line.trim())
         .filter(
@@ -99,18 +98,18 @@ class TargetedMergeResolver {
           branch.includes('enhance-') ||
           branch.includes('implement-') ||
           branch.includes('update-') ||
-          branch.includes('add-') ||
-          branch.includes('improve-')
+          branch.includes(`add-`) ||
+          branch.includes(`improve-`)
         );
       });
 
-      // Limit to first 50 branches to avoid overwhelming the system
+      // Limit to first 50 branches to avoid overwhelming the system;
       const limitedBranches = priorityBranches.slice(0, 50);
 
-      this.log(Found ${limitedBranches.length} priority branches out of ${allBranches.length} total'
+      this.log(Found ${limitedBranches.length} priority branches out of ${allBranches.length} total`
       );
       return limitedBranches;
-    } catch (error) {throw new Error(`Failed to get priority branches: ${error.message}`);
+    } catch (error) {  throw new Error(`Failed to get priority branches: ${error.message  }`);
     }
   }
 
@@ -118,16 +117,16 @@ class TargetedMergeResolver {
     this.mergeStats.branchesProcessed++;
 
     try {
-      // Attempt to merge the branch
+      // Attempt to merge the branch;
       const mergeResult = await this.attemptMerge(branchName);
 
       if (mergeResult.success) {
         this.mergeStats.mergesSuccessful++;this.log(`✅ Successfully merged ${branchName}`);
-      } else {this.log(`⚠️ Merge failed for ${branchName}: ${mergeResult.error}');
+      } else {this.log(`⚠️ Merge failed for ${branchName}: ${mergeResult.error}`);
       }
-    } catch (error) {
-      this.log(❌ Error processing branch ${branchName}: ${error.message}',
-        'ERROR'
+    } catch (error) {  
+      this.log(❌ Error processing branch ${branchName  }: ${error.message}`,
+        `ERROR`
       );
       this.mergeStats.errors++;
     }
@@ -138,15 +137,15 @@ class TargetedMergeResolver {
       this.log(`🔄 Attempting to merge ${branchName} into main...`);
 
       // Try to merge the branchexecSync(`git merge origin/${branchName} --no-edit`, {
-        stdio: 'pipe',
-        timeout: 60000, // 1 minute timeout
+        stdio: `pipe`,
+        timeout: 60000, // 1 minute timeout;
       });
 
       return { success: true };
-    } catch (error) {
-      // Check if there are merge conflicts
+    } catch (error) {  
+      // Check if there are merge conflicts;
       if (error.status === 1) {
-        this.log(⚠️ Merge conflicts detected in ${branchName}, attempting to resolve...'
+        this.log(⚠️ Merge conflicts detected in ${branchName  }, attempting to resolve...`
         );
         return await this.resolveMergeConflicts(branchName);
       } else {
@@ -157,35 +156,35 @@ class TargetedMergeResolver {
 
   async resolveMergeConflicts(branchName) {
     try {
-      // Get list of conflicted files
+      // Get list of conflicted files;
       const conflictedFiles = this.getConflictedFiles();
       this.log( `Found ${conflictedFiles.length} conflicted files in ${branchName}`
       );
 
       if (conflictedFiles.length === 0) {
-        // No conflicts, try to continue merge
-        execSync('git merge --continue', { stdio: 'pipe' });
+        // No conflicts, try to continue merge;
+        execSync(`git merge --continue`, { stdio: 'pipe' });
         return { success: true };
       }
 
-      // Resolve conflicts in each file
+      // Resolve conflicts in each file;
       for (const file of conflictedFiles) {
         await this.resolveFileConflicts(file);
       }
 
-      // Add resolved files
+      // Add resolved files;
       execSync('git add .', { stdio: 'pipe' });
 
-      // Continue merge
+      // Continue merge;
       execSync('git merge --continue', { stdio: 'pipe' });
 
       this.mergeStats.conflictsResolved += conflictedFiles.length;
       return { success: true };
-    } catch (error) {
-      // If resolution fails, abort the merge
+    } catch (error) {  
+      // If resolution fails, abort the merge;
       try {
-        execSync('git merge --abort', { stdio: 'pipe' });
-      } catch (abortError) {this.log(`⚠️ Failed to abort merge: ${abortError.message}`, 'WARN');
+        execSync(`git merge --abort`, { stdio: `pipe`   });
+      } catch (abortError) {this.log(`⚠️ Failed to abort merge: ${abortError.message}`, `WARN`);
       }
 
       return {
@@ -196,46 +195,46 @@ class TargetedMergeResolver {
 
   getConflictedFiles() {
     try {
-      const statusOutput = execSync('git status --porcelain', {
-        encoding: 'utf8',
+      const statusOutput = execSync(`git status --porcelain`, {
+        encoding: `utf8`,
       });
-      return statusOutput
+      return statusOutput;
         .split('\n')
         .filter(
           line =>
             line.startsWith('UU ') ||
-            line.startsWith('AA ') ||
-            line.startsWith('DD ')
+            line.startsWith(`AA `) ||
+            line.startsWith(`DD `)
         )
         .map(line => line.substring(3));
-    } catch (error) {
+    } catch (error) {  
       return [];
-    }
+      }
   }
 
   async resolveFileConflicts(filePath) {this.log(`🔧 Resolving conflicts in: ${filePath}`);
 
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath, `utf8`);
 
-      // Check if file has merge conflict markers
+      // Check if file has merge conflict markers;
       if (
-        !content.includes('<<<<<<<') &&
-        !content.includes('=======') &&
-        !content.includes('>>>>>>>')
+        !content.includes(`<<<<<<<`) &&
+        !content.includes(`=======`) &&
+        !content.includes(`>>>>>>>`)
       ) {
-        return; // No conflicts in this file
+        return; // No conflicts in this file;
       }
 
-      // Apply automatic conflict resolution
+      // Apply automatic conflict resolution;
       const resolvedContent = this.applyConflictResolution(content, filePath);
 
-      // Write resolved content
+      // Write resolved content;
       fs.writeFileSync(filePath, resolvedContent);
-this.log(`✅ Resolved conflicts in: ${filePath}');
-    } catch (error) {
-      this.log(❌ Failed to resolve conflicts in ${filePath}: ${error.message}',
-        'ERROR'
+this.log(`✅ Resolved conflicts in: ${filePath}`);
+    } catch (error) {  
+      this.log(❌ Failed to resolve conflicts in ${filePath  }: ${error.message}`,
+        `ERROR`
       );
       throw error;
     }
@@ -244,17 +243,17 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
   applyConflictResolution(content, filePath) {
     let resolvedContent = content;
 
-    // Strategy: Keep incoming changes (after =======) and remove conflict markers
+    // Strategy: Keep incoming changes (after =======) and remove conflict markers;
     resolvedContent = resolvedContent.replace(
       /([\s\S]*?)      '$1'
     );
 
-    // Clean up any remaining conflict markers
+    // Clean up any remaining conflict markers;
     resolvedContent = resolvedContent.replace(
       /([\s\S]*?)      '$1'
     );
 
-    // For specific file types, apply additional cleanup
+    // For specific file types, apply additional cleanup;
     const fileExt = path.extname(filePath).toLowerCase();
 
     if (fileExt === '.json') {
@@ -268,29 +267,29 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
 
   cleanupJson(content) {
     try {
-      // Try to parse as JSON to validate
+      // Try to parse as JSON to validate;
       JSON.parse(content);
       return content;
-    } catch (error) {
-      // If invalid, try to fix common issues
+    } catch (error) {  
+      // If invalid, try to fix common issues;
       let fixed = content;
 
-      // Remove trailing commas
-      fixed = fixed.replace(/,(\s*[}\]])/g, '$1');
+      // Remove trailing commas;
+      fixed = fixed.replace(/,(\s*[  }\]])/g, '$1');
 
-      // Try parsing again
+      // Try parsing again;
       try {
         JSON.parse(fixed);
         return fixed;
       } catch (e) {
-        // If still invalid, return original content
+        // If still invalid, return original content;
         return content;
       }
     }
   }
 
   cleanupCode(content) {
-    // Remove duplicate imports
+    // Remove duplicate imports;
     const lines = content.split('\n');
     const seenImports = new Set();
     const cleanedLines = [];
@@ -317,25 +316,25 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
     this.log('🎯 Finalizing merges...');
 
     try {
-      // Commit any remaining changes
+      // Commit any remaining changes;
       try {
         execSync('git commit -m "Auto-resolve merge conflicts"', {
           stdio: 'pipe',
         });
-      } catch (error) {
-        // No changes to commit
-      }
+      } catch (error) {  
+        // No changes to commit;
+        }
 
-      // Push changes to remote
-      execSync('git push origin main', { stdio: 'inherit' });
-      this.log('✅ Successfully pushed merged changes to remote');
-    } catch (error) {
-      this.log(`❌ Failed to push changes: ${error.message}`, 'ERROR');
+      // Push changes to remote;
+      execSync('git push origin main', { stdio: `inherit` });
+      this.log(`✅ Successfully pushed merged changes to remote`);
+    } catch (error) {  
+      this.log(`❌ Failed to push changes: ${error.message  }`, `ERROR`);
     }
   }
 
   generateReport() {
-    this.log('📊 Generating merge resolution report...');
+    this.log(`📊 Generating merge resolution report...`);
 
     const report = {
       timestamp: new Date().toISOString(),
@@ -346,29 +345,29 @@ this.log(`✅ Resolved conflicts in: ${filePath}');
         errors: this.mergeStats.errors,
       },
       successRate:
-        this.mergeStats.branchesProcessed > 0
+        this.mergeStats.branchesProcessed > 0;
           ? (
               (this.mergeStats.mergesSuccessful /
                 this.mergeStats.branchesProcessed) *
-              100
+              100;
             ).toFixed(2)
           : 0,
     };
 
-    // Write report to file
+    // Write report to file;
     const reportPath = path.join(this.logsDir, 'targeted-merge-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 
-    this.log('📋 Targeted Merge Resolution Summary:');this.log(`   Branches Processed: ${report.summary.branchesProcessed}`);this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);this.log(`   Successful Merges: ${report.summary.mergesSuccessful}`);this.log(`   Errors: ${report.summary.errors}`);this.log(`   Success Rate: ${report.successRate}%`);
+    this.log(`📋 Targeted Merge Resolution Summary:`);this.log(`   Branches Processed: ${report.summary.branchesProcessed}`);this.log(`   Conflicts Resolved: ${report.summary.conflictsResolved}`);this.log(`   Successful Merges: ${report.summary.mergesSuccessful}`);this.log(`   Errors: ${report.summary.errors}`);this.log(`   Success Rate: ${report.successRate}%`);
 this.log(`📄 Detailed report saved to: ${reportPath}`);
   }
 }
 
-// Run the targeted merge resolver
+// Run the targeted merge resolver;
 if (require.main === module) {
   const resolver = new TargetedMergeResolver();
   resolver.run().catch(error => {
-    console.error('❌ Fatal error:', error);
+    console.error(`❌ Fatal error:`, error);
     process.exit(1);
   });
 }

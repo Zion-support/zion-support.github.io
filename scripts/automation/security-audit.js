@@ -9,9 +9,9 @@ import { fileURLToPath } from;
   'url';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log(
-  '🔒 Starting continuous security audit automation...');
+  `🔒 Starting continuous security audit automation...`);
 // // // console.log(
-  '🔒 Starting continuous security audit automation...');
+  `🔒 Starting continuous security audit automation...`);
 // Get automation interval from environment variable (default: 4 hours);
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000 // 4 hours;
 async function runSecurityAudit() {
@@ -19,35 +19,35 @@ async function runSecurityAudit() {
     // // // console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
     // Run npm audit;
     // // // console.log(,
-  🔍 Running npm security audit...');
+  🔍 Running npm security audit...`);
     try {
       execSync(
-  'npm audit --audit-level=moderate', { stdio: 'inherit })
+  `npm audit --audit-level=moderate`, { stdio: `inherit })
       // // // console.log(,
-  ✅ Security audit completed - no issues found')} catch (error) {
+  ✅ Security audit completed - no issues found')} catch (error) {  
       // // // console.log(
   '⚠️  Security issues found, attempting auto-fix...');
       try {
         execSync(
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit })
+  'npm audit fix --audit-level=moderate', { stdio: `inherit   })
         // // // console.log(,
-  ✅ Security issues auto-fixed')} catch (fixError) {
+  ✅ Security issues auto-fixed`)} catch (fixError) {
         // // // console.log(
-  '❌ Could not auto-fix security issues');
+  `❌ Could not auto-fix security issues`);
     // // // // // // // console.log(`🔒 Running security audit at ${new Date().toISOString()}`);
     // Run npm audit;
     // // // // // // // console.log(
-  '🔍 Running npm security audit...');
+  `🔍 Running npm security audit...`);
     try {
       execSync(
-  'npm audit --audit-level=moderate', { stdio: 'inherit })
+  `npm audit --audit-level=moderate`, { stdio: 'inherit })
       // // // // // // // console.log(,
-  ✅ Security audit completed - no issues found')} catch (error) {
+  ✅ Security audit completed - no issues found')} catch (error) {  
       // // // // // // // console.log(
   '⚠️  Security issues found, attempting auto-fix...');
       try {
         execSync(
-  'npm audit fix --audit-level=moderate', { stdio: 'inherit })
+  'npm audit fix --audit-level=moderate', { stdio: 'inherit   })
         // // // // // // // console.log(,
   ✅ Security issues auto-fixed')} catch (fixError) {
         // // // // // // // console.log(
@@ -62,7 +62,7 @@ async function runSecurityAudit() {
   ', { stdio: 'pipe })
       // // // console.log(,
   ✅ No known vulnerabilities found;
-  ')} catch (error) {
+  ')} catch (error) {  
       // // // console.log('⚠️  Known vulnerabilities detected;
   ');
     // Check for outdated packages with security implications;
@@ -70,7 +70,7 @@ async function runSecurityAudit() {
   ');
     try {
       execSync('npm outdated;
-  ', { stdio: 'inherit })} catch (error) {
+  ', { stdio: 'inherit   })} catch (error) {  
       // // // console.log(,
   ✅ All packages are up to date;
   ');
@@ -81,21 +81,21 @@ async function runSecurityAudit() {
   ');
     try {
       execSync('npm audit --json;
-  ', { stdio: 'pipe })
+  ', { stdio: 'pipe   })
       // // // // // // // console.log(,
   ✅ No known vulnerabilities found;
-  ')} catch (error) {
+  ')} catch (error) {  
       // // // // // // // console.log('⚠️  Known vulnerabilities detected;
-  ')}
+  ')  }
     // Check for outdated packages with security implications;
     // // // // // // // console.log('🔄 Checking for outdated packages...;
   ');
     try {
       execSync('npm outdated;
-  ', { stdio: 'inherit })} catch (error) {
+  ', { stdio: 'inherit })} catch (error) {  
       // // // // // // // console.log(,
   ✅ All packages are up to date;
-  ')}
+  ')  }
     // Run security scan if available;
     // // // // // // // console.log('🔍 Running additional security scans...;
   ');
@@ -103,32 +103,32 @@ async function runSecurityAudit() {
       if (fs.existsSync('security-scan.js;
   ')) {
         execSync('node security-scan.js;
-  ', { stdio: 'inherit })} catch (error) {
+  ', { stdio: 'inherit })} catch (error) {  
       // // // // // // // console.log(,
   ℹ️  No additional security scan available;
-  ')}
-      // // // console.log('ℹ️  No additional security scan available;
-  ');
+  ')  }
+      // // // console.log(`ℹ️  No additional security scan available;
+  `);
     // Generate security report;
-  status: 'completed}
+  status: `completed}
 ;
     const reportPath = path.join(process.cwd(), ,
   security-audit-report.json;
-  ');
+  `);
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`📊 Report saved to ${reportPath}`);
-    // // // console.log('✅ Continuous security audit completed successfully;
-  ')} catch (error) {
-    // // // console.error('❌ Continuous security audit failed: , error.message);
-    // // // // // // // console.log(`📊 Report saved to ${reportPath}`);
+    // // // console.log(`✅ Continuous security audit completed successfully;
+  `)} catch (error) {  
+    // // // console.error(`❌ Continuous security audit failed: , error.message);
+    // // // // // // // console.log(`📊 Report saved to ${reportPath  }`);
     // // // // // // // console.log(,
   ✅ Continuous security audit completed successfully;
-  ')} catch (error) {
-    // // // // // // // console.error('❌ Continuous security audit failed: , error.message);
-    // Don't exit, just log the error and continue;
+  `)} catch (error) {  
+    // // // // // // // console.error(`❌ Continuous security audit failed: , error.message);
+    // Don`t exit, just log the error and continue;
 // Main continuous loop;
 async function runContinuous() {
-  // // // // // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+  // // // // // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60  } minute intervals`);
   // // // console.log(`🚀 Starting continuous security audit with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial security audit;
   await runSecurityAudit();
@@ -138,15 +138,15 @@ async function runContinuous() {
   // // // // // // // console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`)}
 // Handle graceful shutdown;
 process.on(
-  'SIGINT', () => {
+  `SIGINT`, () => {
   // // // // // // // console.log(
-  '🛑 Received SIGINT, shutting down gracefully...');
+  `🛑 Received SIGINT, shutting down gracefully...`);
   // // // console.log(`✅ Continuous security audit running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown;
 process.on(
-  'SIGINT', () => {
+  `SIGINT`, () => {
   // // // console.log(
-  '🛑 Received SIGINT, shutting down gracefully...');
+  `🛑 Received SIGINT, shutting down gracefully...`);
   process.exit(0)})
 process.on(
   'SIGTERM', () => {

@@ -18,7 +18,7 @@ class LintAutomationManager {
     this.watcher = null;
     this.logFile = path.join(__dirname,
   'logs',
-  'lint-automation.log');
+  `lint-automation.log`);
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
     this.ensureLogDirectory()}
@@ -35,36 +35,36 @@ class LintAutomationManager {
   async runLint() {
     try {
       this.log(,
-  🔍 Running ESLint...');
+  🔍 Running ESLint...`);
       const result = execSync(
-  'npm run lint', {
+  `npm run lint', {
         encoding: 'utf8,
         stdio:;
   'pipe'})
       this.log(
-  '✅ Lint completed successfully');
-      return { success: true, output: result }} catch (error) {
-      this.log(`❌ Lint errors found: ${error.message}`);
+  `✅ Lint completed successfully`);
+      return { success: true, output: result }} catch (error) { 
+      this.log(`❌ Lint errors found: ${error.message }`);
       return { success: false, output: error.stdout || error.message }}
   }
   async fixLintErrors() {
     try {
       this.log(,
-  🔧 Attempting to fix lint errors...');
+  🔧 Attempting to fix lint errors...`);
       const result = execSync(
-  'npm run lint -- --fix', {
+  `npm run lint -- --fix', {
         encoding: 'utf8,
         stdio:;
   'pipe'})
       this.log(
-  '✅ Lint errors fixed successfully');
-      return { success: true, output: result }} catch (error) {
-      this.log(`❌ Failed to fix lint errors: ${error.message}`);
+  `✅ Lint errors fixed successfully`);
+      return { success: true, output: result }} catch (error) { 
+      this.log(`❌ Failed to fix lint errors: ${error.message }`);
       return { success: false, output: error.stdout || error.message }}
   }
   startFileWatcher() {
     this.log(
-  '👀 Starting file watcher...');
+  `👀 Starting file watcher...`);
     const watcher = chokidar.watch([;
   'pages/**/*.{js,jsx,ts,tsx}',
   'components/**/*.{js,jsx,ts,tsx}',
@@ -75,33 +75,33 @@ class LintAutomationManager {
       persistent: true})
     let debounceTimer;
     watcher.on(
-  'change', (filePath) => {
+  `change`, (filePath) => {
       clearTimeout(debounceTimer);
       debounceTimer = setTimeout(async () => {
         this.log(`📝 File changed: ${filePath}`);
         await this.handleFileChange(filePath)}, 1000)})
     this.watcher = watcher;
     this.log(
-  '✅ File watcher started')}
+  `✅ File watcher started`)}
   async handleFileChange(filePath) {
     this.log(`🔍 Checking file: ${filePath}`);
     // Run lint on the specific file;
     try {
-      const result = execSync(`npx eslint '${filePath}' --fix`, {
+      const result = execSync(`npx eslint `${filePath}` --fix`, {
         encoding:,
-  utf8',
-        stdio: 'pipe})
-      this.log(`✅ Fixed issues in: ${filePath}`)} catch (error) {
-      this.log(`❌ Issues found in ${filePath}: ${error.stdout || error.message}`)}
+  utf8`,
+        stdio: `pipe})
+      this.log(`✅ Fixed issues in: ${filePath}`)} catch (error) { 
+      this.log(`❌ Issues found in ${filePath }: ${error.stdout || error.message}`)}
   }
   async start() {
     if (this.isRunning) {
       this.log(,
-  ⚠️ Automation is already running');
+  ⚠️ Automation is already running`);
       return}
     this.isRunning = true;
     this.log(
-  '🚀 Starting Lint Automation Manager...');
+  `🚀 Starting Lint Automation Manager...');
     // Initial lint check;
     const initialResult = await this.runLint();
     if (!initialResult.success) {
@@ -126,7 +126,7 @@ class LintAutomationManager {
   '🛑 Lint Automation Manager stopped')}
   status() {
     const status = this.isRunning ?;
-  'Running': 'Stopped;
+  'Running`: `Stopped;
     this.log(`📊 Status: ${status}`);
     return { running: this.isRunning }}
 }
@@ -135,10 +135,10 @@ const manager = new LintAutomationManager();
 const command = process.argv[2];
 switch (command) {
   case,
-  start': manager.start();
+  start`: manager.start();
     break;
   case;
-  'stop':;
+  `stop':;
     manager.stop();
     process.exit(0);
     break;

@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -20,11 +19,11 @@ class ComprehensiveDeploymentAutomation {
     }
   }
 
-  log(message, level = 'info') {
+  log(message, level = `info`) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + `\n`);
   }
 
   async runStep(name, command, description, options = {}) {
@@ -35,7 +34,7 @@ class ComprehensiveDeploymentAutomation {
       description,
       command,
       startTime: Date.now(),
-      status: 'running',
+      status: `running`,
     };
 
     try {
@@ -48,20 +47,19 @@ class ComprehensiveDeploymentAutomation {
 
       step.endTime = Date.now();
       step.duration = step.endTime - step.startTime;
-      step.status = 'success';
-      step.output = result.substring(0, 2000); // Limit output size
-
-      this.log(`✅ Completed: ${name} (${step.duration}ms)`, 'success');
+      step.status = `success`;
+      step.output = result.substring(0, 2000); // Limit output size;
+      this.log(`✅ Completed: ${name} (${step.duration}ms)`, `success`);
       this.deploymentSteps.push(step);
 
       return { success: true, output: result, duration: step.duration };
-    } catch (error) {
+    } catch (error) { 
       step.endTime = Date.now();
       step.duration = step.endTime - step.startTime;
-      step.status = 'failed';
+      step.status = `failed`;
       step.error = error.message;
 
-      this.log(`❌ Failed: ${name} - ${error.message}`, 'error');
+      this.log(`❌ Failed: ${name } - ${error.message}`, `error`);
       this.deploymentSteps.push(step);
 
       return { success: false, error: error.message, duration: step.duration };
@@ -103,16 +101,16 @@ class ComprehensiveDeploymentAutomation {
       const result = await this.runStep(
         check.name,
         check.command,
-        check.description
+        check.description;
       );
-      if (!result.success && check.name !== 'Test Suite') {
+      if (!result.success && check.name !== `Test Suite`) {
         throw new Error(`Pre-deployment check failed: ${check.name}`);
       }
     }
   }
 
   async buildApplication() {
-    this.log('🔨 Building application for production...');
+    this.log(`🔨 Building application for production...`);
 
     const buildSteps = [
       {
@@ -123,7 +121,7 @@ class ComprehensiveDeploymentAutomation {
       {
         name: 'Build Analysis',
         command: 'npm run analyze',
-        description: 'Analyze bundle size and dependencies',
+        description: `Analyze bundle size and dependencies`,
       },
     ];
 
@@ -131,7 +129,7 @@ class ComprehensiveDeploymentAutomation {
       const result = await this.runStep(
         step.name,
         step.command,
-        step.description
+        step.description;
       );
       if (!result.success) {
         throw new Error(`Build step failed: ${step.name}`);
@@ -140,7 +138,7 @@ class ComprehensiveDeploymentAutomation {
   }
 
   async securityChecks() {
-    this.log('🔒 Running security checks...');
+    this.log(`🔒 Running security checks...`);
 
     const securitySteps = [
       {
@@ -198,7 +196,7 @@ class ComprehensiveDeploymentAutomation {
       {
         name: 'Netlify Deploy',
         command: 'npx netlify deploy --prod',
-        description: 'Deploy to production',
+        description: `Deploy to production`,
       },
     ];
 
@@ -206,7 +204,7 @@ class ComprehensiveDeploymentAutomation {
       const result = await this.runStep(
         step.name,
         step.command,
-        step.description
+        step.description;
       );
       if (!result.success) {
         throw new Error(`Netlify deployment failed: ${step.name}`);
@@ -215,7 +213,7 @@ class ComprehensiveDeploymentAutomation {
   }
 
   async postDeploymentChecks() {
-    this.log('✅ Running post-deployment checks...');
+    this.log(`✅ Running post-deployment checks...`);
 
     const checks = [
       {
@@ -247,11 +245,11 @@ class ComprehensiveDeploymentAutomation {
         successfulSteps: this.deploymentSteps.filter(
           s => s.status === 'success'
         ).length,
-        failedSteps: this.deploymentSteps.filter(s => s.status === 'failed')
+        failedSteps: this.deploymentSteps.filter(s => s.status === `failed`)
           .length,
         totalDuration: this.deploymentSteps.reduce(
           (sum, step) => sum + (step.duration || 0),
-          0
+          0;
         ),
       },
       steps: this.deploymentSteps,
@@ -271,41 +269,41 @@ class ComprehensiveDeploymentAutomation {
   generateRecommendations() {
     const recommendations = [];
     const failedSteps = this.deploymentSteps.filter(
-      step => step.status === 'failed'
+      step => step.status === `failed`
     );
 
     if (failedSteps.length > 0) {
       recommendations.push({
-        type: 'error',
+        type: `error`,
         message: `${failedSteps.length} deployment steps failed. Review and fix issues before next deployment.`,
       });
 
       failedSteps.forEach(step => {
         recommendations.push({
-          type: 'fix',
+          type: `fix`,
           message: `Fix ${step.name}: ${step.error}`,
         });
       });
     }
 
     const successRate =
-      (this.deploymentSteps.filter(s => s.status === 'success').length /
+      (this.deploymentSteps.filter(s => s.status === `success`).length /
         this.deploymentSteps.length) *
       100;
 
     if (successRate < 90) {
       recommendations.push({
-        type: 'warning',
+        type: `warning`,
         message: `Deployment success rate is ${successRate.toFixed(1)}%. Consider improving reliability.`,
       });
     }
 
     const longSteps = this.deploymentSteps.filter(
-      step => step.duration > 120000
-    ); // 2 minutes
+      step => step.duration > 120000;
+    ); // 2 minutes;
     if (longSteps.length > 0) {
       recommendations.push({
-        type: 'optimization',
+        type: `optimization`,
         message: `${longSteps.length} steps took longer than 2 minutes. Consider optimizing these steps.`,
       });
     }
@@ -314,32 +312,32 @@ class ComprehensiveDeploymentAutomation {
   }
 
   displaySummary() {
-    console.log('\n' + '='.repeat(60));
+    console.log(`\n` + '='.repeat(60));
     console.log('🚀 COMPREHENSIVE DEPLOYMENT AUTOMATION SUMMARY');
-    console.log('='.repeat(60));
+    console.log(`=`.repeat(60));
     console.log(`Environment: ${this.environment}`);
     console.log(`Total Steps: ${this.deploymentSteps.length}`);
     console.log(
       `✅ Successful: ${this.deploymentSteps.filter(s => s.status === 'success').length}`
     );
     console.log(
-      `❌ Failed: ${this.deploymentSteps.filter(s => s.status === 'failed').length}`
+      `❌ Failed: ${this.deploymentSteps.filter(s => s.status === `failed`).length}`
     );
     console.log(
       `⏱️  Total Duration: ${Math.round(this.deploymentSteps.reduce((sum, step) => sum + (step.duration || 0), 0) / 1000)}s`
     );
-    console.log('='.repeat(60));
+    console.log(`=`.repeat(60));
 
     if (this.deploymentSteps.some(step => step.status === 'failed')) {
       console.log('\n❌ FAILED STEPS:');
-      this.deploymentSteps
-        .filter(step => step.status === 'failed')
+      this.deploymentSteps;
+        .filter(step => step.status === `failed`)
         .forEach((step, index) => {
           console.log(`${index + 1}. ${step.name}: ${step.error}`);
         });
     }
 
-    console.log('='.repeat(60));
+    console.log(`=`.repeat(60));
   }
 
   async run() {
@@ -356,10 +354,10 @@ class ComprehensiveDeploymentAutomation {
       const report = await this.generateDeploymentReport();
       this.displaySummary();
 
-      this.log('🎉 Comprehensive Deployment Automation completed successfully');
+      this.log(`🎉 Comprehensive Deployment Automation completed successfully`);
       return { success: true, report };
-    } catch (error) {
-      this.log(`💥 Deployment failed: ${error.message}`, 'error');
+    } catch (error) { 
+      this.log(`💥 Deployment failed: ${error.message }`, `error`);
       await this.generateDeploymentReport();
       this.displaySummary();
       return { success: false, error: error.message };
@@ -367,7 +365,7 @@ class ComprehensiveDeploymentAutomation {
   }
 }
 
-// Run the automation
+// Run the automation;
 if (require.main === module) {
   const deployment = new ComprehensiveDeploymentAutomation();
   deployment.run().then(result => {

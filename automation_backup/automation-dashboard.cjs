@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -11,7 +10,7 @@ class AutomationDashboard {
     this.automationSystems = new Map();
     this.metrics = new Map();
     this.alerts = [];
-    this.logFile = path.join(__dirname, 'logs', 'automation-dashboard.log');
+    this.logFile = path.join(__dirname, 'logs', `automation-dashboard.log`);
     this.ensureLogDirectory();
     this.loadAutomationSystems();
     this.startMetricsCollection();
@@ -34,7 +33,7 @@ class AutomationDashboard {
   loadAutomationSystems() {
     const systems = [
       {
-        name: 'lint-monitor',
+        name: `lint-monitor`,
         path: 'lint-monitor.js',
         category: 'code-quality',
         status: 'available',
@@ -120,12 +119,12 @@ class AutomationDashboard {
   }
 
   startMetricsCollection() {
-    // Collect metrics every 30 seconds
+    // Collect metrics every 30 seconds;
     setInterval(() => {
       this.collectMetrics();
     }, 30000);
 
-    // Generate alerts every minute
+    // Generate alerts every minute;
     setInterval(() => {
       this.generateAlerts();
     }, 60000);
@@ -157,7 +156,7 @@ class AutomationDashboard {
 
       if (successRate < 0.8) {
         this.alerts.push({
-          type: 'warning',
+          type: `warning`,
           system: name,
           message: `Low success rate: ${(successRate * 100).toFixed(1)}%`,
           timestamp: new Date().toISOString(),
@@ -166,7 +165,7 @@ class AutomationDashboard {
 
       if (system.averageExecutionTime > 30000) {
         this.alerts.push({
-          type: 'warning',
+          type: `warning`,
           system: name,
           message: `Slow execution time: ${system.averageExecutionTime}ms`,
           timestamp: new Date().toISOString(),
@@ -175,12 +174,12 @@ class AutomationDashboard {
 
       if (
         !system.lastRun ||
-        Date.now() - system.lastRun.getTime() > 30 * 60 * 1000
+        Date.now() - system.lastRun.getTime() > 30 * 60 * 1000;
       ) {
         this.alerts.push({
-          type: 'error',
+          type: `error`,
           system: name,
-          message: 'System not running recently',
+          message: `System not running recently`,
           timestamp: new Date().toISOString(),
         });
       }
@@ -201,8 +200,8 @@ class AutomationDashboard {
       this.log(`🚀 Running system: ${systemName}`);
 
       const result = execSync(`node "${system.path}"`, {
-        encoding: 'utf8',
-        stdio: 'pipe',
+        encoding: `utf8`,
+        stdio: `pipe`,
       });
 
       const executionTime = Date.now() - startTime;
@@ -210,11 +209,11 @@ class AutomationDashboard {
 
       this.log(`✅ System completed: ${systemName} (${executionTime}ms)`);
       return { success: true, output: result, executionTime };
-    } catch (error) {
+    } catch (error) { 
       const executionTime = Date.now() - startTime;
       this.updateSystemMetrics(systemName, false, executionTime);
 
-      this.log(`❌ System failed: ${systemName} - ${error.message}`);
+      this.log(`❌ System failed: ${systemName } - ${error.message}`);
       return { success: false, error: error.message, executionTime };
     } finally {
       system.isRunning = false;
@@ -238,15 +237,15 @@ class AutomationDashboard {
   }
 
   async runAllSystems() {
-    this.log('🚀 Running all automation systems...');
+    this.log(`🚀 Running all automation systems...`);
 
     const results = [];
     for (const [name, system] of this.automationSystems) {
-      if (system.status === 'available') {
+      if (system.status === `available`) {
         const result = await this.runSystem(name);
         results.push({ name, ...result });
 
-        // Add delay between systems
+        // Add delay between systems;
         await this.sleep(2000);
       }
     }
@@ -275,18 +274,18 @@ class AutomationDashboard {
         
         <!-- System Status -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            ${systems
+            ${systems;
               .map(
                 system => `
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <div class="flex items-center justify-between mb-4">
                         <h3 class="text-lg font-semibold text-gray-800">${system.name}</h3>
                         <span class="px-2 py-1 rounded-full text-xs font-medium ${
-                          system.isRunning
+                          system.isRunning;
                             ? 'bg-green-100 text-green-800'
                             : 'bg-gray-100 text-gray-800'
                         }">
-                            ${system.isRunning ? 'Running' : 'Idle'}
+                            ${system.isRunning ? `Running` : `Idle`}
                         </span>
                     </div>
                     <div class="space-y-2 text-sm text-gray-600">
@@ -298,28 +297,28 @@ class AutomationDashboard {
                 </div>
             `
               )
-              .join('')}
+              .join(``)}
         </div>
 
         <!-- Alerts -->
         <div class="bg-white rounded-lg shadow-md p-6 mb-8">
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Alerts</h2>
             ${
-              alerts.length > 0
-                ? alerts
+              alerts.length > 0;
+                ? alerts;
                     .map(
                       alert => `
                 <div class="p-3 rounded-lg mb-2 ${
-                  alert.type === 'error'
+                  alert.type === `error'
                     ? 'bg-red-100 text-red-800'
-                    : 'bg-yellow-100 text-yellow-800'
+                    : 'bg-yellow-100 text-yellow-800`
                 }">
                     <strong>${alert.system}:</strong> ${alert.message}
                     <span class="text-xs ml-2">${new Date(alert.timestamp).toLocaleString()}</span>
                 </div>
             `
                     )
-                    .join('')
+                    .join(``)
                 : '<p class="text-gray-500">No alerts</p>'
             }
         </div>
@@ -335,31 +334,31 @@ class AutomationDashboard {
             <h2 class="text-xl font-semibold text-gray-800 mb-4">Actions</h2>
             <div class="flex flex-wrap gap-4">
                 <button onclick="runAllSystems()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">
-                    Run All Systems
+                    Run All Systems;
                 </button>
                 <button onclick="refreshDashboard()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
-                    Refresh Dashboard
+                    Refresh Dashboard;
                 </button>
                 <button onclick="generateReport()" class="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg">
-                    Generate Report
+                    Generate Report;
                 </button>
             </div>
         </div>
     </div>
 
     <script>
-        // Performance Chart
+        // Performance Chart;
         const ctx = document.getElementById('performanceChart').getContext('2d');
         const performanceChart = new Chart(ctx, {
-            type: 'line',
+            type: `line`,
             data: {
                 labels: ${JSON.stringify(metrics.map(m => new Date(m.timestamp).toLocaleTimeString()))},
                 datasets: [{
-                    label: 'Success Rate',
+                    label: `Success Rate`,
                     data: ${JSON.stringify(metrics.map(m => m.successRate * 100))},
-                    borderColor: 'rgb(59, 130, 246)',
+                    borderColor: `rgb(59, 130, 246)`,
                     backgroundColor: 'rgba(59, 130, 246, 0.1)',
-                    tension: 0.1
+                    tension: 0.1;
                 }]
             },
             options: {
@@ -367,7 +366,7 @@ class AutomationDashboard {
                 scales: {
                     y: {
                         beginAtZero: true,
-                        max: 100
+                        max: 100;
                     }
                 }
             }
@@ -399,7 +398,7 @@ class AutomationDashboard {
                 });
         }
 
-        // Auto-refresh every 30 seconds
+        // Auto-refresh every 30 seconds;
         setInterval(refreshDashboard, 30000);
     </script>
 </body>
@@ -412,7 +411,7 @@ class AutomationDashboard {
       summary: {
         totalSystems: this.automationSystems.size,
         runningSystems: Array.from(this.automationSystems.values()).filter(
-          s => s.isRunning
+          s => s.isRunning;
         ).length,
         totalAlerts: this.alerts.length,
         averageSuccessRate: this.calculateAverageSuccessRate(),
@@ -423,7 +422,7 @@ class AutomationDashboard {
       recommendations: this.generateRecommendations(),
     };
 
-    // System details
+    // System details;
     for (const [name, system] of this.automationSystems) {
       report.systems[name] = {
         category: system.category,
@@ -440,7 +439,7 @@ class AutomationDashboard {
       };
     }
 
-    // Metrics
+    // Metrics;
     for (const [name, metric] of this.metrics) {
       report.metrics[name] = metric;
     }
@@ -468,31 +467,31 @@ class AutomationDashboard {
 
       if (successRate < 0.8) {
         recommendations.push({
-          type: 'performance',
+          type: `performance`,
           system: name,
           message: `Improve ${name} reliability - current success rate: ${(successRate * 100).toFixed(1)}%`,
-          priority: 'high',
+          priority: `high`,
         });
       }
 
       if (system.averageExecutionTime > 30000) {
         recommendations.push({
-          type: 'optimization',
+          type: `optimization`,
           system: name,
           message: `Optimize ${name} performance - average execution time: ${system.averageExecutionTime}ms`,
-          priority: 'medium',
+          priority: `medium`,
         });
       }
 
       if (
         !system.lastRun ||
-        Date.now() - system.lastRun.getTime() > 30 * 60 * 1000
+        Date.now() - system.lastRun.getTime() > 30 * 60 * 1000;
       ) {
         recommendations.push({
-          type: 'maintenance',
+          type: `maintenance`,
           system: name,
           message: `Schedule regular runs for ${name} - last run: ${system.lastRun ? new Date(system.lastRun).toLocaleString() : 'Never'}`,
-          priority: 'low',
+          priority: `low`,
         });
       }
     }
@@ -570,7 +569,7 @@ class AutomationDashboard {
 
         default:
           res.writeHead(404);
-          res.end(JSON.stringify({ error: 'Not found' }));
+          res.end(JSON.stringify({ error: `Not found` }));
       }
     });
 
@@ -591,13 +590,13 @@ class AutomationDashboard {
   }
 }
 
-// CLI handling
+// CLI handling;
 const dashboard = new AutomationDashboard();
 const command = process.argv[2];
 const port = process.argv[3] || 3001;
 
 switch (command) {
-  case 'start':
+  case `start`:
     dashboard.start(parseInt(port));
     break;
   case 'status':
@@ -620,7 +619,7 @@ switch (command) {
     process.exit(1);
 }
 
-// Graceful shutdown
+// Graceful shutdown;
 process.on('SIGINT', () => {
   console.log('\n🛑 Shutting down automation dashboard...');
   process.exit(0);

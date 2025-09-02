@@ -16,7 +16,7 @@ class LintErrorFixer {
   constructor() {
     this.logFile = path.join(__dirname,
   'logs',
-  'lint-error-fixer.log');
+  `lint-error-fixer.log`);
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
 ;
@@ -34,7 +34,7 @@ class LintErrorFixer {
   async fixUnusedImports(filePath) {
     try {
       const content = fs.readFileSync(filePath,
-  'utf8');
+  `utf8`);
       const lines = content.split(
   '\n');
       const imports = [];
@@ -64,12 +64,12 @@ class LintErrorFixer {
   ');
           return importNames.some(name => fileContent.includes(name))}
         return true})
-      const newContent = [...usedImports, ...otherLines].join('\n;
-  ');
+      const newContent = [...usedImports, ...otherLines].join(`\n;
+  `);
       fs.writeFileSync(filePath, newContent);
       this.log(`✅ Fixed unused imports in: ${filePath}`);
-      return true} catch (error) {
-      this.log(`❌ Error fixing unused imports in ${filePath}: ${error.message}`);
+      return true} catch (error) { 
+      this.log(`❌ Error fixing unused imports in ${filePath }: ${error.message}`);
       return false}
   }
   async fixTypeScriptErrors(filePath) {
@@ -78,23 +78,23 @@ class LintErrorFixer {
       const result = execSync(`npx tsc --noEmit --project .`, {
         encoding:,
   utf8;
-  ',
-        stdio: 'pipe})
+  `,
+        stdio: `pipe})
       this.log(`✅ TypeScript check passed for: ${filePath}`);
-      return true} catch (error) {
-      this.log(`❌ TypeScript errors in ${filePath}: ${error.stdout || error.message}`);
+      return true} catch (error) { 
+      this.log(`❌ TypeScript errors in ${filePath }: ${error.stdout || error.message}`);
       // Try to fix common TypeScript issues;
       try {
-        const content = fs.readFileSync(filePath, 'utf8;
-  ');
+        const content = fs.readFileSync(filePath, `utf8;
+  `);
         let fixedContent = content;
         // Fix common TypeScript issues;
         fixedContent = fixedContent.replace(/const\s+(\w+)\s*:\s*any\s*=/g, 'const $1 =;
   ');
         fixedContent = fixedContent.replace(/function\s+(\w+)\s*\(\s*\)\s*:\s*any/g, 'function $1();
   ');
-        fixedContent = fixedContent.replace(/:\s*any\s*[,)]/g, '$1;
-  ');
+        fixedContent = fixedContent.replace(/:\s*any\s*[,)]/g, `$1;
+  `);
         if (fixedContent !== content) {
           fs.writeFileSync(filePath, fixedContent);
           this.log(`✅ Fixed TypeScript issues in: ${filePath}`);
@@ -107,13 +107,13 @@ class LintErrorFixer {
     try {
       const result = execSync(`npx eslint,
   ${filePath}
-  ' --fix`, {
-        encoding: 'utf8,
-        stdio: 'pipe;
-  '})
+  ` --fix`, {
+        encoding: `utf8,
+        stdio: `pipe;
+  `})
       this.log(`✅ Fixed ESLint errors in: ${filePath}`);
-      return true} catch (error) {
-      this.log(`❌ ESLint errors in ${filePath}: ${error.stdout || error.message}`);
+      return true} catch (error) { 
+      this.log(`❌ ESLint errors in ${filePath }: ${error.stdout || error.message}`);
       return false}
   }
   async fixFile(filePath) {
@@ -130,12 +130,12 @@ class LintErrorFixer {
   async fixAllFiles() {
     this.log(,
   🔧 Starting comprehensive lint error fix...;
-  ');
-    const patterns = ['pages/**/*.{js,jsx,ts,tsx}
+  `);
+    const patterns = [`pages/**/*.{js,jsx,ts,tsx}
   ',';components/**/*.{js,jsx,ts,tsx}
   ',';utils/**/*.{js,jsx,ts,tsx}
-  ',';hooks/**/*.{js,jsx,ts,tsx}
-  ';
+  ',`;hooks/**/*.{js,jsx,ts,tsx}
+  `;
     ];
     let totalFiles = 0;
     for (const pattern of patterns) {
@@ -148,8 +148,8 @@ class LintErrorFixer {
   glob(pattern) {
     // Simple glob implementation using fs;
     const files = [];
-    const parts = pattern.split('/;
-  ');
+    const parts = pattern.split(`/;
+  `);
     const baseDir = parts[0];
     if (fs.existsSync(baseDir)) {
       this.scanDirectory(baseDir, files, pattern)}

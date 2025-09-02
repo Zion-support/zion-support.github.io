@@ -45,7 +45,7 @@ class NetlifyBuildAutomation {
     this.validateConfiguration();
     this.ensureLogDirectory();
     this.log(
-  'Netlify Build Automation initialized')}
+  `Netlify Build Automation initialized`)}
   setupLogging() {
     this.log = message => {
       const timestamp = new Date().toISOString();
@@ -53,20 +53,20 @@ class NetlifyBuildAutomation {
       // console.log(logMessage);
       try {
         fs.appendFileSync(this.config.logFile, logMessage +;
-  '\n')} catch (error) {
+  `\n`)} catch (error) { 
         console.error(
-  'Failed to write to log file:', error.message)}
+  `Failed to write to log file:`, error.message) }
     }
 ;
     this.error = (message, error) => {
       const timestamp = new Date().toISOString();
       const errorMessage = `[${timestamp}] ERROR: ${message}${error ? ` - ${error.message}` :,
-  '}`;
+  `}`;
       console.error(errorMessage);
       try {
-        fs.appendFileSync(this.config.errorFile, errorMessage + '\n;
-  ')} catch (error) {
-        console.error('Failed to write to error log file: , error.message)}
+        fs.appendFileSync(this.config.errorFile, errorMessage + `\n;
+  ')} catch (error) { 
+        console.error('Failed to write to error log file: , error.message) }
     }
   }
   validateConfiguration() {
@@ -113,8 +113,8 @@ class NetlifyBuildAutomation {
   ')}
   async checkNetlifyStatus() {
     try {
-      this.log('Checking Netlify connection...;
-  ');
+      this.log(`Checking Netlify connection...;
+  `);
       const siteInfo = await this.getSiteInfo();
       if (siteInfo) {
         this.log(`Connected to site: ${siteInfo.name} (${siteInfo.url})`);
@@ -125,11 +125,11 @@ class NetlifyBuildAutomation {
           this.log(`Build command: ${buildSettings.cmd ||,
   Not set;
   '}`);
-          this.log(`Publish directory: ${buildSettings.dir || 'Not set}`)}
+          this.log(`Publish directory: ${buildSettings.dir || `Not set}`)}
       }
-    } catch (error) {
-      this.error('Failed to check Netlify status;
-  ', error)}
+    } catch (error) { 
+      this.error(`Failed to check Netlify status;
+  ', error) }
   }
   async monitorBuildStatus() {
     try {
@@ -143,22 +143,22 @@ class NetlifyBuildAutomation {
         if (!currentBuild || currentBuild.state === 'error;
   ') {
           this.log(
-            'No active build or previous build failed, triggering new build...;
-  ');
+            `No active build or previous build failed, triggering new build...;
+  `);
           if (this.config.autoDeployEnabled) {
             await this.triggerBuild()}
         } else {
           this.log(`Build already in progress: ${currentBuild.state}`)}
       }
       // Monitor existing builds;
-      await this.monitorExistingBuilds()} catch (error) {
+      await this.monitorExistingBuilds()} catch (error) { 
       this.error(,
   Build status monitoring failed;
-  ', error)}
+  `, error) }
   }
   async checkLocalChanges() {
     try {
-      const gitStatus = execSync('git status --porcelain;
+      const gitStatus = execSync(`git status --porcelain;
   ', {
         encoding: 'utf8})
       const hasChanges = gitStatus.trim().length > 0;
@@ -167,30 +167,30 @@ class NetlifyBuildAutomation {
   git diff --name-only;
   ', {
           encoding: 'utf8})
-          .split('\n;
-  ');
+          .split(`\n;
+  `);
           .filter(file => file.trim());
         this.log(`Found ${changedFiles.length} changed files`);
         return true}
-      return false} catch (error) {
-      this.error('Failed to check local changes;
-  ', error);
-      return false}
+      return false} catch (error) { 
+      this.error(`Failed to check local changes;
+  `, error);
+      return false }
   }
   async getCurrentBuild() {
     try {
       const builds = await this.getBuilds(1);
-      return builds.length > 0 ? builds[0] : null} catch (error) {
+      return builds.length > 0 ? builds[0] : null} catch (error) { 
       this.error('Failed to get current build;
   ', error);
-      return null}
+      return null }
   }
   async monitorExistingBuilds() {
     try {
       const builds = await this.getBuilds(5);
       for (const build of builds) {
-        if (build.state === 'building;
-  ') {
+        if (build.state === `building;
+  `) {
           this.log(`Monitoring build ${build.id}: ${build.state}`);
           // Check build timeout;
           const buildAge = Date.now() - new Date(build.created_at).getTime();
@@ -199,30 +199,30 @@ class NetlifyBuildAutomation {
             await this.investigateBuildTimeout(build)}
         } else if (build.state ===,
   error;
-  ') {
+  `) {
           this.log(`Build ${build.id} failed, analyzing error...`);
-          await this.analyzeBuildError(build)} else if (build.state === 'ready;
-  ') {
+          await this.analyzeBuildError(build)} else if (build.state === `ready;
+  `) {
           this.log(`Build ${build.id} completed successfully`);
           await this.onBuildSuccess(build)}
       }
-    } catch (error) {
-      this.error('Failed to monitor existing builds;
-  ', error)}
+    } catch (error) { 
+      this.error(`Failed to monitor existing builds;
+  ', error) }
   }
   async triggerBuild() {
     try {
       this.log('Triggering new Netlify build...;
-  ');
+  `);
       // Commit and push changes first;
       await this.commitAndPushChanges();
       // Trigger build via Netlify API;
       const buildData = {
-        clear_cache: 'full,
+        clear_cache: `full,
         draft: false}
 ;
       const response = await this.makeNetlifyRequest(
-        `/sites/${this.config.netlifySiteId}/builds`,POST',
+        `/sites/${this.config.netlifySiteId}/builds`,POST`,
         buildData);
       if (response && response.id) {
         this.log(`Build triggered successfully: ${response.id}`);
@@ -232,14 +232,14 @@ class NetlifyBuildAutomation {
           id: response.id,
           triggeredAt: new Date().toISOString(),
           status:,
-  triggered'})
+  triggered`})
         return response} else {
         throw new Error(
   'Failed to trigger build')}
-    } catch (error) {
+    } catch (error) { 
       this.error(
   'Failed to trigger build', error);
-      throw error}
+      throw error }
   }
   async commitAndPushChanges() {
     try {
@@ -247,20 +247,20 @@ class NetlifyBuildAutomation {
   'Committing and pushing changes...');
       // Add all changes;
       execSync(
-  'git add .', { stdio: 'pipe })
+  'git add .`, { stdio: `pipe })
       // Commit with timestamp;
       const timestamp = new Date().toISOString();
       const commitMessage = `Auto-build: ${timestamp}`;
-      execSync(`git commit -m '${commitMessage}'`, { stdio:,
+      execSync(`git commit -m `${commitMessage}``, { stdio:,
   pipe' })
       // Push to main branch;
       execSync(
   'git push origin main', { stdio: 'pipe })
       this.log(,
-  Changes committed and pushed successfully')} catch (error) {
+  Changes committed and pushed successfully')} catch (error) { 
       this.error(
-  'Failed to commit and push changes', error);
-      throw error}
+  `Failed to commit and push changes`, error);
+      throw error }
   }
   async investigateBuildTimeout(build) {
     try {
@@ -277,9 +277,9 @@ class NetlifyBuildAutomation {
           // Retry build;
           await this.retryBuild(build.id)}
       }
-    } catch (error) {
-      this.error('Failed to investigate build timeout;
-  ', error)}
+    } catch (error) { 
+      this.error(`Failed to investigate build timeout;
+  `, error) }
   }
   async analyzeBuildError(build) {
     try {
@@ -296,9 +296,9 @@ class NetlifyBuildAutomation {
           // Retry build;
           await this.retryBuild(build.id)}
       }
-    } catch (error) {
-      this.error('Failed to analyze build error;
-  ', error)}
+    } catch (error) { 
+      this.error(`Failed to analyze build error;
+  `, error) }
   }
   async onBuildSuccess(build) {
     try {
@@ -306,21 +306,21 @@ class NetlifyBuildAutomation {
       // Update build history;
       const buildRecord = this.buildHistory.find(b => b.id === build.id);
       if (buildRecord) {
-        buildRecord.status = 'completed;
-  ';
+        buildRecord.status = `completed;
+  `;
         buildRecord.completedAt = new Date().toISOString();
         buildRecord.duration = build.duration}
       // Perform post-build optimizations;
       await this.performPostBuildOptimizations(build);
       // Check deployment status;
-      await this.checkDeploymentStatus(build)} catch (error) {
+      await this.checkDeploymentStatus(build)} catch (error) { 
       this.error('Failed to process build success;
-  ', error)}
+  ', error) }
   }
   async checkBuildHealth() {
     try {
-      this.log('Performing build health check...;
-  ');
+      this.log(`Performing build health check...;
+  `);
       // Check build performance;
       const recentBuilds = this.buildHistory.slice(-10);
       const avgDuration =;
@@ -329,21 +329,21 @@ class NetlifyBuildAutomation {
       this.log(`Average build duration: ${Math.round(avgDuration / 1000)}s`);
       // Check for build failures;
       const failedBuilds = recentBuilds.filter(
-        build => build.status === 'error;
-  ');
+        build => build.status === `error;
+  `);
       if (failedBuilds.length > 0) {
         this.log(`Recent build failures: ${failedBuilds.length}`);
         // Analyze failure patterns;
         await this.analyzeFailurePatterns(failedBuilds)}
       // Check build configuration;
-      await this.checkBuildConfiguration()} catch (error) {
+      await this.checkBuildConfiguration()} catch (error) { 
       this.error(,
   Build health check failed;
-  ', error)}
+  `, error) }
   }
   async performDailyOptimization() {
     try {
-      this.log('Performing daily build optimization...;
+      this.log(`Performing daily build optimization...;
   ');
       // Optimize build configuration;
       await this.optimizeBuildConfiguration();
@@ -354,22 +354,22 @@ class NetlifyBuildAutomation {
       // Check for build performance improvements;
       await this.checkBuildPerformance();
       this.log('Daily optimization completed;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.error('Daily optimization failed;
-  ', error)}
+  ', error) }
   }
   // Netlify API methods;
   async makeNetlifyRequest(endpoint, method = 'GET;
-  ', data = null) {
+  `, data = null) {
     return new Promise((resolve, reject) => {
       const options = {
-        hostname: 'api.netlify.com,
+        hostname: `api.netlify.com,
         port: 443,
         path: endpoint,
         method: method,
         headers: {
-          Authorization: `Bearer ${this.config.netlifyToken}`,Content-Type':,
-  application/json',User-Agent;
+          Authorization: `Bearer ${this.config.netlifyToken}`,Content-Type`:,
+  application/json`,User-Agent;
   ': 'Zion-App-Build-Automation/1.0}}
 ;
       if (data) {
@@ -382,17 +382,17 @@ class NetlifyBuildAutomation {
   'data', chunk => {
           responseData += chunk})
         res.on(
-  'end', () => {
+  `end`, () => {
           try {
             if (res.statusCode >= 200 && res.statusCode < 300) {
               const parsed = JSON.parse(responseData);
               resolve(parsed)} else {
               reject(new Error(`HTTP ${res.statusCode}: ${responseData}`))}
-          } catch (error) {
-            reject(new Error(`Failed to parse response: ${error.message}`))}
+          } catch (error) { 
+            reject(new Error(`Failed to parse response: ${error.message }`))}
         })})
       req.on(,
-  error', error => {
+  error`, error => {
         reject(error)})
       if (data) {
         req.write(JSON.stringify(data))}
@@ -400,33 +400,33 @@ class NetlifyBuildAutomation {
   async getSiteInfo() {
     try {
       return await this.makeNetlifyRequest(
-        `/sites/${this.config.netlifySiteId}`)} catch (error) {
+        `/sites/${this.config.netlifySiteId}`)} catch (error) { 
       this.error(
-  'Failed to get site info', error);
-      return null}
+  `Failed to get site info`, error);
+      return null }
   }
   async getBuilds(limit = 10) {
     try {
       return await this.makeNetlifyRequest(
-        `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) {
+        `/sites/${this.config.netlifySiteId}/builds?per_page=${limit}`)} catch (error) { 
       this.error(
-  'Failed to get builds', error);
-      return []}
+  `Failed to get builds`, error);
+      return [] }
   }
   async getBuildLogs(buildId) {
     try {
-      return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) {
+      return await this.makeNetlifyRequest(`/builds/${buildId}/log`)} catch (error) { 
       this.error(
-  'Failed to get build logs', error);
-      return null}
+  `Failed to get build logs`, error);
+      return null }
   }
   async getBuildSettings() {
     try {
       return await this.makeNetlifyRequest(
-        `/sites/${this.config.netlifySiteId}/build_settings`)} catch (error) {
+        `/sites/${this.config.netlifySiteId}/build_settings`)} catch (error) { 
       this.error(
-  'Failed to get build settings', error);
-      return null}
+  `Failed to get build settings', error);
+      return null }
   }
   // Analysis and fix methods;
   analyzeTimeoutCauses(logs) {
@@ -501,9 +501,9 @@ class NetlifyBuildAutomation {
             break}
       }
       this.log(,
-  Timeout fixes applied')} catch (error) {
+  Timeout fixes applied')} catch (error) { 
       this.error(
-  'Failed to apply timeout fixes', error)}
+  'Failed to apply timeout fixes', error) }
   }
   async applyBuildFixes(errors) {
     try {
@@ -524,28 +524,28 @@ class NetlifyBuildAutomation {
             break}
       }
       this.log(
-  'Build fixes applied')} catch (error) {
+  'Build fixes applied')} catch (error) { 
       this.error(
-  'Failed to apply build fixes', error)}
+  `Failed to apply build fixes`, error) }
   }
   async retryBuild(buildId) {
     try {
       this.log(`Retrying build ${buildId}...`);
       // Cancel current build if it;
-  's still running;
+  `s still running;
       await this.cancelBuild(buildId);
       // Wait a moment for cancellation to complete;
       await new Promise(resolve => setTimeout(resolve, 5000));
       // Trigger new build;
-      await this.triggerBuild()} catch (error) {
-      this.error('Failed to retry build;
-  ', error)}
+      await this.triggerBuild()} catch (error) { 
+      this.error(`Failed to retry build;
+  `, error) }
   }
   async cancelBuild(buildId) {
     try {
-      await this.makeNetlifyRequest(`/builds/${buildId}/cancel`,POST');
-      this.log(`Build ${buildId} cancelled`)} catch (error) {
-      this.error(`Failed to cancel build ${buildId}`, error)}
+      await this.makeNetlifyRequest(`/builds/${buildId}/cancel`,POST`);
+      this.log(`Build ${buildId} cancelled`)} catch (error) { 
+      this.error(`Failed to cancel build ${buildId }`, error)}
   }
   // Fix implementation methods;
   async fixMemoryLimit() {
@@ -557,15 +557,15 @@ class NetlifyBuildAutomation {
   'package.json',utf8;
   '));
       if (packageJson.scripts && packageJson.scripts.build) {
-        packageJson.scripts.build = `NODE_OPTIONS='--max-old-space-size=4096' ${packageJson.scripts.build}`;
-        fs.writeFileSync('package.json;
-  ', JSON.stringify(packageJson, null, 2))}
+        packageJson.scripts.build = `NODE_OPTIONS=`--max-old-space-size=4096` ${packageJson.scripts.build}`;
+        fs.writeFileSync(`package.json;
+  `, JSON.stringify(packageJson, null, 2))}
       // Update Netlify build settings if possible;
       await this.updateNetlifyBuildSettings({
-        cmd: `NODE_OPTIONS='--max-old-space-size=4096' npm run build`})} catch (error) {
+        cmd: `NODE_OPTIONS='--max-old-space-size=4096' npm run build`})} catch (error) { 
       this.error(,
   Failed to fix memory limit;
-  ', error)}
+  ', error) }
   }
   async fixTimeLimit() {
     this.log('Fixing time limit issues...;
@@ -575,10 +575,10 @@ class NetlifyBuildAutomation {
       await this.optimizeBuildProcess();
       // Update Netlify build timeout if possible;
       await this.updateNetlifyBuildSettings({
-        cmd: 'npm run build:optimized})} catch (error) {
+        cmd: 'npm run build:optimized})} catch (error) { 
       this.error(,
   Failed to fix time limit;
-  ', error)}
+  ', error) }
   }
   async fixNetworkTimeout() {
     this.log('Fixing network timeout issues...;
@@ -593,10 +593,10 @@ class NetlifyBuildAutomation {
       // Clear npm cache;
       execSync(,
   npm cache clean --force;
-  ', { stdio: 'pipe })} catch (error) {
+  ', { stdio: 'pipe })} catch (error) { 
       this.error(,
   Failed to fix network timeout;
-  ', error)}
+  ', error) }
   }
   async fixDependencyResolution() {
     this.log('Fixing dependency resolution issues...;
@@ -610,10 +610,10 @@ class NetlifyBuildAutomation {
   ', { stdio: 'pipe })
       execSync(,
   npm install;
-  ', { stdio: 'pipe })} catch (error) {
+  ', { stdio: 'pipe })} catch (error) { 
       this.error(,
   Failed to fix dependency resolution;
-  ', error)}
+  ', error) }
   }
   async fixTypeScriptErrors() {
     this.log('Fixing TypeScript errors...;
@@ -625,10 +625,10 @@ class NetlifyBuildAutomation {
       // Auto-fix common issues;
       execSync(,
   npx eslint . --ext .ts,.tsx --fix;
-  ', { stdio: 'pipe })} catch (error) {
+  ', { stdio: 'pipe })} catch (error) { 
       this.error(,
   Failed to fix TypeScript errors;
-  ', error)}
+  ', error) }
   }
   async fixBuildErrors() {
     this.log('Fixing build errors...;
@@ -638,10 +638,10 @@ class NetlifyBuildAutomation {
       execSync('rm -rf .next out dist build;
   ', { stdio: 'pipe })
       // Check for configuration issues;
-      await this.checkBuildConfiguration()} catch (error) {
+      await this.checkBuildConfiguration()} catch (error) { 
       this.error(,
   Failed to fix build errors;
-  ', error)}
+  ', error) }
   }
   async fixDependencyErrors() {
     this.log('Fixing dependency errors...;
@@ -653,19 +653,19 @@ class NetlifyBuildAutomation {
       // Fix security vulnerabilities;
       execSync(,
   npm audit fix;
-  ', { stdio: 'pipe })} catch (error) {
-      this.error('Failed to fix dependency errors;
-  ', error)}
+  ', { stdio: 'pipe })} catch (error) { 
+      this.error(`Failed to fix dependency errors;
+  `, error) }
   }
   async updateNetlifyBuildSettings(settings) {
     try {
       await this.makeNetlifyRequest(
-        `/sites/${this.config.netlifySiteId}/build_settings`,PUT',
+        `/sites/${this.config.netlifySiteId}/build_settings`,PUT`,
         settings);
       this.log(
-  'Netlify build settings updated')} catch (error) {
+  `Netlify build settings updated')} catch (error) { 
       this.error(
-  'Failed to update Netlify build settings', error)}
+  'Failed to update Netlify build settings', error) }
   }
   async optimizeBuildProcess() {
     this.log(
@@ -695,9 +695,9 @@ class NetlifyBuildAutomation {
   'build: optimized'] =;
   'NODE_OPTIONS='--max-old-space-size=4096' npm run build}
       fs.writeFileSync(,
-  package.json', JSON.stringify(packageJson, null, 2))} catch (error) {
+  package.json', JSON.stringify(packageJson, null, 2))} catch (error) { 
       this.error(
-  'Failed to optimize build process', error)}
+  'Failed to optimize build process', error) }
   }
   async checkBuildConfiguration() {
     this.log(
@@ -723,10 +723,10 @@ class NetlifyBuildAutomation {
   ')}
       this.log('Build configuration is valid;
   ');
-      return true} catch (error) {
+      return true} catch (error) { 
       this.error('Build configuration check failed;
   ', error);
-      return false}
+      return false }
   }
   async cleanupBuildArtifacts() {
     this.log('Cleaning up build artifacts...;
@@ -739,14 +739,14 @@ class NetlifyBuildAutomation {
   ', { stdio: 'pipe })
       this.log(,
   Build artifacts cleaned up;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.error('Failed to cleanup build artifacts;
-  ', error)}
+  ', error) }
   }
   async updateDependenciesIfNeeded() {
     try {
       const outdated = execSync('npm outdated --json;
-  ', { encoding: 'utf8 })
+  `, { encoding: `utf8 })
       const outdatedDeps = JSON.parse(outdated);
       if (Object.keys(outdatedDeps).length > 0) {
         this.log(
@@ -754,18 +754,18 @@ class NetlifyBuildAutomation {
         // Update minor and patch versions;
         execSync(,
   npm update;
-  ', { stdio: 'pipe })
+  `, { stdio: `pipe })
         // Check for security issues;
         execSync(,
   npm audit fix;
   ', { stdio: 'pipe })}
-    } catch (error) {
+    } catch (error) { 
       this.error('Failed to update dependencies;
-  ', error)}
+  ', error) }
   }
   async checkBuildPerformance() {
-    this.log('Checking build performance...;
-  ');
+    this.log(`Checking build performance...;
+  `);
     try {
       const recentBuilds = this.buildHistory.slice(-20);
       if (recentBuilds.length >= 5) {
@@ -783,14 +783,14 @@ class NetlifyBuildAutomation {
           if (avgDuration > 300000) {
             // 5 minutes;
             this.log(
-              'Build performance degradation detected, applying optimizations...;
-  ');
+              `Build performance degradation detected, applying optimizations...;
+  `);
             await this.applyPerformanceOptimizations()}
         }
       }
-    } catch (error) {
+    } catch (error) { 
       this.error('Build performance check failed;
-  ', error)}
+  ', error) }
   }
   async applyPerformanceOptimizations() {
     this.log('Applying performance optimizations...;
@@ -803,9 +803,9 @@ class NetlifyBuildAutomation {
       // Clean up build artifacts;
       await this.cleanupBuildArtifacts();
       this.log('Performance optimizations applied;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.error('Failed to apply performance optimizations;
-  ', error)}
+  ', error) }
   }
   async optimizeBuildConfiguration() {
     this.log('Optimizing build configuration...;
@@ -836,9 +836,9 @@ class NetlifyBuildAutomation {
         packageJson.scripts['build:analyze;
   '] = 'ANALYZE=true npm run build}
       fs.writeFileSync('package.json;
-  ', JSON.stringify(packageJson, null, 2))} catch (error) {
-      this.error('Failed to optimize build configuration;
-  ', error)}
+  ', JSON.stringify(packageJson, null, 2))} catch (error) { 
+      this.error(`Failed to optimize build configuration;
+  `, error) }
   }
   async checkDeploymentStatus(build) {
     try {
@@ -850,8 +850,8 @@ class NetlifyBuildAutomation {
         const latestDeploy = deployments[0];
         this.log(
           `Latest deployment: ${latestDeploy.state} (${latestDeploy.url})`);
-        if (latestDeploy.state === 'ready;
-  ') {
+        if (latestDeploy.state === `ready;
+  `) {
           this.log('Deployment successful;
   ')} else if (latestDeploy.state === 'error;
   ') {
@@ -859,9 +859,9 @@ class NetlifyBuildAutomation {
   ');
           await this.investigateDeploymentFailure(latestDeploy)}
       }
-    } catch (error) {
-      this.error('Failed to check deployment status;
-  ', error)}
+    } catch (error) { 
+      this.error(`Failed to check deployment status;
+  `, error) }
   }
   async investigateDeploymentFailure(deployment) {
     try {
@@ -879,15 +879,15 @@ class NetlifyBuildAutomation {
           // Retry deployment if possible;
           await this.retryDeployment(deployment.id)}
       }
-    } catch (error) {
+    } catch (error) { 
       this.error(,
   Failed to investigate deployment failure;
-  ', error)}
+  `, error) }
   }
   analyzeDeploymentErrors(logs) {
     const errors = [];
     // Common deployment error patterns;
-    if (logs.includes('404 Not Found;
+    if (logs.includes(`404 Not Found;
   ')) {
       errors.push({ type: 'missing_files, message:,
   Build files not found;
@@ -924,9 +924,9 @@ class NetlifyBuildAutomation {
       }
       this.log(,
   Deployment fixes applied;
-  ')} catch (error) {
+  ')} catch (error) { 
       this.error('Failed to apply deployment fixes;
-  ', error)}
+  ', error) }
   }
   async fixMissingFiles() {
     this.log('Fixing missing files issue...;
@@ -944,10 +944,10 @@ class NetlifyBuildAutomation {
   ');
         execSync('npm run build;
   ', { stdio: 'pipe })}
-    } catch (error) {
+    } catch (error) { 
       this.error(,
   Failed to fix missing files;
-  ', error)}
+  ', error) }
   }
   async fixPermissionIssues() {
     this.log('Fixing permission issues...;
@@ -955,28 +955,28 @@ class NetlifyBuildAutomation {
     try {
       // Fix file permissions;
       execSync('chmod -R 755 .;
-  ', { stdio: 'pipe })} catch (error) {
+  ', { stdio: 'pipe })} catch (error) { 
       this.error('Failed to fix permission issues;
-  ', error)}
+  ', error) }
   }
   async fixDeploymentTimeout() {
     this.log('Fixing deployment timeout...;
   ');
     try {
       // Optimize build for faster deployment;
-      await this.optimizeBuildConfiguration()} catch (error) {
-      this.error('Failed to fix deployment timeout;
-  ', error)}
+      await this.optimizeBuildConfiguration()} catch (error) { 
+      this.error(`Failed to fix deployment timeout;
+  `, error) }
   }
   async retryDeployment(deploymentId) {
     try {
       this.log(`Retrying deployment ${deploymentId}...`);
       // Retry deployment via API;
-      await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`,POST');
+      await this.makeNetlifyRequest(`/deploys/${deploymentId}/retry`,POST`);
       this.log(
-  'Deployment retry triggered')} catch (error) {
+  `Deployment retry triggered')} catch (error) { 
       this.error(
-  'Failed to retry deployment', error)}
+  'Failed to retry deployment', error) }
   }
   async stop() {
     this.isRunning = false;

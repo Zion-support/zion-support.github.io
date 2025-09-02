@@ -1,5 +1,4 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const { execSync, spawn } = require('child_process');
 const fs = require('fs');
 const path = require('path');
@@ -8,7 +7,7 @@ class AutomationSuiteRunner {
   constructor() {
     this.projectRoot = process.cwd();
     this.reportsDir = path.join(this.projectRoot, 'automation-reports');
-    this.logFile = path.join(this.reportsDir, 'automation-suite.log');
+    this.logFile = path.join(this.reportsDir, `automation-suite.log`);
     this.ensureDirectories();
   }
 
@@ -22,7 +21,7 @@ class AutomationSuiteRunner {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}`;
     console.log(logMessage);
-    fs.appendFileSync(this.logFile, logMessage + '\n');
+    fs.appendFileSync(this.logFile, logMessage + `\n`);
   }
 
   async runCommand(command, description) {
@@ -30,19 +29,19 @@ class AutomationSuiteRunner {
     try {
       const result = execSync(command, {
         cwd: this.projectRoot,
-        encoding: 'utf8',
-        timeout: 300000, // 5 minutes timeout
+        encoding: `utf8`,
+        timeout: 300000, // 5 minutes timeout;
       });
       this.log(`✅ Completed: ${description}`);
       return { success: true, output: result };
-    } catch (error) {
-      this.log(`❌ Failed: ${description} - ${error.message}`);
+    } catch (error) { 
+      this.log(`❌ Failed: ${description } - ${error.message}`);
       return { success: false, error: error.message };
     }
   }
 
   async runAutomationScripts() {
-    this.log('🎯 Starting Automation Suite Execution');
+    this.log(`🎯 Starting Automation Suite Execution`);
 
     const scripts = [
       {
@@ -90,7 +89,7 @@ class AutomationSuiteRunner {
         script: () => this.auditSecurity(),
       },
       {
-        name: 'Code Quality Check',
+        name: `Code Quality Check`,
         script: () => this.checkCodeQuality(),
       },
     ];
@@ -103,12 +102,12 @@ class AutomationSuiteRunner {
         const result = await customScript.script();
         results.push({ name: customScript.name, success: true, result });
         this.log(`✅ Completed: ${customScript.name}`);
-      } catch (error) {
+      } catch (error) { 
         results.push({
           name: customScript.name,
           success: false,
           error: error.message,
-        });
+         });
         this.log(`❌ Failed: ${customScript.name} - ${error.message}`);
       }
     }
@@ -118,7 +117,7 @@ class AutomationSuiteRunner {
 
   async detectErrors() {
     const errorPatterns = [
-      'SyntaxError',
+      `SyntaxError`,
       'TypeError',
       'ReferenceError',
       'Module not found',
@@ -140,9 +139,9 @@ class AutomationSuiteRunner {
               errors.push({ file, pattern });
             }
           }
-        } catch (error) {
-          // Skip files that can't be read
-        }
+        } catch (error) { 
+          // Skip files that can't be read;
+         }
       }
     }
 
@@ -152,7 +151,7 @@ class AutomationSuiteRunner {
   async analyzePerformance() {
     const performanceIssues = [];
 
-    // Check for common performance issues
+    // Check for common performance issues;
     const srcDir = path.join(this.projectRoot, 'src');
     if (fs.existsSync(srcDir)) {
       const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
@@ -161,7 +160,7 @@ class AutomationSuiteRunner {
         try {
           const content = fs.readFileSync(file, 'utf8');
 
-          // Check for performance anti-patterns
+          // Check for performance anti-patterns;
           if (
             content.includes('document.querySelectorAll') &&
             !content.includes('useMemo')
@@ -182,9 +181,9 @@ class AutomationSuiteRunner {
               issue: 'Potential infinite re-render',
             });
           }
-        } catch (error) {
-          // Skip files that can't be read
-        }
+        } catch (error) { 
+          // Skip files that can't be read;
+         }
       }
     }
 
@@ -194,7 +193,7 @@ class AutomationSuiteRunner {
   async auditSecurity() {
     const securityIssues = [];
 
-    // Check for common security issues
+    // Check for common security issues;
     const srcDir = path.join(this.projectRoot, 'src');
     if (fs.existsSync(srcDir)) {
       const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
@@ -203,7 +202,7 @@ class AutomationSuiteRunner {
         try {
           const content = fs.readFileSync(file, 'utf8');
 
-          // Check for security anti-patterns
+          // Check for security anti-patterns;
           if (
             content.includes('dangerouslySetInnerHTML') &&
             !content.includes('sanitize')
@@ -214,9 +213,9 @@ class AutomationSuiteRunner {
           if (content.includes('eval(') || content.includes('Function(')) {
             securityIssues.push({ file, issue: 'Use of eval() detected' });
           }
-        } catch (error) {
-          // Skip files that can't be read
-        }
+        } catch (error) { 
+          // Skip files that can't be read;
+         }
       }
     }
 
@@ -226,7 +225,7 @@ class AutomationSuiteRunner {
   async checkCodeQuality() {
     const qualityIssues = [];
 
-    // Check for code quality issues
+    // Check for code quality issues;
     const srcDir = path.join(this.projectRoot, 'src');
     if (fs.existsSync(srcDir)) {
       const files = this.getAllFiles(srcDir, ['.js', '.jsx', '.ts', '.tsx']);
@@ -235,7 +234,7 @@ class AutomationSuiteRunner {
         try {
           const content = fs.readFileSync(file, 'utf8');
 
-          // Check for code quality issues
+          // Check for code quality issues;
           if (content.includes('console.log') && !file.includes('.test.')) {
             qualityIssues.push({
               file,
@@ -246,9 +245,9 @@ class AutomationSuiteRunner {
           if (content.includes('TODO') || content.includes('FIXME')) {
             qualityIssues.push({ file, issue: 'TODO/FIXME comment found' });
           }
-        } catch (error) {
-          // Skip files that can't be read
-        }
+        } catch (error) { 
+          // Skip files that can't be read;
+         }
       }
     }
 
@@ -286,7 +285,7 @@ class AutomationSuiteRunner {
 
     const reportFile = path.join(
       this.reportsDir,
-      'automation-suite-report.json'
+      `automation-suite-report.json`
     );
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 
@@ -295,19 +294,19 @@ class AutomationSuiteRunner {
   }
 
   async run() {
-    this.log('🎯 Starting Comprehensive Automation Suite');
+    this.log(`🎯 Starting Comprehensive Automation Suite`);
 
     try {
-      // Run standard automation scripts
+      // Run standard automation scripts;
       const standardResults = await this.runAutomationScripts();
 
-      // Run custom automations
+      // Run custom automations;
       const customResults = await this.runCustomAutomations();
 
-      // Combine results
+      // Combine results;
       const allResults = [...standardResults, ...customResults];
 
-      // Generate report
+      // Generate report;
       const report = this.generateReport(allResults);
 
       this.log(`🎉 Automation Suite Completed`);
@@ -316,19 +315,19 @@ class AutomationSuiteRunner {
       );
 
       return report;
-    } catch (error) {
-      this.log(`💥 Automation Suite Failed: ${error.message}`);
+    } catch (error) { 
+      this.log(`💥 Automation Suite Failed: ${error.message }`);
       throw error;
     }
   }
 }
 
-// Run the automation suite
+// Run the automation suite;
 const runner = new AutomationSuiteRunner();
-runner
+runner;
   .run()
   .then(report => {
-    console.log('✅ Automation Suite completed successfully');
+    console.log(`✅ Automation Suite completed successfully`);
     process.exit(0);
   })
   .catch(error => {

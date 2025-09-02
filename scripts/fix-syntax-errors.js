@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node;
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -9,34 +9,34 @@ const __dirname = path.dirname(__filename);
 
 console.log('🔧 Fixing syntax errors in automation scripts...');
 
-// Common syntax error patterns to fix
+// Common syntax error patterns to fix;
 const syntaxFixes = [
-  // Fix broken import statements
+  // Fix broken import statements;
   {
     pattern: /import\s+(\w+)\s+from\s*;\s*\n\s*['"`]([^'"`]+)['"`];?/g,
     replacement: "import $1 from '$2';"
   },
-  // Fix broken console.log statements
+  // Fix broken console.log statements;
   {pattern: /\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*\/\/\s*console\.log\(\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
     replacement: "console.log('$1')"
   },
-  // Fix broken console.log with comma
+  // Fix broken console.log with comma;
   {pattern: /console\.log\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
     replacement: "console.log('$1')"
   },
-  // Fix broken string concatenation
+  // Fix broken string concatenation;
   {pattern: /path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
     replacement: "path.resolve(__dirname, '$1')"
   },
-  // Fix broken execSync calls
+  // Fix broken execSync calls;
   {pattern: /execSync\(\s*,\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g,
     replacement: "execSync('$1')"
   },
-  // Fix broken string literals
+  // Fix broken string literals;
   {pattern: /['"`]([^'"`]+)\s*\n\s*['"`]([^'"`]+)['"`]/g,
     replacement: "'$1$2'"
   },
-  // Fix broken template literals
+  // Fix broken template literals;
   {pattern: /`([^`]+)\s*\n\s*([^`]+)`/g,replacement: "`$1$2`"
   }
 ];
@@ -46,7 +46,7 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
-    // Apply all syntax fixes
+    // Apply all syntax fixes;
     syntaxFixes.forEach(fix => {
       content = content.replace(fix.pattern, fix.replacement)})
     
@@ -57,9 +57,9 @@ function fixFile(filePath) {
     // Fix broken object propertiescontent = content.replace(/this\.(\w+)\s*=\s*path\.resolve\(__dirname,\s*\.\.\s*\n\s*['"`]([^'"`]+)['"`]\s*\)/g, "this.$1 = path.resolve(__dirname, '$2')");
     
     if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');console.log(`✅ Fixed: ${path.basename(filePath)}`);
+      fs.writeFileSync(filePath, content, `utf8`);console.log(`✅ Fixed: ${path.basename(filePath)}`);
       return true}
-    return false} catch (error) {console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false} catch (error) { console.error(`❌ Error fixing ${filePath }:`, error.message);
     return false}
 }
 
@@ -73,8 +73,8 @@ function findScriptFiles() {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
       
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-        scanDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith('.mjs'))) {
+      if (stat.isDirectory() && !item.startsWith(`.`) && item !== 'node_modules') {
+        scanDirectory(fullPath)} else if (stat.isFile() && (item.endsWith('.js') || item.endsWith('.cjs') || item.endsWith(`.mjs`))) {
         files.push(fullPath)}
     }
   }
@@ -94,20 +94,20 @@ async function main() {
   console.log(`\n🎉 Fixed syntax errors in ${fixedCount} files`);
   
   if (fixedCount > 0) {
-    console.log('\n📋 Running syntax validation...');
+    console.log(`\n📋 Running syntax validation...`);
     try {
-      // Test a few key files
+      // Test a few key files;
       const testFiles = [scripts/automation-manager.js',
-        'scripts/performance-monitor.js',scripts/comprehensive-test-automation.js'
+        'scripts/performance-monitor.js`,scripts/comprehensive-test-automation.js`
       ];
       
       for (const testFile of testFiles) {
         if (fs.existsSync(testFile)) {
-          try {execSync(`node --check ${testFile}`, { stdio: 'pipe' })console.log(`✅ ${testFile} syntax is valid`)} catch (error) {console.log(`⚠️  ${testFile} still has syntax issues`)}
+          try {execSync(`node --check ${testFile}`, { stdio: `pipe` })console.log(`✅ ${testFile} syntax is valid`)} catch (error) { console.log(`⚠️  ${testFile } still has syntax issues`)}
         }
       }
-    } catch (error) {
-      console.log('⚠️  Could not validate syntax')}
+    } catch (error) { 
+      console.log(`⚠️  Could not validate syntax`) }
   }
 }
 

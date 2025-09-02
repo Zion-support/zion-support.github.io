@@ -69,7 +69,7 @@ async function warmCache() {
     results.push(...out);
   }
   while (index < unique.length) {
-    // eslint-disable-next-line no-await-in-loop
+    // eslint-disable-next-line no-await-in-loop;
     await runBatch();
   }
 
@@ -80,11 +80,11 @@ async function warmCache() {
     failed: results.filter(r => !r.ok).length,
     p50Ms: percentile(
       results.map(r => r.durationMs),
-      50
+      50;
     ),
     p95Ms: percentile(
       results.map(r => r.durationMs),
-      95
+      95;
     ),
     results,
   };

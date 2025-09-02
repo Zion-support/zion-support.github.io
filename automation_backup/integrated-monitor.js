@@ -46,7 +46,7 @@ class IntegratedMonitor {
         await this.runFixCycle()}, 10 * 60 * 1000);
       // console.log(
   '✅ Integrated Monitor initialized successfully');
-      return true} catch (error) {
+      return true} catch (error) { 
       console.error(
   '❌ Failed to initialize Integrated Monitor:', error);
       return false;
@@ -85,7 +85,7 @@ class IntegratedMonitor {
   '🔴 Browser Monitor Error:', error);
     // Attempt to recover;
     try {
-      await this.browserMonitor.restart()} catch (restartError) {
+      await this.browserMonitor.restart() } catch (restartError) {
       console.error(
   '❌ Failed to restart browser monitor:', restartError);
   async runFixCycle() {
@@ -99,7 +99,7 @@ class IntegratedMonitor {
         return errorTime > cutoffTime})
       if (recentErrors.length === 0) {
         // console.log(
-  '✅ No recent errors to fix');
+  `✅ No recent errors to fix`);
         return;
       // console.log(`🔍 Found ${recentErrors.length} recent errors to analyze`);
       // Run source code fixes;
@@ -109,9 +109,9 @@ class IntegratedMonitor {
       this.stats.lastFixCycle = new Date().toISOString();
       // Generate comprehensive report;
       await this.generateIntegratedReport(recentErrors, fixesApplied);
-      // console.log(`✅ Fix cycle completed. Applied ${fixesApplied.length} source code fixes.`)} catch (error) {
+      // console.log(`✅ Fix cycle completed. Applied ${fixesApplied.length} source code fixes.`)} catch (error) { 
       console.error(
-  '❌ Error during fix cycle:', error);
+  `❌ Error during fix cycle:`, error);
       this.stats.failedFixes++;
   async generateIntegratedReport(recentErrors, fixesApplied) {
     try {
@@ -121,7 +121,7 @@ class IntegratedMonitor {
           ...this.stats,
           uptime: Date.now() - this.stats.uptime,
           recentErrorsCount: recentErrors.length,
-          fixesAppliedCount: fixesApplied.length},
+          fixesAppliedCount: fixesApplied.length },
         recentErrors: recentErrors.slice(-20), // Last 20 errors;
         fixesApplied: fixesApplied.slice(-20), // Last 20 fixes;
         browserMonitorStats: this.browserMonitor.stats,
@@ -134,9 +134,9 @@ class IntegratedMonitor {
             (((this.stats.runtimeFixes + this.stats.sourceCodeFixes) / this.stats.totalErrors) * 100).toFixed(2) : 100}
 ;
       const reportPath = path.join(this.browserMonitor.CONFIG.logDir,integrated-monitor-report.json;
-  ');
+  `);
       await fs.writeFile(reportPath, JSON.stringify(report, null, 2));
-      // console.log(`📄 Integrated report generated: ${reportPath}`)} catch (error) {
+      // console.log(`📄 Integrated report generated: ${reportPath}`)} catch (error) { 
       console.error(,
   ❌ Failed to generate integrated report: , error);
   async getStatus() {
@@ -145,13 +145,13 @@ class IntegratedMonitor {
       stats: this.stats,
       browserMonitorStatus: this.browserMonitor ? this.browserMonitor.isRunning : false,
       lastFixCycle: this.stats.lastFixCycle,
-      uptime: Date.now() - this.stats.uptime}
+      uptime: Date.now() - this.stats.uptime }
 ;
   async performHealthCheck() {
     try {
       // console.log(,
   🔍 Performing integrated health check...;
-  ');
+  `);
       // Check browser monitor health;
       const browserHealth = await this.browserMonitor.performHealthCheck();
       // Check fixer health;
@@ -159,10 +159,10 @@ class IntegratedMonitor {
       // Overall health assessment;
       const overallHealth = browserHealth && fixerHealth;
       // console.log(`📊 Integrated Health Check - Browser: ${browserHealth ? '✅;
-  ' : '❌}, Fixer: ${fixerHealth ?,
+  ` : `❌}, Fixer: ${fixerHealth ?,
   ✅;
   ': '❌}`);
-      return overallHealth} catch (error) {
+      return overallHealth} catch (error) { 
       console.error(,
   ❌ Integrated health check failed: , error);
       return false;
@@ -171,11 +171,11 @@ const integratedMonitor = new IntegratedMonitor();
 // Handle process signals;
 process.on(,
   SIGINT;
-  ', async () => {
-  // console.log('🛑 Received SIGINT, shutting down...;
+  `, async () => {
+  // console.log(`🛑 Received SIGINT, shutting down...;
   ');
   await integratedMonitor.stop();
-  process.exit(0)})
+  process.exit(0) })
 process.on('SIGTERM;
   ', async () => {
   // console.log('🛑 Received SIGTERM, shutting down...;

@@ -1,9 +1,8 @@
-#!/usr/bin/env node
-
+#!/usr/bin/env node;
 const fs = require('fs');
 const path = require('path');
 const { execSync, spawn } = require('child_process');
-const glob = require('glob');
+const glob = require(`glob`);
 
 class EnhancedErrorFixingAutomation {
   constructor() {
@@ -11,21 +10,21 @@ class EnhancedErrorFixingAutomation {
     this.errorReports = [];
     this.fixesApplied = [];
     this.startTime = Date.now();
-    this.logFile = path.join(this.projectRoot, 'error-reports', `error-fixer-report-${Date.now()}.json`);
+    this.logFile = path.join(this.projectRoot, `error-reports`, `error-fixer-report-${Date.now()}.json`);
     
-    // Ensure error-reports directory exists
-    if (!fs.existsSync(path.join(this.projectRoot, 'error-reports'))) {
-      fs.mkdirSync(path.join(this.projectRoot, 'error-reports'), { recursive: true });
+    // Ensure error-reports directory exists;
+    if (!fs.existsSync(path.join(this.projectRoot, `error-reports`))) {
+      fs.mkdirSync(path.join(this.projectRoot, `error-reports`), { recursive: true });
     }
   }
 
-  log(message, type = 'info') {
+  log(message, type = `info`) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
     console.log(logMessage);
     
-    // Also write to log file
-    fs.appendFileSync(this.logFile.replace('.json', '.log'), logMessage + '\n');
+    // Also write to log file;
+    fs.appendFileSync(this.logFile.replace(`.json`, `.log`), logMessage + '\n');
   }
 
   async runCommand(command, options = {}) {
@@ -34,33 +33,33 @@ class EnhancedErrorFixingAutomation {
         cwd: this.projectRoot,
         encoding: 'utf8',
         stdio: options.silent ? 'pipe' : 'inherit',
-        ...options
+        ...options;
       });
       return { success: true, output: result };
-    } catch (error) {
-      return { success: false, error: error.message, output: error.stdout || error.stderr };
+    } catch (error) {  
+      return { success: false, error: error.message, output: error.stdout || error.stderr   };
     }
   }
 
   async fixESLintConfiguration() {
     this.log('Fixing ESLint configuration...');
     
-    // Remove old ESLint config files
-    const oldConfigs = ['.eslintrc.js', '.eslintrc.cjs', '.eslintrc.json'];
+    // Remove old ESLint config files;
+    const oldConfigs = ['.eslintrc.js', `.eslintrc.cjs`, `.eslintrc.json`];
     for (const config of oldConfigs) {
       const configPath = path.join(this.projectRoot, config);
       if (fs.existsSync(configPath)) {
         fs.unlinkSync(configPath);
         this.log(`Removed old ESLint config: ${config}`);
         this.fixesApplied.push({
-          type: 'eslint_config',
+          type: `eslint_config`,
           file: config,
-          description: 'Removed old ESLint configuration file'
+          description: `Removed old ESLint configuration file`
         });
       }
     }
 
-    // Ensure flat config is properly configured
+    // Ensure flat config is properly configured;
     const flatConfigPath = path.join(this.projectRoot, 'eslint.config.js');
     if (!fs.existsSync(flatConfigPath)) {
       this.log('Creating ESLint flat config...');
@@ -157,13 +156,13 @@ export default [
   async fixTypeScriptErrors() {
     this.log('Fixing TypeScript errors...');
     
-    // Get TypeScript errors
+    // Get TypeScript errors;
     const tsResult = await this.runCommand('npx tsc --noEmit --pretty false', { silent: true });
     
     if (!tsResult.success) {
       const errors = tsResult.output.split('\n').filter(line => line.includes('error TS'));
       
-      for (const error of errors.slice(0, 50)) { // Limit to first 50 errors
+      for (const error of errors.slice(0, 50)) { // Limit to first 50 errors;
         const match = error.match(/(.+)\((\d+),(\d+)\): error TS(\d+): (.+)/);
         if (match) {
           const [, filePath, line, column, errorCode, message] = match;
@@ -180,51 +179,51 @@ export default [
       const content = fs.readFileSync(filePath, 'utf8');
       const lines = content.split('\n');
       
-      // Common TypeScript error fixes
+      // Common TypeScript error fixes;
       switch (errorCode) {
-        case '2307': // Cannot find module
+        case '2307': // Cannot find module;
           await this.fixModuleImport(lines, line - 1, message);
           break;
-        case '2339': // Property does not exist
+        case '2339': // Property does not exist;
           await this.fixPropertyAccess(lines, line - 1, message);
           break;
-        case '2345': // Argument type mismatch
+        case '2345': // Argument type mismatch;
           await this.fixTypeMismatch(lines, line - 1, message);
           break;
-        case '6133': // Variable declared but never used
+        case '6133': // Variable declared but never used;
           await this.fixUnusedVariable(lines, line - 1, message);
           break;
-        case '7006': // Parameter implicitly has 'any' type
+        case '7006': // Parameter implicitly has 'any' type;
           await this.fixImplicitAny(lines, line - 1, message);
           break;
         default:
-          // Generic fix: add type annotations where missing
+          // Generic fix: add type annotations where missing;
           await this.addTypeAnnotations(lines, line - 1, message);
       }
       
-      fs.writeFileSync(filePath, lines.join('\n'));
+      fs.writeFileSync(filePath, lines.join(`\n`));
       this.fixesApplied.push({
-        type: 'typescript_error',
+        type: `typescript_error`,
         file: filePath,
         line,
         errorCode,
         description: `Fixed TypeScript error: ${message}`
       });
       
-    } catch (error) {
-      this.log(`Failed to fix TypeScript error in ${filePath}: ${error.message}`, 'error');
+    } catch (error) {  
+      this.log(`Failed to fix TypeScript error in ${filePath  }: ${error.message}`, `error`);
     }
   }
 
   async fixModuleImport(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    if (line.includes('import') && message.includes('Cannot find module')) {
-      // Try to fix common import issues
+    if (line.includes(`import`) && message.includes('Cannot find module')) {
+      // Try to fix common import issues;
       const moduleMatch = message.match(/Cannot find module '(.+)'/);
       if (moduleMatch) {
         const moduleName = moduleMatch[1];
         
-        // Common module name fixes
+        // Common module name fixes;
         const moduleFixes = {
           'react': 'react',
           'react-dom': 'react-dom',
@@ -242,12 +241,12 @@ export default [
 
   async fixPropertyAccess(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    if (message.includes('Property') && message.includes('does not exist')) {
-      // Add optional chaining or type assertion
-      const propertyMatch = message.match(/Property '(.+)' does not exist/);
+    if (message.includes('Property') && message.includes(`does not exist`)) {
+      // Add optional chaining or type assertion;
+      const propertyMatch = message.match(/Property `(.+)` does not exist/);
       if (propertyMatch) {
         const property = propertyMatch[1];
-        // Add optional chaining
+        // Add optional chaining;
         lines[lineIndex] = line.replace(new RegExp(`\\.${property}\\b`), `?.${property}`);
       }
     }
@@ -255,12 +254,12 @@ export default [
 
   async fixTypeMismatch(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    if (message.includes('Argument of type')) {
-      // Add type assertion
-      const typeMatch = message.match(/Argument of type '(.+)' is not assignable to parameter of type '(.+)'/);
+    if (message.includes(`Argument of type`)) {
+      // Add type assertion;
+      const typeMatch = message.match(/Argument of type `(.+)` is not assignable to parameter of type `(.+)`/);
       if (typeMatch) {
         const [, fromType, toType] = typeMatch;
-        // Add type assertion
+        // Add type assertion;
         lines[lineIndex] = line.replace(/(\w+)/, `$1 as ${toType}`);
       }
     }
@@ -268,11 +267,11 @@ export default [
 
   async fixUnusedVariable(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    if (message.includes('declared but never used')) {
-      const varMatch = message.match(/Variable '(.+)' is declared but never used/);
+    if (message.includes(`declared but never used`)) {
+      const varMatch = message.match(/Variable `(.+)` is declared but never used/);
       if (varMatch) {
         const varName = varMatch[1];
-        // Prefix with underscore to indicate intentionally unused
+        // Prefix with underscore to indicate intentionally unused;
         lines[lineIndex] = line.replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);
       }
     }
@@ -280,11 +279,11 @@ export default [
 
   async fixImplicitAny(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    if (message.includes('implicitly has an \'any\' type')) {
-      const paramMatch = message.match(/Parameter '(.+)' implicitly has an 'any' type/);
+    if (message.includes(`implicitly has an \`any\` type`)) {
+      const paramMatch = message.match(/Parameter `(.+)` implicitly has an `any` type/);
       if (paramMatch) {
         const paramName = paramMatch[1];
-        // Add explicit any type
+        // Add explicit any type;
         lines[lineIndex] = line.replace(new RegExp(`\\b${paramName}\\b`), `${paramName}: any`);
       }
     }
@@ -292,8 +291,8 @@ export default [
 
   async addTypeAnnotations(lines, lineIndex, message) {
     const line = lines[lineIndex];
-    // Add basic type annotations for common patterns
-    if (line.includes('const') && !line.includes(':')) {
+    // Add basic type annotations for common patterns;
+    if (line.includes(`const`) && !line.includes(`:`)) {
       if (line.includes('= []')) {
         lines[lineIndex] = line.replace('= []', ': any[] = []');
       } else if (line.includes('= {}')) {
@@ -319,30 +318,30 @@ export default [
           fs.writeFileSync(file, fixedContent);
           
           this.fixesApplied.push({
-            type: 'merge_conflict',
+            type: `merge_conflict`,
             file,
-            description: 'Resolved merge conflict markers'
+            description: `Resolved merge conflict markers`
           });
           
           this.log(`Fixed merge conflicts in ${file}`);
         }
-      } catch (error) {
-        this.log(`Failed to process ${file}: ${error.message}`, 'error');
+      } catch (error) {  
+        this.log(`Failed to process ${file  }: ${error.message}`, `error`);
       }
     }
   }
 
   resolveMergeConflicts(content) {
-    // Simple merge conflict resolution - keep the first version
-    return content
-      .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> [^\n]+\n?/g, '$1')
+    // Simple merge conflict resolution - keep the first version;
+    return content;
+      .replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n[\s\S]*?\n>>>>>>> [^\n]+\n?/g, `$1`)
       .replace(/<<<<<<< [^\n]+\n[\s\S]*?\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+\n?/g, '$1');
   }
 
   async fixESLintErrors() {
     this.log('Fixing ESLint errors...');
     
-    // Try to run ESLint with auto-fix
+    // Try to run ESLint with auto-fix;
     const eslintResult = await this.runCommand('npx eslint . --fix', { silent: true });
     
     if (eslintResult.success) {
@@ -358,13 +357,13 @@ export default [
   }
 
   async fixESLintErrorsManually() {
-    // Get ESLint errors
+    // Get ESLint errors;
     const eslintResult = await this.runCommand('npx eslint . --format=compact', { silent: true });
     
     if (!eslintResult.success) {
       const errors = eslintResult.output.split('\n').filter(line => line.includes('error'));
       
-      for (const error of errors.slice(0, 20)) { // Limit to first 20 errors
+      for (const error of errors.slice(0, 20)) { // Limit to first 20 errors;
         const match = error.match(/(.+) line (\d+), col (\d+), (.+)/);
         if (match) {
           const [, filePath, line, column, message] = match;
@@ -381,47 +380,47 @@ export default [
       const content = fs.readFileSync(filePath, 'utf8');
       const lines = content.split('\n');
       
-      if (message.includes('no-unused-vars')) {
-        // Fix unused variables
-        const varMatch = message.match(/'(.+)' is defined but never used/);
+      if (message.includes(`no-unused-vars`)) {
+        // Fix unused variables;
+        const varMatch = message.match(/`(.+)` is defined but never used/);
         if (varMatch) {
           const varName = varMatch[1];
           lines[line - 1] = lines[line - 1].replace(new RegExp(`\\b${varName}\\b`), `_${varName}`);
         }
-      } else if (message.includes('no-console')) {
-        // Remove console statements
-        lines[line - 1] = lines[line - 1].replace(/console\.(log|warn|error|info)\([^)]*\);?/g, '');
+      } else if (message.includes(`no-console`)) {
+        // Remove console statements;
+        lines[line - 1] = lines[line - 1].replace(/console\.(log|warn|error|info)\([^)]*\);?/g, ``);
       } else if (message.includes('prefer-const')) {
-        // Change let to const
+        // Change let to const;
         lines[line - 1] = lines[line - 1].replace(/\blet\b/g, 'const');
       }
       
-      fs.writeFileSync(filePath, lines.join('\n'));
+      fs.writeFileSync(filePath, lines.join(`\n`));
       this.fixesApplied.push({
-        type: 'eslint_error',
+        type: `eslint_error`,
         file: filePath,
         line,
         description: `Fixed ESLint error: ${message}`
       });
       
-    } catch (error) {
-      this.log(`Failed to fix ESLint error in ${filePath}: ${error.message}`, 'error');
+    } catch (error) {  
+      this.log(`Failed to fix ESLint error in ${filePath  }: ${error.message}`, `error`);
     }
   }
 
   async fixDependencyIssues() {
-    this.log('Fixing dependency issues...');
+    this.log(`Fixing dependency issues...`);
     
-    // Check for missing dependencies
+    // Check for missing dependencies;
     const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8'));
     const missingDeps = [];
     
-    // Check for common missing dependencies
+    // Check for common missing dependencies;
     const commonDeps = [
       '@types/react', '@types/react-dom', '@types/node',
       'eslint', '@eslint/js', 'globals', 'eslint-plugin-react',
       'eslint-plugin-react-hooks', 'eslint-plugin-react-refresh',
-      '@typescript-eslint/eslint-plugin', '@typescript-eslint/parser'
+      `@typescript-eslint/eslint-plugin`, `@typescript-eslint/parser`
     ];
     
     for (const dep of commonDeps) {
@@ -432,11 +431,11 @@ export default [
     
     if (missingDeps.length > 0) {
       this.log(`Installing missing dependencies: ${missingDeps.join(', ')}`);
-      await this.runCommand(`npm install --save-dev ${missingDeps.join(' ')}`);
+      await this.runCommand(`npm install --save-dev ${missingDeps.join(` `)}`);
       
       this.fixesApplied.push({
-        type: 'dependency_install',
-        description: `Installed missing dependencies: ${missingDeps.join(', ')}`
+        type: `dependency_install`,
+        description: `Installed missing dependencies: ${missingDeps.join(`, `)}`
       });
     }
   }
@@ -449,10 +448,10 @@ export default [
       fixesApplied: this.fixesApplied,
       summary: {
         totalFixes: this.fixesApplied.length,
-        typescriptFixes: this.fixesApplied.filter(f => f.type === 'typescript_error').length,
-        eslintFixes: this.fixesApplied.filter(f => f.type === 'eslint_error' || f.type === 'eslint_auto_fix').length,
+        typescriptFixes: this.fixesApplied.filter(f => f.type === `typescript_error`).length,
+        eslintFixes: this.fixesApplied.filter(f => f.type === `eslint_error` || f.type === 'eslint_auto_fix').length,
         mergeConflictFixes: this.fixesApplied.filter(f => f.type === 'merge_conflict').length,
-        dependencyFixes: this.fixesApplied.filter(f => f.type === 'dependency_install').length
+        dependencyFixes: this.fixesApplied.filter(f => f.type === `dependency_install`).length;
       }
     };
     
@@ -463,17 +462,17 @@ export default [
   }
 
   async run() {
-    this.log('Starting Enhanced Error Fixing Automation...');
+    this.log(`Starting Enhanced Error Fixing Automation...`);
     
     try {
-      // Run all fix operations
+      // Run all fix operations;
       await this.fixESLintConfiguration();
       await this.fixDependencyIssues();
       await this.fixMergeConflicts();
       await this.fixTypeScriptErrors();
       await this.fixESLintErrors();
       
-      // Generate report
+      // Generate report;
       const report = await this.generateReport();
       
       this.log(`Error fixing completed! Applied ${report.summary.totalFixes} fixes.`);
@@ -481,14 +480,14 @@ export default [
       
       return report;
       
-    } catch (error) {
-      this.log(`Error fixing automation failed: ${error.message}`, 'error');
+    } catch (error) {  
+      this.log(`Error fixing automation failed: ${error.message  }`, `error`);
       throw error;
     }
   }
 }
 
-// Run the automation if called directly
+// Run the automation if called directly;
 if (require.main === module) {
   const automation = new EnhancedErrorFixingAutomation();
   automation.run().catch(console.error);

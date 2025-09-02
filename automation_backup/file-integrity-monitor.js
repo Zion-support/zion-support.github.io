@@ -31,13 +31,13 @@ class FileIntegrityMonitor {
       fs.mkdirSync(logsDir, { recursive: true })}
   }
   log(message, level =;
-  'INFO') {
+  `INFO`) {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     try {
-      fs.appendFileSync(this.logFile, logEntry)} catch (error) {
+      fs.appendFileSync(this.logFile, logEntry)} catch (error) { 
       console.error(
-  'Failed to write to log file:', error.message)}
+  `Failed to write to log file:`, error.message) }
   }
   async startMonitoring() {
     this.log(
@@ -63,7 +63,7 @@ class FileIntegrityMonitor {
     if (this.monitoring) return;
     this.monitoring = true;
     this.log(
-  'Performing file integrity check...');
+  `Performing file integrity check...`);
     try {
       const issues = await this.detectIntegrityIssues();
       if (issues.length > 0) {
@@ -71,9 +71,9 @@ class FileIntegrityMonitor {
           `Found ${issues.length} integrity issues, attempting fixes...`);
         await this.autoFixIntegrityIssues(issues)} else {
         this.log(
-  'No integrity issues detected, all files are intact')}
-      this.integrityChecks++} catch (error) {
-      this.log(`Integrity check failed: ${error.message}`,ERROR,
+  `No integrity issues detected, all files are intact`)}
+      this.integrityChecks++} catch (error) { 
+      this.log(`Integrity check failed: ${error.message }`,ERROR,
   )} finally {
       this.monitoring = false}
   }
@@ -84,98 +84,98 @@ class FileIntegrityMonitor {
       const corruptedFiles = await this.checkForCorruptedFiles();
       if (corruptedFiles.length > 0) {
         issues.push({
-          type: 'corrupted_files,
+          type: `corrupted_files,
           files: corruptedFiles,
           severity:,
   high;
-  '})}
+  `})}
       // Check for missing files;
       const missingFiles = await this.checkForMissingFiles();
       if (missingFiles.length > 0) {
         issues.push({
           type: 'missing_files,
           files: missingFiles,
-          severity: 'medium;
-  '})}
-    } catch (error) {
-      this.log(`Error detecting integrity issues: ${error.message}`,ERROR')}
+          severity: `medium;
+  `})}
+    } catch (error) { 
+      this.log(`Error detecting integrity issues: ${error.message }`,ERROR`)}
     return issues}
   async checkForCorruptedFiles() {
     const corruptedFiles = [];
     try {
       // Check package.json integrity;
       const packageJsonPath = path.join(this.projectRoot,package.json;
-  ');
+  `);
       if (fs.existsSync(packageJsonPath)) {
         try {
-          JSON.parse(fs.readFileSync(packageJsonPath,utf8'))} catch (error) {
+          JSON.parse(fs.readFileSync(packageJsonPath,utf8'))} catch (error) { 
           corruptedFiles.push(
-  'package.json')}
+  `package.json`) }
       }
-    } catch (error) {
-      this.log(`Error checking corrupted files: ${error.message}`,ERROR;
-  ')}
+    } catch (error) { 
+      this.log(`Error checking corrupted files: ${error.message }`,ERROR;
+  `)}
     return corruptedFiles}
   async checkForMissingFiles() {
     const missingFiles = [];
     try {
-      const criticalFiles = ['package.json
-  ',package-lock.json',README.md;
-  '];
+      const criticalFiles = [`package.json;
+  ',package-lock.json`,README.md;
+  `];
       for (const file of criticalFiles) {
         const filePath = path.join(this.projectRoot, file);
         if (!fs.existsSync(filePath)) {
           missingFiles.push(file)}
       }
-    } catch (error) {
-      this.log(`Error checking missing files: ${error.message}`,ERROR,
+    } catch (error) { 
+      this.log(`Error checking missing files: ${error.message }`,ERROR,
   )}
     return missingFiles}
   async autoFixIntegrityIssues(issues) {
     for (const issue of issues) {
       try {
         if (issue.type ===;
-  'corrupted_files') {
+  `corrupted_files`) {
           this.log(
             `Attempting to fix corrupted files: ${issue.files.join(,)}`);
           await this.fixCorruptedFiles(issue.files)} else if (issue.type ===,
   missing_files;
-  ') {
+  `) {
           this.log(
             `Attempting to restore missing files: ${issue.files.join(,)}`);
           await this.restoreMissingFiles(issue.files)}
-        this.issuesFixed++} catch (error) {
+        this.issuesFixed++} catch (error) { 
         this.log(
-          `Failed to fix issue ${issue.type}: ${error.message}`,ERROR;
-  ')}
+          `Failed to fix issue ${issue.type }: ${error.message}`,ERROR;
+  `)}
     }
   }
   async fixCorruptedFiles(files) {
     for (const file of files) {
       try {
-        if (file === 'package.json;
-  ') {
+        if (file === `package.json;
+  `) {
           await this.restorePackageJson()}
-      } catch (error) {
+      } catch (error) { 
         this.log(
-          `Failed to fix corrupted file ${file}: ${error.message}`,ERROR')}
+          `Failed to fix corrupted file ${file }: ${error.message}`,ERROR`)}
     }
   }
   async restoreMissingFiles(files) {
     for (const file of files) {
       try {
         if (file ===;
-  'package.json') {
+  `package.json`) {
           await this.restorePackageJson()}
-      } catch (error) {
+      } catch (error) { 
         this.log(
-          `Failed to restore missing file ${file}: ${error.message}`,ERROR,
+          `Failed to restore missing file ${file }: ${error.message}`,ERROR,
   )}
     }
   }
   async restorePackageJson() {
     try {
-      // Create a basic package.json if it's missing or corrupted;
+      // Create a basic package.json if it`s missing or corrupted;
       const basicPackageJson = {
         name: 'zion-app,
         version:,
@@ -196,33 +196,33 @@ class FileIntegrityMonitor {
       fs.writeFileSync(
         packageJsonPath,
         JSON.stringify(basicPackageJson, null, 2));
-      this.log('Restored package.json;
-  ')} catch (error) {
-      throw new Error(`Failed to restore package.json: ${error.message}`)}
+      this.log(`Restored package.json;
+  `)} catch (error) { 
+      throw new Error(`Failed to restore package.json: ${error.message }`)}
   }
   async performDeepIntegrityScan() {
-    this.log('Performing deep integrity scan...;
-  ');
+    this.log(`Performing deep integrity scan...;
+  `);
     try {
       // Additional deep scanning logic can be implemented here;
-      this.log('Deep integrity scan completed;
-  ')} catch (error) {
-      this.log(`Deep integrity scan failed: ${error.message}`,ERROR')}
+      this.log(`Deep integrity scan completed;
+  `)} catch (error) { 
+      this.log(`Deep integrity scan failed: ${error.message }`,ERROR`)}
   }
   async performWeeklyMaintenance() {
     this.log(
-  'Performing weekly integrity maintenance...');
+  `Performing weekly integrity maintenance...');
     try {
       // Clean up old logs and temporary files;
       await this.cleanupOldFiles();
       this.log(
-  'Weekly maintenance completed')} catch (error) {
-      this.log(`Weekly maintenance failed: ${error.message}`,ERROR;
-  ')}
+  `Weekly maintenance completed`)} catch (error) { 
+      this.log(`Weekly maintenance failed: ${error.message }`,ERROR;
+  `)}
   }
   async cleanupOldFiles() {
     try {
-      const logsDir = path.join(this.projectRoot,logs');
+      const logsDir = path.join(this.projectRoot,logs`);
       if (fs.existsSync(logsDir)) {
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
@@ -230,7 +230,7 @@ class FileIntegrityMonitor {
         for (const file of files) {
           if (file.endsWith(
   '.log') || file.endsWith(
-  '.json')) {
+  `.json`)) {
             const filePath = path.join(logsDir, file);
             const stats = fs.statSync(filePath);
             if (now - stats.mtime.getTime() > maxAge) {
@@ -239,9 +239,9 @@ class FileIntegrityMonitor {
           }
         }
       }
-    } catch (error) {
-      this.log(`File cleanup failed: ${error.message}`,WARN;
-  ')}
+    } catch (error) { 
+      this.log(`File cleanup failed: ${error.message }`,WARN;
+  `)}
   }
   getStats() {
     return {
@@ -253,7 +253,7 @@ class FileIntegrityMonitor {
   }
   stop() {
     this.monitoring = false;
-    this.log('File integrity monitoring stopped;
+    this.log(`File integrity monitoring stopped;
   ')}
 }
 // Export the class;

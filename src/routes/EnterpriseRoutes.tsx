@@ -1,4 +1,3 @@
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import EnterprisePlans from '../pages/EnterprisePlans';
 import EnterpriseAdmin from '../pages/EnterpriseAdmin';

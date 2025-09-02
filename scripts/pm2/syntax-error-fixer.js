@@ -13,7 +13,7 @@ class SyntaxErrorFixer {
     this.logFile =;
   'error-reports/syntax-error-fixer-report.json';
     console.log(
-  '🔧 Syntax Error Fixer started');
+  `🔧 Syntax Error Fixer started`);
     console.log(`Scan interval: ${this.scanInterval}ms`);
     console.log(`Auto-fix enabled: ${this.autoFix}`)}
   async start() {
@@ -24,7 +24,7 @@ class SyntaxErrorFixer {
       await this.scanAndFix()}, this.scanInterval)}
   async scanAndFix() {
     console.log(
-  '🔍 Starting syntax error scan...');
+  `🔍 Starting syntax error scan...`);
     const report = {
       timestamp: new Date().toISOString(),
       errors: [],
@@ -52,15 +52,15 @@ class SyntaxErrorFixer {
             } else {
               report.fixes.skipped.push(file)}
           }
-        } catch (error) {
-          console.error(`Error processing ${file}:`, error.message)}
+        } catch (error) { 
+          console.error(`Error processing ${file }:`, error.message)}
       }
       // Save report;
       this.saveReport(report);
       console.log(`📊 Scan complete. Found ${report.errors.length} files with syntax errors.`);
-      console.log(`✅ Fixed: ${report.fixes.applied.length}, ❌ Failed: ${report.fixes.failed.length}, ⏭️ Skipped: ${report.fixes.skipped.length}`)} catch (error) {
+      console.log(`✅ Fixed: ${report.fixes.applied.length}, ❌ Failed: ${report.fixes.failed.length}, ⏭️ Skipped: ${report.fixes.skipped.length}`)} catch (error) { 
       console.error(
-  'Error during syntax scan:', error)}
+  `Error during syntax scan:`, error) }
   }
   findSyntaxErrorFiles() {
     const extensions = [
@@ -127,13 +127,13 @@ class SyntaxErrorFixer {
               error,
               type: 'syntax;
   '})}
-        })})} catch (error) {
+        })})} catch (error) { 
       errors.push({
         line: 1,
-        content: '',
-        error: `File read error: ${error.message}`,
+        content: ``,
+        error: `File read error: ${error.message }`,
         type:;
-  'file-error'})}
+  `file-error`})}
     return errors}
   async fixSyntaxErrors(filePath, errors) {
     try {
@@ -171,12 +171,12 @@ class SyntaxErrorFixer {
         // Create backup;
         fs.writeFileSync(filePath +;
   '.backup', fs.readFileSync(filePath,
-  'utf8'));
+  `utf8`));
         // Write fixed content;
         fs.writeFileSync(filePath, content);
         return true}
-      return false} catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
+      return false} catch (error) { 
+      console.error(`Error fixing ${filePath }:`, error.message);
       return false}
   }
   fixMergeConflicts(content) {
@@ -185,9 +185,9 @@ class SyntaxErrorFixer {
       .replace(/\\n([\\s\\S]*?).replace(/\\n([\\s\\S]*?)}
 saveReport(report) {
     try {
-      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))} catch (error) {
+      fs.writeFileSync(this.logFile, JSON.stringify(report, null, 2))} catch (error) { 
       console.error(
-  'Error saving report:', error.message)}
+  `Error saving report:`, error.message) }
   }
 }
 // Start the fixer;

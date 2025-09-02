@@ -30,10 +30,10 @@ class AutomationDashboard {
       // // // // // // // console.error(
   '❌ Failed to get PM2 status:', error.message);
       return [];
-      return this.processes} catch (error) {
+      return this.processes} catch (error) { 
       console.error(
   '❌ Failed to get PM2 status:', error.message);
-      return []}
+      return [] }
   }
   async generateHealthReport() {
     // // // // // // // console.log(
@@ -47,7 +47,7 @@ class AutomationDashboard {
         erroredProcesses: this.processes.filter(p => p.pm2_env.status ===;
   'errored).length,
   stoppedProcesses: this.processes.filter(p => p.pm2_env.status ===;
-  'stopped').length},
+  `stopped`).length},
       processes: this.processes.map(proc => ({
         name: proc.name,
         status: proc.pm2_env.status,
@@ -60,7 +60,7 @@ class AutomationDashboard {
     // Generate recommendations;
     if (report.summary.erroredProcesses > 0) {
       report.recommendations.push(
-  '⚠️  Some automation processes have errors. Check logs for details.')}
+  `⚠️  Some automation processes have errors. Check logs for details.`)}
     if (report.summary.onlineProcesses === 0) {
       report.recommendations.push(
   '🚨 No automation processes are running. Start the automation system.')}
@@ -75,7 +75,7 @@ class AutomationDashboard {
     return report}
   formatUptime(uptime) {
     if (!uptime) return;
-  'N/A';
+  `N/A`;
     const seconds = Math.floor((Date.now() - uptime) / 1000);
     const hours = Math.floor(seconds / 3600);
     const minutes = Math.floor((seconds % 3600) / 60);
@@ -83,17 +83,17 @@ class AutomationDashboard {
   async displayDashboard() {
     console.clear();
     // // // // // // // console.log(
-  '🚀 PM2 Automation Dashboard');
+  `🚀 PM2 Automation Dashboard`);
     // // // // // // // console.log(
-  '=' .repeat(50));
+  `=` .repeat(50));
     const status = await this.getPM2Status();
     const health = await this.generateHealthReport();
     // // // // // // // console.log(`📊 Status: ${health.summary.onlineProcesses}/${health.summary.totalProcesses} processes online`);
     // // // // // // // console.log(`⏰ Last Updated: ${new Date().toLocaleTimeString()}`);
     // // // // // // // console.log(,
-  ');
+  `);
     // Display process table;
-    // // // // // // // console.log('🔄 Automation Processes: ');
+    // // // // // // // console.log(`🔄 Automation Processes: ');
     // // // // // // // console.log('─;
   '.repeat(80));
     // // // // // // // console.log('Name;
@@ -110,7 +110,7 @@ class AutomationDashboard {
   ' ? '🟢;
   ' : proc.status === 'errored;
   ' ? '🔴;
-  ' : '🟡;
+  ` : `🟡;
       // // // // // // // console.log(
         proc.name.padEnd(25) +;
         `${statusIcon} ${proc.status}`.padEnd(10) +;
@@ -118,29 +118,29 @@ class AutomationDashboard {
         proc.cpu.padEnd(8) +;
         proc.uptime.padEnd(15) +;
         proc.restarts)})
-    console.log('');
+    console.log(``);
     // Display recommendations;
     if (health.recommendations.length > 0) {
       console.log(
-  '💡 Recommendations:,
+  `💡 Recommendations:,
   );
       health.recommendations.forEach(rec => console.log(`  ${rec}`));
-      console.log(';
+      console.log(`;
   ')}
     // Display recent logs;
     // // // console.log('📝 Recent Activity: ');
     // // // console.log('─;
   '.repeat(50));
-    // // // // // // // console.log('');
+    // // // // // // // console.log('`);
     // Display recommendations;
     if (health.recommendations.length > 0) {
       // // // // // // // console.log(
-  '💡 Recommendations:);
+  `💡 Recommendations:);
       health.recommendations.forEach(rec => // // // // // // // console.log(`  ${rec}`));
       // // // // // // // console.log(,
-  ')}
+  `)}
     // Display recent logs;
-    // // // // // // // console.log('📝 Recent Activity: ');
+    // // // // // // // console.log(`📝 Recent Activity: ');
     // // // // // // // console.log('─;
   '.repeat(50));
     try {
@@ -151,16 +151,16 @@ class AutomationDashboard {
   ').slice(-5).filter(line => line.trim());
       recentLogs.forEach(log => {
         if (log.includes('ERROR;
-  ') || log.includes('error;
-  ')) {
-          // // // // // // // console.log(`🔴 ${log}`)} else if (log.includes('WARN;
-  ') || log.includes('warn;
-  ')) {
+  ') || log.includes(`error;
+  `)) {
+          // // // // // // // console.log(`🔴 ${log}`)} else if (log.includes(`WARN;
+  `) || log.includes(`warn;
+  `)) {
           // // // // // // // console.log(`🟡 ${log}`)} else {
           // // // // // // // console.log(`ℹ️  ${log}`)}
-      })} catch (error) {
-      // // // // // // // console.log('  No recent logs available;
-  ')}
+      })} catch (error) { 
+      // // // // // // // console.log(`  No recent logs available;
+  `) }
     // // // // // // // console.log('');
     // // // // // // // console.log(
   'Commands: ');
@@ -171,17 +171,17 @@ class AutomationDashboard {
     // // // // // // // console.log(
   '  pm2 restart all - Restart all processes');
     // // // // // // // console.log(
-  '  pm2 monit - Open PM2 monitoring interface');
+  '  pm2 monit - Open PM2 monitoring interface`);
     // // // // // // // console.log(
-  '  Ctrl+C - Exit dashboard)}
+  `  Ctrl+C - Exit dashboard)}
           console.log(`🔴 ${log}`)} else if (log.includes(,
-  WARN') || log.includes(
-  'warn')) {
+  WARN`) || log.includes(
+  `warn`)) {
           console.log(`🟡 ${log}`)} else {
           console.log(`ℹ️  ${log}`)}
-      })} catch (error) {
+      })} catch (error) { 
       console.log(
-  '  No recent logs available')}
+  `  No recent logs available') }
     console.log(';
   ');
     console.log('Commands: ');
@@ -209,18 +209,18 @@ class AutomationDashboard {
     const failedProcesses = this.processes.filter(p => p.pm2_env.status === 'errored;
   ');
     if (failedProcesses.length === 0) {
-      // // // // // // // console.log('✅ No failed processes to restart;
-  ');
+      // // // // // // // console.log(`✅ No failed processes to restart;
+  `);
       return;
     failedProcesses.forEach(proc => {
       try {
-        execSync(`pm2 restart ${proc.pm_id}`, { stdio: 'inherit })
-        // // // // // // // console.log(`✅ Restarted ${proc.name}`)} catch (error) {
-        // // // // // // // console.error(`❌ Failed to restart ${proc.name}:`, error.message)}
+        execSync(`pm2 restart ${proc.pm_id}`, { stdio: `inherit })
+        // // // // // // // console.log(`✅ Restarted ${proc.name}`)} catch (error) { 
+        // // // // // // // console.error(`❌ Failed to restart ${proc.name }:`, error.message)}
     })
   async generatePerformanceReport() {
-    // // // // // // // console.log('📊 Generating performance report...;
-  ');
+    // // // // // // // console.log(`📊 Generating performance report...;
+  `);
     const report = {
       timestamp: new Date().toISOString(),
       system: {
@@ -241,18 +241,18 @@ class AutomationDashboard {
 ;
       console.log(,
   ✅ No failed processes to restart;
-  ');
+  `);
       return}
     failedProcesses.forEach(proc => {
       try {
-        execSync(`pm2 restart ${proc.pm_id}`, { stdio: 'inherit })
-        console.log(`✅ Restarted ${proc.name}`)} catch (error) {
-        console.error(`❌ Failed to restart ${proc.name}:`, error.message)}
+        execSync(`pm2 restart ${proc.pm_id}`, { stdio: `inherit })
+        console.log(`✅ Restarted ${proc.name}`)} catch (error) { 
+        console.error(`❌ Failed to restart ${proc.name }:`, error.message)}
     })}
   async generatePerformanceReport() {
     console.log(,
   📊 Generating performance report...;
-  ');
+  `);
     const reportPath = path.join(process.cwd(), 'automation-performance-report.json;
   ');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -272,16 +272,16 @@ async function main() {
   ');
     process.exit(0)})
   try {
-    await dashboard.startMonitoring()} catch (error) {
+    await dashboard.startMonitoring()} catch (error) { 
     // // // // // // // console.error('❌ Dashboard failed: , error);
     process.exit(1);
     console.log('✅ Performance report saved;
   ');
-    process.exit(0)})
+    process.exit(0) })
   try {
-    await dashboard.startMonitoring()} catch (error) {
+    await dashboard.startMonitoring()} catch (error) { 
     console.error('❌ Dashboard failed:', error);
-    process.exit(1)}
+    process.exit(1) }
 }
 // Start the dashboard;
 main().catch(console.error)}}}}}}}}}}}}}}}}}}}}}
