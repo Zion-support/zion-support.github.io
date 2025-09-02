@@ -1,7 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import EnhancedNavigation from '../EnhancedNavigation';
-import EnhancedFooter from '../EnhancedFooter';
+import React from
+  'react';
+import Head from
+  'next/head';
+import EnhancedNavigation from
+  '../EnhancedNavigation';
+import EnhancedFooter from
+  '../EnhancedFooter';
 
 interface EnhancedLayoutProps {
   // Add your props here
@@ -18,10 +22,14 @@ interface EnhancedLayoutProps {
 ;
 const EnhancedLayout: React.FC<EnhancedLayoutProps> = {
   children,
-  title = 'Zion Tech Group - Leading AI & Technology Solutions',
-  description = 'Transform your business with Zion Tech Group\'s cutting-edge AI development, cloud architecture, and digital transformation services.',
-  keywords = 'AI development, cloud architecture, web development, cybersecurity, IoT platforms, digital transformation, technology consulting',
-  ogImage = 'https://ziontechgroup.com/og-image.png',
+  title =,
+  Zion Tech Group - Leading AI & Technology Solutions',
+  description =
+  'Transform your business with Zion Tech Group\'s cutting-edge AI development, cloud architecture, and digital transformation services.
+  ',
+  keywords = 'AI development, cloud architecture, web development, cybersecurity, IoT platforms, digital transformation, technology consulting
+  ',
+  ogImage = 'https: //ziontechgroup.com/og-image.png,
   structuredData
 } {
   const defaultStructuredData = {
