@@ -1,1 +1,1 @@
-import React, { Suspense, lazy } from 'react'; import { Routes, Route } from 'react-router-dom'; import { motion, AnimatePresence } from 'framer-motion'; import { HelmetProvider } from 'react-helmet-async';
+import React, { Suspense, lazy } from 'react'; import { Routes, Route } from 'react-router-dom'; import { motion, AnimatePresence } from 'framer-motion'; import { HelmetProvider } from 'react-helmet-async'; import { AppHeader } from './layout/AppHeader'; import { Footer } from './components/layout/Footer'; import { MainSidebar } from './components/layout/MainSidebar';
