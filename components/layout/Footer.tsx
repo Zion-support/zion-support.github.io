@@ -12,21 +12,11 @@ import {
   Instagram,
   ArrowRight,
   Heart,
-  Globe,
-  Shield,
-  Users,
-  Award,
-  Star,
-  Zap,
   Cloud,
-  Database,
-  Network,
-  Target,
-  CheckCircle,
-  ExternalLink
+  Database
 } from 'lucide-react';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
+// import { Button } from '../ui/Button';
+// import { Badge } from '../ui/Badge';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -209,9 +199,9 @@ const Footer: React.FC = () => {
                   placeholder="Enter your email"
                   className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
                 />
-                <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                <button className="w-full h-9 px-3 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-colors">
                   Subscribe
-                </Button>
+                </button>
               </div>
             </div>
           </div>

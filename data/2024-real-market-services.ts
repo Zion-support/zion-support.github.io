@@ -36,7 +36,9 @@ export interface RealMarketService {
   launchDate: string;
   customers: number;
   rating: number;
-reviews: number;export const realMarketServices: RealMarketService[] = [
+  reviews: number;
+}
+export const realMarketServices: RealMarketService[] = [
   // AI-Powered Business Intelligence
   {
     id: 'ai-business-intelligence-pro',
@@ -45,7 +47,7 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     price: '$299',
     period: '/month',
     description: 'Advanced AI-powered business intelligence platform that automatically analyzes your business data, identifies trends, and provides actionable recommendations for growth and optimization.',
-    features[
+    features: [
       'Real-time data analytics dashboard',
       'AI-powered trend prediction',
       'Custom KPI tracking and alerts',
@@ -68,11 +70,11 @@ reviews: number;export const realMarketServices: RealMarketService[] = [
     setupTime: '2 hours',
     category: 'AI & Analytics',
     realService: true,
-    technology['Python, TensorFlow, React, Node.js, PostgreSQL, Redis, AWS'],
-    integrations['Salesforce, HubSpot, Google Analytics, Shopify, QuickBooks, Zapier'],
-    useCases['Sales performance analysis, Marketing ROI tracking, Customer behavior insights, Operational efficiency, Financial forecasting, Competitive analysis'],
+    technology: ['Python', 'TensorFlow', 'React', 'Node.js', 'PostgreSQL', 'Redis', 'AWS'],
+    integrations: ['Salesforce', 'HubSpot', 'Google Analytics', 'Shopify', 'QuickBooks', 'Zapier'],
+    useCases: ['Sales performance analysis', 'Marketing ROI tracking', 'Customer behavior insights', 'Operational efficiency', 'Financial forecasting', 'Competitive analysis'],
     roi: 'Average customer sees 400% ROI within 6 months through improved decision-making and operational efficiency.',
-    competitors['Tableau, Power BI, Looker, Qlik, Sisense'],
+    competitors: ['Tableau', 'Power BI', 'Looker', 'Qlik', 'Sisense'],
     marketSize: '$29.48B market',
     growthRate: '15.7% annual growth',
     variant: 'ai-futuristic',

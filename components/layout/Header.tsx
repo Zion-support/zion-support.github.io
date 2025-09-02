@@ -8,26 +8,23 @@ import {
   Users, 
   Briefcase, 
   Phone, 
-  Mail, 
   ChevronDown,
   Brain,
   Shield,
   Cloud,
-  Database,
   Network,
-  Zap,
   Target,
   DollarSign,
   BookOpen,
   Calendar,
   FileText,
   Award,
-  Globe,
   Search,
   ArrowRight
 } from 'lucide-react';
-import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
+// Avoid typed Button to unblock build; use native button
+// import { Button } from '../ui/Button';
+// import { Badge } from '../ui/Badge';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -162,13 +159,13 @@ const Header: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <button className="h-9 px-3 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
               <Search className="w-4 h-4 mr-2" />
               Search
-            </Button>
-            <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+            </button>
+            <button className="h-9 px-3 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white">
               Get Started
-            </Button>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -232,13 +229,13 @@ const Header: React.FC = () => {
               ))}
               
               <div className="pt-4 border-t border-slate-700 space-y-3">
-                <Button variant="outline" size="sm" className="w-full">
+                <button className="w-full h-9 px-3 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium border border-input bg-background hover:bg-accent hover:text-accent-foreground">
                   <Search className="w-4 h-4 mr-2" />
                   Search
-                </Button>
-                <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                </button>
+                <button className="w-full h-9 px-3 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium bg-gradient-to-r from-blue-500 to-purple-600 text-white">
                   Get Started
-                </Button>
+                </button>
               </div>
             </div>
           </motion.div>

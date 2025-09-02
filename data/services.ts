@@ -59,6 +59,187 @@ export const services: Service[] = [
     icon: '📝'
   },
   {
+    id: 'ai-product-analytics-copilot',
+    name: 'AI Product Analytics Copilot',
+    category: 'micro-saas',
+    description: 'LLM-powered analytics assistant that explains product metrics in plain English, surfaces anomalies, and suggests growth experiments.',
+    features: [
+      'Natural language metric queries',
+      'Anomaly and trend detection',
+      'North Star and funnel insights',
+      'Cohort and retention breakdowns',
+      'Auto-generated weekly summaries',
+      'Experiment suggestions with impact',
+      'Slack/Teams digests',
+      'REST and Segment/CDP integrations'
+    ],
+    pricing: { starter: 39, professional: 119, enterprise: 349, currency: 'USD' },
+    benefits: [
+      'Make data self-serve for every team',
+      'Catch regressions early',
+      'Prioritize high-ROI experiments',
+      'Reduce ad-hoc analyst time'
+    ],
+    useCases: ['SaaS product analytics', 'Growth experimentation', 'Executive reporting', 'CS health monitoring'],
+    technologies: ['LLMs', 'RAG', 'Next.js', 'Node.js', 'PostgreSQL', 'Event Pipelines'],
+    link: 'https://ziontechgroup.com/services/ai-product-analytics-copilot',
+    icon: '📊'
+  },
+  {
+    id: 'gdpr-ccpa-compliance-hub',
+    name: 'GDPR/CCPA Compliance Hub',
+    category: 'micro-saas',
+    description: 'Privacy operations hub for DSAR automation, consent logs, data mapping, and audit-ready reporting for modern SaaS.',
+    features: [
+      'DSAR intake and workflow',
+      'System-of-record data mapping',
+      'Consent collection and proof',
+      'Policy/version management',
+      'Deletion and minimization runs',
+      'RoPA and TIAs',
+      'Audit-ready exports',
+      'Webhook and SCIM integrations'
+    ],
+    pricing: { starter: 59, professional: 149, enterprise: 399, currency: 'USD' },
+    benefits: ['Reduce privacy ops burden', 'Lower compliance risk', 'Centralize evidence', 'Delight auditors'],
+    useCases: ['B2B SaaS vendor due diligence', 'Consumer app privacy', 'Enterprise DPIA support', 'Global policy changes'],
+    technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'Queues', 'Encryption-at-rest'],
+    link: 'https://ziontechgroup.com/services/gdpr-ccpa-compliance-hub',
+    icon: '🛡️'
+  },
+  {
+    id: 'smb-copilot-suite',
+    name: 'SMB Operations Copilot Suite',
+    category: 'micro-saas',
+    description: 'Unified AI copilot for scheduling, invoicing, lead capture, and follow-ups tailored to local service businesses.',
+    features: [
+      'AI receptionist/chat',
+      'Calendar and route optimization',
+      'Auto invoicing and reminders',
+      'Voice/SMS follow-ups',
+      'Review and referral nudges',
+      'QuickBooks/Stripe sync',
+      'Simple mobile app',
+      'Lead form and call tracking'
+    ],
+    pricing: { starter: 29, professional: 79, enterprise: 199, currency: 'USD' },
+    benefits: ['Book more jobs', 'Reduce no-shows', 'Get paid faster', 'Grow reviews and referrals'],
+    useCases: ['Home services', 'Clinics and practices', 'Auto shops', 'Contractors'],
+    technologies: ['Twilio', 'Stripe', 'React Native', 'Next.js', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/smb-operations-copilot',
+    icon: '🧰'
+  },
+  {
+    id: 'ai-secure-code-assistant',
+    name: 'AI Secure Code Assistant (SAST+Fix)',
+    category: 'it-services',
+    description: 'Program-level rollout of AI code review with SAST, auto-fixes, and supply chain hardening across monorepos.',
+    features: [
+      'SAST integration and baseline',
+      'LLM-based autofix PRs',
+      'Secrets and SBOM scanning',
+      'IaC and container hardening',
+      'Policy-as-code and attestations',
+      'Supply chain risk reduction',
+      'Developer training and enablement',
+      'Weekly security posture reports'
+    ],
+    pricing: { starter: 12000, professional: 45000, enterprise: 180000, currency: 'USD' },
+    benefits: ['Cut vuln backlog by 50%+', 'Shift-left security', 'Pass vendor audits', 'Improve MTTR'],
+    useCases: ['Regulated SaaS', 'Payment and fintech', 'Healthcare', 'Platform engineering'],
+    technologies: ['SAST', 'SCA', 'OpenAI', 'OPA', 'Sigstore', 'GitHub/GitLab CI'],
+    link: 'https://ziontechgroup.com/services/ai-secure-code-assistant',
+    icon: '🔐'
+  },
+  {
+    id: 'unity-genai-digital-twins',
+    name: 'Unity + GenAI Digital Twins',
+    category: 'it-services',
+    description: 'Photorealistic operational twins with sensor fusion, simulation, and closed-loop optimization for factories and facilities.',
+    features: [
+      '3D scene capture and pipelines',
+      'Real-time telemetry overlays',
+      'Scenario simulation and RL agents',
+      'Predictive maintenance',
+      'Energy and throughput optimization',
+      'Operator training modes',
+      'Alarms and playbooks',
+      'ERP/MES connectors'
+    ],
+    pricing: { starter: 45000, professional: 150000, enterprise: 600000, currency: 'USD' },
+    benefits: ['Reduce downtime 20–40%', 'Improve OEE and safety', 'Lower energy costs', 'Faster ramp and scale'],
+    useCases: ['Manufacturing', 'Warehousing', 'Utilities', 'Smart buildings'],
+    technologies: ['Unity/Unreal', 'IoT', 'Time-series DB', 'RL', 'Edge + Cloud'],
+    link: 'https://ziontechgroup.com/services/unity-genai-digital-twins',
+    icon: '🏭'
+  },
+  {
+    id: 'genai-customer-support-cx',
+    name: 'GenAI Customer Support CX Suite',
+    category: 'ai-services',
+    description: 'Grounded, policy-aware support copilots that deflect tickets, summarize threads, and keep humans-in-the-loop with audit trails.',
+    features: [
+      'RAG over help center and tickets',
+      'Safe tool use and escalations',
+      'Auto-summarization and tagging',
+      'Quality, bias, and hallucination checks',
+      'PII redaction and access control',
+      'Deflection and CSAT analytics',
+      'Zendesk/Intercom/Freshdesk apps',
+      'Evals and red-teaming harness'
+    ],
+    pricing: { starter: 8000, professional: 28000, enterprise: 120000, currency: 'USD' },
+    benefits: ['Deflect 30–60% tickets', 'Shorter handle times', 'Higher CSAT', 'Lower support cost'],
+    useCases: ['SaaS support', 'E-commerce returns', 'Telecom and utilities', 'Gaming/moderation'],
+    technologies: ['RAG', 'Guardrails', 'Vector DB', 'OpenAI/Azure', 'Next.js'],
+    link: 'https://ziontechgroup.com/services/genai-customer-support-cx',
+    icon: '🎧'
+  },
+  {
+    id: 'ai-sales-prospecting-agent',
+    name: 'AI Sales Prospecting Agent',
+    category: 'ai-services',
+    description: 'Autonomous SDR assistant that researches accounts, drafts multi-channel outreach, and books meetings with compliance and approvals.',
+    features: [
+      'ICP discovery and account research',
+      'Personalized email and InMail drafts',
+      'Sequence planning and throttling',
+      'Signal-based timing and routing',
+      'CRM hygiene and enrichment',
+      'Approvals and safety guardrails',
+      'A/B testing and attribution',
+      'Calendar booking integrations'
+    ],
+    pricing: { starter: 49, professional: 149, enterprise: 449, currency: 'USD' },
+    benefits: ['More quality meetings', 'Higher reply rates', 'Cleaner CRM data', 'Reduced SDR grunt work'],
+    useCases: ['B2B pipeline generation', 'Account-based marketing', 'Founder-led sales'],
+    technologies: ['LLMs', 'Browsers/Agents', 'Sales APIs', 'Next.js', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/ai-sales-prospecting-agent',
+    icon: '📬'
+  },
+  {
+    id: 'threat-intel-copilot',
+    name: 'Threat Intelligence Copilot',
+    category: 'it-services',
+    description: 'Enrich SIEM/XDR with AI triage, IoC correlation, and intel summaries to speed analyst workflows and response.',
+    features: [
+      'IoC and TTP correlation',
+      'Alert triage and deduplication',
+      'Playbook generation',
+      'Threat report summarization',
+      'Case linkage and timelines',
+      'Intel feeds and scoring',
+      'SOAR actions and approvals',
+      'Evidence packs and audit trails'
+    ],
+    pricing: { starter: 15000, professional: 45000, enterprise: 150000, currency: 'USD' },
+    benefits: ['Reduce alert fatigue', 'Faster MTTR', 'Better intel coverage', 'Operationalized learnings'],
+    useCases: ['SOC automation', 'MSSP offerings', 'Critical infrastructure'],
+    technologies: ['SIEM', 'SOAR', 'OpenAI', 'LangChain', 'KQL/SPL'],
+    link: 'https://ziontechgroup.com/services/threat-intelligence-copilot',
+    icon: '🛡️'
+  },
+  {
     id: 'ai-meeting-notes-assistant',
     name: 'AI Meeting Notes Assistant',
     category: 'micro-saas',
