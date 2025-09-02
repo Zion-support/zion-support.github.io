@@ -1,16 +1,26 @@
 
 :pages.disabled/pages/services/MobileSurvey.tsx
-export default function MobileSurvey() {
-    'Mobile-first NPS/CSAT/CES templates',;'
-    'QR code and link campaigns',;'
-    'AI topic clustering and sentiment',;'
-    'Webhooks to CRM/Slack',;'
-    'Kiosk mode for in-person feedback',;''Multilingual with auto-translate';
+export default function MobileSurvey() {,
+  Mobile-first NPS/CSAT/CES templates',;'
+  'QR code and link campaigns',;'
+  'AI topic clustering and sentiment',;'
+  'Webhooks to CRM/Slack',;'
+  'Kiosk mode for in-person feedback',;'
+  'Multilingual with auto-translate';
   ];
+
   '
-    { name: 'Starter', price: '$39/mo', details: ['1,000 responses',Email export'] },;'
-    { name: 'Team', price: '$99/mo', details: ['10,000 responses',Slack + Webhooks'] },;'
-    { name: 'Business', price: '$249/mo', details: ['100,000 responses',SSO, Custom domains'] },;
+    { name: 'Starter, price:,
+  $39/mo
+  ', details: [1,000 responses,
+  ,Email export'] },;'
+    { name: 'Team, price:,
+  $99/mo', details: [10,000 responses,
+  ,Slack + Webhooks
+  '] },;'
+    { name: 'Business, price:,
+  $249/mo', details: [100,000 responses',SSO, Custom domains
+  '] },;
   ];
   return()
     <div className = "min-h-screen bg-white">""
@@ -47,7 +57,10 @@ export default function MobileSurvey() {
         </div>"
       </section>""
       <section className="pb-16 max-w-6xl mx-auto px-6">""
-        <div className="grid md:grid-cols-3 gap-6">'"{[{icon: MessageSquare, t: 'Conversational UX'}, {icon: Users, t: 'High Completion'}, {icon: BarChart2, t: 'AI Insights'}].map((c) => (""
+        <div className="grid md:grid-cols-3 gap-6">'"{[{icon: MessageSquare, t:
+  'Conversational UX'}, {icon: Users, t:
+  'High Completion'}, {icon: BarChart2, t:
+  'AI Insights'}].map((c) => (""
             <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">""
               <c.icon className="w-6 h-6 text-zion-cyan mb-3" />""
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>
@@ -62,4 +75,5 @@ export default function MobileSurvey() {
       </section>;
 :pages.disabled/pages/services/MobileSurvey.tsx
     </div>;'"
-  )}}'"'"
+  )}}
+  '"'"

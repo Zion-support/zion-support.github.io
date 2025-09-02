@@ -1,6 +1,9 @@
-import { createClient, AuthError, AuthApiError } from '@supabase/supabase-js';
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { User, Session } from '@supabase/supabase-js';
+import { createClient, AuthError, AuthApiError } from
+  '@supabase/supabase-js';
+import type { NextApiRequest, NextApiResponse } from
+  'next';
+import type { User, Session } from
+  '@supabase/supabase-js';
 
 // Define expected request body structure
 interface LoginRequestBody {
@@ -26,7 +29,8 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !serviceKey) {
-  const errorMessage = 'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.';
+  const errorMessage =,
+  CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.;
   console.error(errorMessage);
   throw new Error(errorMessage);
 }
@@ -34,8 +38,11 @@ if (!supabaseUrl || !serviceKey) {
 const supabase = createClient(supabaseUrl, serviceKey);
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<LoginSuccessResponse | ErrorResponse>) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
+  if (req.method !==
+  'POST') {
+    res.setHeader(
+  'Allow',
+  'POST');
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
@@ -43,7 +50,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const { email, password } = req.body as LoginRequestBody;
 
     if (!email || !password) {
-      return res.status(400).json({ error: 'Email and password are required.' });
+      return res.status(400).json({ error:
+  'Email and password are required.' });
     }
 
     // Attempt to sign in with Supabase
@@ -53,7 +61,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     });
 
     if (error) {
-      console.error('Supabase signInWithPassword error:', error);
+      console.error(
+  'Supabase signInWithPassword error:', error);
 
       if (error.message && /Email not confirmed/i.test(error.message)) {
         return res.status(403).json({
@@ -88,7 +97,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     });
 
   } catch (error) {
-    console.error('Unexpected error in login handler:', error);
+    console.error(
+  'Unexpected error in login handler:', error);
     return res.status(500).json({
       error: "An unexpected error occurred during login.",
       code: "UNEXPECTED_ERROR"

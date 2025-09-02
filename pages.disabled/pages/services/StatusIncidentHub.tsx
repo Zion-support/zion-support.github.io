@@ -4,7 +4,8 @@ import {}
   CheckCircle,
   ExternalLink,
   Mail,
-  Phone} from 'lucide-react.ts';
+  Phone} from
+  'lucide-react.ts';
 
 export default function StatusIncidentHub(...args: any[]): any {}
   return()
@@ -20,22 +21,25 @@ export default function StatusIncidentHub(...args: any[]): any {}
         </p>""
         <div className="mt-8 grid gap-4 sm: anygrid-cols-2">
           {[
+            {,
+  title: 'Multi‑service monitoring,'
+              desc:,
+  Track APIs, regions and dependencies.'},
             {
-'
-              title: 'Multi‑service monitoring','
-              desc: 'Track APIs, regions and dependencies.'},
+  '
+              title: 'Incident comms,'
+              desc:,
+  Templates, timelines, and subscriber updates.'},
             {
-'
-              title: 'Incident comms','
-              desc: 'Templates, timelines, and subscriber updates.'},
+  '
+              title: 'SLA/SLO dashboards,'
+              desc:,
+  Burn rates, availability and error budgets.'},
             {
-'
-              title: 'SLA/SLO dashboards','
-              desc: 'Burn rates, availability and error budgets.'},
-            {
-'
-              title: 'Webhooks & integrations','
-              desc: 'PagerDuty, Opsgenie, Slack, Email.'},
+  '
+              title: 'Webhooks & integrations,'
+              desc:
+  'PagerDuty, Opsgenie, Slack, Email.'},
           ].map(f => (
             <div"key={f.title}""
               className="rounded-xl border border-white/10 bg-white/5 p-5""
@@ -47,8 +51,9 @@ export default function StatusIncidentHub(...args: any[]): any {}
             </div>
           ))}"
         </div>""
-        <div className="mt-8 text-sm text-slate-300">'"
-          Typical pricing:{' '}""
+        <div className="mt-8 text-sm text-slate-300">,
+  "
+          Typical pricing: {'}""
           <span className="font-semibold text-cyan-300">$59–$299/mo</span>."
         </div>""
         <div className="mt-4 flex gap-4 text-sm">"<a""
@@ -83,4 +88,4 @@ export default function StatusIncidentHub(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/StatusIncidentHub.tsx
   )}'"
-'"'"
+  '"'"

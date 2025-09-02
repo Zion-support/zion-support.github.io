@@ -193,7 +193,8 @@ export default function Blockchain(...args[]):  {},;
                 <span className="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 bg-clip-text text-transparent">Blockchain</span> Solutions for the Future"
               </h1>""
               <p className="text-xl text-zinc-300 mb-8 leading-relaxed">
-                Leverage the power of blockchain technology to create transparent, secure, and efficient''
+                Leverage the power of blockchain technology to create transparent, secure, and efficient'
+  '
                 business processes. From smart contracts to DeFi, we're building the decentralized future."
               </p>""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -367,11 +368,11 @@ export default function Blockchain(...args[]):  {},;
               {pricing.map(plan: unknown, index: unknown()
                 <motion.div
                   key={index}
-                  className={`relative p-8 rounded-2xl ${
-'
-                    plan.popular''
-                      ? 'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50'''`
-                      : 'bg-white/5 border border-white/10'``} backdrop-blur-sm`}
+                  className={`relative p-8 rounded-2xl ${,
+  plan.popular''
+                      ?
+  'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50''
+  '`: 'bg-white/5 border border-white/10``} backdrop-blur-sm`}
                   initial = {}
   { opacity: 0,
 :pages.disabled/pages/services/Blockchain.tsx
@@ -415,11 +416,12 @@ export default function Blockchain(...args[]):  {},;
 "
                   <RouterLink""`
                     to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}``
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-'
-                      plan.popular''
-                        ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600'''`
-                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'``}`}
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${,
+  plan.popular'
+  '
+                        ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover: from-orange-600 hover:to-red-600''
+  '`
+                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20``}`}
 
                     {plan.cta}
                   </RouterLink>;
@@ -510,7 +512,8 @@ export default function Blockchain(...args[]):  {},;
                 Ready to Go Blockchain?"
               </h2>""
               <p className="text-xl text-zinc-300 mb-8 max-w-3xl mx-auto">'
-                Join the blockchain revolution with Zion Tech Group's cutting-edge decentralized solutions"
+                Join the blockchain revolution with Zion Tech Group
+  's cutting-edge decentralized solutions"
               </p>""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <RouterLink""
@@ -531,4 +534,4 @@ export default function Blockchain(...args[]):  {},;
       </div>;
     </div>;
   )}'"`
-'"`'"`
+  '"`'"`

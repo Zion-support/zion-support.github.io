@@ -1,5 +1,6 @@
 :pages/research-development.tsx
-import React from 'react';
+import React from
+  'react';
 
 const Component = () => {
   return (

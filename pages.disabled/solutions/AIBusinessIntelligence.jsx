@@ -1,5 +1,7 @@
-import React from 'react';'
-import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
+import React from
+  'react';'
+import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from
+  'lucide-react';
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
 const AIBusinessIntelligence = () => {
     const benefits = ["Data-driven decision making across all business areas",""
@@ -231,4 +233,5 @@ const AIBusinessIntelligence = () => {
 export { AIBusinessIntelligence };
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
 export default AIBusinessIntelligence;'"
-}}}}'"'"
+}}}}
+  '"'"
