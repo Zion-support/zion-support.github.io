@@ -185,62 +185,6 @@ module.exports = {
       log_file: './logs/log-cleaner-combined.log',
       time: false,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-<<<<<<< HEAD
-      merge_logs: true,
-      max_restarts: 1,
-      min_uptime: '30s',
-      restart_delay: 1000,
-      cron_restart: '0 2 * * *', // Run daily at 2 AM
-      pmx: true
-    },
-
-    // Performance Monitor - runs every 20 minutes
-    {
-      name: 'performance-monitor',
-      script: './scripts/performance-monitor.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '300M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      error_file: './logs/performance-monitor-error.log',
-      out_file: './logs/performance-monitor-out.log',
-      log_file: './logs/performance-monitor-combined.log',
-      time: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      max_restarts: 5,
-      min_uptime: '10s',
-      restart_delay: 2000,
-      cron_restart: '*/20 * * * *', // Run every 20 minutes
-      pmx: true
-    },
-
-    // Link Checker - runs every 6 hours
-    {
-      name: 'link-checker',
-      script: './scripts/link-checker.js',
-      instances: 1,
-      autorestart: true,
-      watch: false,
-      max_memory_restart: '400M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      error_file: './logs/link-checker-error.log',
-      out_file: './logs/link-checker-out.log',
-      log_file: './logs/link-checker-combined.log',
-      time: true,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: true,
-      max_restarts: 3,
-      min_uptime: '30s',
-      restart_delay: 5000,
-      cron_restart: '0 */6 * * *', // Run every 6 hours
-      pmx: true
-=======
       merge_logs: false,
       max_restarts: 3,
       min_uptime: '5s',

@@ -1,4 +1,5 @@
 import React, { Suspense, useState, useEffect, useMemo, useCallback } from 'react';
+
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
@@ -141,6 +142,53 @@ export default function Home() {
       link: "/services/sustainable-technology",
       icon: Leaf,
       color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Cloud-Native Architecture",
+      subtitle: "Scalable, secure, and resilient cloud solutions",
+      description: "Build the future with our enterprise-grade cloud infrastructure and microservices architecture.",
+      image: "/images/hero/cloud-architecture.jpg",
+      cta: "Cloud Solutions",
+      link: "/cloud"
+    }
+  ];
+
+  const services = [
+    {
+      icon: Brain,
+      title: "AI Autonomous Business Manager",
+      description: "Fully autonomous AI system that manages your entire business operations with 40-60% cost reduction",
+      color: "from-purple-500 to-pink-500",
+      link: "/services/ai-autonomous-business-manager"
+    },
+    {
+      icon: Brain,
+      title: "AI Autonomous Business Operations",
+      description: "Automate complex business processes with intelligent AI agents",
+      color: "from-purple-500 to-pink-500",
+      link: "/services/ai-autonomous-business-operations"
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Infrastructure & DevOps",
+      description: "Scalable cloud solutions with automated deployment and management",
+      color: "from-blue-500 to-cyan-500",
+      link: "/services/cloud-infrastructure-devops"
+    },
+    {
+      icon: Shield,
+      title: "Cybersecurity & Zero Trust",
+      description: "Advanced security solutions for modern threat landscapes",
+      color: "from-red-500 to-orange-500",
+      link: "/services/cybersecurity-zero-trust"
+    },
+    {
+      icon: Zap,
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation consulting and implementation",
+      color: "from-green-500 to-emerald-500",
+      link: "/services/digital-transformation"
+
     }
   ];
 
@@ -149,30 +197,6 @@ export default function Home() {
     { number: "50+", label: "Team Members", icon: Users },
     { number: "25+", label: "Countries Served", icon: Globe },
     { number: "99%", label: "Client Satisfaction", icon: Star }
-  ];
-
-  const services = [
-    {
-      title: "AI Autonomous Research",
-      description: "Intelligent research automation that discovers insights across multiple sources",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      link: "/services/AIAutonomousBusinessOperations"
-    },
-    {
-      title: "Quantum Edge Computing",
-      description: "Revolutionary quantum-enhanced edge computing platform",
-      icon: Atom,
-      color: "from-blue-500 to-cyan-500",
-      link: "/services/quantum-edge-computing-solutions"
-    },
-    {
-      title: "AI Customer Experience Analytics",
-      description: "Transform customer relationships with AI-powered analytics",
-      icon: BarChart3,
-      color: "from-green-500 to-emerald-500",
-      link: "/services/ai-customer-experience-analytics"
-    }
   ];
 
   useEffect(() => {
@@ -221,6 +245,7 @@ export default function Home() {
                   >
                     <span>{slide.cta}</span>
                     <ArrowRight className="w-4 h-4 ml-2" />
+
                   </Link>
                 </div>
               </motion.div>
@@ -249,8 +274,12 @@ export default function Home() {
               Zion Tech Group
             </h1>
           </motion.div>
+
         </div>
       </section>
+
+      {/* Enhanced Services Showcase */}
+      <EnhancedServicesShowcase />
 
       {/* Stats Section */}
       <section className="relative z-10 py-16">
@@ -270,6 +299,7 @@ export default function Home() {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-zinc-300">{stat.label}</div>
+
               </motion.div>
             ))}
           </div>
@@ -279,90 +309,33 @@ export default function Home() {
       {/* Services Section */}
       <section className="relative z-10 py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
+            transition={{ duration: 0.6 }}
+            className="max-w-4xl mx-auto"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Services
-            </h2>
-            <p className="text-lg text-zinc-300 max-w-3xl mx-auto">
-              Discover our comprehensive range of AI-powered solutions designed to transform your business
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="group relative"
-              >
-                <div className="relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-blue-500/20 rounded-2xl p-8 h-full hover:border-blue-400/40 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-5 rounded-2xl group-hover:opacity-10 transition-opacity duration-300`}></div>
-                  
-                  <div className="relative z-10">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-zinc-300 mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
-
-                    <Link
-                      to={service.link}
-                      className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="relative z-10 py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Business?
             </h2>
-            <p className="text-lg text-zinc-300 max-w-3xl mx-auto mb-8">
-              Join the future of business with our cutting-edge AI solutions. Let's build something amazing together.
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Join hundreds of companies already leveraging our cutting-edge technology solutions
+
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-xl hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
+                className="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-50 transition-colors transform hover:scale-105"
               >
-                <span>Get Started</span>
-                <ArrowRight className="w-4 h-4 ml-2" />
+                Start Your Journey
               </Link>
               <Link
                 to="/services"
-                className="inline-flex items-center px-8 py-4 border border-blue-500/20 text-blue-300 font-semibold rounded-xl hover:border-blue-400/40 hover:bg-blue-500/10 transition-all duration-300"
+                className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 <span>View All Services</span>
+
               </Link>
             </div>
           </motion.div>
@@ -371,3 +344,4 @@ export default function Home() {
     </div>
   );
 }
+

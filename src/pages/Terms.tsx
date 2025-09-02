@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   FileText, 
@@ -298,6 +297,7 @@ export default function Terms() {
                 <Globe className="w-16 h-16 text-green-400 mx-auto mb-6" />
                 <h3 className="text-xl font-semibold text-white mb-3">Applicability</h3>
                 <p className="text-gray-400">Global Coverage</p>
+
               </div>
             </section>
           </div>
@@ -633,6 +633,7 @@ export default function Terms() {
           </motion.div>
         </div>
       </section>
+
     </div>
   );
 }

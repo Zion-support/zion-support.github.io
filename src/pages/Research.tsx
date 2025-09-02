@@ -160,6 +160,7 @@ export default function Research() {
 
   const categories: Category[] = [
     { id: 'all', name: 'All Categories', icon: FlaskConical, count: 52 },
+
     { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain, count: 12 },
     { id: 'cloud', name: 'Cloud & Infrastructure', icon: Cloud, count: 8 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 6 },
@@ -246,11 +247,13 @@ export default function Research() {
           year: 2024,
           doi: '10.1109/TMI.2024.001234',
           citations: 32
+
         }
       ],
       tags: ['Federated Learning', 'Healthcare', 'Privacy', 'Machine Learning', 'Security'],
       featured: true,
       progress: 100,
+
       impact: 'high'
     },
     {
@@ -321,7 +324,7 @@ export default function Research() {
       project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.leadResearcher.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    
+
     const matchesCategory = activeCategory === 'all' || project.category === activeCategory;
     const matchesStatus = activeStatus === 'all' || project.status === activeStatus;
     const matchesType = activeType === 'all' || project.type === activeType;
@@ -331,6 +334,7 @@ export default function Research() {
 
   const toggleProjectExpansion = (projectId: number) => {
     setExpandedProject(expandedProject === projectId ? null : projectId);
+
   };
 
   const getStatusColor = (status: string) => {
@@ -345,6 +349,7 @@ export default function Research() {
         return 'text-purple-400 bg-purple-400/10 border-purple-400/20';
       default:
         return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+
     }
   };
 
@@ -493,6 +498,7 @@ export default function Research() {
                     </button>
                   ))}
                 </div>
+
               </div>
             </div>
             <h1 className="text-5xl font-bold text-white mb-6">
@@ -693,6 +699,7 @@ export default function Research() {
                 </button>
               </div>
             )}
+
           </div>
         </section>
 

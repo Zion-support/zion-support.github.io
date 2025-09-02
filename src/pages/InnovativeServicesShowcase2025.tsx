@@ -92,7 +92,7 @@ import {
   Scale,
   Gauge
 } from 'lucide-react';
-import { INNOVATIVE_SERVICES_2025 } from '../data/innovativeServices2025';
+>>>>>>> origin/clean-new-services-2025
 
 export default function InnovativeServicesShowcase2025() {
   const innovativeServices = [

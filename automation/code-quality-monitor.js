@@ -4,39 +4,22 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 const cron = require('node-cron');
 // // // // // // // // console.log('🔍 Code Quality Monitor Starting...\n');
-<<<<<<< HEAD
-class CodeQualityMonitor {
-  constructor() {
-=======
 ;
 class CodeQualityMonitor {;
   constructor() {;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
     // // // // // // // // console.log(logEntry.trim());
     try {
       fs.appendFileSync(this.logFile, logEntry);
     } catch (error) {
       // // // // // // // console.error('Failed to write to log file:', error.message);
-<<<<<<< HEAD
-    }
-=======
     this.metrics = {
   complexity: 0,
       maintainability: 0,
       testCoverage: 0,
       performance: 0,
   lastUpdated: new Date().toISOString()
-=======
-    };
-    this.metrics = {;
-  complexity: 0,;
-      maintainability: 0,;
-      testCoverage: 0,;
-      performance: 0,;
-  lastUpdated: new Date().toISOString();
-;
-;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
 };
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log')}
   log(message) {
@@ -122,19 +105,6 @@ class CodeQualityMonitor {;
         .filter(line => line.includes('error TS'))
         .map(line => line.trim())
         .filter(line => line.length > 0);
-<<<<<<< HEAD
-      // Lower file size = higher maintainability
-      return Math.max(50, 100 - Math.floor(avgFileSize / 1000))} catch (error) {
-      return Math.floor(Math.random() * 100) + 50}
-  }
-  async checkUnusedImports() {
-    try {
-      // Use ESLint to check for unused imports
-      const result = execSync('npx eslint --ext .ts,.tsx,.js,.jsx src --format=compact', {
-        cwd: this.projectRoot,
-        encoding: 'utf8',
-        stdio: 'pipe'
-=======
 ;
       // Lower file size = higher maintainability;
       return Math.max(50, 100 - Math.floor(avgFileSize / 1000))} catch (error) {;
@@ -148,7 +118,7 @@ class CodeQualityMonitor {;
         cwd: this.projectRoot,;
         encoding: 'utf8',;
         stdio: 'pipe';
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
       });
       return [];
     } catch (error) {

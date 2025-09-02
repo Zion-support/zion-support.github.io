@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
+
 import { 
   Server, 
   Users, 
@@ -115,6 +116,7 @@ export default function Categories() {
       icon: Globe,
       color: 'from-cyan-500 to-blue-500',
       count: 182
+
     },
     {
       id: 'ai-ml',
@@ -201,6 +203,7 @@ export default function Categories() {
         name: 'Cloud Architecture',
         description: 'Scalable and resilient cloud infrastructure design',
         icon: Building,
+
         services: 14,
         talent: 9,
         equipment: 5
@@ -220,6 +223,7 @@ export default function Categories() {
         services: 16,
         talent: 10,
         equipment: 6
+
       }
     ],
     'cybersecurity': [
@@ -234,6 +238,7 @@ export default function Categories() {
       {
         name: 'Security Auditing',
         description: 'Comprehensive security assessments and compliance',
+
         icon: Lock,
         services: 9,
         talent: 6,
@@ -254,6 +259,7 @@ export default function Categories() {
         services: 7,
         talent: 5,
         equipment: 1
+
       }
     ],
     'data': [
@@ -263,6 +269,7 @@ export default function Categories() {
         icon: Database,
         services: 15,
         talent: 10,
+
         equipment: 6
       },
       {
@@ -288,12 +295,14 @@ export default function Categories() {
         services: 14,
         talent: 9,
         equipment: 5
+
       }
     ],
     'development': [
       {
         name: 'Web Development',
         description: 'Modern web applications and responsive design',
+
         icon: Code,
         services: 22,
         talent: 15,
@@ -304,6 +313,7 @@ export default function Categories() {
         description: 'iOS and Android mobile applications',
         icon: Smartphone,
         services: 19,
+
         talent: 12,
         equipment: 6
       },
@@ -322,6 +332,7 @@ export default function Categories() {
         services: 25,
         talent: 18,
         equipment: 10
+
       }
     ]
   };
@@ -558,6 +569,7 @@ export default function Categories() {
                 </a>
               </div>
             </motion.div>
+
           </div>
         </section>
       </div>

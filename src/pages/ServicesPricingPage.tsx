@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+
 import { 
   Brain, Cloud, Shield, Zap, Rocket, Atom, Globe, Cpu, 
   Database, Lock, Smartphone, BarChart3, Code, Server, 
@@ -465,6 +466,7 @@ const ServicesPricingPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {categories.map((category) => (
+
               <button
                 key={category.id}
                 onClick={() => setActiveCategory(category.id)}
@@ -478,6 +480,7 @@ const ServicesPricingPage: React.FC = () => {
                 {category.name}
               </button>
             ))}
+
           </div>
         </div>
       </section>
@@ -699,6 +702,7 @@ const ServicesPricingPage: React.FC = () => {
         </div>
       )}
     </div>
+
   );
 };
 

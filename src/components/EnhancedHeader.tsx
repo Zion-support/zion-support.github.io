@@ -19,6 +19,7 @@ export function EnhancedHeader() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -328,6 +329,7 @@ export function EnhancedHeader() {
                         <div className="text-xs text-gray-500">{link.description}</div>
                       </Link>
                     ))}
+
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -482,6 +484,7 @@ export function EnhancedHeader() {
                         <div className="text-xs text-gray-500">{link.description}</div>
                       </Link>
                     ))}
+
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -590,3 +593,4 @@ export function EnhancedHeader() {
     </header>
   );
 }
+

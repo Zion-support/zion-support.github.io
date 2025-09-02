@@ -5,7 +5,7 @@ import { Zap, Sparkles, TrendingUp, Route, Users, PenTool,
   CheckCircle, ArrowRight, ExternalLink, Phone, Mail,
   BarChart3, Shield, Briefcase, Package, Target
 } from 'lucide-react';
-import SEO from '@/components/SEO';
+import SEO from '@/src/src/components/SEO';
 
 export default function InnovativeAIServicesShowcase(...args: any[]): any {
   const services = [

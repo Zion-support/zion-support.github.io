@@ -120,7 +120,7 @@ const Contact: React.FC = () => {
     }
   ];
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange: React.FC = ($2) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -168,6 +168,7 @@ const Contact: React.FC = () => {
           >
             <h1 className="text-4xl md:text-6xl font-bold text-zion-cyan mb-6">
               Get in Touch
+
             </h1>
             <p className="text-xl md:text-2xl text-zion-slate-light max-w-4xl mx-auto leading-relaxed">
               Ready to transform your business with cutting-edge AI and technology solutions? 
@@ -313,6 +314,7 @@ const Contact: React.FC = () => {
                     <label htmlFor="company" className="block text-sm font-medium text-zion-cyan mb-2">
                       Company
                     </label>
+
                     <input
                       type="text"
                       id="company"
@@ -321,6 +323,7 @@ const Contact: React.FC = () => {
                       onChange={handleInputChange}
                       className="w-full px-4 py-3 bg-zion-slate-darker border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                       placeholder="Enter your company name"
+
                     />
                   </div>
 
@@ -368,6 +371,7 @@ const Contact: React.FC = () => {
                     <label htmlFor="subject" className="block text-sm font-medium text-zion-cyan mb-2">
                       Subject *
                     </label>
+
                     <input
                       type="text"
                       id="subject"
@@ -377,6 +381,7 @@ const Contact: React.FC = () => {
                       required
                       className="w-full px-4 py-3 bg-zion-slate-darker border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan focus:ring-2 focus:ring-zion-cyan/20 transition-all duration-300"
                       placeholder="Enter message subject"
+
                     />
                   </div>
 
@@ -685,7 +690,6 @@ const Contact: React.FC = () => {
                   )}
                 </button>
               </form>
-              )}
             </motion.div>
 
             {/* Additional Information */}
@@ -740,6 +744,7 @@ const Contact: React.FC = () => {
               </div>
             </motion.div>
           </div>
+
         </div>
       </section>
 

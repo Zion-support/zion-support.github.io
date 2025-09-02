@@ -9,9 +9,10 @@ const nextConfig = {
   },
   experimental: {
     esmExternals: false,
-    optimizeCss: true,
+    optimizeCss: false,
     optimizePackageImports: ['lucide-react', 'framer-motion'],
   },
+  output: 'standalone',
   images: {
     domains: ['ziontechgroup.com'],
     unoptimized: true,

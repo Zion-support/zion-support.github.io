@@ -38,7 +38,7 @@ class AutomationFactory {
       this.log(`Error saving status: ${error.message}`);
     // // // // // // // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
-=======
+
     }
   }
   log(message, level = 'INFO') {
@@ -84,7 +84,7 @@ class CodeQualityMonitor {
     this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-=======
+
   }
   log(message) {
     const timestamp = new Date().toISOString();
@@ -148,7 +148,7 @@ class CodeQualityMonitor {
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
     // // // // // // // // console.log('Metrics:', metrics);
   }
-=======
+
           walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
           files.push(fullPath)}
       })};
@@ -186,7 +186,7 @@ class PerformanceOptimizer {
     this.optimizations = [];
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-=======
+
     this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')}
   log(message) {
     const timestamp = new Date().toISOString();
@@ -260,7 +260,7 @@ class PerformanceOptimizer {
       'Use React.memo for expensive components'
     // // // // // // // // console.log('Performance report:', report);
   }
-=======
+
     ]}
   saveReport(report) {
     const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
@@ -355,7 +355,7 @@ optimizer.optimizePerformance().then(report => {
       const duration = Date.now() - info.startTime;
       // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
     }
-=======
+
       console.log(`\n${name}:`);
       console.log(`  Description: ${script.description}`);
       console.log(`  Status: ${status}`);
@@ -413,7 +413,7 @@ switch (command) {
     // // // // // // // // console.log('  node automation-factory.js continuous');
     break;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
-=======
+
     console.log('Usage:');
     console.log('  node automation-factory.js list');
     console.log('  node automation-factory.js run [script-name]');

@@ -43,6 +43,7 @@ export const validateCartItem = (item) => {
   }
 
   return true;
+
 };
 
 /**
@@ -55,6 +56,7 @@ export const addToCart = (cart, newItem) => {
   if (!validateCartItem(newItem)) {
     console.warn('Invalid cart item:', newItem);
     return cart;
+
   }
 
   const existingItemIndex = cart.findIndex(item => item.id === newItem.id);
@@ -82,6 +84,7 @@ export const addToCart = (cart, newItem) => {
   } else {
     // Add new item
     return [...cart, { ...newItem }];
+
   }
 };
 
@@ -105,6 +108,7 @@ export const removeFromCart = (cart, itemId) => {
 export const updateCartItemQuantity = (cart, itemId, newQuantity) => {
   if (newQuantity < MIN_QUANTITY) {
     return removeFromCart(cart, itemId);
+
   }
 
   if (newQuantity > MAX_QUANTITY) {
@@ -125,6 +129,7 @@ export const updateCartItemQuantity = (cart, itemId, newQuantity) => {
  */
 export const clearCart = (cart) => {
   return [];
+
 };
 
 /**
@@ -438,4 +443,5 @@ export default {
   mergeCartItems,
   getCartStats,
   sortCartItems
+
 };

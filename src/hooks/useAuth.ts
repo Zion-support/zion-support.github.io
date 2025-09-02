@@ -4,6 +4,7 @@ import { loginUser, signupUser, logoutUser, checkAuthStatus, selectUser, selectI
 
 interface User {
   id: number;
+
   email: string;
   name: string;
   role: 'user' | 'admin' | 'moderator';
@@ -77,3 +78,4 @@ export function useAuth() {
 }
 
 export default useAuth;
+

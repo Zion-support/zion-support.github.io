@@ -1,120 +1,3 @@
-<<<<<<< HEAD
-
-  const successMetrics = [
-    { metric: '500+', label: 'Successful Implementations', icon: CheckCircle, color: 'text-green-400' },
-    { metric: '98%', label: 'Client Satisfaction Rate', icon: Award, color: 'text-yellow-400' },
-    { metric: '40%', label: 'Average Cost Reduction', icon: TrendingUp, color: 'text-blue-400' },
-    { metric: '3x', label: 'Performance Improvement', icon: Zap, color: 'text-purple-400' }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
-      {/* Header Section */}
-      <div className="bg-black/95 backdrop-blur-xl border-b border-cyan-500/30">
-        <div className="container mx-auto px-4 py-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg shadow-cyan-500/50">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <h1 className="text-4xl font-bold font-orbitron bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                  Solutions
-                </h1>
-                <p className="text-lg text-cyan-400 font-rajdhani tracking-wider">
-                  Industry-Specific Solutions
-                </p>
-              </div>
-            </div>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Discover tailored solutions designed for your industry. From healthcare to finance, 
-              manufacturing to government, we provide cutting-edge technology solutions that drive real results.
-            </p>
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Success Metrics */}
-      <div className="container mx-auto px-4 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-16"
-        >
-          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
-            {successMetrics.map((item, index)              => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <item.icon className={`w-8 h-8 ${item.color}`} />
-                </div>
-                <div className="text-3xl font-bold text-cyan-400 mb-2">{item.metric}</div>
-                <div className="text-sm text-gray-400">{item.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Industry Solutions */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mb-16"
-        >
-          <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-12 uppercase tracking-wider">
-            Industry Solutions
-          </h2>
-          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
-            {industrySolutions.map((solution, index)              => (
-              <motion.div
-                key={solution.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-              >
-                <Link
-                  to={solution.href}
-                  className="block p-8 bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 group h-full"
-                >
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-br ${solution.color} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                      <solution.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-bold font-rajdhani text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                        {solution.title}
-                      </h3>
-                      <p className="text-gray-400">
-                        {solution.description}
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-cyan-300 mb-3">Key Features</h4>
-                    <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-2">
-                      {solution.features.map((feature, featureIndex)              => (
-                        <div key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-300">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
-import React, { useState } from 'react.ts';
-import { motion               } from 'framer-motion.ts';
-import { Link               } from 'react-router-dom.ts';
-import { Building, 
-  Shield, 
-  Cloud, 
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
@@ -484,23 +367,6 @@ export default function Solutions() {
                   transition={{ duration: 0.6, delay: 0.1 * index }}
                   className="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-cyan-400/50 transition-all duration-300 group hover:transform hover:scale-105"
                 >
-<<<<<<< HEAD
-                  <div className="w-16 h-16 bg-blue-600/20 rounded-xl flex items-center justify-center mb-6">
-                    <solution.icon className="w-8 h-8 text-blue-400" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{solution.title}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">{solution.description}</p>
-                  {/* Features */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-blue-400 mb-3">Key Features</h4>
-                    <div className="grid grid-cols-2 gap-2">
-                      {solution.features.slice(0, 4).map((feature, idx) => (
-                        <div key={idx} className="flex items-center space-x-2 text-gray-300 text-sm">
-                          <CheckCircle className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-=======
                   {solution.popular && (
                     <div className="absolute top-3 right-3">
                       <span className="bg-yellow-500 text-black px-2 py-1 rounded-full text-xs font-semibold">
@@ -513,16 +379,6 @@ export default function Solutions() {
                   <div className={`w-12 h-12 mb-4 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center`}>
                     <solution.icon className="w-6 h-6 text-white" />
                   </div>
-<<<<<<< HEAD
-                  {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-cyan-400 mb-3">Key Benefits</h4>
-                    <ul className="space-y-2">
-                      {solution.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-start space-x-2 text-gray-300 text-sm">
-                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span>{benefit}</span>
-=======
                   
                   <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 rounded-full text-sm mb-3">
                     {solution.category}
@@ -547,23 +403,6 @@ export default function Solutions() {
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-
-                  {/* Actions */}
-                  <div className="flex items-center justify-between pt-4 border-t border-slate-700/50">
-                    <div className="flex space-x-2">
-                      {solution.demo && (
-                        <button className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-500 transition-colors duration-300">
-                          <Play className="w-4 h-4 mr-1 inline" />
-                          Demo
-                        </button>
-                      )}
-                      {solution.trial && (
-                        <button className="px-4 py-2 border border-blue-600 text-blue-400 text-sm font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-300">
-                          Start Trial
-                        </button>
-                      )}
-=======
                   
                   <div className="mb-4">
                     <div className="text-lg font-bold text-cyan-400 mb-1">{solution.pricing}</div>
@@ -634,9 +473,6 @@ export default function Solutions() {
             </div>
           </motion.div>
 
-<<<<<<< HEAD
-export default Solutions;
-=======
           {/* CTA Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

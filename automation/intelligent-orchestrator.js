@@ -4,7 +4,7 @@ const path = require('path');
 const { execSync, spawn } = require('child_process');
 class IntelligentOrchestrator {;
   constructor() {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     this.automationSystems = new Map();
     this.monitoring = false;
     this.logFile = path.join(__dirname, 'logs', 'intelligent-orchestrator.log');
@@ -25,7 +25,7 @@ class IntelligentOrchestrator {;
       fs.mkdirSync(logDir, { recursive: true })};
   };
   log(message) {;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
     console.log(message);
@@ -415,4 +415,4 @@ process.on('SIGTERM', () => {;
   orchestrator.stop();
   process.exit(0)});
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3;
->>>>>>> 4cc4a42f69bd95988691b9548650af1405020894
+

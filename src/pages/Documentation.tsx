@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '@/components/SEO';
 import { 
+
   BookOpen, 
   Code, 
   FileText, 
@@ -342,6 +343,7 @@ export default function Documentation() {
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <motion.div
+
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -378,6 +380,7 @@ export default function Documentation() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -445,6 +448,7 @@ export default function Documentation() {
                       <div>
                         <h3 className="text-xl font-bold text-white">{category.name}</h3>
                         <p className="text-sm text-gray-400">{category.description}</p>
+
                       </div>
                       
                       <div className="flex items-center justify-between mb-4">
@@ -517,6 +521,7 @@ export default function Documentation() {
                   </div>
                 </motion.div>
               ))}
+
             </div>
           </div>
         </section>
@@ -656,6 +661,7 @@ export default function Documentation() {
                   color: 'from-yellow-500 to-orange-500'
                 }
               ].map((guide, index) => (
+
                 <motion.div
                   key={resource.title}
                   initial={{ opacity: 0, y: 30 }}
@@ -666,6 +672,7 @@ export default function Documentation() {
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${guide.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <guide.icon className="w-8 h-8 text-white" />
+
                   </div>
                   
                   <h3 className="text-xl font-bold text-white mb-3">{guide.title}</h3>
@@ -725,6 +732,7 @@ export default function Documentation() {
                   📞 Call Now
                 </a>
               </div>
+
             </motion.div>
           </div>
         </section>

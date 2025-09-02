@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Shield, 
@@ -211,6 +210,7 @@ export default function Privacy() {
                 >
                   Contact Us
                 </a>
+
               </div>
             </section>
 
@@ -223,6 +223,7 @@ export default function Privacy() {
               <p className="text-gray-300 leading-relaxed mb-4">
                 We do not sell, trade, or rent your personal information to third parties. 
                 We may share your information only in the following circumstances:
+
               </p>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
@@ -253,6 +254,7 @@ export default function Privacy() {
               <p className="text-gray-300 leading-relaxed mb-4">
                 We implement appropriate technical and organizational security measures to protect 
                 your personal information against unauthorized access, alteration, disclosure, or destruction.
+
               </p>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="text-center bg-white/5 rounded-lg p-4">
@@ -284,6 +286,7 @@ export default function Privacy() {
               <h2 className="text-2xl font-semibold text-white mb-4">Your Rights</h2>
               <p className="text-gray-300 leading-relaxed mb-4">
                 You have the following rights regarding your personal information:
+
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="bg-white/5 rounded-lg p-4">
@@ -742,5 +745,6 @@ export default function Privacy() {
         </div>
       </section>
     </div>
+
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import { 
   Zap, Mail, Phone, MapPin, Globe, Twitter, Linkedin, 
   Facebook, Instagram, Youtube, Github, ArrowRight,
@@ -14,6 +15,7 @@ import {
 } from 'lucide-react';
 
 export function EnhancedFooter() {
+
   const currentYear = new Date().getFullYear();
 
   const serviceCategories = [
@@ -26,6 +28,7 @@ export function EnhancedFooter() {
         { name: 'Careers', href: '/careers', description: 'Join our team' },
         { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
         { name: 'News', href: '/news', description: 'Latest updates' },
+
       ]
     },
     {
@@ -40,6 +43,7 @@ export function EnhancedFooter() {
         { name: 'Autonomous Systems', href: '/services/ai-autonomous-vehicle-management-platform', description: 'AI-powered automation' },
         { name: 'Micro SaaS', href: '/micro-saas', description: 'Lightweight applications' },
         { name: 'Consulting', href: '/it-consulting', description: 'Technology advisory' },
+
       ]
     },
     {
@@ -51,6 +55,7 @@ export function EnhancedFooter() {
         { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industry 4.0' },
         { name: 'Research & Development', href: '/research-development', description: 'Innovation labs' },
         { name: 'Green IT', href: '/green-it', description: 'Sustainable technology' },
+
       ]
     },
     {
@@ -62,6 +67,7 @@ export function EnhancedFooter() {
         { name: 'Webinars', href: '/webinars', description: 'Educational content' },
         { name: 'Documentation', href: '/documentation', description: 'Technical guides' },
         { name: 'API Reference', href: '/api', description: 'Developer resources' },
+
       ]
     },
     {
@@ -143,7 +149,7 @@ export function EnhancedFooter() {
               </div>
               <span className="text-2xl font-bold">Zion Tech Group</span>
             </div>
-            
+
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading the future of technology with cutting-edge AI solutions, 
               quantum computing, and innovative micro SAAS services. 
@@ -188,6 +194,7 @@ export function EnhancedFooter() {
                   </a>
                 ))}
               </div>
+
             </div>
           </div>
 
@@ -204,6 +211,7 @@ export function EnhancedFooter() {
               </h3>
               
               <ul className="space-y-3">
+
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
@@ -219,6 +227,7 @@ export function EnhancedFooter() {
                           {link.description}
                         </div>
                       </div>
+
                     </Link>
                   </li>
                 ))}
@@ -254,6 +263,7 @@ export function EnhancedFooter() {
                 Subscribe
               </button>
             </form>
+
           </div>
         </div>
       </div>
@@ -279,6 +289,7 @@ export function EnhancedFooter() {
                 >
                   {link.name}
                 </Link>
+
               ))}
             </div>
           </div>
@@ -312,3 +323,4 @@ export function EnhancedFooter() {
     </footer>
   );
 }
+

@@ -5,15 +5,18 @@ import { Badge               } from './ui/badge';
 import { Alert, AlertDescription               } from './ui/alert';
 import { Progress               } from './ui/progress';
 import { Shield, 
+
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Shield, 
+
   Lock, 
   AlertTriangle, 
   CheckCircle, 
   Eye, 
                } from 'lucide-react.ts';
+
   EyeOff, 
   Settings,
   X,
@@ -39,41 +42,12 @@ interface SecurityStatus {
 }
 
 interface SecurityThreat {
-=======
-  status: 'active' | 'mitigated' | 'resolved';
-}
-interface SecurityMetrics {
+
 status: 'active' | 'mitigated' | 'resolved';
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 interface SecurityMetrics {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   overallScore: number;
   vulnerabilities: number;
@@ -83,69 +57,7 @@ interface SecurityMetrics {
   encryptionStrength: number;
 }
 interface SecurityCheck {
-=======
-encryptionStrength: number;
 
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-interface SecurityCheck {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  id: string;
-  name: string;
-  status: 'pass' | 'fail' | 'warning';
-  id: string;
-  type: 'high' | 'medium' | 'low';
-  category: 'injection' | 'xss' | 'csrf' | 'authentication' | 'authorization' | 'data-exposure';
-  description: string;
-  impact: string;
-  recommendation: string;
-category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
-
-
-
-
-
-
-
-
-
-
-
-
-
-  status: 'detected' | 'mitigated' | 'resolved';
-  timestamp: Date;
-}
-
-=======
-  category: 'authentication' | 'data-protection' | 'network-security' | 'compliance';
-}
 const SecurityEnhancer: React.FC = (): JSX.Element => {
   const [metrics, setMetrics] = useState<any>({
     overallScore: 85,
@@ -196,6 +108,7 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
   
   // Generate security checks
   useEffect(()                => {
+
     const checks: SecurityCheck[] = [
       {
         id: '1',
@@ -253,6 +166,55 @@ const SecurityEnhancer: React.FC = (): JSX.Element => {
       threatsBlocked: prev.threatsBlocked + Math.floor(Math.random() * 10),
       lastScan: new Date()
     }));
+    setIsScanning(false);
+  }, []);
+  const mitigateThreat = useCallback((threatId: string) => {
+    setThreats(prev => prev.map(threat => 
+      threat.id === threatId 
+        ? { ...threat, status: 'mitigated' as const }
+        : threat
+    ));
+  }, []);
+  const resolveThreat = useCallback((threatId: string) => {
+    setThreats(prev => prev.map(threat => 
+      threat.id === threatId 
+        ? { ...threat, status: 'resolved' as const }
+        : threat
+    ));
+  }, []);
+  const getThreatIcon = (type: SecurityThreat['type']) => {
+    switch (type) {
+
+      case 'xss': return <Bug className="h-4 w-4" />;
+      case 'csrf': return <Network className="h-4 w-4" />;
+      case 'injection': return <Database className="h-4 w-4" />;
+      case 'authentication': return <Lock className="h-4 w-4" />;
+      case 'authorization': return <Shield className="h-4 w-4" />;
+      case 'data-leak': return <Eye className="h-4 w-4" />;
+      default: return <AlertTriangle className="h-4 w-4" />;
+    }
+  };
+
+      default: return 'bg-gray-500'}
+  };
+
+      default: return 'bg-gray-100 text-gray-800'}
+  };
+
+      default: return <AlertTriangle className = "h-4 w-4 text-gray-600" />};
+  };
+
+            <strong>Security Warning:</strong> Your security score is below the recommended threshold. 
+            Consider running a comprehensive security audit and implementing the suggested improvements.;
+          </AlertDescription>;
+        </Alert>;
+      )};
+    </div>;
+
+  );
+};
+export default SecurityEnhancer;
+
 interface SecurityEnhancerProps {
   enabled?: boolean;
   showPanel?: boolean;
@@ -944,9 +906,11 @@ export const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
   );
 };
 export default SecurityEnhancer;
+
           </motion.div>
         )}
       </AnimatePresence>
     </>
   );
 };
+

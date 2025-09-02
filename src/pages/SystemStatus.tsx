@@ -107,6 +107,7 @@ const services: ServiceStatus[] = [
     lastUpdated: '2025-08-27T16:48:00Z',
     description: 'Cloud hosting and infrastructure services',
     icon: Cloud
+
   }
 ];
 
@@ -129,6 +130,7 @@ const incidents: Incident[] = [
     severity: 'medium',
     startTime: '2025-08-27T16:00:00Z',
     affectedServices: ['ai']
+
   }
 ];
 
@@ -159,6 +161,7 @@ const getStatusIcon = (status: ServiceStatus['status']) => {
       return <Settings className="w-5 h-5" />;
     default:
       return <Clock className="w-5 h-5" />;
+
   }
 };
 
@@ -457,6 +460,7 @@ export default function SystemStatus() {
                             : 'text-blue-400 bg-blue-400/10 border-blue-400/20'
                         }`}>
                           <span className="capitalize">{incident.status}</span>
+
                         </div>
                       </div>
                     </div>
@@ -584,6 +588,7 @@ export default function SystemStatus() {
             </motion.div>
           </div>
         </section>
+
       </div>
     </>
   );

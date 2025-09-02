@@ -13,15 +13,9 @@ class LintAutomationManager {
     this.logFile = path.join(__dirname, 'logs', 'lint-automation.log');
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
-<<<<<<< HEAD
-=======
     this.ensureLogDirectory()}
   ensureLogDirectory() {
-=======
-;
-    this.ensureLogDirectory()};
-  ensureLogDirectory() {;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
     const logDir = path.dirname(this.logFile);
     if (!fs.existsSync(logDir)) {
       fs.mkdirSync(logDir, { recursive: true })}
@@ -133,11 +127,7 @@ switch (command) {
   default:
     // // // // // // // // console.log('Usage: node lint-automation-manager.js [start|stop|status]');
     process.exit(1);
-<<<<<<< HEAD
-=======
-=======
-;
->>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190
+
     console.log('Usage: node lint-automation-manager.js [start|stop|status]');
     process.exit(1)}
 // Graceful shutdown

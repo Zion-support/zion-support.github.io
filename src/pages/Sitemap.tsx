@@ -5,6 +5,7 @@ import { Map, Home, Building, Code, Shield, Users, BookOpen, HelpCircle, FileTex
 
 export default function Sitemap() {
   const siteStructure = [
+
     {
       category: 'Main Pages',
       icon: Home,
@@ -176,6 +177,7 @@ export default function Sitemap() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="space-y-8">
           {siteStructure.map((category, categoryIndex) => (
+
             <motion.div
               key={category.category}
               initial={{ opacity: 0, y: 20 }}
@@ -261,6 +263,7 @@ export default function Sitemap() {
             })}
           </p>
         </motion.div>
+
       </div>
     </div>
   );

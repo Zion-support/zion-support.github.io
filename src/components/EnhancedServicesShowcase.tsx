@@ -16,262 +16,112 @@ import { Brain,
 
 interface Service {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   id: string;
+  icon: React.ComponentType<any>;
   title: string;
   description: string;
   category: string;
-  subcategory: string;
-  price: number;
-  currency: string;
-  pricingModel: string;
+  price: {
+    monthly: number;
+    yearly: number;
+    currency: string;
+  };
   features: string[];
-  benefits: string[];
-  useCases: string[];
-  targetAudience: string[];
-  tags: string[];
-  estimatedDelivery: string;
-  supportLevel: string;
-  marketPrice: string;
-  roi: string;
+
   marketSize: string;
-  path: string;
-category: string;
-
-
-
-
-
-
-
-
-
-
-
-
-
+  growthRate: string;
+  color: string;
+  link: string;
+  popular?: boolean;
+  new?: boolean;
 }
-
-const ServiceCard: React.FC<{ service: Service; index: number }> = ({ service, index }) => (
-  <motion.div
-    initial = {
-  { opacity: 0,
-  y: 20 
-
-}}
-    whileInView = {
-  { opacity: 1,
-  y: 0 
-
-}}
-    viewport={{ once: true }}
-    transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-
-}}
-    className="group relative"
-  >
-    <motion.div
-      className="relative bg-zion-slate-dark/50 backdrop-blur-lg border border-zion-slate/30 rounded-3xl p-8 h-full hover:border-zion-cyan/50 transition-all duration-300 cursor-pointer"
-      whileHover = {
-  { 
-        y: -5,
-        borderColor: 'rgba(34, 221, 210,
-  0.5)'
-      
-
-}}
-      transition={{ duration: 0.3 }}
-    >
-      {/* Background gradient overlay */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-      
-      {/* Icon */}
-      <motion.div
-        className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} bg-opacity-20 flex items-center justify-center mb-6 relative z-10`}
-        whileHover={{ rotate: 360 }}
-        transition={{ duration: 0.6 }}
-      >
-        <service.icon className="w-8 h-8 text-white" />
-      </motion.div>
-
-      {/* Category badge */}
-      <div className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full mb-4">
-        {service.category}
-      </div>
-
-      {/* Title */}
-      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
-        {service.title}
-      </h3>
-
-      {/* Description */}
-      <p className="text-gray-300 mb-6 leading-relaxed">
-        {service.description}
-      </p>
-
-      {/* Features */}
-      <div className="space-y-2 mb-6">
-        {service.features.map((feature, featureIndex) => (
-          <motion.div
-            key={feature}
-            className="flex items-center text-sm text-gray-300"
-            initial = {
-  { opacity: 0,
-  x: -20 
-
-}}
-            animate = {
-  { opacity: 1,
-  x: 0 
-
-}}
-            transition={{ delay: featureIndex * 0.1 }}
-          >
-            <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-            {feature}
-          </motion.div>
-        ))}
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-3 gap-4 mb-6">
-        <div className="text-center">
-          <p className="text-2xl font-bold text-zion-cyan">{service.price}</p>
-          <p className="text-xs text-gray-400">Monthly</p>
-        </div>
-        <div className="text-center">
-          <p className="text-2xl font-bold text-zion-purple">{service.roi}</p>
-          <p className="text-xs text-gray-400">ROI</p>
-        </div>
-        <div className="text-center">
-          <p className="text-2xl font-bold text-zion-blue">{service.marketSize}</p>
-          <p className="text-xs text-gray-400">Market</p>
-        </div>
-      </div>
-
-      {/* CTA Button */}
-      <motion.div
-        className="relative z-10"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-      >
-        <Link
-          to={service.path}
-          className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 border border-zion-cyan/30"
-        >
-          Learn More
-          <ArrowRight className="ml-2 w-5 h-5" />
-        </Link>
-      </motion.div>
-
-      {/* Hover effect overlay */}
-      <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        initial={false}
-      />
-    </motion.div>;
-  </motion.div>;
-);
 
 const services: Service[] = [
   {
-    id: 'ai-analytics',
-    title: 'AI Predictive Analytics Engine',
-    description: 'Advanced machine learning algorithms for real-time business insights and forecasting',
+    id: 'ai-autonomous-business',
     icon: Brain,
-    gradient: 'from-zion-cyan to-zion-purple',
-    features['95% prediction accuracy', 'Real-time processing', 'Custom model training', 'Multi-dimensional forecasting'],
-    price: '$12,999/month',
-    roi: '450% ROI',
-    marketSize: '$23.1B Market',
-    path: '/services/ai-business-intelligence',
-    category: 'AI & Analytics'
+    title: 'AI Autonomous Business Operations',
+    description: 'Automate complex business processes with intelligent AI agents',
+    category: 'AI & Machine Learning',
+    price: { monthly: 8500, yearly: 85000, currency: 'USD' },
+    features: ['Self-learning agents', 'Multi-agent collaboration', '90% process automation', 'Real-time optimization'],
+    marketSize: '$45 billion by 2030',
+    growthRate: '+35% annually',
+    color: 'from-purple-500 to-pink-500',
+    link: '/services/ai-autonomous-business-operations',
+    popular: true
   },
   {
-    id: 'quantum-optimization',
-    title: 'Quantum Optimization Suite',
-    description: 'Solve complex optimization problems with hybrid quantum-classical computing',
-    icon: Zap,
-    gradient: 'from-zion-purple to-zion-blue',
-    features['Quantum advantage', 'Custom algorithms', 'Hybrid computing', '800% ROI'],
-    price: '$25,999/month',
-    roi: '800% ROI',
-    marketSize: '$1.8B Market',
-    path: '/services/quantum-computing',
-    category: 'Quantum Computing'
+    id: 'quantum-ai-optimization',
+    icon: Atom,
+    title: 'Quantum AI Optimization Platform',
+    description: 'Quantum-classical hybrid algorithms for unprecedented optimization',
+    category: 'Quantum Computing',
+    price: { monthly: 15000, yearly: 150000, currency: 'USD' },
+    features: ['Quantum-classical hybrid', '1000x faster processing', 'Real-time optimization', 'Advanced algorithms'],
+    marketSize: '$65 billion by 2030',
+    growthRate: '+40% annually',
+    color: 'from-blue-500 to-indigo-500',
+    link: '/services/quantum-ai-optimization',
+    new: true
   },
   {
-    id: 'zero-trust-security',
-    title: 'Zero Trust Security Platform',
-    description: 'Continuous verification with AI behavioral analysis and real-time threat detection',
-    icon: Shield,
-    gradient: 'from-zion-blue to-zion-cyan',
-    features['Continuous verification', 'AI behavioral analysis', 'Real-time detection', '600% ROI'],
-    price: '$18,999/month',
-    roi: '600% ROI',
-    marketSize: '$18.5B Market',
-    path: '/services/cybersecurity',
-    category: 'Cybersecurity'
-  },
-  {
-    id: 'multi-cloud',
-    title: 'Multi-Cloud Orchestration',
-    description: 'Unified management across AWS, Azure, and Google Cloud with cost optimization',
+    id: 'cloud-infrastructure',
     icon: Cloud,
-    gradient: 'from-zion-cyan to-zion-blue',
-    features['Unified management', 'Cost optimization', 'Performance monitoring', '700% ROI'],
-    price: '$15,999/month',
-    roi: '700% ROI',
-    marketSize: '$12.8B Market',
-    path: '/services/cloud-devops',
-    category: 'Cloud & DevOps'
+    title: 'Cloud Infrastructure & DevOps',
+    description: 'Scalable cloud solutions with automated deployment and management',
+    category: 'Cloud & Infrastructure',
+    price: { monthly: 12000, yearly: 120000, currency: 'USD' },
+    features: ['Auto-scaling', 'CI/CD pipelines', 'Infrastructure as code', '24/7 monitoring'],
+    marketSize: '$1.5 trillion by 2030',
+    growthRate: '+25% annually',
+    color: 'from-cyan-500 to-blue-500',
+    link: '/services/cloud-infrastructure-devops'
   },
   {
-    id: 'data-streaming',
-    title: 'Real-Time Data Streaming',
-    description: 'Process millions of events per second with AI analytics and enterprise scalability',
-    icon: Database,
-    gradient: 'from-zion-purple to-zion-cyan',
-    features['Millions of events/sec', 'AI analytics', 'Low latency', '500% ROI'],
-    price: '$13,999/month',
-    roi: '500% ROI',
-    marketSize: '$15.2B Market',
-    path: '/services/data-analytics',
-    category: 'Data & Analytics'
+    id: 'cybersecurity',
+    icon: Shield,
+    title: 'AI-Powered Cybersecurity',
+    description: 'Advanced security solutions for modern threat landscapes',
+    category: 'Cybersecurity',
+    price: { monthly: 8500, yearly: 85000, currency: 'USD' },
+    features: ['99.9% threat detection', 'Real-time response', 'Zero-day protection', 'Compliance ready'],
+    marketSize: '$300 billion by 2030',
+    growthRate: '+30% annually',
+    color: 'from-red-500 to-orange-500',
+    link: '/services/ai-cybersecurity'
   },
   {
-    id: 'blockchain-enterprise',
-    title: 'Enterprise Blockchain Platform',
-    description: 'AI-powered governance and smart contracts with multi-chain support',
-    icon: Globe,
-    gradient: 'from-zion-blue to-zion-purple',
-    features['AI governance', 'Multi-chain support', 'Smart contracts', '600% ROI'],
-    price: '$22,999/month',
-    roi: '600% ROI',
-    marketSize: '$19.9B Market',
-    path: '/services/blockchain',
-    category: 'Blockchain & Web3'
+    id: 'digital-transformation',
+    icon: Zap,
+    title: 'Digital Transformation',
+    description: 'End-to-end digital transformation consulting and implementation',
+    category: 'Consulting',
+    price: { monthly: 15000, yearly: 150000, currency: 'USD' },
+    features: ['Strategy development', 'Process optimization', 'Technology integration', 'Change management'],
+    marketSize: '$500 billion by 2030',
+    growthRate: '+20% annually',
+    color: 'from-green-500 to-emerald-500',
+    link: '/services/digital-transformation'
+  },
+  {
+    id: 'edge-computing',
+    icon: ChipIcon,
+    title: 'Edge Computing Platform',
+    description: 'Real-time data processing at the edge for ultra-low latency',
+    category: 'Emerging Technologies',
+    price: { monthly: 9500, yearly: 95000, currency: 'USD' },
+    features: ['90% latency reduction', 'Real-time processing', 'Edge AI capabilities', 'Global deployment'],
+    marketSize: '$50 billion by 2030',
+    growthRate: '+45% annually',
+    color: 'from-indigo-500 to-purple-500',
+    link: '/services/edge-computing'
   }
 ];
 
-const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity', 'Cloud & DevOps', 'Data & Analytics', 'Blockchain & Web3'];
+const categories = ['All', 'AI & Machine Learning', 'Quantum Computing', 'Cloud & Infrastructure', 'Cybersecurity', 'Consulting', 'Emerging Technologies'];
 
-export default function EnhancedServicesShowcase(...args[]: any):  {
+export function EnhancedServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -283,79 +133,24 @@ export default function EnhancedServicesShowcase(...args[]: any):  {
   const [currentPage, setCurrentPage] = useState(1);
   const servicesPerPage = 12;
 
-  // Combine all services
-  const allServices: Service[] = [
-    ...enhancedInnovativeServices2025,
-    ...enhancedITandAIServices2025
-  ];
+  const filteredServices = useMemo(() => {
+    let filtered = services.filter(service => {
+      const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory;
+      const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchQuery.toLowerCase());
+      const matchesPrice = service.price.monthly >= priceRange[0] && service.price.monthly <= priceRange[1];
+      
+      return matchesCategory && matchesSearch && matchesPrice;
+    });
 
-  // Filter and sort services
-  const filteredServices = allServices
-    .filter(service => {
-      const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
-      const matchesInnovation = selectedInnovationLevel === 'all' || service.innovationLevel === selectedInnovationLevel;
-      
-      // Price range filtering
-      let matchesPrice = true;
-      if (selectedPriceRange !== 'all') {
-        const price = service.price;
-        switch (selectedPriceRange) {
-          case 'under-1000':
-            matchesPrice = price < 1000;
-            break;
-          case '1000-5000':
-            matchesPrice = price >= 1000 && price <= 5000;
-            break;
-          case '5000-10000':
-            matchesPrice = price > 5000 && price <= 10000;
-            break;
-          case 'over-10000':
-            matchesPrice = price > 10000;
-            break;
-        }
-      }
-      
-      // Delivery time filtering
-      let matchesDelivery = true;
-      if (selectedDeliveryTime !== 'all') {
-        const delivery = service.estimatedDelivery.toLowerCase();
-        switch (selectedDeliveryTime) {
-          case 'under-1-week':
-            matchesDelivery = delivery.includes('1 week') || delivery.includes('3-5 days');
-            break;
-          case '1-2-weeks':
-            matchesDelivery = delivery.includes('2 weeks') || delivery.includes('1-2 weeks');
-            break;
-          case '2-4-weeks':
-            matchesDelivery = delivery.includes('4 weeks') || delivery.includes('2-4 weeks');
-            break;
-          case 'over-4-weeks':
-            matchesDelivery = delivery.includes('6 weeks') || delivery.includes('8 weeks') || delivery.includes('12 weeks');
-            break;
-        }
-      }
-      
-      return matchesSearch && matchesCategory && matchesInnovation && matchesPrice && matchesDelivery;
-    })
-    .sort((a, b) => {
+    // Sort services
+    filtered.sort((a, b) => {
       switch (sortBy) {
-        case 'price-low':
-          return a.price - b.price;
-        case 'price-high':
-          return b.price - a.price;
-        case 'innovation-high':
-          return b.innovationLevel.localeCompare(a.innovationLevel);
-        case 'delivery-fast':
-          return a.estimatedDelivery.localeCompare(b.estimatedDelivery);
-        case 'roi-high':
-          return b.roi.localeCompare(a.roi);
-        case 'roi':
-          return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
-        case 'name':
+        case 'price':
+          return a.price.monthly - b.price.monthly;
+        case 'marketSize':
+          return parseInt(a.marketSize.replace(/[^0-9]/g, '')) - parseInt(b.marketSize.replace(/[^0-9]/g, ''));
+
         default:
           return a.title.localeCompare(b.title);
       }
@@ -485,7 +280,7 @@ export default function EnhancedServicesShowcase(...args[]: any):  {
             </select>
 
 }}
-=======
+
 export const EnhancedServicesShowcase: React.FC = (): JSX.Element => {
   const services = [
     {
@@ -689,164 +484,11 @@ export default function EnhancedServicesShowcase(...args: any[]): any {
             </motion.div>
           ))}
         </motion.div>
-        {/* Services Grid */}
-        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-8">
-          <AnimatePresence mode="wait">
-            {filteredServices.map((service, index) => (
-              <motion.div
-                key={service.id}
-                layout
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative"
-                onHoverStart={() => setHoveredService(service.id)}
-                onHoverEnd={() => setHoveredService(null)}
-              >
-                <motion.div
-                  className="relative bg-white/5 backdrop-blur-lg border border-white/20 rounded-3xl p-8 h-full overflow-hidden"
-                  whileHover={{
-                    y: -10,
-                    scale: 1.02,
-                    borderColor: 'rgba(34, 221, 210, 0.5)'
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {/* Background gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                  {/* Icon */}
-                  <motion.div
-                    className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.gradient} bg-opacity-20 flex items-center justify-center mb-6 relative z-10`}
-                    whileHover={{ rotate: 360 }}
-                    transition={{ duration: 0.6 }}
-                  >
-                    <service.icon className="w-8 h-8 text-white" />
-                  </motion.div>
-                  {/* Category badge */}
-                  <div className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-xs font-medium rounded-full mb-4">
-                    {service.category}
-                  </div>
-                  {/* Title */}
-                  <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-zion-cyan transition-colors duration-300">
-                    {service.title}
-                  </h3>
-                  {/* Description */}
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  {/* Features */}
-                  <div className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <motion.div
-                        key={feature}
-                        className="flex items-center text-sm text-gray-300"
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: featureIndex * 0.1 }}
-                      >
-                        <CheckCircle className="w-4 h-4 text-zion-cyan mr-3 flex-shrink-0" />
-                        {feature}
-                      </motion.div>
-                    ))}
-                  </div>
-                  {/* Stats */}
-                  <div className="grid grid-cols-3 gap-4 mb-6">
-                    <div className="text-center">
-                      <p className="text-2xl font-bold text-zion-cyan">{service.price}</p>
-                      <p className="text-xs text-gray-400">Monthly</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-2xl font-bold text-zion-purple">{service.roi}</p>
-                      <p className="text-xs text-gray-400">ROI</p>
-                    </div>
-                    <div className="text-center">
-                      <p className="text-2xl font-bold text-zion-blue">{service.marketSize}</p>
-                      <p className="text-xs text-gray-400">Market</p>
-                    </div>
-                  </div>
-                  {/* CTA Button */}
-                  <motion.div
-                    className="relative z-10"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Link
-                      to={service.path}
-                      className="inline-flex items-center w-full justify-center px-6 py-3 bg-gradient-to-r from-zion-cyan to-zion-purple text-white font-semibold rounded-xl hover:shadow-lg hover:shadow-zion-cyan/25 transition-all duration-300 border border-zion-cyan/30"
-                    >
-                      Learn More
-                      <ArrowRight className="ml-2 w-5 h-5" />
-                    </Link>
-                  </motion.div>
-                  {/* Hover effect overlay */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-zion-cyan/5 to-zion-purple/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    initial={false}
-                  />
-                </motion.div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
-        {/* Bottom CTA */}
-        <motion.div
-          className="text-center mt-16"
-          initial = {
-  { opacity: 0,
-  y: 20 
-}}
-          whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-          viewport={{ once: true }}
-          transition = {
-  { duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.6,
-  delay: 0.3 
-}}
-        >
-          {categories.map((category, index)               => (
-            <motion.button
-              key={category}
-              onClick={() => setSelectedCategory(category)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-gradient-to-r from-zion-cyan to-zion-purple text-white shadow-lg shadow-zion-cyan/25'
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-              }`}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              initial = {
-  { opacity: 0,
-  y: 20 
-}}
-              whileInView = {
-  { opacity: 1,
-  y: 0 
-}}
-              viewport={{ once: true }}
-              transition = {
-  { duration: 0.6,
-  delay: index * 0.1 
-}}
-            >
-              View All Services
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Link>
-            <a
-              href="tel:+13024640950"
-              className="px-8 py-4 border border-zion-cyan text-zion-cyan font-semibold rounded-xl hover:bg-zion-cyan hover:text-white transition-all duration-300"
-              Call +1 302 464 0950
-            </a>
+
           </div>
-          <div className="mt-8 text-slate-400">
-            <p>Visit us at: <a href="https://ziontechgroup.com" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">https://ziontechgroup.com</a></p>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
-};
+}
 
-export default EnhancedServicesShowcase;

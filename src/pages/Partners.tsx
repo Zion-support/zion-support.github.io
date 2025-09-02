@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { 
+
   Users, 
   Award, 
   Target, 
@@ -20,6 +21,7 @@ import {
   Briefcase,
   TrendingUp,
   Lightbulb
+
 } from 'lucide-react';
 
 export default function Partners() {
@@ -68,6 +70,7 @@ export default function Partners() {
       category: 'Cloud Services',
       description: 'Cloud infrastructure partnership for scalable AI solutions.',
       partnership: 'Infrastructure Provider'
+
     },
     {
       name: 'Google Cloud',
@@ -76,12 +79,14 @@ export default function Partners() {
       description: 'Partnership for advanced machine learning and AI services.',
       partnership: 'AI Technology'
     },
+
     {
       name: 'IBM',
       logo: '/partners/ibm.png',
       category: 'Quantum Computing',
       description: 'Quantum computing partnership for next-generation solutions.',
       partnership: 'Quantum Technology'
+
     }
   ];
 
@@ -155,6 +160,7 @@ export default function Partners() {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
+
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -430,6 +436,7 @@ export default function Partners() {
               </button>
             </div>
           </motion.div>
+
         </div>
       </section>
     </div>

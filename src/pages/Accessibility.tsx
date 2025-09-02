@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Eye, Ear, MousePointer, Smartphone, Monitor, CheckCircle, AlertTriangle, Users, Globe, Shield } from 'lucide-react';
 
@@ -72,6 +71,7 @@ export default function Accessibility() {
                     <Eye className="h-5 w-5 text-blue-400" />
                   </div>
                   <h3 className="text-lg font-semibold text-white">Visual Accessibility</h3>
+
                 </div>
                 <ul className="space-y-2 text-zion-slate-light text-sm">
                   <li className="flex items-center space-x-2">

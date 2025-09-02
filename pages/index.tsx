@@ -1,11 +1,24 @@
+import React from 'react';
 import type { NextPage } from 'next';
-import Layout from '../components/Layout';
+import MainLayout from '../components/layout/MainLayout';
+import { services, getServicesByCategory } from '../data/services';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe } from 'lucide-react';
 import Link from 'next/link';
-import { CheckCircle, Star, Users, Award, Globe, ArrowRight } from 'lucide-react';
 
 const Home: NextPage = () => {
+  const microSaasServices = getServicesByCategory('micro-saas');
+  const itServices = getServicesByCategory('it-services');
+  const aiServices = getServicesByCategory('ai-services');
+
+  const stats = [
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+  ];
+
   return (
-    <Layout>
+    <MainLayout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -59,139 +72,46 @@ const Home: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <Star className="w-8 h-8 text-blue-600" />
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Micro SaaS Services */}
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="text-blue-600 mb-4">
+                <Zap className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">AI Development</h3>
-              <p className="text-gray-600 mb-4">
-                Custom AI solutions and machine learning models tailored to your business needs.
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>
+              <p className="text-gray-600 mb-6">
+                Innovative, focused software solutions that solve specific business problems with minimal overhead.
               </p>
-              <Link href="/services/ai-development" className="text-blue-600 hover:text-blue-700 font-semibold flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+              <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold">
+                Learn More →
               </Link>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
-                <Globe className="w-8 h-8 text-purple-600" />
+            {/* IT Services */}
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="text-blue-600 mb-4">
+                <Shield className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Cloud Services</h3>
-              <p className="text-gray-600 mb-4">
-                Scalable cloud solutions and infrastructure design for modern applications.
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
+              <p className="text-gray-600 mb-6">
+                Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses.
               </p>
-              <Link href="/services/cloud-services" className="text-purple-600 hover:text-purple-700 font-semibold flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
+              <Link href="/services/it-services" className="text-blue-600 hover:text-blue-700 font-semibold">
+                Learn More →
               </Link>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
-                <Users className="w-8 h-8 text-green-600" />
+            {/* AI Services */}
+            <div className="bg-white p-8 rounded-lg shadow-lg">
+              <div className="text-blue-600 mb-4">
+                <Globe className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Web Development</h3>
-              <p className="text-gray-600 mb-4">
-                Modern, responsive web applications built with cutting-edge technologies.
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
+              <p className="text-gray-600 mb-6">
+                Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages.
               </p>
-              <Link href="/services/web-development" className="text-green-600 hover:text-green-700 font-semibold flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <Award className="w-8 h-8 text-orange-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Mobile Development</h3>
-              <p className="text-gray-600 mb-4">
-                Native and cross-platform mobile applications for iOS and Android.
-              </p>
-              <Link href="/services/mobile-development" className="text-orange-600 hover:text-orange-700 font-semibold flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
-                <CheckCircle className="w-8 h-8 text-red-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Blockchain Solutions</h3>
-              <p className="text-gray-600 mb-4">
-                Innovative blockchain technology for secure, transparent business processes.
-              </p>
-              <Link href="/services/blockchain-solutions" className="text-red-600 hover:text-red-700 font-semibold flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
-                <Star className="w-8 h-8 text-indigo-600" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">IoT Platforms</h3>
-              <p className="text-gray-600 mb-4">
-                Connected device solutions and IoT infrastructure for smart business operations.
-              </p>
-              <Link href="/services/iot-platforms" className="text-indigo-600 hover:text-indigo-700 font-semibold flex items-center">
-                Learn More <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Us */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine technical expertise with business acumen to deliver solutions that drive real results.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Expert Team</h3>
-                    <p className="text-gray-600">Our team consists of industry experts with years of experience in cutting-edge technologies.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Proven Track Record</h3>
-                    <p className="text-gray-600">We've successfully delivered hundreds of projects across various industries and technologies.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">Innovation Focus</h3>
-                    <p className="text-gray-600">We stay ahead of the curve, implementing the latest technologies and best practices.</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">24/7 Support</h3>
-                    <p className="text-gray-600">Round-the-clock support ensures your systems are always running smoothly.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-              <p className="mb-6 text-blue-100">
-                Let's discuss how we can help transform your business with cutting-edge technology solutions.
-              </p>
-              <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block">
-                Schedule a Consultation
+              <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold">
+                Learn More →
               </Link>
             </div>
           </div>
@@ -199,23 +119,20 @@ const Home: NextPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-900 text-white">
+      <section className="py-20 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
-          <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-            Join hundreds of businesses that have already transformed their digital presence with Zion Tech Group.
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            Let's discuss how we can help transform your business with cutting-edge technology solutions.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Get Started Today
-            </Link>
-            <Link href="/about" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
-              Learn More About Us
-            </Link>
-          </div>
+          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            Get Started Today
+          </Link>
         </div>
       </section>
-    </Layout>
+    </MainLayout>
   );
 };
 

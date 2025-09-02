@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { 
   Users, 
+
   Award, 
   Target, 
   Globe, 
@@ -28,6 +29,7 @@ export default function About() {
       icon: Brain,
       title: 'Innovation First',
       description: 'We push the boundaries of what\'s possible with cutting-edge AI and emerging technologies.'
+
     },
     {
       icon: Shield,

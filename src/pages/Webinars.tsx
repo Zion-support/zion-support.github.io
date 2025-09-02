@@ -128,6 +128,7 @@ export default function Webinars() {
     { id: 'healthcare-tech', name: 'Healthcare Technology', icon: Heart, count: 2 },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: Zap, count: 1 },
     { id: 'sustainability', name: 'Sustainability & Green IT', icon: Globe, count: 1 }
+
   ];
 
   const upcomingWebinars: Webinar[] = [
@@ -176,6 +177,7 @@ export default function Webinars() {
       speakers: ['Jennifer Kim', 'Cybersecurity Experts', 'AI Security Team'],
       maxAttendees: 500,
       currentAttendees: 342,
+
       featured: false,
       tags: ['Cybersecurity', 'AI Security', 'Threat Detection', 'Automated Response'],
       thumbnail: '/images/webinars/ai-cybersecurity-2025.jpg',
@@ -252,6 +254,7 @@ export default function Webinars() {
       thumbnail: '/images/webinars/sustainable-tech-2025.jpg',
       registrationRequired: false,
       recordingAvailable: true
+
     }
   ];
 
@@ -265,7 +268,7 @@ export default function Webinars() {
       webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
     
     const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
-    
+
     return matchesSearch && matchesCategory;
   });
 
@@ -317,6 +320,7 @@ export default function Webinars() {
         return 'text-emerald-400 bg-emerald-400/10 border-emerald-400/20';
       default:
         return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
+
     }
   };
 
@@ -333,6 +337,7 @@ export default function Webinars() {
         <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
           <div className="relative max-w-7xl mx-auto text-center">
+
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -362,6 +367,7 @@ export default function Webinars() {
                   />
                 </div>
               </form>
+
             </motion.div>
           </div>
         </section>
@@ -415,6 +421,7 @@ export default function Webinars() {
                     All Webinars
                   </button>
                 </div>
+
               </div>
             </div>
           </div>
@@ -587,6 +594,7 @@ export default function Webinars() {
                     </div>
                   </motion.div>
                 ))}
+
               </div>
             ) : (
               <motion.div
@@ -627,6 +635,7 @@ export default function Webinars() {
                 Want to Host a Webinar?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
+
                 Have expertise to share? We're always looking for industry leaders and subject matter experts 
                 to present on cutting-edge topics. Let's discuss how we can collaborate.
               </p>
@@ -644,6 +653,7 @@ export default function Webinars() {
                 >
                   📞 Call Now
                 </a>
+
               </div>
             </motion.div>
           </div>

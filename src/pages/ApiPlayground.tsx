@@ -1,21 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
 import { 
   Code, 
   Play, 
   Copy, 
-  Download, 
-  BookOpen, 
-  Search, 
-  Filter, 
-  ExternalLink, 
-  ArrowRight, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Database, 
-  Zap, 
+  Check, 
   Globe, 
   Target, 
   TrendingUp, 
@@ -102,7 +91,9 @@ import {
   FastForward as FastForwardIcon2,
   Repeat as RepeatIcon2,
   Repeat1 as Repeat1Icon2
+
 } from 'lucide-react';
+import { SEO } from '@/components/SEO';
 
 interface ApiEndpoint {
   id: number;
@@ -146,14 +137,9 @@ interface Method {
 }
 
 export default function ApiPlayground() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [activeMethod, setActiveMethod] = useState('all');
-  const [selectedApi, setSelectedApi] = useState<ApiEndpoint | null>(null);
-  const [requestBody, setRequestBody] = useState('');
-  const [responseData, setResponseData] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('playground');
+  const [selectedApi, setSelectedApi] = useState(null);
+  const [copied, setCopied] = useState(false);
 
   const categories: Category[] = [
     { id: 'all', name: 'All Categories', icon: Code, count: 30 },
@@ -173,77 +159,15 @@ export default function ApiPlayground() {
   ];
 
   const apis: ApiEndpoint[] = [
+
     {
-      id: 1,
-      name: 'AI Text Analysis',
-      description: 'Analyze text sentiment, extract entities, and perform language processing tasks.',
-      category: 'ai-ml',
-      method: 'POST',
-      endpoint: '/api/v1/ai/text-analysis',
-      baseUrl: 'https://api.ziontechgroup.com',
-      version: '1.0.0',
-      status: 'stable',
-      rateLimit: '1000 requests/hour',
-      authentication: 'Bearer Token',
-      parameters: [
-        { name: 'text', type: 'string', required: true, description: 'Text to analyze' },
-        { name: 'language', type: 'string', required: false, description: 'Language code (default: auto-detect)' },
-        { name: 'features', type: 'array', required: false, description: 'Analysis features to enable' }
-      ],
-      requestExample: {
-        text: "I love this new AI technology! It's amazing how it can understand context.",
-        language: "en",
-        features: ["sentiment", "entities", "keywords"]
-      },
-      responseExample: {
-        sentiment: { score: 0.9, label: "positive" },
-        entities: [
-          { text: "AI technology", type: "technology", confidence: 0.95 }
-        ],
-        keywords: ["AI", "technology", "amazing", "context"],
-        language: "en"
-      },
-      documentation: 'https://docs.ziontechgroup.com/api/ai-text-analysis',
-      sdk: 'https://github.com/ziontechgroup/ai-sdk',
-      featured: true
-    },
-    {
-      id: 2,
-      name: 'Cloud Resource Management',
-      description: 'Manage cloud infrastructure, deploy resources, and monitor performance.',
-      category: 'cloud',
+      id: 'user-management',
+      name: 'User Management API',
+      description: 'Complete user authentication and management system',
+      endpoint: '/api/users',
       method: 'GET',
-      endpoint: '/api/v1/cloud/resources',
-      baseUrl: 'https://api.ziontechgroup.com',
-      version: '1.0.0',
-      status: 'stable',
-      rateLimit: '500 requests/hour',
-      authentication: 'API Key',
-      parameters: [
-        { name: 'region', type: 'string', required: false, description: 'Cloud region' },
-        { name: 'type', type: 'string', required: false, description: 'Resource type' },
-        { name: 'status', type: 'string', required: false, description: 'Resource status' }
-      ],
-      requestExample: {
-        region: "us-east-1",
-        type: "compute",
-        status: "running"
-      },
-      responseExample: {
-        resources: [
-          {
-            id: "i-1234567890abcdef0",
-            name: "web-server-01",
-            type: "compute",
-            status: "running",
-            region: "us-east-1"
-          }
-        ],
-        total: 1,
-        region: "us-east-1"
-      },
-      documentation: 'https://docs.ziontechgroup.com/api/cloud-resources',
-      sdk: 'https://github.com/ziontechgroup/cloud-sdk'
+      documentation: 'https://docs.ziontechgroup.com/api/users',
+      sdk: 'https://github.com/ziontechgroup/user-sdk'
     },
     {
       id: 3,
@@ -388,6 +312,7 @@ export default function ApiPlayground() {
       default:
         return 'text-gray-400 bg-gray-400/10 border-gray-400/20';
     }
+
   };
 
   return (
@@ -396,99 +321,33 @@ export default function ApiPlayground() {
         title="API Playground - Zion Tech Group"
         description="Test and explore our APIs in real-time. Interactive playground for AI, cloud, security, and data analytics endpoints with live examples."
         keywords="API playground, API testing, REST API, AI API, cloud API, security API, Zion Tech Group"
+
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-        {/* Header Section */}
-        <section className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Header */}
+        <section className="relative py-20 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-          <div className="relative max-w-7xl mx-auto text-center">
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                API{' '}
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-                  Playground
-                </span>
+                API <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Playground</span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
-                Test and explore our APIs in real-time. Interactive playground for AI, cloud, security, 
-                and data analytics endpoints with live examples and documentation.
+              <p className="text-xl text-gray-300 mb-8">
+                Test and explore our APIs with our interactive playground
               </p>
-              
-              {/* Search Form */}
-              <form className="max-w-2xl mx-auto">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Search APIs, endpoints, or descriptions..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-12 pr-4 py-4 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors text-lg"
-                  />
-                </div>
-              </form>
             </motion.div>
           </div>
         </section>
 
-        {/* Filters Section */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-6 items-start lg:items-center justify-between">
-              {/* Category Filter */}
-              <div className="flex flex-wrap gap-3">
-                {categories.map((category) => (
-                  <button
-                    key={category.id}
-                    onClick={() => setActiveCategory(category.id)}
-                    className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
-                      activeCategory === category.id
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg'
-                        : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20'
-                    }`}
-                  >
-                    <category.icon className="w-4 h-4" />
-                    {category.name}
-                    <span className="text-xs bg-white/20 px-2 py-1 rounded-full">
-                      {category.count}
-                    </span>
-                  </button>
-                ))}
-              </div>
-
-              {/* Method Filter */}
-              <div className="flex items-center gap-4">
-                <div className="flex bg-white/10 rounded-lg p-1 border border-white/20">
-                  {methods.map((method) => (
-                    <button
-                      key={method.id}
-                      onClick={() => setActiveMethod(method.id)}
-                      className={`px-4 py-2 rounded-md transition-all duration-300 ${
-                        activeMethod === method.id
-                          ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white'
-                          : 'text-gray-400 hover:text-white'
-                      }`}
-                    >
-                      {method.name}
-                      {method.id !== 'all' && (
-                        <span className="text-xs ml-1">({method.count})</span>
-                      )}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Main Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <section className="py-16">
+          <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-3 gap-8">
               {/* API List */}
               <div className="lg:col-span-1">
@@ -808,19 +667,13 @@ export default function ApiPlayground() {
                         </div>
                       </div>
                     )}
+
                   </div>
                 ) : (
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-12 text-center">
-                    <div className="text-6xl mb-4">🚀</div>
-                    <h3 className="text-2xl font-bold text-white mb-4">Select an API to Get Started</h3>
-                    <p className="text-gray-300 mb-6">
-                      Choose an API from the list to explore its endpoints, test requests, 
-                      and view documentation in our interactive playground.
-                    </p>
-                    <div className="flex items-center justify-center gap-2 text-gray-400">
-                      <Terminal className="w-5 h-5" />
-                      <span className="text-sm">Interactive testing environment</span>
-                    </div>
+                  <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
+                    <Terminal size={48} className="text-gray-500 mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold text-white mb-2">Select an API</h3>
+                    <p className="text-gray-400">Choose an API from the list to view details and test endpoints</p>
                   </div>
                 )}
               </div>
@@ -862,6 +715,7 @@ export default function ApiPlayground() {
             </motion.div>
           </div>
         </section>
+
       </div>
     </>
   );

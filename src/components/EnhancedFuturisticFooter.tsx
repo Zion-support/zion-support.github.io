@@ -69,7 +69,7 @@ import {
   Moon,
   Infinity
 export const EnhancedFuturisticFooter: React.FC = (): JSX.Element => {
-=======
+
   Smartphone,
   Monitor,
   Server,

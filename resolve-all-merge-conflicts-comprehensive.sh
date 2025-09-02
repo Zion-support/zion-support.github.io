@@ -1,187 +1,147 @@
 #!/bin/bash
 
-echo "🔧 Starting comprehensive merge conflict resolution..."
+# Comprehensive Merge Conflict Resolution Script
+# This script resolves all merge conflicts systematically
 
-# Function to resolve conflicts in a file
-resolve_conflicts() {
-    local file="$1"
-    echo "Processing: $file"
-    
-    # Remove merge conflict markers and keep both versions where possible
-    if grep -q "<<<<<<< HEAD" "$file"; then
-        # For most files, remove conflict markers and keep the HEAD version
-        sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-        sed -i '/^>>>>>>> /d' "$file"
-        echo "✅ Resolved conflicts in: $file"
+set -e
+
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Function to print colored output
+print_status() {
+    echo -e "${BLUE}[INFO]${NC} $1"
+}
+
+print_success() {
+    echo -e "${GREEN}[SUCCESS]${NC} $1"
+}
+
+print_warning() {
+    echo -e "${YELLOW}[WARNING]${NC} $1"
+}
+
+print_error() {
+    echo -e "${RED}[ERROR]${NC} $1"
+}
+
+print_status "Starting comprehensive merge conflict resolution..."
+
+# Check if we're in a merge state
+if ! git status | grep -q "You have unmerged paths"; then
+    print_error "Not in a merge state. Please start a merge first."
+    exit 1
+fi
+
+# Strategy 1: Resolve modify/delete conflicts by keeping the main branch version (deleting files)
+print_status "Resolving modify/delete conflicts by keeping main branch version..."
+
+# Get list of modify/delete conflicts
+git status --porcelain | grep "^DU\|^UD" | while read status file; do
+    if [[ $status == "DU" ]]; then
+        # File was deleted in main, modified in HEAD - keep the deletion
+        print_status "Removing file: $file (deleted in main)"
+        git rm "$file"
+    elif [[ $status == "UD" ]]; then
+        # File was modified in main, deleted in HEAD - keep the file
+        print_status "Keeping file: $file (modified in main)"
+        git add "$file"
     fi
-}
+done
 
-# Function to resolve specific file types
-resolve_specific_files() {
-    echo "🎯 Resolving conflicts in specific important files..."
-    
-    # Resolve App.tsx conflicts (already done manually)
-    if grep -q "<<<<<<< HEAD" "src/App.tsx"; then
-        echo "App.tsx still has conflicts - resolving..."
-        resolve_conflicts "src/App.tsx"
-    fi
-    
-    # Resolve package.json conflicts
-    if grep -q "<<<<<<< HEAD" "package.json"; then
-        echo "Resolving package.json conflicts..."
-        resolve_conflicts "package.json"
-    fi
-    
-    # Resolve tsconfig conflicts
-    if grep -q "<<<<<<< HEAD" "tsconfig.json"; then
-        echo "Resolving tsconfig.json conflicts..."
-        resolve_conflicts "tsconfig.json"
-    fi
-}
+# Strategy 2: Resolve content conflicts by taking the main branch version for most files
+print_status "Resolving content conflicts by preferring main branch version..."
 
-# Function to clean up backup files with conflicts
-cleanup_backup_files() {
-    echo "🧹 Cleaning up backup files with conflicts..."
+# Get list of content conflicts
+git status --porcelain | grep "^UU" | while read status file; do
+    print_status "Resolving content conflict in: $file"
     
-    # Remove backup files that contain merge conflicts
-    find . -name "*.backup.*" -type f -exec grep -l "<<<<<<< HEAD" {} \; 2>/dev/null | while read -r file; do
-        echo "Removing conflicted backup: $file"
-        rm -f "$file"
-    done
-}
-
-# Function to resolve data files conflicts
-resolve_data_files() {
-    echo "📊 Resolving conflicts in data files..."
-    
-    # List of important data files to resolve
-    data_files=(
-        "src/data/comprehensiveServicesIndex.ts"
-        "src/data/comprehensivePricingGuide2030.ts"
-        "src/data/revolutionaryServices2030.ts"
-        "src/data/emergingTechnologyServices2030.ts"
-        "src/data/innovativeMicroSaasServices2027.ts"
-        "src/data/innovativeMicroSaasServices2028.ts"
-        "src/data/nextGenInnovativeServices2025.ts"
-        "src/data/advancedEnterpriseSolutions2025.ts"
-        "src/data/specializedHealthcareAIServices2025.ts"
-        "src/data/iotEdgeComputingServices2025.ts"
-        "src/data/comprehensivePricingGuide2026.ts"
-        "src/data/comprehensiveServicesCatalog2025.ts"
-        "src/data/expandedInnovativeServices2025.ts"
-        "src/data/advancedITServices2025.ts"
-    )
-    
-    for file in "${data_files[@]}"; do
-        if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
-            echo "Resolving conflicts in: $file"
-            resolve_conflicts "$file"
-        fi
-    done
-}
-
-# Function to resolve utility files conflicts
-resolve_utility_files() {
-    echo "🛠️ Resolving conflicts in utility files..."
-    
-    utility_files=(
-        "src/services/api.ts"
-        "src/utils/serviceMapper.ts"
-        "src/utils/securityConfig.ts"
-        "src/utils/serviceWorker.ts"
-        "src/utils/apiErrorHandler.ts"
-        "src/utils/cartUtils.ts"
-        "src/utils/getStripe.ts"
-        "src/utils/sitemapGenerator.ts"
-        "src/store/authSlice.ts"
-    )
-    
-    for file in "${utility_files[@]}"; do
-        if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
-            echo "Resolving conflicts in: $file"
-            resolve_conflicts "$file"
-        fi
-    done
-}
-
-# Function to resolve automation files conflicts
-resolve_automation_files() {
-    echo "🤖 Resolving conflicts in automation files..."
-    
-    # Remove automation files with conflicts (they're not critical for the main app)
-    find automation/ -name "*.js" -type f -exec grep -l "<<<<<<< HEAD" {} \; 2>/dev/null | while read -r file; do
-        echo "Removing conflicted automation file: $file"
-        rm -f "$file"
-    done
-}
-
-# Function to resolve root level files
-resolve_root_files() {
-    echo "📁 Resolving conflicts in root level files..."
-    
-    root_files=(
-        "tailwind.config.js"
-        ".gitignore"
-        "ComprehensivePricingGuide2030.tsx"
-        "security-audit-report.json"
-        "quality-report.json"
-        "continuous-improvement-report.json"
-    )
-    
-    for file in "${root_files[@]}"; do
-        if [ -f "$file" ] && grep -q "<<<<<<< HEAD" "$file"; then
-            echo "Resolving conflicts in: $file"
-            resolve_conflicts "$file"
-        fi
-    done
-}
-
-# Main execution
-main() {
-    echo "🚀 Starting comprehensive merge conflict resolution process..."
-    
-    # Step 1: Resolve specific important files
-    resolve_specific_files
-    
-    # Step 2: Resolve data files
-    resolve_data_files
-    
-    # Step 3: Resolve utility files
-    resolve_utility_files
-    
-    # Step 4: Resolve automation files
-    resolve_automation_files
-    
-    # Step 5: Resolve root files
-    resolve_root_files
-    
-    # Step 6: Clean up backup files
-    cleanup_backup_files
-    
-    # Step 7: Final cleanup - remove any remaining conflict markers
-    echo "🧽 Final cleanup of remaining conflict markers..."
-    find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | \
-    grep -v node_modules | grep -v .git | while read -r file; do
-        if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
-            echo "Final cleanup for: $file"
-            sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-            sed -i '/^>>>>>>> /d' "$file"
-        fi
-    done
-    
-    # Step 8: Check remaining conflicts
-    echo "🔍 Checking for remaining conflicts..."
-    remaining_conflicts=$(grep -r "<<<<<<< HEAD" . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" --exclude="*.md" 2>/dev/null | wc -l)
-    
-    if [ "$remaining_conflicts" -eq 0 ]; then
-        echo "✅ All merge conflicts resolved successfully!"
+    # For most files, take the main branch version (theirs)
+    if [[ "$file" == *"package.json"* ]] || [[ "$file" == *"yarn.lock"* ]] || [[ "$file" == *"tsconfig.json"* ]]; then
+        # For config files, take main branch version
+        git checkout --theirs "$file"
+        git add "$file"
+        print_success "Resolved $file using main branch version"
+    elif [[ "$file" == *"src/"* ]]; then
+        # For source files, take main branch version to avoid breaking changes
+        git checkout --theirs "$file"
+        git add "$file"
+        print_success "Resolved $file using main branch version"
     else
-        echo "⚠️  $remaining_conflicts conflicts remaining. Showing first 10:"
-        grep -r "<<<<<<< HEAD" . --exclude-dir=node_modules --exclude-dir=.git --exclude="*.sh" --exclude="*.md" 2>/dev/null | head -10
+        # For other files, take main branch version
+        git checkout --theirs "$file"
+        git add "$file"
+        print_success "Resolved $file using main branch version"
     fi
-    
-    echo "🎉 Merge conflict resolution process completed!"
-}
+done
 
-# Run the main function
-main
+# Strategy 3: Handle special cases
+print_status "Handling special cases..."
+
+# Keep our automation files that are unique to our branch
+AUTOMATION_FILES=(
+    "scripts/automation/enhanced-error-fixing-automation.cjs"
+    "ecosystem-comprehensive-automation.config.cjs"
+    "start-comprehensive-automation.sh"
+    "COMPREHENSIVE_AUTOMATION_README.md"
+    "AUTOMATION_IMPLEMENTATION_SUMMARY.md"
+)
+
+for file in "${AUTOMATION_FILES[@]}"; do
+    if [[ -f "$file" ]]; then
+        print_status "Keeping our automation file: $file"
+        git add "$file"
+    fi
+done
+
+# Strategy 4: Clean up any remaining conflicts
+print_status "Cleaning up remaining conflicts..."
+
+# Check for any remaining unmerged files
+if git status --porcelain | grep -q "^UU\|^DU\|^UD"; then
+    print_warning "Some conflicts remain, attempting to resolve automatically..."
+    
+    # For any remaining conflicts, take main branch version
+    git status --porcelain | grep "^UU\|^DU\|^UD" | while read status file; do
+        if [[ $status == "UU" ]]; then
+            git checkout --theirs "$file"
+            git add "$file"
+        elif [[ $status == "DU" ]]; then
+            git rm "$file"
+        elif [[ $status == "UD" ]]; then
+            git add "$file"
+        fi
+    done
+fi
+
+# Final check
+print_status "Final conflict check..."
+if git status --porcelain | grep -q "^UU\|^DU\|^UD"; then
+    print_error "Some conflicts could not be resolved automatically:"
+    git status --porcelain | grep "^UU\|^DU\|^UD"
+    exit 1
+fi
+
+print_success "All merge conflicts resolved!"
+print_status "Ready to commit the merge..."
+
+# Commit the merge
+git commit -m "feat: merge comprehensive error fixing automation with main branch
+
+- Resolved all merge conflicts by preferring main branch version
+- Kept unique automation files from error fixing branch
+- Integrated comprehensive PM2 automation system
+- Maintained project stability while adding new features
+
+Conflicts resolved:
+- Modified/delete conflicts: Kept main branch deletions
+- Content conflicts: Used main branch version for stability
+- Automation files: Preserved unique error fixing automation
+- Configuration files: Used main branch versions"
+
+print_success "Merge completed successfully!"
+print_status "You can now push to main branch or create a PR"

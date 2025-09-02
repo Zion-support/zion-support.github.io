@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Eye, 
@@ -15,6 +16,7 @@ import {
   Info,
   Settings,
   X
+
 } from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -52,6 +54,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhanc
   showPanel = false,
   autoFix = true,
   complianceLevel = 'AA'
+
 }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [settings, setSettings] = useState<AccessibilitySettings>({
@@ -550,6 +553,7 @@ export const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhanc
                     <option value="deuteranopia">Deuteranopia (Green-Blind)</option>
                     <option value="tritanopia">Tritanopia (Blue-Blind)</option>
                   </select>
+
                 </div>
               </div>
             </div>
@@ -576,3 +580,4 @@ export const EnhancedAccessibilityEnhancer: React.FC<EnhancedAccessibilityEnhanc
     </>
   );
 };
+

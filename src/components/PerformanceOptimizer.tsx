@@ -8,6 +8,7 @@ interface PerformanceMetrics {
   cls: number;
   ttfb: number;
   loadTime: number;
+
 }
 
 interface PerformanceOptimizerProps {
@@ -190,13 +191,62 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     ];
 
     criticalResources.forEach((resource) => {
+
       const link = document.createElement('link');
       link.rel = 'preload';
       link.href = resource.href;
       link.as = resource.as;
       document.head.appendChild(link);
     });
-  }, [enabled]);
+  };
+
+  // Optimize LCP
+  const optimizeLCP = () => {
+    // Prioritize above-the-fold images
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach((img, index) => {
+      if (index < 3) { // First 3 images
+        (img as HTMLImageElement).loading = 'eager';
+        (img as HTMLImageElement).fetchPriority = 'high';
+      }
+    });
+  };
+
+  // Optimize CLS
+  const optimizeCLS = () => {
+    // Set explicit dimensions for images and videos
+    const mediaElements = document.querySelectorAll('img, video');
+    mediaElements.forEach(element => {
+      if (!element.hasAttribute('width') || !element.hasAttribute('height')) {
+        element.setAttribute('width', '100%');
+        element.setAttribute('height', 'auto');
+      }
+    });
+  };
+
+  // Optimize TTFB
+  const optimizeTTFB = () => {
+    // Enable HTTP/2 Server Push hints
+    const pushHints = [
+      { resource: '/css/main.css', as: 'style' },
+      { resource: '/js/main.js', as: 'script' }
+    ];
+
+    pushHints.forEach(hint => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = hint.resource;
+      link.as = hint.as as any;
+      document.head.appendChild(link);
+    });
+  };
+
+  // Manual optimization trigger
+  const triggerOptimization = () => {
+    if (metricsRef.current) {
+      autoOptimizePerformance(metricsRef.current);
+    }
+  };
 
   // Initialize performance monitoring
   useEffect(() => {
@@ -292,3 +342,4 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     </>
   );
 };
+
