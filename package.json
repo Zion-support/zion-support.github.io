@@ -36,7 +36,7 @@
     "build:vite": "vite build",
     "start": "next start",
     "start:vite": "vite preview",
-    "lint": "next lint",
+    "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "analyze": "ANALYZE=true npm run build",
     "format": "prettier --write .",
