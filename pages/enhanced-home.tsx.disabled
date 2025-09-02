@@ -62,7 +62,6 @@ const EnhancedHome: React.FC = () => {
       color: 'from-red-500 to-pink-500'
     }
   ];
-
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '99.9%', label: 'Uptime Guarantee' },
@@ -235,7 +234,7 @@ const EnhancedHome: React.FC = () => {
                     ))}
                   </div>
                   <p className='text-gray-600 mb-6 italic'>
-                    '{testimonial.content}'
+                    "{testimonial.content}"
                   </p>
                   <div>
                     <div className='font-semibold text-gray-900'>
@@ -257,27 +256,27 @@ const EnhancedHome: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-            >
+            >;
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Ready to Transform Your Business?
+                Ready to Transform Your Business?;
               </h2>
               <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-                Let's discuss how our technology solutions can drive your success.
-                Get in touch with our experts today.
+                Let's discuss how our technology solutions can drive your success.;
+                Get in touch with our experts today.;
               </p>
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>
                 <Link
                   href='/contact'
                   className='inline-flex items-center px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold text-lg'
-                >
-                  Start Your Project
+                >;
+                  Start Your Project;
                   <Rocket className='ml-2 w-5 h-5' />
                 </Link>
                 <Link
                   href='/pricing'
                   className='inline-flex items-center px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-semibold text-lg'
-                >
-                  View Pricing
+                >;
+                  View Pricing;
                 </Link>
               </div>
             </motion.div>
@@ -287,5 +286,5 @@ const EnhancedHome: React.FC = () => {
     </>
   );
 };
-
+;
 export default EnhancedHome;

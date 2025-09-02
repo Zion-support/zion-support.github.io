@@ -1,8 +1,8 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import SEO from '../components/SEO'
-import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card'
-import { Badge } from '../components/ui/Badge'
+import React from 'react';
+import { motion } from 'framer-motion';
+import SEO from '../components/SEO';
+import { Card, CardHeader, CardContent, CardTitle } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
 import {
   Map, ArrowRight,
   ExternalLink, Home,
@@ -18,7 +18,7 @@ import {
   Lock, Code,
   Smartphone, Monitor,
   Server, Network
-} from 'lucide-react'
+} from 'lucide-react';
 
 const SitemapPage: React.FC = () => {
   const siteStructure = [
@@ -75,7 +75,7 @@ const SitemapPage: React.FC = () => {
         { name: 'Cookie Policy', path: '/cookies', description: 'Cookie usage policy' }
       ]
     }
-  ]
+  ];
 
   return (
     <>
@@ -87,7 +87,8 @@ const SitemapPage: React.FC = () => {
       <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
           <motion.div
-            initial={{ opacity: 0, y: 20 }}            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className='text-center mb-12'
           >
@@ -98,11 +99,13 @@ const SitemapPage: React.FC = () => {
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
               Navigate through all pages and sections of the Zion Tech Group website.
               Find exactly what you're looking for with our comprehensive site structure.
-            </p>          </motion.div>
+            </p>
+          </motion.div>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
             {siteStructure.map((section, index) => (
               <motion.div
-                key={section.category}                initial={{ opacity: 0, y: 20 }}
+                key={section.category}
+                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
@@ -176,42 +179,7 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-const Sitemap: React.FC = () => {
-  const links = [
-    { name: 'Home', url: '/' },
-    { name: 'About', url: '/about' },
-    { name: 'Services', url: '/services' },
-    { name: 'AI Services', url: '/services/ai-services' },
-    { name: 'IT Services', url: '/services/it-services' },
-    { name: 'Micro SaaS', url: '/services/micro-saas' },
-    { name: 'Solutions', url: '/solutions' },
-    { name: 'Enterprise', url: '/solutions/enterprise' },
-    { name: 'Small Business', url: '/solutions/small-business' },
-    { name: 'Startups', url: '/solutions/startups' },
-    { name: 'Products', url: '/products' },
-    { name: 'Contact', url: '/contact' },
-    { name: 'Careers', url: '/careers' },
-    { name: 'Privacy', url: '/privacy' },
-    { name: 'Terms', url: '/terms' }]
-
-  return (
-    <div className='min-h-screen px-6 py-16 max-w-4xl mx-auto'>
-      <h1 className='text-3xl font-bold mb-6'>Sitemap</h1>
-      <p className='text-gray-600 mb-8'>Quick links to primary pages and sections.</p>
-      <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3'>
-        {links.map((l) => (
-          <li key={l.url}>
-            <a className='text-blue-600 hover:underline' href={l.url}>
-              {l.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
-
-export default SitemapPage
+export default SitemapPage;
