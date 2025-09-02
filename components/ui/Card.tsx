@@ -1,6 +1,6 @@
 React from
   'react';
-import { cn } from
+import { cn } from 'lucide-react';
   '../../src/lib/utils';'
   'const Card = React.forwardRef<;
   HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(({ className, ...props }, ref) => (
@@ -13,7 +13,9 @@ import { cn } from
   />
 ));
 Card.displayName = 'Card
-  ';''const CardHeader = React.forwardRef<;
+  ;
+
+const CardHeader = React.forwardRef<;
   HTMLDivElement, React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div
@@ -35,7 +37,9 @@ CardHeader.displayName =
   />
 ));
 CardTitle.displayName = 'CardTitle
-  ';''const CardDescription = React.forwardRef<;
+  ;
+
+const CardDescription = React.forwardRef<;
   HTMLParagraphElement, React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
   <p
@@ -62,4 +66,6 @@ CardDescription.displayName =
   '  />
 ));
 CardFooter.displayName = 'CardFooter
-  ';''export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+  ;
+
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };

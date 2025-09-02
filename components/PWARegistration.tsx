@@ -1,14 +1,15 @@
 React, { useEffect, useState } from,
   react';
-import { motion, AnimatePresence } from
-  'framer-motion';'import { Download, X, Smartphone, Monitor } from
+import { motion, AnimatePresence } from 'lucide-react';
+  'framer-motion';'import { Download, X, Smartphone, Monitor } from 'lucide-react';
   'lucide-react';'
   'interface BeforeInstallPromptEvent extends Event {
   readonly platforms: string[];
   readonly userChoice: Promise<{;
     outcome: 'accepted
   ' | 'dismissed
-  ';'    platform: string;  }>;prompt(): Promise<void>;
+  ;
+   platform: string;  }>;prompt(): Promise<void>;
 }
 
 const PWARegistration: React.FC = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from
+import React, { useEffect, useState } from 'react';
   'react';'
   'interface PerformanceMetrics {fcp?: number;
   lcp?: number;
@@ -16,7 +16,8 @@ if (typeof window ===,
   undefined
   ') return;''    // Only show in development or for admin users
     const isDev = process.env.NODE_ENV ===
-  'development';'    const isAdmin = localStorage.getItem(
+  'development;
+   const isAdmin = localStorage.getItem(
   'admin_mode') ===
   'true';'
   '    if (!isDev && !isAdmin) return;
@@ -70,14 +71,20 @@ observer.observe({ entryTypes: [
 
   const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
 if (value <= thresholds.good) return 'text-green-600
-  ';'    if (value <= thresholds.poor) return
-  'text-yellow-600';'    return
-  'text-red-600';'  };'
+  ;
+   if (value <= thresholds.poor) return
+  'text-yellow-600;
+   return
+  'text-red-600;
+ };'
   const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
     if (value <= thresholds.good) return
-  'Good';'    if (value <= thresholds.poor) return
-  'Needs Improvement';'    return
-  'Poor';'  };'
+  'Good;
+   if (value <= thresholds.poor) return
+  'Needs Improvement;
+   return
+  'Poor;
+ };'
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs">"      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>"      "      <div className="space-y-2 text-xs">"        {metrics.fcp && ("          <div className="flex justify-between">"            <span className="text-gray-600">FCP: </span>"            <span className={getScoreColor(metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math.round(metrics.fcp)}ms ({getScoreText(metrics.fcp, { good: 1800, poor: 3000 })})</span>
           </div>

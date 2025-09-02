@@ -1,6 +1,6 @@
 React from
   'react';
-import { Link } from
+import { Link } from 'lucide-react';
   'react-router-dom';'import { ;'  Brain, Mail,
   Phone, MapPin,
   Linkedin, Twitter,
@@ -16,8 +16,10 @@ import { Link } from
 } from
   'lucide-react';'{ Button } from
   '../ui/Button';
-import { Badge } from
-  '../ui/Badge';''const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
+import { Badge } from 'lucide-react';
+  '../ui/Badge;
+
+const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
 
   const serviceCategories = [;
     {

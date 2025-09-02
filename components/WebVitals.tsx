@@ -1,6 +1,6 @@
 { useEffect } from
   'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'lucide-react';
   'web-vitals';'
   'interface WebVitalsMetric {name: string;
   value: number;

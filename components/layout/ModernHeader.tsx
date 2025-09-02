@@ -1,6 +1,6 @@
 React, { useState, useEffect } from
   'react.ts';
-import Link from
+import Link from 'next/link';
   'next/link.ts';'import {;'
   Menu, X,
   ChevronDown, Zap,
@@ -13,4 +13,5 @@ import Link from
   Globe2, Zap2,
   Brain2, Cloud2,
   Lock2} from
-  'lucide-react.ts';''
+  'lucide-react.ts;
+

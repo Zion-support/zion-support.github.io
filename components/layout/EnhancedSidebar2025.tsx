@@ -1,6 +1,6 @@
 React, { useState, useEffect              } from
   'react.ts';
-import Link from
+import Link from 'next/link';
   'next/link.ts';'{ motion, AnimatePresence               } from
   'framer-motion.ts';
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ;'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star
@@ -292,7 +292,8 @@ export default function EnhancedSidebar2025(...args[]: any): {const [expandedSec
 document.body.style.overflow =
   'hidden'} else {'
   '      document.body.style.overflow = 'unset
-  '}';'    return () => {;
+  '};
+   return () => {;
       document.body.style.overflow =
   'unset'}}, [isOpen]);'
   '  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (

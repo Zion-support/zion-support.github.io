@@ -1,6 +1,6 @@
 React, { useState, useEffect } from
   'react';
-import { Link, useLocation } from
+import { Link, useLocation } from 'lucide-react';
   'react-router-dom';'{ motion, AnimatePresence } from
   'framer-motion';
 import { ;'  Menu, X, 
@@ -18,7 +18,7 @@ import { ;'  Menu, X,
 } from
   'lucide-react';'{ Button } from
   '../ui/Button';
-import { Badge } from
+import { Badge } from 'lucide-react';
   '../ui/Badge';'
   'const Header: React.FC = () => {const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

@@ -1,6 +1,6 @@
-import React from
+import React from 'react';
   'react';
-import Head from
+import Head from 'next/head';
   'next/head';
 import EnhancedNavigation from
   './layout/EnhancedNavigation';

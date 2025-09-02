@@ -1,6 +1,6 @@
 React, { useState              } from
   'react.ts';
-import Link from
+import Link from 'next/link';
   'next/link.ts';'import { Home, Briefcase, ;'  Users, Phone, 
   Mail, MapPin, 
   Globe, Linkedin, 
