@@ -1,6 +1,6 @@
 import React from 'react';
 import type { NextPage } from 'next';
-import MainLayout from '../../components/layout/MainLayout';
+import MainLayout from "../../src/components/layout/MainLayout";
 import { CheckCircle, Star, Users, Zap, Shield, Globe, DollarSign, Clock } from 'lucide-react';
 import Link from 'next/link';
 

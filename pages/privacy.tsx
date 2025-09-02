@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { Card } from '../components/ui/Card';
-import { Badge } from '../components/ui/Badge';
+
+
+
 import { 
   Shield,
   Lock,

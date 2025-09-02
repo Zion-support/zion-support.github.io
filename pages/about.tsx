@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
+import MainLayout from "../src/components/layout/MainLayout";
 import { Users, Target, Award, Globe, Zap, Shield, Heart, Lightbulb } from 'lucide-react';
 import Link from 'next/link';
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
+import MainLayout from "../src/components/layout/MainLayout";
 import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
 
 const FAQ: NextPage = () => {

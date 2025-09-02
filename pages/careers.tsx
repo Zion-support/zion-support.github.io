@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Layout from '../components/Layout';
+
 import Link from 'next/link';
 import { Users, Briefcase, Heart, Zap, CheckCircle } from 'lucide-react';
 
