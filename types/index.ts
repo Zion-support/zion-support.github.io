@@ -1,8 +1,13 @@
-// Global types for the Zion Tech Group application;export interface Service {
+// Global types for the Zion Tech Group application
+
+export interface Service {
   id: string;
   name: string;
   description: string;
-category: 'micro-saas' | 'ai-services' | 'it-services';'  price: {'    min: number;max: number;
+  category: 'micro-saas' | 'ai-services' | 'it-services';
+  price: {
+    min: number;
+    max: number;
     currency: string;
   };
   features: string[];
@@ -21,7 +26,10 @@ export interface ContactForm {
   service: string;
   budget?: string;
   message: string;
-preferredContact: 'email' | 'phone' | 'both';'}'export interface TeamMember {
+  preferredContact: 'email' | 'phone' | 'both';
+}
+
+export interface TeamMember {
   id: string;
   name: string;
   position: string;
@@ -79,7 +87,10 @@ export interface PricingTier {
   name: string;
   price: number;
   currency: string;
-period: 'month' | 'year' | 'one-time';'  features: string[];'  limitations?: string[];popular?: boolean;
+  period: 'month' | 'year' | 'one-time';
+  features: string[];
+  limitations?: string[];
+  popular?: boolean;
   cta: string;
   description: string;
 }
@@ -95,10 +106,13 @@ export interface PaginationParams {
   page: number;
   limit: number;
   sort?: string;
-order?: 'asc' | 'desc';'}'
+  order?: 'asc' | 'desc';
+}
+
 export interface PaginatedResponse<T> {
   data: T[];
-  pagination: {;page: number;
+  pagination: {
+    page: number;
     limit: number;
     total: number;
     pages: number;
@@ -133,8 +147,11 @@ export interface AccessibilitySettings {
 }
 
 export interface UserPreferences {
-theme: 'light' | 'dark' | 'system';'  language: string;'  accessibility: AccessibilitySettings;
-  notifications: {;email: boolean;
+  theme: 'light' | 'dark' | 'system';
+  language: string;
+  accessibility: AccessibilitySettings;
+  notifications: {
+    email: boolean;
     browser: boolean;
     marketing: boolean;
   };
@@ -148,13 +165,17 @@ export interface NavigationItem {
 }
 
 export interface SocialLink {
-platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';'  url: string;'  label: string;}
+  platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
+  url: string;
+  label: string;
+}
 
 export interface CompanyInfo {
   name: string;
   tagline: string;
   description: string;
-address: {;street: string;
+  address: {
+    street: string;
     city: string;
     state: string;
     zip: string;

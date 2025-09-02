@@ -1,4 +1,8 @@
-import React from 'react';'import { Link } from 'react-router-dom';'import { ;'  Brain, Mail,
+import React from 'react';
+import { Link } from 'react-router-dom';
+import {
+  Brain,
+  Mail,
   Phone, MapPin,
   Linkedin, Twitter,
   Github, Youtube,
@@ -10,23 +14,82 @@ import React from 'react';'import { Link } from 'react-router-dom';'import { ;' 
   Database, Network,
   Target, CheckCircle,
   ExternalLink
-} from 'lucide-react';'import { Button } from '../ui/Button';'import { Badge } from '../ui/Badge';''const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
+} from 'lucide-react';
+import { Button } from '../ui/Button';
+import { Badge } from '../ui/Badge';
 
-  const serviceCategories = [;
+const Footer: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+
+  const serviceCategories = [
     {
-title: "AI & Automation", icon: Brain,"      color: "text-blue-400", services: ["        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" }, { name: "AI Customer Experience Platform", href: "/services/ai-customer-experience-platform" }, { name: "AI Healthcare Diagnostics", href: "/services/ai-healthcare-diagnostics" }, { name: "AI Enterprise Orchestrator", href: "/services/ai-enterprise-orchestrator" }"      ]"    }, {;
-      title: "Cloud & Infrastructure","      icon: Cloud, color: "text-green-400","      services: ["        { name: "Cloud Migration", href: "/services/cloud-migration" },"        { name: "Micro SaaS Solutions", href: "/micro-saas" },"        { name: "IT Services", href: "/it-services" },"        { name: "Infrastructure Management", href: "/services/infrastructure" }"      ]"    }, {;
-      title: "Data & Analytics","      icon: Database, color: "text-purple-400","      services: ["        { name: "Data Analytics", href: "/services/data-analytics" },"        { name: "Business Intelligence", href: "/services/business-intelligence" },"        { name: "Predictive Analytics", href: "/services/predictive-analytics" },"        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" }"      ]"    }
+      title: "AI & Automation",
+      icon: Brain,
+      color: "text-blue-400",
+      services: [
+        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" },
+        { name: "AI Customer Experience Platform", href: "/services/ai-customer-experience-platform" },
+        { name: "AI Healthcare Diagnostics", href: "/services/ai-healthcare-diagnostics" },
+        { name: "AI Enterprise Orchestrator", href: "/services/ai-enterprise-orchestrator" }
+      ]
+    },
+    {
+      title: "Cloud & Infrastructure",
+      icon: Cloud,
+      color: "text-green-400",
+      services: [
+        { name: "Cloud Migration", href: "/services/cloud-migration" },
+        { name: "Micro SaaS Solutions", href: "/micro-saas" },
+        { name: "IT Services", href: "/it-services" },
+        { name: "Infrastructure Management", href: "/services/infrastructure" }
+      ]
+    },
+    {
+      title: "Data & Analytics",
+      icon: Database,
+      color: "text-purple-400",
+      services: [
+        { name: "Data Analytics", href: "/services/data-analytics" },
+        { name: "Business Intelligence", href: "/services/business-intelligence" },
+        { name: "Predictive Analytics", href: "/services/predictive-analytics" },
+        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" }
+      ]
+    }
   ];
 
-  const quickLinks = [;
-    { name: "About Us", href: "/about" },"    { name: "Our Team", href: "/team" },"    { name: "Careers", href: "/careers" },"    { name: "Case Studies", href: "/case-studies" },"    { name: "Blog", href: "/blog" },"    { name: "White Papers", href: "/white-papers" },"    { name: "Webinars", href: "/webinars" },"    { name: "Pricing", href: "/pricing" }"  ];"
-  const legalLinks = [;
-    { name: "Privacy Policy", href: "/privacy" },"    { name: "Terms of Service", href: "/terms" },"    { name: "Cookie Policy", href: "/cookies" },"    { name: "Sitemap", href: "/sitemap" }"  ];"
-  const socialLinks = [;
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin }, { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },"    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github }, { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },"    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }"  ];"
-  const contactInfo = {;
-    email: "contact@ziontechgroup.com", phone: "+1 (555) 123-4567", address: "123 Technology Drive, San Francisco, CA 94105""  };"return (
+  const quickLinks = [
+    { name: "About Us", href: "/about" },
+    { name: "Our Team", href: "/team" },
+    { name: "Careers", href: "/careers" },
+    { name: "Case Studies", href: "/case-studies" },
+    { name: "Blog", href: "/blog" },
+    { name: "White Papers", href: "/white-papers" },
+    { name: "Webinars", href: "/webinars" },
+    { name: "Pricing", href: "/pricing" }
+  ];
+
+  const legalLinks = [
+    { name: "Privacy Policy", href: "/privacy" },
+    { name: "Terms of Service", href: "/terms" },
+    { name: "Cookie Policy", href: "/cookies" },
+    { name: "Sitemap", href: "/sitemap" }
+  ];
+
+  const socialLinks = [
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github },
+    { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
+    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
+  ];
+
+  const contactInfo = {
+    email: "contact@ziontechgroup.com",
+    phone: "+1 (555) 123-4567",
+    address: "123 Technology Drive, San Francisco, CA 94105"
+  };
+
+  return (
     <footer className="bg-slate-900 border-t border-slate-700">"      {/* Main Footer Content */}"      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">"        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">"          {/* Company Info */}"          <div className="lg:col-span-1">"            <Link to="/" className="flex items-center space-x-2 mb-6">"              <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">"                <Brain className="w-6 h-6 text-white" />"              </div>"              <span className="text-2xl font-bold text-white">Zion Tech Group</span>"            </Link>"            
             <p className="text-gray-300 mb-6 leading-relaxed">"              Leading provider of AI-powered solutions and technology services. "              We help businesses transform and innovate with cutting-edge artificial intelligence.
             </p>
