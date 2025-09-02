@@ -110,63 +110,63 @@ Crawl-delay: 1`;
     </style>
 </head>
 <body>
-    <div class="container">
+    <div className="container">
         <h1>Zion Tech Group - Sitemap</h1>
         <p>Complete navigation guide for our website. Find all our services, solutions, and resources.</p>
         
-        <div class="sitemap-section">
+        <div className="sitemap-section">
             <h2>Main Pages</h2>
-            <div class="sitemap-links">
+            <div className="sitemap-links">
                 ${urls
             .filter(url => url.priority && url.priority >= 0.8)
             .map(url => `
-                    <a href="${baseUrl}${url.url}" class="sitemap-link priority-high">
+                    <a href="${baseUrl}${url.url}" className="sitemap-link priority-high">
                         ${url.url === '/' ? 'Home' : url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>
                   `).join('')}
             </div>
         </div>
         
-        <div class="sitemap-section">
+        <div className="sitemap-section">
             <h2>Services</h2>
-            <div class="sitemap-links">
+            <div className="sitemap-links">
                 ${urls
             .filter(url => url.url.startsWith('/services/'))
             .map(url => `
-                    <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">
+                    <a href="${baseUrl}${url.url}" className="sitemap-link priority-medium">
                         ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>
                   `).join('')}
             </div>
         </div>
         
-        <div class="sitemap-section">
+        <div className="sitemap-section">
             <h2>Solutions</h2>
-            <div class="sitemap-links">
+            <div className="sitemap-links">
                 ${urls
             .filter(url => url.url.startsWith('/solutions/'))
             .map(url => `
-                    <a href="${baseUrl}${url.url}" class="sitemap-link priority-medium">
+                    <a href="${baseUrl}${url.url}" className="sitemap-link priority-medium">
                         ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>
                   `).join('')}
             </div>
         </div>
         
-        <div class="sitemap-section">
+        <div className="sitemap-section">
             <h2>Other Pages</h2>
-            <div class="sitemap-links">
+            <div className="sitemap-links">
                 ${urls
             .filter(url => !url.url.startsWith('/services/') && !url.url.startsWith('/solutions/') && url.url !== '/' && url.priority && url.priority < 0.8)
             .map(url => `
-                    <a href="${baseUrl}${url.url}" class="sitemap-link priority-low">
+                    <a href="${baseUrl}${url.url}" className="sitemap-link priority-low">
                         ${url.url.split('/').pop()?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || url.url}
                     </a>
                   `).join('')}
             </div>
         </div>
         
-        <div class="sitemap-section">
+        <div className="sitemap-section">
             <p><strong>Total Pages:</strong> ${urls.length}</p>
             <p><strong>Last Updated:</strong> ${new Date().toLocaleDateString()}</p>
         </div>

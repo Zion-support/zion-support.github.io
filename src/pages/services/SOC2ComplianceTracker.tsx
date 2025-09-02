@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell import { SEO } from '@/components/SEO';
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { Shield, CheckCircle, FileText, Users, BarChart3, Zap, Lock, Target, AlertTriangle, Clock, Database, Cloud, Server, Globe, TrendingUp, Award, BookOpen, Settings, Bell  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { SEO  } from '@/src/src/components/SEO';
 
 export default function SOC2ComplianceTracker(...args: []):  {
   const features = [
@@ -36,15 +28,6 @@ export default function SOC2ComplianceTracker(...args: []):  {
     {
       icon: Lock,
       title: "Security Controls",
-<<<<<<< HEAD
-      description: "Comprehensive security control monitoring including encryption, authentication, and network security."
-    },
-    {
-      icon: Clock,
-      title: "Audit Trail",
-      description: "Complete audit logging of all system activities, changes, and access attempts for compliance reporting."
-
-=======
       description: "Comprehensive security control monitoring including encryption, authentication, and network security.";
     },;
     {;
@@ -52,7 +35,6 @@ export default function SOC2ComplianceTracker(...args: []):  {
       title: "Audit Trail",;
       description: "Complete audit logging of all system activities, changes, and access attempts for compliance reporting.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const complianceAreas = [
@@ -79,15 +61,6 @@ export default function SOC2ComplianceTracker(...args: []):  {
     {
       icon: Users,
       title: "Privacy",
-<<<<<<< HEAD
-      description: "Data handling, consent management, and privacy controls"
-    },
-    {
-      icon: FileText,
-      title: "Documentation",
-      description: "Policies, procedures, and compliance documentation management"
-
-=======
       description: "Data handling, consent management, and privacy controls";
     },;
     {;
@@ -95,7 +68,6 @@ export default function SOC2ComplianceTracker(...args: []):  {
       title: "Documentation",;
       description: "Policies, procedures, and compliance documentation management";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -139,15 +111,6 @@ export default function SOC2ComplianceTracker(...args: []):  {
         "Full SOC2 framework support",
         "Custom control frameworks",
         "White-label solutions",
-<<<<<<< HEAD
-        "Dedicated compliance manager",
-        "Advanced integrations",
-        "Unlimited users",
-        "Custom training"
-      ],
-      popular: false
-
-=======
         "Dedicated compliance manager",;
         "Advanced integrations",;
         "Unlimited users",;
@@ -155,7 +118,6 @@ export default function SOC2ComplianceTracker(...args: []):  {
       ],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -172,15 +134,6 @@ export default function SOC2ComplianceTracker(...args: []):  {
     {
       title: "Improve Security Posture",
       description: "Strengthen your security controls and risk management with continuous monitoring.",
-<<<<<<< HEAD
-      icon: Shield
-    },
-    {
-      title: "Build Customer Trust",
-      description: "Demonstrate your commitment to security and compliance to build customer confidence.",
-      icon: Users
-
-=======
       icon: Shield;
     },;
     {;
@@ -188,7 +141,6 @@ export default function SOC2ComplianceTracker(...args: []):  {
       description: "Demonstrate your commitment to security and compliance to build customer confidence.",;
       icon: Users;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const complianceSteps = [
@@ -215,15 +167,6 @@ export default function SOC2ComplianceTracker(...args: []):  {
     {
       step: "05",
       title: "Audit Preparation",
-<<<<<<< HEAD
-      description: "Prepare for external audit with complete documentation and evidence"
-    },
-    {
-      step: "06",
-      title: "Ongoing Compliance",
-      description: "Maintain compliance with continuous monitoring and improvement"
-
-=======
       description: "Prepare for external audit with complete documentation and evidence";
     },;
     {;
@@ -231,18 +174,12 @@ export default function SOC2ComplianceTracker(...args: []):  {
       title: "Ongoing Compliance",;
       description: "Maintain compliance with continuous monitoring and improvement";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="SOC2 Compliance Tracker - Zion Tech Group"
-=======
       <SEO 
         title = "SOC2 Compliance Tracker - Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Professional SOC2 compliance tracking platform with automated controls monitoring, documentation management, and audit preparation tools."
         canonical="/services/soc2-compliance-tracker"
       />
@@ -305,7 +242,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -315,15 +252,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Everything you need to achieve and maintain SOC2 compliance efficiently
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-=======
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -363,14 +294,14 @@ export default function SOC2ComplianceTracker(...args: []):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Compliance Areas Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -380,15 +311,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Comprehensive coverage of all SOC2 Trust Service Criteria
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceAreas.map((area, index) => (
-=======
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {complianceAreas.map((area, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -428,14 +353,14 @@ export default function SOC2ComplianceTracker(...args: []):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{area.title}</h3>
                   <p className="text-gray-300">{area.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Compliance Journey Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -445,15 +370,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Step-by-step guidance through the entire compliance process
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceSteps.map((step, index) => (
-=======
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {complianceSteps.map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -493,14 +412,14 @@ export default function SOC2ComplianceTracker(...args: []):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white text-center">{step.title}</h3>
                   <p className="text-gray-300 text-center">{step.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -510,15 +429,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Professional compliance tools that help you achieve and maintain SOC2 certification
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
-=======
             
             <div className="grid md: grid-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -560,14 +473,14 @@ export default function SOC2ComplianceTracker(...args: []):  {
                     <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
                     <p className="text-gray-300">{benefit.description}</p>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -577,15 +490,9 @@ export default function SOC2ComplianceTracker(...args: []):  {
                 Choose the compliance plan that fits your organization's needs
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-=======
             
             <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -624,7 +531,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
                       : 'border-slate-700'
                   }`}
 
-                  {plan.popular && (
+                  {plan.popular && (;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
@@ -659,7 +566,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
                     }`}
 
                     Get Started
-                  </Link>
+                  </Link>;
                 </motion.div>
               ))}
             </div>
@@ -667,7 +574,7 @@ export default function SOC2ComplianceTracker(...args: []):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">
+        <section className="py-20 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">;
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
               initial = {

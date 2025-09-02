@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Home,
-  Users,
-  Briefcase,
-  Phone,
+import { 
+  Menu, 
+  X, 
+  ChevronDown, 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
   Info,
   Settings,
   HelpCircle,
@@ -33,23 +33,22 @@ import {
   Mail,
   MapPin,
   Clock
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface NavigationItem {
 
   label: string;
   path: string;
   icon: React.ComponentType<{ size?: number; className?: string 
 }>;
+} from 'lucide-react';
+
+interface NavigationItem {
+  label: string;
+  path: string;
+  icon: React.ComponentType<{ size?: number; className?: string }>;
   children?: NavigationItem[];
-<<<<<<< HEAD
-  description?: string;
-=======
   description?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const navigationItems: NavigationItem[] = [
   {
@@ -68,7 +67,7 @@ const navigationItems: NavigationItem[] = [
     label: 'Services',
     path: '/services',
     icon: Briefcase,
-    children[
+    children[;
       {
         label: 'AI & Machine Learning',
         path: '/services/ai',
@@ -105,8 +104,8 @@ const navigationItems: NavigationItem[] = [
         icon: Users,
         description: 'Strategic IT consulting'
 
-    ]
-  },
+    ];
+  },;
   {
     label: 'Solutions',
     path: '/solutions',
@@ -133,15 +132,6 @@ const quickActions = [
     path: '/help',
     icon: HelpCircle,
     color: 'bg-zion-purple'
-<<<<<<< HEAD
-  },
-  {
-    label: 'Documentation',
-    path: '/docs',
-    icon: FileText,
-    color: 'bg-zion-blue'
-
-=======
   },;
   {;
     label: 'Documentation',;
@@ -149,12 +139,9 @@ const quickActions = [
     icon: FileText,;
     color: 'bg-zion-blue';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-<<<<<<< HEAD
-export const EnhancedMobileNavigation: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+export const EnhancedMobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [activePath, setActivePath] = useState('/');
@@ -165,73 +152,42 @@ export const EnhancedMobileNavigation: React.FC = () => {;
     setActivePath(location.pathname)}, [location]);
 
   useEffect(() => {
-<<<<<<< HEAD
-    const handleClickOutside = (event: MouseEvent) => {;
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {;
+    const handleClickOutside: React.FC = ($2) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         setIsOpen(false);
-<<<<<<< HEAD
-
-=======
       }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     };
 
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside);
-<<<<<<< HEAD
-      document.body.style.overflow = 'hidden';
-
-    return () => {
-=======
       document.body.style.overflow = 'hidden'}
 ;
     return () => {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       document.removeEventListener('mousedown', handleClickOutside);
       document.body.style.overflow = 'unset'}}, [isOpen]);
 
-<<<<<<< HEAD
-  const toggleExpanded = (label: string) => {;
-    setExpandedItems(prev => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const toggleExpanded: React.FC = ($2) => {
+    setExpandedItems(prev => {
       const newSet = new Set(prev);
       if (newSet.has(label)) {
-<<<<<<< HEAD
-        newSet.delete(label);
-      } else {
-        newSet.add(label);
-
-      return newSet;
-    });
-  };
-=======
         newSet.delete(label)} else {
         newSet.add(label)}
       return newSet})};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-<<<<<<< HEAD
-  const handleNavigation = (path: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const handleNavigation: React.FC = ($2) => {
     setIsOpen(false);
     setExpandedItems(new Set())};
 
-<<<<<<< HEAD
-  const isActive = (path: string)  => {
+  const isActive: React.FC = ($2) => {;
     if (path === '/') {;
-      return activePath === '/'};
-    return activePath.startsWith(path)};
-=======
-  const isActive = (path: string) => {;
-    if (path === '/') {;
+  const isActive: React.FC = ($2) => {
+    if (path === '/') {
       return activePath === '/';
 
     return activePath.startsWith(path);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const renderNavigationItem = (item: NavigationItem, depth: number = 0) => {;
+  const renderNavigationItem: React.FC = ($2) => {;
     const isExpanded = expandedItems.has(item.label);
     const hasChildren = item.children && item.children.length > 0;
     const isItemActive = isActive(item.path);
@@ -242,7 +198,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
           initial={false}
           animate = {
   { backgroundColor: isItemActive ? 'rgba(34, 221, 210,
-  0.1)' : 'transparent' 
+  0.1)' : 'transparent' ;
 
 
 
@@ -283,7 +239,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
             )}
           </Link>
 
-          {hasChildren && (
+          {hasChildren && (;
             <button
               onClick={() => toggleExpanded(item.label)}
               className="absolute right-4 top-1/2 transform -translate-y-1/2 p-2 text-zion-slate-light hover:text-white transition-colors"
@@ -295,11 +251,11 @@ export const EnhancedMobileNavigation: React.FC = () => {;
                   isExpanded ? 'rotate-180' : ''
                 }`}
               />
-            </button>
+            </button>;
           )}
         </motion.div>
 
-        {hasChildren && (
+        {hasChildren && (;
           <AnimatePresence>
             {isExpanded && (
               <motion.div
@@ -348,14 +304,6 @@ export const EnhancedMobileNavigation: React.FC = () => {;
                 <div className="border-l border-zion-slate-light/20 ml-4">
                   {item.children!.map(child => renderNavigationItem(child, depth + 1))}
                 </div>
-<<<<<<< HEAD
-              </motion.div>
-            )}
-          </AnimatePresence>
-        )};
-      </div>;
-    )};
-=======
               </motion.div>;
             )};
           </AnimatePresence>;
@@ -363,7 +311,6 @@ export const EnhancedMobileNavigation: React.FC = () => {;
       </div>;
     );
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <>
@@ -421,12 +368,12 @@ export const EnhancedMobileNavigation: React.FC = () => {;
 
                   <X size={24} />
                 </button>
-              </div>
+              </div>;
 
               {/* Navigation Content */}
-              <div className="flex-1 overflow-y-auto">
+              <div className="flex-1 overflow-y-auto">;
                 {/* Quick Actions */}
-                <div className="p-6 border-b border-zion-slate-light/20">
+                <div className="p-6 border-b border-zion-slate-light/20">;
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Quick Actions
                   </h3>
@@ -440,13 +387,13 @@ export const EnhancedMobileNavigation: React.FC = () => {;
 
                         <action.icon size={20} className="mx-auto mb-2" />
                         <span className="text-xs font-medium">{action.label}</span>
-                      </Link>
+                      </Link>;
                     ))}
                   </div>
                 </div>
 
                 {/* Main Navigation */}
-                <nav className="p-6">
+                <nav className="p-6">;
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Navigation
                   </h3>
@@ -456,7 +403,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
                 </nav>
 
                 {/* Contact Information */}
-                <div className="p-6 border-t border-zion-slate-light/20">
+                <div className="p-6 border-t border-zion-slate-light/20">;
                   <h3 className="text-sm font-semibold text-zion-slate-light uppercase tracking-wider mb-4">
                     Contact Info
                   </h3>
@@ -482,7 +429,7 @@ export const EnhancedMobileNavigation: React.FC = () => {;
               </div>
 
               {/* Footer */}
-              <div className="p-6 border-t border-zion-slate-light/20">
+              <div className="p-6 border-t border-zion-slate-light/20">;
                 <div className="flex items-center justify-between text-sm text-zion-slate-light">
                   <span>© 2024 Zion Tech Group</span>
                   <div className="flex items-center gap-4">
@@ -495,23 +442,11 @@ export const EnhancedMobileNavigation: React.FC = () => {;
                   </div>
                 </div>
               </div>
-<<<<<<< HEAD
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>;
-    </>;
-  )};
-=======
             </motion.div>;
           </motion.div>;
         )};
       </AnimatePresence>;
     </>;
   );
-<<<<<<< HEAD
-};}}}}}}}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+};

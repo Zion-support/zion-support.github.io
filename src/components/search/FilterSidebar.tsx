@@ -1,52 +1,98 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Filter, X interface FilterOption {
-  value: string;
-  label: string;
-  count?: number;
-=======
 import React from 'react.ts';
-import { Filter, X  } from 'lucide-react';
+import { Filter, X   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'lucide-react.ts';
 
 interface FilterOption {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   value: string;
   label: string;
-  count?: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+count?: number;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 interface FilterGroup {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   title: string;
   key: string;
   options: FilterOption[];
-<<<<<<< HEAD
-  type: 'checkbox' | 'radio' | 'range';
-=======
-  type: 'checkbox' | 'radio' | 'range'}
+type: anyanyanyanyanyanyanyanyanyanyanyanyanyany'checkbox' | 'radio' | 'range';
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 interface FilterSidebarProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
   filters: FilterGroup[];
   selectedFilters: Record<string, any>;
-  onFilterChange: (key: string, value: string, checked: boolean)  => void;
-  onClearFilters: ()  => void;
-  isOpen: boolean;
-<<<<<<< HEAD
-  onClose: () => void;
-=======
-  onClose: ()  => void}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  onFilterChange: (key: string, value: string, checked: boolean)                => void;
+  onClearFilters: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void;
+  isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+  onClose: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void}
 
-export function FilterSidebar({
-  filters,
-  selectedFilters,
-  onFilterChange,
-  onClearFilters,
-  isOpen,
-  onClose
-}: FilterSidebarProps) {
+export function FilterSidebar(...args: any[]): any {
   return (
     <>
       {/* Mobile overlay */}
@@ -56,7 +102,6 @@ export function FilterSidebar({
           onClick={onClose}
         />
       )}
-
       {/* Sidebar */}
       <div className={`
         fixed lg:static inset-y-0 left-0 z-50 w-80 bg-zion-blue-dark/95 backdrop-blur-xl border-r border-zion-blue-light/20 transform transition-transform duration-300 lg:transform-none
@@ -70,46 +115,28 @@ export function FilterSidebar({
           <button
             onClick={onClose}
             className="lg:hidden p-2 hover:bg-zion-blue-light/20 rounded-lg transition-colors"
-
             <X className="w-5 h-5 text-zion-slate-light" />
           </button>
         </div>
-
         <div className="p-4 space-y-6">
           {/* Clear all button */}
           <div className="flex justify-between items-center">
             <span className="text-sm text-zion-slate-light">Active filters</span>
             <button
               onClick={onClearFilters}
-<<<<<<< HEAD
-              className="text-sm text-zion-cyan hover:text-zion-cyan-light transition-colors underline"
-
-=======
-              className="text-sm text-zion-cyan hover: text-zion-cyan-light transition-colors underline"
+              className="text-sm text-zion-cyan hover: anyanyanyanyanyanyanyanyanyanyanyanyanyanytext-zion-cyan-light transition-colors underline"
             >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
               Clear all
             </button>
           </div>
-
           {/* Filter groups */}
-<<<<<<< HEAD
-          {filters.map((group)  => (
-            <div key={group.key} className="space-y-3">
-              <h4 className="font-medium text-white">{group.title}</h4>
-
-              <div className="space-y-2">
-                {group.options.map((option) => {
-=======;
           {filters.map((group) => (;
             <div key={group.key} className="space-y-3">;
               <h4 className="font-medium text-white">{group.title}</h4>;
               ;
               <div className="space-y-2">;
                 {group.options.map((option) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
                   const isSelected = selectedFilters[group.key]?.includes(option.value) || false;
-
                   return (
                     <label key = {option.value} className="flex items-center gap-3 cursor-pointer">
                       <input
@@ -120,12 +147,6 @@ export function FilterSidebar({
                         onChange = {
   (e) => onFilterChange(group.key, option.value,
   e.target.checked)
-
-
-
-
-
-
 }
                         className="w-4 h-4 text-zion-cyan bg-zion-blue-dark border-zion-blue-light/30 rounded focus:ring-zion-cyan focus:ring-2"
                       />
@@ -133,14 +154,6 @@ export function FilterSidebar({
                         {option.label}
                         {option.count && (
                           <span className="ml-2 text-zion-slate-light/60">
-<<<<<<< HEAD
-                            ({option.count})
-                          </span>
-                        )}
-                      </span>
-                    </label>
-                  )})};
-=======;
                             ({option.count});
                           </span>;
                         )};
@@ -148,16 +161,10 @@ export function FilterSidebar({
                     </label>;
                   );
                 })}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
               </div>
             </div>
           ))}
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  );
-</div>}}}}}
-=======
   )}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

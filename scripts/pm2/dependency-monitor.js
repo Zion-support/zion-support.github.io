@@ -1,37 +1,24 @@
 #!/usr/bin/env node
-
+;
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-
+;
 class DependencyMonitor {
   constructor() {
     this.projectRoot = process.cwd();
-    this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log');
-    this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json');
+    this.logFile = path.join(this.projectRoot,logs/pm2/dependency-monitor.log');
+    this.reportFile = path.join(this.projectRoot,logs/pm2/dependency-report.json');
     this.startTime = Date.now();
 
   log(message) {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] ${message}\n`;
 
-<<<<<<< HEAD
-    // // // console.log(message);
-=======
-    // // // // // // // console.log(message);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
     try {
       fs.appendFileSync(this.logFile, logMessage);
     } catch (error) {
-<<<<<<< HEAD
-      // // // console.error('Failed to write to log file:', error.message);
-
-=======
-      // // // // // // // console.error('Failed to write to log file:', error.message);
-    }
-  }
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
 
   async checkNpmAudit() {
     try {
@@ -101,12 +88,12 @@ class DependencyMonitor {
 
   async checkPackageLock() {
     try {
-      const packageLockPath = path.join(this.projectRoot, 'package-lock.json');
+      const packageLockPath = path.join(this.projectRoot,package-lock.json');
 
       if (!fs.existsSync(packageLockPath)) {
         return { exists: false, message: 'No package-lock.json found' };
 
-      const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8'));
+      const packageLock = JSON.parse(fs.readFileSync(packageLockPath,utf8'));
       const lockfileVersion = packageLock.lockfileVersion;
 
       return {
@@ -134,7 +121,7 @@ class DependencyMonitor {
 
   async checkGitHooks() {
     try {
-      const hooksDir = path.join(this.projectRoot, '.git/hooks');
+      const hooksDir = path.join(this.projectRoot,.git/hooks');
 
       if (!fs.existsSync(hooksDir)) {
         return { exists: false, message: 'No git hooks directory found' };
@@ -305,14 +292,9 @@ class DependencyMonitor {
 
 
 
-// Run the dependency monitor
+// Run the dependency monitor;
 const monitor = new DependencyMonitor();
 monitor.run().catch(error => {
-<<<<<<< HEAD
-  // // // console.error('Fatal error:', error);
-=======
-  // // // // // // // console.error('Fatal error:', error);
->>>>>>> cursor/enhance-pm2-automations-for-app-development-edf2
   process.exit(1);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

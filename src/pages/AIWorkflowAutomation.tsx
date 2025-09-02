@@ -265,121 +265,107 @@ import {
   AVLTree,
   SplayTree,
   Treap,
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 const workflowSolutions = [
   {
     id: 1,
     title: "AI Process Automation",
     description: "Intelligent automation of business processes using AI and machine learning.",
     icon: Cog,
-    features[
+    features[;
       "Process automation",
       "AI decision making",
       "Workflow optimization",
       "Performance monitoring"
-    ],
+    ],;
     price: "From $200,000",
     timeline: "24-36 weeks",
     category: "Process Automation",
-    technologies["AI", "RPA", "Workflow Engines", "Machine Learning"]
-  },
+    technologies["AI", "RPA", "Workflow Engines", "Machine Learning"];
+  },;
   {
     id: 2,
     title: "Intelligent Document Processing",
     description: "AI-powered document processing and workflow automation.",
     icon: FileText,
-    features[
+    features[;
       "Document processing",
       "Data extraction",
       "Workflow automation",
       "Compliance management"
-    ],
+    ],;
     price: "From $150,000",
     timeline: "20-32 weeks",
     category: "Document Processing",
-    technologies["AI", "OCR", "Document Processing", "Workflow"]
-  },
+    technologies["AI", "OCR", "Document Processing", "Workflow"];
+  },;
   {
     id: 3,
     title: "Smart Workflow Orchestration",
     description: "Intelligent orchestration and management of complex workflows.",
     icon: Network,
-    features[
+    features[;
       "Workflow orchestration",
       "Process management",
       "Resource optimization",
       "Performance analytics"
-    ],
+    ],;
     price: "From $180,000",
     timeline: "22-34 weeks",
     category: "Workflow Orchestration",
-    technologies["AI", "Workflow Management", "Orchestration", "Analytics"]
-  },
+    technologies["AI", "Workflow Management", "Orchestration", "Analytics"];
+  },;
   {
     id: 4,
     title: "AI Decision Automation",
     description: "Automated decision making using AI algorithms and business rules.",
     icon: Brain,
-    features[
+    features[;
       "Decision automation",
       "Business rules",
       "AI algorithms",
       "Risk assessment"
-    ],
+    ],;
     price: "From $250,000",
     timeline: "28-40 weeks",
     category: "Decision Automation",
-    technologies["AI", "Decision Trees", "Machine Learning", "Risk Models"]
-  },
+    technologies["AI", "Decision Trees", "Machine Learning", "Risk Models"];
+  },;
   {
     id: 5,
     title: "Predictive Workflow Analytics",
     description: "AI-powered analytics for workflow optimization and prediction.",
     icon: BarChart3,
-    features[
+    features[;
       "Predictive analytics",
       "Workflow optimization",
       "Performance insights",
       "Trend analysis"
-    ],
+    ],;
     price: "From $120,000",
     timeline: "18-30 weeks",
     category: "Analytics",
-    technologies["AI", "Predictive Analytics", "Machine Learning", "Data Science"]
-  },
+    technologies["AI", "Predictive Analytics", "Machine Learning", "Data Science"];
+  },;
   {
     id: 6,
     title: "Intelligent Task Management",
     description: "AI-powered task management and workflow optimization.",
     icon: Target,
-    features[
+    features[;
       "Task management",
       "Priority optimization",
       "Resource allocation",
       "Performance tracking"
-    ],
-<<<<<<< HEAD
-    price: "From $100,000",
-    timeline: "16-28 weeks",
-    category: "Task Management",
-<<<<<<< HEAD
-    technologies: ["AI", "Task Management", "Optimization", "Analytics"]
-
-=======
-    technologies["AI", "Task Management", "Optimization", "Analytics"]
+    ],;
+    technologies["AI", "Task Management", "Optimization", "Analytics"];
   };
-=======;
     price: "From $100,000",;
     timeline: "16-28 weeks",;
     category: "Task Management",;
     technologies: ["AI", "Task Management", "Optimization", "Analytics"];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const workflowTechnologies = [
@@ -404,15 +390,6 @@ const workflowTechnologies = [
     useCase: "Workflow Control",
     reliability: "High"
   },
-<<<<<<< HEAD
-  {
-    name: "Predictive Analytics",
-    description: "AI-powered analytics for workflow optimization",
-    icon: BarChart3,
-    useCase: "Performance Optimization",
-    reliability: "High"
-
-=======
   {;
     name: "Predictive Analytics",;
     description: "AI-powered analytics for workflow optimization",;
@@ -420,7 +397,6 @@ const workflowTechnologies = [
     useCase: "Performance Optimization",;
     reliability: "High";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const successStories = [
@@ -444,15 +420,6 @@ const successStories = [
   },
   {
     id: 3,
-<<<<<<< HEAD
-    company: "Healthcare Technology Ltd",
-    industry: "Healthcare",
-    challenge: "Needed AI workflow automation for patient care processes",
-    solution: "Built AI-powered workflow automation system for healthcare",
-    results: "40% faster patient care, 50% efficiency improvement, better outcomes, reduced errors",
-    logo: "HTL"
-
-=======
     comp: "Healthcare Technology Ltd",;
     industry: "Healthcare",;
     challenge: "Needed AI workflow automation for patient care processes",;
@@ -460,7 +427,6 @@ const successStories = [
     results: "40% faster patient care, 50% efficiency improvement, better outcomes, reduced errors",;
     logo: "HTL";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const processSteps = [
@@ -485,15 +451,6 @@ const processSteps = [
     icon: Wrench,
     duration: "16-40 weeks"
   },
-<<<<<<< HEAD
-  {
-    step: 4,
-    title: "Testing & Optimization",
-    description: "Test systems and optimize performance",
-    icon: Gauge,
-    duration: "4-8 weeks"
-
-=======
   {;
     step: 4,;
     title: "Testing & Optimization",;
@@ -501,7 +458,6 @@ const processSteps = [
     icon: Gauge,;
     duration: "4-8 weeks";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 const workflowBenefits = [
@@ -509,39 +465,28 @@ const workflowBenefits = [
     title: "Increased Efficiency",
     description: "AI automation significantly improves workflow efficiency and productivity",
     icon: Zap,
-    examples["Faster processing", "Reduced errors", "Better accuracy", "Improved productivity"]
-  },
+    examples["Faster processing", "Reduced errors", "Better accuracy", "Improved productivity"];
+  },;
   {
     title: "Cost Reduction",
     description: "Automation reduces manual effort and operational costs",
     icon: TrendingUp,
-    examples["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"]
-  },
+    examples["Reduced labor costs", "Lower error rates", "Better resource utilization", "Improved ROI"];
+  },;
   {
     title: "Better Decision Making",
     description: "AI-powered insights enable better, data-driven decisions",
     icon: Brain,
-    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"]
-  },
+    examples["Data-driven insights", "Predictive analytics", "Risk assessment", "Strategic planning"];
+  },;
   {
-<<<<<<< HEAD
-    title: "Scalability",
-    description: "AI workflows scale efficiently with business growth",
-    icon: Rocket,
-<<<<<<< HEAD
-    examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
-
-=======
-    examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"]
+    examples["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
   };
-=======;
     title: "Scalability",;
     description: "AI workflows scale efficiently with business growth",;
     icon: Rocket,;
     examples: ["Easy scaling", "Flexible workflows", "Adaptive processes", "Growth support"];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function AIWorkflowAutomation(...args[]):  {
@@ -553,7 +498,6 @@ export default function AIWorkflowAutomation(...args[]):  {
   const filteredSolutions = selectedCategory === 'All'
     ? workflowSolutions
     : workflowSolutions.filter(solution => solution.category === selectedCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <div className = "min-h-screen bg-futuristic">
@@ -652,10 +596,10 @@ export default function AIWorkflowAutomation(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Workflow Benefits */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -731,7 +675,7 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <p className="text-zion-slate-light mb-6 leading-relaxed text-center">{benefit.description}</p>
 
                 <div className="space-y-2">
-                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: any</h4>
+                  <h4 className="text-zion-cyan font-semibold mb-3">Examples: unknown</h4>
                   {benefit.examples.map((example, exampleIndex)  => (
                     <div key={exampleIndex} className="flex items-center gap-3">
                       <CheckCircle className="w-4 h-4 text-zion-cyan flex-shrink-0" />
@@ -739,14 +683,14 @@ export default function AIWorkflowAutomation(...args[]):  {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Workflow Technologies */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -831,14 +775,14 @@ export default function AIWorkflowAutomation(...args[]):  {
                 }`}>
                   {technology.reliability} Reliability
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -920,14 +864,14 @@ export default function AIWorkflowAutomation(...args[]):  {
                 <span className="inline-block px-3 py-1 bg-zion-cyan/20 text-zion-cyan text-sm rounded-full border border-zion-cyan/30">
                   {step.duration}
                 </span>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Solutions Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1061,7 +1005,7 @@ export default function AIWorkflowAutomation(...args[]):  {
       </section>
 
       {/* Success Stories */}
-      <section className="py-20 bg-zion-blue-dark/50">
+      <section className="py-20 bg-zion-blue-dark/50">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1160,14 +1104,14 @@ export default function AIWorkflowAutomation(...args[]):  {
                   ))}
                   <span className="text-zion-slate-light text-sm ml-2">5.0 Rating</span>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">
+      <section className="py-20 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-blue/10">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -1212,23 +1156,10 @@ export default function AIWorkflowAutomation(...args[]):  {
 
                 Workflow Consultation
               </a>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

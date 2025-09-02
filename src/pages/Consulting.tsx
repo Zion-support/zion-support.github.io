@@ -1,62 +1,46 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase const Consulting = () => {
-=======
 import React from 'react.ts';
 import { Users, Lightbulb, Target, TrendingUp, Shield, Globe, Zap, Cpu, Database, Award, Briefcase  } from 'lucide-react';
 
-const Consulting = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+const Consulting: React.FC = ($2) => {
   const consultingServices = [
     {
       icon: Lightbulb,
       title: "Technology Strategy",
       description: "Strategic technology planning and digital transformation roadmaps",
-      features["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"]
-    },
+      features["Technology assessment", "Digital transformation", "Innovation strategy", "Technology roadmaps"];
+    },;
     {
       icon: Target,
       title: "AI & ML Consulting",
       description: "Expert guidance on AI implementation and machine learning strategies",
-      features["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"]
-    },
+      features["AI readiness assessment", "ML model development", "Data strategy", "Implementation planning"];
+    },;
     {
       icon: Shield,
       title: "Cybersecurity Consulting",
       description: "Comprehensive security assessments and risk management strategies",
-      features["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"]
-    },
+      features["Security audits", "Risk assessment", "Compliance consulting", "Incident response planning"];
+    },;
     {
       icon: Globe,
       title: "Cloud Strategy",
       description: "Cloud migration planning and multi-cloud optimization strategies",
-      features["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"]
-    },
+      features["Cloud assessment", "Migration planning", "Cost optimization", "Security architecture"];
+    },;
     {
       icon: Database,
       title: "Data Strategy",
       description: "Data governance, analytics, and business intelligence consulting",
-      features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"]
-    },
+      features["Data governance", "Analytics strategy", "BI implementation", "Data quality management"];
+    },;
     {
-<<<<<<< HEAD
-      icon: Zap,
-      title: "Digital Innovation",
-      description: "Emerging technology consulting and innovation acceleration",
-<<<<<<< HEAD
-      features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
-
-=======
-      features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"]
+      features["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
     };
-=======;
       icon: Zap,;
       title: "Digital Innovation",;
       description: "Emerging technology consulting and innovation acceleration",;
       features: ["Technology scouting", "Innovation labs", "Proof of concepts", "Technology adoption"];
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const industries = [
@@ -83,15 +67,6 @@ const Consulting = () => {
     {
       title: "Energy & Utilities",
       description: "Smart grid and sustainability consulting",
-<<<<<<< HEAD
-      icon: Globe
-    },
-    {
-      title: "Government",
-      description: "Public sector digital transformation consulting",
-      icon: Briefcase
-
-=======
       icon: Globe;
     },;
     {;
@@ -99,7 +74,6 @@ const Consulting = () => {
       description: "Public sector digital transformation consulting",;
       icon: Briefcase;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;
@@ -125,15 +99,6 @@ const Consulting = () => {
     {
       phase: "Strategy",
       description: "Developing customized solutions and implementation plans",
-<<<<<<< HEAD
-      duration: "3-6 weeks"
-    },
-    {
-      phase: "Implementation",
-      description: "Executing the strategy with ongoing support and guidance",
-      duration: "Ongoing"
-
-=======
       duration: "3-6 weeks";
     },;
     {;
@@ -141,7 +106,6 @@ const Consulting = () => {
       description: "Executing the strategy with ongoing support and guidance",;
       duration: "Ongoing";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -318,14 +282,6 @@ const Consulting = () => {
             </a>
             <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View All Services
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -333,6 +289,5 @@ const Consulting = () => {
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default Consulting;}}}}

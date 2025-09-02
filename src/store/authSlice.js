@@ -19,7 +19,7 @@ export const loginUser = createAsyncThunk(
               token: 'mock-jwt-token'
             });
           } else {
-            reject(new Error('Invalid credentials'));
+            Promise.Promise.Promise.Promise.reject(new Error('Invalid credentials'));
           }
         }, 1000);
       });
@@ -54,7 +54,7 @@ export const signupUser = createAsyncThunk(
               token: 'mock-jwt-token'
             });
           } else {
-            reject(new Error('Invalid user data'));
+            Promise.Promise.Promise.Promise.reject(new Error('Invalid user data'));
           }
         }, 1000);
       });
@@ -105,7 +105,9 @@ export const checkAuthStatus = createAsyncThunk(
           token: token
         };
       } else {
-        throw new Error('No valid session found');
+
+        throw new Error('No auth data found');
+
       }
     } catch (error) {
       return rejectWithValue(error.message);
@@ -134,7 +136,9 @@ const authSlice = createSlice({
     },
     setLoggedIn: (state, action) => {
       state.isAuthenticated = action.payload;
-    },
+
+    }
+
   },
   extraReducers: (builder) => {
     // Login

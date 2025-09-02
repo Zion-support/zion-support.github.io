@@ -1,9 +1,8 @@
-import React from 'react';
-import { SEO } from '../../components/SEO';
-import { motion } from 'framer-motion';
-import { Workflow, Zap, Brain, Target, TrendingUp, Shield, Users, Clock, BarChart3, CheckCircle } from 'lucide-react';
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { motion  } from 'framer-motion.ts';
 
-export default function AIWorkflowAutomation() {
+export default function AIWorkflowAutomation(...args: unknown[]): unknown {
   const features = [
     {
       icon: Workflow,
@@ -104,8 +103,8 @@ export default function AIWorkflowAutomation() {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)  => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

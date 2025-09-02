@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-const Talent: React.FC = () => (
-	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">
-		<div className="text-center text-white">
-			<h1 className="text-4xl font-bold mb-4">Talent</h1>
-			<p className="text-xl text-gray-300">Find experts and project teams.</p>
-		</div>
-	</div>
-);
-=======
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
@@ -481,7 +471,6 @@ export default function Talent() {
   const [selectedExperience, setSelectedExperience] = useState('all');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedTalent, setExpandedTalent] = useState<string | null>(null);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const categories = [
     { id: 'all', name: 'All Categories', count: 45 },
@@ -616,7 +605,7 @@ export default function Talent() {
     }
   ];
 
-  const toggleTalentExpansion = (talentId: string) => {
+  const toggleTalentExpansion: React.FC = ($2) => {
     setExpandedTalent(expandedTalent === talentId ? null : talentId);
   };
 
@@ -631,7 +620,7 @@ export default function Talent() {
     return true;
   });
 
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor: React.FC = ($2) => {
     switch (category) {
       case 'ai-ml': return 'bg-purple-500/20 text-purple-400';
       case 'cloud': return 'bg-blue-500/20 text-blue-400';
@@ -642,7 +631,7 @@ export default function Talent() {
     }
   };
 
-  const getExperienceColor = (experience: string) => {
+  const getExperienceColor: React.FC = ($2) => {
     switch (experience) {
       case 'junior': return 'bg-green-500/20 text-green-400';
       case 'mid': return 'bg-blue-500/20 text-blue-400';
@@ -652,11 +641,11 @@ export default function Talent() {
     }
   };
 
-  const getAvailabilityColor = (availability: string) => {
+  const getAvailabilityColor: React.FC = ($2) => {
     return availability === 'Available' ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400';
   };
 
-  const renderStars = (rating: number) => {
+  const renderStars: React.FC = ($2) => {
     return Array.from({ length: 5 }, (_, i) => (
       <Star
         key={i}

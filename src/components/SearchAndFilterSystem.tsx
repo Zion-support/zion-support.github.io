@@ -16,11 +16,8 @@ import {
   Cloud,
   Shield,
   Globe
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SearchResult {
 
   id: string;
@@ -31,33 +28,21 @@ interface SearchResult {
   location?: string;
   date?: string;
   rating?: number;
-<<<<<<< HEAD
-  type: 'service' | 'article' | 'team' | 'technology';
-=======
   type: 'service' | 'article' | 'team' | 'technology'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface FilterOption {
 
   id: string;
   label: string;
   value: string;
-<<<<<<< HEAD
-  count: number;
-=======
   count: number}
 
 interface SearchAndFilterSystemProps extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   data: SearchResult[];
   onResultsChange?: (results: SearchResult[])  => void;
   placeholder?: string;
-<<<<<<< HEAD
-  showFilters?: boolean;
-=======
   showFilters?: boolean}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   data,
@@ -77,20 +62,12 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
     const categories = data.reduce((acc, item) => {
       acc[item.category] = (acc[item.category] || 0) + 1;
       return acc;
-<<<<<<< HEAD
-    }, { /* empty */ } as Record<string, number>);
-=======
     }, {} as Record<string, any>);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     const types = data.reduce((acc, item) => {
       acc[item.type] = (acc[item.type] || 0) + 1;
       return acc;
-<<<<<<< HEAD
-    }, { /* empty */ } as Record<string, number>);
-=======
     }, {} as Record<string, any>);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return {
       categories: Object.entries(categories).map(([key, count])  => ({
@@ -161,7 +138,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   }, [filteredResults, onResultsChange]);
 
   // Toggle filter
-  const toggleFilter = (filterId: string) => {
+  const toggleFilter: React.FC = ($2) => {
     const newFilters = new Set(activeFilters);
     if (newFilters.has(filterId)) {
       newFilters.delete(filterId);
@@ -172,14 +149,14 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Clear all filters
-  const clearAllFilters = () => {
+  const clearAllFilters: React.FC = ($2) => {
     setActiveFilters(new Set());
     setSelectedCategory('all');
     setSortBy('relevance');
   };
 
   // Get icon for type
-  const getTypeIcon = (type: string) => {
+  const getTypeIcon: React.FC = ($2) => {
     switch (type) {
       case 'service': return <Zap className="w-4 h-4" />;
       case 'article': return <Tag className="w-4 h-4" />;
@@ -190,7 +167,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
   };
 
   // Get category color
-  const getCategoryColor = (category: string) => {
+  const getCategoryColor: React.FC = ($2) => {
     const colors = {
       'ai': 'text-purple-400',
       'cloud': 'text-blue-400',
@@ -223,7 +200,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               className="absolute right-4 top-1/2 transform -translate-y-1/2 text-zinc-400 hover:text-white transition-colors"
 
               <X className="w-5 h-5" />
-            </button>
+            </button>;
           )}
         </div>
 
@@ -236,7 +213,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
               exit={{ opacity: 0, y: -10 }}
               className="absolute top-full left-0 right-0 mt-2 bg-zinc-900/95 backdrop-blur-md border border-zinc-700/50 rounded-xl shadow-2xl z-50 max-h-64 overflow-y-auto"
 
-              {filteredResults.slice(0, 5).map((result) => (
+              {filteredResults.slice(0, 5).map((result) => (;
                 <div
                   key={result.id}
                   className="p-3 hover:bg-zinc-800/50 transition-colors cursor-pointer border-b border-zinc-700/30 last:border-b-0"
@@ -253,7 +230,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                       {result.category}
                     </span>
                   </div>
-                </div>
+                </div>;
               ))}
             </motion.div>
           )}
@@ -298,7 +275,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
           {/* Filter Toggle */}
           <button
             onClick={() => setShowFilterPanel(!showFilterPanel)}
-            className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
+className: {`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
               showFilterPanel
                 ? 'bg-zion-cyan text-white'
                 : 'bg-zinc-900/50 text-zinc-300 hover:text-white border border-zinc-700/50'
@@ -432,20 +409,20 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                   </div>
                 </div>
               </div>
-            </div>
+            </div>;
           </motion.div>
         )}
       </AnimatePresence>
 
       {/* Results Count */}
-      <div className="mb-4 text-sm text-zinc-400">
-        Showing {filteredResults.length} of {data.length} results
+      <div className="mb-4 text-sm text-zinc-400">;
+        Showing {filteredResults.length} of {data.length} results;
         {searchQuery && ` for "${searchQuery}"`}
       </div>
 
       {/* Search Results */}
-      <div className="space-y-4">
-        {filteredResults.map((result) => (
+      <div className="space-y-4">;
+        {filteredResults.map((result) => (;
           <motion.div
             key={result.id}
             initial = {
@@ -516,7 +493,7 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
                 </div>
               </div>
             </div>
-          </motion.div>
+          </motion.div>;
         ))}
       </div>
 
@@ -542,8 +519,4 @@ export const SearchAndFilterSystem: React.FC<SearchAndFilterSystemProps> = ({
       )}
     </div>
   );
-<<<<<<< HEAD
-};}}}}}}}
-=======
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

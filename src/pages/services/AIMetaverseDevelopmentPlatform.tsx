@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles import { SEO } from '../../components/SEO';
-=======
-import { Globe, Brain, Zap, Shield, TrendingUp, Users, ArrowRight, CheckCircle, Star, Eye, Sparkles } from 'lucide-react';
 import { SEO } from "../../components/SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIMetaverseDevelopmentPlatform() {
   const features = [;
@@ -51,15 +46,6 @@ export default function AIMetaverseDevelopmentPlatform() {
       details: [
         'Unlimited virtual worlds',
         'Custom AI algorithms',
-<<<<<<< HEAD
-        '24/7 dedicated support',
-        'On-premise deployment options',
-        'Custom integrations and APIs',
-        'White-label solutions available',
-        'Enterprise security features'
-      ]
-
-=======
         '24/7 dedicated support',;
         'On-premise deployment options',;
         'Custom integrations and APIs',;
@@ -67,7 +53,6 @@ export default function AIMetaverseDevelopmentPlatform() {
         'Enterprise security features';
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;
@@ -98,13 +83,8 @@ export default function AIMetaverseDevelopmentPlatform() {
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="AI Metaverse Development Platform | Zion Tech Group"
-=======
       <SEO 
         title = "AI Metaverse Development Platform | Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Revolutionary AI-powered metaverse development platform for creating immersive virtual worlds. AI-driven 3D generation, avatar systems, and spatial computing."
         keywords="AI metaverse, virtual reality, 3D world generation, avatar creation, spatial computing, VR development, AR development"
       />
@@ -144,7 +124,7 @@ export default function AIMetaverseDevelopmentPlatform() {
         </section>
 
         {/* Key Features */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -168,7 +148,7 @@ export default function AIMetaverseDevelopmentPlatform() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -205,14 +185,14 @@ export default function AIMetaverseDevelopmentPlatform() {
 
                     Get Started
                   </a>
-                </div>
+                </div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Use Cases */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -236,7 +216,7 @@ export default function AIMetaverseDevelopmentPlatform() {
         </section>
 
         {/* Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -260,7 +240,7 @@ export default function AIMetaverseDevelopmentPlatform() {
         </section>
 
         {/* Industries */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -284,7 +264,7 @@ export default function AIMetaverseDevelopmentPlatform() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Build the Metaverse?
@@ -320,16 +300,6 @@ export default function AIMetaverseDevelopmentPlatform() {
             <a
               href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-200"
-<<<<<<< HEAD
-
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </div>
-        </section>
-      </div>
-    </>
-=======
             >
               Get Started Today;
               <ArrowRight className="ml-2 w-5 h-5" />;
@@ -338,6 +308,5 @@ export default function AIMetaverseDevelopmentPlatform() {
         </section>;
       </div>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}

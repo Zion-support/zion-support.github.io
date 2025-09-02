@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight const DigitalTransformation = () => {
-=======
 import React from 'react.ts';
-import { RefreshCw, Zap, Users, TrendingUp, Target, BarChart3, Lightbulb, ArrowRight  } from 'lucide-react';
 
-const DigitalTransformation = () => {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+const DigitalTransformation: React.FC = ($2) => {
   const transformationServices = [
     {
       title: "Process Automation",
@@ -22,15 +16,6 @@ const DigitalTransformation = () => {
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],
       icon: RefreshCw
     },
-<<<<<<< HEAD
-    {
-      title: "Change Management",
-      description: "Guide your team through digital adoption and transformation.",
-      price: "From $8,000/month",
-      features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],
-      icon: Users
-
-=======
     {;
       title: "Change Management",;
       description: "Guide your team through digital adoption and transformation.",;
@@ -38,7 +23,6 @@ const DigitalTransformation = () => {
       features: ["Change strategy", "Training programs", "Communication plans", "Success measurement"],;
       icon: Users;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const transformationAreas = [
@@ -53,15 +37,6 @@ const DigitalTransformation = () => {
       description: "Optimize internal processes and efficiency",
       icon: TrendingUp,
       features: ["Process redesign", "Automation", "Performance metrics", "Continuous improvement"]
-<<<<<<< HEAD
-    },
-    {
-      name: "Technology",
-      description: "Modernize your technology stack and infrastructure",
-      icon: BarChart3,
-      features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]
-
-=======
     },;
     {;
       name: "Technology",;
@@ -69,7 +44,6 @@ const DigitalTransformation = () => {
       icon: BarChart3,;
       features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [;

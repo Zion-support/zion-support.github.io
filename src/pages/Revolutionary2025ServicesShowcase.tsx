@@ -84,20 +84,6 @@ import {
   SkipForward2,
   PlayCircle,
   PauseCircle
-<<<<<<< HEAD
-import { revolutionary2025AdvancedMicroSaasServices } from '../data/revolutionary-2025-advanced-micro-saas-v2';
-import { revolutionary2025SpecializedITAIServices } from '../data/revolutionary-2025-specialized-it-ai-services';
-=======
-<<<<<<< HEAD
- } from 'lucide-react';
-import { revolutionary2025AdvancedMicroSaasServices  } from "../data/revolutionary-2025-advanced-micro-saas-v2";
-import { revolutionary2025SpecializedITAIServices  } from "../data/revolutionary-2025-specialized-it-ai-services";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-// Combine all services
-const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
-const Revolutionary2025ServicesShowcase: React.FC = (): JSX.Element => {;
-  const [services, setServices] = useState<any>(ALL_SERVICES);
-=======
 } from 'lucide-react';
 import { revolutionary2025AdvancedMicroSaasServices } from "../data/revolutionary-2025-advanced-micro-saas-v2";
 import { revolutionary2025SpecializedITAIServices } from "../data/revolutionary-2025-specialized-it-ai-services";
@@ -105,7 +91,6 @@ import { revolutionary2025SpecializedITAIServices } from "../data/revolutionary-
 const ALL_SERVICES = [...revolutionary2025AdvancedMicroSaasServices, ...revolutionary2025SpecializedITAIServices];
 const Revolutionary2025ServicesShowcase: React.FC = () => {;
   const [services, setServices] = useState<any[]>(ALL_SERVICES);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState('all');
@@ -117,60 +102,28 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
   useEffect(() => {
     let filtered = ALL_SERVICES;
     if (searchTerm) {
-<<<<<<< HEAD
-      filtered = filtered.filter(service =>
-        service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        service.category.toLowerCase().includes(searchTerm.toLowerCase())
-      )};
-=======;
       filtered = filtered.filter(service =>;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.category.toLowerCase().includes(searchTerm.toLowerCase());
       );
-<<<<<<< HEAD
-
-    if (selectedCategory !== 'all') {
-      filtered = filtered.filter(service => service.category === selectedCategory);
-
-    if (selectedPriceRange !== 'all') {
-=======
     }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => service.category === selectedCategory)};
     if (selectedPriceRange !== 'all') {;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       const [min, max] = selectedPriceRange.split('-').map(Number);
       filtered = filtered.filter(service => {;
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (max) {
-<<<<<<< HEAD
-          return price >= min && price <= max;
-
-        return price >= min;
-      });
-
-=======
           return price >= min && price <= max}
         return price >= min})}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     if (selectedROI !== 'all') {
       const [min, max] = selectedROI.split('-').map(Number);
       filtered = filtered.filter(service => {;
         const roi = parseInt(service.roi.match(/\d+/)?.[0] || '0');
         if (max) {
-<<<<<<< HEAD
-          return roi >= min && roi <= max;
-
-        return roi >= min;
-      });
-
-=======
           return roi >= min && roi <= max}
         return roi >= min})}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
@@ -181,23 +134,17 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         case 'customers':
           return b.customers - a.customers;
         default:
-<<<<<<< HEAD
-          return a.name.localeCompare(b.name);
-
-=======
           return a.name.localeCompare(b.name)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
     });
     setServices(filtered)}, [searchTerm, selectedCategory, selectedPriceRange, selectedROI, sortBy]);
   const categories = Array.from(new Set(ALL_SERVICES.map(service => service.category)));
-  const handleServiceSelect = (serviceId: string) => {
+  const handleServiceSelect: React.FC = ($2) => {
     setSelectedServices(prev =>
       prev.includes(serviceId)
         ? prev.filter(id => id !== serviceId)
         : [...prev, serviceId]
     );
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
   const selectedServicesData = ALL_SERVICES.filter(service => selectedServices.includes(service.id));
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -222,9 +169,9 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
             </p>
           </motion.div>
         </div>
-      </section>
+      </section>;
       {/* Search and Filters */}
-      <section className="py-12 bg-black/30">
+      <section className="py-12 bg-black/30">;
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
             {/* Search */}
@@ -284,7 +231,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               </select>
             </div>
             {/* View Mode Toggle */}
-            <div className="flex gap-2">
+            <div className="flex gap-2">;
               <button
                 onClick={() => setViewMode('grid')}
                 className={`p-3 rounded-lg transition-colors ${
@@ -320,7 +267,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* AI Service Recommendation Engine */}
-      <section className="py-16 bg-gradient-to-r from-slate-900/40 to-gray-900/40">
+      <section className="py-16 bg-gradient-to-r from-slate-900/40 to-gray-900/40">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -496,7 +443,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Service Integration Showcase */}
-      <section className="py-16 bg-gradient-to-r from-violet-900/20 to-fuchsia-900/20">
+      <section className="py-16 bg-gradient-to-r from-violet-900/20 to-fuchsia-900/20">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -694,7 +641,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Service Comparison Matrix */}
-      <section className="py-16 bg-gradient-to-r from-slate-800/40 to-gray-800/40">
+      <section className="py-16 bg-gradient-to-r from-slate-800/40 to-gray-800/40">;
         <div className="container mx-auto px-4">
           <motion.div
             className="text-center mb-12"
@@ -794,7 +741,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Services Grid/List */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -877,8 +824,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
                       Learn More <ArrowRight className="w-4 h-4 ml-1" />
                     </a>
-                  </div>
-                </motion.div>
+                  </div>;
+                </motion.div>;
               ))}
             </div>
           )}
@@ -961,8 +908,8 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
                         </a>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
+                  </div>;
+                </motion.div>;
               ))}
             </div>
           )}
@@ -1052,14 +999,14 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
 
                     View Services
                   </button>
-                </div>
+                </div>;
               )}
             </div>
           )}
         </div>
       </section>
       {/* Pricing Comparison Section */}
-      <section className="py-20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">
+      <section className="py-20 bg-gradient-to-r from-green-900/20 to-emerald-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Competitive Pricing Plans
@@ -1276,7 +1223,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Service Performance Dashboard */}
-      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
+      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Real-Time Service Performance
@@ -1588,7 +1535,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Customer Success Metrics */}
-      <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">
+      <section className="py-20 bg-gradient-to-r from-emerald-900/20 to-teal-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Proven Customer Success
@@ -1847,7 +1794,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Global Presence & Impact */}
-      <section className="py-20 bg-gradient-to-r from-amber-900/20 to-orange-900/20">
+      <section className="py-20 bg-gradient-to-r from-amber-900/20 to-orange-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Global Presence & Impact
@@ -2112,7 +2059,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Call to Action Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
+      <section className="py-20 bg-gradient-to-r from-cyan-900/30 to-blue-900/30">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
@@ -2165,7 +2112,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Service Evolution Roadmap */}
-      <section className="py-20 bg-gradient-to-r from-amber-900/20 to-orange-900/20">
+      <section className="py-20 bg-gradient-to-r from-amber-900/20 to-orange-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Service Evolution Roadmap
@@ -2366,7 +2313,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Technology Stack Section */}
-      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">
+      <section className="py-20 bg-gradient-to-r from-indigo-900/20 to-purple-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Cutting-Edge Technology Stack
@@ -2548,7 +2495,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Statistics Section */}
-      <section className="py-20 bg-gradient-to-r from-gray-900/40 to-slate-900/40">
+      <section className="py-20 bg-gradient-to-r from-gray-900/40 to-slate-900/40">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
             Revolutionary Impact by the Numbers
@@ -2697,7 +2644,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">
+      <section className="py-20 bg-gradient-to-r from-purple-900/20 to-indigo-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             What Our Clients Say
@@ -2842,7 +2789,7 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
         </div>
       </section>
       {/* Contact Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">
+      <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-blue-900/20">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -2881,14 +2828,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
               className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300"
 
               Visit Website
-<<<<<<< HEAD
-            </a>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </a>;
           </div>;
         </div>;
@@ -2896,7 +2835,6 @@ const Revolutionary2025ServicesShowcase: React.FC = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 // Grid and List icons for the view mode toggle
 const Grid = ({ className }: { className?: string }) => (;
   <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">;

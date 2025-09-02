@@ -1,9 +1,9 @@
 import React from 'react';
-import SEO from '@/components/SEO';
+import SEO from '@/src/src/components/SEO';
 
 export default function AIAutoEmailResponder(...args[]):  {
   return (
-    <div className = "min-h-screen bg-futuristic text-white">
+    <div className = "min-h-screen bg-futuristic text-white">;
       <SEO
         title="AI Auto Email Responder | Zion Tech Group"
         description="Automate customer email replies with secure AI, sentiment detection, intent routing, and CRM logging."
@@ -57,24 +57,11 @@ export default function AIAutoEmailResponder(...args[]):  {
           </div>
           <div className="rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6">
             <h3 className="font-semibold mb-2">Get a Quote</h3>
-<<<<<<< HEAD
-            <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>
-          </div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             <p className="text-sm text-zion-slate-light">Call +1 302 464 0950 or email <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a>.</p>;
           </div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,10 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation import { SEO } from '../../components/SEO';
-=======
-import { Car, Brain, Zap, Shield, TrendingUp, Users, Globe, ArrowRight, CheckCircle, Star, Navigation } from 'lucide-react';
 import { SEO } from "../../components/SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function AIAutonomousVehiclePlatform() {
   const features = [;
@@ -51,15 +46,6 @@ export default function AIAutonomousVehiclePlatform() {
       details: [
         'Unlimited vehicle management',
         'Custom autonomous algorithms',
-<<<<<<< HEAD
-        '24/7 dedicated support',
-        'On-premise deployment options',
-        'Custom integrations and APIs',
-        'White-label solutions available',
-        'Regulatory compliance tools'
-      ]
-
-=======
         '24/7 dedicated support',;
         'On-premise deployment options',;
         'Custom integrations and APIs',;
@@ -67,7 +53,6 @@ export default function AIAutonomousVehiclePlatform() {
         'Regulatory compliance tools';
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const useCases = [;
@@ -98,13 +83,8 @@ export default function AIAutonomousVehiclePlatform() {
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="AI Autonomous Vehicle Platform | Zion Tech Group"
-=======
       <SEO 
         title = "AI Autonomous Vehicle Platform | Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Revolutionary AI-powered autonomous vehicle platform for safe, efficient, and intelligent transportation. Advanced computer vision, sensor fusion, and fleet management."
         keywords="AI autonomous vehicles, self-driving cars, autonomous fleet management, computer vision, sensor fusion, transportation automation"
       />
@@ -144,7 +124,7 @@ export default function AIAutonomousVehiclePlatform() {
         </section>
 
         {/* Key Features */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -168,7 +148,7 @@ export default function AIAutonomousVehiclePlatform() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+        <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -205,14 +185,14 @@ export default function AIAutonomousVehiclePlatform() {
 
                     Get Started
                   </a>
-                </div>
+                </div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Use Cases */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -236,7 +216,7 @@ export default function AIAutonomousVehiclePlatform() {
         </section>
 
         {/* Benefits */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -260,7 +240,7 @@ export default function AIAutonomousVehiclePlatform() {
         </section>
 
         {/* Industries */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -284,7 +264,7 @@ export default function AIAutonomousVehiclePlatform() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">;
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Go Autonomous?
@@ -320,16 +300,6 @@ export default function AIAutonomousVehiclePlatform() {
             <a
               href="https://ziontechgroup.com/contact"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200"
-<<<<<<< HEAD
-
-              Get Started Today
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </div>
-        </section>
-      </div>
-    </>
-=======
             >
               Get Started Today;
               <ArrowRight className="ml-2 w-5 h-5" />;
@@ -338,6 +308,5 @@ export default function AIAutonomousVehiclePlatform() {
         </section>;
       </div>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}

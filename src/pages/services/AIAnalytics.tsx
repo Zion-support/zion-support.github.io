@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users export default function AIAnalytics() {
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { Brain, BarChart3, Zap, Eye, ArrowRight, Shield, Cloud, Database, Cpu, Users  } from 'lucide-react';
 
 export default function AIAnalytics(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Brain,
@@ -23,15 +16,6 @@ export default function AIAnalytics(...args[]):  {
     {
       icon: Zap,
       title: 'Real-time Insights',
-<<<<<<< HEAD
-      description: 'Instant data analysis and actionable intelligence'
-    },
-    {
-      icon: Eye,
-      title: 'Data Visualization',
-      description: 'Clear and intuitive data presentation'
-
-=======
       description: 'Instant data analysis and actionable intelligence';
     },;
     {;
@@ -39,7 +23,6 @@ export default function AIAnalytics(...args[]):  {
       title: 'Data Visualization',;
       description: 'Clear and intuitive data presentation';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const services = [
@@ -56,15 +39,6 @@ export default function AIAnalytics(...args[]):  {
     {
       title: 'Natural Language Processing',
       description: 'Text analysis and language understanding systems',
-<<<<<<< HEAD
-      icon: Database
-    },
-    {
-      title: 'Computer Vision',
-      description: 'Image and video analysis with AI',
-      icon: Eye
-
-=======
       icon: Database;
     },;
     {;
@@ -72,7 +46,6 @@ export default function AIAnalytics(...args[]):  {
       description: 'Image and video analysis with AI',;
       icon: Eye;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
@@ -131,10 +104,10 @@ export default function AIAnalytics(...args[]):  {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -211,14 +184,14 @@ export default function AIAnalytics(...args[]):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-zion-slate-light">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white/5">
+      <section className="py-20 bg-white/5">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -299,14 +272,14 @@ export default function AIAnalytics(...args[]):  {
                     <p className="text-zion-slate-light leading-relaxed">{service.description}</p>
                   </div>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container-responsive">
           <motion.div
             initial = {
@@ -349,23 +322,10 @@ export default function AIAnalytics(...args[]):  {
                   Contact AI Team
                 </button>
               </div>
-<<<<<<< HEAD
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )};
-=======;
             </div>;
           </motion.div>;
         </div>;
       </section>;
     </div>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

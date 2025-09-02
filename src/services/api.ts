@@ -6,113 +6,84 @@ interface ApiResponse<T = any> {
   error?: string;
   message?: string;
   count?: number;
+}
 
 // Generic API error
 class ApiError extends Error {
   constructor(public status: number, message: string) {
     super(message);
     this.name = 'ApiError';
+  }
+}
 
-
-<<<<<<< HEAD
-// Generic fetch wrapper with error handling
-async function apiRequest<T>(
-  endpoint: string,
-  options: RequestInit = { /* empty */ }
-): Promise<ApiResponse<T>> {
-  const url = `${API_BASE_URL}${endpoint}`;
-
-=======
 interface ApiClientOptions {
   method?: string;
-  body?: string;
   headers?: Record<string, string>;
+  body?: string;
+  timeout?: number;
 }
 
-export async function apiClient(endpoint: string, options: ApiClientOptions = {}) {;
-  const { method = 'GET', body, headers = {} } = options;
-  
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const config: RequestInit = {
-  method,
-    headers: {
-      'Content-Type': 'application/json',
-      ...headers,;
-  ;
-  ;
-  ;
-  ;
-  ;
+// Generic API client function
+async function apiClient<T>(
+  endpoint: string,
+  options: ApiClientOptions = {}
+): Promise<ApiResponse<T>> {
+  const {
+    method = 'GET',
+    headers = {},
+    body,
+    timeout = 10000
+  } = options;
 
-
-
-
-
-},;
-  };
-
-  if (body) {
-    config.body = body;
-  }
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeout);
 
   try {
-<<<<<<< HEAD
-    const response = await fetch(url, config);
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+      method,
+      headers: {
+        'Content-Type': 'application/json',
+        ...headers,
+      },
+      body,
+      signal: controller.signal,
+    });
+
+    clearTimeout(timeoutId);
 
     if (!response.ok) {
-      throw new ApiError(response.status, `HTTP error! status: ${response.status}`);
+      throw new ApiError(response.status, `HTTP ${response.status}: ${response.statusText}`);
+    }
 
     const data = await response.json();
-    return data;
+    return {
+      success: true,
+      data,
+    };
   } catch (error) {
+    clearTimeout(timeoutId);
+    
     if (error instanceof ApiError) {
       throw error;
-
-    throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
-
-=======
-    const response = await fetch(endpoint, config);
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
     }
     
-    return await response.json();
-  } catch (error) {
-    console.error('API request failed:', error);
-    throw error;
+    throw new ApiError(0, error instanceof Error ? error.message : 'Unknown error occurred');
   }
 }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
+// API methods
 export const api = {
-<<<<<<< HEAD
-  // Health check
-  health: () => apiRequest('/health'),
+  get: <T>(endpoint: string, headers?: Record<string, string>) =>
+    apiClient<T>(endpoint, { method: 'GET', headers }),
 
-  // Users
-  getUsers: () => apiRequest<Array<{ id: number; name: string; email: string }>>('/users'),
-  getUser: (id: number) => apiRequest<{ id: number; name: string; email: string }>(`/users/${id}`),
-  createUser: (userData: { name: string; email: string }) =>
-    apiRequest<{ id: number; name: string; email: string; createdAt: string }>('/users', {
-      method: 'POST',
-      body: JSON.stringify(userData),
-    }),
-=======
-  get: (endpoint: string, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'GET', headers: headers || {} }),
-  
-  post: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'POST', body: JSON.stringify(data), headers: headers || {} }),
-  
-  put: (endpoint: string, data: any, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'PUT', body: JSON.stringify(data), headers: headers || {} }),
-  
-  delete: (endpoint: string, headers?: Record<string, string>) => 
-    apiClient(endpoint, { method: 'DELETE', headers: headers || {} }),
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  post: <T>(endpoint: string, data: any, headers?: Record<string, string>) =>
+    apiClient<T>(endpoint, { method: 'POST', body: JSON.stringify(data), headers }),
+
+  put: <T>(endpoint: string, data: any, headers?: Record<string, string>) =>
+    apiClient<T>(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),
+
+  delete: <T>(endpoint: string, headers?: Record<string, string>) =>
+    apiClient<T>(endpoint, { method: 'DELETE', headers }),
 };
 
-// Export types for use in components
-export type { ApiResponse };
-export { ApiError };}}}}}}}
+export { ApiError };

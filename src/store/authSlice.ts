@@ -1,14 +1,16 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface User {
+export interface User {
   id: string;
   email: string;
   name: string;
+  role: string;
   avatar?: string;
+  company?: string;
+  preferences?: Record<string, any>;
 }
 
 interface AuthState {
-  isLoggedIn: boolean;
   user: User | null;
   token: string | null;
   isAuthenticated: boolean;
@@ -18,11 +20,10 @@ interface AuthState {
 
 const initialState: AuthState = {
   user: null,
+  token: null,
   isAuthenticated: false,
   isLoading: false,
   error: null,
-  isLoggedIn: false,
-  token: null,
 };
 
 const authSlice = createSlice({
@@ -34,12 +35,12 @@ const authSlice = createSlice({
       state.isAuthenticated = true;
       state.error = null;
     },
-    setToken: (state, action: PayloadAction<string>)  => {
+    setToken: (state, action: PayloadAction<string>) => {
       state.token = action.payload;
     },
-    logout: (state)  => {
-      state.isLoggedIn = false;
+    logout: (state) => {
       state.user = null;
+      state.token = null;
       state.isAuthenticated = false;
       state.error = null;
     },
@@ -52,8 +53,22 @@ const authSlice = createSlice({
     clearError: (state) => {
       state.error = null;
     },
+    updateUser: (state, action: PayloadAction<Partial<User>>) => {
+      if (state.user) {
+        state.user = { ...state.user, ...action.payload };
+      }
+    },
   },
 });
 
-export const { setUser, setToken, logout, setLoading, setError, clearError } = authSlice.actions;
+export const {
+  setUser,
+  setToken,
+  logout,
+  setLoading,
+  setError,
+  clearError,
+  updateUser,
+} = authSlice.actions;
+
 export default authSlice.reducer;

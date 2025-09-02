@@ -1,27 +1,14 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe,
-  Phone, Mail, MapPin, ChevronRight, ChevronDown,
-  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye,
-  Award, Clock, Heart, Lightbulb, Users, FileText,
-  HelpCircle, BookOpen, Target, TrendingUp, Star
-=======
-import React, { useState, useEffect } from 'react.ts';
+import React, { useState, useEffect              } from 'react.ts';
 import Link from 'next/link.ts';
-import { useRouter  } from 'next/router.ts';
-import { motion, AnimatePresence  } from 'framer-motion.ts';
+import { useRouter               } from 'next/router.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, 
   Phone, Mail, MapPin, ChevronRight, ChevronDown, 
   Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, 
   Award, Clock, Heart, Lightbulb, Users, FileText, 
   HelpCircle, BookOpen, Target, TrendingUp, Star
- } from 'lucide-react';
+              } from 'lucide-react.ts';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface SidebarItem {
 
   name: string;
@@ -34,19 +21,30 @@ interface SidebarItem {
   isNew?: boolean;
   isHot?: boolean;
   isPremium?: boolean;
-<<<<<<< HEAD
-  category?: string;
-=======
-  category?: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+category?: string;
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 const sidebarSections = [
   {
-    title: 'Revolutionary Services',
+
+    title: anyanyanyanyanyanyanyanyanyanyanyanyany'Revolutionary Services',
     icon: Zap,
     color: 'from-cyan-500 to-blue-600',
     items[
       {
+
         name: 'AI & Consciousness',
         href: '/ai-services',
         icon: Brain,
@@ -65,6 +63,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Quantum Computing',
         href: '/quantum-services',
         icon: Atom,
@@ -81,6 +80,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Enterprise IT',
         href: '/enterprise-it',
         icon: Shield,
@@ -97,6 +97,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Micro SAAS',
         href: '/micro-saas',
         icon: Rocket,
@@ -114,6 +115,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Space Technology',
         href: '/space-tech',
         icon: Globe,
@@ -126,6 +128,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Emerging Tech',
         href: '/emerging-tech',
         icon: Sparkles,
@@ -140,11 +143,13 @@ const sidebarSections = [
     ]
   },
   {
+
     title: 'Industry Solutions',
     icon: Target,
     color: 'from-purple-500 to-pink-600',
     items[
       {
+
         name: 'Healthcare',
         href: '/healthcare-solutions',
         icon: Heart,
@@ -156,6 +161,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Financial Services',
         href: '/financial-solutions',
         icon: BarChart3,
@@ -167,6 +173,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Manufacturing',
         href: '/manufacturing-solutions',
         icon: Settings,
@@ -178,6 +185,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Retail & E-commerce',
         href: '/retail-solutions',
         icon: Eye,
@@ -189,6 +197,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Government & Defense',
         href: '/government-solutions',
         icon: Shield,
@@ -200,6 +209,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Education',
         href: '/education-solutions',
         icon: Award,
@@ -213,11 +223,13 @@ const sidebarSections = [
     ]
   },
   {
+
     title: 'Comp & Resources',
     icon: Users,
     color: 'from-green-500 to-emerald-600',
     items[
       {
+
         name: 'About Us',
         href: '/about',
         icon: Users,
@@ -230,6 +242,7 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Resources',
         href: '/resources',
         icon: BookOpen,
@@ -244,27 +257,15 @@ const sidebarSections = [
         ]
       },
       {
+
         name: 'Support',
         href: '/support',
         icon: HelpCircle,
         description: 'Get help and support',
         subItems[
           { name: 'Contact Support', href: '/contact-support' },
-<<<<<<< HEAD
-          { name: 'Training Programs', href: '/training' },
-          { name: 'Community Forum', href: '/community' },
-          { name: 'Knowledge Base', href: '/knowledge-base' }
-        ]
-
-    ]
-
-];
-
-interface EnhancedSidebar2025Props {
-  isOpen: boolean;
-  onClose: () => void;
-=======
-          { name: 'Training Programs', href: '/training' },;
+{ name: anyanyanyanyanyanyanyanyanyanyanyanyany'Training Programs', href: '/training';
+},;
           { name: 'Community Forum', href: '/community' },;
           { name: 'Knowledge Base', href: '/knowledge-base' };
         ];
@@ -274,32 +275,19 @@ interface EnhancedSidebar2025Props {
 ];
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   isOpen: boolean;
-  onClose: ()  => void}
+  onClose: ()               => void}
 
-export default function EnhancedSidebar2025(...args[]):  {
+export default function EnhancedSidebar2025(...args[]: any):  {
+
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
 
-<<<<<<< HEAD
-  const toggleSection = (sectionTitle: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const newExpanded = new Set(expandedSections);
-    if (newExpanded.has(sectionTitle)) {
-<<<<<<< HEAD
-      newExpanded.delete(sectionTitle);
-    } else {
-      newExpanded.add(sectionTitle);
-
-    setExpandedSections(newExpanded);
-  };
-=======
       newExpanded.delete(sectionTitle)} else {
+
       newExpanded.add(sectionTitle)}
     setExpandedSections(newExpanded)};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
   const filteredServices = sidebarSections.flatMap(section =>;
     section.items.flatMap(item =>;
@@ -310,39 +298,23 @@ export default function EnhancedSidebar2025(...args[]):  {
     );
   );
 
-<<<<<<< HEAD
-  const toggleItem = (itemName: string) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const newExpanded = new Set(expandedItems);
-    if (newExpanded.has(itemName)) {
-<<<<<<< HEAD
-      newExpanded.delete(itemName);
-    } else {
-      newExpanded.add(itemName);
-
-    setExpandedItems(newExpanded);
-  };
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-=======
       newExpanded.delete(itemName)} else {
+
       newExpanded.add(itemName)}
     setExpandedItems(newExpanded)};
 
   useEffect(() => {
+
     if (isOpen) {
+
       document.body.style.overflow = 'hidden'} else {
+
       document.body.style.overflow = 'unset'}
 ;
     return () => {;
       document.body.style.overflow = 'unset'}}, [isOpen]);
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
-  const isActive = (href: string)  => router.pathname === href;
+  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;
 
   return (
     <>
@@ -365,6 +337,7 @@ export default function EnhancedSidebar2025(...args[]):  {
         initial={{ x: '-100%' }}
         animate={{ x: isOpen ? 0 : '-100%' }}
         transition = {
+
   { type: 'spring', damping: 25,
   stiffness: 200 
 
@@ -441,6 +414,7 @@ export default function EnhancedSidebar2025(...args[]):  {
                 </div>
                 <ChevronDown
                   className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${
+
                     expandedSections.has(section.title) ? 'rotate-180' : ''
                   }`}
                 />
@@ -450,6 +424,7 @@ export default function EnhancedSidebar2025(...args[]):  {
                 {expandedSections.has(section.title) && (
                   <motion.div
                     initial = {
+
   { opacity: 0,
   height: 0 
 
@@ -460,6 +435,7 @@ export default function EnhancedSidebar2025(...args[]):  {
 
 }}
                     animate = {
+
   { opacity: 1,
   height: 'auto' 
 
@@ -470,6 +446,7 @@ export default function EnhancedSidebar2025(...args[]):  {
 
 }}
                     exit = {
+
   { opacity: 0,
   height: 0 
 
@@ -500,6 +477,7 @@ export default function EnhancedSidebar2025(...args[]):  {
                           {item.subItems && item.subItems.length > 0 && (
                             <ChevronRight
                               className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${
+
                                 expandedItems.has(item.name) ? 'rotate-90' : ''
                               }`}
                             />
@@ -512,6 +490,7 @@ export default function EnhancedSidebar2025(...args[]):  {
                             {expandedItems.has(item.name) && (
                               <motion.div
                                 initial = {
+
   { opacity: 0,
   height: 0 
 
@@ -522,6 +501,7 @@ export default function EnhancedSidebar2025(...args[]):  {
 
 }}
                                 animate = {
+
   { opacity: 1,
   height: 'auto' 
 
@@ -532,6 +512,7 @@ export default function EnhancedSidebar2025(...args[]):  {
 
 }}
                                 exit = {
+
   { opacity: 0,
   height: 0 
 
@@ -599,23 +580,10 @@ export default function EnhancedSidebar2025(...args[]):  {
                 Contact Us
                 <ChevronRight className="w-4 h-4" />
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </>
-  )};
-=======;
             </div>;
           </div>;
         </div>;
       </motion.div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}}}}}}}</section></motion.div>}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

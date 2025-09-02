@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone import { Link } from 'react-router-dom';
-=======
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
-import { RefreshCw, TrendingUp, BarChart3, Settings, Users, Shield, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, Database, Calculator, PieChart, Globe, Clock, Zap, Eye, Brain, Cpu, Cloud, Smartphone  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function DigitalTransformation(...args: []):  {
   return (
@@ -57,7 +50,7 @@ export default function DigitalTransformation(...args: []):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -100,13 +93,8 @@ export default function DigitalTransformation(...args: []):  {
                   icon: TrendingUp,
                   title: "Data Analytics",
                   description: "Leverage data insights for informed decision-making and optimization."
-<<<<<<< HEAD
-
-              ].map((feature, index) => (
-=======
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +108,7 @@ export default function DigitalTransformation(...args: []):  {
         </section>
 
         {/* Transformation Areas Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -168,13 +156,8 @@ export default function DigitalTransformation(...args: []):  {
                   description: "Ensure digital security and regulatory compliance.",
                   icon: Shield,
                   benefits: ["Cybersecurity", "Data protection", "Compliance frameworks"]
-<<<<<<< HEAD
-
-              ].map((area, index) => (
-=======
                 }
               ].map((area, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <area.icon className="w-6 h-6 text-white" />
@@ -196,7 +179,7 @@ export default function DigitalTransformation(...args: []):  {
         </section>
 
         {/* Technology Stack Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -244,13 +227,8 @@ export default function DigitalTransformation(...args: []):  {
                   description: "Advanced cybersecurity and compliance solutions.",
                   icon: Shield,
                   features: ["Zero-trust security", "Compliance automation", "Threat detection"]
-<<<<<<< HEAD
-
-              ].map((tech, index) => (
-=======
                 }
               ].map((tech, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">
                     <tech.icon className="w-6 h-6 text-white" />
@@ -272,7 +250,7 @@ export default function DigitalTransformation(...args: []):  {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -324,7 +302,7 @@ export default function DigitalTransformation(...args: []):  {
         </section>
 
         {/* Implementation Process Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -356,13 +334,8 @@ export default function DigitalTransformation(...args: []):  {
                   step: "04",
                   title: "Optimization",
                   description: "Continuously monitor, optimize, and scale digital capabilities."
-<<<<<<< HEAD
-
-              ].map((step, index) => (
-=======
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -376,7 +349,7 @@ export default function DigitalTransformation(...args: []):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10">
+        <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business?
@@ -395,16 +368,6 @@ export default function DigitalTransformation(...args: []):  {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;
@@ -413,6 +376,5 @@ export default function DigitalTransformation(...args: []):  {
         </section>;
       </div>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}

@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen import { SEO } from '@/components/SEO';
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { Calendar, Users, Clock, CheckCircle, Shield, Zap, BarChart3, Smartphone, Globe, TrendingUp, Target, Bell, Settings, FileText, Database, Cloud, Server, Award, BookOpen  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { SEO  } from '@/src/src/components/SEO';
 
 export default function EmployeeSchedulingSaaS(...args: []):  {
   const features = [
@@ -36,15 +28,6 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
     {
       icon: Smartphone,
       title: "Mobile App",
-<<<<<<< HEAD
-      description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out."
-    },
-    {
-      icon: Globe,
-      title: "Multi-location Support",
-      description: "Manage schedules across multiple locations, departments, and time zones seamlessly."
-
-=======
       description: "Full-featured mobile app for employees to view schedules, request time off, and clock in/out.";
     },;
     {;
@@ -52,7 +35,6 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       title: "Multi-location Support",;
       description: "Manage schedules across multiple locations, departments, and time zones seamlessly.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const schedulingCapabilities = [
@@ -79,15 +61,6 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
     {
       icon: Settings,
       title: "Custom Rules",
-<<<<<<< HEAD
-      description: "Configurable business rules for scheduling, overtime, and compliance"
-    },
-    {
-      icon: FileText,
-      title: "Compliance Tracking",
-      description: "Ensure compliance with labor laws, break requirements, and overtime regulations"
-
-=======
       description: "Configurable business rules for scheduling, overtime, and compliance";
     },;
     {;
@@ -95,7 +68,6 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       title: "Compliance Tracking",;
       description: "Ensure compliance with labor laws, break requirements, and overtime regulations";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -139,15 +111,6 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
         "Unlimited employees",
         "Custom scheduling algorithms",
         "Advanced compliance tools",
-<<<<<<< HEAD
-        "White-label options",
-        "Dedicated account manager",
-        "Custom training",
-        "On-premise options"
-      ],
-      popular: false
-
-=======
         "White-label options",;
         "Dedicated account manager",;
         "Custom training",;
@@ -155,7 +118,6 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       ],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -172,15 +134,6 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
     {
       title: "Optimize Labor Costs",
       description: "Reduce overtime costs and optimize staffing levels with data-driven insights.",
-<<<<<<< HEAD
-      icon: TrendingUp
-    },
-    {
-      title: "Ensure Compliance",
-      description: "Automatically comply with labor laws and avoid costly violations.",
-      icon: Shield
-
-=======
       icon: TrendingUp;
     },;
     {;
@@ -188,7 +141,6 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       description: "Automatically comply with labor laws and avoid costly violations.",;
       icon: Shield;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const industries = [
@@ -215,15 +167,6 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
     {
       icon: Settings,
       title: "Services",
-<<<<<<< HEAD
-      description: "Manage appointment-based scheduling for professional services"
-    },
-    {
-      icon: BarChart3,
-      title: "Construction",
-      description: "Coordinate complex project schedules with multiple teams and locations"
-
-=======
       description: "Manage appointment-based scheduling for professional services";
     },;
     {;
@@ -231,18 +174,12 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
       title: "Construction",;
       description: "Coordinate complex project schedules with multiple teams and locations";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="Employee Scheduling SaaS - Zion Tech Group"
-=======
       <SEO 
         title = "Employee Scheduling SaaS - Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Professional employee scheduling platform with AI-powered automation, time tracking, and comprehensive workforce management tools."
         canonical="/services/employee-scheduling-saas"
       />
@@ -305,7 +242,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -315,15 +252,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Everything you need to manage your workforce efficiently and effectively
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-=======
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -363,14 +294,14 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Scheduling Capabilities Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -380,15 +311,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Intelligent tools that make scheduling simple and efficient
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {schedulingCapabilities.map((capability, index) => (
-=======
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {schedulingCapabilities.map((capability, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -428,14 +353,14 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{capability.title}</h3>
                   <p className="text-gray-300">{capability.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Industries Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -445,15 +370,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Flexible scheduling solutions that adapt to your business needs
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industries.map((industry, index) => (
-=======
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -493,14 +412,14 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{industry.title}</h3>
                   <p className="text-gray-300">{industry.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -510,15 +429,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Professional scheduling tools that transform how you manage your workforce
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
-=======
             
             <div className="grid md: grid-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -560,14 +473,14 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                     <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
                     <p className="text-gray-300">{benefit.description}</p>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -577,15 +490,9 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                 Choose the scheduling plan that fits your business size and needs
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-=======
             
             <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -624,7 +531,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                       : 'border-slate-700'
                   }`}
 
-                  {plan.popular && (
+                  {plan.popular && (;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-orange-500 to-red-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
@@ -659,7 +566,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
                     }`}
 
                     Get Started
-                  </Link>
+                  </Link>;
                 </motion.div>
               ))}
             </div>
@@ -667,7 +574,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-orange-600/20 to-red-600/20">
+        <section className="py-20 bg-gradient-to-r from-orange-600/20 to-red-600/20">;
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
               initial = {

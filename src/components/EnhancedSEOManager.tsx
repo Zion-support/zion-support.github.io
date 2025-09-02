@@ -17,7 +17,7 @@ interface EnhancedSEOManagerProps {
 const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, children }) => {
   useEffect(() => {
     // Update meta tags dynamically
-    const updateMetaTags = () => {;
+    const updateMetaTags: React.FC = ($2) => {;
       // Update title;
       document.title = seoData.title;
 
@@ -40,7 +40,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       metaKeywords.setAttribute('content', seoData.keywords.join(', '));
       
       // Update Open Graph tags
-      const updateOGTag = (property: string, content: string) => {;
+      const updateOGTag: React.FC = ($2) => {;
         let ogTag = document.querySelector(`meta[property="${property}"]`);
         if (!ogTag) {
           ogTag = document.createElement('meta');
@@ -57,7 +57,7 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
       updateOGTag('og:url', seoData.canonicalUrl || window.location.href);
       
       // Update Twitter Card tags
-      const updateTwitterTag = (name: string, content: string) => {;
+      const updateTwitterTag: React.FC = ($2) => {;
         let twitterTag = document.querySelector(`meta[name="${name}"]`);
         if (!twitterTag) {
           twitterTag = document.createElement('meta');
@@ -109,59 +109,17 @@ const EnhancedSEOManager: React.FC<EnhancedSEOManagerProps> = ({ seoData, childr
     <>
       <Helmet>
         <title>{seoData.title}</title>
-<<<<<<< HEAD
-        <meta name="description" content={seoData.description} />
-        <meta name="keywords" content={seoData.keywords.join(', ')} />
-
-        {/* Open Graph */}
-        <meta property="og:title" content={seoData.title} />
-        <meta property="og:description" content={seoData.description} />
-        <meta property="og:type" content={seoData.ogType || 'website'} />
-        {seoData.ogImage && <meta property="og:image" content={seoData.ogImage} />}
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={seoData.title} />
-        <meta name="twitter:description" content={seoData.description} />
-        {seoData.ogImage && <meta name="twitter:image" content={seoData.ogImage} />}
-
-        {/* Canonical URL */}
-        {seoData.canonicalUrl && <link rel="canonical" href={seoData.canonicalUrl} />}
-
-        {/* Structured Data */}
-        {seoData.structuredData && (
-          <script type="application/ld+json">
-            {JSON.stringify(seoData.structuredData)}
-          </script>
-        )}
-
-        {/* Performance Optimizations */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-
-        {/* Security */}
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';" />
-        <meta name="referrer" content="strict-origin-when-cross-origin" />
-      </Helmet>
-
-      {children}
-    </>
-  );
-};
-
-export default EnhancedSEOManager;}}}}
-=======
         <meta name = "description" content={seoData.description} />
         <meta name="keywords" content = {
   seoData.keywords.join(',
-  ')
+  ');
 
 
 
 
 
 
-} />
+} />;
         <meta name="robots" content="index, follow" />;
         <meta name="author" content="Zion Tech Group" />;
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />;
@@ -196,4 +154,3 @@ export default EnhancedSEOManager;}}}}
 export default EnhancedSEOManager;
 export default function
     return;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

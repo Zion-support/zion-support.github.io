@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon import { Link } from 'react-router-dom';
-=======
 import React from 'react.ts';
 import { Helmet  } from 'react-helmet-async.ts';
-import { Lock, Shield, Zap, Settings, Users, Globe, ArrowRight, CheckCircle, Play, Download, Mail, Target, Activity, BarChart3, Database, Link as LinkIcon  } from 'lucide-react';
 import { Link  } from 'react-router-dom.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 export default function BlockchainEnterpriseSolutions(...args: []):  {
   return (
@@ -57,7 +50,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -100,13 +93,8 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   icon: Globe,
                   title: "Cross-border Solutions",
                   description: "Global blockchain networks for international business operations."
-<<<<<<< HEAD
-
-              ].map((feature, index) => (
-=======
                 }
               ].map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -120,7 +108,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -168,13 +156,8 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   description: "Peer-to-peer energy trading and renewable energy certificates.",
                   icon: Activity,
                   benefits: ["P2P trading", "Renewable certificates", "Grid management"]
-<<<<<<< HEAD
-
-              ].map((useCase, index) => (
-=======
                 }
               ].map((useCase, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
@@ -196,7 +179,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* Technology Stack Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -252,7 +235,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* DeFi Solutions Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -306,7 +289,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* Implementation Process Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -338,13 +321,8 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
                   step: "04",
                   title: "Deployment",
                   description: "Deploy and integrate with existing enterprise systems."
-<<<<<<< HEAD
-
-              ].map((step, index) => (
-=======
                 }
               ].map((step, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-white font-bold text-xl">{step.step}</span>
@@ -358,7 +336,7 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-yellow-500/10 to-orange-600/10">
+        <section className="py-20 bg-gradient-to-r from-yellow-500/10 to-orange-600/10">;
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Transform Your Business with Blockchain?
@@ -377,16 +355,6 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-=======
               >
                 Explore All Services;
               </Link>;
@@ -395,6 +363,5 @@ export default function BlockchainEnterpriseSolutions(...args: []):  {
         </section>;
       </div>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}

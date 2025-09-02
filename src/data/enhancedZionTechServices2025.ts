@@ -1,4 +1,4 @@
-import { ProductListing } from "@/types/listings";
+import { ProductListing } from '@/src/src/types/listings';
 
 // Enhanced Zion Tech Group Services 2025 - Real Micro SAAS, IT & AI Solutions
 export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
@@ -774,15 +774,6 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       currency: "$",
       features: ["Autonomous research", "Data analysis", "Report generation", "Custom methodologies", "24/7 support"]
     },
-<<<<<<< HEAD
-    link: "https://ziontechgroup.com/ai-research-assistant",
-    contactInfo: {
-      phone: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"
-
-
-=======
     link: "https://ziontechgroup.com/ai-research-assistant",;
     contactInfo: {;
       phone: "+1 302 464 0950",;
@@ -790,38 +781,31 @@ export const ENHANCED_ZION_TECH_SERVICES_2025: ProductListing[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709";
     };
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 // Helper functions
-export const getEnhancedServiceById = (id: string) => {;
+export const getEnhancedServiceById: React.FC = ($2) => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.find(service => service.id === id);
 };
 
-export const getEnhancedServicesByCategory = (category: string) => {;
+export const getEnhancedServicesByCategory: React.FC = ($2) => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.category === category);
 };
 
-export const getEnhancedServiceCategories = () => {;
+export const getEnhancedServiceCategories: React.FC = ($2) => {;
   return [...new Set(ENHANCED_ZION_TECH_SERVICES_2025.map(service => service.category))];
 };
 
-export const getFeaturedEnhancedServices = () => {;
+export const getFeaturedEnhancedServices: React.FC = ($2) => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.featured);
 };
 
-<<<<<<< HEAD
-export const getEnhancedServicesByPriceRange = (minPrice: number, maxPrice: number) => {
-  return ENHANCED_ZION_TECH_SERVICES_2025.filter(service =>
-    service.price >= minPrice && service.price <= maxPrice
-=======
-export const getEnhancedServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
+export const getEnhancedServicesByPriceRange: React.FC = ($2) => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => ;
     service.price >= minPrice && service.price <= maxPrice;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 };
 
-export const getEnhancedServicesByAIScore = (minScore: number) => {;
+export const getEnhancedServicesByAIScore: React.FC = ($2) => {;
   return ENHANCED_ZION_TECH_SERVICES_2025.filter(service => service.aiScore >= minScore);
 };}}}}}}}}}}}}}}}}

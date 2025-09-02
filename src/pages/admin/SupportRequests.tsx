@@ -1,19 +1,15 @@
 import React, { useState } from 'react';
 
 import { useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-<<<<<<< HEAD
-import { Search, Filter import { SEO } from "@/components/SEO";
-=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/src/src/components/ui/card';
+import { Input } from '@/src/src/components/ui/input';
+import { Button } from '@/src/src/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/src/src/components/ui/tabs';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/src/src/components/ui/select';
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/src/src/components/ui/table';
+import { Badge } from '@/src/src/components/ui/badge';
 import { Search, Filter } from "lucide-react";
-import SEO from "@/components/SEO";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import SEO from '@/src/src/components/SEO';
 
 // Mock data for support requests
 const MOCK_SUPPORT_REQUESTS = [
@@ -87,15 +83,6 @@ const MOCK_SUPPORT_REQUESTS = [
     id: "SR-1007",
     user: "jamie.taylor@tech.org",
     userId: "user-345",
-<<<<<<< HEAD
-    issue: "Cannot upload portfolio images",
-    status: "resolved",
-    priority: "medium",
-    createdAt: "2023-12-10T15:10:00Z",
-    lastUpdated: "2023-12-13T11:25:00Z",
-    category: "profile"
-
-=======
     issue: "Cannot upload portfolio images",;
     status: "resolved",;
     priority: "medium",;
@@ -103,7 +90,6 @@ const MOCK_SUPPORT_REQUESTS = [
     lastUpdated: "2023-12-13T11:25:00Z",;
     category: "profile";
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
 export default function SupportRequests() {
@@ -120,34 +106,22 @@ export default function SupportRequests() {
         !request.user.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !request.id.toLowerCase().includes(searchQuery.toLowerCase())) {
       return false;
-<<<<<<< HEAD
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Apply status filter
     if (statusFilter && request.status !== statusFilter) {
       return false;
-<<<<<<< HEAD
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Apply priority filter
     if (priorityFilter && request.priority !== priorityFilter) {
       return false;
-<<<<<<< HEAD
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
       return false;
-<<<<<<< HEAD
-=======
     }
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return true;
   });
@@ -158,7 +132,7 @@ export default function SupportRequests() {
   const resolvedCount = MOCK_SUPPORT_REQUESTS.filter(r => r.status === 'resolved').length;
   const totalCount = MOCK_SUPPORT_REQUESTS.length;
 
-  const resetFilters = () => {
+  const resetFilters: React.FC = ($2) => {
     setSearchQuery("");
     setStatusFilter(null);
     setPriorityFilter(null);
@@ -166,11 +140,7 @@ export default function SupportRequests() {
   };
 
   return (
-<<<<<<< HEAD
-    <>
-=======
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       <SEO
         title="Support Requests | Admin Dashboard"
         description="Manage and track user support requests and issues"
@@ -377,10 +347,6 @@ export default function SupportRequests() {
           </TabsContent>
         </Tabs>
       </div>
-<<<<<<< HEAD
-    </>
-=======
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 </Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card></Card>}}}}}}}

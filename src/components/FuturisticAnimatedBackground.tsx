@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-
-  return (
-    <div className = "fixed inset-0 -z-10 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(6,182,212,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.1),transparent_50%)]"></div>
-      </div>;
-    </div>;
-  )};
-=======
 import React, { useEffect, useRef } from 'react';
 
 export const FuturisticAnimatedBackground: React.FC = () => {;
@@ -24,7 +11,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     if (!ctx) return;
 
     // Set canvas size
-    const resizeCanvas = () => {;
+    const resizeCanvas: React.FC = ($2) => {;
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
@@ -74,7 +61,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     }> = [];
 
     // Create particles
-    const createParticle = () => {;
+    const createParticle: React.FC = ($2) => {;
       const x = Math.random() * canvas.width;
       const y = Math.random() * canvas.height;
       const angle = Math.random() * Math.PI * 2;
@@ -93,7 +80,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     };
 
     // Update and draw particles
-    const animate = () => {;
+    const animate: React.FC = ($2) => {;
       time += 0.01;
 
       // Clear canvas with fade effect
@@ -234,7 +221,6 @@ export const FuturisticAnimatedBackground: React.FC = () => {;
     />;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default FuturisticAnimatedBackground;
 }}}}}}

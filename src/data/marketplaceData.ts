@@ -1,5 +1,18 @@
 export interface MarketplaceItem {
 
+
+
+
+
+
+
+
+
+
+
+
+
+
   id: string;
   title: string;
   category: 'products' | 'talent' | 'equipment' | 'services';
@@ -12,19 +25,27 @@ export interface MarketplaceItem {
   image: string;
   tags: string[];
   featured: boolean;
-seller: {
+seller: {;
     name: string;
     rating: number;
-    verified: boolean};
+verified: boolean;
+
+
+
+
+
+
+
+
+
+
+
+
+};
   location: string;
   availability: 'available' | 'limited' | 'out-of-stock';
   deliveryTime: string;
-<<<<<<< HEAD
-  warranty: string;
-=======
   warranty: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-
 export const marketplaceItems: MarketplaceItem[] = [
   {
     id: 'ai-server-cluster',
@@ -36,13 +57,8 @@ export const marketplaceItems: MarketplaceItem[] = [
     reviews: 127,
     views: 2847,
     likes: 156,
-<<<<<<< HEAD
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
-    tags['AI', 'High Performance', 'Scalable', 'GPU'],
-=======
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib = rb-4.0.3&auto=format&fit=crop&w=2072&q=80',
     tags: ['AI', 'High Performance', 'Scalable', 'GPU'],
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     featured: true,
     seller: {
       name: 'TechCorp Solutions',
@@ -162,15 +178,6 @@ export const marketplaceItems: MarketplaceItem[] = [
     seller: {
       name: 'DataGenius Consulting',
       rating: 4.7,
-<<<<<<< HEAD
-      verified: true
-    },
-    location: 'Remote',
-    availability: 'available',
-    deliveryTime: 'Immediate',
-    warranty: 'N/A'
-
-=======
       verified: true;
     },;
     location: 'Remote',;
@@ -178,55 +185,41 @@ export const marketplaceItems: MarketplaceItem[] = [
     deliveryTime: 'Immediate',;
     warranty: 'N/A';
   };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export const marketplaceCategories = [
   {
-    id: 'products',
+    id: anyanyanyanyanyanyanyanyanyanyanyanyany'products',
     name: 'Products',
     description: 'Hardware and software solutions',
-    count: marketplaceItems.filter(item  => item.category === 'products').length
+    count: marketplaceItems.filter(item               => item.category === 'products').length
   },
   {
-    id: 'talent',
+    id: anyanyanyanyanyanyanyanyanyanyanyanyany'talent',
     name: 'Talent',
     description: 'Expert professionals and teams',
-    count: marketplaceItems.filter(item  => item.category === 'talent').length
+    count: marketplaceItems.filter(item               => item.category === 'talent').length
   },
   {
-    id: 'equipment',
+    id: anyanyanyanyanyanyanyanyanyanyanyanyany'equipment',
     name: 'Equipment',
     description: 'Computing and networking equipment',
-    count: marketplaceItems.filter(item  => item.category === 'equipment').length
+    count: marketplaceItems.filter(item               => item.category === 'equipment').length
   },
   {
-<<<<<<< HEAD
-    id: 'services',
-    name: 'Services',
-    description: 'Professional services and consulting',
-<<<<<<< HEAD
-    count: marketplaceItems.filter(item => item.category === 'services').length
-
-=======
-    count: marketplaceItems.filter(item  => item.category === 'services').length
+    count: anyanyanyanyanyanyanyanyanyanyanyanyanymarketplaceItems.filter(item               => item.category === 'services').length
   };
-=======;
-    id: 'services',;
+    id: anyanyanyanyanyanyanyanyanyanyanyanyany'services',;
     name: 'Services',;
     description: 'Professional services and consulting',;
-    count: marketplaceItems.filter(item => item.category === 'services').length;
+    count: marketplaceItems.filter(item              => item.category === 'services').length;
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
-
 export const marketplaceFilters = [
   {
-    title: 'Category',
+    title: anyanyanyanyanyanyanyanyanyanyanyanyany'Category',
     key: 'category',
     type: 'checkbox' as const,
-    options: marketplaceCategories.map(cat  => ({
+    options: marketplaceCategories.map(cat               => ({
       value: cat.id,
       label: cat.name,
       count: cat.count
@@ -257,24 +250,11 @@ export const marketplaceFilters = [
     title: 'Availability',
     key: 'availability',
     type: 'checkbox' as const,
-<<<<<<< HEAD
-    options[
-      { value: 'available', label: 'Available' },
-      { value: 'limited', label: 'Limited' },
-      { value: 'out-of-stock', label: 'Out of Stock' }
-    ]
-<<<<<<< HEAD
-
-];}}}}
-=======
   }
-=======;
     options: [;
       { value: 'available', label: 'Available' },;
       { value: 'limited', label: 'Limited' },;
       { value: 'out-of-stock', label: 'Out of Stock' };
     ];
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 ];
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

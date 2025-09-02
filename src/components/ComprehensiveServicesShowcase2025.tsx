@@ -402,12 +402,8 @@ import {
   Psi,
   Omega,
   Crown
-<<<<<<< HEAD
-import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from '../data/innovativeMicroSaasServices2025';
-=======
 } from 'lucide-react';
 import { INNOVATIVE_MICRO_SAAS_SERVICES_2025 } from "../data/innovativeMicroSaasServices2025";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface ServiceContact {
   mobile: string;
@@ -462,13 +458,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
-      case 'name':
+      case 'name':;
         return a.title.localeCompare(b.title);
-      case 'innovation':
-<<<<<<< HEAD
-        const innovationOrder = { 'Advanced': 1, 'Cutting-edge': 2, 'Revolutionary': 3 };
-        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) -
-=======
+      case 'innovation':;
         const innovationOrder = {
   'Advanced': 1, 'Cutting-edge': 2,;
   ;
@@ -484,36 +476,15 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 
 };
-        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+        return (innovationOrder[a.innovationLevel as keyof typeof innovationOrder] || 0) - ;
                (innovationOrder[b.innovationLevel as keyof typeof innovationOrder] || 0);
-      case 'category':
+      case 'category':;
         return a.category.localeCompare(b.category);
-      default:
+      default:;
         return 0;
 
   });
 
-<<<<<<< HEAD
-  const handleServiceClick = (service: any) => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    setSelectedService(service);
-  };
-
-  const closeModal = () => {;
-    setSelectedService(null);
-  };
-
-  const containerVariants = {
-<<<<<<< HEAD
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-
-
-=======
     hidden: { opacity: 0 },;
     visible: {;
       opacity: 1,;
@@ -521,7 +492,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
         staggerChildren: 0.1;
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
   const itemVariants = {
@@ -535,15 +505,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
 },
     visible: {
-<<<<<<< HEAD
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut"
-
-
-=======
       y: 0,;
       opacity: 1,;
       transition: {;
@@ -551,10 +512,9 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
         ease: "easeOut";
       };
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   };
 
-  const getCategoryIcon = (category: string) => {;
+  const getCategoryIcon: React.FC = ($2) => {;
     switch (category) {;
       case 'AI & Automation': return <Bot className="w-5 h-5" />;
       case 'AI & Analytics': return <BarChart3 className="w-5 h-5" />;
@@ -571,7 +531,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 
   };
 
-  const getInnovationIcon = (level: string) => {;
+  const getInnovationIcon: React.FC = ($2) => {;
     switch (level) {;
       case 'Advanced': return <Star className="w-4 h-4 text-yellow-500" />;
       case 'Cutting-edge': return <Zap className="w-4 h-4 text-blue-500" />;
@@ -634,10 +594,10 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>;
 
       {/* Search and Filters */}
-      <section className="relative px-4 sm:px-6 lg:px-8 mb-12">
+      <section className="relative px-4 sm:px-6 lg:px-8 mb-12">;
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial = {
@@ -693,7 +653,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   onChange={(e) => setActiveCategory(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
-                  {categories.map((category) => (
+                  {categories.map((category) => (;
                     <option key={category.id} value={category.id}>
                       {category.icon} {category.name} ({category.count})
                     </option>
@@ -709,7 +669,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   onChange={(e) => setInnovationLevel(e.target.value)}
                   className="w-full bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-zion-cyan/50 focus:border-zion-cyan appearance-none"
 
-                  {innovationLevels.map((level) => (
+                  {innovationLevels.map((level) => (;
                     <option key={level.id} value={level.id}>
                       {level.icon} {level.name}
                     </option>
@@ -734,7 +694,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               </div>
 
               {/* View Mode Toggle */}
-              <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">
+              <div className="flex bg-zion-slate-900/50 border border-zion-slate-600 rounded-xl p-1">;
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`flex-1 px-3 py-2 rounded-lg transition-all ${
@@ -759,7 +719,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
             </div>
 
             {/* Price Range Slider */}
-            <div className="mt-6">
+            <div className="mt-6">;
               <label className="block text-sm font-medium text-zion-slate-300 mb-2">
                 Price Range: ${priceRange[0]} - ${priceRange[1]}
               </label>
@@ -805,7 +765,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
       </section>
 
       {/* Services Grid */}
-      <section className="relative px-4 sm:px-6 lg:px-8 pb-20">
+      <section className="relative px-4 sm:px-6 lg:px-8 pb-20">;
         <div className="max-w-7xl mx-auto">
           {/* Results Count */}
           <div className="mb-8">
@@ -823,7 +783,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
               ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
               : 'space-y-4'
 
-            {sortedServices.map((service) => (
+            {sortedServices.map((service) => (;
               <motion.div
                 key={service.id}
                 variants={itemVariants}
@@ -832,7 +792,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                 }`}
                 onClick={() => handleServiceClick(service)}
 
-                {viewMode === 'grid' ? (
+                {viewMode === 'grid' ? (;
                   // Grid View
                   <>
                     {/* Header */}
@@ -892,7 +852,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                       <ArrowRight className="w-4 h-4" />
                     </button>
                   </>
-                ) : (
+                ) : (;
                   // List View
                   <>
                     <div className="flex-1">
@@ -966,11 +926,6 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
                   setPriceRange([0,
   10000]);
                   setInnovationLevel('all');
-<<<<<<< HEAD
-                }}
-                className="bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
-
-=======
                 
 
 
@@ -981,8 +936,7 @@ const ComprehensiveServicesShowcase2025: React.FC = () => {;
 }}
                 className = "bg-zion-cyan text-white px-6 py-3 rounded-xl font-medium hover:bg-zion-cyan/90 transition-colors"
               >
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-                Clear All Filters
+                Clear All Filters;
               </button>
             </motion.div>
           )}

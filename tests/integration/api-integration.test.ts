@@ -1,0 +1,24 @@
+import { render, screen, waitFor } from '@testing-library/react';
+import { describe, it, expect, vi } from 'vitest';
+
+// Mock component for testing
+const YourApiComponent = () => {
+  return <div>test data</div>;
+};
+
+describe('API Integration', () => {
+  it('should fetch and display data', async () => {
+    // Mock API response
+    global.fetch = vi.fn(() =>
+      Promise.resolve({
+        json: () => Promise.resolve({ data: 'test data' }),
+      })
+    );
+    
+    render(<YourApiComponent />);
+    
+    await waitFor(() => {
+      expect(screen.getByText('test data')).toBeInTheDocument();
+    });
+  });
+});

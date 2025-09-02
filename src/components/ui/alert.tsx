@@ -1,14 +1,19 @@
-import React from 'react';
-import { cn } from '../../lib/utils';
+import React from 'react.ts';
 
-interface AlertProps {
+interface AlertProps extends React.PropsWithChildren<{
+}> {
+
   children: React.ReactNode;
-  className?: string;
+  className?: string}
+
 }
 
 interface AlertTitleProps {
   children: React.ReactNode;
   className?: string;
+=======
+  className?: string}
+
 }
 
 interface AlertDescriptionProps {

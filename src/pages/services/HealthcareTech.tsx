@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-import React from 'react.ts';
-import { SEO  } from "../../components/SEO";
-import { motion  } from 'framer-motion.ts';
-import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain  } from 'lucide-react';
-=======
 import React from 'react';
 import { SEO } from "../../components/SEO";
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain export default function HealthcareTech() {
-=======
-import { Heart, Shield, Database, Zap, Globe, Server, BarChart3, Settings, Users, Network, Smartphone, Tablet, Laptop, Cloud, RefreshCw, TrendingUp, AlertTriangle, Activity, FileText, CheckCircle, Stethoscope, Microscope, Pill, Brain } from 'lucide-react';
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default function HealthcareTech(...args: []):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: Heart,
@@ -45,15 +33,6 @@ export default function HealthcareTech(...args: []):  {
       title: 'AI Diagnostics',
       description: 'Machine learning algorithms for accurate disease detection',
       color: 'from-purple-500 to-pink-500'
-<<<<<<< HEAD
-    },
-    {
-      icon: Activity,
-      title: 'Predictive Analytics',
-      description: 'Early warning systems and preventive care insights',
-      color: 'from-indigo-500 to-purple-500'
-
-=======
     },;
     {;
       icon: Activity,;
@@ -61,7 +40,6 @@ export default function HealthcareTech(...args: []):  {
       description: 'Early warning systems and preventive care insights',;
       color: 'from-indigo-500 to-purple-500';
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const services = [
@@ -82,15 +60,6 @@ export default function HealthcareTech(...args: []):  {
       description: 'Advanced analytics for population health and clinical insights',
       price: 'From $20,000',
       features: ['Population health', 'Clinical analytics', 'Predictive modeling', 'Reporting tools']
-<<<<<<< HEAD
-    },
-    {
-      title: 'Medical Device Integration',
-      description: 'IoT integration for medical devices and wearables',
-      price: 'From $18,000',
-      features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems']
-
-=======
     },;
     {;
       title: 'Medical Device Integration',;
@@ -98,7 +67,6 @@ export default function HealthcareTech(...args: []):  {
       price: 'From $18,000',;
       features: ['Device connectivity', 'Data collection', 'Real-time monitoring', 'Alert systems'];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const applications = [;
@@ -111,13 +79,8 @@ export default function HealthcareTech(...args: []):  {
   ];
 
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO
-=======
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         title="Healthcare Technology Services - Zion Tech Group"
         description="Transform healthcare delivery with cutting-edge technology solutions. From AI diagnostics to telemedicine, we help healthcare providers deliver better patient care."
       />
@@ -181,12 +144,12 @@ export default function HealthcareTech(...args: []):  {
                 Learn More
               </motion.button>
             </div>
-          </motion.div>
+          </motion.div>;
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -262,14 +225,14 @@ export default function HealthcareTech(...args: []):  {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-slate-300">{feature.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Services & Pricing */}
-      <section className="py-20 bg-slate-800/30">
+      <section className="py-20 bg-slate-800/30">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -357,7 +320,7 @@ export default function HealthcareTech(...args: []):  {
                   className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-red-500 to-pink-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-pink-600 transition-all duration-300"
 
                   Get Quote
-                </motion.button>
+                </motion.button>;
               </motion.div>
             ))}
           </div>
@@ -365,7 +328,7 @@ export default function HealthcareTech(...args: []):  {
       </section>
 
       {/* Applications */}
-      <section className="py-20">
+      <section className="py-20">;
         <div className="container mx-auto px-4">
           <motion.div
             initial = {
@@ -441,14 +404,14 @@ export default function HealthcareTech(...args: []):  {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{app.name}</h3>
                 <p className="text-sm text-slate-400">{app.description}</p>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">
+      <section className="py-20 bg-gradient-to-r from-red-600/20 to-pink-600/20">;
         <div className="container mx-auto px-4 text-center">
           <motion.div
             initial = {
@@ -492,16 +455,6 @@ export default function HealthcareTech(...args: []):  {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="px-8 py-4 border border-slate-600 text-white font-semibold rounded-lg hover:border-slate-500 hover:bg-slate-800/50 transition-all duration-300"
-<<<<<<< HEAD
-
-                View Case Studies
-              </motion.button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-=======
               >
                 View Case Studies;
               </motion.button>;
@@ -510,6 +463,5 @@ export default function HealthcareTech(...args: []):  {
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}

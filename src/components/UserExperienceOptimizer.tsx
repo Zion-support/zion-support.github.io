@@ -266,7 +266,7 @@ export function UserExperienceOptimizer({
   }, [showRealTime, isOpen, analysisComplete, generateUserBehaviors, generateUXMetrics]);
 
   // Get trend display
-  const getTrendDisplay = (trend: string, change: number) => {
+  const getTrendDisplay: React.FC = ($2) => {
     const colors = {
       up: 'text-green-600',
       down: 'text-red-600',
@@ -288,7 +288,7 @@ export function UserExperienceOptimizer({
   };
 
   // Get impact color
-  const getImpactColor = (impact: string) => {
+  const getImpactColor: React.FC = ($2) => {
     const colors = {
       high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
       medium: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
@@ -298,7 +298,7 @@ export function UserExperienceOptimizer({
   };
 
   // Get effort color
-  const getEffortColor = (effort: string) => {
+  const getEffortColor: React.FC = ($2) => {
     const colors = {
       high: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400',
       medium: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400',
@@ -308,7 +308,7 @@ export function UserExperienceOptimizer({
   };
 
   // Filter behaviors by timeframe
-  const getFilteredBehaviors = () => {
+  const getFilteredBehaviors: React.FC = ($2) => {
     const now = Date.now();
     const timeframes = {
       '1h': 3600000,

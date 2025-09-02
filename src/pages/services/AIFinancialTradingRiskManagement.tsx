@@ -1,23 +1,11 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import {
-  TrendingUp,
-  Shield,
-  Clock,
-  Zap,
-  Search,
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
-import { SEO  } from '@/components/SEO';
+import { SEO  } from '@/src/src/components/SEO';
 import { TrendingUp, 
   Shield, 
   Clock, 
   Zap, 
   Search, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   Eye,
   CheckCircle,
   ArrowRight,
@@ -31,13 +19,9 @@ import { TrendingUp,
   Activity,
   AlertTriangle,
   Target
-<<<<<<< HEAD
-export default function AIFinancialTradingRiskManagement() {
-=======
  } from 'lucide-react';
 
 export default function AIFinancialTradingRiskManagement(...args[]):  {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   const features = [
     {
       icon: TrendingUp,
@@ -62,15 +46,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
     {
       icon: Search,
       title: "Security & Compliance",
-<<<<<<< HEAD
-      description: "Enterprise-grade security with regulatory compliance and audit trails"
-    },
-    {
-      icon: Eye,
-      title: "Data Integration",
-      description: "Seamless integration with major data providers and trading platforms"
-
-=======
       description: "Enterprise-grade security with regulatory compliance and audit trails";
     },;
     {;
@@ -78,14 +53,13 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
       title: "Data Integration",;
       description: "Seamless integration with major data providers and trading platforms";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const servicePackages = [
     {
       name: "AI Trading Platform",
       price: "From $4,999/month",
-      features[
+      features[;
         "Advanced trading algorithms",
         "Real-time market data",
         "Portfolio optimization",
@@ -93,11 +67,11 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         "Multi-asset support",
         "24/7 monitoring"
       ]
-    },
+    },;
     {
       name: "Risk Management Suite",
       price: "From $2,999/month",
-      features[
+      features[;
         "Portfolio risk analysis",
         "VaR calculations",
         "Stress testing",
@@ -105,11 +79,11 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         "Compliance reporting",
         "Custom risk models"
       ]
-    },
+    },;
     {
       name: "Market Analysis Engine",
       price: "From $3,999/month",
-      features[
+      features[;
         "AI market predictions",
         "Sentiment analysis",
         "Technical indicators",
@@ -117,21 +91,12 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         "Custom research tools",
         "Real-time insights"
       ]
-    },
+    },;
     {
       name: "Quantitative Research",
       price: "From $5,999/month",
-      features[
+      features[;
         "Custom strategy development",
-<<<<<<< HEAD
-        "Advanced modeling",
-        "Performance analytics",
-        "Research reports",
-        "Expert consultation",
-        "Strategy optimization"
-      ]
-
-=======
         "Advanced modeling",;
         "Performance analytics",;
         "Research reports",;
@@ -139,7 +104,6 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         "Strategy optimization";
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const supportedAssets = [
@@ -173,13 +137,8 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="AI Financial Trading & Risk Management - Zion Tech Group"
-=======
       <SEO 
         title = "AI Financial Trading & Risk Management - Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Transform your trading operations with AI-powered algorithms, comprehensive risk management, and real-time market analysis. Maximize returns while minimizing risks."
         canonical="/services/ai-financial-trading-risk-management"
         url="https://ziontechgroup.com/services/ai-financial-trading-risk-management"
@@ -241,7 +200,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -317,14 +276,14 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Service Packages */}
-        <section className="py-20 px-6 bg-black/30">
+        <section className="py-20 px-6 bg-black/30">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -411,7 +370,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                     className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
 
                     Get Started
-                  </motion.button>
+                  </motion.button>;
                 </motion.div>
               ))}
             </div>
@@ -419,7 +378,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         </section>
 
         {/* Supported Assets */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -492,14 +451,14 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
                   <DollarSign className="w-8 h-8 text-cyan-400 mx-auto mb-3" />
                   <p className="text-white font-medium">{asset}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-6 bg-black/30">
+        <section className="py-20 px-6 bg-black/30">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -574,14 +533,14 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                     <CheckCircle className="w-6 h-6 text-white" />
                   </div>
                   <p className="text-white text-lg font-medium">{benefit}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Technologies Section */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -654,14 +613,14 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
 
                   <Zap className="w-8 h-8 text-blue-400 mx-auto mb-3" />
                   <p className="text-white font-medium">{tech}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">
+        <section className="py-20 px-6 bg-gradient-to-r from-cyan-600 to-blue-700">;
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
               initial = {
@@ -777,7 +736,7 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
         </section>
 
         {/* Contact Information */}
-        <section className="py-20 px-6">
+        <section className="py-20 px-6">;
           <div className="max-w-7xl mx-auto">
             <motion.div
               initial = {
@@ -957,23 +916,10 @@ export default function AIFinancialTradingRiskManagement(...args[]):  {
                 364 E Main St STE 1008<br />
                 Middletown DE 19709
               </p>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </motion.div>;
           </div>;
         </section>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

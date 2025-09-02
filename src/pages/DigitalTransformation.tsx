@@ -25,72 +25,14 @@ import {
   Lock,
   Eye,
   Heart
-<<<<<<< HEAD
-const DigitalTransformation = () => {
-=======
  } from 'lucide-react';
 
-<<<<<<< HEAD
-const DigitalTransformation = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  const [selectedPhase, setSelectedPhase] = useState(0);
-
-  const transformationServices = [
-    {
-      title: "Strategy & Planning",
-      description: "Comprehensive digital transformation roadmap aligned with business objectives and market opportunities.",
-      icon: Rocket,
-      features["Digital Maturity Assessment", "Technology Roadmap", "Change Management Strategy", "ROI Analysis"],
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Process Automation",
-      description: "Intelligent automation solutions that streamline operations and eliminate manual workflows.",
-      icon: Zap,
-      features["Workflow Automation", "RPA Implementation", "Process Optimization", "Performance Monitoring"],
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Technology Modernization",
-      description: "Legacy system modernization and cloud-native architecture implementation.",
-      icon: Cpu,
-      features["Legacy Migration", "Cloud Architecture", "API Development", "Microservices"],
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Data & Analytics",
-      description: "Data-driven insights and business intelligence solutions for informed decision-making.",
-      icon: Database,
-      features["Data Strategy", "Business Intelligence", "Predictive Analytics", "Data Governance"],
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Customer Experience",
-      description: "Omnichannel customer experience optimization and digital touchpoint enhancement.",
-      icon: Users,
-      features["CX Strategy", "Digital Channels", "Personalization", "Customer Journey Mapping"],
-      color: "from-indigo-500 to-purple-500"
-    },
-    {
-      title: "Security & Compliance",
-<<<<<<< HEAD
-      description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",
-      icon: Shield,
-      features["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],
-      color: "from-yellow-500 to-orange-500"
-<<<<<<< HEAD
-
-=======
     };
-=======;
       description: "Enterprise-grade security and regulatory compliance for digital transformation initiatives.",;
       icon: Shield,;
       features: ["Security Architecture", "Compliance Frameworks", "Risk Management", "Security Audits"],;
       color: "from-yellow-500 to-orange-500";
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const transformationPhases = [
@@ -99,56 +41,46 @@ const DigitalTransformation = () => {;
       title: "Discovery & Assessment",
       description: "Evaluate current state, identify opportunities, and assess digital maturity",
       duration: "2-4 weeks",
-      activities[
+      activities[;
         "Current state analysis",
         "Digital maturity assessment",
         "Stakeholder interviews",
         "Technology audit",
         "Gap analysis"
       ]
-    },
+    },;
     {
       phase: "02",
       title: "Strategy Development",
       description: "Create comprehensive digital transformation roadmap and business case",
       duration: "4-6 weeks",
-      activities[
+      activities[;
         "Digital strategy formulation",
         "Technology roadmap creation",
         "Change management planning",
         "ROI analysis and business case",
         "Risk assessment"
       ]
-    },
+    },;
     {
       phase: "03",
       title: "Pilot & Validation",
       description: "Implement proof-of-concept and validate approach with stakeholders",
       duration: "6-8 weeks",
-      activities[
+      activities[;
         "Proof-of-concept development",
         "Pilot implementation",
         "Stakeholder validation",
         "Performance measurement",
         "Feedback collection"
       ]
-    },
+    },;
     {
       phase: "04",
       title: "Full Implementation",
       description: "Execute transformation plan with phased rollout and continuous optimization",
       duration: "6-18 months",
-<<<<<<< HEAD
-      activities: [
-        "Phased rollout execution",
-        "Change management implementation",
-        "Performance monitoring",
-        "Continuous optimization",
-        "Training and support"
-      ]
-
-=======
-      activities[
+      activities[;
         "Phased rollout execution",;
         "Change management implementation",;
         "Performance monitoring",;
@@ -156,7 +88,6 @@ const DigitalTransformation = () => {;
         "Training and support";
       ];
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const testimonials = [
@@ -173,23 +104,12 @@ const DigitalTransformation = () => {;
       rating: 5
     },
     {
-<<<<<<< HEAD
-      content: "Working with Zion transformed our comp culture. We're now more agile, data-driven, and customer-focused than ever before.",
-      name: "Marcus Johnson",
-      role: "CTO, DigitalFirst Inc",
-      rating: 5
-<<<<<<< HEAD
-
-=======
     };
-=======;
       content: "Working with Zion transformed our company culture. We're now more agile, data-driven, and customer-focused than ever before.",;
       name: "Marcus Johnson",;
       role: "CTO, DigitalFirst Inc",;
       rating: 5;
     };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const stats = [;
@@ -278,14 +198,14 @@ const DigitalTransformation = () => {;
 
                 <div className="text-4xl md:text-5xl font-bold text-zion-cyan mb-2">{stat.number}</div>
                 <div className="text-zion-slate-light text-sm md:text-base">{stat.label}</div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
-      </section>
+      </section>;
 
       {/* Services Section */}
-      <section className="py-20 bg-zion-blue-dark">
+      <section className="py-20 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -348,14 +268,14 @@ const DigitalTransformation = () => {;
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* Transformation Process */}
-      <section className="py-20 bg-zion-slate-dark">
+      <section className="py-20 bg-zion-slate-dark">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -448,15 +368,9 @@ const DigitalTransformation = () => {;
 }}
                         transition={{ duration: 0.3 }}
                         className="space-y-2"
-<<<<<<< HEAD
-
-                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities:</div>
-                        {phase.activities.map((activity, activityIndex) => (
-=======
                       >
-                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: any</div>
+                        <div className="text-sm font-medium text-zion-slate-light mb-2">Key Activities: unknown</div>
                         {phase.activities.map((activity, activityIndex)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                           <div key={activityIndex} className="flex items-center gap-2 text-zion-slate-light text-xs">
                             <Check className="w-3 h-3 text-zion-cyan" />
                             {activity}
@@ -465,7 +379,7 @@ const DigitalTransformation = () => {;
                       </motion.div>
                     )}
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
@@ -473,7 +387,7 @@ const DigitalTransformation = () => {;
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-zion-blue-dark">
+      <section className="py-20 bg-zion-blue-dark">;
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -532,14 +446,14 @@ const DigitalTransformation = () => {;
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-zion-slate-light text-sm">{testimonial.role}</div>
                 </div>
-              </motion.div>
+              </motion.div>;
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">;
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -555,14 +469,6 @@ const DigitalTransformation = () => {;
             </button>
             <button className="px-8 py-4 border border-zion-cyan text-zion-cyan rounded-xl font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
               Schedule Consultation
-<<<<<<< HEAD
-            </button>
-          </div>
-        </div>
-      </section>;
-    </div>;
-  )};
-=======
             </button>;
           </div>;
         </div>;
@@ -570,6 +476,5 @@ const DigitalTransformation = () => {;
     </div>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default DigitalTransformation;}}}}

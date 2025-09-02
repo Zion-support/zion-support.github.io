@@ -9,12 +9,6 @@ const contact = {
   ;
   website: 'https://ziontechgroup.com';
 ;
-
-
-
-
-
-
 };
 export const emergingTechServices2025: MicroSaasService[] = [
   // Quantum Computing Services
@@ -486,7 +480,6 @@ export const emergingTechServices2025: MicroSaasService[] = [
     customers: 9,
     rating: 4.9,
     reviews: 7
-
 ];
 <<<<<<< HEAD
 export const getPopularEmergingTechServices = () => {;
@@ -509,4 +502,7 @@ export const getEmergingTechServicesByPriceRange = (minPrice: number, maxPrice: 
 };}
 =======
     return price >= minPrice && price <= maxPrice})};
+<<<<<<< HEAD
 >>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+=======
+>>>>>>> c9859988b808260bd1cd4c2f704500befd6f5190

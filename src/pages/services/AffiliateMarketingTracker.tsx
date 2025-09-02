@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor import { SEO } from '@/components/SEO';
-=======
 import React from 'react.ts';
 import { motion  } from 'framer-motion.ts';
 import { Link  } from 'react-router-dom.ts';
-import { TrendingUp, Users, BarChart3, Target, Zap, Shield, Globe, DollarSign, CheckCircle, Star, ArrowRight, BarChart, PieChart, Activity, Mail, Smartphone, Monitor  } from 'lucide-react';
-import { SEO  } from '@/components/SEO';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import { SEO  } from '@/src/src/components/SEO';
 
 export default function AffiliateMarketingTracker(...args[]):  {
   const features = [
@@ -36,15 +28,6 @@ export default function AffiliateMarketingTracker(...args[]):  {
     {
       icon: Shield,
       title: "Fraud Detection",
-<<<<<<< HEAD
-      description: "AI-powered fraud detection to prevent click fraud and ensure campaign integrity."
-    },
-    {
-      icon: Globe,
-      title: "Multi-channel Support",
-      description: "Track performance across social media, email, influencer partnerships, and more."
-
-=======
       description: "AI-powered fraud detection to prevent click fraud and ensure campaign integrity.";
     },;
     {;
@@ -52,7 +35,6 @@ export default function AffiliateMarketingTracker(...args[]):  {
       title: "Multi-channel Support",;
       description: "Track performance across social media, email, influencer partnerships, and more.";
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const pricingPlans = [
@@ -61,13 +43,13 @@ export default function AffiliateMarketingTracker(...args[]):  {
       price: "$99",
       period: "/month",
       description: "Perfect for small businesses starting with affiliate marketing",
-      features[
+      features[;
         "Up to 100 affiliates",
         "Basic tracking & analytics",
         "Email support",
         "Standard reporting",
         "Mobile app access"
-      ],
+      ],;
       popular: false
     },
     {
@@ -75,14 +57,14 @@ export default function AffiliateMarketingTracker(...args[]):  {
       price: "$299",
       period: "/month",
       description: "Ideal for growing businesses with active affiliate programs",
-      features[
+      features[;
         "Up to 500 affiliates",
         "Advanced analytics & AI insights",
         "Priority support",
         "Custom reporting",
         "API access",
         "Fraud detection"
-      ],
+      ],;
       popular: true
     },
     {
@@ -90,18 +72,9 @@ export default function AffiliateMarketingTracker(...args[]):  {
       price: "$799",
       period: "/month",
       description: "For large-scale affiliate operations with custom requirements",
-      features[
+      features[;
         "Unlimited affiliates",
         "Custom integrations",
-<<<<<<< HEAD
-        "Dedicated account manager",
-        "White-label options",
-        "Advanced fraud protection",
-        "Custom commission structures"
-      ],
-      popular: false
-
-=======
         "Dedicated account manager",;
         "White-label options",;
         "Advanced fraud protection",;
@@ -109,7 +82,6 @@ export default function AffiliateMarketingTracker(...args[]):  {
       ],;
       popular: false;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   const benefits = [
@@ -126,15 +98,6 @@ export default function AffiliateMarketingTracker(...args[]):  {
     {
       title: "Reduce Fraud",
       description: "AI-powered detection prevents click fraud and ensures campaign integrity.",
-<<<<<<< HEAD
-      icon: Shield
-    },
-    {
-      title: "Scale Efficiently",
-      description: "Manage thousands of affiliates with automated systems and smart workflows.",
-      icon: Users
-
-=======
       icon: Shield;
     },;
     {;
@@ -142,18 +105,12 @@ export default function AffiliateMarketingTracker(...args[]):  {
       description: "Manage thousands of affiliates with automated systems and smart workflows.",;
       icon: Users;
     };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   ];
 
   return (
     <>
-<<<<<<< HEAD
-      <SEO
-        title="Affiliate Marketing Tracker - Zion Tech Group"
-=======
       <SEO 
         title = "Affiliate Marketing Tracker - Zion Tech Group"
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
         description="Advanced affiliate marketing tracking platform with AI-powered analytics, fraud detection, and real-time reporting. Boost your affiliate program ROI."
         canonical="/services/affiliate-marketing-tracker"
       />
@@ -216,7 +173,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
         </section>
 
         {/* Features Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -226,15 +183,9 @@ export default function AffiliateMarketingTracker(...args[]):  {
                 Everything you need to track, manage, and optimize your affiliate marketing campaigns
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
-=======
             
             <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -274,14 +225,14 @@ export default function AffiliateMarketingTracker(...args[]):  {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 bg-slate-800/30">
+        <section className="py-20 bg-slate-800/30">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -291,15 +242,9 @@ export default function AffiliateMarketingTracker(...args[]):  {
                 Transform your affiliate marketing with intelligent automation and powerful insights
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
-=======
             
             <div className="grid md: grid-cols-2 gap-8">
               {benefits.map((benefit, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -341,14 +286,14 @@ export default function AffiliateMarketingTracker(...args[]):  {
                     <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
                     <p className="text-gray-300">{benefit.description}</p>
                   </div>
-                </motion.div>
+                </motion.div>;
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20">
+        <section className="py-20">;
           <div className="max-w-7xl mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6 text-white">
@@ -358,15 +303,9 @@ export default function AffiliateMarketingTracker(...args[]):  {
                 Choose the plan that fits your affiliate marketing needs and scale as you grow
               </p>
             </div>
-<<<<<<< HEAD
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
-=======
             
             <div className="grid md: grid-cols-3 gap-8">
               {pricingPlans.map((plan, index)  => (
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
                 <motion.div
                   key={index}
                   initial = {
@@ -405,7 +344,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
                       : 'border-slate-700'
                   }`}
 
-                  {plan.popular && (
+                  {plan.popular && (;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
@@ -440,7 +379,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
                     }`}
 
                     Get Started
-                  </Link>
+                  </Link>;
                 </motion.div>
               ))}
             </div>
@@ -448,7 +387,7 @@ export default function AffiliateMarketingTracker(...args[]):  {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">
+        <section className="py-20 bg-gradient-to-r from-blue-600/20 to-purple-600/20">;
           <div className="max-w-4xl mx-auto text-center px-6">
             <motion.div
               initial = {
@@ -493,24 +432,11 @@ export default function AffiliateMarketingTracker(...args[]):  {
                   Contact Sales
                 </Link>
               </div>
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  )};
-=======;
             </motion.div>;
           </div>;
         </section>;
       </div>;
     </>;
   );
-<<<<<<< HEAD
-}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import { cn } from '../../utils/cn';
-=======
-import React from 'react';
 import { cn } from "../../utils/cn";
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 interface SwitchProps {
   checked?: boolean;
@@ -22,7 +17,7 @@ export function Switch({
   'aria-label': ariaLabel,;
   ...props;
 }: SwitchProps) {;
-  const handleToggle = () => {;
+  const handleToggle: React.FC = ($2) => {;
     if (!disabled && onCheckedChange) {;
       onCheckedChange(!checked);
 

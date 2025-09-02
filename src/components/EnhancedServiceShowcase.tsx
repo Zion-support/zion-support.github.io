@@ -18,11 +18,8 @@ import {
   Target,
   Award,
   CheckCircle
-<<<<<<< HEAD
-=======
  } from 'lucide-react';
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 interface Service {
 
   id: string;
@@ -36,11 +33,7 @@ icon: React.ComponentType<{ className?: string}>;
   reviews: number;
   color: string;
   popular?: boolean;
-<<<<<<< HEAD
-  link: string;
-=======
   link: string}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
 const services: Service[] = [
   {
@@ -49,7 +42,7 @@ const services: Service[] = [
     description: 'Advanced analytics with AI-powered insights and predictive modeling',
     icon: Brain,
     category: 'AI & Machine Learning',
-    features['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],
+    features['Real-time analytics', 'Predictive modeling', 'Custom dashboards', 'API integration'],;
     pricing: '$2,999/month',
     rating: 4.9,
     reviews: 156,
@@ -63,7 +56,7 @@ const services: Service[] = [
     description: 'Next-generation quantum computing solutions for complex problem solving',
     icon: Rocket,
     category: 'Emerging Tech',
-    features['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],
+    features['Quantum algorithms', 'Hybrid classical-quantum', 'Scientific computing', 'Optimization'],;
     pricing: '$5,000/month',
     rating: 4.8,
     reviews: 89,
@@ -76,7 +69,7 @@ const services: Service[] = [
     description: 'Intelligent threat detection and response with zero-trust architecture',
     icon: Shield,
     category: 'Cybersecurity',
-    features['AI threat detection', 'Zero-trust architecture', 'Compliance automation', '24/7 monitoring'],
+    features['AI threat detection', 'Zero-trust architecture', 'Compliance automation', '24/7 monitoring'],;
     pricing: '$2,500/month',
     rating: 4.9,
     reviews: 234,
@@ -90,7 +83,7 @@ const services: Service[] = [
     description: 'Scalable cloud infrastructure with intelligent automation',
     icon: Cloud,
     category: 'Cloud & DevOps',
-    features['Multi-cloud management', 'CI/CD automation', 'Infrastructure as code', 'Cost optimization'],
+    features['Multi-cloud management', 'CI/CD automation', 'Infrastructure as code', 'Cost optimization'],;
     pricing: '$1,500/month',
     rating: 4.7,
     reviews: 189,
@@ -103,7 +96,7 @@ const services: Service[] = [
     description: 'Decentralized finance solutions with advanced blockchain technology',
     icon: Globe,
     category: 'Blockchain & Web3',
-    features['DeFi protocols', 'Smart contracts', 'Yield optimization', 'Cross-chain support'],
+    features['DeFi protocols', 'Smart contracts', 'Yield optimization', 'Cross-chain support'],;
     pricing: '$1,800/month',
     rating: 4.6,
     reviews: 123,
@@ -116,7 +109,7 @@ const services: Service[] = [
     description: 'End-to-end business transformation with cutting-edge technology',
     icon: TrendingUp,
     category: 'Digital Transformation',
-    features['Strategy consulting', 'Process optimization', 'Change management', 'ROI tracking'],
+    features['Strategy consulting', 'Process optimization', 'Change management', 'ROI tracking'],;
     pricing: '$3,500/month',
     rating: 4.8,
     reviews: 167,
@@ -129,7 +122,7 @@ const services: Service[] = [
     description: 'Rapid development and deployment of SaaS applications',
     icon: Code,
     category: 'Micro SAAS',
-    features['Rapid prototyping', 'Scalable architecture', 'Multi-tenancy', 'Analytics dashboard'],
+    features['Rapid prototyping', 'Scalable architecture', 'Multi-tenancy', 'Analytics dashboard'],;
     pricing: '$899/month',
     rating: 4.7,
     reviews: 98,
@@ -142,7 +135,7 @@ const services: Service[] = [
     description: 'AI-powered diagnostic and patient care optimization',
     icon: Users,
     category: 'Healthcare AI',
-    features['Medical imaging AI', 'Predictive diagnostics', 'Patient monitoring', 'HIPAA compliant'],
+    features['Medical imaging AI', 'Predictive diagnostics', 'Patient monitoring', 'HIPAA compliant'],;
     pricing: '$4,500/month',
     rating: 4.9,
     reviews: 78,
@@ -163,45 +156,22 @@ const categories = [
   'Healthcare AI';
 ];
 
-<<<<<<< HEAD
-export const EnhancedServiceShowcase: React.FC = () => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [hoveredService, setHoveredService] = useState<any>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-<<<<<<< HEAD
-    const observer = new IntersectionObserver(;
-      ([entry]) => {;
-        if (entry.isIntersecting) {;
-          setIsVisible(true);
-<<<<<<< HEAD
-
-=======
         }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       },
       { threshold: 0.1 }
     );
 
     const element = document.getElementById('service-showcase');
     if (element) {
-<<<<<<< HEAD
-      observer.observe(element);
-=======
       observer.observe(element)}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 
     return () => observer.disconnect()}, []);
 
   const filteredServices = selectedCategory === 'All Services'
     ? services
     : services.filter(service => service.category === selectedCategory);
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const renderStars = (rating: number)  => {
+  const renderStars: React.FC = ($2) => {
     return Array.from({ length: 5 }, (_, i)  => (
       <Star
         key={i}
@@ -212,7 +182,6 @@ export const EnhancedServiceShowcase: React.FC = () => {;
         }`};
       />;
     ))};
-=======
           i < Math.floor(rating) ;
             ? 'text-yellow-400 fill-current' ;
             : 'text-gray-400';
@@ -220,7 +189,6 @@ export const EnhancedServiceShowcase: React.FC = () => {;
       />;
     ));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
   return (
     <section id = "service-showcase" className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -361,7 +329,7 @@ export const EnhancedServiceShowcase: React.FC = () => {;
                     )}
 
                     {/* Service Icon */}
-                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>;
                       <service.icon className="w-8 h-8 text-white" />
                     </div>
 
@@ -475,23 +443,10 @@ export const EnhancedServiceShowcase: React.FC = () => {;
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </motion.div>
-      </div>;
-    </section>;
-  )};
-=======
             </div>;
           </div>;
         </motion.div>;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-};}}}}}
-=======
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

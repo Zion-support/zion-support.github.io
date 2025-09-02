@@ -1,170 +1,25 @@
-<<<<<<< HEAD
-import {
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Shield,
-  Lock,
-  Eye,
-  Zap,
-  Target,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Play,
-  Code,
-  Database,
-  Cloud,
+
+import React from 'react.ts';
+import { SEO  } from '../../components/SEO';
+import { Shield, 
+  Brain, 
+  Zap, 
+  Users, 
+  TrendingUp, 
+  Lock, 
+  Clock,
   BarChart3,
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   AlertTriangle,
-  ArrowRight,
-  CheckCircle,
-  CreditCard,
-  Database,
-  Eye,
-  Key,
-  Lock,
-  Monitor,
-  Network,
-  Play,
-  Server,
-  Shield,
-  Target,
-  Users
-import { Link } from 'react-router-dom';
-export default function CybersecurityServices() {
-  const cyberServices = [
-    {
-      name: "Security Assessment & Auditing",
-      description: "Comprehensive security evaluation and compliance auditing",
-      icon: Eye,
-      features: [
-        "Vulnerability assessments",
-        "Penetration testing",
-        "Security audits and compliance",
-        "Risk analysis and reporting"
-      ],
-      price: "From $3,500",
-      duration: "2-6 weeks"
-    },
-    {
-      name: "Threat Detection & Response",
-      description: "Advanced threat monitoring and incident response",
-      icon: AlertTriangle,
-      features: [
-        "24/7 security monitoring",
-        "Threat intelligence",
-        "Incident response planning",
-        "Forensic analysis"
-      ],
-      price: "From $5,000/month",
-      duration: "Ongoing"
-    },
-    {
-      name: "Identity & Access Management",
-      description: "Secure user authentication and authorization systems",
-      icon: Key,
-      features: [
-        "Single sign-on (SSO)",
-        "Multi-factor authentication",
-        "Role-based access control",
-        "Privileged access management"
-      ],
-      price: "From $4,200",
-      duration: "4-8 weeks"
-    },
-    {
-      name: "Data Protection & Encryption",
-      description: "Comprehensive data security and encryption solutions",
-      icon: Lock,
-      features: [
-        "Data encryption at rest and in transit",
-<<<<<<< HEAD
-        "Data loss prevention",
-        "Backup and recovery",
-        "Compliance frameworks (GDPR, HIPAA, SOC2)"
-      ],
-      price: "From $6,000",
-      duration: "4-10 weeks"
+  Eye
+ } from 'lucide-react.ts';
 
-=======
-        "Data loss prevention",;
-        "Backup and recovery",;
-        "Compliance frameworks (GDPR, HIPAA, SOC2)";
-      ],;
-      price: "From $6,000",;
-      duration: "4-10 weeks";
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  ];
-  const securityTechnologies = [;
-    { name: "SIEM", description: "Security Information and Event Management", icon: Monitor },;
-    { name: "EDR", description: "Endpoint Detection and Response", icon: Server },;
-    { name: "NGFW", description: "Next-Generation Firewall", icon: Network },;
-    { name: "WAF", description: "Web Application Firewall", icon: Shield },;
-    { name: "DLP", description: "Data Loss Prevention", icon: Database },;
-    { name: "IAM", description: "Identity and Access Management", icon: Key };
-  ];
-  const complianceFrameworks = [
-    {
-      name: "SOC 2",
-      description: "Service Organization Control 2 compliance",
-      icon: Shield,
-      color: "from-green-500 to-emerald-600"
-    },
-    {
-      name: "ISO 27001",
-      description: "Information Security Management System",
-      icon: Lock,
-      color: "from-blue-500 to-indigo-600"
-    },
-    {
-      name: "GDPR",
-      description: "General Data Protection Regulation",
-      icon: Eye,
-      color: "from-purple-500 to-violet-600"
-    },
-    {
-      name: "HIPAA",
-      description: "Health Insurance Portability and Accountability Act",
-      icon: Users,
-      color: "from-red-500 to-pink-600"
-    },
-    {
-      name: "PCI DSS",
-      description: "Payment Card Industry Data Security Standard",
-      icon: CreditCard,
-      color: "from-orange-500 to-amber-600"
-    },
-    {
-<<<<<<< HEAD
-      name: "NIST",
-      description: "National Institute of Standards and Technology",
-      icon: Target,
-      color: "from-cyan-500 to-blue-600"
-<<<<<<< HEAD
+export default function Cybersecurity(...args: unknown[]): unknown {
 
-=======
-    };
-=======;
-      name: "NIST",;
-      description: "National Institute of Standards and Technology",;
-      icon: Award,;
-      color: "from-cyan-500 to-blue-600";
-    };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-  ];
   return (
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-          <motion.div className="text-center">
-=======
           <motion.div 
             className="text-center"
             initial = {
@@ -189,7 +44,6 @@ export default function CybersecurityServices() {
 }}
             transition={{ duration: 0.6 }}
           >
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cybersecurity
               <span className="block bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
@@ -214,16 +68,16 @@ export default function CybersecurityServices() {
               </button>
             </div>
           </div>
-        </div>
+        </div>;
         {/* Background Elements */}
-        <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 -z-10">;
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10"></div>
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
         </div>
       </section>
       {/* Services Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -267,14 +121,14 @@ export default function CybersecurityServices() {
 
                     Get Quote
                   </Link>
-                </div>
+                </div>;
               </div>
             ))}
           </div>
         </div>
       </section>
       {/* Security Technologies Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -295,13 +149,13 @@ export default function CybersecurityServices() {
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>
                 <p className="text-slate-400 text-sm">{tech.description}</p>
-              </div>
+              </div>;
             ))}
           </div>
         </div>
       </section>
       {/* Compliance Frameworks Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -322,13 +176,13 @@ export default function CybersecurityServices() {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{framework.name}</h3>
                 <p className="text-slate-300 text-sm">{framework.description}</p>
-              </div>
+              </div>;
             ))}
           </div>
         </div>
       </section>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -348,16 +202,6 @@ export default function CybersecurityServices() {
               <Link
                 to="/services"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-<<<<<<< HEAD
-
-                Explore All Services
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-=======
               >
                 Explore All Services;
               </Link>;
@@ -366,6 +210,5 @@ export default function CybersecurityServices() {
         </div>;
       </section>;
     </div>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 </div></div></div>}}}}

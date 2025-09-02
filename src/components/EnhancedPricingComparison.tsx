@@ -1,7 +1,7 @@
 import React from 'react.ts';
 import { Link  } from 'react-router-dom.ts';
 
-export const EnhancedPricingComparison = () => {
+export const EnhancedPricingComparison: React.FC = ($2) => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -81,14 +81,6 @@ export const EnhancedPricingComparison = () => {
             </ul>
             <Link to="/pricing" className="block w-full text-center bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
               Contact Sales
-<<<<<<< HEAD
-            </Link>
-          </div>
-        </div>
-      </div>;
-    </section>;
-  )};
-=======
             </Link>;
           </div>;
         </div>;
@@ -96,6 +88,5 @@ export const EnhancedPricingComparison = () => {
     </section>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default EnhancedPricingComparison;

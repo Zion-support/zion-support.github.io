@@ -117,7 +117,7 @@ const caseStudies = [
   }
 ];
 
-const CaseStudies = () => {
+const CaseStudies: React.FC = ($2) => {
   const [selectedIndustry, setSelectedIndustry] = useState('All');
   const [selectedCaseStudy, setSelectedCaseStudy] = useState(null);
 

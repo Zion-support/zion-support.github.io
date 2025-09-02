@@ -1,7 +1,6 @@
-import React from 'react';
-import SEO from '@/components/SEO';
+import SEO from '@/src/src/components/SEO';
 
-const ITServicesPage = () => {
+const ITServicesPage: React.FC = ($2) => {
   return (
     <>
       <SEO
@@ -38,14 +37,6 @@ const ITServicesPage = () => {
               <div className="text-4xl mb-4">💡</div>
               <h3 className="text-xl font-semibold text-white mb-3">Consulting</h3>
               <p className="text-gray-300 mb-4">Strategic technology consulting services</p>
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-      </div>;
-    </>;
-  )};
-=======
             </div>;
           </div>;
         </div>;
@@ -53,6 +44,5 @@ const ITServicesPage = () => {
     </>;
   );
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
 export default ITServicesPage;

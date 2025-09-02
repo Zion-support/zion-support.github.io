@@ -1,10 +1,12 @@
-export type InnovativeService = {;
+export interface InnovativeService2026 {
   id: string;
-  title: string;
+  name: string;
   description: string;
-  category: 'Micro SaaS' | 'IT Services' | 'AI Solutions' | 'Cybersecurity' | 'Data & Analytics' | 'Cloud & DevOps' | 'Quantum Computing' | 'Blockchain & Web3' | 'IoT & Edge' | 'Green Tech' | 'Space Tech' | 'BioTech & Health' | 'FinTech & DeFi' | 'Metaverse & AR/VR' | 'Autonomous Systems' | 'Sustainability' | 'Digital Transformation';
-  price: string;
-  billing: 'month' | 'project' | 'hour' | 'year';
+  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Cybersecurity' | 'Cloud Solutions' | 'Blockchain' | 'IoT' | 'Quantum Computing' | 'FinTech' | 'HealthTech' | 'EdTech' | 'GreenTech';
+  subcategory: string;
+  price: number;
+  currency: string;
+  marketPrice: string;
   features: string[];
   benefits: string[];
   useCases: string[];
@@ -24,7 +26,6 @@ export type InnovativeService = {;
   enterprise?: boolean;
   startup?: boolean;
   smb?: boolean};
-
 export const innovativeServices2026: InnovativeService[] = [
   // MICRO SAAS SERVICES
   {
@@ -203,7 +204,6 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
-
   // AI SOLUTIONS
   {
     id: 'autonomous-customer-service-agent',
@@ -337,7 +337,6 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: true,
     smb: true
   },
-
   // IT SERVICES
   {
     id: 'cloud-migration-accelerator',
@@ -471,7 +470,6 @@ export const innovativeServices2026: InnovativeService[] = [
     startup: false,
     smb: true
   },
-
   // EMERGING TECHNOLOGIES
   {
     id: 'quantum-computing-as-a-service',
@@ -604,43 +602,30 @@ export const innovativeServices2026: InnovativeService[] = [
     enterprise: true,
     startup: true,
     smb: true
-
 ];
-
 export const serviceCategories = [
   {
-    name: 'Micro SaaS',
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'Micro SaaS',
     description: 'Scalable software solutions for specific business needs',
-    services: innovativeServices2026.filter(s  => s.category === 'Micro SaaS')
+    services: innovativeServices2026.filter(s               => s.category === 'Micro SaaS')
   },
   {
-    name: 'AI Solutions',
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'AI Solutions',
     description: 'Advanced artificial intelligence and machine learning solutions',
-    services: innovativeServices2026.filter(s  => s.category === 'AI Solutions')
+    services: innovativeServices2026.filter(s               => s.category === 'AI Solutions')
   },
   {
-    name: 'IT Services',
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'IT Services',
     description: 'Comprehensive IT consulting and implementation services',
-    services: innovativeServices2026.filter(s  => s.category === 'IT Services')
+    services: innovativeServices2026.filter(s               => s.category === 'IT Services')
   },
-<<<<<<< HEAD
-  {
-    name: 'Emerging Technologies',
-    description: 'Cutting-edge technologies shaping the future',
-<<<<<<< HEAD
-    services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
-
-=======
-    services: innovativeServices2026.filter(s  => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
+    services: anyanyanyanyanyanyanyanyanyanyanyanyanyinnovativeServices2026.filter(s               => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category))
   };
-=======;
   {;
-    name: 'Emerging Technologies',;
+    name: anyanyanyanyanyanyanyanyanyanyanyanyany'Emerging Technologies',;
     description: 'Cutting-edge technologies shaping the future',;
-    services: innovativeServices2026.filter(s => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
+    services: innovativeServices2026.filter(s              => ['Quantum Computing', 'Blockchain & Web3', 'Metaverse & AR/VR'].includes(s.category));
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 ];
 
-export default innovativeServices2026;}}
+export default INNOVATIVE_SERVICES_2026;

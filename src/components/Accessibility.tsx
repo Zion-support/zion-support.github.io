@@ -1,20 +1,11 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  Accessibility,
-  Type,
-  Eye,
-  Volume2,
-  Keyboard,
-=======
 import { 
   Accessibility as AccessibilityIcon, 
   Type, 
   Eye, 
   Volume2, 
   Keyboard, 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   X,
   Plus,
   Minus,
@@ -48,7 +39,7 @@ export function Accessibility() {
       applySettings(parsed);
 
     // Add keyboard shortcuts
-    const handleKeyDown = (e: KeyboardEvent) => {;
+    const handleKeyDown: React.FC = ($2) => {;
       if (e.ctrlKey) {;
         switch (e.key) {;
           case '=':;
@@ -56,11 +47,11 @@ export function Accessibility() {
             e.preventDefault();
             increaseFontSize();
             break;
-          case '-':
+          case '-':;
             e.preventDefault();
             decreaseFontSize();
             break;
-          case '0':
+          case '0':;
             e.preventDefault();
             resetSettings();
             break;
@@ -72,7 +63,7 @@ export function Accessibility() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  const applySettings = (newSettings: AccessibilitySettings) => {;
+  const applySettings: React.FC = ($2) => {;
     const root = document.documentElement;
 
     // Apply font size
@@ -102,15 +93,7 @@ export function Accessibility() {
 
   };
 
-<<<<<<< HEAD
-  const updateSetting = (key: keyof AccessibilitySettings, value: ) => {
-    const newSettings = {
-  ...settings,;
-  [key]: value ;
-
-};
-=======
-  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+  const updateSetting: React.FC = ($2) => {
     const newSettings = {
   ...settings,;
   ;
@@ -126,25 +109,24 @@ export function Accessibility() {
 
 
 };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
     setSettings(newSettings);
     applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
 
-  const increaseFontSize = () => {;
+  const increaseFontSize: React.FC = ($2) => {;
     if (settings.fontSize < 24) {;
       updateSetting('fontSize', settings.fontSize + 2);
 
   };
 
-  const decreaseFontSize = () => {;
+  const decreaseFontSize: React.FC = ($2) => {;
     if (settings.fontSize > 12) {;
       updateSetting('fontSize', settings.fontSize - 2);
 
   };
 
-  const resetSettings = () => {
+  const resetSettings: React.FC = ($2) => {
     const defaultSettings: AccessibilitySettings = {
   fontSize: 16,
       highContrast: false,
@@ -176,13 +158,8 @@ export function Accessibility() {
         className="fixed bottom-4 left-4 z-50 p-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
         aria-label="Accessibility Settings"
         title="Accessibility Settings"
-<<<<<<< HEAD
-
-        <Accessibility className="w-6 h-6" />
-=======
       >
         <AccessibilityIcon className="w-6 h-6" />
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
       </button>
 
       {/* Accessibility Panel */}
@@ -277,7 +254,7 @@ export function Accessibility() {
               </div>
 
               {/* High Contrast Toggle */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Contrast className="w-4 h-4" />
@@ -309,7 +286,7 @@ export function Accessibility() {
               </div>
 
               {/* Reduced Motion Toggle */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Eye className="w-4 h-4" />
@@ -341,7 +318,7 @@ export function Accessibility() {
               </div>
 
               {/* Theme Selection */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <label className="block text-sm font-medium text-gray-300 mb-3 flex items-center gap-2">
                   <Settings className="w-4 h-4" />
                   Theme
@@ -375,7 +352,7 @@ export function Accessibility() {
               </div>
 
               {/* Sound Toggle */}
-              <div className="mb-6">
+              <div className="mb-6">;
                 <label className="flex items-center justify-between cursor-pointer">
                   <span className="text-sm font-medium text-gray-300 flex items-center gap-2">
                     <Volume2 className="w-4 h-4" />
@@ -407,7 +384,7 @@ export function Accessibility() {
               </div>
 
               {/* Keyboard Shortcuts Help */}
-              <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">
+              <div className="mb-6 p-4 bg-slate-800/50 rounded-lg">;
                 <h3 className="text-sm font-medium text-white mb-3 flex items-center gap-2">
                   <Keyboard className="w-4 h-4" />
                   Keyboard Shortcuts
@@ -432,16 +409,6 @@ export function Accessibility() {
               <button
                 onClick={resetSettings}
                 className="w-full px-4 py-2 bg-slate-800 hover:bg-slate-700 text-white rounded-md transition-colors text-sm font-medium"
-<<<<<<< HEAD
-
-                Reset to Defaults
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </>
-=======
               >
                 Reset to Defaults;
               </button>;
@@ -450,6 +417,5 @@ export function Accessibility() {
         )};
       </AnimatePresence>;
     </>;
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   );
 }}}}}}}}}}}
