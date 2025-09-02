@@ -14,4 +14,4 @@ const CybersecurityServices: React.FC = () => {
     </>
   )}
 ;
-export default CybersecurityServices
+export default CybersecurityServices;

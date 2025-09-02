@@ -6,4 +6,4 @@ const PageTransition: React.FC<PageTransitionProps> = ({ children }) => {
   return <>{children}</>
 }
 ;
-export default PageTransition
+export default PageTransition;

@@ -267,4 +267,4 @@ const Accessibility: React.FC = () => {
     </div>
   )}
 ;
-export default Accessibility
+export default Accessibility;

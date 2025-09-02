@@ -132,4 +132,4 @@ const FAQ: React.FC = () => {
     </div>
   )}
 ;
-export default FAQ
+export default FAQ;

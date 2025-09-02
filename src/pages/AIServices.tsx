@@ -14,4 +14,4 @@ const AIServices: React.FC = () => {
     </>
   )}
 ;
-export default AIServices
+export default AIServices;

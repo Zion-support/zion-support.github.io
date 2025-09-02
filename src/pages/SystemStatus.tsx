@@ -49,4 +49,4 @@ const SystemStatus: React.FC = () => {
     </div>
   )}
 ;
-export default SystemStatus
+export default SystemStatus;

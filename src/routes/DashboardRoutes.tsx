@@ -65,4 +65,4 @@ const DashboardRoutes: React.FC = () => {
     </Suspense>
   )}
 ;
-export default DashboardRoutes
+export default DashboardRoutes;

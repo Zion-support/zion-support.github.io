@@ -46,4 +46,4 @@ const AuthRoutes: React.FC = () => {
     </Suspense>
   )}
 ;
-export default AuthRoutes
+export default AuthRoutes;

@@ -14,4 +14,4 @@ const CloudServices: React.FC = () => {
     </>
   )}
 ;
-export default CloudServices
+export default CloudServices;

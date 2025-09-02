@@ -14,4 +14,4 @@ const ConsultingServices: React.FC = () => {
     </>
   )}
 ;
-export default ConsultingServices
+export default ConsultingServices;

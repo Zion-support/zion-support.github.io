@@ -468,4 +468,4 @@ import { ErrorBoundary } from 'react-error-boundary';
       </div>
     </ErrorBoundary>
   )}
-export default App
+export default App;

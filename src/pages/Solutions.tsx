@@ -14,4 +14,4 @@ const Solutions: React.FC = () => {
     </>
   )}
 ;
-export default Solutions
+export default Solutions;

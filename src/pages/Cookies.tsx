@@ -217,4 +217,4 @@ const Cookies: React.FC = () => {
     </div>
   )}
 ;
-export default Cookies
+export default Cookies;
