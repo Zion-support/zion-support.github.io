@@ -10,6 +10,7 @@ const Home: NextPage = () => {
   const itServices = getServicesByCategory('it-services');
   const aiServices = getServicesByCategory('ai-services');
 
+const Home: React.FC = () => {
   const stats = [
     { number: '500+', label: 'Projects Completed' },
     { number: '50+', label: 'Happy Clients' },
@@ -17,8 +18,34 @@ const Home: NextPage = () => {
     { number: '24/7', label: 'Support Available' },
   ];
 
+  const services = [
+    {
+      title: "AI Services",
+      description: "Cutting-edge artificial intelligence solutions",
+      icon: Brain,
+      href: "/ai-services"
+    },
+    {
+      title: "IT Services", 
+      description: "Comprehensive information technology services",
+      icon: Network,
+      href: "/it-services"
+    },
+    {
+      title: "Micro SaaS",
+      description: "Scalable software as a service solutions",
+      icon: Cloud,
+      href: "/micro-saas"
+    }
+  ];
+
   return (
-    <MainLayout>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Zion Tech Group - Leading AI & Technology Solutions" 
+        description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results."
+      />
+      
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
@@ -240,7 +267,7 @@ const Home: NextPage = () => {
           </Link>
         </div>
       </section>
-    </MainLayout>
+    </div>
   );
 };
 

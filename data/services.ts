@@ -59,6 +59,307 @@ export const services: Service[] = [
     icon: '📝'
   },
   {
+    id: 'ai-meeting-notes-assistant',
+    name: 'AI Meeting Notes Assistant',
+    category: 'micro-saas',
+    description: 'Automated recording, transcription, summarization, and action-item extraction for meetings across Zoom, Google Meet, and Teams.',
+    features: [
+      'One-click meeting recording',
+      'Accurate multilingual transcription',
+      'Key-point and decision summaries',
+      'Action items with owners and due dates',
+      'CRM and task manager sync (HubSpot, Jira, Asana)',
+      'Speaker diarization',
+      'Secure storage and search',
+      'Compliance-friendly redaction'
+    ],
+    pricing: { starter: 19, professional: 49, enterprise: 149, currency: 'USD' },
+    benefits: [
+      'Save 4+ hours per week per employee',
+      'Never miss decisions or follow-ups',
+      'Centralized, searchable meeting knowledge',
+      'Improved accountability across teams'
+    ],
+    useCases: [
+      'Sales and customer success reviews',
+      'Engineering standups and retrospectives',
+      'Executive and board meetings',
+      'Client discovery and requirement gathering'
+    ],
+    technologies: ['Whisper/ASR', 'OpenAI', 'React', 'Node.js', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/ai-meeting-notes-assistant',
+    icon: '📝'
+  },
+  {
+    id: 'whatsapp-crm-inbox',
+    name: 'WhatsApp CRM Inbox',
+    category: 'micro-saas',
+    description: 'Unified WhatsApp shared inbox with automation, templates, and CRM enrichment for SMB sales and support teams.',
+    features: [
+      'Team shared inbox and assignment',
+      'Templates and quick replies',
+      'AI reply suggestions',
+      'Contact enrichment and tagging',
+      'Campaign broadcasts with opt-in',
+      'CRM sync (HubSpot, Pipedrive)',
+      'Metrics and SLA tracking',
+      'Role-based permissions'
+    ],
+    pricing: { starter: 29, professional: 79, enterprise: 199, currency: 'USD' },
+    benefits: [
+      'Faster first-response times',
+      'Higher conversion from chat-to-deal',
+      'Reduced context switching',
+      'Compliance-friendly messaging'
+    ],
+    useCases: ['Inbound sales', 'Customer support', 'Abandoned cart recovery', 'Local services intake'],
+    technologies: ['Meta WhatsApp API', 'React', 'Node.js', 'Redis'],
+    link: 'https://ziontechgroup.com/services/whatsapp-crm-inbox',
+    icon: '💬'
+  },
+  {
+    id: 'local-seo-audit-suite',
+    name: 'Local SEO Audit Suite',
+    category: 'micro-saas',
+    description: 'Automated local SEO audits with citation checks, GBP optimization, review insights, and prioritized recommendations.',
+    features: [
+      'Google Business Profile audit',
+      'NAP consistency checks',
+      'Review sentiment analysis',
+      'Local SERP and competitor gap analysis',
+      'Structured data validation',
+      'Automated weekly reports',
+      'Backlink discovery',
+      'Actionable checklist'
+    ],
+    pricing: { starter: 12, professional: 35, enterprise: 99, currency: 'USD' },
+    benefits: ['Higher local rankings', 'Increased foot traffic and calls', 'Quick, actionable fixes', 'Benchmark vs competitors'],
+    useCases: ['Local services', 'Restaurants', 'Clinics', 'Home services'],
+    technologies: ['SEO APIs', 'React', 'Node.js', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/local-seo-audit-suite',
+    icon: '📍'
+  },
+  {
+    id: 'ai-rfp-proposal-writer',
+    name: 'AI RFP & Proposal Writer',
+    category: 'micro-saas',
+    description: 'Generate compliant RFP responses and tailored proposals using your past wins, case studies, and brand tone.',
+    features: [
+      'RFP requirements extraction',
+      'Reusable answer library',
+      'Auto-compliance checklists',
+      'Citations and source linking',
+      'Reviewer workflows',
+      'Style and tone controls',
+      'Export to DOCX/PDF',
+      'Red teaming and accuracy guardrails'
+    ],
+    pricing: { starter: 59, professional: 149, enterprise: 399, currency: 'USD' },
+    benefits: ['Win more bids', 'Cut drafting time by 70%', 'Ensure compliance', 'Consistent branding'],
+    useCases: ['Government contracts', 'Enterprise RFPs', 'Agency proposals', 'Vendor questionnaires'],
+    technologies: ['RAG', 'OpenAI', 'Vector DB', 'React', 'Node.js'],
+    link: 'https://ziontechgroup.com/services/ai-rfp-proposal-writer',
+    icon: '📄'
+  },
+  {
+    id: 'ecommerce-image-optimizer',
+    name: 'E‑commerce Image Optimizer',
+    category: 'micro-saas',
+    description: 'Automated product image background removal, uniform shadows, variants, and size optimization for faster storefronts.',
+    features: [
+      'Background removal and replacement',
+      'Consistent lighting and shadow',
+      'Batch processing and presets',
+      'WebP/AVIF conversion',
+      'Shopify/BigCommerce apps',
+      'A/B visual testing',
+      'CDN delivery',
+      'Accessibility contrast checks'
+    ],
+    pricing: { starter: 15, professional: 49, enterprise: 129, currency: 'USD' },
+    benefits: ['Higher conversion rates', 'Improved Core Web Vitals', 'Brand-consistent visuals', 'Reduced design costs'],
+    useCases: ['D2C stores', 'Marketplaces', 'Wholesale catalogs', 'Dropshipping'],
+    technologies: ['Computer Vision', 'FFmpeg', 'CDN', 'React', 'Node.js'],
+    link: 'https://ziontechgroup.com/services/ecommerce-image-optimizer',
+    icon: '🛍️'
+  },
+  {
+    id: 'soc2-readiness-and-automation',
+    name: 'SOC 2 Readiness & Automation',
+    category: 'it-services',
+    description: 'End-to-end SOC 2 readiness with control mapping, evidence collection automation, and auditor collaboration.',
+    features: [
+      'Gap assessment and remediation plan',
+      'Automated evidence collection',
+      'Policy generation and training',
+      'Continuous control monitoring',
+      'Risk register and vendor tracking',
+      'Auditor workspace access',
+      'Ticketing and workflows',
+      'Reporting and dashboards'
+    ],
+    pricing: { starter: 8000, professional: 25000, enterprise: 65000, currency: 'USD' },
+    benefits: ['Faster audit timelines', 'Lower compliance costs', 'Reduced manual effort', 'Audit-ready anytime'],
+    useCases: ['SaaS startups', 'FinTech', 'HealthTech', 'Enterprise vendor programs'],
+    technologies: ['GRC', 'SIEM', 'IDP', 'Cloud APIs', 'Automation'],
+    link: 'https://ziontechgroup.com/services/soc2-readiness-and-automation',
+    icon: '✅'
+  },
+  {
+    id: 'lakehouse-architecture-deployment',
+    name: 'Data Lakehouse Architecture & Deployment',
+    category: 'it-services',
+    description: 'Design and implement a modern lakehouse leveraging open table formats, scalable ETL, and governed self-serve analytics.',
+    features: [
+      'Architecture and governance blueprint',
+      'Medallion data modeling',
+      'Ingestion and ETL pipelines',
+      'Batch and streaming processing',
+      'Data catalog and lineage',
+      'Cost and performance optimization',
+      'BI and semantic layer setup',
+      'Security and compliance'
+    ],
+    pricing: { starter: 30000, professional: 90000, enterprise: 250000, currency: 'USD' },
+    benefits: ['Unified storage and compute', 'Lower TCO vs legacy DW', 'Governed self-serve analytics', 'Future-proof architecture'],
+    useCases: ['Enterprise analytics', 'IoT telemetry', 'Marketing data hubs', 'Financial reporting'],
+    technologies: ['Delta Lake', 'Iceberg', 'Apache Spark', 'dbt', 'Airflow', 'AWS/Azure/GCP'],
+    link: 'https://ziontechgroup.com/services/lakehouse-architecture-deployment',
+    icon: '🏗️'
+  },
+  {
+    id: 'finops-cloud-cost-optimization',
+    name: 'FinOps Cloud Cost Optimization',
+    category: 'it-services',
+    description: 'Operationalize FinOps with visibility, anomaly detection, and automated rightsizing to reduce cloud spend without slowing delivery.',
+    features: [
+      'Cost allocation and showback',
+      'Anomaly detection and alerts',
+      'Rightsizing and scheduling automation',
+      'Reserved/spot strategy',
+      'Kubernetes cost governance',
+      'Tagging standards rollout',
+      'Dashboards and KPIs',
+      'Stakeholder enablement'
+    ],
+    pricing: { starter: 6000, professional: 18000, enterprise: 75000, currency: 'USD' },
+    benefits: ['Reduce cloud spend 20–40%', 'Faster budgeting cycles', 'Predictable unit economics', 'No vendor lock-in'],
+    useCases: ['SaaS platforms', 'Data platforms', 'Microservices estates', 'Seasonal workloads'],
+    technologies: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Cloud APIs', 'Automation'],
+    link: 'https://ziontechgroup.com/services/finops-cloud-cost-optimization',
+    icon: '💸'
+  },
+  {
+    id: 'sre-reliability-retainer',
+    name: 'SRE Reliability Retainer',
+    category: 'it-services',
+    description: '24/7 SRE services with SLIs/SLOs, incident response, and proactive reliability engineering for critical systems.',
+    features: [
+      'SLO design and error budgets',
+      'On-call runbooks and automation',
+      'Chaos and load testing',
+      'Observability as code',
+      'Post-incident reviews',
+      'Capacity planning',
+      'Reliability roadmap',
+      'Monthly executive reporting'
+    ],
+    pricing: { starter: 12000, professional: 35000, enterprise: 120000, currency: 'USD' },
+    benefits: ['Lower downtime risk', 'Faster MTTR', 'Predictable reliability', 'Happier engineers and users'],
+    useCases: ['Payments and checkout', 'Core APIs', 'Real-time apps', 'Multi-tenant SaaS'],
+    technologies: ['Terraform', 'Kubernetes', 'Prometheus', 'Grafana', 'OpenTelemetry', 'PagerDuty'],
+    link: 'https://ziontechgroup.com/services/sre-reliability-retainer',
+    icon: '🛠️'
+  },
+  {
+    id: 'rag-enterprise-search',
+    name: 'RAG Enterprise Search',
+    category: 'ai-services',
+    description: 'Retrieval-Augmented Generation for enterprise knowledge: private, secure question answering over documents, tickets, and wikis.',
+    features: [
+      'Document ingestion and chunking',
+      'Embeddings and vector indexing',
+      'Source-grounded citations',
+      'Access control and redaction',
+      'Feedback loops and evaluation',
+      'Enterprise SSO integration',
+      'Usage analytics and guardrails',
+      'Multi-tenant isolation'
+    ],
+    pricing: { starter: 10000, professional: 35000, enterprise: 120000, currency: 'USD' },
+    benefits: ['Reduce search time by 80%', 'Trustworthy answers with citations', 'Protect sensitive data', 'Scale across departments'],
+    useCases: ['Support deflection', 'Policy Q&A', 'Sales playbooks', 'Engineering runbooks'],
+    technologies: ['RAG', 'Vector DB', 'OpenAI', 'Azure OpenAI', 'LangChain', 'Next.js'],
+    link: 'https://ziontechgroup.com/services/rag-enterprise-search',
+    icon: '🔎'
+  },
+  {
+    id: 'mlops-platform-and-ops',
+    name: 'MLOps Platform & Operations',
+    category: 'ai-services',
+    description: 'Productionize ML with experiment tracking, model registry, CI/CD for models, monitoring, and drift remediation.',
+    features: [
+      'Feature store and governance',
+      'Experiment tracking',
+      'Model registry and promotion gates',
+      'Model CI/CD and canarying',
+      'Online/offline evaluation',
+      'Data and concept drift detection',
+      'Shadow deployments',
+      'Incident and rollback playbooks'
+    ],
+    pricing: { starter: 20000, professional: 60000, enterprise: 180000, currency: 'USD' },
+    benefits: ['Faster model velocity', 'Reduced production risk', 'Traceable lineage', 'Operational excellence'],
+    useCases: ['Personalization', 'Fraud detection', 'Forecasting', 'NLP pipelines'],
+    technologies: ['MLflow', 'Kubeflow', 'Vertex AI', 'SageMaker', 'Airflow', 'dbt'],
+    link: 'https://ziontechgroup.com/services/mlops-platform-and-ops',
+    icon: '🧪'
+  },
+  {
+    id: 'synthetic-data-generation',
+    name: 'Synthetic Data Generation',
+    category: 'ai-services',
+    description: 'Create privacy-preserving synthetic datasets to unblock AI/analytics while meeting compliance and bias-reduction goals.',
+    features: [
+      'Tabular, image, and text synthesis',
+      'Differential privacy controls',
+      'Quality and utility evaluation',
+      'Bias detection and mitigation',
+      'Domain constraint enforcement',
+      'Secure data sandboxing',
+      'Versioning and governance',
+      'Regulatory documentation'
+    ],
+    pricing: { starter: 15000, professional: 45000, enterprise: 150000, currency: 'USD' },
+    benefits: ['Accelerate AI safely', 'Reduce privacy risk', 'Balance rare classes', 'Share data across teams'],
+    useCases: ['Healthcare analytics', 'Financial modeling', 'CV pretraining', 'Anomaly detection'],
+    technologies: ['GANs', 'Diffusion', 'DP-SGD', 'Python', 'TensorFlow', 'PyTorch'],
+    link: 'https://ziontechgroup.com/services/synthetic-data-generation',
+    icon: '🧬'
+  },
+  {
+    id: 'llm-evaluation-red-teaming',
+    name: 'LLM Evaluation & Red-Teaming',
+    category: 'ai-services',
+    description: 'Holistic LLM safety and quality evaluation with automated test suites, jailbreak resistance, and bias and toxicity audits.',
+    features: [
+      'Automated eval harness and metrics',
+      'Adversarial prompt libraries',
+      'Hallucination and citation checks',
+      'PII/PHI leakage testing',
+      'Bias, harm, and toxicity audits',
+      'Safety guardrail tuning',
+      'Incident response runbooks',
+      'Reporting for compliance teams'
+    ],
+    pricing: { starter: 12000, professional: 35000, enterprise: 100000, currency: 'USD' },
+    benefits: ['Reduce production incidents', 'Meet regulatory expectations', 'Improve answer quality', 'Strengthen brand trust'],
+    useCases: ['Customer support agents', 'Internal copilots', 'Content generation', 'Healthcare/finance assistants'],
+    technologies: ['Eval frameworks', 'OpenAI', 'Azure OpenAI', 'Guardrails', 'Vector search'],
+    link: 'https://ziontechgroup.com/services/llm-evaluation-red-teaming',
+    icon: '🛡️'
+  },
+  {
     id: 'social-media-scheduler',
     name: 'Social Media Scheduler Pro',
     category: 'micro-saas',
@@ -2752,7 +3053,7 @@ export const services: Service[] = [
     icon: '⛓️'
   },
 
-  // Additional Innovative IT Services
+  // Additional Advanced IT Services
   {
     id: 'quantum-computing-solutions',
     name: 'Quantum Computing Solutions',
@@ -2902,8 +3203,8 @@ export const services: Service[] = [
     icon: '📡'
   },
   {
-    id: 'blockchain-infrastructure',
-    name: 'Blockchain Infrastructure & Development',
+    id: 'zero-trust-security',
+    name: 'Zero Trust Security Architecture',
     category: 'it-services',
     description: 'Complete blockchain infrastructure setup and smart contract development for enterprise applications.',
     features: [
@@ -2939,8 +3240,8 @@ export const services: Service[] = [
     icon: '⛓️'
   },
   {
-    id: 'ai-infrastructure-setup',
-    name: 'AI Infrastructure & MLOps',
+    id: '5g-network-implementation',
+    name: '5G Network Implementation & Optimization',
     category: 'it-services',
     description: 'Complete AI infrastructure setup with MLOps pipeline for scalable machine learning operations.',
     features: [
