@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,14 +38,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <motion.header 
-      className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'shadow-xl' : 'shadow-lg'
-      }`}
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <header className={`bg-white shadow-lg sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-xl' : 'shadow-lg'}`}>
       {/* Top bar with contact info */}
       <div className="bg-blue-900 text-white py-2">
         <div className="container mx-auto px-4">
@@ -54,306 +46,166 @@ const Header: React.FC = () => {
             <div className="flex items-center space-x-4 mb-2 sm:mb-0">
               <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4" />
-                <span>+1 302 464 0950</span>
+                <span>+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="w-4 h-4" />
-                <span>kleber@ziontechgroup.com</span>
+                <span>info@ziontechgroup.com</span>
               </div>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="w-4 h-4" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              <span>San Francisco, CA</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Main navigation */}
-      <nav className="bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="text-2xl font-bold text-blue-900">Zion Tech Group</div>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-6">
-              <Link
-                href="/"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                Home
-              </Link>
-              
-              {/* Services Dropdown */}
-              <div className="relative group">
-                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
-                  Services
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-<<<<<<< HEAD
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-=======
-                <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <Link
-                    href="/services"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold border-b border-gray-100"
-                  >
-                    All Services
-                  </Link>
->>>>>>> cursor/website-audit-content-update-and-deployment-32ee
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              {/* Solutions Dropdown */}
-              <div className="relative group">
-                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
-                  Solutions
-                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-<<<<<<< HEAD
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  {solutionCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              <Link
-                href="/about"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                About
-              </Link>
-              <Link
-                href="/careers"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                Careers
-              </Link>
-              <Link
-                href="/contact"
-                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-              >
-                Contact
-              </Link>
-
-=======
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                  <Link
-                    href="/solutions"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold border-b border-gray-100"
-                  >
-                    All Solutions
-                  </Link>
-                  <Link
-                    href="/solutions/enterprise"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                  >
-                    Enterprise Solutions
-                  </Link>
-                  <Link
-                    href="/solutions/small-business"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                  >
-                    Small Business
-                  </Link>
-                  <Link
-                    href="/solutions/startups"
-                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                  >
-                    Startup Solutions
-                  </Link>
-                </div>
-              </div>
-
->>>>>>> cursor/website-audit-content-update-and-deployment-32ee
-              {/* CTA Button */}
-              <Link
-                href="/contact"
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
-              >
-                Get Quote
-              </Link>
+      <nav className="container mx-auto px-4 py-4">
+        <div className="flex items-center justify-between">
+          {/* Logo */}
+          <Link href="/" className="flex items-center space-x-2">
+            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-xl">Z</span>
             </div>
+            <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
+          </Link>
 
-            {/* Mobile menu button */}
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center space-x-8">
+            {navigation.map((item) => (
+              <div key={item.name}>
+                {item.name === 'Services' ? (
+                  <div className="relative group">
+                    <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                      Services
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <Link
+                        href="/services"
+                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold border-b border-gray-100"
+                      >
+                        All Services
+                      </Link>
+                      {serviceCategories.map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ) : item.name === 'Solutions' ? (
+                  <div className="relative group">
+                    <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                      Solutions
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      <Link
+                        href="/solutions"
+                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold border-b border-gray-100"
+                      >
+                        All Solutions
+                      </Link>
+                      <Link
+                        href="/solutions/enterprise"
+                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      >
+                        Enterprise Solutions
+                      </Link>
+                      <Link
+                        href="/solutions/small-business"
+                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      >
+                        Small Business
+                      </Link>
+                      <Link
+                        href="/solutions/startups"
+                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                      >
+                        Startup Solutions
+                      </Link>
+                    </div>
+                  </div>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                )}
+              </div>
+            ))}
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
+            >
+              Get Quote
+            </Link>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
             <button
-              className="lg:hidden p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
+              className="p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
             >
-              <motion.div
-                animate={{ rotate: isMenuOpen ? 180 : 0 }}
-                transition={{ duration: 0.3 }}
-              >
+              <div>
                 {isMenuOpen ? (
                   <X className="w-6 h-6 text-gray-700" />
                 ) : (
                   <Menu className="w-6 h-6 text-gray-700" />
                 )}
-              </motion.div>
+              </div>
             </button>
           </div>
+        </div>
 
-          {/* Mobile Navigation */}
-          <AnimatePresence>
-            {isMenuOpen && (
-              <motion.div 
-                className="lg:hidden border-t border-gray-200 py-4"
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-              <div className="flex flex-col space-y-4">
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="lg:hidden border-t border-gray-200 py-4">
+            <div className="flex flex-col space-y-4">
+              {navigation.map((item) => (
                 <Link
-                  href="/"
+                  key={item.name}
+                  href={item.href}
                   className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Home
+                  {item.name}
                 </Link>
-                
-                {/* Mobile Services */}
-                <div className="border-t border-gray-200 pt-4">
-<<<<<<< HEAD
-                  <div className="text-gray-700 font-medium mb-3">Services</div>
-=======
-                  <div className="text-gray-700 font-medium mb-2">Services</div>
-                  <Link
-                    href="/services"
-                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors font-semibold"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    All Services
-                  </Link>
->>>>>>> cursor/website-audit-content-update-and-deployment-32ee
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block py-2 pl-4 text-gray-600 hover:text-blue-600 transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
-                </div>
-
-                {/* Mobile Solutions */}
-                <div className="border-t border-gray-200 pt-4">
-                  <div className="text-gray-700 font-medium mb-3">Solutions</div>
-                  {solutionCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block py-2 pl-4 text-gray-600 hover:text-blue-600 transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
-                </div>
-
-<<<<<<< HEAD
-=======
-                {/* Mobile Solutions */}
-                <div className="border-t border-gray-200 pt-4">
-                  <div className="text-gray-700 font-medium mb-2">Solutions</div>
-                  <Link
-                    href="/solutions"
-                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors font-semibold"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    All Solutions
-                  </Link>
-                  <Link
-                    href="/solutions/enterprise"
-                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Enterprise Solutions
-                  </Link>
-                  <Link
-                    href="/solutions/small-business"
-                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Small Business
-                  </Link>
-                  <Link
-                    href="/solutions/startups"
-                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Startup Solutions
-                  </Link>
-                </div>
-
-                {/* Mobile CTA */}
->>>>>>> cursor/website-audit-content-update-and-deployment-32ee
-                <Link
-                  href="/about"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/careers"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Careers
-                </Link>
+              ))}
+              <div className="pt-4 border-t border-gray-200">
                 <Link
                   href="/contact"
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Contact
+                  Get Quote
                 </Link>
-
-                {/* Mobile CTA */}
-                <div className="border-t border-gray-200 pt-4">
-                  <Link
-                    href="/contact"
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors text-center block"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Get Quote
-                  </Link>
-                </div>
               </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+            </div>
+          </div>
+        )}
       </nav>
-    </motion.header>
+    </header>
   );
 };
 
