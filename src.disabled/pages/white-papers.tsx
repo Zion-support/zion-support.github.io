@@ -1,12 +1,6 @@
-<<<<<<< HEAD:src.disabled/pages/white-papers.tsx
+:src.disabled/pages/white-papers.tsx
 import React from
-  'react';
-=======
-import React from 'react';
-export default React.memo(function WhitePapers () {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/white-papers.tsx
-
-;
+  'react';;
   return (;
     <div className="max - w-5xl mx - auto px - 4 py - 12 text - white">";
       <h1 className="text - 4xl font - bold mb - 4">White Papers</h1>";

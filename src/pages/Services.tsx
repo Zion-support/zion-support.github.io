@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '../components/SEO';
 
@@ -15,21 +14,8 @@ const Services: React.FC = () => {
       </div>
     </>
   );
-};
-=======
-<<<<<<< HEAD
-React from
-  'react';
-import { SEO } from
-  '../components/SEO';''const Services: React.FC = () => {
-=======
-import React from 'react'
-import  { SEO } from '../components/SEO'''const Services: React.FC = () => {''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-  return (
+};return (
     <>
       <SEO title="Services - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">Services</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
 </>);};
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-8c53
-
 export default Services;

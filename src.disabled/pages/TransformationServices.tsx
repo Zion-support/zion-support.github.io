@@ -1,20 +1,13 @@
-<<<<<<< HEAD:src.disabled/pages/TransformationServices.tsx
+:src.disabled/pages/TransformationServices.tsx
 React from
   'react';
 import { SEO } from
-  '../components/SEO';''const TransformationServices: React.FC = () => {
-=======
-import React from 'react'
-import  { SEO } from '../components/SEO'''const TransformationServices: React.FC = () => {'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/pages/TransformationServices.tsx
-  return (
+  '../components/SEO';''const TransformationServices: React.FC = () => {return (
     <>
       <SEO title="TransformationServices - Zion Tech Group" />"      <div className="min-h-screen bg-white py-20">"        <div className="max-w-4xl mx-auto px-4">"          <h1 className="text-4xl font-bold text-gray-900 mb-8">TransformationServices</h1>"          <p className="text-lg text-gray-600">Content coming soon...</p>"        </div>"      </div>
 </>);};
 
-=======
 import React from 'react';'import { SEO } from '../components / SEO';''const TransformationServices: React.FC = () => {';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/TransformationServices.tsx
 export default TransformationServices;
 
   return (;

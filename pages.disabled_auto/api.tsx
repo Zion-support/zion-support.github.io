@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from, react';'
 import type { NextPage } from
   'next';
@@ -7,20 +6,10 @@ import MainLayout from
 import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
   'lucide-react';
 import Link from
-  'next/link';
-=======
-import React from 'react'
-import type { NextPage } from 'next'
-import MainLayout from '../components/layout/MainLayout'
-import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from 'lucide-react'
-import Link from 'next/link'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
-const API: NextPage = () => {
+  'next/link';const API: NextPage = () => {
   const apiEndpoints = [
     {
-<<<<<<< HEAD
-      method: 'GET, '
+method: 'GET, '
       endpoint:,
   /api/v1/users', '
       description: 'Retrieve user information,'
@@ -59,26 +48,11 @@ const API: NextPage = () => {
       endpoint:,
   /api/v1/webhooks', '
       description: 'Create a webhook,'
-      category:, Webhooks''
-=======
-      method: 'GET', endpoint: '/api/v1/users', description: 'Retrieve user information', category: 'Users'
-    }, {
-      method: 'POST', endpoint: '/api/v1/users', description: 'Create a new user', category: 'Users'
-    }, {
-      method: 'GET', endpoint: '/api/v1/projects', description: 'List all projects', category: 'Projects'
-    }, {
-      method: 'POST', endpoint: '/api/v1/projects', description: 'Create a new project', category: 'Projects'
-    }, {
-      method: 'GET', endpoint: '/api/v1/analytics', description: 'Get analytics data', category: 'Analytics'
-    }, {
-      method: 'POST', endpoint: '/api/v1/webhooks', description: 'Create a webhook', category: 'Webhooks'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    }
+      category:, Webhooks''}
   ]
 
   const sdkLanguages = [
-<<<<<<< HEAD
-    { name: 'JavaScript, version:,'
+{ name: 'JavaScript, version:,'
   2.1.0', icon: '🟨 },
     { name:, Python', version: '1.8.2, icon:,
   🐍' }, '
@@ -88,15 +62,7 @@ const API: NextPage = () => {
     { name: 'Go, version:,'
   1.2.0', icon: '🐹 },
     { name:, Ruby', version: '1.1.0, icon: '💎' }
-  ];
-=======
-    { name: 'JavaScript', version: '2.1.0', icon: '🟨' }, { name: 'Python', version: '1.8.2', icon: '🐍' },
-    { name: 'PHP', version: '1.5.0', icon: '🐘' }, { name: 'Java', version: '1.3.0', icon: '☕' },
-    { name: 'Go', version: '1.2.0', icon: '🐹' }, { name: 'Ruby', version: '1.1.0', icon: '💎' }
-  ]
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
-  return (
+  ];return (
     <MainLayout
       title="API Reference - Zion Tech Group"
       description="Complete API reference and documentation for Zion Tech Group services."

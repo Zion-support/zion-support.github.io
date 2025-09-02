@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/pricing.tsx
+:src.disabled/pages/pricing.tsx
 import React from
   'react';
 
@@ -7,12 +7,7 @@ const Pricing: React.FC = () => (
     <h1 className="text-4xl font-bold mb-4">Pricing</h1>
     <p className="text-gray-300">Transparent plans for every stage. Contact us for enterprise.</p>
   </div>
-);
-
-=======
-import React from 'react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/pricing.tsx
-export default Pricing;
+);export default Pricing;
 
 ;
 const Pricing: React.FC = () => (;

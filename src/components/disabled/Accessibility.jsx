@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, createContext, useContext } from, react'; import { motion, AnimatePresence } from'
   'framer-motion'; ; import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from
   '../ui/button'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if (!context) {; throw new Error(
@@ -14,25 +13,12 @@ export const useAccessibility = () => {;
     const context = useContext(AccessibilityContext);
     if (!context) {;
         throw new Error(
-  'useAccessibility must be used within an AccessibilityProvider');
-=======
-import React, { useState, useEffect, createContext, useContext } from 'react' import { motion, AnimatePresence } from 'framer-motion';  import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button'; const AccessibilityContext = createContext(undefined); export const useAccessibility = () => {; const context = useContext(AccessibilityContext); if (!context) { throw new Error('useAccessibility must be used within an AccessibilityProvider'); ; return context; }import React, { useState, useEffect, createContext, useContext } from 'react'
-import { motion, AnimatePresence } from 'framer-motion';
-
-import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X import { Button } from '../ui/button';
-const AccessibilityContext = createContext(undefined);
-export const useAccessibility = () => {;
-    const context = useContext(AccessibilityContext);
-    if (!context) {
-        throw new Error('useAccessibility must be used within an AccessibilityProvider');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-;
+  'useAccessibility must be used within an AccessibilityProvider');;
     return context;
 };// Accessibility Provider Component;
 export const AccessibilityProvider = ({ children }) => {;
     const [highContrast, setHighContrast] = useState(false);
-<<<<<<< HEAD
-    const [reducedMotion, setReducedMotion] = useState(false);
+const [reducedMotion, setReducedMotion] = useState(false);
     const [fontSize, setFontSize] = useState(
   'medium');
     const [colorBlindMode, setColorBlindMode] = useState(
@@ -49,23 +35,7 @@ export const AccessibilityProvider = ({ children }) => {;
   'medium');
 ;
             setColorBlindMode(settings.colorBlindMode ||
-  'none');
-=======
-    const [reducedMotion, setReducedMotion] = useState(false)
-    const [fontSize, setFontSize] = useState('medium')
-    const [colorBlindMode, setColorBlindMode] = useState('none');
-    // Load settings from localStorage;
-    useEffect(() => {
-        const savedSettings = localStorage.getItem('zion-accessibility-settings');
-        if (savedSettings) {;
-            const settings = JSON.parse(savedSettings);
-            setHighContrast(settings.highContrast || false);
-            setReducedMotion(settings.reducedMotion || false)
-            setFontSize(settings.fontSize || 'medium');
-
-            setColorBlindMode(settings.colorBlindMode || 'none');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-;}, []);
+  'none');;}, []);
     // Save settings to localStorage;
     useEffect(() => {;
         const settings = {;
@@ -74,19 +44,12 @@ export const AccessibilityProvider = ({ children }) => {;
             fontSize,;
   ;
             colorBlindMode;
-<<<<<<< HEAD
 };
         localStorage.setItem(
-  'zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);// Apply accessibility settings to document;
-=======
-}
-        localStorage.setItem('zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);// Apply accessibility settings to document;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    useEffect(() => {;
+  'zion-accessibility-settings', JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]);// Apply accessibility settings to document;useEffect(() => {;
         const root = document.documentElement;
         // High contrast mode;
         if (highContrast) {;
-<<<<<<< HEAD
 ;
             root.classList.add(
   'high-contrast');
@@ -122,28 +85,7 @@ export const AccessibilityProvider = ({ children }) => {;
   'url(#deuteranopia)' :;
 ;
 
-  'url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode]);'
-=======
-
-            root.classList.add('high-contrast');
-;
-        else {
-            root.classList.remove('high-contrast');
-;
-        // Reduced motion;
-        if (reducedMotion) {
-            root.classList.add('reduced-motion');
-;
-        else {
-            root.classList.remove('reduced-motion');
-;// Font size
-        root.style.fontSize = fontSize === 'small' ? '14px' : fontSize === 'large' ? '18px' : '16px';
-        // Color blind mode
-        root.style.filter = colorBlindMode === 'none' ? 'none' : colorBlindMode === 'protanopia' ? 'url(#protanopia)' : colorBlindMode === 'deuteranopia' ? 'url(#deuteranopia)' :;
-
-                    'url(#tritanopia)'}, [highContrast, reducedMotion, fontSize, colorBlindMode]);
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-    const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
+  'url(#tritanopia)}, [highContrast, reducedMotion, fontSize, colorBlindMode]);'const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
     const value = {;
   highContrast,;
         reducedMotion,;
@@ -164,20 +106,13 @@ export const AccessibilityPanel = () => {;
     // Keyboard shortcuts;
     useEffect(() => {;
         const handleKeyDown = (event) => {;
-<<<<<<< HEAD
-            // Ctrl/Cmd + Shift + A to open accessibility panel;
+// Ctrl/Cmd + Shift + A to open accessibility panel;
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===
-  'A') {;
-=======
-            // Ctrl/Cmd + Shift + A to open accessibility panel
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'A') {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-                event.preventDefault();
+  'A') {;event.preventDefault();
 ;
                 setIsOpen(!isOpen);
 ;
-<<<<<<< HEAD
-            // Ctrl/Cmd + Shift + H to toggle high contrast;
+// Ctrl/Cmd + Shift + H to toggle high contrast;
             if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key ===
   'H') {;
                 event.preventDefault();
@@ -193,23 +128,7 @@ export const AccessibilityPanel = () => {;
   'keydown', handleKeyDown);";"
         return () => window.removeEventListener(
   'keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);";"
-    return (<>;"";""
-=======
-            // Ctrl/Cmd + Shift + H to toggle high contrast
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'H') {;
-                event.preventDefault();
-                toggleHighContrast();
-;
-            // Ctrl/Cmd + Shift + M to toggle reduced motion
-            if ((event.ctrlKey || event.metaKey) && event.shiftKey && event.key === 'M') {;
-                event.preventDefault();
-                toggleReducedMotion();
-;}""
-        window.addEventListener('keydown', handleKeyDown);""
-        return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]);";"
-    return (<>;"";""
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      {/* Floating Accessibility Button */}";"";"
+    return (<>;"";""{/* Floating Accessibility Button */}";"";"
       <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">";"";"
         <Accessibility className="w-6 h-6"/>;";"
       </motion.button>;";"
@@ -261,34 +180,21 @@ export const AccessibilityPanel = () => {;
                 {/* Font Size */};"";""
                 <div>";"";"
                   <h3 className="text-white font-medium mb-3">Font Size</h3>";"";"
-<<<<<<< HEAD
-                  <div className="flex gap-2">";"";"
+<div className="flex gap-2">";"";"
                     {[
   'small', 'medium',
-  'large'].map((size) => (<Button key={size} variant={fontSize === size ? "default" : "outline"} size="sm" onClick={() => setFontSize(size)} className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
-=======
-                  <div className="flex gap-2">";"""
-                    {['smallmediumlarge'].map((size) => (<Button key={size} variant={fontSize === size ? "default" : "outline"} size="sm" onClick={() => setFontSize(size)} className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-                        {size.charAt(0).toUpperCase() + size.slice(1)};
+  'large'].map((size) => (<Button key={size} variant={fontSize === size ? "default" : "outline"} size="sm" onClick={() => setFontSize(size)} className={fontSize === size ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;{size.charAt(0).toUpperCase() + size.slice(1)};
                       </Button>))};""
                   </div>;";"
                 </div>;";"
                 {/* Color Blind Mode */};"";""
                 <div>";"";"
                   <h3 className="text-white font-medium mb-3">Color Blind Support</h3>";"";"
-<<<<<<< HEAD
-                  <div className="grid grid-cols-2 gap-2">";"";"
+<div className="grid grid-cols-2 gap-2">";"";"
                     {[
   'none', 'protanopia',
   'deuteranopia', 'tritanopia'].map((mode) => (<Button key={mode} variant={colorBlindMode === mode ? "default" : "outline"} size="sm" onClick={() => setColorBlindMode(mode)} className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
-                        {mode.charAt(0).toUpperCase() + mode.slice(1)};""
-=======
-                  <div className="grid grid-cols-2 gap-2">";"""
-                    {['noneprotanopiadeuteranopia', 'tritanopia'].map((mode) => (<Button key={mode} variant={colorBlindMode === mode ? "default" : "outline"} size="sm" onClick={() => setColorBlindMode(mode)} className={colorBlindMode === mode ? "bg-zion-cyan text-white" : "border-zion-cyan/30 text-zion-cyan"}>;
-                        {mode.charAt(0).toUpperCase() + mode.slice(1)};""
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-                      </Button>))};";"
+                        {mode.charAt(0).toUpperCase() + mode.slice(1)};""</Button>))};";"
                   </div>;";"
                 </div>;"";""
                 {/* Keyboard Shortcuts */}";"";"
@@ -330,31 +236,17 @@ export const SkipToContent = () => (<a href="#main-content" className="sr-only f
 // Focus Trap Hook;""
 export const useFocusTrap = (isActive) => {;";"
     useEffect(() => {;";"
-<<<<<<< HEAD
-        if (!isActive);"";""
+if (!isActive);"";""
             return;";"";"
         const focusableElements =, button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])';'
         const container = document.activeElement?.closest(
-  '[data-focus-trap]');
-=======
-        if (!isActive);"";""
-            return;";"""
-        const focusableElements = 'button, [href], input, select, textarea, [tabindex]: not([tabindex="-1"])'
-        const container = document.activeElement?.closest('[data-focus-trap]');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-        if (!container);
+  '[data-focus-trap]');if (!container);
             return;
         const firstFocusableElement = focusableContent[0];
         const lastFocusableElement = focusableContent[focusableContent.length - 1];
-<<<<<<< HEAD
-        const handleTabKey = (e) => {;
+const handleTabKey = (e) => {;
             if (e.key ===
-  'Tab) {;'
-=======
-        const handleTabKey = (e) => {
-            if (e.key === 'Tab') {;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-                if (e.shiftKey) {;
+  'Tab) {;'if (e.shiftKey) {;
                     if (document.activeElement === firstFocusableElement) {;
                         e.preventDefault();
 ;
@@ -364,18 +256,11 @@ export const useFocusTrap = (isActive) => {;";"
                     if (document.activeElement === lastFocusableElement) {;
                         e.preventDefault();
                         firstFocusableElement.focus();
-<<<<<<< HEAD
 ;};";"
         document.addEventListener(
   'keydown', handleTabKey);";"
         return () => document.removeEventListener(
-  'keydown', handleTabKey)}, [isActive])};"";""
-=======
-;};""
-        document.addEventListener('keydown', handleTabKey);""
-        return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};"";""
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-// Screen Reader Only Text";"";"
+  'keydown', handleTabKey)}, [isActive])};"";""// Screen Reader Only Text";"";"
 export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);";"
 export default AccessibilityPanel;"";""
 }}}}}}}}}}}}}}}";"";"

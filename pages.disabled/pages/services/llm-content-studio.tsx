@@ -9,16 +9,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
 :pages.disabled/pages/services/llm-content-studio.tsx
       </Helmet>"
 ""
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      </Helmet>
-""
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}""
->>>>>>> pr-10728
-        <section className="relative pt-32 pb-20 overflow-hidden">""
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""<section className="relative pt-32 pb-20 overflow-hidden">""
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
@@ -30,20 +21,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
                 LLM Content""
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Studio</span>
-<<<<<<< HEAD
-              </h1>"""
-=======
-              </h1>"
-                <BookOpen className="w-4 h-4 mr-2"  />                AI-Powered Content Creation;
-              </div>
-""
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                LLM Content""
-                <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Studio</span>
-              </h1>
-""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
+</h1>"""<p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
                 Transform your content creation with AI-powered LLM technology. Generate high-quality,
                 on-brand content at scale for blogs, marketing, and creative projects.
 :pages.disabled/pages/services/llm-content-studio.tsx
@@ -58,48 +36,17 @@ export { function };export default function LLMContentStudio(...args: []):  {}
                   <ArrowRight className="ml-2 w-5 h-5"  />"
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">""
-<<<<<<< HEAD
-                  <Play className="mr-2 w-5 h-5"  />                  Watch Demo</button>
-=======
-                  <Play className="mr-2 w-5 h-5"  />                  Watch Demo
-              </p>
-""
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link""
-                  to="/contact""
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl""
-                  Get Started""
-                  <ArrowRight className="ml-2 w-5 h-5"  />
-                </Link>""
-                <button className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">""
-                  <Play className="mr-2 w-5 h-5"  />                  Watch Demo;
-                </button>
->>>>>>> pr-10728
-              </div>
+<Play className="mr-2 w-5 h-5"  />                  Watch Demo</button></div>
             </div>
           </div>
         </section>
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-"{/* Features Section */}""
-=======
-"
-
-        {/* Features Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
+"{/* Features Section */}""<section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-                AI-Powered Content Creation"</h2>""
-=======
-                AI-Powered Content Creation"
-                AI-Powered Content Creation;
-              </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+AI-Powered Content Creation"</h2>""<p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Our LLM Content Studio provides comprehensive tools for creating engaging,
                 high-quality content across all platforms and formats.
               </p>
@@ -147,51 +94,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD
-                    <feature.icon className="w-6 h-6 text-white" />"</div>""
-=======
-                    <feature.icon className="w-6 h-6 text-white" />"
-            </div>
-""
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {[]
-                {}
-                  icon: Sparkles,""
-                  title: "AI Content Generation",""
-                  description: "Generate original content using advanced language models and AI algorithms.""
-                },
-                {}
-                  icon: PenTool,""
-                  title: "Creative Writing",""
-                  description: "Create compelling stories, articles, and creative content with AI assistance.""
-                },
-                {}
-                  icon: Target,""
-                  title: "Brand Voice Consistency",""
-                  description: "Maintain consistent brand voice and tone across all content pieces.""
-                },
-                {}
-                  icon: Users,""
-                  title: "Multi-format Support",""
-                  description: "Create content for blogs, social media, emails, and marketing materials.""
-                },
-                {}
-                  icon: Zap,""
-                  title: "Rapid Content Creation",""
-                  description: "Generate high-quality content in minutes, not hours or days.""
-                },
-                {}
-                  icon: Shield,""
-                  title: "Quality Assurance",""
-                  description: "Built-in plagiarism detection and content quality validation.""
-                }
-              ].map((feature, index)  => (""
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
-                    <feature.icon className="w-6 h-6 text-white" />
-                  </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
+<feature.icon className="w-6 h-6 text-white" />"</div>""<h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
                   <p className="text-slate-300">{feature.description}</p>
                 </div>
               ))}
@@ -199,26 +102,12 @@ export { function };export default function LLMContentStudio(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-"{/* Content Types Section */}""
-=======
-"
-
-        {/* Content Types Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
+"{/* Content Types Section */}""<section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-                Content Types & Formats"</h2>""
-=======
-                Content Types & Formats"
-                Content Types & Formats;
-              </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+Content Types & Formats"</h2>""<p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Generate diverse content types for all your marketing and communication needs.
               </p>
 :pages.disabled/pages/services/llm-content-studio.tsx
@@ -281,67 +170,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{contentType.title}</h3>""
                   <p className="text-slate-300 mb-4">{contentType.description}</p>""
-<<<<<<< HEAD
-                  <ul className="space-y-1">"{contentType.benefits.map((benefit, benefitIndex) => (""
-=======
-                  <ul className="space-y-1">"
-            </div>
-""
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-              {[]
-                {}
-""
-                  title: "Blog Posts & Articles",""
-                  description: "Long-form content, blog posts, and comprehensive articles.",
-                  icon: BookOpen,""
-                  benefits: ["SEO optimization", "Research-backed", "Engaging narratives"]
-                },
-                {}
-""
-                  title: "Marketing Copy",""
-                  description: "Ad copy, landing pages, and promotional content.",
-                  icon: Target,""
-                  benefits: ["Conversion-focused", "Brand-aligned", "Compelling messaging"]
-                },
-                {}
-""
-                  title: "Social Media Content",""
-                  description: "Posts, captions, and social media marketing content.",
-                  icon: Users,""
-                  benefits: ["Platform-optimized", "Trend-aware", "Engagement-driven"]
-                },
-                {}
-""
-                  title: "Email Marketing",""
-                  description: "Newsletters, promotional emails, and drip campaigns.",
-                  icon: Mail,""
-                  benefits: ["Personalized", "Segmented", "Action-oriented"]
-                },
-                {}
-""
-                  title: "Product Descriptions",""
-                  description: "E-commerce product descriptions and catalog content.",
-                  icon: Activity,""
-                  benefits: ["Feature-focused", "Benefit-driven", "SEO-optimized"]
-                },
-                {}
-""
-                  title: "Creative Writing",""
-                  description: "Stories, scripts, and creative content projects.",
-                  icon: PenTool,""
-                  benefits: ["Imaginative", "Emotionally engaging", "Original concepts"]
-                }
-              ].map((contentType, index)  => (""
-                <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
-                    <contentType.icon className="w-6 h-6 text-white" />
-                  </div>""
-                  <h3 className="text-xl font-semibold text-white mb-2">{contentType.title}</h3>""
-                  <p className="text-slate-300 mb-4">{contentType.description}</p>""
-                  <ul className="space-y-1">
-                    {contentType.benefits.map((benefit, benefitIndex) => (""
->>>>>>> pr-10728
-                      <li key={benefitIndex} className="text-sm text-purple-400 flex items-center">""
+<ul className="space-y-1">"{contentType.benefits.map((benefit, benefitIndex) => (""<li key={benefitIndex} className="text-sm text-purple-400 flex items-center">""
                         <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
                       </li>
                     ))}
@@ -352,26 +181,12 @@ export { function };export default function LLMContentStudio(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-"{/* AI Capabilities Section */}""
-=======
-"
-
-        {/* AI Capabilities Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
+"{/* AI Capabilities Section */}""<section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-                Advanced AI Capabilities"</h2>""
-=======
-                Advanced AI Capabilities"
-                Advanced AI Capabilities;
-              </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+Advanced AI Capabilities"</h2>""<p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Leverage cutting-edge language models and AI technology for superior content creation.
               </p>
 :pages.disabled/pages/services/llm-content-studio.tsx
@@ -379,18 +194,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
-<<<<<<< HEAD
-                <div className="space-y-6">"{[""
-=======
-                <div className="space-y-6">"
-            </div>
-""
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>""
-                <div className="space-y-6">
-                  {[""
->>>>>>> pr-10728
-                    "Natural language processing for human-like content generation",""
+<div className="space-y-6">"{["""Natural language processing for human-like content generation",""
                     "Context-aware writing that understands your industry and audience",""
                     "Multi-language support for global content creation",""
                     "Style transfer to match different writing styles and tones",""
@@ -407,18 +211,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Models Supported</h3>""
-<<<<<<< HEAD
-                <div className="space-y-4">"{[""
-=======
-                <div className="space-y-4">"
-              </div>
-""
-              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
-                <h3 className="text-2xl font-semibold text-white mb-4">AI Models Supported</h3>""
-                <div className="space-y-4">
-                  {[""
->>>>>>> pr-10728
-                    { model: "GPT-4", icon: Sparkles, color: "from-blue-500 to-cyan-500", description: "Advanced language model" },""
+<div className="space-y-4">"{[""{ model: "GPT-4", icon: Sparkles, color: "from-blue-500 to-cyan-500", description: "Advanced language model" },""
                     { model: "Claude", icon: BookOpen, color: "from-purple-500 to-pink-500", description: "Anthropic
   's AI assistant" },""
                     { model: "LLaMA", icon: PenTool, color: "from-green-500 to-emerald-500", description: "Open-source LLM" },""
@@ -428,19 +221,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
                     <div key={index} className="flex items-center space-x-3">"
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>""
                         <item.icon className="w-4 h-4 text-white" />
-<<<<<<< HEAD
-                      </div>"<div>""
-=======
-                      </div>"
-                    { model: "Custom Models", icon: Settings, color: "from-orange-500 to-red-500", description: "Fine-tuned for your brand" }
-                  ].map((item, index)  => (""
-                    <div key={index} className="flex items-center space-x-3">
-                      <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>""
-                        <item.icon className="w-4 h-4 text-white" />
-                      </div>
-                      <div>""
->>>>>>> pr-10728
-                        <span className="text-slate-300 font-medium">{item.model}</span>""
+</div>"<div>""<span className="text-slate-300 font-medium">{item.model}</span>""
                         <p className="text-xs text-slate-400">{item.description}</p>
                       </div>
                     </div>
@@ -451,26 +232,12 @@ export { function };export default function LLMContentStudio(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-"{/* Workflow Section */}""
-=======
-"
-
-        {/* Workflow Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
+"{/* Workflow Section */}""<section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-                Content Creation Workflow"</h2>""
-=======
-                Content Creation Workflow"
-                Content Creation Workflow;
-              </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+Content Creation Workflow"</h2>""<p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Streamlined process from idea to published content with AI assistance at every step.
               </p>
 :pages.disabled/pages/services/llm-content-studio.tsx
@@ -509,45 +276,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
-                    <span className="text-white font-bold text-xl">{step.step}</span>"</div>""
-=======
-                    <span className="text-white font-bold text-xl">{step.step}</span>"
-            </div>
-""
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {[]
-                {}
-""
-                  step: "01",""
-                  title: "Content Brief",""
-                  description: "Define content goals, target audience, and key messaging points.""
-                },
-                {}
-""
-                  step: "02",""
-                  title: "AI Generation",""
-                  description: "AI creates initial content based on your brief and requirements.""
-                },
-                {}
-""
-                  step: "03",""
-                  title: "Human Review",""
-                  description: "Content creators review, edit, and refine AI-generated content.""
-                },
-                {}
-""
-                  step: "04",""
-                  title: "Publishing",""
-                  description: "Final content is optimized and published across platforms.""
-                }
-              ].map((step, index)  => (""
-                <div key={index} className="text-center">""
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                    <span className="text-white font-bold text-xl">{step.step}</span>
-                  </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
+<span className="text-white font-bold text-xl">{step.step}</span>"</div>""<h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
                   <p className="text-slate-300">{step.description}</p>
                 </div>
               ))}
@@ -555,26 +284,12 @@ export { function };export default function LLMContentStudio(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-"{/* Benefits Section */}""
-=======
-"
-
-        {/* Benefits Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
+"{/* Benefits Section */}""<section className="py-20">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-                Transform Your Content Strategy"</h2>""
-=======
-                Transform Your Content Strategy"
-                Transform Your Content Strategy;
-              </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+Transform Your Content Strategy"</h2>""<p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Experience unprecedented efficiency and quality in content creation and management.
               </p>
 :pages.disabled/pages/services/llm-content-studio.tsx
@@ -583,19 +298,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">"
               <div>""
                 <h3 className="text-2xl font-semibold text-white mb-6">Content Creation Benefits</h3>""
-<<<<<<< HEAD
-                <div className="space-y-4">"{[""
-=======
-                <div className="space-y-4">"
-            </div>
-""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
-              <div>""
-                <h3 className="text-2xl font-semibold text-white mb-6">Content Creation Benefits</h3>""
-                <div className="space-y-4">
-                  {[""
->>>>>>> pr-10728
-                    "Generate 10x more content in the same time frame",""
+<div className="space-y-4">"{["""Generate 10x more content in the same time frame",""
                     "Reduce content creation costs by up to 60%",""
                     "Improve content quality and consistency across all channels",""
                     "Enable rapid content scaling for marketing campaigns",""
@@ -612,17 +315,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
 "
               <div>""
                 <h3 className="text-2xl font-semibold text-white mb-6">Business Impact</h3>""
-<<<<<<< HEAD
-                <div className="space-y-4">"{[""
-=======
-                <div className="space-y-4">"
-
-              <div>""
-                <h3 className="text-2xl font-semibold text-white mb-6">Business Impact</h3>""
-                <div className="space-y-4">
-                  {[""
->>>>>>> pr-10728
-                    "Increase website traffic through SEO-optimized content",""
+<div className="space-y-4">"{["""Increase website traffic through SEO-optimized content",""
                     "Improve customer engagement with relevant, timely content",""
                     "Enhance brand authority and thought leadership",""
                     "Support sales teams with compelling marketing materials",""
@@ -639,26 +332,12 @@ export { function };export default function LLMContentStudio(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-"{/* Analytics Section */}""
-=======
-"
-
-        {/* Analytics Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
+"{/* Analytics Section */}""<section className="py-20 bg-slate-800/30">;""
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-                Content Performance Analytics"</h2>""
-=======
-                Content Performance Analytics"
-                Content Performance Analytics;
-              </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+Content Performance Analytics"</h2>""<p className="text-xl text-slate-300 max-w-2xl mx-auto">
                 Track content performance and optimize your strategy with comprehensive analytics.
               </p>
 :pages.disabled/pages/services/llm-content-studio.tsx
@@ -697,45 +376,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
               ].map((metric, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
-                    <span className="text-white font-bold text-xl">{metric.metric}</span>"</div>""
-=======
-                    <span className="text-white font-bold text-xl">{metric.metric}</span>"
-            </div>
-""
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-              {[]
-                {}
-""
-                  metric: "Engagement",""
-                  title: "Content Engagement",""
-                  description: "Track reader engagement and interaction metrics""
-                },
-                {}
-""
-                  metric: "SEO",""
-                  title: "Search Performance",""
-                  description: "Monitor search rankings and organic traffic""
-                },
-                {}
-""
-                  metric: "Conversion",""
-                  title: "Conversion Rates",""
-                  description: "Measure content-driven conversion performance""
-                },
-                {}
-""
-                  metric: "ROI",""
-                  title: "Content ROI",""
-                  description: "Calculate return on investment for content""
-                }
-              ].map((metric, index)  => (""
-                <div key={index} className="text-center">""
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-                    <span className="text-white font-bold text-xl">{metric.metric}</span>
-                  </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{metric.title}</h3>""
+<span className="text-white font-bold text-xl">{metric.metric}</span>"</div>""<h3 className="text-xl font-semibold text-white mb-2">{metric.title}</h3>""
                   <p className="text-slate-300">{metric.description}</p>
                 </div>
               ))}
@@ -743,14 +384,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/llm-content-studio.tsx
-<<<<<<< HEAD
-"{/* CTA Section */}""
-=======
-"
-
-        {/* CTA Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10">;""
+"{/* CTA Section */}""<section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10">;""
           <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/llm-content-studio.tsx
@@ -768,27 +402,7 @@ export { function };export default function LLMContentStudio(...args: []):  {}
                 <ArrowRight className="ml-2 w-5 h-5"  />              </Link>"
               <Link""
                 to="/services""
-<<<<<<< HEAD
-                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
-=======
-                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200"
-              Ready to Transform Your Content Creation?
-            </h2>""
-            <p className="text-xl text-slate-300 mb-8">
-              Leverage AI-powered content generation to scale your content strategy and drive business growth.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link""
-                to="/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-700 transition-all duration-200""
-                Start Creating""
-                <ArrowRight className="ml-2 w-5 h-5"  />              </Link>
-              <Link""
-                to="/services""
-                className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200""
-              >
->>>>>>> pr-10728
-                Explore All Services;
+className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">Explore All Services;
               </Link>;
             </div>;
           </div>;

@@ -96,13 +96,10 @@
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
     "alwaysStrict": true,
-<<<<<<< HEAD
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "exactOptionalPropertyTypes": false
-=======
+    "exactOptionalPropertyTypes": false,
     "tsBuildInfoFile": ".next/tsbuildinfo"
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-8c53
   },
   "include": [
     "next-env.d.ts",
@@ -132,7 +129,6 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.backup",
-<<<<<<< HEAD
     "**/*.disabled",
     "src/utils/generateRandomListing.ts",
     "src/utils/linkChecker.ts",
@@ -150,8 +146,5 @@
     "src/pages/webinars.tsx",
     "src/routes/*Routes.tsx",
     "src/pages/services/**"
-=======
-    "**/*.disabled"
->>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-8c53
   ]
 }

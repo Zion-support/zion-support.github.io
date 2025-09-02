@@ -1,6 +1,2 @@
-<<<<<<< HEAD:src.pages.disabled/Pricing.test.tsx
+:src.pages.disabled/Pricing.test.tsx
 describe ('Pricing', () => {}; '; it ('renders without crashing', () => {}; render (<Pricing />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Pricing />) ;
-=======
-
-describe ('Pricing', () => {}; '; it ('renders without crashing', () => {}; render (<Pricing />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Pricing />) ;''';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Pricing.test.tsx

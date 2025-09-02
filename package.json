@@ -86,10 +86,7 @@
     "child_process": "^1.0.2",
     "chokidar": "^4.0.3",
     "class-variance-authority": "^0.7.1",
-<<<<<<< HEAD
-=======
     "clsx": "^2.1.1",
->>>>>>> origin/main
     "cron-parser": "^5.3.0",
 
     "events": "^3.3.0",
@@ -105,10 +102,7 @@
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "postcss": "^8.4.32",
-<<<<<<< HEAD
-=======
     "queue-microtask": "^1.2.3",
->>>>>>> origin/main
     "react": "^18.3.1",
     "react-datepicker": "^8.4.0",
     "react-dom": "^18.3.1",
@@ -141,11 +135,8 @@
     "eslint-plugin-react-refresh": "^0.4.20",
     "globals": "^16.3.0",
     "husky": "^9.1.7",
-<<<<<<< HEAD
-=======
     "jsdom": "^24.0.0",
     "pm2": "^6.0.8",
->>>>>>> origin/main
     "postcss": "^8.4.32",
     "postcss-preset-env": "^10.3.1",
     "tailwindcss": "^3.4.0",

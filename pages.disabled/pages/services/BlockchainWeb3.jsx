@@ -10,66 +10,31 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         },;
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
-"icon: Shield,""
-=======
-"
-        {}
-            icon: Shield,""
->>>>>>> pr-10728
-            title: "DeFi Protocol Development",""
+"icon: Shield,""title: "DeFi Protocol Development",""
             description: "Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions",""
             features["AMM algorithms", "Liquidity management", "Risk assessment", "Regulatory compliance"];
         },;
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
-"icon: Users,""
-=======
-"
-        {}
-            icon: Users,""
->>>>>>> pr-10728
-            title: "DAO & Governance Systems",""
+"icon: Users,""title: "DAO & Governance Systems",""
             description: "Decentralized autonomous organizations with voting mechanisms and governance frameworks",""
             features["Token-weighted voting", "Proposal management", "Treasury management", "Multi-sig wallets"];
         },;
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
-"icon: Database,""
-=======
-"
-        {}
-            icon: Database,""
->>>>>>> pr-10728
-            title: "NFT Marketplace Development",""
+"icon: Database,""title: "NFT Marketplace Development",""
             description: "Complete NFT ecosystems with minting, trading, and marketplace functionality",""
             features["ERC-721/ERC-1155 standards", "Royalty systems", "Metadata management", "Cross-chain bridges"];
         },;
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
-"icon: Network,""
-=======
-"
-        {}
-            icon: Network,""
->>>>>>> pr-10728
-            title: "Cross-Chain Solutions",""
+"icon: Network,""title: "Cross-Chain Solutions",""
             description: "Interoperability solutions connecting different blockchain networks seamlessly",""
             features["Bridge development", "Cross-chain messaging", "Asset transfers", "Liquidity aggregation"];
         },;
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
-"icon: Lock,""
-=======
-"
-        {}
-            icon: Lock,""
->>>>>>> pr-10728
-            title: "Enterprise Blockchain",""
+"icon: Lock,""title: "Enterprise Blockchain",""
             description: "Private and consortium blockchain solutions for enterprise applications",""
             features["Hyperledger Fabric", "Permissioned networks", "Identity management", "Supply chain tracking"];
         }
@@ -121,104 +86,31 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
     ];
     const useCases = [
         {
-<<<<<<< HEAD
-"""
-=======
-"
-    const web3Technologies = []
-        {}
-""
-            name: "Ethereum",""
-            description: "Smart contracts and DeFi protocols",""
-            icon: "ETH""
-        },
-        {}
-""
-            name: "Polygon",""
-            description: "Scalable Layer 2 solutions",""
-            icon: "POL""
-        },
-        {}
-""
-            name: "Solana",""
-            description: "High-performance blockchain",""
-            icon: "SOL""
-        },
-        {}
-""
-            name: "Polkadot",""
-            description: "Multi-chain interoperability",""
-            icon: "DOT""
-        },
-        {}
-""
-            name: "Cosmos",""
-            description: "Internet of blockchains",""
-            icon: "ATOM""
-        },
-        {}
-""
-            name: "Avalanche",""
-            description: "Fast consensus protocol",""
-            icon: "AVAX""
-    ];
-    const useCases = []
-        {}
-""
->>>>>>> pr-10728
-            title: "Financial Services",""
+"""title: "Financial Services",""
             description: "DeFi protocols, payment systems, and asset tokenization",
             icon: TrendingUp;
         },
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
-"""
-=======
-"
-        {}
-""
->>>>>>> pr-10728
-            title: "Supply Chain",""
+"""title: "Supply Chain",""
             description: "Transparent tracking and verification of goods and materials",
             icon: Network;
         },
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
-"""
-=======
-"
-        {}
-""
->>>>>>> pr-10728
-            title: "Digital Identity",""
+"""title: "Digital Identity",""
             description: "Self-sovereign identity and verifiable credentials",
             icon: Shield;
         },
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
-"""
-=======
-"
-        {}
-""
->>>>>>> pr-10728
-            title: "Gaming & Metaverse",""
+"""title: "Gaming & Metaverse",""
             description: "NFT gaming, virtual assets, and metaverse infrastructure",
             icon: Users;
         },
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
-"""
-=======
-"
-        {}
-""
->>>>>>> pr-10728
-            title: "Healthcare",""
+"""title: "Healthcare",""
             description: "Patient data management and pharmaceutical supply chain",
             icon: Eye;
         },
@@ -230,19 +122,7 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             description: "Property tokenization and fractional ownership",
             icon: Target
 
-<<<<<<< HEAD
-    ];"const benefits = [""
-=======
-    ];"
-        {}
-""
-            title: "Real Estate",""
-            description: "Property tokenization and fractional ownership",
-            icon: Target;
-    ];
-    const benefits = [""
->>>>>>> pr-10728
-        "Transparent and immutable record-keeping",""
+];"const benefits = ["""Transparent and immutable record-keeping",""
         "Reduced intermediaries and costs",""
         "Enhanced security and privacy",""
         "Programmable business logic",""
@@ -250,14 +130,7 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         "Real-time settlement and automation""
     ];""
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
-    return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
+return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""<section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto text-center">""
           <div className="mb-8">""
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">""
@@ -275,26 +148,7 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
-                Explore Services"</a>""
-=======
-                Explore Services"
-              Blockchain & Web3;
-            </div>""
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Building the Future of""
-              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent"> Decentralized Technology</span>
-            </h1>""
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              We develop cutting-edge blockchain solutions and Web3 applications that enable;
-              trustless, transparent, and efficient digital ecosystems for the future.
-            </p>""
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-              <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Explore Services;
-              </a>""
->>>>>>> pr-10728
-              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+Explore Services"</a>""<a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
                 Get Started;
               </a>
             </div>
@@ -302,49 +156,21 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         </div>
       </section>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-"{/* Blockchain Services Grid */}""
-=======
-"
-
-      {/* Blockchain Services Grid */}""
->>>>>>> pr-10728
-      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">""
+"{/* Blockchain Services Grid */}""<section id="services" className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-              Our Blockchain & Web3 Services"</h2>""
-=======
-              Our Blockchain & Web3 Services"
-              Our Blockchain & Web3 Services;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+Our Blockchain & Web3 Services"</h2>""<p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Comprehensive solutions covering every aspect of blockchain development;
               and Web3 application creation.
             </p>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-          </div>"""
-=======
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
+</div>"""<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {blockchainServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-                  <service.icon className="w-8 h-8 text-white"/>"</div>""
-=======
-                  <service.icon className="w-8 h-8 text-white"/>"
-                  <service.icon className="w-8 h-8 text-white"/>
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>""
+<service.icon className="w-8 h-8 text-white"/>"</div>""<h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>""
                 <p className="text-gray-300 mb-4">{service.description}</p>""
                 <ul className="space-y-2">""
                   {service.features.map((feature, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">""
@@ -357,98 +183,42 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         </div>
       </section>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-"{/* Web3 Technologies */}""
-=======
-"
-
-      {/* Web3 Technologies */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+"{/* Web3 Technologies */}""<section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-              Supported Blockchain Technologies"</h2>""
-=======
-              Supported Blockchain Technologies"
-              Supported Blockchain Technologies;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+Supported Blockchain Technologies"</h2>""<p className="text-xl text-gray-300 max-w-2xl mx-auto">
               We work with leading blockchain platforms and protocols to deliver;
               the best solutions for your specific needs.
             </p>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-          </div>"""
-=======
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">""
+</div>"""<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">""
             {web3Technologies.map((tech, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold text-white">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-                  {tech.icon}"</div>""
-=======
-                  {tech.icon}"
-                  {tech.icon}
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>""
+{tech.icon}"</div>""<h3 className="text-lg font-semibold text-white mb-2">{tech.name}</h3>""
                 <p className="text-sm text-gray-300">{tech.description}</p>
               </div>))}
           </div>
         </div>
       </section>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-"{/* Use Cases */}""
-=======
-"
-
-      {/* Use Cases */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
+"{/* Use Cases */}""<section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-              Blockchain Use Cases"</h2>""
-=======
-              Blockchain Use Cases"
-              Blockchain Use Cases;
-            </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+Blockchain Use Cases"</h2>""<p className="text-xl text-gray-300 max-w-2xl mx-auto">
               Discover how blockchain technology can transform your industry;
               and create new opportunities for innovation.
             </p>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-          </div>"""
-=======
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
+</div>"""<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-                  <useCase.icon className="w-8 h-8 text-white"/>"</div>""
-=======
-                  <useCase.icon className="w-8 h-8 text-white"/>"
-                  <useCase.icon className="w-8 h-8 text-white"/>
-                </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>""
+<useCase.icon className="w-8 h-8 text-white"/>"</div>""<h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>""
                 <p className="text-gray-300">{useCase.description}</p>
               </div>))}
           </div>
@@ -466,57 +236,21 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
               </h2>""
               <p className="text-lg text-gray-300 mb-6">
                 Blockchain technology offers unprecedented opportunities to create
-<<<<<<< HEAD
-                trust, transparency, and efficiency in digital systems."</p>""
-=======
-                trust, transparency, and efficiency in digital systems."
-
-      {/* Benefits Section */}""
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-        <div className="max-w-7xl mx-auto">""
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>""
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Why Choose Blockchain?
-              </h2>""
-              <p className="text-lg text-gray-300 mb-6">
-                Blockchain technology offers unprecedented opportunities to create;
-                trust, transparency, and efficiency in digital systems.
-              </p>""
->>>>>>> pr-10728
-              <ul className="space-y-3">""
+trust, transparency, and efficiency in digital systems."</p>""<ul className="space-y-3">""
                 {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">""
                     <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-              </ul>"</div>""
-=======
-              </ul>"
-              </ul>
-            </div>""
->>>>>>> pr-10728
-            <div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30">""
+</ul>"</div>""<div className="bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-blue-500/30">""
               <div className="text-center">""
                 <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>""
                 <h3 className="text-2xl font-bold text-white mb-2">Web3 Revolution</h3>""
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-                <p className="text-gray-300 mb-6">
+<p className="text-gray-300 mb-6">
   '
                   We're at the forefront of the Web3 revolution, building
-                  decentralized applications that empower users and organizations."</p>""
-=======
-                <p className="text-gray-300 mb-6">'
-                  We're at the forefront of the Web3 revolution, building
-                  decentralized applications that empower users and organizations."
-                <p className="text-gray-300 mb-6">
-                  We're at the forefront of the Web3 revolution, building;
-                  decentralized applications that empower users and organizations.
-                </p>""
->>>>>>> pr-10728
-                <div className="text-sm text-gray-400">
+                  decentralized applications that empower users and organizations."</p>""<div className="text-sm text-gray-400">
                   <p>• Decentralized applications</p>
                   <p>• Smart contract automation</p>
                   <p>• Token economics</p>
@@ -527,36 +261,15 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         </div>
       </section>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-"{/* Development Process */}""
-=======
-"
-
-      {/* Development Process */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
+"{/* Development Process */}""<section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-            Our Development Process"</h2>""
-=======
-            Our Development Process"
-            Our Development Process;
-          </h2>""
->>>>>>> pr-10728
-          <p className="text-xl text-gray-300 mb-8">
+Our Development Process"</h2>""<p className="text-xl text-gray-300 mb-8">
             A systematic approach to building secure, scalable, and user-friendly;
             blockchain applications.
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-          </p>"""
-=======
-          </p>"
-          </p>
-""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">""
+</p>"""<div className="grid grid-cols-1 md:grid-cols-4 gap-8">""
             <div className="text-center">""
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
@@ -581,49 +294,14 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             </div>""
             <div className="text-center">""
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-<<<<<<< HEAD
-                4"</div>""
-=======
-                4"
-                1;
-              </div>""
-              <h3 className="text-xl font-semibold text-white mb-2">Discovery</h3>""
-              <p className="text-gray-300">Requirements analysis and blockchain selection</p>
-            </div>""
-            <div className="text-center">""
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                2;
-              </div>""
-              <h3 className="text-xl font-semibold text-white mb-2">Design</h3>""
-              <p className="text-gray-300">Architecture and smart contract design</p>
-            </div>""
-            <div className="text-center">""
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                3;
-              </div>""
-              <h3 className="text-xl font-semibold text-white mb-2">Development</h3>""
-              <p className="text-gray-300">Smart contract and frontend development</p>
-            </div>""
-            <div className="text-center">""
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-                4;
-              </div>""
->>>>>>> pr-10728
-              <h3 className="text-xl font-semibold text-white mb-2">Deployment</h3>""
+4"</div>""<h3 className="text-xl font-semibold text-white mb-2">Deployment</h3>""
               <p className="text-gray-300">Testing, auditing, and mainnet deployment</p>
             </div>
           </div>
         </div>
       </section>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
-"{/* CTA Section */}""
-=======
-"
-
-      {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
+"{/* CTA Section */}""<section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
@@ -636,22 +314,7 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
-              Start Your Project"</a>""
-=======
-              Start Your Project"
-            Ready to Build on the Blockchain?
-          </h2>""
-          <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how blockchain technology can transform your business;
-            and create new opportunities for growth and innovation.
-          </p>""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">""
-            <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-              Start Your Project;
-            </a>""
->>>>>>> pr-10728
-            <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
+Start Your Project"</a>""<a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
               View Solutions;
             </a>
           </div>
@@ -661,11 +324,5 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
 export { BlockchainWeb3 };
 :pages.disabled/pages/services/BlockchainWeb3.jsx
 export default BlockchainWeb3;'"
-<<<<<<< HEAD
 }}}}
   '"'"
-=======
-}}}}'"'"
-export default BlockchainWeb3;
-}}}}'""
->>>>>>> pr-10728

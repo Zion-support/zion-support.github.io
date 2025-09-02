@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") ; } return context; };"""";
-=======
-import React from 'react'; const AccessibilityContext = createContext(null); export const useAccessibility = () => { const context = useContext(AccessibilityContext); if(!context) { throw new Error(" "useAccessibility must be used within an AccessibilityProvider" ); } return context; };
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
-import React, { useState, useEffect, createContext, useContext } from 'react';'''
+import React from 'react'; const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") ; } return context; };"""";import React, { useState, useEffect, createContext, useContext } from 'react';'''
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';
 ;const AccessibilityContext = createContext(null);
@@ -405,4 +398,3 @@ export const SrOnly = ({ children }) => (""""
 );
 export default AccessibilityPanel;'"""
 '"'"""
->>>>>>> pr-10728

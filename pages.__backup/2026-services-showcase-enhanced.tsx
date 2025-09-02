@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from,
   react';
 import Head from
@@ -8,120 +7,7 @@ import Link from
 import { motion, AnimatePresence } from
   'framer-motion';
 import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, Search as SearchIcon, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain as BrainIcon, Atom as AtomIcon, Globe2, Bot, ChevronRight, Crown, Infinity, Zap as ZapIcon2, Shield as ShieldIcon, Users as UsersIcon, Globe as GlobeIcon, Cpu as CpuIcon, Database as DatabaseIcon2, Cloud as CloudIcon, Smartphone as SmartphoneIcon, Palette as PaletteIcon, Search as SearchIcon2, MessageSquare as MessageSquareIcon, FileText as MessageSquareIcon2, Calendar as CalendarIcon, CreditCard as CreditCardIcon, BarChart3 as BarChart3Icon, Settings as SettingsIcon, Zap as ZapIcon3, Code as CodeIcon, BookOpen as CodeIcon2, Activity as ActivityIcon, Database as DatabaseIcon3, Play as PlayIcon, Mail as MailIcon, Phone as PhoneIcon, MapPin as MapPinIcon, Filter as FilterIcon, Grid as GridIcon, List as ListIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, Sparkles as SparklesIcon2, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon, Brain as BrainIcon2, Atom as AtomIcon2, Globe2 as Globe2Icon, Bot as BotIcon, ChevronRight as ChevronRightIcon } from
-  'lucide-react';
-=======
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Brain,
-  Atom,
-  Sparkles,
-  Shield,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  Search as SearchIcon,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Zap as ZapIcon,
-  Code,
-  BookOpen,
-  Activity,
-  Database as DatabaseIcon,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  Sparkles as SparklesIcon,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Brain as BrainIcon,
-  Atom as AtomIcon,
-  Globe2,
-  Bot,
-  ChevronRight,
-  Crown,
-  Infinity,
-  Zap as ZapIcon2,
-  Shield as ShieldIcon,
-  Users as UsersIcon,
-  Globe as GlobeIcon,
-  Cpu as CpuIcon,
-  Database as DatabaseIcon2,
-  Cloud as CloudIcon,
-  Smartphone as SmartphoneIcon,
-  Palette as PaletteIcon,
-  Search as SearchIcon2,
-  MessageSquare as MessageSquareIcon,
-  FileText as MessageSquareIcon2,
-  Calendar as CalendarIcon,
-  CreditCard as CreditCardIcon,
-  BarChart3 as BarChart3Icon,
-  Settings as SettingsIcon,
-  Zap as ZapIcon3,
-  Code as CodeIcon,
-  BookOpen as CodeIcon2,
-  Activity as ActivityIcon,
-  Database as DatabaseIcon3,
-  Play as PlayIcon,
-  Mail as MailIcon,
-  Phone as PhoneIcon,
-  MapPin as MapPinIcon,
-  Filter as FilterIcon,
-  Grid as GridIcon,
-  List as ListIcon,
-  ChevronDown as ChevronDownIcon,
-  ChevronUp as ChevronUpIcon,
-  Sparkles as SparklesIcon2,
-  FlaskConical as FlaskConicalIcon,
-  Dna as DnaIcon,
-  Car as CarIcon,
-  Leaf as LeafIcon,
-  Factory as FactoryIcon,
-  Truck as TruckIcon,
-  Microscope as MicroscopeIcon,
-  GraduationCap as GraduationCapIcon,
-  ShieldCheck as ShieldCheckIcon,
-  Brain as BrainIcon2,
-  Atom as AtomIcon2,
-  Globe2 as Globe2Icon,
-  Bot as BotIcon,
-  ChevronRight as ChevronRightIcon,
-} from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-
-import UltraFuturisticBackground from
+  'lucide-react';import UltraFuturisticBackground from
   '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from
   '../components/ui/UltraFuturisticCard';
@@ -153,8 +39,7 @@ export default function Services2026ShowcaseEnhancedPage() {
   ');
 
   // Map service variants to supported card variants
-<<<<<<< HEAD
-  const mapServiceVariantToCardVariant = (serviceVariant: string): 'default
+const mapServiceVariantToCardVariant = (serviceVariant: string): 'default
   ' | 'holographic
   ' | 'quantum
   ' | 'cyberpunk
@@ -285,82 +170,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     address:,
   364 E Main St STE 1008 Middletown DE 19709
   ',
-    website: 'https://ziontechgroup.com
-=======
-  const mapServiceVariantToCardVariant = (
-    serviceVariant: string
-  ):
-    | 'default'
-    | 'holographic'
-    | 'quantum'
-    | 'cyberpunk'
-    | 'neural'
-    | 'quantum-holographic'
-    | 'quantum-advanced'
-    | 'holographic-advanced'
-    | 'neural-quantum'
-    | 'quantum-cyberpunk'
-    | 'holographic-neural'
-    | 'quantum-holographic-advanced'
-    | 'quantum-matrix'
-    | 'neural-cyberpunk'
-    | 'holographic-quantum'
-    | 'quantum-neural-advanced'
-    | 'cyberpunk-holographic'
-    | 'quantum-space'
-    | 'ai-futuristic'
-    | 'quantum-entanglement'
-    | 'holographic-matrix'
-    | 'neural-quantum-cyberpunk'
-    | 'enterprise-futuristic'
-    | 'quantum-futuristic'
-    | 'holographic-futuristic'
-    | 'quantum-iot'
-    | 'quantum-logistics'
-    | 'quantum-financial'
-    | 'quantum-energy'
-    | 'quantum-neural'
-    | 'quantum-cyberpunk' => {
-    if (serviceVariant.includes('quantum') && serviceVariant.includes('ai'))
-      return 'quantum-advanced';
-    if (serviceVariant.includes('quantum')) return 'quantum';
-    if (serviceVariant.includes('ai')) return 'ai-futuristic';
-    if (serviceVariant.includes('holographic')) return 'holographic';
-    if (serviceVariant.includes('neural')) return 'neural';
-    if (serviceVariant.includes('cyberpunk')) return 'cyberpunk';
-    if (serviceVariant.includes('enterprise')) return 'enterprise-futuristic';
-    if (serviceVariant.includes('cloud')) return 'quantum-advanced';
-    if (serviceVariant.includes('security')) return 'cyberpunk';
-    if (serviceVariant.includes('data')) return 'neural';
-    if (serviceVariant.includes('mobility')) return 'holographic';
-    if (serviceVariant.includes('network')) return 'quantum-advanced';
-    if (serviceVariant.includes('backup')) return 'quantum-advanced';
-    if (serviceVariant.includes('itsm')) return 'enterprise-futuristic';
-    if (serviceVariant.includes('monitoring')) return 'neural';
-    if (serviceVariant.includes('blockchain')) return 'quantum-advanced';
-    if (serviceVariant.includes('metaverse')) return 'holographic';
-    if (serviceVariant.includes('iot')) return 'quantum-iot';
-    if (serviceVariant.includes('edge')) return 'quantum-advanced';
-    if (serviceVariant.includes('ar')) return 'holographic';
-    if (serviceVariant.includes('digital-twin')) return 'quantum-advanced';
-    if (serviceVariant.includes('5g')) return 'quantum-advanced';
-    if (serviceVariant.includes('biometric')) return 'cyberpunk';
-    if (serviceVariant.includes('autonomous')) return 'ai-futuristic';
-    if (serviceVariant.includes('revolutionary')) return 'quantum-advanced';
-    if (serviceVariant.includes('consulting')) return 'enterprise-futuristic';
-    if (serviceVariant.includes('api')) return 'quantum-advanced';
-    if (serviceVariant.includes('integration')) return 'quantum-advanced';
-    if (serviceVariant.includes('analytics')) return 'neural';
-    return 'default';
-  };
-
-  const contactInfo = {
-    mobile: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  };
+    website: 'https://ziontechgroup.com};
 
   // Combine all 2026 services including new ones
   const all2026Services = [
@@ -374,8 +184,7 @@ export default function Services2026ShowcaseEnhancedPage() {
 
   // Enhanced categories for 2026
   const categories = [
-<<<<<<< HEAD
-    { id:,
+{ id:,
   all
   ', name: 'All 2026 Services, icon: '🚀
   ', count: all2026Services.length },
@@ -462,85 +271,7 @@ export default function Services2026ShowcaseEnhancedPage() {
   Newest First
   ' },
     { id: 'rating, name: 'Highest Rated
-  ' }
-=======
-    {
-      id: 'all',
-      name: 'All 2026 Services',
-      icon: '🚀',
-      count: all2026Services.length,
-    },
-    {
-      id: 'ai',
-      name: 'AI & Machine Learning',
-      icon: '🧠',
-      count: all2026Services.filter(s => s.category.includes('AI')).length,
-    },
-    {
-      id: 'quantum',
-      name: 'Quantum & Emerging Tech',
-      icon: '⚛️',
-      count: all2026Services.filter(
-        s => s.category.includes('Quantum') || s.category.includes('Emerging')
-      ).length,
-    },
-    {
-      id: 'enterprise',
-      name: 'Enterprise IT',
-      icon: '🏢',
-      count: all2026Services.filter(
-        s => s.category.includes('Enterprise') || s.category.includes('IT')
-      ).length,
-    },
-    {
-      id: 'micro-saas',
-      name: 'Micro SaaS',
-      icon: '💻',
-      count: all2026Services.filter(s => s.category.includes('SaaS')).length,
-    },
-    {
-      id: 'healthcare',
-      name: 'Healthcare & Biotech',
-      icon: '🏥',
-      count: all2026Services.filter(
-        s => s.category.includes('Healthcare') || s.category.includes('Biotech')
-      ).length,
-    },
-    {
-      id: 'financial',
-      name: 'Financial Technology',
-      icon: '💰',
-      count: all2026Services.filter(
-        s => s.category.includes('Financial') || s.category.includes('Trading')
-      ).length,
-    },
-    {
-      id: 'manufacturing',
-      name: 'Manufacturing & IoT',
-      icon: '🏭',
-      count: all2026Services.filter(
-        s => s.category.includes('Manufacturing') || s.category.includes('IoT')
-      ).length,
-    },
-  ];
-
-  const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' },
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
-    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
-    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
-    { id: 'premium', name: '$20K+/month', range: '$20K+' },
-  ];
-
-  const sortOptions = [
-    { id: 'name', name: 'Name A-Z' },
-    { id: 'price-low', name: 'Price Low to High' },
-    { id: 'price-high', name: 'Price High to Low' },
-    { id: 'popularity', name: 'Most Popular' },
-    { id: 'newest', name: 'Newest First' },
-    { id: 'rating', name: 'Highest Rated' },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  ' }];
 
   // Filter and sort services
   const filteredServices = useMemo(() => {
@@ -559,8 +290,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     }
 
     // Category filter
-<<<<<<< HEAD
-    if (selectedCategory !== 'all
+if (selectedCategory !== 'all
   ') {
       if (selectedCategory === 'ai
   ') {
@@ -594,47 +324,7 @@ export default function Services2026ShowcaseEnhancedPage() {
   ') {
         filtered = filtered.filter(service => service.category.includes('Manufacturing
   ') || service.category.includes('IoT
-  '));
-=======
-    if (selectedCategory !== 'all') {
-      if (selectedCategory === 'ai') {
-        filtered = filtered.filter(service => service.category.includes('AI'));
-      } else if (selectedCategory === 'quantum') {
-        filtered = filtered.filter(
-          service =>
-            service.category.includes('Quantum') ||
-            service.category.includes('Emerging')
-        );
-      } else if (selectedCategory === 'enterprise') {
-        filtered = filtered.filter(
-          service =>
-            service.category.includes('Enterprise') ||
-            service.category.includes('IT')
-        );
-      } else if (selectedCategory === 'micro-saas') {
-        filtered = filtered.filter(service =>
-          service.category.includes('SaaS')
-        );
-      } else if (selectedCategory === 'healthcare') {
-        filtered = filtered.filter(
-          service =>
-            service.category.includes('Healthcare') ||
-            service.category.includes('Biotech')
-        );
-      } else if (selectedCategory === 'financial') {
-        filtered = filtered.filter(
-          service =>
-            service.category.includes('Financial') ||
-            service.category.includes('Trading')
-        );
-      } else if (selectedCategory === 'manufacturing') {
-        filtered = filtered.filter(
-          service =>
-            service.category.includes('Manufacturing') ||
-            service.category.includes('IoT')
-        );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      }
+  '));}
     }
 
     // Price filter
@@ -642,32 +332,21 @@ export default function Services2026ShowcaseEnhancedPage() {
   ') {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-<<<<<<< HEAD
-        if (selectedPriceRange ===
+if (selectedPriceRange ===
   'low') return price < 1000;
         if (selectedPriceRange ===
   'medium') return price >= 1000 && price < 5000;
         if (selectedPriceRange ===
   'high') return price >= 5000 && price < 20000;
         if (selectedPriceRange ===
-  'premium') return price >= 20000;
-=======
-        if (selectedPriceRange === 'low') return price < 1000;
-        if (selectedPriceRange === 'medium')
-          return price >= 1000 && price < 5000;
-        if (selectedPriceRange === 'high')
-          return price >= 5000 && price < 20000;
-        if (selectedPriceRange === 'premium') return price >= 20000;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-        return true;
+  'premium') return price >= 20000;return true;
       });
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
-<<<<<<< HEAD
-        case
+case
   'price-low':
           return parseInt(a.price.replace(/[^0-9]/g, '
   ')) - parseInt(b.price.replace(/[^0-9]/g, ''));
@@ -681,27 +360,7 @@ export default function Services2026ShowcaseEnhancedPage() {
   'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
         case
-  'rating:
-=======
-        case 'price-low':
-          return (
-            parseInt(a.price.replace(/[^0-9]/g, '')) -
-            parseInt(b.price.replace(/[^0-9]/g, ''))
-          );
-        case 'price-high':
-          return (
-            parseInt(b.price.replace(/[^0-9]/g, '')) -
-            parseInt(a.price.replace(/[^0-9]/g, ''))
-          );
-        case 'popularity':
-          return b.rating * b.reviews - a.rating * a.reviews;
-        case 'newest':
-          return (
-            new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
-          );
-        case 'rating':
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-          return b.rating - a.rating;
+  'rating:return b.rating - a.rating;
         default:
           return a.name.localeCompare(b.name);
       }
@@ -719,8 +378,7 @@ export default function Services2026ShowcaseEnhancedPage() {
   // Service statistics
   const serviceStats = {
     totalServices: all2026Services.length,
-<<<<<<< HEAD
-    aiServices: all2026Services.filter(s => s.category.includes(,
+aiServices: all2026Services.filter(s => s.category.includes(,
   AI')).length,
     quantumServices: all2026Services.filter(s => s.category.includes(
   'Quantum)).length,
@@ -737,27 +395,7 @@ export default function Services2026ShowcaseEnhancedPage() {
   'Trading)).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes(
   'Manufacturing') || s.category.includes(
-  'IoT')).length
-=======
-    aiServices: all2026Services.filter(s => s.category.includes('AI')).length,
-    quantumServices: all2026Services.filter(s => s.category.includes('Quantum'))
-      .length,
-    enterpriseServices: all2026Services.filter(
-      s => s.category.includes('Enterprise') || s.category.includes('IT')
-    ).length,
-    microSaasServices: all2026Services.filter(s => s.category.includes('SaaS'))
-      .length,
-    healthcareServices: all2026Services.filter(
-      s => s.category.includes('Healthcare') || s.category.includes('Biotech')
-    ).length,
-    financialServices: all2026Services.filter(
-      s => s.category.includes('Financial') || s.category.includes('Trading')
-    ).length,
-    manufacturingServices: all2026Services.filter(
-      s => s.category.includes('Manufacturing') || s.category.includes('IoT')
-    ).length,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  };
+  'IoT')).length};
 
   return (
     <UltraFuturisticBackground intensity="high">
@@ -834,23 +472,10 @@ export default function Services2026ShowcaseEnhancedPage() {
                     key={key}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-<<<<<<< HEAD
-                    transition={{ duration: 0.5, delay: key.length * 0.1 }} className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30">
+transition={{ duration: 0.5, delay: key.length * 0.1 }} className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30">
                     <div className="text-3xl font-bold text-cyan-400">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g,
-  ' $1').trim()}</div>
-=======
-                    transition={{ duration: 0.5, delay: key.length * 0.1 }}
-                    className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30"
-                  >
-                    <div className="text-3xl font-bold text-cyan-400">
-                      {value}
-                    </div>
-                    <div className="text-sm text-gray-400 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
-                    </div>
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-                  </motion.div>
+  ' $1').trim()}</div></motion.div>
                 ))}
               </div>
 
@@ -960,16 +585,9 @@ export default function Services2026ShowcaseEnhancedPage() {
                       onClick={() => setViewMode(,
   grid')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-<<<<<<< HEAD
-                        viewMode ===
+viewMode ===
   'grid' ?
-  'bg-cyan-600 text-white': 'text-gray-400 hover:text-white
-=======
-                        viewMode === 'grid'
-                          ? 'bg-cyan-600 text-white'
-                          : 'text-gray-400 hover:text-white'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-                      }`}
+  'bg-cyan-600 text-white': 'text-gray-400 hover:text-white}`}
                     >
                       <Grid className="w-4 h-4 mx-auto" />
                     </button>
@@ -977,16 +595,9 @@ export default function Services2026ShowcaseEnhancedPage() {
                       onClick={() => setViewMode(,
   list')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-<<<<<<< HEAD
-                        viewMode ===
+viewMode ===
   'list' ?
-  'bg-cyan-600 text-white': 'text-gray-400 hover:text-white
-=======
-                        viewMode === 'list'
-                          ? 'bg-cyan-600 text-white'
-                          : 'text-gray-400 hover:text-white'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-                      }`}
+  'bg-cyan-600 text-white': 'text-gray-400 hover:text-white}`}
                     >
                       <List className="w-4 h-4 mx-auto" />
                     </button>
@@ -997,22 +608,9 @@ export default function Services2026ShowcaseEnhancedPage() {
               {/* Results Count */}
               <div className="text-center">
                 <p className="text-gray-400">
-<<<<<<< HEAD
-                  Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{
+Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{
   ' '}
-                  <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
-=======
-                  Showing{' '}
-                  <span className="text-cyan-400 font-semibold">
-                    {filteredServices.length}
-                  </span>{' '}
-                  of{' '}
-                  <span className="text-cyan-400 font-semibold">
-                    {all2026Services.length}
-                  </span>{' '}
-                  services
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-                </p>
+                  <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services</p>
               </div>
             </div>
           </div>
@@ -1038,39 +636,19 @@ export default function Services2026ShowcaseEnhancedPage() {
                   </p>
                 </motion.div>
               ) : (
-<<<<<<< HEAD
-                <div className={viewMode ===,
+<div className={viewMode ===,
   grid' ?
   'grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6' :
-  'space-y-4}>
-=======
-                <div
-                  className={
-                    viewMode === 'grid'
-                      ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
-                      : 'space-y-4'
-                  }
-                >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-                  {filteredServices.map((service, index) => (
+  'space-y-4}>{filteredServices.map((service, index) => (
                     <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-                      className={viewMode ===,
+className={viewMode ===,
   grid' ? '
-  ': 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30}
-=======
-                      className={
-                        viewMode === 'grid'
-                          ? ''
-                          : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'
-                      }
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-                    >
+  ': 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30}>
                       <UltraFuturisticCard className="h-full">
                         <div className="p-6">
                           {/* Service Header */}
@@ -1177,18 +755,9 @@ export default function Services2026ShowcaseEnhancedPage() {
 
                           {/* Action Buttons */}
                           <div className="flex space-x-2">
-<<<<<<< HEAD
-                            <button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+<button className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
                               onClick={() => window.open(service.link, '_blank
-  ')}
-=======
-                            <button
-                              className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-                              onClick={() =>
-                                window.open(service.link, '_blank')
-                              }
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-                            >
+  ')}>
                               Learn More
                               <ArrowRight className="w-4 h-4 ml-1" />
                             </button>
@@ -1232,21 +801,9 @@ export default function Services2026ShowcaseEnhancedPage() {
                 ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-                <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
+<button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
                   onClick={() => window.open(`mailto:${contactInfo.email}?subject=Business Transformation Consultation`, '_blank
-  ')}
-=======
-                <button
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-                  onClick={() =>
-                    window.open(
-                      `mailto:${contactInfo.email}?subject=Business Transformation Consultation`,
-                      '_blank'
-                    )
-                  }
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-                >
+  ')}>
                   <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
                 </button>

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/legal/TermsOfService.tsx
+:src.disabled/legal/TermsOfService.tsx
 const TermsOfService: React.FC = ($2) => {
   return (
     <div className="max-w-4xl mx-auto space-y-8"><div className="text-center">
@@ -147,5 +147,3 @@ const TermsOfService: React.FC = ($2) => {
 };
 
 export default TermsOfService;
-=======
->>>>>>> pr-10728:src/legal/TermsOfService.tsx

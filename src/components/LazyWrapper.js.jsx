@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react'; const LazyWrapper = ({ children, threshold = 0.1, className = ", loadingVariant = "default", loadingText = "Loading...", loadingSize = "md"}) => { const [isLoaded, setIsLoaded] = useState (false) ; const [isInView, setIsInView] = useState (false) ; const ref = useRef (null) ; const inView = useInView (ref, { amount: threshold }) ; useEffect ( () => { if (inView && !isInView) { setIsInView (true) ;"""";
-=======
-import React from 'react'; const LazyWrapper = ({ children, threshold = 0.1, className = ", loadingVariant = "default", loadingText = "Loading...", loadingSize = "md"}) => { const [isLoaded, setIsLoaded] = useState(false); const [isInView, setIsInView] = useState(false); const ref = useRef(null); const inView = useInView(ref, { amount: threshold }); useEffect(() => { if(inView && !isInView) { setIsInView(true);
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
-import React, { useState, useEffect, useRef } from 'react';'''
+import React from 'react'; const LazyWrapper = ({ children, threshold = 0.1, className = ", loadingVariant = "default", loadingText = "Loading...", loadingSize = "md"}) => { const [isLoaded, setIsLoaded] = useState (false) ; const [isInView, setIsInView] = useState (false) ; const ref = useRef (null) ; const inView = useInView (ref, { amount: threshold }) ; useEffect ( () => { if (inView && !isInView) { setIsInView (true) ;"""";import React, { useState, useEffect, useRef } from 'react';'''
 import { motion, useInView } from 'framer-motion';'''
 import { EnhancedLoading } from './EnhancedLoading';
 const LazyWrapper = ({}
@@ -65,7 +58,6 @@ const LazyWrapper = ({}
     </motion.div>)};
 export default LazyWrapper;
 
-
 export { LazyWrapper };
 
 export { LazyWrapper };
@@ -75,4 +67,3 @@ export { LazyWrapper };
 export { LazyWrapper };
 
 export { LazyWrapper };
->>>>>>> pr-10728

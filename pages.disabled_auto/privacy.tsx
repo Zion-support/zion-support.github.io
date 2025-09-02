@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from
   'react';
 import { motion } from
@@ -19,25 +18,7 @@ import {
   Settings, Trash2,
   Download, ArrowRight
 } from
-  'lucide-react';
-=======
-import React from 'react'
-import { motion } from 'framer-motion'
-import { SEO } from '../components/SEO'
-import { Card } from '../components/ui/Card'
-import { Badge } from '../components/ui/Badge'
-  Shield, Lock,
-  Eye, Database,
-  Users, Mail,
-  Phone, Calendar,
-  FileText, CheckCircle,
-  AlertTriangle, Globe,
-  Settings, Trash2,
-  Download, ArrowRight
-} from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
-const Privacy: React.FC = () => {
+  'lucide-react';const Privacy: React.FC = () => {
   const lastUpdated = "2025-01-15";
 
   const sections = [

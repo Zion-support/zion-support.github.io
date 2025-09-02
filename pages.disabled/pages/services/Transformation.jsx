@@ -10,26 +10,12 @@ const DigitalTransformation = () => {}
           <div className="text-center">""
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
 :pages.disabled/pages/services/Transformation.jsx
-<<<<<<< HEAD
-              Digital Transformation"</h1>""
-=======
-              Digital Transformation"
-              Digital Transformation;
-            </h1>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+Digital Transformation"</h1>""<p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Modernize your business processes and operations.
             </p>
           </div>
 :pages.disabled/pages/services/Transformation.jsx
-<<<<<<< HEAD
-        </div>"</section>""
-=======
-        </div>"
-        </div>
-      </section>""
->>>>>>> pr-10728
-      <section className="py-16 bg-white">""
+</div>"</section>""<section className="py-16 bg-white">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl">""
@@ -51,30 +37,7 @@ const DigitalTransformation = () => {}
             </div>""
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl">""
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
-<<<<<<< HEAD
-                Change Management"</h3>""
-=======
-                Change Management"
-                Process Automation;
-              </h3>""
-              <p className="text-slate-600">
-                Streamline workflows with intelligent automation.
-              </p>
-            </div>""
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-8 rounded-2xl">""
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">
-                Legacy Modernization;
-              </h3>""
-              <p className="text-slate-600">
-                Update and integrate legacy systems.
-              </p>
-            </div>""
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl">""
-              <h3 className="text-xl font-semibold text-slate-900 mb-4">
-                Change Management;
-              </h3>""
->>>>>>> pr-10728
-              <p className="text-slate-600">
+Change Management"</h3>""<p className="text-slate-600">
                 Guide your team through digital adoption.
               </p>
             </div>
@@ -87,21 +50,7 @@ const DigitalTransformation = () => {}
           <h2 className="text-3xl font-bold mb-6">Transform Your Business</h2>"
           <Link""
             to="/contact""
-<<<<<<< HEAD
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-=======
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
-        </div>
-      </section>""
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">""
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
-          <h2 className="text-3xl font-bold mb-6">Transform Your Business</h2>
-          <Link""
-            to="/contact""
-            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300""
-          >
->>>>>>> pr-10728
-            Get Started;
+className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">Get Started;
           </Link>
         </div>
       </section>
@@ -111,10 +60,4 @@ const DigitalTransformation = () => {}
 export { DigitalTransformation };
 :pages.disabled/pages/services/Transformation.jsx
 export default DigitalTransformation;'"
-<<<<<<< HEAD
-  '"'"
-=======
 '"'"
-export default DigitalTransformation;
-'""
->>>>>>> pr-10728

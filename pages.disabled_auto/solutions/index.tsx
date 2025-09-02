@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -6,15 +5,7 @@ import MainLayout from
 import Link from
   'next/link';
 import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from
-  'lucide-react';
-=======
-import type { NextPage } from 'next'
-import MainLayout from '../../components/layout/MainLayout'
-import Link from 'next/link'
-import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
-const Solutions: NextPage = () => {
+  'lucide-react';const Solutions: NextPage = () => {
   return (
     <MainLayout
       title="Technology Solutions - Zion Tech Group"

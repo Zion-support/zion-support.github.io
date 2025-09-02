@@ -13,25 +13,11 @@ export default function TalentProfilePage() {}
     const { id } = useParams();
     const [profile, setProfile] = useState(null);
     const [loading, setLoading] = useState(true);
-<<<<<<< HEAD
-    const [error, setError] = useState(null);: pages.disabled/pages/talent/[id].jsx
+const [error, setError] = useState(null);: pages.disabled/pages/talent/[id].jsx
     useEffect(() => {
         const fetchProfile = async () => {
             if (!id) {
-  'setError('Profile not found);
-=======
-    const [error, setError] = useState(null);
-:pages.disabled/pages/talent/[id].jsx
-    useEffect(() => {
-        const fetchProfile = async () => {
-            if (!id) {
-'
-    useEffect(() => {}
-        const fetchProfile = async () => {}
-            if (!id) {}
-                setError('Profile not found');
->>>>>>> pr-10728
-                setLoading(false);
+  'setError('Profile not found);setLoading(false);
                 return;
 
             try {}
@@ -40,21 +26,9 @@ export default function TalentProfilePage() {}
   throw new Error(
   'Failed to load profile');
                 const data = await res.json();
-<<<<<<< HEAD
-                setProfile(data.profile);: pages.disabled/pages/talent/[id].jsx
+setProfile(data.profile);: pages.disabled/pages/talent/[id].jsx
             catch (err) {
-  'setError('Profile not found);
-=======
-                setProfile(data.profile);
-
-:pages.disabled/pages/talent/[id].jsx
-            catch (err) {
-'
-            catch (err) {}
-                setError('Profile not found');
->>>>>>> pr-10728
-
-            finally {}
+  'setError('Profile not found);finally {}
                 setLoading(false);
 
         };
@@ -75,14 +49,7 @@ export default function TalentProfilePage() {}
           </h1>
           {profile.bio && <p>{profile.bio}</p>}
 :pages.disabled/pages/talent/[id].jsx
-<<<<<<< HEAD
-          {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}"{profile.skills && (<div>""
-=======
-          {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}"
-          {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}
-          {profile.skills && (<div>""
->>>>>>> pr-10728
-              <h2 className="font-semibold">Skills</h2>""
+{profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}"{profile.skills && (<div>""<h2 className="font-semibold">Skills</h2>""
               <ul className="list-disc ml-5">
                 {profile.skills.map(skill => (<li key={skill}>{skill}</li>))}
               </ul>
@@ -90,17 +57,7 @@ export default function TalentProfilePage() {}
             </div>)}"
           {profile.social && (<div>""
               <h2 className="font-semibold">Social Links</h2>""
-<<<<<<< HEAD
-              <ul className="list-disc ml-5">"{Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>""
-=======
-              <ul className="list-disc ml-5">"
-            </div>)}
-          {profile.social && (<div>""
-              <h2 className="font-semibold">Social Links</h2>""
-              <ul className="list-disc ml-5">
-                {Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>""
->>>>>>> pr-10728
-                    <a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">
+<ul className="list-disc ml-5">"{Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>""<a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">
                       {platform}
                     </a>
                   </li>))}
@@ -120,9 +77,5 @@ export { TalentProfilePage };
 
 export { TalentProfilePage };
     </>);'"`
-<<<<<<< HEAD
 }}}}}
   '"`'"`
-=======
-}}}}}'"`'"`
->>>>>>> pr-10728

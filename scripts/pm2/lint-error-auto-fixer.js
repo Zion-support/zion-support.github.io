@@ -13,18 +13,11 @@ class LintErrorAutoFixer {
     this.autoFixLint = process.env.AUTO_FIX_LINT ===
   'true';
     this.maxWarnings = parseInt(process.env.MAX_WARNINGS) || 10;
-<<<<<<< HEAD
-    this.logFile =
+this.logFile =
   'error-reports/lint-error-auto-fixer-report.json';
     
     console.log(
-  '🧹 Lint Error Auto Fixer started');
-=======
-    this.logFile = 'error-reports/lint-error-auto-fixer-report.json';
-
-    console.log('🧹 Lint Error Auto Fixer started');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);
+  '🧹 Lint Error Auto Fixer started');console.log(`Lint check interval: ${this.lintCheckInterval}ms`);
     console.log(`Auto-fix lint: ${this.autoFixLint}`);
     console.log(`Max warnings: ${this.maxWarnings}`);
   }
@@ -40,15 +33,8 @@ class LintErrorAutoFixer {
   }
 
   async checkAndFixLintErrors() {
-<<<<<<< HEAD
-    console.log(
-  '🔍 Checking lint errors...');
-    
-=======
-    console.log('🔍 Checking lint errors...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    const report = {
+console.log(
+  '🔍 Checking lint errors...');const report = {
       timestamp: new Date().toISOString(),
       summary: {
         totalErrors: 0,
@@ -101,30 +87,17 @@ class LintErrorAutoFixer {
   async runLint() {
     try {
       // Try to run ESLint with auto-fix first
-<<<<<<< HEAD
-      const output = execSync(
+const output = execSync(
   'npm run lint', { 
         stdio: 'pipe,
-        timeout: 120000 // 2 minutes timeout
-=======
-      const output = execSync('npm run lint', {
-        stdio: 'pipe',
-        timeout: 120000, // 2 minutes timeout
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      }).toString();
+        timeout: 120000 // 2 minutes timeout}).toString();
 
       return {
         success: true,
         errors: [],
-<<<<<<< HEAD
-        warnings: this.parseLintOutput(output,
+warnings: this.parseLintOutput(output,
   'warning'),
-        output
-=======
-        warnings: this.parseLintOutput(output, 'warning'),
-        output,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      };
+        output};
     } catch (error) {
       const output = error.stdout
         ? error.stdout.toString()
@@ -132,32 +105,18 @@ class LintErrorAutoFixer {
 
       return {
         success: false,
-<<<<<<< HEAD
-        errors: this.parseLintOutput(output,
+errors: this.parseLintOutput(output,
   'error'),
         warnings: this.parseLintOutput(output,
   'warning'),
-        output
-=======
-        errors: this.parseLintOutput(output, 'error'),
-        warnings: this.parseLintOutput(output, 'warning'),
-        output,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      };
+        output};
     }
   }
 
   parseLintOutput(output, severity) {
     const issues = [];
-<<<<<<< HEAD
-    const lines = output.split(
-  '\\n');
-    
-=======
-    const lines = output.split('\\n');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    for (const line of lines) {
+const lines = output.split(
+  '\\n');for (const line of lines) {
       // Parse ESLint output format
       const match = line.match(
         /^\\s*(.+?):(\\d+):(\\d+):\\s+(error|warning)\\s+(.+?)\\s+([\\w\\/-]+)$/
@@ -171,13 +130,8 @@ class LintErrorAutoFixer {
           severity: sev,
           message: message.trim(),
           rule: rule.trim(),
-<<<<<<< HEAD
-          type:,
-  lint'
-=======
-          type: 'lint',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-        });
+type:,
+  lint'});
       }
     }
 
@@ -196,15 +150,8 @@ class LintErrorAutoFixer {
       console.log('✅ ESLint auto-fix completed
   ');
     } catch (error) {
-<<<<<<< HEAD
-      console.log('ESLint auto-fix had issues, trying manual fixes...
-  ');
-      
-=======
-      console.log('ESLint auto-fix had issues, trying manual fixes...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      // Manual fixes for common issues
+console.log('ESLint auto-fix had issues, trying manual fixes...
+  ');// Manual fixes for common issues
       for (const issue of [...report.errors, ...report.warnings]) {
         try {
           const fixed = await this.fixLintIssue(issue);
@@ -238,18 +185,10 @@ class LintErrorAutoFixer {
     }
 
     try {
-<<<<<<< HEAD
-      const content = fs.readFileSync(file, 'utf8
+const content = fs.readFileSync(file, 'utf8
   ');
       const lines = content.split('\\n
-  ');
-      
-=======
-      const content = fs.readFileSync(file, 'utf8');
-      const lines = content.split('\\n');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      if (line > lines.length) {
+  ');if (line > lines.length) {
         return false;
       }
 
@@ -296,15 +235,8 @@ class LintErrorAutoFixer {
 
       if (modified) {
         // Create backup
-<<<<<<< HEAD
-        fs.writeFileSync(file + '.backup
-  ', originalContent);
-        
-=======
-        fs.writeFileSync(file + '.backup', originalContent);
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-        // Write fixed content
+fs.writeFileSync(file + '.backup
+  ', originalContent);// Write fixed content
         const newContent = lines.join('\\n
   ');
         fs.writeFileSync(file, newContent);
@@ -320,15 +252,8 @@ class LintErrorAutoFixer {
 
   fixUnusedVars(lines, lineIndex, message) {
     const line = lines[lineIndex];
-<<<<<<< HEAD
-    const varMatch = message.match(/'(.+?)
-  ' is defined but never used/);
-    
-=======
-    const varMatch = message.match(/'(.+?)' is defined but never used/);
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    if (varMatch) {
+const varMatch = message.match(/'(.+?)
+  ' is defined but never used/);if (varMatch) {
       const varName = varMatch[1];
       // Comment out unused variables
       if (
@@ -357,15 +282,8 @@ class LintErrorAutoFixer {
 
   fixQuotes(lines, lineIndex, message) {
     const line = lines[lineIndex];
-<<<<<<< HEAD
-    
-    if (message.includes('single quotes
-  ')) {
-=======
-
-    if (message.includes('single quotes')) {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      // Convert double quotes to single quotes
+if (message.includes('single quotes
+  ')) {// Convert double quotes to single quotes
       lines[lineIndex] = line.replace(/"/g, "'");
       return true;
     } else if (message.includes(
@@ -382,15 +300,8 @@ class LintErrorAutoFixer {
 
   fixSemicolons(lines, lineIndex, message) {
     const line = lines[lineIndex];
-<<<<<<< HEAD
-    
-    if (message.includes('Missing semicolon
-  ')) {
-=======
-
-    if (message.includes('Missing semicolon')) {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      lines[lineIndex] = line + ';';
+if (message.includes('Missing semicolon
+  ')) {lines[lineIndex] = line + ';';
       return true;
     } else if (message.includes(
   'Extra semicolon')) {
@@ -440,16 +351,9 @@ class LintErrorAutoFixer {
 
   fixPreferConst(lines, lineIndex) {
     const line = lines[lineIndex];
-<<<<<<< HEAD
-    
-    if (line.includes('let
+if (line.includes('let
   ') && !line.includes('=
-  ')) {
-=======
-
-    if (line.includes('let ') && !line.includes('=')) {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      // Only fix if it's a simple let declaration that could be const
+  ')) {// Only fix if it's a simple let declaration that could be const
       lines[lineIndex] = line.replace(
   'let ',
   'const ');

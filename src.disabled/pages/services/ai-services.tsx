@@ -1,14 +1,8 @@
-<<<<<<< HEAD:src.disabled/pages/services/ai-services.tsx
+:src.disabled/pages/services/ai-services.tsx
 import React from
   'react';
 import { Link } from
-  'react-router-dom';
-=======
-import React from 'react'
-import { Link } from 'react-router-dom';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/pages/services/ai-services.tsx
-
-const AIServices: React.FC = () => {
+  'react-router-dom';const AIServices: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 text-white">
       <h1 className="text-4xl font-bold mb-4">AI Services</h1>
@@ -18,7 +12,6 @@ const AIServices: React.FC = () => {
         <li><Link className="text-blue-400" to="/services/ai-seo-optimizer">AI SEO Optimizer</Link></li>
       </ul>
     </div>
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
 ;
@@ -32,8 +25,7 @@ const AIServices: React.FC = () => {;
         <li><Link className="text-blue-400" to="/services/ai-seo-optimizer">AI SEO Optimizer</Link></li>;
       </ul>;
     </div>;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-services.tsx
-  );
+);
 };
 ;
 export default AIServices;

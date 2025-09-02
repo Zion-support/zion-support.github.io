@@ -10,16 +10,10 @@ module.exports = {
   \.(css|less|scss|sass)$': 'identity-obj-proxy,
   },
   collectCoverageFrom: [
-<<<<<<< HEAD
-  'src/**/*.{js,jsx,ts,tsx}',
+'src/**/*.{js,jsx,ts,tsx}',
   '!src/**/*.d.ts',
   '!src/index.tsx',
-  '!src/serviceWorker.ts',
-=======
-    'src/**/*.{js,jsx,ts,tsx}!src/**/*.d.ts!src/index.tsx',
-    '!src/serviceWorker.ts',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-  ],
+  '!src/serviceWorker.ts',],
   coverageThreshold: {
     global: {
       branches: 70,

@@ -1,19 +1,14 @@
-<<<<<<< HEAD:src.disabled/components/ContactForm.tsx
+:src.disabled/components/ContactForm.tsx
 import React, { useState } from
   'react';
 import { motion } from
-  'framer-motion';
-=======
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx
-import { 
+  'framer-motion';import { 
   Mail, Phone, 
   MapPin, Send, 
   CheckCircle, AlertCircle,
   User, Building,
   MessageSquare
-<<<<<<< HEAD:src.disabled/components/ContactForm.tsx
+:src.disabled/components/ContactForm.tsx
 } from
   'lucide-react';
 
@@ -40,24 +35,7 @@ export const ContactForm: React.FC = () => {
   ' | 'success
   ' | 'error
   '>('idle
-  ');
-=======
-} from 'lucide-react'
-
-export const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState({
-    firstName: '', lastName: '',
-    email: '', company: '',
-    phone: '', service: '',
-    message: '', budget: '',
-    timeline: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  ');const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev, [name]: value
@@ -70,7 +48,7 @@ export const ContactForm: React.FC = () => {
     
     // Simulate form submission
     try {
-<<<<<<< HEAD:src.disabled/components/ContactForm.tsx
+:src.disabled/components/ContactForm.tsx
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus(,
   success
@@ -89,19 +67,7 @@ export const ContactForm: React.FC = () => {
         budget:,
   ',
         timeline: '
-      });
-=======
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      setSubmitStatus('success')
-      setFormData({
-        firstName: '', lastName: '',
-        email: '', company: '',
-        phone: '', service: '',
-        message: '', budget: '',
-        timeline: ''
-      })
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx
-    } catch (error) {
+      });} catch (error) {
       setSubmitStatus(
   'error');
     } finally {
@@ -110,7 +76,7 @@ export const ContactForm: React.FC = () => {
   }
 
   const services = [
-<<<<<<< HEAD:src.disabled/components/ContactForm.tsx
+:src.disabled/components/ContactForm.tsx
   'AI & Machine Learning',
   'Cloud & DevOps',
   'Enterprise Security',
@@ -134,23 +100,7 @@ export const ContactForm: React.FC = () => {
   'Quick (1-2 months)',
   'Standard (3-6 months)',
   'Long-term (6+ months)'
-  ];
-=======
-    'AI & Machine LearningCloud & DevOpsEnterprise Security', 'Digital TransformationMicro SAAS ServicesIT Onsite Services',
-    'Custom Development', 'Other'
-  ]
-
-  const budgets = [
-    'Under $10K$10K - $50K$50K - $100K', '$100K - $500K',
-    'Over $500K'
-  ]
-
-  const timelines = [
-    'Immediate (1-2 weeks)Quick (1-2 months)Standard (3-6 months)', 'Long-term (6+ months)'
-  ]
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx
-
-  if (submitStatus ===
+  ];if (submitStatus ===
   'success') {
     return (
       <motion.div
@@ -163,22 +113,14 @@ export const ContactForm: React.FC = () => {
         </div>
         <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
         <p className="text-zion-slate-light mb-6">
-<<<<<<< HEAD:src.disabled/components/ContactForm.tsx
+:src.disabled/components/ContactForm.tsx
           Your message has been sent successfully. We
   'll get back to you within 24 hours.
         </p>
         <button
           onClick={() => setSubmitStatus('idle
   ')}
-          className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
-=======
-          Your message has been sent successfully. We&aposll get back to you within 24 hours.'
-        </p>
-        <button
-          onClick={() => setSubmitStatus('idle')}
-          className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/90 transition-colors"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx
-        >
+          className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors">
           Send Another Message
         </button>
       </motion.div>

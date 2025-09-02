@@ -20,8 +20,7 @@ console.log(
 
 // 1. Generate sitemap.xml
 function generateSitemap() {
-<<<<<<< HEAD
-  console.log(
+console.log(
   '🗺️ Generating sitemap...');
   
   const baseUrl =
@@ -44,32 +43,7 @@ function generateSitemap() {
   '/services/transformation',
   '/services/consulting',
   '/privacy',
-  '/terms'
-=======
-  console.log('🗺️ Generating sitemap...');
-
-  const baseUrl = 'https://ziontechgroup.com';
-  const pages = [
-    '/',
-    '/about',
-    '/contact',
-    '/careers',
-    '/solutions',
-    '/research-development',
-    '/case-studies',
-    '/news',
-    '/events',
-    '/services',
-    '/services/ai',
-    '/services/cloud',
-    '/services/cybersecurity',
-    '/services/infrastructure',
-    '/services/transformation',
-    '/services/consulting',
-    '/privacy',
-    '/terms',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  ];
+  '/terms'];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -80,8 +54,7 @@ ${pages
     <lastmod>${new Date().toISOString().split(,
   T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
-<<<<<<< HEAD
-    <priority>${page ===
+<priority>${page ===
   '/' ?
   '1.0': '0.8}</priority>
   </url>`).join(
@@ -89,32 +62,15 @@ ${pages
 </urlset>`;
   
   const sitemapPath = path.join(__dirname,
-  '../public/sitemap.xml');
-=======
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>
-  </url>`
-  )
-  .join('\n')}
-</urlset>`;
-
-  const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  fs.writeFileSync(sitemapPath, sitemap);
+  '../public/sitemap.xml');fs.writeFileSync(sitemapPath, sitemap);
   console.log(
   '✅ Generated sitemap.xml');
 }
 
 // 2. Generate robots.txt
 function generateRobotsTxt() {
-<<<<<<< HEAD
-  console.log(
-  '🤖 Generating robots.txt...');
-  
-=======
-  console.log('🤖 Generating robots.txt...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  const robotsTxt = `User-agent: *
+console.log(
+  '🤖 Generating robots.txt...');const robotsTxt = `User-agent: *
 Allow: /
 
 # Sitemap
@@ -134,24 +90,16 @@ Allow: /services/
 Allow: /solutions/
 Allow: /about/
 Allow: /contact/`;
-<<<<<<< HEAD
-  
-  const robotsPath = path.join(__dirname,
+const robotsPath = path.join(__dirname,
 ,
-  ../public/robots.txt');
-=======
-
-  const robotsPath = path.join(__dirname, '../public/robots.txt');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  fs.writeFileSync(robotsPath, robotsTxt);
+  ../public/robots.txt');fs.writeFileSync(robotsPath, robotsTxt);
   console.log(
   '✅ Generated robots.txt');
 }
 
 // 3. Generate manifest.json for PWA
 function generateManifest() {
-<<<<<<< HEAD
-  console.log(
+console.log(
   '📱 Generating manifest.json...');
   
   const manifest = {
@@ -193,54 +141,15 @@ function generateManifest() {
   };
   
   const manifestPath = path.join(__dirname,
-  '../public/manifest.json');
-=======
-  console.log('📱 Generating manifest.json...');
-
-  const manifest = {
-    name: 'Zion Tech Group - AI-Powered IT Solutions',
-    short_name: 'Zion Tech',
-    description:
-      'Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',
-    start_url: '/',
-    display: 'standalone',
-    background_color: '#0f172a',
-    theme_color: '#3b82f6',
-    icons: [
-      {
-        src: '/icon-192x192.png',
-        sizes: '192x192',
-        type: 'image/png',
-      },
-      {
-        src: '/icon-512x512.png',
-        sizes: '512x512',
-        type: 'image/png',
-      },
-    ],
-    categories: ['technology', 'business', 'productivity'],
-    lang: 'en-US',
-    orientation: 'portrait-primary',
-  };
-
-  const manifestPath = path.join(__dirname, '../public/manifest.json');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+  '../public/manifest.json');fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log(
   '✅ Generated manifest.json');
 }
 
 // 4. Generate structured data
 function generateStructuredData() {
-<<<<<<< HEAD
-  console.log(
-  '📊 Generating structured data...');
-  
-=======
-  console.log('📊 Generating structured data...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  const structuredData = {
+console.log(
+  '📊 Generating structured data...');const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -273,18 +182,8 @@ function generateStructuredData() {
       'IT Consulting',
     ],
   };
-<<<<<<< HEAD
-  
-  const structuredDataPath = path.join(__dirname,
-  '../public/structured-data.json');
-=======
-
-  const structuredDataPath = path.join(
-    __dirname,
-    '../public/structured-data.json'
-  );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
+const structuredDataPath = path.join(__dirname,
+  '../public/structured-data.json');fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
   console.log(
   '✅ Generated structured data');
 }
@@ -296,15 +195,8 @@ async function main() {
     generateRobotsTxt();
     generateManifest();
     generateStructuredData();
-<<<<<<< HEAD
-    
-    console.log(
-  '✅ SEO optimization completed successfully!');
-=======
-
-    console.log('✅ SEO optimization completed successfully!');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  } catch (error) {
+console.log(
+  '✅ SEO optimization completed successfully!');} catch (error) {
     console.error(
   '❌ SEO optimization failed:', error.message);
     process.exit(1);

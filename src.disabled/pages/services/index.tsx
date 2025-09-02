@@ -1,14 +1,8 @@
-<<<<<<< HEAD:src.disabled/pages/services/index.tsx
+:src.disabled/pages/services/index.tsx
 import React from,
   react';
 import { Link } from
-  'react-router-dom';
-=======
-import React from 'react'
-import { Link } from 'react-router-dom'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/pages/services/index.tsx
-
-const ServicesIndex: React.FC = () => {
+  'react-router-dom';const ServicesIndex: React.FC = () => {
   const links = [
     { to:
   '/ai-services, label:,

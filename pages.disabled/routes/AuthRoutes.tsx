@@ -10,18 +10,7 @@ const AuthRoutes: any = () => {}
       {/* Protected routes that require authentication */}"
       <Route""
         path="/profile"
-<<<<<<< HEAD
-        element={<ProtectedRoute>
-=======
-        element={
-
-      {/* Protected routes that require authentication */}
-      <Route""
-        path="/profile""
-        element={}
-          <ProtectedRoute>
->>>>>>> pr-10728
-            <div>Profile Page</div>
+element={<ProtectedRoute><div>Profile Page</div>
           </ProtectedRoute>
 
       />
@@ -29,45 +18,19 @@ const AuthRoutes: any = () => {}
 "
       <Route""
         path="/dashboard"
-<<<<<<< HEAD
-        element={<ProtectedRoute>
-=======
-        element={
-
-
-      <Route""
-        path="/dashboard""
-        element={}
-          <ProtectedRoute>
->>>>>>> pr-10728
-            <div>Dashboard</div>
+element={<ProtectedRoute><div>Dashboard</div>
           </ProtectedRoute>
 
       />
 :pages.disabled/routes/AuthRoutes.tsx
 "
       <Route""
-<<<<<<< HEAD
-        path="/settings"element={;          <ProtectedRoute>;
-=======
-        path="/settings"
-
-      <Route""
-        path="/settings""
-        element={;          <ProtectedRoute>;
->>>>>>> pr-10728
-            <div>Settings</div>;
+path="/settings"element={;          <ProtectedRoute>;<div>Settings</div>;
           </ProtectedRoute>};
       />;
     </Routes>;
   )};
 :pages.disabled/routes/AuthRoutes.tsx
 "
-<<<<<<< HEAD
 export default AuthRoutes}}}
   '"'"
-=======
-export default AuthRoutes}}}'"'"
-
-export default AuthRoutes}}}'""
->>>>>>> pr-10728

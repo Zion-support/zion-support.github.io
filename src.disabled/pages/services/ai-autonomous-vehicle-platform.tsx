@@ -1,16 +1,10 @@
-<<<<<<< HEAD:src.disabled/pages/services/ai-autonomous-vehicle-platform.tsx
+:src.disabled/pages/services/ai-autonomous-vehicle-platform.tsx
 import React from
   'react';
 import { motion } from
   'framer-motion';
 import { Link } from
-  'react-router-dom';
-=======
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/pages/services/ai-autonomous-vehicle-platform.tsx
-import { 
+  'react-router-dom';import { 
   Car, Brain, 
   Shield, Zap, 
   Globe, BarChart3, 

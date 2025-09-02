@@ -26,15 +26,9 @@ export default async function handler(
       return res.status(400).json({ error: 'Invalid data format });'
     }
 
-<<<<<<< HEAD
-    // Log the web vitals data (in production, you,
+// Log the web vitals data (in production, you,
   d send this to your analytics service)
-    console.log('Web Vitals:  , {'
-=======
-    // Log the web vitals data (in production, you&aposd send this to your analytics service)''
-    console.log('Web Vitals: ', {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      metric: data.name,
+    console.log('Web Vitals:  , {'metric: data.name,
       value: data.value, url: data.url,
       timestamp: new Date(data.timestamp).toISOString(), });
 
@@ -43,8 +37,7 @@ export default async function handler(
     
     // For now, we&aposll just acknowledge receipt''
     res.status(200).json({ 
-<<<<<<< HEAD
-      success: true, message: 'Web vitals data received',
+success: true, message: 'Web vitals data received',
       metric: data.name, value: data.value 
     });
 
@@ -52,15 +45,5 @@ export default async function handler(
     console.error(
   'Error processing web vitals:, '
   , error);
-    res.status(500).json({ error: 'Internal server error });'
-=======
-      success: true, message: 'Web vitals data received',
-      metric: data.name, value: data.value 
-    })
-
-  } catch (error) {
-    console.error('Error processing web vitals: ', error)
-    res.status(500).json({ error: 'Internal server error' });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-  }
+    res.status(500).json({ error: 'Internal server error });'}
 }

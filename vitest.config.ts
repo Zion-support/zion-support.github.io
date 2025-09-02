@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 import { defineConfig } from,
   vitest/config';
 import path from
-  'node: path';
-=======
-import { defineConfig } from 'vitest/config'
-import path from 'node:path'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
-export default defineConfig({
+  'node: path';export default defineConfig({
   resolve: {
     alias: {
   '@: path.resolve(__dirname,
@@ -25,8 +18,7 @@ export default defineConfig({
   './tests/setup.ts',
     globals: true,
     coverage: {
-<<<<<<< HEAD
-      provider:,
+provider:,
   v8',
       reporter: [
   'text,
@@ -38,16 +30,7 @@ export default defineConfig({
   'tests/',
   '**/*.d.ts',
   '**/*.config.*',
-  '**/coverage/**',
-=======
-      provider: 'v8',
-      reporter: ['textjsonhtml'],
-      exclude: [
-        'node_modules/tests/**/*.d.ts',
-        '**/*.config.*',
-        '**/coverage/**',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-      ],
+  '**/coverage/**',],
     },
   },
 });

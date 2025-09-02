@@ -6,14 +6,7 @@
         <h1 className="text-4xl font-bold mb-4">Healthcare Solutions</h1>""
         <p className="text-slate-300">Healthcare technology solutions to improve outcomes and operations.</p>
 :pages.disabled/pages/Healthcare.tsx
-<<<<<<< HEAD
-      </div>"</div>""
-=======
-      </div>"
-      </div>
-    </div>""
->>>>>>> pr-10728
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">""
+</div>"</div>""<div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">""
       <SEO title="Healthcare Solutions - Zion Tech Group" description="Clinical AI, patient analytics, secure interoperability, and compliance-ready platforms."  />""
       <section className="container mx-auto px-4 py-16">;""
         <h1 className="text-4xl font-bold mb-4">Healthcare Solutions</h1>;"        <p className="text-lg text-gray-300 max-w-3xl">;
@@ -24,10 +17,4 @@
   );
 :pages.disabled/pages/Healthcare.tsx
 "
-<<<<<<< HEAD
-  '"'"
-=======
 '"'"
-
-'""
->>>>>>> pr-10728

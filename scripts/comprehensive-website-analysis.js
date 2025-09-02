@@ -63,17 +63,9 @@ class WebsiteAnalyzer {
     // Generate report
     this.generateReport();
 
-<<<<<<< HEAD
-    console.log(
+console.log(
   '\n✅ Analysis completed!');
-    console.log(`📊 Total links checked: ${this.results.summary.totalLinksChecked}`);
-=======
-    console.log('\n✅ Analysis completed!');
-    console.log(
-      `📊 Total links checked: ${this.results.summary.totalLinksChecked}`
-    );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    console.log(`🔗 Working links: ${this.results.summary.workingLinks}`);
+    console.log(`📊 Total links checked: ${this.results.summary.totalLinksChecked}`);console.log(`🔗 Working links: ${this.results.summary.workingLinks}`);
     console.log(`❌ Broken links: ${this.results.summary.brokenLinks}`);
     console.log(`🔄 Redirects: ${this.results.summary.redirects}`);
     console.log(`📄 Missing pages: ${this.results.summary.missingPages}`);
@@ -108,18 +100,10 @@ class WebsiteAnalyzer {
         if (response.data) {
           const links = this.extractLinks(response.data, url);
           for (const link of links) {
-<<<<<<< HEAD
-            if (link.startsWith(
+if (link.startsWith(
   '/') || link.startsWith(BASE_URL)) {
               const fullUrl = link.startsWith(
-  '/') ? `${BASE_URL}${link}` : link;
-=======
-            if (link.startsWith('/') || link.startsWith(BASE_URL)) {
-              const fullUrl = link.startsWith('/')
-                ? `${BASE_URL}${link}`
-                : link;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-              if (!this.checkedUrls.has(fullUrl)) {
+  '/') ? `${BASE_URL}${link}` : link;if (!this.checkedUrls.has(fullUrl)) {
                 this.linkQueue.push({ url: fullUrl, parentUrl: url });
               }
             }
@@ -146,13 +130,8 @@ class WebsiteAnalyzer {
             url,
             status,
             parentUrl,
-<<<<<<< HEAD
-            error:
-  'Page not found'
-=======
-            error: 'Page not found',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-          });
+error:
+  'Page not found'});
         } else {
           this.results.summary.brokenLinks++;
           this.results.brokenLinks.push({
@@ -189,8 +168,7 @@ class WebsiteAnalyzer {
 
   async checkNavigationLinks() {
     const navigationLinks = [
-<<<<<<< HEAD
-      '/
+'/
   ',
       '/about
   ',
@@ -225,28 +203,7 @@ class WebsiteAnalyzer {
       '/privacy
   ',
       '/terms
-  '
-=======
-      '/',
-      '/about',
-      '/contact',
-      '/services',
-      '/ai-services',
-      '/it-services',
-      '/micro-saas',
-      '/solutions',
-      '/case-studies',
-      '/white-papers',
-      '/webinars',
-      '/blog',
-      '/careers',
-      '/team',
-      '/pricing',
-      '/help',
-      '/privacy',
-      '/terms',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    ];
+  '];
 
     for (const link of navigationLinks) {
       const fullUrl = `${BASE_URL}${link}`;
@@ -256,8 +213,7 @@ class WebsiteAnalyzer {
 
   async checkServicePages() {
     const servicePages = [
-<<<<<<< HEAD
-      '/services/ai-supply-chain-optimization
+'/services/ai-supply-chain-optimization
   ',
       '/services/ai-cybersecurity-platform
   ',
@@ -290,27 +246,7 @@ class WebsiteAnalyzer {
       '/services/iot-edge
   ',
       '/services/digital-transformation
-  '
-=======
-      '/services/ai-supply-chain-optimization',
-      '/services/ai-cybersecurity-platform',
-      '/services/ai-healthcare-platform',
-      '/services/ai-quantum-hybrid-platform',
-      '/services/ai-business-intelligence',
-      '/services/ai-sales-copilot',
-      '/services/ai-content-marketing-automation',
-      '/services/ai-hr-platform',
-      '/services/ai-legal-research-platform',
-      '/services/ai-education-platform',
-      '/services/cloud-devops',
-      '/services/zero-trust-network-architecture',
-      '/services/ai-compliance-copilot',
-      '/services/blockchain-enterprise-solutions',
-      '/services/quantum-computing',
-      '/services/iot-edge',
-      '/services/digital-transformation',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    ];
+  '];
 
     for (const link of servicePages) {
       const fullUrl = `${BASE_URL}${link}`;
@@ -320,8 +256,7 @@ class WebsiteAnalyzer {
 
   async checkAdditionalPages() {
     const additionalPages = [
-<<<<<<< HEAD
-      '/enterprise
+'/enterprise
   ',
       '/healthcare
   ',
@@ -368,34 +303,7 @@ class WebsiteAnalyzer {
       '/request-quote
   ',
       '/schedule-demo
-  '
-=======
-      '/enterprise',
-      '/healthcare',
-      '/financial',
-      '/manufacturing',
-      '/retail',
-      '/government',
-      '/education',
-      '/startup',
-      '/marketplace',
-      '/talent',
-      '/community',
-      '/research-development',
-      '/training',
-      '/tutorials',
-      '/support',
-      '/faq',
-      '/news',
-      '/events',
-      '/partners',
-      '/signup',
-      '/login',
-      '/dashboard',
-      '/request-quote',
-      '/schedule-demo',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    ];
+  '];
 
     for (const link of additionalPages) {
       const fullUrl = `${BASE_URL}${link}`;
@@ -407,32 +315,15 @@ class WebsiteAnalyzer {
     // Calculate success rate
     const total = this.results.summary.totalLinksChecked;
     const working = this.results.summary.workingLinks;
-<<<<<<< HEAD
-    const successRate = total > 0 ? ((working / total) * 100).toFixed(2): '0.00;
-    
-=======
-    const successRate =
-      total > 0 ? ((working / total) * 100).toFixed(2) : '0.00';
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    this.results.summary.successRate = `${successRate}%`;
+const successRate = total > 0 ? ((working / total) * 100).toFixed(2): '0.00;this.results.summary.successRate = `${successRate}%`;
 
     // Generate recommendations
     this.generateRecommendations();
 
     // Save report
-<<<<<<< HEAD
-    const reportPath = path.join(__dirname, '..
+const reportPath = path.join(__dirname, '..
   ', 'comprehensive-website-analysis-report.json
-  ');
-=======
-    const reportPath = path.join(
-      __dirname,
-      '..',
-      'comprehensive-website-analysis-report.json'
-    );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
+  ');fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
 
     console.log(`📄 Report saved to: ${reportPath}`);
   }
@@ -443,44 +334,27 @@ class WebsiteAnalyzer {
         type: 'critical
   ',
         message: `Fix ${this.results.summary.brokenLinks} broken links to improve user experience and SEO`,
-<<<<<<< HEAD
-        action:,
+action:,
   Review and fix all broken links identified in the report
-  '
-=======
-        action: 'Review and fix all broken links identified in the report',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      });
+  '});
     }
 
     if (this.results.summary.missingPages > 0) {
       this.results.recommendations.push({
         type: 'important,
         message: `Create ${this.results.summary.missingPages} missing pages that are referenced in navigation`,
-<<<<<<< HEAD
-        action:,
+action:,
   Create content for all missing pages or update navigation to remove broken references
-  '
-=======
-        action:
-          'Create content for all missing pages or update navigation to remove broken references',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      });
+  '});
     }
 
     if (this.results.summary.redirects > 0) {
       this.results.recommendations.push({
         type: 'info,
         message: `${this.results.summary.redirects} redirects found - consider updating direct links`,
-<<<<<<< HEAD
-        action:,
+action:,
   Update navigation and internal links to point directly to final URLs
-  '
-=======
-        action:
-          'Update navigation and internal links to point directly to final URLs',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-      });
+  '});
     }
 
     if (this.results.summary.successRate < '95%

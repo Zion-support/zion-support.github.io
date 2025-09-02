@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from
   'react';
 import { motion } from
@@ -24,29 +23,7 @@ import {
   BarChart3, Rocket,
   Heart, Sparkles
 } from
-  'lucide-react';
-=======
-import React from 'react'
-import { motion } from 'framer-motion'
-import { SEO } from '../components/SEO'
-import { Button } from '../components/ui/Button'
-import { Card } from '../components/ui/Card'
-import { Badge } from '../components/ui/Badge'
-  CheckCircle, Star, 
-  Zap, Shield, 
-  Users, Globe, 
-  Phone, Mail, 
-  ArrowRight, DollarSign,
-  TrendingUp, Award,
-  Clock, Target,
-  Brain, Server,
-  Cloud, Lock,
-  BarChart3, Rocket,
-  Heart, Sparkles
-} from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
-
-const Pricing: React.FC = () => {
+  'lucide-react';const Pricing: React.FC = () => {
   const pricingPlans = [
     {
       name: "Starter", price: "$299",

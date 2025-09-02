@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react.ts';
 import { Link               } from 'react-router-dom.ts';
 import { motion               } from 'framer-motion.ts';
@@ -506,8 +504,3 @@ export function Footer(...args: any[]): any {
     </footer>
   );
 }
-=======
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-=======
->>>>>>> pr-10728

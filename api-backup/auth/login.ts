@@ -29,50 +29,27 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !serviceKey) {
-<<<<<<< HEAD
-  const errorMessage =,
-  CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.;
-=======
-  const errorMessage =
-    'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-  console.error(errorMessage);
+const errorMessage =,
+  CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.;console.error(errorMessage);
   throw new Error(errorMessage);
 }
 
 const supabase = createClient(supabaseUrl, serviceKey);
 
-<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse<LoginSuccessResponse | ErrorResponse>) {
   if (req.method !==
   'POST') {
     res.setHeader(
   'Allow',
-  'POST');
-=======
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<LoginSuccessResponse | ErrorResponse>
-) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
+  'POST');return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
   try {
     const { email, password } = req.body as LoginRequestBody;
 
     if (!email || !password) {
-<<<<<<< HEAD
-      return res.status(400).json({ error:
-  'Email and password are required.' });
-=======
-      return res
-        .status(400)
-        .json({ error: 'Email and password are required.' });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-    }
+return res.status(400).json({ error:
+  'Email and password are required.' });}
 
     // Attempt to sign in with Supabase
     const { data, error } = await supabase.auth.signInWithPassword({

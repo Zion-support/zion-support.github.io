@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> pr-10705
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -13,7 +7,6 @@ import ErrorBoundary from './components/ErrorBoundary';
 import LoadingSpinner from './components/LoadingSpinner';
 
 // Lazy load pages for better performance
-<<<<<<< HEAD
 const Home = lazy(() => import('./pages/index'));
 const About = lazy(() => import('./pages/about'));
 const Contact = lazy(() => import('./pages/contact'));
@@ -112,26 +105,7 @@ const SimpleFooter = () => (
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
   return (props: any) => (
-    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
-=======
-import React, { Suspense, lazy } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-
-// Core Components
-import { PerformanceOptimizer } from './components/PerformanceOptimizer';
-import { SEO } from './components/SEO';
-import { ErrorBoundary } from './components/ErrorBoundary';
-import { LoadingSpinner } from './components/ui/loading-spinner';
-=======
-const HomePage = lazy(() => import('./pages/HomePage'));
-const ServicesPage = lazy(() => import('./pages/SimpleServicesPage'));
-const SolutionsPage = lazy(() => import('./pages/Solutions'));
-const AboutPage = lazy(() => import('./pages/About'));
-const ContactPage = lazy(() => import('./pages/Contact'));
->>>>>>> pr-10705
-
-// Layout Components
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>// Layout Components
 import { EnhancedHeader } from './components/EnhancedHeader';
 import { EnhancedFooter } from './components/EnhancedFooter';
 import { Sidebar } from './components/Sidebar';
@@ -141,8 +115,7 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
   const LazyComponent = lazy(importFn);
   return (props: any) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-      <LazyComponent {...props} />
+<LazyComponent {...props} />
     </Suspense>
   );
 };
@@ -151,7 +124,6 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
-<<<<<<< HEAD
 const Team = createLazyComponent(() => import('./pages/Team'));
 const Partners = createLazyComponent(() => import('./pages/Partners'));
 const HelpCenter = createLazyComponent(() => import('./pages/Help'));
@@ -191,7 +163,6 @@ const SolutionsHealthcare = lazy(() => import('./pages/solutions/Healthcare'));
 
 // AI Service pages
 const AILegalDocumentAutomation = createLazyComponent(() => import('./pages/services/AILegalDocumentAutomation'));
-<<<<<<< HEAD
 const AIContentGenerator = createLazyComponent(() => import('./pages/services/ai-content-generator'));
 const AIContentOptimizer = createLazyComponent(() => import('./pages/services/ai-content-optimizer-pro'));
 const AICybersecuritySuite = createLazyComponent(() => import('./pages/services/ai-cybersecurity-suite'));
@@ -244,32 +215,7 @@ const MicroCRM = createLazyComponent(() => import('./pages/services/micro-crm'))
 const MicroSAASSolutions = createLazyComponent(() => import('./pages/services/micro-saas-solutions'));
 const SmartInventoryManagement = createLazyComponent(() => import('./pages/services/smart-inventory-management'));
 const SpaceTech = createLazyComponent(() => import('./pages/services/space-tech'));
-const Sustainability = createLazyComponent(() => import('./pages/services/sustainability'));
-=======
-const AIHealthcareAnalytics = createLazyComponent(() => import('./pages/services/AIHealthcareAnalytics'));
-const AICybersecurityThreatIntelligence = createLazyComponent(() => import('./pages/services/AICybersecurityThreatIntelligence'));
-const AIFinancialTrading = createLazyComponent(() => import('./pages/services/AIFinancialTrading'));
-const AIContentCreationSuite = createLazyComponent(() => import('./pages/services/AIContentCreationSuite'));
-const AIWorkflowOrchestrator = createLazyComponent(() => import('./pages/services/AIWorkflowOrchestrator'));
-const AIDataGovernancePlatform = createLazyComponent(() => import('./pages/services/AIDataGovernancePlatform'));
-const AICustomerExperienceAnalytics = createLazyComponent(() => import('./pages/services/AICustomerExperienceAnalytics'));
-const AISupplyChainOptimization = createLazyComponent(() => import('./pages/services/AISupplyChainOptimization'));
-const AIFinancialRiskManagement = createLazyComponent(() => import('./pages/services/AIFinancialRiskManagement'));
-
-// New Innovative Services 2025
-const AIEmailAutomationSuite = createLazyComponent(() => import('./pages/services/ai-email-automation-suite'));
-const AISocialMediaScheduler = createLazyComponent(() => import('./pages/services/ai-social-media-scheduler'));
-const AIPoweredDevOpsAutomation = createLazyComponent(() => import('./pages/services/ai-powered-devops-automation'));
-const AICustomerInsightsPlatform = createLazyComponent(() => import('./pages/services/ai-customer-insights-platform'));
-const AIHRTalentAcquisition = createLazyComponent(() => import('./pages/services/AIHRTalentAcquisition'));
-const AIIoTEdgeComputing = createLazyComponent(() => import('./pages/services/AIIoTEdgeComputing'));
-const AIPredictiveMaintenance = createLazyComponent(() => import('./pages/services/AIPredictiveMaintenance'));
-const AISustainableTechnology = createLazyComponent(() => import('./pages/services/AISustainableTechnology'));
-const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AIQuantumMachineLearning'));
-const AICybersecurity = createLazyComponent(() => import('./pages/services/AICybersecurity'));
-const AIHRPlatform = createLazyComponent(() => import('./pages/services/AIHRPlatform'));
->>>>>>> origin/main
-const SustainableTechnology = createLazyComponent(() => import('./pages/services/sustainable-technology'));
+const Sustainability = createLazyComponent(() => import('./pages/services/sustainability'));const SustainableTechnology = createLazyComponent(() => import('./pages/services/sustainable-technology'));
 const QuantumMachineLearning = createLazyComponent(() => import('./pages/services/quantum-machine-learning'));
 const AIContentCreation = createLazyComponent(() => import('./pages/services/ai-content-creation'));
 const IoTEdgeComputing = createLazyComponent(() => import('./pages/services/iot-edge-computing'));
@@ -311,8 +257,6 @@ const UltimateServicesShowcase2025 = createLazyComponent(() => import('./compone
 const UltimateServicesShowcase2026 = createLazyComponent(() => import('./pages/UltimateServicesShowcase2026'));
 const ComprehensivePricing2026 = createLazyComponent(() => import('./pages/ComprehensivePricing2026'));
 const ComprehensivePricing2028 = createLazyComponent(() => import('./pages/ComprehensivePricing2028'));
->>>>>>> origin/add-new-innovative-services-2025
-
 // 2025 Innovative Services Showcase and Pricing Guide
 const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
 const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
@@ -327,7 +271,6 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       <h1 className="text-4xl font-bold mb-4 text-red-400">Something went wrong</h1>
       <p className="text-gray-300 mb-6">
         {error.message || 'An unexpected error occurred'}
-=======
 const Careers = createLazyComponent(() => import('./pages/Careers'));
 const Services = createLazyComponent(() => import('./pages/Services'));
 const Solutions = createLazyComponent(() => import('./pages/Solutions'));
@@ -352,17 +295,11 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
       <p className="text-gray-300 mb-6">
         {error.message || 'An unexpected error occurred. Please try again.'}
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-      </p>
+</p>
       <div className="space-y-3">
         <button
           onClick={resetErrorBoundary}
-<<<<<<< HEAD
-          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
-=======
-          className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-        >
+className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors">
           Try again
         </button>
         <button
@@ -375,17 +312,9 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>
   </div>
 );
-<<<<<<< HEAD
->>>>>>> origin/clean-new-services-2025
-=======
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-
-function App() {
-  return (
-<<<<<<< HEAD
-    <HelmetProvider>
-<<<<<<< HEAD
-      <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
+return (
+<HelmetProvider>
+<ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
         <Router>
           <div className="App min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
             {/* SEO Component */}
@@ -415,8 +344,7 @@ function App() {
             {/* Header */}
             <EnhancedHeader />
 
-<<<<<<< HEAD
-                  {/* Service Routes */}
+{/* Service Routes */}
                   <Route path="/ai-services" element={<AIServices />} />
                   <Route path="/ai-solutions" element={<AISolutions />} />
                   <Route path="/it-services" element={<ITServices />} />
@@ -520,110 +448,11 @@ function App() {
                   <Route path="/services/ai-sustainable-technology" element={<AISustainableTechnology />} />
                   <Route path="/services/ai-quantum-machine-learning" element={<AIQuantumMachineLearning />} />
 
-<<<<<<< HEAD
-                  {/* New AI Service Routes */}
+{/* New AI Service Routes */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
                   <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
                   <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
-                  <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
-=======
-                    {/* Additional service routes from remote branch */}
-                    <Route path="/services/ai-sales-copilot" element={<AISalesCopilot />} />
-                    <Route path="/services/cloud-finops-optimizer" element={<CloudFinOpsOptimizer />} />
-                    <Route path="/services/ai-compliance-assistant" element={<AIComplianceAssistant />} />
-                    <Route path="/services/ai-enterprise-resource-planning" element={<ModernLayout><AIEnterpriseResourcePlanning /></ModernLayout>} />
-                    <Route path="/services/ai-autonomous-manufacturing-platform" element={<ModernLayout><AIAutonomousManufacturingPlatform /></ModernLayout>} />
-                                      <Route path="/services/cloud-devops" element={<CloudDevOps />} />
-                  <Route path="/services/cloud-migration-services" element={<CloudMigrationServices />} />
-                  <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                    <Route path="/services/digital-transformation" element={<DigitalTransformation />} />
-                    <Route path="/services/it-infrastructure" element={<ITInfrastructure />} />
-                    <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
-                    <Route path="/services/ai-healthcare-analytics" element={<AIHealthcareAnalytics />} />
-                    <Route path="/services/podcast-transcription-insights" element={<PodcastTranscriptionInsights />} />
-                    <Route path="/services/ai-data-pipeline-optimizer" element={<AIDataPipelineOptimizer />} />
-                    <Route path="/services/ai-sales-assistant" element={<AISalesAssistant />} />
-                    <Route path="/services/security-posture-guardian" element={<SecurityPostureGuardian />} />
-                    <Route path="/services/developer-productivity-copilot" element={<DeveloperProductivityCopilot />} />
-                    <Route path="/services/ai-space-technology-platform" element={<AISpaceTechnologyPlatform />} />
-                    <Route path="/services/ai-financial-technology-platform" element={<AIFinancialTechnologyPlatform />} />
-
-                  {/* 2025 New Innovative Services */}
-                  <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
-                  <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
-                  <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
-                  <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
-                  <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
-
-                  {/* Additional Service Routes */}
-                  <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />
-                  <Route path="/services/ai-hr-platform" element={<AIHRPlatform />} />
-                  <Route path="/services/sustainable-technology" element={<SustainableTechnology />} />
-                  <Route path="/services/ai-content-creation" element={<AIContentCreation />} />
-                  <Route path="/services/quantum-machine-learning" element={<QuantumMachineLearning />} />
-
-                  {/* Additional Pages */}
-                  <Route path="/api" element={<API />} />
-                  <Route path="/developer-portal" element={<DeveloperPortal />} />
-
-                  {/* Showcase Routes */}
-                  <Route path="/ultimate-services-2025" element={<UltimateServicesShowcase2025 />} />
-                  <Route path="/ultimate-services-2026" element={<UltimateServicesShowcase2026 />} />
-                  <Route path="/comprehensive-pricing-2026" element={<ComprehensivePricing2026 />} />
-                  <Route path="/comprehensive-pricing-2028" element={<ComprehensivePricing2028 />} />
-                  <Route path="/innovative-services-2025" element={<InnovativeServicesLanding2025 />} />
-
-                  {/* 2029 Cutting-Edge Services */}
-                  <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
-                  <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
-
-                  {/* New Innovative Services */}
-                  <Route path="/services/AI-Content-Creation-Studio-Pro" element={<AIContentCreationStudioPro />} />
-                  <Route path="/services/Quantum-AI-Trading-Platform" element={<QuantumAITradingPlatform />} />
-
-                  {/* 404 Page */}
-                  <Route
-                    path="*"
-                    element={
-                      <motion.div
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
-                      >
-                        <div className="text-center text-white">
-                          <h1 className="text-6xl font-bold mb-4">404</h1>
-                          <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
-                          <p className="text-gray-300 mb-8">
-                            The page you're looking for doesn't exist or has been moved.
-                          </p>
-                          <button
-                            onClick={() => window.history.back()}
-                            className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4"
-                          >
-                            Go Back
-                          </button>
-                          <button
-                            onClick={() => window.location.href = '/'}
-                            className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
-                          >
-                            Go Home
-                          </button>
-=======
-            {/* Main Content */}
-            <main className="flex-1">
-              <Suspense fallback={<LoadingSpinner />}>
-                <AnimatePresence mode="wait">
-                  <Routes>
-                    {/* Core Routes */}
-                    <Route
-                      path="/"
-                      element={
-                        <div className="min-h-screen">
-                          <Home />
->>>>>>> origin/main
-                        </div>
+                  <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} /></div>
                       }
                     />
                     <Route path="/about" element={<About />} />
@@ -759,9 +588,7 @@ function App() {
                     {/* 2029 Cutting-Edge Services */}
                     <Route path="/zion-cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
                     <Route path="/cutting-edge-services-2029" element={<ZionCuttingEdgeServices2029 />} />
->>>>>>> origin/add-new-innovative-services-2025
-
-                    {/* 404 Page */}
+{/* 404 Page */}
                     <Route
                       path="*"
                       element={
@@ -811,21 +638,17 @@ function App() {
             />
           </div>
         </Router>
->>>>>>> origin/clean-new-services-2025
-      </ErrorBoundary>
+</ErrorBoundary>
     </HelmetProvider>
   );
 };
 
 export default App;
-=======
 import React, { Suspense, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 ('');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
-=======
-      <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
+<ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
         <PerformanceOptimizer>
           <SEO />
           <div className="min-h-screen bg-gray-50">
@@ -897,8 +720,7 @@ import { ErrorBoundary } from 'react-error-boundary';
         </PerformanceOptimizer>
       </ErrorBoundary>
     </HelmetProvider>
-=======
-    <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
+<ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
       <div className="App">
         <div className="min-h-screen">
           <Suspense fallback={<PageLoader />}>
@@ -966,11 +788,7 @@ import { ErrorBoundary } from 'react-error-boundary';
         </div>
       </div>
     </ErrorBoundary>
->>>>>>> pr-10705
-  );
+);
 }
 
 export default App;
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
->>>>>>> pr-10728
