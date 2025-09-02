@@ -31,6 +31,15 @@ const Header: React.FC = () => {
     { name: 'AI Services', href: '/services/ai-services' },
   ];
 
+  const popularServices = [
+    { name: 'AI Code Reviewer Pro', href: '/services/ai-code-reviewer' },
+    { name: 'AI Meeting Transcriber', href: '/services/ai-meeting-transcriber' },
+    { name: 'Quantum Computing Consulting', href: '/services/quantum-computing-consulting' },
+    { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
+    { name: 'Edge Computing Infrastructure', href: '/services/edge-computing-infrastructure' },
+    { name: 'AI Autonomous Systems', href: '/services/ai-autonomous-systems' },
+  ];
+
   const solutionCategories = [
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Custom Development', href: '/solutions/custom-development' },
@@ -94,16 +103,32 @@ const Header: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  {serviceCategories.map((category) => (
-                    <Link
-                      key={category.name}
-                      href={category.href}
-                      className="block px-4 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors border-b border-gray-100 last:border-b-0"
-                    >
-                      {category.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 mt-2 w-80 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <div className="p-4">
+                    <div className="text-sm font-semibold text-gray-500 mb-3">Service Categories</div>
+                    {serviceCategories.map((category) => (
+                      <Link
+                        key={category.name}
+                        href={category.href}
+                        className="block px-3 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded"
+                      >
+                        {category.name}
+                      </Link>
+                    ))}
+                    
+                    <div className="border-t border-gray-200 my-3"></div>
+                    
+                    <div className="text-sm font-semibold text-gray-500 mb-3">Popular Services</div>
+                    {popularServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className="block px-3 py-2 text-sm text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors rounded"
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -206,6 +231,18 @@ const Header: React.FC = () => {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {category.name}
+                    </Link>
+                  ))}
+                  
+                  <div className="text-gray-700 font-medium mb-3 mt-4">Popular Services</div>
+                  {popularServices.map((service) => (
+                    <Link
+                      key={service.name}
+                      href={service.href}
+                      className="block py-2 pl-4 text-sm text-gray-500 hover:text-blue-600 transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {service.name}
                     </Link>
                   ))}
                 </div>
