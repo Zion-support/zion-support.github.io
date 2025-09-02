@@ -1,4 +1,4 @@
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes  } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 import { ProtectedRoute } from '../components/ProtectedRoute';
 import LoadingSpinner from '../components/LoadingSpinner';
@@ -14,8 +14,7 @@ const ProjectDetails = lazy(() => import('../pages/ProjectDetails'));
 const ProjectRoom = lazy(() => import('../pages/ProjectRoom'));
 
 const DashboardRoutes: React.FC = () => {
-  return (
-    <Suspense fallback={<LoadingSpinner />}>
+  return(<Suspense fallback={<LoadingSpinner />}>
       <Routes>
         <Route path="/dashboard" element={
           <ProtectedRoute>
