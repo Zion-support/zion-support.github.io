@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import Head from 'next/head';
 
 interface SEOProps {
   title: string;
@@ -24,7 +24,7 @@ const SEO: React.FC<SEOProps> = ({
   const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
 
   return (
-    <Helmet>
+    <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -67,8 +67,10 @@ const SEO: React.FC<SEOProps> = ({
       <link rel="manifest" href="/site.webmanifest" />
       
       {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify({
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Zion Tech Group",
@@ -94,9 +96,10 @@ const SEO: React.FC<SEOProps> = ({
             "https://twitter.com/ziontechgroup",
             "https://github.com/ziontechgroup"
           ]
-        })}
-      </script>
-    </Helmet>
+        })
+        }}
+      />
+    </Head>
   );
 };
 

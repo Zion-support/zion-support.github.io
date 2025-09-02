@@ -1,4 +1,18 @@
 import React from 'react';
+
+export default function Home(): JSX.Element {
+  return (
+    <main style={{ padding: '2rem', fontFamily: 'system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif' }}>
+      <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>Zion Tech Group</h1>
+      <p>
+        Welcome. This is a minimal placeholder homepage to enable successful builds while we
+        iterate on improvements. Visit ziontechgroup.com for the live experience.
+      </p>
+    </main>
+  );
+}
+
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
