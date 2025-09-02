@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -107,6 +108,28 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
   const LazyComponent = lazy(importFn);
   return (props: any) => (
     <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
+=======
+import React, { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+
+// Core Components
+import { PerformanceOptimizer } from './components/PerformanceOptimizer';
+import { SEO } from './components/SEO';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { LoadingSpinner } from './components/ui/loading-spinner';
+
+// Layout Components
+import { EnhancedHeader } from './components/EnhancedHeader';
+import { EnhancedFooter } from './components/EnhancedFooter';
+import { Sidebar } from './components/Sidebar';
+
+// Optimized lazy loading with preloading hints
+const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
+  const LazyComponent = lazy(importFn);
+  return (props: any) => (
+    <Suspense fallback={fallback || <LoadingSpinner />}>
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
       <LazyComponent {...props} />
     </Suspense>
   );
@@ -116,6 +139,7 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
+<<<<<<< HEAD
 const Team = createLazyComponent(() => import('./pages/Team'));
 const Partners = createLazyComponent(() => import('./pages/Partners'));
 const HelpCenter = createLazyComponent(() => import('./pages/Help'));
@@ -291,11 +315,41 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
       <h1 className="text-4xl font-bold mb-4 text-red-400">Something went wrong</h1>
       <p className="text-gray-300 mb-6">
         {error.message || 'An unexpected error occurred'}
+=======
+const Careers = createLazyComponent(() => import('./pages/Careers'));
+const Services = createLazyComponent(() => import('./pages/Services'));
+const Solutions = createLazyComponent(() => import('./pages/Solutions'));
+const News = createLazyComponent(() => import('./pages/News'));
+const CaseStudies = createLazyComponent(() => import('./pages/CaseStudies'));
+const Privacy = createLazyComponent(() => import('./pages/Privacy'));
+const Terms = createLazyComponent(() => import('./pages/Terms'));
+
+// Service pages
+const AIServices = createLazyComponent(() => import('./pages/AIServices'));
+const CloudServices = createLazyComponent(() => import('./pages/CloudServices'));
+const CybersecurityServices = createLazyComponent(() => import('./pages/CybersecurityServices'));
+const InfrastructureServices = createLazyComponent(() => import('./pages/InfrastructureServices'));
+const TransformationServices = createLazyComponent(() => import('./pages/TransformationServices'));
+const ConsultingServices = createLazyComponent(() => import('./pages/ConsultingServices'));
+
+// Error Fallback Component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">
+    <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-md w-full text-center border border-white/20">
+      <div className="text-red-400 text-6xl mb-4">⚠️</div>
+      <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+      <p className="text-gray-300 mb-6">
+        {error.message || 'An unexpected error occurred. Please try again.'}
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
       </p>
       <div className="space-y-3">
         <button
           onClick={resetErrorBoundary}
+<<<<<<< HEAD
           className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
+=======
+          className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
         >
           Try again
         </button>
@@ -309,11 +363,15 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetError
     </div>
   </div>
 );
+<<<<<<< HEAD
 >>>>>>> origin/clean-new-services-2025
+=======
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
 
 function App() {
   return (
     <HelmetProvider>
+<<<<<<< HEAD
       <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
         <Router>
           <div className="App min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -753,3 +811,81 @@ import { Routes, Route } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 ('');
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+=======
+      <ErrorBoundary fallback={<ErrorFallback error={new Error('App failed to load')} resetErrorBoundary={() => window.location.reload()} />}>
+        <PerformanceOptimizer>
+          <SEO />
+          <div className="min-h-screen bg-gray-50">
+            <EnhancedHeader />
+            <div className="flex">
+              <Sidebar />
+              <main className="flex-1">
+                <Routes>
+                {/* Core Pages */}
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="/blog" element={<div className="p-8"><h1 className="text-3xl font-bold">Blog</h1><p className="text-gray-600 mt-2">Articles and insights from Zion Tech Group.</p></div>} />
+                <Route path="/faq" element={<div className="p-8"><h1 className="text-3xl font-bold">FAQ</h1><p className="text-gray-600 mt-2">Frequently asked questions.</p></div>} />
+                <Route path="/careers" element={<Careers />} />
+                <Route path="/partners" element={<div className="p-8"><h1 className="text-3xl font-bold">Partners</h1><p className="text-gray-600 mt-2">Our technology and delivery partners.</p></div>} />
+                <Route path="/solutions" element={<Solutions />} />
+                <Route path="/research-development" element={<Solutions />} />
+                <Route path="/case-studies" element={<CaseStudies />} />
+                <Route path="/news" element={<News />} />
+                <Route path="/events" element={<News />} />
+                <Route path="/team" element={<div className="p-8"><h1 className="text-3xl font-bold">Team</h1><p className="text-gray-600 mt-2">Meet the people behind Zion Tech Group.</p></div>} />
+                <Route path="/help" element={<div className="p-8"><h1 className="text-3xl font-bold">Help Center</h1><p className="text-gray-600 mt-2">How can we help you?</p></div>} />
+                <Route path="/security" element={<div className="p-8"><h1 className="text-3xl font-bold">Security</h1><p className="text-gray-600 mt-2">Our commitment to security.</p></div>} />
+                <Route path="/status" element={<div className="p-8"><h1 className="text-3xl font-bold">Status</h1><p className="text-gray-600 mt-2">All systems operational.</p></div>} />
+                <Route path="/sitemap" element={<div className="p-8"><h1 className="text-3xl font-bold">Sitemap</h1><p className="text-gray-600 mt-2">Browse all pages.</p></div>} />
+                <Route path="/login" element={<div className="p-8"><h1 className="text-3xl font-bold">Login</h1></div>} />
+                <Route path="/signup" element={<div className="p-8"><h1 className="text-3xl font-bold">Signup</h1></div>} />
+                <Route path="/request-quote" element={<div className="p-8"><h1 className="text-3xl font-bold">Request a Quote</h1><p className="text-gray-600 mt-2">Tell us about your project.</p></div>} />
+                <Route path="/green-it" element={<div className="p-8"><h1 className="text-3xl font-bold">Green IT</h1><p className="text-gray-600 mt-2">Sustainable technology initiatives.</p></div>} />
+                <Route path="/marketplace" element={<div className="p-8"><h1 className="text-3xl font-bold">Marketplace</h1><p className="text-gray-600 mt-2">Explore products, talent, and services.</p></div>} />
+                <Route path="/marketplace/products" element={<div className="p-8"><h1 className="text-2xl font-semibold">Products</h1></div>} />
+                <Route path="/marketplace/talent" element={<div className="p-8"><h1 className="text-2xl font-semibold">Talent</h1></div>} />
+                <Route path="/marketplace/equipment" element={<div className="p-8"><h1 className="text-2xl font-semibold">Equipment</h1></div>} />
+                <Route path="/micro-saas" element={<div className="p-8"><h1 className="text-3xl font-bold">Micro SAAS</h1><p className="text-gray-600 mt-2">Curated micro SaaS solutions.</p></div>} />
+                <Route path="/it-services" element={<div className="p-8"><h1 className="text-3xl font-bold">IT Services</h1><p className="text-gray-600 mt-2">Enterprise IT offerings.</p></div>} />
+                
+                {/* Services */}
+                <Route path="/services" element={<Services />} />
+                <Route path="/services/ai" element={<AIServices />} />
+                <Route path="/services/cloud" element={<CloudServices />} />
+                <Route path="/services/cybersecurity" element={<CybersecurityServices />} />
+                <Route path="/services/infrastructure" element={<InfrastructureServices />} />
+                <Route path="/services/transformation" element={<TransformationServices />} />
+                <Route path="/services/consulting" element={<ConsultingServices />} />
+                
+                {/* Legal */}
+                <Route path="/privacy" element={<Privacy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/cookies" element={<div className="p-8"><h1 className="text-3xl font-bold">Cookies</h1></div>} />
+                
+                {/* 404 Fallback */}
+                <Route path="*" element={
+                  <div className="min-h-screen flex items-center justify-center">
+                    <div className="text-center">
+                      <h1 className="text-4xl font-bold text-gray-900 mb-4">404</h1>
+                      <p className="text-gray-600 mb-8">Page not found</p>
+                      <a href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        Go Home
+                      </a>
+                    </div>
+                  </div>
+                } />
+              </Routes>
+              </main>
+            </div>
+            <EnhancedFooter />
+          </div>
+        </PerformanceOptimizer>
+      </ErrorBoundary>
+    </HelmetProvider>
+  );
+}
+
+export default App;
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff

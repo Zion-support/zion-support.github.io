@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -315,6 +316,12 @@ export function EnhancedHeader() {
 export const EnhancedHeader: React.FC = () => {
   return (
     <header className="bg-white shadow-lg">
+=======
+import React from 'react';
+
+export const EnhancedHeader: React.FC = () => {
+  return (<header className="bg-white shadow-lg">
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center">
@@ -322,11 +329,24 @@ export const EnhancedHeader: React.FC = () => {
               Zion Tech Group
             </a>
           </div>
+<<<<<<< HEAD
           <nav className="hidden md:flex space-x-8">
+=======
+          <nav className="hidden md:flex space-x-6">
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
             <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
             <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
             <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>
             <a href="/solutions" className="text-gray-700 hover:text-blue-600">Solutions</a>
+<<<<<<< HEAD
+=======
+            <a href="/micro-saas" className="text-gray-700 hover:text-blue-600">Micro SAAS</a>
+            <a href="/it-services" className="text-gray-700 hover:text-blue-600">IT Services</a>
+            <a href="/marketplace" className="text-gray-700 hover:text-blue-600">Marketplace</a>
+            <a href="/news" className="text-gray-700 hover:text-blue-600">News</a>
+            <a href="/blog" className="text-gray-700 hover:text-blue-600">Blog</a>
+            <a href="/careers" className="text-gray-700 hover:text-blue-600">Careers</a>
+>>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
             <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
           </nav>
         </div>
