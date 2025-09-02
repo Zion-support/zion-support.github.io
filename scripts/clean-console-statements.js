@@ -5,9 +5,12 @@
  * Removes console statements from production code
  */
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from
+  'fs';
+import path from
+  'path';
+import { fileURLToPath } from
+  'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -20,13 +23,14 @@ class ConsoleCleaner {
   }
 
   async cleanConsoleStatements() {
-    console.log('🧹 Cleaning console statements from production code...');
+    console.log(
+  '🧹 Cleaning console statements from production code...');
     
     const directories = [
-      'pages',
-      'components',
-      'src',
-      'lib'
+  'pages',
+  'components',
+  'src',
+  'lib'
     ];
 
     for (const dir of directories) {
@@ -57,37 +61,53 @@ class ConsoleCleaner {
 
   isJavaScriptFile(filePath) {
     const ext = path.extname(filePath);
-    return ['.js', '.jsx', '.ts', '.tsx'].includes(ext);
+    return [
+  '.js',
+  '.jsx',
+  '.ts',
+  '.tsx'].includes(ext);
   }
 
   async cleanFile(filePath) {
     try {
-      const content = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath,
+  'utf8');
       const originalContent = content;
       
       // Remove console statements but keep console.error for debugging
       let cleanedContent = content
-        .replace(/console\.log\([^)]*\);?\s*/g, '')
+        .replace(/console\.log\([^)]*\);?\s*/g, '
+  ')
         .replace(/console\.warn\([^)]*\);?\s*/g, '')
-        .replace(/console\.info\([^)]*\);?\s*/g, '')
+        .replace(/console\.info\([^)]*\);?\s*/g, '
+  ')
         .replace(/console\.debug\([^)]*\);?\s*/g, '')
-        .replace(/console\.trace\([^)]*\);?\s*/g, '')
+        .replace(/console\.trace\([^)]*\);?\s*/g, '
+  ')
         .replace(/console\.table\([^)]*\);?\s*/g, '')
-        .replace(/console\.group\([^)]*\);?\s*/g, '')
+        .replace(/console\.group\([^)]*\);?\s*/g, '
+  ')
         .replace(/console\.groupEnd\([^)]*\);?\s*/g, '')
-        .replace(/console\.time\([^)]*\);?\s*/g, '')
+        .replace(/console\.time\([^)]*\);?\s*/g, '
+  ')
         .replace(/console\.timeEnd\([^)]*\);?\s*/g, '')
-        .replace(/console\.count\([^)]*\);?\s*/g, '')
+        .replace(/console\.count\([^)]*\);?\s*/g, '
+  ')
         .replace(/console\.clear\([^)]*\);?\s*/g, '')
-        .replace(/console\.assert\([^)]*\);?\s*/g, '')
+        .replace(/console\.assert\([^)]*\);?\s*/g, '
+  ')
         .replace(/console\.dir\([^)]*\);?\s*/g, '')
-        .replace(/console\.dirxml\([^)]*\);?\s*/g, '')
+        .replace(/console\.dirxml\([^)]*\);?\s*/g, '
+  ')
         .replace(/console\.profile\([^)]*\);?\s*/g, '')
-        .replace(/console\.profileEnd\([^)]*\);?\s*/g, '')
+        .replace(/console\.profileEnd\([^)]*\);?\s*/g, '
+  ')
         .replace(/console\.timeStamp\([^)]*\);?\s*/g, '')
-        .replace(/console\.markTimeline\([^)]*\);?\s*/g, '')
+        .replace(/console\.markTimeline\([^)]*\);?\s*/g, '
+  ')
         .replace(/console\.timeline\([^)]*\);?\s*/g, '')
-        .replace(/console\.timelineEnd\([^)]*\);?\s*/g, '');
+        .replace(/console\.timelineEnd\([^)]*\);?\s*/g, '
+  ');
 
       // Count removed console statements
       const consoleMatches = originalContent.match(/console\.(log|warn|info|debug|trace|table|group|groupEnd|time|timeEnd|count|clear|assert|dir|dirxml|profile|profileEnd|timeStamp|markTimeline|timeline|timelineEnd)\([^)]*\);?\s*/g);

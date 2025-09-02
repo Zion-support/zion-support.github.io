@@ -11,7 +11,8 @@ import {}
   Zap,
   Brain,
   Clock,
-  Database} from 'lucide-react';
+  Database} from
+  'lucide-react';
 
   return (""
     <div className="min-h-screen bg-white">""
@@ -240,4 +241,4 @@ import {}
 ;
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
 export { AIHealthcareAnalytics };export default AIHealthcareAnalytics;'"
-'"'"
+  '"'"

@@ -225,7 +225,8 @@ export { function };export default function LLMContentStudio(...args: []):  {}
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Models Supported</h3>""
                 <div className="space-y-4">"{[""
                     { model: "GPT-4", icon: Sparkles, color: "from-blue-500 to-cyan-500", description: "Advanced language model" },""
-                    { model: "Claude", icon: BookOpen, color: "from-purple-500 to-pink-500", description: "Anthropic's AI assistant" },""
+                    { model: "Claude", icon: BookOpen, color: "from-purple-500 to-pink-500", description: "Anthropic
+  's AI assistant" },""
                     { model: "LLaMA", icon: PenTool, color: "from-green-500 to-emerald-500", description: "Open-source LLM" },""
 :pages.disabled/pages/services/llm-content-studio.tsx
                     { model: "Custom Models", icon: Settings, color: "from-orange-500 to-red-500", description: "Fine-tuned for your brand" }"
@@ -434,4 +435,5 @@ export { function };export default function LLMContentStudio(...args: []):  {}
         </section>;
       </div>;
     </>'"`
-  )}}}}}}'"`'"`
+  )}}}}}}
+  '"`'"`

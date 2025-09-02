@@ -35,4 +35,5 @@ const AuthRoutes: any = () => {}
   )};
 :pages.disabled/routes/AuthRoutes.tsx
 "
-export default AuthRoutes}}}'"'"
+export default AuthRoutes}}}
+  '"'"

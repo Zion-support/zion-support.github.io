@@ -36,7 +36,8 @@ import {}
   BarChart,
   Users2,
   Settings,
-  Palette} from 'lucide-react';
+  Palette} from
+  'lucide-react';
 
 :pages.disabled/pages/services/ai-sales-copilot.tsx
 export default function AISalesCopilot() {
@@ -197,7 +198,8 @@ export default function AISalesCopilot() {
 :pages.disabled/pages/services/ai-sales-copilot.tsx
               Perfect For Your Business"
             </h2>""
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">'
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+  '
               Whether you're a startup or enterprise, our AI Sales Copilot
               adapts to your needs
             </p>
@@ -263,5 +265,6 @@ export default function AISalesCopilot() {
       </section>
     </div>
 :pages.disabled/pages/services/ai-sales-copilot.tsx
-  )}'"
+  )}
+  '"
 '"'"
