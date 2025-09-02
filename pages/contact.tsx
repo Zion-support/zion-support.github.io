@@ -70,18 +70,53 @@ const ContactPage: NextPage = () => {
   ];
 
   const services = [
+    // Micro SaaS Services
     'AI Content Generator Pro',
+    'Social Media Scheduler Pro',
+    'Email Marketing Automation Suite',
+    'Smart Invoice Management',
+    'Time Tracking & Productivity Suite',
+    'CRM & Sales Pipeline Manager',
+    'Smart Appointment Booking',
+    'Inventory & POS System',
+    'Document Management & Collaboration',
+    'Survey & Feedback Platform',
+    'Expense Management & Reimbursement',
     'Smart Project Manager',
     'Inventory Tracker Pro',
     'AI Support Assistant',
+    
+    // IT Services
     'Cloud Migration Expert',
+    'Multi-Cloud Strategy & Management',
+    'Container Orchestration & Kubernetes',
+    'Serverless Architecture Implementation',
+    'Network Security & Infrastructure Audit',
+    'Database Optimization & Migration',
+    'API Gateway & Microservices Management',
+    'Disaster Recovery & Business Continuity',
+    'IT Infrastructure Monitoring & Management',
+    'Identity & Access Management (IAM)',
     'Cybersecurity Assessment',
     'DevOps Automation Suite',
     'Data Backup & Recovery',
+    
+    // AI Services
     'Custom AI Model Development',
+    'Computer Vision & Image Recognition',
+    'Natural Language Processing (NLP)',
+    'Predictive Analytics & Forecasting',
+    'AI Recommendation Engine',
+    'AI-Powered Workflow Automation',
+    'AI Data Analytics & Business Intelligence',
+    'AI Chatbot & Voice Assistant Development',
+    'AI Fraud Detection & Security',
+    'AI Content Moderation & Safety',
+    'AI Supply Chain Optimization',
     'AI Process Automation',
     'AI Analytics Platform',
     'AI Chatbot Development',
+    
     'Other'
   ];
 
