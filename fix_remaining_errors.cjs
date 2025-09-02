@@ -48,7 +48,7 @@ async function fixRemainingErrors() {
   if (await fs.pathExists(sanitizePath)) {
     let content = await fs.readFile(sanitizePath, 'utf8');
     content = content.replace(
-      /let, sanitize, d = html\.replace\(\/<scri p t\\b\[^<\]\*\(\?:\!<\/scri p t>\)<\[^<\]\*\)\*<\/scri p t>\/gi  ''/,
+      /let, sanitize, d = html\.replace\(\/<scri p t\\b\[^<\]\*\(\?:\!<\/scri p t>\)<\[^<\]\*\)\*<\/scri p t>\/gi {2}''/,
       "let sanitized = html.replace(/<script\\b[^<]*(?:(?!<\\/script>)<[^<]*)*<\\/script>/gi, '');"
     );
     content = content.replace(
@@ -87,11 +87,11 @@ async function fixRemainingErrors() {
     content = content.replace(/case 'type':/, "case 'type':");
     content = content.replace(/case 'hover':/, "case 'hover':");
     content = content.replace(
-      /Object\.defineProperty\(window  'innerWidth',/,
+      /Object\.defineProperty\(window {2}'innerWidth',/,
       "Object.defineProperty(window, 'innerWidth',"
     );
     content = content.replace(
-      /Object\.defineProperty\(window  'innerHeight',/,
+      /Object\.defineProperty\(window {2}'innerHeight',/,
       "Object.defineProperty(window, 'innerHeight',"
     );
     content = content.replace(

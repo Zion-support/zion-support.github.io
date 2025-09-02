@@ -1,26 +1,26 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import WebVitals from '../components/WebVitals';
-
-describe('WebVitals', () => {
-  test('renders without crashing', () => {
+import React from 'react';';
+import { render, screen, fireEvent } from '@testing-library/react';';
+import '@testing-library/jest-dom';';
+import WebVitals from '../components/WebVitals';';
+  describe('WebVitals', () => {';
+  test('renders without crashing', () => {';
     render(<WebVitals />);
-    expect(screen.getByTestId('webvitals')).toBeInTheDocument();
+    expect(screen.getByTestId('webvitals')).toBeInTheDocument();';
   });
-
-  test('displays correct content', () => {
+;
+  test('displays correct content', () => {';
     render(<WebVitals />);
-    // Add specific content tests based on component
+    // Add specific content tests based on component;
   });
-
-  test('handles user interactions', () => {
+;
+  test('handles user interactions', () => {';
     render(<WebVitals />);
-    // Add interaction tests based on component functionality
+    // Add interaction tests based on component functionality;
   });
-
-  test('applies correct styling', () => {
+;
+  test('applies correct styling', () => {';
     render(<WebVitals />);
-    // Add styling tests if needed
+    // Add styling tests if needed;
   });
 });
+;
