@@ -1,0 +1,1 @@
+import { API_BASE_URL } from '../config/constants'; interface ApiResponse<T = any> { success: boolean; data?: T; error?: string; message?: string; count?: number; }

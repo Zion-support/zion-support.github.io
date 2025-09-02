@@ -1,0 +1,1 @@
+export interface InnovativeMicroSaasService2026 {

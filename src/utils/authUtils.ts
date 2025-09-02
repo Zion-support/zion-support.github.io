@@ -1,0 +1,1 @@
+export const cleanupAuthState: React.FC = ($2) => {

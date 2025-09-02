@@ -1,0 +1,1 @@
+import { toast } from '@/src/src/hooks/use-toast'; export const showApiError: React.FC = ($2) => { const message = error?.message || fallbackMessage || 'An unexpected error occurred'; toast({ variant: "destructive", title: "Error", description: message, });

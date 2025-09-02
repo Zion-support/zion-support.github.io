@@ -1,0 +1,85 @@
+{
+  "timestamp": "2025-08-29T14:14:31.363Z",
+  "duration": "15130ms",
+  "summary": {
+    "total": 6,
+    "passed": 2,
+    "failed": 3,
+    "skipped": 1
+  },
+  "results": {
+    "dependencies": {
+      "status": "success",
+      "result": {
+        "duration": "5563ms",
+        "output": "Dependencies installed successfully"
+      }
+    },
+    "linting": {
+      "status": "failure",
+      "result": {
+        "error": "Command failed: npm run lint\nInvalid option '--ext' - perhaps you meant '-c'?\nYou're using eslint.config.js, some command line flags are no longer available. Please see https://eslint.org/docs/latest/use/command-line-interface for details.\n",
+        "output": "\n> bolt.new.zion.app@0.1.0 lint\n> eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0\n\n",
+        "issues": {
+          "total": 1,
+          "errors": 0,
+          "warnings": 1
+        }
+      }
+    },
+    "typeCheck": {
+      "status": "failure",
+      "result": {
+        "error": "Command failed: npm run type-check",
+        "output": "\n> bolt.new.zion.app@0.1.0 type-check\n> tsc --noEmit\n\nsrc/components/BenefitsSection.tsx(94,3): error TS1005: ',' expected.\nsrc/components/EnhancedHeroSection.tsx(192,34): error TS1003: Identifier expected.\nsrc/components/EnhancedHeroSection.tsx(192,88): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/components/FuturisticServicesShowcase.tsx(236,75): error TS1003: Identifier expected.\nsrc/components/FuturisticServicesShowcase.tsx(236,129): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/components/FuturisticServicesShowcase.tsx(236,130): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/components/FuturisticServicesShowcase.tsx(282,75): error TS1003: Identifier expected.\nsrc/components/FuturisticServicesShowcase.tsx(282,134): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/components/FuturisticServicesShowcase.tsx(282,135): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/layout/PrimaryNav.tsx(62,10): error TS17008: JSX element 'div' has no corresponding closing tag.\nsrc/pages/ComprehensiveServicesOverview.tsx(32,3): error TS1128: Declaration or statement expected.\nsrc/pages/ComprehensiveServicesOverview2027.tsx(482,2): error TS1005: '}' expected.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(354,85): error TS1005: '}' expected.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(355,19): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/pages/EnhancedComprehensiveServices2026.tsx(355,21): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/pages/EnhancedComprehensiveServices2026.tsx(356,17): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/EnhancedComprehensiveServices2026.tsx(358,19): error TS17002: Expected corresponding JSX closing tag for 'div'.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(365,7): error TS1005: ')' expected.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(714,5): error TS1128: Declaration or statement expected.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(715,3): error TS1109: Expression expected.\nsrc/pages/EnhancedComprehensiveServices2026.tsx(716,1): error TS1128: Declaration or statement expected.\nsrc/pages/ForgotPassword.tsx(472,84): error TS1003: Identifier expected.\nsrc/pages/ForgotPassword.tsx(472,316): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ForgotPassword.tsx(552,5): error TS1005: ')' expected.\nsrc/pages/ForgotPassword.tsx(553,3): error TS1109: Expression expected.\nsrc/pages/ForgotPassword.tsx(554,1): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(381,11): error TS17015: Expected corresponding closing tag for JSX fragment.\nsrc/pages/Home.tsx(382,9): error TS2657: JSX expressions must have one parent element.\nsrc/pages/Home.tsx(388,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(391,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(391,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(391,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(391,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(391,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(391,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(393,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(396,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(396,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(396,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(396,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(396,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(396,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(398,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(401,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(401,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(401,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(401,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(401,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(401,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(403,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(406,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(406,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(406,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(406,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(406,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(406,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(408,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(411,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(411,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(411,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(411,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(411,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(411,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(413,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(416,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(416,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(416,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(416,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(416,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(416,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(418,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(421,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(421,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(421,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(421,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(421,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(421,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(423,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(426,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(426,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(426,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(426,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(426,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(426,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(428,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(431,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(431,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(431,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(431,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(431,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(431,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(433,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(436,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(436,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(436,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(436,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(436,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(436,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(438,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(441,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(441,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(441,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(441,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(441,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(441,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(443,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(446,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(446,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(446,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(446,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(446,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(446,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(448,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(451,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(451,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(451,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(451,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(451,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(451,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(453,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(456,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(456,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(456,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(456,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(456,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(456,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(458,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(461,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(461,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(461,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(461,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(461,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(461,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(463,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(466,17): error TS1005: ';' expected.\nsrc/pages/Home.tsx(466,27): error TS1136: Property assignment expected.\nsrc/pages/Home.tsx(466,32): error TS1005: ';' expected.\nsrc/pages/Home.tsx(466,86): error TS1109: Expression expected.\nsrc/pages/Home.tsx(466,92): error TS1109: Expression expected.\nsrc/pages/Home.tsx(466,93): error TS1109: Expression expected.\nsrc/pages/Home.tsx(468,7): error TS1128: Declaration or statement expected.\nsrc/pages/Home.tsx(471,1): error TS1185: Merge conflict marker encountered.\nsrc/pages/Home.tsx(472,21): error TS1109: Expression expected.\nsrc/pages/Home.tsx(473,5): error TS1109: Expression expected.\nsrc/pages/Home.tsx(473,7): error TS1109: Expression expected.\nsrc/pages/Home.tsx(474,3): error TS1109: Expression expected.\nsrc/pages/Home.tsx(475,1): error TS1128: Declaration or statement expected.\nsrc/pages/Login.tsx(546,84): error TS1003: Identifier expected.\nsrc/pages/Login.tsx(546,316): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/Login.tsx(612,5): error TS1005: ')' expected.\nsrc/pages/Login.tsx(613,3): error TS1109: Expression expected.\nsrc/pages/Login.tsx(614,1): error TS1128: Declaration or statement expected.\nsrc/pages/ServicesOverview.tsx(490,8): error TS17008: JSX element 'section' has no corresponding closing tag.\nsrc/pages/ServicesOverview.tsx(543,22): error TS17008: JSX element 'p' has no corresponding closing tag.\nsrc/pages/ServicesOverview.tsx(609,21): error TS17002: Expected corresponding JSX closing tag for 'motion.div'.\nsrc/pages/ServicesOverview.tsx(610,17): error TS1005: ')' expected.\nsrc/pages/ServicesOverview.tsx(610,19): error TS17002: Expected corresponding JSX closing tag for 'div'.\nsrc/pages/ServicesOverview.tsx(611,16): error TS1005: ':' expected.\nsrc/pages/ServicesOverview.tsx(611,17): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/pages/ServicesOverview.tsx(683,12): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/pages/ServicesOverview.tsx(701,7): error TS1005: ')' expected.\nsrc/pages/ServicesOverview.tsx(704,16): error TS1005: ';' expected.\nsrc/pages/ServicesOverview.tsx(785,7): error TS1128: Declaration or statement expected.\nsrc/pages/ServicesOverview.tsx(786,5): error TS1109: Expression expected.\nsrc/pages/ServicesOverview.tsx(787,3): error TS1109: Expression expected.\nsrc/pages/ServicesPage.tsx(303,81): error TS1003: Identifier expected.\nsrc/pages/ServicesPage.tsx(303,132): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/ServicesPage.tsx(303,133): error TS1381: Unexpected token. Did you mean `{'}'}` or `&rbrace;`?\nsrc/pages/Signup.tsx(499,84): error TS1003: Identifier expected.\nsrc/pages/Signup.tsx(499,316): error TS1382: Unexpected token. Did you mean `{'>'}` or `&gt;`?\nsrc/pages/Signup.tsx(603,5): error TS1005: ')' expected.\nsrc/pages/Signup.tsx(604,3): error TS1109: Expression expected.\nsrc/pages/Signup.tsx(605,1): error TS1128: Declaration or statement expected.\nsrc/pages/Solutions.tsx(651,5): error TS1128: Declaration or statement expected.\nsrc/pages/Solutions.tsx(652,3): error TS1109: Expression expected.\nsrc/pages/Solutions.tsx(653,1): error TS1128: Declaration or statement expected.\nsrc/pages/admin/SupportRequests.tsx(143,7): error TS2657: JSX expressions must have one parent element.\nsrc/pages/services/Cybersecurity.tsx(154,13): error TS17002: Expected corresponding JSX closing tag for 'div'.\nsrc/pages/services/DigitalTransformation.tsx(124,13): error TS17002: Expected corresponding JSX closing tag for 'motion.h1'.\nsrc/pages/solutions.tsx(651,5): error TS1128: Declaration or statement expected.\nsrc/pages/solutions.tsx(652,3): error TS1109: Expression expected.\nsrc/pages/solutions.tsx(653,1): error TS1128: Declaration or statement expected.\n",
+        "issues": {
+          "total": 182,
+          "errors": 182,
+          "warnings": 0
+        }
+      }
+    },
+    "build": {
+      "status": "success",
+      "result": {
+        "duration": "7740ms",
+        "output": "Build completed successfully",
+        "buildSize": "4.40 MB"
+      }
+    },
+    "testing": {
+      "status": "skipped",
+      "result": {
+        "reason": "No test scripts configured",
+        "output": "Tests skipped"
+      }
+    },
+    "quality": {
+      "status": "failure",
+      "result": {
+        "score": "40.00",
+        "passed": 2,
+        "total": 5,
+        "details": {
+          "buildSuccess": true,
+          "lintingPassed": false,
+          "typeCheckPassed": false,
+          "testsPassed": false,
+          "dependenciesInstalled": true
+        }
+      }
+    }
+  },
+  "quality": {
+    "score": "40.00",
+    "passed": 2,
+    "total": 5,
+    "details": {
+      "buildSuccess": true,
+      "lintingPassed": false,
+      "typeCheckPassed": false,
+      "testsPassed": false,
+      "dependenciesInstalled": true
+    }
+  }
+}

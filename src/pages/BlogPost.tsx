@@ -1,0 +1,1 @@
+import { SEO } from '@/src/src/components/SEO' export default function BlogPost() { const { slug } = useParams();

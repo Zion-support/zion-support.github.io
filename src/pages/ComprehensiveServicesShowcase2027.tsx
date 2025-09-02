@@ -1,0 +1,1 @@
+import React, { useState, useMemo } from 'react'; import { motion, AnimatePresence } from 'framer-motion'; import { Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Lock, Code, Rocket, Users, Search, Filter, Star, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Play, BookOpen, MessageCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Atom,
