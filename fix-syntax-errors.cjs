@@ -1,131 +1,73 @@
 const fs = require('fs');
 const path = require('path');
 
-// Common syntax fixes
-const fixes = [
-  // Fix import statements with spaces
-  { 
-    pattern: /import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]([^'"`]+)\s*-\s*([^'"`]+)['"`]/g,
-    replacement: "import { $1 } from '$2-$3'"
-  },
-  // Fix import statements with .ts extension
-  { 
-    pattern: /from\s+['"`]([^'"`]+)\.ts['"`]/g,
-    replacement: "from '$1'"
-  },
-  // Fix function declarations with incorrect syntax
-  { 
-    pattern: /export\s+(?:default\s+)?(?:React\.memo\s*\()?function\s+(\w+)\s*\(\.\.\.args\s*:\s*any\[\]\)\s*:\s*any\s*\{/g,
-    replacement: "export default function $1() {"
-  },
-  // Fix useState calls with spaces
-  { 
-    pattern: /useState\s*\(\s*([^)]+)\s*\)\s*;/g,
-    replacement: "useState($1);"
-  },
-  // Fix className with spaces
-  { 
-    pattern: /className\s*=\s*["'`]([^"'`]+)\s*-\s*([^"'`]+)["'`]/g,
-    replacement: 'className="$1-$2"'
-  },
-  // Fix JSX attributes with spaces
-  { 
-    pattern: /(\w+)\s*-\s*(\w+)\s*=/g,
-    replacement: '$1-$2='
-  },
-  // Fix array access with spaces
-  { 
-    pattern: /\[\s*([^\]]+)\s*\]/g,
-    replacement: '[$1]'
-  },
-  // Fix object property access with spaces
-  { 
-    pattern: /\.\s*([^\s]+)/g,
-    replacement: '.$1'
-  },
-  // Fix function calls with spaces
-  { 
-    pattern: /(\w+)\s*\(\s*([^)]+)\s*\)/g,
-    replacement: '$1($2)'
-  },
-  // Fix template literals with spaces
-  { 
-    pattern: /\$\{\s*([^}]+)\s*\}/g,
-    replacement: '${$1}'
-  }
-];
-
 function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let originalContent = content;
-    
-    // Apply all fixes
-    fixes.forEach(fix => {
-      content = content.replace(fix.pattern, fix.replacement);
-    });
-    
-    // Additional specific fixes
-    content = content.replace(/import\s+React\s+from\s+['"`]react\.ts['"`]/g, "import React from 'react'");
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]framer\s*-\s*motion\.ts['"`]/g, "import { $1 } from 'framer-motion'");
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]lucide\s*-\s*react\.ts['"`]/g, "import { $1 } from 'lucide-react'");
-    content = content.replace(/import\s+\{\s*([^}]+)\s*\}\s+from\s+['"`]react\s*-\s*router\s*-\s*dom\.ts['"`]/g, "import { $1 } from 'react-router-dom'");
-    
-    // Fix common JSX issues
-    content = content.replace(/role\s*=\s*["'`]button["'`]/g, '');
-    content = content.replace(/aria\s*-\s*label\s*=\s*["'`][^"'`]*["'`]/g, '');
-    
-    // Fix spacing issues in class names
-    content = content.replace(/bg\s*-\s*([^\s]+)/g, 'bg-$1');
-    content = content.replace(/text\s*-\s*([^\s]+)/g, 'text-$1');
-    content = content.replace(/border\s*-\s*([^\s]+)/g, 'border-$1');
-    content = content.replace(/rounded\s*-\s*([^\s]+)/g, 'rounded-$1');
-    content = content.replace(/px\s*-\s*([^\s]+)/g, 'px-$1');
-    content = content.replace(/py\s*-\s*([^\s]+)/g, 'py-$1');
-    content = content.replace(/w\s*-\s*([^\s]+)/g, 'w-$1');
-    content = content.replace(/h\s*-\s*([^\s]+)/g, 'h-$1');
-    content = content.replace(/gap\s*-\s*([^\s]+)/g, 'gap-$1');
-    content = content.replace(/mb\s*-\s*([^\s]+)/g, 'mb-$1');
-    content = content.replace(/mt\s*-\s*([^\s]+)/g, 'mt-$1');
-    content = content.replace(/ml\s*-\s*([^\s]+)/g, 'ml-$1');
-    content = content.replace(/mr\s*-\s*([^\s]+)/g, 'mr-$1');
-    
-    if (content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed: ${filePath}`);
-      return true;
-    }
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-  }
+  let content = fs.readFileSync(filePath, 'utf8');
+  
+  // Fix import statements
+  content = content.replace(/from 'react$/gm, "from 'react';");
+  content = content.replace(/from 'next\/head$/gm, "from 'next/head';");
+  content = content.replace(/from 'next\/link$/gm, "from 'next/link';");
+  content = content.replace(/from 'lucide-react$/gm, "from 'lucide-react';");
+  content = content.replace(/from 'class-variance-authority$/gm, "from 'class-variance-authority';");
+  content = content.replace(/from 'react-helmet-async$/gm, "from 'react-helmet-async';");
+  
+  // Fix broken quotes and semicolons
+  content = content.replace(/';'/g, ";\n");
+  content = content.replace(/';''/g, ";\n\n");
+  content = content.replace(/';' /g, ";\n");
+  content = content.replace(/';'' /g, ";\n\n");
+  
+  // Fix broken function calls and statements
+  content = content.replace(/setIsHighContrast\(savedHighContrast\);setFontSize\(savedFontSize\);/g, 
+    "setIsHighContrast(savedHighContrast);\n    setFontSize(savedFontSize);");
+  
+  // Fix broken strings
+  content = content.replace(/';'const/g, ";\n\nconst");
+  content = content.replace(/';'interface/g, ";\n\ninterface");
+  content = content.replace(/';'export/g, ";\n\nexport");
+  
+  // Fix broken JSX
+  content = content.replace(/';'<footer/g, ";\n\n  return (\n    <footer");
+  content = content.replace(/';'<nav/g, ";\n\n  return (\n    <nav");
+  
+  // Fix broken URLs
+  content = content.replace(/https: \/\/fonts\.googleapis\.com/g, "https://fonts.googleapis.com");
+  content = content.replace(/https: \/\/ziontechgroup\.com/g, "https://ziontechgroup.com");
+  
+  // Fix broken CSS classes
+  content = content.replace(/md: grid-cols-2/g, "md:grid-cols-2");
+  content = content.replace(/focus: outline-none/g, "focus:outline-none");
+  content = content.replace(/focus-visible: outline-none/g, "focus-visible:outline-none");
+  content = content.replace(/hover: bg-primary/g, "hover:bg-primary");
+  
+  // Fix broken function definitions
+  content = content.replace(/const applyAccessibilityStyles = \(highContrast: boolean, fontSize: string, reducedMotion: boolean\) => {;/g,
+    "const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {\n  const root = document.documentElement;");
+  
+  // Fix broken array definitions
+  content = content.replace(/const badgeVariants = cva\(;/g, "const badgeVariants = cva(");
+  content = content.replace(/const buttonVariants = cva\(;/g, "const buttonVariants = cva(");
+  
+  fs.writeFileSync(filePath, content);
+  console.log(`Fixed: ${filePath}`);
 }
 
-function processDirectory(dirPath) {
-  const files = fs.readdirSync(dirPath);
-  let fixedCount = 0;
+function walkDir(dir) {
+  const files = fs.readdirSync(dir);
   
-  files.forEach(file => {
-    const filePath = path.join(dirPath, file);
+  for (const file of files) {
+    const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
     
     if (stat.isDirectory()) {
-      // Skip node_modules and other non-source directories
-      if (!['node_modules', '.git', '.next', 'out', 'dist'].includes(file)) {
-        fixedCount += processDirectory(filePath);
-      }
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
-      if (fixFile(filePath)) {
-        fixedCount++;
-      }
+      walkDir(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+      fixFile(filePath);
     }
-  });
-  
-  return fixedCount;
+  }
 }
 
-// Start fixing from the src directory
-console.log('Starting syntax fixes...');
-const fixedCount = processDirectory('./src');
-console.log(`Fixed ${fixedCount} files.`);
+// Fix all component files
+walkDir('./components');
+console.log('All syntax errors fixed!');

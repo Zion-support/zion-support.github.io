@@ -1,11 +1,15 @@
-import React, { useEffect, useState, useCallback } from 'react';'import { motion, AnimatePresence } from 'framer-motion';'import { ;'  BarChart3, Users, 
+import React, { useEffect, useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion
+import { ;'  BarChart3, Users, 
   Eye, MousePointer, 
   Clock, TrendingUp, 
   Globe, Smartphone,
   Monitor, Tablet,
   Download, Share2,
   Heart, MessageCircle
-} from 'lucide-react';''interface AnalyticsData {pageViews: number;
+} from 'lucide-react';
+
+interface AnalyticsData {pageViews: number;
   uniqueVisitors: number;
   bounceRate: number;
   avgSessionDuration: number;
@@ -72,7 +76,9 @@ console.error('Error fetching analytics: ', error);'    } finally {'      setIsL
   }, [fetchAnalytics, autoRefresh, refreshInterval, timeRange]);
 
 const formatNumber = (num: number): string => {;
-    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';'    if (num >= 1000) return (num / 1000).toFixed(1) + 'K';'    return num.toString();'  };
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M;
+    if (num >= 1000) return (num / 1000).toFixed(1) + 'K;
+    return num.toString();'  };
 
   const formatDuration = (seconds: number): string => {;
     const minutes = Math.floor(seconds / 60);
@@ -90,7 +96,7 @@ const formatNumber = (num: number): string => {;
     <div className="space-y-6">"      {/* Header */}"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <BarChart3 className="w-6 h-6 mr-2 text-blue-500" />"          Analytics Dashboard"        </h2>
         <div className="flex items-center space-x-4">"          <select"            value={timeRange}
             onChange={(e) => setTimeRange(e.target.value as any)}
-            className="px-3 py-1 border border-gray-300 rounded-md text-sm focus: outline-none focus:ring-2 focus:ring-blue-500""          >"            <option value="24h">Last 24 Hours</option>"            <option value="7d">Last 7 Days</option>"            <option value="30d">Last 30 Days</option>"            <option value="90d">Last 90 Days</option>"          </select>"          <button
+            className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500""          >"            <option value="24h">Last 24 Hours</option>"            <option value="7d">Last 7 Days</option>"            <option value="30d">Last 30 Days</option>"            <option value="90d">Last 90 Days</option>"          </select>"          <button
             onClick={fetchAnalytics}
             disabled={isLoading}
             className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50 text-sm""          >"            {isLoading ? 'Refreshing...' : 'Refresh'}'          </button>'        </div></div>
@@ -104,7 +110,7 @@ className="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-4 rounded-l
       )}
 
       {/* Key Metrics */}
-      <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-4">"        <motion.div"          initial={{ opacity: 0, y: 20 }}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">"        <motion.div"          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-200 dark:border-gray-700""        >"          <div className="flex items-center justify-between">"            <div>"              <p className="text-sm text-gray-600 dark:text-gray-400">Page Views</p>"              <p className="text-2xl font-bold text-gray-900 dark:text-white">"                {formatNumber(analytics.pageViews)}"              </p>

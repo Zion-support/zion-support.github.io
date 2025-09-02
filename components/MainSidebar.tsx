@@ -1,4 +1,6 @@
-import React, { useState              } from 'react.ts';'import Link from 'next/link.ts';'import { Home, Briefcase, ;'  Users, Phone, 
+import React, { useState              } from 'react.ts
+import Link from 'next/link.ts
+import { Home, Briefcase, ;'  Users, Phone, 
   Mail, MapPin, 
   Globe, Linkedin, 
   Twitter, Shield, 
@@ -30,7 +32,9 @@ import React, { useState              } from 'react.ts';'import Link from 'next/
   Leaf, Sun,
   Wind
   
-} from 'lucide-react.ts';''interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
+} from 'lucide-react.ts
+
+interface SidebarProps extends React.PropsWithChildren<{}> {isOpen: anyanyanyanyanyanyanyanyanyanyanyanyanyboolean;
   onClose: ()               => void}
 
 const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {

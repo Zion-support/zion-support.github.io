@@ -1,4 +1,7 @@
-import React, { useState } from 'react';'import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';''interface FormData {name: string;
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
+
+interface FormData {name: string;
   email: string;
   company: string;
   service: string;
@@ -18,14 +21,18 @@ const [formData, setFormData] = useState<FormData>({;
 
     if (!formData.name.trim()) {
 
-newErrors.name = 'Name is required';'    }'
+newErrors.name = 'Name is required;
+    }'
     if (!formData.email.trim()) {
 
-      newErrors.email = 'Email is required';'    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {'
-      newErrors.email = 'Email is invalid';'    }'
+      newErrors.email = 'Email is required;
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {'
+      newErrors.email = 'Email is invalid;
+    }'
     if (!formData.message.trim()) {
 
-      newErrors.message = 'Message is required';'    }'setErrors(newErrors);
+      newErrors.message = 'Message is required;
+    }'setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
@@ -91,7 +98,7 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
           </div>
         </div>
 
-<form onSubmit={handleSubmit} className="space-y-6">"          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"            <div>"              <label
+<form onSubmit={handleSubmit} className="space-y-6">"          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"            <div>"              <label
                 htmlFor="name""                className="block text-sm font-medium text-gray-700 mb-2""              >"                Full Name *
               </label>
               <input
@@ -109,7 +116,7 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
                   errors.email ? 'border-red-500' : 'border-gray-300''                }`}'                placeholder="john@company.com""              />"              {errors.email && (`                <p className="text-red-500 text-sm mt-1">{errors.email}</p>"              )}"            </div>
           </div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"            <div>"              <label
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">"            <div>"              <label
                 htmlFor="company""                className="block text-sm font-medium text-gray-700 mb-2""              >"                Company
               </label>
               <input

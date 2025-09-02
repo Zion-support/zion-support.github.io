@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';''interface AnalyticsProps {trackingId?: string;
+import React, { useEffect } from 'react';
+
+interface AnalyticsProps {trackingId?: string;
 }
 
 const Analytics: React.FC<AnalyticsProps> = ({ 

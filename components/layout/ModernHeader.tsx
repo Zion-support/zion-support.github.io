@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react.ts';'import Link from 'next/link.ts';'import {;'
+import React, { useState, useEffect } from 'react.ts
+import Link from 'next/link.ts
+import {;'
   Menu, X,
   ChevronDown, Zap,
   Shield, Cpu,
@@ -9,4 +11,5 @@ import React, { useState, useEffect } from 'react.ts';'import Link from 'next/li
   Rocket, ShieldCheck,
   Globe2, Zap2,
   Brain2, Cloud2,
-  Lock2} from 'lucide-react.ts';''
+  Lock2} from 'lucide-react.ts;
+'
