@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud, Code, Cpu, Cross, Database, Flexible, From, Globe, Grid, Link2, Mail, MapPin, Monitor, Network, Now, Phone, Server, Settings, Shield, Smartphone, TrendingUp, User, Users, Wifi, Zap } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -696,6 +696,159 @@ export default function ITServices() {
       pricing: '$4,000 - $20,000/month',
       delivery: '4-12 weeks',
       category: 'Backup Services',
+    },
+    {
+      title: 'Vulnerability Assessment & Penetration Testing (VAPT)',
+      description:
+        'Comprehensive security testing and vulnerability assessment services with detailed reporting and remediation guidance',
+      icon: Shield,
+      features: [
+        'Automated vulnerability scanning and assessment',
+        'Manual penetration testing and ethical hacking',
+        'Web application security testing',
+        'Network infrastructure security audits',
+        'Social engineering and phishing assessments',
+        'Compliance testing (PCI DSS, HIPAA, SOX)',
+      ],
+      pricing: '$2,500 - $15,000/month',
+      delivery: '2-6 weeks',
+      category: 'Security Services',
+    },
+    {
+      title: 'ERP Solutions Implementation',
+      description:
+        'Enterprise Resource Planning system implementation and customization for business process optimization',
+      icon: Database,
+      features: [
+        'Microsoft Dynamics 365 implementation and customization',
+        'SAP Business One and S/4HANA deployment',
+        'Oracle NetSuite and ERP Cloud solutions',
+        'Custom ERP development and integration',
+        'Data migration and system integration',
+        'User training and change management',
+      ],
+      pricing: '$10,000 - $100,000/month',
+      delivery: '8-24 weeks',
+      category: 'Enterprise Solutions',
+    },
+    {
+      title: 'CRM Solutions & Customer Data Platform',
+      description:
+        'Customer Relationship Management implementation with advanced analytics and automation',
+      icon: Users,
+      features: [
+        'Salesforce, HubSpot, and Microsoft Dynamics CRM',
+        'Customer data platform (CDP) implementation',
+        'Marketing automation and lead management',
+        'Customer journey mapping and optimization',
+        'Integration with existing business systems',
+        'Advanced analytics and reporting dashboards',
+      ],
+      pricing: '$5,000 - $50,000/month',
+      delivery: '4-16 weeks',
+      category: 'Customer Solutions',
+    },
+    {
+      title: 'API Development & Integration Services',
+      description:
+        'Custom API development and third-party system integration for seamless data flow',
+      icon: Link2,
+      features: [
+        'RESTful and GraphQL API development',
+        'Microservices architecture implementation',
+        'Third-party API integration and management',
+        'API gateway setup and security',
+        'API documentation and testing',
+        'Rate limiting and performance optimization',
+      ],
+      pricing: '$3,000 - $25,000/month',
+      delivery: '3-12 weeks',
+      category: 'Integration Services',
+    },
+    {
+      title: 'Mobile App Development & Management',
+      description:
+        'Native and cross-platform mobile application development with ongoing support and maintenance',
+      icon: Smartphone,
+      features: [
+        'iOS and Android native app development',
+        'React Native and Flutter cross-platform apps',
+        'Progressive Web App (PWA) development',
+        'App store optimization and deployment',
+        'Mobile app security and compliance',
+        'Performance monitoring and analytics',
+      ],
+      pricing: '$8,000 - $60,000/month',
+      delivery: '6-20 weeks',
+      category: 'Mobile Services',
+    },
+    {
+      title: 'Business Intelligence & Data Warehousing',
+      description:
+        'Advanced analytics and data warehousing solutions for informed business decision-making',
+      icon: BarChart3,
+      features: [
+        'Data warehouse design and implementation',
+        'ETL/ELT pipeline development and automation',
+        'Business intelligence dashboard creation',
+        'Real-time analytics and reporting',
+        'Data governance and quality management',
+        'Machine learning model integration',
+      ],
+      pricing: '$6,000 - $40,000/month',
+      delivery: '8-20 weeks',
+      category: 'Analytics Services',
+    },
+    {
+      title: 'IT Infrastructure Assessment & Optimization',
+      description:
+        'Comprehensive IT infrastructure evaluation and optimization for improved performance and cost efficiency',
+      icon: Server,
+      features: [
+        'Infrastructure performance analysis and optimization',
+        'Capacity planning and resource allocation',
+        'Cost optimization and right-sizing recommendations',
+        'Technology stack modernization',
+        'Disaster recovery planning and implementation',
+        'IT governance and compliance assessment',
+      ],
+      pricing: '$4,000 - $30,000/month',
+      delivery: '4-12 weeks',
+      category: 'Infrastructure Services',
+    },
+    {
+      title: 'Software Testing & Quality Assurance',
+      description:
+        'Comprehensive software testing services including automation, performance, and security testing',
+      icon: CheckCircle,
+      features: [
+        'Automated testing framework development',
+        'Performance and load testing',
+        'Security testing and vulnerability assessment',
+        'User acceptance testing (UAT)',
+        'Test automation and CI/CD integration',
+        'Quality metrics and reporting',
+      ],
+      pricing: '$2,000 - $20,000/month',
+      delivery: '2-8 weeks',
+      category: 'Testing Services',
+    },
+    {
+      title: 'IT Consulting & Strategic Planning',
+      description:
+        'Strategic IT consulting and technology roadmap development for digital transformation',
+      icon: Brain,
+      features: [
+        'IT strategy development and alignment',
+        'Technology roadmap and architecture planning',
+        'Digital transformation consulting',
+        'Vendor evaluation and selection',
+        'IT governance and compliance consulting',
+        'Change management and training programs',
+      ],
+      pricing: '$3,000 - $25,000/month',
+      delivery: '4-16 weeks',
+      category: 'Consulting Services',
     },
   ];
   const technologies = [

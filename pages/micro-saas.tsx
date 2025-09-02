@@ -1,5 +1,5 @@
 import React from 'react';
-import { Activity, ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+import { Activity, ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, Mail, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -740,6 +740,176 @@ export default function MicroSaaS() {
       pricing: '$2,500 - $8,000/month',
       delivery: '5-8 weeks',
       category: 'Supply Chain SaaS',
+    },
+    {
+      title: 'AI-Powered Meeting Summary Generator',
+      description:
+        'Automatically generate concise, actionable meeting summaries with key decisions and action items',
+      icon: MessageSquare,
+      features: [
+        'Real-time meeting transcription and analysis',
+        'AI-generated summaries with key points extraction',
+        'Action item identification and assignment',
+        'Integration with calendar and video conferencing tools',
+        'Multi-language support and speaker identification',
+        'Searchable meeting history and insights',
+      ],
+      pricing: '$49 - $199/month',
+      delivery: '1-2 weeks',
+      category: 'Productivity SaaS',
+    },
+    {
+      title: 'Intelligent Affiliate Marketing Tracker',
+      description:
+        'Advanced affiliate marketing platform with AI-powered fraud detection and performance optimization',
+      icon: TrendingUp,
+      features: [
+        'Real-time affiliate performance tracking',
+        'AI-powered fraud detection and prevention',
+        'Automated commission calculations and payments',
+        'Custom referral link generation and management',
+        'Multi-tier affiliate program support',
+        'Advanced analytics and ROI reporting',
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '3-4 weeks',
+      category: 'Marketing SaaS',
+    },
+    {
+      title: 'AI-Powered Website Analytics for SMBs',
+      description:
+        'User-friendly website analytics platform with AI insights and actionable recommendations',
+      icon: BarChart3,
+      features: [
+        'Intuitive dashboard with key metrics visualization',
+        'AI-powered insights and recommendations',
+        'Conversion funnel analysis and optimization',
+        'Real-time visitor behavior tracking',
+        'Competitor analysis and benchmarking',
+        'Custom report generation and scheduling',
+      ],
+      pricing: '$29 - $149/month',
+      delivery: '1-2 weeks',
+      category: 'Analytics SaaS',
+    },
+    {
+      title: 'Smart Appointment Scheduler for Healthcare',
+      description:
+        'Specialized appointment booking system for healthcare providers with patient management',
+      icon: Calendar,
+      features: [
+        'Online appointment booking with availability management',
+        'Patient data storage and medical history tracking',
+        'Automated reminders and confirmations',
+        'Telemedicine integration and video consultations',
+        'Insurance verification and billing integration',
+        'HIPAA-compliant data security and privacy',
+      ],
+      pricing: '$99 - $399/month',
+      delivery: '3-5 weeks',
+      category: 'Healthcare SaaS',
+    },
+    {
+      title: 'AI-Powered Email Follow-up Automation',
+      description:
+        'Intelligent email follow-up system with behavioral triggers and personalization',
+      icon: Mail,
+      features: [
+        'Behavioral trigger-based email sequences',
+        'AI-powered personalization and content optimization',
+        'Multi-channel follow-up (email, SMS, social)',
+        'Lead nurturing and conversion optimization',
+        'A/B testing and performance analytics',
+        'CRM integration and lead scoring',
+      ],
+      pricing: '$79 - $299/month',
+      delivery: '2-3 weeks',
+      category: 'Marketing SaaS',
+    },
+    {
+      title: 'Intelligent Document Collaboration Platform',
+      description:
+        'AI-enhanced document collaboration with real-time editing and smart suggestions',
+      icon: FileText,
+      features: [
+        'Real-time collaborative editing with AI assistance',
+        'Smart content suggestions and grammar checking',
+        'Version control and change tracking',
+        'AI-powered document summarization',
+        'Template library and content reuse',
+        'Integration with popular productivity tools',
+      ],
+      pricing: '$149 - $599/month',
+      delivery: '4-6 weeks',
+      category: 'Productivity SaaS',
+    },
+    {
+      title: 'AI-Powered Customer Sentiment Analyzer',
+      description:
+        'Real-time customer sentiment analysis across multiple channels with actionable insights',
+      icon: Brain,
+      features: [
+        'Multi-channel sentiment monitoring (social, reviews, support)',
+        'Real-time sentiment analysis and alerting',
+        'Trend analysis and sentiment forecasting',
+        'Competitor sentiment comparison',
+        'Automated response recommendations',
+        'Custom dashboard and reporting',
+      ],
+      pricing: '$199 - $799/month',
+      delivery: '3-4 weeks',
+      category: 'Analytics SaaS',
+    },
+    {
+      title: 'Smart Inventory Forecasting Platform',
+      description:
+        'AI-driven inventory forecasting with demand prediction and supply chain optimization',
+      icon: BarChart3,
+      features: [
+        'Machine learning demand forecasting',
+        'Seasonal trend analysis and prediction',
+        'Supplier performance optimization',
+        'Automated reorder point calculations',
+        'Multi-location inventory synchronization',
+        'Cost optimization and waste reduction',
+      ],
+      pricing: '$299 - $1,199/month',
+      delivery: '4-6 weeks',
+      category: 'Supply Chain SaaS',
+    },
+    {
+      title: 'AI-Powered Code Review Assistant',
+      description:
+        'Automated code review platform with AI-powered suggestions and quality assurance',
+      icon: Code,
+      features: [
+        'Automated code quality analysis and suggestions',
+        'Security vulnerability detection and remediation',
+        'Performance optimization recommendations',
+        'Code style and best practices enforcement',
+        'Integration with popular development tools',
+        'Team collaboration and knowledge sharing',
+      ],
+      pricing: '$99 - $399/month',
+      delivery: '2-3 weeks',
+      category: 'Development SaaS',
+    },
+    {
+      title: 'Intelligent E-commerce Return Manager',
+      description:
+        'AI-powered return management system with automated processing and fraud detection',
+      icon: ArrowRight,
+      features: [
+        'Automated return request processing and approval',
+        'AI-powered fraud detection and prevention',
+        'Smart return label generation and tracking',
+        'Real-time inventory updates and restocking',
+        'Customer satisfaction tracking and analytics',
+        'Integration with major e-commerce platforms',
+      ],
+      pricing: '$149 - $599/month',
+      delivery: '3-4 weeks',
+      category: 'E-commerce SaaS',
     },
   ];
   const technologies = [

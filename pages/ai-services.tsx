@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap } from 'lucide-react';
+import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, Car, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap } from 'lucide-react';
 // import PageTransition from '../src/components/PageTransition';
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group';
@@ -678,6 +678,176 @@ export default function AIServices() {
       pricing: '$10,000 - $35,000/month',
       delivery: '14-26 weeks',
       category: 'Blockchain AI',
+    },
+    {
+      title: 'AI-Powered Predictive Analytics',
+      description:
+        'Advanced predictive analytics using machine learning to forecast trends, customer behavior, and business outcomes',
+      icon: BarChart3,
+      features: [
+        'Customer lifetime value prediction',
+        'Sales forecasting and demand planning',
+        'Churn prediction and retention modeling',
+        'Market trend analysis and forecasting',
+        'Risk assessment and fraud detection',
+        'Real-time predictive insights and alerts',
+      ],
+      pricing: '$5,000 - $25,000/month',
+      delivery: '6-12 weeks',
+      category: 'Analytics AI',
+    },
+    {
+      title: 'AI-Powered Voice & Speech Recognition',
+      description:
+        'Advanced voice recognition and speech processing solutions for voice commands, transcription, and analysis',
+      icon: Mic,
+      features: [
+        'Real-time speech-to-text transcription',
+        'Voice command recognition and processing',
+        'Speaker identification and verification',
+        'Emotion and sentiment analysis from voice',
+        'Multi-language voice processing',
+        'Custom voice model training and deployment',
+      ],
+      pricing: '$3,000 - $15,000/month',
+      delivery: '4-8 weeks',
+      category: 'Voice AI',
+    },
+    {
+      title: 'AI-Powered Recommendation Engine',
+      description:
+        'Intelligent recommendation systems for personalized content, products, and services',
+      icon: Star,
+      features: [
+        'Collaborative filtering and content-based recommendations',
+        'Real-time personalization and A/B testing',
+        'Cross-platform recommendation synchronization',
+        'Behavioral analysis and preference learning',
+        'Recommendation performance analytics',
+        'Custom recommendation algorithm development',
+      ],
+      pricing: '$4,000 - $20,000/month',
+      delivery: '6-10 weeks',
+      category: 'Recommendation AI',
+    },
+    {
+      title: 'AI-Powered Fraud Detection System',
+      description:
+        'Advanced fraud detection and prevention using machine learning and behavioral analysis',
+      icon: Shield,
+      features: [
+        'Real-time transaction monitoring and analysis',
+        'Behavioral pattern recognition and anomaly detection',
+        'Multi-channel fraud detection (online, mobile, in-store)',
+        'Risk scoring and automated decision making',
+        'False positive reduction and accuracy optimization',
+        'Compliance reporting and audit trails',
+      ],
+      pricing: '$6,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Security AI',
+    },
+    {
+      title: 'AI-Powered Supply Chain Optimization',
+      description:
+        'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics planning',
+      icon: Network,
+      features: [
+        'Demand forecasting with external factor integration',
+        'Inventory optimization and stock level management',
+        'Route optimization and logistics planning',
+        'Supplier performance analysis and risk assessment',
+        'Supply chain disruption prediction and mitigation',
+        'Cost optimization and sustainability tracking',
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '10-20 weeks',
+      category: 'Supply Chain AI',
+    },
+    {
+      title: 'AI-Powered Medical Diagnosis Assistant',
+      description:
+        'AI-powered medical diagnosis support system with image analysis and clinical decision support',
+      icon: Eye,
+      features: [
+        'Medical image analysis (X-rays, MRIs, CT scans)',
+        'Clinical decision support and treatment recommendations',
+        'Patient risk assessment and early warning systems',
+        'Drug interaction checking and dosage optimization',
+        'Medical record analysis and pattern recognition',
+        'HIPAA-compliant data processing and security',
+      ],
+      pricing: '$15,000 - $75,000/month',
+      delivery: '12-24 weeks',
+      category: 'Healthcare AI',
+    },
+    {
+      title: 'AI-Powered Financial Trading Algorithm',
+      description:
+        'Advanced algorithmic trading system with machine learning for market analysis and automated trading',
+      icon: TrendingUp,
+      features: [
+        'Real-time market data analysis and pattern recognition',
+        'Automated trading strategy execution',
+        'Risk management and portfolio optimization',
+        'Sentiment analysis from news and social media',
+        'Backtesting and strategy performance evaluation',
+        'Regulatory compliance and audit reporting',
+      ],
+      pricing: '$20,000 - $100,000/month',
+      delivery: '16-32 weeks',
+      category: 'Finance AI',
+    },
+    {
+      title: 'AI-Powered Energy Management System',
+      description:
+        'Intelligent energy management with consumption optimization, predictive maintenance, and sustainability tracking',
+      icon: Zap,
+      features: [
+        'Energy consumption prediction and optimization',
+        'Predictive maintenance for energy infrastructure',
+        'Renewable energy integration and management',
+        'Carbon footprint tracking and reduction',
+        'Smart grid optimization and demand response',
+        'Energy cost optimization and billing analysis',
+      ],
+      pricing: '$10,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Energy AI',
+    },
+    {
+      title: 'AI-Powered Legal Document Analysis',
+      description:
+        'Intelligent legal document processing with contract analysis, compliance checking, and risk assessment',
+      icon: FileText,
+      features: [
+        'Contract analysis and clause extraction',
+        'Legal document classification and routing',
+        'Compliance checking and risk assessment',
+        'Legal research and precedent analysis',
+        'Document summarization and key point extraction',
+        'Client confidentiality and data security',
+      ],
+      pricing: '$8,000 - $40,000/month',
+      delivery: '10-20 weeks',
+      category: 'Legal AI',
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description:
+        'Advanced autonomous vehicle technology with computer vision, sensor fusion, and decision-making algorithms',
+      icon: Car,
+      features: [
+        'Computer vision and object detection',
+        'Sensor fusion and environmental mapping',
+        'Path planning and navigation algorithms',
+        'Real-time decision making and control systems',
+        'Safety monitoring and emergency response',
+        'Vehicle-to-vehicle and infrastructure communication',
+      ],
+      pricing: '$50,000 - $200,000/month',
+      delivery: '24-52 weeks',
+      category: 'Autonomous AI',
     },
   ];
   const aiTechnologies = [
