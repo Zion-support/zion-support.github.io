@@ -39,7 +39,7 @@ function fixFile(filePath) {;
     );
     // Replace the export statement;
     newContent = newContent.replace(;
-      new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')}`;,g;
+      new RegExp(`export\\s+default\\s+${filename.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g,\\$&')}`;g;
   '),;
       `export default ${camelCaseName}`;
     );

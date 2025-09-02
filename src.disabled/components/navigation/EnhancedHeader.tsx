@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from;
-  'react'; import { Link, useLocation } from;
-  'react-router-dom'; import { motion, AnimatePresence } from;
-  'framer-motion'; import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from;
-  'lucide-react'; const EnhancedHeader: React.FC = () => { const [isOpen, setIsOpen] = useState(false); const [isScrolled, setIsScrolled] = useState(false); const [activeDropdown, setActiveDropdown] = useState<string | null>(null); const [searchQuery, setSearchQuery] = useState(,;
-  '); const location = useLocation(); useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 20); }; window.addEventListener('scroll;
-  ', handleScroll); return () => window.removeEventListener('scroll;
-  ', handleScroll); }, []); const navigationItems = [ { name: 'Home, href:,;
+  'react' import { Link, useLocation } from;
+  'react-router-dom' import { motion, AnimatePresence } from;
+  'framer-motion' import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from;
+  'lucide-react' const EnhancedHeader: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const [activeDropdown, setActiveDropdown] = useState<string | null>(null) const [searchQuery, setSearchQuery] = useState(,;
+  ') const location = useLocation() useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 20) } window.addEventListener('scroll;
+  ', handleScroll) return () => window.removeEventListener('scroll;
+  ', handleScroll) }, []) const navigationItems = [ { name: 'Home, href:,;
   /;
   ' }, { name: 'Services, href:,;
   /services;
@@ -70,10 +70,10 @@ import React, { useState, useEffect } from;
   ' }, { name: 'Blog, href:,;
   /blog;
   ' }, { name: 'Contact, href: '/contact;
-  ' } ]; const contactInfo = [ { icon: Phone, text:,
+  ' } ] const contactInfo = [ { icon: Phone, text:,
   +1 302 464 0950;
   ', href: 'tel:+13024640950 }, { icon: Mail, text:,;
   kleber@ziontechgroup.com;
   ', href: 'mailto:kleber@ziontechgroup.com }, { icon: MapPin, text:,;
   364 E Main St STE 1008, Middletown DE 19709;
-  ', href: '# } ]; const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) }; const closeMobileMenu = () => { setIsOpen(false); setActiveDropdown(null); }; const handleSearch = (e: React.FormEvent) => { e.preventDefault(); if (searchQuery.trim()) {'';
+  ', href: '# } ] const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) } const closeMobileMenu = () => { setIsOpen(false) setActiveDropdown(null) } const handleSearch = (e: React.FormEvent) => { e.preventDefault() if (searchQuery.trim()) {'';

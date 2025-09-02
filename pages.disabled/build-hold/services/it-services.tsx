@@ -9,7 +9,7 @@ import { getServicesByCategory } from;
 import Link from;
   'next/link'';const ITServicesPage: NextPage = () => {;
   const itServices = getServicesByCategory('it-services;
-  ')';  const benefits = [
+  ')'  const benefits = [
     {;
       icon: <Shield className='w-8 h-8' />, title:,;
   Enterprise Security',;

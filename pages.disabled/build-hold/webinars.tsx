@@ -7,7 +7,7 @@ import { Button } from;
   '../components/ui/Button';{ Card } from;
   '../components/ui/Card';
 import { Badge } from;
-  '../components/ui/Badge';import { ';  Calendar, Clock,;
+  '../components/ui/Badge';import { '  Calendar, Clock,;
   Users, Play,;
   ArrowRight, Search,;
   Filter, Tag,;

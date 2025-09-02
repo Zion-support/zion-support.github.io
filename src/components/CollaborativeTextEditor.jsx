@@ -262,7 +262,7 @@ export const CollaborativeTextEditor = ({ roomId, userId, userName, initialConte
         const autoSaveInterval = setInterval(() => {}
             if(editorState.content !== initialContent) {}
                 handleSave()}
-        }, 30000); // Auto-save every 30 seconds;
+        }, 30000) // Auto-save every 30 seconds;
         return () => clearInterval(autoSaveInterval)}, [editorState.content, initialContent, enableVersioning, handleSave]);
     // Generate suggestions when content changes significantly;
     useEffect(() => {}

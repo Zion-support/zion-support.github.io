@@ -1,1 +1,1 @@
-type Req = { method?: string; body?: any; ;
+type Req = { method?: string body?: any ;

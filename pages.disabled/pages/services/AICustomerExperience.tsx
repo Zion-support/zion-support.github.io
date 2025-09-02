@@ -16,7 +16,7 @@ import {}
   BarChart3,;
 :pages.disabled/pages/services/AICustomerExperience.tsx;
   Headphones,'';
-  ShoppingBag} from 'lucide-react.ts';              AI-Powered CX Platform;
+  ShoppingBag} from 'lucide-react.ts'              AI-Powered CX Platform;
             </Badge>'';
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent'>
               AI Customer Experience Platform';

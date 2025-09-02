@@ -25,7 +25,7 @@ const SecurityEnhancer: React.FC = () => {
     // Security headers;
     const securityHeaders = {;
       'X-Content-Type-Options': 'nosniff', 'X-Frame-Options': 'DENY',;
-      'X-XSS-Protection': '1; mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',;
+      'X-XSS-Protection': '1 mode=block', 'Referrer-Policy': 'strict-origin-when-cross-origin',;
       'Permissions-Policy': 'camera=(), microphone=(), geolocation=()';
     };
 ;
@@ -98,7 +98,7 @@ const SecurityEnhancer: React.FC = () => {
     const securityInterval = setInterval(() => {;
       detectXSS();
       monitorSuspiciousActivity();
-    }, 30000); // Check every 30 seconds;
+    }, 30000) // Check every 30 seconds;
     return () => {;
       clearInterval(securityInterval);
     };
@@ -115,13 +115,13 @@ const SecurityEnhancer: React.FC = () => {
       {/* Content Security Policy */}
       <meta
         httpEquiv='Content-Security-Policy';
-        content='default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'';
+        content='default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https://fonts.googleapis.com font-src 'self' https://fonts.gstatic.com img-src 'self' data: https: blob: connect-src 'self' https://www.google-analytics.com https://analytics.google.com frame-src 'none' object-src 'none' base-uri 'self' form-action 'self'';
       />;
       {/* Additional Security Meta Tags */}
       <meta name='robots' content='index, follow, noarchive, nosnippet' />
       <meta name='googlebot' content='index, follow, noarchive, nosnippet' />
       {/* HSTS (HTTP Strict Transport Security) - This should be set at server level */}
-      <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains; preload' />;
+      <meta httpEquiv='Strict-Transport-Security' content='max-age=31536000 includeSubDomains preload' />;
     </Head>
   );
 };

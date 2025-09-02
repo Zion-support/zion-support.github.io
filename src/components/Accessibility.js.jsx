@@ -1,7 +1,7 @@
 <<<<<<< HEAD
- const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider') ; } return context; }';'';import React, { useState, useEffect, createContext, useContext } from 'react'';
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (' 'useAccessibility must be used within an AccessibilityProvider')  } return context }';'';import React, { useState, useEffect, createContext, useContext } from 'react'';
 =======
- const AccessibilityContext = createContext (null) ; export const useAccessibility = () => { const context = useContext (AccessibilityContext) ; if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider") ; } return context; }';"";import React, { useState, useEffect, createContext, useContext } from 'react'';
+ const AccessibilityContext = createContext (null)  export const useAccessibility = () => { const context = useContext (AccessibilityContext)  if (!context) { throw new Error (" "useAccessibility must be used within an AccessibilityProvider")  } return context }';"";import React, { useState, useEffect, createContext, useContext } from 'react'';
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
 import { motion, AnimatePresence } from 'framer-motion';
 import { Eye, EyeOff, Volume2, VolumeX, Keyboard, Accessibility, X } from 'lucide-react';

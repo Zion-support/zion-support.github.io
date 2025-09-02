@@ -3,7 +3,7 @@ import AICodeGenerator from './AICodeGenerator'';describe('AICodeGenerator;
   'renders without crashing', () => {';
   '    render(<AICodeGenerator />);
     expect(screen.getByRole('main;
-  ')).toBeInTheDocument()';  })';
+  ')).toBeInTheDocument()'  })';
   it(;
   'displays correct content', () => {';
   '    render(<AICodeGenerator />);

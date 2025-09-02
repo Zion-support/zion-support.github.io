@@ -33,7 +33,7 @@ export default function BlockchainEnterpriseSolutions(...args[]):  {}
     { name: 'Financial Services', icon: Bitcoin, description: 'Cross-border payments and settlements' },';
     { name: 'Healthcare', icon: Shield, description: 'Patient data security and interoperability' },';
     { name: 'Real Estate', icon: FileText, description: 'Property records and title management' },';
-    { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },';    { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' }
+    { name: 'Voting Systems', icon: CheckCircle, description: 'Secure and transparent elections' },'    { name: 'Intellectual Property', icon: Lock, description: 'Digital rights management and protection' }
     {}
       title: 'Smart Contract Development',;
       description: 'Custom smart contracts for business automation and compliance',;

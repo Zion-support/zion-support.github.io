@@ -92,7 +92,7 @@
         return 'bg-green-100 text-green-800'';
       case 'In Progress':';
         return 'bg-blue-100 text-blue-800'';
-      case 'Planning':';        return 'bg-yellow-100 text-yellow-800';
+      case 'Planning':'        return 'bg-yellow-100 text-yellow-800';
       default:';
         return 'bg-gray-100 text-gray-800'}
   };
@@ -103,7 +103,7 @@
         return 'bg-red-100 text-red-800'';
       case 'Medium':';
         return 'bg-yellow-100 text-yellow-800'';
-      case 'Low':';        return 'bg-green-100 text-green-800';
+      case 'Low':'        return 'bg-green-100 text-green-800';
       default:';
         return 'bg-gray-100 text-gray-800'}
   };
@@ -248,15 +248,15 @@ export default function Dashboard() {
   /api-docs', color: 'from-gray-500 to-slate-500 }
 { name:;
   'Add New Service', icon: Plus, href:,;
-  /services', color: 'from-green-500 to-emerald-500 },;,;
+  /services', color: 'from-green-500 to-emerald-500 },;;
   { name: 'View Analytics, icon: BarChart3, href:,;
-  /analytics', color: 'from-blue-500 to-indigo-500 },;,;
+  /analytics', color: 'from-blue-500 to-indigo-500 },;;
   { name: 'Security Settings, icon: Shield, href:,;
-  /security', color: 'from-red-500 to-orange-500 },;,;
+  /security', color: 'from-red-500 to-orange-500 },;;
   { name: 'Support Request, icon: HelpCircle, href:,;
-  /help', color: 'from-purple-500 to-pink-500 },;,;
+  /help', color: 'from-purple-500 to-pink-500 },;;
   { name: 'Billing & Plans, icon: DollarSign, href:,;
-  /pricing', color: 'from-yellow-500 to-orange-500 },;,;
+  /pricing', color: 'from-yellow-500 to-orange-500 },;;
   { name: 'API Documentation, icon: Code, href:,;
   /api-docs', color: 'from-gray-500 to-slate-500 }
   ];

@@ -174,7 +174,7 @@ export const validatePassword = (password) => {
   const score = calculatePasswordScore(password);
   const strength = getPasswordStrength(password);
   const feedback = getPasswordFeedback(password);
-  const isValid = score >= 60; // Minimum medium strength;
+  const isValid = score >= 60 // Minimum medium strength;
   return {;
     isValid,;
     score,;

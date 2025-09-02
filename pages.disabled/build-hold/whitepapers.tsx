@@ -94,7 +94,7 @@ import { Download, FileText, Calendar, User, Eye, ArrowRight, Search } from;
   ', 'Software Architecture;
   ', 'Data Analytics;
   ', 'Mobile Development;
-  ']';  return (;
+  ']'  return (;
     <MainLayout;
       title='Whitepapers - Zion Tech Group''      description='Download our comprehensive whitepapers and research reports on technology trends and best practices.''    >'      {/* Hero Section */}
       <section className='bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20'>'        <div className='container mx-auto px-4 text-center'>'          <h1 className='text-5xl md: text-6xl font-bold mb-6'>'            <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400'>Whitepapers</span>'          </h1>'          <p className='text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200'>'            In-depth research and insights on technology trends, best practices, and industry innovations.'          </p>

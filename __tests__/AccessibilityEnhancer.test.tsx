@@ -77,7 +77,7 @@ describe(;
 ,;
   focus: ring-2,;
 ,;
-  focus: ring-blue-500);  });
+  focus: ring-blue-500)  });
 ;
   it(;
   'disables focus when not focusable', () => {;

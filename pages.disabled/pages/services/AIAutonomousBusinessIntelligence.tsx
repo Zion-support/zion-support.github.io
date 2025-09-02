@@ -56,7 +56,7 @@ export default function AIAutonomousBusinessIntelligence(...args: any[]): any {
       icon: Home,';
       title: 'Real Estate',';
       description: 'AI-driven property valuation, market analysis, and investment optimization.'};
-  ]; ;
+  ] ;
       {/* Hero Section */}';
       <section className='relative py-20 px-4 sm:px-6 lg:px-8'>';
 >  return (''

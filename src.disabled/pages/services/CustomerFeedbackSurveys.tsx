@@ -21,7 +21,7 @@ export { function };export default function CustomerFeedbackSurveys(...args[]): 
               <li>• NPS, CSAT, CES templates</li>
               <li>• Branching logic, translations, rich media</li>
               <li>• AI topic clustering, sentiment trends</li>
-              <li>• Alerts to Slack/Teams; webhook and REST APIs</li>
+              <li>• Alerts to Slack/Teams webhook and REST APIs</li>
               <li>• Exports to BigQuery, Snowflake, S3</li>
 :pages.disabled/pages/services/CustomerFeedbackSurveys.tsx;
             </ul>'</div>'';

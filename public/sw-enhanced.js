@@ -161,8 +161,8 @@ async function handlePageRequest(request) {;
           <title>Offline - Zion Tech Group</title>
           <meta name='viewport' content='width=device-width, initial-scale=1'>
           <style>
-            body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-            .offline { color: #666; }
+            body { font-family: Arial, sans-serif text-align: center padding: 50px }
+            .offline { color: #666 }
           </style>
         </head>
         <body>

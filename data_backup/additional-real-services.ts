@@ -1065,7 +1065,7 @@ export interface AdditionalRealService {
   text-fuchsia-300',;
     link: 'https://ziontechgroup.com/services/subscription-revenue-analytics,;
     marketPosition:,;
-  Faster deploy vs. BI stacks; purpose-built for SaaS.',;
+  Faster deploy vs. BI stacks purpose-built for SaaS.',;
     targetAudience: Founders, finance, ops',;
     trialDays: 14,;
     setupTime:,;
@@ -1209,7 +1209,7 @@ export interface AdditionalRealService {
     price: '$29,;
     period:,;
   /month',;
-    description: 'Create consistent runbooks from incident timelines and postmortems; validate steps and link to on-call.,;
+    description: 'Create consistent runbooks from incident timelines and postmortems validate steps and link to on-call.,;
     features[;
   'Templates and versioning',;
   'AI draft from incidents',;
@@ -1224,7 +1224,7 @@ export interface AdditionalRealService {
   text-sky-300',;
     link: 'https://ziontechgroup.com/services/runbook-generator,;
     marketPosition:,;
-  Eliminates ad-hoc docs; codifies reliability.',;
+  Eliminates ad-hoc docs codifies reliability.',;
     targetAudience: SRE, platform, ops',;
     trialDays: 14,;
     setupTime:,;
@@ -2361,7 +2361,7 @@ export interface AdditionalRealService {
   text-indigo-300',;
     link: 'https://ziontechgroup.com/services/synthetic-data-generator,;
     marketPosition:,;
-  Faster than in-house approaches; simpler than research toolkits while maintaining privacy guarantees.',;
+  Faster than in-house approaches simpler than research toolkits while maintaining privacy guarantees.',;
     targetAudience: Data science, product, QA, compliance',;
     trialDays: 14,;
     setupTime:,;
@@ -2382,7 +2382,7 @@ export interface AdditionalRealService {
   'Analytics sandboxes',;
   'Non-prod testing',;
   'Model pre-training'],;
-    roi: 'Unblock data access; cut compliance review time by 70%,;
+    roi: 'Unblock data access cut compliance review time by 70%,;
     competitors[,;
   Mostly AI',;
   'Gretel'],;
@@ -2442,7 +2442,7 @@ export interface AdditionalRealService {
   'Ticket intake',;
   'Order parsing',;
   'Lead capture'],;
-    roi: 'Automate manual triage; reduce handling time 40%,;
+    roi: 'Automate manual triage reduce handling time 40%,;
     competitors[,;
   Mailparser',;
   'Parseur'],;
@@ -2560,7 +2560,7 @@ export interface AdditionalRealService {
     useCases[;
   'Foundations',;
   'Multi-env setup'],;
-    roi: 'Cut setup time by 80%; fewer misconfigs,;
+    roi: 'Cut setup time by 80% fewer misconfigs,;
     competitors[,;
   AWS Control Tower',;
   'Azure Landing Zones'],;
@@ -2675,7 +2675,7 @@ export interface AdditionalRealService {
     useCases[;
   'Perf budgets',;
   'DX improvements'],;
-    roi: 'Prevent perf regressions; faster pages,;
+    roi: 'Prevent perf regressions faster pages,;
     competitors[,;
   Calibre',;
   'SpeedCurve'],;
@@ -2973,7 +2973,7 @@ export interface AdditionalRealService {
     useCases[;
   'Evidence automation',;
   'Guardrails'],;
-    roi: 'Shorten audits; prevent drift-related incidents,;
+    roi: 'Shorten audits prevent drift-related incidents,;
     competitors[,;
   Bridgecrew',;
   'Snyk IaC'],;
@@ -3037,7 +3037,7 @@ export interface AdditionalRealService {
   'Invoices',;
   'Agreements',;
   'Reports'],;
-    roi: 'Replace brittle DIY scripts; cut maintenance by 80%.,;
+    roi: 'Replace brittle DIY scripts cut maintenance by 80%.,;
     competitors[,;
   PDFMonkey',;
   'PDFShift',;
@@ -6065,7 +6065,7 @@ export interface AdditionalRealService {
   $69',;
     period: '/month,;
     description:;
-  'Monitors key templates for DOM diffs, CWV regressions, and indexation issues; alerts with suggested fixes.',;
+  'Monitors key templates for DOM diffs, CWV regressions, and indexation issues alerts with suggested fixes.',;
     features[;
   'Template diff & render checks',;
   'Core Web Vitals watch',;
@@ -6122,7 +6122,7 @@ export interface AdditionalRealService {
   $59',;
     period: '/month,;
     description:;
-  'Statistically detects flaky tests across pipelines; auto‑retries, quarantines, and creates PRs with suggested fixes.',;
+  'Statistically detects flaky tests across pipelines auto‑retries, quarantines, and creates PRs with suggested fixes.',;
     features[;
   'Flake scoring & trends',;
   'Auto‑retry/quarantine',;
@@ -6293,7 +6293,7 @@ export interface AdditionalRealService {
     price: '$89,;
     period:,;
   /month',;
-    description: Monitors data jobs for timeliness and completeness; errors page, freshness badges, and stakeholder alerts.',;
+    description: Monitors data jobs for timeliness and completeness errors page, freshness badges, and stakeholder alerts.',;
     features[;
   'Freshness & completeness checks',;
   'Runbook links',;

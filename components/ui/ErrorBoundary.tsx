@@ -20,7 +20,7 @@ public state: State = {;hasError: false;
 ;
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {;
 console.error(,;
-  ErrorBoundary caught an error: , error, errorInfo)';  }
+  ErrorBoundary caught an error: , error, errorInfo)'  }
   'private handleRetry = () => {;
     this.setState({ hasError: false, error: undefined });
   };

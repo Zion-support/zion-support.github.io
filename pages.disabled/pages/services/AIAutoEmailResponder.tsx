@@ -19,7 +19,7 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
               <li>• Intent/sentiment detection, priority triage</li>
               <li>• Multi-lingual drafting with brand tone controls</li>
               <li>• Knowledge grounding from your docs/CRM</li>
-              <li>• Approval queues; role-based workflows</li>
+              <li>• Approval queues role-based workflows</li>
               <li>• Secure redaction (PII/PHI), audit logs</li>
               <li>• Integrations: Gmail, O365, HubSpot, Salesforce, Zendesk</li>
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx;
@@ -41,7 +41,7 @@ export { function };export default function AIAutoEmailResponder(...args[]):  {}
           <div className='rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>';
             <h3 className='font-semibold mb-2'>Time-to-Value</h3>';
 :pages.disabled/pages/services/AIAutoEmailResponder.tsx;
-            <p className='text-sm text-zion-slate-light'>Deploy pilot in 7 days; typical 35–60% faster responses.</p>';
+            <p className='text-sm text-zion-slate-light'>Deploy pilot in 7 days typical 35–60% faster responses.</p>';
           </div>'';
           <div className = 'rounded-xl border border-cyan-400/20 bg-slate-900/50 p-6'>'';
             <h3 className='font-semibold mb-2'>Compliance</h3>'';

@@ -2,7 +2,7 @@
 export default function ComprehensiveServicesLanding2028(...args[]):  {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [selectedService, setSelectedService] = useState(null)};
-      company: 'BioTech Innovations',;,;
+      company: 'BioTech Innovations',;;
   ';
       content: 'Their quantum AI drug discovery platform has accelerated our research by 10x. Were now able to analyze molecular interactions that were previously impossible to model.',;
       rating: 5,';
@@ -12,7 +12,7 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   const stats = ['
     { number: '500+', label: 'Successful Projects', icon: CheckCircle },';
     { number: '15+', label: 'Years of Innovation', icon: Award },';
-    { number: '99.9%', label: 'Client Satisfaction', icon: Star },';    { number: '24/7', label: 'Support Available', icon: Clock }
+    { number: '99.9%', label: 'Client Satisfaction', icon: Star },'    { number: '24/7', label: 'Support Available', icon: Clock }
   ];
 ;
       default: return Rocket}

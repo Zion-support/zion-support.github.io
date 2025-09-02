@@ -152,7 +152,7 @@ export const generateDynamicSuggestions = (query, recentSearches = [], available
             id: `recent-${search}`;
         });
     });
-    return suggestions.slice(0, 8); // Limit to 8 suggestions;
+    return suggestions.slice(0, 8) // Limit to 8 suggestions;
 };
 /**;
  * Calculate search metrics for analytics;

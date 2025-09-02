@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from;
-  'react'; import { motion, AnimatePresence } from;
-  'framer-motion'; import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from;
-  '@heroicons/react/24/outline'; export const ContentQualityEnhancer = ({ className = ';
+  'react' import { motion, AnimatePresence } from;
+  'framer-motion' import { DocumentTextIcon, CheckCircleIcon, ExclamationTriangleIcon, InformationCircleIcon, WrenchScrewdriverIcon, XMarkIcon, ArrowPathIcon } from;
+  '@heroicons/react/24/outline' export const ContentQualityEnhancer = ({ className = ';
   ', showAnalysis = true, autoAnalyze = true, targetElements = ['p
   ', 'h1;
   ', 'h2;
@@ -12,5 +12,5 @@ import React, { useState, useEffect, useCallback } from;
   ', 'div[class*='content'];
   ', 'article;
   ', 'section;
-  '] }) => {; const [isOpen, setIsOpen] = useState(false); const [analysis, setAnalysis] = useState(null); const [isAnalyzing, setIsAnalyzing] = useState(false); const [activeTab, setActiveTab] = useState('overview;
-  '); const [selectedElement, setSelectedElement] = useState(null)';
+  '] }) => { const [isOpen, setIsOpen] = useState(false) const [analysis, setAnalysis] = useState(null) const [isAnalyzing, setIsAnalyzing] = useState(false) const [activeTab, setActiveTab] = useState('overview;
+  ') const [selectedElement, setSelectedElement] = useState(null)';

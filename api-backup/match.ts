@@ -1,5 +1,5 @@
 import React from;
-  'react'; interface OpenAIMatchRequestBody {;
+  'react' interface OpenAIMatchRequestBody {;
   projectDescription?: string;
 } interface OpenAIMatchSuccessResponse {
   category: string;
@@ -7,7 +7,7 @@ import React from;
    timeline: string;
    budget: { amount: number;
    type: string;
-}; // Add other fields as the actual OpenAI integration is built } interface ErrorResponse {;
+} // Add other fields as the actual OpenAI integration is built } interface ErrorResponse {;
   error: string;
    details?: string;
 } export default async function handler( req: NextApiRequest,;

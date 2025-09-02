@@ -16,7 +16,7 @@ import {}
   Database,;
 :pages.disabled/pages/services/AIFinTechPlatform.tsx;
   Lock,'';
-  PieChart} from 'lucide-react.ts';              AI-Powered FinTech;
+  PieChart} from 'lucide-react.ts'              AI-Powered FinTech;
             </Badge>'';
             <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-400 bg-clip-text text-transparent'>
               AI FinTech Platform';

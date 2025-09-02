@@ -28,7 +28,7 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (;
           <li>Enterprise: custom, DPA + SSO</li>
         </ul>
 :pages.disabled/pages/services/GDPRCookieCompliance.tsx;
-      </div>';</section>';    <section className='container mx-auto px-4 pb-16'>';
+      </div>';</section>'    <section className='container mx-auto px-4 pb-16'>';
       <a href='/contact' className='inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition'>Talk to compliance</a>
     </section>
   </div>

@@ -125,7 +125,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
       popular: false};
   ]},;
     {'
-      industry: 'Finance',';      description: 'Track financial advisor performance, client satisfaction, and investment portfolio management',;
+      industry: 'Finance','      description: 'Track financial advisor performance, client satisfaction, and investment portfolio management',;
       icon: DollarSign};
   ];
 :pages.disabled/pages/services/AIEmployeePerformanceAnalytics.tsx;
@@ -214,7 +214,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
       indicators: ['Team Participation', 'Knowledge Sharing', 'Cross-functional Projects', 'Mentoring']},;
     {'
       category: 'Growth Metrics',';
-      indicators: ['Skill Development', 'Learning Progress', 'Career Advancement', 'Certifications']};  ];
+      indicators: ['Skill Development', 'Learning Progress', 'Career Advancement', 'Certifications']}  ];
 ;
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -239,7 +239,7 @@ export default function AIEmployeePerformanceAnalytics(...args: any[]): any {}
       indicators: ['Team Participation', 'Knowledge Sharing', 'Cross-functional Projects', 'Mentoring']},';
     {'
       category: 'Growth Metrics',';
-      indicators: ['Skill Development', 'Learning Progress', 'Career Advancement', 'Certifications']};  ]';
+      indicators: ['Skill Development', 'Learning Progress', 'Career Advancement', 'Certifications']}  ]';
   return ('';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO'';

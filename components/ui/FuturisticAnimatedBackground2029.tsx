@@ -57,14 +57,14 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
           ctx.lineWidth = 1;
 ;
           // Vertical lines;
-          for (let x = this.offset % this.spacing; x < canvas.width; x += this.spacing) {;
+          for (let x = this.offset % this.spacing x < canvas.width x += this.spacing) {;
             ctx.beginPath();
             ctx.moveTo(x, 0);
             ctx.lineTo(x, canvas.height);
             ctx.stroke()}
 ;
           // Horizontal lines;
-          for (let y = this.offset % this.spacing; y < canvas.height; y += this.spacing) {;
+          for (let y = this.offset % this.spacing y < canvas.height y += this.spacing) {;
             ctx.beginPath();
             ctx.moveTo(0, y);
             ctx.lineTo(canvas.width, y);
@@ -95,7 +95,7 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
           ctx.lineWidth = 2;
           ctx.beginPath();
 ;
-          for (let x = 0; x < canvas.width; x++) {;
+          for (let x = 0 x < canvas.width x++) {;
             const y = Math.sin(x * this.frequency + this.offset) * this.amplitude + canvas.height / 2;
             if (x = == 0) {;
               ctx.moveTo(x, y);
@@ -114,11 +114,11 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
     const waves: Wave[] = [];
 ;
     // Initialize particles;
-    for (let i = 0; i < 100; i++) {;
+    for (let i = 0 i < 100 i++) {;
       particles.push(new Particle())}
 ;
     // Initialize waves;
-    for (let i = 0; i < 3; i++) {;
+    for (let i = 0 i < 3 i++) {;
       const wave = new Wave();
       wave.amplitude = 30 + i * 20;
       wave.frequency = 0.01 + i * 0.005;
@@ -153,8 +153,8 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
       ctx.lineWidth = 1;
 ;
-      for (let i = 0; i < particles.length; i++) {;
-        for (let j = i + 1; j < particles.length; j++) {;
+      for (let i = 0 i < particles.length i++) {;
+        for (let j = i + 1 j < particles.length j++) {;
           const distance = Math.sqrt(dx * dx + dy * dy);
 ;
           if (distance < 100) {;
@@ -177,7 +177,7 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       ctx.strokeStyle = 'rgba(255, 100, 200, 0.2)';
       ctx.lineWidth = 2;
       ctx.beginPath();
-      for (let i = 0; i < 6; i++) {;
+      for (let i = 0 i < 6 i++) {;
         const angle = (i * Math.PI) / 3;
         const x = Math.cos(angle) * 150;
         const y = Math.sin(angle) * 150;
@@ -194,7 +194,7 @@ interface FuturisticAnimatedBackground2029Props extends React.PropsWithChildren<
       ctx.strokeStyle = 'rgba(100, 255, 200, 0.2)';
       ctx.lineWidth = 2;
       ctx.beginPath();
-      for (let i = 0; i < 3; i++) {;
+      for (let i = 0 i < 3 i++) {;
         const angle = (i * Math.PI * 2) / 3 + time * 0.5;
         const x = Math.cos(angle) * 100;
         const y = Math.sin(angle) * 100;

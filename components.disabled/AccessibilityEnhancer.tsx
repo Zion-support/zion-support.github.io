@@ -101,20 +101,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           color: black !important;
           border-color: black !important;
         }
-        .high-contrast button, .high-contrast a { border: 2px solid black !important; }
-        .high-contrast button:hover, .high-contrast a:hover { background-color: black !important; color: white !important; }
-        .font-small { font-size: 0.875rem; }
-        .font-normal { font-size: 1rem; }
-        .font-large { font-size: 1.125rem; }
-        .font-extra-large { font-size: 1.25rem; }
+        .high-contrast button, .high-contrast a { border: 2px solid black !important }
+        .high-contrast button:hover, .high-contrast a:hover { background-color: black !important color: white !important }
+        .font-small { font-size: 0.875rem }
+        .font-normal { font-size: 1rem }
+        .font-large { font-size: 1.125rem }
+        .font-extra-large { font-size: 1.25rem }
         .reduced-motion *, .reduced-motion *::before, .reduced-motion *::after {;
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
           scroll-behavior: auto !important;
         }
-        *:focus { outline: 2px solid #3b82f6 !important; outline-offset: 2px !important; }
-        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+        *:focus { outline: 2px solid #3b82f6 !important outline-offset: 2px !important }
+        .sr-only { position: absolute width: 1px height: 1px padding: 0 margin: -1px overflow: hidden clip: rect(0,0,0,0) white-space: nowrap border: 0 }
       `}</style>
     </>
   );

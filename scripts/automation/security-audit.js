@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 // // // console.log(;
   '🔒 Starting continuous security audit automation...');
 // Get automation interval from environment variable (default: 4 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000; // 4 hours;
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 14400000 // 4 hours;
 async function runSecurityAudit() {;
   try {;
     // // // console.log(`🔒 Running security audit at ${new Date().toISOString()}`);

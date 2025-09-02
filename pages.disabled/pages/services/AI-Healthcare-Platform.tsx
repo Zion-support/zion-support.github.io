@@ -64,7 +64,7 @@ import {}
   Beaker} from,;
   lucide-react';: pages.disabled/pages/services/AI-Healthcare-Platform.tsx;
 const AIHealthcarePlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview;
-  ');  const [isVisible, setIsVisible] = useState(false);
+  ')  const [isVisible, setIsVisible] = useState(false);
 ;
   useEffect(() => {}
     setIsVisible(true)}, []);

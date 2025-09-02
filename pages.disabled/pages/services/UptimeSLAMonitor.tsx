@@ -91,7 +91,7 @@ export default function UptimeSLAMonitor(...args: []):  {}
   ]},';
   ]},;
     {'
-      title: 'Reduce MTTR',';      description: 'Faster incident response with detailed error information and automated escalation.',;
+      title: 'Reduce MTTR','      description: 'Faster incident response with detailed error information and automated escalation.',;
       icon: Zap};
   ];
 ;

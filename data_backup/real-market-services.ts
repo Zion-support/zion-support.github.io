@@ -335,7 +335,7 @@ export interface RealMarketService {
   text-amber-300',;
     link: 'https://ziontechgroup.com/local-micro-crm,;
     marketPosition:,;
-  Tooled for simplicity; avoids enterprise CRM bloat and costs.',;
+  Tooled for simplicity avoids enterprise CRM bloat and costs.',;
     targetAudience: 'Local service businesses,;
     trialDays: 14,;
     setupTime:,;
@@ -352,7 +352,7 @@ export interface RealMarketService {
   'Track customers',;
   'Follow‑ups',;
   'Close more deals'],;
-    roi: 'Reduce no‑shows and lost leads; +10–20% revenue lift.,;
+    roi: 'Reduce no‑shows and lost leads +10–20% revenue lift.,;
     competitors[,;
   HubSpot Starter',;
   'Pipedrive Essentials'],;
@@ -384,7 +384,7 @@ export interface RealMarketService {
     price: '$29,;
     period:,;
   /month',;
-    description: 'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.,;
+    description: 'Create and score subject lines using language models and historical performance data export to ESPs and run quick A/B tests.,;
     features[;
   'AI suggestions and variants',;
   'Tone and length tuning',;
@@ -401,7 +401,7 @@ export interface RealMarketService {
   text-cyan-300',;
     link: 'https://ziontechgroup.com/subjectline-optimizer-ai,;
     marketPosition:,;
-  Focused assistant vs. general copy tools; fast iteration for marketers.',;
+  Focused assistant vs. general copy tools fast iteration for marketers.',;
     targetAudience: 'Growth and lifecycle marketers,;
     trialDays: 7,;
     setupTime:,;
@@ -468,7 +468,7 @@ export interface RealMarketService {
   text-emerald-300',;
     link: 'https://ziontechgroup.com/dev-workflow-analytics,;
     marketPosition:,;
-  Actionable insights without surveillance; focused on flow metrics.',;
+  Actionable insights without surveillance focused on flow metrics.',;
     targetAudience: 'Engineering teams and platform leads,;
     trialDays: 14,;
     setupTime:,;
@@ -535,7 +535,7 @@ export interface RealMarketService {
   text-sky-300',;
     link: 'https://ziontechgroup.com/mobile-device-management,;
     marketPosition:,;
-  SMB-focused MDM starter; complements Intune and Apple Business Manager.',;
+  SMB-focused MDM starter complements Intune and Apple Business Manager.',;
     targetAudience: IT, MSPs, security teams',;
     trialDays: 7,;
     setupTime:,;
@@ -607,7 +607,7 @@ export interface RealMarketService {
   'Google Meet, Zoom, Jira, GitHub'],;
     useCases[;
   'Reduce manual note‑taking, Faster follow‑ups, Better accountability'],;
-    roi: 'Save hours/week per team; fewer missed actions.,;
+    roi: 'Save hours/week per team fewer missed actions.,;
     competitors[,;
   Supernormal, Tactiq + custom flows'],;
     marketSize: '$3B productivity AI,;
@@ -666,7 +666,7 @@ export interface RealMarketService {
   'LaunchDarkly, Flagsmith, Split.io'],;
     useCases[;
   'Reduce tech debt, Safer rollouts, Faster cleanups'],;
-    roi: 'Cut incidents from stale flags; improve developer velocity.,;
+    roi: 'Cut incidents from stale flags improve developer velocity.,;
     competitors[,;
   Native vendor hygiene, manual audits'],;
     marketSize: '$2B experimentation,;

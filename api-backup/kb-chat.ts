@@ -1,5 +1,5 @@
 import React from;
-  'react'; interface Message {;
+  'react' interface Message {;
   role: string;
    content: string;
 } interface KBChatRequestBody {;
@@ -10,10 +10,10 @@ import React from;
    // Add other fields if relevant';
 }' ' // Simplified structure for OpenAI's chat completion response interface OpenAIChoice {
   message?: { content: string;
-}; finish_reason?: string; } interface OpenAIResponse {
+} finish_reason?: string } interface OpenAIResponse {
   choices?: OpenAIChoice[];
    // Add other fields if necessary, e.g., error object error?: { message: string;
-}; } interface KBChatSuccessResponse {;
+} } interface KBChatSuccessResponse {;
   message: string;
    confidence: number;
 } interface ErrorResponse {;

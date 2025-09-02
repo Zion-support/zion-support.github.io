@@ -17,7 +17,7 @@ export function findServicesByCategory(;
 ;
   for (const arr of allServiceArrays) {;
     for (const s of arr) {;
-if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {'        results.push(s)';      }}
+if (s && typeof s.category === 'string' && s.category.toLowerCase().includes(categoryIncludes.toLowerCase())) {'        results.push(s)'      }}
   }
 ;
   return results;

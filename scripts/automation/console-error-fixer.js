@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 // // // console.log(;
   '🔧 Starting continuous console error fixer automation...');
 // Get automation interval from environment variable (default: 15 minutes);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes;
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000 // 15 minutes;
 async function runConsoleErrorFixer() {;
   try {;
     // // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`);

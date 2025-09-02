@@ -152,7 +152,7 @@ export function RevolutionaryServicesPage(...args: any[]): any {;
 ;
       case 'price-low;
   ': return a.price - b.price;
-return a.title.localeCompare(b.title)';      case;
+return a.title.localeCompare(b.title)'      case;
   'price-low':;
         return a.price - b.price';
       case;

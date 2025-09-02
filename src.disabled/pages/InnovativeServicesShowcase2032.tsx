@@ -1,12 +1,12 @@
 import React, { useState, useMemo } from;
-  'react'; import { motion } from;
-  'framer-motion'; import { ; Search,; Filter,; Star,; TrendingUp,; Shield,; Brain,; Database,; Globe,; Zap,; Award,; Phone,; Mail,; MapPin,; ExternalLink,; CheckCircle,; Clock,; DollarSign,; Users,; Target,; BarChart3; } from;
-  'lucide-react'; import { INNOVATIVE_MICRO_SAAS_SERVICES_2032 } from;
-  '../data/innovativeMicroSaasServices2032'; ; const InnovativeServicesShowcase2032: React.FC = () => {; const [searchTerm, setSearchTerm] = useState(';
-  '); const [selectedCategory, setSelectedCategory] = useState('All;
-  '); const [selectedPriceRange, setSelectedPriceRange] = useState('All;
-  '); const [sortBy, setSortBy] = useState('featured;
-  '); ; const categories = ['All
+  'react' import { motion } from;
+  'framer-motion' import {  Search, Filter, Star, TrendingUp, Shield, Brain, Database, Globe, Zap, Award, Phone, Mail, MapPin, ExternalLink, CheckCircle, Clock, DollarSign, Users, Target, BarChart3 } from;
+  'lucide-react' import { INNOVATIVE_MICRO_SAAS_SERVICES_2032 } from;
+  '../data/innovativeMicroSaasServices2032'  const InnovativeServicesShowcase2032: React.FC = () => { const [searchTerm, setSearchTerm] = useState(';
+  ') const [selectedCategory, setSelectedCategory] = useState('All;
+  ') const [selectedPriceRange, setSelectedPriceRange] = useState('All;
+  ') const [sortBy, setSortBy] = useState('featured;
+  ')  const categories = ['All
   ', 'AI & Legal Tech;
   ', 'Cybersecurity;
   ', 'AI & Healthcare;
@@ -17,9 +17,9 @@ import React, { useState, useMemo } from;
   ', 'AI & Quantum Computing;
   ', 'AI & Customer Experience;
   ', 'AI & Supply Chain;
-  ']; ; const priceRanges = ['All;
+  ']  const priceRanges = ['All;
   ',';Under $500;
   ',';$500 - $1, 000;
   ',';$1, 000 - $2,000;
   ',';$2, 000+;
-  '; ]; ; const filteredServices = useMemo(() => {; let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2032; ';
+  ' ]  const filteredServices = useMemo(() => { let filtered = INNOVATIVE_MICRO_SAAS_SERVICES_2032 ';

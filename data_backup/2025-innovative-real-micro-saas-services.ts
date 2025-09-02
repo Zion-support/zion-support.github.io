@@ -78,7 +78,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
   text-purple-400',;
     link: 'https://ziontechgroup.com/ai-autonomous-decision-engine,;
     marketPosition:,;
-  Competes with Palantir Foundry and C3.ai; more accessible for mid-market companies.',;
+  Competes with Palantir Foundry and C3.ai more accessible for mid-market companies.',;
     targetAudience: Operations managers, business analysts, C-suite executives',;
     trialDays: 30,;
     setupTime:,;
@@ -137,7 +137,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
   text-blue-400',;
     link: 'https://ziontechgroup.com/quantum-crm-suite,;
     marketPosition:,;
-  Competes with Salesforce, HubSpot, and Pipedrive; adds quantum computing capabilities.',;
+  Competes with Salesforce, HubSpot, and Pipedrive adds quantum computing capabilities.',;
     targetAudience: Sales teams, marketing professionals, customer success managers',;
     trialDays: 21,;
     setupTime:,;
@@ -196,7 +196,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
   text-green-400',;
     link: 'https://ziontechgroup.com/ai-content-factory-pro,;
     marketPosition:,;
-  Competes with Jasper, Copy.ai, and Writesonic; more enterprise-focused with better collaboration.',;
+  Competes with Jasper, Copy.ai, and Writesonic more enterprise-focused with better collaboration.',;
     targetAudience: Content marketers, copywriters, digital agencies',;
     trialDays: 14,;
     setupTime:,;
@@ -254,7 +254,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
   text-red-400',;
     link: 'https://ziontechgroup.com/ai-legal-contract-analyzer,;
     marketPosition:,;
-  Competes with DocuSign, ContractPodAi, and Evisort; more affordable for mid-market companies.',;
+  Competes with DocuSign, ContractPodAi, and Evisort more affordable for mid-market companies.',;
     targetAudience: Legal teams, contract managers, business development',;
     trialDays: 30,;
     setupTime:,;
@@ -312,7 +312,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
   text-yellow-400',;
     link: 'https://ziontechgroup.com/ai-financial-intelligence,;
     marketPosition:,;
-  Competes with Bloomberg Terminal, FactSet, and Refinitiv; more accessible for mid-market companies.',;
+  Competes with Bloomberg Terminal, FactSet, and Refinitiv more accessible for mid-market companies.',;
     targetAudience: CFOs, financial analysts, investment managers',;
     trialDays: 21,;
     setupTime:,;
@@ -370,7 +370,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
   text-teal-400',;
     link: 'https://ziontechgroup.com/ai-healthcare-diagnostics,;
     marketPosition:,;
-  Competes with IBM Watson Health, Google Health, and Microsoft Healthcare; more specialized for diagnostic imaging.',;
+  Competes with IBM Watson Health, Google Health, and Microsoft Healthcare more specialized for diagnostic imaging.',;
     targetAudience: Radiologists, pathologists, healthcare providers',;
     trialDays: 60,;
     setupTime:,;
@@ -428,7 +428,7 @@ export const innovativeRealMicroSaasServices2025: InnovativeMicroSaasService[] =
   text-emerald-400',;
     link: 'https://ziontechgroup.com/ai-sustainability-platform,;
     marketPosition:,;
-  Competes with Sphera, Benchmark ESG, and Sustainalytics; more affordable for mid-market companies.',;
+  Competes with Sphera, Benchmark ESG, and Sustainalytics more affordable for mid-market companies.',;
     targetAudience: Sustainability managers, ESG officers, corporate responsibility teams',;
     trialDays: 30,;
     setupTime:,;

@@ -65,7 +65,7 @@ import { FileText, AlertTriangle, CheckCircle, Info, Search, Edit3, Eye, BarChar
         setContentIssues (sampleIssues) ;
         generateReport (sampleIssues) }, []) ;
     const generateReport = (issues) => {}
-        const totalPages = 79; // From analysis report;
+        const totalPages = 79 // From analysis report;
         const pagesWithIssues = issues.length';
         const criticalIssues = issues.filter(i => i.severity === 'high').length';
         const mediumIssues = issues.filter(i => i.severity === 'medium').length';

@@ -1,2 +1,2 @@
 import React from;
-  'react'; export default ComprehensivePricing2026';
+  'react' export default ComprehensivePricing2026';

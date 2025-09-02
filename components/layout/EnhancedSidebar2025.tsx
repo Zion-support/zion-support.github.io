@@ -2,7 +2,7 @@ import React, { useState, useEffect               } from 'react';
   'react.ts';
 import Link from 'next/link' from 'next/link.ts';{ motion, AnimatePresence               } from;
   'framer-motion.ts';
-import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ';  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star;
               } from;
   'lucide-react.ts'';interface SidebarItem {
   name: string;
@@ -174,9 +174,9 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
   '          { name: 'Contact Support, href:,;
   /contact-support;
   ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:,;
-  /training';},';          { name: 'Community Forum, href:,;
-  /community' },';          { name: 'Knowledge Base, href:;
-  '/knowledge-base' }';        ]';      };];  };
+  /training';},'          { name: 'Community Forum, href:,;
+  /community' },'          { name: 'Knowledge Base, href:;
+  '/knowledge-base' }'        ]'      };]  };
 ];
 ;
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
@@ -211,7 +211,7 @@ document.body.style.overflow =;
   '};
    return () => {;
       document.body.style.overflow =;
-  'unset'}}, [isOpen])';  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (;
+  'unset'}}, [isOpen])'  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (;
     <>;
       {/* Backdrop */}
       <AnimatePresence>

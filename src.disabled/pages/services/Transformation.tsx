@@ -20,7 +20,7 @@ const DigitalTransformation = () => {;
     },'{'
       title: 'Change Management',';
       description: 'Guide your team through digital adoption and transformation.',';
-      price: 'From $8,000/month',';      features: ['Change strategy', 'Training programs', 'Communication plans', 'Success measurement'],;
+      price: 'From $8,000/month','      features: ['Change strategy', 'Training programs', 'Communication plans', 'Success measurement'],;
       icon: Users};
   ];
 ;

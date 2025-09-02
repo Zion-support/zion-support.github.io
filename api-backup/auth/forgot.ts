@@ -63,7 +63,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   ') {;
     res.setHeader('Allow;
   ', ['POST;
-  ']);    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
+  '])    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 ;
   try {;
@@ -81,12 +81,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!user) {;
       // Don,;
   t reveal if user exists or not for security;
-      return res.status(200).json({ message: If an account with that email exists, a password reset link has been sent.' });    }
+      return res.status(200).json({ message: If an account with that email exists, a password reset link has been sent.' })    }
 ;
     // Generate reset token;
     const resetToken = crypto.randomBytes(32).toString(;
   'hex');
-    const resetTokenExpiry = new Date(Date.now() + 60 * 60 * 1000); // 1 hour;
+    const resetTokenExpiry = new Date(Date.now() + 60 * 60 * 1000) // 1 hour;
     // Store reset token in database;
     await prisma.user.update({;
       where: { email },;
@@ -105,7 +105,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ message:,;
   Password reset email sent successfully.' });
     } else {;
-      return res.status(500).json({ error: 'Failed to send password reset email. });    }
+      return res.status(500).json({ error: 'Failed to send password reset email. })    }
   } catch (error) {;
     console.error(;
   'Error in forgot password handler:,;

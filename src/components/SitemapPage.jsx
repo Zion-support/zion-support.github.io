@@ -1,4 +1,4 @@
- export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth) ; const talentRoutes = completeSitemap.filter () route =>';;import { Link } from 'react-router-dom';
+ export default function SitemapPage () { const publicRoutes = completeSitemap.filter (route => !route.requiredAuth)  const talentRoutes = completeSitemap.filter () route =>';;import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { SEO } from './SEO';
 

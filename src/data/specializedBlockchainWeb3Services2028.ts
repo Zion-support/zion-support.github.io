@@ -20,4 +20,4 @@ export interface BlockchainWeb3Service2028 {
    contactInfo: { phone: string;
    email: string;
    website: string;
-}; technicalSpecs?: { technology: string[] integrations: string[]; apiEndpoints: number; uptime: string; security: string[];  }; competitors?: string[]; marketSize?: string; aiCapabilities?: string[]; complianceFeatures?: string[]; scalabilityFeatures?: string[]; }; export const BLOCKCHAIN_WEB3_SERVICES_2028: BlockchainWeb3Service2028[] = [;
+} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string aiCapabilities?: string[] complianceFeatures?: string[] scalabilityFeatures?: string[] } export const BLOCKCHAIN_WEB3_SERVICES_2028: BlockchainWeb3Service2028[] = [;

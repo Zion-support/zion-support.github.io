@@ -7,7 +7,7 @@ import { Button } from;
   '../components/ui/Button';{ Card } from;
   '../components/ui/Card';
 import { Badge } from;
-  '../components/ui/Badge';import { ';  TrendingUp, Users,;
+  '../components/ui/Badge';import { '  TrendingUp, Users,;
   DollarSign, Clock,;
   Target, CheckCircle,;
   ArrowRight, Star,;

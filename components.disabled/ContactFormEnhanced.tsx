@@ -4,12 +4,12 @@ import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucid
   const [formData, setFormData] = useState({;
     name:,;
   ', email: ','    subject:,;
-  ', message: ''  })';  const [isSubmitting, setIsSubmitting] = useState(false);
+  ', message: ''  })'  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<;
   'idle' |;
   'success' |;
   'error'>(;
-  'idle')';  const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
+  'idle')'  const handleSubmit = async (e: React.FormEvent) => {;e.preventDefault();
     setIsSubmitting(true);
 ;
     // Simulate API call;
@@ -17,8 +17,8 @@ import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucid
 ;
 setSubmitStatus(,;
   success;
-  ')';    setIsSubmitting(false)';    setFormData({ name: ', email:,;
-  ', subject: ', message: '' })';  }';
+  ')'    setIsSubmitting(false)'    setFormData({ name: ', email:,;
+  ', subject: ', message: '' })'  }';
   return (;
     <div className='max-w-2xl mx-auto p-6'>'      <motion.div'        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

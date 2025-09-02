@@ -56,7 +56,7 @@ import {;
   ',';Green IT - Sustainable technology solutions;
   ';
       ]};
-items: [';Quantum Computing - Next-gen computational power,;,;
+items: [';Quantum Computing - Next-gen computational power,;;
   'IoT Edge Computing - Smart device networks',';Space Tech - Space technology solutions',';Green IT - Sustainable technology solutions';
       ]};
   ];
@@ -76,7 +76,7 @@ items: [';Quantum Computing - Next-gen computational power,;,;
   'Advanced security measures and privacy protection',;
       icon: Shield,;
       color:;
-  'from-red-500 to-orange-500'};  ];
+  'from-red-500 to-orange-500'}  ];
 ;
   return (';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>

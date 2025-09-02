@@ -77,32 +77,32 @@ const PerformanceMonitor: React.FC = () => {;
   useEffect(() => {;
 if (typeof window ===,;
   undefined;
-  ') return';    // Only show in development or for admin users;
+  ') return'    // Only show in development or for admin users;
     const isDev = process.env.NODE_ENV ===;
   'development;
    const isAdmin = localStorage.getItem(;
   'admin_mode') ===;
-  'true'';    if (!isDev && !isAdmin) return;
+  'true''    if (!isDev && !isAdmin) return;
     const observer = new PerformanceObserver((list) => {;const entries = list.getEntries();
 ;
       entries.forEach((entry) => {;
         switch (entry.entryType) {;
 case 'paint;
   ': if (entry.name === 'first-contentful-paint;
-  ') {              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))';            }
+  ') {              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))'            }
             break;
           case;
-  'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }))';            break';          case;
-  'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));,;
-  break';          case;
+  'largest-contentful-paint': setMetrics(prev => ({ ...prev, lcp: entry.startTime }))'            break'          case;
+  'first-input': setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));;
+  break'          case;
   'layout-shift': if (!(entry as any).hadRecentInput) {;
   '              setMetrics(prev => ({                ...prev, cls: (prev.cls || 0) + (entry as any).value;
               }));
             }
             break;
           case;
-  'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));,;
-  break';        }});
+  'navigation': setMetrics(prev => ({ ...prev, ttfb: entry.responseStart - entry.requestStart }));;
+  break'        }});
     });
 ;
     // Observe different types of performance entries;
@@ -113,10 +113,10 @@ observer.observe({ entryTypes: [;
   largest-contentful-paint',;
   'first-input',;
   'layout-shift',;
-  'navigation'] })';    } catch (e) {;
+  'navigation'] })'    } catch (e) {;
   '      // Fallback for browsers that don&apos;t support all entry types''      observer.observe({ entryTypes: [;
   'paint,;
-  'largest-contentful-paint'] })';    }
+  'largest-contentful-paint'] })'    }
   ';
     // Show metrics after 3 seconds;
     const timer = setTimeout(() => {;setIsVisible(true);
@@ -130,13 +130,13 @@ observer.observe({ entryTypes: [;
 ;
   if (!isVisible) return null;
 
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {
+  const getScoreColor = (value: number, thresholds: { good: number poor: number }) => {
     if (value <= thresholds.good) return 'text-green-600';
     if (value <= thresholds.poor) return 'text-yellow-600';
     return 'text-red-600';
   };
 
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {
+  const getScoreText = (value: number, thresholds: { good: number poor: number }) => {
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.poor) return 'Needs Improvement';
     return 'Poor';
@@ -202,7 +202,7 @@ observer.observe({ entryTypes: [;
         </button>
       </div>
     </div>
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) => {;
+  const getScoreColor = (value: number, thresholds: { good: number poor: number }) => {;
 if (value <= thresholds.good) return 'text-green-600;
   ;
    if (value <= thresholds.poor) return;
@@ -210,7 +210,7 @@ if (value <= thresholds.good) return 'text-green-600;
    return;
   'text-red-600;
  }';
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) => {;
+  const getScoreText = (value: number, thresholds: { good: number poor: number }) => {;
     if (value <= thresholds.good) return;
   'Good;
    if (value <= thresholds.poor) return;

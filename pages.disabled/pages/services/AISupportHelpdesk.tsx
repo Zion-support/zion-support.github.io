@@ -99,7 +99,7 @@ export default function AISupportHelpdesk(...args[]):  {}
     {;
       icon: Users,';
       title: 'Social Media',';
-      description: 'Monitor and respond to support requests across social platforms'};  ];
+      description: 'Monitor and respond to support requests across social platforms'}  ];
 ;
   return();
 :pages.disabled/pages/services/AISupportHelpdesk.tsx;

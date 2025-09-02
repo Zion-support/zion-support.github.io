@@ -132,7 +132,7 @@ export default function ServicesAdvertisingPage() {
   ', href: 'https://arcticwolf.com/platform/managed-detection-response/ }
       ],;
       note:,;
-  EDR/XDR from $5–$25/endpoint; MDR from $2k–$10k+/mo.;
+  EDR/XDR from $5–$25/endpoint MDR from $2k–$10k+/mo.;
   ';
     },;
     {;

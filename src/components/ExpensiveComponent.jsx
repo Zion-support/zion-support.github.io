@@ -1,4 +1,4 @@
- export default function ExpensiveComponent () { const [data, setData] = useState ([]) ; const [loading, setLoading] = useState (true) ; useEffect ( () => {'';import React, { useState, useEffect } from 'react';
+ export default function ExpensiveComponent () { const [data, setData] = useState ([])  const [loading, setLoading] = useState (true)  useEffect ( () => {'';import React, { useState, useEffect } from 'react';
 export default function ExpensiveComponent() {}
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);

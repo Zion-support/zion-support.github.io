@@ -9,7 +9,7 @@ import { getServicesByCategory } from;
 import Link from;
   'next/link'';const AIServicesPage: NextPage = () => {;
   const aiServices = getServicesByCategory('ai-services;
-  ')';  const benefits = [
+  ')'  const benefits = [
     {;
       icon: <Brain className='w-8 h-8' />, title:,;
   Advanced AI',;

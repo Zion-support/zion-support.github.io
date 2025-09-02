@@ -135,7 +135,7 @@
           pricing: 'Custom pricing''';
         }
       ]};
-  ]};  ]';';
+  ]}  ]';';
   return ('''';
     <div className = 'relative'>
       {/* Main Services Button */}

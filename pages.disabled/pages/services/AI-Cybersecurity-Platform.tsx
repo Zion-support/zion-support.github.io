@@ -52,7 +52,7 @@ import {}
   Stopwatch} from,;
   lucide-react';: pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx;
 const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview;
-  ');  const [isVisible, setIsVisible] = useState(false);
+  ')  const [isVisible, setIsVisible] = useState(false);
 ;
   useEffect(() => {}
     setIsVisible(true)}, []);

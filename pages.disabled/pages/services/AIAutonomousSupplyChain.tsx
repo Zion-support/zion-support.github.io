@@ -739,7 +739,7 @@ import { Truck,;
             </div>'';
             <div className='flex flex-col items-center'>'';
               <MapPin className='w-8 h-8 text-blue-400 mb-4'  />'';
-              <p className='text-gray-300'>Address</p>';              <p className='text-white'>364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <p className='text-gray-300'>Address</p>'              <p className='text-white'>364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
         </div>

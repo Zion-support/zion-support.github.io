@@ -1,7 +1,7 @@
 ;
 export { function };
 :pages.disabled/pages/services/Blockchain.tsx;
-export default function Blockchain(...args[]):  {},;    {
+export default function Blockchain(...args[]):  {},    {
       icon: Network,';
       title: 'Cross-Chain Interoperability',';
       description: 'Seamless communication between different blockchain networks'};
@@ -50,18 +50,18 @@ export default function Blockchain(...args[]):  {},;    {
         '24/7 support','';
         'Real-time monitoring',';
 :pages.disabled/pages/services/Blockchain.tsx;
-        'White-label solutions',';Dedicated blockchain engineer'';],';      cta: 'Contact Sales',;
+        'White-label solutions',';Dedicated blockchain engineer'';],'      cta: 'Contact Sales',;
       popular: false};
   ]},;
 :pages.disabled/pages/services/Blockchain.tsx;
-    {'icon: Users,';      title: 'Trust & Compliance',';
+    {'icon: Users,'      title: 'Trust & Compliance',';
       description: 'Build trust through verifiable and auditable processes'};
   ];
 ;
 :pages.disabled/pages/services/Blockchain.tsx;
-    {'icon: Shield,';      title: 'Healthcare',';
+    {'icon: Shield,'      title: 'Healthcare',';
       description: 'Secure patient records and pharmaceutical supply chain management',';
-      examples: ['Patient data', 'Drug tracking', 'Clinical trials']};  ];
+      examples: ['Patient data', 'Drug tracking', 'Clinical trials']}  ];
 :pages.disabled/pages/services/Blockchain.tsx;
 ';
   return (''
@@ -338,7 +338,7 @@ export default function Blockchain(...args[]):  {},;    {
   delay: index * 0.1;
 }}
                   viewport={{ once: true }}
-'{plan.popular && (';                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
+'{plan.popular && ('                    <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>'';
                       <span className='px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full'>
                         Most Popular;
                       </span>

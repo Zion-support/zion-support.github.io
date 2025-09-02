@@ -8,7 +8,7 @@ import path from;
 ;
 class SyntaxErrorFixer {;
   constructor() {;
-    this.scanInterval = process.env.SCAN_INTERVAL || 300000; // 5 minutes;
+    this.scanInterval = process.env.SCAN_INTERVAL || 300000 // 5 minutes;
     this.autoFix = process.env.AUTO_FIX ===;
   'true';
     this.logFile =;

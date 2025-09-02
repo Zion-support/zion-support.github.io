@@ -14,7 +14,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { useRouter } from 'next/router';
-// import Image from 'next/image'; // TODO: Replace with regular img or custom Image component'';
+// import Image from 'next/image' // TODO: Replace with regular img or custom Image component'';
 import React, { useState } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
 import { useNavigate } from 'react-router-dom';

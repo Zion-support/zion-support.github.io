@@ -9,7 +9,7 @@ export default function AIAnalytics(...args[]):  {}
 :pages.disabled/pages/services/AIAnalytics.tsx;
   ]},';
     {';
-      title: 'Computer Vision',';      description: 'Image and video analysis with AI',;
+      title: 'Computer Vision','      description: 'Image and video analysis with AI',;
   ]},;
     {
       title: 'Computer Vision',;

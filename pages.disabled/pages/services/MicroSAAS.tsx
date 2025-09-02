@@ -26,7 +26,7 @@ icon: Globe,';
       features: ['Cloud platforms', 'Containerization', 'Auto-scaling', 'Load balancing']};
   ]},';
     {'
-      title: 'E-commerce',';      description: 'Online marketplace and retail management solutions',;
+      title: 'E-commerce','      description: 'Online marketplace and retail management solutions',;
       icon: Package};
   ]';
   return ('';
@@ -40,7 +40,7 @@ icon: Globe,';
       features: ['Cloud platforms', 'Containerization', 'Auto-scaling', 'Load balancing']};
   ]},;
     {'
-      title: 'E-commerce',';      description: 'Online marketplace and retail management solutions',;
+      title: 'E-commerce','      description: 'Online marketplace and retail management solutions',;
       icon: Package};
   ];
 ;

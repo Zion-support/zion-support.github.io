@@ -108,13 +108,13 @@ class MimeTypeFallback {
   ';
         contentType.includes ('application / octet - stream;
   ') ) {;
-        return true; // MIME type is correct or generic}`;
+        return true // MIME type is correct or generic}`;
       console.warn (`MIME type mismatch for ${url}: expected ${expectedType}, got ${contentType}`) ;
 ;
 :pages.disabled/utils/mimeTypeFallback.tsx;
       // Try to fix with fallback URL;
       return await this.tryFallbackUrl (url) } catch (error) {;
-`console.error (`Error checking MIME type for ${url}:`, error) ;      return await this.tryFallbackUrl (url) }
+`console.error (`Error checking MIME type for ${url}:`, error)       return await this.tryFallbackUrl (url) }
   }
 ;
 :pages.disabled/utils/mimeTypeFallback.tsx;
@@ -126,7 +126,7 @@ class MimeTypeFallback {
       try {;
         if (response.ok) {;
           if (contentType && contentType.includes (expectedType) ) {;
-`console.log (`Fallback URL has correct MIME type: ${fallbackUrl}`) ;            this.replaceResource (originalUrl, fallbackUrl) ;
+`console.log (`Fallback URL has correct MIME type: ${fallbackUrl}`)             this.replaceResource (originalUrl, fallbackUrl) ;
             return true}
         }
 :pages.disabled/utils/mimeTypeFallback.tsx;
@@ -174,7 +174,7 @@ class MimeTypeFallback {
 :pages.disabled/utils/mimeTypeFallback.tsx;
       return script} else {,;
   link.rel = 'stylesheet;
-  ';      link.href = url';
+  '      link.href = url';
       link.type =;
   'text / css';
       return link}
@@ -191,7 +191,7 @@ class MimeTypeFallback {
       element.onerror = () => {;
 `;
         console.error (`❌ Failed to load resource: ${url}`) `;
-        reject (new Error (`Failed to load resource: ${url}`) ) };,;
+        reject (new Error (`Failed to load resource: ${url}`) ) };;
   if (type ===;
   'script') {;
         document.head.appendChild (element) } else {document.head.appendChild (element) }

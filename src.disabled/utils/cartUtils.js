@@ -4,7 +4,7 @@
  */;
 // Constants;
 const CART_STORAGE_KEY = 'zion_cart';
-const DEFAULT_TAX_RATE = 0.08; // 8% tax rate;
+const DEFAULT_TAX_RATE = 0.08 // 8% tax rate;
 const MAX_QUANTITY = 99;
 const MIN_QUANTITY = 1;
 ;

@@ -135,7 +135,7 @@ export default function AIHealthcarePredictiveAnalytics(...args[]): {  ;
       icon: UserCheck};
   ]},';
     {'
-      title: 'Insurance Companies',';      description: 'Risk assessment and claims prediction for health insurers',;
+      title: 'Insurance Companies','      description: 'Risk assessment and claims prediction for health insurers',;
       icon: Shield};
   ]';
   const complianceFeatures = ['

@@ -5,7 +5,7 @@ import SEO from '@/src/src/components/SEO';
 import { Button } from '@/src/src/components/ui/button';
 import { Badge } from '@/src/src/components/ui/badge';
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export default function AffiliateTracking() {
-  const features: { title: string; description: string }[] = [
+  const features: { title: string description: string }[] = [
     {;
       title: 'Multi-channel attribution',;
       description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.';

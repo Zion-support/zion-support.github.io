@@ -1,3 +1,3 @@
 
-describe ('PricingSection', () => { it ('renders without crashing', () => { render (<PricingSection />) ; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ('displays expected content', () => { render (<PricingSection />) '';
+describe ('PricingSection', () => { it ('renders without crashing', () => { render (<PricingSection />)  expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () })  it ('displays expected content', () => { render (<PricingSection />) '';
 ;

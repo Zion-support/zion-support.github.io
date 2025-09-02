@@ -33,7 +33,7 @@
     description: 'Identity verification and access management,;
     icon: Lock,;
 ,;
-  id: anythreat-detection,;,;
+  id: anythreat-detection,;;
   name: 'Threat Detection & Response,;
 ,;
   description: 'AI-powered security monitoring and incident response,;
@@ -43,7 +43,7 @@
   },;
   {;
   ';
-    id: anyzero-trust,;,;
+    id: anyzero-trust,;;
   name: 'Zero Trust Security,;
 ,;
   description: 'Identity verification and access management,;
@@ -78,7 +78,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
   'Monthly';
       case;
   'hourly': return;
-  'Hourly';      case;
+  'Hourly'      case;
   'project-based': return;
   'Project-based;
       default: return model}
@@ -470,7 +470,7 @@ function SecurityServiceCard(...args: any[]): any {,;
   'Monthly';
       case;
   'hourly': return;
-  'Hourly';      case;
+  'Hourly'      case;
   'project-based': return;
   'Project-based;
       default: return model}
@@ -1218,7 +1218,7 @@ function SecurityServiceCard(...args: any[]): any {,;
             </div>
           </div>';
           <div className='border-t border-gray-700 mt-8 pt-8 text-center text-gray-400'>';
-            <p>&copy; 2024 ZionTech Group. All rights reserved. | <a href='https://ziontechgroup.com' target='_blank' rel='noopener noreferrer' className='text-red-400 hover:underline'>ziontechgroup.com</a></p>
+            <p>&copy 2024 ZionTech Group. All rights reserved. | <a href='https://ziontechgroup.com' target='_blank' rel='noopener noreferrer' className='text-red-400 hover:underline'>ziontechgroup.com</a></p>
           </div>
         </div>
       </div>

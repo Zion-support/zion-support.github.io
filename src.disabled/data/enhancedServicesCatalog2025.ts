@@ -1,4 +1,4 @@
-export type ServiceItem = {; id: string; title: string; description: string; category:,;
+export type ServiceItem = { id: string title: string description: string category:,;
   Micro SaaS' |;
   'IT Services' |;
   'AI Solutions' |;
@@ -29,4 +29,4 @@ export type ServiceItem = {; id: string; title: string; description: string; cat
   'HR Tech' |;
   'Sales Tech' |;
   'Customer Experience' |;
-  'Productivity Tools'; price: string';
+  'Productivity Tools' price: string';

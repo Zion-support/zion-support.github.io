@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from;
   'next'';export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const baseUrl =,;
   https: //ziontechgroup.com;
-  '';  const staticPages = [';,;
+  ''  const staticPages = [';;
 ,;
   /about',;
   '    '/contact;
@@ -21,7 +21,7 @@ import { NextApiRequest, NextApiResponse } from;
   '/auth/forgot-password',;
   '/auth/reset-password',;
   '    '/auth/verify;
-  ']';  const blogPages = [';/blog/5g-technology-and-its-impact-on-iot-chat',;
+  ']'  const blogPages = [';/blog/5g-technology-and-its-impact-on-iot-chat',;
   '/blog/ai-powered-marketplaces-the-future-of-digital-commerce-chat',;
   '    '/blog/api-first-development-building-scalable-systems-chat;
   ', '/blog/augmented-reality-in-enterprise-applications-chat;
@@ -39,7 +39,7 @@ import { NextApiRequest, NextApiResponse } from;
   '/blog/quantum-computing-implications-for-business-chat',;
   '/blog/sustainable-technology-green-computing-solutions-chat',;
   '    '/blog/the-rise-of-edge-computing-in-iot-applications-chat;
-  ']';  const servicePages = [';/services/ai-model-development-chat',;
+  ']'  const servicePages = [';/services/ai-model-development-chat',;
   '/services/api-development-chat',;
   '    '/services/business-intelligence-chat;
   ', '/services/cloud-migration-services-chat;
@@ -57,7 +57,7 @@ import { NextApiRequest, NextApiResponse } from;
   '/services/technical-documentation-chat',;
   '/services/ui-ux-design-chat',;
   '    '/services/web-application-development-chat;
-  ']';  const categoryPages = [';/category/ai-consulting-chat',;
+  ']'  const categoryPages = [';/category/ai-consulting-chat',;
   '/category/business-intelligence-chat',;
   '    '/category/cloud-architecture-chat;
   ', '/category/cybersecurity-chat;
@@ -75,7 +75,7 @@ import { NextApiRequest, NextApiResponse } from;
   '/category/technical-writing-chat',;
   '/category/ui-ux-design-chat',;
   '    '/category/web-development-chat;
-  ']';  const chatContentPages = [';/chat-content/ai-powered-business-solutions-discussion',;
+  ']'  const chatContentPages = [';/chat-content/ai-powered-business-solutions-discussion',;
   '/chat-content/cloud-computing-strategies',;
   '    '/chat-content/cybersecurity-best-practices;
   ', '/chat-content/data-analytics-implementation;
@@ -98,20 +98,20 @@ import { NextApiRequest, NextApiResponse } from;
   ' : page.includes('/blog/;
   ') ? '0.8;
   ' : '0.9;
-  ';      const changefreq = page === ';
+  '      const changefreq = page === ';
   ' ? 'daily;
   ' : page.includes('/blog/;
   ') ? 'weekly;
   ' : 'monthly;
-  ';      return ``    <url>
+  '      return ``    <url>
       <loc>${baseUrl}${page}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
       <changefreq>${changefreq}</changefreq>
       <priority>${priority}</priority>
-    </url>`;    });
+    </url>`    });
     .join('')}
-  '</urlset>`'`;  res.setHeader(;
+  '</urlset>`'`  res.setHeader(;
   'Content-Type',;
-  'text/xml')';  res.setHeader(;
+  'text/xml')'  res.setHeader(;
   'Cache-Control',;
-  'public, max-age=86400, s-maxage=86400')';  res.status(200).send(sitemap)';}
+  'public, max-age=86400, s-maxage=86400')'  res.status(200).send(sitemap)';}

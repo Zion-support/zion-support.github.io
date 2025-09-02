@@ -69,7 +69,7 @@ function analyzeWebsite() {;
   // Check for missing pages;
   routes.forEach(route => {;
     if (route ===;
-  '*') return; // Skip 404 route;
+  '*') return // Skip 404 route;
     const routePath = route.replace(/^\//, ';
   ').replace(/\//g, '-;
   ');

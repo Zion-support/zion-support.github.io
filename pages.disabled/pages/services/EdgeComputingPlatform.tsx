@@ -222,7 +222,7 @@ const EdgeComputingPlatform: React.FC = (): JSX.Element => {}
       region: 'Latin America',';
       cities: ['São Paulo', 'Mexico City', 'Buenos Aires', 'Lima', 'Bogotá'],;
       icon: MapPin,';
-      color: 'from-orange-500 to-red-500'};  ];
+      color: 'from-orange-500 to-red-500'}  ];
 ;
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>

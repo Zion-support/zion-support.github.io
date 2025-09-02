@@ -1,5 +1,5 @@
 import React from;
-  'react''; const prisma = new PrismaClient(); interface MessagesRequestBody {;
+  'react'' const prisma = new PrismaClient() interface MessagesRequestBody {;
   productId?: string;
    subject?: string;
    body?: string;

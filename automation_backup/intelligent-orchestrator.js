@@ -200,7 +200,7 @@ class IntelligentOrchestrator {;
 ;
   async findLargeFiles() {;
     const largeFiles = [];
-    const maxSize = 1024 * 1024; // 1MB;
+    const maxSize = 1024 * 1024 // 1MB;
     try {;
       const sourceDir = path.join(__dirname,..;
   ',src');

@@ -7,7 +7,7 @@ import { Button } from;
   '../components/ui/Button';{ Card } from;
   '../components/ui/Card';
 import { Badge } from;
-  '../components/ui/Badge';import { ';  Linkedin, Twitter,;
+  '../components/ui/Badge';import { '  Linkedin, Twitter,;
   Mail, Globe,;
   Award, Star,;
   Users, Brain,;

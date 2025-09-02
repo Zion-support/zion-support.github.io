@@ -1,5 +1,5 @@
 import { render, fireEvent, waitFor } from @testing-library/react;
-  '; // Added waitFor;
+  ' // Added waitFor;
 // Mock Sentry to prevent errors in test environment;
 jest.mock'@sentry/nextjs;
   ': unknown, (: unknown ({'  captureException: jest.fn(),;
@@ -19,8 +19,8 @@ it;
     </ThemeProvider>
   );
   const button = document.querySelector('button;
-  ');  fireEvent.click(button!);
+  ')  fireEvent.click(button!);
   await waitFor(: unknown { // Added waitFor for the assertion;
-    expect(document.documentElement.classList.contains('dark)).toBe(true);  });
+    expect(document.documentElement.classList.contains('dark)).toBe(true)  });
 });
 ;

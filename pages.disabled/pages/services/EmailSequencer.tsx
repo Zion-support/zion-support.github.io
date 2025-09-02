@@ -18,11 +18,11 @@ export default function EmailSequencer() {
   ',Priority support'] };
 	]';
 		{ label: 'HubSpot Email Marketing Pricing, href:,;
-  https: //www.hubspot.com/pricing/marketing/email },;,;
+  https: //www.hubspot.com/pricing/marketing/email },;;
   { label: 'Mailchimp Pricing, href:,;
-  https: //mailchimp.com/pricing/marketing/ },;,;
+  https: //mailchimp.com/pricing/marketing/ },;;
   { label: 'Lemlist Pricing, href:,;
-  https: //lemlist.com/pricing },;,;
+  https: //lemlist.com/pricing },;;
   { label: 'Salesloft Pricing, href:,
   https: //salesloft.com/pricing/ };
 	];

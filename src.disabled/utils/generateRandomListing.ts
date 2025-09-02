@@ -1,5 +1,5 @@
 import { MarketplaceItem } from,;
-  @/src/data/marketplaceData'; const sampleTitles = [
+  @/src/data/marketplaceData' const sampleTitles = [
   'AI-Powered Analytics Platform',;
   'Cybersecurity Assessment Tool',;
   'Cloud Migration Service',;
@@ -9,7 +9,7 @@ import { MarketplaceItem } from,;
   'Blockchain Development Service',;
   'Machine Learning Platform',;
   'DevOps Automation Tool',;
-  'Network Security Solution' ]; const sampleDescriptions = [
+  'Network Security Solution' ] const sampleDescriptions = [
   'Advanced analytics platform powered by artificial intelligence for business intelligence and data insights.',;
   'Comprehensive cybersecurity assessment and monitoring solution for enterprise environments.',;
   'Professional cloud migration service including planning, execution, and optimization.',;
@@ -19,7 +19,7 @@ import { MarketplaceItem } from,;
   'Blockchain development and implementation services for decentralized applications.',;
   'Machine learning platform with pre-trained models and custom training capabilities.',;
   'DevOps automation tools for continuous integration and deployment pipelines.',;
-  'Network security solution with advanced threat detection and prevention.' ]; const sampleTags = [ [;
+  'Network security solution with advanced threat detection and prevention.' ] const sampleTags = [ [;
   'AI',;
   'Analytics',;
   'Business Intelligence'], [;
@@ -49,5 +49,5 @@ import { MarketplaceItem } from,;
   'CI/CD'], [;
   'Network',;
   'Security',;
-  'Threat Detection'] ]; const sampleImages = [;
+  'Threat Detection'] ] const sampleImages = [;
   'https: '';

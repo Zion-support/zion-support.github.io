@@ -1,6 +1,6 @@
 import { describe, expect, test, vi, beforeEach } from 'vitest';
-import handler from '@/pages/api/auth/register'; // Assuming this is the Next.js API handler;
-import { z } from 'zod'; // Used by the handler;
+import handler from '@/pages/api/auth/register' // Assuming this is the Next.js API handler;
+import { z } from 'zod' // Used by the handler;
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 // Mock the Supabase client;
@@ -16,7 +16,7 @@ interface MockApiResponse extends NextApiResponse {
   status: vi.Mock<[number] MockApiResponse>
   json: vi.Mock<[unknown] MockApiResponse> // Parameter of json can be unknown;
   setHeader: vi.Mock<[string, string | string[]] void>
-  end: vi.Mock<[((cb?: () => void) => void)?], void>; // end can be called with no args;
+  end: vi.Mock<[((cb?: () => void) => void)?], void> // end can be called with no args;
 }
 ;
 // Helper to create mock request object;
@@ -42,7 +42,7 @@ function mockRes(): MockApiResponse {
 ;
 describe('/api/auth/register'', () => {;
   beforeEach(() => {;
-    vi.clearAllMocks(); // Clear mocks before each test;
+    vi.clearAllMocks() // Clear mocks before each test;
   });
 ;
   test(;
@@ -63,7 +63,7 @@ describe('/api/auth/register'', () => {;
   test(,;
   should return 400 for invalid input (schema validation failed)', async () => {;
     const req = mockReq({ email: 'invalid-email, password:;
-  'short' }); // name is missing;
+  'short' }) // name is missing;
     const res = mockRes();
     await handler(req, res);
     expect(res.status).toHaveBeenCalledWith(400);
@@ -149,7 +149,7 @@ describe('/api/auth/register'', () => {;
         session: mockSession});
       expect(res.setHeader).toHaveBeenCalledWith(;
   'Set-Cookie',;
-        `authToken=${mockSession.access_token}; HttpOnly; Path=/; Secure; SameSite=Strict`;
+        `authToken=${mockSession.access_token} HttpOnly Path=/ Secure SameSite=Strict`;
       );
     });
   });

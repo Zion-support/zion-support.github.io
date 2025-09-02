@@ -298,7 +298,7 @@ interface SearchResult {;
 ;
   // Handle search;
   const handleSearch = (e: React.FormEvent) => {;
-    e.preventDefault();    if (searchQuery.trim()) {;
+    e.preventDefault()    if (searchQuery.trim()) {;
       setSearchParams({ q: searchQuery.trim() });
       setIsSearching(true);
       setTimeout(() => setIsSearching(false), 1000)}
@@ -310,7 +310,7 @@ interface SearchResult {;
     setSelectedFilters (newFilters) };
 ;
   // Clear all filters;
-    setSelectedTags([]);,;
+    setSelectedTags([]);;
   setSearchQuery(';
   ');
     setSearchParams({})};
@@ -331,7 +331,7 @@ interface SearchResult {;
       case;
   'blog': return BookOpen';
       case;
-  'case-study': return FileText';      case;
+  'case-study': return FileText'      case;
   'documentation: return Code;
       default: return FileText}
   };

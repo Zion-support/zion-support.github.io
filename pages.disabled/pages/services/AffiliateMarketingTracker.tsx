@@ -80,7 +80,7 @@ export default function AffiliateMarketingTracker(...args[]):  {}
   ]},';
   ]},;
     {'
-      title: 'Scale Efficiently',';      description: 'Manage thousands of affiliates with automated systems and smart workflows.',;
+      title: 'Scale Efficiently','      description: 'Manage thousands of affiliates with automated systems and smart workflows.',;
       icon: Users};
   ];
 ;

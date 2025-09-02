@@ -24,7 +24,7 @@
       title: 'Insecure Dependencies',';
       description: 'Identify and update vulnerable third-party libraries and dependencies.',';
       icon: Package,';
-      examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']};  ];
+      examples: ['Dependency scanning', 'Vulnerability databases', 'Update automation', 'License compliance']}  ];
   return();
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       {/* Hero Section */}'';

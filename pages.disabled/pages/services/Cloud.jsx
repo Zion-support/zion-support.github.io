@@ -23,7 +23,7 @@ const CloudServices = () => {;
             price: 'From $6,500/month','';
             features['Identity and access management', 'Data encryption', 'Compliance monitoring', 'Security auditing']
 :pages.disabled/pages/services/Cloud.jsx;
-        }']';    return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>'';
+        }']'    return (<div className='min-h-screen bg-gradient-to-br from-slate-50 to-slate-100'>'';
       <section className='pt-24 pb-16 bg-gradient-to-r from-slate-900 to-slate-800 text-white'>'';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>'';
           <div className='text-center'>'';

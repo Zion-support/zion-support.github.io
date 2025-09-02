@@ -174,7 +174,7 @@ class BuildHealthMonitor {;
   async hasNextJSImports() {;
     try {;
       const result = execSync(;
-        `find src -type f \\( -name '*.tsx' -o -name '*.ts' -o -name '*.jsx' -o -name '*.js' \\) -exec grep -l 'next/' {} \\`;,;
+        `find src -type f \\( -name '*.tsx' -o -name '*.ts' -o -name '*.jsx' -o -name '*.js' \\) -exec grep -l 'next/' {} \\`;;
         { cwd: this.projectRoot, encoding: 'utf8;
   ' }
       );
@@ -204,7 +204,7 @@ class BuildHealthMonitor {;
         .map(line => line.trim());
         .filter(line => line.length > 0);
 ;
-      return errors.slice(0, 10); // Limit to first 10 errors;
+      return errors.slice(0, 10) // Limit to first 10 errors;
     }
   }
 ;
@@ -219,7 +219,7 @@ class BuildHealthMonitor {;
         try {;
           require.resolve(dep);
         } catch (e) {;
-          return true; // Missing dependency;
+          return true // Missing dependency;
         }
       }
 ;
@@ -243,7 +243,7 @@ class BuildHealthMonitor {;
       if (configContent.includes(;
   'require(') && configContent.includes(;
   'export default')) {;
-        return true; // Mixed module systems;
+        return true // Mixed module systems;
       }
 ;
       return false;
@@ -531,7 +531,7 @@ export default defineConfig({;
     const lastBuild = this.lastBuildTime || 0;
     const timeSinceLastBuild = now - lastBuild;
 ;
-    return timeSinceLastBuild > 3600000 || this.fixCount > 0; // 1 hour or after fixes;
+    return timeSinceLastBuild > 3600000 || this.fixCount > 0 // 1 hour or after fixes;
   }
 ;
   async testBuild() {;
@@ -687,7 +687,7 @@ export default defineConfig({;
       if (fs.existsSync(logsDir)) {;
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
-        const maxAge = 7 * 24 * 60 * 60 * 1000; // 7 days;
+        const maxAge = 7 * 24 * 60 * 60 * 1000 // 7 days;
         for (const filePath = path.join(logsDir, file);
           const stats = fs.statSync(filePath);
 ;
@@ -774,7 +774,7 @@ setInterval(() => {;
   // Heartbeat;
   const stats = monitor.getStats();
   monitor.log(`Monitor heartbeat - Errors: ${stats.errorCount}, Fixes: ${stats.fixCount}, Uptime: ${Math.round(stats.uptime)}s`);
-}, 300000); // Every 5 minutes;
+}, 300000) // Every 5 minutes;
 ;
 export default traverse;
 export default traverse;

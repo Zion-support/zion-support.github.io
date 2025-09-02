@@ -12,4 +12,4 @@ export interface Listing {
    name: string;
    rating: number;
    reviews: number;
-}; location: string; ;
+} location: string ;

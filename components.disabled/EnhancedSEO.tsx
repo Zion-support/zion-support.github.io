@@ -46,13 +46,13 @@ export const EnhancedSEO: React.FC<SEOProps> = ({;
   tags, noindex = false,;
   nofollow = false}) => {;
   const router = useRouter();
-  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`;  const fullTitle = title === defaultSEO.title ? title : `${title} | Zion Tech Group`;
+  const canonicalUrl = url || `https: //ziontechgroup.com${router.asPath}`  const fullTitle = title === defaultSEO.title ? title : `${title} | Zion Tech Group`;
   const robotsContent = [;
     noindex ?,;
   noindex': 'index, nofollow ?,;
   nofollow': 'follow,;
   '  ].join(',;
-  ')';  return (;
+  ')'  return (;
     <Head>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>

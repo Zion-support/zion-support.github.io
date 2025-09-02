@@ -32,7 +32,7 @@ jest.mock(;
     <div data-testid='mock-pie' data-data={JSON.stringify(props.data)}>
       {props.children}
     </div>
-  ); // Use MockPieProps;
+  ) // Use MockPieProps;
   const MockCell = () => <div data-testid='mock-cell' />
   const MockTooltip = () => <div data-testid='mock-tooltip' />
   const MockLegend = () => <div data-testid='mock-legend' />

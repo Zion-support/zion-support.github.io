@@ -1,7 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from;
-  'react'; import { motion } from;
-  'framer-motion'; import { AlertTriangle, RefreshCw, Home, Bug } from;
-  'lucide-react'; interface Props {;
+  'react' import { motion } from;
+  'framer-motion' import { AlertTriangle, RefreshCw, Home, Bug } from;
+  'lucide-react' interface Props {;
   children: ReactNode;
    fallback?: ReactNode;
    onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -9,4 +9,4 @@ import React, { Component, ErrorInfo, ReactNode } from;
   hasError: boolean;
    error?: Error;
    errorInfo?: ErrorInfo;
-} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false }; } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }); this.props.onError?.(error, errorInfo)';
+} export class ErrorBoundary extends Component<Props, State> { constructor(props: Props) { super(props) this.state = { hasError: false } } static getDerivedStateFromError(error: Error): State { return { hasError: true, error } } componentDidCatch(error: Error, errorInfo: ErrorInfo) { this.setState({ error, errorInfo }) this.props.onError?.(error, errorInfo)';

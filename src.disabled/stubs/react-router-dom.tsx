@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Link: React.FC<{ to?: string; href?: string; className?: string; children?: React.ReactNode } & React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({ to, href, children, ...rest }) => {;
+export const Link: React.FC<{ to?: string href?: string className?: string children?: React.ReactNode } & React.AnchorHTMLAttributes<HTMLAnchorElement>> = ({ to, href, children, ...rest }) => {;
 	return (
 		<a href={to || href || '#'} {...rest}>
 			{children}

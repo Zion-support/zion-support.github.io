@@ -1,21 +1,21 @@
-// import { NextPage   } from 'next.ts'; // Removed;
-import React from 'react.ts'; // Ensure React is imported if not already for FC type;
-import { AppLayout   } from '@/src/src/layout/AppLayout'; // Assuming a general AppLayout exists;
+// import { NextPage   } from 'next.ts' // Removed;
+import React from 'react.ts' // Ensure React is imported if not already for FC type;
+import { AppLayout   } from '@/src/src/layout/AppLayout' // Assuming a general AppLayout exists;
 import { Button   } from '@/src/src/components/ui/button';
 import { Input   } from '@/src/src/components/ui/input';
 import { Textarea   } from '@/src/src/components/ui/textarea';
 import { Label   } from '@/src/src/components/ui/label';
-import { Switch   } from '@/src/src/components/ui/switch'; // Added for new fields;
+import { Switch   } from '@/src/src/components/ui/switch' // Added for new fields;
 import { useForm, Controller, type SubmitHandler   } from 'react-hook-form.ts';
 import { zodResolver   } from '@hookform/resolvers/zod';
 import * as z from 'zod.ts';
-import { Steps, Step   } from '@/src/src/components/ui/steps'; // Assuming this is how steps are imported;
+import { Steps, Step   } from '@/src/src/components/ui/steps' // Assuming this is how steps are imported;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter   } from '@/src/src/components/ui/card';
 import { useState   } from 'react.ts';
-import { ProjectBrief, TeamRecommendation   } from '@/src/src/types'; // Import from barrel file;
-import { toast   } from 'sonner.ts'; // Or use-toast if that's the project's standard;
+import { ProjectBrief, TeamRecommendation   } from '@/src/src/types' // Import from barrel file;
+import { toast   } from 'sonner.ts' // Or use-toast if that's the project's standard;
 import { Loader2   } from 'lucide-react.ts';
-import { TeamRecommendationDisplay   } from '@/src/src/components/team-builder/TeamRecommendationDisplay'; // New import;
+import { TeamRecommendationDisplay   } from '@/src/src/components/team-builder/TeamRecommendationDisplay' // New import;
 // Define Zod schema for form validation;
 const projectBriefSchema = z.object({;
   projectName: z.string().min(3, 'Project name must be at least 3 characters'),;
@@ -104,7 +104,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       const recommendationResult = await response.json();
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
-      // setCurrentStep((prev) => prev + 1); // No longer using steps for display, display immediately;
+      // setCurrentStep((prev) => prev + 1) // No longer using steps for display, display immediately;
     } catch (error: ) {;
       console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.');
@@ -155,7 +155,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
   };
 ;
   const renderRecommendation: React.FC = ($2) => {;
-    if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available;
+    if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available;
     return (
       <TeamRecommendationDisplay
         recommendation = {teamRecommendation}

@@ -27,9 +27,9 @@ error, errorInfo});
 ;
     // Log error to monitoring service;
     console.error(,;
-  Error caught by boundary: , error, errorInfo)';    // In production, you would send this to your error tracking service;
+  Error caught by boundary: , error, errorInfo)'    // In production, you would send this to your error tracking service;
     if (process.env.NODE_ENV === 'production;
-  ') {'      // Example: Sentry.captureException(error, { extra: errorInfo })';    }}
+  ') {'      // Example: Sentry.captureException(error, { extra: errorInfo })'    }}
 ;
   handleRetry = () => {;
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });

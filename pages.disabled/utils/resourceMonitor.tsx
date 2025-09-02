@@ -19,7 +19,7 @@ class ResourceMonitor {}
     this.isMonitoring = true;
     this.setupErrorListeners () ;
     this.setupResourceObservers () ;
-    this.monitorCriticalResources () ;,;
+    this.monitorCriticalResources () ;;
   console.log ('🔍 Resource Monitor started;
   ') }: pages.disabled/utils/resourceMonitor.tsx  stop() {;
     this.isMonitoring = false';
@@ -147,13 +147,13 @@ class ResourceMonitor {}
   type;
   ']) {;
     if (attempts >= this.maxRetries) {;
-`console.warn (`Max retry attempts reached for ${url}`) ;      return}
+`console.warn (`Max retry attempts reached for ${url}`)       return}
 ;
     this.retryAttempts.set (url, attempts + 1) ;
 ;
     setTimeout ( () => {}
         this.retryResource (url, type) },;
-      Math.pow (2, attempts) * 1000) ; // Exponential backoff;
+      Math.pow (2, attempts) * 1000)  // Exponential backoff;
   }: pages.disabled/utils/resourceMonitor.tsx;
   private retryResource (url: string, type: ResourceError[;
   'type']) {`;

@@ -16,4 +16,4 @@ export interface ComprehensivePricingService {
    contactInfo: { phone: string;
    email: string;
    website: string;
-}; competitors?: string[]; marketSize?: string; demoUrl?: string; documentationUrl?: string; }; export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [;
+} competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const COMPREHENSIVE_PRICING_2025: ComprehensivePricingService[] = [;

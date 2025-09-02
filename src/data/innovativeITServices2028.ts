@@ -22,4 +22,4 @@ export interface InnovativeITService2028 {
    email: string;
    website: string;
    address: string;
-}; technicalSpecs?: { technology: string[] integrations: string[]; certifications: string[]; uptime: string; security: string[];  }; competitors?: string[]; marketSize?: string; uniqueValueProposition: string; sla: string; responseTime: string; }; export const INNOVATIVE_IT_SERVICES_2028: InnovativeITService2028[] = [;
+} technicalSpecs?: { technology: string[] integrations: string[] certifications: string[] uptime: string security: string[]  } competitors?: string[] marketSize?: string uniqueValueProposition: string sla: string responseTime: string } export const INNOVATIVE_IT_SERVICES_2028: InnovativeITService2028[] = [;

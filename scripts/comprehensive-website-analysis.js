@@ -62,7 +62,7 @@ class WebsiteAnalyzer {;
 ;
     console.log(;
   '\n✅ Analysis completed!');
-    console.log(`📊 Total links checked: ${this.results.summary.totalLinksChecked}`);    console.log(`🔗 Working links: ${this.results.summary.workingLinks}`);
+    console.log(`📊 Total links checked: ${this.results.summary.totalLinksChecked}`)    console.log(`🔗 Working links: ${this.results.summary.workingLinks}`);
     console.log(`❌ Broken links: ${this.results.summary.brokenLinks}`);
     console.log(`🔄 Redirects: ${this.results.summary.redirects}`);
     console.log(`📄 Missing pages: ${this.results.summary.missingPages}`);
@@ -98,7 +98,7 @@ class WebsiteAnalyzer {;
             if (link.startsWith(;
   '/') || link.startsWith(BASE_URL)) {;
               const fullUrl = link.startsWith(;
-  '/') ? `${BASE_URL}${link}` : link;              if (!this.checkedUrls.has(fullUrl)) {;
+  '/') ? `${BASE_URL}${link}` : link              if (!this.checkedUrls.has(fullUrl)) {;
                 this.linkQueue.push({ url: fullUrl, parentUrl: url });
               }
             }
@@ -315,7 +315,7 @@ class WebsiteAnalyzer {;
     // Save report;
     const reportPath = path.join(__dirname, '..;
   ', 'comprehensive-website-analysis-report.json;
-  ');    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
+  ')    fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
 ;
     console.log(`📄 Report saved to: ${reportPath}`);
   }

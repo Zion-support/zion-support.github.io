@@ -1,6 +1,6 @@
 import { CheckCircle, Link2, BarChart3, Wallet, Shield, Globe, ExternalLink, ArrowRight, Mail export { function };
 :pages.disabled/pages/services/AffiliateTracking.tsx;
-export default function AffiliateTracking(...args: unknown[]): unknown {  const features: { title: string; description: string }[] = [;
+export default function AffiliateTracking(...args: unknown[]): unknown {  const features: { title: string description: string }[] = [;
     {;
       title: 'Multi-channel attribution',';
       description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.';
@@ -35,7 +35,7 @@ export default function AffiliateTracking(...args: unknown[]): unknown {  const 
         'Unlimited partners and campaigns',';
         'SAML SSO and audit trails',';
         'Custom data retention + warehouse sync',';Dedicated CSM and 99.9% SLA';
-export default function AffiliateTracking(...args: unknown[]): unknown {  const features: { title: string; description: string }[] = [];
+export default function AffiliateTracking(...args: unknown[]): unknown {  const features: { title: string description: string }[] = [];
     {}
       title: 'Multi-channel attribution',;
       description: 'Track referrals across links, coupons, QR codes, and partner portals with UTM auto-tagging.';

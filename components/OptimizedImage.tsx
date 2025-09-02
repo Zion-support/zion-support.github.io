@@ -174,7 +174,7 @@ return();
   '        className={`bg-gray-200 dark: bg-gray-700 animate-pulse ${className}`}',;
   '        style={{ width: fill ? '100% : width, height: fill ? '100%;
   ' : height }}'      />;
-  '    )`;  }
+  '    )`  }
 ;
   return();
     <div``      ref={imageRef}```      className={`relative ${className}`}`      style={style}

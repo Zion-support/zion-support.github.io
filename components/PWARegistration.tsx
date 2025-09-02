@@ -82,7 +82,7 @@ import { motion, AnimatePresence  } from 'lucide-react';import { Download, X, Sm
     outcome: 'accepted;
   ' | 'dismissed;
   ;
-   platform: string;  }>;prompt(): Promise<void>
+   platform: string  }>;prompt(): Promise<void>
 }
 const PWARegistration: React.FC = () => {;
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
@@ -106,20 +106,20 @@ const handleAppInstalled = () => {;setIsInstalled(true);
     };
 ;
 window.addEventListener(,;
-  beforeinstallprompt', handleBeforeInstallPrompt)';    window.addEventListener(;
-  'appinstalled', handleAppInstalled)';    // Register service worker;
+  beforeinstallprompt', handleBeforeInstallPrompt)'    window.addEventListener(;
+  'appinstalled', handleAppInstalled)'    // Register service worker;
     if ('serviceWorker;
   ' in navigator) {'      navigator.serviceWorker.register(;
   '/sw.js');
   '        .then((registration) => {'          console.log(;
   'Service Worker registered successfully: , registration);});
   '        .catch((error) => {;
-          console.log('Service Worker registration failed: , error)';        })';    }
+          console.log('Service Worker registration failed: , error)'        })'    }
 ;
     return () => {;
       window.removeEventListener(;
-  'beforeinstallprompt', handleBeforeInstallPrompt)';      window.removeEventListener(;
-  'appinstalled', handleAppInstalled)';    }';  }, []);
+  'beforeinstallprompt', handleBeforeInstallPrompt)'      window.removeEventListener(;
+  'appinstalled', handleAppInstalled)'    }'  }, []);
   const handleInstallClick = async () => {;if (!deferredPrompt) return;
 ;
     deferredPrompt.prompt();
@@ -128,9 +128,9 @@ window.addEventListener(,;
 if (outcome ===;
   'accepted') {;
   '      console.log('User accepted the install prompt;
-  ')';    } else {;
+  ')'    } else {;
   '      console.log('User dismissed the install prompt;
-  ')';    }'setDeferredPrompt(null);    setShowInstallPrompt(false);
+  ')'    }'setDeferredPrompt(null)    setShowInstallPrompt(false);
   };
 ;
 const handleDismiss = () => {;setShowInstallPrompt(false);

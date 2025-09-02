@@ -49,7 +49,7 @@ export default function AIDevelopmentService() {
           <ol className='mt-4 list-decimal list-inside text-gray-700 space-y-2'>
             <li>Book a 30-minute discovery call.</li>
             <li>We propose an architecture, scope, and timeline.</li>
-            <li>Rapid prototype within 1–2 weeks; iterate to production.</li>
+            <li>Rapid prototype within 1–2 weeks iterate to production.</li>
           </ol>
           <div className='mt-6'>
             <Link href='/contact' className='inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold'>Talk to an AI architect</Link>

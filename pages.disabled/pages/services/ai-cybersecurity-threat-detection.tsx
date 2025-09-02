@@ -51,7 +51,7 @@ export default function AICybersecurityThreatDetection(...args: []):  {
   ]},;
     {;
       title: 'Insider Threats',;
-      description: 'Behavioral analysis detects unusual user activities and data access patterns',;        title='AI Cybersecurity Threat Detection - Zion Tech Group''        description='Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month.';
+      description: 'Behavioral analysis detects unusual user activities and data access patterns',        title='AI Cybersecurity Threat Detection - Zion Tech Group''        description='Advanced AI-powered cybersecurity platform with 99.9% threat detection rate. Real-time monitoring, automated response, and zero-day attack prevention. Start from $499/month.';
        />';
       {/* Hero Section */}'';
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>'';

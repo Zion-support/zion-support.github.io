@@ -50,7 +50,7 @@ export default function AICustomerServiceAutomation() {}
             price: '$199','';
             period: '/month','';
 :pages.disabled/pages/services/AICustomerServiceAutomation.jsx;
-            description: 'Perfect for small businesses and startups','features[';                'Up to 1,000 conversations/month','';
+            description: 'Perfect for small businesses and startups','features['                'Up to 1,000 conversations/month','';
                 'Basic AI chatbot','';
                 'Email and chat support','';
                 'Email support','';
@@ -66,7 +66,7 @@ export default function AICustomerServiceAutomation() {}
             price: '$599','';
             period: '/month','';
 :pages.disabled/pages/services/AICustomerServiceAutomation.jsx;
-            description: 'Ideal for growing businesses and mid-size companies','features[';                'Up to 10,000 conversations/month','';
+            description: 'Ideal for growing businesses and mid-size companies','features['                'Up to 10,000 conversations/month','';
                 'Advanced AI chatbot','';
                 'Multi-channel support','';
                 'Priority support','';
@@ -84,7 +84,7 @@ export default function AICustomerServiceAutomation() {}
             price: '$1,999','';
             period: '/month','';
 :pages.disabled/pages/services/AICustomerServiceAutomation.jsx;
-            description: 'For large corporations and global customer service teams','features[';                'Unlimited conversations','';
+            description: 'For large corporations and global customer service teams','features['                'Unlimited conversations','';
                 'Custom AI models','';
                 'Omnichannel support','';
                 'Dedicated support team','';

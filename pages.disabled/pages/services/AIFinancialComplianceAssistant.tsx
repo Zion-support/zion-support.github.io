@@ -125,7 +125,7 @@ export default function AIFinancialComplianceAssistant(...args[]): {  ;
       icon: BookOpen};
   ]},';
     {'
-      title: 'Fintech Startups',';      description: 'Rapid compliance scaling for growing financial technology companies',;
+      title: 'Fintech Startups','      description: 'Rapid compliance scaling for growing financial technology companies',;
       icon: Zap};
   ];
 :pages.disabled/pages/services/AIFinancialComplianceAssistant.tsx;

@@ -6,14 +6,14 @@ export async /**;
 function register () {;
   try {;
     try {;
-    ; try {; const res = await fetch ('/api / auth / register', { method: 'POST', headers: { 'Content - Type': 'application / json'; ;
+     try { const res = await fetch ('/api / auth / register', { method: 'POST', headers: { 'Content - Type': 'application / json' ;
   } catch (error) {;
     console.error ('Error in register:', error) ;
   }
 } catch (error) {;
     console.error ('Error in register:', error) ;
   }
-} catch (error) { console.error ('Error in register: ', error) ; }; }, body: JSON.stringify ({ name, email, password }) }) ; const data = await res.json () .catch ( () => ({}) ) ; return { res, data }; } export async /**;
+} catch (error) { console.error ('Error in register: ', error)  } }, body: JSON.stringify ({ name, email, password }) })  const data = await res.json () .catch ( () => ({}) )  return { res, data } } export async /**;
  * forgotPassword function;
  * @param {*} params - Function parameters;
  * @returns {*} Function return value;
@@ -21,12 +21,12 @@ function register () {;
 function forgotPassword () {;
   try {;
     try {;
-    ; try {'; const res = await fetch ('/api / auth / forgot', { method: 'POST', headers: { 'Content - Type': 'application / json'; ;
+     try {' const res = await fetch ('/api / auth / forgot', { method: 'POST', headers: { 'Content - Type': 'application / json' ;
   } catch (error) {;
     console.error ('Error in forgotPassword:', error) ;
   }
 } catch (error) {;
     console.error ('Error in forgotPassword:', error) ;
   }
-} catch (error) { console.error ('Error in forgotPassword: ', error) ; }; }, body: JSON.stringify ({ email }) }) ; const data = await res.json () .catch ( () => ({}) ) ';
-} catch (error) { console.error ('Error in forgotPassword: ', error) ; }; }, body: JSON.stringify ({ email }) }) ; const data = await res.json () .catch ( () => ({}) ) ';'";
+} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email }) })  const data = await res.json () .catch ( () => ({}) ) ';
+} catch (error) { console.error ('Error in forgotPassword: ', error)  } }, body: JSON.stringify ({ email }) })  const data = await res.json () .catch ( () => ({}) ) ';'";

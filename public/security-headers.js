@@ -40,7 +40,7 @@ const securityHeaders = {
   ': 'nosniff,;
   // X-XSS-Protection,;
   X-XSS-Protection;
-  ': '1; mode=block,;
+  ': '1 mode=block,;
   // Referrer Policy,;
   Referrer-Policy;
   ': 'strict-origin-when-cross-origin,;
@@ -50,7 +50,7 @@ const securityHeaders = {
   ,),;
   // Strict-Transport-Security;
   'Strict-Transport-Security;
-  ': 'max-age=31536000; includeSubDomains; preload,;
+  ': 'max-age=31536000 includeSubDomains preload,;
   // Cross-Origin-Embedder-Policy,;
   Cross-Origin-Embedder-Policy;
   ': 'require-corp,;

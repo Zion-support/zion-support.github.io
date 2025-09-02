@@ -1,6 +1,6 @@
 import React from;
-  'react'; import { Helmet } from;
-  'react-helmet-async'; interface SEOEnhancerProps {;
+  'react' import { Helmet } from;
+  'react-helmet-async' interface SEOEnhancerProps {;
   title?: string;
    description?: string;
    keywords?: string;
