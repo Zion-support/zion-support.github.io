@@ -64,7 +64,8 @@ import {
   Award,
   Leaf,
   Sun,
-  Wind
+  Wind,
+  RefreshCw
 } from 'lucide-react';
 
 interface SidebarProps extends React.PropsWithChildren<{}> {
@@ -98,68 +99,20 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       { name: 'Contact', href: '/contact', icon: Phone },
     ],
     services: [
-      {
-        name: 'AI & Machine Learning',
-        icon: Brain,
-        children: [
-          { name: 'AI Development', href: '/services/ai-development' },
-          { name: 'Machine Learning', href: '/services/machine-learning' },
-          { name: 'Natural Language Processing', href: '/services/nlp' },
-          { name: 'Computer Vision', href: '/services/computer-vision' },
-        ]
-      },
-      {
-        name: 'Cloud & Infrastructure',
-        icon: Cloud,
-        children: [
-          { name: 'Cloud Migration', href: '/services/cloud-migration' },
-          { name: 'DevOps', href: '/services/devops' },
-          { name: 'Microservices', href: '/services/microservices' },
-          { name: 'Containerization', href: '/services/containerization' },
-        ]
-      },
-      {
-        name: 'Web Development',
-        icon: Code,
-        children: [
-          { name: 'Frontend Development', href: '/services/frontend' },
-          { name: 'Backend Development', href: '/services/backend' },
-          { name: 'Full-Stack Development', href: '/services/fullstack' },
-          { name: 'E-commerce Solutions', href: '/services/ecommerce' },
-        ]
-      },
-      {
-        name: 'Cybersecurity',
-        icon: Shield,
-        children: [
-          { name: 'Security Audits', href: '/services/security-audits' },
-          { name: 'Penetration Testing', href: '/services/penetration-testing' },
-          { name: 'Compliance', href: '/services/compliance' },
-          { name: 'Incident Response', href: '/services/incident-response' },
-        ]
-      },
+      { name: 'AI Services', href: '/ai-services', icon: Brain },
+      { name: 'IT Services', href: '/it-services', icon: Network },
+      { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud },
+      { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud },
+      { name: 'Web Development', href: '/services/web-development', icon: Code },
+      { name: 'All Services', href: '/services', icon: Briefcase },
     ],
     solutions: [
-      {
-        name: 'Industry Solutions',
-        icon: Building2,
-        children: [
-          { name: 'Healthcare', href: '/solutions/healthcare' },
-          { name: 'Finance', href: '/solutions/finance' },
-          { name: 'Education', href: '/solutions/education' },
-          { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        ]
-      },
-      {
-        name: 'Technology Solutions',
-        icon: Cpu,
-        children: [
-          { name: 'IoT Platforms', href: '/solutions/iot' },
-          { name: 'Blockchain', href: '/solutions/blockchain' },
-          { name: 'Quantum Computing', href: '/solutions/quantum' },
-          { name: 'AR/VR', href: '/solutions/ar-vr' },
-        ]
-      },
+      { name: 'Custom Development', href: '/solutions/custom-development', icon: Code },
+      { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: RefreshCw },
+      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 },
+      { name: 'AI Content Creation', href: '/solutions/ai-content-creation', icon: PenTool },
+      { name: 'Workflow Automation', href: '/solutions/workflow-automation', icon: Zap },
+      { name: 'All Solutions', href: '/solutions', icon: Target },
     ],
     resources: [
       { name: 'Documentation', href: '/docs', icon: BookOpen },

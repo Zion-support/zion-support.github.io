@@ -15,6 +15,8 @@ const Navigation: React.FC = () => {
         { name: 'AI Services', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
         { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cloud Services', href: '/services/cloud-services' },
+        { name: 'Web Development', href: '/services/web-development' },
         { name: 'All Services', href: '/services' }
       ]
     }, 
@@ -25,6 +27,8 @@ const Navigation: React.FC = () => {
         { name: 'Custom Development', href: '/solutions/custom-development' },
         { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
         { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
+        { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
         { name: 'All Solutions', href: '/solutions' }
       ]
     },
@@ -35,10 +39,20 @@ const Navigation: React.FC = () => {
         { name: 'About Us', href: '/about' },
         { name: 'Our Team', href: '/team' },
         { name: 'Careers', href: '/careers' },
-        { name: 'Partners', href: '/partners' }
+        { name: 'Partners', href: '/partners' },
+        { name: 'Case Studies', href: '/case-studies' }
       ]
     },
-    { name: 'Blog', href: '/blog' },
+    {
+      name: 'Resources',
+      href: '/blog',
+      dropdown: [
+        { name: 'Blog', href: '/blog' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'Help Center', href: '/help' },
+        { name: 'Pricing Guide', href: '/pricing-guide' }
+      ]
+    },
     { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }
   ];

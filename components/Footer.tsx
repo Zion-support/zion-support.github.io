@@ -10,12 +10,16 @@ const Footer: React.FC = () => {
       { name: 'AI Services', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
       { name: 'Micro SaaS', href: '/micro-saas' },
+      { name: 'Cloud Services', href: '/services/cloud-services' },
+      { name: 'Web Development', href: '/services/web-development' },
       { name: 'All Services', href: '/services' }
     ], 
     solutions: [
       { name: 'Custom Development', href: '/solutions/custom-development' }, 
       { name: 'Digital Transformation', href: '/solutions/digital-transformation' }, 
       { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
+      { name: 'AI Content Creation', href: '/solutions/ai-content-creation' },
+      { name: 'Workflow Automation', href: '/solutions/workflow-automation' },
       { name: 'All Solutions', href: '/solutions' }
     ], 
     company: [
@@ -23,13 +27,14 @@ const Footer: React.FC = () => {
       { name: 'Our Team', href: '/team' }, 
       { name: 'Careers', href: '/careers' },
       { name: 'Partners', href: '/partners' },
+      { name: 'Case Studies', href: '/case-studies' },
       { name: 'Contact', href: '/contact' }
     ], 
     resources: [
       { name: 'Blog', href: '/blog' }, 
-      { name: 'Case Studies', href: '/case-studies' }, 
       { name: 'Documentation', href: '/docs' }, 
-      { name: 'Support', href: '/help' },
+      { name: 'Help Center', href: '/help' },
+      { name: 'Pricing Guide', href: '/pricing-guide' },
       { name: 'Pricing', href: '/pricing' }
     ]
   };
