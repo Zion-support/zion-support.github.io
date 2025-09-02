@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
-import Head from 'next/head';
 
 const PerformanceOptimizer: React.FC = () => {
   useEffect(() => {
     // Preload critical resources
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/images/hero-bg.jpg',
-        '/images/logo.png',
-        '/images/og-image.jpg'
+        '/og-image.jpg',
+        '/favicon.ico'
       ];
 
       criticalImages.forEach(src => {
@@ -20,7 +18,7 @@ const PerformanceOptimizer: React.FC = () => {
       });
     };
 
-    // Lazy load non-critical images
+    // Lazy load images
     const lazyLoadImages = () => {
       const images = document.querySelectorAll('img[data-src]');
       const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -68,61 +66,7 @@ const PerformanceOptimizer: React.FC = () => {
     return cleanup;
   }, []);
 
-  return (
-    <Head>
-      {/* Performance hints */}
-      <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-      <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      
-      {/* Resource hints */}
-      <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      
-      {/* Critical CSS inline */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          /* Critical above-the-fold styles */
-          .hero-section {
-            background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #3730a3 100%);
-          }
-          
-          /* Smooth scrolling */
-          html {
-            scroll-behavior: smooth;
-          }
-          
-          /* Optimize animations */
-          * {
-            will-change: auto;
-          }
-          
-          .animate-gradient {
-            background-size: 200% 200%;
-            animation: gradient 6s ease infinite;
-          }
-          
-          @keyframes gradient {
-            0%, 100% {
-              background-position: 0% 50%;
-            }
-            50% {
-              background-position: 100% 50%;
-            }
-          }
-          
-          /* Reduce motion for accessibility */
-          @media (prefers-reduced-motion: reduce) {
-            * {
-              animation-duration: 0.01ms !important;
-              animation-iteration-count: 1 !important;
-              transition-duration: 0.01ms !important;
-            }
-          }
-        `
-      }} />
-    </Head>
-  );
+  return null;
 };
 
 export default PerformanceOptimizer;

@@ -10,39 +10,57 @@ const Footer: React.FC = () => {
       title: 'Micro SaaS',
       services: [
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
-        { name: 'Project Management', href: '/services/project-management-suite' },
-        { name: 'Inventory Tracker', href: '/services/inventory-management' },
-        { name: 'Customer Support', href: '/services/customer-support-platform' },
-        { name: 'Social Media Automation', href: '/services/social-media-automation' },
-        { name: 'Email Marketing Pro', href: '/services/email-marketing-automation' },
-        { name: 'HR Management', href: '/services/hr-management-system' },
-        { name: 'Financial Analytics', href: '/services/financial-analytics-dashboard' },
+        { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
+        { name: 'Mobile Survey Platform', href: '/services/mobile-survey-platform' },
+        { name: 'Event Management Dashboard', href: '/services/event-management-dashboard' },
+        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer' },
+        { name: 'AI Talent Matching', href: '/services/ai-talent-matching' },
+        { name: 'AI Recruiting Platform', href: '/services/ai-recruiting-platform' },
+        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' },
+        { name: 'Project Management Suite', href: '/services/project-management-suite' },
+        { name: 'Social Media Scheduler', href: '/services/social-media-scheduler' },
+        { name: 'Expense Tracker', href: '/services/expense-tracker' },
+        { name: 'Lead Scoring Platform', href: '/services/lead-scoring-platform' },
+        { name: 'Time Tracking Analytics', href: '/services/time-tracking-analytics' },
+        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
+        { name: 'Website Speed Optimizer', href: '/services/website-speed-optimizer' },
       ]
     },
     {
       title: 'IT Services',
       services: [
         { name: 'Cloud Migration', href: '/services/cloud-migration' },
-        { name: 'Cybersecurity', href: '/services/cybersecurity-audit' },
-        { name: 'DevOps Automation', href: '/services/devops-automation' },
-        { name: 'Data Backup', href: '/services/data-backup-recovery' },
-        { name: 'Blockchain Development', href: '/services/blockchain-development' },
-        { name: 'IoT Solutions', href: '/services/iot-solutions' },
-        { name: 'API Development', href: '/services/api-development-integration' },
-        { name: 'Mobile App Development', href: '/services/mobile-app-development' },
+        { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },
+        { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
+        { name: 'Zero Trust Security', href: '/services/zero-trust-security' },
+        { name: '5G Network Implementation', href: '/services/5g-network-implementation' },
+        { name: 'Hyperautomation Platform', href: '/services/hyperautomation-platform' },
+        { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
+        { name: 'API Gateway Setup', href: '/services/api-gateway-setup' },
+        { name: 'Database Optimization', href: '/services/database-optimization' },
+        { name: 'Network Security Audit', href: '/services/network-security-audit' },
+        { name: 'Disaster Recovery Planning', href: '/services/disaster-recovery-planning' },
+        { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
+        { name: 'Performance Monitoring', href: '/services/performance-monitoring' },
       ]
     },
     {
       title: 'AI Services',
       services: [
+        { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
+        { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
+        { name: 'AI Space Exploration', href: '/services/ai-space-exploration' },
+        { name: 'AI Neuroscience Research', href: '/services/ai-neuroscience-research' },
+        { name: 'AI Robotics & Automation', href: '/services/ai-robotics-automation' },
+        { name: 'AI Financial Trading', href: '/services/ai-financial-trading' },
         { name: 'Custom AI Models', href: '/services/custom-ai-models' },
-        { name: 'Process Automation', href: '/services/ai-process-automation' },
-        { name: 'Analytics Platform', href: '/services/ai-analytics-platform' },
-        { name: 'Chatbot Development', href: '/services/ai-chatbot-development' },
-        { name: 'Computer Vision', href: '/services/computer-vision-solutions' },
+        { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
         { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
         { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
-        { name: 'Recommendation Engine', href: '/services/ai-powered-recommendation-engine' },
+        { name: 'Recommendation Engine', href: '/services/recommendation-engine' },
+        { name: 'AI-Powered Search', href: '/services/ai-powered-search' },
+        { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },
+        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
       ]
     }
   ];
@@ -51,7 +69,7 @@ const Footer: React.FC = () => {
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="text-2xl font-bold text-blue-400 mb-4">Zion Tech Group</div>
@@ -102,7 +120,7 @@ const Footer: React.FC = () => {
 
         {/* Quick Links */}
         <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div>
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Quick Links</h4>
               <ul className="space-y-2">
