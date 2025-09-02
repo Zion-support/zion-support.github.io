@@ -67,11 +67,7 @@
         "src/styles/*"
       ],
       "@data/*": [
-<<<<<<< HEAD
         "data/*"
-=======
-        "src/data/*"
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
       ],
       "@services/*": [
         "src/services/*"
@@ -103,7 +99,6 @@
   },
   "include": [
     "next-env.d.ts",
-<<<<<<< HEAD
     "pages/**/*",
     "components/**/*.ts",
     "components/**/*.tsx",
@@ -111,10 +106,6 @@
     "styles/**/*",
     "types/**/*",
     "utils/**/*",
-=======
-    "**/*.ts",
-    "**/*.tsx",
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -144,13 +135,10 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.backup",
-    "**/*.disabled"
-=======
+    "**/*.disabled",
     "components",
     "contracts",
     "cypress",
-    "**/*.backup",
-    "**/*.disabled",
     "temp_working",
     "supabase/functions",
     "src/utils/generateRandomListing.ts",
@@ -175,6 +163,5 @@
     "src/services/**",
     "src/types/**",
     "src/utils/**"
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
   ]
 }

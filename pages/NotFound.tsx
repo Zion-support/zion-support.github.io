@@ -4,42 +4,30 @@ import { SEO } from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { 
-  Home,
-  ArrowLeft,
-  Search,
-  HelpCircle,
-  Phone,
-  Mail,
-  Globe,
-  FileText,
-  Briefcase,
-  Users,
-  BookOpen,
-  DollarSign,
-  Calendar,
-  Award,
+  Home, ArrowLeft,
+  Search, HelpCircle,
+  Phone, Mail,
+  Globe, FileText,
+  Briefcase, Users,
+  BookOpen, DollarSign,
+  Calendar, Award,
   Shield
 } from 'lucide-react';
 
 const NotFound: React.FC = () => {
   const quickLinks = [
-    { name: "Home", url: "/", icon: Home },
-    { name: "Services", url: "/services", icon: Briefcase },
-    { name: "About", url: "/about", icon: Users },
-    { name: "Contact", url: "/contact", icon: Phone },
-    { name: "Blog", url: "/blog", icon: BookOpen },
-    { name: "Pricing", url: "/pricing", icon: DollarSign },
-    { name: "Team", url: "/team", icon: Award },
-    { name: "Webinars", url: "/webinars", icon: Calendar },
-    { name: "White Papers", url: "/white-papers", icon: FileText },
-    { name: "Privacy Policy", url: "/privacy", icon: Shield }
+    { name: "Home", url: "/", icon: Home }, { name: "Services", url: "/services", icon: Briefcase },
+    { name: "About", url: "/about", icon: Users }, { name: "Contact", url: "/contact", icon: Phone },
+    { name: "Blog", url: "/blog", icon: BookOpen }, { name: "Pricing", url: "/pricing", icon: DollarSign },
+    { name: "Team", url: "/team", icon: Award }, { name: "Webinars", url: "/webinars", icon: Calendar },
+    { name: "White Papers", url: "/white-papers", icon: FileText }, { name: "Privacy Policy", url: "/privacy", icon: Shield }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4">
       <SEO 
         title="Page Not Found - Zion Tech Group" 
-        description="The page you're looking for doesn't exist. Find what you need with our helpful navigation and search options."
+        description="The page you&apos;re looking for doesn&apos;t exist. Find what you need with our helpful navigation and search options."
       />
       
       <div className="max-w-4xl mx-auto text-center">
@@ -69,10 +57,10 @@ const NotFound: React.FC = () => {
           >
             <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2>
             <p className="text-xl text-gray-300 mb-6">
-              Sorry, the page you're looking for doesn't exist or has been moved.
+              Sorry, the page you&apos;re looking for doesn&apos;t exist or has been moved.
             </p>
             <p className="text-gray-400">
-              Don't worry, we'll help you find what you're looking for.
+              Don&apos;t worry, we&apos;ll help you find what you&apos;re looking for.''
             </p>
           </motion.div>
 
@@ -139,9 +127,9 @@ const NotFound: React.FC = () => {
             <div className="bg-slate-800/50 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-white mb-4">Still Need Help?</h3>
               <p className="text-gray-300 mb-6">
-                If you can't find what you're looking for, our team is here to help.
+                If you can&apos;t find what you&apos;re looking for, our team is here to help.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity"

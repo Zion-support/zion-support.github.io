@@ -1,4 +1,4 @@
-import React, { useState } from 'react';'import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';''interface FormData {name: string;
+import React, { useState } from 'react';'import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';''interface FormData {name: string;'
   email: string;
   company: string;
   service: string;
@@ -13,7 +13,7 @@ const [formData, setFormData] = useState<FormData>({;
   const [errors, setErrors] = useState<Partial<FormData>>({});
 
   const services = [;
-    'AI & Machine Learning', 'Cloud & DevOps','    'Cybersecurity', 'Web Development','    'Mobile Development', 'Data Analytics','    'Digital Transformation', 'Other','  ];'
+    'AI & Machine Learning', 'Cloud & DevOps','    'Cybersecurity', 'Web Development','    'Mobile Development', 'Data Analytics','    'Digital Transformation', 'Other','  ];''
   const validateForm = (): boolean => {;const newErrors: Partial<FormData> = {};
 
     if (!formData.name.trim()) {
@@ -73,16 +73,16 @@ name: '', email: '','        company: '', service: '','        message: ''});'  
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
-className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""      >"        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />"        <h3 className="text-2xl font-bold text-green-800 mb-2">"          Message Sent!"        </h3>
-        <p className="text-green-600">"          Thank you for reaching out. We&apos;ll get back to you within 24 hours.''        </p>'      </motion.div>);
+className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""      >"        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />"        <h3 className="text-2xl font-bold text-green-800 mb-2">"          Message Sent!"        </h3>"
+        <p className="text-green-600">"          Thank you for reaching out. We&apos;ll get back to you within 24 hours.''        </p>'      </motion.div>);'"
   }
 
   return (
-<div className="bg-white rounded-xl shadow-xl p-8">"      <div className="text-center mb-8">"        <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>"        <p className="text-gray-600 max-w-2xl mx-auto">"          Ready to transform your business? Let&apos;s discuss how our technology''          solutions can drive your success.'        </p>
+<div className="bg-white rounded-xl shadow-xl p-8">"      <div className="text-center mb-8">"        <h2 className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</h2>"        <p className="text-gray-600 max-w-2xl mx-auto">"          Ready to transform your business? Let&apos;s discuss how our technology''          solutions can drive your success.'        </p>'
       </div>
 
       <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">"        <div>"          <h3 className="text-xl font-semibold text-gray-900 mb-4">"            Contact Information"          </h3>
-          <div className="space-y-4">"            <div className="flex items-center space-x-3">"              <Mail className="w-5 h-5 text-blue-600" />"              <div>"                <p className="font-medium text-gray-900">Email</p>"                <p className="text-gray-600">kleber@ziontechgroup.com</p>"              </div>"            </div>
+          <div className="space-y-4">"            <div className="flex items-center space-x-3">"              <Mail className="w-5 h-5 text-blue-600" />"              <div>"                <p className="font-medium text-gray-900">Email</p>"                <p className="text-gray-600">kleber@ziontechgroup.com</p>"              </div>"            </div>"
             <div className="flex items-center space-x-3">"              <Phone className="w-5 h-5 text-blue-600" />"              <div>"                <p className="font-medium text-gray-900">Phone</p>"                <p className="text-gray-600">+1 (302) 464-0950</p>"              </div>"            </div>
             <div className="flex items-center space-x-3">"              <MapPin className="w-5 h-5 text-blue-600" />"              <div>"                <p className="font-medium text-gray-900">Address</p>"                <p className="text-gray-600">"                  364 E Main St STE 1008"                  <br />Middletown, DE 19709
                 </p>
@@ -91,8 +91,8 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
           </div>
         </div>
 
-<form onSubmit={handleSubmit} className="space-y-6">"          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"            <div>"              <label
-                htmlFor="name""                className="block text-sm font-medium text-gray-700 mb-2""              >"                Full Name *
+<form onSubmit={handleSubmit} className="space-y-6">"          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"            <div>"              <label"
+                htmlFor="name""                className="block text-sm font-medium text-gray-700 mb-2""              >"                Full Name *"
               </label>
               <input
                 type="text""                id="name""                name="name""                value={formData.name}"                onChange={handleChange}
@@ -101,7 +101,7 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
 
             <div>
               <label
-                htmlFor="email""                className="block text-sm font-medium text-gray-700 mb-2""              >"                Email Address *
+                htmlFor="email""                className="block text-sm font-medium text-gray-700 mb-2""              >"                Email Address *"
               </label>
               <input
                 type="email""                id="email""                name="email""                value={formData.email}"                onChange={handleChange}
@@ -110,18 +110,18 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
           </div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 gap-4">"            <div>"              <label
-                htmlFor="company""                className="block text-sm font-medium text-gray-700 mb-2""              >"                Company
+                htmlFor="company""                className="block text-sm font-medium text-gray-700 mb-2""              >"                Company"
               </label>
               <input
                 type="text""                id="company""                name="company""                value={formData.company}"                onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""                placeholder="Your Company""              />"            </div>
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""                placeholder="Your Company""              />"            </div>"
 
             <div>
               <label
-                htmlFor="service""                className="block text-sm font-medium text-gray-700 mb-2""              >"                Service Interest
+                htmlFor="service""                className="block text-sm font-medium text-gray-700 mb-2""              >"                Service Interest"
               </label>
               <select
-                id="service""                name="service""                value={formData.service}"                onChange={handleChange}
+                id="service""                name="service""                value={formData.service}"                onChange={handleChange}"
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent""              >"                <option value="">Select a service</option>"                {services.map(service => ("                  <option key={service} value={service}>{service}
                   </option>
                 ))}
@@ -131,10 +131,10 @@ className="bg-green-50 border border-green-200 rounded-xl p-8 text-center""     
 
           <div>
             <label
-htmlFor="message""              className="block text-sm font-medium text-gray-700 mb-2""            >"              Message *
+htmlFor="message""              className="block text-sm font-medium text-gray-700 mb-2""            >"              Message *"
             </label>
             <textarea
-              id="message""              name="message""              value={formData.message}"              onChange={handleChange}
+              id="message""              name="message""              value={formData.message}"              onChange={handleChange}"
               rows={5}
               className={`w-full px-4 py-3 border rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent ${`
                 errors.message ? 'border-red-500' : 'border-gray-300''              }`}'              placeholder="Tell us about your project and how we can help...""            />"            {errors.message && (`              <p className="text-red-500 text-sm mt-1">{errors.message}</p>"            )}"          </div>

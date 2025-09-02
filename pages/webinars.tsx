@@ -5,162 +5,92 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { 
-  Calendar,
-  Clock,
-  Users,
-  Play,
-  ArrowRight,
-  Search,
-  Filter,
-  Tag,
-  Eye,
-  Share2,
-  Video,
-  TrendingUp,
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Zap,
-  Globe,
-  Phone,
-  Mail,
-  Award,
-  Star,
-  CheckCircle,
-  Download,
-  Bookmark,
+  Calendar, Clock,
+  Users, Play,
+  ArrowRight, Search,
+  Filter, Tag,
+  Eye, Share2,
+  Video, TrendingUp,
+  Brain, Shield,
+  Cloud, Database,
+  Network, Zap,
+  Globe, Phone,
+  Mail, Award,
+  Star, CheckCircle,
+  Download, Bookmark,
   ExternalLink
 } from 'lucide-react';
 
 const Webinars: React.FC = () => {
   const webinars = [
     {
-      id: 1,
-      title: "AI Revolution in Business: Strategies for 2025",
-      description: "Join our experts as they discuss the latest AI trends and how businesses can leverage these technologies for competitive advantage.",
-      speaker: "Dr. Sarah Johnson",
-      speakerTitle: "Chief AI Officer",
-      speakerCompany: "Zion Tech Group",
-      date: "2025-02-15",
-      time: "2:00 PM EST",
-      duration: "60 minutes",
-      category: "AI Strategy",
-      attendees: 1250,
-      rating: 4.9,
-      image: "/api/placeholder/600/400",
-      tags: ["AI Strategy", "Business Innovation", "Future Trends", "Leadership"],
-      featured: true,
-      status: "upcoming",
-      registrationUrl: "/webinars/ai-revolution-2025"
+      id: 1, title: "AI Revolution in Business: Strategies for 2025",
+      description: "Join our experts as they discuss the latest AI trends and how businesses can leverage these technologies for competitive advantage.", speaker: "Dr. Sarah Johnson",
+      speakerTitle: "Chief AI Officer", speakerCompany: "Zion Tech Group",
+      date: "2025-02-15", time: "2:00 PM EST",
+      duration: "60 minutes", category: "AI Strategy",
+      attendees: 1250, rating: 4.9,
+      image: "/api/placeholder/600/400", tags: ["AI Strategy", "Business Innovation", "Future Trends", "Leadership"], featured: true,
+      status: "upcoming", registrationUrl: "/webinars/ai-revolution-2025"
     },
     {
-      id: 2,
-      title: "Cybersecurity in the AI Era: Protecting Your Digital Assets",
-      description: "Learn about the latest cybersecurity threats and how AI is being used both to attack and defend digital infrastructure.",
-      speaker: "Michael Chen",
-      speakerTitle: "Cybersecurity Expert",
-      speakerCompany: "Zion Tech Group",
-      date: "2025-02-12",
-      time: "3:00 PM EST",
-      duration: "45 minutes",
-      category: "Security",
-      attendees: 980,
-      rating: 4.8,
-      image: "/api/placeholder/600/400",
-      tags: ["Cybersecurity", "AI Security", "Threat Protection", "Risk Management"],
-      featured: false,
-      status: "upcoming",
-      registrationUrl: "/webinars/cybersecurity-ai-era"
+      id: 2, title: "Cybersecurity in the AI Era: Protecting Your Digital Assets",
+      description: "Learn about the latest cybersecurity threats and how AI is being used both to attack and defend digital infrastructure.", speaker: "Michael Chen",
+      speakerTitle: "Cybersecurity Expert", speakerCompany: "Zion Tech Group",
+      date: "2025-02-12", time: "3:00 PM EST",
+      duration: "45 minutes", category: "Security",
+      attendees: 980, rating: 4.8,
+      image: "/api/placeholder/600/400", tags: ["Cybersecurity", "AI Security", "Threat Protection", "Risk Management"], featured: false,
+      status: "upcoming", registrationUrl: "/webinars/cybersecurity-ai-era"
     },
     {
-      id: 3,
-      title: "Cloud Migration Best Practices: A Complete Guide",
-      description: "Comprehensive guide to planning and executing successful cloud migration projects with minimal business disruption.",
-      speaker: "Emily Rodriguez",
-      speakerTitle: "Cloud Solutions Architect",
-      speakerCompany: "Zion Tech Group",
-      date: "2025-02-10",
-      time: "1:00 PM EST",
-      duration: "50 minutes",
-      category: "Cloud Computing",
-      attendees: 1150,
-      rating: 4.7,
-      image: "/api/placeholder/600/400",
-      tags: ["Cloud Migration", "Strategy", "Best Practices", "Digital Transformation"],
-      featured: false,
-      status: "upcoming",
-      registrationUrl: "/webinars/cloud-migration-guide"
+      id: 3, title: "Cloud Migration Best Practices: A Complete Guide",
+      description: "Comprehensive guide to planning and executing successful cloud migration projects with minimal business disruption.", speaker: "Emily Rodriguez",
+      speakerTitle: "Cloud Solutions Architect", speakerCompany: "Zion Tech Group",
+      date: "2025-02-10", time: "1:00 PM EST",
+      duration: "50 minutes", category: "Cloud Computing",
+      attendees: 1150, rating: 4.7,
+      image: "/api/placeholder/600/400", tags: ["Cloud Migration", "Strategy", "Best Practices", "Digital Transformation"], featured: false,
+      status: "upcoming", registrationUrl: "/webinars/cloud-migration-guide"
     },
     {
-      id: 4,
-      title: "Data Analytics and Machine Learning: Driving Business Intelligence",
-      description: "Discover how advanced analytics and machine learning are transforming business intelligence and decision-making processes.",
-      speaker: "David Kim",
-      speakerTitle: "Data Science Director",
-      speakerCompany: "Zion Tech Group",
-      date: "2025-01-28",
-      time: "2:30 PM EST",
-      duration: "55 minutes",
-      category: "Analytics",
-      attendees: 890,
-      rating: 4.6,
-      image: "/api/placeholder/600/400",
-      tags: ["Data Analytics", "Machine Learning", "Business Intelligence", "Decision Making"],
-      featured: false,
-      status: "recorded",
-      recordingUrl: "/webinars/data-analytics-ml-recording"
+      id: 4, title: "Data Analytics and Machine Learning: Driving Business Intelligence",
+      description: "Discover how advanced analytics and machine learning are transforming business intelligence and decision-making processes.", speaker: "David Kim",
+      speakerTitle: "Data Science Director", speakerCompany: "Zion Tech Group",
+      date: "2025-01-28", time: "2:30 PM EST",
+      duration: "55 minutes", category: "Analytics",
+      attendees: 890, rating: 4.6,
+      image: "/api/placeholder/600/400", tags: ["Data Analytics", "Machine Learning", "Business Intelligence", "Decision Making"], featured: false,
+      status: "recorded", recordingUrl: "/webinars/data-analytics-ml-recording"
     },
     {
-      id: 5,
-      title: "AI-Powered Customer Experience: The New Competitive Advantage",
+      id: 5, title: "AI-Powered Customer Experience: The New Competitive Advantage",
       description: "Explore how AI is revolutionizing customer service and experience, with real-world examples and implementation strategies.",
-      speaker: "Lisa Wang",
-      speakerTitle: "Customer Experience Lead",
-      speakerCompany: "Zion Tech Group",
-      date: "2025-01-25",
-      time: "3:30 PM EST",
-      duration: "40 minutes",
-      category: "Customer Experience",
-      attendees: 1100,
-      rating: 4.8,
-      image: "/api/placeholder/600/400",
-      tags: ["Customer Experience", "AI", "Automation", "Competitive Advantage"],
-      featured: false,
-      status: "recorded",
-      recordingUrl: "/webinars/ai-customer-experience-recording"
+      speaker: "Lisa Wang", speakerTitle: "Customer Experience Lead",
+      speakerCompany: "Zion Tech Group", date: "2025-01-25",
+      time: "3:30 PM EST", duration: "40 minutes",
+      category: "Customer Experience", attendees: 1100,
+      rating: 4.8, image: "/api/placeholder/600/400",
+      tags: ["Customer Experience", "AI", "Automation", "Competitive Advantage"], featured: false,
+      status: "recorded", recordingUrl: "/webinars/ai-customer-experience-recording"
     },
     {
-      id: 6,
-      title: "Digital Transformation: A Roadmap for Modern Organizations",
-      description: "Complete roadmap for organizations looking to embrace digital transformation and leverage emerging technologies.",
-      speaker: "James Wilson",
-      speakerTitle: "Digital Transformation Consultant",
-      speakerCompany: "Zion Tech Group",
-      date: "2025-01-22",
-      time: "1:30 PM EST",
-      duration: "65 minutes",
-      category: "Digital Transformation",
-      attendees: 1350,
-      rating: 4.9,
-      image: "/api/placeholder/600/400",
-      tags: ["Digital Transformation", "Strategy", "Technology", "Innovation"],
-      featured: false,
-      status: "recorded",
-      recordingUrl: "/webinars/digital-transformation-roadmap-recording"
+      id: 6, title: "Digital Transformation: A Roadmap for Modern Organizations",
+      description: "Complete roadmap for organizations looking to embrace digital transformation and leverage emerging technologies.", speaker: "James Wilson",
+      speakerTitle: "Digital Transformation Consultant", speakerCompany: "Zion Tech Group",
+      date: "2025-01-22", time: "1:30 PM EST",
+      duration: "65 minutes", category: "Digital Transformation",
+      attendees: 1350, rating: 4.9,
+      image: "/api/placeholder/600/400", tags: ["Digital Transformation", "Strategy", "Technology", "Innovation"], featured: false,
+      status: "recorded", recordingUrl: "/webinars/digital-transformation-roadmap-recording"
     }
   ];
 
   const categories = [
-    { name: "All Categories", count: 24, active: true },
-    { name: "AI Strategy", count: 6, active: false },
-    { name: "Security", count: 4, active: false },
-    { name: "Cloud Computing", count: 5, active: false },
-    { name: "Analytics", count: 3, active: false },
-    { name: "Customer Experience", count: 3, active: false },
-    { name: "Digital Transformation", count: 2, active: false },
-    { name: "Other", count: 1, active: false }
+    { name: "All Categories", count: 24, active: true }, { name: "AI Strategy", count: 6, active: false },
+    { name: "Security", count: 4, active: false }, { name: "Cloud Computing", count: 5, active: false },
+    { name: "Analytics", count: 3, active: false }, { name: "Customer Experience", count: 3, active: false },
+    { name: "Digital Transformation", count: 2, active: false }, { name: "Other", count: 1, active: false }
   ];
 
   const featuredWebinar = webinars.find(webinar => webinar.featured);
@@ -173,7 +103,7 @@ const Webinars: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -282,7 +212,7 @@ const Webinars: React.FC = () => {
       )}
 
       {/* Webinars Grid */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8">
             {/* Main Content */}
@@ -397,7 +327,7 @@ const Webinars: React.FC = () => {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:w-1/3">
+            <div className="lg: w-1/3">
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -455,7 +385,7 @@ const Webinars: React.FC = () => {
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full p-3 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500"
                     />
                     <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
                       Subscribe
