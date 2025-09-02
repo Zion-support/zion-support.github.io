@@ -1,1 +1,0 @@
-import React, { useEffect, useState } from 'react'; import { motion, AnimatePresence } from 'framer-motion'; interface PWAUpdaterProps { autoCheck?: boolean; checkInterval?: number; showUpdatePrompt?: boolean; } const PWAUpdater: React.FC<PWAUpdaterProps> = ({ autoCheck = true, checkInterval = 300000,

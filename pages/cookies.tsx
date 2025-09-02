@@ -1,227 +1,215 @@
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../components/layout/MainLayout';
-import { Cookie, Settings, Eye, Shield, Database, AlertCircle } from 'lucide-react';
+import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from 'lucide-react';
 
 const Cookies: NextPage = () => {
+  const cookieTypes = [
+    {
+      icon: Cookie,
+      title: 'Essential Cookies',
+      description: 'These cookies are necessary for the website to function and cannot be switched off.',
+      examples: ['Authentication', 'Security', 'Load balancing']
+    },
+    {
+      icon: Settings,
+      title: 'Functional Cookies',
+      description: 'These cookies enable enhanced functionality and personalization.',
+      examples: ['User preferences', 'Language settings', 'Customization']
+    },
+    {
+      icon: Eye,
+      title: 'Analytics Cookies',
+      description: 'These cookies help us understand how visitors interact with our website.',
+      examples: ['Page views', 'User behavior', 'Performance metrics']
+    },
+    {
+      icon: Database,
+      title: 'Marketing Cookies',
+      description: 'These cookies are used to deliver relevant advertisements and marketing campaigns.',
+      examples: ['Ad targeting', 'Campaign tracking', 'Conversion measurement']
+    }
+  ];
+
+  const cookieFeatures = [
+    {
+      icon: Shield,
+      title: 'Cookie Consent',
+      description: 'We obtain your consent before setting non-essential cookies.'
+    },
+    {
+      icon: Settings,
+      title: 'Cookie Management',
+      description: 'You can manage your cookie preferences at any time.'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Transparency',
+      description: 'We provide clear information about the cookies we use.'
+    }
+  ];
+
   return (
     <MainLayout
       title="Cookie Policy - Zion Tech Group"
-      description="Learn about how Zion Tech Group uses cookies and similar technologies on our website."
+      description="Learn about how Zion Tech Group uses cookies and similar technologies. Understand your options for managing cookie preferences and protecting your privacy."
+      keywords="cookie policy, cookies, tracking, privacy, user preferences, data collection"
     >
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Cookie Policy</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Learn about how we use cookies and similar technologies to enhance your experience.
-          </p>
-          <div className="text-sm text-gray-300">
-            Last updated: January 27, 2024
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">Cookie Policy</h1>
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
+              Learn about how we use cookies and similar technologies to enhance your experience on our website.
+            </p>
+            <p className="text-sm text-gray-300 mt-4">
+              Last updated: January 27, 2025
+            </p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Cookie Policy Content */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="prose prose-lg max-w-none">
+        {/* Cookie Features */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Cookie Commitment</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We are committed to transparency and giving you control over your cookie preferences.
+              </p>
+            </div>
             
-            {/* Introduction */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Cookie className="w-8 h-8 text-blue-600 mr-3" />
-                What Are Cookies?
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Cookies are small text files that are placed on your computer or mobile device when you visit 
-                a website. They are widely used to make websites work more efficiently and to provide information 
-                to website owners.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                This Cookie Policy explains how Zion Tech Group ("we," "our," or "us") uses cookies and similar 
-                technologies when you visit our website https://ziontechgroup.com.
-              </p>
-            </div>
-
-            {/* Types of Cookies */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Database className="w-8 h-8 text-blue-600 mr-3" />
-                Types of Cookies We Use
-              </h2>
-              
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Essential Cookies</h3>
-                  <p className="text-gray-600 mb-4">
-                    These cookies are necessary for the website to function properly. They enable basic functions 
-                    like page navigation and access to secure areas of the website.
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 space-y-1">
-                    <li>Session management</li>
-                    <li>Security features</li>
-                    <li>Load balancing</li>
-                    <li>User authentication</li>
-                  </ul>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {cookieFeatures.map((feature, index) => (
+                <div key={index} className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                  <feature.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                <div className="bg-green-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Analytics Cookies</h3>
-                  <p className="text-gray-600 mb-4">
-                    These cookies help us understand how visitors interact with our website by collecting and 
-                    reporting information anonymously.
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 space-y-1">
-                    <li>Page views and visits</li>
-                    <li>User behavior patterns</li>
-                    <li>Performance metrics</li>
-                    <li>Error tracking</li>
-                  </ul>
+        {/* Cookie Types */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Types of Cookies We Use</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We use different types of cookies to provide you with the best possible experience.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {cookieTypes.map((type, index) => (
+                <div key={index} className="bg-white rounded-lg shadow-lg p-6">
+                  <div className="flex items-center mb-4">
+                    <type.icon className="w-8 h-8 text-blue-600 mr-3" />
+                    <h3 className="text-xl font-semibold text-gray-900">{type.title}</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">{type.description}</p>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-2">Examples:</h4>
+                    <ul className="list-disc list-inside text-gray-600 space-y-1">
+                      {type.examples.map((example, idx) => (
+                        <li key={idx}>{example}</li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-                <div className="bg-purple-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Functional Cookies</h3>
-                  <p className="text-gray-600 mb-4">
-                    These cookies enable enhanced functionality and personalization, such as remembering your 
-                    preferences and settings.
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 space-y-1">
-                    <li>Language preferences</li>
-                    <li>Theme settings</li>
-                    <li>Form data</li>
-                    <li>User preferences</li>
-                  </ul>
+        {/* Cookie Policy Content */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4 max-w-4xl">
+            <div className="bg-gray-50 rounded-lg shadow-lg p-8">
+              <div className="prose prose-lg max-w-none">
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">What Are Cookies?</h2>
+                <p className="text-gray-700 mb-4">
+                  Cookies are small text files that are placed on your computer or mobile device when you visit a website. 
+                  They are widely used to make websites work more efficiently and to provide information to website owners.
+                </p>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">How We Use Cookies</h2>
+                <p className="text-gray-700 mb-4">
+                  We use cookies for several purposes:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
+                  <li>To ensure our website functions properly</li>
+                  <li>To remember your preferences and settings</li>
+                  <li>To analyze how our website is used</li>
+                  <li>To improve our services and user experience</li>
+                  <li>To provide personalized content and advertisements</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Managing Your Cookie Preferences</h2>
+                <p className="text-gray-700 mb-4">
+                  You have several options for managing cookies:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
+                  <li>Use our cookie consent banner to choose which cookies to accept</li>
+                  <li>Modify your browser settings to block or delete cookies</li>
+                  <li>Use browser extensions or plugins to manage cookies</li>
+                  <li>Contact us to discuss your cookie preferences</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Browser Settings</h2>
+                <p className="text-gray-700 mb-4">
+                  Most web browsers allow you to control cookies through their settings preferences. 
+                  You can set your browser to refuse cookies or delete certain cookies. However, 
+                  if you choose to delete or refuse cookies, some features of our website may not function properly.
+                </p>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Third-Party Cookies</h2>
+                <p className="text-gray-700 mb-4">
+                  We may also use third-party cookies from trusted partners to enhance our services. 
+                  These may include:
+                </p>
+                <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
+                  <li>Analytics services (Google Analytics, etc.)</li>
+                  <li>Social media platforms</li>
+                  <li>Advertising networks</li>
+                  <li>Customer support tools</li>
+                </ul>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Updates to This Policy</h2>
+                <p className="text-gray-700 mb-4">
+                  We may update this cookie policy from time to time to reflect changes in our practices 
+                  or for other operational, legal, or regulatory reasons. We will notify you of any material 
+                  changes by posting the updated policy on our website.
+                </p>
+
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
+                <p className="text-gray-700 mb-4">
+                  If you have any questions about our use of cookies or this cookie policy, please contact us:
+                </p>
+                <div className="bg-white p-4 rounded-lg border">
+                  <p className="text-gray-700"><strong>Email:</strong> privacy@ziontechgroup.com</p>
+                  <p className="text-gray-700"><strong>Phone:</strong> +1 302 464 0950</p>
+                  <p className="text-gray-700"><strong>Address:</strong> 364 E Main St STE 1008, Middletown DE 19709</p>
                 </div>
-
-                <div className="bg-orange-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">Marketing Cookies</h3>
-                  <p className="text-gray-600 mb-4">
-                    These cookies are used to track visitors across websites to display relevant and engaging 
-                    advertisements.
-                  </p>
-                  <ul className="list-disc list-inside text-gray-600 space-y-1">
-                    <li>Ad targeting</li>
-                    <li>Campaign tracking</li>
-                    <li>Conversion measurement</li>
-                    <li>Retargeting</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            {/* Third-Party Cookies */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Third-Party Cookies</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                We may also use third-party services that set cookies on our website. These include:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li><strong>Google Analytics:</strong> For website analytics and performance monitoring</li>
-                <li><strong>Google Tag Manager:</strong> For managing tracking codes and tags</li>
-                <li><strong>Social Media Platforms:</strong> For social sharing and integration features</li>
-                <li><strong>Customer Support Tools:</strong> For providing customer service and support</li>
-                <li><strong>Marketing Platforms:</strong> For email marketing and campaign tracking</li>
-              </ul>
-            </div>
-
-            {/* Cookie Duration */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Settings className="w-8 h-8 text-blue-600 mr-3" />
-                Cookie Duration
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Cookies can be either "session" cookies or "persistent" cookies:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li><strong>Session Cookies:</strong> These are temporary cookies that expire when you close your browser</li>
-                <li><strong>Persistent Cookies:</strong> These remain on your device for a set period or until you delete them</li>
-              </ul>
-            </div>
-
-            {/* Managing Cookies */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Eye className="w-8 h-8 text-blue-600 mr-3" />
-                Managing Your Cookie Preferences
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                You have several options for managing cookies:
-              </p>
-              
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Browser Settings</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Most web browsers allow you to control cookies through their settings. You can:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li>Block all cookies</li>
-                <li>Block third-party cookies only</li>
-                <li>Delete existing cookies</li>
-                <li>Set preferences for specific websites</li>
-              </ul>
-
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Cookie Consent</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                When you first visit our website, you'll see a cookie consent banner. You can:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li>Accept all cookies</li>
-                <li>Reject non-essential cookies</li>
-                <li>Customize your preferences</li>
-                <li>Change your settings at any time</li>
-              </ul>
-            </div>
-
-            {/* Impact of Disabling Cookies */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <AlertCircle className="w-8 h-8 text-blue-600 mr-3" />
-                Impact of Disabling Cookies
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                If you choose to disable cookies, some features of our website may not function properly:
-              </p>
-              <ul className="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                <li>You may need to re-enter information more frequently</li>
-                <li>Some personalized features may not work</li>
-                <li>We may not be able to remember your preferences</li>
-                <li>Some forms and interactive features may not function</li>
-              </ul>
-            </div>
-
-            {/* Updates to Policy */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Updates to This Cookie Policy</h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                We may update this Cookie Policy from time to time to reflect changes in our practices or 
-                for other operational, legal, or regulatory reasons. We will notify you of any material 
-                changes by posting the updated policy on our website.
-              </p>
-            </div>
-
-            {/* Contact Information */}
-            <div className="mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6 flex items-center">
-                <Shield className="w-8 h-8 text-blue-600 mr-3" />
-                Contact Us
-              </h2>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                If you have any questions about our use of cookies or this Cookie Policy, please contact us:
-              </p>
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-2"><strong>Zion Tech Group</strong></p>
-                <p className="text-gray-700 mb-2">364 E Main St STE 1008</p>
-                <p className="text-gray-700 mb-2">Middletown, DE 19709</p>
-                <p className="text-gray-700 mb-2">Phone: +1 302 464 0950</p>
-                <p className="text-gray-700 mb-2">Email: privacy@ziontechgroup.com</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Cookie Settings CTA */}
+        <section className="py-16 bg-blue-900 text-white">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">Manage Your Cookie Preferences</h2>
+            <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
+              Take control of your privacy by managing your cookie preferences.
+            </p>
+            <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+              Cookie Settings
+            </button>
+          </div>
+        </section>
+      </div>
     </MainLayout>
   );
 };
