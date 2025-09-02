@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// Removed react-helmet-async for Next.js compatibility
 import { Linkedin, Twitter, Mail, MapPin, Award, Users, Briefcase, GraduationCap } from 'lucide-react';
 
 const TeamPage: React.FC = () => {
@@ -119,12 +119,6 @@ const TeamPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Our Team - Zion Tech Group | Meet the Technology Experts</title>
-        <meta name="description" content="Meet the talented team of technology experts at Zion Tech Group. Our diverse team brings together decades of experience in AI, cybersecurity, SaaS development, and more." />
-        <meta name="keywords" content="team, technology experts, AI researchers, cybersecurity specialists, SaaS developers, digital transformation consultants" />
-        <link rel="canonical" href="https://ziontechgroup.com/team" />
-      </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}

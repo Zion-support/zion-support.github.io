@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+// Removed react-helmet-async for Next.js compatibility
 import { Download, FileText, Calendar, User, ArrowRight, Eye } from 'lucide-react';
 import Link from 'next/link';
 
@@ -95,12 +95,6 @@ const WhitePapersPage: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>White Papers - Zion Tech Group | Technology Research & Insights</title>
-        <meta name="description" content="Access our comprehensive white papers and research reports on the latest technology trends, best practices, and industry insights." />
-        <meta name="keywords" content="white papers, technology research, industry insights, AI, cybersecurity, digital transformation, SaaS, data analytics" />
-        <link rel="canonical" href="https://ziontechgroup.com/white-papers" />
-      </Helmet>
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
