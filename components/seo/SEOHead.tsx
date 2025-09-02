@@ -70,14 +70,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       {structuredData && (
         <script
-          type='application/ld+json';
+          type='application/ld+json'
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData)}}
-        />)}
+            __html: JSON.stringify(structuredData)
+          }}
+        />
+      )}
       {/* Default Structured Data for Organization */}
       {!structuredData && (
         <script
-          type='application/ld+json';
+          type='application/ld+json'
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org', '@type': 'Organization',
@@ -88,8 +90,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
                 'addressCountry': 'US'}, 'contactPoint': {
                 '@type': 'ContactPoint',
                 'contactType': 'customer service', 'url': 'https://ziontechgroup.com/contact'},
-              'sameAs': [;
-                'https: //linkedin.com/company/zion-tech-group', 'https: //twitter.com/ZionTechGroup';
+              'sameAs': [
+                'https://linkedin.com/company/zion-tech-group', 'https://twitter.com/ZionTechGroup'
               ], 'offers': {
                 '@type': 'AggregateOffer',
                 'offerCount': '500+', 'description': 'Technology solutions and services'}

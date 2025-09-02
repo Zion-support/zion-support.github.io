@@ -83,9 +83,9 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
                 "@type": "ContactPoint", "telephone": "+1-302-464-0950",
                 "contactType": "customer service", "email": "kleber@ziontechgroup.com"
               },
-              "sameAs"[
-                "https: //linkedin.com/company/ziontechgroup", "https: //twitter.com/ziontechgroup",
-                "https: //github.com/ziontechgroup"
+              "sameAs": [
+                "https://linkedin.com/company/ziontechgroup", "https://twitter.com/ziontechgroup",
+                "https://github.com/ziontechgroup"
               ]
             })
           }}
@@ -95,11 +95,12 @@ const ModernLayout: React.FC<ModernLayoutProps> = ({
       <div className="min-h-screen bg-white text-gray-900 flex flex-col">
         <ModernHeader />
         <main className="flex-1 pt-20">
-          {children};
-        </main>;
-        <ModernFooter />;
-      </div>;
-</>;
+          {children}
+        </main>
+        <ModernFooter />
+      </div>
+    </>
   );
 };
-export default ModernLayout;}
+
+export default ModernLayout;

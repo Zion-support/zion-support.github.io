@@ -58,7 +58,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height, ...style }}
-        role='img';
+        role='img'
         aria-label={alt}
       >
         <span className='text-gray-500 text-sm'>Image failed to load</span>
@@ -86,9 +86,12 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       />{/* Loading skeleton */}
       {!isLoaded && !hasError && (
         <div
-          className='absolute inset-0 bg-gray-200 animate-pulse';
-          aria-hidden='true'/>)}
+          className='absolute inset-0 bg-gray-200 animate-pulse'
+          aria-hidden='true'
+        />
+      )}
     </div>
-  )}
-;
-export default ImageOptimizer
+  );
+};
+
+export default ImageOptimizer;

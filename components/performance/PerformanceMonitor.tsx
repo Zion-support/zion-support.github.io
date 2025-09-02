@@ -89,8 +89,11 @@ const PerformanceMonitor: React.FC = () => {
       fidObserver.disconnect();
       clsObserver.disconnect();
       fmpObserver.disconnect();
-      window.removeEventListener('beforeunload', sendMetrics)}
+      window.removeEventListener('beforeunload', sendMetrics);
+    };
   }, []);
-  return null // This component doesn't render anything'}'
-;
-export default PerformanceMonitor
+  
+  return null; // This component doesn't render anything
+};
+
+export default PerformanceMonitor;

@@ -41,9 +41,8 @@ export const innovativeITServices2024: InnovativeITService2024[] = [{
     tagline: 'Self-healing infrastructure with zero downtime',
     price: '$799',
     period: '/month',
-    description:;
-      'AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.',
-    features: [;
+    description: 'AI-powered DevOps platform that automatically monitors, optimizes, and heals your infrastructure, ensuring maximum uptime and performance while reducing operational overhead.',
+    features: [
       'AI-powered infrastructure monitoring and alerting',
       'Automatic performance optimization and scaling',
       'Self-healing deployment pipelines',
@@ -59,19 +58,19 @@ export const innovativeITServices2024: InnovativeITService2024[] = [{
     color: 'from-blue-500 to-cyan-600',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/autonomous-devops-platform',
-    marketPosition:;
-      'Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.',
-    targetAudience:;
-      'DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providers, Startups',
+    marketPosition: 'Competitive with GitLab ($99/user/month), Jenkins (free), and CircleCI ($15/month). Our advantage: AI-powered automation, self-healing capabilities, and comprehensive infrastructure management.',
+    targetAudience: 'DevOps teams, Software companies, IT departments, Cloud service providers, Managed service providers, Startups',
     trialDays: 14,
     setupTime: '2 hours',
     category: 'DevOps & Infrastructure',
     realService: true,
     technology: 'React, Node.js, Python, Kubernetes, Docker, AWS, Azure, GCP',
-    integrations: [;
-      'GitHub, GitLab, Jenkins, CircleCI, AWS CodePipeline, Azure DevOps'],
-    useCases: [;
-      'Continuous integration and deployment, Infrastructure monitoring, Performance optimization, Security automation, Disaster recovery'],
+    integrations: [
+      'GitHub, GitLab, Jenkins, CircleCI, AWS CodePipeline, Azure DevOps'
+    ],
+    useCases: [
+      'Continuous integration and deployment, Infrastructure monitoring, Performance optimization, Security automation, Disaster recovery'
+    ],
     roi: 'Average customer reduces DevOps overhead by 60% and improves deployment frequency by 300% within 4 months.',
     competitors: ['GitLab, Jenkins, CircleCI, GitHub Actions, Azure DevOps'],
     marketSize: '$8.2B market',
@@ -83,21 +82,22 @@ export const innovativeITServices2024: InnovativeITService2024[] = [{
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true,
-    implementationDetails:;
-      'Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.',
+    implementationDetails: 'Production-ready DevOps platform with AI-powered automation, real-time monitoring, and comprehensive infrastructure management capabilities.',
     launchDate: '2024-01-15',
     customers: 950,
     rating: 4.8,
-    reviews: 520},
-  // Zero Trust Network Architecture{
+    reviews: 520
+  },
+  
+  // Zero Trust Network Architecture
+  {
     id: 'zero-trust-network-architecture',
     name: 'Zero Trust Network Architecture',
     tagline: 'Never trust, always verify - secure by design',
     price: '$599',
     period: '/month',
-    description:;
-      'Comprehensive zero trust security platform that implements the principle of 'never trust, always verify' across your entire network infrastructure, providing military-grade security for modern businesses.',
-    features: [;
+    description: 'Comprehensive zero trust security platform that implements the principle of "never trust, always verify" across your entire network infrastructure, providing military-grade security for modern businesses.',
+    features: [
       'Identity and access management (IAM)',
       'Multi-factor authentication (MFA)',
       'Network segmentation and micro-segmentation',
@@ -113,20 +113,21 @@ export const innovativeITServices2024: InnovativeITService2024[] = [{
     color: 'from-red-500 to-pink-600',
     textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/zero-trust-network-architecture',
-    marketPosition:;
-      'Competitive with Okta ($2/user/month), Duo ($3/user/month), and CrowdStrike ($8.99/user/month). Our advantage: Comprehensive zero trust implementation, lower cost, and easier deployment.',
-    targetAudience:;
-      'Financial institutions, Healthcare organizations, Government agencies, Enterprise businesses, Educational institutions, Defense contractors',
+    marketPosition: 'Competitive with Okta ($2/user/month), Duo ($3/user/month), and CrowdStrike ($8.99/user/month). Our advantage: Comprehensive zero trust implementation, lower cost, and easier deployment.',
+    targetAudience: 'Financial institutions, Healthcare organizations, Government agencies, Enterprise businesses, Educational institutions, Defense contractors',
     trialDays: 30,
     setupTime: '4 hours',
     category: 'Cybersecurity & Network Security',
     realService: true,
-    technology: [;
-      'React, Node.js, Python, Zero Trust architecture, PostgreSQL, Redis, AWS'],
-    integrations: [;
-      'Active Directory, LDAP, SAML, OAuth, Okta, Azure AD, Google Workspace'],
-    useCases: [;
-      'Secure remote access, Network segmentation, Identity management, Compliance reporting, Threat detection, Access control'],
+    technology: [
+      'React, Node.js, Python, Zero Trust architecture, PostgreSQL, Redis, AWS'
+    ],
+    integrations: [
+      'Active Directory, LDAP, SAML, OAuth, Okta, Azure AD, Google Workspace'
+    ],
+    useCases: [
+      'Secure remote access, Network segmentation, Identity management, Compliance reporting, Threat detection, Access control'
+    ],
     roi: 'Average enterprise customer reduces security incidents by 85% and saves $100K+ annually on security compliance.',
     competitors: ['Okta, Duo, CrowdStrike, Palo Alto Networks, Cisco'],
     marketSize: '$19.6B market',
@@ -138,21 +139,22 @@ export const innovativeITServices2024: InnovativeITService2024[] = [{
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true,
-    implementationDetails:;
-      'Production-ready zero trust platform with comprehensive security features, compliance tools, and enterprise-grade monitoring.',
+    implementationDetails: 'Production-ready zero trust platform with comprehensive security features, compliance tools, and enterprise-grade monitoring.',
     launchDate: '2024-02-01',
     customers: 650,
     rating: 4.9,
-    reviews: 380},
-  // Edge Computing Orchestration{
+    reviews: 380
+  },
+  
+  // Edge Computing Orchestration
+  {
     id: 'edge-computing-orchestration',
     name: 'Edge Computing Orchestration',
     tagline: 'Distributed computing at the edge of the network',
     price: '$449',
     period: '/month',
-    description:;
-      'Advanced edge computing platform that distributes computing resources closer to data sources, reducing latency, improving performance, and enabling real-time applications across global networks.',
-    features: [;
+    description: 'Advanced edge computing platform that distributes computing resources closer to data sources, reducing latency, improving performance, and enabling real-time applications across global networks.',
+    features: [
       'Global edge node distribution',
       'Automatic load balancing and failover',
       'Real-time data processing and analytics',
@@ -168,20 +170,21 @@ export const innovativeITServices2024: InnovativeITService2024[] = [{
     color: 'from-green-500 to-emerald-600',
     textColor: 'text-green-400',
     link: 'https://ziontechgroup.com/edge-computing-orchestration',
-    marketPosition:;
-      'Competitive with Cloudflare ($20/month), AWS CloudFront ($0.085/GB), and Azure CDN ($0.081/GB). Our advantage: Comprehensive edge computing capabilities, lower cost, and better performance optimization.',
-    targetAudience:;
-      'IoT companies, Gaming companies, Video streaming services, E-commerce platforms, Financial services, Healthcare providers',
+    marketPosition: 'Competitive with Cloudflare ($20/month), AWS CloudFront ($0.085/GB), and Azure CDN ($0.081/GB). Our advantage: Comprehensive edge computing capabilities, lower cost, and better performance optimization.',
+    targetAudience: 'IoT companies, Gaming companies, Video streaming services, E-commerce platforms, Financial services, Healthcare providers',
     trialDays: 14,
     setupTime: '1 hour',
     category: 'Edge Computing & IoT',
     realService: true,
-    technology: [;
-      'React, Node.js, Python, Kubernetes, Docker, Edge computing, AWS, Azure'],
-    integrations: [;
-      'AWS, Azure, Google Cloud, IoT platforms, CDN services, Analytics tools'],
-    useCases: [;
-      'Content delivery optimization, IoT data processing, Real-time analytics, Gaming server distribution, Financial trading, Video streaming'],
+    technology: [
+      'React, Node.js, Python, Kubernetes, Docker, Edge computing, AWS, Azure'
+    ],
+    integrations: [
+      'AWS, Azure, Google Cloud, IoT platforms, CDN services, Analytics tools'
+    ],
+    useCases: [
+      'Content delivery optimization, IoT data processing, Real-time analytics, Gaming server distribution, Financial trading, Video streaming'
+    ],
     roi: 'Average customer reduces latency by 60% and improves application performance by 40% within 3 months.',
     competitors: ['Cloudflare, AWS CloudFront, Azure CDN, Fastly, Akamai'],
     marketSize: '$15.7B market',
@@ -193,21 +196,22 @@ export const innovativeITServices2024: InnovativeITService2024[] = [{
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true,
-    implementationDetails:;
-      'Production-ready edge computing platform with global node distribution, real-time processing, and comprehensive orchestration tools.',
+    implementationDetails: 'Production-ready edge computing platform with global node distribution, real-time processing, and comprehensive orchestration tools.',
     launchDate: '2024-01-20',
     customers: 750,
     rating: 4.7,
-    reviews: 420},
-  // AI-Powered IT Operations Center{
+    reviews: 420
+  },
+  
+  // AI-Powered IT Operations Center
+  {
     id: 'ai-powered-it-operations-center',
     name: 'AI-Powered IT Operations Center',
     tagline: 'Intelligent IT operations with predictive insights',
     price: '$699',
     period: '/month',
-    description:;
-      'AI-powered IT operations center that provides intelligent monitoring, predictive maintenance, and automated incident response, helping IT teams proactively manage infrastructure and reduce downtime.',
-    features: [;
+    description: 'AI-powered IT operations center that provides intelligent monitoring, predictive maintenance, and automated incident response, helping IT teams proactively manage infrastructure and reduce downtime.',
+    features: [
       'AI-powered infrastructure monitoring',
       'Predictive maintenance and alerting',
       'Automated incident response and resolution',
@@ -223,20 +227,21 @@ export const innovativeITServices2024: InnovativeITService2024[] = [{
     color: 'from-purple-500 to-indigo-600',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-powered-it-operations-center',
-    marketPosition:;
-      'Competitive with ServiceNow ($100/user/month), BMC Helix ($45/user/month), and SolarWinds ($1,995/one-time). Our advantage: AI-powered automation, lower cost, and predictive capabilities.',
-    targetAudience:;
-      'IT departments, Managed service providers, Data centers, Cloud service providers, Enterprise businesses, Educational institutions',
+    marketPosition: 'Competitive with ServiceNow ($100/user/month), BMC Helix ($45/user/month), and SolarWinds ($1,995/one-time). Our advantage: AI-powered automation, lower cost, and predictive capabilities.',
+    targetAudience: 'IT departments, Managed service providers, Data centers, Cloud service providers, Enterprise businesses, Educational institutions',
     trialDays: 21,
     setupTime: '3 hours',
     category: 'IT Operations & Management',
     realService: true,
-    technology: [;
-      'React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS'],
-    integrations: [;
-      'ServiceNow, BMC, SolarWinds, Nagios, Zabbix, Microsoft System Center'],
-    useCases: [;
-      'Infrastructure monitoring, Incident management, Capacity planning, Performance optimization, Compliance reporting, IT automation'],
+    technology: [
+      'React, Node.js, Python, Machine Learning, PostgreSQL, Redis, AWS'
+    ],
+    integrations: [
+      'ServiceNow, BMC, SolarWinds, Nagios, Zabbix, Microsoft System Center'
+    ],
+    useCases: [
+      'Infrastructure monitoring, Incident management, Capacity planning, Performance optimization, Compliance reporting, IT automation'
+    ],
     roi: 'Average customer reduces IT incidents by 70% and improves system uptime by 25% within 6 months.',
     competitors: ['ServiceNow, BMC Helix, SolarWinds, Nagios, Zabbix'],
     marketSize: '$12.8B market',
@@ -248,13 +253,15 @@ export const innovativeITServices2024: InnovativeITService2024[] = [{
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'},
     realImplementation: true,
-    implementationDetails:;
-      'Production-ready IT operations platform with AI-powered monitoring, predictive analytics, and comprehensive automation tools.',
+    implementationDetails: 'Production-ready IT operations platform with AI-powered monitoring, predictive analytics, and comprehensive automation tools.',
     launchDate: '2024-02-10',
     customers: 850,
     rating: 4.8,
-    reviews: 480},
-  // Quantum-Secure Database Platform{
+    reviews: 480
+  },
+  
+  // Quantum-Secure Database Platform
+  {
     id: 'quantum-secure-database-platform',
     name: 'Quantum-Secure Database Platform',
     tagline: 'Future-proof database security for quantum threats',
