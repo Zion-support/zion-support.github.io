@@ -1,3 +1,4 @@
+import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from '../../components/layout/MainLayout';
 import { getServicesByCategory } from '../../data/services';
