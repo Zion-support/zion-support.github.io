@@ -12,7 +12,7 @@ const EnterpriseSolutions: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Enterprise
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Solutions</span>
           </h1>
@@ -21,7 +21,7 @@ const EnterpriseSolutions: NextPage = () => {
             We help large organizations modernize their IT infrastructure and drive digital transformation.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact">
               <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
                 Transform Your Enterprise
@@ -79,7 +79,7 @@ const EnterpriseSolutions: NextPage = () => {
               </ul>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white rounded-lg p-8 shadow-lg hover: shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                 <Shield className="w-8 h-8 text-green-600" />
               </div>
@@ -175,7 +175,7 @@ const EnterpriseSolutions: NextPage = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2">Scalability Issues</h4>
-                    <p className="text-gray-600">Systems that can't handle growth and increased user demands effectively.</p>
+                    <p className="text-gray-600">Systems that can&apos;t handle growth and increased user demands effectively.</p>'
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -254,7 +254,7 @@ const EnterpriseSolutions: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-blue-600">1</span>
@@ -308,7 +308,7 @@ const EnterpriseSolutions: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-lg p-6">
               <h3 className="text-lg font-semibold mb-3 text-blue-600">Financial Services</h3>
               <p className="text-gray-600">Secure, compliant solutions for banking, insurance, and fintech companies.</p>
@@ -347,7 +347,7 @@ const EnterpriseSolutions: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md: grid-cols-2 gap-12 items-center">
             <div>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -384,10 +384,10 @@ const EnterpriseSolutions: NextPage = () => {
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Ready to Transform?</h3>
               <p className="mb-6 text-blue-100">
-                Let's discuss how our enterprise solutions can modernize your organization and drive growth.
+                Let&apos;s discuss how our enterprise solutions can modernize your organization and drive growth.'
               </p>
               <Link href="/contact">
-                <a className="bg-white text-blue-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block">
+                <a className="bg-white text-blue-600 hover: bg-gray-100 px-6 py-3 rounded-lg font-semibold transition-colors cursor-pointer inline-block">
                   Schedule a Consultation
                 </a>
               </Link>
@@ -402,9 +402,9 @@ const EnterpriseSolutions: NextPage = () => {
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Enterprise?</h2>
           <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
             Join leading enterprises that have already transformed their operations with Zion Tech Group. 
-            Let's build the future of your business together.
+            Let&apos;s build the future of your business together.'
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
             <Link href="/contact">
               <a className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
                 Transform Your Enterprise

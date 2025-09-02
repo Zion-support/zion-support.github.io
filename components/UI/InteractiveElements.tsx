@@ -16,28 +16,21 @@ interface InteractiveButtonProps {
 }
 
 export const InteractiveButton: React.FC<InteractiveButtonProps> = ({
-  children,
-  onClick,
-  variant = 'primary',
-  size = 'md',
-  disabled = false,
-  loading = false,
-  icon,
-  className = '',
+  children, onClick,
+  variant = 'primary', size = 'md',
+  disabled = false, loading = false,
+  icon, className = '',
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
+  const baseClasses = 'relative inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden';
   const variantClasses: Record<ButtonVariant, string> = {
     primary: 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-blue-500',
-    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600',
-    ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800',
-    gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500',
-  };
+    secondary: 'bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600', ghost: 'text-gray-700 hover:bg-gray-100 focus:ring-gray-500 dark:text-gray-300 dark:hover:bg-gray-800',
+    gradient: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500', };
   const sizeClasses: Record<ButtonSize, string> = {
     sm: 'px-3 py-2 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg',
+    md: 'px-4 py-2 text-base', lg: 'px-6 py-3 text-lg',
   };
 
   return (
@@ -93,7 +86,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = ({ children, className 
   return (
     <motion.div
       ref={ref}
-      className={`bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}
+      className={`bg-white dark: bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}
       variants={directionVariants[direction]}
       initial="hidden"
       animate={controls}
@@ -110,7 +103,7 @@ interface InteractiveStatsProps {
 }
 
 export const InteractiveStats: React.FC<InteractiveStatsProps> = ({ stats }) => (
-  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+  <div className="grid grid-cols-2 md: grid-cols-4 gap-6">
     {stats.map((stat, index) => (
       <motion.div
         key={index}
@@ -144,21 +137,17 @@ export const FloatingActionButton: React.FC<FloatingActionButtonProps> = ({ icon
   const [showTooltip, setShowTooltip] = useState(false);
   const positionClasses: Record<NonNullable<FloatingActionButtonProps['position']>, string> = {
     'bottom-right': 'bottom-6 right-6',
-    'bottom-left': 'bottom-6 left-6',
-    'top-right': 'top-6 right-6',
-    'top-left': 'top-6 left-6',
-  };
+    'bottom-left': 'bottom-6 left-6', 'top-right': 'top-6 right-6',
+    'top-left': 'top-6 left-6', };
   const colorClasses: Record<NonNullable<FloatingActionButtonProps['color']>, string> = {
     blue: 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500',
-    green: 'bg-green-600 hover:bg-green-700 focus:ring-green-500',
-    purple: 'bg-purple-600 hover:bg-purple-700 focus:ring-purple-500',
-    red: 'bg-red-600 hover:bg-red-700 focus:ring-red-500',
-  };
+    green: 'bg-green-600 hover:bg-green-700 focus:ring-green-500', purple: 'bg-purple-600 hover:bg-purple-700 focus:ring-purple-500',
+    red: 'bg-red-600 hover:bg-red-700 focus:ring-red-500', };
 
   return (
     <div className={`fixed ${positionClasses[position]} z-50`}>
       <motion.button
-        className={`w-14 h-14 rounded-full text-white shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 ${colorClasses[color]}`}
+        className={`w-14 h-14 rounded-full text-white shadow-lg focus: outline-none focus:ring-2 focus:ring-offset-2 ${colorClasses[color]}`}
         onClick={onClick}
         onHoverStart={() => setShowTooltip(true)}
         onHoverEnd={() => setShowTooltip(false)}

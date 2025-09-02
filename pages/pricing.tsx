@@ -5,117 +5,74 @@ import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import { Badge } from '../components/ui/Badge';
 import { 
-  CheckCircle, 
-  Star, 
-  Zap, 
-  Shield, 
-  Users, 
-  Globe, 
-  Phone, 
-  Mail, 
-  ArrowRight,
-  DollarSign,
-  TrendingUp,
-  Award,
-  Clock,
-  Target,
-  Brain,
-  Server,
-  Cloud,
-  Lock,
-  BarChart3,
-  Rocket,
-  Heart,
-  Sparkles
+  CheckCircle, Star, 
+  Zap, Shield, 
+  Users, Globe, 
+  Phone, Mail, 
+  ArrowRight, DollarSign,
+  TrendingUp, Award,
+  Clock, Target,
+  Brain, Server,
+  Cloud, Lock,
+  BarChart3, Rocket,
+  Heart, Sparkles
 } from 'lucide-react';
 
 const Pricing: React.FC = () => {
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
-      period: "/month",
-      description: "Perfect for small businesses getting started with AI",
+      name: "Starter", price: "$299",
+      period: "/month", description: "Perfect for small businesses getting started with AI",
       features: [
-        "AI-powered analytics dashboard",
-        "Basic automation tools",
-        "Email support",
-        "Up to 5 team members",
-        "Standard integrations",
-        "Monthly reports"
-      ],
-      popular: false,
-      color: "from-blue-500 to-cyan-500",
-      buttonText: "Get Started",
+        "AI-powered analytics dashboard", "Basic automation tools",
+        "Email support", "Up to 5 team members",
+        "Standard integrations", "Monthly reports"
+      ], popular: false,
+      color: "from-blue-500 to-cyan-500", buttonText: "Get Started",
       buttonVariant: "outline" as const
-    },
-    {
+    }, {
       name: "Professional",
-      price: "$799",
-      period: "/month",
-      description: "Ideal for growing businesses with advanced needs",
-      features: [
+      price: "$799", period: "/month",
+      description: "Ideal for growing businesses with advanced needs", features: [
         "Advanced AI analytics",
-        "Custom automation workflows",
-        "Priority support",
-        "Up to 25 team members",
-        "Advanced integrations",
-        "Real-time reporting",
-        "API access",
+        "Custom automation workflows", "Priority support",
+        "Up to 25 team members", "Advanced integrations",
+        "Real-time reporting", "API access",
         "Custom branding"
-      ],
-      popular: true,
-      color: "from-purple-500 to-pink-500",
-      buttonText: "Start Free Trial",
+      ], popular: true,
+      color: "from-purple-500 to-pink-500", buttonText: "Start Free Trial",
       buttonVariant: "default" as const
-    },
-    {
+    }, {
       name: "Enterprise",
-      price: "Custom",
-      period: "",
-      description: "Tailored solutions for large organizations",
-      features: [
+      price: "Custom", period: "",
+      description: "Tailored solutions for large organizations", features: [
         "Unlimited AI capabilities",
-        "Custom AI model training",
-        "Dedicated support team",
-        "Unlimited team members",
-        "White-label solutions",
-        "Advanced security",
-        "Custom integrations",
-        "24/7 phone support",
-        "SLA guarantee"
-      ],
-      popular: false,
-      color: "from-orange-500 to-red-500",
-      buttonText: "Contact Sales",
+        "Custom AI model training", "Dedicated support team",
+        "Unlimited team members", "White-label solutions",
+        "Advanced security", "Custom integrations",
+        "24/7 phone support", "SLA guarantee"
+      ], popular: false,
+      color: "from-orange-500 to-red-500", buttonText: "Contact Sales",
       buttonVariant: "outline" as const
     }
   ];
 
   const servicePricing = [
     {
-      service: "AI Development",
-      startingPrice: "$5,000",
-      description: "Custom AI solutions and machine learning models",
+      service: "AI Development", startingPrice: "$5,000", description: "Custom AI solutions and machine learning models",
       features: ["Custom AI models", "Data analysis", "Integration support", "Training & documentation"]
-    },
-    {
+    }, {
       service: "Cloud Migration",
-      startingPrice: "$3,000",
-      description: "Seamless migration to cloud infrastructure",
-      features: ["Infrastructure assessment", "Migration planning", "Data transfer", "Performance optimization"]
-    },
-    {
+      startingPrice: "$3, 000",
+      description: "Seamless migration to cloud infrastructure", features: ["Infrastructure assessment", "Migration planning", "Data transfer", "Performance optimization"]
+    }, {
       service: "Cybersecurity",
-      startingPrice: "$2,500",
-      description: "Comprehensive security solutions and monitoring",
-      features: ["Security audit", "Threat monitoring", "Incident response", "Compliance support"]
-    },
-    {
+      startingPrice: "$2, 500",
+      description: "Comprehensive security solutions and monitoring", features: ["Security audit", "Threat monitoring", "Incident response", "Compliance support"]
+    }, {
       service: "Digital Transformation",
-      startingPrice: "$10,000",
-      description: "End-to-end digital transformation consulting",
-      features: ["Strategy development", "Process optimization", "Technology implementation", "Change management"]
+      startingPrice: "$10, 000",
+      description: "End-to-end digital transformation consulting", features: ["Strategy development", "Process optimization", "Technology implementation", "Change management"]
     }
   ];
 
@@ -127,7 +84,7 @@ const Pricing: React.FC = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -195,7 +152,7 @@ const Pricing: React.FC = () => {
 
                   <Button 
                     variant={plan.buttonVariant}
-                    className={`w-full bg-gradient-to-r ${plan.color} text-white hover:opacity-90 transition-opacity`}
+                    className={`w-full bg-gradient-to-r ${plan.color} text-white hover: opacity-90 transition-opacity`}
                   >
                     {plan.buttonText}
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -208,7 +165,7 @@ const Pricing: React.FC = () => {
       </section>
 
       {/* Service Pricing */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800/50">
+      <section className="py-20 px-4 sm: px-6 lg:px-8 bg-slate-800/50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -257,7 +214,7 @@ const Pricing: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -6,45 +6,33 @@ import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from 'lucide-rea
 const Cookies: NextPage = () => {
   const cookieTypes = [
     {
-      icon: Cookie,
-      title: 'Essential Cookies',
-      description: 'These cookies are necessary for the website to function and cannot be switched off.',
-      examples: ['Authentication', 'Security', 'Load balancing']
-    },
-    {
+      icon: Cookie, title: 'Essential Cookies',
+      description: 'These cookies are necessary for the website to function and cannot be switched off.', examples: ['Authentication', 'Security', 'Load balancing']
+    }, {
       icon: Settings,
-      title: 'Functional Cookies',
-      description: 'These cookies enable enhanced functionality and personalization.',
+      title: 'Functional Cookies', description: 'These cookies enable enhanced functionality and personalization.',
       examples: ['User preferences', 'Language settings', 'Customization']
-    },
-    {
+    }, {
       icon: Eye,
-      title: 'Analytics Cookies',
-      description: 'These cookies help us understand how visitors interact with our website.',
+      title: 'Analytics Cookies', description: 'These cookies help us understand how visitors interact with our website.',
       examples: ['Page views', 'User behavior', 'Performance metrics']
-    },
-    {
+    }, {
       icon: Database,
-      title: 'Marketing Cookies',
-      description: 'These cookies are used to deliver relevant advertisements and marketing campaigns.',
+      title: 'Marketing Cookies', description: 'These cookies are used to deliver relevant advertisements and marketing campaigns.',
       examples: ['Ad targeting', 'Campaign tracking', 'Conversion measurement']
     }
   ];
 
   const cookieFeatures = [
     {
-      icon: Shield,
-      title: 'Cookie Consent',
+      icon: Shield, title: 'Cookie Consent',
       description: 'We obtain your consent before setting non-essential cookies.'
-    },
-    {
+    }, {
       icon: Settings,
-      title: 'Cookie Management',
-      description: 'You can manage your cookie preferences at any time.'
+      title: 'Cookie Management', description: 'You can manage your cookie preferences at any time.'
     },
     {
-      icon: CheckCircle,
-      title: 'Transparency',
+      icon: CheckCircle, title: 'Transparency',
       description: 'We provide clear information about the cookies we use.'
     }
   ];
@@ -59,7 +47,7 @@ const Cookies: NextPage = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Cookie Policy</h1>
+            <h1 className="text-4xl md: text-5xl font-bold mb-6">Cookie Policy</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Learn about how we use cookies and similar technologies to enhance your experience on our website.
             </p>
@@ -79,9 +67,9 @@ const Cookies: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
               {cookieFeatures.map((feature, index) => (
-                <div key={index} className="text-center p-6 rounded-lg border border-gray-200 hover:shadow-lg transition-shadow">
+                <div key={index} className="text-center p-6 rounded-lg border border-gray-200 hover: shadow-lg transition-shadow">
                   <feature.icon className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                   <p className="text-gray-600">{feature.description}</p>
@@ -101,7 +89,7 @@ const Cookies: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
               {cookieTypes.map((type, index) => (
                 <div key={index} className="bg-white rounded-lg shadow-lg p-6">
                   <div className="flex items-center mb-4">
@@ -110,7 +98,7 @@ const Cookies: NextPage = () => {
                   </div>
                   <p className="text-gray-600 mb-4">{type.description}</p>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Examples:</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">Examples: </h4>
                     <ul className="list-disc list-inside text-gray-600 space-y-1">
                       {type.examples.map((example, idx) => (
                         <li key={idx}>{example}</li>
@@ -136,8 +124,7 @@ const Cookies: NextPage = () => {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">How We Use Cookies</h2>
                 <p className="text-gray-700 mb-4">
-                  We use cookies for several purposes:
-                </p>
+                  We use cookies for several purposes: </p>
                 <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
                   <li>To ensure our website functions properly</li>
                   <li>To remember your preferences and settings</li>
@@ -160,15 +147,13 @@ const Cookies: NextPage = () => {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Browser Settings</h2>
                 <p className="text-gray-700 mb-4">
                   Most web browsers allow you to control cookies through their settings preferences. 
-                  You can set your browser to refuse cookies or delete certain cookies. However, 
-                  if you choose to delete or refuse cookies, some features of our website may not function properly.
+                  You can set your browser to refuse cookies or delete certain cookies. However, if you choose to delete or refuse cookies, some features of our website may not function properly.
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Third-Party Cookies</h2>
                 <p className="text-gray-700 mb-4">
                   We may also use third-party cookies from trusted partners to enhance our services. 
-                  These may include:
-                </p>
+                  These may include: </p>
                 <ul className="list-disc list-inside text-gray-700 mb-6 space-y-2">
                   <li>Analytics services (Google Analytics, etc.)</li>
                   <li>Social media platforms</li>
@@ -185,8 +170,7 @@ const Cookies: NextPage = () => {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
                 <p className="text-gray-700 mb-4">
-                  If you have any questions about our use of cookies or this cookie policy, please contact us:
-                </p>
+                  If you have any questions about our use of cookies or this cookie policy, please contact us: </p>
                 <div className="bg-white p-4 rounded-lg border">
                   <p className="text-gray-700"><strong>Email:</strong> privacy@ziontechgroup.com</p>
                   <p className="text-gray-700"><strong>Phone:</strong> +1 302 464 0950</p>
@@ -204,7 +188,7 @@ const Cookies: NextPage = () => {
             <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
               Take control of your privacy by managing your cookie preferences.
             </p>
-            <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <button className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors">
               Cookie Settings
             </button>
           </div>

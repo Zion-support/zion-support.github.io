@@ -30,7 +30,6 @@
     "composite": true,
     "noEmit": true
   },
-<<<<<<< HEAD
   "include": [
     "types",
     "src/components/**/*",
@@ -48,7 +47,4 @@
     "src/data",
     "temp_working"
   ]
-=======
-  "include": ["src", "types"]
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
 }

@@ -5,86 +5,63 @@ import Link from 'next/link';
 
 const AboutPage: NextPage = () => {
   const stats = [
-    { number: '500+', label: 'Projects Completed', icon: <Award className="w-8 h-8" /> },
-    { number: '50+', label: 'Happy Clients', icon: <Users className="w-8 h-8" /> },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" /> },
-    { number: '24/7', label: 'Support Available', icon: <Globe className="w-8 h-8" /> },
+    { number: '500+', label: 'Projects Completed', icon: <Award className="w-8 h-8" /> }, { number: '50+', label: 'Happy Clients', icon: <Users className="w-8 h-8" /> },
+    { number: '99.9%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" /> }, { number: '24/7', label: 'Support Available', icon: <Globe className="w-8 h-8" /> },
   ];
 
   const values = [
     {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: 'Innovation',
+      icon: <Lightbulb className="w-8 h-8" />, title: 'Innovation',
       description: 'We constantly push the boundaries of technology to deliver cutting-edge solutions that drive real business value.'
-    },
-    {
+    }, {
       icon: <Heart className="w-8 h-8" />,
-      title: 'Customer Focus',
-      description: 'Our clients\' success is our success. We build lasting partnerships based on trust, transparency, and mutual growth.'
+      title: 'Customer Focus', description: 'Our clients\' success is our success. We build lasting partnerships based on trust, transparency, and mutual growth.''
     },
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Excellence',
+      icon: <Zap className="w-8 h-8" />, title: 'Excellence',
       description: 'We maintain the highest standards of quality in everything we do, from code to customer service.'
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: 'Results-Driven',
+      icon: <Target className="w-8 h-8" />, title: 'Results-Driven',
       description: 'We focus on delivering measurable outcomes that directly impact your business growth and efficiency.'
     }
   ];
 
   const team = [
     {
-      name: 'Kleber Silva',
-      role: 'Founder & CEO',
-      bio: 'Technology visionary with over 15 years of experience in software development and business transformation.',
-      image: '/team/kleber.jpg'
+      name: 'Kleber Silva', role: 'Founder & CEO',
+      bio: 'Technology visionary with over 15 years of experience in software development and business transformation.', image: '/team/kleber.jpg'
     },
     {
-      name: 'Sarah Johnson',
-      role: 'CTO',
+      name: 'Sarah Johnson', role: 'CTO',
       bio: 'Expert in cloud architecture and AI/ML solutions with a passion for scalable, innovative technology.',
       image: '/team/sarah.jpg'
-    },
-    {
+    }, {
       name: 'Michael Chen',
-      role: 'Head of Engineering',
-      bio: 'Full-stack development specialist focused on creating robust, user-centric applications.',
-      image: '/team/michael.jpg'
+      role: 'Head of Engineering', bio: 'Full-stack development specialist focused on creating robust, user-centric applications.', image: '/team/michael.jpg'
     },
     {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      bio: 'UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.',
-      image: '/team/emily.jpg'
+      name: 'Emily Rodriguez', role: 'Head of Design',
+      bio: 'UX/UI expert dedicated to creating intuitive, beautiful, and functional user experiences.', image: '/team/emily.jpg'
     }
   ];
 
   const timeline = [
     {
-      year: '2020',
-      title: 'Company Founded',
+      year: '2020', title: 'Company Founded',
       description: 'Zion Tech Group was established with a vision to democratize technology solutions for businesses of all sizes.'
-    },
-    {
+    }, {
       year: '2021',
-      title: 'First Major Client',
-      description: 'Successfully delivered our first enterprise AI solution, marking the beginning of our growth journey.'
-    },
-    {
+      title: 'First Major Client', description: 'Successfully delivered our first enterprise AI solution, marking the beginning of our growth journey.'
+    }, {
       year: '2022',
-      title: 'Micro SaaS Launch',
-      description: 'Introduced our first suite of micro SaaS solutions, helping small businesses scale efficiently.'
-    },
-    {
+      title: 'Micro SaaS Launch', description: 'Introduced our first suite of micro SaaS solutions, helping small businesses scale efficiently.'
+    }, {
       year: '2023',
-      title: 'Team Expansion',
-      description: 'Grew our team to 20+ experts and expanded our service offerings to include comprehensive IT services.'
+      title: 'Team Expansion', description: 'Grew our team to 20+ experts and expanded our service offerings to include comprehensive IT services.'
     },
     {
-      year: '2024',
-      title: 'Global Reach',
+      year: '2024', title: 'Global Reach',
       description: 'Serving clients across multiple countries and industries, with a focus on AI and digital transformation.'
     }
   ];
@@ -92,17 +69,17 @@ const AboutPage: NextPage = () => {
   return (
     <MainLayout
       title="About Us - Zion Tech Group"
-      description="Learn about Zion Tech Group's mission to transform businesses through innovative technology solutions. Meet our expert team and discover our story."
+      description="Learn about Zion Tech Group&apos;s mission to transform businesses through innovative technology solutions. Meet our expert team and discover our story."'
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">
               Transforming Businesses Through Innovation
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
-              We're a team of passionate technologists dedicated to helping businesses 
+              We&apos;re a team of passionate technologists dedicated to helping businesses '
               leverage cutting-edge technology to achieve their goals and drive growth.
             </p>
           </div>
@@ -112,7 +89,7 @@ const AboutPage: NextPage = () => {
       {/* Mission Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg: grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-lg text-gray-600 mb-6">
@@ -125,8 +102,8 @@ const AboutPage: NextPage = () => {
                 that not only work flawlessly but also provide measurable ROI for our clients.
               </p>
               <p className="text-lg text-gray-600">
-                Whether you're a startup looking to scale or an enterprise seeking digital transformation, 
-                we're here to be your technology partner every step of the way.
+                Whether you&apos;re a startup looking to scale or an enterprise seeking digital transformation, '
+                we&apos;re here to be your technology partner every step of the way.'
               </p>
             </div>
             <div className="bg-gray-100 rounded-lg p-8">
@@ -161,11 +138,11 @@ const AboutPage: NextPage = () => {
       {/* Stats Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md: grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-blue-600 mb-4 flex justify-center">{stat.icon}</div>
-                <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">{stat.number}</div>
+                <div className="text-4xl md: text-5xl font-bold text-gray-900 mb-2">{stat.number}</div>
                 <div className="text-gray-600 font-medium">{stat.label}</div>
               </div>
             ))}
@@ -182,9 +159,9 @@ const AboutPage: NextPage = () => {
               These core values guide everything we do and shape how we serve our clients.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
+              <div key={index} className="text-center p-6 rounded-lg hover: shadow-lg transition-shadow">
                 <div className="text-blue-600 mb-4 flex justify-center">{value.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
@@ -204,7 +181,7 @@ const AboutPage: NextPage = () => {
               exceptional results for our clients.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <div className="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -225,7 +202,7 @@ const AboutPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              From humble beginnings to serving clients worldwide, here's our story of growth and innovation.
+              From humble beginnings to serving clients worldwide, here&apos;s our story of growth and innovation.'
             </p>
           </div>
           <div className="max-w-4xl mx-auto">
@@ -251,21 +228,20 @@ const AboutPage: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're not just another technology company. Here's what makes us different.
+              We&apos;re not just another technology company. Here&apos;s what makes us different.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>
               <p className="text-gray-600">
-                Our team consists of experienced professionals with deep expertise in AI, 
-                cloud computing, and software development.
+                Our team consists of experienced professionals with deep expertise in AI, cloud computing, and software development.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Track Record</h3>
               <p className="text-gray-600">
-                We've successfully delivered hundreds of projects across various industries 
+                We&apos;ve successfully delivered hundreds of projects across various industries '
                 and business sizes.
               </p>
             </div>
@@ -306,10 +282,10 @@ const AboutPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Work Together?</h2>
           <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Let's discuss how our team can help transform your business with innovative 
+            Let&apos;s discuss how our team can help transform your business with innovative '
             technology solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link href="/contact">
               <span className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                 Get Started Today

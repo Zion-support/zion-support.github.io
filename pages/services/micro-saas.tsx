@@ -10,24 +10,18 @@ const MicroSaasPage: NextPage = () => {
 
   const benefits = [
     {
-      icon: <Zap className="w-8 h-8" />,
-      title: 'Lightning Fast Setup',
+      icon: <Zap className="w-8 h-8" />, title: 'Lightning Fast Setup',
       description: 'Get up and running in minutes, not months. Our micro SaaS solutions are designed for quick deployment.'
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: 'Scalable Solutions',
+      icon: <Users className="w-8 h-8" />, title: 'Scalable Solutions',
       description: 'Start small and grow as your business expands. Our solutions scale with your needs.'
-    },
-    {
+    }, {
       icon: <Shield className="w-8 h-8" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with SOC 2 compliance, ensuring your data is always protected.'
-    },
-    {
+      title: 'Enterprise Security', description: 'Bank-level security with SOC 2 compliance, ensuring your data is always protected.'
+    }, {
       icon: <Star className="w-8 h-8" />,
-      title: 'Proven Results',
-      description: 'Track record of successful implementations with measurable ROI for our clients.'
+      title: 'Proven Results', description: 'Track record of successful implementations with measurable ROI for our clients.'
     }
   ];
 
@@ -40,14 +34,14 @@ const MicroSaasPage: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">
               Micro SaaS Solutions
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
               Powerful, affordable SaaS applications designed to solve specific business challenges 
               and streamline your operations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link href="/contact">
                 <span className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                   Get Started Today
@@ -75,7 +69,7 @@ const MicroSaasPage: NextPage = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="text-center p-6 rounded-lg hover:shadow-lg transition-shadow">
+              <div key={index} className="text-center p-6 rounded-lg hover: shadow-lg transition-shadow">
                 <div className="text-blue-600 mb-4 flex justify-center">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
                 <p className="text-gray-600">{benefit.description}</p>
@@ -94,9 +88,9 @@ const MicroSaasPage: NextPage = () => {
               Choose from our suite of powerful micro SaaS applications designed to transform your business operations.
             </p>
           </div>
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg: grid-cols-2 gap-8">
             {microSaasServices.map((service) => (
-              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+              <div key={service.id} className="bg-white rounded-lg shadow-lg p-8 hover: shadow-xl transition-shadow">
                 <div className="flex items-start justify-between mb-6">
                   <div className="text-5xl">{service.icon}</div>
                   <div className="text-right">
@@ -120,7 +114,7 @@ const MicroSaasPage: NextPage = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefits: </h4>
                   <ul className="space-y-2">
                     {service.benefits.map((benefit, index) => (
                       <li key={index} className="flex items-center text-gray-600">
@@ -132,7 +126,7 @@ const MicroSaasPage: NextPage = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Use Cases:</h4>
+                  <h4 className="font-semibold text-gray-900 mb-3">Use Cases: </h4>
                   <ul className="space-y-2">
                     {service.useCases.map((useCase, index) => (
                       <li key={index} className="flex items-center text-gray-600">
@@ -145,7 +139,7 @@ const MicroSaasPage: NextPage = () => {
 
                 <div className="flex justify-between items-center">
                   <Link href={service.link}>
-                    <span className="text-blue-600 hover:text-blue-700 font-medium cursor-pointer inline-flex items-center">
+                    <span className="text-blue-600 hover: text-blue-700 font-medium cursor-pointer inline-flex items-center">
                       Learn More
                       <ArrowRight className="ml-1 w-4 h-4" />
                     </span>
@@ -171,7 +165,7 @@ const MicroSaasPage: NextPage = () => {
               Choose the plan that best fits your business needs. All plans include our core features and support.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
               <div className="text-4xl font-bold text-blue-600 mb-6">$29<span className="text-lg text-gray-500">/mo</span></div>
@@ -349,10 +343,10 @@ const MicroSaasPage: NextPage = () => {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8 text-gray-200 max-w-3xl mx-auto">
-            Let's discuss how our micro SaaS solutions can help streamline your operations 
+            Let&apos;s discuss how our micro SaaS solutions can help streamline your operations '
             and drive growth for your business.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">
             <Link href="/contact">
               <span className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors cursor-pointer inline-flex items-center">
                 Schedule Consultation

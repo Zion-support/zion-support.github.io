@@ -1,27 +1,19 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Send, 
-  CheckCircle, 
-  AlertCircle,
-  User,
-  Building,
+  Mail, Phone, 
+  MapPin, Send, 
+  CheckCircle, AlertCircle,
+  User, Building,
   MessageSquare
 } from 'lucide-react';
 
 export const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
+    firstName: '', lastName: '',
+    email: '', company: '',
+    phone: '', service: '',
+    message: '', budget: '',
     timeline: ''
   });
 
@@ -31,8 +23,7 @@ export const ContactForm: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev,
-      [name]: value
+      ...prev, [name]: value
     }));
   };
 
@@ -45,14 +36,10 @@ export const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve, 2000));
       setSubmitStatus('success');
       setFormData({
-        firstName: '',
-        lastName: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-        budget: '',
+        firstName: '', lastName: '',
+        email: '', company: '',
+        phone: '', service: '',
+        message: '', budget: '',
         timeline: ''
       });
     } catch (error) {
@@ -63,29 +50,20 @@ export const ContactForm: React.FC = () => {
   };
 
   const services = [
-    'AI & Machine Learning',
-    'Cloud & DevOps',
-    'Enterprise Security',
-    'Digital Transformation',
-    'Micro SAAS Services',
-    'IT Onsite Services',
-    'Custom Development',
-    'Other'
+    'AI & Machine Learning', 'Cloud & DevOps',
+    'Enterprise Security', 'Digital Transformation',
+    'Micro SAAS Services', 'IT Onsite Services',
+    'Custom Development', 'Other'
   ];
 
   const budgets = [
-    'Under $10K',
-    '$10K - $50K',
-    '$50K - $100K',
-    '$100K - $500K',
+    'Under $10K', '$10K - $50K',
+    '$50K - $100K', '$100K - $500K',
     'Over $500K'
   ];
 
   const timelines = [
-    'Immediate (1-2 weeks)',
-    'Quick (1-2 months)',
-    'Standard (3-6 months)',
-    'Long-term (6+ months)'
+    'Immediate (1-2 weeks)', 'Quick (1-2 months)', 'Standard (3-6 months)', 'Long-term (6+ months)'
   ];
 
   if (submitStatus === 'success') {
@@ -100,11 +78,11 @@ export const ContactForm: React.FC = () => {
         </div>
         <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
         <p className="text-zion-slate-light mb-6">
-          Your message has been sent successfully. We'll get back to you within 24 hours.
+          Your message has been sent successfully. We&apos;ll get back to you within 24 hours.'
         </p>
         <button
           onClick={() => setSubmitStatus('idle')}
-          className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover:bg-zion-cyan/90 transition-colors"
+          className="px-6 py-3 bg-zion-cyan text-white rounded-lg hover: bg-zion-cyan/90 transition-colors"
         >
           Send Another Message
         </button>
@@ -117,11 +95,11 @@ export const ContactForm: React.FC = () => {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-white mb-4">Get In Touch</h2>
         <p className="text-zion-slate-light">
-          Ready to transform your business? Let's discuss how we can help you achieve your goals.
+          Ready to transform your business? Let&apos;s discuss how we can help you achieve your goals.'
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+      <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">
         {/* Contact Information */}
         <div className="space-y-6">
           <div className="flex items-center gap-4">
@@ -164,7 +142,7 @@ export const ContactForm: React.FC = () => {
 
         {/* Contact Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 gap-4">
             <div>
               <label htmlFor="firstName" className="block text-sm font-medium text-white mb-2">
                 First Name *
@@ -272,7 +250,7 @@ export const ContactForm: React.FC = () => {
                 name="budget"
                 value={formData.budget}
                 onChange={handleInputChange}
-                className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50 transition-colors"
+                className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/50 transition-colors"
               >
                 <option value="">Select budget range</option>
                 {budgets.map((budget) => (
@@ -291,7 +269,7 @@ export const ContactForm: React.FC = () => {
               name="timeline"
               value={formData.timeline}
               onChange={handleInputChange}
-              className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white focus:outline-none focus:border-zion-cyan/50 transition-colors"
+              className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white focus: outline-none focus:border-zion-cyan/50 transition-colors"
             >
               <option value="">Select timeline</option>
               {timelines.map((timeline) => (
@@ -311,7 +289,7 @@ export const ContactForm: React.FC = () => {
               onChange={handleInputChange}
               required
               rows={4}
-              className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:border-zion-cyan/50 transition-colors resize-none"
+              className="w-full px-4 py-3 bg-zion-blue-light/50 border border-zion-purple/20 rounded-lg text-white placeholder-zion-slate-light focus: outline-none focus:border-zion-cyan/50 transition-colors resize-none"
               placeholder="Tell us about your project and how we can help..."
             />
           </div>
@@ -334,12 +312,12 @@ export const ContactForm: React.FC = () => {
               <>
                 <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                 Sending Message...
-              </>
+</>
             ) : (
               <>
                 <Send className="w-5 h-5" />
                 Send Message
-              </>
+</>
             )}
           </motion.button>
         </form>

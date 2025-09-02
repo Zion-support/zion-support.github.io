@@ -46,7 +46,12 @@ module.exports = {
       min_uptime: '5s',
       restart_delay: 2000,
       cron_restart: '*/10 * * * *', // Run every 10 minutes
-      pmx: true
+      pmx: true,
+      health_check_grace_period: 3000,
+      health_check_fatal_exceptions: true,
+      kill_timeout: 5000,
+      listen_timeout: 3000,
+      shutdown_with_message: true
     },
 
     // Health Checker - runs every 5 minutes
@@ -70,7 +75,12 @@ module.exports = {
       min_uptime: '5s',
       restart_delay: 2000,
       cron_restart: '*/5 * * * *', // Run every 5 minutes
-      pmx: true
+      pmx: true,
+      health_check_grace_period: 3000,
+      health_check_fatal_exceptions: true,
+      kill_timeout: 5000,
+      listen_timeout: 3000,
+      shutdown_with_message: true
     },
 
     // Auto Fixer - runs every 2 hours
@@ -94,7 +104,12 @@ module.exports = {
       min_uptime: '10s',
       restart_delay: 5000,
       cron_restart: '0 */2 * * *', // Run every 2 hours
-      pmx: true
+      pmx: true,
+      health_check_grace_period: 3000,
+      health_check_fatal_exceptions: true,
+      kill_timeout: 5000,
+      listen_timeout: 3000,
+      shutdown_with_message: true
     },
 
     // Syntax Fixer - runs every 30 minutes
@@ -118,7 +133,12 @@ module.exports = {
       min_uptime: '15s',
       restart_delay: 3000,
       cron_restart: '*/30 * * * *', // Run every 30 minutes
-      pmx: true
+      pmx: true,
+      health_check_grace_period: 3000,
+      health_check_fatal_exceptions: true,
+      kill_timeout: 5000,
+      listen_timeout: 3000,
+      shutdown_with_message: true
     },
 
     // Dependency Manager - runs every hour
@@ -142,7 +162,12 @@ module.exports = {
       min_uptime: '20s',
       restart_delay: 5000,
       cron_restart: '0 * * * *', // Run every hour
-      pmx: true
+      pmx: true,
+      health_check_grace_period: 3000,
+      health_check_fatal_exceptions: true,
+      kill_timeout: 5000,
+      listen_timeout: 3000,
+      shutdown_with_message: true
     },
 
     // Build Monitor - runs every 15 minutes
@@ -166,7 +191,12 @@ module.exports = {
       min_uptime: '10s',
       restart_delay: 2000,
       cron_restart: '*/15 * * * *', // Run every 15 minutes
-      pmx: true
+      pmx: true,
+      health_check_grace_period: 3000,
+      health_check_fatal_exceptions: true,
+      kill_timeout: 5000,
+      listen_timeout: 3000,
+      shutdown_with_message: true
     },
 
     // Log Cleaner - runs daily at 2 AM
@@ -190,11 +220,12 @@ module.exports = {
       min_uptime: '5s',
       restart_delay: 2000,
       cron_restart: '0 2 * * *', // Run daily at 2 AM
-      pmx: true
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/test-and-fix-pm2-automations-merge-to-main-22c7
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
+      pmx: true,
+      health_check_grace_period: 3000,
+      health_check_fatal_exceptions: true,
+      kill_timeout: 5000,
+      listen_timeout: 3000,
+      shutdown_with_message: true
     }
   ],
 

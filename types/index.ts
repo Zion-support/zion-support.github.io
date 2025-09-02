@@ -1,8 +1,13 @@
-// Global types for the Zion Tech Group application;export interface Service {
+// Global types for the Zion Tech Group application
+
+export interface Service {
   id: string;
   name: string;
   description: string;
-category: 'micro-saas' | 'ai-services' | 'it-services';'  price: {'    min: number;max: number;
+  category: 'micro-saas' | 'ai-services' | 'it-services';
+  price: {
+    min: number;
+    max: number;
     currency: string;
   };
   features: string[];
@@ -217,7 +222,7 @@ export type DeepPartial<T> = {
   id?: string;
 'data-testid'?: string;'}'
 export interface ButtonProps extends BaseComponentProps {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';'  size?: 'sm' | 'md' | 'lg';'  disabled?: boolean;'  loading?: boolean;
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';'  size?: 'sm' | 'md' | 'lg';'  disabled?: boolean;'  loading?: boolean;'
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';'}'
 export interface InputProps extends BaseComponentProps {
