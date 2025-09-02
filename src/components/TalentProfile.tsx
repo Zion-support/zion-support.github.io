@@ -1,3 +1,4 @@
+import React from 'react';
  interface TalentProfileProps extends TalentProfileType {} export default React.memo(/**;
  * TalentProfile function;
  * @param {*} params - Function parameters;

@@ -1,3 +1,4 @@
+import React from 'react';
  export default React.memo(/**;
  * Spinner function;
  * @param {*} params - Function parameters;

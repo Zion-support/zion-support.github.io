@@ -1,3 +1,4 @@
+import React from 'react';
 import { CheckCircle, AlertCircle, XCircle, Server, Database, Cloud } from 'lucide-react';
 
 const SystemStatus: React.FC = () => {

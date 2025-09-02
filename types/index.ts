@@ -107,92 +107,112 @@ export interface SEOProps {
    type?: string;
    noindex?: boolean}
 export interface PerformanceMetrics {
-  fcp?: number;
-   // First Contentful Paint lcp?: number;
-   // Largest Contentful Paint fid?: number;
-   // First Input Delay cls?: number;
-   // Cumulative Layout Shift ttfb?: number;
-   // Time to First Byte}
+  fcp?: number; // First Contentful Paint
+  lcp?: number; // Largest Contentful Paint
+  fid?: number; // First Input Delay
+  cls?: number; // Cumulative Layout Shift
+  ttfb?: number; // Time to First Byte
+}
 export interface AccessibilitySettings {
   highContrast: boolean;
-   fontSize: number;
-   reducedMotion: boolean;
-   screenReader: boolean}
+  fontSize: number;
+  reducedMotion: boolean;
+  screenReader: boolean;
+}
 export interface UserPreferences {
   theme: 'light' | 'dark' | 'system';
-   language: string;
-   accessibility: AccessibilitySettings;
-   notifications: { email: boolean;
-   browser: boolean;
-   marketing: boolean}
+  language: string;
+  accessibility: AccessibilitySettings;
+  notifications: { 
+    email: boolean;
+    browser: boolean;
+    marketing: boolean;
+  };
 }
 export interface NavigationItem {
   name: string;
-   href: string;
-   submenu?: NavigationItem[];
-   external?: boolean}
+  href: string;
+  submenu?: NavigationItem[];
+  external?: boolean;
+}
 export interface SocialLink {
   platform: 'linkedin' | 'twitter' | 'github' | 'facebook' | 'instagram';
-   url: string;
-   label: string}
+  url: string;
+  label: string;
+}
 export interface CompanyInfo {
   name: string;
-   tagline: string;
-   description: string;
-   address: { street: string;
-   city: string;
-   state: string;
-   zip: string;
-   country: string}
-contact: {phone: string;
+  tagline: string;
+  description: string;
+  address: { 
+    street: string;
+    city: string;
+    state: string;
+    zip: string;
+    country: string;
+  };
+  contact: {
+    phone: string;
     email: string;
-    website: string}
+    website: string;
+  };
   social: SocialLink[];
   founded: number;
   employees: string;
-  certifications: string[]}
+  certifications: string[];
+}
 export interface ErrorInfo {
   message: string;
-   code?: string;
-   details?: any;
-   timestamp: string;
-   userAgent?: string;
-   url?: string}
+  code?: string;
+  details?: any;
+  timestamp: string;
+  userAgent?: string;
+  url?: string;
+}
 export interface LoadingState {
   isLoading: boolean;
-   error?: string;
-   progress?: number}
+  error?: string;
+  progress?: number;
+}
 export interface FormField {
   name: string;
   label: string;
   type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
   required: boolean;
-   placeholder?: string;
-  options?: { value: string;
-   label: string}[];
+  placeholder?: string;
+  options?: { 
+    value: string;
+    label: string;
+  }[];
   validation?: {
     min?: number;
     max?: number;
     pattern?: string;
-    message?: string}
+    message?: string;
+  };
 }
 export interface FormState {
-  values: Record<string, any>
-   errors: Record<string, string>
-   touched: Record<string, boolean>
-   isSubmitting: boolean;
-   isValid: boolean}
-// Utility types;export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
+  values: Record<string, any>;
+  errors: Record<string, string>;
+  touched: Record<string, boolean>;
+  isSubmitting: boolean;
+  isValid: boolean;
+}
+
+// Utility types
+export type Optional<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 export type RequiredFields<T, K extends keyof T> = T & Required<Pick<T, K>>;
 export type DeepPartial<T> = {
-  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P]}
-;
-// Component prop types;
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+};
+
+// Component prop types
 export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
   id?: string;
-  'data-testid'?: string}
+  'data-testid'?: string;
+}
 
 export interface ButtonProps extends BaseComponentProps {
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
@@ -200,7 +220,8 @@ export interface ButtonProps extends BaseComponentProps {
   disabled?: boolean;
   loading?: boolean;
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset'}
+  type?: 'button' | 'submit' | 'reset';
+}
 
 export interface InputProps extends BaseComponentProps {
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
@@ -209,23 +230,30 @@ export interface InputProps extends BaseComponentProps {
   onChange?: (value: string) => void;
   error?: string;
   disabled?: boolean;
-  required?: boolean}
-// API types;
+  required?: boolean;
+}
+
+// API types
 export interface ApiError {
   status: number;
-   message: string;
-   code?: string;
-   details?: any}
+  message: string;
+  code?: string;
+  details?: any;
+}
+
 export interface ApiRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
   data?: any;
   params?: Record<string, any>;
-  headers?: Record<string, string>}
-// Environment types;
+  headers?: Record<string, string>;
+}
+
+// Environment types
 export interface Environment {
   NODE_ENV: 'development' | 'production' | 'test';
   NEXT_PUBLIC_API_URL?: string;
   NEXT_PUBLIC_APP_URL?: string;
   NEXT_PUBLIC_GA_ID?: string;
-  NEXT_PUBLIC_SENTRY_DSN?: string}
+  NEXT_PUBLIC_SENTRY_DSN?: string;
+}

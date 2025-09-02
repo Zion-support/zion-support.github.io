@@ -1,3 +1,4 @@
+import React from 'react';
 import { Brain, Cloud, Shield, Code, Database, Network } from 'lucide-react';
 
 const Categories: React.FC = () => {
