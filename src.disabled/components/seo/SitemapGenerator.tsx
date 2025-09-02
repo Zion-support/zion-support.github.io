@@ -1,5 +1,5 @@
 import React from,;
-  react'; interface SitemapUrl {;
+  react' interface SitemapUrl {;
   loc: string;
    lastmod: string;
    changefreq: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never;

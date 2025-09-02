@@ -8,7 +8,7 @@ import path from;
 ;
 class BuildErrorMonitor {;
   constructor() {;
-    this.buildCheckInterval = process.env.BUILD_CHECK_INTERVAL || 900000; // 15 minutes;
+    this.buildCheckInterval = process.env.BUILD_CHECK_INTERVAL || 900000 // 15 minutes;
     this.autoFixBuild = process.env.AUTO_FIX_BUILD ===;
   'true';
     this.reportErrors = process.env.REPORT_ERRORS ===;
@@ -17,7 +17,7 @@ class BuildErrorMonitor {;
   'error-reports/build-error-monitor-report.json';
 ;
     console.log(;
-  '🏗️ Build Error Monitor started');    console.log(`Build check interval: ${this.buildCheckInterval}ms`);
+  '🏗️ Build Error Monitor started')    console.log(`Build check interval: ${this.buildCheckInterval}ms`);
     console.log(`Auto-fix build: ${this.autoFixBuild}`);
   }
 ;
@@ -71,7 +71,7 @@ class BuildErrorMonitor {;
       const status = report.buildStatus ===,;
   success' ?;
   '✅': '❌;
-      console.log(`${status} Build check complete. Status: ${report.buildStatus}`);      console.log(`Build time: ${report.buildTime}ms`);
+      console.log(`${status} Build check complete. Status: ${report.buildStatus}`)      console.log(`Build time: ${report.buildTime}ms`);
       console.log(;
         `Errors: ${report.errors.length}, Warnings: ${report.warnings.length}`;
       );
@@ -115,7 +115,7 @@ class BuildErrorMonitor {;
     const errors = [];
     const lines = output.split(,;
   \\n');
-        for (let i = 0; i < lines.length; i++) {;
+        for (let i = 0 i < lines.length i++) {;
       const line = lines[i];
 ;
       // Vite/Rollup errors;
@@ -151,7 +151,7 @@ class BuildErrorMonitor {;
     const lines = output.split(;
   '\\n');
 ;
-    for (let i = 0; i < lines.length; i++) {;
+    for (let i = 0 i < lines.length i++) {;
       const line = lines[i];
 ;
       if (line.includes(;
@@ -290,7 +290,7 @@ class BuildErrorMonitor {;
     if (report.buildTime > 60000) { // More than 1 minute;
       suggestions.push(,;
   Consider optimizing build performance - build time is over 1 minute;
-  ');    }
+  ')    }
 ;
     // Error pattern suggestions;
     const moduleErrors = report.errors.filter(e => e.type === 'module;
@@ -302,7 +302,7 @@ class BuildErrorMonitor {;
     }
 ;
     const tsErrors = report.errors.filter(e => e.message.includes('TS;
-  ')).length;    if (tsErrors > 0) {;
+  ')).length    if (tsErrors > 0) {;
       suggestions.push(;
         `Found ${tsErrors} TypeScript errors - run type checking separately`;
       );
@@ -311,7 +311,7 @@ class BuildErrorMonitor {;
     // Warning suggestions;
     if (report.warnings.length > 10) {;
       suggestions.push('High number of warnings detected - consider addressing them for better code quality;
-  ');    }
+  ')    }
 ;
     return suggestions;
   }

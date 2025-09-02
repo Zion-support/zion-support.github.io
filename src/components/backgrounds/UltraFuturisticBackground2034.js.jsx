@@ -1,7 +1,7 @@
 <<<<<<< HEAD
- const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => { const canvasRef = useRef(null); const animationRef = useRef(); useEffect(() => { const canvas = canvasRef.current; if (!canvas) return; const ctx = canvas.getContext('2d'); if (!ctx) return; canvas.width = window.innerWidth; canvas.height = window.innerHeight; const particles = []; const colors = { quantum['#00ffff', #ff00ff',#ffff00', #00ff00'],; neon['#ff0080', #8000ff',#00ffff', #ffff00'],; holographic['#ff6b6b', #4ecdc4',#45b7d1',';#96ceb4'] }; const selectedColors = colors[theme]';';import React, { useEffect, useRef } from 'react';
+ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext('2d') if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum['#00ffff', #ff00ff',#ffff00', #00ff00'], neon['#ff0080', #8000ff',#00ffff', #ffff00'], holographic['#ff6b6b', #4ecdc4',#45b7d1',';#96ceb4'] } const selectedColors = colors[theme]';';import React, { useEffect, useRef } from 'react';
 =======
- const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null); const animationRef = useRef(); useEffect(() => { const canvas = canvasRef.current; if (!canvas) return; const ctx = canvas.getContext("2d"); if (!ctx) return; canvas.width = window.innerWidth; canvas.height = window.innerHeight; const particles = []; const colors = { quantum["#00ffff", #ff00ff",#ffff00", #00ff00"],; neon["#ff0080", #8000ff",#00ffff", #ffff00"],; holographic["#ff6b6b", #4ecdc4",#45b7d1",";#96ceb4"] }; const selectedColors = colors[theme]';";import React, { useEffect, useRef } from 'react';
+ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = "quantum" }) => { const canvasRef = useRef(null) const animationRef = useRef() useEffect(() => { const canvas = canvasRef.current if (!canvas) return const ctx = canvas.getContext("2d") if (!ctx) return canvas.width = window.innerWidth canvas.height = window.innerHeight const particles = [] const colors = { quantum["#00ffff", #ff00ff",#ffff00", #00ff00"], neon["#ff0080", #8000ff",#00ffff", #ffff00"], holographic["#ff6b6b", #4ecdc4",#45b7d1",";#96ceb4"] } const selectedColors = colors[theme]';";import React, { useEffect, useRef } from 'react';
 >>>>>>> cursor/automate-test-fix-improve-and-merge-code-2b9a
 const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) => {}
     const canvasRef = useRef(null);
@@ -27,7 +27,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
 };
         const selectedColors = colors[theme];
         // Create particles;
-        for(let i = 0; i < 100; i++) {}
+        for(let i = 0 i < 100 i++) {}
             particles.push({}
                 x: Math.random() * canvas.width,;
                 y: Math.random() * canvas.height,;
@@ -76,7 +76,7 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                 ctx.save()';
                 ctx.globalCompositeOperation = 'screen';
                 // Quantum wave effect;
-                for(let i = 0; i < 5; i++) {}
+                for(let i = 0 i < 5 i++) {}
                     const time = Date.now() * 0.001;
                     const wave = Math.sin(time + i) * 100;
                     ctx.beginPath()`;
@@ -105,14 +105,14 @@ const UltraFuturisticBackground2034 = ({ intensity = 0.8, theme = 'quantum' }) =
                 ctx.globalCompositeOperation = 'overlay';
                 // Holographic grid;
                 const gridSize = 50;
-                for(let x = 0; x < canvas.width; x += gridSize) {}
+                for(let x = 0 x < canvas.width x += gridSize) {}
                     ctx.beginPath();
                     ctx.moveTo(x, 0)`;
                     ctx.lineTo(x, canvas.height)`;
                     ctx.strokeStyle = `rgba(255, 255, 255, ${0.1 * intensity})`;
                     ctx.lineWidth = 0.5;
                     ctx.stroke()}
-                for(let y = 0; y < canvas.height; y += gridSize) {}
+                for(let y = 0 y < canvas.height y += gridSize) {}
                     ctx.beginPath();
                     ctx.moveTo(0, y)`;
                     ctx.lineTo(canvas.width, y)`;

@@ -272,7 +272,7 @@ export default function Services2026ShowcasePage() {
   ');
         if (selectedCategory === 'micro-saas;
   ') return service.category.includes('SaaS;
-  ');        return true;
+  ')        return true;
       });
     }
 ;
@@ -291,7 +291,7 @@ export default function Services2026ShowcasePage() {
         if (selectedPriceRange === 'high;
   ') return price >= 5000 && price < 20000;
         if (selectedPriceRange === 'premium;
-  ') return price >= 20000;        return true;
+  ') return price >= 20000        return true;
       });
     }
 ;
@@ -317,7 +317,7 @@ export default function Services2026ShowcasePage() {
         case 'popularity;
   ': return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
         case 'newest:;
-          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();        default:;
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()        default:;
           return a.name.localeCompare(b.name);
       }
     });

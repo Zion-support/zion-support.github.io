@@ -1,5 +1,5 @@
 import React from;
-  'react''; interface HelpArticle {;
+  'react'' interface HelpArticle {;
   slug: string;
    title: string;
    content: string;

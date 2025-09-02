@@ -40,7 +40,7 @@ const Marketplace: React.FC = () => {;
     return matchesCategory && matchesSearch}) ;
 ;
       case 'price;
-  ': return b.rating - a.rating';      case;
+  ': return b.rating - a.rating'      case;
   'price':;
         return (;
           parseFloat(a.price.replace(/[^0-9.]/g,)) -,;
@@ -52,7 +52,7 @@ const Marketplace: React.FC = () => {;
   'users:;
         return b.users - a.users;
       default:;
-        return b.reviews - a.reviews; // popularity;
+        return b.reviews - a.reviews // popularity;
     }
   }) ;
 ;
@@ -84,7 +84,7 @@ const Marketplace: React.FC = () => {;
   'bg-slate-500/20 text-slate-400}
   };
 ;
-    for (let i = 0; i < fullStars i++) {;
+    for (let i = 0 i < fullStars i++) {;
       stars.push();
         <Star key={i} className='w-4 h-4 text-yellow-400 fill-current'  />;
       )}
@@ -94,7 +94,7 @@ const Marketplace: React.FC = () => {;
         <Star key='half' className='w-4 h-4 text-yellow-400 fill-current'  />
       )}
 ;
-    for (let i = 0; i < emptyStars; i++) {;
+    for (let i = 0 i < emptyStars i++) {;
 ';
       stars.push(<Star key={`empty-${i}`} className='w-4 h-4 text-gray-400'  />)}
 ;

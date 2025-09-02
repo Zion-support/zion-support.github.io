@@ -49,7 +49,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {;
           <div className='flex items-center gap-2 text-slate-200 font-semibold'>'';
             <DollarSign className='h-4 w-4'  /> Pricing'</div>'          <ul className='mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm'>            <li>Starter: $39/mo + 3 pages</li>
             <li>Growth: $129/mo + 20 pages</li>
-            <li>Enterprise: Custom; SSO, compliance, SLAs</li>
+            <li>Enterprise: Custom SSO, compliance, SLAs</li>
             <li>Setup: $2k–$8k (brand + components)</li>
 :pages.disabled/pages/services/LandingPageGenerator.tsx;
           </ul>'<a''            className='mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200'';

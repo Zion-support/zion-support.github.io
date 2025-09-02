@@ -30,7 +30,7 @@
   🚀',;
       difficulty: 'Beginner';
   ';
-      title: 'Getting Started Guide,;,;
+      title: 'Getting Started Guide,;;
   description: 'Quick start tutorial for new developers,;
 ,;
   icon: '🚀,'      difficulty:,;
@@ -66,7 +66,7 @@
   'application/json}}) ;
 ;
 const data = await response.json()`;
-// // // // // console.log(data)`;,      icon: Code;
+// // // // // console.log(data)`      icon: Code;
     },;
     {;
       name:,;
@@ -90,7 +90,7 @@ const data = await response.json()`;
       description: 'Q&A platform integration,;
       members:,;
   5K+',;
-      icon: '📝};  ];
+      icon: '📝}  ];
 ;
   return();
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>

@@ -31,7 +31,7 @@ class ComprehensiveWebsiteAnalyzer {
         timeout: 10000,;
         validateStatus: (status) => status < 500,;
         headers: {,;
-  User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Analyzer/1.0);
+  User-Agent': 'Mozilla/5.0 (compatible ZionTechGroup-Analyzer/1.0);
         }      });
 ;
       if (response.status === 200) {;
@@ -55,7 +55,7 @@ class ComprehensiveWebsiteAnalyzer {
             if (link.startsWith('/;
   ') || link.startsWith(this.baseUrl)) {;
               const fullUrl = link.startsWith('/;
-  ') ? `${this.baseUrl}${link}` : link;              await this.checkUrl(fullUrl, url);
+  ') ? `${this.baseUrl}${link}` : link              await this.checkUrl(fullUrl, url);
             }
           }
         }
@@ -357,7 +357,7 @@ async function main() {;
     const report = await analyzer.saveReport();
 ;
     console.log(;
-  '\n=== ANALYSIS SUMMARY ===);    console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);
+  '\n=== ANALYSIS SUMMARY ===)    console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);
     console.log(`Working links: ${report.summary.workingLinks}`);
     console.log(`Broken links: ${report.summary.brokenLinks}`);
     console.log(`Success rate: ${report.summary.successRate}`);

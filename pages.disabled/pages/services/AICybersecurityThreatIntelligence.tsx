@@ -218,7 +218,7 @@ export default function AICybersecurityThreatIntelligence(...args[]):  {}
   const threatTypes: any = [];
     {}
 '';
-      title: 'Ransomware Attacks',';      description: 'AI detection and prevention of ransomware before encryption occurs',;
+      title: 'Ransomware Attacks','      description: 'AI detection and prevention of ransomware before encryption occurs',;
       icon: Lock;
     },;
 :pages.disabled/pages/services/AICybersecurityThreatIntelligence.tsx;

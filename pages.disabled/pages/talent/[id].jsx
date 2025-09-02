@@ -17,7 +17,7 @@ export default function TalentProfilePage() {}
     useEffect(() => {;
         const fetchProfile = async () => {;
             if (!id) {;
-  'setError('Profile not found);                setLoading(false);
+  'setError('Profile not found)                setLoading(false);
                 return;
 ;
             try {}

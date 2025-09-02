@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from,;
-  react'; import { motion, AnimatePresence } from;
-  'framer-motion'; import { Search, X, Clock, TrendingUp, Star } from;
-  'lucide-react'; interface SearchResult {;
+  react' import { motion, AnimatePresence } from;
+  'framer-motion' import { Search, X, Clock, TrendingUp, Star } from;
+  'lucide-react' interface SearchResult {;
   id: string;
    title: string;
    description: string;
@@ -13,4 +13,4 @@ import React, { useState, useRef, useEffect } from,;
    onSearch?: (query: string) => void;
    className?: string;
 } const SearchComponent: React.FC<SearchComponentProps> = ({ placeholder = 'Search services, features, and more...', onSearch, className = '' }) => { const [query, setQuery] = useState(';
-  '); const [isOpen, setIsOpen] = useState(false); const [selectedIndex, setSelectedIndex] = useState(-1); const inputRef = useRef<HTMLInputElement>(null); const resultsRef = useRef<HTMLDivElement>(null)';
+  ') const [isOpen, setIsOpen] = useState(false) const [selectedIndex, setSelectedIndex] = useState(-1) const inputRef = useRef<HTMLInputElement>(null) const resultsRef = useRef<HTMLDivElement>(null)';

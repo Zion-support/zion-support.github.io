@@ -173,7 +173,7 @@ class BuildAutomation {;
       }
     }
 ;
-    return errors.slice(0, 20); // Limit to first 20 errors;
+    return errors.slice(0, 20) // Limit to first 20 errors;
   }
 ;
   async autoFixBuildIssues(errors) {;
@@ -835,4 +835,4 @@ setInterval(() => {;
   automation.log(;
     `Automation heartbeat - Successes: ${stats.buildSuccesses}, Failures: ${stats.buildFailures}, Optimizations: ${stats.optimizationsApplied}, Uptime: ${Math.round(stats.uptime)}s`;
   );
-}, 1200000); // Every 20 minutes;
+}, 1200000) // Every 20 minutes;

@@ -60,7 +60,7 @@ ${pages;
 </urlset>`;
 ;
   const sitemapPath = path.join(__dirname,;
-  '../public/sitemap.xml');  fs.writeFileSync(sitemapPath, sitemap);
+  '../public/sitemap.xml')  fs.writeFileSync(sitemapPath, sitemap);
   console.log(;
   '✅ Generated sitemap.xml');
 }
@@ -88,7 +88,7 @@ Allow: /contact/`;
 ;
   const robotsPath = path.join(__dirname,;
 ,;
-  ../public/robots.txt');  fs.writeFileSync(robotsPath, robotsTxt);
+  ../public/robots.txt')  fs.writeFileSync(robotsPath, robotsTxt);
   console.log(;
   '✅ Generated robots.txt');
 }
@@ -137,7 +137,7 @@ function generateManifest() {;
   };
 ;
   const manifestPath = path.join(__dirname,;
-  '../public/manifest.json');  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
+  '../public/manifest.json')  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log(;
   '✅ Generated manifest.json');
 }
@@ -176,7 +176,7 @@ function generateStructuredData() {;
       'IT Consulting']};
 ;
   const structuredDataPath = path.join(__dirname,;
-  '../public/structured-data.json');  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
+  '../public/structured-data.json')  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
   console.log(;
   '✅ Generated structured data');
 }
@@ -190,7 +190,7 @@ async function main() {;
     generateStructuredData();
 ;
     console.log(;
-  '✅ SEO optimization completed successfully!');  } catch (error) {;
+  '✅ SEO optimization completed successfully!')  } catch (error) {;
     console.error(;
   '❌ SEO optimization failed:', error.message);
     process.exit(1);

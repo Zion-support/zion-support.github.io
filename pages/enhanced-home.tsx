@@ -33,10 +33,10 @@ const EnhancedHome: React.FC = () => {
     },
     {
       icon: Cloud,
-      title: 'Cloud Architecture',;
-      description: 'Scalable, secure, and efficient cloud solutions designed for modern enterprise needs.',;
-      color: 'from-blue-500 to-cyan-500';
-    },;
+      title: 'Cloud Architecture',
+      description: 'Scalable, secure, and efficient cloud solutions designed for modern enterprise needs.',
+      color: 'from-blue-500 to-cyan-500'
+    },
     {;
       icon: Shield,;
       title: 'Cybersecurity',;

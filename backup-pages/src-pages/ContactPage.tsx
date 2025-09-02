@@ -41,7 +41,7 @@ message: ';
   const [isSubmitted, setIsSubmitted] = useState (false) };
 ;
   const handleSubmit = async (e: anyReact.FormEvent) => {;
-    e.preventDefault();    setIsSubmitting(true);
+    e.preventDefault()    setIsSubmitting(true);
 ;
     // Simulate form submission;
     await new Promise(resolve => setTimeout(resolve, 2000));

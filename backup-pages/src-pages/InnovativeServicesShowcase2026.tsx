@@ -75,13 +75,13 @@
   }) }};
 ;
   ;
-  ;,;
+  ;;
   'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600,;
 ,;
   'Advanced;
-  ': 'bg-gradient-to-r from-blue-600 to-cyan-600,;  ;
+  ': 'bg-gradient-to-r from-blue-600 to-cyan-600,  ;
   ;
-  ;,;
+  ;;
   Cutting-Edge;
   ': 'bg-gradient-to-r from-green-600 to-emerald-600;
     };

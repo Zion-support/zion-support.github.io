@@ -7,7 +7,7 @@ import { Button } from;
   '../components/ui/Button';{ Card } from;
   '../components/ui/Card';
 import { Badge } from;
-  '../components/ui/Badge';import { ';  CheckCircle, Star,;
+  '../components/ui/Badge';import { '  CheckCircle, Star,;
   Zap, Shield,;
   Users, Globe,;
   Phone, Mail,;

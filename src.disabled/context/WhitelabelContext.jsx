@@ -4,7 +4,7 @@ const WhitelabelContext = createContext();
 ;
 export function WhitelabelProvider({ children }) {;
   const [isWhitelabel, setIsWhitelabel] = useState(false);
-  const [primaryColor, setPrimaryColor] = useState('#06b6d4'); // Default zion-cyan;
+  const [primaryColor, setPrimaryColor] = useState('#06b6d4') // Default zion-cyan;
   const [customTheme, setCustomTheme] = useState(null);
 ;
   const value = {;

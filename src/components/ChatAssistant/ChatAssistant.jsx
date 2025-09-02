@@ -10,7 +10,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     const auth = useContext(AuthContext);
     const isGuest = !auth?.isAuthenticated;
     // Hooks called unconditionally at the top';
-    const localStorageKey = `chatHistory-${recipient.id}`; // Key is always generated'';
+    const localStorageKey = `chatHistory-${recipient.id}` // Key is always generated'';
     const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage(isGuest ? localStorageKey : 'dummy-guest-key', // Use a dummy key if not guest to prevent LS write for logged-in users;
     []);
     const [displayGuestMessages, setDisplayGuestMessages] = useState([]);
@@ -26,7 +26,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             // Priority: initialMessages prop > localStorage > empty array;
             if (initialMessages && initialMessages.length > 0) {}
                 setDisplayGuestMessages(initialMessages);
-                setStoredGuestMessages(initialMessages); // Persist if initialMessages are provided;
+                setStoredGuestMessages(initialMessages) // Persist if initialMessages are provided;
             else {}
                 setDisplayGuestMessages(storedGuestMessages)}
         }
@@ -43,7 +43,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         if(isGuest) {}
             const newMessages = valueOrFn instanceof Function ? valueOrFn(displayGuestMessages) : valueOrFn;
             setDisplayGuestMessages(newMessages);
-            setStoredGuestMessages(newMessages); // Always update localStorage for guests;
+            setStoredGuestMessages(newMessages) // Always update localStorage for guests;
         else {}
             const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn;
             setLoggedInMessages(newMessages)}
@@ -54,7 +54,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             onSendMessage(debouncedApiCallParams.message, debouncedApiCallParams.conversationId)}
     }, [debouncedApiCallParams, onSendMessage]);
     useEffect(() => {}
-        scrollToBottom()}, [currentMessages]); // currentMessages will correctly refer to either guest or logged-in state;
+        scrollToBottom()}, [currentMessages]) // currentMessages will correctly refer to either guest or logged-in state;
     const scrollToBottom = () => {}
 ';
 '';
@@ -85,7 +85,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             message: guestMessage,;
   timestamp: new Date();
 };
-        setCurrentMessages((prev) => [...prev, newMessage]); // This will now use the guest-aware setCurrentMessages;
+        setCurrentMessages((prev) => [...prev, newMessage]) // This will now use the guest-aware setCurrentMessages;
         setPendingApiCallParams({ message: guestMessage, conversationId });
         setShowGuestModal(false);
         setGuestMessage(null)};

@@ -123,7 +123,7 @@ describe(;
 ;
     cy.url().should(;
   'include',;
-  '/login'); // Should remain on login page;
+  '/login') // Should remain on login page;
     // Check for Sonner toast (common toast library);
     // Adjust selector if your toast implementation differs.;
     // This selector targets a toast that is marked as destructive (error);

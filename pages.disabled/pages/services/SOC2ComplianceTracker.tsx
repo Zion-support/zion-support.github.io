@@ -100,7 +100,7 @@ export default function SOC2ComplianceTracker(...args: []):  {}
     {'
       step: '06',';
       title: 'Ongoing Compliance',';
-      description: 'Maintain compliance with continuous monitoring and improvement'};  ];
+      description: 'Maintain compliance with continuous monitoring and improvement'}  ];
 ;
   return();
 :pages.disabled/pages/services/SOC2ComplianceTracker.tsx;

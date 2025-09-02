@@ -143,14 +143,14 @@ const PerformanceEnhancer: React.FC = () => {;
 ;
   if (!isVisible) return null;
 ;
-  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {;
+  const getScoreColor = (value: number | null, thresholds: { good: number needsImprovement: number }) => {;
     if (value === null) return 'text-gray-500';
     if (value <= thresholds.good) return 'text-green-500';
     if (value <= thresholds.needsImprovement) return 'text-yellow-500';
     return 'text-red-500';
   };
 ;
-  const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {;
+  const getScoreText = (value: number | null, thresholds: { good: number needsImprovement: number }) => {;
     if (value === null) return 'Measuring...';
     if (value <= thresholds.good) return 'Good'
     if (value <= thresholds.needsImprovement) return 'Needs Improvement';

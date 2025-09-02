@@ -3,7 +3,7 @@ import AIChatbot from './AIChatbot'';describe('AIChatbot;
   'renders without crashing', () => {';
   '    render(<AIChatbot />);
     expect(screen.getByRole('main;
-  ')).toBeInTheDocument()';  })';
+  ')).toBeInTheDocument()'  })';
   it(;
   'displays correct content', () => {';
   '    render(<AIChatbot />);

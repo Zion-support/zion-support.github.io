@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 // // // console.log(;
   '📊 Starting continuous performance monitoring automation...');
 // Get automation interval from environment variable (default: 2 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000; // 2 hours;
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 7200000 // 2 hours;
 async function runPerformanceMonitor() {;
   try {;
     // // // console.log(`📊 Running performance monitoring at ${new Date().toISOString()}`);

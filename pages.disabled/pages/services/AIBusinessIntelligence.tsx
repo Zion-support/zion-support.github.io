@@ -64,7 +64,7 @@ const AIBusinessIntelligence: React.FC = props {;
   ];
 export { function };
 export default function AIBusinessIntelligence(...args: unknown[]): unknown {
-  const features = [;    {;
+  const features = [    {;
       icon: Brain,'';
       title: 'AI-Powered Analytics','';
       description: 'Advanced machine learning algorithms that automatically identify patterns and insights in your business data.';
@@ -103,7 +103,7 @@ const AIBusinessIntelligence: React.FC = props {}
 ;
 export { function };
 export default function AIBusinessIntelligence(...args: unknown[]): unknown {}
-  const features: any = [;    {}
+  const features: any = [    {}
       icon: Brain,'';
       title: 'AI-Powered Analytics','';
       description: 'Advanced machine learning algorithms that automatically identify patterns and insights in your business data.'';

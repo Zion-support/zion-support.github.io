@@ -37,7 +37,7 @@ import {}
   PieChart} from,;
   lucide-react.ts';: pages.disabled/pages/services/QuantumAITradingPlatform.tsx;
 export default function QuantumAITradingPlatform(...args: any[]): any {const [activeTab, setActiveTab] = useState('overview;
-  ');  const [isVisible, setIsVisible] = useState(false);
+  ')  const [isVisible, setIsVisible] = useState(false);
 ;
   useEffect(() => {}
     setIsVisible(true)}, []);

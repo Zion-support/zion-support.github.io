@@ -43,7 +43,7 @@ export default function ServicesPage() {
   // Sort services;
       case 'price-high;
   ': return b.price - a.price;
-return a.price - b.price';      case;
+return a.price - b.price'      case;
   'price-high':;
         return b.price - a.price';
       case;

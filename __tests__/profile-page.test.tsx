@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import Profile from '@/pages/Profile';
-import { vi, expect, test, beforeEach, afterEach } from 'vitest'; // Added beforeEach, afterEach;
+import { vi, expect, test, beforeEach, afterEach } from 'vitest' // Added beforeEach, afterEach;
 // Define the UserProfile structure based on usage;
 interface UserProfile {
   id: string;
@@ -59,7 +59,7 @@ describe('Profile Page;
 ;
     render(<Profile />);
     await screen.findByDisplayValue(,;
-  Jane'); // Wait for the name field to be populated;
+  Jane') // Wait for the name field to be populated;
     expect(global.fetch).toHaveBeenCalledWith(;
   '/api/users/me');
     expect(global.fetch).toHaveBeenCalledTimes(1);
@@ -86,7 +86,7 @@ describe('Profile Page;
 ;
     render(<Profile />);
     await screen.findByDisplayValue('Jane;
-  '); // Ensure initial data is loaded;
+  ') // Ensure initial data is loaded;
     // Mock the PUT request response;
     (global.fetch as vi.Mock).mockResolvedValueOnce({;
       ok: true,;

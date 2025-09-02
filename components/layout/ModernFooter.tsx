@@ -1,6 +1,6 @@
 React from;
   'react.ts';
-import Link from 'next/link' from 'next/link.ts';import {';  Mail, Phone,;
+import Link from 'next/link' from 'next/link.ts';import {'  Mail, Phone,;
   MapPin, Linkedin,;
   Twitter, Github,;
   Zap, Shield,;

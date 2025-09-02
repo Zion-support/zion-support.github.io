@@ -374,7 +374,7 @@ class BrowserErrorMonitor {
   ') {;
         window.globalErrorHandler = (error) => {;
           console.warn('Global error handler caught: , error);
-          return false; // Prevent default error handling;
+          return false // Prevent default error handling;
         };
         window.addEventListener('error;
   ', window.globalErrorHandler);

@@ -1,2 +1,2 @@
 import React from;
-  'react'; export default UltimateServicesShowcase2025';
+  'react' export default UltimateServicesShowcase2025';

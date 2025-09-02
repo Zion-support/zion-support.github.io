@@ -38,5 +38,5 @@ export default async function handler(;
 ;
   } catch (error) {;
     console.error(;
-  'Error processing web vitals: , error);,;
-  res.status(500).json({ error: 'Internal server error })';  }'}
+  'Error processing web vitals: , error);;
+  res.status(500).json({ error: 'Internal server error })'  }'}

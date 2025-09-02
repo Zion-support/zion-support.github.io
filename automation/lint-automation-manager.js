@@ -118,7 +118,7 @@ class LintAutomationManager {;
         this.log(;
   '🔄 Running periodic lint check...');
         await this.runLint()}
-    }, 5 * 60 * 1000); // Every 5 minutes;
+    }, 5 * 60 * 1000) // Every 5 minutes;
     this.log(;
   '✅ Lint Automation Manager started successfully')}
   stop() {;

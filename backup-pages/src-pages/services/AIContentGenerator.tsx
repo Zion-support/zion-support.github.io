@@ -95,7 +95,7 @@ export default function AIContentGenerator(...args[]):  {
   Performance Analytics;
   ',;
       description: 'Track content performance with AI-powered insights and optimization recommendations};
-  ];,;
+  ];;
   Increase content production by 10x with AI assistance;
   ',';Improve SEO rankings by 45% with optimized content;
   ',';Reduce content creation costs by 60%;

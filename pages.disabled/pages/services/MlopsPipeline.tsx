@@ -28,7 +28,7 @@ const MlopsPipeline: React.FC = (): JSX.Element => (;
           <li>Managed run: from $3,000/mo</li>
         </ul>
 :pages.disabled/pages/services/MlopsPipeline.tsx;
-      </div>';</section>';    <section className='container mx-auto px-4 pb-16'>';
+      </div>';</section>'    <section className='container mx-auto px-4 pb-16'>';
       <a href='/contact' className='inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition'>Talk to an engineer</a>
     </section>
   </div>

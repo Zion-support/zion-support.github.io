@@ -8,7 +8,7 @@ if (typeof (globalThis as any).fetch === 'undefined') {;
     const nodeFetch = require('node-fetch');
     ;(globalThis as any).fetch = nodeFetch;
   } catch {;
-    // ignore if node-fetch is not available; most tests may not need fetch;
+    // ignore if node-fetch is not available most tests may not need fetch;
   }
 }
 ;

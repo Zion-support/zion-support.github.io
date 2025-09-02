@@ -65,8 +65,8 @@ const categories: Array < any> = [];
 ;
   const listings: MarketplaceItem[] = [];
 :pages.disabled/utils/generateRandomListing.tsx;
-  for (let i = 0; i < count; i++) {;
-  for (let i = 0; i < count; i++) {}
+  for (let i = 0 i < count i++) {;
+  for (let i = 0 i < count i++) {}
     listings.push (generateRandomListing () ) ;
 ;
   return listings}}}'`;

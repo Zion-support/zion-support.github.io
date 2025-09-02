@@ -19,10 +19,10 @@ export default function Index() {
         <meta name='twitter: image' content='https://ziontechgroup.com/og-image.jpg' />
         <link rel='canonical' href='https://ziontechgroup.com' />
         <script
-          type='application/ld+json';
-          dangerouslySetInnerHTML={{;
-            __html: JSON.stringify({;
-              '@context': 'https://schema.org', '@type': 'Organization',;
+          type='application/ld+json'
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org', '@type': 'Organization',
               'name': 'Zion Tech Group', 'url': 'https://ziontechgroup.com',;
               'logo': 'https://ziontechgroup.com/logo.png', 'description': 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', 'address': {;
                 '@type': 'PostalAddress',;

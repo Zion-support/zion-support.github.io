@@ -11,7 +11,7 @@ export default function AIBusinessIntelligence(...args[]):  {}
 :pages.disabled/pages/micro-saas/AIBusinessIntelligence.tsx;
   ]},';
     {';
-      title: 'Automated Reporting',';      description: 'Generate reports automatically with AI insights',;
+      title: 'Automated Reporting','      description: 'Generate reports automatically with AI insights',;
   ]},;
     {
       title: 'Automated Reporting',;

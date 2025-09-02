@@ -339,7 +339,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   };
 }
 ;
-export default function ServiceDetailPage({ service, slug }: { service: SimpleService; slug: string }) {;
+export default function ServiceDetailPage({ service, slug }: { service: SimpleService slug: string }) {;
   return (;
     <Layout>
       <Head>

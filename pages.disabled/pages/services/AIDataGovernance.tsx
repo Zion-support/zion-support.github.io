@@ -221,7 +221,7 @@ const AIDataGovernance: React.FC = (): JSX.Element => {}
       title: 'Intellectual Property',';
       description: 'Protect trade secrets and proprietary data with advanced classification',;
       icon: Cpu,';
-      color: 'from-orange-500 to-red-500'};  ];
+      color: 'from-orange-500 to-red-500'}  ];
 ;
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>

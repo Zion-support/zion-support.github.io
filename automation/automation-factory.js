@@ -144,7 +144,7 @@ class CodeQualityMonitor {
   'utf8');
         const lines = content.split(;
   '\\n');
-        totalComplexity += lines.length * 0.1; // Simplified complexity metric;
+        totalComplexity += lines.length * 0.1 // Simplified complexity metric;
       });
       return Math.min(Math.floor(totalComplexity), 100)} catch (error) {;
       return Math.floor(Math.random() * 10) + 1}

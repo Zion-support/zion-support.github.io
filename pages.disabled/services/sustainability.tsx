@@ -197,7 +197,7 @@ export default function Sustainability(...args: []):  {
 >              and create positive environmental impact;
             </p>
           </motion.div>';
-Sustainability Solutions;            </h2>'';
+Sustainability Solutions            </h2>'';
             <p className='text-xl text-slate-300 max-w-3xl mx-auto'>
               Discover how sustainable technology can transform various aspects of your business;
               and create positive environmental impact;

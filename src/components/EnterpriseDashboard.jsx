@@ -7,7 +7,7 @@ export const EnterpriseDashboard = () => {;
         enableUserBehaviorTracking: true;
     })';
     const [activeTab, setActiveTab] = useState('overview');
-    const [refreshInterval, setRefreshInterval] = useState(30000); // 30 seconds;
+    const [refreshInterval, setRefreshInterval] = useState(30000) // 30 seconds;
     const [isRefreshing, setIsRefreshing] = useState(false)';
     const [dateRange, setDateRange] = useState('24h')';
     const [searchQuery, setSearchQuery] = useState('')';

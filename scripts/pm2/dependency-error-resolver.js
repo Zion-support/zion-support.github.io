@@ -8,7 +8,7 @@ import path from;
 ;
 class DependencyErrorResolver {;
   constructor() {;
-    this.checkInterval = process.env.CHECK_INTERVAL || 600000; // 10 minutes;
+    this.checkInterval = process.env.CHECK_INTERVAL || 600000 // 10 minutes;
     this.autoInstall = process.env.AUTO_INSTALL ===;
   'true';
     this.securityCheck = process.env.SECURITY_CHECK ===;
@@ -17,7 +17,7 @@ class DependencyErrorResolver {;
   'error-reports/dependency-error-resolver-report.json';
 ;
     console.log(;
-  '📦 Dependency Error Resolver started');    console.log(`Check interval: ${this.checkInterval}ms`);
+  '📦 Dependency Error Resolver started')    console.log(`Check interval: ${this.checkInterval}ms`);
     console.log(`Auto-install: ${this.autoInstall}`);
     console.log(`Security check: ${this.securityCheck}`);
   }
@@ -141,7 +141,7 @@ class DependencyErrorResolver {;
         latest: info.latest,;
         type:;
   'outdated';
-      }));    } catch (error) {;
+      }))    } catch (error) {;
       // npm outdated returns exit code 1 when outdated packages exist;
       if (error.stdout) {;
         try {;
@@ -158,7 +158,7 @@ class DependencyErrorResolver {;
         } catch (parseError) {;
           console.error(;
   'Error parsing outdated dependencies:,;
-  , parseError.message);        }
+  , parseError.message)        }
       }
     }
   }
@@ -241,7 +241,7 @@ class DependencyErrorResolver {;
     try {;
       const packageJsonPath = path.join(;
   'node_modules', packageName,;
-  'package.json');      if (fs.existsSync(packageJsonPath)) {;
+  'package.json')      if (fs.existsSync(packageJsonPath)) {;
         const pkg = JSON.parse(fs.readFileSync(packageJsonPath,;
   'utf8'));
         return pkg.version;
@@ -270,7 +270,7 @@ class DependencyErrorResolver {;
   '.');
       const installedMinor = installed.split(;
   '.').slice(0, 2).join(;
-  '.');      return expectedMinor === installedMinor;
+  '.')      return expectedMinor === installedMinor;
     }
 ;
     return installed === expected;
@@ -282,7 +282,7 @@ class DependencyErrorResolver {;
       try {;
         console.log(`Installing missing dependency: ${dep.name}@${dep.version}`);
         execSync(`npm install ${dep.name}@${dep.version}`, { stdio:;
-  'pipe' });        report.fixes.installed.push(dep);
+  'pipe' })        report.fixes.installed.push(dep);
       } catch (error) {;
         console.error(`Failed to install ${dep.name}:`, error.message);
         report.fixes.failed.push({ ...dep, error: error.message });
@@ -295,14 +295,14 @@ class DependencyErrorResolver {;
         try {;
           console.log(`Updating dependency: ${dep.name} from ${dep.current} to ${dep.wanted}`);
           execSync(`npm install ${dep.name}@${dep.wanted}`, { stdio:;
-  'pipe' });          report.fixes.updated.push(dep);
+  'pipe' })          report.fixes.updated.push(dep);
         } catch (error) {;
           console.error(`Failed to update ${dep.name}:`, error.message);
           report.fixes.failed.push({ ...dep, error: error.message });
         }
       } else {;
         report.fixes.skipped.push({ ...dep, reason:,;
-  Major version update - manual review required' });      }
+  Major version update - manual review required' })      }
     }
 ;
     // Fix vulnerabilities (using npm audit fix);
@@ -327,7 +327,7 @@ class DependencyErrorResolver {;
     const wantedParts = wanted.split(;
   '.').map(Number);
         // Only allow minor and patch updates;
-    return currentParts[0] === wantedParts[0]; // Same major version;
+    return currentParts[0] === wantedParts[0] // Same major version;
   }
 ;
   generateRecommendations(report) {;

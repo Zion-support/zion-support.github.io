@@ -19,8 +19,8 @@ class ErrorMonitor {;
     this.errorReportDir = path.join(__dirname,;
   '..',;
   'error-reports');
-    this.maxLogSize = 10 * 1024 * 1024; // 10MB;
-    this.errorThreshold = 5; // Number of errors before triggering fixes;
+    this.maxLogSize = 10 * 1024 * 1024 // 10MB;
+    this.errorThreshold = 5 // Number of errors before triggering fixes;
     this.errors = [];
 ;
     this.ensureDirectories();
@@ -76,13 +76,13 @@ class ErrorMonitor {;
 ;
       this.log(;
   'info',;
-  'TypeScript check passed');      return { success: true, errors: [] }
+  'TypeScript check passed')      return { success: true, errors: [] }
     } catch (error) {;
       const errorOutput = error.stdout || error.message;
       const errors = this.parseTypeScriptErrors(errorOutput);
 ;
       this.log(;
-  'error', `TypeScript check failed with ${errors.length} errors`);      return { success: false, errors }
+  'error', `TypeScript check failed with ${errors.length} errors`)      return { success: false, errors }
     }
   }
 ;
@@ -103,13 +103,13 @@ class ErrorMonitor {;
 ;
       this.log(;
   'info',;
-  'ESLint check passed');      return { success: true, errors: [] }
+  'ESLint check passed')      return { success: true, errors: [] }
     } catch (error) {;
       const errorOutput = error.stdout || error.message;
       const errors = this.parseESLintErrors(errorOutput);
 ;
       this.log(;
-  'error', `ESLint check failed with ${errors.length} errors`);      return { success: false, errors }
+  'error', `ESLint check failed with ${errors.length} errors`)      return { success: false, errors }
     }
   }
 ;
@@ -130,13 +130,13 @@ class ErrorMonitor {;
 ;
       this.log(;
   'info',;
-  'Build check passed');      return { success: true, errors: [] }
+  'Build check passed')      return { success: true, errors: [] }
     } catch (error) {;
       const errorOutput = error.stdout || error.message;
       const errors = this.parseBuildErrors(errorOutput);
 ;
       this.log(;
-  'error', `Build check failed with ${errors.length} errors`);      return { success: false, errors }
+  'error', `Build check failed with ${errors.length} errors`)      return { success: false, errors }
     }
   }
 ;
@@ -225,7 +225,7 @@ class ErrorMonitor {;
 ;
       this.log(;
   'info',;
-  'Auto-fixer triggered successfully');    } catch (error) {;
+  'Auto-fixer triggered successfully')    } catch (error) {;
       this.log(;
   'error',;
   'Failed to trigger auto-fixer', error);
@@ -276,7 +276,7 @@ class ErrorMonitor {;
     if (this.errors.some(e => e.type ===;
   'build')) {;
       recommendations.push(;
-  'Check dependencies and build configuration');    }
+  'Check dependencies and build configuration')    }
 ;
     return recommendations;
   }

@@ -331,7 +331,7 @@ class ComprehensiveLinkChecker {
       const report = this.generateReport();
 ;
       console.log(;
-  '\n📊 Link Check Complete!');      console.log(`Total URLs checked: ${report.summary.totalUrls}`);
+  '\n📊 Link Check Complete!')      console.log(`Total URLs checked: ${report.summary.totalUrls}`);
       console.log(`Working links: ${report.summary.workingLinks}`);
       console.log(`Broken links: ${report.summary.brokenLinks}`);
       console.log(`Missing pages: ${report.summary.missingPages}`);

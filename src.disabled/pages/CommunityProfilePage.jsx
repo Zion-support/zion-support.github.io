@@ -1,2 +1,2 @@
 import React from;
-  'react'; export default function CommunityProfilePage () {'';
+  'react' export default function CommunityProfilePage () {'';

@@ -10,7 +10,7 @@ url: string;
   'working' |;
   'broken' |;
   'missing' |;
-  'external';  page: string;
+  'external'  page: string;
   anchor?: string;
   error?: string}
 ;

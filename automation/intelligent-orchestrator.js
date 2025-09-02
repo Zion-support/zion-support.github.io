@@ -256,7 +256,7 @@ this.log(;
     setInterval(async () => {;
       this.log(;
   '🔄 Running continuous intelligence cycle...');
-      await this.runIntelligentExecution()}, 5 * 60 * 1000); // Every 5 minutes;
+      await this.runIntelligentExecution()}, 5 * 60 * 1000) // Every 5 minutes;
     // Set up file watcher for immediate response;
     this.startFileWatcher()};
 startFileWatcher() {;startFileWatcher() {;

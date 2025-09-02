@@ -1,6 +1,6 @@
 import React, { useState              } from 'react.ts';
 import Link from 'next/link.ts';
-import { Home, Briefcase, ';  Users, Phone,;
+import { Home, Briefcase, '  Users, Phone,;
   Mail, MapPin,;
   Globe, Linkedin,;
   Twitter, Shield,;
@@ -151,7 +151,7 @@ const navigation = {;
   kleber@ziontechgroup.com;
   ', href: 'mailto:kleber@ziontechgroup.com }, { icon: MapPin, text:,;
   Middletown, DE 19709;
-  ', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709 }];,;
+  ', href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709 }];;
   '  const socialLinks = [;
     { name: 'LinkedIn, href:,;
   https: //www.linkedin.com/company/zion-tech-group/, icon: Linkedin, color:,;
@@ -255,7 +255,7 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                 <social.icon className='w-4 h-4' />'              </a>'            ))}
           </div>
           {/* Copyright */}
-          <div className='text-xs text-zion-slate-light text-center'>'            © {new Date().getFullYear()} Zion Tech Group";          </div>
+          <div className='text-xs text-zion-slate-light text-center'>'            © {new Date().getFullYear()} Zion Tech Group"          </div>
         </div>
       </div>
 </>);

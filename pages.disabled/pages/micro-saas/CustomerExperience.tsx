@@ -11,7 +11,7 @@ export default function CustomerExperience(...args[]):  {}
 :pages.disabled/pages/micro-saas/CustomerExperience.tsx;
   ]},';
     {';
-      title: 'Performance Analytics',';      description: 'Track and improve customer experience metrics',;
+      title: 'Performance Analytics','      description: 'Track and improve customer experience metrics',;
   ]},;
     {
       title: 'Performance Analytics',;

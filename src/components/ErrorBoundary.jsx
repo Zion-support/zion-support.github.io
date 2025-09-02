@@ -61,4 +61,4 @@ export function ErrorFallback({ error, resetErrorBoundary, retryCount = 0 }) {;
   );
 }
 ;
-export default ErrorBoundary;function ErrorFallback({ error, resetError, retryCount = 0 }) { const navigate = useNavigate(); const maxRetries = 3; const handleRetry = () => { if(retryCount < maxRetries) { resetError(); } else {;
+export default ErrorBoundary;function ErrorFallback({ error, resetError, retryCount = 0 }) { const navigate = useNavigate() const maxRetries = 3 const handleRetry = () => { if(retryCount < maxRetries) { resetError() } else {;

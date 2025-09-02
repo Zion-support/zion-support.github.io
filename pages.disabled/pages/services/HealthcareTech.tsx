@@ -19,7 +19,7 @@ export default function HealthcareTech(...args: []):  {}
     { name: 'Telemedicine', icon: Activity, description: 'Remote patient consultations' },';
     { name: 'Patient Monitoring', icon: Activity, description: 'Continuous health tracking' },';
     { name: 'Drug Discovery', icon: Pill, description: 'AI-assisted pharmaceutical research' },';
-    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },';    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' }
+    { name: 'Medical Imaging', icon: Brain, description: 'Radiology and pathology analysis' },'    { name: 'Clinical Trials', icon: FileText, description: 'Research and trial management' }
 ;
     {
       title: 'Medical Device Integration',;

@@ -66,7 +66,7 @@ class PerformanceMonitor {;
 ;
       // CPU usage;
       const startUsage = process.cpuUsage();
-      await this.sleep(100); // Wait 100ms;
+      await this.sleep(100) // Wait 100ms;
       const endUsage = process.cpuUsage(startUsage);
 ;
       this.metrics.system.cpu = {
@@ -98,7 +98,7 @@ class PerformanceMonitor {;
       const distPath = path.join(this.projectRoot,dist');
       if (fs.existsSync(distPath)) {;
         const distSize = this.getDirectorySize(distPath);
-        this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024); // MB;
+        this.metrics.application.buildSize = Math.round(distSize / 1024 / 1024) // MB;
       }
 ;
       // Check node_modules size;
@@ -106,14 +106,14 @@ class PerformanceMonitor {;
   ');
       if (fs.existsSync(nodeModulesPath)) {;
         const nodeModulesSize = this.getDirectorySize(nodeModulesPath);
-        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024); // MB;
+        this.metrics.application.dependenciesSize = Math.round(nodeModulesSize / 1024 / 1024) // MB;
       }
 ;
       // Check source code size;
       const srcPath = path.join(this.projectRoot,src');
       if (fs.existsSync(srcPath)) {;
         const srcSize = this.getDirectorySize(srcPath);
-        this.metrics.application.sourceSize = Math.round(srcSize / 1024); // KB;
+        this.metrics.application.sourceSize = Math.round(srcSize / 1024) // KB;
       }
 ;
       // Count files;

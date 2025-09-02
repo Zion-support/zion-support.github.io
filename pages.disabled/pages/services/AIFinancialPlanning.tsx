@@ -132,7 +132,7 @@ export default function AIFinancialPlanning(...args: any[]): any {}
       popular: false};
   ]},;
     {'
-      industry: 'Investment Management',';      description: 'Build and manage investment portfolios with AI-driven insights',;
+      industry: 'Investment Management','      description: 'Build and manage investment portfolios with AI-driven insights',;
       icon: TrendingUp};
   ];
 :pages.disabled/pages/services/AIFinancialPlanning.tsx;
@@ -221,7 +221,7 @@ export default function AIFinancialPlanning(...args: any[]): any {}
       areas: ['Deduction Optimization', 'Tax Strategy', 'Filing Assistance', 'Year-round Planning']},;
     {'
       category: 'Goal Planning',';
-      areas: ['Retirement Planning', 'Debt Management', 'Emergency Fund', 'Major Purchases']};  ];
+      areas: ['Retirement Planning', 'Debt Management', 'Emergency Fund', 'Major Purchases']}  ];
 ;
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -246,7 +246,7 @@ export default function AIFinancialPlanning(...args: any[]): any {}
       areas: ['Deduction Optimization', 'Tax Strategy', 'Filing Assistance', 'Year-round Planning']},';
     {'
       category: 'Goal Planning',';
-      areas: ['Retirement Planning', 'Debt Management', 'Emergency Fund', 'Major Purchases']};  ]';
+      areas: ['Retirement Planning', 'Debt Management', 'Emergency Fund', 'Major Purchases']}  ]';
   return ('';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO'';

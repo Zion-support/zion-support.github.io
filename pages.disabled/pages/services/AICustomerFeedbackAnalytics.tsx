@@ -116,7 +116,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
       popular: false};
   ]},;
     {'
-      industry: 'Manufacturing',';      description: 'Track customer satisfaction with products, service quality, and identify improvement areas',;
+      industry: 'Manufacturing','      description: 'Track customer satisfaction with products, service quality, and identify improvement areas',;
       icon: Settings};
   ];
 :pages.disabled/pages/services/AICustomerFeedbackAnalytics.tsx;
@@ -164,7 +164,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
       platforms: ['Google Reviews', 'Yelp', 'Trustpilot', 'G2']},;
     {'
       name: 'Analytics Tools',';
-      platforms: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Hotjar']};  ];
+      platforms: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Hotjar']}  ];
 ;
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -189,7 +189,7 @@ export default function AICustomerFeedbackAnalytics(...args: any[]): any {}
       platforms: ['Google Reviews', 'Yelp', 'Trustpilot', 'G2']},';
     {'
       name: 'Analytics Tools',';
-      platforms: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Hotjar']};  ]';
+      platforms: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Hotjar']}  ]';
   return ('';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO'';

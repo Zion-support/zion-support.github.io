@@ -3,7 +3,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import;
   '@testing-library/jest-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import ForgotPassword from '../../src/pages/ForgotPassword'; // Adjust path as necessary;
+import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as necessary;
 // Mock the auth service;
 // jest.mock(;
   '../../src/services/auth', () => ({;

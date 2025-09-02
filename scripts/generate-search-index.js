@@ -11,7 +11,7 @@ function walk(dir, filelist = []) {;
     if (entry.isDirectory()) {;
       if (entry.name.startsWith(;
   '.') || entry.name.includes(;
-  'node_modules')) continue;      filelist = walk(full, filelist);
+  'node_modules')) continue      filelist = walk(full, filelist);
     } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {;
       filelist.push(full);
     }
@@ -24,7 +24,7 @@ function main() {;
   const srcDirs = [path.join(repoRoot,
   'pages'), path.join(repoRoot,;
   'src'), path.join(repoRoot,;
-  'components')];  const index = [];
+  'components')]  const index = [];
   for (const dir of srcDirs) {;
     if (!fs.existsSync(dir)) continue;
     for (const file of walk(dir)) {;
@@ -33,7 +33,7 @@ function main() {;
         const content = fs.readFileSync(file,;
   'utf8');
         const titleMatch = content.match(/export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/);
-        const title = titleMatch ? (titleMatch[1] || titleMatch[2]) : path.basename(file);        index.push({ file: rel, title });
+        const title = titleMatch ? (titleMatch[1] || titleMatch[2]) : path.basename(file)        index.push({ file: rel, title });
       } catch {}
     }
   }
@@ -42,7 +42,7 @@ function main() {;
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
   const outPath = path.join(outDir,;
   'search-index.json');
-  fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), items: index }, null, 2));  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`);
+  fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), items: index }, null, 2))  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`);
 }
 ;
 main();

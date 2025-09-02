@@ -32,7 +32,7 @@ import {}
   Sparkles} from,;
   lucide-react';: pages.disabled/pages/services/AI-Quantum-Hybrid-Platform.tsx;
 const AIQuantumHybridPlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview;
-  ');  const [isVisible, setIsVisible] = useState(false);
+  ')  const [isVisible, setIsVisible] = useState(false);
 ;
   useEffect(() => {}
     setIsVisible(true)}, []);

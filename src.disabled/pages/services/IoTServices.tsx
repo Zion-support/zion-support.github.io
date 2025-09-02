@@ -20,7 +20,7 @@ const IoTServices = () => {;
     },'{'
       title: 'IoT Data Management',';
       description: 'Comprehensive data collection, processing, and analytics for IoT devices.',';
-      price: 'From $6,500/month',';      features: ['Data collection', 'Real-time processing', 'Cloud storage', 'Data analytics'],;
+      price: 'From $6,500/month','      features: ['Data collection', 'Real-time processing', 'Cloud storage', 'Data analytics'],;
       icon: Database};
   ];
 ;

@@ -1,4 +1,4 @@
-export type ServiceType = 'service' | 'talent' | 'equipment' | '; export type ServiceCategory = string; export type TimelineType = 'fixed' | 'flexible'; export type BudgetType = 'fixed' | 'hourly' | 'range'; export interface ListingItem {;
+export type ServiceType = 'service' | 'talent' | 'equipment' | ' export type ServiceCategory = string export type TimelineType = 'fixed' | 'flexible' export type BudgetType = 'fixed' | 'hourly' | 'range' export interface ListingItem {;
   id: string;
    title: string;
    category: string;
@@ -24,7 +24,7 @@ export type ServiceType = 'service' | 'talent' | 'equipment' | '; export type Se
    timeline: TimelineType;
    budget: Budget;
    contactInfo: ContactInfo;
-} export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived'; export interface QuoteRequest {;
+} export type QuoteStatus = 'new' | 'in_review' | 'accepted' | 'responded' | 'closed' | 'archived' export interface QuoteRequest {;
   id: string;
    talent_id: string;
    talent_name?: string;

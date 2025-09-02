@@ -311,7 +311,7 @@ class FileIntegrityMonitor {;
       if (fs.existsSync(logsDir)) {;
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
-        const maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days;
+        const maxAge = 30 * 24 * 60 * 60 * 1000 // 30 days;
         for (const file of files) {;
           if (file.endsWith(;
   '.log') || file.endsWith(;

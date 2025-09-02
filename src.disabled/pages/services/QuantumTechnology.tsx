@@ -20,7 +20,7 @@ const QuantumTechnology = () => {;
     },'{'
       title: 'Quantum Cryptography',';
       description: 'Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.',';
-      price: 'From $42,000/month',';      features: ['Quantum key distribution', 'Post-quantum cryptography', 'Secure communications', 'Threat protection'],;
+      price: 'From $42,000/month','      features: ['Quantum key distribution', 'Post-quantum cryptography', 'Secure communications', 'Threat protection'],;
       icon: Shield};
   ];
 ;

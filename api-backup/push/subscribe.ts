@@ -1,5 +1,5 @@
 import React from;
-  'react'; // Define the expected structure of a PushSubscription object // This often aligns with the PushSubscriptionJSON interface from web APIs interface PushSubscriptionKeys {;
+  'react' // Define the expected structure of a PushSubscription object // This often aligns with the PushSubscriptionJSON interface from web APIs interface PushSubscriptionKeys {;
   p256dh: string;
    auth: string;
 } interface PushSubscriptionRequestBody {;

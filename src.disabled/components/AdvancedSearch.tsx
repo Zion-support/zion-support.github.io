@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from,;
-  react'; import { motion, AnimatePresence } from;
-  'framer-motion'; import { ; Search,; X,; Filter,; TrendingUp,; Clock,; Star,; MapPin,; Users,; Building,; Code,; Shield,; Brain,; Zap,; ArrowRight,; ChevronDown,; CheckCircle,; Sparkles,; Target,; Globe,; Cpu,; Database,; Network,; Smartphone,; Server,; Lock,; Eye,; Settings,; BookOpen,; FileText,; Video,; Microphone,; Camera,; Lightbulb,; Rocket,; Atom,; Leaf,; Gamepad2,; Coins,; Satellite,; Activity,; MessageCircle,; BarChart,; Users2,; Palette,; Heart,; Share2,; Download,; ExternalLink; } from;
-  'lucide-react'; ; interface SearchResult {
+  react' import { motion, AnimatePresence } from;
+  'framer-motion' import {  Search, X, Filter, TrendingUp, Clock, Star, MapPin, Users, Building, Code, Shield, Brain, Zap, ArrowRight, ChevronDown, CheckCircle, Sparkles, Target, Globe, Cpu, Database, Network, Smartphone, Server, Lock, Eye, Settings, BookOpen, FileText, Video, Microphone, Camera, Lightbulb, Rocket, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, MessageCircle, BarChart, Users2, Palette, Heart, Share2, Download, ExternalLink } from;
+  'lucide-react'  interface SearchResult {
    id: string;
    title: string;
    description: string;
@@ -13,13 +13,13 @@ import React, { useState, useEffect, useRef, useCallback } from,;
    lastUpdated: Date;
    views: number;
    rating: number;
-}; interface SearchFilter {
+} interface SearchFilter {
    type: string[];
    category: string[];
    tags: string[];
    dateRange:, all' | 'week' | 'month' | 'year';
    sortBy: 'relevance' | 'date' | 'popularity' | 'rating;
-}; export function AdvancedSearch() {; const [isOpen, setIsOpen] = useState(false); const [query, setQuery] = useState(';
-  '); const [results, setResults] = useState<SearchResult[]>([]); const [suggestions, setSuggestions] = useState<string[]>([]); const [filters, setFilters] = useState<SearchFilter>({; type: [],; category: [],; tags: [],; dateRange:,;
+} export function AdvancedSearch() { const [isOpen, setIsOpen] = useState(false) const [query, setQuery] = useState(';
+  ') const [results, setResults] = useState<SearchResult[]>([]) const [suggestions, setSuggestions] = useState<string[]>([]) const [filters, setFilters] = useState<SearchFilter>({ type: [], category: [], tags: [], dateRange:,;
   all;
-  ',; sortBy: 'relevance; }); const [isSearching, setIsSearching] = useState(false); const [showFilters, setShowFilters] = useState(false); const [recentSearches, setRecentSearches] = useState<string[]>([]); const [popularSearches, setPopularSearches] = useState<string[]>([]); ; const searchInputRef = useRef<HTMLInputElement>(null); const searchTimeoutRef = useRef<NodeJS.Timeout>(); ';
+  ', sortBy: 'relevance }) const [isSearching, setIsSearching] = useState(false) const [showFilters, setShowFilters] = useState(false) const [recentSearches, setRecentSearches] = useState<string[]>([]) const [popularSearches, setPopularSearches] = useState<string[]>([])  const searchInputRef = useRef<HTMLInputElement>(null) const searchTimeoutRef = useRef<NodeJS.Timeout>() ';

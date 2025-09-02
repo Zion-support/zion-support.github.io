@@ -61,7 +61,7 @@ import {}
   Kanban} from,;
   lucide-react';: pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx;
 const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTab] = useState('overview;
-  ');  const [isVisible, setIsVisible] = useState(false);
+  ')  const [isVisible, setIsVisible] = useState(false);
 ;
   useEffect(() => {}
     setIsVisible(true)}, []);

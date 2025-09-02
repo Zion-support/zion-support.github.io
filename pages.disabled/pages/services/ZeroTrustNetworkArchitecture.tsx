@@ -19,7 +19,7 @@ export default function ZeroTrustNetworkArchitecture(...args: []):  {}
     { name: 'Compliance', icon: CheckCircle, description: 'Meet regulatory requirements and industry standards' },';
     { name: 'Cost Reduction', icon: TrendingUp, description: 'Lower security costs and reduce breach impact' },';
     { name: 'User Experience', icon: Users, description: 'Seamless access while maintaining security' },';
-    { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },';    { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' }
+    { name: 'Scalability', icon: Cloud, description: 'Security that grows with your business' },'    { name: 'Visibility', icon: Eye, description: 'Complete visibility into network activities' }
 ;
     {
       title: 'Continuous Monitoring',;

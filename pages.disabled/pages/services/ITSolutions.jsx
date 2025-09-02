@@ -159,7 +159,7 @@ const ITSolutions = () => {;
 }} viewport={{ once: true }}>';
                   <div className='w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center mr-4'>';
                     <TrendingUp className='w-4 h-4 text-teal-600'/>
-                  </div>'Experience the benefits of optimized IT infrastructure;              </p>
+                  </div>'Experience the benefits of optimized IT infrastructure              </p>
             </div>
 '';
             <div className='space-y-6'>'';

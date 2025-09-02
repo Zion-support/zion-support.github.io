@@ -360,7 +360,7 @@ export function HelpCenter() {;
 ;
     if (query.trim() === ';
   ') {;
-setSearchQuery(query)';    if (query.trim() === ';
+setSearchQuery(query)'    if (query.trim() === ';
   ') {;
       setFilteredFAQs(faqData);
       return;

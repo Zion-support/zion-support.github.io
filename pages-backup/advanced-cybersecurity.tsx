@@ -16,15 +16,15 @@ const AdvancedCybersecurityServices: NextPage = () => {;
 ;
   const categories = ['
     { id: 'all, name:,;
-  All Security', color: 'from-blue-500 to-purple-600 },;,;
+  All Security', color: 'from-blue-500 to-purple-600 },;;
   { id: 'AI Security, name:,;
-  AI Security', color: 'from-purple-500 to-pink-600 },;,;
+  AI Security', color: 'from-purple-500 to-pink-600 },;;
   { id: 'Quantum Security, name:,;
-  Quantum Security', color: 'from-indigo-500 to-blue-600 },;,;
+  Quantum Security', color: 'from-indigo-500 to-blue-600 },;;
   { id: 'Network Security, name:,;
-  Network Security', color: 'from-green-500 to-teal-600 },;,;
+  Network Security', color: 'from-green-500 to-teal-600 },;;
   { id: 'Endpoint Security, name:,;
-  Endpoint Security', color: 'from-orange-500 to-red-600 },;,;
+  Endpoint Security', color: 'from-orange-500 to-red-600 },;;
   const categories = [;
     { id: 'all, name:,;
   All Security', color: 'from-blue-500 to-purple-600 },;
@@ -67,7 +67,7 @@ const AdvancedCybersecurityServices: NextPage = () => {;
       default:;
         return 0;
     }
-  });,;
+  });;
   default: return 'from-gray-500 to-gray-600}
   };
 ;

@@ -2,7 +2,7 @@
 :pages.disabled/pages/services/ITHelpdesk.tsx;
 export default function ITHelpdesk() {
   'Ticketing with SLA and automation rules',';Self-service knowledge base and chat widget',';Asset inventory and remote assistance',';Email-to-ticket and status notifications',';Multi-tenant client portals',';Reports: MTTR, CSAT, backlog trends,;
-  ;  ]';
+    ]';
     { name: 'Basic, price:,;
   $199/mo;
   ', details: ['3 agents,Email support,;

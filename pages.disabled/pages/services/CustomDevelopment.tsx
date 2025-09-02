@@ -3,7 +3,7 @@
       title: 'Mobile Applications',';
       description: 'Native and cross-platform mobile applications for iOS and Android that deliver exceptional user experiences.',';
       icon: Smartphone,'';
-      features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']},;    {;
+      features['iOS Development', 'Android Development', 'Cross-platform Apps', 'App Store Optimization']},    {;
 ';
 '';
       title: 'API Development','';
@@ -68,13 +68,13 @@ export default function CustomDevelopment(...args[]):  {}
 ';
       title: 'Mobile',';
       icon: Monitor,'';
-      stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']},;    {;
+      stack['React', 'Vue.js', 'Angular', 'TypeScript', 'Tailwind CSS']},    {;
 ';
 '';
       title: 'Backend','';
       description: 'Robust backend technologies for scalable and secure applications.',';
       icon: Cpu, // Changed from Server to Cpu'';
-      stack['Node.js', 'Python', 'Java', 'C#', 'Go']},;    {;
+      stack['Node.js', 'Python', 'Java', 'C#', 'Go']},    {;
 ';
 '';
       title: 'Mobile','';
@@ -102,7 +102,7 @@ export default function CustomDevelopment(...args[]):  {}
 :pages.disabled/pages/services/CustomDevelopment.tsx;
   ]},';
     {'
-      title: 'Support & Maintenance',';      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
+      title: 'Support & Maintenance','      description: 'Ongoing support and maintenance to ensure your applications run smoothly.',;
       icon: Settings};
   ]';
   const industries = [';Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Government', 'Education', 'Transportation', 'Energy';

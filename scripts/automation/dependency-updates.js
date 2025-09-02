@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 // // // console.log(;
   '📦 Starting continuous dependency updates automation...');
 // Get automation interval from environment variable (default: 6 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000; // 6 hours;
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 21600000 // 6 hours;
 async function runDependencyUpdates() {;
   try {;
     // // // console.log(`📦 Running dependency updates at ${new Date().toISOString()}`);

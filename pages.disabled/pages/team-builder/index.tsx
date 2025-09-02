@@ -1,4 +1,4 @@
-// import { NextPage   } from 'next.ts'; // Removed';
+// import { NextPage   } from 'next.ts' // Removed';
 :pages.disabled/pages/team-builder/index.tsx;
 // Define Zod schema for form validation}).optional()});
 type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
@@ -57,7 +57,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
     const projectBriefData: ProjectBrief = {;
 ';
 '';
-  userId: anycurrent-user-id',;      createdAt: new Date().toISOString(),';
+  userId: anycurrent-user-id',      createdAt: new Date().toISOString(),';
       ...data,'';
       techStack: data.techStack?.split(',').map(s   => s.trim()).filter(s => s) || [],;
     const projectBriefData: ProjectBrief = {}
@@ -85,8 +85,8 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       if (!response.ok) {;
 ';
         throw new Error(errorData.error || 'Failed to generate team recommendation')}';
-      setTeamRecommendation(recommendationResult)';      toast.success('Team recommendation generated successfully!');
-      // setCurrentStep(prev: unknown prev + 1); // No longer using steps for display, display immediately;
+      setTeamRecommendation(recommendationResult)'      toast.success('Team recommendation generated successfully!');
+      // setCurrentStep(prev: unknown prev + 1) // No longer using steps for display, display immediately;
     } catch (error: ) {;
 ';
       // console.error('Error submitting project brief:', error)';
@@ -104,7 +104,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
 ;
       setTeamRecommendation(recommendationResult);
       toast.success('Team recommendation generated successfully!');
-      // setCurrentStep(prev: unknown prev + 1); // No longer using steps for display, display immediately;
+      // setCurrentStep(prev: unknown prev + 1) // No longer using steps for display, display immediately;
     } catch (error: ) {}
       // console.error('Error submitting project brief:', error);
       toast.error(error.message || 'An error occurred while generating the team.')} finally {}
@@ -131,7 +131,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       // console.error('Error sending invite:', error)`;
       toast.error(`Failed to send invite: ${error.message}`)}
   };
-    if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available;
+    if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available;
     };
 ;
     try {}
@@ -147,7 +147,7 @@ type ProjectBriefFormData = z.infer<typeof projectBriefSchema>
       toast.error(`Failed to send invite: ${error.message}`)}
   };
 ;
-    if (!teamRecommendation || !projectBriefSubmitted) return null; // Ensure projectBriefSubmitted is also available;
+    if (!teamRecommendation || !projectBriefSubmitted) return null // Ensure projectBriefSubmitted is also available;
     return();
       <TeamRecommendationDisplay recommendation = {teamRecommendation}        projectBrief={projectBriefSubmitted}
         onInviteTalent={handleInviteTalent}

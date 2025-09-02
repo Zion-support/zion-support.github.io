@@ -26,4 +26,4 @@ export interface EmergingTechService2028 {
    id: string;
    avatarUrl?: string;
    verified: boolean;
-}; images: string[]; createdAt: string; technologyStack: string[]; useCases: string[]; integrations: string[]; compliance: string[]; support: string[]; roi: string; implementationTime: string; securityFeatures: string[]; scalability: string; uptime: string; } export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [;
+} images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[] roi: string implementationTime: string securityFeatures: string[] scalability: string uptime: string } export const EMERGING_TECH_SERVICES_2028: EmergingTechService2028[] = [;

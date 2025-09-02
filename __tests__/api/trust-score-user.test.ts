@@ -1,6 +1,6 @@
 import { createMocks, createRequest, createResponse } from 'node-mocks-http';
 import type { NextApiRequest, NextApiResponse } from 'next';
-import handler from '../../pages/api/trust/score/[userId]'; // Adjust path as needed;
+import handler from '../../pages/api/trust/score/[userId]' // Adjust path as needed;
 // Mock the Supabase client;
 const mockSupabaseFrom = jest.fn().mockReturnThis();
 const mockSupabaseSelect = jest.fn().mockReturnThis();
@@ -119,7 +119,7 @@ describe('/api/trust/score/[userId] API Endpoint'', () => {;
   'components: TrustScoreComponent(*)');
     );
     expect(mockSupabaseEq).toHaveBeenCalledWith(;
-  'userId, 123); // Ensure string;
+  'userId, 123) // Ensure string;
   '123' is parsed to number;
     expect(mockSupabaseOrder).toHaveBeenCalledWith(;
   'createdAt', {;

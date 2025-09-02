@@ -233,7 +233,7 @@ class CodeQualityMonitor {;
   findLineNumber(content, searchTerm) {;
     const lines = content.split('\n;
   ');
-    for (let i = 0; i < lines.length; i++) {;
+    for (let i = 0 i < lines.length i++) {;
       if (lines[i].includes(searchTerm)) {;
         return i + 1;
     return 0;
@@ -297,9 +297,9 @@ class CodeQualityMonitor {;
         let modified = false;
         let newContent = content;
         // Fix common issues;
-        if (newContent.includes('// debugger; // TODO: Remove in production)) {;
-          newContent = newContent.replace(/// debugger; // TODO: Remove in production/g, ,;
-  // // debugger; // TODO: Remove in production // TODO: Remove in production);
+        if (newContent.includes('// debugger // TODO: Remove in production)) {;
+          newContent = newContent.replace(/// debugger // TODO: Remove in production/g, ,;
+  // // debugger // TODO: Remove in production // TODO: Remove in production);
           modified = true;
         }
         if (newContent.includes('// // // // // // // // console.log(;
@@ -487,7 +487,7 @@ class CodeQualityMonitor {;
       if (fs.existsSync(logsDir)) {;
         const files = fs.readdirSync(logsDir);
         const now = Date.now();
-        const maxAge = 14 * 24 * 60 * 60 * 1000; // 14 days;
+        const maxAge = 14 * 24 * 60 * 60 * 1000 // 14 days;
         for (const filePath = path.join(logsDir, file);
             const stats = fs.statSync(filePath);
             if (now - stats.mtime.getTime() > maxAge) {;
@@ -557,4 +557,4 @@ setInterval(() => {;
   // Heartbeat;
   const stats = monitor.getStats();
   monitor.log(`Monitor heartbeat - Issues Found: ${stats.issuesFound}, Issues Fixed: ${stats.issuesFixed}, Uptime: ${Math.round(stats.uptime)}s`);
-}, 600000); // Every 10 minutes))))}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+}, 600000) // Every 10 minutes))))}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}

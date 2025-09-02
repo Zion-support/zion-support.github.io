@@ -9,7 +9,7 @@ import { getServicesByCategory } from;
 import Link from;
   'next/link'';const MicroSaasPage: NextPage = () => {;
   const microSaasServices = getServicesByCategory('micro-saas;
-  ')';  const benefits = [
+  ')'  const benefits = [
     {;
       icon: <Zap className='w-8 h-8' />, title:,;
   Lightning Fast Setup',;

@@ -8,7 +8,7 @@ import path from;
 ;
 class LintErrorAutoFixer {;
   constructor() {;
-    this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000; // 4 minutes;
+    this.lintCheckInterval = process.env.LINT_CHECK_INTERVAL || 240000 // 4 minutes;
     this.autoFixLint = process.env.AUTO_FIX_LINT ===;
   'true';
     this.maxWarnings = parseInt(process.env.MAX_WARNINGS) || 10;
@@ -16,7 +16,7 @@ class LintErrorAutoFixer {;
   'error-reports/lint-error-auto-fixer-report.json';
 ;
     console.log(;
-  '🧹 Lint Error Auto Fixer started');    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);
+  '🧹 Lint Error Auto Fixer started')    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);
     console.log(`Auto-fix lint: ${this.autoFixLint}`);
     console.log(`Max warnings: ${this.maxWarnings}`);
   }

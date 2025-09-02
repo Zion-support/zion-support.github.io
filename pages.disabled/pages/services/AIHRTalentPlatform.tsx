@@ -5,7 +5,7 @@ import { Users, Search, CheckCircle, ArrowRight, ExternalLink, Phone, Mail, Spar
   ]';
     { ';
       name: 'Enterprise', ';
-      price: '$999/mo', ';      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
+      price: '$999/mo', '      features: ['Unlimited employees', 'Full AI suite', 'Custom AI training', 'Dedicated support', 'White-label solutions', 'Advanced compliance'],;
       popular: false};
   ]';Recruitment and talent acquisition',';Employee performance management',';Learning and development',';Workforce planning and analytics',';Compliance and HR operations',';Employee engagement and retention';
   ]';Learning & Development',';Workforce Analytics',';Employee Engagement',';Compliance & Reporting',';Onboarding & Offboarding',';Succession Planning'';Talent Acquisition','';

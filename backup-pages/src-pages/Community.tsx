@@ -37,7 +37,7 @@ interface CommunityPost {
    avatar: string;
    role: string;
    verified: boolean;
-};  category: string;
+}  category: string;
   tags: string[];
   likes: number;
   replies: number;
@@ -276,7 +276,7 @@ interface CommunityCategory {;
       case,;
   popular;
   ': return b.likes - a.likes;
-return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()';      case;
+return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()'      case;
   'popular':;
         return b.likes - a.likes';
       case;

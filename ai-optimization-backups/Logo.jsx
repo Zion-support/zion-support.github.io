@@ -5,7 +5,7 @@ import { Link } from;
 ;
 export function Logo({ customLogo, customColor }) {;
   const logoColor = customColor ||;
-  '#22D3EE'; // Default to zion-cyan;
+  '#22D3EE' // Default to zion-cyan;
   return (;
     <Link to='/' className='flex items-center space-x-3 group'>
       <div

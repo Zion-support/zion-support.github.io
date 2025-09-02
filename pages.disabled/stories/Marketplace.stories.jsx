@@ -16,7 +16,7 @@ export const Grid = {;
   render: () => {,;
   localStorage.setItem(;
   'marketplaceView',grid;
-  ');        return <Marketplace />
+  ')        return <Marketplace />
 ;
 }
 };: pages.disabled/stories/Marketplace.stories.jsx;
@@ -24,7 +24,7 @@ export const List = {;
   render: () => {;
 'localStorage.setItem(;
   'marketplaceView,list;
-  ');        return <Marketplace />
+  ')        return <Marketplace />
 ;
 }
 :pages.disabled/stories/Marketplace.stories.jsx;

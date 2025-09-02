@@ -1,5 +1,5 @@
 import React, { useState, useRef } from,;
-  react'; ; export function AdvancedAIBusinessProcessAutomation () {;import React, { useState, useRef } from;
+  react'  export function AdvancedAIBusinessProcessAutomation () {;import React, { useState, useRef } from;
   'react';
 ;
 export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProcesses = [;
@@ -14,9 +14,9 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
         priority:,;
   high',;
         automationLevel: 'fully-automated,;
-        aiInsights[;,;
+        aiInsights[;;
   Pattern detected: 15% of invoices require manual review,Optimization opportunity: Reduce approval time by 40%;
-  ',Cost savings potential: $12,000/month through automation';        ],;
+  ',Cost savings potential: $12,000/month through automation'        ],;
         efficiency: 92,;
         costSavings: 12000,;
         timeReduction: 65,;
@@ -26,7 +26,7 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
         lastExecuted: new Date(;
   '2024-01-15T10:30:00Z),;
         nextExecution: new Date(,;
-  2024-01-16T09: 00:00Z),;        executionHistory[;
+  2024-01-16T09: 00:00Z),        executionHistory[;
             {;
                 id:,;
   exec-001',;
@@ -37,7 +37,7 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
                 duration: 45,;
                 aiDecisions[;
   'Auto-approved 85% of invoices',Flagged 3 suspicious entries;
-  '],;                manualInterventions: 2,;
+  '],                manualInterventions: 2,;
                 cost: 150,;
                 efficiency: 94;
         ],;
@@ -73,9 +73,9 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
         priority:,;
   medium',;
         automationLevel: 'semi-automated,;
-        aiInsights[;,;
+        aiInsights[;;
   Bottleneck identified: IT setup takes 3 days on average,Recommendation: Implement parallel processing for faster onboarding,;
-  ,Success rate: 98% completion within SLA;        ],;
+  ,Success rate: 98% completion within SLA        ],;
         efficiency: 87,;
         costSavings: 8000,;
         timeReduction: 55,;
@@ -85,7 +85,7 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
         lastExecuted: new Date(;
   '2024-01-14T14:15:00Z),;
         nextExecution: new Date(,;
-  2024-01-17T09: 00:00Z),;        executionHistory[;
+  2024-01-17T09: 00:00Z),        executionHistory[;
             {;
                 id:,;
   exec-002',;
@@ -96,7 +96,7 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
                 duration: 120,;
                 aiDecisions[;
   'Optimized task sequence',Identified resource conflicts;
-  '],;                manualInterventions: 1,;
+  '],                manualInterventions: 1,;
                 cost: 200,;
                 efficiency: 89;
         ],;
@@ -132,9 +132,9 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
         priority:,;
   critical',;
         automationLevel: 'fully-automated,;
-        aiInsights[;,;
+        aiInsights[;;
   AI accuracy: 94% correct ticket classification,Response time improved by 60%;
-  ',Customer satisfaction increased by 25%';        ],;
+  ',Customer satisfaction increased by 25%'        ],;
         efficiency: 96,;
         costSavings: 15000,;
         timeReduction: 70,;
@@ -144,7 +144,7 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
         lastExecuted: new Date(;
   '2024-01-15T16:45:00Z),;
         nextExecution: new Date(,;
-  2024-01-15T17: 00:00Z),;        executionHistory[;
+  2024-01-15T17: 00:00Z),        executionHistory[;
             {;
                 id:,;
   exec-003',;
@@ -169,7 +169,7 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
                 condition:,;
   priority = 'critical' AND category = 'technical';
   ',;
-                action: 'route_to_senior_agent,;                priority: 1,;
+                action: 'route_to_senior_agent,                priority: 1,;
                 isActive: true,;
                 aiOptimized: true,;
                 lastTriggered: new Date(,;
@@ -178,14 +178,14 @@ export function AdvancedAIBusinessProcessAutomation () {;const mockBusinessProce
         ],;
         dependencies[,
   ticket_classification;
-  ',agent_availability'];    };
+  ',agent_availability']    };
 ];
 export function AdvancedAIBusinessProcessAutomation() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
 ursor/automate-test-fix-improve-and-merge-code-48f3;
-    const [showAIInsights, setShowAIInsights] = useState(true);    const [showAutomation, setShowAutomation] = useState(true);
+    const [showAIInsights, setShowAIInsights] = useState(true)    const [showAutomation, setShowAutomation] = useState(true);
     const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses);
     const [selectedProcess, setSelectedProcess] = useState(null);
     const [isExecuting, setIsExecuting] = useState(false);
@@ -241,7 +241,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             default: return 'text-gray-600 bg-gray-100 dark:bg-gray-900/20}';
     }';;
     const getCategoryIcon = (category) => {';
-        switch (category) {';;'';,;
+        switch (category) {';;'';;
   '';';
             case;
   'finance': return <DollarSign className='w-4 h-4'/>'';;'';
@@ -254,7 +254,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
             case;
   'marketing': return <Target className='w-4 h-4'/>'';;'';
             case;
-  'it: return <Server className='w-4 h-4'/>';;'';            default: return <FileText className='w-4 h-4'/>};
+  'it: return <Server className='w-4 h-4'/>';;''            default: return <FileText className='w-4 h-4'/>};
     };
     const formatPercentage = (value) => {;
         return `${value}%`};
@@ -511,7 +511,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
                     <p className='text-2xl font-bold text-orange-600'>{process.executionHistory.length}</p>'';';
                     <p className='text-xs text-zion-slate-light'>Executions</p>';;
                   </div>';';
-                </div>'';;'';                <div className='flex items-center gap-3 mb-4'>`;
+                </div>'';;''                <div className='flex items-center gap-3 mb-4'>`;
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getStatusColor(process.status)}`}>
                     {process.status};
                   </span>`;

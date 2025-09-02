@@ -31,9 +31,9 @@ export interface Cart {
 // Calculate cart totals;
 export const calculateCartTotals = (items: CartItem[]): Omit<Cart, 'items' | 'lastUpdated'> => {
   const subtotal = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const tax = subtotal * 0.08; // 8% tax rate;
-  const shipping = subtotal > 100 ? 0 : 10; // Free shipping over $100;
-  const discount = 0; // Could be calculated based on coupons, etc.;
+  const tax = subtotal * 0.08 // 8% tax rate;
+  const shipping = subtotal > 100 ? 0 : 10 // Free shipping over $100;
+  const discount = 0 // Could be calculated based on coupons, etc.;
   const total = subtotal + tax + shipping - discount;
 ;
   return {;
@@ -99,7 +99,7 @@ export const getCartItem = (cart: CartItem[], itemId: string): CartItem | undefi
 };
 ;
 // Apply discount to cart;
-export const applyDiscount = (cart: CartItem[], discountCode: string): { cart: CartItem[]; discount: number } => {
+export const applyDiscount = (cart: CartItem[], discountCode: string): { cart: CartItem[] discount: number } => {
   // This is a simplified discount logic;
   const discountMap: Record<string, number> = {;
     'SAVE10': 0.1,;
@@ -116,7 +116,7 @@ export const applyDiscount = (cart: CartItem[], discountCode: string): { cart: C
 };
 ;
 // Validate cart items;
-export const validateCartItems = (cart: CartItem[]): { isValid: boolean; errors: string[] } => {;
+export const validateCartItems = (cart: CartItem[]): { isValid: boolean errors: string[] } => {;
   const errors: string[] = [];
 ;
   cart.forEach((item, index) => {;

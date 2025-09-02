@@ -20,7 +20,7 @@ function replaceNextImports(content, filePath) {;
   'next/image')) {;
     content = content.replace(/import Image from [;
   '']next\/image[''];?/g,;
-  '// import Image from 'next/image'; // TODO: Replace with regular img or custom Image component);
+  '// import Image from 'next/image' // TODO: Replace with regular img or custom Image component);
     modified = true}
   // Replace next/router with react-router-dom hooks;
   if (content.includes(;

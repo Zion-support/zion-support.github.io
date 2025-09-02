@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 // // // console.log(;
   '🔗 Starting continuous link checker automation...');
 // Get automation interval from environment variable (default: 30 minutes);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000; // 30 minutes;
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 1800000 // 30 minutes;
 async function checkLinks() {;
   try {;
     // // // console.log(`🔗 Running link check at ${new Date().toISOString()}`);

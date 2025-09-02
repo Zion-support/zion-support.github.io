@@ -104,7 +104,7 @@ class ImportOptimizer {;
   optimizeLucideImports(content) {;
     // Convert individual icon imports to single import;
     const lucidePattern = /import\s*{\s*([^}]+)\s*}\s*from\s*[;
-  '']lucide-react[''];?\s*/g;    const matches = [...content.matchAll(lucidePattern)];
+  '']lucide-react[''];?\s*/g    const matches = [...content.matchAll(lucidePattern)];
 ;
     if (matches.length > 1) {;
       const allIcons = new Set();
@@ -118,7 +118,7 @@ class ImportOptimizer {;
   ', ')} } from;
   'lucide-react';\n`;
       return content.replace(lucidePattern, ';
-  ').replace(/^/, optimizedImport);    }
+  ').replace(/^/, optimizedImport)    }
 ;
     return content;
   }
@@ -136,7 +136,7 @@ class ImportOptimizer {;
   optimizeRadixImports(content) {;
     // Group Radix UI imports;
     const radixPattern = /import\s*{\s*([^}]+)\s*}\s*from\s*['']@radix-ui\/([^;
-  '']+)['"];?\s*/g;    const matches = [...content.matchAll(radixPattern)];
+  '']+)['"];?\s*/g    const matches = [...content.matchAll(radixPattern)];
 ;
     if (matches.length > 1) {;
       const groupedImports = new Map();
@@ -151,7 +151,7 @@ class ImportOptimizer {;
       });
 ;
       let optimizedImports = ';
-  ';      groupedImports.forEach((components, packageName) => {;
+  '      groupedImports.forEach((components, packageName) => {;
         optimizedImports += `import { ${Array.from(components).join(',;
   ')} } from '@radix-ui/${packageName};
   ';\n`;
@@ -194,7 +194,7 @@ class ImportOptimizer {;
       }
       return true;
     }).join(;
-  '\n');  }
+  '\n')  }
 }
 ;
 // Run the optimizer;

@@ -126,7 +126,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
       popular: false};
   ]},;
     {'
-      industry: 'Automotive',';      description: 'Track spare parts, manage service inventory, and optimize supply chain for dealerships',;
+      industry: 'Automotive','      description: 'Track spare parts, manage service inventory, and optimize supply chain for dealerships',;
       icon: Truck};
   ];
 :pages.disabled/pages/services/AIInventoryManagement.tsx;
@@ -181,7 +181,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
     {'
       metric: '3x',';
       label: 'Faster Processing',';
-      description: 'Improved inventory processing speed'};  ];
+      description: 'Improved inventory processing speed'}  ];
 ;
   return (''
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -205,7 +205,7 @@ export default function AIInventoryManagement(...args: any[]): any {}
     {'
       metric: '3x',';
       label: 'Faster Processing',';
-      description: 'Improved inventory processing speed'};  ]';
+      description: 'Improved inventory processing speed'}  ]';
   return ('';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO'';

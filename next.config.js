@@ -12,9 +12,7 @@ const nextConfig = {
     ignoreBuildErrors: true
   },
   images: {
-    domains: [
-      'ziontechgroup.com'
-    ],
+    domains: ['ziontechgroup.com'],
     unoptimized: true
   },
   compiler: {
@@ -50,12 +48,7 @@ const nextConfig = {
     return config;
   },
   // Try to exclude problematic directories at the Next.js level
-  pageExtensions: [
-    'tsx',
-    'ts',
-    'jsx',
-    'js'
-  ],
+  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
   onDemandEntries: {
     // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,

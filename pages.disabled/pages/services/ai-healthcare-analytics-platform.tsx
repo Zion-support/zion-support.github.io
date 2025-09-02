@@ -50,7 +50,7 @@ export default function AIHealthcareAnalyticsPlatform(...args: []):  {
   ]},;
     {;
       title: 'Drug Safety Monitoring',;
-      description: 'Real-time monitoring of drug interactions and adverse effects',;        title='AI Healthcare Analytics Platform - Zion Tech Group''        description='Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month.';
+      description: 'Real-time monitoring of drug interactions and adverse effects',        title='AI Healthcare Analytics Platform - Zion Tech Group''        description='Revolutionary AI-powered healthcare analytics platform with 95% accuracy rate. Diagnostic support, predictive analytics, and patient monitoring. Start from $799/month.';
        />';
       {/* Hero Section */}'';
       <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>'';

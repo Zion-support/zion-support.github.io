@@ -267,7 +267,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
    description?: string;
 }
 ;
-  const navigation: { main: NavItem[]; services: NavItem[]; solutions: NavItem[]; resources: NavItem[]; company: NavItem[] } = {;
+  const navigation: { main: NavItem[] services: NavItem[] solutions: NavItem[] resources: NavItem[] company: NavItem[] } = {;
     main: [;
       { name: 'Home', href: '/', icon: Home },;
       { name: 'About', href: '/about', icon: Building },;
@@ -582,7 +582,7 @@ className = 'fixed inset-0 bg-black/50 z-40 lg: hidden''          onClick={onClo
                 <social.icon className='w-4 h-4' />'              </a>'            ))}
           </div>
           {/* Copyright */}
-          <div className='text-xs text-zion-slate-light text-center'>'            © {new Date().getFullYear()} Zion Tech Group";          </div>
+          <div className='text-xs text-zion-slate-light text-center'>'            © {new Date().getFullYear()} Zion Tech Group"          </div>
         </div>
       </div>
 </>);

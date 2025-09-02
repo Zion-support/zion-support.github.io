@@ -35,7 +35,7 @@ class ErrorBoundary extends Component<Props, State> {}
   ')';
       // console.error(;
   'Error:', error)';// console.error(;
-  'Error Info:', errorInfo);      console.groupEnd()}
+  'Error Info:', errorInfo)      console.groupEnd()}
     // In production, you could send to error reporting service;
     // Example: Sentry, LogRocket, etc.;
   };

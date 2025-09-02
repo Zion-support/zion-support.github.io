@@ -14,4 +14,4 @@ export interface ZionService {
    email: string;
    address: string;
    website: string;
-}; ctaLabel: string; href: string; external?: boolean; }; export const zionTechGroup2025Services: ZionService[] = [';
+} ctaLabel: string href: string external?: boolean } export const zionTechGroup2025Services: ZionService[] = [';

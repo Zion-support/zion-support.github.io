@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 // // // console.log(;
   '🔍 Starting continuous quality checks automation...');
 // Get automation interval from environment variable (default: 3 hours);
-const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000; // 3 hours;
+const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 10800000 // 3 hours;
 async function runQualityChecks() {;
   try {;
     // // // console.log(`🔍 Running quality checks at ${new Date().toISOString()}`);

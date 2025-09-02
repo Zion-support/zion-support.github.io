@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {;
       uptime: process.uptime(),;
       memory: process.memoryUsage(),;
       pid: process.pid;
-    }));  } else {;
+    }))  } else {;
     res.writeHead(404, {,;
   Content-Type': 'text/plain });
     res.end(;

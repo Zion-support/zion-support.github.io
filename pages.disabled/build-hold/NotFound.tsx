@@ -6,7 +6,7 @@ import { motion } from;
 import { Button } from;
   '../components/ui/Button';{ Card } from;
   '../components/ui/Card';
-import { ';  Home, ArrowLeft,;
+import { '  Home, ArrowLeft,;
   Search, HelpCircle,;
   Phone, Mail,;
   Globe, FileText,;

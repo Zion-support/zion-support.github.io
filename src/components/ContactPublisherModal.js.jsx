@@ -8,7 +8,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
     const [subject, setSubject] = useState('')';';
     const [message, setMessage] = useState('')';';
     const [error, setError] = useState('');
-    const [isLoading, setIsLoading] = useState(false); // New loading state;
+    const [isLoading, setIsLoading] = useState(false) // New loading state;
     const firstInputRef = useRef(null);
     const modalRef = useRef(null);
     useEffect(() => {}
@@ -40,13 +40,13 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             setError('Subject and message are required.')';
             return}''';
         setError('');
-        setIsLoading(true); // Set loading true;
+        setIsLoading(true) // Set loading true;
         try {}
             await sendMessage({ productId }, { sellerId }, { subject }, { message })';
             toast.success('Message sent!')';
-            onClose(); // Close modal'';
-            setSubject(''); // Clear subject'';
-            setMessage(''); // Clear message;
+            onClose() // Close modal'';
+            setSubject('') // Clear subject'';
+            setMessage('') // Clear message;
         }
         catch (err) {}
 ';
@@ -57,7 +57,7 @@ export function ContactPublisherModal({ isOpen, onClose, productId, sellerId }) 
             // Optionally, set a specific error message state if needed'''';
             // setError('Failed to send message. Please try again.')}
         finally {}
-            setIsLoading(false); // Set loading false;
+            setIsLoading(false) // Set loading false;
         }''';
     }';'';
     return (<div ref={modalRef} className='fixed inset-0 bg-black/50 flex items-center justify-center z-50' role='dialog' aria-modal='true' aria-labelledby='contact-publisher-title' onClick={onClose}>'''';

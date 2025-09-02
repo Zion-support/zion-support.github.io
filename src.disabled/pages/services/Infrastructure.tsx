@@ -20,7 +20,7 @@ const InfrastructureServices = () => {;
     },'{'
       title: 'Data Center Solutions',';
       description: 'Reliable hosting, colocation, and data center management.',';
-      price: 'From $8,000/month',';      features: ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Compliance support'],;
+      price: 'From $8,000/month','      features: ['Colocation services', 'Managed hosting', 'Disaster recovery', 'Compliance support'],;
       icon: Database};
   ];
 ;

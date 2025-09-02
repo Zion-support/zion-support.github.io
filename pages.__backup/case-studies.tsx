@@ -360,7 +360,7 @@ const CaseStudies: NextPage = () => {;
     const matchesIndustry = selectedIndustry === 'All;
   ' || study.industry === selectedIndustry;
     const matchesService = selectedService === 'All;
-  ' || study.service === selectedService;    return matchesIndustry && matchesService;
+  ' || study.service === selectedService    return matchesIndustry && matchesService;
   });
 ;
   const featuredCaseStudies = caseStudies.filter(study => study.featured);

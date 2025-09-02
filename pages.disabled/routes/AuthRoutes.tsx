@@ -22,7 +22,7 @@ const AuthRoutes: any = () => {}
 :pages.disabled/routes/AuthRoutes.tsx;
 ';
       <Route''
-        path='/settings'element={;          <ProtectedRoute>;            <div>Settings</div>
+        path='/settings'element={          <ProtectedRoute>            <div>Settings</div>
           </ProtectedRoute>};
       />;
     </Routes>

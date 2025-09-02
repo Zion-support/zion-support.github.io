@@ -119,7 +119,7 @@ class IntegratedMonitor {
       // Get recent errors from browser monitor;
       const recentErrors = this.browserMonitor.errorLog.filter(error => {;
         const errorTime = new Date(error.timestamp);
-        const cutoffTime = new Date(Date.now() - 30 * 60 * 1000); // Last 30 minutes;
+        const cutoffTime = new Date(Date.now() - 30 * 60 * 1000) // Last 30 minutes;
         return errorTime > cutoffTime;
       });
 ;

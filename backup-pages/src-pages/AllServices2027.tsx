@@ -17,7 +17,7 @@
         avgPrice: Math.round (INNOVATIVE_SERVICES_2027.reduce ( (sum, s) => sum + s.price, 0) / INNOVATIVE_SERVICES_2027.length) ,;
         avgRating: Math.round ( (INNOVATIVE_SERVICES_2027.reduce ( (sum, s) => sum + s.rating, 0) / INNOVATIVE_SERVICES_2027.length) * 10) / 10};
 ;
-    const services = INNOVATIVE_SERVICES_2027.filter (s => s.category === categoryId) ;    return {;
+    const services = INNOVATIVE_SERVICES_2027.filter (s => s.category === categoryId)     return {;
       count: services.length,;
       avgPrice: Math.round (services.reduce ( (sum, s) => sum + s.price, 0) / services.length) ,;
       avgRating: Math.round ( (services.reduce ( (sum, s) => sum + s.rating, 0) / services.length) * 10) / 10;
@@ -350,7 +350,7 @@
 const ServiceCard: React.FC<{ service}> = ({ service }) => {
             </a>';
       case 'AI Services;
-  ':;            </a>
+  ':            </a>
           </div>
         </div>
       </section>

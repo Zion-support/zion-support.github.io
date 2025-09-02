@@ -9,7 +9,7 @@ const CloudDevOpsServices = () => {;
         {;
             title: 'Cloud Migration & Strategy','';
             description: 'Seamless migration to cloud platforms with strategic planning and execution.',;
-            icon: Cloud,'features[';                'Multi-cloud Strategy','';
+            icon: Cloud,'features['                'Multi-cloud Strategy','';
                 'Legacy System Migration','';
                 'Cost Optimization','';
                 'Performance Optimization','';

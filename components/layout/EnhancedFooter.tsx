@@ -161,7 +161,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3;
         <div className='container mx-auto px-4'>
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <p className='text-gray-300 text-sm'>
-              &copy; 2024 Zion Tech Group. All rights reserved.;
+              &copy 2024 Zion Tech Group. All rights reserved.;
             </p>
             <div className='flex space-x-6 mt-4 md:mt-0'>
               <Link href='/privacy' className='text-gray-300 hover:text-white text-sm transition-colors'>

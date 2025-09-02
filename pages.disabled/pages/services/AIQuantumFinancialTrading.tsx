@@ -116,7 +116,7 @@ const AIQuantumFinancialTrading = () => {;
       features: [';Custom quantum computing integration',;
         'Dedicated support team',;
         'Custom compliance modules',;
-        'Multi-tenant architecture',';Advanced analytics dashboard',';SLA guarantees',';On-premise deployment';],;      popular: false;
+        'Multi-tenant architecture',';Advanced analytics dashboard',';SLA guarantees',';On-premise deployment';],      popular: false;
     };
   ];
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx;

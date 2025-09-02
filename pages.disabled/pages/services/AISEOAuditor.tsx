@@ -4,7 +4,7 @@ import {}
   ExternalLink,;
 :pages.disabled/pages/services/AISEOAuditor.tsx;
   Phone,'';
-  Mail} from 'lucide-react.ts';        <p className='mt-4 max-w-3xl text-slate-300'>
+  Mail} from 'lucide-react.ts'        <p className='mt-4 max-w-3xl text-slate-300'>
           Identify SEO issues, generate prioritized fixes, and ship updates;
           automatically with guardrails. Nightly crawls, Core Web Vitals checks,;
           structured data validation, and content suggestions.;
@@ -61,7 +61,7 @@ const AISEOAuditor: React.FC = (): JSX.Element => {}
           </div>'          <ul className='mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm'>
             <li>Starter: $49/mo for up to 500 pages</li>
             <li>Growth: $149/mo for up to 5k pages</li>
-            <li>Enterprise: Custom; SSO, SLOs, multi-brand</li>
+            <li>Enterprise: Custom SSO, SLOs, multi-brand</li>
             <li>Setup projects: $2k–$10k (one-time)</li>
 :pages.disabled/pages/services/AISEOAuditor.tsx;
           </ul>';

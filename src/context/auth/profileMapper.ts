@@ -3,7 +3,7 @@ interface SupabaseUser {
    email?: string;
    user_metadata?: { full_name?: string;
    avatar_url?: string;
-}; created_at?: string; updated_at?: string} interface Profile {;
+} created_at?: string updated_at?: string} interface Profile {;
   id: string;
    display_name?: string;
    avatar_url?: string;
@@ -20,4 +20,4 @@ interface SupabaseUser {
    isEmailVerified?: boolean;
    createdAt?: string;
    updatedAt?: string;
-} ; export role: profile.role,; isEmailVerified: profile.is_email_verified || false,; createdAt: profile.created_at || supabaseUser.created_at,; updatedAt: profile.updated_at || supabaseUser.updated_at}}; ;
+}  export role: profile.role, isEmailVerified: profile.is_email_verified || false, createdAt: profile.created_at || supabaseUser.created_at, updatedAt: profile.updated_at || supabaseUser.updated_at}} ;

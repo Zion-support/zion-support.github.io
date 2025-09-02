@@ -77,7 +77,7 @@ export default function SmartContractRiskScanner(...args: []):  {}
   marketSize: '$2.8 billion','';
     growthRate: '23.4% CAGR','';
     averageMarketPrice: '$500-$2,000/month','';
-    setupTime: '1-2 weeks',;  ;
+    setupTime: '1-2 weeks',  ;
   ]';On-premise deployment',';Compliance certifications';
       ],;
       cta: 'Contact Sales',;

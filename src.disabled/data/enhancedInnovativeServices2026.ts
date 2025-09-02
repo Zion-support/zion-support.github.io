@@ -1,4 +1,4 @@
-export type EnhancedInnovativeService = { id: string; title: string; description: string; category:,;
+export type EnhancedInnovativeService = { id: string title: string description: string category:,;
   Micro SaaS' |;
   'IT Services' |;
   'AI Solutions' |;
@@ -29,8 +29,8 @@ export type EnhancedInnovativeService = { id: string; title: string; description
   'Swarm Robotics' |;
   'Bio-Inspired Computing' |;
   'Ambient Intelligence' |;
-  'Tactile Internet'; price: string; billing:;
+  'Tactile Internet' price: string billing:;
   'month' |;
   'project' |;
   'hour' |;
-  'year; features: string[]; benefits: string[]; useCases: string[]; targetMarket: string[]; ctaLabel: string; href: string; external?: boolean; featured?: boolean; marketSize?: string; roi?: string; implementationTime?: string; supportLevel?: string; compliance?: string[]; integrations?: string[]; api?: boolean; mobile?: boolean; enterprise?: boolean; startup?: boolean; smb?: boolean; realWorldExamples?: string[]; competitiveAdvantage?: string[]; technologyStack?: string[]; scalability?: string; securityFeatures?: string[]; performanceMetrics?: string[]; }; ; export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [';
+  'year features: string[] benefits: string[] useCases: string[] targetMarket: string[] ctaLabel: string href: string external?: boolean featured?: boolean marketSize?: string roi?: string implementationTime?: string supportLevel?: string compliance?: string[] integrations?: string[] api?: boolean mobile?: boolean enterprise?: boolean startup?: boolean smb?: boolean realWorldExamples?: string[] competitiveAdvantage?: string[] technologyStack?: string[] scalability?: string securityFeatures?: string[] performanceMetrics?: string[] }  export const enhancedInnovativeServices2026: EnhancedInnovativeService[] = [';

@@ -152,7 +152,7 @@ import { Atom,;
       title: 'Quantum Entanglement',';
       description: 'Leverage quantum correlations for secure communication',;
       icon: Network,';
-      metric: '100%'};  ];
+      metric: '100%'}  ];
 ;
   return ('';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>

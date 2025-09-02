@@ -81,7 +81,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
       popular: false};
   ]};
 :pages.disabled/pages/services/AISupplyChainOptimizationPlatform.tsx;
-  ]};  ];
+  ]}  ];
 ;
   return ('';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
@@ -104,7 +104,7 @@ const AISupplyChainOptimizationPlatform: React.FC = (): JSX.Element => {}
       <div className='relative overflow-hidden'>';
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24'>';
           <div className='text-center'>';
->  ]};  ]';
+>  ]}  ]';
   return ('';
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';
       <SEO '';

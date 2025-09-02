@@ -19,9 +19,9 @@ class LogCleaner {;
   'logs');
     this.errorReportDir = path.join(this.projectRoot,;
   'error-reports');
-    this.maxLogAge = 7 * 24 * 60 * 60 * 1000; // 7 days in milliseconds;
-    this.maxLogSize = 100 * 1024 * 1024; // 100MB;
-    this.maxTotalSize = 500 * 1024 * 1024; // 500MB total;
+    this.maxLogAge = 7 * 24 * 60 * 60 * 1000 // 7 days in milliseconds;
+    this.maxLogSize = 100 * 1024 * 1024 // 100MB;
+    this.maxTotalSize = 500 * 1024 * 1024 // 500MB total;
     this.cleanedFiles = [];
     this.archivedFiles = [];
     this.errors = [];
@@ -89,7 +89,7 @@ class LogCleaner {;
   ';
             });
             this.log('info;
-  ', `Deleted old log file: ${file} (${Math.round((now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000))} days old)`);          } catch (error) {;
+  ', `Deleted old log file: ${file} (${Math.round((now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000))} days old)`)          } catch (error) {;
             this.log('error;
   ', `Failed to delete old log file: ${file}`, error);
             this.errors.push(`Failed to delete ${file}: ${error.message}`);
@@ -133,7 +133,7 @@ class LogCleaner {;
             await this.archiveLogFile(filePath, file, stats.size);
           } catch (error) {;
             this.log('error;
-  ', `Failed to archive large log file: ${file}`, error);            this.errors.push(`Failed to archive ${file}: ${error.message}`);
+  ', `Failed to archive large log file: ${file}`, error)            this.errors.push(`Failed to archive ${file}: ${error.message}`);
           }
         }
       }
@@ -173,7 +173,7 @@ class LogCleaner {;
       });
 ;
       this.log(;
-  'info', `Archived large log file: ${fileName} -> ${path.basename(archivePath)} (${Math.round(fileSize / 1024 / 1024)}MB)`);    } catch (error) {;
+  'info', `Archived large log file: ${fileName} -> ${path.basename(archivePath)} (${Math.round(fileSize / 1024 / 1024)}MB)`)    } catch (error) {;
       this.log(;
   'error', `Failed to archive log file: ${fileName}`, error);
       throw error;
@@ -250,7 +250,7 @@ class LogCleaner {;
   'info', `Deleted log file to manage total size: ${file.name} (${Math.round(file.size / 1024)}KB)`);
           } catch (error) {;
             this.log(;
-  'error', `Failed to delete log file for size management: ${file.name}`, error);            this.errors.push(`Failed to delete ${file.name}: ${error.message}`);
+  'error', `Failed to delete log file for size management: ${file.name}`, error)            this.errors.push(`Failed to delete ${file.name}: ${error.message}`);
           }
         }
       }
@@ -298,7 +298,7 @@ class LogCleaner {;
           } catch (error) {;
             this.log(;
   'error', `Failed to delete old error report: ${file}`, error);
-            this.errors.push(`Failed to delete error report ${file}: ${error.message}`);          }
+            this.errors.push(`Failed to delete error report ${file}: ${error.message}`)          }
         }
       }
     } catch (error) {;
@@ -322,7 +322,7 @@ class LogCleaner {;
 ;
       this.log('info;
   ', 'PM2 logs rotated successfully;
-  ');    } catch (error) {;
+  ')    } catch (error) {;
       this.log('error;
   ', 'Failed to rotate PM2 logs;
   ', error);

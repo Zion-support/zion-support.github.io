@@ -12,7 +12,7 @@
   secondary:,;
   border-blue-400',;
   ';
-  white: 'border-white,;  ;
+  white: 'border-white,  ;
   ;
   ;
   ;
@@ -77,7 +77,7 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
 // Optimized spinner for inline use,;
   export const InlineSpinner: React.FC<{ size?:;
   'sm' |;
-  'md; className?: string }> = ({;
+  'md className?: string }> = ({;
   size =,;
   sm',;
   className = ';
@@ -144,7 +144,7 @@ export const SkeletonLoader: React.FC<{;
           index === lines - 1 ?,;
   w-3/4;
   ': 'w-full`;
-        }`};      />;
+        }`}      />;
     ))};
   </div>
 );

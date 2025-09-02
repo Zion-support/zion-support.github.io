@@ -29,14 +29,14 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       gridCtx.strokeStyle = 'rgba(6, 182, 212, 0.1)';
       gridCtx.lineWidth = 1;
 ;
-      for (let x = 0; x < gridCanvas.width; x += 40) {;
+      for (let x = 0 x < gridCanvas.width x += 40) {;
         gridCtx.beginPath();
         gridCtx.moveTo(x, 0);
         gridCtx.lineTo(x, gridCanvas.height);
         gridCtx.stroke();
       }
 ;
-      for (let y = 0; y < gridCanvas.height; y += 40) {;
+      for (let y = 0 y < gridCanvas.height y += 40) {;
         gridCtx.beginPath();
         gridCtx.moveTo(0, y);
         gridCtx.lineTo(gridCanvas.width, y);
@@ -92,7 +92,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
         createParticle();
 ;
       // Update and draw particles;
-      for (let i = particles.length - 1; i >= 0; i--) {;
+      for (let i = particles.length - 1 i >= 0 i--) {;
         const particle = particles[i];
 ;
         // Update position;
@@ -134,14 +134,14 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       const offsetY = (time * 5) % gridSize;
 ;
       // Vertical lines;
-      for (let x = offsetX; x < canvas.width; x += gridSize) {;
+      for (let x = offsetX x < canvas.width x += gridSize) {;
         ctx.beginPath();
         ctx.moveTo(x, 0);
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
 ;
       // Horizontal lines;
-      for (let y = offsetY; y < canvas.height; y += gridSize) {;
+      for (let y = offsetY y < canvas.height y += gridSize) {;
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
@@ -183,7 +183,7 @@ export const FuturisticAnimatedBackground: React.FC = () => {
       ctx.strokeStyle = 'rgba(56, 189, 248, 0.2)';
       ctx.lineWidth = 3;
 ;
-      for (let i = 0; i < 3; i++) {;
+      for (let i = 0 i < 3 i++) {;
         const waveY = canvas.height * 0.5 + Math.sin(time + i) * 50;
 ;
         ctx.beginPath();

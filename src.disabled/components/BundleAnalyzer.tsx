@@ -55,7 +55,7 @@ export const BundleAnalyzer: React.FC<BundleAnalyzerProps> = ({;
       });
 ;
       const averageChunkSize = chunkCount > 0 ? totalSize / chunkCount : 0;
-      const gzipSavings = totalSize * 0.7; // Estimate 70% savings with gzip;
+      const gzipSavings = totalSize * 0.7 // Estimate 70% savings with gzip;
       setMetrics({;
         totalSize,;
         chunkCount,;

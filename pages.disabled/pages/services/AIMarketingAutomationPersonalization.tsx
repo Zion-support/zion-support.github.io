@@ -1,7 +1,7 @@
 
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx;
 export default function AIMarketingAutomationPersonalization(...args: any[]): any {,;
-  Predictive lead scoring and conversion optimization',';Multi-channel campaign orchestration (email, SMS, social, web),';Real-time A/B testing with AI-driven optimization',';Customer journey mapping and automated nurturing sequences',';Advanced analytics and ROI tracking with attribution modeling',';Integration with major CRM, e-commerce, and advertising platforms',;  ]';Increase conversion rates by 40-60% with personalization;
+  Predictive lead scoring and conversion optimization',';Multi-channel campaign orchestration (email, SMS, social, web),';Real-time A/B testing with AI-driven optimization',';Customer journey mapping and automated nurturing sequences',';Advanced analytics and ROI tracking with attribution modeling',';Integration with major CRM, e-commerce, and advertising platforms',  ]';Increase conversion rates by 40-60% with personalization;
   ',';Reduce customer acquisition costs by 30-50%',';Improve email open rates by 25-40% with AI optimization',';Generate 35-50% more qualified leads through automation',';Boost customer lifetime value by 20-35%',';Achieve 99.9% campaign delivery and tracking accuracy',;
   ]';Content Marketing;
   ',';Search Engine Marketing',';Influencer Marketing',';Video Marketing',';Voice & Chatbot Marketing',';Location-Based Marketing',;
@@ -11,36 +11,36 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
   ',';WooCommerce',';Facebook Ads',';Google Ads',';LinkedIn Ads',';TikTok Ads',;
   ]';
     { name: 'Scikit-learn, url:,;
-  https: //scikit-learn.org/ },;,;
+  https: //scikit-learn.org/ },;;
   { name: 'Apache Spark, url:,;
-  https: //spark.apache.org/ },;,;
+  https: //spark.apache.org/ },;;
   { name: 'Kubernetes, url:,;
-  https: //kubernetes.io/ },;,;
+  https: //kubernetes.io/ },;;
   { name: 'Redis, url:,;
-  https: //redis.io/ },;,;
+  https: //redis.io/ },;;
   { name: 'PostgreSQL, url:,;
-  https: //www.postgresql.org/ },;,;
+  https: //www.postgresql.org/ },;;
   { name: 'Elasticsearch, url:,;
-  https: //www.elastic.co/ },;,;
+  https: //www.elastic.co/ },;;
   { name: 'OpenAI GPT-4, url:,;
   https: //openai.com/gpt-4 },',;
   { name: 'TensorFlow, url:,;
-  https: //www.tensorflow.org/ },;,;
+  https: //www.tensorflow.org/ },;;
   ';
     { name: 'Scikit-learn, url:,;
-  https: //scikit-learn.org/ },;,;
+  https: //scikit-learn.org/ },;;
   ';
     { name: 'Apache Spark, url:,;
-  https: //spark.apache.org/ },;,;
+  https: //spark.apache.org/ },;;
   ';
     { name: 'Kubernetes, url:,;
-  https: //kubernetes.io/ },;,;
+  https: //kubernetes.io/ },;;
   ';
     { name: 'Redis, url:,;
-  https: //redis.io/ },;,;
+  https: //redis.io/ },;;
   ';
     { name: 'PostgreSQL, url:,;
-  https: //www.postgresql.org/ },;,;
+  https: //www.postgresql.org/ },;;
   { name: 'Elasticsearch, url:,;
   https: //www.elastic.co/ },;
 :pages.disabled/pages/services/AIMarketingAutomationPersonalization.tsx];
@@ -197,7 +197,7 @@ export default function AIMarketingAutomationPersonalization(...args: any[]): an
               <ArrowRight className='ml-2 h-5 w-5'  />';
             </Link>'            <a href='tel:+13024640950' className='inline-flex items-center px-8 py-4 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200'>
               Call +1 302 464 0950;
-            </a>'</div>';          <p className='text-slate-400 mt-6'>';
+            </a>'</div>'          <p className='text-slate-400 mt-6'>';
             Contact us at <a href='mailto:kleber@ziontechgroup.com' className='text-cyan-400 hover:underline'>kleber@ziontechgroup.com</a> for enterprise solutions;
           </p>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect  } from 'react';
   'react.ts';
-import Link from 'next/link' from 'next/link.ts';import {';  Menu, X,;
+import Link from 'next/link' from 'next/link.ts';import {'  Menu, X,;
   ChevronDown, Zap,;
   Shield, Cpu,;
   Database, Globe,;

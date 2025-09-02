@@ -9,7 +9,7 @@ export default function IoTEdge(...args: []):  {}
 :pages.disabled/pages/services/IoTEdge.tsx;
   ]},';
     {'
-      title: 'Security & Compliance',';      description: 'End-to-end security for IoT ecosystems',;
+      title: 'Security & Compliance','      description: 'End-to-end security for IoT ecosystems',;
       icon: Shield};
   ];
   return (''

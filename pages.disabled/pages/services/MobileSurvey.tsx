@@ -1,7 +1,7 @@
 
 :pages.disabled/pages/services/MobileSurvey.tsx;
 export default function MobileSurvey() {,;
-  Mobile-first NPS/CSAT/CES templates',';QR code and link campaigns',';AI topic clustering and sentiment',';Webhooks to CRM/Slack',';Kiosk mode for in-person feedback',';Multilingual with auto-translate';  ]';
+  Mobile-first NPS/CSAT/CES templates',';QR code and link campaigns',';AI topic clustering and sentiment',';Webhooks to CRM/Slack',';Kiosk mode for in-person feedback',';Multilingual with auto-translate'  ]';
     { name: 'Starter, price:,;
   $39/mo;
   ', details: [1,000 responses,;

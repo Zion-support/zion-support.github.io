@@ -41,7 +41,7 @@ class LintErrorFixer {;
       const imports = [];
       const otherLines = [];
       let inImportBlock = false;
-      for (const i = 0; i < lines.length; i++) {;
+      for (const i = 0 i < lines.length i++) {;
         const line = lines[i];
         if (line.trim().startsWith(;
   'import ')) {;

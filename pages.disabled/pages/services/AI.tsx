@@ -131,7 +131,7 @@ export default function AIServices(...args[]):  {}
 ';
 '';
       industry: 'Healthcare','';
-      applications['Medical image analysis', 'Drug discovery', 'Patient risk prediction'],;      icon: Heart;
+      applications['Medical image analysis', 'Drug discovery', 'Patient risk prediction'],      icon: Heart;
     },;
     {;
 ';
@@ -139,7 +139,7 @@ export default function AIServices(...args[]):  {}
     {}
 '';
       industry: 'Healthcare','';
-      applications['Medical image analysis', 'Drug discovery', 'Patient risk prediction'],;      icon: Heart;
+      applications['Medical image analysis', 'Drug discovery', 'Patient risk prediction'],      icon: Heart;
     },;
     {}
 '';

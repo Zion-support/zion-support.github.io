@@ -100,7 +100,7 @@ export default function EmployeeSchedulingSaaS(...args: []):  {}
     {;
       icon: BarChart3,';
       title: 'Construction',';
-      description: 'Coordinate complex project schedules with multiple teams and locations'};  ];
+      description: 'Coordinate complex project schedules with multiple teams and locations'}  ];
 ;
   return();
 :pages.disabled/pages/services/EmployeeSchedulingSaaS.tsx;

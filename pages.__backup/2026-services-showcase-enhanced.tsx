@@ -324,7 +324,7 @@ export default function Services2026ShowcaseEnhancedPage() {
   ') {;
         filtered = filtered.filter(service => service.category.includes('Manufacturing;
   ') || service.category.includes('IoT;
-  '));      }
+  '))      }
     }
 ;
     // Price filter;
@@ -339,7 +339,7 @@ export default function Services2026ShowcaseEnhancedPage() {
         if (selectedPriceRange ===;
   'high') return price >= 5000 && price < 20000;
         if (selectedPriceRange ===;
-  'premium') return price >= 20000;        return true;
+  'premium') return price >= 20000        return true;
       });
     }
 ;

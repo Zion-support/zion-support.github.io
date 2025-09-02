@@ -77,7 +77,7 @@ export default function AICybersecuritySuite(...args[]):  {
       title: 'Compliance Automation',';
       description: 'Automated compliance monitoring and reporting for all major regulatory frameworks',;
       icon: CheckCircle,;
-      benefits: ['GDPR compliance',';SOC 2 automation',';HIPAA compliance',';Real-time audit trails';  ];
+      benefits: ['GDPR compliance',';SOC 2 automation',';HIPAA compliance',';Real-time audit trails'  ];
 ;
   return ('
     <div className = 'min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>
