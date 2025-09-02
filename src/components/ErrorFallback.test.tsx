@@ -1,1 +1,1 @@
-describe ("ErrorFallback", () => { it ("renders without crashing", () => { render (<ErrorFallback />) ; expect (screen.getByRole ("main") || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; it ("displays expected content", () => { render (<ErrorFallback />) ;
+describe("ErrorFallback", () => { it("renders without crashing", () => { render(<ErrorFallback />) ; expect(screen.getByRole ("main") || screen.getByText(/.*/) ) .toBeInTheDocument () }) ; it("displays expected content", () => { render(<ErrorFallback />) ;
