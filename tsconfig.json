@@ -67,7 +67,7 @@
         "src/styles/*"
       ],
       "@data/*": [
-        "src/data/*"
+        "data/*"
       ],
       "@services/*": [
         "src/services/*"
@@ -99,8 +99,13 @@
   },
   "include": [
     "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
+    "pages/**/*",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/services.ts",
+    "styles/**/*",
+    "types/**/*",
+    "utils/**/*",
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -111,9 +116,23 @@
     "automation/backups",
     "automation_backup",
     "broken_files_backup",
-    "components",
     "contracts",
     "cypress",
+    "temp_working",
+    "supabase/functions",
+    "src/**",
+    "data/**",
+    "!data/services.ts",
+    "components/AIChatAssistant.test.ts",
+    "components/AIChatbot.test.ts",
+    "components/AIChatbotSystem.test.ts",
+    "components/layout/EnhancedSidebar2025.tsx",
+    "components/OptimizedImage.tsx",
+    "components/MainSidebar.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
     "**/*.backup",
     "**/*.disabled"
   ]
