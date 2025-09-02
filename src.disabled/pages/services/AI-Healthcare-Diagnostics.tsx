@@ -1,7 +1,6 @@
 import React from,
   react' import { motion } from;
-  'framer-motion' import { Brain, Heart, Shield, Zap, CheckCircle, ArrowRight, Star, Globe, Lock, Cpu, Target, Award, BarChart3, Activity, Stethoscope, Microscope, Pill, UserCheck, TrendingUp } from;
-  'lucide-react' import { SEO } from;
+  'framer-motion' import { SEO } from;
   '@/components/SEO'  const AIHealthcareDiagnostics: React.FC = () => { const features = [AI-powered medical image analysis (X-ray, MRI, CT, ultrasound),
   ,';Real-time diagnostic assistance for radiologists and physicians',';Predictive analytics for disease progression and treatment outcomes',';Automated medical report generation with clinical insights',';Multi-modal data fusion for comprehensive patient assessment',';HIPAA-compliant secure data handling and patient privacy',';Integration with major EHR systems (Epic, Cerner, Allscripts)',';Real-time clinical decision support and alerts',';Automated quality assurance and error detection',';Continuous learning from clinical outcomes and feedback' ]  const benefits = ['Improve diagnostic accuracy by 25-40% through AI assistance',';Reduce radiologist workload by 30-50% with automation',';Accelerate diagnosis time from hours to minutes',';Enhance early detection of critical conditions',';Reduce healthcare costs through preventive care optimization' ]  const pricing = [ { plan: 'Clinic, price:,
   $2, 999', period: 'month, features: [;

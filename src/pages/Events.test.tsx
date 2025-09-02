@@ -1,16 +1,16 @@
 import React from 'react';"
 import { render, screen } from '@testing-library/react';"
 import '@testing-library/jest-dom';"
-import Events from './Events';
+import events from './events';
 "
-describe('Events', () => {"
+describe('events', () => {"
   it('renders without crashing', () => {
-    render(<Events /" >);"
+    render(<events /" >);"
     expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
 "
   it('displays expected content', () => {
-    render(<Events /" >);
+    render(<events /" >);
     // Add more specific tests here,
 });,
 });
