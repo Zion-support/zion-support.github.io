@@ -1,8 +1,8 @@
 import { SEO } from '../components/SEO';
 export default function Page() {
-const ConsultingServices: React.FC = () => {
+const ConsultingServices: React.FC = () => {"
   return (<>"
-      <SEO title='ConsultingServices - Zion Tech Group' /" >"
+      <SEO title='ConsultingServices - Zion Tech Group' /"" >"
       <div className='min-h-screen bg-white py-20'>"
         <div className='max-w-4xl mx-auto px-4'>"
           <h1 className='text-4xl font-bold text-gray-900 mb-8'>ConsultingServices</h1>"
@@ -12,3 +12,5 @@ const ConsultingServices: React.FC = () => {
 </>
   )}
 ;
+"
+}

@@ -3,5 +3,6 @@ import {
   Shield, Code,
   Database, Network,
   Users, Award,
-  ShoppingCart, HelpCircle,
+  ShoppingCart, HelpCircle,;
   ChevronRight} from 'lucide-react';
+"

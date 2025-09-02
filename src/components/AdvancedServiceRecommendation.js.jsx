@@ -1,11 +1,11 @@
 import React, { useState } from 'react''
 import { motion } from 'framer-motion''
-import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react'
+import { Brain, CheckCircle, ArrowRight, Zap, Users, Lightbulb, BarChart3 } from 'lucide-react';"
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'';''
 import { Button } from './ui/button'';''
-import { Badge } from './ui/badge'
+import { Badge } from './ui/badge';
 const AdvancedServiceRecommendation = () => {}
-    const [clientProfile, setClientProfile] = useState({}
+    const [clientProfile, setClientProfile] = useState({}"
 '
 ''
 '''
@@ -13,31 +13,31 @@ const AdvancedServiceRecommendation = () => {}
         compSize: '','''
         budget: '','''
         timeline: '','''
-        technologyMaturity: '', primaryGoals[], challenges[]
-    })
+        technologyMaturity: '', primaryGoals[], challenges[],
+})"
     const [recommendations, setRecommendations] = useState([])'
-    const [isAnalyzing, setIsAnalyzing] = useState(false)'
+    const [isAnalyzing, setIsAnalyzing] = useState(false)';"
     const [showResults, setShowResults] = useState(false)';'
     const industries = [''''
-        'Technology',Healthcare',Financial Services',Manufacturing',Retail',Education',Government',Energy',Transportation',Media'''
-    ]';'
+        'Technology',Healthcare',Financial Services',Manufacturing',Retail',Education',Government',Energy',Transportation',Media''',;
+]';'
     const compSizes = [''''
-        'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)''
-    ]';'
+        'Startup (1-50 employees),Small Business (51-200 employees),Medium Business (201-1000 employees),Enterprise (1000+ employees)'',
+]';'
     const budgets = [''''
-        'Under $50K',$50K-$200K',$200K-$500K',$500K-$1M',$1M+'''
-    ]';'
+        'Under $50K',$50K-$200K',$200K-$500K',$500K-$1M',$1M+''',;
+]';'
     const technologyMaturityLevels = [''''
-        'Early Adopter',Growing',Mature',Advanced',Innovation Leader'''
-    ]';'
+        'Early Adopter',Growing',Mature',Advanced',Innovation Leader''',;
+]';'
     const primaryGoals = [''''
-        'Cost Reduction',Revenue Growth',Operational Efficiency',Digital Transformation',Innovation',Competitive Advantage',Customer Experience',Risk Management',Sustainability'''
-    ]';'
+        'Cost Reduction',Revenue Growth',Operational Efficiency',Digital Transformation',Innovation',Competitive Advantage',Customer Experience',Risk Management',Sustainability''',;
+]';'
     const challenges = [''''
-        'Legacy Systems',Data Security',Scalability Issues',Talent Shortage',Regulatory Compliance',Integration Complexity',Performance Issues',Cost Management',Technology Debt'
-    ]
+        'Legacy Systems',Data Security',Scalability Issues',Talent Shortage',Regulatory Compliance',Integration Complexity',Performance Issues',Cost Management',Technology Debt',
+]
     const mockServices = []
-        {}
+        {}"
 '
 ''
 '''
@@ -55,8 +55,8 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/ai-crm.jpg','''
             link: 'https://ziontechgroup.com/services/ai-crm-platform','''
             contactInfo: '+1 302 464 0950','''
-            email: 'kleber@ziontechgroup.com'
-        }, {}
+            email: 'kleber@ziontechgroup.com',
+}, {}"
 '
 ''
 '''
@@ -74,8 +74,8 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/quantum-computing.jpg','''
             link: 'https://ziontechgroup.com/services/quantum-computing-service','''
             contactInfo: '+1 302 464 0950','''
-            email: 'kleber@ziontechgroup.com'
-        }, {}
+            email: 'kleber@ziontechgroup.com',
+}, {}"
 '
 ''
 '''
@@ -93,44 +93,44 @@ const AdvancedServiceRecommendation = () => {}
             image: '/images/services/blockchain-supply-chain.jpg','''
             link: 'https://ziontechgroup.com/services/blockchain-supply-chain','''
             contactInfo: '+1 302 464 0950','''
-            email: 'kleber@ziontechgroup.com'
-        }
+            email: 'kleber@ziontechgroup.com',
+}
     ]
     const calculateMatchScore = (service, profile) => {}
         let score = 0
         // Industry match
-        if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {}
+        if(service.targetAudience?.some((audience) => audience.toLowerCase().includes(profile.industry.toLowerCase()))) {}"
             score += 25}'
         // Budget compatibility'
         const servicePrice = parseInt(service.price.replace(/[^0-9]/g,))'
-        if (profile.budget === 'Under $50K' && servicePrice < 50)
+        if (profile.budget === 'Under $50K' && servicePrice < 50)"
             score += 20'
-        else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200)
+        else if (profile.budget === '$50K-$200K' && servicePrice >= 50 && servicePrice < 200)"
             score += 20'
-        else if (profile.budget === '$200K-$500K' && servicePrice >= 200 && servicePrice < 500)
+        else if (profile.budget === '$200K-$500K' && servicePrice >= 200 && servicePrice < 500)"
             score += 20'
-        else if (profile.budget === '$500K-$1M' && servicePrice >= 500 && servicePrice < 1000)
+        else if (profile.budget === '$500K-$1M' && servicePrice >= 500 && servicePrice < 1000)"
             score += 20'
-        else if (profile.budget === '$1M+' && servicePrice >= 1000)
+        else if (profile.budget === '$1M+' && servicePrice >= 1000)"
             score += 20'
         // Timeline compatibility''
         const serviceDuration = parseInt(service.duration.split('-')[0])'
-        if (profile.timeline === 'Immediate (0-3 months)' && serviceDuration <= 3)
+        if (profile.timeline === 'Immediate (0-3 months)' && serviceDuration <= 3)"
             score += 15'
-        else if (profile.timeline === 'Short-term (3-6 months)' && serviceDuration <= 6)
+        else if (profile.timeline === 'Short-term (3-6 months)' && serviceDuration <= 6)"
             score += 15'
-        else if (profile.timeline === 'Medium-term (6-12 months)' && serviceDuration <= 12)
+        else if (profile.timeline === 'Medium-term (6-12 months)' && serviceDuration <= 12)"
             score += 15'
-        else if (profile.timeline === 'Long-term (12+ months)' && serviceDuration > 12)
+        else if (profile.timeline === 'Long-term (12+ months)' && serviceDuration > 12)"
             score += 15'
         // Technology maturity alignment''
-        if (profile.technologyMaturity === 'Innovation Leader' && service.category === 'quantum')
+        if (profile.technologyMaturity === 'Innovation Leader' && service.category === 'quantum')"
             score += 20'
-        else if (profile.technologyMaturity === 'Advanced' && ['ai',blockchain'].includes(service.category))
+        else if (profile.technologyMaturity === 'Advanced' && ['ai',blockchain'].includes(service.category))"
             score += 20'
-        else if (profile.technologyMaturity === 'Mature' && ['iot',edge-computing'].includes(service.category))
+        else if (profile.technologyMaturity === 'Mature' && ['iot',edge-computing'].includes(service.category))"
             score += 20'
-        else if (profile.technologyMaturity === 'Growing' && ['cloud-services',web-development'].includes(service.category))
+        else if (profile.technologyMaturity === 'Growing' && ['cloud-services',web-development'].includes(service.category))"
             score += 20'
         else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services',consulting'].includes(service.category))
             score += 20
@@ -144,7 +144,7 @@ const AdvancedServiceRecommendation = () => {}
         setTimeout(() => {}
             const recs = mockServices.map(service => {}
                 const matchScore = calculateMatchScore(service, clientProfile)
-                let priority
+                let priority"
                 if (matchScore >= 80)'
                     priority = 'High'
                 else if (matchScore >= 60)'
@@ -162,20 +162,20 @@ const AdvancedServiceRecommendation = () => {}
                     `High match with ${clientProfile.industry} industry requirements`,``
                     `Budget alignment with ${clientProfile.budget} range`,``
                     `Timeline compatibility with ${clientProfile.timeline} expectations`,``
-                    `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`
-                ]'
+                    `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`",
+]'
                 const expectedROI = matchScore >= 80 ? 'High ROI expected' :''
                     matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated'
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :''
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months'
                 return {}
-                    service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue
-                }}) .sort((a, b) => b.matchScore - a.matchScore) 
+                    service, matchScore, reasoning, priority, implementationComplexity: complexity, expectedROI, timeToValue,
+}}) .sort((a, b) => b.matchScore - a.matchScore) 
             setRecommendations(recs) 
             setIsAnalyzing(false) 
             setShowResults(true) }, 2000) }
     const getPriorityColor = (priority) => {}
-        switch (priority) {}
+        switch (priority) {}"
 '
 ''
 '''
@@ -185,7 +185,7 @@ const AdvancedServiceRecommendation = () => {}
             default: return 'bg-gray-100 text-gray-800'}
     }
     const getComplexityColor = (complexity) => {}
-        switch (complexity) {}
+        switch (complexity) {}"
 '
 ''
 '''
@@ -195,18 +195,18 @@ const AdvancedServiceRecommendation = () => {}
             default: return 'bg-gray-100 text-gray-800'}
     }
     const isFormComplete = () => {}
-        return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&
+        return clientProfile.industry && clientProfile.compSize && clientProfile.budget &&"
             clientProfile.timeline && clientProfile.technologyMaturity &&'''
             clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0}';''
     return (<div className='max-w-7xl mx-auto p-6'>
       {/* Header */}
       <motion.div initial = {}
-  { opacity: 0, y: 20
-}} animate = {}
+  { opacity: 0, y: 20,
+}} animate = {}"
   { opacity: 1, y: 0 '''
-''''
+'''',
 }} className='text-center mb-8'>''''
-        <h1 className='text-4xl font-bold text-zion-blue-dark mb-4'>
+        <h1 className='text-4xl font-bold text-zion-blue-dark mb-4'>"
           AI-Powered Service Recommendation Engine'''
         </h1>''''
         <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>
@@ -214,71 +214,71 @@ const AdvancedServiceRecommendation = () => {}
       </motion.div>
       {/* Client Profile Form */}
       <motion.div initial = {}
-  { opacity: 0, y: 20
-}} animate = {}
+  { opacity: 0, y: 20,
+}} animate = {}"
   { opacity: 1, y: 0 '''
-''''
+'''',
 }} transition={{ delay: 0.1 }} className='bg-white rounded-lg shadow-lg p-6 mb-8'>''''
         <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 flex items-center gap-2'>''''
-          <Brain className='w-6 h-6 text-zion-cyan'/>
-          Tell Us About Your Business
+          <Brain className='w-6 h-6 text-zion-cyan'/" >
+          Tell Us About Your Business"
         </h2>'''
         ''''
         <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>'''
           <div>''''
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Industry</label>
-            <select value={clientProfile.industry} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev, industry: e.target.value '''
-''''
+            <select value={clientProfile.industry} onChange = {}"
+  (e) =" > setClientProfile(prev => ({ ...prev, industry: e.target.value '''
+'''',
 }))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Industry</option>
-              {industries.map(industry => (<option key={industry} value={industry}>{industry}</option>) ) }
+              {industries.map(industry => (<option key={industry} value={industry}" >{industry}</option>) ) }
             </select>
-          </div>
+          </div>"
           '''
           <div>''''
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Comp Size</label>
-            <select value={clientProfile.compSize} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev, compSize: e.target.value '''
-''''
+            <select value={clientProfile.compSize} onChange = {}"
+  (e) =" > setClientProfile(prev => ({ ...prev, compSize: e.target.value '''
+'''',
 }))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Comp Size</option>
-              {compSizes.map(size => (<option key={size} value={size}>{size}</option>) ) }
+              {compSizes.map(size => (<option key={size} value={size}" >{size}</option>) ) }
             </select>
-          </div>
+          </div>"
           '''
           <div>''''
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Budget Range</label>
-            <select value={clientProfile.budget} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev, budget: e.target.value '''
-''''
+            <select value={clientProfile.budget} onChange = {}"
+  (e) =" > setClientProfile(prev => ({ ...prev, budget: e.target.value '''
+'''',
 }))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Budget Range</option>
-              {budgets.map(budget => (<option key={budget} value={budget}>{budget}</option>) ) }
+              {budgets.map(budget => (<option key={budget} value={budget}" >{budget}</option>) ) }
             </select>
-          </div>
+          </div>"
           '''
           <div>''''
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Implementation Timeline</label>
-            <select value={clientProfile.timeline} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev, timeline: e.target.value '''
-''''
+            <select value={clientProfile.timeline} onChange = {}"
+  (e) =" > setClientProfile(prev => ({ ...prev, timeline: e.target.value '''
+'''',
 }))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Timeline</option>
-              {timelines.map(timeline => (<option key={timeline} value={timeline}>{timeline}</option>) ) }
+              {timelines.map(timeline => (<option key={timeline} value={timeline}" >{timeline}</option>) ) }
             </select>
-          </div>
+          </div>"
           '''
           <div>''''
             <label className='block text-sm font-medium text-zion-slate-dark mb-2'>Technology Maturity Level</label>
-            <select value={clientProfile.technologyMaturity} onChange = {}
-  (e) => setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value '''
-''''
+            <select value={clientProfile.technologyMaturity} onChange = {}"
+  (e) =" > setClientProfile(prev => ({ ...prev, technologyMaturity: e.target.value '''
+'''',
 }))} className='w-full p-3 border border-zion-slate-light rounded-md'>''''
               <option value=''>Select Technology Maturity</option>
-              {technologyMaturityLevels.map(level => (<option key={level} value={level}>{level}</option>) ) }
+              {technologyMaturityLevels.map(level => (<option key={level} value={level}" >{level}</option>) ) }
             </select>
-          </div>
+          </div>"
         </div>'''
 ''''
         <div className='mt-6'>''''
@@ -286,19 +286,18 @@ const AdvancedServiceRecommendation = () => {}
           <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>''''
             {primaryGoals.map(goal => (<label key={goal} className='flex items-center gap-2 cursor-pointer'>''''
                 <input type='checkbox' checked={clientProfile.primaryGoals.includes(goal)} onChange = {}
-  (e) => {}
+  (e) =" > {}
                 if(e.target.checked) {}
                     setClientProfile(prev => ({ ...prev, primaryGoals[...prev.primaryGoals,
-  goal] 
-
+  goal],
 }) ) }
-                else {}
+                else {}"
 '''
-                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}''''
-            }} className='rounded text-zion-cyan'/>''''
+                    setClientProfile(prev => ({ ...prev, primaryGoals: prev.primaryGoals.filter(g => g !== goal) }))}'''',
+}} className='rounded text-zion-cyan'/>''''
                 <span className='text-sm text-zion-slate-light'>{goal}</span>
               </label>))}
-          </div>
+          </div>"
         </div>'''
 ''''
         <div className='mt-6'>''''
@@ -306,75 +305,74 @@ const AdvancedServiceRecommendation = () => {}
           <div className='grid grid-cols-2 md:grid-cols-3 gap-2'>''''
             {challenges.map(challenge => (<label key={challenge} className='flex items-center gap-2 cursor-pointer'>''''
                 <input type='checkbox' checked={clientProfile.challenges.includes(challenge)} onChange = {}
-  (e) => {}
+  (e) =" > {}
                 if(e.target.checked) {}
                     setClientProfile(prev => ({ ...prev, challenges[...prev.challenges,
-  challenge] 
-
+  challenge],
 }) ) }
-                else {}
+                else {}"
 '''
-                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}''''
-            }} className='rounded text-zion-cyan'/>''''
+                    setClientProfile(prev => ({ ...prev, challenges: prev.challenges.filter(c => c !== challenge) }))}'''',
+}} className='rounded text-zion-cyan'/>''''
                 <span className='text-sm text-zion-slate-light'>{challenge}</span>
               </label>))}
-          </div>
+          </div>"
         </div>'''
 ''''
         <div className='mt-8 text-center'>''''
-          <Button className='bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4' onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}>'''
+          <Button className='bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark text-lg px-8 py-4' onClick={generateRecommendations} disabled={!isFormComplete() || isAnalyzing}" >'''
             {isAnalyzing ? (<>''''
-                <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>
+                <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>"
                 Analyzing Your Profile...'''
               </>) : (<>''''
-                <Brain className='w-5 h-5 mr-2'/>
+                <Brain className='w-5 h-5 mr-2'/" >
                 Get AI Recommendations
               </>) }
           </Button>
         </div>
       </motion.div>
       {/* Recommendations Results */}
-      {showResults && (<motion.div initial = {}
-  { opacity: 0, y: 20
-}} animate = {}
-  { opacity: 1, y: 0';'
-}} transition={{ delay: 0.2 }}>''''
+      {showResults && (<motion .div initial = {}
+  { opacity: 0, y: 20,
+}} animate = {}"
+  { opacity: 1, y: 0';',
+}} transition={{ delay: 0.2 }}" >''''
           <h2 className='text-2xl font-bold text-zion-blue-dark mb-6 text-center'>
-            Your Personalized Service Recommendations
+            Your Personalized Service Recommendations"
           </h2>'''
           ''''
           <div className='space-y-6'>
-            {recommendations.map((rec, index) => (<motion.div key={rec.service.id} initial = {}
-  { opacity: 0, x: -20
-}} animate = {}
-  { opacity: 1, x: 0';'
-}} transition={{ delay: 0.1 * index }}>''''
+            {recommendations.map((rec, index) => (<motion .div key={rec.service.id} initial = {}
+  { opacity: 0, x: -20,
+}} animate = {}"
+  { opacity: 1, x: 0';',
+}} transition={{ delay: 0.1 * index }}" >''''
                 <Card className='hover:shadow-lg transition-shadow'>'''
                   <CardHeader>''''
                     <div className='flex items-start justify-between'>''''
                       <div className='flex-1'>''''
-                        <CardTitle className='text-xl text-zion-blue-dark mb-2'>
+                        <CardTitle className='text-xl text-zion-blue-dark mb-2'>"
                           {rec.service.title}'''
                         </CardTitle>''''
                         <p className='text-zion-slate-light mb-3'>
-                          {rec.service.description}
+                          {rec.service.description}"
                         </p>'''
                         ''''
                         <div className='flex flex-wrap gap-2 mb-4'>
-                          <Badge className={getPriorityColor(rec.priority)}>
+                          <Badge className={getPriorityColor(rec.priority)}" >
                             Priority: {rec.priority}
                           </Badge>
-                          <Badge className={getComplexityColor (rec.implementationComplexity) }>
+                          <Badge className={getComplexityColor (rec.implementationComplexity) }" >"
                             Complexity: {rec.implementationComplexity}'''
                           </Badge>''''
                           <Badge className='bg-zion-cyan/10 text-zion-cyan'>
                             Match Score: {rec.matchScore}%
                           </Badge>
-                        </div>
+                        </div>"
                       </div>'''
                       ''''
                       <div className='text-right ml-4'>''''
-                        <div className='text-2xl font-bold text-zion-cyan mb-1'>
+                        <div className='text-2xl font-bold text-zion-cyan mb-1'>"
                           {rec.service.price}'''
                         </div>''''
                         <div className='text-sm text-zion-slate-light'>
@@ -382,26 +380,26 @@ const AdvancedServiceRecommendation = () => {}
                         </div>
                       </div>
                     </div>
-                  </CardHeader>
+                  </CardHeader>"
                   '''
                   <CardContent>''''
                     <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>'''
                       <div>''''
                         <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>''''
-                          <Lightbulb className='w-4 h-4 text-zion-purple'/>
+                          <Lightbulb className='w-4 h-4 text-zion-purple'/" >"
                           Why This Service Matches'''
                         </h4>''''
                         <ul className='space-y-2'>''''
                           {rec.reasoning.map((reason, idx) => (<li key={idx} className='text-sm text-zion-slate-light flex items-start gap-2'>''''
-                              <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 flex-shrink-0'/>
+                              <CheckCircle className='w-4 h-4 text-green-500 mt-0.5 flex-shrink-0'/" >
                               {reason}
                             </li>) ) }
                         </ul>
-                      </div>
+                      </div>"
                       '''
                       <div>''''
                         <h4 className='font-semibold text-zion-slate-dark mb-3 flex items-center gap-2'>''''
-                          <BarChart3 className='w-4 h-4 text-zion-cyan'/>
+                          <BarChart3 className='w-4 h-4 text-zion-cyan'/" >"
                           Implementation Details'''
                         </h4>''''
                         <div className='space-y-3'>''''
@@ -418,16 +416,16 @@ const AdvancedServiceRecommendation = () => {}
                             <Badge variant='outline' className='text-xs'>
                               {rec.service.category.toUpperCase()}
                             </Badge>
-                          </div>
+                          </div>"
                         </div>'''
                         ''''
                         <div className='mt-4'>''''
-                          <Button className='w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark' onClick = {}
+                          <Button className='w-full bg-gradient-to-r from-zion-cyan to-zion-purple hover:from-zion-cyan-dark hover:to-zion-purple-dark' onClick = {}"
 '
-  () => window.open(rec.service.link,_blank')
+  () =" > window.open(rec.service.link,_blank')",
 }>'''
                             Learn More''''
-                            <ArrowRight className='w-4 h-4 ml-2'/>
+                            <ArrowRight className='w-4 h-4 ml-2'/" >
                           </Button>
                         </div>
                       </div>
@@ -438,32 +436,32 @@ const AdvancedServiceRecommendation = () => {}
           </div>
           {/* CTA Section */}
           <motion.div initial = {}
-  { opacity: 0, y: 20
-}} animate = {}
+  { opacity: 0, y: 20,
+}} animate = {}"
   { opacity: 1, y: 0 '''
-''''
+'''',
 }} transition={{ delay: 0.4 }} className='mt-12 text-center'>''''
             <div className='bg-gradient-to-r from-zion-purple via-zion-blue-light to-zion-cyan rounded-lg p-8 text-white'>''''
               <h3 className='text-3xl font-bold mb-4'>Ready to Get Started?</h3>''''
               <p className='text-xl mb-6 max-w-2xl mx-auto'>
-                Our expert team is ready to help you implement the perfect solution
+                Our expert team is ready to help you implement the perfect solution"
                 for your business needs. Contact us today for a personalized consultation.'''
               </p>''''
               <div className='flex flex-col sm:flex-row gap-4 justify-center'>''''
-                <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}
+                <Button className='bg-white text-zion-purple hover:bg-zion-slate-light' onClick = {}"
 '
-  () => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',_blank')
-'''
+  () =" > window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation',_blank')"
+''',
 }>''''
-                  <Users className='w-5 h-5 mr-2'/>
+                  <Users className='w-5 h-5 mr-2'/" >"
                   Get Expert Consultation'''
                 </Button>''''
-                <Button variant='outline' className='border-white text-white hover:bg-white hover:text-zion-purple' onClick = {}
+                <Button variant='outline' className='border-white text-white hover:bg-white hover:text-zion-purple' onClick = {}"
 '
-  () => window.open('tel:+13024640950',_blank')
-'''
+  () =" > window.open('tel:+13024640950',_blank')"
+''',
 }>''''
-                  <Zap className='w-5 h-5 mr-2"/>
+                  <Zap className='w-5 h-5 mr-2"/" >
                   Call Now
                 </Button>
               </div>
@@ -481,4 +479,4 @@ export { AdvancedServiceRecommendation }
 
 export { AdvancedServiceRecommendation }
 
-export { AdvancedServiceRecommendation }
+export { AdvancedServiceRecommendation }"`

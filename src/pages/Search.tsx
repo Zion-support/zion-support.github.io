@@ -7,6 +7,6 @@ import {
   MapPin, Clock,
   DollarSign, ArrowUpDown,
   Calendar, Eye,
-  Bookmark, Share2
-} from 'lucide-react';
-import { SEO } from '../components/SEO';
+  Bookmark, Share2;",
+} from 'lucide-react';"
+import { SEO } from '../components/SEO';"

@@ -3,3 +3,4 @@ export const securityConfig = {
   'self''}'
   contentSecurityPolicy: 'default - src 'self''}
 ;
+"

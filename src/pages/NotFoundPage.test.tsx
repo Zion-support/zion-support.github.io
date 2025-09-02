@@ -1,16 +1,17 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import React from 'react';"
+import { render, screen } from '@testing-library/react';"
+import '@testing-library/jest-dom';"
 import NotFoundPage from './NotFoundPage';
-
-describe('NotFoundPage', () => {
+"
+describe('NotFoundPage', () => {"
   it('renders without crashing', () => {
-    render(<NotFoundPage />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-
-  it('displays expected content', () => {
-    render(<NotFoundPage />);
-    // Add more specific tests here
-  });
+    render(<NotFoundPage /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
+"
+  it('displays expected content', () => {
+    render(<NotFoundPage /" >);
+    // Add more specific tests here,
+});,
+});
+"

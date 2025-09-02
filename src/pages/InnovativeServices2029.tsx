@@ -3,3 +3,5 @@ import React, { useState, useMemo } from 'react' import { motion, AnimatePresenc
    title: string;
    description: string;
    icon: React.ComponentType<>
+"
+}

@@ -1,5 +1,5 @@
  const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false)  const [isAnalyzing, setIsAnalyzing] = useState (false)  const [report, setReport] = useState (null)  const [selectedPage, setSelectedPage] = useState (null)  const analyzeSEO = useCallback (async () => { setIsAnalyzing (true)  try {'';import React, { useState, useEffect, useCallback } from 'react''
-import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react'
+import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
 const SEOOptimizer = () => {}
     const [isOpen, setIsOpen] = useState (false) 
     const [isAnalyzing, setIsAnalyzing] = useState (false) 
@@ -10,18 +10,18 @@ const SEOOptimizer = () => {}
         try {}
             // Simulate analyzing all pages for SEO
             const samplePages = []
-                {}
+                {}"
 '
 ''
 '''
                     url: '/','''
                     title: 'Zion Tech Group - AI-Powered Technology Solutions & Enterprise Services','''
-                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.','''
+                    metaDescription: 'Leading provider of AI-powered technology solutions, quantum computing, cybersecurity, and enterprise digital transformation services.',''';"
                     headings['AI-Powered Business Solutions',Comprehensive IT Services',Micro-SaaS Solutions'],';'
                     images['/images/hero-ai-solutions.jpg',/images/hero-it-services.jpg'],';'
                     links['/services',/ai-solutions',/about',/contact'],';'
-                    keywords['AI solutions',quantum computing',cybersecurity',digital transformation']
-                }, {}
+                    keywords['AI solutions',quantum computing',cybersecurity',digital transformation'],
+}, {}"
 '
 ''
 '''
@@ -31,8 +31,8 @@ const SEOOptimizer = () => {}
                     headings['AI Solutions',Cloud & DevOps',Cybersecurity',Digital Transformation'],';'
                     images['/images/services-overview.jpg'],';'
                     links['/ai-solutions',/cloud-devops',/cybersecurity',/about'],';'
-                    keywords['technology services',AI solutions',cloud infrastructure',cybersecurity']
-                }, {}
+                    keywords['technology services',AI solutions',cloud infrastructure',cybersecurity'],
+}, {}"
 '
 ''
 '''
@@ -42,16 +42,16 @@ const SEOOptimizer = () => {}
                     headings['Machine Learning',Predictive Analytics',AI Automation',Business Intelligence'],';'
                     images['/images/ai-solutions.jpg'],';'
                     links['/services',/about',/contact'],';'
-                    keywords['artificial intelligence',machine learning',predictive analytics',AI automation']
-                }
+                    keywords['artificial intelligence',machine learning',predictive analytics',AI automation'],
+}
             ]
             const pageAnalyses = samplePages.map(page => {}
                 const score = calculateSEOScore(page)
                 const issues = identifySEOIssues(page)
                 const recommendations = generateSEORecommendations(issues)
                 return {}
-                    pageUrl: page.url, title: page.title, metaDescription: page.metaDescription, headings: page.headings, images: page.images, links: page.links, keywords: page.keywords, score, issues, recommendations
-                }}) 
+                    pageUrl: page.url, title: page.title, metaDescription: page.metaDescription, headings: page.headings, images: page.images, links: page.links, keywords: page.keywords, score, issues, recommendations,
+}}) 
             const totalPages = pageAnalyses.length
             const averageScore = Math.round(pageAnalyses.reduce ( (sum, page) => sum + page.score, 0) / totalPages) 
             const pagesWithIssues = pageAnalyses.filter(page => page.issues.length > 0) .length
@@ -66,9 +66,9 @@ const SEOOptimizer = () => {}
                 .map(([issue]) => issue)
             const summary = generateSummary(pageAnalyses, topIssues)
             setReport({}
-                totalPages, averageScore, pagesWithIssues, topIssues, pageAnalyses, summary
-            }) }
-        catch (error) {}
+                totalPages, averageScore, pagesWithIssues, topIssues, pageAnalyses, summary,
+}) }
+        catch (error) {}"
 '
 ''
 '''
@@ -112,7 +112,7 @@ const SEOOptimizer = () => {}
             score += 10}
         else if(page.keywords.length >= 1) {}
             score += 5}
-        // URL structure (0-15 points)
+        // URL structure (0-15 points)"
         maxScore += 15'
         if (page.url === '/' || page.url.includes('-')) {}
             score += 15}
@@ -120,71 +120,71 @@ const SEOOptimizer = () => {}
             score += 8}
         return Math.round((score / maxScore) * 100) }
     const issues = []
-        if (!page.title || page.title.length < 30) {}
+        if (!page.title || page.title.length < 30) {}"
 '
 ''
 '''
             issues.push('Title is too short (should be 30-60 characters))}
-        else if (page.title.length > 60) {}
+        else if (page.title.length > 60) {}"
 '
 ''
 '''
             issues.push('Title is too long (should be 30-60 characters))}
-        if (!page.metaDescription || page.metaDescription.length < 120) {}
+        if (!page.metaDescription || page.metaDescription.length < 120) {}"
 '
 ''
 '''
             issues.push('Meta description is too short (should be 120-160 characters))}
-        else if (page.metaDescription.length > 160) {}
+        else if (page.metaDescription.length > 160) {}"
 '
 ''
 '''
             issues.push('Meta description is too long (should be 120-160 characters))}
-        if (page.headings.length < 2) {}
+        if (page.headings.length < 2) {}"
 '
 ''
 '''
             issues.push('Insufficient heading structure (should have at least 2 headings))}
-        if (page.images.length === 0) {}
+        if (page.images.length === 0) {}"
 '
 ''
 '''
             issues.push('No images found (consider adding relevant images with alt text))}
-        if (page.links.length < 2) {}
+        if (page.links.length < 2) {}"
 '
 ''
 '''
             issues.push('Insufficient internal linking (should have at least 2 internal links))}
-        if (page.keywords.length < 2) {}
+        if (page.keywords.length < 2) {}"
 '
             issues.push('Insufficient keyword targeting (should have at least 2 relevant keywords))}'
-        if (page.url !== '/' && !page.url.includes('-')) {}
+        if (page.url !== '/' && !page.url.includes('-')) {}"
 '
 ''
 '''
             issues.push('URL could be more SEO-friendly (consider using hyphens))}
         return issues}
-    const generateSEORecommendations = (issues) => {}
+    const generateSEORecommendations = (issues) => {}"
         const recommendations = []'
-        if (issues.some(issue => issue.includes('Title'))) {}
+        if (issues.some(issue => issue.includes('Title'))) {}"
 '
             recommendations.push('Optimize page titles with relevant keywords and compelling copy')}'
-        if (issues.some(issue => issue.includes('Meta description'))) {}
+        if (issues.some(issue => issue.includes('Meta description'))) {}"
 '
             recommendations.push('Write compelling meta descriptions that accurately describe the page content')}'
-        if (issues.some(issue => issue.includes('heading structure'))) {}
+        if (issues.some(issue => issue.includes('heading structure'))) {}"
 '
             recommendations.push('Add H1, H2, and H3 headings to improve content structure and SEO')}'
-        if (issues.some(issue => issue.includes('No images'))) {}
+        if (issues.some(issue => issue.includes('No images'))) {}"
 '
             recommendations.push('Add relevant images with descriptive alt text for better accessibility and SEO')}'
-        if (issues.some(issue => issue.includes('internal linking'))) {}
+        if (issues.some(issue => issue.includes('internal linking'))) {}"
 '
             recommendations.push('Add internal links to related pages to improve navigation and SEO')}'
-        if (issues.some(issue => issue.includes('keyword targeting'))) {}
+        if (issues.some(issue => issue.includes('keyword targeting'))) {}"
 '
             recommendations.push('Research and include relevant keywords naturally throughout the content')}'
-        if (issues.some(issue => issue.includes('URL'))) {}
+        if (issues.some(issue => issue.includes('URL'))) {}"
 '
 ''
 '''
@@ -199,42 +199,42 @@ const SEOOptimizer = () => {}
         const goodPages = pageAnalyses.filter(page => page.score >= 60) .length
         const poorPages = pageAnalyses.filter(page => page.score < 40) .length
         let summary = `Analyzed ${totalPages} pages for SEO.`
-        if(excellentPages > 0) {}
+        if(excellentPages > 0) {}`
 `
 ``
 ```
 ````
             summary += `${excellentPages} pages have excellent SEO. `}
-        if (goodPages > 0) {}
+        if (goodPages > 0) {}`
 `
 ``
 ```
 ````
             summary += `${goodPages} pages have good SEO. `}
-        if (poorPages > 0) {}
+        if (poorPages > 0) {}`
 `
 ``
 ```
 ````
             summary += `${poorPages} pages need significant SEO improvement. `}
-        if (topIssues.length > 0) {}
-'`
-'`'`
-'`'`'`
-'`'`'`'`
+        if (topIssues.length > 0) {}"`
+'`"`
+'`'`"`
+'`'`'`"`
+'`'`'`'`"`
             summary += `Top SEO issues to address: ${topIssues.slice(0, 3).join(',)}.`}
         return summary}
     const exportSEOReport = () => {}
-        if (!report)
+        if (!report)"
             return'
         const csvContent = [''
             ['Page URL',Title',SEO Score',Issues',Recommendations'], ...report.pageAnalyses.map(page => [page.pageUrl,'
-                page.title,''
-                page.score.toString(),'''`
-                page.issues.join('),''`'`
-                page.recommendations.join(')'`'`'`
-            ])'`'`'`'`
-        ].map(row => row.map(cell => `'${cell}'`).join(',)).join('\n')';'
+                page.title,''`
+                page.score.toString(),'''`"`
+                page.issues.join('),''`'`"`
+                page.recommendations.join(')'`'`'`",`
+])'`'`'`'`",`
+].map(row => row.map(cell => `'${cell}'`).join(',)).join('\n')';'
         const blob = new Blob([csvContent], { type: 'text/csv' })'
         const url = window.URL.createObjectURL(blob)';'
         const a = document.createElement('a')'
@@ -242,7 +242,7 @@ const SEOOptimizer = () => {}
         a.download = 'seo-optimization-report.csv'
         a.click()
         window.URL.revokeObjectURL(url)}
-    const getScoreColor = (score) => {}
+    const getScoreColor = (score) => {}"
         if (score >= 80)'
             return 'text-green-600 bg-green-50 border-green-200'
         if (score >= 60)'
@@ -250,7 +250,7 @@ const SEOOptimizer = () => {}
         if (score >= 40)'
             return 'text-orange-600 bg-orange-50 border-orange-200'
         return 'text-red-600 bg-red-50 border-red-200'}
-    const getScoreText = (score) => {}
+    const getScoreText = (score) => {}"
         if (score >= 80)'
             return 'Excellent'
         if (score >= 60)'
@@ -260,9 +260,9 @@ const SEOOptimizer = () => {}
         return 'Poor'}';''
     return (<div className='fixed bottom-6 right-24 z-50'>'''
       {/* Floating Action Button */}''''
-      <button onClick={() => setIsOpen(!isOpen)} className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105' aria-label='Toggle SEO Optimizer'>''''
-        <Search className='w-6 h-6'/>
-      </button>
+      <button onClick={() =" > setIsOpen(!isOpen)} className='bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105' aria-label='Toggle SEO Optimizer'>''''
+        <Search className='w-6 h-6'/" >
+      </button>"
 '''
       {/* SEO Optimizer Panel */}''''
       {isOpen && (<div className='absolute bottom-16 right-0 w-[700px] bg-white dark:bg-gray-900 rounded-lg shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden'>'''
@@ -270,13 +270,13 @@ const SEOOptimizer = () => {}
           <div className='bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4'>''''
             <div className='flex items-center justify-between'>''''
               <h3 className='text-lg font-semibold flex items-center gap-2'>''''
-                <TrendingUp className='w-5 h-5'/>
+                <TrendingUp className='w-5 h-5'/" >"
                 SEO Optimizer'''
               </h3>''''
-              <button onClick={() => setIsOpen(false)} className='text-white/80 hover:text-white transition-colors'>
+              <button onClick={() =" > setIsOpen(false)} className='text-white/80 hover:text-white transition-colors'>
                 ×
               </button>
-            </div>
+            </div>"
             '''
             {/* Summary Stats */}''''
             {report && (<div className='grid grid-cols-3 gap-4 mt-3'>''''
@@ -293,18 +293,18 @@ const SEOOptimizer = () => {}
                   <div className='text-sm text-pink-100'>Need Optimization</div>
                 </div>
               </div>) }
-          </div>
+          </div>"
 '''
           {/* Content */}''''
           <div className='p-4 max-h-[500px] overflow-y-auto'>''''
             {isAnalyzing ? (<div className='flex items-center justify-center py-8'>''''
-                <RefreshCw className='w-6 h-6 animate-spin text-purple-600'/>''''
+                <RefreshCw className='w-6 h-6 animate-spin text-purple-600'/" >''''
                 <span className='ml-2 text-gray-600'>Analyzing SEO...</span>''''
               </div>) : report ? (<div className='space-y-4'>'''
                 {/* Top Issues */}''''
                 {report.topIssues.length > 0 && (<div className='bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg'>''''
                     <h4 className='font-medium text-yellow-800 dark:text-yellow-200 mb-2 flex items-center gap-2'>''''
-                      <AlertTriangle className='w-4 h-4'/>
+                      <AlertTriangle className='w-4 h-4'/" >"
                       Top SEO Issues to Address'''
                     </h4>''''
                     <div className='space-y-1'>''''
@@ -312,7 +312,7 @@ const SEOOptimizer = () => {}
                           • {issue}
                         </div>) ) }
                     </div>
-                  </div>) }
+                  </div>) }"
 '''
                 {/* Pages Analysis */}''''
                 <div className='bg-gray-50 dark:bg-gray-800 rounded-lg overflow-hidden'>''''
@@ -320,36 +320,36 @@ const SEOOptimizer = () => {}
                     <table className='w-full'>''''
                       <thead className='bg-gray-100 dark:bg-gray-700'>'''
                         <tr>''''
-                          <th className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
+                          <th className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>"
                             Page'''
                           </th>''''
-                          <th className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
+                          <th className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>"
                             SEO Score'''
                           </th>''''
-                          <th className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
+                          <th className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>"
                             Status'''
                           </th>''''
                           <th className='px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider'>
                             Issues
-                          </th>
+                          </th>"
                         </tr>'''
                       </thead>''''
                       <tbody className='bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700'>''''
-                        {report.pageAnalyses.map((page, index) => (<tr key={index} className='hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer' onClick={() => setSelectedPage(page)}>''''
+                        {report.pageAnalyses.map((page, index) => (<tr key={index} className='hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer' onClick={() =" > setSelectedPage(page)}>''''
                             <td className='px-4 py-3'>''''
-                              <div className='text-sm font-medium text-gray-900 dark:text-white'>
+                              <div className='text-sm font-medium text-gray-900 dark:text-white'>"
                                 {page.title}'''
                               </div>''''
                               <div className='text-xs text-gray-500 dark:text-gray-400'>
-                                {page.pageUrl}
+                                {page.pageUrl}"
                               </div>'''
                             </td>''''
-                            <td className='px-4 py-3 text-sm text-gray-900 dark:text-white'>
-                              {page.score}%'''
-                            </td>''`
+                            <td className='px-4 py-3 text-sm text-gray-900 dark:text-white'>"
+                              {page.score}%'''`
+                            </td>''`"`
                             <td className='px-4 py-3'>``
-                              <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getScoreColor(page.score)}`}>
-                                {getScoreText(page.score)}
+                              <span className={`inline-flex px-2 py-1 text-xs font-semibold rounded-full border ${getScoreColor(page.score)}`}" >
+                                {getScoreText(page.score)}"
                               </span>'''
                             </td>''''
                             <td className='px-4 py-3 text-sm text-gray-900 dark:text-white'>
@@ -359,18 +359,18 @@ const SEOOptimizer = () => {}
                       </tbody>
                     </table>
                   </div>
-                </div>
+                </div>"
 '''
                 {/* Page Details Modal */}''''
                 {selectedPage && (<div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>''''
                     <div className='bg-white dark:bg-gray-900 rounded-lg p-6 max-w-2xl w-full mx-4 max-h-[80vh] overflow-y-auto'>''''
                       <div className='flex items-center justify-between mb-4'>''''
-                        <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>
+                        <h3 className='text-lg font-semibold text-gray-900 dark:text-white'>"
                           SEO Analysis: {selectedPage.title}'''
                         </h3>''''
-                        <button onClick={() => setSelectedPage(null)} className='text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'>
+                        <button onClick={() =" > setSelectedPage(null)} className='text-gray-400 hover:text-gray-600 dark:hover:text-gray-300'>
                           ×
-                        </button>
+                        </button>"
                       </div>'''
                       ''''
                       <div className='space-y-4'>''''
@@ -391,43 +391,43 @@ const SEOOptimizer = () => {}
                             <div className='text-sm text-gray-500 dark:text-gray-400'>Links</div>''''
                             <div className='text-lg font-semibold text-gray-900 dark:text-white'>{selectedPage.links.length}</div>
                           </div>
-                        </div>
+                        </div>"
 '''
                         {selectedPage.issues.length > 0 && (<div>''''
                             <h4 className='font-medium text-red-600 dark:text-red-400 mb-2'>SEO Issues Found</h4>''''
                             <div className='space-y-2'>''''
                               {selectedPage.issues.map((issue, index) => (<div key={index} className='flex items-start gap-2 text-sm text-red-600 dark:text-red-400'>''''
-                                  <AlertTriangle className='w-4 h-4 mt-0.5 flex-shrink-0'/>
+                                  <AlertTriangle className='w-4 h-4 mt-0.5 flex-shrink-0'/" >
                                   <span>{issue}</span>
                                 </div>) ) }
                             </div>
-                          </div>) }
+                          </div>) }"
 '''
                         {selectedPage.recommendations.length > 0 && (<div>''''
                             <h4 className='font-medium text-green-600 dark:text-green-400 mb-2'>SEO Recommendations</h4>''''
                             <div className='space-y-2'>''''
                               {selectedPage.recommendations.map((rec, index) => (<div key={index} className='flex items-start gap-2 text-sm text-green-600 dark:text-green-400'>''''
-                                  <Zap className='w-4 h-4 mt-0.5 flex-shrink-0'/>
+                                  <Zap className='w-4 h-4 mt-0.5 flex-shrink-0'/" >
                                   <span>{rec}</span>
                                 </div>) ) }
                             </div>
                           </div>) }
-                      </div>
+                      </div>"
                     </div>'''
                   </div>)}''''
               </div>) : (<div className='text-center py-8 text-gray-500'>
                 No SEO analysis data available
               </div>) }
-          </div>
+          </div>"
 '''
-          {/* Footer Actions */}''''
-          <div className='bg-gray-50 dark:bg-gray-800 p-3 flex gap-2'>'''`
-            <button onClick={analyzeSEO} disabled={isAnalyzing} className='flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2'>'`'`
-              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`}/>'
+          {/* Footer Actions */}''''`
+          <div className='bg-gray-50 dark:bg-gray-800 p-3 flex gap-2'>'''`"`
+            <button onClick={analyzeSEO} disabled={isAnalyzing} className='flex-1 bg-purple-600 hover:bg-purple-700 disabled:bg-purple-400 text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center justify-center gap-2'>'`'`"`
+              <RefreshCw className={`w-4 h-4 ${isAnalyzing ? 'animate-spin' : ''}`}/" >'
               {isAnalyzing ? 'Analyzing...' : 'Analyze SEO'}'''
             </button>''''
             <button onClick={exportSEOReport} className='px-3 py-2 bg-pink-600 hover:bg-pink-700 text-white rounded-md transition-colors flex items-center gap-2'>''''
-              <Download className='w-4 h-4'/>
+              <Download className='w-4 h-4'/" >
               Export
             </button>
           </div>
@@ -444,3 +444,4 @@ export { SEOOptimizer }
 export { SEOOptimizer }
 
 export { SEOOptimizer }
+"`

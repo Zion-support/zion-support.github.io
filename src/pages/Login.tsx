@@ -2,4 +2,4 @@ import React, { useState } from 'react';"
 import { motion } from 'framer-motion';"
 import { Link } from 'react-router-dom';"
 import { SEO } from '../components/SEO';"
-import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
+import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';"

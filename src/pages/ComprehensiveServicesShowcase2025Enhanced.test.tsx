@@ -1,16 +1,17 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import React from 'react';"
+import { render, screen } from '@testing-library/react';"
+import '@testing-library/jest-dom';"
 import ComprehensiveServicesShowcase2025Enhanced from './ComprehensiveServicesShowcase2025Enhanced';
-
-describe('ComprehensiveServicesShowcase2025Enhanced', () => {
+"
+describe('ComprehensiveServicesShowcase2025Enhanced', () => {"
   it('renders without crashing', () => {
-    render(<ComprehensiveServicesShowcase2025Enhanced />);
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
-  });
-
-  it('displays expected content', () => {
-    render(<ComprehensiveServicesShowcase2025Enhanced />);
-    // Add more specific tests here
-  });
+    render(<ComprehensiveServicesShowcase2025Enhanced /" >);"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();,
 });
+"
+  it('displays expected content', () => {
+    render(<ComprehensiveServicesShowcase2025Enhanced /" >);
+    // Add more specific tests here,
+});,
+});
+"
