@@ -70,4 +70,4 @@ eslint: {
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
