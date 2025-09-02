@@ -134,7 +134,6 @@ export default function Home() {
       color: "from-blue-500 to-cyan-500"
     },
     {
-<<<<<<< HEAD
       title: "Sustainable Technology Solutions",
       subtitle: "Building a greener future through innovation",
       description: "Eco-friendly technology solutions that reduce environmental impact while boosting efficiency.",
@@ -142,7 +141,8 @@ export default function Home() {
       link: "/services/sustainable-technology",
       icon: Leaf,
       color: "from-green-500 to-emerald-500"
-=======
+    },
+    {
       title: "Cloud-Native Architecture",
       subtitle: "Scalable, secure, and resilient cloud solutions",
       description: "Build the future with our enterprise-grade cloud infrastructure and microservices architecture.",
@@ -187,7 +187,6 @@ export default function Home() {
       description: "End-to-end digital transformation consulting and implementation",
       color: "from-green-500 to-emerald-500",
       link: "/services/digital-transformation"
->>>>>>> cursor/website-audit-content-update-and-deployment-8db3
     }
   ];
 
@@ -198,29 +197,7 @@ export default function Home() {
     { number: "99%", label: "Client Satisfaction", icon: Star }
   ];
 
-  const services = [
-    {
-      title: "AI Autonomous Research",
-      description: "Intelligent research automation that discovers insights across multiple sources",
-      icon: Brain,
-      color: "from-purple-500 to-pink-500",
-      link: "/services/AIAutonomousBusinessOperations"
-    },
-    {
-      title: "Quantum Edge Computing",
-      description: "Revolutionary quantum-enhanced edge computing platform",
-      icon: Atom,
-      color: "from-blue-500 to-cyan-500",
-      link: "/services/quantum-edge-computing-solutions"
-    },
-    {
-      title: "AI Customer Experience Analytics",
-      description: "Transform customer relationships with AI-powered analytics",
-      icon: BarChart3,
-      color: "from-green-500 to-emerald-500",
-      link: "/services/ai-customer-experience-analytics"
-    }
-  ];
+
 
   useEffect(() => {
     if (!isPlaying) return;
