@@ -24,13 +24,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             console.log('LCP:', entry.startTime);
           }
           if (entry.entryType === 'first-input') {
-            const e: any = entry as any; // PerformanceEventTiming in supporting browsers
-            const processingStart = typeof e.processingStart === 'number' ? e.processingStart : e.startTime;
-            console.log('FID:', processingStart - entry.startTime);
+            const e = entry as PerformanceEventTiming;
+            if (typeof e.processingStart === 'number') {
+              console.log('FID:', e.processingStart - e.startTime);
+            }
           }
           if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              console.log('CLS:', (entry as any).value);
+            const ls = entry as any;
+            if (!ls.hadRecentInput) {
+              console.log('CLS:', ls.value);
             }
           }
         }

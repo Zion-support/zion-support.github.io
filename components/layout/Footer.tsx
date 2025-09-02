@@ -13,9 +13,9 @@ import {
   ArrowRight,
   Heart,
   Cloud,
-  Database,
+  Database
 } from 'lucide-react';
-import { Button } from '../ui/Button';
+ 
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -38,8 +38,8 @@ const Footer: React.FC = () => {
       color: "text-green-400",
       services: [
         { name: "Cloud Migration", href: "/services/cloud-migration" },
-        { name: "Micro SaaS Solutions", href: "/micro-saas" },
-        { name: "IT Services", href: "/it-services" },
+        { name: "Micro SaaS Solutions", href: "/services/micro-saas" },
+        { name: "IT Services", href: "/services/it-services" },
         { name: "Infrastructure Management", href: "/services/infrastructure" }
       ]
     },
@@ -67,19 +67,14 @@ const Footer: React.FC = () => {
     { name: "Pricing", href: "/pricing" }
   ];
 
-  const legalLinks = [
-    { name: "Privacy Policy", href: "/privacy" },
-    { name: "Terms of Service", href: "/terms" },
-    { name: "Cookie Policy", href: "/cookies" },
-    { name: "Sitemap", href: "/sitemap" }
-  ];
+  // Legal links rendered in bottom bar
 
   const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin },
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter },
+    { name: "LinkedIn", href: "https://www.linkedin.com/company/ziontechgroup", icon: Linkedin },
+    { name: "Twitter", href: "https://twitter.com/ZionTechGroup", icon: Twitter },
     { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github },
-    { name: "YouTube", href: "https://youtube.com/ziontechgroup", icon: Youtube },
-    { name: "Instagram", href: "https://instagram.com/ziontechgroup", icon: Instagram }
+    { name: "YouTube", href: "https://www.youtube.com/@ZionTechGroup", icon: Youtube },
+    { name: "Instagram", href: "https://www.instagram.com/ziontechgroup", icon: Instagram }
   ];
 
   const contactInfo = {
@@ -116,7 +111,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="flex items-center text-gray-300">
                 <Phone className="w-4 h-4 mr-3 text-blue-400" />
-                <a href={`tel:${contactInfo.phone}`} className="hover:text-white transition-colors">
+                <a href={`tel:+13024640950`} className="hover:text-white transition-colors">
                   {contactInfo.phone}
                 </a>
               </div>
@@ -187,76 +182,37 @@ const Footer: React.FC = () => {
             </div>
 
             {/* Newsletter Signup */}
-            <div className="bg-slate-800 rounded-lg p-6">
-              <h4 className="text-white font-semibold mb-3">Stay Updated</h4>
-              <p className="text-gray-300 text-sm mb-4">
-                Get the latest AI insights and technology trends delivered to your inbox.
-              </p>
-              <div className="space-y-3">
+            <div className="bg-slate-800 rounded-lg p-4">
+              <div className="flex items-center space-x-3 mb-3">
+                <Heart className="w-5 h-5 text-pink-400" />
+                <h4 className="text-white font-semibold">Stay Updated</h4>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">Join our newsletter for product updates and insights.</p>
+              <form action="https://ziontechgroup.com/api/newsletter" method="post" className="flex">
                 <input
                   type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-3 py-2 rounded-lg bg-slate-700 border border-slate-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                  name="email"
+                  required
+                  placeholder="Your email address"
+                  className="flex-1 px-3 py-2 rounded-l bg-slate-900 border border-slate-700 text-gray-200 placeholder-gray-500 focus:outline-none"
                 />
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-                  Subscribe
-                </Button>
-              </div>
+                <button type="submit" className="px-4 py-2 rounded-r bg-blue-600 hover:bg-blue-700 text-white">Subscribe</button>
+              </form>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Stats Section */}
-      <div className="border-t border-slate-700 py-8">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold text-white mb-2">200+</div>
-              <div className="text-gray-400 text-sm">Projects Completed</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-400 text-sm">Expert Team Members</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-white mb-2">95%</div>
-              <div className="text-gray-400 text-sm">Client Satisfaction</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-gray-400 text-sm">Support Available</div>
-            </div>
+      {/* Bottom Bar */}
+      <div className="border-t border-slate-800 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="text-gray-400 text-sm">
+            © {currentYear} Zion Tech Group. All rights reserved.
           </div>
-        </div>
-      </div>
-
-      {/* Bottom Footer */}
-      <div className="border-t border-slate-700 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <div className="flex items-center space-x-6 mb-4 md:mb-0">
-              <p className="text-gray-400 text-sm">
-                © {currentYear} Zion Tech Group. All rights reserved.
-              </p>
-              <div className="flex items-center space-x-4">
-                {legalLinks.map((link) => (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-              </div>
-            </div>
-            
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>Made with</span>
-              <Heart className="w-4 h-4 text-red-500" />
-              <span>by Zion Tech Group</span>
-            </div>
+          <div className="flex items-center gap-4 text-gray-400 text-sm">
+            <Link href="/privacy" className="hover:text-white">Privacy</Link>
+            <Link href="/terms" className="hover:text-white">Terms</Link>
+            <Link href="/sitemap" className="hover:text-white">Sitemap</Link>
           </div>
         </div>
       </div>
