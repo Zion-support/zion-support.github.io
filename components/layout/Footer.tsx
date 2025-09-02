@@ -10,18 +10,25 @@ const Footer: React.FC = () => {
       title: 'Micro SaaS',
       services: [
         { name: 'AI Content Generator', href: '/services/ai-content-generator' },
-        { name: 'Project Management', href: '/services/project-management-suite' },
+        { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
+        { name: 'E-Commerce Return Manager', href: '/services/ecommerce-return-manager' },
+        { name: 'Mobile-First Survey Builder', href: '/services/mobile-survey-builder' },
+        { name: 'AI Content Optimizer', href: '/services/ai-content-optimizer' },
+        { name: 'Smart Invoice Processor', href: '/services/smart-invoice-processor' },
+        { name: 'AI Meeting Transcriber', href: '/services/ai-meeting-transcriber' },
+        { name: 'Blockchain NFT Platform', href: '/services/blockchain-nft-platform' },
+        { name: 'IoT Device Manager', href: '/services/iot-device-manager' },
+        { name: 'Project Management Suite', href: '/services/project-management-suite' },
         { name: 'Social Media Scheduler', href: '/services/social-media-scheduler' },
         { name: 'Expense Tracker', href: '/services/expense-tracker' },
-        { name: 'Lead Scoring Platform', href: '/services/lead-scoring-platform' },
-        { name: 'Time Tracking Analytics', href: '/services/time-tracking-analytics' },
-        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
-        { name: 'Website Speed Optimizer', href: '/services/website-speed-optimizer' },
       ]
     },
     {
       title: 'IT Services',
       services: [
+        { name: 'Zero Trust Security', href: '/services/zero-trust-security' },
+        { name: 'Edge Computing Infrastructure', href: '/services/edge-computing-setup' },
+        { name: 'Quantum-Ready Encryption', href: '/services/quantum-ready-encryption' },
         { name: 'Cloud Migration', href: '/services/cloud-migration' },
         { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
         { name: 'API Gateway Setup', href: '/services/api-gateway-setup' },
@@ -30,11 +37,16 @@ const Footer: React.FC = () => {
         { name: 'Disaster Recovery Planning', href: '/services/disaster-recovery-planning' },
         { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
         { name: 'Performance Monitoring', href: '/services/performance-monitoring' },
+        { name: 'Identity & Access Management', href: '/services/identity-access-management' },
       ]
     },
     {
       title: 'AI Services',
       services: [
+        { name: 'AI Ethical Compliance', href: '/services/ai-ethical-compliance' },
+        { name: 'AI Drug Discovery Platform', href: '/services/ai-drug-discovery' },
+        { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
+        { name: 'AI Autonomous Vehicles', href: '/services/ai-autonomous-vehicles' },
         { name: 'Custom AI Models', href: '/services/custom-ai-models' },
         { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
         { name: 'Natural Language Processing', href: '/services/natural-language-processing' },

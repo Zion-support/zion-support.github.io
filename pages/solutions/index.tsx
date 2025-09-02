@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
-import Layout from '../../components/Layout';
+import MainLayout from '../../components/layout/MainLayout';
 import Link from 'next/link';
-import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight } from 'lucide-react';
+import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield } from 'lucide-react';
 
 const Solutions: NextPage = () => {
   return (
-    <Layout
+    <MainLayout
       title="Technology Solutions - Zion Tech Group"
       description="Discover comprehensive technology solutions tailored for enterprises, small businesses, startups, and specific industries. Transform your business with Zion Tech Group."
     >
@@ -48,24 +48,45 @@ const Solutions: NextPage = () => {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
-                <Building className="w-8 h-8 text-blue-600" />
+            {/* Startup Solutions */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-green-600 mb-4">
+                <Rocket className="w-12 h-12" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Enterprise Solutions</h3>
-              <p className="text-gray-600 mb-4">
-                Comprehensive technology solutions for large organizations with complex infrastructure needs.
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Startup Solutions</h3>
+              <p className="text-gray-600 mb-6">
+                Fast-track your startup with our rapid MVP development, AI automation, and scalable architecture solutions.
               </p>
-              <ul className="text-sm text-gray-600 space-y-2 mb-6">
-                <li>• Digital Transformation</li>
-                <li>• Legacy System Modernization</li>
-                <li>• Enterprise Security</li>
-                <li>• Global Infrastructure</li>
-              </ul>
-              <Link href="/solutions/enterprise">
-                <a className="text-blue-600 hover:text-blue-700 font-semibold flex items-center">
-                  Learn More <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
+              <Link href="/solutions/startup" className="text-green-600 hover:text-green-700 font-semibold flex items-center">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+
+            {/* Enterprise Solutions */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-blue-600 mb-4">
+                <Building className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Enterprise Solutions</h3>
+              <p className="text-gray-600 mb-6">
+                Comprehensive enterprise-grade solutions with advanced security, scalability, and compliance features.
+              </p>
+              <Link href="/solutions/enterprise" className="text-blue-600 hover:text-blue-700 font-semibold flex items-center">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+
+            {/* Industry Solutions */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-purple-600 mb-4">
+                <Heart className="w-12 h-12" />
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Industry Solutions</h3>
+              <p className="text-gray-600 mb-6">
+                Specialized solutions for healthcare, finance, e-commerce, education, automotive, and manufacturing.
+              </p>
+              <Link href="/solutions/industry" className="text-purple-600 hover:text-purple-700 font-semibold flex items-center">
+                Learn More <ArrowRight className="w-4 h-4 ml-1" />
               </Link>
             </div>
 
@@ -364,7 +385,7 @@ const Solutions: NextPage = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </MainLayout>
   );
 };
 
