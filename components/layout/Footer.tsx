@@ -9,58 +9,58 @@ const Footer: React.FC = () => {
     {
       title: 'Micro SaaS',
       services: [
-        { name: 'AI Content Generator', href: '/services/ai-content-generator' },
-        { name: 'AI Email Responder Pro', href: '/services/ai-email-responder' },
-        { name: 'Mobile Survey Platform', href: '/services/mobile-survey-platform' },
-        { name: 'Event Management Dashboard', href: '/services/event-management-dashboard' },
-        { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer' },
-        { name: 'AI Talent Matching', href: '/services/ai-talent-matching' },
-        { name: 'AI Recruiting Platform', href: '/services/ai-recruiting-platform' },
-        { name: 'Quantum Computing Solutions', href: '/services/quantum-computing-solutions' },
-        { name: 'Project Management Suite', href: '/services/project-management-suite' },
-        { name: 'Social Media Scheduler', href: '/services/social-media-scheduler' },
-        { name: 'Expense Tracker', href: '/services/expense-tracker' },
-        { name: 'Lead Scoring Platform', href: '/services/lead-scoring-platform' },
-        { name: 'Time Tracking Analytics', href: '/services/time-tracking-analytics' },
-        { name: 'Email Marketing Automation', href: '/services/email-marketing-automation' },
-        { name: 'Website Speed Optimizer', href: '/services/website-speed-optimizer' },
+        { name: 'AI Content Generation', href: '/services/ai-services' },
+        { name: 'Email Automation', href: '/services/ai-services' },
+        { name: 'Survey Platforms', href: '/services/micro-saas' },
+        { name: 'Event Management', href: '/services/micro-saas' },
+        { name: 'SEO Optimization', href: '/services/ai-services' },
+        { name: 'Talent Matching', href: '/services/ai-services' },
+        { name: 'Recruiting Solutions', href: '/services/ai-services' },
+        { name: 'Quantum Computing', href: '/services/ai-services' },
+        { name: 'Project Management', href: '/services/micro-saas' },
+        { name: 'Social Media Tools', href: '/services/micro-saas' },
+        { name: 'Expense Tracking', href: '/services/micro-saas' },
+        { name: 'Lead Management', href: '/services/micro-saas' },
+        { name: 'Time Tracking', href: '/services/micro-saas' },
+        { name: 'Marketing Automation', href: '/services/ai-services' },
+        { name: 'Performance Optimization', href: '/services/it-services' },
       ]
     },
     {
       title: 'IT Services',
       services: [
-        { name: 'Cloud Migration', href: '/services/cloud-migration' },
-        { name: 'Edge Computing Solutions', href: '/services/edge-computing-solutions' },
-        { name: 'Blockchain Infrastructure', href: '/services/blockchain-infrastructure' },
-        { name: 'Zero Trust Security', href: '/services/zero-trust-security' },
-        { name: '5G Network Implementation', href: '/services/5g-network-implementation' },
-        { name: 'Hyperautomation Platform', href: '/services/hyperautomation-platform' },
-        { name: 'Kubernetes Orchestration', href: '/services/kubernetes-orchestration' },
-        { name: 'API Gateway Setup', href: '/services/api-gateway-setup' },
-        { name: 'Database Optimization', href: '/services/database-optimization' },
-        { name: 'Network Security Audit', href: '/services/network-security-audit' },
-        { name: 'Disaster Recovery Planning', href: '/services/disaster-recovery-planning' },
-        { name: 'Microservices Architecture', href: '/services/microservices-architecture' },
-        { name: 'Performance Monitoring', href: '/services/performance-monitoring' },
+        { name: 'Cloud Migration', href: '/services/it-services' },
+        { name: 'Edge Computing', href: '/services/it-services' },
+        { name: 'Blockchain Infrastructure', href: '/services/it-services' },
+        { name: 'Zero Trust Security', href: '/services/it-services' },
+        { name: 'Network Implementation', href: '/services/it-services' },
+        { name: 'Automation Platforms', href: '/services/it-services' },
+        { name: 'Container Orchestration', href: '/services/it-services' },
+        { name: 'API Gateway Setup', href: '/services/it-services' },
+        { name: 'Database Optimization', href: '/services/it-services' },
+        { name: 'Security Audits', href: '/services/it-services' },
+        { name: 'Disaster Recovery', href: '/services/it-services' },
+        { name: 'Microservices Architecture', href: '/services/it-services' },
+        { name: 'Performance Monitoring', href: '/services/it-services' },
       ]
     },
     {
       title: 'AI Services',
       services: [
-        { name: 'AI Drug Discovery', href: '/services/ai-drug-discovery' },
-        { name: 'AI Climate Modeling', href: '/services/ai-climate-modeling' },
-        { name: 'AI Space Exploration', href: '/services/ai-space-exploration' },
-        { name: 'AI Neuroscience Research', href: '/services/ai-neuroscience-research' },
-        { name: 'AI Robotics & Automation', href: '/services/ai-robotics-automation' },
-        { name: 'AI Financial Trading', href: '/services/ai-financial-trading' },
-        { name: 'Custom AI Models', href: '/services/custom-ai-models' },
-        { name: 'Computer Vision Solutions', href: '/services/computer-vision-solutions' },
-        { name: 'Natural Language Processing', href: '/services/natural-language-processing' },
-        { name: 'Predictive Analytics', href: '/services/predictive-analytics' },
-        { name: 'Recommendation Engine', href: '/services/recommendation-engine' },
-        { name: 'AI-Powered Search', href: '/services/ai-powered-search' },
-        { name: 'AI Content Moderation', href: '/services/ai-content-moderation' },
-        { name: 'AI Fraud Detection', href: '/services/ai-fraud-detection' },
+        { name: 'AI Drug Discovery', href: '/services/ai-services' },
+        { name: 'AI Climate Modeling', href: '/services/ai-services' },
+        { name: 'AI Space Exploration', href: '/services/ai-services' },
+        { name: 'AI Neuroscience Research', href: '/services/ai-services' },
+        { name: 'AI Robotics & Automation', href: '/services/ai-services' },
+        { name: 'AI Financial Trading', href: '/services/ai-services' },
+        { name: 'Custom AI Models', href: '/services/ai-services' },
+        { name: 'Computer Vision', href: '/services/ai-services' },
+        { name: 'Natural Language Processing', href: '/services/ai-services' },
+        { name: 'Predictive Analytics', href: '/services/ai-services' },
+        { name: 'Recommendation Engine', href: '/services/ai-services' },
+        { name: 'AI-Powered Search', href: '/services/ai-services' },
+        { name: 'AI Content Moderation', href: '/services/ai-services' },
+        { name: 'AI Fraud Detection', href: '/services/ai-services' },
       ]
     }
   ];
@@ -126,8 +126,8 @@ const Footer: React.FC = () => {
               <ul className="space-y-2">
                 <li><Link href="/about" className="text-gray-300 hover:text-blue-400 transition-colors">About Us</Link></li>
                 <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact</Link></li>
-                <li><Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
-                <li><Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>
+                <li><Link href="/partners" className="text-gray-300 hover:text-blue-400 transition-colors">Partners</Link></li>
+                <li><Link href="/careers" className="text-gray-300 hover:text-blue-400 transition-colors">Careers</Link></li>
               </ul>
             </div>
             
@@ -135,19 +135,19 @@ const Footer: React.FC = () => {
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Resources</h4>
               <ul className="space-y-2">
                 <li><Link href="/blog" className="text-gray-300 hover:text-blue-400 transition-colors">Blog</Link></li>
-                <li><Link href="/case-studies" className="text-gray-300 hover:text-blue-400 transition-colors">Case Studies</Link></li>
-                <li><Link href="/whitepapers" className="text-gray-300 hover:text-blue-400 transition-colors">Whitepapers</Link></li>
-                <li><Link href="/webinars" className="text-gray-300 hover:text-blue-400 transition-colors">Webinars</Link></li>
+                <li><Link href="/documentation" className="text-gray-300 hover:text-blue-400 transition-colors">Documentation</Link></li>
+                <li><Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors">Help Center</Link></li>
+                <li><Link href="/faq" className="text-gray-300 hover:text-blue-400 transition-colors">FAQ</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="text-lg font-semibold mb-4 text-blue-400">Support</h4>
               <ul className="space-y-2">
-                <li><Link href="/help" className="text-gray-300 hover:text-blue-400 transition-colors">Help Center</Link></li>
-                <li><Link href="/documentation" className="text-gray-300 hover:text-blue-400 transition-colors">Documentation</Link></li>
-                <li><Link href="/api" className="text-gray-300 hover:text-blue-400 transition-colors">API Reference</Link></li>
                 <li><Link href="/status" className="text-gray-300 hover:text-blue-400 transition-colors">System Status</Link></li>
+                <li><Link href="/contact" className="text-gray-300 hover:text-blue-400 transition-colors">Contact Support</Link></li>
+                <li><Link href="/privacy" className="text-gray-300 hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="text-gray-300 hover:text-blue-400 transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
             
