@@ -9,5 +9,5 @@ const Talent: React.FC = () => (;
 );
 
 export default Talent;
-=======
+
 >>>>>>> pr-10728:src/pages/marketplace/Talent.tsx

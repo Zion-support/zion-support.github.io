@@ -4,9 +4,9 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
     <SEO title="Website AI Chatbot - Zion Tech Group" description="24/7 on-site AI assistant that answers, qualifies, and books meetings."  />""
     <section className="container mx-auto px-4 py-12">""
 :pages.disabled/pages/services/WebsiteAiChatbot.tsx
-<<<<<<< HEAD
+
       <h1 className="text-4xl font-bold mb-4">Website AI Chatbot</h1>"      <p className="text-slate-300 max-w-3xl">Deploy an AI chatbot trained on your docs, pages, and FAQs. Deflect support tickets, qualify prospects, and handoff to live agents with transcripts.</p>"</section>""
-=======
+
       <h1 className="text-4xl font-bold mb-4">Website AI Chatbot</h1>"      <p className="text-slate-300 max-w-3xl">Deploy an AI chatbot trained on your docs, pages, and FAQs. Deflect support tickets, qualify prospects, and handoff to live agents with transcripts.</p>"
       <h1 className="text-4xl font-bold mb-4">Website AI Chatbot</h1>"      <p className="text-slate-300 max-w-3xl">Deploy an AI chatbot trained on your docs, pages, and FAQs. Deflect support tickets, qualify prospects, and handoff to live agents with transcripts.</p>
     </section>""
@@ -20,9 +20,9 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
           <li>Calendly/HubSpot Meetings integration</li>
           <li>Multilingual support</li>
 :pages.disabled/pages/services/WebsiteAiChatbot.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -34,9 +34,9 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
           <li>Slack, Microsoft Teams</li>
           <li>Google Analytics, Segment</li>
 :pages.disabled/pages/services/WebsiteAiChatbot.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -49,9 +49,9 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
           <li>Enterprise: custom, SSO + analytics</li>
         </ul>;
 :pages.disabled/pages/services/WebsiteAiChatbot.tsx
-<<<<<<< HEAD
+
       </div>;"</section>;""
-=======
+
       </div>;"
       </div>;
     </section>;""
@@ -66,9 +66,9 @@ export { WebsiteAiChatbot };
 export default WebsiteAiChatbot;
 :pages.disabled/pages/services/WebsiteAiChatbot.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

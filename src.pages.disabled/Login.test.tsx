@@ -1,6 +1,1 @@
-<<<<<<< HEAD:src.pages.disabled/Login.test.tsx
-describe ('Login', () => {}; '; it ('renders without crashing', () => {}; render (<Login />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Login />) ;
-=======
-
-describe ('Login', () => {}; '; it ('renders without crashing', () => {}; render (<Login />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<Login />) ;''';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Login.test.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Login.test.tsx

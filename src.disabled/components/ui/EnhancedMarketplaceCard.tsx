@@ -20,5 +20,5 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
   );
 };
 export default EnhancedMarketplaceCard;}
-=======
+
 >>>>>>> pr-10728:src/components/ui/EnhancedMarketplaceCard.tsx

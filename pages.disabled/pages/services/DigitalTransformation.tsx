@@ -24,9 +24,8 @@ export { function };
 :pages.disabled/pages/services/DigitalTransformation.tsx
 export default function DigitalTransformation(...args: unknown[]): unknown {
 
-<<<<<<< HEAD
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"{/* Hero Section */}""
-=======
+
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
 export default function DigitalTransformation(...args: unknown[]): unknown {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -47,7 +46,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
 ""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               Digital""
-<<<<<<< HEAD
+
               <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">
   '{' 
   '}
@@ -55,7 +54,7 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
               </span>
 :pages.disabled/pages/services/DigitalTransformation.tsx
             </h1>"""
-=======
+
               <span className="bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent">'
             transition={{ duration: 0.8 }}
           >""
@@ -78,9 +77,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
               Transform your business for the digital age with our comprehensive;
               digital transformation solutions that drive innovation and growth.
 :pages.disabled/pages/services/DigitalTransformation.tsx
-<<<<<<< HEAD
+
             </p>"""
-=======
+
             </p>"
             </p>
 ""
@@ -92,9 +91,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
                 Start Transformation"
               </button>""
               <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200 flex items-center justify-center">""
-<<<<<<< HEAD
+
                 <Settings className="w-5 h-5 mr-2"  />                Schedule Consultation</button>
-=======
+
                 <Settings className="w-5 h-5 mr-2"  />                Schedule Consultation
                 Start Transformation;
               </button>""
@@ -107,9 +106,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
         </div>
       </section>
 :pages.disabled/pages/services/DigitalTransformation.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -123,9 +122,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
             transition={{ duration: 0.8 }}"
           >""
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-<<<<<<< HEAD
+
               Our Transformation Services"</h2>""
-=======
+
               Our Transformation Services"
             transition={{ duration: 0.8 }}
           >""
@@ -145,9 +144,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -166,9 +165,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -183,9 +182,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
         </div>
       </section>
 :pages.disabled/pages/services/DigitalTransformation.tsx
-<<<<<<< HEAD
+
 "{/* Services Section */}""
-=======
+
 "
 
       {/* Services Section */}""
@@ -195,9 +194,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/DigitalTransformation.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -206,9 +205,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/DigitalTransformation.tsx
-<<<<<<< HEAD
+
               Core Transformation Services"</h2>""
-=======
+
               Core Transformation Services"
               Core Transformation Services;
             </h2>""
@@ -225,9 +224,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
           </motion.div>
 ""
@@ -248,9 +247,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
                   </div>"
                   <div>""
                     <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                       {service.title}"</h3>""
-=======
+
                       {service.title}"
                   </div>
                   <div>""
@@ -278,9 +277,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
             transition={{ duration: 0.8 }}"
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
+
               Industries We Serve"</h2>""
-=======
+
               Industries We Serve"
 
       {/* Benefits Section */}""
@@ -309,9 +308,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, x: 0 }}"
           </motion.div>
 ""
@@ -336,9 +335,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, x: 0 }}"
               ))}
             </div>""
@@ -360,9 +359,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
         </div>
       </section>
 :pages.disabled/pages/services/DigitalTransformation.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -376,9 +375,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
             transition={{ duration: 0.8 }}"
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
+
               Our Transformation Process"</h2>""
-=======
+
               Our Transformation Process"
             transition={{ duration: 0.8 }}
           >""
@@ -403,9 +402,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
+
                   <Target className="w-8 h-8 text-white"  />"</div>""
-=======
+
                   <Target className="w-8 h-8 text-white"  />"
           </motion.div>
 ""
@@ -431,9 +430,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
         </div>
       </section>
 :pages.disabled/pages/services/DigitalTransformation.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -457,9 +456,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-200 flex items-center justify-center">"
                 Get Started Today""
-<<<<<<< HEAD
+
                 <ArrowRight className="w-5 h-5 ml-2"  />"</button>"              <button className="px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-200">
-=======
+
                 <ArrowRight className="w-5 h-5 ml-2"  />"
             transition={{ duration: 0.8 }}
           >""
@@ -487,9 +486,9 @@ export default function DigitalTransformation(...args: unknown[]): unknown {}
   )}
 :pages.disabled/pages/services/DigitalTransformation.tsx
 export default DigitalTransformation;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default DigitalTransformation;
 '""

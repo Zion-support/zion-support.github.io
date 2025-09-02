@@ -2,9 +2,9 @@
 :pages.disabled/pages/services/IoTServices.tsx
 const IoTServices = () => {
   const iotServices = [
-<<<<<<< HEAD
+
     {title: "IoT Device Development",""
-=======
+
     {
 
 const IoTServices: any = () => {}
@@ -19,9 +19,9 @@ const IoTServices: any = () => {}
     },
 :pages.disabled/pages/services/IoTServices.tsx
     {
-<<<<<<< HEAD
+
 """
-=======
+
 "
     {}
 ""
@@ -32,9 +32,9 @@ const IoTServices: any = () => {}
       features: ["Cellular connectivity", "WiFi solutions", "LPWAN networks", "Edge computing"],
 :pages.disabled/pages/services/IoTServices.tsx
       icon: Wifi
-<<<<<<< HEAD
+
     },"{;""
-=======
+
     },"
       icon: Wifi;
     },
@@ -55,9 +55,9 @@ const IoTServices: any = () => {}
       features: ["Device authentication", "Data encryption", "Secure updates", "Privacy compliance"]};
   ];
 "
-<<<<<<< HEAD
+
   const benefits = [;"""Real-time monitoring and control capabilities",;""
-=======
+
   const benefits = [;""
   
     {;""
@@ -78,9 +78,9 @@ const IoTServices: any = () => {}
 :pages.disabled/pages/services/IoTServices.tsx
 "
   return (""
-<<<<<<< HEAD
+
     <div className = "min-h-screen bg-slate-900 text-white">"{/* Hero Section */}""
-=======
+
     <div className = "min-h-screen bg-slate-900 text-white">"
 
   return (""
@@ -104,9 +104,9 @@ const IoTServices: any = () => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
                 Explore Services"</a>""
-=======
+
                 Explore Services"
               <Cog className="w-4 h-4 mr-2" />              IoT Services;
             </div>""
@@ -131,9 +131,9 @@ const IoTServices: any = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/IoTServices.tsx
-<<<<<<< HEAD
+
 "{/* IoT Services */}""
-=======
+
 "
 
       {/* IoT Services */}""
@@ -143,9 +143,9 @@ const IoTServices: any = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/IoTServices.tsx
-<<<<<<< HEAD
+
               Our IoT Services"</h2>""
-=======
+
               Our IoT Services"
               Our IoT Services;
             </h2>""
@@ -161,9 +161,9 @@ const IoTServices: any = () => {}
             {iotServices.map((service, index) => (""
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
+
                   <service.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <service.icon className="w-8 h-8 text-white"/>"
           </div>
 ""
@@ -178,9 +178,9 @@ const IoTServices: any = () => {}
                 <p className="text-gray-300 mb-4">{service.description}</p>""
                 <p className="text-lg font-semibold text-blue-400 mb-4">{service.price}</p>""
 :pages.disabled/pages/services/IoTServices.tsx
-<<<<<<< HEAD
+
                 <ul className="space-y-2">"{service.features.map((feature, featureIndex) => (""
-=======
+
                 <ul className="space-y-2">"
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (""
@@ -197,9 +197,9 @@ const IoTServices: any = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/IoTServices.tsx
-<<<<<<< HEAD
+
 "{/* IoT Technologies */}""
-=======
+
 "
 
       {/* IoT Technologies */}""
@@ -209,9 +209,9 @@ const IoTServices: any = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/IoTServices.tsx
-<<<<<<< HEAD
+
               IoT Technologies We Use"</h2>""
-=======
+
               IoT Technologies We Use"
               IoT Technologies We Use;
             </h2>""
@@ -231,9 +231,9 @@ const IoTServices: any = () => {}
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">{tech.name}</h3>""
                 <p className="text-gray-300 mb-4">{tech.description}</p>""
-<<<<<<< HEAD
+
                 <ul className="space-y-2">"{tech.features.map((feature, idx) => (""
-=======
+
                 <ul className="space-y-2">"
           </div>
 ""
@@ -272,9 +272,9 @@ const IoTServices: any = () => {}
                 IoT technology provides unprecedented opportunities to monitor,
                 control, and optimize your business operations."
               </p>""
-<<<<<<< HEAD
+
               <ul className="space-y-3">"{benefits.map((benefit, index) => (""
-=======
+
               <ul className="space-y-3">"
 
       {/* Benefits Section */}""
@@ -298,9 +298,9 @@ const IoTServices: any = () => {}
                   </li>
                 ))}
 :pages.disabled/pages/services/IoTServices.tsx
-<<<<<<< HEAD
+
               </ul>"</div>""
-=======
+
               </ul>"
               </ul>
             </div>""
@@ -311,9 +311,9 @@ const IoTServices: any = () => {}
                 <h3 className="text-2xl font-bold text-white mb-2">IoT Expertise</h3>"                <p className="text-gray-300 mb-6">
 :pages.disabled/pages/services/IoTServices.tsx
                   Our team has extensive experience building and deploying
-<<<<<<< HEAD
+
                   IoT solutions across various industries."</p>""
-=======
+
                   IoT solutions across various industries."
                   Our team has extensive experience building and deploying;
                   IoT solutions across various industries.
@@ -330,9 +330,9 @@ const IoTServices: any = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/IoTServices.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -350,9 +350,9 @@ const IoTServices: any = () => {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
               Get Started"</a>""
-=======
+
               Get Started"
             Ready to Connect Your World?
           </h2>""
@@ -376,10 +376,10 @@ const IoTServices: any = () => {}
 ;
 :pages.disabled/pages/services/IoTServices.tsx
 export { IoTServices };'"
-<<<<<<< HEAD
+
 export default IoTServices}}}
   '"'"
-=======
+
 export default IoTServices}}}'"'"
 export { IoTServices };
 export default IoTServices}}}'""

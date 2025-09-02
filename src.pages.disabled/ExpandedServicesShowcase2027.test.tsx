@@ -1,6 +1,1 @@
-<<<<<<< HEAD:src.pages.disabled/ExpandedServicesShowcase2027.test.tsx
-describe ('ExpandedServicesShowcase2027', () => {}; '; it ('renders without crashing', () => {}; render (<ExpandedServicesShowcase2027 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ExpandedServicesShowcase2027 />) ;
-=======
-
-describe ('ExpandedServicesShowcase2027', () => {}; '; it ('renders without crashing', () => {}; render (<ExpandedServicesShowcase2027 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ExpandedServicesShowcase2027 />) ;''';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ExpandedServicesShowcase2027.test.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ExpandedServicesShowcase2027.test.tsx

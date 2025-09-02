@@ -10,9 +10,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         },;
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
+
 "icon: Shield,""
-=======
+
 "
         {}
             icon: Shield,""
@@ -23,9 +23,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         },;
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
+
 "icon: Users,""
-=======
+
 "
         {}
             icon: Users,""
@@ -36,9 +36,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         },;
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
+
 "icon: Database,""
-=======
+
 "
         {}
             icon: Database,""
@@ -49,9 +49,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         },;
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
+
 "icon: Network,""
-=======
+
 "
         {}
             icon: Network,""
@@ -62,9 +62,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         },;
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
+
 "icon: Lock,""
-=======
+
 "
         {}
             icon: Lock,""
@@ -121,9 +121,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
     ];
     const useCases = [
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
     const web3Technologies = []
         {}
@@ -172,9 +172,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         },
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         {}
 ""
@@ -185,9 +185,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         },
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         {}
 ""
@@ -198,9 +198,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         },
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         {}
 ""
@@ -211,9 +211,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         },
 :pages.disabled/pages/services/BlockchainWeb3.jsx
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         {}
 ""
@@ -230,9 +230,8 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             description: "Property tokenization and fractional ownership",
             icon: Target
 
-<<<<<<< HEAD
     ];"const benefits = [""
-=======
+
     ];"
         {}
 ""
@@ -250,9 +249,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         "Real-time settlement and automation""
     ];""
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}""
@@ -275,9 +274,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
                 Explore Services"</a>""
-=======
+
                 Explore Services"
               Blockchain & Web3;
             </div>""
@@ -302,9 +301,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         </div>
       </section>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
 "{/* Blockchain Services Grid */}""
-=======
+
 "
 
       {/* Blockchain Services Grid */}""
@@ -314,9 +313,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
               Our Blockchain & Web3 Services"</h2>""
-=======
+
               Our Blockchain & Web3 Services"
               Our Blockchain & Web3 Services;
             </h2>""
@@ -326,9 +325,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
               and Web3 application creation.
             </p>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -337,9 +336,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             {blockchainServices.map((service, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
                   <service.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <service.icon className="w-8 h-8 text-white"/>"
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>""
@@ -357,9 +356,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         </div>
       </section>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
 "{/* Web3 Technologies */}""
-=======
+
 "
 
       {/* Web3 Technologies */}""
@@ -369,9 +368,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
               Supported Blockchain Technologies"</h2>""
-=======
+
               Supported Blockchain Technologies"
               Supported Blockchain Technologies;
             </h2>""
@@ -381,9 +380,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
               the best solutions for your specific needs.
             </p>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -392,9 +391,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             {web3Technologies.map((tech, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold text-white">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
                   {tech.icon}"</div>""
-=======
+
                   {tech.icon}"
                   {tech.icon}
                 </div>""
@@ -406,9 +405,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         </div>
       </section>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
 "{/* Use Cases */}""
-=======
+
 "
 
       {/* Use Cases */}""
@@ -418,9 +417,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
               Blockchain Use Cases"</h2>""
-=======
+
               Blockchain Use Cases"
               Blockchain Use Cases;
             </h2>""
@@ -430,9 +429,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
               and create new opportunities for innovation.
             </p>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -441,9 +440,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             {useCases.map((useCase, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
                   <useCase.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <useCase.icon className="w-8 h-8 text-white"/>"
                   <useCase.icon className="w-8 h-8 text-white"/>
                 </div>""
@@ -466,9 +465,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
               </h2>""
               <p className="text-lg text-gray-300 mb-6">
                 Blockchain technology offers unprecedented opportunities to create
-<<<<<<< HEAD
+
                 trust, transparency, and efficiency in digital systems."</p>""
-=======
+
                 trust, transparency, and efficiency in digital systems."
 
       {/* Benefits Section */}""
@@ -490,9 +489,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
                     {benefit}
                   </li>))}
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
               </ul>"</div>""
-=======
+
               </ul>"
               </ul>
             </div>""
@@ -502,12 +501,12 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
                 <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>""
                 <h3 className="text-2xl font-bold text-white mb-2">Web3 Revolution</h3>""
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
                 <p className="text-gray-300 mb-6">
   '
                   We're at the forefront of the Web3 revolution, building
                   decentralized applications that empower users and organizations."</p>""
-=======
+
                 <p className="text-gray-300 mb-6">'
                   We're at the forefront of the Web3 revolution, building
                   decentralized applications that empower users and organizations."
@@ -527,9 +526,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         </div>
       </section>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
 "{/* Development Process */}""
-=======
+
 "
 
       {/* Development Process */}""
@@ -538,9 +537,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
             Our Development Process"</h2>""
-=======
+
             Our Development Process"
             Our Development Process;
           </h2>""
@@ -549,9 +548,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             A systematic approach to building secure, scalable, and user-friendly;
             blockchain applications.
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
           </p>"""
-=======
+
           </p>"
           </p>
 ""
@@ -581,9 +580,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
             </div>""
             <div className="text-center">""
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
-<<<<<<< HEAD
+
                 4"</div>""
-=======
+
                 4"
                 1;
               </div>""
@@ -616,9 +615,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
         </div>
       </section>
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -636,9 +635,9 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
               Start Your Project"</a>""
-=======
+
               Start Your Project"
             Ready to Build on the Blockchain?
           </h2>""
@@ -661,10 +660,10 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
 export { BlockchainWeb3 };
 :pages.disabled/pages/services/BlockchainWeb3.jsx
 export default BlockchainWeb3;'"
-<<<<<<< HEAD
+
 }}}}
   '"'"
-=======
+
 }}}}'"'"
 export default BlockchainWeb3;
 }}}}'""

@@ -5,9 +5,9 @@
         <header className="mb-10">""
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-sky-400 to-purple-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
             Developer API Tester & Mock Server"</h1>""
-=======
+
             Developer API Tester & Mock Server"
             Developer API Tester & Mock Server;
           </h1>""
@@ -17,9 +17,9 @@
             contract tests, and mock servers.
           </p>
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
         </header>"""
-=======
+
         </header>"
         </header>
 ""
@@ -40,9 +40,9 @@
                   Team workspaces with RBAC"
                 </li>""
                 <li className="p-3 rounded-lg bg-slate-800/50">
-<<<<<<< HEAD
+
                   Mock server with dynamic data and delays"</li>""
-=======
+
                   Mock server with dynamic data and delays"
                   OpenAPI import/export and contract validation;
                 </li>""
@@ -65,9 +65,9 @@
 ""
             <div className="rounded-2xl border border-sky-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">
-<<<<<<< HEAD
+
                 Pricing (avg market ranges)"</h2>""
-=======
+
                 Pricing (avg market ranges)"
             </div>
 ""
@@ -83,9 +83,9 @@
                 <li>Enterprise: Custom — on-prem/VPC, DLP</li>
               </ul>
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
             </div>"""
-=======
+
             </div>"
             </div>
 ""
@@ -94,9 +94,9 @@
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>""
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -105,9 +105,9 @@
                     href="https://www.openapis.org/""
                     target="_blank""
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -116,9 +116,9 @@
                   </a>
                 </li>
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -127,9 +127,9 @@
                     href="https://insomnia.rest/plugins""
                     target="_blank""
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -138,9 +138,9 @@
                   </a>
                 </li>
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -149,9 +149,9 @@
                     href="https://github.com/postmanlabs/newman""
                     target="_blank""
 :pages.disabled/pages/services/DeveloperAPITester.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -169,9 +169,9 @@
               <h3 className="text-xl font-semibold">Start Testing</h3>"
               <a""
                 href="/contact""
-<<<<<<< HEAD
+
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-400 to-purple-400 text-white hover:from-sky-500 hover:to-purple-500">
-=======
+
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-sky-400 to-purple-400 text-white hover:from-sky-500 hover:to-purple-500"
           </div>
 ""
@@ -193,9 +193,9 @@
   )};
 :pages.disabled/pages/services/DeveloperAPITester.tsx
 export default DeveloperAPITester;"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default DeveloperAPITester;
 '""

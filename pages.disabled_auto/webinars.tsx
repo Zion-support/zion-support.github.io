@@ -1,24 +1,4 @@
-<<<<<<< HEAD
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
-=======
-import React from 'react'
-import { motion } from 'framer-motion'
-import { SEO } from '../components/SEO'
-import { Button } from '../components/ui/Button'
-import { Card } from '../components/ui/Card'
-import { Badge } from '../components/ui/Badge'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
 import { 
   Calendar, Clock,
   Users, Play,

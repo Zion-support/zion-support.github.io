@@ -20,55 +20,7 @@ console.log(
 
 // 1. Generate sitemap.xml
 function generateSitemap() {
-<<<<<<< HEAD
-  console.log(
-  '🗺️ Generating sitemap...');
-  
-  const baseUrl =
-  'https: //ziontechgroup.com';
-  const pages = [
-  '/,
-  '/about',
-  '/contact',
-  '/careers',
-  '/solutions',
-  '/research-development',
-  '/case-studies',
-  '/news',
-  '/events',
-  '/services',
-  '/services/ai',
-  '/services/cloud',
-  '/services/cybersecurity',
-  '/services/infrastructure',
-  '/services/transformation',
-  '/services/consulting',
-  '/privacy',
-  '/terms'
-=======
-  console.log('🗺️ Generating sitemap...');
-
-  const baseUrl = 'https://ziontechgroup.com';
-  const pages = [
-    '/',
-    '/about',
-    '/contact',
-    '/careers',
-    '/solutions',
-    '/research-development',
-    '/case-studies',
-    '/news',
-    '/events',
-    '/services',
-    '/services/ai',
-    '/services/cloud',
-    '/services/cybersecurity',
-    '/services/infrastructure',
-    '/services/transformation',
-    '/services/consulting',
-    '/privacy',
-    '/terms',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   ];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -80,25 +32,7 @@ ${pages
     <lastmod>${new Date().toISOString().split(,
   T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
-<<<<<<< HEAD
-    <priority>${page ===
-  '/' ?
-  '1.0': '0.8}</priority>
-  </url>`).join(
-  '\n')}
-</urlset>`;
-  
-  const sitemapPath = path.join(__dirname,
-  '../public/sitemap.xml');
-=======
-    <priority>${page === '/' ? '1.0' : '0.8'}</priority>
-  </url>`
-  )
-  .join('\n')}
-</urlset>`;
-
-  const sitemapPath = path.join(__dirname, '../public/sitemap.xml');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   fs.writeFileSync(sitemapPath, sitemap);
   console.log(
   '✅ Generated sitemap.xml');
@@ -106,14 +40,7 @@ ${pages
 
 // 2. Generate robots.txt
 function generateRobotsTxt() {
-<<<<<<< HEAD
-  console.log(
-  '🤖 Generating robots.txt...');
-  
-=======
-  console.log('🤖 Generating robots.txt...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   const robotsTxt = `User-agent: *
 Allow: /
 
@@ -134,15 +61,7 @@ Allow: /services/
 Allow: /solutions/
 Allow: /about/
 Allow: /contact/`;
-<<<<<<< HEAD
-  
-  const robotsPath = path.join(__dirname,
-,
-  ../public/robots.txt');
-=======
-
-  const robotsPath = path.join(__dirname, '../public/robots.txt');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   fs.writeFileSync(robotsPath, robotsTxt);
   console.log(
   '✅ Generated robots.txt');
@@ -150,81 +69,7 @@ Allow: /contact/`;
 
 // 3. Generate manifest.json for PWA
 function generateManifest() {
-<<<<<<< HEAD
-  console.log(
-  '📱 Generating manifest.json...');
-  
-  const manifest = {
-    name: 'Zion Tech Group - AI-Powered IT Solutions,
-    short_name:,
-  Zion Tech',
-    description: Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.,
-  ,
-    start_url: '/,
-    display:,
-  standalone',
-    background_color: '#0f172a,
-    theme_color:,
-  #3b82f6',
-    icons: [
-      {
-        src:
-  '/icon-192x192.png,
-        sizes:,
-  192x192',
-        type: 'image/png
-      },
-      {
-        src:,
-  /icon-512x512.png',
-        sizes: '512x512,
-        type:,
-  image/png'
-      }
-    ],
-    categories: [
-  'technology,
-,
-  business',
-  'productivity'],
-    lang: 'en-US,
-    orientation:
-  'portrait-primary'
-  };
-  
-  const manifestPath = path.join(__dirname,
-  '../public/manifest.json');
-=======
-  console.log('📱 Generating manifest.json...');
-
-  const manifest = {
-    name: 'Zion Tech Group - AI-Powered IT Solutions',
-    short_name: 'Zion Tech',
-    description:
-      'Leading provider of AI-powered IT services, cybersecurity, cloud solutions, and digital transformation.',
-    start_url: '/',
-    display: 'standalone',
-    background_color: '#0f172a',
-    theme_color: '#3b82f6',
-    icons: [
-      {
-        src: '/icon-192x192.png',
-        sizes: '192x192',
-        type: 'image/png',
-      },
-      {
-        src: '/icon-512x512.png',
-        sizes: '512x512',
-        type: 'image/png',
-      },
-    ],
-    categories: ['technology', 'business', 'productivity'],
-    lang: 'en-US',
-    orientation: 'portrait-primary',
-  };
-
-  const manifestPath = path.join(__dirname, '../public/manifest.json');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   console.log(
   '✅ Generated manifest.json');
@@ -232,14 +77,7 @@ function generateManifest() {
 
 // 4. Generate structured data
 function generateStructuredData() {
-<<<<<<< HEAD
-  console.log(
-  '📊 Generating structured data...');
-  
-=======
-  console.log('📊 Generating structured data...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -273,17 +111,7 @@ function generateStructuredData() {
       'IT Consulting',
     ],
   };
-<<<<<<< HEAD
-  
-  const structuredDataPath = path.join(__dirname,
-  '../public/structured-data.json');
-=======
-
-  const structuredDataPath = path.join(
-    __dirname,
-    '../public/structured-data.json'
-  );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
   console.log(
   '✅ Generated structured data');
@@ -296,14 +124,7 @@ async function main() {
     generateRobotsTxt();
     generateManifest();
     generateStructuredData();
-<<<<<<< HEAD
-    
-    console.log(
-  '✅ SEO optimization completed successfully!');
-=======
-
-    console.log('✅ SEO optimization completed successfully!');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   } catch (error) {
     console.error(
   '❌ SEO optimization failed:', error.message);

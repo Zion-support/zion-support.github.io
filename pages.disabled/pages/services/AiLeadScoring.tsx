@@ -3,9 +3,9 @@
 const AiLeadScoring: React.FC = (): JSX.Element => {}
   return()
 :pages.disabled/pages/services/AiLeadScoring.tsx
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"<SEO""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO""
@@ -21,9 +21,9 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
           <span className="text-sm font-semibold">AI LEAD SCORING</span>"
         </div>""
         <h1 className="text-4xl font-bold">Prioritize the right leads with explainable AI</h1>""
-<<<<<<< HEAD
+
         <p className="mt-3 text-slate-300 max-w-2xl">Ship an AI model that ranks leads by conversion probability and surfaces the why behind each score. Integrate with Salesforce, HubSpot, or custom CRMs.</p>"""
-=======
+
         <p className="mt-3 text-slate-300 max-w-2xl">Ship an AI model that ranks leads by conversion probability and surfaces the why behind each score. Integrate with Salesforce, HubSpot, or custom CRMs.</p>"
           <span className="text-sm font-semibold">AI LEAD SCORING</span>
         </div>""
@@ -40,9 +40,9 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
               <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Lift and ROI dashboard</li>""
               <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> GDPR/PII handling patterns</li>
 :pages.disabled/pages/services/AiLeadScoring.tsx
-<<<<<<< HEAD
+
             </ul>"</div>""
-=======
+
             </ul>"
             </ul>
           </div>""
@@ -55,9 +55,9 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/AiLeadScoring.tsx
               <li className="flex items-center gap-2"><Database className="h-4 w-4 text-cyan-300" /> Secure S3/GCS data syncs</li>"
             </ul>"            <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $199–$799/month</div>
-<<<<<<< HEAD
+
           </div>"</div>""
-=======
+
           </div>"
               <li className="flex items-center gap-2"><Database className="h-4 w-4 text-cyan-300" /> Secure S3/GCS data syncs</li>
             </ul>"            <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $199–$799/month</div>
@@ -72,9 +72,9 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
             <li>Enterprise: custom, SSO + SLA</li>
           </ul>
 :pages.disabled/pages/services/AiLeadScoring.tsx
-<<<<<<< HEAD
+
         </div>"</section>""
-=======
+
         </div>"
         </div>
       </section>""
@@ -89,9 +89,9 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
                 Average pricing benchmarks for AI tools:""
                 <a className="text-cyan-400 hover:underline" href="https://www.g2.com/categories/predictive-lead-scoring" target="_blank" rel="noreferrer">G2 Predictive Lead Scoring</a>
               </li>
-<<<<<<< HEAD
+
               <li>"CRM integrations and APIs:""
-=======
+
               <li>"
               <li>
                 Average pricing benchmarks for AI tools:""
@@ -104,9 +104,9 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
                 <a className="text-cyan-400 hover:underline" href="https://developer.salesforce.com/" target="_blank" rel="noreferrer">Salesforce Developer</a>
               </li>
 :pages.disabled/pages/services/AiLeadScoring.tsx
-<<<<<<< HEAD
+
               <li>"Intent data providers:""
-=======
+
               <li>"
               <li>
                 Intent data providers:""
@@ -115,9 +115,9 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
                 <a className="text-cyan-400 hover:underline" href="https://6sense.com" target="_blank" rel="noreferrer">6sense</a>
               </li>
 :pages.disabled/pages/services/AiLeadScoring.tsx
-<<<<<<< HEAD
+
             </ul>"</div>""
-=======
+
             </ul>"
             </ul>
           </div>""
@@ -128,9 +128,9 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
             <p className="text-slate-300">E-mail: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>""
             <p className="text-slate-300">Address: 364 E Main St STE 1008 Middletown DE 19709</p>
 :pages.disabled/pages/services/AiLeadScoring.tsx
-<<<<<<< HEAD
+
           </div>;"</div>;""
-=======
+
           </div>;"
           </div>;
         </div>;""
@@ -142,10 +142,10 @@ const AiLeadScoring: React.FC = (): JSX.Element => {}
 ;
 :pages.disabled/pages/services/AiLeadScoring.tsx
 export { AiLeadScoring };"
-<<<<<<< HEAD
+
 export default AiLeadScoring}
   '"'"
-=======
+
 export default AiLeadScoring}'"'"
 export { AiLeadScoring };
 export default AiLeadScoring}'""

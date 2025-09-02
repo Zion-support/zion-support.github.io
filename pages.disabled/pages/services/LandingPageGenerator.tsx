@@ -11,9 +11,9 @@ import {}
 const LandingPageGenerator: React.FC = (): JSX.Element => {
 
   return()
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"<SEO""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
 const LandingPageGenerator: React.FC = (): JSX.Element => {}
   return()
@@ -26,9 +26,9 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
       <section className="container mx-auto px-4 py-16">""
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
 :pages.disabled/pages/services/LandingPageGenerator.tsx
-<<<<<<< HEAD
+
           Landing Page Generator"</h1>""
-=======
+
           Landing Page Generator"
           Landing Page Generator;
         </h1>""
@@ -40,8 +40,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/LandingPageGenerator.tsx
         </p>"
 ""
-<<<<<<< HEAD
-=======
+
         <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">'
           {[''
             'On-brand copy and image generation',SEO-ready metadata and schema',A/B testing and analytics hooks',One-click deploy to Vercel/Netlify/S3',Forms with spam protection and CRM sync',Localization and accessibility checks',
@@ -58,9 +57,9 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
   ',Forms with spam protection and CRM sync',Localization and accessibility checks
   ',
           ].map(b => (
-<<<<<<< HEAD
+
             <div"key={b}""
-=======
+
             <div;
               key={b}""
 >>>>>>> pr-10728
@@ -75,9 +74,9 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
 ""
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">""
           <div className="flex items-center gap-2 text-slate-200 font-semibold">""
-<<<<<<< HEAD
+
             <DollarSign className="h-4 w-4"  /> Pricing"</div>"          <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
-=======
+
             <DollarSign className="h-4 w-4"  /> Pricing"
         </div>
 ""
@@ -91,9 +90,9 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
             <li>Enterprise: Custom; SSO, compliance, SLAs</li>
             <li>Setup: $2k–$8k (brand + components)</li>
 :pages.disabled/pages/services/LandingPageGenerator.tsx
-<<<<<<< HEAD
+
           </ul>"<a""
-=======
+
           </ul>"
           </ul>
           <a""
@@ -106,9 +105,9 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/LandingPageGenerator.tsx
             Learn more <ExternalLink className="ml-1 h-3 w-3"  />"
           </a>""
-<<<<<<< HEAD
+
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">"<a""
-=======
+
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">"
             Learn more <ExternalLink className="ml-1 h-3 w-3"  />
           </a>""
@@ -120,9 +119,9 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
             >""
 :pages.disabled/pages/services/LandingPageGenerator.tsx
               <Globe className="h-4 w-4"  /> +1 302 464 0950
-<<<<<<< HEAD
+
             </a>"<a""
-=======
+
             </a>"
               <Globe className="h-4 w-4"  /> +1 302 464 0950;
             </a>
@@ -132,9 +131,9 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
               className="inline-flex items-center gap-2 hover:text-cyan-200""
             >""
 :pages.disabled/pages/services/LandingPageGenerator.tsx
-<<<<<<< HEAD
+
               <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com</a>          </div>
-=======
+
               <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com
               <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com;
             </a>          </div>
@@ -146,9 +145,9 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
 ;
 :pages.disabled/pages/services/LandingPageGenerator.tsx
 export { LandingPageGenerator };export default LandingPageGenerator;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export { LandingPageGenerator };export default LandingPageGenerator;
 '""

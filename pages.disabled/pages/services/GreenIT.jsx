@@ -176,9 +176,9 @@ export default function GreenIT() {
         title="Green IT Services - Zion Tech Group""
         description="Sustainable and energy-efficient IT solutions. Green data centers, energy management, cloud optimization, and eco-friendly technology services."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 export default function GreenIT() {}
   const services = []
@@ -279,9 +279,9 @@ export default function GreenIT() {}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.6 }}">""
-=======
+
             transition={{ duration: 0.6 }}"
             transition={{ duration: 0.6 }}
           >""
@@ -309,9 +309,9 @@ export default function GreenIT() {}
               </a>"
               <a""
                 href="/services-overview""
-<<<<<<< HEAD
+
                 className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300">
-=======
+
                 className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
               </div>
             </div>""
@@ -342,9 +342,9 @@ export default function GreenIT() {}
         </div>
       </section>
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
 "{/* Services Grid */}""
-=======
+
 "
 
       {/* Services Grid */}""
@@ -354,9 +354,9 @@ export default function GreenIT() {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -365,9 +365,9 @@ export default function GreenIT() {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
               Green IT Services"</h2>""
-=======
+
               Green IT Services"
               Green IT Services;
             </h2>""
@@ -378,9 +378,9 @@ export default function GreenIT() {}
               performance.
             </p>
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -391,9 +391,9 @@ export default function GreenIT() {}
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -405,9 +405,9 @@ export default function GreenIT() {}
                   <service.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {service.title}"</h3>""
-=======
+
                   {service.title}"
                   <service.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -419,9 +419,9 @@ export default function GreenIT() {}
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
                     <li"key={idx}""
-=======
+
                     <li"
                     <li;
                       key={idx}""
@@ -439,9 +439,9 @@ export default function GreenIT() {}
         </div>
       </section>
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -451,9 +451,9 @@ export default function GreenIT() {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -462,9 +462,9 @@ export default function GreenIT() {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
               Benefits of Green IT"</h2>""
-=======
+
               Benefits of Green IT"
               Benefits of Green IT;
             </h2>""
@@ -474,9 +474,9 @@ export default function GreenIT() {}
               benefits for your business and the environment.
             </p>
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -487,9 +487,9 @@ export default function GreenIT() {}
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -501,9 +501,9 @@ export default function GreenIT() {}
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-lg font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {benefit.title}"</h3>""
-=======
+
                   {benefit.title}"
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -518,9 +518,9 @@ export default function GreenIT() {}
         </div>
       </section>
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
 "{/* Technologies Section */}""
-=======
+
 "
 
       {/* Technologies Section */}""
@@ -530,9 +530,9 @@ export default function GreenIT() {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -541,9 +541,9 @@ export default function GreenIT() {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
               Green Technologies"</h2>""
-=======
+
               Green Technologies"
               Green Technologies;
             </h2>""
@@ -553,9 +553,9 @@ export default function GreenIT() {}
               energy-efficient IT infrastructure.
             </p>
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -566,9 +566,9 @@ export default function GreenIT() {}
                 key={tech.title}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -580,9 +580,9 @@ export default function GreenIT() {}
                   <tech.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-lg font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {tech.title}"</h3>""
-=======
+
                   {tech.title}"
                   <tech.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -597,9 +597,9 @@ export default function GreenIT() {}
         </div>
       </section>
 :pages.disabled/pages/services/GreenIT.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -628,9 +628,9 @@ export default function GreenIT() {}
               </a>"
               <a""
                 href="/services-overview""
-<<<<<<< HEAD
+
                 className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300">
-=======
+
                 className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300"
             transition={{ duration: 0.6 }}
           >""
@@ -663,9 +663,9 @@ export default function GreenIT() {}
   );
 :pages.disabled/pages/services/GreenIT.jsx
 }'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 }
 '""

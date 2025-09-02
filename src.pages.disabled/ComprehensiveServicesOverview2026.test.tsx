@@ -1,6 +1,1 @@
-<<<<<<< HEAD:src.pages.disabled/ComprehensiveServicesOverview2026.test.tsx
-describe ('ComprehensiveServicesOverview2026', () => {}; '; it ('renders without crashing', () => {}; render (<ComprehensiveServicesOverview2026 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ComprehensiveServicesOverview2026 />) ;
-=======
-
-describe ('ComprehensiveServicesOverview2026', () => {}; '; it ('renders without crashing', () => {}; render (<ComprehensiveServicesOverview2026 />) ;'; expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ; '; it ('displays expected content', () => {}; render (<ComprehensiveServicesOverview2026 />) ;''';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ComprehensiveServicesOverview2026.test.tsx
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/ComprehensiveServicesOverview2026.test.tsx

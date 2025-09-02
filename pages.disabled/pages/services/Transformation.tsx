@@ -2,9 +2,9 @@
 :pages.disabled/pages/services/Transformation.tsx
 const DigitalTransformation = () => {
   const transformationServices = [
-<<<<<<< HEAD
+
     {title: "Process Automation",""
-=======
+
     {
 
 const DigitalTransformation: any = () => {}
@@ -19,9 +19,9 @@ const DigitalTransformation: any = () => {}
     },
 :pages.disabled/pages/services/Transformation.tsx
     {
-<<<<<<< HEAD
+
 """
-=======
+
 "
     {}
 ""
@@ -32,9 +32,9 @@ const DigitalTransformation: any = () => {}
       features: ["System assessment", "Modernization planning", "Data migration", "Integration services"],
 :pages.disabled/pages/services/Transformation.tsx
       icon: RefreshCw
-<<<<<<< HEAD
+
     },"{;""
-=======
+
     },"
       icon: RefreshCw;
     },
@@ -55,9 +55,9 @@ const DigitalTransformation: any = () => {}
       features: ["Cloud migration", "API integration", "Data modernization", "Security enhancement"]};
   ];
 "
-<<<<<<< HEAD
+
   const benefits = [;"""Increased operational efficiency and productivity",;""
-=======
+
   const benefits = [;""
   
     {;""
@@ -78,9 +78,9 @@ const DigitalTransformation: any = () => {}
 :pages.disabled/pages/services/Transformation.tsx
 "
   return (""
-<<<<<<< HEAD
+
     <div className = "min-h-screen bg-slate-900 text-white">"{/* Hero Section */}""
-=======
+
     <div className = "min-h-screen bg-slate-900 text-white">"
 
   return (""
@@ -104,9 +104,9 @@ const DigitalTransformation: any = () => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <a href="#services" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
                 Explore Services"</a>""
-=======
+
                 Explore Services"
               <RefreshCw className="w-4 h-4 mr-2" />              Digital Transformation;
             </div>""
@@ -131,9 +131,9 @@ const DigitalTransformation: any = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/Transformation.tsx
-<<<<<<< HEAD
+
 "{/* Transformation Services */}""
-=======
+
 "
 
       {/* Transformation Services */}""
@@ -143,9 +143,9 @@ const DigitalTransformation: any = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/Transformation.tsx
-<<<<<<< HEAD
+
               Our Transformation Services"</h2>""
-=======
+
               Our Transformation Services"
               Our Transformation Services;
             </h2>""
@@ -161,9 +161,9 @@ const DigitalTransformation: any = () => {}
             {transformationServices.map((service, index) => (""
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-indigo-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
+
                   <service.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <service.icon className="w-8 h-8 text-white"/>"
           </div>
 ""
@@ -178,9 +178,9 @@ const DigitalTransformation: any = () => {}
                 <p className="text-gray-300 mb-4">{service.description}</p>""
                 <p className="text-lg font-semibold text-indigo-400 mb-4">{service.price}</p>""
 :pages.disabled/pages/services/Transformation.tsx
-<<<<<<< HEAD
+
                 <ul className="space-y-2">"{service.features.map((feature, featureIndex) => (""
-=======
+
                 <ul className="space-y-2">"
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (""
@@ -197,9 +197,9 @@ const DigitalTransformation: any = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/Transformation.tsx
-<<<<<<< HEAD
+
 "{/* Transformation Areas */}""
-=======
+
 "
 
       {/* Transformation Areas */}""
@@ -209,9 +209,9 @@ const DigitalTransformation: any = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/Transformation.tsx
-<<<<<<< HEAD
+
               Areas of Transformation"</h2>""
-=======
+
               Areas of Transformation"
               Areas of Transformation;
             </h2>""
@@ -231,9 +231,9 @@ const DigitalTransformation: any = () => {}
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">{area.name}</h3>""
                 <p className="text-gray-300 mb-4">{area.description}</p>""
-<<<<<<< HEAD
+
                 <ul className="space-y-2">"{area.features.map((feature, idx) => (""
-=======
+
                 <ul className="space-y-2">"
           </div>
 ""
@@ -272,9 +272,9 @@ const DigitalTransformation: any = () => {}
                 Digital transformation is essential for businesses to remain
                 competitive and meet evolving customer expectations."
               </p>""
-<<<<<<< HEAD
+
               <ul className="space-y-3">"{benefits.map((benefit, index) => (""
-=======
+
               <ul className="space-y-3">"
 
       {/* Benefits Section */}""
@@ -298,9 +298,9 @@ const DigitalTransformation: any = () => {}
                   </li>
                 ))}
 :pages.disabled/pages/services/Transformation.tsx
-<<<<<<< HEAD
+
               </ul>"</div>""
-=======
+
               </ul>"
               </ul>
             </div>""
@@ -311,9 +311,9 @@ const DigitalTransformation: any = () => {}
                 <h3 className="text-2xl font-bold text-white mb-2">Transformation Expertise</h3>"                <p className="text-gray-300 mb-6">
 :pages.disabled/pages/services/Transformation.tsx
                   Our team has successfully guided hundreds of organizations
-<<<<<<< HEAD
+
                   through their digital transformation journey."</p>""
-=======
+
                   through their digital transformation journey."
                   Our team has successfully guided hundreds of organizations;
                   through their digital transformation journey.
@@ -330,9 +330,9 @@ const DigitalTransformation: any = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/Transformation.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -349,9 +349,9 @@ const DigitalTransformation: any = () => {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
               Get Started"</a>""
-=======
+
               Get Started"
             Transform Your Business;
           </h2>""
@@ -374,10 +374,10 @@ const DigitalTransformation: any = () => {}
   )};
 :pages.disabled/pages/services/Transformation.tsx
 "
-<<<<<<< HEAD
+
 export default DigitalTransformation}}}
   '"'"
-=======
+
 export default DigitalTransformation}}}'"'"
 
 export default DigitalTransformation}}}'""

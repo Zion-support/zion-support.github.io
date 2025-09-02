@@ -8,7 +8,6 @@ export default function Sustainability(...args: []):  {
   const services = [
     {
 
-<<<<<<< HEAD
       title:,
   Green IT Infrastructure',
   'description: 'Energy-efficient data centers and computing systems,
@@ -33,7 +32,7 @@ export default function Sustainability(...args: []):  {
   title: 'Carbon Footprint Analysis,
 ,
   description: 'Comprehensive environmental impact assessment,
-=======
+
       title: 'Green IT Infrastructure','
 export default function Sustainability(...args: []):  {}
     };
@@ -77,9 +76,9 @@ export default function Sustainability(...args: []):  {}
 
   return (""
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
     <div className = "min-h-screen bg-futuristic">"{/* Hero Section */}""
-=======
+
     <div className = "min-h-screen bg-futuristic">"
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}""
@@ -91,9 +90,9 @@ export default function Sustainability(...args: []):  {}
             initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
   y: 20}}
-=======
+
   y: 20
 
   y: 20;
@@ -104,9 +103,8 @@ export default function Sustainability(...args: []):  {}
 :pages.disabled/services/sustainability.tsx
   y: 0
 
-<<<<<<< HEAD
 }}"transition={{ duration: 0.6 }}""
-=======
+
 }}"
   y: 0;
 }}
@@ -122,9 +120,9 @@ export default function Sustainability(...args: []):  {}
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               Technology for a""
               <span className="text-gradient"> Sustainable Future</span>
-<<<<<<< HEAD
+
             </h1>"""
-=======
+
             </h1>"
             </div>
 ""
@@ -143,9 +141,9 @@ export default function Sustainability(...args: []):  {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="btn-futuristic px-8 py-4 text-lg">"
                 Go Green with Tech""
-<<<<<<< HEAD
+
                 <ArrowRight className="w-5 h-5 ml-2"  />"</button>"              <button className="btn-outline px-8 py-4 text-lg">
-=======
+
                 <ArrowRight className="w-5 h-5 ml-2"  />"
             </p>
 ""
@@ -162,9 +160,9 @@ export default function Sustainability(...args: []):  {}
         </div>
       </section>
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -175,9 +173,9 @@ export default function Sustainability(...args: []):  {}
             initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
   y: 20}}
-=======
+
   y: 20
 
   y: 20;
@@ -189,9 +187,9 @@ export default function Sustainability(...args: []):  {}
   y: 0
 
 }}
-<<<<<<< HEAD
+
             transition={{ duration: 0.6 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.6 }}"
   y: 0;
 }}
@@ -202,9 +200,9 @@ export default function Sustainability(...args: []):  {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
               Why Choose Sustainable Technology?"</h2>""
-=======
+
               Why Choose Sustainable Technology?"
               Why Choose Sustainable Technology?
             </h2>""
@@ -213,9 +211,9 @@ export default function Sustainability(...args: []):  {}
               Environmental responsibility meets technological innovation;
             </p>
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -227,13 +225,13 @@ export default function Sustainability(...args: []):  {}
                 initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
   y: 20}}
                 whileInView = {}
   { opacity: 1,
 :pages.disabled/services/sustainability.tsx
   y: 0}}
-=======
+
   y: 20
 
   y: 20;
@@ -251,9 +249,8 @@ export default function Sustainability(...args: []):  {}
 :pages.disabled/services/sustainability.tsx
   delay: index * 0.1
 
-<<<<<<< HEAD
 }}"viewport={{ once: true }}""
-=======
+
 }}"
   delay: index * 0.1;
 }}
@@ -263,9 +260,9 @@ export default function Sustainability(...args: []):  {}
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
                   <feature.icon className="w-8 h-8 text-white" />"</div>""
-=======
+
                   <feature.icon className="w-8 h-8 text-white" />"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -278,9 +275,9 @@ export default function Sustainability(...args: []):  {}
         </div>
       </section>
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
 "{/* Services Section */}""
-=======
+
 "
 
       {/* Services Section */}""
@@ -291,9 +288,9 @@ export default function Sustainability(...args: []):  {}
             initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
   y: 20}}
-=======
+
   y: 20
 
   y: 20;
@@ -305,9 +302,9 @@ export default function Sustainability(...args: []):  {}
   y: 0
 
 }}
-<<<<<<< HEAD
+
             transition={{ duration: 0.6 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.6 }}"
   y: 0;
 }}
@@ -318,9 +315,9 @@ export default function Sustainability(...args: []):  {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
               Our Sustainability Services"</h2>""
-=======
+
               Our Sustainability Services"
               Our Sustainability Services;
             </h2>""
@@ -329,9 +326,9 @@ export default function Sustainability(...args: []):  {}
               Comprehensive green technology solutions for eco-conscious businesses;
             </p>
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -343,13 +340,13 @@ export default function Sustainability(...args: []):  {}
                 initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
   x: index % 2 === 0 ? -20 : 20}}
                 whileInView = {}
   { opacity: 1,
 :pages.disabled/services/sustainability.tsx
   x: 0}}
-=======
+
   x: index % 2 === 0 ? -20 : 20
 
   x: index % 2 === 0 ? -20 : 20;
@@ -367,9 +364,8 @@ export default function Sustainability(...args: []):  {}
 :pages.disabled/services/sustainability.tsx
   delay: index * 0.1
 
-<<<<<<< HEAD
 }}"viewport={{ once: true }}""
-=======
+
 }}"
   delay: index * 0.1;
 }}
@@ -381,9 +377,9 @@ export default function Sustainability(...args: []):  {}
                 <p className="text-slate-300 mb-4">{service.description}</p>""
                 <div className="text-2xl font-bold text-emerald-400 mb-4">{service.price}</div>""
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
                 <ul className="space-y-2">"{service.features.map((feature, featureIndex) => (""
-=======
+
                 <ul className="space-y-2">"
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (""
@@ -398,9 +394,9 @@ export default function Sustainability(...args: []):  {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}"
                   whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                   className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300">
-=======
+
                   className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
                 <motion.button;
                   whileHover={{ scale: 1.05 }}
@@ -416,9 +412,9 @@ export default function Sustainability(...args: []):  {}
         </div>
       </section>
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
 "{/* Solutions */}""
-=======
+
 "
 
       {/* Solutions */}""
@@ -429,9 +425,9 @@ export default function Sustainability(...args: []):  {}
             initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
   y: 20}}
-=======
+
   y: 20
 
   y: 20;
@@ -442,9 +438,8 @@ export default function Sustainability(...args: []):  {}
 :pages.disabled/services/sustainability.tsx
   y: 0
 
-<<<<<<< HEAD
 }}"transition={{ duration: 0.6 }}""
-=======
+
 }}"
   y: 0;
 }}
@@ -456,10 +451,10 @@ export default function Sustainability(...args: []):  {}
 :pages.disabled/services/sustainability.tsx
 :pages.disabled/services/sustainability.tsx
               Sustainability Solutions
-<<<<<<< HEAD
+
 <=
             </h2>"<p className="text-xl text-slate-300 max-w-3xl mx-auto">
-=======
+
 <:pages.disabled/services/sustainability.tsx
             </h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto&quot;>
@@ -474,9 +469,9 @@ export default function Sustainability(...args: []):  {}
 >              and create positive environmental impact
             </p>
           </motion.div>"
-<<<<<<< HEAD
+
 Sustainability Solutions;
-=======
+
               Sustainability Solutions;
 >>>>>>> pr-10728
             </h2>""
@@ -493,13 +488,13 @@ Sustainability Solutions;
                 initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
   scale: 0.8}}
                 whileInView = {}
   { opacity: 1,
 :pages.disabled/services/sustainability.tsx
   scale: 1}}
-=======
+
   scale: 0.8
 
   scale: 0.8;
@@ -521,9 +516,9 @@ Sustainability Solutions;
 }}"
                 className="text-center group"
               >"
-<<<<<<< HEAD
+
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">"}}""
-=======
+
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">"
   delay: index * 0.1 
 "
@@ -534,9 +529,9 @@ Sustainability Solutions;
               >""
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">""
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
 </div>
-=======
+
                   <solution.icon className="w-8 h-8 text-emerald-400" />
                 </div>
 >>>>>>> pr-10728
@@ -546,9 +541,9 @@ Sustainability Solutions;
         </div>
       </section>
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -559,9 +554,9 @@ Sustainability Solutions;
             initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-<<<<<<< HEAD
+
   y: 20}}
-=======
+
   y: 20
 
   y: 20;
@@ -573,9 +568,9 @@ Sustainability Solutions;
   y: 0
 
 }}
-<<<<<<< HEAD
+
             transition={{ duration: 0.6 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.6 }}"
   y: 0;
 }}
@@ -595,9 +590,9 @@ Sustainability Solutions;
               </p>""
               <div className="flex flex-col sm:flex-row gap-4 justify-center">""
                 <button className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
-<<<<<<< HEAD
+
                   Go Green with Tech"</button>""
-=======
+
                   Go Green with Tech"
                 Ready to Go Green?
               </h2>""
@@ -620,9 +615,9 @@ Sustainability Solutions;
     </div>;
 :pages.disabled/services/sustainability.tsx
   )}'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""

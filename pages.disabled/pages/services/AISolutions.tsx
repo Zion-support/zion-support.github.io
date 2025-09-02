@@ -1,7 +1,7 @@
 :pages.disabled/pages/services/AISolutions.tsx
-<<<<<<< HEAD
+
 import {Brain,
-=======
+
 import {
 
 import {}
@@ -92,14 +92,14 @@ import {}
   Jitter,
   Ridge,
 :pages.disabled/pages/services/AISolutions.tsx
-<<<<<<< HEAD
+
   Joy} from
   'lucide-react';
 ;
 export function AISolutions(...args: unknown[]): unknown {
 
   return<div className="min-h-screen bg-gray-900 text-white">
-=======
+
   Joy} from 'lucide-react';
 ;
 export function AISolutions(...args: unknown[]): unknown {
@@ -141,9 +141,9 @@ export function AISolutions(...args: unknown[]): unknown {}
               </Link>
               <Link"
                 to="/request-quote""
-<<<<<<< HEAD
+
                 className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20">
-=======
+
                 className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20"
               <Link;
                 to="/contact""
@@ -177,9 +177,9 @@ export function AISolutions(...args: unknown[]): unknown {}
           >"
             <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive AI Capabilities
-<<<<<<< HEAD
+
             </h2>"<p className="text-xl text-gray-400 max-w-3xl mx-auto">
-=======
+
             </h2>"
             viewport={{ once: true }}
             className="text-center mb-16""
@@ -207,9 +207,9 @@ export function AISolutions(...args: unknown[]): unknown {}
                 className="bg-gray-700/50 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/50 transition-colors"
               >"
                 <div className="flex items-center gap-3 mb-4">"
-<<<<<<< HEAD
+
                   <div className="p-2 bg-cyan-500/20 rounded-lg">"<feature.icon className="w-6 h-6 text-cyan-400" />
-=======
+
                   <div className="p-2 bg-cyan-500/20 rounded-lg">"
                 viewport={{ once: true }}
                 className="bg-gray-700/50 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/50 transition-colors""
@@ -230,9 +230,9 @@ export function AISolutions(...args: unknown[]): unknown {}
                     <li
                       key={idx}"
                       className="flex items-center gap-2 text-sm text-gray-400"
-<<<<<<< HEAD
+
                     >"<CheckCircle className="w-4 h-4 text-cyan-400"  />
-=======
+
                     >"
                     <li;
                       key={idx}
@@ -263,9 +263,9 @@ export function AISolutions(...args: unknown[]): unknown {}
           >"
             <h2 className="text-4xl font-bold text-white mb-4">
               Industry Applications
-<<<<<<< HEAD
+
             </h2>"<p className="text-xl text-gray-400 max-w-3xl mx-auto">
-=======
+
             </h2>"
             viewport={{ once: true }}
             className="text-center mb-16""
@@ -290,9 +290,9 @@ export function AISolutions(...args: unknown[]): unknown {}
 :pages.disabled/pages/services/AISolutions.tsx
                 viewport={{ once: true }}"
                 className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600"
-<<<<<<< HEAD
+
               >"<div className="flex items-center gap-4 mb-6">
-=======
+
               >"
                 viewport={{ once: true }}
                 className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600""
@@ -314,9 +314,9 @@ export function AISolutions(...args: unknown[]): unknown {}
                     <li
                       key={idx}"
                       className="flex items-center gap-3 text-gray-300"
-<<<<<<< HEAD
+
                     >"<ArrowRight className="w-4 h-4 text-cyan-400"  />
-=======
+
                     >"
                     <li;
                       key={idx}
@@ -347,9 +347,9 @@ export function AISolutions(...args: unknown[]): unknown {}
           >"
             <h2 className="text-4xl font-bold text-white mb-4">
               Cutting-Edge Technologies
-<<<<<<< HEAD
+
             </h2>"<p className="text-xl text-gray-400 max-w-3xl mx-auto">
-=======
+
             </h2>"
             viewport={{ once: true }}
             className="text-center mb-16""
@@ -367,9 +367,9 @@ export function AISolutions(...args: unknown[]): unknown {}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 :pages.disabled/pages/services/AISolutions.tsx
             {technologies.map(tech: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={tech.name}
-=======
+
               <motion.div
             {technologies.map(tech: unknown, index: unknown (
               <motion.div;
@@ -383,9 +383,9 @@ export function AISolutions(...args: unknown[]): unknown {}
                 className="bg-gray-700/30 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/30 transition-colors"
               >"
                 <div className="flex items-center gap-3 mb-4">"
-<<<<<<< HEAD
+
                   <tech.icon className="w-6 h-6 text-cyan-400" />"<h3 className="text-lg font-semibold text-white">
-=======
+
                   <tech.icon className="w-6 h-6 text-cyan-400" />"
                 viewport={{ once: true }}
                 className="bg-gray-700/30 rounded-lg p-6 border border-gray-600 hover:border-cyan-500/30 transition-colors""
@@ -432,9 +432,9 @@ export function AISolutions(...args: unknown[]): unknown {}
               </Link>
               <Link"
                 to="/services""
-<<<<<<< HEAD
+
                 className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white">
-=======
+
                 className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white"
               <Link;
                 to="/contact""

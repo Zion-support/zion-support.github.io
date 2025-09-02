@@ -1,52 +1,4 @@
-<<<<<<< HEAD
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
-import { 
-  Linkedin, Twitter,
-  Mail, Globe,
-  Award, Star,
-  Users, Brain,
-  Shield, Cloud,
-  Database, Network,
-  Zap, Target,
-  TrendingUp, Phone,
-  MapPin, Calendar,
-  GraduationCap, Briefcase,
-  Heart, Sparkles,
-  CheckCircle, ArrowRight
-} from
-  'lucide-react';
-=======
-import React from 'react'
-import { motion } from 'framer-motion'
-import { SEO } from '../components/SEO'
-import { Button } from '../components/ui/Button'
-import { Card } from '../components/ui/Card'
-import { Badge } from '../components/ui/Badge'
-  Linkedin, Twitter,
-  Mail, Globe,
-  Award, Star,
-  Users, Brain,
-  Shield, Cloud,
-  Database, Network,
-  Zap, Target,
-  TrendingUp, Phone,
-  MapPin, Calendar,
-  GraduationCap, Briefcase,
-  Heart, Sparkles,
-  CheckCircle, ArrowRight
-} from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -118,12 +70,7 @@ const Team: React.FC = () => {
 
   const values = [
     {
-<<<<<<< HEAD
-      title: "Innovation First", description: "We push the boundaries of what"
-  's possible with AI and technology",'"
-=======
-      title: "Innovation First", description: "We push the boundaries of what&aposs possible with AI and technology", ''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
       icon: Brain
     }, {
       title: "Client Success", description: "Our success is measured by the success of our clients", icon: Target

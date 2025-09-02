@@ -8,12 +8,12 @@ import {}
   Globe,
   Zap,
   Users,
-<<<<<<< HEAD
+
   BarChart3,
   '
   Lock} from 'lucide-react
   ';: pages.disabled/solutions/Enterprise.jsx
-=======
+
   BarChart3,'
   Lock} from 'lucide-react';
 
@@ -23,7 +23,7 @@ const EnterpriseSolutions = () => {
   const solutions = [
     {
 '
-<<<<<<< HEAD
+
       title:
   'AI-Powered Business Intelligence,
 ,
@@ -76,7 +76,7 @@ const EnterpriseSolutions = () => {
   'Workflow automation,Document processing
   ',Customer service bots',Supply chain optimization
   ',Quality control',
-=======
+
       title: 'AI-Powered Business Intelligence','
       description:''
         'Transform your data into actionable insights with our advanced AI analytics platform.','
@@ -242,9 +242,9 @@ const EnterpriseSolutions = () => {}
       ]},
   ];
   return()
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"{/* Header Section */}""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}""
 >>>>>>> pr-10728
@@ -268,9 +268,9 @@ const EnterpriseSolutions = () => {}
             </Link>"
             <Link""
               to="/contact""
-<<<<<<< HEAD
+
               className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300">
-=======
+
               className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
             Enterprise Solutions;
           </h1>""
@@ -297,9 +297,9 @@ const EnterpriseSolutions = () => {}
         </div>
       </div>
 :pages.disabled/solutions/Enterprise.jsx
-<<<<<<< HEAD
+
 "{/* Core Solutions */}""
-=======
+
 "
 
       {/* Core Solutions */}""
@@ -309,9 +309,9 @@ const EnterpriseSolutions = () => {}
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
 :pages.disabled/solutions/Enterprise.jsx
             Core Enterprise Solutions
-<<<<<<< HEAD
+
           </h2>"""
-=======
+
           </h2>"
             Core Enterprise Solutions;
           </h2>
@@ -322,9 +322,9 @@ const EnterpriseSolutions = () => {}
               const Icon = solution.icon;
               return()
 :pages.disabled/solutions/Enterprise.jsx
-<<<<<<< HEAD
+
                 <div"key={index}""
-=======
+
                 <div"
                 <div;
                   key={index}""
@@ -343,9 +343,9 @@ const EnterpriseSolutions = () => {}
 ""
                   <ul className="space-y-3 mb-6">
                     {solution.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                       <li"key={featureIndex}""
-=======
+
                       <li"
                       <Icon className="w-8 h-8 text-white" />
                     </div>""
@@ -372,9 +372,9 @@ const EnterpriseSolutions = () => {}
                     to={solution.href}""
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                   >
-<<<<<<< HEAD
+
                     Learn More"<svg""
-=======
+
                     Learn More"
                   <Link;
                     to={solution.href}""
@@ -388,9 +388,9 @@ const EnterpriseSolutions = () => {}
                       stroke="currentColor""
 :pages.disabled/solutions/Enterprise.jsx
                       viewBox="0 0 24 24"
-<<<<<<< HEAD
+
                     >"<path""
-=======
+
                     >"
                       viewBox="0 0 24 24""
                     >
@@ -400,9 +400,9 @@ const EnterpriseSolutions = () => {}
                         strokeLinejoin="round""
                         strokeWidth={2}""
 :pages.disabled/solutions/Enterprise.jsx
-<<<<<<< HEAD
+
                         d="M9 5l7 7-7 7"/>
-=======
+
                         d="M9 5l7 7-7 7"
                         d="M9 5l7 7-7 7""
                       />
@@ -416,9 +416,9 @@ const EnterpriseSolutions = () => {}
         </div>
       </div>
 :pages.disabled/solutions/Enterprise.jsx
-<<<<<<< HEAD
+
 "{/* Industry Solutions */}""
-=======
+
 "
 
       {/* Industry Solutions */}""
@@ -428,9 +428,9 @@ const EnterpriseSolutions = () => {}
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
 :pages.disabled/solutions/Enterprise.jsx
             Industry-Specific Solutions
-<<<<<<< HEAD
+
           </h2>"""
-=======
+
           </h2>"
             Industry-Specific Solutions;
           </h2>
@@ -441,9 +441,9 @@ const EnterpriseSolutions = () => {}
               const Icon = industry.icon;
               return()
 :pages.disabled/solutions/Enterprise.jsx
-<<<<<<< HEAD
+
                 <div"key={index}""
-=======
+
                 <div"
                 <div;
                   key={index}""
@@ -462,9 +462,9 @@ const EnterpriseSolutions = () => {}
 ""
                   <div className="grid grid-cols-1 gap-3">
                     {industry.solutions.map((solution, solutionIndex) => (
-<<<<<<< HEAD
+
                       <div"key={solutionIndex}""
-=======
+
                       <div"
                       <Icon className="w-8 h-8 text-white" />
                     </div>""
@@ -491,9 +491,9 @@ const EnterpriseSolutions = () => {}
         </div>
       </div>
 :pages.disabled/solutions/Enterprise.jsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -533,9 +533,9 @@ const EnterpriseSolutions = () => {}
               return (""
                 <div key={index} className="text-center">""
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">""
-<<<<<<< HEAD
+
                     <Icon className="w-10 h-10 text-white" />"</div>""
-=======
+
                     <Icon className="w-10 h-10 text-white" />"
           </h2>
 ""
@@ -573,9 +573,9 @@ const EnterpriseSolutions = () => {}
         </div>
       </div>
 :pages.disabled/solutions/Enterprise.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -601,9 +601,9 @@ const EnterpriseSolutions = () => {}
               </Link>"
               <Link""
                 to="/contact""
-<<<<<<< HEAD
+
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300">
-=======
+
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
               Ready to Transform Your Enterprise?
             </h2>""
@@ -635,9 +635,9 @@ const EnterpriseSolutions = () => {}
 
 :pages.disabled/solutions/Enterprise.jsx
 export default EnterpriseSolutions;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default EnterpriseSolutions;
 '""

@@ -11,9 +11,9 @@ import {}
 const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {
 
   return()
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"<SEO""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
 const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {}
   return()
@@ -26,9 +26,9 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {}
       <section className="container mx-auto px-4 py-16">""
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
 :pages.disabled/pages/services/DeveloperProductivityCopilot.tsx
-<<<<<<< HEAD
+
           Developer Productivity Copilot"</h1>""
-=======
+
           Developer Productivity Copilot"
           Developer Productivity Copilot;
         </h1>""
@@ -46,9 +46,9 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {}
   ',CI insights: bottlenecks and failures,Jira/GitHub/GitLab/Bitbucket integrations
   ',
           ].map(b => (
-<<<<<<< HEAD
+
             <div"key={b}""
-=======
+
             <div"
         </p>
 ""
@@ -70,9 +70,9 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {}
 ""
         <div className="mt-10 rounded-xl border border-white/10 bg-white/5 p-6">""
           <div className="flex items-center gap-2 text-slate-200 font-semibold">""
-<<<<<<< HEAD
+
             <DollarSign className="h-4 w-4"  /> Pricing"</div>"          <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
-=======
+
             <DollarSign className="h-4 w-4"  /> Pricing"
         </div>
 ""
@@ -86,9 +86,9 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {}
             <li>Enterprise: Custom; SSO, on-prem agent, SLAs</li>
             <li>Setup: $3k–$12k (policy + repos)</li>
 :pages.disabled/pages/services/DeveloperProductivityCopilot.tsx
-<<<<<<< HEAD
+
           </ul>"<a""
-=======
+
           </ul>"
           </ul>
           <a""
@@ -101,9 +101,9 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {}
 :pages.disabled/pages/services/DeveloperProductivityCopilot.tsx
             Learn more <ExternalLink className="ml-1 h-3 w-3"  />"
           </a>""
-<<<<<<< HEAD
+
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">"<a""
-=======
+
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">"
             Learn more <ExternalLink className="ml-1 h-3 w-3"  />
           </a>""
@@ -115,9 +115,9 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {}
             >""
 :pages.disabled/pages/services/DeveloperProductivityCopilot.tsx
               <GitBranch className="h-4 w-4"  /> +1 302 464 0950
-<<<<<<< HEAD
+
             </a>"<a""
-=======
+
             </a>"
               <GitBranch className="h-4 w-4"  /> +1 302 464 0950;
             </a>
@@ -127,9 +127,9 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {}
               className="inline-flex items-center gap-2 hover:text-cyan-200""
             >""
 :pages.disabled/pages/services/DeveloperProductivityCopilot.tsx
-<<<<<<< HEAD
+
               <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com</a>          </div>
-=======
+
               <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com
               <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com;
             </a>          </div>
@@ -141,9 +141,9 @@ const DeveloperProductivityCopilot: React.FC = (): JSX.Element => {}
 ;
 :pages.disabled/pages/services/DeveloperProductivityCopilot.tsx
 export { DeveloperProductivityCopilot };export default DeveloperProductivityCopilot;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export { DeveloperProductivityCopilot };export default DeveloperProductivityCopilot;
 '""

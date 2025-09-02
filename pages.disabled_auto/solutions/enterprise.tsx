@@ -1,18 +1,4 @@
-<<<<<<< HEAD
-import type { NextPage } from
-  'next';
-import Layout from
-  '../../components/Layout';
-import Link from
-  'next/link';
-import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from
-  'lucide-react';
-=======
-import type { NextPage } from 'next'
-import Layout from '../../components/Layout'
-import Link from 'next/link'
-import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
 
 const EnterpriseSolutions: NextPage = () => {
   return (
@@ -186,12 +172,7 @@ const EnterpriseSolutions: NextPage = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2">Scalability Issues</h4>
-<<<<<<< HEAD
-                    <p className="text-gray-600">Systems that can
-  't handle growth and increased user demands effectively.</p>'
-=======
-                    <p className="text-gray-600">Systems that can&apost handle growth and increased user demands effectively.</p>''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

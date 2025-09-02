@@ -1,6 +1,6 @@
 
 :pages.disabled/pages/research-development.test.tsx
-<<<<<<< HEAD
+
 describe (
   'research - development', () => {
   '
@@ -13,7 +13,7 @@ describe (
   '
   it ('displays expected content
   ', () => {render (<research - development />) ;
-=======
+
 describe ('research - development', () => {
 '
   it ('renders without crashing', () => {

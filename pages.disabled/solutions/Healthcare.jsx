@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from,
   react';'
 import { Link } from
@@ -23,7 +23,7 @@ const HealthcareSolutions = () => {
       icon: Heart,'
       href:,
   /services/ai-autonomous-systems'},: pages.disabled/solutions/Healthcare.jsx
-=======
+
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
@@ -58,7 +58,7 @@ const HealthcareSolutions = () => {}
   Advanced AI for diagnostic imaging and analysis.',
   '
       features: [''
-<<<<<<< HEAD
+
   'Radiology image analysis,Pathology detection
   ',3D imaging reconstruction',Automated reporting
   ',Quality assurance tools',],
@@ -79,7 +79,7 @@ const HealthcareSolutions = () => {}
       icon: Pill,'
       href:,
   /services/quantum-technology'},: pages.disabled/solutions/Healthcare.jsx
-=======
+
         'Radiology image analysis',Pathology detection',3D imaging reconstruction',Automated reporting',Quality assurance tools',
     {}
       title: 'Medical Imaging AI',
@@ -130,10 +130,10 @@ const HealthcareSolutions = () => {}
       description:
   'AI-driven insights lead to better diagnosis and treatment.',
       icon: Activity},
-<<<<<<< HEAD
+
     {,
   title: 'Operational Efficiency,'
-=======
+
     {
 '
       title: 'Operational Efficiency','
@@ -151,12 +151,12 @@ const HealthcareSolutions = () => {}
         'Streamlined workflows reduce costs and improve care delivery.
   ',
       icon: Users},
-<<<<<<< HEAD
+
     {,
   title: 'Enhanced Security,
 ,
   description: 'HIPAA-compliant solutions protect patient data.,
-=======
+
     {}
       title: 'Enhanced Security',
       description: 'HIPAA-compliant solutions protect patient data.',
@@ -165,9 +165,9 @@ const HealthcareSolutions = () => {}
   ];
   return()
 :pages.disabled/solutions/Healthcare.jsx
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"{/* Header Section */}""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}""
@@ -192,9 +192,9 @@ const HealthcareSolutions = () => {}
             </Link>"
             <Link""
               to="/contact""
-<<<<<<< HEAD
+
               className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300">
-=======
+
               className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
             Healthcare AI Solutions;
           </h1>""
@@ -221,9 +221,9 @@ const HealthcareSolutions = () => {}
         </div>
       </div>
 :pages.disabled/solutions/Healthcare.jsx
-<<<<<<< HEAD
+
 "{/* Core Solutions */}""
-=======
+
 "
 
       {/* Core Solutions */}""
@@ -233,9 +233,9 @@ const HealthcareSolutions = () => {}
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
 :pages.disabled/solutions/Healthcare.jsx
             Healthcare AI Solutions
-<<<<<<< HEAD
+
           </h2>"""
-=======
+
           </h2>"
             Healthcare AI Solutions;
           </h2>
@@ -246,9 +246,9 @@ const HealthcareSolutions = () => {}
               const Icon = solution.icon;
               return()
 :pages.disabled/solutions/Healthcare.jsx
-<<<<<<< HEAD
+
                 <div"key={index}""
-=======
+
                 <div"
                 <div;
                   key={index}""
@@ -267,9 +267,9 @@ const HealthcareSolutions = () => {}
 ""
                   <ul className="space-y-3 mb-6">
                     {solution.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                       <li"key={featureIndex}""
-=======
+
                       <li"
                       <Icon className="w-8 h-8 text-white" />
                     </div>""
@@ -296,9 +296,9 @@ const HealthcareSolutions = () => {}
                     to={solution.href}""
                     className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300"
                   >
-<<<<<<< HEAD
+
                     Learn More"<svg""
-=======
+
                     Learn More"
                   <Link;
                     to={solution.href}""
@@ -312,9 +312,9 @@ const HealthcareSolutions = () => {}
                       stroke="currentColor""
 :pages.disabled/solutions/Healthcare.jsx
                       viewBox="0 0 24 24"
-<<<<<<< HEAD
+
                     >"<path""
-=======
+
                     >"
                       viewBox="0 0 24 24""
                     >
@@ -324,9 +324,9 @@ const HealthcareSolutions = () => {}
                         strokeLinejoin="round""
                         strokeWidth={2}""
 :pages.disabled/solutions/Healthcare.jsx
-<<<<<<< HEAD
+
                         d="M9 5l7 7-7 7"/>
-=======
+
                         d="M9 5l7 7-7 7"
                         d="M9 5l7 7-7 7""
                       />
@@ -340,9 +340,9 @@ const HealthcareSolutions = () => {}
         </div>
       </div>
 :pages.disabled/solutions/Healthcare.jsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -361,9 +361,9 @@ const HealthcareSolutions = () => {}
               return (""
                 <div key={index} className="text-center">""
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">""
-<<<<<<< HEAD
+
                     <Icon className="w-10 h-10 text-white" />"</div>""
-=======
+
                     <Icon className="w-10 h-10 text-white" />"
             Benefits for Healthcare Organizations;
           </h2>
@@ -386,9 +386,9 @@ const HealthcareSolutions = () => {}
         </div>
       </div>
 :pages.disabled/solutions/Healthcare.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -413,9 +413,9 @@ const HealthcareSolutions = () => {}
               </Link>"
               <Link""
                 to="/contact""
-<<<<<<< HEAD
+
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300">
-=======
+
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300"
               Transform Healthcare with AI;
             </h2>""
@@ -447,9 +447,9 @@ const HealthcareSolutions = () => {}
 
 :pages.disabled/solutions/Healthcare.jsx
 export default HealthcareSolutions;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default HealthcareSolutions;
 '""

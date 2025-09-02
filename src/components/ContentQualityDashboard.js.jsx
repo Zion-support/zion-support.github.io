@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 import React from 'react'; const ContentQualityDashboard = ({ className = " }) => { const [isOpen, setIsOpen] = useState (false) ; const [isLoading, setIsLoading] = useState (false) ; const [report, setReport] = useState (null) ; const [selectedPage, setSelectedPage] = useState (null) ; const [searchTerm, setSearchTerm] = useState (") ; const [filterStatus, setFilterStatus] = useState ("all") ; const contentAnalyzer = ContentQualityAnalyzer.getInstance () ; const analyzeAllPages = useCallback (async () => { setIsLoading (true) ; try {""";
-=======
+
 import React, { useState, useEffect, useCallback } from 'react';'
 import { BarChart3, FileText, AlertTriangle, Zap, RefreshCw, Download, Search, X } from 'lucide-react';
 import ContentQualityAnalyzer from "../utils/contentQualityAnalyzer.jsx";
@@ -351,7 +351,6 @@ const ContentQualityDashboard = ({ className = '' }) => {    const [isOpen, setI
         </div>)}
     </div>)};
 export default ContentQualityDashboard;
-
 
 export { ContentQualityDashboard };
 

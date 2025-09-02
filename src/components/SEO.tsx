@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import { Helmet } from
-  'react-helmet-async';''
-  'interface SEOProps {title?: string;description?: string;'
-=======
-import { Helmet } from 'react-helmet-async'''interface SEOProps {title?: string;description?: string;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
   keywords?: string;
   image?: string;
   url?: string;
@@ -12,17 +6,7 @@ import { Helmet } from 'react-helmet-async'''interface SEOProps {title?: string;
 }
 
 export const SEO: React.FC<SEOProps> = ({
-<<<<<<< HEAD
-title =, Zion Tech Group - Leading Technology Solutions
-  ', description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
-  ', keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group
-  ', image = '/og-image.svg
-  ', '  url =
-  'https: //ziontechgroup.com, type ='
-  'website''}) => {'  return (
-=======
-title = 'Zion Tech Group - Leading Technology Solutions', description = 'Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.', keywords = 'AI, cybersecurity, cloud infrastructure, digital transformation, technology solutions, Zion Tech Group', image = '/og-image.svg','  url = 'https: //ziontechgroup.com', type = 'website''}) => {'  return ('
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>

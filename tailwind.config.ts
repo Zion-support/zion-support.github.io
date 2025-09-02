@@ -1,15 +1,7 @@
 import type { Config } from,
   tailwindcss'
 export default {
-<<<<<<< HEAD
-  content: [./pages/**/*.{js,ts,jsx,tsx,mdx}',
-,
-  ./components/**/*.{js,ts,jsx,tsx,mdx}',
-  './app/**/*.{js,ts,jsx,tsx,mdx}',
-=======
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}./components/**/*.{js,ts,jsx,tsx,mdx}./app/**/*.{js,ts,jsx,tsx,mdx}',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
   ],
   darkMode: 'class,
   theme: {
@@ -89,68 +81,7 @@ export default {
         }
       },
       fontFamily: {
-<<<<<<< HEAD
-        sans: [,
-  Inter',
-  'ui-sans-serif',
-  'system-ui',
-  '-apple-system',
-  'BlinkMacSystemFont',
-  'Segoe UI',
-  'Roboto',
-  'Helvetica Neue',
-  'Arial',
-  'Noto Sans',
-  'sans-serif',
-  'Apple Color Emoji',
-  'Segoe UI Emoji',
-  'Segoe UI Symbol',
-  'Noto Color Emoji',
-        ],
-        mono: [
-  'JetBrains Mono,
-,
-  Fira Code',
-  'Monaco',
-  'Consolas',
-  'Liberation Mono',
-  'Courier New',
-  'monospace',
-        ],
-        display: [
-  'Orbitron,
-,
-  ui-sans-serif',
-  'system-ui',
-  'sans-serif',
-        ],
-        body: [
-  'Rajdhani,
-,
-  ui-sans-serif',
-  'system-ui',
-  'sans-serif',
-=======
-        sans: [
-          'Interui-sans-serifsystem-ui',
-          '-apple-systemBlinkMacSystemFontSegoe UI',
-          'RobotoHelvetica NeueArial',
-          'Noto Sanssans-serifApple Color Emoji',
-          'Segoe UI EmojiSegoe UI SymbolNoto Color Emoji',
-        ],
-        mono: [
-          'JetBrains MonoFira CodeMonaco',
-          'ConsolasLiberation MonoCourier New',
-          'monospace',
-        ],
-        display: [
-          'Orbitronui-sans-serifsystem-ui',
-          'sans-serif',
-        ],
-        body: [
-          'Rajdhaniui-sans-serifsystem-ui',
-          'sans-serif',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
         ],
       },
       fontSize: {

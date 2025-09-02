@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-React from
-  'react';
-import { Link } from
-  'react-router-dom';'import { ;'  Brain, Mail,
-=======
-import React from 'react'
-import  { Link } from 'react-router-dom''import { ;'  Brain, Mail,''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
   Phone, MapPin,
   Linkedin, Twitter,
   Github, Youtube,
@@ -18,16 +10,7 @@ import  { Link } from 'react-router-dom''import { ;'  Brain, Mail,''
   Database, Network,
   Target, CheckCircle,
   ExternalLink
-<<<<<<< HEAD
-} from
-  'lucide-react';'{ Button } from'
-  '../ui/Button';
-import { Badge } from
-  '../ui/Badge';''const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
-=======
-} from 'lucide-react''import { Button } from '../ui/Button''
-import  { Badge } from '../ui/Badge'''const Footer: React.FC = () => {const currentYear = new Date().getFullYear();
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
 
   const serviceCategories = [;
     {

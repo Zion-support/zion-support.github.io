@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import {}
   Truck,
   Package,
@@ -317,7 +317,7 @@ const AISupplyChainOptimization: React.FC = () => {const [activeTab, setActiveTa
                       className="flex items-center text-gray-300""
                     >""
                       <CheckCircle className="w-5 h-5 mr-3 text-green-400 flex-shrink-0"  />                      {app}
-=======
+
 ;
 export { function };export default function AISupplyChainOptimization(...args: []):  {}
   return()
@@ -845,7 +845,7 @@ export { function };export default function AISupplyChainOptimization(...args: [
               </motion.div>
             ))}
           </div>
-<<<<<<< HEAD
+
         </div>
       </section>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
@@ -866,7 +866,7 @@ export { function };export default function AISupplyChainOptimization(...args: [
             </p>
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
           </motion.div>"
-=======
+
         </section>
 :pages.disabled/pages/services/ai-supply-chain-optimization.tsx
 "
@@ -909,7 +909,7 @@ export { function };export default function AISupplyChainOptimization(...args: [
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
                 )}"
 ""
-<<<<<<< HEAD
+
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-4">
                     {tier.name}"
@@ -1016,7 +1016,7 @@ export { function };export default function AISupplyChainOptimization(...args: [
             transition={{ duration: 0.8, delay: 1.6 }}"
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-=======
+
                   step: "01",""
                   title: "Assessment",""
                   description: "Evaluate current supply chain performance and identify optimization opportunities."
@@ -1118,7 +1118,7 @@ export { function };export default function AISupplyChainOptimization(...args: [
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
                 to="/contact""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105""
               >""
 :pages.disabled/pages/services/AI-Supply-Chain-Optimization.tsx
@@ -1138,7 +1138,7 @@ export { function };export default function AISupplyChainOptimization(...args: [
 
 export default AISupplyChainOptimization;'"`
   '"`'"`
-=======
+
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
 "
                 Schedule a Consultation""

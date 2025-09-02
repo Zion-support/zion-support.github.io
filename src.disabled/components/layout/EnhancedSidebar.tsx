@@ -1,12 +1,4 @@
-<<<<<<< HEAD:src.disabled/components/layout/EnhancedSidebar.tsx
-import React from
-  'react';
-import { Link, useLocation } from
-  'react-router-dom';
-=======
-import React from 'react'
-import { Link, useLocation } from 'react-router-dom';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:src/components/layout/EnhancedSidebar.tsx
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/layout/EnhancedSidebar.tsx
 
 interface SidebarProps {
   isOpen: boolean;

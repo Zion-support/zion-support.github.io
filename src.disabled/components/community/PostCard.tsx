@@ -59,5 +59,5 @@ export default function PostCard(...args[]: any):  {
     </div>;
   );
 }
-=======
+
 >>>>>>> pr-10728:src/components/community/PostCard.tsx

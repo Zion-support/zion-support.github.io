@@ -17,9 +17,9 @@ const SpaceTech = () => {}
             </div>"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-<<<<<<< HEAD
+
             Space Technology Solutions"</h1>""
-=======
+
             Space Technology Solutions"
             </div>
           </div>""
@@ -34,9 +34,9 @@ const SpaceTech = () => {}
           </p>"
           <Link""
             to="/contact""
-<<<<<<< HEAD
+
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg">
-=======
+
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg"
           </p>
           <Link""
@@ -55,9 +55,9 @@ const SpaceTech = () => {}
 export { SpaceTech };
 :pages.disabled/pages/services/SpaceTech.jsx
 export default SpaceTech;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default SpaceTech;
 '""

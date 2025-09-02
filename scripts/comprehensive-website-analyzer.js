@@ -29,17 +29,7 @@ class ComprehensiveWebsiteAnalyzer {
       console.log(`Checking: ${url}`);
       const response = await axios.get(url, {
         timeout: 10000,
-<<<<<<< HEAD
-        validateStatus: (status) => status < 500,
-        headers: {,
-  User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Analyzer/1.0)
-        }
-=======
-        validateStatus: status => status < 500,
-        headers: {
-          'User-Agent': 'Mozilla/5.0 (compatible; ZionTechGroup-Analyzer/1.0)',
-        },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       });
 
       if (response.status === 200) {
@@ -48,15 +38,7 @@ class ComprehensiveWebsiteAnalyzer {
           status: response.status,
           parentUrl,
           headers: response.headers,
-<<<<<<< HEAD
-          contentLength: response.headers[,
-  content-length'],
-          contentType: response.headers[
-  'content-type]
-=======
-          contentLength: response.headers['content-length'],
-          contentType: response.headers['content-type'],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         });
 
         // Extract links from HTML content if it
@@ -66,17 +48,7 @@ class ComprehensiveWebsiteAnalyzer {
   ')) {
           const links = this.extractLinks(response.data, url);
           for (const link of links) {
-<<<<<<< HEAD
-            if (link.startsWith('/
-  ') || link.startsWith(this.baseUrl)) {
-              const fullUrl = link.startsWith('/
-  ') ? `${this.baseUrl}${link}` : link;
-=======
-            if (link.startsWith('/') || link.startsWith(this.baseUrl)) {
-              const fullUrl = link.startsWith('/')
-                ? `${this.baseUrl}${link}`
-                : link;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
               await this.checkUrl(fullUrl, url);
             }
           }
@@ -111,19 +83,7 @@ class ComprehensiveWebsiteAnalyzer {
 
     while ((match = linkRegex.exec(html)) !== null) {
       const link = match[1];
-<<<<<<< HEAD
-      if (link && !link.startsWith(
-  '#') && !link.startsWith(
-  'javascript: ') && !link.startsWith(
-  'mailto:)) {
-=======
-      if (
-        link &&
-        !link.startsWith('#') &&
-        !link.startsWith('javascript:') &&
-        !link.startsWith('mailto:')
-      ) {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         links.push(link);
       }
     }
@@ -132,158 +92,13 @@ class ComprehensiveWebsiteAnalyzer {
   }
 
   async analyzeWebsite() {
-<<<<<<< HEAD
-    console.log(
-  'Starting comprehensive website analysis...');
-    
-=======
-    console.log('Starting comprehensive website analysis...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     // Start with the main page
     await this.checkUrl(this.baseUrl);
 
     // Check common routes
     const commonRoutes = [
-<<<<<<< HEAD
-  '/about',
-  '/services',
-  '/solutions',
-  '/contact',
-  '/pricing',
-  '/blog',
-  '/careers',
-  '/partners',
-  '/support',
-  '/help',
-  '/training',
-  '/sitemap',
-  '/privacy-policy',
-  '/terms-of-service',
-  '/cookie-policy',
-  '/api',
-  '/docs',
-  '/research-development',
-  '/case-studies',
-  '/white-papers',
-  '/events',
-  '/webinars',
-  '/news',
-  '/press',
-  '/community',
-  '/developer',
-  '/request-quote',
-  '/login',
-  '/signup',
-  '/dashboard',
-  '/admin',
-  '/talent',
-  '/marketplace',
-  '/micro-saas',
-  '/ai-services',
-  '/cybersecurity',
-  '/cloud-devops',
-  '/quantum-computing',
-  '/space-technology',
-  '/digital-transformation',
-  '/data-analytics',
-  '/iot-edge-computing',
-  '/manufacturing-solutions',
-  '/financial-solutions',
-  '/industry-solutions',
-  '/startup-solutions',
-  '/supply-chain',
-  '/sustainability',
-  '/system-status',
-  '/testimonials',
-  '/faq',
-  '/accessibility',
-  '/comprehensive-services',
-  '/revolutionary-services',
-  '/new-services-2025',
-  '/enhanced-new-services-2025',
-  '/comprehensive-sitemap',
-  '/comprehensive-pricing',
-  '/services-overview',
-  '/services-catalog',
-  '/services-comparison',
-  '/services-pricing',
-  '/ai-solutions',
-  '/quantum-ai-platform',
-  '/digital-twin',
-  '/zero-trust-security',
-  '/enterprise-solutions',
-  '/ai-business-intelligence'
-=======
-      '/about',
-      '/services',
-      '/solutions',
-      '/contact',
-      '/pricing',
-      '/blog',
-      '/careers',
-      '/partners',
-      '/support',
-      '/help',
-      '/training',
-      '/sitemap',
-      '/privacy-policy',
-      '/terms-of-service',
-      '/cookie-policy',
-      '/api',
-      '/docs',
-      '/research-development',
-      '/case-studies',
-      '/white-papers',
-      '/events',
-      '/webinars',
-      '/news',
-      '/press',
-      '/community',
-      '/developer',
-      '/request-quote',
-      '/login',
-      '/signup',
-      '/dashboard',
-      '/admin',
-      '/talent',
-      '/marketplace',
-      '/micro-saas',
-      '/ai-services',
-      '/cybersecurity',
-      '/cloud-devops',
-      '/quantum-computing',
-      '/space-technology',
-      '/digital-transformation',
-      '/data-analytics',
-      '/iot-edge-computing',
-      '/manufacturing-solutions',
-      '/financial-solutions',
-      '/industry-solutions',
-      '/startup-solutions',
-      '/supply-chain',
-      '/sustainability',
-      '/system-status',
-      '/testimonials',
-      '/faq',
-      '/accessibility',
-      '/comprehensive-services',
-      '/revolutionary-services',
-      '/new-services-2025',
-      '/enhanced-new-services-2025',
-      '/comprehensive-sitemap',
-      '/comprehensive-pricing',
-      '/services-overview',
-      '/services-catalog',
-      '/services-comparison',
-      '/services-pricing',
-      '/ai-solutions',
-      '/quantum-ai-platform',
-      '/digital-twin',
-      '/zero-trust-security',
-      '/enterprise-solutions',
-      '/ai-business-intelligence',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     for (const route of commonRoutes) {
@@ -292,55 +107,7 @@ class ComprehensiveWebsiteAnalyzer {
 
     // Check service sub-routes
     const serviceRoutes = [
-<<<<<<< HEAD
-  '/ai-solutions',
-  '/quantum-computing',
-  '/cybersecurity',
-  '/cloud-devops',
-  '/digital-transformation',
-  '/data-analytics',
-  '/iot-edge-computing',
-  '/space-technology',
-  '/ai-business-intelligence',
-  '/ai-content-creation',
-  '/ai-cybersecurity',
-  '/ai-financial-analytics',
-  '/ai-healthcare-analytics',
-  '/ai-hr-platform',
-  '/ai-marketing-automation',
-  '/ai-supply-chain-optimization',
-  '/ai-workflow-orchestrator',
-  '/ai-autonomous-research-assistant',
-  '/ai-content-marketing-suite',
-  '/ai-quantum-hybrid-platform',
-  '/it-infrastructure',
-  '/digital-twin',
-  '/ai-devops-automation-platform'
-=======
-      '/ai-solutions',
-      '/quantum-computing',
-      '/cybersecurity',
-      '/cloud-devops',
-      '/digital-transformation',
-      '/data-analytics',
-      '/iot-edge-computing',
-      '/space-technology',
-      '/ai-business-intelligence',
-      '/ai-content-creation',
-      '/ai-cybersecurity',
-      '/ai-financial-analytics',
-      '/ai-healthcare-analytics',
-      '/ai-hr-platform',
-      '/ai-marketing-automation',
-      '/ai-supply-chain-optimization',
-      '/ai-workflow-orchestrator',
-      '/ai-autonomous-research-assistant',
-      '/ai-content-marketing-suite',
-      '/ai-quantum-hybrid-platform',
-      '/it-infrastructure',
-      '/digital-twin',
-      '/ai-devops-automation-platform',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     for (const serviceRoute of serviceRoutes) {
@@ -349,19 +116,7 @@ class ComprehensiveWebsiteAnalyzer {
 
     // Check solution sub-routes
     const solutionRoutes = [
-<<<<<<< HEAD
-  '/enterprise',
-  '/ai-business-intelligence',
-  '/quantum-ai-platform',
-  '/digital-twin',
-  '/zero-trust-security'
-=======
-      '/enterprise',
-      '/ai-business-intelligence',
-      '/quantum-ai-platform',
-      '/digital-twin',
-      '/zero-trust-security',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     for (const solutionRoute of solutionRoutes) {
@@ -369,14 +124,7 @@ class ComprehensiveWebsiteAnalyzer {
     }
 
     // Check about sub-routes
-<<<<<<< HEAD
-    const aboutRoutes = [
-  '/story',
-  '/team'
-    ];
-=======
-    const aboutRoutes = ['/story', '/team'];
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
 
     for (const aboutRoute of aboutRoutes) {
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);
@@ -384,27 +132,7 @@ class ComprehensiveWebsiteAnalyzer {
 
     // Check resources sub-routes
     const resourceRoutes = [
-<<<<<<< HEAD
-  '/blog',
-  '/case-studies',
-  '/research-development',
-  '/docs',
-  '/api',
-  '/sitemap',
-  '/support',
-  '/training',
-  '/help'
-=======
-      '/blog',
-      '/case-studies',
-      '/research-development',
-      '/docs',
-      '/api',
-      '/sitemap',
-      '/support',
-      '/training',
-      '/help',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     for (const resourceRoute of resourceRoutes) {
@@ -453,67 +181,19 @@ class ComprehensiveWebsiteAnalyzer {
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention.`,
         actions: this.brokenLinks.map(link => ({
           url: link.url,
-<<<<<<< HEAD
-          action:,
-  Create missing page or fix redirect',
-          priority: 'high
-        }))
-=======
-          action: 'Create missing page or fix redirect',
-          priority: 'high',
-        })),
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       });
     }
 
     if (this.workingLinks.length < 50) {
       recommendations.push({
-<<<<<<< HEAD
-        type:,
-  warning',
-        title: 'Expand Content,
-        description:,
-  Website has limited content. Consider adding more pages and services.',
-        actions: [
-          { action:
-  'Add more service pages, priority:,
-  medium' },
-          { action: 'Create blog section, priority:,
-  medium' },
-          { action: 'Add case studies, priority:,
-  medium' }
-        ]
-=======
-        type: 'warning',
-        title: 'Expand Content',
-        description:
-          'Website has limited content. Consider adding more pages and services.',
-        actions: [
-          { action: 'Add more service pages', priority: 'medium' },
-          { action: 'Create blog section', priority: 'medium' },
-          { action: 'Add case studies', priority: 'medium' },
-        ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       });
     }
 
     // Check for missing essential pages
     const essentialPages = [
-<<<<<<< HEAD
-  '/privacy-policy',
-  '/terms-of-service',
-  '/cookie-policy',
-  '/sitemap',
-  '/contact',
-  '/about'
-=======
-      '/privacy-policy',
-      '/terms-of-service',
-      '/cookie-policy',
-      '/sitemap',
-      '/contact',
-      '/about',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     const missingEssential = essentialPages.filter(
@@ -528,16 +208,7 @@ class ComprehensiveWebsiteAnalyzer {
         description: 'Essential pages are missing from the website.,
         actions: missingEssential.map(page => ({
           url: page,
-<<<<<<< HEAD
-          action:,
-  Create missing page',
-          priority: 'high
-        }))
-=======
-          action: 'Create missing page',
-          priority: 'high',
-        })),
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       });
     }
 
@@ -556,25 +227,7 @@ class ComprehensiveWebsiteAnalyzer {
 // Run the analysis
 async function main() {
   const analyzer = new ComprehensiveWebsiteAnalyzer(
-<<<<<<< HEAD
-  'https: //ziontechgroup.com');
-  
-  try {
-    await analyzer.analyzeWebsite();
-    const report = await analyzer.saveReport();
-    
-    console.log(
-  '\n=== ANALYSIS SUMMARY ===);
-=======
-    'https://ziontechgroup.com'
-  );
-
-  try {
-    await analyzer.analyzeWebsite();
-    const report = await analyzer.saveReport();
-
-    console.log('\n=== ANALYSIS SUMMARY ===');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);
     console.log(`Working links: ${report.summary.workingLinks}`);
     console.log(`Broken links: ${report.summary.brokenLinks}`);

@@ -10,9 +10,9 @@ const DigitalTransformation = () => {}
           <div className="text-center">""
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
 :pages.disabled/pages/services/Transformation.jsx
-<<<<<<< HEAD
+
               Digital Transformation"</h1>""
-=======
+
               Digital Transformation"
               Digital Transformation;
             </h1>""
@@ -22,9 +22,9 @@ const DigitalTransformation = () => {}
             </p>
           </div>
 :pages.disabled/pages/services/Transformation.jsx
-<<<<<<< HEAD
+
         </div>"</section>""
-=======
+
         </div>"
         </div>
       </section>""
@@ -51,9 +51,9 @@ const DigitalTransformation = () => {}
             </div>""
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-2xl">""
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
-<<<<<<< HEAD
+
                 Change Management"</h3>""
-=======
+
                 Change Management"
                 Process Automation;
               </h3>""
@@ -87,9 +87,9 @@ const DigitalTransformation = () => {}
           <h2 className="text-3xl font-bold mb-6">Transform Your Business</h2>"
           <Link""
             to="/contact""
-<<<<<<< HEAD
+
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-=======
+
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300"
         </div>
       </section>""
@@ -111,9 +111,9 @@ const DigitalTransformation = () => {}
 export { DigitalTransformation };
 :pages.disabled/pages/services/Transformation.jsx
 export default DigitalTransformation;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default DigitalTransformation;
 '""

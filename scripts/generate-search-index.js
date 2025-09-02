@@ -9,14 +9,7 @@ function walk(dir, filelist = []) {
   for (const entry of files) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-<<<<<<< HEAD
-      if (entry.name.startsWith(
-  '.') || entry.name.includes(
-  'node_modules')) continue;
-=======
-      if (entry.name.startsWith('.') || entry.name.includes('node_modules'))
-        continue;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       filelist = walk(full, filelist);
     } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {
       filelist.push(full);
@@ -27,38 +20,14 @@ function walk(dir, filelist = []) {
 
 function main() {
   const repoRoot = process.cwd();
-<<<<<<< HEAD
-  const srcDirs = [path.join(repoRoot,
-  'pages'), path.join(repoRoot,
-  'src'), path.join(repoRoot,
-  'components')];
-=======
-  const srcDirs = [
-    path.join(repoRoot, 'pages'),
-    path.join(repoRoot, 'src'),
-    path.join(repoRoot, 'components'),
-  ];
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   const index = [];
   for (const dir of srcDirs) {
     if (!fs.existsSync(dir)) continue;
     for (const file of walk(dir)) {
       try {
         const rel = path.relative(repoRoot, file);
-<<<<<<< HEAD
-        const content = fs.readFileSync(file,
-  'utf8');
-        const titleMatch = content.match(/export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/);
-        const title = titleMatch ? (titleMatch[1] || titleMatch[2]) : path.basename(file);
-=======
-        const content = fs.readFileSync(file, 'utf8');
-        const titleMatch = content.match(
-          /export\s+default\s+function\s+(\w+)|export\s+const\s+(\w+)/
-        );
-        const title = titleMatch
-          ? titleMatch[1] || titleMatch[2]
-          : path.basename(file);
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         index.push({ file: rel, title });
       } catch {}
     }
@@ -66,21 +35,7 @@ function main() {
   const outDir = path.join(repoRoot,
   'public');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
-<<<<<<< HEAD
-  const outPath = path.join(outDir,
-  'search-index.json');
-  fs.writeFileSync(outPath, JSON.stringify({ generatedAt: new Date().toISOString(), items: index }, null, 2));
-=======
-  const outPath = path.join(outDir, 'search-index.json');
-  fs.writeFileSync(
-    outPath,
-    JSON.stringify(
-      { generatedAt: new Date().toISOString(), items: index },
-      null,
-      2
-    )
-  );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
   console.log(`✅ Search index generated: ${outPath} (${index.length} items)`);
 }
 

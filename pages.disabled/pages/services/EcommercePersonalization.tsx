@@ -3,9 +3,9 @@
 const EcommercePersonalization: React.FC = (): JSX.Element => {}
   return()
 :pages.disabled/pages/services/EcommercePersonalization.tsx
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"<SEO""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO""
@@ -21,9 +21,9 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
           <span className="text-sm font-semibold">E‑COMMERCE PERSONALIZATION</span>"
         </div>""
         <h1 className="text-4xl font-bold">Turn browsers into buyers with AI personalization</h1>""
-<<<<<<< HEAD
+
         <p className="mt-3 text-slate-300 max-w-2xl">Realtime product recommendations, cross‑sells, and bundles that adapt to user behavior and inventory. Built‑in experimentation and guardrails.</p>"""
-=======
+
         <p className="mt-3 text-slate-300 max-w-2xl">Realtime product recommendations, cross‑sells, and bundles that adapt to user behavior and inventory. Built‑in experimentation and guardrails.</p>"
           <span className="text-sm font-semibold">E‑COMMERCE PERSONALIZATION</span>
         </div>""
@@ -40,9 +40,9 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
               <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Price sensitivity nudges</li>""
               <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Merchandiser controls</li>
 :pages.disabled/pages/services/EcommercePersonalization.tsx
-<<<<<<< HEAD
+
             </ul>"</div>""
-=======
+
             </ul>"
             </ul>
           </div>""
@@ -56,9 +56,9 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
             </ul>""
             <div className="mt-4 text-sm font-semibold text-cyan-300">Pricing: $249–$1,499/month</div>;
           </div>;
-<<<<<<< HEAD
+
         </div>;";""
-=======
+
         </div>;"
               <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300" /> +3–8% conversion rate</li>"              <li className="flex items-center gap-2"><BarChart3 className="h-4 w-4 text-cyan-300"/> Experiment results dashboard</li>
             </ul>""
@@ -74,10 +74,10 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
 ;
 :pages.disabled/pages/services/EcommercePersonalization.tsx
 export { EcommercePersonalization };"
-<<<<<<< HEAD
+
 export default EcommercePersonalization}
   '"'"
-=======
+
 export default EcommercePersonalization}'"'"
 export { EcommercePersonalization };
 export default EcommercePersonalization}'""

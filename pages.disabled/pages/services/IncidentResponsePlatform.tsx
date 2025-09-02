@@ -14,9 +14,9 @@ export default function IncidentResponsePlatform(...args: []):  {}
           </div>""
           <div className="rounded-xl border border-slate-700 bg-slate-800/50 p-6">""
             <h3 className="font-semibold mb-2">Automated Playbooks</h3>""
-<<<<<<< HEAD
+
             <p className="text-slate-300 text-sm">Respond consistently with reusable workflows and approvals.</p>"</div>""
-=======
+
             <p className="text-slate-300 text-sm">Respond consistently with reusable workflows and approvals.</p>"
             <h3 className="font-semibold mb-2">Real-time Detection</h3>"            <p className="text-slate-300 text-sm">Stream alerts from SIEM, EDR, and cloud platforms with AI-powered correlation.</p>
           </div>""
@@ -33,10 +33,10 @@ export default function IncidentResponsePlatform(...args: []):  {}
       </div>;
 :pages.disabled/pages/services/IncidentResponsePlatform.tsx
     </div>;"
-<<<<<<< HEAD
+
   )}
   '"'"
-=======
+
   )}'"'"
     </div>;
   )}'""

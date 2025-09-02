@@ -1,9 +1,9 @@
-<<<<<<< HEAD
+
 import React from
   'react';'
 import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network, Link } from
   'lucide-react';
-=======
+
 import React from 'react';'
 import { Brain, Zap, Shield, Users, Cpu, Database, Lightbulb, BarChart3, Network, Link } from 'lucide-react';
 >>>>>>> pr-10728
@@ -57,9 +57,8 @@ const AIAutonomousEcosystem = () => {
             icon: Cpu,""
             capabilities: ["System monitoring", "Configuration management", "User administration", "Deployment control"]
 
-<<<<<<< HEAD
     ];"const benefits = [""
-=======
+
     ];"
 const AIAutonomousEcosystem = () => {}
     const ecosystemComponents = []
@@ -159,9 +158,9 @@ const AIAutonomousEcosystem = () => {}
             duration: "2-4 weeks"
 "
     ];""
-<<<<<<< HEAD
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
         "Enhanced security and compliance posture""
     ];
@@ -223,9 +222,9 @@ const AIAutonomousEcosystem = () => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <a href="#features" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
                 Explore Features"</a>""
-=======
+
                 Explore Features"
               AI Ecosystem Solution;
             </div>""
@@ -250,9 +249,9 @@ const AIAutonomousEcosystem = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
 "{/* Ecosystem Features */}""
-=======
+
 "
 
       {/* Ecosystem Features */}""
@@ -262,9 +261,9 @@ const AIAutonomousEcosystem = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
               Ecosystem Features"</h2>""
-=======
+
               Ecosystem Features"
               Ecosystem Features;
             </h2>""
@@ -274,9 +273,9 @@ const AIAutonomousEcosystem = () => {}
               seamless integration and optimal performance across all systems.
             </p>
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -285,9 +284,9 @@ const AIAutonomousEcosystem = () => {}
             {ecosystemFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
                   <feature.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <feature.icon className="w-8 h-8 text-white"/>"
                   <feature.icon className="w-8 h-8 text-white"/>
                 </div>""
@@ -305,9 +304,9 @@ const AIAutonomousEcosystem = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
 "{/* Ecosystem Components */}""
-=======
+
 "
 
       {/* Ecosystem Components */}""
@@ -317,9 +316,9 @@ const AIAutonomousEcosystem = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
               Ecosystem Components"</h2>""
-=======
+
               Ecosystem Components"
               Ecosystem Components;
             </h2>""
@@ -329,9 +328,9 @@ const AIAutonomousEcosystem = () => {}
               to create a powerful AI ecosystem.
             </p>
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -340,9 +339,9 @@ const AIAutonomousEcosystem = () => {}
             {ecosystemComponents.map((component, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
                   <component.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <component.icon className="w-8 h-8 text-white"/>"
                   <component.icon className="w-8 h-8 text-white"/>
                 </div>""
@@ -371,9 +370,9 @@ const AIAutonomousEcosystem = () => {}
               </h2>""
               <p className="text-lg text-gray-300 mb-6">
                 Our AI Autonomous Ecosystem provides a unified approach to AI
-<<<<<<< HEAD
+
                 implementation that delivers measurable business value."</p>""
-=======
+
                 implementation that delivers measurable business value."
 
       {/* Benefits Section */}""
@@ -395,9 +394,9 @@ const AIAutonomousEcosystem = () => {}
                     {benefit}
                   </li>))}
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
               </ul>"</div>""
-=======
+
               </ul>"
               </ul>
             </div>""
@@ -409,9 +408,9 @@ const AIAutonomousEcosystem = () => {}
                 <p className="text-gray-300 mb-6">
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
                   Connect all your AI systems into one intelligent ecosystem
-<<<<<<< HEAD
+
                   that learns and adapts together."</p>""
-=======
+
                   that learns and adapts together."
                   Connect all your AI systems into one intelligent ecosystem;
                   that learns and adapts together.
@@ -428,9 +427,9 @@ const AIAutonomousEcosystem = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
 "{/* Implementation Process */}""
-=======
+
 "
 
       {/* Implementation Process */}""
@@ -439,9 +438,9 @@ const AIAutonomousEcosystem = () => {}
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
             Implementation Process"</h2>""
-=======
+
             Implementation Process"
             Implementation Process;
           </h2>""
@@ -450,9 +449,9 @@ const AIAutonomousEcosystem = () => {}
             A structured approach to building and deploying your AI ecosystem;
             with minimal disruption to existing operations.
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
           </p>"""
-=======
+
           </p>"
           </p>
 ""
@@ -461,9 +460,9 @@ const AIAutonomousEcosystem = () => {}
             {implementation.map((phase, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
                   {index + 1}"</div>""
-=======
+
                   {index + 1}"
                   {index + 1}
                 </div>""
@@ -476,9 +475,9 @@ const AIAutonomousEcosystem = () => {}
         </div>
       </section>
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -495,9 +494,9 @@ const AIAutonomousEcosystem = () => {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
               Start Building"</a>""
-=======
+
               Start Building"
             Ready to Build Your AI Ecosystem?
           </h2>""
@@ -521,10 +520,10 @@ const AIAutonomousEcosystem = () => {}
 export { AIAutonomousEcosystem };
 :pages.disabled/solutions/AIAutonomousEcosystem.jsx
 export default AIAutonomousEcosystem;'"
-<<<<<<< HEAD
+
 }}}}
   '"'"
-=======
+
 }}}}'"'"
 export default AIAutonomousEcosystem;
 }}}}'""

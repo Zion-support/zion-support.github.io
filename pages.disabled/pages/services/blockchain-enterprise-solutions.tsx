@@ -9,9 +9,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
       </Helmet>"
 ""
-<<<<<<< HEAD
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""
-=======
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       </Helmet>
 ""
@@ -30,9 +30,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
                 Blockchain""
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> Enterprise</span>
-<<<<<<< HEAD
+
               </h1>"""
-=======
+
               </h1>"
                 <Lock className="w-4 h-4 mr-2"  />                Enterprise Blockchain Solutions;
               </div>
@@ -58,9 +58,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   <ArrowRight className="ml-2 w-5 h-5"  />"
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200">""
-<<<<<<< HEAD
+
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo</button>
-=======
+
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo
               </p>
 ""
@@ -80,9 +80,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
           </div>
         </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
         {/* Features Section */}""
@@ -92,9 +92,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
                 Enterprise Blockchain Capabilities"</h2>""
-=======
+
                 Enterprise Blockchain Capabilities"
                 Enterprise Blockchain Capabilities;
               </h2>""
@@ -147,9 +147,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD
+
                     <feature.icon className="w-6 h-6 text-white" />"</div>""
-=======
+
                     <feature.icon className="w-6 h-6 text-white" />"
             </div>
 ""
@@ -199,9 +199,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
           </div>
         </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
         {/* Use Cases Section */}""
@@ -211,9 +211,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
                 Blockchain Use Cases"</h2>""
-=======
+
                 Blockchain Use Cases"
                 Blockchain Use Cases;
               </h2>""
@@ -281,9 +281,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>""
                   <p className="text-slate-300 mb-4">{useCase.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-1">"{useCase.benefits.map((benefit, benefitIndex) => (""
-=======
+
                   <ul className="space-y-1">"
             </div>
 ""
@@ -352,9 +352,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
           </div>
         </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
 "{/* Technology Stack Section */}""
-=======
+
 "
 
         {/* Technology Stack Section */}""
@@ -364,9 +364,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
                 Advanced Blockchain Technology"</h2>""
-=======
+
                 Advanced Blockchain Technology"
                 Advanced Blockchain Technology;
               </h2>""
@@ -379,9 +379,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
-<<<<<<< HEAD
+
                 <div className="space-y-6">"{[""
-=======
+
                 <div className="space-y-6">"
             </div>
 ""
@@ -407,9 +407,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">Blockchain Types</h3>""
-<<<<<<< HEAD
+
                 <div className="space-y-4">"{[""
-=======
+
                 <div className="space-y-4">"
               </div>
 ""
@@ -427,9 +427,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                     <div key={index} className="flex items-center space-x-3">"
                       <div className={`w-8 h-8 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center`}>""
                         <item.icon className="w-4 h-4 text-white" />
-<<<<<<< HEAD
+
                       </div>"<div>""
-=======
+
                       </div>"
                     { type: "Hybrid", icon: LinkIcon, color: "from-orange-500 to-red-500", description: "Combination of public and private" }
                   ].map((item, index)  => (""
@@ -450,9 +450,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
           </div>
         </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
 "{/* DeFi Solutions Section */}""
-=======
+
 "
 
         {/* DeFi Solutions Section */}""
@@ -462,9 +462,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
                 DeFi Enterprise Solutions"</h2>""
-=======
+
                 DeFi Enterprise Solutions"
                 DeFi Enterprise Solutions;
               </h2>""
@@ -478,9 +478,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">"
               <div>""
                 <h3 className="text-2xl font-semibold text-white mb-6">DeFi Applications</h3>""
-<<<<<<< HEAD
+
                 <div className="space-y-4">"{[""
-=======
+
                 <div className="space-y-4">"
             </div>
 ""
@@ -507,9 +507,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 "
               <div>""
                 <h3 className="text-2xl font-semibold text-white mb-6">Enterprise Benefits</h3>""
-<<<<<<< HEAD
+
                 <div className="space-y-4">"{[""
-=======
+
                 <div className="space-y-4">"
 
               <div>""
@@ -534,9 +534,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
           </div>
         </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
 "{/* Implementation Process Section */}""
-=======
+
 "
 
         {/* Implementation Process Section */}""
@@ -546,9 +546,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
                 Implementation Process"</h2>""
-=======
+
                 Implementation Process"
                 Implementation Process;
               </h2>""
@@ -592,9 +592,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"</div>""
-=======
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"
             </div>
 ""
@@ -638,9 +638,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
           </div>
         </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
         {/* CTA Section */}""
@@ -663,9 +663,9 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 <ArrowRight className="ml-2 w-5 h-5"  />              </Link>"
               <Link""
                 to="/services""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200">
-=======
+
                 className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200"
               Ready to Transform Your Business with Blockchain?
             </h2>""

@@ -66,10 +66,10 @@ class AutoFixer {
   'Checking for merge conflicts...');
       
       // Find files with merge conflict markers
-<<<<<<< HEAD
+
       const conflictFiles = execSync(
   'grep -r "" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {
-=======
+
       const conflictFiles = execSync('grep -r "" src/ --include="*.ts" --include="*.tsx" --include="*.js" --include="*.jsx" -l || true', {
 >>>>>>> pr-10728
         cwd: this.projectRoot,
@@ -116,11 +116,11 @@ class AutoFixer {
     
     // Simple merge conflict resolution - keep HEAD version and remove markers
     let fixed = content
-<<<<<<< HEAD
+
       .replace(/\n/g, '
   ')
       .replace(/.replace(/// Clean up any remaining artifacts
-=======
+
       .replace(/\n/g, '')
       .replace(/\n[\s\S]*?      .replace(/    
     // Clean up any remaining artifacts

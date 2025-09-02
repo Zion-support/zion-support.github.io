@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 export const AIChatbot = ({ welcomeMessage = "Hello! I"m Zion Tech Group"s AI assistant.How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 1000 }) => { const { trackEvent } = useAnalytics({ ";"
-=======
+
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Sparkles } from 'lucide-react';

@@ -23,9 +23,8 @@ import {}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
 const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {
 
-<<<<<<< HEAD
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
+
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -56,9 +55,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900"
               >"
                 Start Optimizing Today""
-<<<<<<< HEAD
+
                 <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200"  />              </Link>"<a""
-=======
+
                 <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200"  />              </Link>"
             transition={{ duration: 0.8 }}
           >""
@@ -85,9 +84,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-900""
               >""
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
                 <Phone className="w-5 h-5 mr-2 inline-block"  />                Call Now</a>
-=======
+
                 <Phone className="w-5 h-5 mr-2 inline-block"  />                Call Now
                 <Phone className="w-5 h-5 mr-2 inline-block"  />                Call Now;
               </a>
@@ -97,9 +96,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -110,9 +109,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -121,9 +120,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
               Intelligent Process Optimization Features"</h2>""
-=======
+
               Intelligent Process Optimization Features"
               Intelligent Process Optimization Features;
             </h2>""
@@ -133,9 +132,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
               optimize, and continuously improve your business processes.
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -147,9 +146,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -161,9 +160,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-bold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -180,9 +179,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -193,9 +192,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -204,9 +203,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
               Transform Your Business Operations"</h2>""
-=======
+
               Transform Your Business Operations"
               Transform Your Business Operations;
             </h2>""
@@ -216,9 +215,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
               and operational excellence.
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -230,9 +229,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -246,9 +245,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -259,9 +258,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -270,9 +269,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
               Industry Applications"</h2>""
-=======
+
               Industry Applications"
               Industry Applications;
             </h2>""
@@ -282,9 +281,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
               diverse industries and business functions.
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -296,9 +295,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -312,9 +311,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                   </div>""
                   <h3 className="text-2xl font-bold text-white">
                     {useCase.title}
-<<<<<<< HEAD
+
                   </h3>"</div>""
-=======
+
                   </h3>"
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>""
@@ -332,9 +331,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -345,9 +344,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -356,9 +355,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
               Flexible Pricing Plans"</h2>""
-=======
+
               Flexible Pricing Plans"
               Flexible Pricing Plans;
             </h2>""
@@ -368,9 +367,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
               needs.
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -384,7 +383,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${,
   plan.popular''
                     ?
@@ -392,7 +391,7 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
   '`: 'border-white/20``
                 }`}
               >"{plan.popular && (""
-=======
+
                 className={`relative bg-white/10 backdrop-blur-sm border rounded-2xl p-8 ${
 '
                   plan.popular''
@@ -418,9 +417,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
 ""
                 <div className="text-center mb-8">""
                   <h3 className="text-2xl font-bold text-white mb-2">
-<<<<<<< HEAD
+
                     {plan.name}"</h3>""
-=======
+
                     {plan.name}"
                 )}
 ""
@@ -439,9 +438,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                   </div>
                 </div>"
 ""
-<<<<<<< HEAD
+
                 <ul className="space-y-4 mb-8">"{plan.features.map((feature, idx) => (""
-=======
+
                 <ul className="space-y-4 mb-8">"
                       {plan.price}
                     </span>""
@@ -457,9 +456,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                     </li>
                   ))}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
                 </ul>"""
-=======
+
                 </ul>"
                 </ul>
 ""
@@ -473,9 +472,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
 "{/* ROI Section */}""
-=======
+
 "
 
       {/* ROI Section */}""
@@ -486,9 +485,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -497,9 +496,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
               Proven Return on Investment"</h2>""
-=======
+
               Proven Return on Investment"
               Proven Return on Investment;
             </h2>""
@@ -509,9 +508,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
               operational efficiency and cost reduction.
             </p>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -523,9 +522,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -537,9 +536,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                   {metric.improvement}"
                 </div>""
                 <h3 className="text-lg font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {metric.metric}"</h3>""
-=======
+
                   {metric.metric}"
                   {metric.improvement}
                 </div>""
@@ -554,9 +553,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Contact Section */}""
-=======
+
 "
 
       {/* Contact Section */}""
@@ -578,9 +577,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
   's discuss how our AI-powered process optimization can
               transform your operations and drive measurable results for your
               business.
-<<<<<<< HEAD
+
             </p>"""
-=======
+
             </p>"
             viewport={{ once: true }}
           >""
@@ -602,9 +601,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
               </div>""
               <div className="flex items-center justify-center space-x-3 text-white">""
                 <Mail className="w-5 h-5 text-blue-400"  />
-<<<<<<< HEAD
+
                 <span>kleber@ziontechgroup.com</span>"</div>""
-=======
+
                 <span>kleber@ziontechgroup.com</span>"
                 <span>+1 302 464 0950</span>
               </div>""
@@ -625,9 +624,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold text-lg rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
               >"
                 Schedule a Consultation""
-<<<<<<< HEAD
+
                 <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200"  />              </Link>"<a""
-=======
+
                 <ArrowRight className="w-5 h-5 ml-2 inline-block group-hover:translate-x-1 transition-transform duration-200"  />              </Link>"
             </div>
 ""
@@ -644,9 +643,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
                 className="group px-8 py-4 bg-white/10 backdrop-blur-sm border border-blue-400/30 text-white font-bold text-lg rounded-xl transition-all duration-300 hover:bg-white/20 hover:border-blue-400/50""
               >""
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
                 <Phone className="w-5 h-5 mr-2 inline-block"  />                Call Now</a>
-=======
+
                 <Phone className="w-5 h-5 mr-2 inline-block"  />                Call Now
                 <Phone className="w-5 h-5 mr-2 inline-block"  />                Call Now;
               </a>
@@ -656,9 +655,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessProcessOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Footer */}""
-=======
+
 "
 
       {/* Footer */}""
@@ -677,9 +676,9 @@ const AIBusinessProcessOptimization: React.FC = (): JSX.Element => {}
           <div className="mt-4 text-sm text-gray-500">"
             <a""
               href="https://ziontechgroup.com""
-<<<<<<< HEAD
+
               className="hover:text-blue-400 transition-colors">
-=======
+
               className="hover:text-blue-400 transition-colors"
             <Star className="w-5 h-5 text-purple-400"  />
           </div>"          <p className="text-gray-400">

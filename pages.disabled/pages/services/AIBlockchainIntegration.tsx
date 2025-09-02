@@ -29,9 +29,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {
         title="AI Blockchain Integration - Zion Tech Group""
         description="Revolutionary AI-powered blockchain integration platform for secure, intelligent, and automated blockchain operations."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 export default function AIBlockchainIntegration(...args: any[]): any {}
   return()
@@ -65,9 +65,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
-=======
+
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
             transition={{ duration: 0.8 }}
           >""
@@ -94,9 +94,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300">
-=======
+
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300"
               <motion.button;
                 whileHover={{ scale: 1.05 }}
@@ -111,9 +111,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -123,9 +123,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -134,9 +134,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
               Revolutionary Features"</h2>""
-=======
+
               Revolutionary Features"
               Revolutionary Features;
             </h2>""
@@ -147,9 +147,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
               unprecedented capabilities.
             </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -160,9 +160,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -174,9 +174,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -191,9 +191,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -203,9 +203,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -214,9 +214,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
               Why Choose AI Blockchain Integration?"</h2>""
-=======
+
               Why Choose AI Blockchain Integration?"
               Why Choose AI Blockchain Integration?
             </h2>""
@@ -226,9 +226,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
               and enhanced security.
             </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -239,9 +239,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -255,9 +255,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -267,9 +267,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -278,9 +278,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
               Transparent Pricing"</h2>""
-=======
+
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
@@ -290,9 +290,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
               our core AI features.
             </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -305,7 +305,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${,
   index === 1''
                     ?
@@ -313,7 +313,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
   '`: 'border-slate-600/50``
                 } relative`}
               >"{index === 1 && (""
-=======
+
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
 '
                   index === 1''
@@ -349,9 +349,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                   </div>
                 </div>"
 ""
-<<<<<<< HEAD
+
                 <ul className="space-y-4 mb-8">"{plan.features.map((feature, featureIndex) => (""
-=======
+
                 <ul className="space-y-4 mb-8">"
                 )}
 ""
@@ -380,14 +380,14 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}`
                   whileTap={{ scale: 0.95 }}``
-<<<<<<< HEAD
+
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
   index === 1'
   '
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: shadow-lg hover:shadow-cyan-500/25''
   '`
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10``}`}
-=======
+
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 '
                     index === 1''
@@ -411,9 +411,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -437,9 +437,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300">
-=======
+
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
             transition={{ duration: 0.8 }}
           >""
@@ -463,9 +463,9 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300">
-=======
+
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300"
               <motion.button;
                 whileHover={{ scale: 1.05 }}

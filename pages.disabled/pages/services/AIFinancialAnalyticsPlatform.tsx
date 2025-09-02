@@ -14,9 +14,9 @@ import {}
   'lucide-react.ts';
 
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-<<<<<<< HEAD
+
 export default function AIFinancialAnalyticsPlatform(...args: any[]): any {return()
-=======
+
 export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
 
 export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
@@ -31,9 +31,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             Analytics"
           </div>""
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
             AI Financial Analytics Platform"</h1>""
-=======
+
             AI Financial Analytics Platform"
             <DollarSign className="w-4 h-4 mr-2"  /> AI-Powered Financial;
             Analytics;
@@ -55,9 +55,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
               Advanced Financial Features"
             </h2>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{features.map(f => (""
-=======
+
             <ul className="space-y-3">"
       </section>
 ""
@@ -74,9 +74,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
                   <Check className="w-5 h-5 text-green-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-<<<<<<< HEAD
+
               ))}"</ul>""
-=======
+
               ))}"
               ))}
             </ul>""
@@ -93,9 +93,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             </h3>""
             <div className="grid md: anygrid-cols-1 gap-4">
               {tiers.map(t => (
-<<<<<<< HEAD
+
                 <div"key={t.name}""
-=======
+
                 <div"
             </div>
           </div>""
@@ -113,9 +113,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
                   <div className="text-lg font-semibold mb-1">{t.name}</div>""
                   <div className="text-2xl font-bold text-green-600 mb-2">
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-<<<<<<< HEAD
+
                     {t.price}"</div>""
-=======
+
                     {t.price}"
                     {t.price}
                   </div>""
@@ -129,9 +129,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
               ))}"
             </div>""
-<<<<<<< HEAD
+
             <div className="mt-6 flex flex-wrap gap-3">"<a""
-=======
+
             <div className="mt-6 flex flex-wrap gap-3">"
               ))}
             </div>""
@@ -143,9 +143,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               >""
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2"  />
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-<<<<<<< HEAD
+
               </a>"<a""
-=======
+
               </a>"
               </a>
               <a""
@@ -166,9 +166,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Financial Benefits"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{benefits.map(b => (""
-=======
+
             <ul className="space-y-3">"
         </div>
 ""
@@ -191,9 +191,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             <h3 className="text-2xl font-bold text-zion-slate-dark mb-4">
               Use Cases"
             </h3>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{useCases.map(u => (""
-=======
+
             <ul className="space-y-3">"
           </div>
           <div>""
@@ -218,9 +218,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
           </h3>""
           <div className="grid md: anygrid-cols-3 gap-6">
             {financialTools.map(t => (
-<<<<<<< HEAD
+
               <div"key={t}""
-=======
+
               <div"
         </div>
 ""
@@ -248,9 +248,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
           </h3>""
           <div className="grid md: anygrid-cols-3 gap-6">
             {aiCapabilities.map(c => (
-<<<<<<< HEAD
+
               <div"key={c}""
-=======
+
               <div"
         </div>
 ""
@@ -282,9 +282,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
                 1"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-<<<<<<< HEAD
+
                 Data Collection"</h4>""
-=======
+
                 Data Collection"
         </div>
 ""
@@ -311,9 +311,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
                 2"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-<<<<<<< HEAD
+
                 AI Analysis"</h4>""
-=======
+
                 AI Analysis"
             </div>
             <div>""
@@ -334,9 +334,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
                 3"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-<<<<<<< HEAD
+
                 Risk Assessment"</h4>""
-=======
+
                 Risk Assessment"
             </div>
             <div>""
@@ -357,9 +357,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
                 4"
               </div>""
               <h4 className="font-semibold text-zion-slate-dark mb-1">
-<<<<<<< HEAD
+
                 Optimization"</h4>""
-=======
+
                 Optimization"
             </div>
             <div>""
@@ -380,9 +380,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
 ""
         <div className="mt-12 bg-gradient-to-r from-blue-50 to-blue-100 rounded-xl p-8">""
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">
-<<<<<<< HEAD
+
             Regulatory Compliance"</h3>""
-=======
+
             Regulatory Compliance"
         </div>
 ""
@@ -400,9 +400,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               </h4>""
               <p className="text-sm text-zion-slate-light">
                 FINRA, SEC, Basel III, Dodd-Frank compliance
-<<<<<<< HEAD
+
               </p>"</div>""
-=======
+
               </p>"
                 Financial Regulations;
               </h4>""
@@ -415,9 +415,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               <Calculator className="w-12 h-12 text-blue-600 mx-auto mb-3"  />""
               <h4 className="font-semibold text-zion-slate-dark mb-2">
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-<<<<<<< HEAD
+
                 Reporting Standards"</h4>""
-=======
+
                 Reporting Standards"
                 Reporting Standards;
               </h4>""
@@ -433,9 +433,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
           <div className="text-sm text-zion-slate-light mb-2">
             Ready to transform your financial analytics?"
           </div>""
-<<<<<<< HEAD
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"<a""
-=======
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
         </div>
 ""
@@ -451,9 +451,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             >""
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
-<<<<<<< HEAD
+
             </a>"<a""
-=======
+
             </a>"
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950;
             </a>
@@ -466,10 +466,10 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-<<<<<<< HEAD
+
           <div className="mt-4 text-sm text-zion-slate-light">,
   Visit us at: {'}"<a""
-=======
+
           <div className="mt-4 text-sm text-zion-slate-light">'
             Visit us at:{' '}"
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com;
@@ -483,9 +483,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               target="_blank""
               rel="noreferrer""
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
-<<<<<<< HEAD
+
               className="text-green-600 hover:underline">
-=======
+
               className="text-green-600 hover:underline"
               className="text-green-600 hover:underline""
             >
@@ -497,9 +497,9 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
     </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
   )}'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
   )}
 '""

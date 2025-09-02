@@ -319,17 +319,9 @@ import {}
   CloudSleet10} from
   'lucide-react.ts';
 
-<<<<<<< HEAD
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"{/* Hero Section */}""
-=======
 
-  
-  
-  
-  
-  
-  
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
@@ -340,9 +332,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -380,9 +372,9 @@ import {}
                 whileTap={{ scale: 0.95 }}""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200""
               >""
-<<<<<<< HEAD
+
                 <Settings className="w-5 h-5 mr-2"  />                Start Free Trial</motion.button>
-=======
+
                 <Settings className="w-5 h-5 mr-2"  />                Start Free Trial
               <Sparkles className="w-4 h-4 mr-2"  />              AI-Powered Financial Compliance Platform;
             </div>""
@@ -419,9 +411,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Key Metrics Section */}""
-=======
+
 "
 
       {/* Key Metrics Section */}""
@@ -434,9 +426,9 @@ import {}
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, scale: 1 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, scale: 1 }}"
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -445,9 +437,9 @@ import {}
               >""
                 <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                   {item.metric}"</div>""
-=======
+
                   {item.metric}"
                   {item.metric}
                 </div>""
@@ -461,9 +453,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -473,9 +465,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -484,9 +476,9 @@ import {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
               Advanced AI-Powered Features"</h2>""
-=======
+
               Advanced AI-Powered Features"
               Advanced AI-Powered Features;
             </h2>""
@@ -496,9 +488,9 @@ import {}
               compliance methodologies;
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -509,9 +501,9 @@ import {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -523,9 +515,9 @@ import {}
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -540,9 +532,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -552,9 +544,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -563,9 +555,9 @@ import {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
               Measurable Business Impact"</h2>""
-=======
+
               Measurable Business Impact"
               Measurable Business Impact;
             </h2>""
@@ -574,9 +566,9 @@ import {}
               See real results with our AI-powered financial compliance platform;
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -587,9 +579,9 @@ import {}
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -603,9 +595,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -615,9 +607,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -626,9 +618,9 @@ import {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
               Industry Solutions"</h2>""
-=======
+
               Industry Solutions"
               Industry Solutions;
             </h2>""
@@ -638,9 +630,9 @@ import {}
               requirements;
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -651,9 +643,9 @@ import {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -662,9 +654,9 @@ import {}
               >""
                 <h3 className="text-xl font-semibold text-white mb-3">
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                   {useCase.industry}"</h3>""
-=======
+
                   {useCase.industry}"
                   {useCase.industry}
                 </h3>""
@@ -676,9 +668,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Regulations Section */}""
-=======
+
 "
 
       {/* Regulations Section */}""
@@ -688,9 +680,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -699,9 +691,9 @@ import {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
               Comprehensive Regulation Coverage"</h2>""
-=======
+
               Comprehensive Regulation Coverage"
               Comprehensive Regulation Coverage;
             </h2>""
@@ -710,9 +702,9 @@ import {}
               Stay compliant with all major financial regulations and standards;
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -723,9 +715,9 @@ import {}
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, scale: 1 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, scale: 1 }}"
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -741,9 +733,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -753,9 +745,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -764,9 +756,9 @@ import {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
               Transparent Pricing"</h2>""
-=======
+
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
@@ -776,9 +768,9 @@ import {}
               grow;
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -791,13 +783,13 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${,
   index === 1'
   '
                     ? 'border-purple-500/50 bg-gradient-to-b from-purple-500/10 to-transparent''
   '`: 'border-zion-slate-light/20``
-=======
+
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
 '
                   index === 1''
@@ -812,9 +804,9 @@ import {}
                   </h3>""
                   <div className="text-4xl font-bold text-white mb-2">
                     {plan.price}
-<<<<<<< HEAD
+
                   </div>"{index === 1 && (""
-=======
+
                   </div>"
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${}
                   index === 1'
@@ -839,9 +831,9 @@ import {}
                 </div>""
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <li"key={featureIndex}""
-=======
+
                     <li"
                   )}
                 </div>""
@@ -855,9 +847,9 @@ import {}
                       <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />"                      <span className="text-zion-slate-light">{feature}</span>
                     </li>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                   ))}"</ul>""
-=======
+
                   ))}"
                   ))}
                 </ul>""
@@ -871,9 +863,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Integrations Section */}""
-=======
+
 "
 
       {/* Integrations Section */}""
@@ -883,9 +875,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -894,9 +886,9 @@ import {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
               Seamless Integrations"</h2>""
-=======
+
               Seamless Integrations"
               Seamless Integrations;
             </h2>""
@@ -906,9 +898,9 @@ import {}
               platforms;
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -919,9 +911,9 @@ import {}
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, scale: 1 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, scale: 1 }}"
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -937,9 +929,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -972,9 +964,9 @@ import {}
                 whileTap={{ scale: 0.95 }}""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200""
               >""
-<<<<<<< HEAD
+
                 <MessageSquare className="w-5 h-5 mr-2"  />                Schedule Demo</motion.button>
-=======
+
                 <MessageSquare className="w-5 h-5 mr-2"  />                Schedule Demo
             transition={{ duration: 0.8 }}
           >""
@@ -1006,9 +998,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
 "{/* Contact Section */}""
-=======
+
 "
 
       {/* Contact Section */}""
@@ -1030,9 +1022,9 @@ import {}
             </p>""
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">""
               <div className="flex items-center justify-center space-x-3">""
-<<<<<<< HEAD
+
                 <Phone className="w-6 h-6 text-purple-400"  />"                <span className="text-zion-slate-light">+1 302 464 0950</span>"</div>""
-=======
+
                 <Phone className="w-6 h-6 text-purple-400"  />"                <span className="text-zion-slate-light">+1 302 464 0950</span>"
             transition={{ duration: 0.8 }}
           >""
@@ -1053,9 +1045,9 @@ import {}
                 <span className="text-zion-slate-light">
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
                   kleber@ziontechgroup.com
-<<<<<<< HEAD
+
                 </span>"</div>""
-=======
+
                 </span>"
                   kleber@ziontechgroup.com;
                 </span>
@@ -1070,9 +1062,9 @@ import {}
                 </span>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
               </div>"
-<<<<<<< HEAD
+
             </div>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">"<a""
-=======
+
             </div>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               </div>
             </div>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -1083,9 +1075,9 @@ import {}
               >""
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
                 <ArrowRight className="w-5 h-5 mr-2"  />                Contact Us
-<<<<<<< HEAD
+
               </a>"<a""
-=======
+
               </a>"
                 <ArrowRight className="w-5 h-5 mr-2"  />                Contact Us;
               </a>
@@ -1095,9 +1087,9 @@ import {}
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200""
               >""
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-<<<<<<< HEAD
+
                 <Globe className="w-5 h-5 mr-2"  />                Visit Website</a>
-=======
+
                 <Globe className="w-5 h-5 mr-2"  />                Visit Website
                 <Globe className="w-5 h-5 mr-2"  />                Visit Website;
               </a>

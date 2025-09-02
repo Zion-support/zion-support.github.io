@@ -6,9 +6,9 @@
         <h1 className="text-4xl font-bold mb-4">Healthcare Solutions</h1>""
         <p className="text-slate-300">Healthcare technology solutions to improve outcomes and operations.</p>
 :pages.disabled/pages/Healthcare.tsx
-<<<<<<< HEAD
+
       </div>"</div>""
-=======
+
       </div>"
       </div>
     </div>""
@@ -24,9 +24,9 @@
   );
 :pages.disabled/pages/Healthcare.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

@@ -39,14 +39,9 @@ import {}
   Lock} from
   'lucide-react';
 
-<<<<<<< HEAD
 :pages.disabled/pages/services/CloudDevOps.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
 
-  
-  
-  
 :pages.disabled/pages/services/CloudDevOps.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -58,9 +53,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -74,7 +69,7 @@ import {}
 ""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               Cloud""
-<<<<<<< HEAD
+
               <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">
   '{' 
   '}
@@ -82,7 +77,7 @@ import {}
               </span>
 :pages.disabled/pages/services/CloudDevOps.tsx
             </h1>"""
-=======
+
               <span className="bg-gradient-to-r from-blue-400 to-cyan-500 bg-clip-text text-transparent">'
               Cloud DevOps            </div>
 ""
@@ -102,9 +97,9 @@ import {}
               Cloud DevOps solutions that enable rapid delivery, scalability,
               and operational excellence.
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
             </p>"""
-=======
+
             </p>"
             </p>
 ""
@@ -116,9 +111,9 @@ import {}
                 Start Free Trial"
               </button>""
               <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200 flex items-center justify-center">""
-<<<<<<< HEAD
+
                 <Settings className="w-5 h-5 mr-2"  />                Schedule Demo</Link>
-=======
+
                 <Settings className="w-5 h-5 mr-2"  />                Schedule Demo
                 Start Free Trial;
               </button>""
@@ -131,9 +126,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -143,9 +138,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -154,9 +149,9 @@ import {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
               Comprehensive DevOps Features"</h2>""
-=======
+
               Comprehensive DevOps Features"
               Comprehensive DevOps Features;
             </h2>""
@@ -173,9 +168,9 @@ import {}
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -194,9 +189,9 @@ import {}
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -211,9 +206,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
 "{/* Services Section */}""
-=======
+
 "
 
       {/* Services Section */}""
@@ -223,9 +218,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -234,9 +229,9 @@ import {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
               Core DevOps Services"</h2>""
-=======
+
               Core DevOps Services"
               Core DevOps Services;
             </h2>""
@@ -253,9 +248,9 @@ import {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
           </motion.div>
 ""
@@ -276,9 +271,9 @@ import {}
                   </div>"
                   <div>""
                     <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                       {service.title}"</h3>""
-=======
+
                       {service.title}"
                   </div>
                   <div>""
@@ -297,9 +292,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -309,9 +304,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -320,9 +315,9 @@ import {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
               Transform Your Operations"</h2>""
-=======
+
               Transform Your Operations"
               Transform Your Operations;
             </h2>""
@@ -340,9 +335,9 @@ import {}
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, x: 0 }}"
           </motion.div>
 ""
@@ -367,9 +362,9 @@ import {}
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, x: 0 }}"
               ))}
             </div>""
@@ -391,9 +386,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -403,9 +398,9 @@ import {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -414,9 +409,9 @@ import {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
               Industry Applications"</h2>""
-=======
+
               Industry Applications"
               Industry Applications;
             </h2>""
@@ -433,9 +428,9 @@ import {}
               <motion.div
                 key={plan.plan}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -451,9 +446,9 @@ import {}
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
                   <Target className="w-8 h-8 text-white"  />"</div>""
-=======
+
                   <Target className="w-8 h-8 text-white"  />"
                   <Target className="w-8 h-8 text-white"  />
                 </div>""
@@ -467,9 +462,9 @@ import {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOps.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -492,9 +487,9 @@ import {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">"
                 Get Started Today""
-<<<<<<< HEAD
+
                 <ArrowRight className="w-5 h-5 ml-2"  />"</button>"              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
-=======
+
                 <ArrowRight className="w-5 h-5 ml-2"  />"
             transition={{ duration: 0.8 }}
           >""
@@ -522,9 +517,9 @@ import {}
 ;
 :pages.disabled/pages/services/CloudDevOps.tsx
 export { CloudDevOps };export default CloudDevOps;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export { CloudDevOps };export default CloudDevOps;
 '""

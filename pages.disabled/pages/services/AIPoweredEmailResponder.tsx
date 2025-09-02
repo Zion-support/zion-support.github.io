@@ -5,9 +5,9 @@
         <header className="mb-10">""
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
             AI-Powered Email Responder"</h1>""
-=======
+
             AI-Powered Email Responder"
             AI-Powered Email Responder;
           </h1>""
@@ -19,9 +19,9 @@
             needed.
           </p>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
         </header>"""
-=======
+
         </header>"
         </header>
 ""
@@ -45,9 +45,9 @@
                   Integrations: Gmail, Outlook 365, Zendesk, HubSpot"
                 </li>""
                 <li className="p-3 rounded-lg bg-slate-800/50">
-<<<<<<< HEAD
+
                   Approval workflows with human-in-the-loop (HITL)"</li>""
-=======
+
                   Approval workflows with human-in-the-loop (HITL)"
                   Intelligent drafting with knowledge-base grounding;
                 </li>""
@@ -73,9 +73,9 @@
 ""
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">
-<<<<<<< HEAD
+
                 Pricing (avg market ranges)"</h2>""
-=======
+
                 Pricing (avg market ranges)"
             </div>
 ""
@@ -96,9 +96,9 @@
                 <li>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
                   Enterprise: Custom — on-prem/VPC, DLP, custom compliance
-<<<<<<< HEAD
+
                 </li>"</ul>""
-=======
+
                 </li>"
                   Enterprise: Custom — on-prem/VPC, DLP, custom compliance;
                 </li>
@@ -109,9 +109,9 @@
                 and AI add-ons.
               </p>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
             </div>"""
-=======
+
             </div>"
             </div>
 ""
@@ -120,9 +120,9 @@
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>""
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -131,9 +131,9 @@
                     href="https://workspace.google.com/marketplace""
                     target="_blank""
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -142,9 +142,9 @@
                   </a>
                 </li>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -153,9 +153,9 @@
                     href="https://learn.microsoft.com/exchange/""
                     target="_blank""
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -164,9 +164,9 @@
                   </a>
                 </li>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -175,9 +175,9 @@
                     href="https://platform.openai.com/docs""
                     target="_blank""
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -186,9 +186,9 @@
                   </a>
                 </li>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
                 <li>"<a""
-=======
+
                 <li>"
                 <li>
                   <a""
@@ -197,9 +197,9 @@
                     href="https://developers.google.com/gmail/api""
                     target="_blank""
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
                     rel="noreferrer">
-=======
+
                     rel="noreferrer"
                     rel="noreferrer""
                   >
@@ -210,9 +210,9 @@
               </ul>
             </div>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -229,9 +229,9 @@
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-white hover:from-cyan-500 hover:to-blue-600"
               >
                 Contact Us
-<<<<<<< HEAD
+
               </a>"</div>""
-=======
+
               </a>"
                 Call +1 302 464 0950 or email kleber@ziontechgroup.com;
               </p>
@@ -258,9 +258,9 @@
   )};
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
 export default AIPoweredEmailResponder;"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default AIPoweredEmailResponder;
 '""

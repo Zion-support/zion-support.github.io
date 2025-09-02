@@ -5,10 +5,10 @@ export default function CommunityRoutes(function CommunityRoutes() {): any {}
       <Route path = "" element={<CommunityPage  />} />;
 :pages.disabled/routes/CommunityRoutes.tsx
     </>"
-<<<<<<< HEAD
+
   )}
   '"'"
-=======
+
   )}'"'"
     </>
   )}'""

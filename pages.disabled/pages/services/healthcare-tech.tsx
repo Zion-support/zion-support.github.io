@@ -9,9 +9,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
 :pages.disabled/pages/services/healthcare-tech.tsx
       </Helmet>"
 ""
-<<<<<<< HEAD
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"{/* Hero Section */}""
-=======
+
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
       </Helmet>
 ""
@@ -30,9 +30,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
                 Healthcare""
                 <span className="bg-gradient-to-r from-pink-400 to-red-500 bg-clip-text text-transparent"> Technology</span>
-<<<<<<< HEAD
+
               </h1>"""
-=======
+
               </h1>"
                 <Heart className="w-4 h-4 mr-2"  />                Healthcare Technology;
               </div>
@@ -58,9 +58,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   <ArrowRight className="ml-2 w-5 h-5"  />"
                 </Link>""
                 <button className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200">""
-<<<<<<< HEAD
+
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo</button>
-=======
+
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo
               </p>
 ""
@@ -80,9 +80,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
         {/* Features Section */}""
@@ -92,9 +92,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
                 Advanced Healthcare Solutions"</h2>""
-=======
+
                 Advanced Healthcare Solutions"
                 Advanced Healthcare Solutions;
               </h2>""
@@ -147,9 +147,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
               ].map((feature, index)  => (""
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:bg-slate-800/70 transition-all duration-300">""
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-red-600 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD
+
                     <feature.icon className="w-6 h-6 text-white" />"</div>""
-=======
+
                     <feature.icon className="w-6 h-6 text-white" />"
             </div>
 ""
@@ -199,9 +199,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
 "{/* Healthcare Applications Section */}""
-=======
+
 "
 
         {/* Healthcare Applications Section */}""
@@ -211,9 +211,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
                 Healthcare Technology Applications"</h2>""
-=======
+
                 Healthcare Technology Applications"
                 Healthcare Technology Applications;
               </h2>""
@@ -281,9 +281,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{application.title}</h3>""
                   <p className="text-slate-300 mb-4">{application.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-1">"{application.benefits.map((benefit, benefitIndex) => (""
-=======
+
                   <ul className="space-y-1">"
             </div>
 ""
@@ -352,9 +352,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
 "{/* AI in Healthcare Section */}""
-=======
+
 "
 
         {/* AI in Healthcare Section */}""
@@ -364,9 +364,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
                 AI-Powered Healthcare"</h2>""
-=======
+
                 AI-Powered Healthcare"
                 AI-Powered Healthcare;
               </h2>""
@@ -380,9 +380,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
 ""
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">"
               <div>""
-<<<<<<< HEAD
+
                 <div className="space-y-6">"{[""
-=======
+
                 <div className="space-y-6">"
             </div>
 ""
@@ -408,9 +408,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
 ""
               <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8">""
                 <h3 className="text-2xl font-semibold text-white mb-4">AI Healthcare Benefits</h3>""
-<<<<<<< HEAD
+
                 <div className="space-y-4">"{[""
-=======
+
                 <div className="space-y-4">"
               </div>
 ""
@@ -423,9 +423,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
                     { benefit: "Faster Results", metric: "60%", description: "Reduced wait time" },""
                     { benefit: "Cost Savings", metric: "30%", description: "Operational costs" },""
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }"].map((item, index)  => (""
-=======
+
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }"
                     { benefit: "Better Outcomes", metric: "40%", description: "Patient outcomes" }
                   ].map((item, index)  => (""
@@ -442,9 +442,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
 "{/* Compliance & Security Section */}""
-=======
+
 "
 
         {/* Compliance & Security Section */}""
@@ -454,9 +454,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
                 Healthcare Compliance & Security"</h2>""
-=======
+
                 Healthcare Compliance & Security"
                 Healthcare Compliance & Security;
               </h2>""
@@ -524,9 +524,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{compliance.title}</h3>""
                   <p className="text-slate-300 mb-4">{compliance.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-1">"{compliance.features.map((feature, featureIndex) => (""
-=======
+
                   <ul className="space-y-1">"
             </div>
 ""
@@ -595,9 +595,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
 "{/* Implementation Process Section */}""
-=======
+
 "
 
         {/* Implementation Process Section */}""
@@ -607,9 +607,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
                 Implementation Process"</h2>""
-=======
+
                 Implementation Process"
                 Implementation Process;
               </h2>""
@@ -653,9 +653,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
               ].map((step, index)  => (""
                 <div key={index} className="text-center">""
                   <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"</div>""
-=======
+
                     <span className="text-white font-bold text-xl">{step.step}</span>"
             </div>
 ""
@@ -699,9 +699,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
           </div>
         </section>
 :pages.disabled/pages/services/healthcare-tech.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
         {/* CTA Section */}""
@@ -724,9 +724,9 @@ export { function };export default function HealthcareTech(...args: []):  {}
                 <ArrowRight className="ml-2 w-5 h-5"  />              </Link>"
               <Link""
                 to="/services""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200">
-=======
+
                 className="inline-flex items-center px-8 py-4 border border-pink-500/30 text-pink-400 font-semibold rounded-lg hover:bg-pink-500/10 transition-all duration-200"
               Ready to Transform Healthcare Delivery?
             </h2>""
@@ -752,10 +752,10 @@ export { function };export default function HealthcareTech(...args: []):  {}
       </div>;
 :pages.disabled/pages/services/healthcare-tech.tsx
     </>"
-<<<<<<< HEAD
+
   )}}}}}}
   '"'"
-=======
+
   )}}}}}}'"'"
     </>
   )}}}}}}'""

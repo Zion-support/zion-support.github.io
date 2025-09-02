@@ -4,5 +4,5 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string}
 
 }
-=======
+
 >>>>>>> pr-10728:src/components/ui/input.tsx

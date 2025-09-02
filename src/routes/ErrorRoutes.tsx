@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from 'react';'import { Route, Routes } from 'react-router-dom';'import { Suspense, lazy } from 'react';'import LoadingSpinner from '../components/LoadingSpinner';''// Lazy load error pages';
 const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: React.FC = () => {;
   return (;
@@ -7,7 +7,7 @@ const NotFound = lazy(() => import('../pages/NotFound'));''const ErrorRoutes: Re
 };
 ;
 export default ErrorRoutes;";
-=======
+
 import React from 'react';
 import { Route, Routes    } from 'react-router-dom';
 export default function Page() {

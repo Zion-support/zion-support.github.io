@@ -23,21 +23,7 @@ class ConsoleCleaner {
   }
 
   async cleanConsoleStatements() {
-<<<<<<< HEAD
-    console.log(
-  '🧹 Cleaning console statements from production code...');
-    
-    const directories = [
-  'pages',
-  'components',
-  'src',
-  'lib'
-    ];
-=======
-    console.log('🧹 Cleaning console statements from production code...');
-
-    const directories = ['pages', 'components', 'src', 'lib'];
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
 
     for (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);

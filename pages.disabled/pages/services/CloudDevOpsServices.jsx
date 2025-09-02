@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
 import React from
   'react';'
 import { Link } from
   'react-router-dom';'
 import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from
   'lucide-react';
-=======
+
 import React from 'react';'
 import { Link } from 'react-router-dom';'
 import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
@@ -17,9 +17,9 @@ const CloudDevOpsServices = () => {
 
             title: "Cloud Migration & Strategy",""
             description: "Seamless migration to cloud platforms with strategic planning and execution.",
-<<<<<<< HEAD
+
             icon: Cloud,"features[;""
-=======
+
             icon: Cloud,"
 const CloudDevOpsServices = () => {}
     const cloudServices = []
@@ -42,9 +42,9 @@ const CloudDevOpsServices = () => {}
 ""
             title: "DevOps Implementation",""
             description: "Streamline development and operations with modern DevOps practices and tools.",
-<<<<<<< HEAD
+
             icon: GitFork,"features: [""
-=======
+
             icon: GitFork,"
                 "Security Assessment""
             ]
@@ -69,9 +69,9 @@ const CloudDevOpsServices = () => {}
 ""
             title: "Container Orchestration",""
             description: "Manage and scale containerized applications with Kubernetes and Docker.",
-<<<<<<< HEAD
+
             icon: Server,"features[;""
-=======
+
             icon: Server,"
                 "Monitoring & Alerting""
             ]
@@ -96,9 +96,9 @@ const CloudDevOpsServices = () => {}
 ""
             title: "Database Management",""
             description: "Optimize and manage databases in cloud environments for performance and reliability.",
-<<<<<<< HEAD
+
             icon: Database,"features[;""
-=======
+
             icon: Database,"
                 "Load Balancing""
             ]
@@ -123,9 +123,9 @@ const CloudDevOpsServices = () => {}
 ""
             title: "Security & Compliance",""
             description: "Ensure cloud security and compliance with industry standards and best practices.",
-<<<<<<< HEAD
+
             icon: Shield,"features[;""
-=======
+
             icon: Shield,"
                 "Data Security""
             ]
@@ -150,9 +150,9 @@ const CloudDevOpsServices = () => {}
 ""
             title: "Monitoring & Observability",""
             description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
-<<<<<<< HEAD
+
             icon: Monitor,"features[;""
-=======
+
             icon: Monitor,"
                 "Threat Detection""
             ]
@@ -172,9 +172,8 @@ const CloudDevOpsServices = () => {}
                 "Troubleshooting Tools"
             ]
 
-<<<<<<< HEAD
     ];"const benefits = [""
-=======
+
     ];"
                 "Troubleshooting Tools""
             ]
@@ -189,9 +188,9 @@ const CloudDevOpsServices = () => {}
         "Scalable infrastructure that grows with your business",""
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
         "Better collaboration between development and operations teams"
-<<<<<<< HEAD
+
     ];"const technologies = [""
-=======
+
     ];"
         "Better collaboration between development and operations teams""
     ];
@@ -207,9 +206,9 @@ const CloudDevOpsServices = () => {}
     ];
     const cloudPlatforms = [
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         "ELK Stack""
     ];
@@ -223,9 +222,9 @@ const CloudDevOpsServices = () => {}
         },;
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         {}
 ""
@@ -236,9 +235,9 @@ const CloudDevOpsServices = () => {}
         },;
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         {}
 ""
@@ -249,9 +248,9 @@ const CloudDevOpsServices = () => {}
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
         }"
     ];""
-<<<<<<< HEAD
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"{/* Hero Section */}""
-=======
+
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">"
         }
     ];""
@@ -271,9 +270,9 @@ const CloudDevOpsServices = () => {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
               Get Started"</Link>""
-=======
+
               Get Started"
             Cloud & DevOps Services;
           </h1>""
@@ -293,9 +292,9 @@ const CloudDevOpsServices = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
 "{/* Services Grid */}""
-=======
+
 "
 
       {/* Services Grid */}""
@@ -305,9 +304,9 @@ const CloudDevOpsServices = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
               Comprehensive Cloud & DevOps Solutions"</h2>""
-=======
+
               Comprehensive Cloud & DevOps Solutions"
               Comprehensive Cloud & DevOps Solutions;
             </h2>""
@@ -317,9 +316,9 @@ const CloudDevOpsServices = () => {}
               solutions that modernize your infrastructure and accelerate delivery.
             </p>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -334,9 +333,9 @@ const CloudDevOpsServices = () => {}
                   {service.title}"
                 </h3>""
                 <p className="text-slate-600 mb-6">
-<<<<<<< HEAD
+
                   {service.description}"</p>""
-=======
+
                   {service.description}"
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>""
@@ -354,9 +353,9 @@ const CloudDevOpsServices = () => {}
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
                     </li>))}"
                 </ul>""
-<<<<<<< HEAD
+
                 <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">"Learn More""
-=======
+
                 <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">"
                     </li>))}
                 </ul>""
@@ -370,9 +369,9 @@ const CloudDevOpsServices = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
 "{/* Cloud Platforms Section */}""
-=======
+
 "
 
       {/* Cloud Platforms Section */}""
@@ -382,9 +381,9 @@ const CloudDevOpsServices = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
               Multi-Cloud Expertise"</h2>""
-=======
+
               Multi-Cloud Expertise"
               Multi-Cloud Expertise;
             </h2>""
@@ -394,9 +393,9 @@ const CloudDevOpsServices = () => {}
               for your specific needs and budget.
             </p>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -408,9 +407,9 @@ const CloudDevOpsServices = () => {}
                   {platform.name}"
                 </h3>""
                 <p className="text-slate-600 mb-6">
-<<<<<<< HEAD
+
                   {platform.description}"</p>""
-=======
+
                   {platform.description}"
                   {platform.name}
                 </h3>""
@@ -429,9 +428,9 @@ const CloudDevOpsServices = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -441,9 +440,9 @@ const CloudDevOpsServices = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
               Benefits of Cloud & DevOps"</h2>""
-=======
+
               Benefits of Cloud & DevOps"
               Benefits of Cloud & DevOps;
             </h2>""
@@ -452,9 +451,9 @@ const CloudDevOpsServices = () => {}
               Transform your organization with modern cloud and DevOps practices.
             </p>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -463,9 +462,9 @@ const CloudDevOpsServices = () => {}
             {benefits.map((benefit, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
                   <CheckCircle className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <CheckCircle className="w-8 h-8 text-white"/>"
                   <CheckCircle className="w-8 h-8 text-white"/>
                 </div>""
@@ -476,9 +475,9 @@ const CloudDevOpsServices = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
 "{/* Technologies Section */}""
-=======
+
 "
 
       {/* Technologies Section */}""
@@ -488,9 +487,9 @@ const CloudDevOpsServices = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
               Technologies We Use"</h2>""
-=======
+
               Technologies We Use"
               Technologies We Use;
             </h2>""
@@ -499,9 +498,9 @@ const CloudDevOpsServices = () => {}
               We leverage industry-leading tools and technologies to deliver robust solutions.
             </p>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -514,9 +513,9 @@ const CloudDevOpsServices = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -535,9 +534,9 @@ const CloudDevOpsServices = () => {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
               Start Your Transformation"</Link>""
-=======
+
               Start Your Transformation"
             Ready to Modernize Your Infrastructure?
           </h2>""
@@ -560,10 +559,10 @@ const CloudDevOpsServices = () => {}
 export { CloudDevOpsServices };
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
 export default CloudDevOpsServices;'"
-<<<<<<< HEAD
+
 }}}
   '"'"
-=======
+
 }}}'"'"
 export default CloudDevOpsServices;
 }}}'""

@@ -15,9 +15,9 @@ export default function EnterpriseSolutions() {}
         },
 :pages.disabled/solutions/EnterpriseSolutions.jsx
         {
-<<<<<<< HEAD
+
 "icon: Users,""
-=======
+
 "
         {}
             icon: Users,""
@@ -28,9 +28,9 @@ export default function EnterpriseSolutions() {}
         },
 :pages.disabled/solutions/EnterpriseSolutions.jsx
         {
-<<<<<<< HEAD
+
 "icon: Shield,""
-=======
+
 "
         {}
             icon: Shield,""
@@ -41,9 +41,9 @@ export default function EnterpriseSolutions() {}
         },
 :pages.disabled/solutions/EnterpriseSolutions.jsx
         {
-<<<<<<< HEAD
+
 "icon: BarChart3,""
-=======
+
 "
         {}
             icon: BarChart3,""
@@ -54,9 +54,9 @@ export default function EnterpriseSolutions() {}
         },
 :pages.disabled/solutions/EnterpriseSolutions.jsx
         {
-<<<<<<< HEAD
+
 "icon: Cloud,""
-=======
+
 "
         {}
             icon: Cloud,""
@@ -67,9 +67,9 @@ export default function EnterpriseSolutions() {}
         },
 :pages.disabled/solutions/EnterpriseSolutions.jsx
         {
-<<<<<<< HEAD
+
 "icon: Zap,""
-=======
+
 "
         {}
             icon: Zap,""
@@ -79,9 +79,9 @@ export default function EnterpriseSolutions() {}
             features: ["Custom AI Models", "Workflow Automation", "Intelligent Analytics", "Process Optimization"]
 
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
     ];"const benefits = [""
-=======
+
     ];"
     ];
     const benefits = [""
@@ -96,9 +96,9 @@ export default function EnterpriseSolutions() {}
     ];
     const caseStudies = [
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         "Better data insights and decision-making capabilities""
     ];
@@ -114,9 +114,9 @@ export default function EnterpriseSolutions() {}
             results: "35% cost reduction, 50% faster time-to-market"
         },
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
             results: "35% cost reduction, 50% faster time-to-market""
         },
@@ -131,9 +131,9 @@ export default function EnterpriseSolutions() {}
             results: "90% reduction in compliance violations, 60% faster reporting"
 "
     ];""
-<<<<<<< HEAD
+
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"{/* Hero Section */}""
-=======
+
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"
             results: "90% reduction in compliance violations, 60% faster reporting""
     ];""
@@ -152,9 +152,9 @@ export default function EnterpriseSolutions() {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
+
                 Get Enterprise Quote"</Link>""
-=======
+
                 Get Enterprise Quote"
               Enterprise Solutions;
             </h1>""
@@ -173,9 +173,9 @@ export default function EnterpriseSolutions() {}
           </div>
         </div>
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Background Elements */}""
-=======
+
 "
 
         {/* Background Elements */}""
@@ -187,9 +187,9 @@ export default function EnterpriseSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Solutions Grid */}""
-=======
+
 "
 
       {/* Solutions Grid */}""
@@ -199,9 +199,9 @@ export default function EnterpriseSolutions() {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
               Comprehensive Enterprise Solutions"</h2>""
-=======
+
               Comprehensive Enterprise Solutions"
               Comprehensive Enterprise Solutions;
             </h2>""
@@ -218,9 +218,9 @@ export default function EnterpriseSolutions() {}
             const Icon = solution.icon;""
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">""
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">""
-<<<<<<< HEAD
+
                     <Icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                     <Icon className="w-8 h-8 text-white"/>"
           </div>
 ""
@@ -246,9 +246,9 @@ export default function EnterpriseSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -258,9 +258,9 @@ export default function EnterpriseSolutions() {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
               Why Choose Zion Tech Group?"</h2>""
-=======
+
               Why Choose Zion Tech Group?"
               Why Choose Zion Tech Group?
             </h2>""
@@ -269,9 +269,9 @@ export default function EnterpriseSolutions() {}
               Proven results and measurable impact for enterprise organizations;
             </p>
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -280,9 +280,9 @@ export default function EnterpriseSolutions() {}
             {benefits.map((benefit, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
                   <TrendingUp className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <TrendingUp className="w-8 h-8 text-white"/>"
                   <TrendingUp className="w-8 h-8 text-white"/>
                 </div>""
@@ -293,9 +293,9 @@ export default function EnterpriseSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Case Studies */}""
-=======
+
 "
 
       {/* Case Studies */}""
@@ -305,9 +305,9 @@ export default function EnterpriseSolutions() {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
               Success Stories"</h2>""
-=======
+
               Success Stories"
               Success Stories;
             </h2>""
@@ -316,9 +316,9 @@ export default function EnterpriseSolutions() {}
               Real results from real enterprise clients;
             </p>
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -345,9 +345,9 @@ export default function EnterpriseSolutions() {}
                     <p className="text-gray-300">{study.results}</p>
                   </div>"
                 </div>""
-<<<<<<< HEAD
+
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">"Read Full Case Study""
-=======
+
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">"
                   <span className="text-sm text-gray-400">{study.industry}</span>
                 </div>""
@@ -376,9 +376,9 @@ export default function EnterpriseSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -394,9 +394,9 @@ export default function EnterpriseSolutions() {}
           </p>""
           <div className="flex flex-col sm: flex-row gap-4 justify-center">""
             <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
+
               Schedule Consultation"</Link>""
-=======
+
               Schedule Consultation"
             Ready to Transform Your Enterprise?
           </h2>""
@@ -415,11 +415,11 @@ export default function EnterpriseSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/EnterpriseSolutions.jsx
-<<<<<<< HEAD
+
     </div>);"
 }}}}
   '"'"
-=======
+
     </div>);'"
 }}}}'"'"
     </div>);

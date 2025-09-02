@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 /**
  * safeConsoleError function
@@ -16,6 +16,6 @@ function safeLocalStorage () { try { if (typeof window !== 'undefined' && window
  * @returns {*} Function return value
  */
 function safeSessionStorage () { try { if (typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage; } } catch (error) { safeConsoleError ('SessionStorage not available: ', error) ; } return null; } export { safeConsoleError, safeLocalStorage, safeSessionStorage };'';
-=======
+
 function safeConsoleError(message, error) { const env = globalThis.process?.env?.NODE_ENV ?? 'production'; if(env === 'development') { console.error(message, error); } } function safeLocalStorage() { try { if(typeof window !== 'undefined' && window.localStorage) { return window.localStorage; } } catch(error) { safeConsoleError('LocalStorage not available:', error); } return null; } function safeSessionStorage() { try { if(typeof window !== 'undefined' && window.sessionStorage) { return window.sessionStorage; } } catch(error) { safeConsoleError('SessionStorage not available:', error); } return null; } export { safeConsoleError, safeLocalStorage, safeSessionStorage };
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff

@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 import React from 'react'; const MobileNavigation = ({ isOpen, onToggle }) => { const [activeDropdown, setActiveDropdown] = useState (null) ; const [searchQuery, setSearchQuery] = useState (") ; const location = useLocation () ; const menuRef = useRef (null) ;"""";
-=======
+
 import React, { useState, useEffect, useRef } from 'react';'''
 import { Link, useLocation } from 'react-router-dom';'''
 import { motion, AnimatePresence } from 'framer-motion';'''
@@ -235,7 +235,6 @@ const MobileNavigation = ({ isOpen, onToggle }) => {}
         </>)}
     </AnimatePresence>)};
 export default MobileNavigation;
-
 
 export { MobileNavigation };
 

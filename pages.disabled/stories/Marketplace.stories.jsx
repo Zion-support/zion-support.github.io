@@ -1,10 +1,10 @@
 import Marketplace from "../pages/Marketplace";
-<<<<<<< HEAD
+
 import { MemoryRouter } from,
   react-router-dom';: pages.disabled/stories/Marketplace.stories.jsx
 const meta = {
   'title: 'Pages/Marketplace,
-=======
+
 import { MemoryRouter } from 'react-router-dom';
 :pages.disabled/stories/Marketplace.stories.jsx
 const meta = {
@@ -25,12 +25,11 @@ export default meta;
 :pages.disabled/stories/Marketplace.stories.jsx
 export const Grid = {
 
-<<<<<<< HEAD
   render: () => {,
   localStorage.setItem(
   'marketplaceView',grid
   ');
-=======
+
   render: () => {
 '
 export const Grid = {}
@@ -40,7 +39,7 @@ export const Grid = {}
         return <Marketplace />;
 
 }
-<<<<<<< HEAD
+
 };: pages.disabled/stories/Marketplace.stories.jsx
 export const List = {
 
@@ -48,7 +47,7 @@ export const List = {
 'localStorage.setItem(
   'marketplaceView,list
   ');
-=======
+
 };
 :pages.disabled/stories/Marketplace.stories.jsx
 export const List = {
@@ -64,10 +63,10 @@ export const List = {}
 }
 :pages.disabled/stories/Marketplace.stories.jsx
 };'"
-<<<<<<< HEAD
+
 }}
   '"'"
-=======
+
 }}'"'"
 };
 }}'""

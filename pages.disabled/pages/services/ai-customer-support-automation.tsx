@@ -57,9 +57,9 @@ import {}
 
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
 export default function AICustomerSupportAutomation() {
-<<<<<<< HEAD
+
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"{/* Hero Section */}""
-=======
+
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
 export default function AICustomerSupportAutomation(function AICustomerSupportAutomation() {): any {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
@@ -70,9 +70,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -102,9 +102,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
-=======
+
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               <Bot className="w-4 h-4"  />              <span>AI-Powered Customer Support</span>
             </div>""
@@ -134,9 +134,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
               </motion.button>
             </div>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
           </motion.div>"</div>""
-=======
+
           </motion.div>"
           </motion.div>
         </div>""
@@ -147,9 +147,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
         </div>
       </section>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -159,9 +159,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
           <div className="text-center mb-16">""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
               Powerful Features"</h2>""
-=======
+
               Powerful Features"
               Powerful Features;
             </h2>""
@@ -178,9 +178,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </div>
 ""
@@ -199,9 +199,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
                   <feature.icon className="w-8 h-8 text-blue-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-4">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-8 h-8 text-blue-400" />
                 </div>""
@@ -216,9 +216,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
         </div>
       </section>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -228,9 +228,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
           <div className="text-center mb-16">""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
               Business Benefits"</h2>""
-=======
+
               Business Benefits"
               Business Benefits;
             </h2>""
@@ -247,9 +247,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
           </div>
 ""
@@ -270,9 +270,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
         </div>
       </section>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
 "{/* Support Channels Section */}""
-=======
+
 "
 
       {/* Support Channels Section */}""
@@ -282,9 +282,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
           <div className="text-center mb-16">""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
               Multi-Channel Support"</h2>""
-=======
+
               Multi-Channel Support"
               Multi-Channel Support;
             </h2>""
@@ -294,9 +294,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
               unified AI-powered assistance.
             </p>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -307,9 +307,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -329,9 +329,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
                   </div>
                 </div>"
 ""
-<<<<<<< HEAD
+
                 <ul className="space-y-3">"{channel.features.map((feature, featureIndex) => (""
-=======
+
                 <ul className="space-y-3">"
                   </div>
                   <div>""
@@ -356,9 +356,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
         </div>
       </section>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -368,9 +368,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
           <div className="text-center mb-16">""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
               Industry Applications"</h2>""
-=======
+
               Industry Applications"
               Industry Applications;
             </h2>""
@@ -380,9 +380,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
               across different industries.
             </p>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -393,9 +393,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -405,9 +405,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
                 <div className="flex items-center mb-6">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mr-4">""
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
                     <useCase.icon className="w-6 h-6 text-blue-400" />"</div>""
-=======
+
                     <useCase.icon className="w-6 h-6 text-blue-400" />"
                     <useCase.icon className="w-6 h-6 text-blue-400" />
                   </div>""
@@ -418,9 +418,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
                 </div>"
 ""
-<<<<<<< HEAD
+
                 <ul className="space-y-3">"{useCase.applications.map((application, appIndex) => (""
-=======
+
                 <ul className="space-y-3">"
                 </div>
 ""
@@ -440,9 +440,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
         </div>
       </section>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -452,9 +452,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -481,9 +481,9 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300">
-=======
+
                 className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               Ready to Transform Your Customer Support?
             </h2>""
@@ -514,11 +514,11 @@ export default function AICustomerSupportAutomation(function AICustomerSupportAu
       </section>
     </div>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-<<<<<<< HEAD
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}

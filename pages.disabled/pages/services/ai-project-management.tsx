@@ -35,9 +35,9 @@ export default function AIProjectManagement(...args: any[]): any {
         title="AI Project Management Services - Zion Tech Group""
         description="Revolutionary AI-powered project management that optimizes planning, resource allocation, and risk management. Deliver projects faster, cheaper, and with higher success rates."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 export default function AIProjectManagement(...args: any[]): any {}
   return()
@@ -54,9 +54,9 @@ export default function AIProjectManagement(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -76,9 +76,9 @@ export default function AIProjectManagement(...args: any[]): any {}
               </span>"
               <br />""
               <span className="text-white">That Delivers Results</span>
-<<<<<<< HEAD
+
             </h1>"""
-=======
+
             </h1>"
                 AI Project Management;
               </span>            </div>
@@ -113,9 +113,9 @@ export default function AIProjectManagement(...args: any[]): any {}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center""
               >""
-<<<<<<< HEAD
+
                 <Video className="w-5 h-5 mr-2"  />                Watch Demo</motion.button>
-=======
+
                 <Video className="w-5 h-5 mr-2"  />                Watch Demo
             </p>
 ""
@@ -140,9 +140,9 @@ export default function AIProjectManagement(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -152,9 +152,9 @@ export default function AIProjectManagement(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -163,9 +163,9 @@ export default function AIProjectManagement(...args: any[]): any {}
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
               Advanced AI Technology for Better Project Delivery"</h2>""
-=======
+
               Advanced AI Technology for Better Project Delivery"
               Advanced AI Technology for Better Project Delivery;
             </h2>""
@@ -176,9 +176,9 @@ export default function AIProjectManagement(...args: any[]): any {}
               exceptional project outcomes.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -189,9 +189,9 @@ export default function AIProjectManagement(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -203,9 +203,9 @@ export default function AIProjectManagement(...args: any[]): any {}
                   <feature.icon className="w-6 h-6 text-orange-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-orange-400" />
                 </div>""
@@ -220,9 +220,9 @@ export default function AIProjectManagement(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -232,9 +232,9 @@ export default function AIProjectManagement(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -243,9 +243,9 @@ export default function AIProjectManagement(...args: any[]): any {}
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
               Proven Results & Benefits"</h2>""
-=======
+
               Proven Results & Benefits"
               Proven Results & Benefits;
             </h2>""
@@ -255,9 +255,9 @@ export default function AIProjectManagement(...args: any[]): any {}
               in delivery time, cost reduction, and project success rates.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -268,9 +268,9 @@ export default function AIProjectManagement(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -284,9 +284,9 @@ export default function AIProjectManagement(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
 "{/* Solutions Section */}""
-=======
+
 "
 
       {/* Solutions Section */}""
@@ -296,9 +296,9 @@ export default function AIProjectManagement(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -307,9 +307,9 @@ export default function AIProjectManagement(...args: any[]): any {}
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
               Flexible Solutions for Every Project"</h2>""
-=======
+
               Flexible Solutions for Every Project"
               Flexible Solutions for Every Project;
             </h2>""
@@ -320,9 +320,9 @@ export default function AIProjectManagement(...args: any[]): any {}
               organization.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -333,9 +333,9 @@ export default function AIProjectManagement(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -350,9 +350,9 @@ export default function AIProjectManagement(...args: any[]): any {}
 ""
                 <div className="space-y-3 mb-6">
                   {solution.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <div"key={featureIndex}""
-=======
+
                     <div"
                   {solution.title}
                 </h3>""
@@ -372,9 +372,9 @@ export default function AIProjectManagement(...args: any[]): any {}
                 </div>"
 ""
                 <div className="text-3xl font-bold text-orange-400 mb-6">
-<<<<<<< HEAD
+
                   {solution.price}"</div>""
-=======
+
                   {solution.price}"
                 </div>
 ""
@@ -391,9 +391,9 @@ export default function AIProjectManagement(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
 "{/* Project Types Section */}""
-=======
+
 "
 
       {/* Project Types Section */}""
@@ -403,9 +403,9 @@ export default function AIProjectManagement(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -414,9 +414,9 @@ export default function AIProjectManagement(...args: any[]): any {}
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
               Optimized for Any Project Type"</h2>""
-=======
+
               Optimized for Any Project Type"
               Optimized for Any Project Type;
             </h2>""
@@ -426,9 +426,9 @@ export default function AIProjectManagement(...args: any[]): any {}
               diverse project types across all industries and complexity levels.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -439,9 +439,9 @@ export default function AIProjectManagement(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, scale: 1 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, scale: 1 }}"
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -450,9 +450,9 @@ export default function AIProjectManagement(...args: any[]): any {}
               >""
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">""
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
                   <GitBranch className="w-6 h-6 text-orange-400"  />"</div>""
-=======
+
                   <GitBranch className="w-6 h-6 text-orange-400"  />"
                   <GitBranch className="w-6 h-6 text-orange-400"  />
                 </div>""
@@ -465,9 +465,9 @@ export default function AIProjectManagement(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -500,9 +500,9 @@ export default function AIProjectManagement(...args: any[]): any {}
                 whileTap={{ scale: 0.95 }}""
                 className="px-8 py-4 border border-orange-400/30 text-orange-300 font-semibold rounded-lg hover:bg-orange-400/10 transition-all duration-300 flex items-center justify-center""
               >""
-<<<<<<< HEAD
+
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950</motion.button>
-=======
+
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950
             transition={{ duration: 0.8 }}
           >""
@@ -535,11 +535,11 @@ export default function AIProjectManagement(...args: any[]): any {}
       </section>
     </div>
 :pages.disabled/pages/services/ai-project-management.tsx
-<<<<<<< HEAD
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}

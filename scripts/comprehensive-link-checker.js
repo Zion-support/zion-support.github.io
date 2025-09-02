@@ -29,14 +29,7 @@ class ComprehensiveLinkChecker {
       const sitemapContent = fs.readFileSync(sitemapPath,
   'utf8');
       const $ = cheerio.load(sitemapContent, { xmlMode: true });
-<<<<<<< HEAD
-      
-      $(
-  'url loc').each((i, elem) => {
-=======
-
-      $('url loc').each((i, elem) => {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         const url = $(elem).text().trim();
         this.sitemapUrls.push(url);
       });
@@ -74,34 +67,7 @@ class ComprehensiveLinkChecker {
         // Extract links from the page
         if (depth < this.maxDepth) {
           const $ = cheerio.load(response.data);
-<<<<<<< HEAD
-          const links = $(
-  'a[href]').map((i, elem) => {
-            const href = $(elem).attr(
-  'href');
-            if (href && !href.startsWith(
-  '#') && !href.startsWith(
-  'javascript:')) {
-              return this.resolveUrl(href, url);
-            }
-            return null;
-          }).get().filter(Boolean);
-=======
-          const links = $('a[href]')
-            .map((i, elem) => {
-              const href = $(elem).attr('href');
-              if (
-                href &&
-                !href.startsWith('#') &&
-                !href.startsWith('javascript:')
-              ) {
-                return this.resolveUrl(href, url);
-              }
-              return null;
-            })
-            .get()
-            .filter(Boolean);
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
 
           // Check extracted links
           for (const link of links) {
@@ -158,61 +124,7 @@ class ComprehensiveLinkChecker {
     console.log(
   '\n=== Checking Navigation Links ===');
     const navigationUrls = [
-<<<<<<< HEAD
-  '/',
-  '/about',
-  '/services',
-  '/solutions',
-  '/pricing',
-  '/contact',
-  '/blog',
-  '/careers',
-  '/team',
-  '/partners',
-  '/case-studies',
-  '/news',
-  '/help',
-  '/faq',
-  '/marketplace',
-  '/dashboard',
-  '/login',
-  '/search',
-  '/it-consulting',
-  '/ai-solutions',
-  '/solutions/enterprise',
-  '/solutions/healthcare',
-  '/research-development',
-  '/request-quote',
-  '/green-it',
-  '/space-tech'
-=======
-      '/',
-      '/about',
-      '/services',
-      '/solutions',
-      '/pricing',
-      '/contact',
-      '/blog',
-      '/careers',
-      '/team',
-      '/partners',
-      '/case-studies',
-      '/news',
-      '/help',
-      '/faq',
-      '/marketplace',
-      '/dashboard',
-      '/login',
-      '/search',
-      '/it-consulting',
-      '/ai-solutions',
-      '/solutions/enterprise',
-      '/solutions/healthcare',
-      '/research-development',
-      '/request-quote',
-      '/green-it',
-      '/space-tech',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     const promises = navigationUrls.map(url =>
@@ -225,77 +137,7 @@ class ComprehensiveLinkChecker {
     console.log(
   '\n=== Checking Service Pages ===');
     const serviceUrls = [
-<<<<<<< HEAD
-  '/services/ai-business-intelligence',
-  '/services/ai-compliance-assistant',
-  '/services/ai-sales-copilot',
-  '/services/ai-powered-seo',
-  '/services/interview-assessment-ai',
-  '/services/ai-content-marketing-suite',
-  '/services/ai-customer-support-automation',
-  '/services/ai-project-management',
-  '/services/ai-financial-analytics',
-  '/services/ai-marketing-automation',
-  '/services/cloud-devops',
-  '/services/it-infrastructure',
-  '/services/finops-advisor',
-  '/services/cloud-finops-optimizer',
-  '/services/ai-cybersecurity-platform',
-  '/services/security-headers-csp',
-  '/services/dsr-portal',
-  '/services/zero-trust-network-access',
-  '/services/ai-compliance-copilot',
-  '/services/quantum-computing',
-  '/services/iot-edge-computing',
-  '/services/ai-quantum-hybrid-platform',
-  '/services/digital-twin',
-  '/services/digital-transformation',
-  '/services/micro-crm',
-  '/services/helpdesk-platform',
-  '/services/website-analytics',
-  '/services/it-helpdesk',
-  '/services/affiliate-tracking',
-  '/services/mobile-survey',
-  '/services/podcast-transcription',
-  '/services/email-sequencer',
-  '/services/returns-management',
-  '/services/llm-content-studio'
-=======
-      '/services/ai-business-intelligence',
-      '/services/ai-compliance-assistant',
-      '/services/ai-sales-copilot',
-      '/services/ai-powered-seo',
-      '/services/interview-assessment-ai',
-      '/services/ai-content-marketing-suite',
-      '/services/ai-customer-support-automation',
-      '/services/ai-project-management',
-      '/services/ai-financial-analytics',
-      '/services/ai-marketing-automation',
-      '/services/cloud-devops',
-      '/services/it-infrastructure',
-      '/services/finops-advisor',
-      '/services/cloud-finops-optimizer',
-      '/services/ai-cybersecurity-platform',
-      '/services/security-headers-csp',
-      '/services/dsr-portal',
-      '/services/zero-trust-network-access',
-      '/services/ai-compliance-copilot',
-      '/services/quantum-computing',
-      '/services/iot-edge-computing',
-      '/services/ai-quantum-hybrid-platform',
-      '/services/digital-twin',
-      '/services/digital-transformation',
-      '/services/micro-crm',
-      '/services/helpdesk-platform',
-      '/services/website-analytics',
-      '/services/it-helpdesk',
-      '/services/affiliate-tracking',
-      '/services/mobile-survey',
-      '/services/podcast-transcription',
-      '/services/email-sequencer',
-      '/services/returns-management',
-      '/services/llm-content-studio',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     const promises = serviceUrls.map(url =>
@@ -358,41 +200,13 @@ class ComprehensiveLinkChecker {
         category:
   'Broken Links',
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention`,
-<<<<<<< HEAD
-        actions: [,
-  Fix all broken links identified in the report',
-  'Update internal navigation to remove broken links',
-  'Implement 301 redirects for moved pages',
-  'Add proper error handling for missing content'
-        ]
-=======
-        actions: [
-          'Fix all broken links identified in the report',
-          'Update internal navigation to remove broken links',
-          'Implement 301 redirects for moved pages',
-          'Add proper error handling for missing content',
-        ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       });
     }
 
     // Check for missing important pages
     const importantPages = [
-<<<<<<< HEAD
-  '/about',
-  '/services',
-  '/contact',
-  '/pricing',
-  '/privacy',
-  '/terms'
-=======
-      '/about',
-      '/services',
-      '/contact',
-      '/pricing',
-      '/privacy',
-      '/terms',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     const missingImportant = importantPages.filter(
@@ -407,18 +221,7 @@ class ComprehensiveLinkChecker {
         description: `Missing critical pages: ${missingImportant.join(, ,
   )}`,
         actions: [
-<<<<<<< HEAD
-  'Create missing critical pages,
-,
-  Ensure proper navigation structure',
-  'Add SEO meta tags and content'
-        ]
-=======
-          'Create missing critical pages',
-          'Ensure proper navigation structure',
-          'Add SEO meta tags and content',
-        ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       });
     }
 
@@ -436,17 +239,7 @@ class ComprehensiveLinkChecker {
   'Navigation Structure',
         description: `Found ${orphanedPages.length} pages that may be difficult to discover`,
         actions: [
-<<<<<<< HEAD
-  'Review navigation structure',
-  'Add breadcrumbs to deep pages',
-  'Improve internal linking strategy'
-        ]
-=======
-          'Review navigation structure',
-          'Add breadcrumbs to deep pages',
-          'Improve internal linking strategy',
-        ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       });
     }
 
@@ -465,14 +258,7 @@ class ComprehensiveLinkChecker {
       await this.checkServicePages();
 
       const report = this.generateReport();
-<<<<<<< HEAD
-      
-      console.log(
-  '\n📊 Link Check Complete!');
-=======
-
-      console.log('\n📊 Link Check Complete!');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       console.log(`Total URLs checked: ${report.summary.totalUrls}`);
       console.log(`Working links: ${report.summary.workingLinks}`);
       console.log(`Broken links: ${report.summary.brokenLinks}`);
@@ -487,21 +273,7 @@ class ComprehensiveLinkChecker {
           );
         });
       }
-<<<<<<< HEAD
-      
-      console.log(,
-  \n📁 Reports saved to: ');
-      console.log(
-  '- reports/comprehensive-link-check-report.json');
-      console.log(
-  '- reports/link-check-summary.json);
-      
-=======
-
-      console.log('\n📁 Reports saved to:');
-      console.log('- reports/comprehensive-link-check-report.json');
-      console.log('- reports/link-check-summary.json');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     } catch (error) {
       console.error(
   '❌ Error during link check:', error.message);

@@ -10,9 +10,9 @@ const CloudServices = () => {
       features["Cloud readiness assessment", "Multi-cloud strategy planning", "Migration roadmap development", "Cost optimization analysis"],;      icon: Cloud
     },
     {
-<<<<<<< HEAD
+
 """
-=======
+
 "
 const CloudServices: any = () => {}
   const cloudServices: any = []
@@ -33,9 +33,9 @@ const CloudServices: any = () => {}
     },
 :pages.disabled/pages/services/Cloud.tsx
     {
-<<<<<<< HEAD
+
 """
-=======
+
 "
     {}
 ""
@@ -63,9 +63,9 @@ const CloudServices: any = () => {}
       features: ["Compute Engine", "Cloud Storage", "Cloud Functions", "BigQuery"]};
   ];
 "
-<<<<<<< HEAD
+
   const benefits = [;"""Scalable infrastructure that grows with your business",;""
-=======
+
   const benefits = [;""
   ]},;    {}
 ""
@@ -93,9 +93,9 @@ const CloudServices: any = () => {}
 :pages.disabled/pages/services/Cloud.tsx
 "
   return (""
-<<<<<<< HEAD
+
     <div className = "min-h-screen bg-slate-900 text-white">"{/* Hero Section */}""
-=======
+
     <div className = "min-h-screen bg-slate-900 text-white">"
 
   return (""
@@ -119,9 +119,9 @@ const CloudServices: any = () => {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <a href="#services" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
                 Explore Services"</a>""
-=======
+
                 Explore Services"
               <Cloud className="w-4 h-4 mr-2" />              Cloud & DevOps;
             </div>""
@@ -146,9 +146,9 @@ const CloudServices: any = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/Cloud.tsx
-<<<<<<< HEAD
+
 "{/* Cloud Services */}""
-=======
+
 "
 
       {/* Cloud Services */}""
@@ -158,9 +158,9 @@ const CloudServices: any = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/Cloud.tsx
-<<<<<<< HEAD
+
               Our Cloud Services"</h2>""
-=======
+
               Our Cloud Services"
               Our Cloud Services;
             </h2>""
@@ -176,9 +176,9 @@ const CloudServices: any = () => {}
             {cloudServices.map((service, index) => (""
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
-<<<<<<< HEAD
+
                   <service.icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <service.icon className="w-8 h-8 text-white"/>"
           </div>
 ""
@@ -193,9 +193,9 @@ const CloudServices: any = () => {}
                 <p className="text-gray-300 mb-4">{service.description}</p>""
                 <p className="text-lg font-semibold text-blue-400 mb-4">{service.price}</p>""
 :pages.disabled/pages/services/Cloud.tsx
-<<<<<<< HEAD
+
                 <ul className="space-y-2">"{service.features.map((feature, featureIndex) => (""
-=======
+
                 <ul className="space-y-2">"
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (""
@@ -212,9 +212,9 @@ const CloudServices: any = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/Cloud.tsx
-<<<<<<< HEAD
+
 "{/* Cloud Platforms */}""
-=======
+
 "
 
       {/* Cloud Platforms */}""
@@ -224,9 +224,9 @@ const CloudServices: any = () => {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/Cloud.tsx
-<<<<<<< HEAD
+
               Cloud Platforms We Work With"</h2>""
-=======
+
               Cloud Platforms We Work With"
               Cloud Platforms We Work With;
             </h2>""
@@ -246,9 +246,9 @@ const CloudServices: any = () => {}
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">{platform.name}</h3>""
                 <p className="text-gray-300 mb-4">{platform.description}</p>""
-<<<<<<< HEAD
+
                 <ul className="space-y-2">"{platform.features.map((feature, idx) => (""
-=======
+
                 <ul className="space-y-2">"
           </div>
 ""
@@ -287,9 +287,9 @@ const CloudServices: any = () => {}
                 Cloud computing provides numerous advantages that can transform
                 your business operations and drive innovation."
               </p>""
-<<<<<<< HEAD
+
               <ul className="space-y-3">"{benefits.map((benefit, index) => (""
-=======
+
               <ul className="space-y-3">"
 
       {/* Benefits Section */}""
@@ -313,9 +313,9 @@ const CloudServices: any = () => {}
                   </li>
                 ))}
 :pages.disabled/pages/services/Cloud.tsx
-<<<<<<< HEAD
+
               </ul>"</div>""
-=======
+
               </ul>"
               </ul>
             </div>""
@@ -326,9 +326,9 @@ const CloudServices: any = () => {}
                 <h3 className="text-2xl font-bold text-white mb-2">Cloud Expertise</h3>"                <p className="text-gray-300 mb-6">
 :pages.disabled/pages/services/Cloud.tsx
                   Our team has extensive experience with cloud platforms and
-<<<<<<< HEAD
+
                   can help you navigate the complex cloud landscape."</p>""
-=======
+
                   can help you navigate the complex cloud landscape."
                   Our team has extensive experience with cloud platforms and;
                   can help you navigate the complex cloud landscape.
@@ -345,9 +345,9 @@ const CloudServices: any = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/Cloud.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -363,9 +363,9 @@ const CloudServices: any = () => {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
-<<<<<<< HEAD
+
               Get Started"</a>""
-=======
+
               Get Started"
             Ready to Scale Your Infrastructure?
           </h2>""
@@ -387,10 +387,10 @@ const CloudServices: any = () => {}
   )};
 :pages.disabled/pages/services/Cloud.tsx
 "
-<<<<<<< HEAD
+
 export default CloudServices}}}
   '"'"
-=======
+
 export default CloudServices}}}'"'"
 
 export default CloudServices}}}'""

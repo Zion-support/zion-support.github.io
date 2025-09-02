@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 import React from 'react'; const LinkHealthChecker = ({ links, className = " }) => { const [linkStatuses, setLinkStatuses] = useState ([]) ; const [isChecking, setIsChecking] = useState (false) ; const checkLinkHealth = async url => { const startTime = Date.now () ; try {"""";
-=======
+
 import React, { useState, useEffect } from 'react';''
 import { CheckCircle, XCircle, AlertTriangle, ExternalLink  } from 'lucide-react';
 
@@ -236,7 +236,6 @@ const LinkHealthChecker = ({ links, className = '' }) => {}
         </div>)}
     </div>)};
 export default LinkHealthChecker;
-
 
 export { LinkHealthChecker };
 

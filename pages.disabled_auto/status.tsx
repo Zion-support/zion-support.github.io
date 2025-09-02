@@ -1,161 +1,27 @@
-<<<<<<< HEAD
-import React from, react';'
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../components/layout/MainLayout';
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from
-  'lucide-react';
-=======
-import React from 'react'
-import type { NextPage } from 'next'
-import MainLayout from '../components/layout/MainLayout'
-import { CheckCircle, AlertCircle, XCircle, Clock, Activity, Server, Database, Cloud } from 'lucide-react'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
 
 const Status: NextPage = () => {
   const services = [
     {
-<<<<<<< HEAD
-      name: 'Web Application, '
-      status:,
-  operational', '
-      uptime: '99.9%,'
-      responseTime:, 120ms','
-      lastIncident: 'No incidents in the past 30 days'
-    }, {
-      name:,
-  API Services', '
-      status: 'operational,'
-      uptime:, 99.8%','
-      responseTime: '85ms, '
-      lastIncident:,
-  No incidents in the past 30 days''
-    }, {
-      name: 'Database,'
-      status:, operational','
-      uptime: '99.9%, '
-      responseTime:,
-  45ms', '
-      lastIncident: 'No incidents in the past 30 days'
-    },
-    {
-      name:, Cloud Infrastructure','
-      status: 'operational, '
-      uptime:,
-  99.7%', '
-      responseTime: '200ms,'
-      lastIncident:, No incidents in the past 30 days''
-    },
-    {
-      name: 'CDN, '
-      status:,
-  operational', '
-      uptime: '99.9%,'
-      responseTime:, 50ms','
-      lastIncident: 'No incidents in the past 30 days'
-    }, {
-      name:,
-  Monitoring', '
-      status: 'operational,'
-      uptime:, 100%','
-      responseTime: '30ms, '
-      lastIncident:,
-  No incidents in the past 30 days''
-=======
-      name: 'Web Application', status: 'operational',
-      uptime: '99.9%', responseTime: '120ms',
-      lastIncident: 'No incidents in the past 30 days'
-    }, {
-      name: 'API Services',
-      status: 'operational', uptime: '99.8%',
-      responseTime: '85ms', lastIncident: 'No incidents in the past 30 days'
-    },
-    {
-      name: 'Database', status: 'operational',
-      uptime: '99.9%', responseTime: '45ms',
-      lastIncident: 'No incidents in the past 30 days'
-    }, {
-      name: 'Cloud Infrastructure',
-      status: 'operational', uptime: '99.7%',
-      responseTime: '200ms', lastIncident: 'No incidents in the past 30 days'
-    },
-    {
-      name: 'CDN', status: 'operational',
-      uptime: '99.9%', responseTime: '50ms',
-      lastIncident: 'No incidents in the past 30 days'
-    }, {
-      name: 'Monitoring',
-      status: 'operational', uptime: '100%',
-      responseTime: '30ms', lastIncident: 'No incidents in the past 30 days'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ]
 
   const getStatusIcon = (status: string) => {
     switch (status) {
-<<<<<<< HEAD
-      case
-  'operational': return <CheckCircle className="w-5 h-5 text-green-500" />;
-      case
-  'degraded': return <AlertCircle className="w-5 h-5 text-yellow-500" />;
-      case
-  'outage: '
-        return <XCircle className="w-5 h-5 text-red-500" />;
-      default: return <Clock className="w-5 h-5 text-gray-500" />;
-=======
-      case 'operational': return <CheckCircle className="w-5 h-5 text-green-500" />
-      case 'degraded': return <AlertCircle className="w-5 h-5 text-yellow-500" />
-      case 'outage': return <XCircle className="w-5 h-5 text-red-500" />;
-      default: return <Clock className="w-5 h-5 text-gray-500" />;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
     }
   }
 
   const getStatusColor = (status: string) => {
     switch (status) {
-<<<<<<< HEAD
-      case, operational': return'
-  'text-green-600 bg-green-100';
-      case
-  'degraded': return
-  'text-yellow-600 bg-yellow-100';
-      case
-  'outage': return
-  'text-red-600 bg-red-100';
-      default: return
-  'text-gray-600 bg-gray-100;'
-=======
-      case 'operational': return 'text-green-600 bg-green-100'
-      case 'degraded': return 'text-yellow-600 bg-yellow-100'
-      case 'outage': return 'text-red-600 bg-red-100'
-      default: return 'text-gray-600 bg-gray-100';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
     }
   }
 
   const incidents = [
     {
-<<<<<<< HEAD
-      id: 1, title:,
-  Scheduled Maintenance - API Services', '
-      status: 'resolved,'
-      date:, 2025-01-20','
-      description: 'Scheduled maintenance window for API services completed successfully., '
-      impact: 'minor'
-    },
-    {
-      id: 2, title:,
-  Database Performance Issue', '
-      status: 'resolved,'
-      date:, 2025-01-15','
-      description: 'Temporary performance degradation in database queries has been resolved., '
-      impact: 'minor'
-=======
-      id: 1, title: 'Scheduled Maintenance - API Services', status: 'resolved', date: '2025-01-20', description: 'Scheduled maintenance window for API services completed successfully.', impact: 'minor'
-    }, {
-      id: 2, title: 'Database Performance Issue', status: 'resolved', date: '2025-01-15', description: 'Temporary performance degradation in database queries has been resolved.', impact: 'minor'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ];
 
@@ -186,12 +52,7 @@ const Status: NextPage = () => {
                 <h2 className="text-3xl font-bold text-gray-900">All Systems Operational</h2>
               </div>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-                All services are running normally. We
-  're monitoring our systems 24/7 to ensure optimal performance.'
-=======
-                All services are running normally. We&aposre monitoring our systems 24/7 to ensure optimal performance.''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
               </p>
             </div>
             

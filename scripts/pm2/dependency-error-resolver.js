@@ -10,23 +10,7 @@ import path from
 class DependencyErrorResolver {
   constructor() {
     this.checkInterval = process.env.CHECK_INTERVAL || 600000; // 10 minutes
-<<<<<<< HEAD
-    this.autoInstall = process.env.AUTO_INSTALL ===
-  'true';
-    this.securityCheck = process.env.SECURITY_CHECK ===
-  'true';
-    this.logFile =
-  'error-reports/dependency-error-resolver-report.json';
-    
-    console.log(
-  '📦 Dependency Error Resolver started');
-=======
-    this.autoInstall = process.env.AUTO_INSTALL === 'true';
-    this.securityCheck = process.env.SECURITY_CHECK === 'true';
-    this.logFile = 'error-reports/dependency-error-resolver-report.json';
-
-    console.log('📦 Dependency Error Resolver started');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     console.log(`Check interval: ${this.checkInterval}ms`);
     console.log(`Auto-install: ${this.autoInstall}`);
     console.log(`Security check: ${this.securityCheck}`);
@@ -43,14 +27,7 @@ class DependencyErrorResolver {
   }
 
   async checkDependencyErrors() {
-<<<<<<< HEAD
-    console.log(
-  '🔍 Checking dependency errors...');
-    
-=======
-    console.log('🔍 Checking dependency errors...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     const report = {
       timestamp: new Date().toISOString(),
       dependencies: {
@@ -126,14 +103,7 @@ class DependencyErrorResolver {
 
   parseMissingDependencies(output) {
     const missing = [];
-<<<<<<< HEAD
-    const lines = output.split(
-  '\\n');
-    
-=======
-    const lines = output.split('\\n');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     for (const line of lines) {
       if (line.includes(
   'UNMET DEPENDENCY') || line.includes(
@@ -143,12 +113,7 @@ class DependencyErrorResolver {
           missing.push({
             name: match[1],
             version: match[2],
-<<<<<<< HEAD
-            type:,
-  missing'
-=======
-            type: 'missing',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
           });
         }
       }
@@ -159,72 +124,12 @@ class DependencyErrorResolver {
 
   async checkOutdatedDependencies(report) {
     try {
-<<<<<<< HEAD
-      const output = execSync(
-  'npm outdated --json', { stdio: 'pipe }).toString();
-      const outdated = JSON.parse(output ||
-  '{}');
-      
-      report.dependencies.outdated = Object.entries(outdated).map(([name, info]) => ({
-        name,
-        current: info.current,
-        wanted: info.wanted,
-        latest: info.latest,
-        type:
-  'outdated'
-      }));
-=======
-      const output = execSync('npm outdated --json', {
-        stdio: 'pipe',
-      }).toString();
-      const outdated = JSON.parse(output || '{}');
-
-      report.dependencies.outdated = Object.entries(outdated).map(
-        ([name, info]) => ({
-          name,
-          current: info.current,
-          wanted: info.wanted,
-          latest: info.latest,
-          type: 'outdated',
-        })
-      );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     } catch (error) {
       // npm outdated returns exit code 1 when outdated packages exist
       if (error.stdout) {
         try {
-<<<<<<< HEAD
-          const outdated = JSON.parse(error.stdout.toString() ||
-  '{}');
-          report.dependencies.outdated = Object.entries(outdated).map(([name, info]) => ({
-            name,
-            current: info.current,
-            wanted: info.wanted,
-            latest: info.latest,
-            type:
-  'outdated'
-          }));
-        } catch (parseError) {
-          console.error(
-  'Error parsing outdated dependencies:,
-  , parseError.message);
-=======
-          const outdated = JSON.parse(error.stdout.toString() || '{}');
-          report.dependencies.outdated = Object.entries(outdated).map(
-            ([name, info]) => ({
-              name,
-              current: info.current,
-              wanted: info.wanted,
-              latest: info.latest,
-              type: 'outdated',
-            })
-          );
-        } catch (parseError) {
-          console.error(
-            'Error parsing outdated dependencies:',
-            parseError.message
-          );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         }
       }
     }
@@ -244,12 +149,7 @@ class DependencyErrorResolver {
           severity: vuln.severity,
           via: vuln.via,
           range: vuln.range,
-<<<<<<< HEAD
-          type:
-  'vulnerable'
-=======
-          type: 'vulnerable',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         }));
       }
     } catch (error) {
@@ -264,12 +164,7 @@ class DependencyErrorResolver {
               severity: vuln.severity,
               via: vuln.via,
               range: vuln.range,
-<<<<<<< HEAD
-              type:
-  'vulnerable'
-=======
-              type: 'vulnerable',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
             }));
           }
         } catch (parseError) {
@@ -301,12 +196,7 @@ class DependencyErrorResolver {
               name,
               expected: version,
               installed: installedVersion,
-<<<<<<< HEAD
-              type:
-  'peer-conflict'
-=======
-              type: 'peer-conflict',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
             });
           }
         }
@@ -322,15 +212,7 @@ class DependencyErrorResolver {
   getInstalledVersion(packageName) {
     try {
       const packageJsonPath = path.join(
-<<<<<<< HEAD
-  'node_modules', packageName,
-  'package.json');
-=======
-        'node_modules',
-        packageName,
-        'package.json'
-      );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       if (fs.existsSync(packageJsonPath)) {
         const pkg = JSON.parse(fs.readFileSync(packageJsonPath,
   'utf8'));
@@ -352,26 +234,7 @@ class DependencyErrorResolver {
   '.')[0];
       return expectedMajor === installedMajor;
     }
-<<<<<<< HEAD
-    
-    if (expected.startsWith(
-  '~')) {
-      const expectedMinor = expected.substring(1).split(
-  '.').slice(0, 2).join(
-  '.');
-      const installedMinor = installed.split(
-  '.').slice(0, 2).join(
-  '.');
-=======
-
-    if (expected.startsWith('~')) {
-      const expectedMinor = expected
-        .substring(1)
-        .split('.')
-        .slice(0, 2)
-        .join('.');
-      const installedMinor = installed.split('.').slice(0, 2).join('.');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       return expectedMinor === installedMinor;
     }
 
@@ -382,16 +245,7 @@ class DependencyErrorResolver {
     // Install missing dependencies
     for (const dep of report.dependencies.missing) {
       try {
-<<<<<<< HEAD
-        console.log(`Installing missing dependency: ${dep.name}@${dep.version}`);
-        execSync(`npm install ${dep.name}@${dep.version}`, { stdio:
-  'pipe' });
-=======
-        console.log(
-          `Installing missing dependency: ${dep.name}@${dep.version}`
-        );
-        execSync(`npm install ${dep.name}@${dep.version}`, { stdio: 'pipe' });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         report.fixes.installed.push(dep);
       } catch (error) {
         console.error(`Failed to install ${dep.name}:`, error.message);
@@ -403,31 +257,14 @@ class DependencyErrorResolver {
     for (const dep of report.dependencies.outdated) {
       if (this.isSafeUpdate(dep.current, dep.wanted)) {
         try {
-<<<<<<< HEAD
-          console.log(`Updating dependency: ${dep.name} from ${dep.current} to ${dep.wanted}`);
-          execSync(`npm install ${dep.name}@${dep.wanted}`, { stdio:
-  'pipe' });
-=======
-          console.log(
-            `Updating dependency: ${dep.name} from ${dep.current} to ${dep.wanted}`
-          );
-          execSync(`npm install ${dep.name}@${dep.wanted}`, { stdio: 'pipe' });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
           report.fixes.updated.push(dep);
         } catch (error) {
           console.error(`Failed to update ${dep.name}:`, error.message);
           report.fixes.failed.push({ ...dep, error: error.message });
         }
       } else {
-<<<<<<< HEAD
-        report.fixes.skipped.push({ ...dep, reason:,
-  Major version update - manual review required' });
-=======
-        report.fixes.skipped.push({
-          ...dep,
-          reason: 'Major version update - manual review required',
-        });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       }
     }
 
@@ -448,17 +285,7 @@ class DependencyErrorResolver {
   }
 
   isSafeUpdate(current, wanted) {
-<<<<<<< HEAD
-    const currentParts = current.split(
-  '.').map(Number);
-    const wantedParts = wanted.split(
-  '.').map(Number);
-    
-=======
-    const currentParts = current.split('.').map(Number);
-    const wantedParts = wanted.split('.').map(Number);
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     // Only allow minor and patch updates
     return currentParts[0] === wantedParts[0]; // Same major version
   }
@@ -479,21 +306,7 @@ class DependencyErrorResolver {
     }
 
     if (report.dependencies.vulnerable.length > 0) {
-<<<<<<< HEAD
-      const critical = report.dependencies.vulnerable.filter(v => v.severity ===
-  'critical').length;
-      const high = report.dependencies.vulnerable.filter(v => v.severity ===
-  'high').length;
-      
-=======
-      const critical = report.dependencies.vulnerable.filter(
-        v => v.severity === 'critical'
-      ).length;
-      const high = report.dependencies.vulnerable.filter(
-        v => v.severity === 'high'
-      ).length;
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       if (critical > 0) {
         recommendations.push(
           `URGENT: Fix ${critical} critical security vulnerabilities`

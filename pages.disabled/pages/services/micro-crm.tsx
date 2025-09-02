@@ -31,9 +31,9 @@ export default function MicroCRM(...args: any[]): any {
         title="Micro CRM - Zion Tech Group""
         description="Streamline your customer relationship management with our Micro CRM solution. Perfect for small businesses and growing teams."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 export default function MicroCRM(...args: any[]): any {}
   return()
@@ -58,9 +58,9 @@ export default function MicroCRM(...args: any[]): any {}
 ""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Micro CRM
-<<<<<<< HEAD
+
             </h1>"""
-=======
+
             </h1>"
                 Customer Relationship Management;
               </span>            </div>
@@ -79,9 +79,9 @@ export default function MicroCRM(...args: any[]): any {}
 ""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25">
-<<<<<<< HEAD
+
                 Start Free Trial"</button>""
-=======
+
                 Start Free Trial"
             </p>
 ""
@@ -98,9 +98,9 @@ export default function MicroCRM(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/micro-crm.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -110,9 +110,9 @@ export default function MicroCRM(...args: any[]): any {}
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/micro-crm.tsx
-<<<<<<< HEAD
+
               Essential CRM Features"</h2>""
-=======
+
               Essential CRM Features"
               Essential CRM Features;
             </h2>""
@@ -127,9 +127,9 @@ export default function MicroCRM(...args: any[]): any {}
 ""
           <div className="grid md: anygrid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-<<<<<<< HEAD
+
               <div"key={index}""
-=======
+
               <div"
           </div>
 ""
@@ -145,9 +145,9 @@ export default function MicroCRM(...args: any[]): any {}
                   <feature.icon className="w-6 h-6 text-cyan-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-cyan-400" />
                 </div>""
@@ -162,9 +162,9 @@ export default function MicroCRM(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/micro-crm.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -174,9 +174,9 @@ export default function MicroCRM(...args: any[]): any {}
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/micro-crm.tsx
-<<<<<<< HEAD
+
               Why Choose Micro CRM?"</h2>""
-=======
+
               Why Choose Micro CRM?"
               Why Choose Micro CRM?
             </h2>""
@@ -188,9 +188,9 @@ export default function MicroCRM(...args: any[]): any {}
 :pages.disabled/pages/services/micro-crm.tsx
           </div>"
 ""
-<<<<<<< HEAD
+
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-6">"{benefits.map((benefit, index) => (""
-=======
+
           <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-6">"
           </div>
 ""
@@ -205,9 +205,9 @@ export default function MicroCRM(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/micro-crm.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -228,9 +228,9 @@ export default function MicroCRM(...args: any[]): any {}
 ""
           <div className="grid md: anygrid-cols-2 gap-8">
             {useCases.map((useCase, index) => (
-<<<<<<< HEAD
+
               <div"key={index}""
-=======
+
               <div"
               Perfect For Your Business;
             </h2>""
@@ -252,9 +252,9 @@ export default function MicroCRM(...args: any[]): any {}
                   <useCase.icon className="w-8 h-8 text-cyan-400" />"
                 </div>""
                 <h3 className="text-2xl font-semibold text-white mb-4">
-<<<<<<< HEAD
+
                   {useCase.title}"</h3>""
-=======
+
                   {useCase.title}"
                   <useCase.icon className="w-8 h-8 text-cyan-400" />
                 </div>""
@@ -271,9 +271,9 @@ export default function MicroCRM(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/micro-crm.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -290,9 +290,9 @@ export default function MicroCRM(...args: any[]): any {}
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
             <button className="px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-cyan-400/25">
-<<<<<<< HEAD
+
               Start Free Trial"</button>""
-=======
+
               Start Free Trial"
             Ready to Transform Your Customer Relationships?
           </h2>""
@@ -313,11 +313,11 @@ export default function MicroCRM(...args: any[]): any {}
       </section>
     </div>
 :pages.disabled/pages/services/micro-crm.tsx
-<<<<<<< HEAD
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}

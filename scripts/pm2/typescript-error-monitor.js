@@ -13,17 +13,7 @@ class TypeScriptErrorMonitor {
     this.autoFixEnabled = process.env.AUTO_FIX_ENABLED ===
   'true';
     this.maxErrorsPerRun = parseInt(process.env.MAX_ERRORS_PER_RUN) || 50;
-<<<<<<< HEAD
-    this.logFile =
-  'error-reports/typescript-error-monitor-report.json';
-    
-    console.log(
-  '🔧 TypeScript Error Monitor started');
-=======
-    this.logFile = 'error-reports/typescript-error-monitor-report.json';
-
-    console.log('🔧 TypeScript Error Monitor started');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     console.log(`Check interval: ${this.checkInterval}ms`);
     console.log(`Auto-fix enabled: ${this.autoFixEnabled}`);
     console.log(`Max errors per run: ${this.maxErrorsPerRun}`);
@@ -40,14 +30,7 @@ class TypeScriptErrorMonitor {
   }
 
   async checkAndFixTypeScriptErrors() {
-<<<<<<< HEAD
-    console.log(
-  '🔍 Checking TypeScript errors...');
-    
-=======
-    console.log('🔍 Checking TypeScript errors...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     const report = {
       timestamp: new Date().toISOString(),
       summary: {
@@ -133,14 +116,7 @@ class TypeScriptErrorMonitor {
 
   parseTypeScriptErrors(output) {
     const errors = [];
-<<<<<<< HEAD
-    const lines = output.split(
-  '\\n');
-    
-=======
-    const lines = output.split('\\n');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     for (const line of lines) {
       // Parse TypeScript error format: file(line,col): error TS#### message
       const match = line.match(
@@ -154,12 +130,7 @@ class TypeScriptErrorMonitor {
           column: parseInt(col),
           code,
           message: message.trim(),
-<<<<<<< HEAD
-          type:
-  'typescript'
-=======
-          type: 'typescript',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         });
       }
     }
@@ -175,17 +146,7 @@ class TypeScriptErrorMonitor {
         return false;
       }
 
-<<<<<<< HEAD
-      const content = fs.readFileSync(file,
-  'utf8');
-      const lines = content.split(
-  '\\n');
-      
-=======
-      const content = fs.readFileSync(file, 'utf8');
-      const lines = content.split('\\n');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       if (line > lines.length) {
         return false;
       }
@@ -227,14 +188,7 @@ class TypeScriptErrorMonitor {
 
       if (modified) {
         // Create backup
-<<<<<<< HEAD
-        fs.writeFileSync(file +
-  '.backup', originalContent);
-        
-=======
-        fs.writeFileSync(file + '.backup', originalContent);
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         // Write fixed content
         const newContent = lines.join(
   '\\n');
@@ -254,40 +208,13 @@ class TypeScriptErrorMonitor {
 
   fixCannotFindName(lines, lineIndex, message) {
     const line = lines[lineIndex];
-<<<<<<< HEAD
-    const nameMatch = message.match(/Cannot find name,
-  (.+?)'/);
-    
-=======
-    const nameMatch = message.match(/Cannot find name '(.+?)'/);
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     if (nameMatch) {
       const missingName = nameMatch[1];
 
       // Add common missing imports
       const commonImports = {
-<<<<<<< HEAD
-  'React': "import React from
-  'react;",
-  'useState': "import { useState } from
-  'react';",
-  'useEffect': "import { useEffect } from
-  'react';",
-  'useRef': "import { useRef } from
-  'react';",
-  'FC': "import { FC } from
-  'react';",
-  'ReactNode': "import { ReactNode } from
-  'react';",
-=======
-        React: "import React from 'react';",
-        useState: "import { useState } from 'react';",
-        useEffect: "import { useEffect } from 'react';",
-        useRef: "import { useRef } from 'react';",
-        FC: "import { FC } from 'react';",
-        ReactNode: "import { ReactNode } from 'react';",
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       };
 
       if (commonImports[missingName]) {
@@ -296,17 +223,7 @@ class TypeScriptErrorMonitor {
       }
 
       // Add type annotation for undefined variables
-<<<<<<< HEAD
-      if (line.includes(missingName) && !line.includes(
-  'const') && !line.includes(
-  'let')) {
-=======
-      if (
-        line.includes(missingName) &&
-        !line.includes('const') &&
-        !line.includes('let')
-      ) {
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         lines[lineIndex] = line.replace(missingName, `${missingName}: any`);
         return true;
       }
@@ -317,14 +234,7 @@ class TypeScriptErrorMonitor {
 
   fixCannotFindModule(lines, lineIndex, message) {
     const line = lines[lineIndex];
-<<<<<<< HEAD
-    const moduleMatch = message.match(/Cannot find module
-  '(.+?)'/);
-    
-=======
-    const moduleMatch = message.match(/Cannot find module '(.+?)'/);
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     if (moduleMatch) {
       const moduleName = moduleMatch[1];
 
@@ -400,17 +310,7 @@ class TypeScriptErrorMonitor {
 
   fixImplicitAnyParameter(lines, lineIndex, message) {
     const line = lines[lineIndex];
-<<<<<<< HEAD
-    const paramMatch = message.match(/Parameter
-  '(.+?)' implicitly has an
-  'any' type/);
-    
-=======
-    const paramMatch = message.match(
-      /Parameter '(.+?)' implicitly has an 'any' type/
-    );
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     if (paramMatch) {
       const paramName = paramMatch[1];
       lines[lineIndex] = line.replace(
@@ -427,24 +327,7 @@ class TypeScriptErrorMonitor {
     const line = lines[lineIndex];
 
     // Generic type annotation fixes
-<<<<<<< HEAD
-    if (line.includes(
-  ':,
-  ) && !line.includes(
-  ': any') && !line.includes(
-  ': string') && !line.includes(
-  ': number)) {
-      lines[lineIndex] = line.replace(/:\\s*$/,
-  ': any');
-=======
-    if (
-      line.includes(':') &&
-      !line.includes(': any') &&
-      !line.includes(': string') &&
-      !line.includes(': number')
-    ) {
-      lines[lineIndex] = line.replace(/:\\s*$/, ': any');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       return true;
     }
 
@@ -477,21 +360,7 @@ class TypeScriptErrorMonitor {
 
   getRecommendationForErrorCode(code, count) {
     const recommendations = {
-<<<<<<< HEAD
-  'TS2304': `Consider adding proper imports for undefined names (${count} occurrences)`,
-  'TS2307': `Check module paths and file extensions (${count} occurrences)`,
-  'TS2339': `Add proper type definitions or use optional chaining (${count} occurrences)`,
-  'TS2345': `Review function argument types (${count} occurrences)`,
-  'TS2322': `Fix type assignments or add type assertions (${count} occurrences)`,
-  'TS7006': `Add explicit type annotations for parameters (${count} occurrences)`,
-=======
-      TS2304: `Consider adding proper imports for undefined names (${count} occurrences)`,
-      TS2307: `Check module paths and file extensions (${count} occurrences)`,
-      TS2339: `Add proper type definitions or use optional chaining (${count} occurrences)`,
-      TS2345: `Review function argument types (${count} occurrences)`,
-      TS2322: `Fix type assignments or add type assertions (${count} occurrences)`,
-      TS7006: `Add explicit type annotations for parameters (${count} occurrences)`,
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     };
 
     return recommendations[code];

@@ -1,9 +1,9 @@
 ;
 export { function };
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
 export default function Blockchain(...args[]):  {},;
-=======
+
 export default function Blockchain(...args[]):  {
 
 export default function Blockchain(...args[]):  {}
@@ -18,9 +18,9 @@ export default function Blockchain(...args[]):  {}
 :pages.disabled/pages/services/Blockchain.tsx
   const pricing = [
     {
-<<<<<<< HEAD
+
 """
-=======
+
 "
   const pricing: any = []
     {}
@@ -30,9 +30,9 @@ export default function Blockchain(...args[]):  {}
       price: "$3,999",""
       period: "/month",""
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
       description: "For small businesses exploring blockchain","features: [""
-=======
+
       description: "For small businesses exploring blockchain","
       description: "For small businesses exploring blockchain",
       features: [""
@@ -48,9 +48,9 @@ export default function Blockchain(...args[]):  {}
     },
 :pages.disabled/pages/services/Blockchain.tsx
     {
-<<<<<<< HEAD
+
 """
-=======
+
 "
     {}
 ""
@@ -59,9 +59,9 @@ export default function Blockchain(...args[]):  {}
       price: "$9,999",""
       period: "/month",""
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
       description: "For growing businesses with blockchain needs","features: [""
-=======
+
       description: "For growing businesses with blockchain needs","
       description: "For growing businesses with blockchain needs",
       features: [""
@@ -78,9 +78,9 @@ export default function Blockchain(...args[]):  {}
     },
 :pages.disabled/pages/services/Blockchain.tsx
     {
-<<<<<<< HEAD
+
 """
-=======
+
 "
     {}
 ""
@@ -89,9 +89,9 @@ export default function Blockchain(...args[]):  {}
       price: "$24,999",""
       period: "/month",""
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
       description: "For large-scale blockchain operations","features: [""
-=======
+
       description: "For large-scale blockchain operations","
       description: "For large-scale blockchain operations",
       features: [""
@@ -101,9 +101,9 @@ export default function Blockchain(...args[]):  {}
         "24/7 support",""
         "Real-time monitoring",;""
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
         "White-label solutions",;"        "Dedicated blockchain engineer";"],;""
-=======
+
         "White-label solutions",;"        "Dedicated blockchain engineer";"
         "White-label solutions",;"        "Dedicated blockchain engineer";
       ],;""
@@ -112,9 +112,9 @@ export default function Blockchain(...args[]):  {}
       popular: false};
   ]},;
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
     {;"icon: Users,;""
-=======
+
     {;"
     {;
       icon: Users,;""
@@ -123,11 +123,9 @@ export default function Blockchain(...args[]):  {}
       description: "Build trust through verifiable and auditable processes"};
   ];
 
-<<<<<<< HEAD
 :pages.disabled/pages/services/Blockchain.tsx
     {;"icon: Shield,;""
-=======
-  
+
 :pages.disabled/pages/services/Blockchain.tsx
     {;"
     {;
@@ -139,9 +137,9 @@ export default function Blockchain(...args[]):  {}
 :pages.disabled/pages/services/Blockchain.tsx
 "
   return (""
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-futuristic">"{/* Hero Section */}""
-=======
+
     <div className="min-h-screen bg-futuristic">"
 
   return (""
@@ -154,9 +152,9 @@ export default function Blockchain(...args[]):  {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -171,9 +169,9 @@ export default function Blockchain(...args[]):  {}
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               Trust Through""
               <span className="text-gradient"> Technology</span>
-<<<<<<< HEAD
+
             </h1>"""
-=======
+
             </h1>"
             </div>
 ""
@@ -192,9 +190,9 @@ export default function Blockchain(...args[]):  {}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="btn-futuristic px-8 py-4 text-lg">"
                 Start Blockchain Project""
-<<<<<<< HEAD
+
                 <ArrowRight className="w-5 h-5 ml-2"  />"</button>"              <button className="btn-outline px-8 py-4 text-lg">
-=======
+
                 <ArrowRight className="w-5 h-5 ml-2"  />"
             </p>
 ""
@@ -211,9 +209,9 @@ export default function Blockchain(...args[]):  {}
         </div>
       </section>
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -224,9 +222,9 @@ export default function Blockchain(...args[]):  {}
             initial = {}
   { opacity: 0,
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
   y: 20}}
-=======
+
   y: 20
 
   y: 20;
@@ -238,9 +236,9 @@ export default function Blockchain(...args[]):  {}
   y: 0
 
 }}
-<<<<<<< HEAD
+
             transition={{ duration: 0.6 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.6 }}"
   y: 0;
 }}
@@ -251,9 +249,9 @@ export default function Blockchain(...args[]):  {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
               Why Choose Blockchain Technology?"</h2>""
-=======
+
               Why Choose Blockchain Technology?"
               Why Choose Blockchain Technology?
             </h2>""
@@ -266,7 +264,7 @@ export default function Blockchain(...args[]):  {}
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index()
-<<<<<<< HEAD
+
               <motion.divkey={feature.title}
                 initial = {}
   { opacity: 0,
@@ -276,7 +274,7 @@ export default function Blockchain(...args[]):  {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0}}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -304,9 +302,8 @@ export default function Blockchain(...args[]):  {}
 :pages.disabled/pages/services/Blockchain.tsx
   delay: index * 0.1
 
-<<<<<<< HEAD
 }}"viewport={{ once: true }}""
-=======
+
 }}"
   delay: index * 0.1;
 }}
@@ -316,9 +313,9 @@ export default function Blockchain(...args[]):  {}
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
                   <feature.icon className="w-8 h-8 text-white" />"</div>""
-=======
+
                   <feature.icon className="w-8 h-8 text-white" />"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -341,9 +338,9 @@ export default function Blockchain(...args[]):  {}
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
+
   y: 30}}
-=======
+
   y: 30
 
       </div>
@@ -389,9 +386,8 @@ export default function Blockchain(...args[]):  {}
                   to="/request-quote""
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
 
-<<<<<<< HEAD
                   Request Quote</RouterLink>
-=======
+
                   Request Quote
   y: 0;
 }}
@@ -433,11 +429,10 @@ export default function Blockchain(...args[]):  {}
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
-  y: 30}}
-=======
-  y: 30
 
+  y: 30}}
+
+  y: 30
 
         {/* Use Cases Section */}""
         <section className="py-20">;""
@@ -459,9 +454,9 @@ export default function Blockchain(...args[]):  {}
               viewport={{ once: true }}"
 ""
               <h2 className="text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Blockchain Applications"</h2>""
-=======
+
                 Blockchain Applications"
   y: 0;
 }}
@@ -486,13 +481,13 @@ export default function Blockchain(...args[]):  {}
                   initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
+
   y: 30}}
                   whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0}}
-=======
+
   y: 30
 
             </motion.div>
@@ -527,9 +522,9 @@ export default function Blockchain(...args[]):  {}
                   </div>""
                   <h3 className="text-xl font-semibold text-white mb-2">{useCase.title}</h3>""
                   <p className="text-zinc-400 mb-4">{useCase.description}</p>""
-<<<<<<< HEAD
+
                   <ul className="space-y-2">"{useCase.examples.map((example, exampleIndex) => (""
-=======
+
                   <ul className="space-y-2">"
   delay: index * 0.1;
 }}
@@ -563,11 +558,10 @@ export default function Blockchain(...args[]):  {}
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
-  y: 30}}
-=======
-  y: 30
 
+  y: 30}}
+
+  y: 30
 
         {/* Features Section */}""
         <section className="py-20 bg-white/5">;""
@@ -589,9 +583,9 @@ export default function Blockchain(...args[]):  {}
               viewport={{ once: true }}"
 ""
               <h2 className="text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Why Choose Our Blockchain?"</h2>""
-=======
+
                 Why Choose Our Blockchain?"
   y: 0;
 }}
@@ -616,13 +610,13 @@ export default function Blockchain(...args[]):  {}
                   initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
+
   y: 30}}
                   whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0}}
-=======
+
   y: 30
 
             </motion.div>
@@ -653,9 +647,9 @@ export default function Blockchain(...args[]):  {}
                   viewport={{ once: true }}"
 ""
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">""
-<<<<<<< HEAD
+
                     <feature.icon className="w-6 h-6 text-white" />"</div>""
-=======
+
                     <feature.icon className="w-6 h-6 text-white" />"
   delay: index * 0.1;
 }}
@@ -682,11 +676,10 @@ export default function Blockchain(...args[]):  {}
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
-  y: 30}}
-=======
-  y: 30
 
+  y: 30}}
+
+  y: 30
 
         {/* Pricing Section */}""
         <section className="py-20">;""
@@ -708,9 +701,9 @@ export default function Blockchain(...args[]):  {}
               viewport={{ once: true }}"
 ""
               <h2 className="text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Transparent Pricing"</h2>""
-=======
+
                 Transparent Pricing"
   y: 0;
 }}
@@ -731,7 +724,7 @@ export default function Blockchain(...args[]):  {}
               {pricing.map(plan: unknown, index: unknown()
                 <motion.div
                   key={index}
-<<<<<<< HEAD
+
                   className={`relative p-8 rounded-2xl ${,
   plan.popular''
                       ?
@@ -745,7 +738,7 @@ export default function Blockchain(...args[]):  {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0}}
-=======
+
                   className={`relative p-8 rounded-2xl ${
 '
                     plan.popular''
@@ -784,9 +777,9 @@ export default function Blockchain(...args[]):  {}
 
 }}
                   viewport={{ once: true }}
-<<<<<<< HEAD
+
 "{plan.popular && (;""
-=======
+
 "
   delay: index * 0.1;
 }}
@@ -800,9 +793,9 @@ export default function Blockchain(...args[]):  {}
                       </span>
                     </div>
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
                   )}"""
-=======
+
                   )}"
                   )}
 ""
@@ -817,9 +810,9 @@ export default function Blockchain(...args[]):  {}
                     <p className="text-zinc-400">{plan.description}</p>
                   </div>"
 ""
-<<<<<<< HEAD
+
                   <ul className="space-y-3 mb-8">"{plan.features.map((feature, featureIndex) => (""
-=======
+
                   <ul className="space-y-3 mb-8">"
                       <span className="text-zinc-400 ml-1">{plan.period}</span>
                     </div>""
@@ -838,14 +831,14 @@ export default function Blockchain(...args[]):  {}
 "
                   <RouterLink""`
                     to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}``
-<<<<<<< HEAD
+
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${,
   plan.popular'
   '
                         ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover: from-orange-600 hover:to-red-600''
   '`
                         : 'bg-white/10 text-white hover:bg-white/20 border border-white/20``}`}
-=======
+
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
 '
                       plan.popular''
@@ -878,11 +871,10 @@ export default function Blockchain(...args[]):  {}
               initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
-  y: 30}}
-=======
-  y: 30
 
+  y: 30}}
+
+  y: 30
 
         {/* Benefits Section */}""
         <section className="py-20 bg-white/5">;""
@@ -904,9 +896,9 @@ export default function Blockchain(...args[]):  {}
               viewport={{ once: true }}"
 ""
               <h2 className="text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                 Business Benefits"</h2>""
-=======
+
                 Business Benefits"
   y: 0;
 }}
@@ -931,13 +923,13 @@ export default function Blockchain(...args[]):  {}
                   initial = {
 
   { opacity: 0,
-<<<<<<< HEAD
+
   x: index % 2 === 0 ? -30 : 30}}
                   whileInView = {}
   { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   x: 0}}
-=======
+
   x: index % 2 === 0 ? -30 : 30
 
             </motion.div>
@@ -969,9 +961,9 @@ export default function Blockchain(...args[]):  {}
 ""
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">""
                     <benefit.icon className="w-6 h-6 text-white" />
-<<<<<<< HEAD
+
                   </div>"<div>""
-=======
+
                   </div>"
   delay: index * 0.1;
 }}
@@ -991,9 +983,9 @@ export default function Blockchain(...args[]):  {}
           </div>
         </section>
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
         {/* CTA Section */}""
@@ -1004,9 +996,9 @@ export default function Blockchain(...args[]):  {}
               initial = {}
   { opacity: 0,
 :pages.disabled/pages/services/Blockchain.tsx
-<<<<<<< HEAD
+
   y: 30}}
-=======
+
   y: 30
 
   y: 30;
@@ -1039,9 +1031,8 @@ export default function Blockchain(...args[]):  {}
                   to="/request-quote""
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
 
-<<<<<<< HEAD
                   Get Custom Quote</RouterLink>
-=======
+
                   Get Custom Quote
   y: 0;
 }}

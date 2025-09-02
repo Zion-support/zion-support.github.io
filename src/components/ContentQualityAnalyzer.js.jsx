@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 import React from 'react'; const ContentQualityAnalyzer = () => { const [isOpen, setIsOpen] = useState (false) ; const [isAnalyzing, setIsAnalyzing] = useState (false) ; const [contentIssues, setContentIssues] = useState ([]) ; const [report, setReport] = useState (null) ; const [selectedFilter, setSelectedFilter] = useState ("all") ; const [searchTerm, setSearchTerm] = useState (") ;"""";
-=======
+
 import React, { useState, useEffect } from 'react';'''
 import { motion } from 'framer-motion';
 import {}
@@ -498,7 +498,6 @@ const ContentQualityAnalyzer = () => {}
         </motion.div>)}
     </>)};
 export default ContentQualityAnalyzer;
-
 
 export { ContentQualityAnalyzer };
 

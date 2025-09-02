@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import,
-  @testing-library/jest-dom';
-=======
-import '@testing-library/jest-dom'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
 
 // Mock Next.js router
 jest.mock(

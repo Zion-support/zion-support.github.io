@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-React, { useEffect, useState, useCallback } from
-  'react';
-import { motion, AnimatePresence } from
-  'framer-motion';'import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from'
-  'lucide-react';''
-  'interface PerformanceMetrics {fcp: number;'
-=======
-import React, { useEffect, useState, useCallback } from 'react'
-import  { motion, AnimatePresence } from 'framer-motion''import { Activity, Zap, Shield, Globe, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'''interface PerformanceMetrics {fcp: number;'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+import React, { useState, useEffect } from 'react';
+
+interface PerformanceMetrics {
   lcp: number;
   fid: number;
   cls: number;
@@ -60,42 +52,12 @@ const observer = new PerformanceObserver((list) => {;const entries = list.getEnt
 
         entries.forEach((entry) => {
           switch (entry.entryType) {
-<<<<<<< HEAD
-case, paint
-  ': if (entry.name === 'first-contentful-paint
-  ') {'                metrics.fcp = Math.round(entry.startTime);              }
-              break;
-            case, largest-contentful-paint': metrics.lcp = Math.round(entry.startTime);'              break;'            case'
-  'first-input': metrics.fid = Math.round(entry.processingStart - entry.startTime);'              break;'            case
-  'layout-shift': if (!(entry as any).hadRecentInput) {
-  '                metrics.cls = (metrics.cls || 0) + (entry as any).value;              }break;'
-=======
-case 'paint': if (entry.name === 'first-contentful-paint') {'                metrics.fcp = Math.round(entry.startTime)'              }
-              break;
-            case 'largest-contentful-paint': metrics.lcp = Math.round(entry.startTime)'              break;'            case 'first-input': metrics.fid = Math.round(entry.processingStart - entry.startTime)'              break;'            case 'layout-shift': if (!(entry as any).hadRecentInput) {'                metrics.cls = (metrics.cls || 0) + (entry as any).value'              }break;
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
           }
         });
 
         // Calculate TTFB
-<<<<<<< HEAD
-const navigationEntry = performance.getEntriesByType(
-  'navigation')[0] as PerformanceNavigationTiming;'        if (navigationEntry) {'
-  '          metrics.ttfb = Math.round(navigationEntry.responseStart - navigationEntry.requestStart);'
-        }
-
-        // Calculate FMP (First Meaningful Paint)
-        const paintEntries = performance.getEntriesByType('paint'
-  ');'        const fmpEntry = paintEntries.find(entry => entry.name ===
-  'first-meaningful-paint');'        if (fmpEntry) {'
-  '          metrics.fmp = Math.round(fmpEntry.startTime);}'
-=======
-const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming'        if (navigationEntry) {'          metrics.ttfb = Math.round(navigationEntry.responseStart - navigationEntry.requestStart)
-        }
-
-        // Calculate FMP (First Meaningful Paint)
-        const paintEntries = performance.getEntriesByType('paint')'        const fmpEntry = paintEntries.find(entry => entry.name === 'first-meaningful-paint')'        if (fmpEntry) {'          metrics.fmp = Math.round(fmpEntry.startTime)}'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
 
         // Calculate TTI (Time to Interactive) - simplified
         metrics.tti = Math.round(performance.now());
@@ -112,17 +74,7 @@ const finalMetrics = {;
 
       // Observe different types of performance entries
       try {
-<<<<<<< HEAD
-observer.observe({ entryTypes: [, paint
-  ', 'largest-contentful-paint
-  ', 'first-input
-  ', 'layout-shift
-  '] });'      } catch (error) {
-  '        console.warn('Performance Observer not supported:  , error);'      }'
-  '// Fallback timeout'
-=======
-observer.observe({ entryTypes: ['paintlargest-contentful-paintfirst-input', 'layout-shift'] })'      } catch (error) {'        console.warn('Performance Observer not supported: ', error)'      }'// Fallback timeout
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
       setTimeout(() => {
         resolve({
           fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0
@@ -138,25 +90,7 @@ const updateMetrics = useCallback(async () => {;setIsLoading(true);
       setLastUpdated(new Date());
 
       // Generate alerts based on metrics
-<<<<<<< HEAD
-      const newAlerts: string[] = [];
-if (newMetrics.fcp > 3000) newAlerts.push(, First Contentful Paint is slow
-  ');'      if (newMetrics.lcp > 4000) newAlerts.push(
-  'Largest Contentful Paint is slow');'      if (newMetrics.fid > 300) newAlerts.push('
-  'First Input Delay is high');'      if (newMetrics.cls > 0.25) newAlerts.push('
-  'Cumulative Layout Shift is high');'      if (newMetrics.score < 50) newAlerts.push('
-  'Overall performance score is low');''
-  '      setAlerts(newAlerts);'
-    } catch (error) {
-      console.error('Error collecting performance metrics:  , error);, '
-  } finally {
-  '      setIsLoading(false);}'
-=======
-      const newAlerts: string[] = []
-if (newMetrics.fcp > 3000) newAlerts.push('First Contentful Paint is slow')'      if (newMetrics.lcp > 4000) newAlerts.push('Largest Contentful Paint is slow')'      if (newMetrics.fid > 300) newAlerts.push('First Input Delay is high')'      if (newMetrics.cls > 0.25) newAlerts.push('Cumulative Layout Shift is high')'      if (newMetrics.score < 50) newAlerts.push('Overall performance score is low')''      setAlerts(newAlerts)
-    } catch (error) {
-      console.error('Error collecting performance metrics: ', error)'    } finally {'      setIsLoading(false);}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
   }, [collectMetrics]);
 
   useEffect(() => {
@@ -168,22 +102,7 @@ if (newMetrics.fcp > 3000) newAlerts.push('First Contentful Paint is slow')'    
     }
   }, [updateMetrics, autoRefresh, refreshInterval]);
 
-<<<<<<< HEAD
-const getScoreColor = (score: number): string => {;
-    if (score >= 90) return 'text-green-500'
-  ';'    if (score >= 70) return
-  'text-yellow-500';'    return'
-  'text-red-500';  };, const getScoreBgColor = (score: number): string => {;
-    if (score >= 90) return
-  'bg-green-100';'    if (score >= 70) return'
-  'bg-yellow-100';'    return'
-  'bg-red-100';  };''
-=======
-const getScoreColor = (score: number): string => {
-    if (score >= 90) return 'text-green-500''    if (score >= 70) return 'text-yellow-500''    return 'text-red-500''  };'
-  const getScoreBgColor = (score: number): string => {
-    if (score >= 90) return 'bg-green-100''    if (score >= 70) return 'bg-yellow-100''    return 'bg-red-100''  };'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
   if (!showDetails) {
     return (
       <div className="fixed bottom-4 right-4 z-50">"        <motion.div"          initial={{ scale: 0, opacity: 0 }}
@@ -229,12 +148,7 @@ const getScoreColor = (score: number): string => {
             {alerts.length > 0 && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-animate={{ opacity: 1, height: 'auto' }}
-  '                exit={{ opacity: 0, height: 0 }}'                className="space-y-2""              >"                <h4 className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center">"                  <AlertTriangle className="w-4 h-4 mr-1" />"                  Performance Alerts"                </h4>{alerts.map((alert, index) => ("
-=======
-animate={{ opacity: 1, height: 'auto' }}'                exit={{ opacity: 0, height: 0 }}'                className="space-y-2""              >"                <h4 className="text-sm font-medium text-red-600 dark:text-red-400 flex items-center">"                  <AlertTriangle className="w-4 h-4 mr-1" />"                  Performance Alerts"                </h4>{alerts.map((alert, index) => ("
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, x: -20 }}

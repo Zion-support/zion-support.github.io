@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 import React from 'react'; const LinkHealthMonitor = () => { const [isOpen, setIsOpen] = useState (false) ; const [isMonitoring, setIsMonitoring] = useState (false) ; const [linkStatuses, setLinkStatuses] = useState ([]) ; const [report, setReport] = useState (null) ; const [selectedFilter, setSelectedFilter] = useState ("all") ;""";
-=======
+
 import React, { useState, useEffect } from 'react';'''
 import { motion } from 'framer-motion';
 import {}
@@ -369,7 +369,6 @@ const LinkHealthMonitor = () => {}
         </motion.div>)}
     </>)};
 export default LinkHealthMonitor;
-
 
 export { LinkHealthMonitor };
 

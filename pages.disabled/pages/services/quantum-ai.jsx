@@ -5,9 +5,9 @@ import { Link } from
 const QuantumAIServices = () => {}
   return()
 :pages.disabled/pages/services/quantum-ai.jsx
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-slate-900 text-white">"{/* Header Section */}""
-=======
+
     <div className="min-h-screen bg-slate-900 text-white">"
     <div className="min-h-screen bg-slate-900 text-white">
       {/* Header Section */}""
@@ -33,9 +33,9 @@ const QuantumAIServices = () => {}
               </Link>"
               <Link""
                 to="/quantum-neural-network-platform""
-<<<<<<< HEAD
+
                 className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
-=======
+
                 className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
               Quantum AI Services;
             </h1>""
@@ -63,9 +63,9 @@ const QuantumAIServices = () => {}
         </div>
       </div>
 :pages.disabled/pages/services/quantum-ai.jsx
-<<<<<<< HEAD
+
 "{/* Services Overview */}""
-=======
+
 "
 
       {/* Services Overview */}""
@@ -74,9 +74,9 @@ const QuantumAIServices = () => {}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <h2 className="text-4xl font-bold text-center mb-16 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/quantum-ai.jsx
-<<<<<<< HEAD
+
             Our Quantum AI Services"</h2>""
-=======
+
             Our Quantum AI Services"
             Our Quantum AI Services;
           </h2>""
@@ -88,9 +88,9 @@ const QuantumAIServices = () => {}
                 <span className="text-3xl">🧠</span>"
               </div>""
               <h3 className="text-xl font-semibold mb-4">
-<<<<<<< HEAD
+
                 Quantum Neural Networks"</h3>""
-=======
+
                 Quantum Neural Networks"
                 <span className="text-3xl">🧠</span>
               </div>""
@@ -113,9 +113,9 @@ const QuantumAIServices = () => {}
 ""
             <div className="bg-slate-700/50 p-8 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">""
               <div className="w-16 h-16 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-6">""
-<<<<<<< HEAD
+
                 <span className="text-3xl">🔬</span>"</div>""
-=======
+
                 <span className="text-3xl">🔬</span>"
               </p>
               <Link""
@@ -150,9 +150,9 @@ const QuantumAIServices = () => {}
                 <span className="text-3xl">⚡</span>"
               </div>""
               <h3 className="text-xl font-semibold mb-4">
-<<<<<<< HEAD
+
                 Quantum Optimization"</h3>""
-=======
+
                 Quantum Optimization"
               </p>
               <Link""
@@ -178,9 +178,9 @@ const QuantumAIServices = () => {}
               </p>"
               <Link""
                 to="/services/consulting""
-<<<<<<< HEAD
+
                 className="text-purple-400 hover:text-purple-300 transition-colors">
-=======
+
                 className="text-purple-400 hover:text-purple-300 transition-colors"
               </p>
               <Link""
@@ -195,9 +195,9 @@ const QuantumAIServices = () => {}
         </div>
       </div>
 :pages.disabled/pages/services/quantum-ai.jsx
-<<<<<<< HEAD
+
 "{/* Use Cases */}""
-=======
+
 "
 
       {/* Use Cases */}""
@@ -211,9 +211,9 @@ const QuantumAIServices = () => {}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">"
             <div>""
               <h3 className="text-2xl font-semibold mb-6 text-blue-400">
-<<<<<<< HEAD
+
                 Scientific Research"</h3>""
-=======
+
                 Scientific Research"
             Applications & Use Cases;
           </h2>""
@@ -235,9 +235,9 @@ const QuantumAIServices = () => {}
                 </li>""
                 <li className="flex items-start">""
                   <span className="text-blue-400 mr-3">•</span>
-<<<<<<< HEAD
+
                   Quantum chemistry simulations"</li>""
-=======
+
                   Quantum chemistry simulations"
                   Drug discovery and molecular modeling;
                 </li>""
@@ -260,9 +260,9 @@ const QuantumAIServices = () => {}
 "
             <div>""
               <h3 className="text-2xl font-semibold mb-6 text-cyan-400">
-<<<<<<< HEAD
+
                 Business Applications"</h3>""
-=======
+
                 Business Applications"
 
             <div>""
@@ -282,9 +282,9 @@ const QuantumAIServices = () => {}
                 </li>""
                 <li className="flex items-start">""
                   <span className="text-cyan-400 mr-3">•</span>
-<<<<<<< HEAD
+
                   Machine learning model training"</li>""
-=======
+
                   Machine learning model training"
                   Financial portfolio optimization;
                 </li>""
@@ -307,9 +307,9 @@ const QuantumAIServices = () => {}
         </div>
       </div>
 :pages.disabled/pages/services/quantum-ai.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -333,9 +333,9 @@ const QuantumAIServices = () => {}
             </Link>"
             <Link""
               to="/quantum-neural-network-platform""
-<<<<<<< HEAD
+
               className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg">
-=======
+
               className="border border-blue-500 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 text-lg"
             Ready to Explore Quantum AI?
           </h2>""
@@ -366,9 +366,9 @@ const QuantumAIServices = () => {}
 export { QuantumAIServices };
 :pages.disabled/pages/services/quantum-ai.jsx
 export default QuantumAIServices;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default QuantumAIServices;
 '""

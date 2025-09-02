@@ -1,5 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 import { useEffect } from 'react';''interface PerformanceOptimizerProps {;
 
   children: React.ReactNode;
@@ -35,7 +35,7 @@ target.style.backgroundImage = `url (${target.dataset.src}) `;`              tar
     };
   }, []) ;
 ;
-=======
+
 import { useEffect } from 'react';
 
 export default function Page() {
@@ -104,5 +104,5 @@ export const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ chil
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
   return <>{children}</>;
 };
-=======
+
 >>>>>>> pr-10728

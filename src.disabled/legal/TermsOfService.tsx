@@ -147,5 +147,5 @@ const TermsOfService: React.FC = ($2) => {
 };
 
 export default TermsOfService;
-=======
+
 >>>>>>> pr-10728:src/legal/TermsOfService.tsx

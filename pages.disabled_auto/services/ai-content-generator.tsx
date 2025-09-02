@@ -1,132 +1,15 @@
-<<<<<<< HEAD
-import React from, react';'
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../../components/layout/MainLayout';
-import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from
-  'lucide-react';
-import Link from
-  'next/link';
-=======
-import React from 'react'
-import type { NextPage } from 'next'
-import MainLayout from '../../components/layout/MainLayout'
-import { CheckCircle, Star, Users, Zap, Globe, Shield, ArrowRight } from 'lucide-react'
-import Link from 'next/link'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
 
 const AIContentGenerator: NextPage = () => {
   const features = [
     {
-<<<<<<< HEAD
-      title: 'Multi-Language Support, '
-      description: 'Generate content in over 50 languages with native-level quality',
-      icon: <Globe className="w-6 h-6" />
-    }, {
-      title:,
-  SEO Optimization', '
-      description: 'AI-powered SEO optimization for better search rankings,'
-      icon: <Zap className="w-6 h-6" />
-    }, {
-      title:,
-  Brand Voice Consistency', '
-      description: 'Maintain consistent brand voice across all content,'
-      icon: <Shield className="w-6 h-6" />
-    }, {
-      title:,
-  Real-time Collaboration', '
-      description: 'Work together with your team in real-time,'
-      icon: <Users className="w-6 h-6" />
-=======
-      title: 'Multi-Language Support', description: 'Generate content in over 50 languages with native-level quality',
-      icon: <Globe className="w-6 h-6" />
-    }, {
-      title: 'SEO Optimization',
-      description: 'AI-powered SEO optimization for better search rankings', icon: <Zap className="w-6 h-6" />
-    },
-    {
-      title: 'Brand Voice Consistency', description: 'Maintain consistent brand voice across all content',
-      icon: <Shield className="w-6 h-6" />
-    }, {
-      title: 'Real-time Collaboration',
-      description: 'Work together with your team in real-time', icon: <Users className="w-6 h-6" />
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ]
 
   const pricingPlans = [
     {
-<<<<<<< HEAD
-      name:, Starter','
-      price: '$99, '
-      period:,
-  /month', '
-      description: 'Perfect for small businesses and individuals,'
-      features: [
-  '10, 000 words per month',
-  '5 languages supported', 'Basic SEO optimization',
-  'Email support', 'Standard templates'
-      ], popular: false
-    },
-    {
-      name:, Professional','
-      price: '$199, '
-      period:,
-  /month', '
-      description: 'Ideal for growing businesses and content teams,'
-      features: [
-  '50, 000 words per month',
-  '25 languages supported', 'Advanced SEO optimization',
-  'Priority support', 'Custom templates',
-  'Team collaboration (up to 5 users)', 'API access'
-      ], popular: true
-    },
-    {
-      name:, Enterprise','
-      price: 'Custom, '
-      period:,
-  ', '
-      description: 'Tailored solutions for large organizations,'
-      features: [
-        'Unlimited words'
-  ', '
-        'All languages supported'
-  ','
-        'Custom AI models'
-  ', '
-        'Dedicated support'
-  ','
-        'White-label solution'
-  ', '
-        'Unlimited team members'
-  ','
-        'Advanced analytics'
-  ', '
-        'Custom integrations'
-  ''
-      ], popular: false
-=======
-      name: 'Starter', price: '$99', period: '/month', description: 'Perfect for small businesses and individuals', features: [
-        '10, 000 words per month5 languages supportedBasic SEO optimization', 'Email support', 'Standard templates'
-      ], popular: false
-    },
-    {
-      name: 'Professional', price: '$199',
-      period: '/month', description: 'Ideal for growing businesses and content teams',
-      features: [
-        '50, 000 words per month25 languages supportedAdvanced SEO optimization',
-        'Priority supportCustom templatesTeam collaboration (up to 5 users)', 'API access'
-      ], popular: true
-    },
-    {
-      name: 'Enterprise', price: 'Custom',
-      period: '', description: 'Tailored solutions for large organizations',
-      features: [
-        'Unlimited wordsAll languages supportedCustom AI models', 'Dedicated supportWhite-label solutionUnlimited team members',
-        'Advanced analytics', 'Custom integrations'
-      ], popular: false
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ]
 
@@ -245,14 +128,7 @@ const AIContentGenerator: NextPage = () => {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
-<<<<<<< HEAD
-                      ?, bg-blue-600 hover: bg-blue-700 text-white''
-                      :
-  'bg-gray-100 hover:bg-gray-200 text-gray-900'
-=======
-                      ? 'bg-blue-600 hover: bg-blue-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
                   }`}
                 >
                   Get Started

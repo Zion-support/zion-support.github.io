@@ -71,14 +71,7 @@ class BuildOptimizer {
   }
 
   async optimize() {
-<<<<<<< HEAD
-    console.log(
-  '🚀 Starting build optimization...');
-    
-=======
-    console.log('🚀 Starting build optimization...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     try {
       await this.cleanConsoleStatements();
       await this.optimizeImages();
@@ -88,19 +81,7 @@ class BuildOptimizer {
       await this.generateRobotsTxt();
       await this.optimizeManifest();
       await this.generateReport();
-<<<<<<< HEAD
-      
-      console.log(
-  '✅ Build optimization completed successfully!');
-      console.log(`📊 Optimization report saved to: ${path.join(this.buildDir,
-  'optimization-report.json')}`);
-=======
-
-      console.log('✅ Build optimization completed successfully!');
-      console.log(
-        `📊 Optimization report saved to: ${path.join(this.buildDir, 'optimization-report.json')}`
-      );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     } catch (error) {
       console.error(
   '❌ Build optimization failed:', error.message);
@@ -111,20 +92,7 @@ class BuildOptimizer {
   }
 
   async cleanConsoleStatements() {
-<<<<<<< HEAD
-    console.log(
-  '🧹 Cleaning console statements...');
-    
-    const files = this.getAllFiles(this.srcDir, [
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx']);
-=======
-    console.log('🧹 Cleaning console statements...');
-
-    const files = this.getAllFiles(this.srcDir, ['.ts', '.tsx', '.js', '.jsx']);
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     let cleanedFiles = 0;
 
     for (const file of files) {
@@ -137,23 +105,7 @@ class BuildOptimizer {
         if (process.env.NODE_ENV ===
   'production') {
           content = content
-<<<<<<< HEAD
-            .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g, '
-  ')
-            .replace(/\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g, '')
-            .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\//g, '
-  ');
-=======
-            .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g, '')
-            .replace(
-              /\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g,
-              ''
-            )
-            .replace(
-              /\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\//g,
-              ''
-            );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         }
 
         if (content !== originalContent) {
@@ -174,18 +126,7 @@ class BuildOptimizer {
   }
 
   async optimizeImages() {
-<<<<<<< HEAD
-    console.log('🖼️ Optimizing images...
-  ');
-    
-    const imageDir = path.join(this.projectRoot, 'public
-  ', 'images
-  ');
-=======
-    console.log('🖼️ Optimizing images...');
-
-    const imageDir = path.join(this.projectRoot, 'public', 'images');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     if (!fs.existsSync(imageDir)) {
       this.optimizationReport.warnings.push('Images directory not found
   ');
@@ -226,29 +167,12 @@ class BuildOptimizer {
   }
 
   async optimizeCSS() {
-<<<<<<< HEAD
-    console.log('🎨 Optimizing CSS...
-  ');
-    
-    const cssFiles = this.getAllFiles(this.srcDir, ['.css
-  ']);
-=======
-    console.log('🎨 Optimizing CSS...');
-
-    const cssFiles = this.getAllFiles(this.srcDir, ['.css']);
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     let optimizedCSS = 0;
 
     for (const file of cssFiles) {
       try {
-<<<<<<< HEAD
-        let content = fs.readFileSync(file, 'utf8
-  ');
-        
-=======
-        let content = fs.readFileSync(file, 'utf8');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         // Remove unused CSS (basic implementation)
         content = content
           .replace(/\s+/g, ' 
@@ -272,37 +196,12 @@ class BuildOptimizer {
   }
 
   async optimizeJavaScript() {
-<<<<<<< HEAD
-    console.log(
-  '⚡ Optimizing JavaScript...');
-    
-    const jsFiles = this.getAllFiles(this.srcDir, [
-  '.ts',
-  '.tsx',
-  '.js',
-  '.jsx']);
-=======
-    console.log('⚡ Optimizing JavaScript...');
-
-    const jsFiles = this.getAllFiles(this.srcDir, [
-      '.ts',
-      '.tsx',
-      '.js',
-      '.jsx',
-    ]);
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     let optimizedJS = 0;
 
     for (const file of jsFiles) {
       try {
-<<<<<<< HEAD
-        let content = fs.readFileSync(file,
-  'utf8');
-        
-=======
-        let content = fs.readFileSync(file, 'utf8');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
         // Basic optimizations
         content = content
           .replace(/\s+/g,
@@ -328,14 +227,7 @@ class BuildOptimizer {
   }
 
   async generateSitemap() {
-<<<<<<< HEAD
-    console.log(,
-  🗺️ Generating sitemap...');
-    
-=======
-    console.log('🗺️ Generating sitemap...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -367,31 +259,7 @@ class BuildOptimizer {
     <priority>0.7</priority>
   </url>
 </urlset>`;
-<<<<<<< HEAD
-    
-    fs.writeFileSync(path.join(this.buildDir,
-  'sitemap.xml'), sitemap);
-    this.optimizationReport.optimizations.push(
-  'Generated sitemap.xml');
-    console.log(
-  '✅ Generated sitemap.xml');
-  }
-
-  async generateRobotsTxt() {
-    console.log(
-  '🤖 Generating robots.txt...');
-    
-=======
-
-    fs.writeFileSync(path.join(this.buildDir, 'sitemap.xml'), sitemap);
-    this.optimizationReport.optimizations.push('Generated sitemap.xml');
-    console.log('✅ Generated sitemap.xml');
-  }
-
-  async generateRobotsTxt() {
-    console.log('🤖 Generating robots.txt...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     const robotsTxt = `User-agent: *
 Allow: /
 
@@ -402,31 +270,7 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/`;
-<<<<<<< HEAD
-    
-    fs.writeFileSync(path.join(this.buildDir,
-  'robots.txt'), robotsTxt);
-    this.optimizationReport.optimizations.push(
-  'Generated robots.txt');
-    console.log(
-  '✅ Generated robots.txt');
-  }
-
-  async optimizeManifest() {
-    console.log(
-  '📱 Optimizing manifest...');
-    
-=======
-
-    fs.writeFileSync(path.join(this.buildDir, 'robots.txt'), robotsTxt);
-    this.optimizationReport.optimizations.push('Generated robots.txt');
-    console.log('✅ Generated robots.txt');
-  }
-
-  async optimizeManifest() {
-    console.log('📱 Optimizing manifest...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     const manifest = {
       name: 'Zion Tech Group',
       short_name: 'Zion Tech',
@@ -450,12 +294,7 @@ Disallow: /private/`;
     };
 
     fs.writeFileSync(
-<<<<<<< HEAD
-      path.join(this.buildDir,
-  'manifest.json'), 
-=======
-      path.join(this.buildDir, 'manifest.json'),
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       JSON.stringify(manifest, null, 2)
     );
     this.optimizationReport.optimizations.push(

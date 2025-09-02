@@ -1,19 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Header from '../layout/Header';
-import Footer from '../layout/Footer';
-=======
-<<<<<<< HEAD
-React from
-  'react';
-import { SEO } from
-  '../components/SEO';''
-  'const About: React.FC = () => {'
-=======
-import React from 'react'
-import  { SEO } from '../components/SEO'''const About: React.FC = () => {''
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
   return (
     <>
       <SEO 

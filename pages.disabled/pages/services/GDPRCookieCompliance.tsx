@@ -4,9 +4,9 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
     <SEO title="GDPR & Cookie Compliance - Zion Tech Group" description="Automated cookie consent banners, policy generation, and compliance audits for GDPR/CCPA/CPRA."  />""
     <section className="container mx-auto px-4 py-12">""
 :pages.disabled/pages/services/GDPRCookieCompliance.tsx
-<<<<<<< HEAD
+
       <h1 className="text-4xl font-bold mb-4">GDPR & Cookie Compliance</h1>"      <p className="text-slate-300 max-w-3xl">Detect trackers, auto-categorize cookies, and display geo-aware consent banners. Generate audit-ready logs and policy versions across your properties.</p>"</section>""
-=======
+
       <h1 className="text-4xl font-bold mb-4">GDPR & Cookie Compliance</h1>"      <p className="text-slate-300 max-w-3xl">Detect trackers, auto-categorize cookies, and display geo-aware consent banners. Generate audit-ready logs and policy versions across your properties.</p>"
       <h1 className="text-4xl font-bold mb-4">GDPR & Cookie Compliance</h1>"      <p className="text-slate-300 max-w-3xl">Detect trackers, auto-categorize cookies, and display geo-aware consent banners. Generate audit-ready logs and policy versions across your properties.</p>
     </section>""
@@ -20,9 +20,9 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
           <li>Policy generator and versioning with diff</li>
           <li>Consent logs export (CSV/JSON) and API access</li>
 :pages.disabled/pages/services/GDPRCookieCompliance.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -34,9 +34,9 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
           <li>HubSpot, Marketo, Salesforce</li>
           <li>Next.js, Vite, Shopify, WordPress plugins</li>
 :pages.disabled/pages/services/GDPRCookieCompliance.tsx
-<<<<<<< HEAD
+
         </ul>"</div>""
-=======
+
         </ul>"
         </ul>
       </div>""
@@ -49,9 +49,9 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
           <li>Enterprise: custom, DPA + SSO</li>
         </ul>;
 :pages.disabled/pages/services/GDPRCookieCompliance.tsx
-<<<<<<< HEAD
+
       </div>;"</section>;""
-=======
+
       </div>;"
       </div>;
     </section>;""
@@ -66,9 +66,9 @@ export { GDPRCookieCompliance };
 export default GDPRCookieCompliance;
 :pages.disabled/pages/services/GDPRCookieCompliance.tsx
 "
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 
 '""

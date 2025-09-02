@@ -32,9 +32,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {
         description="Revolutionary AI-Quantum hybrid computing platform combining the power of quantum computing with artificial intelligence for unprecedented computational capabilities.""
         keywords="quantum computing, AI, hybrid platform, quantum algorithms, quantum machine learning, quantum cryptography"
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
   return()
@@ -51,9 +51,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -65,9 +65,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
               <Atom className="w-4 h-4 mr-2"  />              Revolutionary Quantum-AI Technology"
             </div>""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
+
               AI Quantum Hybrid Platform"</h1>""
-=======
+
               AI Quantum Hybrid Platform"
               <Atom className="w-4 h-4 mr-2"  />              Revolutionary Quantum-AI Technology;
             </div>""
@@ -97,9 +97,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
               <ArrowRight className="ml-2 w-5 h-5"  />            </a>"
             <a""
               href="#demo""
-<<<<<<< HEAD
+
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors">
-=======
+
               className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}""
@@ -122,9 +122,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
         </div>
       </section>
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -135,9 +135,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -161,9 +161,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
+
                 transition={{ duration: 0.8, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.8, delay: index * 0.1 }}"
               Revolutionary Quantum-AI Features;
             </h2>""
@@ -189,9 +189,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
                   <feature.icon className="w-6 h-6 text-purple-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-purple-400" />
                 </div>""
@@ -206,9 +206,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
         </div>
       </section>
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -219,9 +219,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -230,9 +230,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
               Transparent Quantum Computing Pricing"</h2>""
-=======
+
               Transparent Quantum Computing Pricing"
               Transparent Quantum Computing Pricing;
             </h2>""
@@ -246,9 +246,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
 ""
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingTiers.map(tier: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -262,13 +262,13 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${,
   index === 1''
                     ?
   'border-purple-500/50 bg-purple-500/10''
   '`: 'border-white/10``
-=======
+
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${
 '
                   index === 1''
@@ -294,9 +294,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
                 </div>""
                 <p className="text-gray-300 mb-6">{tier.description}</p>"
 ""
-<<<<<<< HEAD
+
                 <ul className="space-y-3 mb-8">"{tier.features.map((feature, featureIndex) => (""
-=======
+
                 <ul className="space-y-3 mb-8">"
                 className={`bg-white/5 backdrop-blur-sm rounded-xl p-8 border ${}
                   index === 1'
@@ -329,9 +329,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
                     </li>
                   ))}
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
                 </ul>"""
-=======
+
                 </ul>"
                 </ul>
 ""
@@ -343,14 +343,14 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
 "
                 <a""`
                   href="/contact"``
-<<<<<<< HEAD
+
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${,
   index === 1'
   '
                       ? 'bg-purple-600 hover: bg-purple-700 text-white''
   '`
                       : 'bg-white/10 hover:bg-white/20 text-white border border-white/20``}`}
-=======
+
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-colors ${
 '
                     index === 1''
@@ -374,9 +374,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
         </div>
       </section>
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -387,9 +387,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -398,9 +398,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
               Revolutionary Use Cases"</h2>""
-=======
+
               Revolutionary Use Cases"
               Revolutionary Use Cases;
             </h2>""
@@ -419,9 +419,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
+
                 transition={{ duration: 0.8, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.8, delay: index * 0.1 }}"
           </motion.div>
 ""
@@ -441,9 +441,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
                   <useCase.icon className="w-6 h-6 text-purple-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {useCase.title}"</h3>""
-=======
+
                   {useCase.title}"
                   <useCase.icon className="w-6 h-6 text-purple-400" />
                 </div>""
@@ -458,9 +458,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
         </div>
       </section>
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -471,9 +471,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -482,9 +482,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
               Why Choose Our AI-Quantum Platform?"</h2>""
-=======
+
               Why Choose Our AI-Quantum Platform?"
               Why Choose Our AI-Quantum Platform?
             </h2>""
@@ -502,9 +502,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
-<<<<<<< HEAD
+
                 transition={{ duration: 0.8, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.8, delay: index * 0.1 }}"
           </motion.div>
 ""
@@ -521,9 +521,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
               >""
                 <div className="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0">""
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
                   <CheckCircle className="w-5 h-5 text-purple-400"  />"</div>"                <p className="text-lg text-gray-300">{benefit}</p>
-=======
+
                   <CheckCircle className="w-5 h-5 text-purple-400"  />"
                   <CheckCircle className="w-5 h-5 text-purple-400"  />
                 </div>"                <p className="text-lg text-gray-300">{benefit}</p>
@@ -534,9 +534,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
         </div>
       </section>
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -563,9 +563,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
                 className="inline-flex items-center px-8 py-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
               >"
                 Start Your Quantum Journey""
-<<<<<<< HEAD
+
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>"<a""
-=======
+
                 <ArrowRight className="ml-2 w-5 h-5"  />              </a>"
             viewport={{ once: true }}
           >""
@@ -589,9 +589,9 @@ export default function AIQuantumHybridPlatform(...args: unknown[]): unknown {}
                 className="inline-flex items-center px-8 py-4 border border-purple-500 text-purple-300 hover:bg-purple-500/20 font-semibold rounded-lg transition-colors""
               >""
 :pages.disabled/pages/services/AIQuantumHybridPlatform.tsx
-<<<<<<< HEAD
+
                 <Phone className="mr-2 w-5 h-5"  />                Call +1 302 464 0950</a>
-=======
+
                 <Phone className="mr-2 w-5 h-5"  />                Call +1 302 464 0950
                 <Phone className="mr-2 w-5 h-5"  />                Call +1 302 464 0950;
               </a>

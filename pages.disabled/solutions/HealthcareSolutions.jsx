@@ -15,9 +15,9 @@ export default function HealthcareSolutions() {}
         },
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
-<<<<<<< HEAD
+
 "icon: Stethoscope,""
-=======
+
 "
         {}
             icon: Stethoscope,""
@@ -28,9 +28,9 @@ export default function HealthcareSolutions() {}
         },
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
-<<<<<<< HEAD
+
 "icon: Shield,""
-=======
+
 "
         {}
             icon: Shield,""
@@ -41,9 +41,9 @@ export default function HealthcareSolutions() {}
         },
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
-<<<<<<< HEAD
+
 "icon: Database,""
-=======
+
 "
         {}
             icon: Database,""
@@ -54,9 +54,9 @@ export default function HealthcareSolutions() {}
         },
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
-<<<<<<< HEAD
+
 "icon: Brain,""
-=======
+
 "
         {}
             icon: Brain,""
@@ -67,9 +67,9 @@ export default function HealthcareSolutions() {}
         },
 :pages.disabled/solutions/HealthcareSolutions.jsx
         {
-<<<<<<< HEAD
+
 "icon: Activity,""
-=======
+
 "
         {}
             icon: Activity,""
@@ -79,9 +79,9 @@ export default function HealthcareSolutions() {}
             features: ["Resource Optimization", "Workflow Automation", "Performance Analytics", "Cost Management"]
 
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
     ];"const benefits = [""
-=======
+
     ];"
     ];
     const benefits = [""
@@ -96,9 +96,9 @@ export default function HealthcareSolutions() {}
     ];
     const caseStudies = [
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         "Enhanced data security and compliance""
     ];
@@ -114,9 +114,9 @@ export default function HealthcareSolutions() {}
             results: "25% reduction in readmissions, 40% improvement in care coordination"
         },
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
             results: "25% reduction in readmissions, 40% improvement in care coordination""
         },
@@ -131,9 +131,9 @@ export default function HealthcareSolutions() {}
             results: "30% reduction in wait times, 35% improvement in resource utilization"
 "
     ];""
-<<<<<<< HEAD
+
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"{/* Hero Section */}""
-=======
+
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"
             results: "30% reduction in wait times, 35% improvement in resource utilization""
     ];""
@@ -152,9 +152,9 @@ export default function HealthcareSolutions() {}
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
+
                 Get Healthcare Quote"</Link>""
-=======
+
                 Get Healthcare Quote"
               Healthcare Solutions;
             </h1>""
@@ -173,9 +173,9 @@ export default function HealthcareSolutions() {}
           </div>
         </div>
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Background Elements */}""
-=======
+
 "
 
         {/* Background Elements */}""
@@ -187,9 +187,9 @@ export default function HealthcareSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Solutions Grid */}""
-=======
+
 "
 
       {/* Solutions Grid */}""
@@ -199,9 +199,9 @@ export default function HealthcareSolutions() {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
               Comprehensive Healthcare Solutions"</h2>""
-=======
+
               Comprehensive Healthcare Solutions"
               Comprehensive Healthcare Solutions;
             </h2>""
@@ -218,9 +218,9 @@ export default function HealthcareSolutions() {}
             const Icon = solution.icon;""
             return (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105">""
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">""
-<<<<<<< HEAD
+
                     <Icon className="w-8 h-8 text-white"/>"</div>""
-=======
+
                     <Icon className="w-8 h-8 text-white"/>"
           </div>
 ""
@@ -246,9 +246,9 @@ export default function HealthcareSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -258,9 +258,9 @@ export default function HealthcareSolutions() {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
               Healthcare Transformation Benefits"</h2>""
-=======
+
               Healthcare Transformation Benefits"
               Healthcare Transformation Benefits;
             </h2>""
@@ -269,9 +269,9 @@ export default function HealthcareSolutions() {}
               Measurable improvements in patient care and operational efficiency;
             </p>
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -280,9 +280,9 @@ export default function HealthcareSolutions() {}
             {benefits.map((benefit, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
                   <TrendingUp className="w-8 h-8 text-white"/>"</div>""
-=======
+
                   <TrendingUp className="w-8 h-8 text-white"/>"
                   <TrendingUp className="w-8 h-8 text-white"/>
                 </div>""
@@ -293,9 +293,9 @@ export default function HealthcareSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Case Studies */}""
-=======
+
 "
 
       {/* Case Studies */}""
@@ -305,9 +305,9 @@ export default function HealthcareSolutions() {}
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
               Healthcare Success Stories"</h2>""
-=======
+
               Healthcare Success Stories"
               Healthcare Success Stories;
             </h2>""
@@ -316,9 +316,9 @@ export default function HealthcareSolutions() {}
               Real results from healthcare organizations using our solutions;
             </p>
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
           </div>"""
-=======
+
           </div>"
           </div>
 ""
@@ -345,9 +345,9 @@ export default function HealthcareSolutions() {}
                     <p className="text-gray-300">{study.results}</p>
                   </div>"
                 </div>""
-<<<<<<< HEAD
+
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">"Read Full Case Study""
-=======
+
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">"
                   <span className="text-sm text-gray-400">{study.specialty}</span>
                 </div>""
@@ -376,9 +376,9 @@ export default function HealthcareSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -394,9 +394,9 @@ export default function HealthcareSolutions() {}
           </p>""
           <div className="flex flex-col sm: flex-row gap-4 justify-center">""
             <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
+
               Schedule Consultation"</Link>""
-=======
+
               Schedule Consultation"
             Ready to Transform Healthcare?
           </h2>""
@@ -415,11 +415,11 @@ export default function HealthcareSolutions() {}
         </div>
       </section>
 :pages.disabled/solutions/HealthcareSolutions.jsx
-<<<<<<< HEAD
+
     </div>);"
 }}}}
   '"'"
-=======
+
     </div>);'"
 }}}}'"'"
     </div>);

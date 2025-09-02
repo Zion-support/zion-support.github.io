@@ -45,9 +45,9 @@ import {}
 
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
 export default function CloudFinOpsOptimizer() {
-<<<<<<< HEAD
+
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"{/* Hero Section */}""
-=======
+
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">"
 export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {): any {}
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
@@ -58,9 +58,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -74,9 +74,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
 ""
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Cloud FinOps Optimizer
-<<<<<<< HEAD
+
             </h1>"""
-=======
+
             </h1>"
             </div>
 ""
@@ -104,9 +104,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300">
-=======
+
                 className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
             </p>
 ""
@@ -131,9 +131,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           </motion.div>
         </div>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
 "{/* Background Elements */}""
-=======
+
 "
 
         {/* Background Elements */}""
@@ -144,9 +144,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
         </div>
       </section>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -156,9 +156,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -167,9 +167,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
               Comprehensive FinOps Features"</h2>""
-=======
+
               Comprehensive FinOps Features"
               Comprehensive FinOps Features;
             </h2>""
@@ -186,9 +186,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -207,9 +207,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                   <feature.icon className="w-6 h-6 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-white" />
                 </div>""
@@ -224,9 +224,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
         </div>
       </section>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -236,9 +236,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -247,9 +247,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
               Transform Your Cloud Economics"</h2>""
-=======
+
               Transform Your Cloud Economics"
               Transform Your Cloud Economics;
             </h2>""
@@ -266,9 +266,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, x: 0 }}"
           </motion.div>
 ""
@@ -296,9 +296,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                 <motion.div
                   key={index + 3}
                   initial={{ opacity: 0, x: 20 }}
-<<<<<<< HEAD
+
                   whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                   whileInView={{ opacity: 1, x: 0 }}"
             </div>
 ""
@@ -322,9 +322,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
         </div>
       </section>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
 "{/* Optimization Strategies Section */}""
-=======
+
 "
 
       {/* Optimization Strategies Section */}""
@@ -334,9 +334,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -345,9 +345,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
               Intelligent Optimization Strategies"</h2>""
-=======
+
               Intelligent Optimization Strategies"
               Intelligent Optimization Strategies;
             </h2>""
@@ -364,9 +364,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
           </motion.div>
 ""
@@ -386,9 +386,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                     <Target className="w-6 h-6 text-white"  />                  </div>"
                   <div>""
                     <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                       {strategy.title}"</h3>""
-=======
+
                       {strategy.title}"
                     <Target className="w-6 h-6 text-white"  />                  </div>
                   <div>""
@@ -407,9 +407,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
         </div>
       </section>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -419,9 +419,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -444,9 +444,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
               Perfect For Your Organization;
             </h2>""
@@ -471,9 +471,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                   <Cloud className="w-8 h-8 text-white"  />"
                 </div>""
                 <h3 className="text-lg font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {useCase.title}"</h3>""
-=======
+
                   {useCase.title}"
                   <Cloud className="w-8 h-8 text-white"  />
                 </div>""
@@ -489,9 +489,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
         </div>
       </section>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -525,9 +525,9 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
                 className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-zion-purple transition-all duration-300"
-<<<<<<< HEAD
+
               >"Contact Sales""
-=======
+
               >"
             transition={{ duration: 0.8 }}
           >""
@@ -562,11 +562,11 @@ export default function CloudFinOpsOptimizer(function CloudFinOpsOptimizer() {):
       </section>
     </div>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-<<<<<<< HEAD
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}

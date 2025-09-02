@@ -10,9 +10,9 @@ const BlockchainServices = () => {}
         <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">""
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
 :pages.disabled/pages/services/BlockchainServices.jsx
-<<<<<<< HEAD
+
             Blockchain & Web3 Services"</h1>""
-=======
+
             Blockchain & Web3 Services"
             Blockchain & Web3 Services;
           </h1>""
@@ -23,9 +23,9 @@ const BlockchainServices = () => {}
           </p>
         </div>
 :pages.disabled/pages/services/BlockchainServices.jsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -43,9 +43,9 @@ const BlockchainServices = () => {}
           </p>"
           <Link""
             to="/contact""
-<<<<<<< HEAD
+
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300">
-=======
+
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
             Coming Soon;
           </h2>""
@@ -67,9 +67,9 @@ const BlockchainServices = () => {}
 };
 :pages.disabled/pages/services/BlockchainServices.jsx
 export default BlockchainServices;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default BlockchainServices;
 '""

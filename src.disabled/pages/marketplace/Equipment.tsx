@@ -9,5 +9,5 @@ const Equipment: React.FC = () => (;
 );
 
 export default Equipment;
-=======
+
 >>>>>>> pr-10728:src/pages/marketplace/Equipment.tsx

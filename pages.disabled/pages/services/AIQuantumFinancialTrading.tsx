@@ -10,9 +10,9 @@ import {
   Zap,
   Atom,
   BarChart3,
-<<<<<<< HEAD
+
   DollarSign,Target,
-=======
+
   DollarSign,
 
   Brain, 
@@ -35,10 +35,10 @@ import {
   Phone,
   Mail,
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
-<<<<<<< HEAD
+
   MapPin} from
   'lucide-react';
-=======
+
   MapPin
   MapPin''
 } from 'lucide-react';
@@ -141,9 +141,9 @@ const AIQuantumFinancialTrading = () => {
         "Multi-tenant architecture",;
         "Advanced analytics dashboard",;
         "SLA guarantees",;
-<<<<<<< HEAD
+
         "On-premise deployment";],;
-=======
+
         "On-premise deployment";
   
       features: [;""
@@ -182,9 +182,9 @@ const AIQuantumFinancialTrading = () => {
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-<<<<<<< HEAD
+
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div><div className="container mx-auto px-4 relative z-10">
-=======
+
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>
 "
     {;""
@@ -238,9 +238,9 @@ const AIQuantumFinancialTrading = () => {
               >
                 Start Trading Today
                 <ArrowRight className="ml-2 w-5 h-5" />
-<<<<<<< HEAD
+
               </Link><button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
-=======
+
               </Link>
 }}"
             transition={{ duration: 0.8 }}""
@@ -292,9 +292,9 @@ const AIQuantumFinancialTrading = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-<<<<<<< HEAD
+
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div><div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
+
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div>
 "
 ""
@@ -357,9 +357,9 @@ const AIQuantumFinancialTrading = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
-<<<<<<< HEAD
+
                 href="#demo"className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
-=======
+
                 href="#demo"
             transition={{ duration: 0.8 }}"
           >""
@@ -392,9 +392,8 @@ const AIQuantumFinancialTrading = () => {
       </section>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
 
-<<<<<<< HEAD
       {/* Features Section */}<section className="py-20">
-=======
+
       {/* Features Section */}
 "
       {/* Features Section */}""
@@ -420,9 +419,9 @@ const AIQuantumFinancialTrading = () => {
               Cutting-Edge Trading Technology
             </h2>
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
-<<<<<<< HEAD
+
               Our AI-powered trading platform combines the latest in machine learning, quantum computing, and financial technology to give you the edge<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
+
               Our AI-powered trading platform combines the latest in machine learning, quantum computing, and financial technology to give you the edge
             viewport={{ once: true }}"
             transition={{ duration: 0.8 }}""
@@ -445,9 +444,9 @@ const AIQuantumFinancialTrading = () => {
           >
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
               Revolutionary Trading Technology
-<<<<<<< HEAD
+
             </h2><p className="text-xl text-gray-300 max-w-3xl mx-auto">
-=======
+
             </h2>
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -465,9 +464,9 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
+
             {features.map((feature, index)  => (<motion.div
-=======
+
             {features.map((feature, index)  => (
           </motion.div>"
 ""
@@ -514,9 +513,9 @@ const AIQuantumFinancialTrading = () => {
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
+
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3><p className="text-gray-300">{feature.description}</p>
-=======
+
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>
   delay: index * 0.1 
 "
@@ -568,9 +567,9 @@ const AIQuantumFinancialTrading = () => {
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
               Flexible pricing options designed to scale with your trading needs
             </p>
-<<<<<<< HEAD
+
           </motion.div><div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
-=======
+
           </motion.div>
 
             viewport={{ once: true }}"
@@ -607,9 +606,9 @@ const AIQuantumFinancialTrading = () => {
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
 }}
       {/* Benefits Section */}
-<<<<<<< HEAD
+
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50"><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
+
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">
 }}"
       {/* Benefits Section */}""
@@ -633,9 +632,9 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-<<<<<<< HEAD
+
             {benefits.map((benefit, index) => (<motion.div
-=======
+
             {benefits.map((benefit, index) => (
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -662,9 +661,9 @@ const AIQuantumFinancialTrading = () => {
                 className="text-center"
               >
                 <div className="text-4xl font-bold text-purple-400 mb-4">{benefit.metric}</div>
-<<<<<<< HEAD
+
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3><p className="text-gray-300">{benefit.description}</p>
-=======
+
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 viewport={{ once: true }}""
@@ -682,9 +681,9 @@ const AIQuantumFinancialTrading = () => {
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
 
       {/* Pricing Section */}
-<<<<<<< HEAD
+
       <section className="py-20">;<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-=======
+
       <section className="py-20">;
 "
       {/* Pricing Section */}""
@@ -716,9 +715,9 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-<<<<<<< HEAD
+
             {pricingPlans.map((plan, index) => (<motion.div
-=======
+
             {pricingPlans.map((plan, index) => (
             transition={{ duration: 0.8 }}"
             viewport={{ once: true }}""
@@ -762,9 +761,9 @@ const AIQuantumFinancialTrading = () => {
                 }`}
               >
                 {plan.popular && (
-<<<<<<< HEAD
+
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2"><span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
-=======
+
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
 }}`
                 viewport={{ once: true }}``
@@ -807,12 +806,12 @@ const AIQuantumFinancialTrading = () => {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-<<<<<<< HEAD
+
                       ?,
   bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover: from-purple-600 hover:to-cyan-600
   '
                       : 'bg-slate-600 text-white hover:bg-slate-500}`}
-=======
+
                       ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'
                       : 'bg-slate-600 text-white hover:bg-slate-500'
                 )}"
@@ -888,9 +887,9 @@ const AIQuantumFinancialTrading = () => {
                   Book a Consultation
                 </button>
               </div>
-<<<<<<< HEAD
+
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"><div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-=======
+
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
             viewport={{ once: true }}"
             transition={{ duration: 0.8 }}""
@@ -943,9 +942,9 @@ const AIQuantumFinancialTrading = () => {
                 className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
               >
                 <Phone className="mr-2 w-5 h-5" />
-<<<<<<< HEAD
+
                 Call Now</a>
-=======
+
                 Call Now
             viewport={{ once: true }}"
           >""
@@ -997,9 +996,9 @@ const AIQuantumFinancialTrading = () => {
             <div className="flex flex-col items-center">
               <MapPin className="w-8 h-8 text-purple-400 mb-4" />
               <p className="text-gray-300">Address</p>
-<<<<<<< HEAD
+
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p></div>
-=======
+
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
 "
       {/* Contact Information */}""
@@ -1035,9 +1034,9 @@ const AIQuantumFinancialTrading = () => {
             <div className = "flex flex-col items-center">
               <MapPin className="w-8 h-8 text-purple-400 mb-4" />
               <p className="text-gray-300">Address</p>;
-<<<<<<< HEAD
+
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;</div>;
-=======
+
               <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
     </div>;"
   )};""
@@ -1054,9 +1053,8 @@ const AIQuantumFinancialTrading = () => {
   );
 };
 
-<<<<<<< HEAD
 export default AIQuantumFinancialTrading;
-=======
+
 export default AIQuantumFinancialTrading;
   )};
 '"`

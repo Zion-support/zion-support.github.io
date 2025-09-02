@@ -49,12 +49,12 @@ import {}
   Kanban,
   Calendar,
   Timer,
-<<<<<<< HEAD
+
   Stopwatch} from,
   lucide-react';: pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
 const AICybersecurityPlatform: React.FC = () => {const [activeTab, setActiveTab] = useState('overview
   ');
-=======
+
   Stopwatch} from 'lucide-react';
 
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
@@ -68,15 +68,9 @@ const AICybersecurityPlatform: React.FC = () => {}
   useEffect(() => {}
     setIsVisible(true)}, []);
 
-<<<<<<< HEAD
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">"{/* Hero Section */}""
-=======
-  
-  
-  
-  
-  
+
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">"
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
@@ -87,9 +81,9 @@ const AICybersecurityPlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}""
@@ -101,9 +95,9 @@ const AICybersecurityPlatform: React.FC = () => {}
               <Shield className="w-4 h-4 mr-2"  />              Enterprise-Grade Security"
             </div>""
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-<<<<<<< HEAD
+
               AI-Powered Cybersecurity Platform"</h1>""
-=======
+
               AI-Powered Cybersecurity Platform"
               <Shield className="w-4 h-4 mr-2"  />              Enterprise-Grade Security;
             </div>""
@@ -124,9 +118,9 @@ const AICybersecurityPlatform: React.FC = () => {}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             transition={{ duration: 0.8, delay: 0.2 }}""
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-<<<<<<< HEAD
+
           >"<Link""
-=======
+
           >"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.2 }}""
@@ -139,9 +133,9 @@ const AICybersecurityPlatform: React.FC = () => {}
             >""
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
               <Shield className="w-5 h-5 mr-2"  />              Secure Your Business
-<<<<<<< HEAD
+
             </Link>"<Link""
-=======
+
             </Link>"
               <Shield className="w-5 h-5 mr-2"  />              Secure Your Business;
             </Link>
@@ -155,9 +149,9 @@ const AICybersecurityPlatform: React.FC = () => {}
             </Link>
           </motion.div>
         </div>
-<<<<<<< HEAD
+
 "{/* Floating Elements */}""
-=======
+
 "
               <Eye className="w-5 h-5 mr-2"  />              Security Demo;
             </Link>
@@ -173,9 +167,9 @@ const AICybersecurityPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Threat Statistics */}""
-=======
+
 "
 
       {/* Threat Statistics */}""
@@ -188,9 +182,9 @@ const AICybersecurityPlatform: React.FC = () => {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.1 * index }}""
-=======
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             {threatStats.map((stat, index (
               <motion.div;
@@ -206,9 +200,9 @@ const AICybersecurityPlatform: React.FC = () => {}
                   {stat.value}"
                 </div>""
                 <div className="text-lg font-semibold text-red-300 mb-2">
-<<<<<<< HEAD
+
                   {stat.metric}"</div>""
-=======
+
                   {stat.metric}"
                   {stat.value}
                 </div>""
@@ -223,9 +217,9 @@ const AICybersecurityPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -235,9 +229,9 @@ const AICybersecurityPlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.4 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}""
@@ -246,9 +240,9 @@ const AICybersecurityPlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
               Advanced Security Features"</h2>""
-=======
+
               Advanced Security Features"
               Advanced Security Features;
             </h2>""
@@ -265,9 +259,9 @@ const AICybersecurityPlatform: React.FC = () => {}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
-<<<<<<< HEAD
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.1 * index }}""
-=======
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
           </motion.div>
 ""
@@ -286,9 +280,9 @@ const AICybersecurityPlatform: React.FC = () => {}
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -305,9 +299,9 @@ const AICybersecurityPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Security Modules Section */}""
-=======
+
 "
 
       {/* Security Modules Section */}""
@@ -317,9 +311,9 @@ const AICybersecurityPlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.6 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.6 }}""
@@ -328,9 +322,9 @@ const AICybersecurityPlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
               Comprehensive Security Modules"</h2>""
-=======
+
               Comprehensive Security Modules"
               Comprehensive Security Modules;
             </h2>""
@@ -339,9 +333,9 @@ const AICybersecurityPlatform: React.FC = () => {}
               Modular security solutions that adapt to your specific needs;
             </p>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -352,9 +346,9 @@ const AICybersecurityPlatform: React.FC = () => {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.1 * index }}""
-=======
+
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}""
@@ -367,9 +361,9 @@ const AICybersecurityPlatform: React.FC = () => {}
                 </h3>""
                 <div className="space-y-3">
                   {module.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <div"key={featureIndex}""
-=======
+
                     <div"
                   <Shield className="w-6 h-6 mr-3 text-red-400"  />                  {module.name}
                 </h3>""
@@ -390,9 +384,9 @@ const AICybersecurityPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -402,9 +396,9 @@ const AICybersecurityPlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 0.8 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.8 }}""
@@ -413,9 +407,9 @@ const AICybersecurityPlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
               Competitive Security Pricing"</h2>""
-=======
+
               Competitive Security Pricing"
               Competitive Security Pricing;
             </h2>""
@@ -429,9 +423,9 @@ const AICybersecurityPlatform: React.FC = () => {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingTiers.map(tier: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -444,11 +438,11 @@ const AICybersecurityPlatform: React.FC = () => {}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
                 transition={{ duration: 0.8, delay: 0.1 * index }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
                 className={`relative bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${,
   tier.popular'
   '
-=======
+
                 className={`relative bg-gradient-to-br from-slate-800/80 to-red-800/80 backdrop-blur-sm rounded-2xl p-8 border-2 ${
 '
                   tier.popular''
@@ -462,9 +456,9 @@ const AICybersecurityPlatform: React.FC = () => {}
                     ? 'border-red-500 scale-105''
   '`: 'border-red-500/20``
                 }`}
-<<<<<<< HEAD
+
               >"{tier.popular && (""
-=======
+
               >
                 {tier.popular && (""
 >>>>>>> pr-10728
@@ -487,9 +481,9 @@ const AICybersecurityPlatform: React.FC = () => {}
                     <span className="text-gray-400">{tier.period}</span>"
                   </div>""
                   <p className="text-gray-300 text-sm">{tier.description}</p>
-<<<<<<< HEAD
+
                 </div>"""
-=======
+
                 </div>"
                 )}
 ""
@@ -511,9 +505,9 @@ const AICybersecurityPlatform: React.FC = () => {}
                   <div className="flex items-center justify-center mb-4">""
                     <span className="text-gray-400 line-through mr-2">
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
                       {tier.marketPrice}"</span>""
-=======
+
                       {tier.marketPrice}"
                       {tier.marketPrice}
                     </span>""
@@ -527,9 +521,9 @@ const AICybersecurityPlatform: React.FC = () => {}
 ""
                 <ul className="space-y-4 mb-8">
                   {tier.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <li"key={featureIndex}""
-=======
+
                     <li"
                 </div>
 ""
@@ -548,14 +542,14 @@ const AICybersecurityPlatform: React.FC = () => {}
 "
                 <Link""`
                   to="/contact"``
-<<<<<<< HEAD
+
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
   tier.popular'
   '
                       ? 'bg-gradient-to-r from-red-600 to-orange-600 text-white hover: from-red-700 hover:to-orange-700''
   '`
                       : 'border-2 border-red-500 text-red-300 hover:bg-red-500 hover:text-white``}`}
-=======
+
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 '
                     tier.popular''
@@ -579,9 +573,9 @@ const AICybersecurityPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -591,9 +585,9 @@ const AICybersecurityPlatform: React.FC = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"transition={{ duration: 0.8, delay: 1.0 }}""
-=======
+
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 1.0 }}""
@@ -602,9 +596,9 @@ const AICybersecurityPlatform: React.FC = () => {}
           >""
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
               Why Choose Our Security Platform?"</h2>""
-=======
+
               Why Choose Our Security Platform?"
               Why Choose Our Security Platform?
             </h2>""
@@ -617,9 +611,9 @@ const AICybersecurityPlatform: React.FC = () => {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {benefits.map(benefit: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -632,9 +626,9 @@ const AICybersecurityPlatform: React.FC = () => {}
                 animate={{}
                   opacity: isVisible ? 1 : 0,
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"transition={{ duration: 0.8, delay: 0.2 * index }}""
-=======
+
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}"
                   x: isVisible ? 0 : index % 2 === 0 ? -20 : 20}}
                 transition={{ duration: 0.8, delay: 0.2 * index }}""
@@ -646,9 +640,9 @@ const AICybersecurityPlatform: React.FC = () => {}
                   <benefit.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
                   {benefit.title}"</h3>""
-=======
+
                   {benefit.title}"
                   <benefit.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -665,9 +659,9 @@ const AICybersecurityPlatform: React.FC = () => {}
         </div>
       </section>
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
 "{/* Contact Section */}""
-=======
+
 "
 
       {/* Contact Section */}""
@@ -686,9 +680,9 @@ const AICybersecurityPlatform: React.FC = () => {}
             <p className="text-xl text-gray-300 mb-8">
               Protect your digital assets with AI-powered cybersecurity that
               never sleeps
-<<<<<<< HEAD
+
             </p>"""
-=======
+
             </p>"
             transition={{ duration: 0.8, delay: 1.2 }}
           >""
@@ -709,9 +703,9 @@ const AICybersecurityPlatform: React.FC = () => {}
               </div>""
               <div className="flex items-center text-gray-300">""
                 <Mail className="w-5 h-5 mr-2 text-red-400"  />
-<<<<<<< HEAD
+
                 <span>kleber@ziontechgroup.com</span>"</div>""
-=======
+
                 <span>kleber@ziontechgroup.com</span>"
                 <span>+1 302 464 0950</span>
               </div>""
@@ -726,9 +720,9 @@ const AICybersecurityPlatform: React.FC = () => {}
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
             </div>"
 ""
-<<<<<<< HEAD
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"<Link""
-=======
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
             </div>
 ""
@@ -740,9 +734,9 @@ const AICybersecurityPlatform: React.FC = () => {}
               >""
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
                 <Shield className="w-5 h-5 mr-2"  />                Get Security Assessment
-<<<<<<< HEAD
+
               </Link>"<Link""
-=======
+
               </Link>"
                 <Shield className="w-5 h-5 mr-2"  />                Get Security Assessment;
               </Link>
@@ -752,9 +746,9 @@ const AICybersecurityPlatform: React.FC = () => {}
                 className="inline-flex items-center px-8 py-4 rounded-lg border-2 border-red-500 text-red-300 font-semibold text-lg hover:bg-red-500 hover:text-white transition-all duration-300""
               >""
 :pages.disabled/pages/services/AI-Cybersecurity-Platform.tsx
-<<<<<<< HEAD
+
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website</Link>
-=======
+
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website
                 <Globe className="w-5 h-5 mr-2"  />                Visit Our Website;
               </Link>

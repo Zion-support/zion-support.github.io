@@ -1,5 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
+
 import { SEO } from '../components/SEO';
 
 export default function Page() {
@@ -18,7 +18,7 @@ const Solutions: React.FC = () => {
 };
 
 export default Solutions;
-=======
+
 import { Link } from 'react-router-dom';
 import Header from '../layout/Header';
 import Footer from '../layout/Footer';

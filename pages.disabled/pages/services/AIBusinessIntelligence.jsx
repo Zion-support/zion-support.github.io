@@ -151,11 +151,11 @@ const AIBusinessIntelligence = () => {
       description:
   'Enterprise-grade security and compliance',
       icon: Shield},
-<<<<<<< HEAD
+
     {,
   name: '24/7 Monitoring,'description:
   'Continuous monitoring and alerting',
-=======
+
     {
 '
       name: '24/7 Monitoring','
@@ -268,9 +268,9 @@ const AIBusinessIntelligence = () => {}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
       {/* Hero Section */}""
       <div className="relative overflow-hidden">""
-<<<<<<< HEAD
+
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />"""
-=======
+
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}""
@@ -282,9 +282,9 @@ const AIBusinessIntelligence = () => {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -315,9 +315,9 @@ const AIBusinessIntelligence = () => {}
               </Link>"
               <Link""
                 to="/services-showcase""
-<<<<<<< HEAD
+
                 className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
-=======
+
                 className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
               <TrendingUp className="w-10 h-10 text-white" />
             </div>""
@@ -354,9 +354,9 @@ const AIBusinessIntelligence = () => {}
 "
       {/* Features Section */}""
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-<<<<<<< HEAD
+
         <motion.div"variants={containerVariants}""
-=======
+
         <motion.div"
 
       {/* Features Section */}""
@@ -381,9 +381,9 @@ const AIBusinessIntelligence = () => {}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {features.map((feature, index) => (
             <motion.div
-<<<<<<< HEAD
+
               key={feature.title}"variants={itemVariants}""
-=======
+
               key={feature.title}"
         </motion.div>
 ""
@@ -402,9 +402,9 @@ const AIBusinessIntelligence = () => {}
                 </div>"
                 <div>""
                   <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                     {feature.title}"</h3>""
-=======
+
                     {feature.title}"
                 </div>
                 <div>""
@@ -425,9 +425,9 @@ const AIBusinessIntelligence = () => {}
                 </h4>""
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, idx) => (
-<<<<<<< HEAD
+
                     <li"key={idx}""
-=======
+
                     <li"
               </div>
 ""
@@ -453,9 +453,9 @@ const AIBusinessIntelligence = () => {}
         </div>
       </div>
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
 "{/* Solutions by Industry */}""
-=======
+
 "
 
       {/* Solutions by Industry */}""
@@ -466,9 +466,9 @@ const AIBusinessIntelligence = () => {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
             viewport={{ once: true }}"transition={{ duration: 0.8 }}""
-=======
+
             viewport={{ once: true }}"
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}""
@@ -477,9 +477,9 @@ const AIBusinessIntelligence = () => {}
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
               Solutions by Industry"</h2>""
-=======
+
               Solutions by Industry"
               Solutions by Industry;
             </h2>""
@@ -489,9 +489,9 @@ const AIBusinessIntelligence = () => {}
               the unique challenges and opportunities in your industry.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -503,9 +503,9 @@ const AIBusinessIntelligence = () => {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
                 viewport={{ once: true }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
                 viewport={{ once: true }}"
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}""
@@ -515,9 +515,9 @@ const AIBusinessIntelligence = () => {}
                 <div className="flex items-center mb-6">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">""
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
                     <category.icon className="w-6 h-6 text-white" />"</div>""
-=======
+
                     <category.icon className="w-6 h-6 text-white" />"
                     <category.icon className="w-6 h-6 text-white" />
                   </div>""
@@ -530,9 +530,9 @@ const AIBusinessIntelligence = () => {}
 ""
                 <ul className="space-y-3">
                   {category.solutions.map((solution, idx) => (
-<<<<<<< HEAD
+
                     <li"key={idx}""
-=======
+
                     <li"
                 </div>
 ""
@@ -554,9 +554,9 @@ const AIBusinessIntelligence = () => {}
         </div>
       </div>
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
 "{/* Technology Stack */}""
-=======
+
 "
 
       {/* Technology Stack */}""
@@ -566,9 +566,9 @@ const AIBusinessIntelligence = () => {}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
           viewport={{ once: true }}"transition={{ duration: 0.8 }}""
-=======
+
           viewport={{ once: true }}"
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}""
@@ -577,9 +577,9 @@ const AIBusinessIntelligence = () => {}
         >""
           <h2 className="text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
             Technology Stack"</h2>""
-=======
+
             Technology Stack"
             Technology Stack;
           </h2>""
@@ -590,9 +590,9 @@ const AIBusinessIntelligence = () => {}
             intelligence.
           </p>
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
         </motion.div>"""
-=======
+
         </motion.div>"
         </motion.div>
 ""
@@ -604,9 +604,9 @@ const AIBusinessIntelligence = () => {}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
               viewport={{ once: true }}"transition={{ duration: 0.5, delay: index * 0.1 }}""
-=======
+
               viewport={{ once: true }}"
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}""
@@ -618,9 +618,9 @@ const AIBusinessIntelligence = () => {}
                 <tech.icon className="w-8 h-8 text-white" />"
               </div>""
               <h3 className="text-lg font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                 {tech.name}"</h3>""
-=======
+
                 {tech.name}"
                 <tech.icon className="w-8 h-8 text-white" />
               </div>""
@@ -634,9 +634,9 @@ const AIBusinessIntelligence = () => {}
         </div>
       </div>
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -647,9 +647,9 @@ const AIBusinessIntelligence = () => {}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
-<<<<<<< HEAD
+
             viewport={{ once: true }}"transition={{ duration: 0.8 }}""
-=======
+
             viewport={{ once: true }}"
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}""
@@ -674,9 +674,9 @@ const AIBusinessIntelligence = () => {}
               </Link>"
               <Link""
                 to="/case-studies""
-<<<<<<< HEAD
+
                 className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300">
-=======
+
                 className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300"
               Ready to Transform Your Business Intelligence?
             </h2>""
@@ -709,9 +709,9 @@ const AIBusinessIntelligence = () => {}
 
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
 export default AIBusinessIntelligence;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export default AIBusinessIntelligence;
 '""

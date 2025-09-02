@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React from
   'react';'
 import { Link } from
@@ -7,7 +7,7 @@ import { Link } from
 const CloudServices = () => {
     const cloudServices = [
         {title: "Cloud Migration & Strategy",""
-=======
+
 import React from 'react';'
 import { Link } from 'react-router-dom';
 :pages.disabled/pages/services/Cloud.jsx
@@ -26,9 +26,9 @@ const CloudServices = () => {}
         },
 :pages.disabled/pages/services/Cloud.jsx
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         {}
 ""
@@ -40,9 +40,9 @@ const CloudServices = () => {}
         },
 :pages.disabled/pages/services/Cloud.jsx
         {
-<<<<<<< HEAD
+
 """
-=======
+
 "
         {}
 ""
@@ -52,9 +52,9 @@ const CloudServices = () => {}
             price: "From $6,500/month",""
             features["Identity and access management", "Data encryption", "Compliance monitoring", "Security auditing"]
 :pages.disabled/pages/services/Cloud.jsx
-<<<<<<< HEAD
+
         }"];""
-=======
+
         }"
         }
     ];""
@@ -68,9 +68,9 @@ const CloudServices = () => {}
           </div>
         </div>
 :pages.disabled/pages/services/Cloud.jsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -80,9 +80,9 @@ const CloudServices = () => {}
           <div className="text-center mb-12">""
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Cloud Services</h2>""
 :pages.disabled/pages/services/Cloud.jsx
-<<<<<<< HEAD
+
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">End-to-end cloud solutions for modern businesses</p>"</div>""
-=======
+
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">End-to-end cloud solutions for modern businesses</p>"
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">End-to-end cloud solutions for modern businesses</p>
           </div>""
@@ -102,9 +102,9 @@ const CloudServices = () => {}
           </div>
         </div>
 :pages.disabled/pages/services/Cloud.jsx
-<<<<<<< HEAD
+
       </section>"""
-=======
+
       </section>"
       </section>
 ""
@@ -123,10 +123,10 @@ const CloudServices = () => {}
 export { CloudServices };
 :pages.disabled/pages/services/Cloud.jsx
 export default CloudServices;'"
-<<<<<<< HEAD
+
 }
   '"'"
-=======
+
 }'"'"
 export default CloudServices;
 :src/pages/services/Cloud.jsx

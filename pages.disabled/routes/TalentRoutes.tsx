@@ -6,10 +6,10 @@ export default function TalentRoutes(function TalentRoutes() {): any {}
       <Route path="list" element={<TalentsPage  />} />;
 :pages.disabled/routes/TalentRoutes.tsx
     </>"
-<<<<<<< HEAD
+
   )}
   '"'"
-=======
+
   )}'"'"
     </>
   )}'""

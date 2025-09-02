@@ -44,9 +44,9 @@ export default function AISupplyChainOptimization() {
       />
 "
       {/* Hero Section */}""
-<<<<<<< HEAD
+
       <section className="relative overflow-hidden py-20 lg:py-32">"        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-red-900/20"></div>"""
-=======
+
       <section className="relative overflow-hidden py-20 lg:py-32">"        <div className="absolute inset-0 bg-gradient-to-br from-orange-900/20 via-transparent to-red-900/20"></div>"
 export default function AISupplyChainOptimization(function AISupplyChainOptimization() {): any {}
   return()
@@ -64,9 +64,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -89,9 +89,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
               Transform your supply chain with AI-powered optimization. Reduce
               costs, improve efficiency, and enhance customer satisfaction with
-<<<<<<< HEAD
+
               intelligent supply chain management."</p>""
-=======
+
               intelligent supply chain management."
               <Truck className="w-4 h-4 mr-2"  />              AI-Powered Optimization;
             </div>""
@@ -115,9 +115,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 Start Free Trial"
               </button>""
               <button className="border border-orange-500 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 text-lg">""
-<<<<<<< HEAD
+
                 <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure</button>
-=======
+
                 <Download className="w-5 h-5 mr-2 inline"  />                Download Brochure
                 Start Free Trial;
               </button>""
@@ -130,9 +130,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Key Metrics Section */}""
-=======
+
 "
 
       {/* Key Metrics Section */}""
@@ -146,9 +146,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
             {keyMetrics.map((metric, index (
               <motion.div;
@@ -165,9 +165,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                   {metric.metric}"
                 </div>""
                 <div className="text-lg font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {metric.label}"</div>""
-=======
+
                   {metric.label}"
                   {metric.metric}
                 </div>""
@@ -186,9 +186,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -198,9 +198,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -209,9 +209,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
               Powerful Features"</h2>""
-=======
+
               Powerful Features"
               Powerful Features;
             </h2>""
@@ -231,9 +231,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 viewport={{ once: true }}""
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-<<<<<<< HEAD
+
               >"{/* Icon */}""
-=======
+
               >"
           </motion.div>
 ""
@@ -259,9 +259,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 {/* Content */}"
                 <div>""
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
-<<<<<<< HEAD
+
                     {feature.title}"</h3>""
-=======
+
                     {feature.title}"
                 {/* Content */}
                 <div>""
@@ -274,9 +274,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                   </p>
                 </div>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Hover Effect */}""
-=======
+
 "
 
                 {/* Hover Effect */}""
@@ -288,9 +288,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Optimization Areas Section */}""
-=======
+
 "
 
       {/* Optimization Areas Section */}""
@@ -300,9 +300,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -311,9 +311,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
               Optimization Areas"</h2>""
-=======
+
               Optimization Areas"
               Optimization Areas;
             </h2>""
@@ -322,9 +322,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
               Tailored optimization strategies for different industries with unique supply chain challenges and requirements.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -336,9 +336,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -351,9 +351,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 </h3>""
                 <ul className="space-y-2">
                   {category.areas.map((area, areaIndex) => (
-<<<<<<< HEAD
+
                     <li"key={areaIndex}""
-=======
+
                     <li"
                   {category.category}
                 </h3>""
@@ -374,9 +374,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -387,9 +387,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -398,9 +398,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
               Business Benefits"</h2>""
-=======
+
               Business Benefits"
               Business Benefits;
             </h2>""
@@ -420,9 +420,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 viewport={{ once: true }}""
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-<<<<<<< HEAD
+
               >"{/* Icon */}""
-=======
+
               >"
           </motion.div>
 ""
@@ -448,9 +448,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 {/* Content */}"
                 <div>""
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
-<<<<<<< HEAD
+
                     {benefit.title}"</h3>""
-=======
+
                     {benefit.title}"
                 {/* Content */}
                 <div>""
@@ -463,9 +463,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                   </p>
                 </div>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Hover Effect */}""
-=======
+
 "
 
                 {/* Hover Effect */}""
@@ -477,9 +477,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -490,9 +490,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -501,9 +501,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
               Transparent Pricing"</h2>""
-=======
+
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
@@ -516,9 +516,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
 ""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown()
-<<<<<<< HEAD
+
               <motion.divkey={index}
-=======
+
               <motion.div
           </motion.div>
 ""
@@ -532,11 +532,11 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${,
   plan.popular'
   '
-=======
+
                 className={`relative bg-white/5 backdrop-blur-sm border rounded-2xl p-8 ${
 '
                   plan.popular''
@@ -550,9 +550,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                     ? 'border-orange-500/50 bg-gradient-to-br from-orange-500/10 to-red-500/10''
   '`: 'border-white/10 hover:border-orange-500/50``
                 }`}
-<<<<<<< HEAD
+
               >"{plan.popular && (""
-=======
+
               >
                 {plan.popular && (""
 >>>>>>> pr-10728
@@ -571,9 +571,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                   <p className="text-gray-400 text-sm mb-4">
                     {plan.description}"
                   </p>""
-<<<<<<< HEAD
+
                   <div className="text-4xl font-bold text-white mb-2">"{plan.price}""
-=======
+
                   <div className="text-4xl font-bold text-white mb-2">"
                 )}
 ""
@@ -595,9 +595,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
 ""
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <li"key={featureIndex}""
-=======
+
                     <li"
                 </div>
 ""
@@ -615,14 +615,14 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
 `
                 <button``
-<<<<<<< HEAD
+
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
   plan.popular'
   '
                       ? 'bg-gradient-to-r from-orange-600 to-red-600 text-white hover: from-orange-700 hover:to-red-700''
   '`
                       : 'bg-white/10 text-white border border-white/20 hover:bg-white/20``}`}
-=======
+
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 '
                     plan.popular''
@@ -645,9 +645,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Use Cases Section */}""
-=======
+
 "
 
       {/* Use Cases Section */}""
@@ -658,9 +658,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -669,9 +669,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
               Industry Use Cases"</h2>""
-=======
+
               Industry Use Cases"
               Industry Use Cases;
             </h2>""
@@ -692,9 +692,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 viewport={{ once: true }}""
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-orange-500/50"
-<<<<<<< HEAD
+
               >"{/* Icon */}""
-=======
+
               >"
           </motion.div>
 ""
@@ -720,9 +720,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 {/* Content */}"
                 <div>""
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">
-<<<<<<< HEAD
+
                     {useCase.industry}"</h3>""
-=======
+
                     {useCase.industry}"
                 {/* Content */}
                 <div>""
@@ -735,9 +735,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                   </p>
                 </div>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Hover Effect */}""
-=======
+
 "
 
                 {/* Hover Effect */}""
@@ -749,9 +749,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* Integrations Section */}""
-=======
+
 "
 
       {/* Integrations Section */}""
@@ -762,9 +762,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
             transition={{ duration: 0.8 }}"viewport={{ once: true }}""
-=======
+
             transition={{ duration: 0.8 }}"
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}""
@@ -773,9 +773,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
           >""
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
               Seamless Integrations"</h2>""
-=======
+
               Seamless Integrations"
               Seamless Integrations;
             </h2>""
@@ -785,9 +785,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
               unified optimization experience.
             </p>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -799,9 +799,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"viewport={{ once: true }}""
-=======
+
                 transition={{ duration: 0.5, delay: index * 0.1 }}"
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}""
@@ -816,9 +816,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
                   {integration.platforms.map((platform, platformIndex()
                     <span"
                       key={platformIndex}""
-<<<<<<< HEAD
+
                       className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20">
-=======
+
                       className="px-3 py-1 bg-white/10 text-gray-300 text-sm rounded-full border border-white/20"
                   {integration.name}
                 </h3>""
@@ -839,9 +839,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
         </div>
       </section>
 :pages.disabled/pages/services/AISupplyChainOptimization.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -864,9 +864,9 @@ export default function AISupplyChainOptimization(function AISupplyChainOptimiza
             </p>""
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-300 text-lg flex items-center justify-center">""
-<<<<<<< HEAD
+
                 <Star className="w-5 h-5 mr-2"  />                Start Free Trial"</button>""
-=======
+
                 <Star className="w-5 h-5 mr-2"  />                Start Free Trial"
             viewport={{ once: true }}
           >""

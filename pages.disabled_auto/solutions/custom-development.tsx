@@ -1,153 +1,15 @@
-<<<<<<< HEAD
-import React from
-  'react';
-import type { NextPage } from
-  'next';
-import MainLayout from
-  '../../components/layout/MainLayout';
-import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } from
-  'lucide-react';
-import Link from
-  'next/link';
-=======
-import React from 'react'
-import type { NextPage } from 'next'
-import MainLayout from '../../components/layout/MainLayout'
-import { Code, Smartphone, Globe, Database, Zap, Shield, Users, CheckCircle } from 'lucide-react'
-import Link from 'next/link'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
 
 const CustomDevelopment: NextPage = () => {
   const developmentServices = [
     {
-<<<<<<< HEAD
-      icon: Code, title:,
-  Web Application Development', '
-      description: 'Custom web applications built with modern frameworks and technologies.,'
-      features: [
-  'React, Vue.js, Angular', 'Node.js, Python, PHP',
-  'Responsive design', 'API integration']
-    }, {
-      icon: Smartphone,
-      title:, Mobile App Development','
-      description: 'Native and cross-platform mobile applications for iOS and Android., '
-      features: [
-  'React Native, Flutter', 'Swift, Kotlin', 'App Store optimization',
-  'Push notifications']
-    }, {
-      icon: Globe,
-      title:, E-commerce Solutions','
-      description: 'Complete e-commerce platforms with payment integration and inventory management., '
-      features: [
-  'Shopping cart functionality',
-  'Payment gateway integration', 'Inventory management',
-  'Order tracking']
-    }, {
-      icon: Database,
-      title:, Database Design & Management','
-      description: 'Custom database solutions optimized for performance and scalability., '
-      features: [
-  'MySQL, PostgreSQL, MongoDB',
-  'Data modeling', 'Performance optimization',
-  'Backup & recovery']
-    }, {
-      icon: Zap,
-      title:, API Development','
-      description: 'RESTful and GraphQL APIs for seamless integration between systems., '
-      features: [
-  'RESTful APIs',
-  'GraphQL endpoints', 'Authentication & authorization',
-  'Rate limiting']
-    }, {
-      icon: Shield,
-      title:, Security Implementation','
-      description: 'Comprehensive security measures to protect your applications and data., '
-      features: [,
-  SSL/TLS encryption', '
-  'Authentication systems',
-  'Data validation', 'Security audits']
-=======
-      icon: Code, title: 'Web Application Development',
-      description: 'Custom web applications built with modern frameworks and technologies.', features: ['React, Vue.js, AngularNode.js, Python, PHPResponsive design', 'API integration']
-    }, {
-      icon: Smartphone,
-      title: 'Mobile App Development', description: 'Native and cross-platform mobile applications for iOS and Android.',
-      features: ['React Native, FlutterSwift, KotlinApp Store optimization', 'Push notifications']
-    }, {
-      icon: Globe,
-      title: 'E-commerce Solutions', description: 'Complete e-commerce platforms with payment integration and inventory management.',
-      features: ['Shopping cart functionalityPayment gateway integrationInventory management', 'Order tracking']
-    }, {
-      icon: Database,
-      title: 'Database Design & Management', description: 'Custom database solutions optimized for performance and scalability.',
-      features: ['MySQL, PostgreSQL, MongoDBData modelingPerformance optimization', 'Backup & recovery']
-    }, {
-      icon: Zap,
-      title: 'API Development', description: 'RESTful and GraphQL APIs for seamless integration between systems.',
-      features: ['RESTful APIsGraphQL endpointsAuthentication & authorization', 'Rate limiting']
-    }, {
-      icon: Shield,
-      title: 'Security Implementation', description: 'Comprehensive security measures to protect your applications and data.',
-      features: ['SSL/TLS encryptionAuthentication systemsData validation', 'Security audits']
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ]
 
   const developmentProcess = [
     {
-<<<<<<< HEAD
-      step: '01, '
-      title:,
-  Discovery & Planning', '
-      description: 'We analyze your requirements and create a detailed project roadmap.'
-    },
-    {
-      step:, 02','
-      title: 'Design & Architecture, '
-      description:,
-  Our team designs the system architecture and user interface.''
-    }, {
-      step: '03,'
-      title:, Development','
-      description: 'We build your solution using agile methodologies and best practices.'
-    }, {
-      step:,
-  04', '
-      title: 'Testing & Quality Assurance,'
-      description:, Comprehensive testing ensures your solution works flawlessly.''
-    },
-    {
-      step: '05, '
-      title:,
-  Deployment & Launch', '
-      description: 'We deploy your solution and provide launch support.'
-    },
-    {
-      step:, 06','
-      title: 'Maintenance & Support, '
-      description:,
-  Ongoing support and maintenance to keep your solution running smoothly.''
-=======
-      step: '01', title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project roadmap.'
-    }, {
-      step: '02',
-      title: 'Design & Architecture', description: 'Our team designs the system architecture and user interface.'
-    },
-    {
-      step: '03', title: 'Development',
-      description: 'We build your solution using agile methodologies and best practices.'
-    }, {
-      step: '04',
-      title: 'Testing & Quality Assurance', description: 'Comprehensive testing ensures your solution works flawlessly.'
-    },
-    {
-      step: '05', title: 'Deployment & Launch',
-      description: 'We deploy your solution and provide launch support.'
-    }, {
-      step: '06',
-      title: 'Maintenance & Support', description: 'Ongoing support and maintenance to keep your solution running smoothly.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ]
 

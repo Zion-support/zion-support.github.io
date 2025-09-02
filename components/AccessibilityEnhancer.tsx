@@ -1,120 +1,37 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from
-  'react';''
-  'interface AccessibilityEnhancerProps {children: React.ReactNode;'
-}
+import React, { useEffect, useState } from 'react';
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-const [fontSize, setFontSize] = useState(, normal
-  ');'  const [reducedMotion, setReducedMotion] = useState(false);''
-  useEffect(() => {
-    // Check for user&apos;s motion preferences''
-  '    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)
-  ').matches;'    setReducedMotion(prefersReducedMotion);''
-    // Apply accessibility settings from localStorage
-    const savedHighContrast = localStorage.getItem(
-  'highContrast') ===
-  'true';'    const savedFontSize = localStorage.getItem('
-  'fontSize') ||
-  'normal';'    setIsHighContrast(savedHighContrast);setFontSize(savedFontSize);'
-=======
-import React, { useEffect, useState } from 'react'''interface AccessibilityEnhancerProps {children: React.ReactNode;
-}
+const AccessibilityEnhancer: React.FC = () => {
+  const [highContrast, setHighContrast] = useState(false);
+  const [fontSize, setFontSize] = useState('medium');
+  const [reducedMotion, setReducedMotion] = useState(false);
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false)
-const [fontSize, setFontSize] = useState('normal')'  const [reducedMotion, setReducedMotion] = useState(false);'
   useEffect(() => {
-    // Check for user&aposs motion preferences''    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches'    setReducedMotion(prefersReducedMotion);'
-    // Apply accessibility settings from localStorage
-    const savedHighContrast = localStorage.getItem('highContrast') === 'true''    const savedFontSize = localStorage.getItem('fontSize') || 'normal''    '    setIsHighContrast(savedHighContrast);setFontSize(savedFontSize)'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+    // Load saved preferences
+    const savedHighContrast = localStorage.getItem('highContrast') === 'true';
+    const savedFontSize = localStorage.getItem('fontSize') || 'medium';
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    setHighContrast(savedHighContrast);
+    setFontSize(savedFontSize);
+    setReducedMotion(prefersReducedMotion);
 
     // Apply initial styles
     applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
   }, []);
 
-const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {;const root = document.documentElement;
+  const applyAccessibilityStyles = (highContrast: boolean, fontSize: string, reducedMotion: boolean) => {
+    const root = document.documentElement;
     
     // High contrast mode
     if (highContrast) {
-<<<<<<< HEAD
-root.classList.add(, high-contrast
-  ');'    } else {
-  '      root.classList.remove('high-contrast
-  ');'    }
-  ''
-    // Font size adjustments
-    root.classList.remove('font-small'
-  ', 'font-normal
-  ', 'font-large
-  ', 'font-extra-large
-  ');'    root.classList.add(`font-${fontSize}`);'`    // Reduced motion'
-    if (reducedMotion) {
-      root.classList.add(
-  'reduced-motion');'    } else {'
-  '      root.classList.remove('reduced-motion
-  ');'    }
-  '  };'
-
-  const toggleHighContrast = () => {;
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue);
-    localStorage.setItem('highContrast'
-  ', newValue.toString());'    applyAccessibilityStyles(newValue, fontSize, reducedMotion);'  };'
-
-  const changeFontSize = (newSize: string) => {;
-    setFontSize(newSize);
-    localStorage.setItem(
-  'fontSize, newSize);'    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);'  };return ('
-=======
-root.classList.add('high-contrast')'    } else {'      root.classList.remove('high-contrast')'    }'
-    // Font size adjustments
-    root.classList.remove('font-smallfont-normalfont-large', 'font-extra-large')'    root.classList.add(`font-${fontSize}`);'`    // Reduced motion
-    if (reducedMotion) {
-      root.classList.add('reduced-motion')'    } else {'      root.classList.remove('reduced-motion')'    }'  };
-
-  const toggleHighContrast = () => {;
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue)
-    localStorage.setItem('highContrast', newValue.toString())'    applyAccessibilityStyles(newValue, fontSize, reducedMotion);'  };
-
-  const changeFontSize = (newSize: string) => {;
-    setFontSize(newSize)
-    localStorage.setItem('fontSize', newSize)'    applyAccessibilityStyles(isHighContrast, newSize, reducedMotion);'  }return (
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
     <>
       {/* Accessibility Controls */}
 <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark: bg-gray-800 shadow-lg rounded-lg p-4 border">"        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">"          Accessibility Options"        </h3>"
         
         <div className="space-y-2">"          <button"            onClick={toggleHighContrast}
             className={`w-full px-3 py-1 text-xs rounded ${`              isHighContrast 
-<<<<<<< HEAD
-                ?, bg-blue-600 text-white' '
-  ': 'bg-gray-200 text-gray-700 hover:bg-gray-300'            }`}'            aria-label={`${isHighContrast ?,
-  Disable': 'Enable} high contrast mode`}
-, >'            {isHighContrast ?'
-  'Disable': 'Enable} High Contrast,'
-  </button>'          `          <div className="text-xs text-gray-600 dark: text-gray-300">"            Font Size:"          </div>'
-          <div className="flex gap-1">"            {["
-  'small, '
-,
-  normal', '
-  'large',
-  'extra-large'].map((size) => (
-  '              <button'                key={size}
-                onClick={() => changeFontSize(size)}
-                className={`px-2 py-1 text-xs rounded ${`                  fontSize === size
-                    ?
-  'bg-blue-600 text-white'': 'bg-gray-200 text-gray-700 hover:bg-gray-300'                }`}'                aria-label={`Set font size to ${size}`}`              >{size.charAt(0).toUpperCase()}
-=======
-                ? 'bg-blue-600 text-white' '                : 'bg-gray-200 text-gray-700 hover:bg-gray-300''            }`}'            aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}'          >'            {isHighContrast ? 'Disable' : 'Enable'} High Contrast'          </button>'          `          <div className="text-xs text-gray-600 dark:text-gray-300">"            Font Size:"          </div>'
-          <div className="flex gap-1">"            {['smallnormallarge', 'extra-large'].map((size) => ('              <button'                key={size}"
-                onClick={() => changeFontSize(size)}
-                className={`px-2 py-1 text-xs rounded ${`                  fontSize === size
-                    ? 'bg-blue-600 text-white''                    : 'bg-gray-200 text-gray-700 hover:bg-gray-300''                }`}'                aria-label={`Set font size to ${size}`}`              >{size.charAt(0).toUpperCase()}'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+ursor/automate-test-fix-improve-and-merge-code-48f3
               </button>
             ))}
           </div>

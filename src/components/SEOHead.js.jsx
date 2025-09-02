@@ -1,10 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 import React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI - Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting - edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images / zion - tech - group - og.jpg", url = "https:"""";
-=======
+
 import React from 'react'; const SEOHead = ({ title = "Zion Tech Group - AI-Powered Technology Solutions & Services", description = "Discover innovative AI, quantum computing, and technology solutions.Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.", keywords = "AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation", image = "/images/zion-tech-group-og.jpg", url = "https:
 >>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-=======
+
 import React from 'react';'
 import { Helmet } from 'react-helmet-async';'
 const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & Services', description = 'Discover innovative AI, quantum computing, and technology solutions. Expert consulting, enterprise services, and cutting-edge platforms for modern businesses.', keywords = 'AI services, quantum computing, technology consulting, enterprise solutions, cybersecurity, cloud services, digital transformation', image = '/images/zion-tech-group-og.jpg', url = 'https://ziontechgroup.com', type = 'website', publishedTime, modifiedTime, author = 'Zion Tech Group' }) => {}
@@ -128,7 +128,6 @@ const SEOHead = ({ title = 'Zion Tech Group - AI-Powered Technology Solutions & 
         </script>)}
     </Helmet>)};
 export default SEOHead;
-
 
 export { SEOHead };
 

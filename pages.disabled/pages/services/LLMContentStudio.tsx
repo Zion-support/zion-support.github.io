@@ -2,9 +2,9 @@
 export { function };export default function LLMContentStudio(...args: []):  {}
   return()
 :pages.disabled/pages/services/LLMContentStudio.tsx
-<<<<<<< HEAD
+
     <div className = "min-h-screen bg-futuristic text-white">;"<SEO""
-=======
+
     <div className = "min-h-screen bg-futuristic text-white">;"
     <div className = "min-h-screen bg-futuristic text-white">;
       <SEO""
@@ -14,9 +14,9 @@ export { function };export default function LLMContentStudio(...args: []):  {}
       />""
       <section className="container-responsive py-16">"        <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6">
 :pages.disabled/pages/services/LLMContentStudio.tsx
-<<<<<<< HEAD
+
           LLM Content Studio"</h1>""
-=======
+
           LLM Content Studio"
           LLM Content Studio;
         </h1>""
@@ -25,9 +25,9 @@ export { function };export default function LLMContentStudio(...args: []):  {}
           A collaborative content workspace with AI-assisted briefs, long-form drafting, SEO optimization, and;
           brand style guardrails. Publish to blog, email, LinkedIn, and X with one click.
 :pages.disabled/pages/services/LLMContentStudio.tsx
-<<<<<<< HEAD
+
         </p>"""
-=======
+
         </p>"
         </p>
 ""
@@ -41,9 +41,9 @@ export { function };export default function LLMContentStudio(...args: []):  {}
               <li>• Brand tone rules, banned claims, fact check prompts</li>
               <li>• Multilingual, image and short-video prompts</li>
 :pages.disabled/pages/services/LLMContentStudio.tsx
-<<<<<<< HEAD
+
             </ul>"</div>""
-=======
+
             </ul>"
             </ul>
           </div>""
@@ -54,9 +54,9 @@ export { function };export default function LLMContentStudio(...args: []):  {}
               <li>• Starter: $79/mo per user</li>
               <li>• Team: $299/mo up to 10 users</li>
 :pages.disabled/pages/services/LLMContentStudio.tsx
-<<<<<<< HEAD
+
               <li>• Enterprise: SSO, custom models, SLAs</li>"</ul>""
-=======
+
               <li>• Enterprise: SSO, custom models, SLAs</li>"
               <li>• Enterprise: SSO, custom models, SLAs</li>
             </ul>""
@@ -69,10 +69,10 @@ export { function };export default function LLMContentStudio(...args: []):  {}
       </section>;
 :pages.disabled/pages/services/LLMContentStudio.tsx
     </div>;"
-<<<<<<< HEAD
+
   )}
   '"'"
-=======
+
   )}'"'"
     </div>;
   )}'""

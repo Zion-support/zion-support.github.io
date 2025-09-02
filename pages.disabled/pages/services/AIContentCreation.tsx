@@ -30,9 +30,9 @@ export default function AIContentCreation(...args: any[]): any {
         title="AI Content Creation Services - Zion Tech Group""
         description="Revolutionary AI-powered content creation for writing, visual design, video production, and multimedia content generation."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 export default function AIContentCreation(...args: any[]): any {}
   return()
@@ -49,9 +49,9 @@ export default function AIContentCreation(...args: any[]): any {}
           <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>""
           <div className="absolute top-0 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"></div>"          <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
         </div>"""
-=======
+
         </div>"
         </div>
 ""
@@ -60,9 +60,9 @@ export default function AIContentCreation(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
             animate={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -74,9 +74,9 @@ export default function AIContentCreation(...args: any[]): any {}
               <PenTool className="w-4 h-4 mr-2"  />              AI Content Creation
             </div>"
 ""
-<<<<<<< HEAD
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"AI Content Creation""
-=======
+
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               <PenTool className="w-4 h-4 mr-2"  />              AI Content Creation;
             </div>
@@ -88,9 +88,9 @@ export default function AIContentCreation(...args: any[]): any {}
                 Services;
               </span>
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
             </h1>"""
-=======
+
             </h1>"
             </h1>
 ""
@@ -111,9 +111,9 @@ export default function AIContentCreation(...args: any[]): any {}
                 <ArrowRight className="w-5 h-5 ml-2"  />              </Link>"
               <Link""
                 to="/services""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200">
-=======
+
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
             </p>
 ""
@@ -136,9 +136,9 @@ export default function AIContentCreation(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -148,9 +148,9 @@ export default function AIContentCreation(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -159,9 +159,9 @@ export default function AIContentCreation(...args: any[]): any {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
               AI Content Creation Features"</h2>""
-=======
+
               AI Content Creation Features"
               AI Content Creation Features;
             </h2>""
@@ -172,9 +172,9 @@ export default function AIContentCreation(...args: any[]): any {}
               content across all media types.
             </p>
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -185,9 +185,9 @@ export default function AIContentCreation(...args: any[]): any {}
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -199,9 +199,9 @@ export default function AIContentCreation(...args: any[]): any {}
                   <feature.icon className="w-6 h-6 text-purple-400" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-2">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-6 h-6 text-purple-400" />
                 </div>""
@@ -216,9 +216,9 @@ export default function AIContentCreation(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
 "{/* Services Section */}""
-=======
+
 "
 
       {/* Services Section */}""
@@ -228,9 +228,9 @@ export default function AIContentCreation(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -239,9 +239,9 @@ export default function AIContentCreation(...args: any[]): any {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
               Comprehensive Content Services"</h2>""
-=======
+
               Comprehensive Content Services"
               Comprehensive Content Services;
             </h2>""
@@ -251,9 +251,9 @@ export default function AIContentCreation(...args: any[]): any {}
               services cover every aspect of your content needs.
             </p>
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -264,9 +264,9 @@ export default function AIContentCreation(...args: any[]): any {}
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -285,9 +285,9 @@ export default function AIContentCreation(...args: any[]): any {}
                 </p>""
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
+
                     <li"key={featureIndex}""
-=======
+
                     <li"
                   <service.icon className="w-8 h-8 text-purple-400" />
                 </div>""
@@ -314,9 +314,9 @@ export default function AIContentCreation(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
 "{/* Technologies Section */}""
-=======
+
 "
 
       {/* Technologies Section */}""
@@ -326,9 +326,9 @@ export default function AIContentCreation(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.6 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
@@ -337,9 +337,9 @@ export default function AIContentCreation(...args: any[]): any {}
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
               Advanced AI Technologies"</h2>""
-=======
+
               Advanced AI Technologies"
               Advanced AI Technologies;
             </h2>""
@@ -349,9 +349,9 @@ export default function AIContentCreation(...args: any[]): any {}
               most advanced content creation capabilities available.
             </p>
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -362,9 +362,9 @@ export default function AIContentCreation(...args: any[]): any {}
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, scale: 1 }}"transition={{ duration: 0.6, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, scale: 1 }}"
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
@@ -378,9 +378,9 @@ export default function AIContentCreation(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -394,9 +394,9 @@ export default function AIContentCreation(...args: any[]): any {}
             transition={{ duration: 0.6 }}"
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
               Ready to Transform Your Content?"</h2>""
-=======
+
               Ready to Transform Your Content?"
             transition={{ duration: 0.6 }}
           >""
@@ -419,9 +419,9 @@ export default function AIContentCreation(...args: any[]): any {}
                 <ArrowRight className="w-5 h-5 ml-2"  />              </Link>"
               <Link""
                 to="/services""
-<<<<<<< HEAD
+
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200">
-=======
+
                 className="inline-flex items-center px-8 py-4 border border-purple-400/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-200"
             </p>
 ""
@@ -445,11 +445,11 @@ export default function AIContentCreation(...args: any[]): any {}
       </section>
     </div>
 :pages.disabled/pages/services/AIContentCreation.tsx
-<<<<<<< HEAD
+
   )}
   '"
 '"'"
-=======
+
   )}'"
 '"'"
   )}

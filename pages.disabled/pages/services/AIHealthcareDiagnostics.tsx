@@ -37,9 +37,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {
         title="AI Healthcare Diagnostics - Zion Tech Group""
         description="Revolutionary AI-powered healthcare diagnostics platform for accurate disease detection, medical imaging analysis, and clinical decision support."
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
 export default function AIHealthcareDiagnostics(...args: any[]): any {}
   return (""
@@ -73,9 +73,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300">
-=======
+
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
             transition={{ duration: 0.8 }}
           >""
@@ -102,9 +102,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300">
-=======
+
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300"
               <motion.button;
                 whileHover={{ scale: 1.05 }}
@@ -119,9 +119,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
 "{/* Features Section */}""
-=======
+
 "
 
       {/* Features Section */}""
@@ -131,9 +131,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -142,9 +142,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
               Advanced AI Diagnostic Capabilities"</h2>""
-=======
+
               Advanced AI Diagnostic Capabilities"
               Advanced AI Diagnostic Capabilities;
             </h2>""
@@ -155,9 +155,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               speed.
             </p>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -168,9 +168,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -182,9 +182,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                   <feature.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-white mb-3">
-<<<<<<< HEAD
+
                   {feature.title}"</h3>""
-=======
+
                   {feature.title}"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -199,9 +199,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
 "{/* Diagnostic Capabilities Section */}""
-=======
+
 "
 
       {/* Diagnostic Capabilities Section */}""
@@ -211,9 +211,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -222,9 +222,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
               Specialized Diagnostic Services"</h2>""
-=======
+
               Specialized Diagnostic Services"
               Specialized Diagnostic Services;
             </h2>""
@@ -234,9 +234,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               specialties with industry-leading accuracy rates.
             </p>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -247,9 +247,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -267,9 +267,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                     </h3>""
                     <div className="flex items-center">""
                       <span className="text-green-400 font-semibold text-lg">
-<<<<<<< HEAD
+
                         {capability.accuracy}"</span>""
-=======
+
                         {capability.accuracy}"
                   </div>
                   <div>""
@@ -287,9 +287,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
                 </div>"
 ""
-<<<<<<< HEAD
+
                 <ul className="space-y-3">"{capability.services.map((service, serviceIndex) => (""
-=======
+
                 <ul className="space-y-3">"
                 </div>
 ""
@@ -307,9 +307,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -319,9 +319,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -330,9 +330,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
               Transform Healthcare Delivery"</h2>""
-=======
+
               Transform Healthcare Delivery"
               Transform Healthcare Delivery;
             </h2>""
@@ -342,9 +342,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               healthcare outcomes, efficiency, and cost reduction.
             </p>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -355,9 +355,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, x: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -371,9 +371,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
 "{/* Compliance Section */}""
-=======
+
 "
 
       {/* Compliance Section */}""
@@ -383,9 +383,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -394,9 +394,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
               Enterprise-Grade Security & Compliance"</h2>""
-=======
+
               Enterprise-Grade Security & Compliance"
               Enterprise-Grade Security & Compliance;
             </h2>""
@@ -406,9 +406,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               protect patient data and ensure regulatory adherence.
             </p>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
           </motion.div>
 ""
@@ -419,9 +419,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
                 whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8, delay: index * 0.1 }}""
-=======
+
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
@@ -437,9 +437,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
 "{/* Pricing Section */}""
-=======
+
 "
 
       {/* Pricing Section */}""
@@ -449,9 +449,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
             whileInView={{ opacity: 1, y: 0 }}"transition={{ duration: 0.8 }}""
-=======
+
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
@@ -467,9 +467,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               Choose the plan that fits your healthcare facility's needs. All
               plans include our core AI diagnostic capabilities.
             </p>
-<<<<<<< HEAD
+
           </motion.div>"""
-=======
+
           </motion.div>"
               Flexible Pricing Plans;
             </h2>""
@@ -488,7 +488,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${,
   index === 1''
                     ?
@@ -496,7 +496,7 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
   '`: 'border-slate-600/50``
                 } relative`}
               >"{index === 1 && (""
-=======
+
                 className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
 '
                   index === 1''
@@ -532,9 +532,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                   </div>
                 </div>"
 ""
-<<<<<<< HEAD
+
                 <ul className="space-y-4 mb-8">"{plan.features.map((feature, featureIndex) => (""
-=======
+
                 <ul className="space-y-4 mb-8">"
                 )}
 ""
@@ -563,14 +563,14 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}`
                   whileTap={{ scale: 0.95 }}``
-<<<<<<< HEAD
+
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
   index === 1'
   '
                       ? 'bg-gradient-to-r from-green-500 to-blue-500 text-white hover: shadow-lg hover:shadow-green-500/25''
   '`
                       : 'border border-green-400 text-green-400 hover:bg-green-400/10``}`}
-=======
+
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
 '
                     index === 1''
@@ -594,9 +594,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
         </div>
       </section>
 :pages.disabled/pages/services/AIHealthcareDiagnostics.tsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -621,9 +621,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300">
-=======
+
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-green-500/25 transition-all duration-300"
             transition={{ duration: 0.8 }}
           >""
@@ -648,9 +648,9 @@ export default function AIHealthcareDiagnostics(...args: any[]): any {}
               <motion.button
                 whileHover={{ scale: 1.05 }}"
                 whileTap={{ scale: 0.95 }}""
-<<<<<<< HEAD
+
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300">
-=======
+
                 className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-green-400/10 transition-all duration-300"
               <motion.button;
                 whileHover={{ scale: 1.05 }}

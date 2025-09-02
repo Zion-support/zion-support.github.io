@@ -1,24 +1,6 @@
-<<<<<<< HEAD
-import React from
-  'react';
-import { motion } from
-  'framer-motion';
-import { SEO } from
-  '../components/SEO';
-import { Button } from
-  '../components/ui/Button';
-import { Card } from
-  '../components/ui/Card';
-import { Badge } from
-  '../components/ui/Badge';
-=======
-import React from 'react'
-import { motion } from 'framer-motion'
-import { SEO } from '../components/SEO'
-import { Button } from '../components/ui/Button'
-import { Card } from '../components/ui/Card'
-import { Badge } from '../components/ui/Badge'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import { 
   CheckCircle, Star, 
   Zap, Shield, 
@@ -34,8 +16,7 @@ import {
   Sparkles, Calculator,
   BookOpen, Lightbulb,
   HelpCircle
-} from
-  'lucide-react';
+} from 'lucide-react';
 
 const PricingGuide: React.FC = () => {
   const pricingFactors = [

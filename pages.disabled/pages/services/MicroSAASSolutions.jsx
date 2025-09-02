@@ -9,12 +9,12 @@ import {}
   TrendingUp,
   Shield,
   Building,
-<<<<<<< HEAD
+
   Cpu,
   '
   BarChart3} from 'lucide-react
   ';: pages.disabled/pages/services/MicroSAASSolutions.jsx
-=======
+
   Cpu,'
   BarChart3} from 'lucide-react';
 
@@ -105,12 +105,12 @@ export default function MicroSAASSolutions() {
 ,
   description: 'Reduced infrastructure costs with cloud-native solutions,
       icon: BarChart3},
-<<<<<<< HEAD
+
     {,
   title: 'Security,
 ,
   description: 'Enterprise-grade security and compliance standards,
-=======
+
     {
 '
       title: 'Security','
@@ -193,12 +193,12 @@ export default function MicroSAASSolutions() {}
 ,
   description: 'Learning management and student tracking,
       icon: Building},
-<<<<<<< HEAD
+
     {,
   name: 'Real Estate,
 ,
   description: 'Property management and client portals,
-=======
+
     {
 '
       name: 'Real Estate','
@@ -223,9 +223,9 @@ export default function MicroSAASSolutions() {}
   ];
   return()
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-<<<<<<< HEAD
+
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">"<SEO""
-=======
+
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">"
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO""
@@ -236,9 +236,9 @@ export default function MicroSAASSolutions() {}
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
         canonical="https://ziontechgroup.com/services/micro-saas-solutions"
       />
-<<<<<<< HEAD
+
 "{/* Hero Section */}""
-=======
+
 "
         canonical="https://ziontechgroup.com/services/micro-saas-solutions""
       />
@@ -262,9 +262,9 @@ export default function MicroSAASSolutions() {}
           </p>""
           <div className="flex flex-wrap justify-center gap-4">""
             <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-<<<<<<< HEAD
+
               Start Your Project"</button>""
-=======
+
               Start Your Project"
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Micro SAAS Solutions""
@@ -289,9 +289,9 @@ export default function MicroSAASSolutions() {}
         </div>
       </section>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Services Grid */}""
-=======
+
 "
 
       {/* Services Grid */}""
@@ -301,9 +301,9 @@ export default function MicroSAASSolutions() {}
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-<<<<<<< HEAD
+
               Comprehensive SAAS Development Services"</h2>""
-=======
+
               Comprehensive SAAS Development Services"
               Comprehensive SAAS Development Services;
             </h2>""
@@ -318,9 +318,9 @@ export default function MicroSAASSolutions() {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-<<<<<<< HEAD
+
               <div"key={index}""
-=======
+
               <div"
           </div>
 ""
@@ -336,9 +336,9 @@ export default function MicroSAASSolutions() {}
                   <service.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-<<<<<<< HEAD
+
                   {service.title}"</h3>""
-=======
+
                   {service.title}"
                   <service.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -350,9 +350,9 @@ export default function MicroSAASSolutions() {}
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-<<<<<<< HEAD
+
                     <li"key={idx}""
-=======
+
                     <li"
                     <li;
                       key={idx}""
@@ -370,9 +370,9 @@ export default function MicroSAASSolutions() {}
         </div>
       </section>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Benefits Section */}""
-=======
+
 "
 
       {/* Benefits Section */}""
@@ -382,9 +382,9 @@ export default function MicroSAASSolutions() {}
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-<<<<<<< HEAD
+
               Why Choose Our Micro SAAS Solutions?"</h2>""
-=======
+
               Why Choose Our Micro SAAS Solutions?"
               Why Choose Our Micro SAAS Solutions?
             </h2>""
@@ -403,9 +403,9 @@ export default function MicroSAASSolutions() {}
                   <benefit.icon className="w-10 h-10 text-white" />"
                 </div>""
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
-<<<<<<< HEAD
+
                   {benefit.title}"</h3>""
-=======
+
                   {benefit.title}"
           </div>
 ""
@@ -426,9 +426,9 @@ export default function MicroSAASSolutions() {}
         </div>
       </section>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-<<<<<<< HEAD
+
 "{/* Industry Solutions */}""
-=======
+
 "
 
       {/* Industry Solutions */}""
@@ -438,9 +438,9 @@ export default function MicroSAASSolutions() {}
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-<<<<<<< HEAD
+
               Industry-Specific Solutions"</h2>""
-=======
+
               Industry-Specific Solutions"
               Industry-Specific Solutions;
             </h2>""
@@ -454,9 +454,9 @@ export default function MicroSAASSolutions() {}
 ""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {industries.map((industry, index) => (
-<<<<<<< HEAD
+
               <div"key={index}""
-=======
+
               <div"
           </div>
 ""
@@ -472,9 +472,9 @@ export default function MicroSAASSolutions() {}
                   <industry.icon className="w-8 h-8 text-white" />"
                 </div>""
                 <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
-<<<<<<< HEAD
+
                   {industry.name}"</h3>""
-=======
+
                   {industry.name}"
                   <industry.icon className="w-8 h-8 text-white" />
                 </div>""
@@ -491,9 +491,9 @@ export default function MicroSAASSolutions() {}
         </div>
       </section>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
-<<<<<<< HEAD
+
 "{/* CTA Section */}""
-=======
+
 "
 
       {/* CTA Section */}""
@@ -510,9 +510,9 @@ export default function MicroSAASSolutions() {}
           </p>""
           <div className="flex flex-wrap justify-center gap-4">""
             <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-<<<<<<< HEAD
+
               Start Your Project"</button>""
-=======
+
               Start Your Project"
             Ready to Build Your Micro SAAS Solution?
           </h2>""
@@ -535,9 +535,9 @@ export default function MicroSAASSolutions() {}
   );
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
 }'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 }
 '""

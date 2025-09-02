@@ -55,15 +55,7 @@ class LogCleaner {
 
   async cleanOldLogs() {
     try {
-<<<<<<< HEAD
-      this.log('info
-  ', 'Cleaning old log files...
-  ');
-      
-=======
-      this.log('info', 'Cleaning old log files...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       if (!fs.existsSync(this.logDir)) {
         this.log('info
   ', 'Log directory does not exist
@@ -92,24 +84,7 @@ class LogCleaner {
             this.cleanedFiles.push({
               file,
               size: stats.size,
-<<<<<<< HEAD
-              age: Math.round((now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000)),
-              reason: 'old_age
-  '
-            });
-            this.log('info
-  ', `Deleted old log file: ${file} (${Math.round((now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000))} days old)`);
-=======
-              age: Math.round(
-                (now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000)
-              ),
-              reason: 'old_age',
-            });
-            this.log(
-              'info',
-              `Deleted old log file: ${file} (${Math.round((now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000))} days old)`
-            );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
           } catch (error) {
             this.log('error
   ', `Failed to delete old log file: ${file}`, error);
@@ -127,15 +102,7 @@ class LogCleaner {
 
   async cleanLargeLogs() {
     try {
-<<<<<<< HEAD
-      this.log('info
-  ', 'Cleaning large log files...
-  ');
-      
-=======
-      this.log('info', 'Cleaning large log files...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       if (!fs.existsSync(this.logDir)) {
         return;
       }
@@ -159,16 +126,7 @@ class LogCleaner {
             // Archive large files instead of deleting
             await this.archiveLogFile(filePath, file, stats.size);
           } catch (error) {
-<<<<<<< HEAD
-            this.log('error
-  ', `Failed to archive large log file: ${file}`, error);
-=======
-            this.log(
-              'error',
-              `Failed to archive large log file: ${file}`,
-              error
-            );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
             this.errors.push(`Failed to archive ${file}: ${error.message}`);
           }
         }
@@ -182,17 +140,7 @@ class LogCleaner {
   }
 
   async archiveLogFile(filePath, fileName, fileSize) {
-<<<<<<< HEAD
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-
-  ');
-    const archiveDir = path.join(this.logDir, 'archive
-  ');
-    
-=======
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-    const archiveDir = path.join(this.logDir, 'archive');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     // Create archive directory if it doesn't exist
     if (!fs.existsSync(archiveDir)) {
       fs.mkdirSync(archiveDir, { recursive: true });
@@ -211,22 +159,7 @@ class LogCleaner {
         originalFile: fileName,
         archiveFile: path.basename(archivePath),
         originalSize: fileSize,
-<<<<<<< HEAD
-        reason:
-  'large_size'
-      });
-      
-      this.log(
-  'info', `Archived large log file: ${fileName} -> ${path.basename(archivePath)} (${Math.round(fileSize / 1024 / 1024)}MB)`);
-=======
-        reason: 'large_size',
-      });
-
-      this.log(
-        'info',
-        `Archived large log file: ${fileName} -> ${path.basename(archivePath)} (${Math.round(fileSize / 1024 / 1024)}MB)`
-      );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     } catch (error) {
       this.log(
   'error', `Failed to archive log file: ${fileName}`, error);
@@ -236,15 +169,7 @@ class LogCleaner {
 
   async manageTotalLogSize() {
     try {
-<<<<<<< HEAD
-      this.log(
-  'info',
-  'Managing total log directory size...');
-      
-=======
-      this.log('info', 'Managing total log directory size...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       if (!fs.existsSync(this.logDir)) {
         return;
       }
@@ -274,19 +199,7 @@ class LogCleaner {
       };
 
       calculateDirSize(this.logDir);
-<<<<<<< HEAD
-      
-      this.log(
-  'info', `Total log directory size: ${Math.round(totalSize / 1024 / 1024)}MB`);
-      
-=======
-
-      this.log(
-        'info',
-        `Total log directory size: ${Math.round(totalSize / 1024 / 1024)}MB`
-      );
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       // If total size exceeds limit, delete oldest files
       if (totalSize > this.maxTotalSize) {
         // Sort files by modification time (oldest first)
@@ -313,31 +226,7 @@ class LogCleaner {
             this.cleanedFiles.push({
               file: file.name,
               size: file.size,
-<<<<<<< HEAD
-              reason:
-  'total_size_limit'
-            });
-            
-            this.log(
-  'info', `Deleted log file to manage total size: ${file.name} (${Math.round(file.size / 1024)}KB)`);
-          } catch (error) {
-            this.log(
-  'error', `Failed to delete log file for size management: ${file.name}`, error);
-=======
-              reason: 'total_size_limit',
-            });
-
-            this.log(
-              'info',
-              `Deleted log file to manage total size: ${file.name} (${Math.round(file.size / 1024)}KB)`
-            );
-          } catch (error) {
-            this.log(
-              'error',
-              `Failed to delete log file for size management: ${file.name}`,
-              error
-            );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
             this.errors.push(`Failed to delete ${file.name}: ${error.message}`);
           }
         }
@@ -352,15 +241,7 @@ class LogCleaner {
 
   async cleanErrorReports() {
     try {
-<<<<<<< HEAD
-      this.log(
-  'info',
-  'Cleaning old error reports...');
-      
-=======
-      this.log('info', 'Cleaning old error reports...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       if (!fs.existsSync(this.errorReportDir)) {
         this.log(
   'info',
@@ -384,33 +265,13 @@ class LogCleaner {
             this.cleanedFiles.push({
               file,
               size: stats.size,
-<<<<<<< HEAD
-              age: Math.round((now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000)),
-              reason:
-  'old_error_report'
-=======
-              age: Math.round(
-                (now - stats.mtime.getTime()) / (24 * 60 * 60 * 1000)
-              ),
-              reason: 'old_error_report',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
             });
             this.log(
   'info', `Deleted old error report: ${file}`);
           } catch (error) {
             this.log(
-<<<<<<< HEAD
-  'error', `Failed to delete old error report: ${file}`, error);
-            this.errors.push(`Failed to delete error report ${file}: ${error.message}`);
-=======
-              'error',
-              `Failed to delete old error report: ${file}`,
-              error
-            );
-            this.errors.push(
-              `Failed to delete error report ${file}: ${error.message}`
-            );
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
           }
         }
       }
@@ -424,27 +285,7 @@ class LogCleaner {
 
   async rotatePM2Logs() {
     try {
-<<<<<<< HEAD
-      this.log(
-  'info',
-  'Rotating PM2 logs...');
-      
-      // Use PM2
-  's built-in log rotation
-      execSync('pm2 flush
-  ', { timeout: 30000 });
-      
-      this.log('info
-  ', 'PM2 logs rotated successfully
-  ');
-=======
-      this.log('info', 'Rotating PM2 logs...');
-
-      // Use PM2's built-in log rotation
-      execSync('pm2 flush', { timeout: 30000 });
-
-      this.log('info', 'PM2 logs rotated successfully');
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     } catch (error) {
       this.log('error
   ', 'Failed to rotate PM2 logs
@@ -474,38 +315,17 @@ class LogCleaner {
       cleanedFiles: this.cleanedFiles,
       archivedFiles: this.archivedFiles,
       errors: this.errors,
-<<<<<<< HEAD
-      status: this.errors.length === 0 ?,
-  success
-  ': 'partial
-=======
-      status: this.errors.length === 0 ? 'success' : 'partial',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     };
 
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-<<<<<<< HEAD
-    this.log('info
-  ', `Log cleaner report generated: ${reportFile}`);
-    
-=======
-    this.log('info', `Log cleaner report generated: ${reportFile}`);
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
     return report;
   }
 
   async run() {
     try {
-<<<<<<< HEAD
-      this.log('info
-  ', 'Starting log cleanup...
-  ');
-      
-=======
-      this.log('info', 'Starting log cleanup...');
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       // Ensure log directory exists
       if (!fs.existsSync(this.logDir)) {
         fs.mkdirSync(this.logDir, { recursive: true });
@@ -520,25 +340,7 @@ class LogCleaner {
 
       // Generate report
       const report = await this.generateReport();
-<<<<<<< HEAD
-      
-      const totalSpaceReclaimed = Math.round(report.summary.totalSpaceReclaimed / 1024 / 1024);
-      
-      this.log('info
-  ', `Log cleanup completed. Cleaned ${this.cleanedFiles.length} files, archived ${this.archivedFiles.length} files, reclaimed ${totalSpaceReclaimed}MB`);
-      
-=======
-
-      const totalSpaceReclaimed = Math.round(
-        report.summary.totalSpaceReclaimed / 1024 / 1024
-      );
-
-      this.log(
-        'info',
-        `Log cleanup completed. Cleaned ${this.cleanedFiles.length} files, archived ${this.archivedFiles.length} files, reclaimed ${totalSpaceReclaimed}MB`
-      );
-
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
       return report;
     } catch (error) {
       this.log('error
@@ -553,29 +355,7 @@ class LogCleaner {
 const isMainModule = import.meta.url === `file://${process.argv[1]}`;
 if (isMainModule) {
   const cleaner = new LogCleaner();
-<<<<<<< HEAD
-  
-  cleaner.run().then(report => {
-    console.log('Log cleanup completed successfully
-  ');
-    process.exit(0);
-  }).catch(error => {
-    console.error('Log cleanup failed:', error);
-    process.exit(1);
-  });
-=======
-
-  cleaner
-    .run()
-    .then(report => {
-      console.log('Log cleanup completed successfully');
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Log cleanup failed:', error);
-      process.exit(1);
-    });
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+ursor/automate-test-fix-improve-and-merge-code-99d1
 }
 
 export default LogCleaner;

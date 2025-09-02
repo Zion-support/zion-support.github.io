@@ -22,9 +22,9 @@ import {}
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
             <Heart className="w-4 h-4 mr-2"  /> AI-Powered Healthcare Analytics"
           </div>"          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
-<<<<<<< HEAD
+
             AI Healthcare Analytics Platform"</h1>""
-=======
+
             AI Healthcare Analytics Platform"
             <Heart className="w-4 h-4 mr-2"  /> AI-Powered Healthcare Analytics;
           </div>"          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
@@ -45,9 +45,9 @@ import {}
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
               Key Features"
             </h2>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{features.map(feature => (""
-=======
+
             <ul className="space-y-3">"
       </section>
 ""
@@ -71,9 +71,9 @@ import {}
             <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">
               Healthcare Benefits"
             </h2>""
-<<<<<<< HEAD
+
             <ul className="space-y-3">"{benefits.map(benefit => (""
-=======
+
             <ul className="space-y-3">"
           </div>
           <div>""
@@ -98,9 +98,9 @@ import {}
           </h2>""
           <div className="grid md:grid-cols-3 gap-6">
             {useCases.map(useCase => (
-<<<<<<< HEAD
+
               <div"key={useCase}""
-=======
+
               <div"
         </div>
 ""
@@ -130,9 +130,9 @@ import {}
           </h2>""
           <div className="grid md:grid-cols-3 gap-6">
             {healthcareSolutions.map(solution => (
-<<<<<<< HEAD
+
               <div"key={solution.specialty}""
-=======
+
               <div"
         </div>
 ""
@@ -153,9 +153,9 @@ import {}
                 </h3>""
                 <ul className="space-y-2">
                   {solution.solutions.map(sol => (
-<<<<<<< HEAD
+
                     <li"key={sol}""
-=======
+
                     <li"
                   {solution.specialty}
                 </h3>""
@@ -182,9 +182,9 @@ import {}
           </h2>""
           <div className="grid md:grid-cols-3 gap-6">
             {tiers.map(tier => (
-<<<<<<< HEAD
+
               <div"key={tier.name}""
-=======
+
               <div"
         </div>
 ""
@@ -202,9 +202,9 @@ import {}
                 <div className="text-lg font-semibold mb-1">{tier.name}</div>""
                 <div className="text-2xl font-bold text-zion-cyan mb-2">
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
-<<<<<<< HEAD
+
                   {tier.price}"</div>""
-=======
+
                   {tier.price}"
                   {tier.price}
                 </div>""
@@ -234,9 +234,9 @@ import {}
                   {technicalSpecs.technology.map(tech => (
                     <span"
                       key={tech}""
-<<<<<<< HEAD
+
                       className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm">
-=======
+
                       className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm"
         </div>
 ""
@@ -271,9 +271,9 @@ import {}
                   {technicalSpecs.integrations.map(integration => (
                     <span"
                       key={integration}""
-<<<<<<< HEAD
+
                       className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm">
-=======
+
                       className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm"
               </div>
               <div>""
@@ -301,9 +301,9 @@ import {}
                 </h4>""
                 <div className="space-y-1">
                   {technicalSpecs.security.map(sec => (
-<<<<<<< HEAD
+
                     <div"key={sec}""
-=======
+
                     <div"
               </div>
             </div>""
@@ -327,9 +327,9 @@ import {}
               </div>"
               <div>""
                 <h4 className="font-semibold text-zion-slate-dark mb-2">
-<<<<<<< HEAD
+
                   Uptime"</h4>""
-=======
+
                   Uptime"
               </div>
               <div>""
@@ -348,9 +348,9 @@ import {}
                 </h4>""
                 <div className="space-y-1">
                   {technicalSpecs.compliance.map(comp => (
-<<<<<<< HEAD
+
                     <div"key={comp}""
-=======
+
                     <div"
               </div>
               <div>""
@@ -378,9 +378,9 @@ import {}
           <div className="text-sm text-zion-slate-light mb-2">
             Ready to transform healthcare with AI?"
           </div>""
-<<<<<<< HEAD
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"<a""
-=======
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
         </div>
 ""
@@ -403,9 +403,9 @@ import {}
             >"              <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
             </a>"
           </div>""
-<<<<<<< HEAD
+
           <div className="mt-4">"<a""
-=======
+
           <div className="mt-4">"
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950;
             </a>
@@ -432,9 +432,9 @@ import {}
 ;
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
 export { AIHealthcareAnalytics };export default AIHealthcareAnalytics;'"
-<<<<<<< HEAD
+
   '"'"
-=======
+
 '"'"
 export { AIHealthcareAnalytics };export default AIHealthcareAnalytics;
 '""
