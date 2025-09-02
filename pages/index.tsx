@@ -30,6 +30,10 @@ const Home: NextPage = () => {
             Leading technology solutions provider helping businesses transform their digital presence 
             with cutting-edge AI, cloud architecture, and innovative development services. From micro SaaS 
             applications to enterprise AI solutions, we deliver measurable results that drive growth and efficiency.
+            <br /><br />
+            <span className="text-blue-300 font-semibold">Trusted by 1000+ businesses worldwide</span> - 
+            Get started with our comprehensive technology solutions today and experience the power of 
+            AI-driven innovation, scalable cloud infrastructure, and intelligent automation.
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -71,6 +75,11 @@ const Home: NextPage = () => {
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
               From innovative micro SaaS applications to enterprise-grade AI solutions and cutting-edge IT services, 
               we provide end-to-end technology solutions that drive measurable business results and competitive advantages.
+              <br /><br />
+              <span className="font-semibold text-gray-800">Why Choose Zion Tech Group?</span> - 
+              We combine deep technical expertise with business acumen to deliver solutions that not only work 
+              but also provide measurable ROI. Our team of 75+ experts has successfully completed 1000+ projects, 
+              helping businesses across industries achieve digital transformation and sustainable growth.
             </p>
           </div>
           
@@ -84,6 +93,10 @@ const Home: NextPage = () => {
               <p className="text-gray-600 mb-6">
                 Innovative, focused software solutions that solve specific business problems with minimal overhead. 
                 Starting from $12/month, our micro SaaS applications deliver immediate ROI and scale with your business.
+                <br /><br />
+                <span className="font-semibold text-blue-600">15+ Ready-to-Deploy Solutions:</span> 
+                From AI-powered content generation to smart inventory management, our micro SaaS suite covers 
+                every aspect of modern business operations with enterprise-grade security and 99.9% uptime guarantee.
               </p>
               <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Learn More →
@@ -99,6 +112,11 @@ const Home: NextPage = () => {
               <p className="text-gray-600 mb-6">
                 Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses. 
                 From $2,000 to $75,000, our IT services ensure your infrastructure is secure, scalable, and optimized.
+                <br /><br />
+                <span className="font-semibold text-blue-600">Enterprise-Grade Solutions:</span> 
+                Our 12+ IT services include quantum-ready security, edge computing, zero-trust architecture, and 
+                green IT solutions. We help businesses future-proof their technology stack with cutting-edge 
+                infrastructure and 24/7 monitoring support.
               </p>
               <Link href="/services/it-services" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Learn More →
@@ -114,6 +132,11 @@ const Home: NextPage = () => {
               <p className="text-gray-600 mb-6">
                 Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages. 
                 From $4,000 to $100,000, our AI services transform your business with machine learning and automation.
+                <br /><br />
+                <span className="font-semibold text-blue-600">Next-Generation AI Solutions:</span> 
+                Our 12+ AI services span from drug discovery and autonomous systems to personalized medicine and 
+                climate modeling. We leverage advanced machine learning, computer vision, and NLP to solve 
+                complex business challenges and drive innovation across industries.
               </p>
               <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Learn More →
@@ -132,6 +155,11 @@ const Home: NextPage = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Join 1000+ successful businesses that have transformed their operations with our technology solutions. 
             Get a free consultation and discover how we can accelerate your growth and efficiency.
+            <br /><br />
+            <span className="font-semibold text-white">Ready to Get Started?</span> 
+            Contact us today at <span className="font-semibold text-white">+1 302 464 0950</span> or 
+            <span className="font-semibold text-white"> kleber@ziontechgroup.com</span> for a personalized 
+            consultation. Our team of experts is standing by to help you choose the perfect solution for your business needs.
           </p>
           <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
             Get Started Today
