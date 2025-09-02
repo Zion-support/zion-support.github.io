@@ -40,7 +40,8 @@
     "format:check": "prettier --check .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "validate:deployment": "npm run build && npm run type-check && npm run lint"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.2",
