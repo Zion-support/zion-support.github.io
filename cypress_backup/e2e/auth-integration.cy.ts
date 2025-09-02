@@ -43,7 +43,6 @@ describe('register and login flow', () => {
     // cy.contains('Welcome to your Dashboard!').should('be.visible');
     // This line is commented out as we don't know the exact content of the dashboard.
     // The cy.url() and /api/users/me checks are the primary assertions for now.
-    });
   });
 });
 
