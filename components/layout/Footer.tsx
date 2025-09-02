@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { 
   Brain,
   Mail,
@@ -37,10 +37,9 @@ const Footer: React.FC = () => {
       icon: Brain,
       color: "text-blue-400",
       services: [
-        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" },
-        { name: "AI Customer Experience Platform", href: "/services/ai-customer-experience-platform" },
-        { name: "AI Healthcare Diagnostics", href: "/services/ai-healthcare-diagnostics" },
-        { name: "AI Enterprise Orchestrator", href: "/services/ai-enterprise-orchestrator" }
+        { name: "AI Services", href: "/services/ai-services" },
+        { name: "AI Sales Assistant", href: "/services/ai-sales-assistant" },
+        { name: "AI Content Generator", href: "/services/ai-content-generator" }
       ]
     },
     {
@@ -48,21 +47,18 @@ const Footer: React.FC = () => {
       icon: Cloud,
       color: "text-green-400",
       services: [
-        { name: "Cloud Migration", href: "/services/cloud-migration" },
-        { name: "Micro SaaS Solutions", href: "/micro-saas" },
-        { name: "IT Services", href: "/it-services" },
-        { name: "Infrastructure Management", href: "/services/infrastructure" }
+        { name: "IT Services", href: "/services/it-services" },
+        { name: "Data Platform", href: "/services/data-platform" },
+        { name: "Security Copilot", href: "/services/security-copilot" }
       ]
     },
     {
-      title: "Data & Analytics",
+      title: "Micro SaaS & Martech",
       icon: Database,
       color: "text-purple-400",
       services: [
-        { name: "Data Analytics", href: "/services/data-analytics" },
-        { name: "Business Intelligence", href: "/services/business-intelligence" },
-        { name: "Predictive Analytics", href: "/services/predictive-analytics" },
-        { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform" }
+        { name: "Micro SaaS", href: "/services/micro-saas" },
+        { name: "Martech Automation", href: "/services/martech-automation" }
       ]
     }
   ];
