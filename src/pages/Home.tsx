@@ -134,7 +134,6 @@ export default function Home() {
       color: "from-blue-500 to-cyan-500"
     },
     {
-<<<<<<< HEAD
       title: "Sustainable Technology Solutions",
       subtitle: "Building a greener future through innovation",
       description: "Eco-friendly technology solutions that reduce environmental impact while boosting efficiency.",
@@ -142,52 +141,6 @@ export default function Home() {
       link: "/services/sustainable-technology",
       icon: Leaf,
       color: "from-green-500 to-emerald-500"
-=======
-      title: "Cloud-Native Architecture",
-      subtitle: "Scalable, secure, and resilient cloud solutions",
-      description: "Build the future with our enterprise-grade cloud infrastructure and microservices architecture.",
-      image: "/images/hero/cloud-architecture.jpg",
-      cta: "Cloud Solutions",
-      link: "/cloud"
-    }
-  ];
-
-  const services = [
-    {
-      icon: Brain,
-      title: "AI Autonomous Business Manager",
-      description: "Fully autonomous AI system that manages your entire business operations with 40-60% cost reduction",
-      color: "from-purple-500 to-pink-500",
-      link: "/services/ai-autonomous-business-manager"
-    },
-    {
-      icon: Brain,
-      title: "AI Autonomous Business Operations",
-      description: "Automate complex business processes with intelligent AI agents",
-      color: "from-purple-500 to-pink-500",
-      link: "/services/ai-autonomous-business-operations"
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Infrastructure & DevOps",
-      description: "Scalable cloud solutions with automated deployment and management",
-      color: "from-blue-500 to-cyan-500",
-      link: "/services/cloud-infrastructure-devops"
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity & Zero Trust",
-      description: "Advanced security solutions for modern threat landscapes",
-      color: "from-red-500 to-orange-500",
-      link: "/services/cybersecurity-zero-trust"
-    },
-    {
-      icon: Zap,
-      title: "Digital Transformation",
-      description: "End-to-end digital transformation consulting and implementation",
-      color: "from-green-500 to-emerald-500",
-      link: "/services/digital-transformation"
->>>>>>> cursor/website-audit-content-update-and-deployment-8db3
     }
   ];
 
