@@ -1,10 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import SEO from '../../components/SEO';
-import { Card } from '../../components/ui/Card';
-import { Button } from '../../components/ui/Button';
 import { Badge } from '../../components/ui/Badge';
+import { Button } from '../../components/ui/Button';
+import { Card } from '../../components/ui/Card';
 import {
   Mail,
   ArrowRight,
@@ -113,13 +112,11 @@ export default function EmailAutomation() {
 
   return (
     <>
-      <SEO
-        title="Email Automation - Zion Tech Group"
-        description="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI."
-        keywords="email automation, email marketing, drip campaigns, personalization, A/B testing"
-      />
       <Head>
         <title>Email Automation - Zion Tech Group</title>
+        <meta name="description" content="Intelligent email marketing automation with personalized campaigns and advanced analytics. Boost your email marketing ROI." />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href="https://ziontechgroup.com/solutions/email-automation" />
       </Head>
 
       {/* Hero Section */}

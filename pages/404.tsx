@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SEO from '../components/SEO';
+
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
 import {   Home,
@@ -33,10 +33,6 @@ const NotFound: React.FC = () => {
 
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'>
-      <SEO
-        title='Page Not Found - Zion Tech Group'
-        description="The page you are looking for doesn't exist. Find what you need with our helpful navigation and search options."
-      />
       <div className='max-w-4xl mx-auto text-center'>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
