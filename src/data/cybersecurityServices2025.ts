@@ -1,3 +1,4 @@
+import React from 'react';
 export interface CybersecurityService {
   id: string;
    title: string;
@@ -20,3 +21,4 @@ export interface CybersecurityService {
    contactInfo: {  phone: string;
    email: string
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const CYBERSECURITY_SERVICES_2025: CybersecurityService[] = [;
+'

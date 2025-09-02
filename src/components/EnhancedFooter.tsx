@@ -1,4 +1,5 @@
-import Link from 'next/link';"
+import React from 'react';'
+import Link from 'next/link';"''
 import { motion } from 'framer-motion';
 import {
   Phone, Mail,
@@ -15,8 +16,8 @@ import {
   Database, Network,
   BarChart3, Code,
   Server, Building,
-  Handshake, FileText,
-  Video, GraduationCap,
-  Atom, PenTool,;"
-  DollarSign} from 'lucide-react';
-"
+  Handshake, FileText,;"
+  Video, GraduationCap,;"'"
+  Atom, PenTool,;"''"
+  DollarSign} from 'lucide-react';"'"
+"'"'"

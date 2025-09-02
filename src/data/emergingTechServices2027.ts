@@ -1,3 +1,4 @@
+import React from 'react';
 export interface EmergingTechService2027 {
   id: string;
    title: string;
@@ -24,3 +25,4 @@ export interface EmergingTechService2027 {
    id: string;
    avatarUrl?: string
    verified: boolean} images: string[] createdAt: string technologyStack: string[] useCases: string[] integrations: string[] compliance: string[] support: string[]}  export const EMERGING_TECH_SERVICES_2027: EmergingTechService2027[] = [;
+'

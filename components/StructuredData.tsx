@@ -40,7 +40,7 @@ export const OrganizationSchema = () => {
     industry: 'Technology Services',
   };
 
-  return <StructuredData data={organizationData} />;
+  return <StructuredData data={organizationData} />
 };
 
 export const WebSiteSchema = () => {
@@ -58,7 +58,7 @@ export const WebSiteSchema = () => {
     },
   };
 
-  return <StructuredData data={websiteData} />;
+  return <StructuredData data={websiteData} />
 };
 
 export const ServiceSchema = () => {
@@ -110,5 +110,5 @@ export const ServiceSchema = () => {
     },
   };
 
-  return <StructuredData data={serviceData} />;
+  return <StructuredData data={serviceData} />
 };

@@ -1,3 +1,4 @@
+import React from 'react';
 export interface BlockchainWeb3Service {
   id: string;
    title: string;
@@ -20,3 +21,4 @@ export interface BlockchainWeb3Service {
    contactInfo: {  phone: string;
    email: string
    website: string} technicalSpecs?: { technology: string[] integrations: string[] apiEndpoints: number uptime: string security: string[]  } competitors?: string[] marketSize?: string demoUrl?: string documentationUrl?: string } export const BLOCKCHAIN_WEB3_SERVICES_2025: BlockchainWeb3Service[] = [;
+'

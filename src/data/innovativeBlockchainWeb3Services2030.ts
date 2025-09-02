@@ -1,1 +1,2 @@
-import { ProductListing } from '@/types/listings'  export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [;"
+import React from 'react';'
+import { ProductListing } from '@/types/listings'  export const INNOVATIVE_BLOCKCHAIN_WEB3_SERVICES_2030: ProductListing[] = [;"'"'"

@@ -1,3 +1,4 @@
+import React from 'react';
 export interface InnovativeITService {
   id: string;
    title: string;
@@ -29,3 +30,4 @@ export interface InnovativeITService {
    id: string;
    avatarUrl?: string
    verified: boolean} images: string[] createdAt: string } export const INNOVATIVE_IT_SERVICES_2032: InnovativeITService[] = [;
+'

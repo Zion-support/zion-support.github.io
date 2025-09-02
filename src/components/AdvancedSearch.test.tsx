@@ -1,12 +1,13 @@
-import { render, screen } from '@testing-library/react';"
-import AdvancedSearch from './AdvancedSearch';"
-describe('AdvancedSearch', () => {"
-  it('renders without crashing', () => {"
-    render(<AdvancedSearch /" >)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"
-  it('displays expected content', () => {
-    render(<AdvancedSearch /" >)
-    // Add specific test assertions based on component content,
-});
-"
-}}
+import React from 'react';'
+import { render, screen } from '@testing-library/react';"'"'"
+import AdvancedSearch from './AdvancedSearch';"'"'"
+describe('AdvancedSearch', () => {"'"'"
+  it('renders without crashing', () => {""'"
+    render(<AdvancedSearch /" ></AdvancedSearch>)"'"'"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"''"
+  it('displays expected content', () => {""
+    render(<AdvancedSearch /" ></AdvancedSearch>)
+    // Add specific test assertions based on component content,"
+});""
+"'"
+}}'"'"

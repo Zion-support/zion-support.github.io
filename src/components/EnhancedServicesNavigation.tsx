@@ -1,5 +1,6 @@
-''';'
-          title: 'Code Review & Security', ''';'
-          url: '/services/ai-code-review-security', ''';'
-          description: '85% vulnerability reduction', ''';'
-"
+import React from 'react';'
+';'
+          title: 'Code Review & Security', ';'
+          url: '/services/ai-code-review-security', ';'
+          description: '85% vulnerability reduction', ';''
+"'"'"

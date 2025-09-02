@@ -1,3 +1,4 @@
+import React from 'react';
 export interface ComprehensivePricingGuide2034 {
   id: string;
    title: string;
@@ -24,3 +25,4 @@ export interface ComprehensivePricingGuide2034 {
    roi: string;
    estimatedDelivery: string;
    supportLevel: string} export const COMPREHENSIVE_PRICING_GUIDE_2034: ComprehensivePricingGuide2034[] = [;
+'

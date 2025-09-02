@@ -1,12 +1,13 @@
-import { render, screen } from '@testing-library/react';"
-import ServiceComparisonTool from './ServiceComparisonTool';"
-describe('ServiceComparisonTool', () => {"
-  it('renders without crashing', () => {"
-    render(<ServiceComparisonTool /" >)"
-    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"
-  it('displays expected content', () => {
-    render(<ServiceComparisonTool /" >)
-    // Add specific test assertions based on component content,
-});
-"
-}}
+import React from 'react';'
+import { render, screen } from '@testing-library/react';"'"'"
+import ServiceComparisonTool from './ServiceComparisonTool';"'"'"
+describe('ServiceComparisonTool', () => {"'"'"
+  it('renders without crashing', () => {""'"
+    render(<ServiceComparisonTool /" ></ServiceComparisonTool>)"'"'"
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();"''"
+  it('displays expected content', () => {""
+    render(<ServiceComparisonTool /" ></ServiceComparisonTool>)
+    // Add specific test assertions based on component content,"
+});""
+"'"
+}}'"'"
