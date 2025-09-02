@@ -57,43 +57,52 @@ export default function Index() {
           marginBottom: '2rem', color: '#a0aec0',
           maxWidth: '600px'
         }}>;
-          Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.;
+          Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.
         </p>
         <div style={{
-          display: 'flex',;
-          gap: '1rem', flexWrap: 'wrap',;
-          justifyContent: 'center';
-        }}>;
-          <a;
-            href='/services';
-            style={{;
-              padding: '12px 24px', background: 'linear-gradient(45deg, #00d4ff, #0099cc)', color: 'white',;
-              textDecoration: 'none', borderRadius: '8px',;
-              fontWeight: '600', transition: 'transform 0.2s';
+          display: 'flex',
+          gap: '1rem', 
+          flexWrap: 'wrap',
+          justifyContent: 'center'
+        }}>
+          <a
+            href='/services'
+            style={{
+              padding: '12px 24px', 
+              background: 'linear-gradient(45deg, #00d4ff, #0099cc)', 
+              color: 'white',
+              textDecoration: 'none', 
+              borderRadius: '8px',
+              fontWeight: '600', 
+              transition: 'transform 0.2s'
             }}
             onMouseOver={(e) => e.target.style.transform = 'translateY(-2px)'}
             onMouseOut={(e) => e.target.style.transform = 'translateY(0)'}
-          >;
-            Our Services;
+          >
+            Our Services
           </a>
-          <a;
-            href='/contact';
-            style={{;
-              padding: '12px 24px', background: 'transparent',;
-              color: '#00d4ff', textDecoration: 'none',;
-              borderRadius: '8px', fontWeight: '600',;
-              border: '2px solid #00d4ff', transition: 'all 0.2s';
+          <a
+            href='/contact'
+            style={{
+              padding: '12px 24px', 
+              background: 'transparent',
+              color: '#00d4ff', 
+              textDecoration: 'none',
+              borderRadius: '8px', 
+              fontWeight: '600',
+              border: '2px solid #00d4ff', 
+              transition: 'all 0.2s'
             }}
-            onMouseOver={(e) => {;
+            onMouseOver={(e) => {
               e.target.style.background = '#00d4ff';
               e.target.style.color = '#0b1220';
             }}
-            onMouseOut={(e) => {;
+            onMouseOut={(e) => {
               e.target.style.background = 'transparent';
               e.target.style.color = '#00d4ff';
             }}
-          >;
-            Get Started;
+          >
+            Get Started
           </a>
         </div>
       </div>
