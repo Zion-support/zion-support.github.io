@@ -10,20 +10,20 @@ interface SEOProps {
   type?: string;
   siteName?: string;
 }
-;
-const SEO: React.FC<SEOProps> = ({;
-  title,;
-  description,;
-  keywords,;
-  image,;
-  url,;
-  type = 'website',;
-  siteName = 'Zion Tech Group';
-}) => {;
+
+const SEO: React.FC<SEOProps> = ({
+  title,
+  description,
+  keywords,
+  image,
+  url,
+  type = 'website',
+  siteName = 'Zion Tech Group'
+}) => {
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullImage = image || '/images/og-image.jpg';
   const fullUrl = url || 'https://ziontechgroup.com';
-;
+
   return (
     <Head>
       <title>{fullTitle}</title>
@@ -48,15 +48,15 @@ const SEO: React.FC<SEOProps> = ({;
       <link rel='canonical' href={fullUrl} />
       {/* JSON-LD Structured Data */}
       <script
-        type='application/ld+json';
-        dangerouslySetInnerHTML={{;
-          __html: JSON.stringify({;
-            '@context': 'https://schema.org',;
-            '@type': 'Organization',;
-            'name': siteName,;
-            'url': 'https://ziontechgroup.com',;
-            'logo': 'https://ziontechgroup.com/images/logo.png',;
-            'description': 'Leading technology solutions provider specializing in AI, quantum computing, and innovative micro SAAS services.',;
+        type='application/ld+json'
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            'name': siteName,
+            'url': 'https://ziontechgroup.com',
+            'logo': 'https://ziontechgroup.com/images/logo.png',
+            'description': 'Leading technology solutions provider specializing in AI, quantum computing, and innovative micro SAAS services.',
             'address': {;
               '@type': 'PostalAddress',;
               'streetAddress': '364 E Main St STE 1008',;
