@@ -1,16 +1,44 @@
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Menu, X, Phone, Mail, MapPin } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Menu, 
+  X, 
+  Home, 
+  Users, 
+  Briefcase, 
+  Phone, 
+  Mail, 
+  ChevronDown,
+  Brain,
+  Shield,
+  Cloud,
+  Database,
+  Network,
+  Zap,
+  Target,
+  DollarSign,
+  BookOpen,
+  Calendar,
+  FileText,
+  Award,
+  Globe,
+  Search,
+  ArrowRight
+} from 'lucide-react';
+import { Button } from '../ui/Button';
+import { Badge } from '../ui/Badge';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -67,146 +95,164 @@ const Header: React.FC = () => {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">Z</span>
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+              <Brain className="w-5 h-5 text-white" />
             </div>
-            <span className="text-2xl font-bold text-gray-900">Zion Tech Group</span>
+            <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navigation.map((item) => (
-              <div key={item.name}>
-                {item.name === 'Services' ? (
-                  <div className="relative group">
-                    <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
-                      Services
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                      <Link
-                        href="/services"
-                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold border-b border-gray-100"
-                      >
-                        All Services
-                      </Link>
-                      {serviceCategories.map((service) => (
-                        <Link
-                          key={service.name}
-                          href={service.href}
-                          className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                ) : item.name === 'Solutions' ? (
-                  <div className="relative group">
-                    <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
-                      Solutions
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </button>
-                    <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                      <Link
-                        href="/solutions"
-                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold border-b border-gray-100"
-                      >
-                        All Solutions
-                      </Link>
-                      <Link
-                        href="/solutions/enterprise"
-                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        Enterprise Solutions
-                      </Link>
-                      <Link
-                        href="/solutions/small-business"
-                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        Small Business
-                      </Link>
-                      <Link
-                        href="/solutions/startups"
-                        className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
-                      >
-                        Startup Solutions
-                      </Link>
-                    </div>
+              <div key={item.name} className="relative">
+                {item.dropdown ? (
+                  <div
+                    className="flex items-center space-x-1 text-gray-300 hover:text-white transition-colors cursor-pointer"
+                    onMouseEnter={() => setActiveDropdown(item.name)}
+                    onMouseLeave={() => setActiveDropdown(null)}
+                  >
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                    <ChevronDown className="w-4 h-4" />
                   </div>
                 ) : (
                   <Link
-                    href={item.href}
-                    className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
+                    to={item.href}
+                    className={`flex items-center space-x-1 transition-colors ${
+                      isActive(item.href)
+                        ? 'text-blue-400'
+                        : 'text-gray-300 hover:text-white'
+                    }`}
                   >
-                    {item.name}
+                    <item.icon className="w-4 h-4" />
+                    <span>{item.name}</span>
                   </Link>
                 )}
+
+                {/* Dropdown Menu */}
+                <AnimatePresence>
+                  {activeDropdown === item.name && item.dropdown && (
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 10 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 mt-2 w-80 bg-slate-800 rounded-lg shadow-xl border border-slate-700 overflow-hidden"
+                      onMouseEnter={() => setActiveDropdown(item.name)}
+                      onMouseLeave={() => setActiveDropdown(null)}
+                    >
+                      <div className="p-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700 transition-colors group"
+                          >
+                            <dropdownItem.icon className="w-5 h-5 text-blue-400 mt-0.5 group-hover:text-blue-300" />
+                            <div>
+                              <div className="text-white font-medium group-hover:text-blue-300">
+                                {dropdownItem.name}
+                              </div>
+                              <div className="text-gray-400 text-sm">
+                                {dropdownItem.description}
+                              </div>
+                            </div>
+                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-white ml-auto mt-0.5" />
+                          </Link>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             ))}
-          </div>
+          </nav>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link
-              href="/contact"
-              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors"
-            >
-              Get Quote
-            </Link>
+            <Button variant="outline" size="sm">
+              <Search className="w-4 h-4 mr-2" />
+              Search
+            </Button>
+            <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+              Get Started
+            </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="lg:hidden">
-            <button
-              className="p-2 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={isMenuOpen}
-            >
-              <div>
-                {isMenuOpen ? (
-                  <X className="w-6 h-6 text-gray-700" />
-                ) : (
-                  <Menu className="w-6 h-6 text-gray-700" />
-                )}
-              </div>
-            </button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
+          >
+            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
         </div>
+      </div>
 
-        {/* Mobile Navigation */}
+      {/* Mobile Menu */}
+      <AnimatePresence>
         {isMenuOpen && (
-          <div className="lg:hidden border-t border-gray-200 py-4">
-            <div className="flex flex-col space-y-4">
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="lg:hidden bg-slate-900 border-t border-slate-700"
+          >
+            <div className="px-4 py-6 space-y-4">
               {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  {item.dropdown ? (
+                    <div>
+                      <div className="flex items-center space-x-2 text-gray-300 font-medium mb-2">
+                        <item.icon className="w-5 h-5" />
+                        <span>{item.name}</span>
+                      </div>
+                      <div className="ml-7 space-y-2">
+                        {item.dropdown.map((dropdownItem) => (
+                          <Link
+                            key={dropdownItem.name}
+                            to={dropdownItem.href}
+                            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <dropdownItem.icon className="w-4 h-4" />
+                            <span>{dropdownItem.name}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`flex items-center space-x-2 transition-colors ${
+                        isActive(item.href)
+                          ? 'text-blue-400'
+                          : 'text-gray-300 hover:text-white'
+                      }`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <item.icon className="w-5 h-5" />
+                      <span>{item.name}</span>
+                    </Link>
+                  )}
+                </div>
               ))}
-              <div className="pt-4 border-t border-gray-200">
-                <Link
-                  href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors inline-block"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Get Quote
-                </Link>
+              
+              <div className="pt-4 border-t border-slate-700 space-y-3">
+                <Button variant="outline" size="sm" className="w-full">
+                  <Search className="w-4 h-4 mr-2" />
+                  Search
+                </Button>
+                <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                  Get Started
+                </Button>
               </div>
             </div>
-          </div>
+          </motion.div>
         )}
-      </nav>
+      </AnimatePresence>
     </header>
   );
 };
