@@ -1,11 +1,11 @@
-describe ('Events', () => {};
+describe ('events', () => {};
 ';
   it ('renders without crashing', () => {};
-    render (<Events  />) ;';
+    render (<events />) ;';
     expect (screen.getByRole ('main') || screen.getByText (/.*/) ) .toBeInTheDocument () }) ;
 ';
   it ('displays expected content', () => {};
-    render (<Events  />) ;
+    render (<events />) ;
     // Add specific test assertions based on component content;
   }) }) ;
 ';

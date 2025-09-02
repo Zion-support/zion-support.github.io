@@ -1,506 +1,497 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { SEO } from '@/components/SEO';
-import { 
-  BookOpen, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Heart, 
-  Zap, 
-  Globe, 
-  Video, 
-  Database, 
-  Target, 
-  Calendar, 
-  Clock, 
-  Users, 
-  Play, 
-  ExternalLink, 
-  Search, 
-  Filter, 
-  Star, 
-  Eye, 
-  Download, 
-  Share2, 
-  ArrowRight, 
-  CheckCircle 
-} from 'lucide-react';
-
-const Webinars: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState('all');
-  const [filterType, setFilterType] = useState('all');
-
-  const categories = [
-    {
-      id: 'all',
-      name: 'All Categories',
-      count: 156,
-      icon: Globe
-    },
-    {
-      id: 'ai',
-      name: 'Artificial Intelligence',
-      count: 42,
-      icon: Brain
-    },
-    {
-      id: 'cybersecurity',
-      name: 'Cybersecurity',
-      count: 35,
-      icon: Shield
-    },
-    {
-      id: 'cloud',
-      name: 'Cloud Computing',
-      count: 38,
-      icon: Cloud
-    },
-    {
-      id: 'emerging',
-      name: 'Emerging Tech',
-      count: 28,
-      icon: Rocket
-    },
-    {
-      id: 'data',
-      name: 'Data & Analytics',
-      count: 31,
-      icon: Database
-    }
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import { ; Video,; Calendar,; Clock,; Users,; Tag,; ArrowRight,; Play,; ExternalLink,; Search,; Filter,; Star,; TrendingUp,; Brain,; Shield,; Cloud,; Zap,; Globe,; BookOpen,; Award,; CheckCircle; } from 'lucide-react';
+;
+export default function Webinars() {;
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+;
+  const categories = [;
+    { id: 'all', name: 'All Webinars', icon: Video },;
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: Brain },;
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield },;
+    { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud },;
+    { id: 'digital-transformation', name: 'Digital Transformation', icon: TrendingUp },;
+    { id: 'industry', name: 'Industry Insights', icon: Globe };
   ];
-
-  const filterTypes = [
-    {
-      id: 'all',
-      name: 'All Types',
-      count: 156
-    },
-    {
-      id: 'upcoming',
-      name: 'Upcoming',
-      count: 45
-    },
-    {
-      id: 'on-demand',
-      name: 'On-Demand',
-      count: 89
-    },
-    {
-      id: 'live',
-      name: 'Live',
-      count: 22
-    }
+;
+  const webinars = [;
+    {;
+      id: 1,;
+      title: 'AI-Powered Cybersecurity: The Future of Threat Detection',;
+      description: 'Learn how artificial intelligence is revolutionizing cybersecurity and providing real-time threat detection capabilities.',;
+      category: 'cybersecurity',;
+      date: '2024-09-15',;
+      time: '2:00 PM - 3:30 PM EST',;
+      duration: '90 minutes',;
+      speaker: 'Dr. Emily Watson',;
+      speakerTitle: 'Cybersecurity Director',;
+      speakerAvatar: '/images/team/emily-watson.jpg',;
+      attendees: 1250,;
+      featured: true,;
+      tags: ['AI', 'Cybersecurity', 'Threat Detection'],;
+      image: '🔒',;
+      registrationUrl: '/webinars/ai-cybersecurity-2024',;
+      recordingUrl: null;
+    },;
+    {;
+      id: 2,;
+      title: 'Cloud Migration Strategies for Enterprise Success',;
+      description: 'Discover proven strategies for migrating legacy systems to the cloud while minimizing downtime and maximizing ROI.',;
+      category: 'cloud',;
+      date: '2024-09-20',;
+      time: '1:00 PM - 2:30 PM EST',;
+      duration: '90 minutes',;
+      speaker: 'Marcus Rodriguez',;
+      speakerTitle: 'Head of Cloud & DevOps',;
+      speakerAvatar: '/images/team/marcus-rodriguez.jpg',;
+      attendees: 980,;
+      featured: true,;
+      tags: ['Cloud Migration', 'DevOps', 'Enterprise'],;
+      image: '☁️',;
+      registrationUrl: '/webinars/cloud-migration-2024',;
+      recordingUrl: null;
+    },;
+    {;
+      id: 3,;
+      title: 'Machine Learning in Healthcare: Transforming Patient Care',;
+      description: 'Explore how ML algorithms are improving diagnostic accuracy and patient outcomes in modern healthcare.',;
+      category: 'ai-ml',;
+      date: '2024-09-25',;
+      time: '3:00 PM - 4:30 PM EST',;
+      duration: '90 minutes',;
+      speaker: 'Dr. Sarah Chen',;
+      speakerTitle: 'CTO & AI Research Lead',;
+      speakerAvatar: '/images/team/sarah-chen.jpg',;
+      attendees: 750,;
+      featured: false,;
+      tags: ['Machine Learning', 'Healthcare', 'AI'],;
+      image: '🏥',;
+      registrationUrl: '/webinars/ml-healthcare-2024',;
+      recordingUrl: null;
+    },;
+    {;
+      id: 4,;
+      title: 'Digital Transformation: From Strategy to Implementation',;
+      description: 'A comprehensive guide to planning and executing successful digital transformation initiatives.',;
+      category: 'digital-transformation',;
+      date: '2024-10-02',;
+      time: '2:00 PM - 3:30 PM EST',;
+      duration: '90 minutes',;
+      speaker: 'Kleber Santos',;
+      speakerTitle: 'CEO & Founder',;
+      speakerAvatar: '/images/team/kleber-santos.jpg',;
+      attendees: 1100,;
+      featured: false,;
+      tags: ['Digital Transformation', 'Strategy', 'Implementation'],;
+      image: '🚀',;
+      registrationUrl: '/webinars/digital-transformation-2024',;
+      recordingUrl: null;
+    },;
+    {;
+      id: 5,;
+      title: 'Edge Computing: The Next Frontier of Technology',;
+      description: 'Learn about edge computing technologies and their applications in IoT, AI, and real-time processing.',;
+      category: 'industry',;
+      date: '2024-10-08',;
+      time: '1:00 PM - 2:30 PM EST',;
+      duration: '90 minutes',;
+      speaker: 'Technology Team',;
+      speakerTitle: 'Innovation Lab',;
+      speakerAvatar: '/images/team/tech-team.jpg',;
+      attendees: 650,;
+      featured: false,;
+      tags: ['Edge Computing', 'IoT', 'Real-time Processing'],;
+      image: '🌐',;
+      registrationUrl: '/webinars/edge-computing-2024',;
+      recordingUrl: null;
+    },;
+    {;
+      id: 6,;
+      title: 'Zero Trust Security Architecture: Implementation Guide',;
+      description: 'Step-by-step guide to implementing zero trust security principles in your organization.',;
+      category: 'cybersecurity',;
+      date: '2024-10-15',;
+      time: '2:00 PM - 3:30 PM EST',;
+      duration: '90 minutes',;
+      speaker: 'Security Team',;
+      speakerTitle: 'Cybersecurity Experts',;
+      speakerAvatar: '/images/team/security-team.jpg',;
+      attendees: 890,;
+      featured: false,;
+      tags: ['Zero Trust', 'Security', 'Architecture'],;
+      image: '🛡️',;
+      registrationUrl: '/webinars/zero-trust-2024',;
+      recordingUrl: null;
+    };
   ];
-
-  const webinars = [
-    {
-      id: '1',
-      title: 'AI-Powered Cybersecurity: The Future of Threat Detection',
-      description: 'Learn how artificial intelligence is revolutionizing cybersecurity and helping organizations stay ahead of evolving threats.',
-      type: 'upcoming',
-      duration: '60 min',
-      speakers: ['Dr. Sarah Chen', 'Michael Rodriguez'],
-      tags: ['AI', 'Cybersecurity', 'Machine Learning'],
-      featured: true,
-      category: 'cybersecurity',
-      date: '2024-02-15T14:00:00Z'
-    },
-    {
-      id: '2',
-      title: 'Cloud-Native Architecture: Building Scalable Applications',
-      description: 'Discover best practices for designing and implementing cloud-native applications that scale with your business needs.',
-      type: 'on-demand',
-      duration: '75 min',
-      speakers: ['Alex Thompson'],
-      tags: ['Cloud Computing', 'Architecture', 'Scalability'],
-      featured: false,
-      category: 'cloud',
-      date: '2024-01-20T10:00:00Z'
-    },
-    {
-      id: '3',
-      title: 'Quantum Computing: Breaking Down the Hype',
-      description: 'An honest look at quantum computing developments and their practical applications in the near future.',
-      type: 'on-demand',
-      duration: '90 min',
-      speakers: ['Dr. Elena Rodriguez', 'David Wilson'],
-      tags: ['Quantum Computing', 'Emerging Tech', 'Research'],
-      featured: true,
-      category: 'emerging',
-      date: '2024-01-15T15:00:00Z'
-    },
-    {
-      id: '4',
-      title: 'Data-Driven Decision Making: From Insights to Action',
-      description: 'Transform your business intelligence capabilities and turn data into actionable insights.',
-      type: 'upcoming',
-      duration: '45 min',
-      speakers: ['Jennifer Kim'],
-      tags: ['Data Analytics', 'Business Intelligence', 'Decision Making'],
-      featured: false,
-      category: 'data',
-      date: '2024-02-20T11:00:00Z'
-    },
-    {
-      id: '5',
-      title: 'Zero Trust Security: Implementation Strategies',
-      description: 'Practical approaches to implementing zero trust security principles in your organization.',
-      type: 'on-demand',
-      duration: '60 min',
-      speakers: ['Michael Rodriguez', 'Sarah Chen'],
-      tags: ['Cybersecurity', 'Zero Trust', 'Implementation'],
-      featured: true,
-      category: 'cybersecurity',
-      date: '2024-01-10T13:00:00Z'
-    },
-    {
-      id: '6',
-      title: 'AI Ethics and Responsible Development',
-      description: 'Understanding the ethical implications of AI development and how to build responsible AI systems.',
-      type: 'upcoming',
-      duration: '75 min',
-      speakers: ['Dr. Sarah Chen', 'Dr. Elena Rodriguez'],
-      tags: ['AI Ethics', 'Responsible AI', 'Governance'],
-      featured: false,
-      category: 'ai',
-      date: '2024-02-25T16:00:00Z'
-    }
-  ];
-
-  const filteredWebinars = webinars.filter(webinar => {
-    const matchesSearch = webinar.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         webinar.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         webinar.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-    const matchesCategory = activeCategory === 'all' || webinar.category === activeCategory;
-    const matchesType = filterType === 'all' || webinar.type === filterType;
-    
-    return matchesSearch && matchesCategory && matchesType;
+;
+  const upcomingWebinars = webinars.filter(webinar => new Date(webinar.date) > new Date());
+  const pastWebinars = webinars.filter(webinar => new Date(webinar.date) <= new Date());
+;
+  const filteredWebinars = upcomingWebinars.filter(webinar => {;
+    const matchesCategory = selectedCategory === 'all' || webinar.category === selectedCategory;
+    const matchesSearch = webinar.title.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         webinar.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
+                         webinar.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+    return matchesCategory && matchesSearch;
   });
-
-  const getCategoryIcon = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.icon : Globe;
-  };
-
-  const getCategoryName = (categoryId: string) => {
-    const category = categories.find(cat => cat.id === categoryId);
-    return category ? category.name : 'General';
-  };
-
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-  };
-
-  const getTypeColor = (type: string) => {
-    switch (type) {
-      case 'upcoming': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
-      case 'on-demand': return 'bg-green-500/20 text-green-400 border-green-500/30';
-      case 'live': return 'bg-red-500/20 text-red-400 border-red-500/30';
-      default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
-    }
-  };
-
-  return (
-    <>
-      <SEO 
-        title="Webinars - Zion Tech Group"
-        description="Join our expert-led webinars on AI, cybersecurity, cloud computing, and emerging technologies. Learn from industry leaders and stay ahead of the curve."
-        keywords="webinars, online learning, AI, cybersecurity, cloud computing, technology education, expert insights"
-      />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
-        {/* Header */}
-        <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Video className="w-10 h-10 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Expert <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Webinars</span>
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join our expert-led webinars on AI, cybersecurity, cloud computing, and emerging technologies. 
-                Learn from industry leaders and stay ahead of the curve.
-              </p>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Search and Filters */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
-              {/* Search */}
-              <div className="relative flex-1 max-w-md">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <input
-                  type="text"
-                  placeholder="Search webinars..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                />
-              </div>
-
-              {/* Filters */}
-              <div className="flex items-center gap-4">
-                <select
-                  value={activeCategory}
-                  onChange={(e) => setActiveCategory(e.target.value)}
-                  className="px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
-                      {category.name} ({category.count})
-                    </option>
-                  ))}
-                </select>
-
-                <select
-                  value={filterType}
-                  onChange={(e) => setFilterType(e.target.value)}
-                  className="px-4 py-3 bg-slate-800/50 border border-slate-700/50 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                >
-                  {filterTypes.map((type) => (
-                    <option key={type.id} value={type.id}>
-                      {type.name} ({type.count})
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Webinars */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="text-center mb-16"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Featured Webinars</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our most popular and highly-rated webinars that provide deep insights 
-                into critical technology trends and business challenges.
-              </p>
-            </motion.div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {webinars.filter(w => w.featured).map((webinar, index) => (
-                <motion.div
-                  key={webinar.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 group"
-                >
-                  <div className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center">
-                        <getCategoryIcon categoryId={webinar.category} className="w-6 h-6 text-white" />
-                      </div>
-                      <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-medium border border-blue-500/30">
-                        Featured
-                      </span>
-                    </div>
-                    
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
-                      {webinar.title}
-                    </h3>
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-3">
-                      {webinar.description}
-                    </p>
-                    
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center gap-2 text-sm">
-                        <Users className="w-4 h-4 text-gray-400" />
-                        <span className="text-gray-300">{webinar.speakers.join(', ')}</span>
-                      </div>
-                      
-                      <div className="flex items-center gap-2 text-sm">
-                        <Clock className="w-4 h-4 text-gray-400" />
-                        <span className="text-gray-300">{webinar.duration}</span>
-                      </div>
-                      
-                      <div className="flex items-center gap-2 text-sm">
-                        <Target className="w-4 h-4 text-gray-400" />
-                        <span className="text-gray-300">{getCategoryName(webinar.category)}</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {webinar.tags.slice(0, 3).map((tag, idx) => (
-                        <span key={idx} className="px-2 py-1 bg-slate-700/50 text-cyan-400 rounded text-xs">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getTypeColor(webinar.type)}`}>
-                        {webinar.type === 'upcoming' ? 'Upcoming' : 
-                         webinar.type === 'on-demand' ? 'On-Demand' : 'Live'}
-                      </span>
-                      <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
-                        {webinar.type === 'upcoming' ? 'Register' : 'Watch Now'}
-                      </button>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* All Webinars */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl font-bold">
-                {searchQuery ? `Search Results for "${searchQuery}"` : 'All Webinars'}
-              </h2>
-              <p className="text-gray-400">
-                {filteredWebinars.length} webinars found
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              {filteredWebinars.map((webinar, index) => (
-                <motion.div
-                  key={webinar.id}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300"
-                >
-                  <div className="flex items-start gap-6">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <getCategoryIcon categoryId={webinar.category} className="w-10 h-10 text-blue-400" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start justify-between mb-3">
-                        <div>
-                          <h3 className="text-xl font-bold text-white mb-2">{webinar.title}</h3>
-                          <p className="text-gray-300 mb-3">{webinar.description}</p>
-                        </div>
-                        <div className="text-right">
-                          <div className="text-sm text-gray-400 mb-1">{webinar.duration}</div>
-                          <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getTypeColor(webinar.type)}`}>
-                            {webinar.type === 'upcoming' ? 'Upcoming' : 
-                             webinar.type === 'on-demand' ? 'On-Demand' : 'Live'}
-                          </span>
-                        </div>
-                      </div>
-                      
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4 text-sm">
-                        <div className="flex items-center gap-2">
-                          <Users className="w-4 h-4 text-gray-400" />
-                          <span className="text-gray-300">{webinar.speakers.join(', ')}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-gray-400" />
-                          <span className="text-gray-300">{formatDate(webinar.date)}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Target className="w-4 h-4 text-gray-400" />
-                          <span className="text-gray-300">{getCategoryName(webinar.category)}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4 text-gray-400" />
-                          <span className="text-gray-300">{webinar.duration}</span>
-                        </div>
-                      </div>
-
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {webinar.tags.map((tag, idx) => (
-                          <span key={idx} className="px-3 py-1 bg-slate-700/50 text-cyan-400 rounded-full text-xs">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-4">
-                          <span className="text-sm text-gray-400">
-                            {getCategoryName(webinar.category)}
-                          </span>
-                          {webinar.featured && (
-                            <span className="px-2 py-1 bg-blue-500/20 text-blue-400 rounded text-xs border border-blue-500/30">
-                              Featured
-                            </span>
-                          )}
-                        </div>
-                        <div className="flex gap-2">
-                          <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors">
-                            {webinar.type === 'upcoming' ? 'Register' : 'Watch Now'}
-                          </button>
-                          <button className="px-4 py-2 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white rounded-lg font-medium transition-colors">
-                            <Share2 className="w-4 h-4 mr-2 inline" />
-                            Share
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 md:p-12"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Stay Updated with Latest Webinars
-              </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Get notified when we schedule new webinars and expert sessions. 
-                Never miss an opportunity to learn from industry leaders.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-6 py-3 bg-white/20 border border-white/30 rounded-lg text-white placeholder-blue-100 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent"
-                />
-                <button className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-blue-50 transition-colors">
-                  Subscribe
-                </button>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-};
-
-export default Webinars;
+;
+  return (;
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">;"";"
+      <SEO ";"";"
+        title="Webinars - Zion Tech Group";"";"
+        description="Join our expert-led webinars on AI, cybersecurity, cloud computing, and digital transformation. Learn from industry leaders and gain valuable insights.";"";"
+        keywords="webinars, online training, AI, cybersecurity, cloud computing, digital transformation, Zion Tech Group";";"
+      />;"";"
+      {/* Hero Section */}";"";"
+      <section className="relative pt-32 pb-20 overflow-hidden">";"";"
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/10 to-purple-600/10"></div>";"";"
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center">;"
+            <motion.h1;";"
+              initial={{ opacity: 0, y: 20 }};";"
+              animate={{ opacity: 1, y: 0 }};"";"
+              transition={{ duration: 0.6 }}";"";"
+              className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6";";"
+            >;"";"
+              Expert";"";"
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Webinars</span>;
+            </motion.h1>;"
+            <motion.p;";"
+              initial={{ opacity: 0, y: 20 }};";"
+              animate={{ opacity: 1, y: 0 }};"";"
+              transition={{ duration: 0.6, delay: 0.2 }}";"";"
+              className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8";
+            >;
+              Join our expert-led webinars to learn about the latest technology trends,;
+              best practices, and innovative solutions from industry leaders.;
+            </motion.p>;
+            {/* Search and Filter */};"
+            <motion.div;";"
+              initial={{ opacity: 0, y: 20 }};";"
+              animate={{ opacity: 1, y: 0 }};"";"
+              transition={{ duration: 0.6, delay: 0.4 }}";"";"
+              className="max-w-4xl mx-auto";"";"
+            >";"";"
+              <div className="flex flex-col md:flex-row gap-4 mb-8">";"";"
+                <div className="relative flex-1">";"";"
+                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />;"";"
+                  <input";"";"
+                    type="text";"";"
+                    placeholder="Search webinars...";";"
+                    value={searchTerm};"";"
+                    onChange={(e) = / / / / /> setSearchTerm(e.target.value)}";"";"
+                    className="w-full pl-12 pr-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-transparent";";"
+                  />;"";"
+                </div>";"";"
+                <div className="flex gap-2 overflow-x-auto pb-2">;
+                  {categories.map((category) => (;
+                    <button;
+                      key={category.id};
+                      onClick={() => setSelectedCategory(category.id)};
+                      className={`flex items-center space-x-2 px-4 py-2 rounded-lg border transition-all duration-200 whitespace-nowrap ${;
+                        selectedCategory === category.id;"
+                          ? 'bg-blue-600 text-white border-blue-600';";"
+                          : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 border-gray-300 dark:border-gray-600 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400';";"
+                      }`};"";"
+                    >";"";"
+                      <category.icon className="w-4 h-4" />;
+                      <span>{category.name}</span>;
+                    </button>;
+                  ))};
+                </div>;
+              </div>;
+            </motion.div>;"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* Featured Webinars */}";"";"
+      <section className="py-20">";"";"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center mb-16">";"";"
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">;";"
+              Featured Webinars;"";"
+            </h2>";"";"
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">;"
+              Don't miss these upcoming expert-led sessions on cutting-edge technology topics.;";"
+            </p>;";"
+          </div>;";"";"
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
+            {webinars.filter(w => w.featured).map((webinar, index) => (;
+              <motion.div;
+                key={webinar.id};"
+                initial={{ opacity: 0, y: 30 }};";"
+                whileInView={{ opacity: 1, y: 0 }};";"
+                transition={{ duration: 0.6, delay: index * 0.1 }};"";"
+                viewport={{ once: true }}";"";"
+                className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2";"";"
+              >";"";"
+                <div className="p-8">";"";"
+                  <div className="flex items-center space-x-2 mb-4">";"";"
+                    <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">;";"
+                      Featured;"";"
+                    </span>";"";"
+                    <span className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-sm font-medium rounded-full">;"
+                      {categories.find(c => c.id === webinar.category)?.name};";"
+                    </span>;";"
+                  </div>;";"";"
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">;";"
+                    {webinar.title};";"
+                  </h3>;";"";"
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">;";"
+                    {webinar.description};";"
+                  </p>;";"";"
+                  <div className="flex items-center space-x-4 mb-6 text-sm text-gray-500 dark:text-gray-400">";"";"
+                    <div className="flex items-center space-x-1">";"";"
+                      <Calendar className="w-4 h-4" />;";"
+                      <span>{new Date(webinar.date).toLocaleDateString()}</span>;"";"
+                    </div>";"";"
+                    <div className="flex items-center space-x-1">";"";"
+                      <Clock className="w-4 h-4" />;";"
+                      <span>{webinar.time}</span>;"";"
+                    </div>";"";"
+                    <div className="flex items-center space-x-1">";"";"
+                      <Users className="w-4 h-4" />;"
+                      <span>{webinar.attendees} registered</span>;";"
+                    </div>;";"
+                  </div>;";"";"
+                  <div className="flex items-center justify-between mb-6">";"";"
+                    <div className="flex items-center space-x-3">";"";"
+                      <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">";"";"
+                        <span className="text-white font-semibold text-sm">;"
+                          {webinar.speaker.split(' ').map(n => n[0]).join('')};";"
+                        </span>;";"
+                      </div>;"";"
+                      <div>";"";"
+                        <div className="font-semibold text-gray-900 dark:text-white">;";"
+                          {webinar.speaker};"";"
+                        </div>";"";"
+                        <div className="text-sm text-gray-500 dark:text-gray-400">;
+                          {webinar.speakerTitle};
+                        </div>;"
+                      </div>;";"
+                    </div>;";"
+                  </div>;";"";"
+                  <div className="flex items-center justify-between">";"";"
+                    <div className="flex flex-wrap gap-2">;";"
+                      {webinar.tags.map((tag, tagIndex) => (;";"
+                        <span;"";"
+                          key={tagIndex}";"";"
+                          className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded";
+                        >;
+                          {tag};
+                        </span>;"
+                      ))};";"
+                    </div>;";"
+                    <Link;"";"
+                      to={webinar.registrationUrl}";"";"
+                      className="inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105";";"
+                    >;"";"
+                      Register Now";"";"
+                      <ArrowRight className="ml-2 w-4 h-4" />;
+                    </Link>;
+                  </div>;
+                </div>;
+              </motion.div>;
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* All Upcoming Webinars */}";"";"
+      <section className="py-20 bg-white dark:bg-gray-900">";"";"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center mb-16">";"";"
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">;";"
+              Upcoming Webinars;"";"
+            </h2>";"";"
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">;"
+              {filteredWebinars.length} webinars found;";"
+            </p>;";"
+          </div>;"";"
+          {filteredWebinars.length > 0 ? (";"";"
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
+              {filteredWebinars.map((webinar, index) => (;
+                <motion.div;
+                  key={webinar.id};"
+                  initial={{ opacity: 0, y: 20 }};";"
+                  whileInView={{ opacity: 1, y: 0 }};";"
+                  transition={{ duration: 0.6, delay: index * 0.1 }};"";"
+                  viewport={{ once: true }}";"";"
+                  className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2";"";"
+                >";"";"
+                  <div className="p-6">";"";"
+                    <div className="flex items-center justify-between mb-4">";"";"
+                      <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm font-medium rounded-full">;";"
+                        {categories.find(c => c.id === webinar.category)?.name};"";"
+                      </span>";"";"
+                      <div className="flex items-center space-x-1 text-sm text-gray-500 dark:text-gray-400">";"";"
+                        <Users className="w-4 h-4" />;"
+                        <span>{webinar.attendees}</span>;";"
+                      </div>;";"
+                    </div>;";"";"
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 hover:text-blue-600 dark:hover:text-blue-400 transition-colors line-clamp-2">;";"
+                      {webinar.title};";"
+                    </h3>;";"";"
+                    <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed line-clamp-3">;";"
+                      {webinar.description};";"
+                    </p>;";"";"
+                    <div className="space-y-2 mb-4 text-sm text-gray-500 dark:text-gray-400">";"";"
+                      <div className="flex items-center space-x-2">";"";"
+                        <Calendar className="w-4 h-4" />;";"
+                        <span>{new Date(webinar.date).toLocaleDateString()}</span>;"";"
+                      </div>";"";"
+                      <div className="flex items-center space-x-2">";"";"
+                        <Clock className="w-4 h-4" />;"
+                        <span>{webinar.time} ({webinar.duration})</span>;";"
+                      </div>;";"
+                    </div>;";"";"
+                    <div className="flex items-center justify-between">";"";"
+                      <div className="flex flex-wrap gap-1">;";"
+                        {webinar.tags.slice(0, 2).map((tag, tagIndex) => (;";"
+                          <span;"";"
+                            key={tagIndex}";"";"
+                            className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded";
+                          >;"
+                            {tag};";"
+                          </span>;";"
+                        ))};"";"
+                        {webinar.tags.length > 2 && (";"";"
+                          <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300 text-xs rounded">;
+                            +{webinar.tags.length - 2};
+                          </span>;"
+                        )};";"
+                      </div>;";"
+                      <Link;"";"
+                        to={webinar.registrationUrl}";"";"
+                        className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors text-sm";";"
+                      >;"";"
+                        Register";"";"
+                        <ArrowRight className="ml-1 w-4 h-4" />;
+                      </Link>;
+                    </div>;
+                  </div>;"
+                </motion.div>;";"
+              ))};";"
+            </div>;"";"
+          ) : (";"";"
+            <div className="text-center py-12">";"";"
+              <div className="w-24 h-24 bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center mx-auto mb-4">";"";"
+                <Video className="w-12 h-12 text-gray-400" />;"";"
+              </div>";"";"
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">;";"
+                No webinars found;"";"
+              </h3>";"";"
+              <p className="text-gray-600 dark:text-gray-400">;
+                Try adjusting your search terms or category filters.;
+              </p>;
+            </div>;"
+          )};";"
+        </div>;";"
+      </section>;"";"
+      {/* Benefits Section */}";"";"
+      <section className="py-20">";"";"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">";"";"
+          <div className="text-center mb-16">";"";"
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">;";"
+              Why Attend Our Webinars?;"";"
+            </h2>";"";"
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">;"
+              Gain valuable insights and practical knowledge from industry experts.;";"
+            </p>;";"
+          </div>;";"";"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
+            {[;
+              {;
+                icon: Brain,;
+                title: 'Expert Knowledge',;
+                description: 'Learn from industry leaders and technology experts';
+              },;
+              {;
+                icon: Clock,;
+                title: 'Time Efficient',;
+                description: '90-minute sessions packed with actionable insights';
+              },;
+              {;
+                icon: Users,;
+                title: 'Interactive Q&A',;
+                description: 'Get your questions answered by experts';
+              },;
+              {;
+                icon: Award,;
+                title: 'Certificates',;
+                description: 'Receive certificates of completion for your records';
+              };
+            ].map((benefit, index) => (;
+              <motion.div;
+                key={benefit.title};"
+                initial={{ opacity: 0, y: 20 }};";"
+                whileInView={{ opacity: 1, y: 0 }};";"
+                transition={{ duration: 0.6, delay: index * 0.1 }};"";"
+                viewport={{ once: true }}";"";"
+                className="text-center";"";"
+              >";"";"
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">";"";"
+                  <benefit.icon className="w-8 h-8 text-white" />;"";"
+                </div>";"";"
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">;";"
+                  {benefit.title};"";"
+                </h3>";"";"
+                <p className="text-gray-600 dark:text-gray-300">;
+                  {benefit.description};
+                </p>;
+              </motion.div>;
+            ))};"
+          </div>;";"
+        </div>;";"
+      </section>;"";"
+      {/* CTA Section */}";"";"
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">";"";"
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
+          <motion.h2;"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};";"
+            transition={{ duration: 0.6 }};"";"
+            viewport={{ once: true }}";"";"
+            className="text-3xl md:text-4xl font-bold text-white mb-4";
+          >;
+            Ready to Learn?;
+          </motion.h2>;
+          <motion.p;"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};";"
+            transition={{ duration: 0.6, delay: 0.2 }};"";"
+            viewport={{ once: true }}";"";"
+            className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto";
+          >;
+            Register for our upcoming webinars and stay ahead of the technology curve.;
+            Join thousands of professionals learning from our experts.;
+          </motion.p>;
+          <motion.div;"
+            initial={{ opacity: 0, y: 20 }};";"
+            whileInView={{ opacity: 1, y: 0 }};";"
+            transition={{ duration: 0.6, delay: 0.4 }};"";"
+            viewport={{ once: true }}";"";"
+            className="flex flex-col sm:flex-row gap-4 justify-center";";"
+          >;"";"
+            <Link";"";"
+              to="/contact";"";"
+              className="inline-flex items-center px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105";";"
+            >;"";"
+              Contact Us";"";"
+              <ArrowRight className="ml-2 w-5 h-5" />;";"
+            </Link>;"";"
+            <Link";"";"
+              to="/training";"";"
+              className="inline-flex items-center px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300";
+            >;
+              View Training;
+            </Link>;
+          </motion.div>;
+        </div>;"
+      </section>;";"
+    </div>;";"
+  );"";"
+}";"";"
