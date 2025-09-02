@@ -1,4 +1,7 @@
-import React, { useState } from 'react';'import Link from 'next/link';'import { Menu, X, ChevronDown } from 'lucide-react';''const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Menu, X, ChevronDown } from 'lucide-react';
+'const EnhancedNavigation: React.FC = () => {const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
 
