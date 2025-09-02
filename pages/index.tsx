@@ -28,8 +28,13 @@ const Home: NextPage = () => {
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
             Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services. From micro SaaS 
+            with cutting-edge AI, quantum computing, blockchain, and innovative development services. From micro SaaS 
             applications to enterprise AI solutions, we deliver measurable results that drive growth and efficiency.
+            <br /><br />
+            <span className="text-blue-300 font-semibold">Contact us today:</span> 
+            <br />📞 <a href="tel:+13024640950" className="text-blue-300 hover:text-blue-200">+1 302 464 0950</a> | 
+            📧 <a href="mailto:kleber@ziontechgroup.com" className="text-blue-300 hover:text-blue-200">kleber@ziontechgroup.com</a>
+            <br />📍 364 E Main St STE 1008, Middletown DE 19709
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
@@ -69,8 +74,12 @@ const Home: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Comprehensive Technology Solutions</h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              From innovative micro SaaS applications to enterprise-grade AI solutions and cutting-edge IT services, 
-              we provide end-to-end technology solutions that drive measurable business results and competitive advantages.
+              From innovative micro SaaS applications to enterprise-grade AI solutions, quantum computing, blockchain infrastructure, 
+              and cutting-edge IT services, we provide end-to-end technology solutions that drive measurable business results and competitive advantages.
+              <br /><br />
+              <span className="text-blue-600 font-semibold">50+ Services Available</span> | 
+              <span className="text-green-600 font-semibold"> Starting from $12/month</span> | 
+              <span className="text-purple-600 font-semibold"> 24/7 Support</span>
             </p>
           </div>
           
@@ -84,6 +93,13 @@ const Home: NextPage = () => {
               <p className="text-gray-600 mb-6">
                 Innovative, focused software solutions that solve specific business problems with minimal overhead. 
                 Starting from $12/month, our micro SaaS applications deliver immediate ROI and scale with your business.
+                <br /><br />
+                <span className="text-sm text-blue-600 font-semibold">25+ Solutions Available:</span>
+                <br />• AI Code Reviewer Pro ($45-299/month)
+                <br />• Smart Contract Auditor ($199-1299/month)
+                <br />• AI SEO Optimizer ($39-249/month)
+                <br />• Blockchain Analytics ($79-499/month)
+                <br />• AI Video Editor ($29-199/month)
               </p>
               <Link href="/services/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Learn More →
@@ -98,7 +114,14 @@ const Home: NextPage = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services</h3>
               <p className="text-gray-600 mb-6">
                 Comprehensive IT infrastructure, cloud migration, and cybersecurity solutions for modern businesses. 
-                From $2,000 to $75,000, our IT services ensure your infrastructure is secure, scalable, and optimized.
+                From $2,000 to $400,000, our IT services ensure your infrastructure is secure, scalable, and optimized.
+                <br /><br />
+                <span className="text-sm text-blue-600 font-semibold">15+ Services Available:</span>
+                <br />• Quantum Cloud Infrastructure ($25K-200K)
+                <br />• Edge Computing Architecture ($15K-120K)
+                <br />• Zero Trust Security ($20K-150K)
+                <br />• AIOps Platform ($18K-140K)
+                <br />• Blockchain Infrastructure ($30K-250K)
               </p>
               <Link href="/services/it-services" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Learn More →
@@ -113,7 +136,14 @@ const Home: NextPage = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-4">AI Services</h3>
               <p className="text-gray-600 mb-6">
                 Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages. 
-                From $4,000 to $100,000, our AI services transform your business with machine learning and automation.
+                From $4,000 to $800,000, our AI services transform your business with machine learning, quantum AI, and automation.
+                <br /><br />
+                <span className="text-sm text-blue-600 font-semibold">20+ Services Available:</span>
+                <br />• Quantum AI Algorithms ($50K-400K)
+                <br />• AI Drug Discovery ($100K-800K)
+                <br />• AI Climate Modeling ($40K-350K)
+                <br />• AI Space Exploration ($60K-500K)
+                <br />• AI Metaverse Platform ($80K-700K)
               </p>
               <Link href="/services/ai-services" className="text-blue-600 hover:text-blue-700 font-semibold">
                 Learn More →
@@ -132,6 +162,11 @@ const Home: NextPage = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
             Join 1000+ successful businesses that have transformed their operations with our technology solutions. 
             Get a free consultation and discover how we can accelerate your growth and efficiency.
+            <br /><br />
+            <span className="text-blue-200 font-semibold">Ready to get started?</span>
+            <br />📞 Call us: <a href="tel:+13024640950" className="text-white hover:text-blue-200">+1 302 464 0950</a>
+            <br />📧 Email: <a href="mailto:kleber@ziontechgroup.com" className="text-white hover:text-blue-200">kleber@ziontechgroup.com</a>
+            <br />🌐 Visit: <a href="https://ziontechgroup.com" className="text-white hover:text-blue-200">ziontechgroup.com</a>
           </p>
           <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
             Get Started Today
