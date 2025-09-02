@@ -242,7 +242,7 @@ export default function Partners() {
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join our network of strategic partners and help shape the future of technology. 
-                We're always looking for innovative companies to collaborate with.'
+                We&apos;re always looking for innovative companies to collaborate with.'
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a

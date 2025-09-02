@@ -29,7 +29,7 @@ try {
     Brain: typeof Brain,
     Cloud: typeof Cloud,
     Shield: typeof Shield,
-    Zap: typeof Zap
+    Zap: typeof Zap,
   });
 
   console.log('🎉 All core dependencies imported successfully!');

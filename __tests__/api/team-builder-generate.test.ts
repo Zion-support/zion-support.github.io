@@ -1,8 +1,8 @@
-import { createMocks, RequestMethod } from 'node-mocks-http';';
-import type { NextApiRequest, NextApiResponse } from 'next';';
-import generateHandler from '@/pages/api/team-builder/generate';';
-import { supabase } from '@/integrations/supabase/client' // To be mocked;';
-import { ProjectBrief, TeamRecommendation } from '@/types';';
+import { createMocks, RequestMethod } from 'node-mocks-http';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import generateHandler from '@/pages/api/team-builder/generate';
+import { supabase } from '@/integrations/supabase/client' // To be mocked;
+import { ProjectBrief, TeamRecommendation } from '@/types';
 // Mock Supabase;
 jest.mock(;
   '@/integrations/supabase/client', () => ({';

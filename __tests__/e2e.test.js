@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');';
-test.describe('E2E Tests', () => {';
+test.describe('E2E Tests', () => {
   test('homepage loads correctly', async ({ page }) => {';
     await page.goto('/');';
     await expect(page).toHaveTitle(/Zion Tech Group/);

@@ -1,3 +1,3 @@
 import React, { memo, useState, useEffect } from 'react' import { motion, AnimatePresence } from 'framer - motion' import { Link } from 'react - router - dom'  interface MobileNavigationProps {;
-"
+""
 }

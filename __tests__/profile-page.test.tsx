@@ -1,6 +1,6 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';';
-import Profile from '@/pages/Profile';';
-import { vi, expect, test, beforeEach, afterEach } from 'vitest' // Added beforeEach, afterEach;';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import Profile from '@/pages/Profile';
+import { vi, expect, test, beforeEach, afterEach } from 'vitest' // Added beforeEach, afterEach;
 // Define the UserProfile structure based on usage;
 interface UserProfile {;
   id: string;

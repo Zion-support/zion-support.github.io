@@ -2,24 +2,15 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
-  Menu, 
-  X, 
-  ChevronDown, 
-  Globe, 
-  Brain, 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Users, 
-  Phone, 
-  Mail, 
-  MapPin,
-  Code,
-  Network,
-  Rocket,
-  ShoppingCart,
-  BarChart3,
-  Info
+  Menu, X, 
+  ChevronDown, Globe, 
+  Brain, Cloud, 
+  Shield, Zap, 
+  Users, Phone, 
+  Mail, MapPin,
+  Code, Network,
+  Rocket, ShoppingCart,
+  BarChart3, Info
 } from 'lucide-react';
 
 const Navigation = () => {
@@ -39,8 +30,7 @@ const Navigation = () => {
   const navigationItems = [
     { name: 'Home', href: '/' },
     { 
-      name: 'Services', 
-      href: '/services', 
+      name: 'Services', href: '/services', 
       dropdown: [
         { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Cutting-edge AI services' },
         { name: 'IT Services', href: '/it-services', icon: Network, description: 'Comprehensive IT solutions' },
@@ -49,17 +39,11 @@ const Navigation = () => {
         { name: 'Cloud Services', href: '/services/cloud-services', icon: Cloud, description: 'Cloud infrastructure' },
         { name: 'AI Development', href: '/services/ai-development', icon: Brain, description: 'AI development services' }
       ]
-    },
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' }
+    }, { name: 'Solutions', href: '/solutions' }, { name: 'About', href: '/about' }, { name: 'Contact', href: '/contact' }, { name: 'Blog', href: '/blog' }, { name: 'Careers', href: '/careers' }
   ];
 
   const contactInfo = [
-    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' },
-    { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
+    { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' }, { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' },
     { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' }
   ];
 
@@ -96,7 +80,7 @@ const Navigation = () => {
                   <div className="relative">
                     <button
                       onClick={() => toggleDropdown(item.name)}
-                      className="flex items-center space-x-1 text-gray-300 hover:text-cyan-300 transition-colors duration-200 py-2"
+                      className="flex items-center space-x-1 text-gray-300 hover: text-cyan-300 transition-colors duration-200 py-2"
                     >
                       <span>{item.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -118,7 +102,7 @@ const Navigation = () => {
                                 key={dropdownItem.name}
                                 href={dropdownItem.href}
                                 onClick={() => setActiveDropdown(null)}
-                                className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-800/50 transition-colors duration-200 group"
+                                className="flex items-start space-x-3 p-3 rounded-lg hover: bg-gray-800/50 transition-colors duration-200 group"
                               >
                                 <div className="flex-shrink-0 w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:from-cyan-400/30 group-hover:to-blue-400/30 transition-all duration-200">
                                   <dropdownItem.icon className="w-5 h-5 text-cyan-400" />
@@ -151,7 +135,7 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
+          <div className="hidden lg: block">
             <Link
               href="/contact"
               className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
@@ -163,7 +147,7 @@ const Navigation = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200"
+            className="lg: hidden p-2 rounded-lg text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 transition-colors duration-200"
             aria-label="Toggle mobile menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -192,7 +176,7 @@ const Navigation = () => {
                     <a
                       key={index}
                       href={contact.href}
-                      className="flex items-center space-x-3 text-sm text-gray-300 hover:text-cyan-300 transition-colors"
+                      className="flex items-center space-x-3 text-sm text-gray-300 hover: text-cyan-300 transition-colors"
                     >
                       <contact.icon className="w-4 h-4 text-cyan-400" />
                       <span>{contact.text}</span>
@@ -209,7 +193,7 @@ const Navigation = () => {
                       <div>
                         <button
                           onClick={() => toggleDropdown(item.name)}
-                          className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                          className="flex items-center justify-between w-full text-left px-3 py-2 text-gray-300 hover: text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                         >
                           <span>{item.name}</span>
                           <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
@@ -230,7 +214,7 @@ const Navigation = () => {
                                   key={dropdownItem.name}
                                   href={dropdownItem.href}
                                   onClick={closeMobileMenu}
-                                  className="flex items-center space-x-3 px-3 py-2 text-sm text-gray-400 hover:text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
+                                  className="flex items-center space-x-3 px-3 py-2 text-sm text-gray-400 hover: text-cyan-300 hover:bg-gray-800/50 rounded-lg transition-colors duration-200"
                                 >
                                   <dropdownItem.icon className="w-4 h-4 text-cyan-400" />
                                   <span>{dropdownItem.name}</span>
@@ -258,7 +242,7 @@ const Navigation = () => {
                 <Link
                   href="/contact"
                   onClick={closeMobileMenu}
-                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-center rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+                  className="block w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium text-center rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                 >
                   Get Started Today
                 </Link>

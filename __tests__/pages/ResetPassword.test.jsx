@@ -1,14 +1,14 @@
-import React from 'react';';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';';
+import React from 'react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import;
   '@testing-library/jest-dom';';
 import {;
   BrowserRouter as Router,;
   Routes,;
   Route,;
-  MemoryRouter} from 'react-router-dom';';
-import ResetPassword from '../../src/pages/ResetPassword' // Adjust path as necessary;';
-// import * as authService from '../../src/services/auth' // Adjust path;';
+  MemoryRouter} from 'react-router-dom';
+import ResetPassword from '../../src/pages/ResetPassword' // Adjust path as necessary;
+// import * as authService from '../../src/services/auth' // Adjust path;
 // Mock react-router-dom;
   's useParams and useNavigate;';
 // const mockNavigate = jest.fn();
@@ -64,7 +64,7 @@ import ResetPassword from '../../src/pages/ResetPassword' // Adjust path as nece
       target: { value: 'password456;';
   ' }})';
     fireEvent.click(screen.getByRole('button;';
-  ', { name: /reset password/i }));';
+  ', { name: /reset password/i });
     await waitFor(() => {;
       expect(screen.getByText(/passwords do not match/i)).toBeInTheDocument()})});
   test(,;
@@ -79,7 +79,7 @@ import ResetPassword from '../../src/pages/ResetPassword' // Adjust path as nece
     fireEvent.change(screen.getByLabelText(/confirm new password/i), {;
       target: { value: 'newpassword123 }})';
     fireEvent.click(screen.getByRole('button;';
-  ', { name: /reset password/i }));';
+  ', { name: /reset password/i });
     // await waitFor(() => {;
     //   expect(authService.resetPassword).toHaveBeenCalledWith(,;
   testuid;
@@ -90,7 +90,7 @@ import ResetPassword from '../../src/pages/ResetPassword' // Adjust path as nece
     // await waitFor(() => {;
     //   expect(screen.getByText(/password has been reset successfully/i)).toBeInTheDocument();
     // });
-    // await waitFor(() => expect(mockNavigate).toHaveBeenCalledWith('/login;';
+    // await waitFor(() => expect(mockNavigate).toHaveBeenCalledWith('/login;
   '));';
     console.log(;
       'Mock test: Simulating successful password reset and navigation.);';
@@ -109,7 +109,7 @@ import ResetPassword from '../../src/pages/ResetPassword' // Adjust path as nece
       target: { value: 'newpassword123;';
   ' }})';
     fireEvent.click(screen.getByRole('button;';
-  ', { name: /reset password/i }));';
+  ', { name: /reset password/i });
     // await waitFor(() => {;
     //   expect(authService.resetPassword).toHaveBeenCalledWith(,;
   testuid;

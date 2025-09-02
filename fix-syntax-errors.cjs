@@ -12,13 +12,13 @@ function fixSyntaxErrors(filePath) {
       // Fix 'use client';'' -> 'use client';
       { pattern: /'use client';''/g, replacement: "'use client';" },
       // Fix import statements with extra quotes
-      { pattern: /import ([^;]+);''/g, replacement: "import $1;" },
+      { pattern: /import ([^;]+);''/g, replacement: 'import $1;' },
       // Fix empty lines with quotes
-      { pattern: /^''$/gm, replacement: "" },
+      { pattern: /^''$/gm, replacement: '' },
       // Fix semicolons in JSX attributes
       { pattern: /(\w+)='([^']*)';/g, replacement: "$1='$2'" },
       // Fix extra semicolons in JSX
-      { pattern: /(\/>);/g, replacement: "$1" },
+      { pattern: /(\/>);/g, replacement: '$1' },
     ];
 
     fixes.forEach(fix => {
@@ -49,9 +49,18 @@ function fixFilesInDirectory(dir) {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
 
-    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+    if (
+      stat.isDirectory() &&
+      !file.startsWith('.') &&
+      file !== 'node_modules'
+    ) {
       fixedCount += fixFilesInDirectory(filePath);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+    } else if (
+      file.endsWith('.tsx') ||
+      file.endsWith('.ts') ||
+      file.endsWith('.jsx') ||
+      file.endsWith('.js')
+    ) {
       if (fixSyntaxErrors(filePath)) {
         fixedCount++;
       }

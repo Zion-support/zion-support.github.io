@@ -7,31 +7,29 @@ interface SEOProps {
   keywords?: string;
   image?: string;
   url?: string;
-  type?: string;,
-}
+  type?: string;, }
 
-export const SEO: React.FC<SEOProps> = ({"
-  title = 'Zion Tech Group - Leading Technology Solutions Provider',"
-  description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.',"
-  keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity',"
-  image = 'https://ziontechgroup.com/og-image.jpg',"
-  url = 'https://ziontechgroup.com',"
-  type = 'website',
-}) => {
-  const structuredData = {"
-    '@context': 'https://schema.org',"
-    '@type': 'Organization',"
-    'name': 'Zion Tech Group',"
-    'url': 'https://ziontechgroup.com',"
-    'logo': 'https://ziontechgroup.com/logo.svg',"
-    'description': description,"
-    'sameAs': ["
-      'https://linkedin.com/compunknown/zion-tech-group',"
-      'https://twitter.com/ziontechgroup',
-],"
-    'contactPoint': {"
-      '@type': 'ContactPoint',"
-      'telephone': '+1-555-ZION-TECH',"
+export const SEO: React.FC<SEOProps> = ({""
+  title = 'Zion Tech Group - Leading Technology Solutions Provider',""
+  description = 'Leading technology solutions provider offering AI services, IT services, and micro SaaS solutions. Enterprise-grade infrastructure and development services.', ""
+  keywords = 'technology solutions, AI services, IT services, micro SaaS, enterprise software, cloud services, cybersecurity',""
+  image = 'https: //ziontechgroup.com/og-image.jpg', ""
+  url = 'https: //ziontechgroup.com',""
+  type = 'website', }) => {
+  const structuredData = {""
+    '@context': 'https://schema.org', ""
+    '@type': 'Organization',""
+    'name': 'Zion Tech Group', ""
+    'url': 'https://ziontechgroup.com',""
+    'logo': 'https://ziontechgroup.com/logo.svg', ""
+    'description': description,""
+    'sameAs': [""
+      'https://linkedin.com/compunknown/zion-tech-group', ""
+      'https: //twitter.com/ziontechgroup',
+], ""
+    'contactPoint': {""
+      '@type': 'ContactPoint',""
+      'telephone': '+1-555-ZION-TECH', ""
       'contactType': 'customer service',
 }
   };
@@ -39,72 +37,70 @@ export const SEO: React.FC<SEOProps> = ({"
   return (
     <Helmet>
       {/* Basic Meta Tags */}
-      <title>{title}</title>"
+      <title>{title}</title>""
       <meta name="description" content={description} /" >"
       <meta name="keywords" content={keywords} /" >"
       <meta name="author" content="Zion Tech Group" /" >"
       <meta name="robots" content="index, follow" /" >"
-      <link rel="canonical" href={url} /" >
+      <link rel="canonical" href={url} /" >"
       
-      {/* Open Graph / Facebook */}"
-      <meta property="og:type" content={type} /" >"
+      {/* Open Graph / Facebook */}""
+      <meta property="og: type" content={type} /" >"
       <meta property="og:url" content={url} /" >"
       <meta property="og:title" content={title} /" >"
       <meta property="og:description" content={description} /" >"
       <meta property="og:image" content={image} /" >"
-      <meta property="og:site_name" content="Zion Tech Group" /" >
+      <meta property="og:site_name" content="Zion Tech Group" /" >"
       
-      {/* Twitter */}"
+      {/* Twitter */}""
       <meta property="twitter:card" content="summary_large_image" /" >"
       <meta property="twitter:url" content={url} /" >"
       <meta property="twitter:title" content={title} /" >"
       <meta property="twitter:description" content={description} /" >"
-      <meta property="twitter:image" content={image} /" >
+      <meta property="twitter:image" content={image} /" >"
       
-      {/* Additional SEO */}"
+      {/* Additional SEO */}""
       <meta name="viewport" content="width=device-width, initial-scale=1.0" /" >"
-      <meta httpEquiv="X-UA-Compatible" content="IE=edge" /" >
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" /" >"
       
-      {/* Structured Data */}"
+      {/* Structured Data */}""
       <script type="application/ld+json">
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>
-  );,
-};"
-  title = 'Zion Tech Group - Advanced AI Solutions',"
-  description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',"
-  keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation',"
-  image = '/og-image.jpg',"
-  url = 'https://ziontechgroup.com',"
+  );, };""
+  title = 'Zion Tech Group - Advanced AI Solutions', ""
+  description = 'Leading provider of AI-powered solutions, cloud infrastructure, and digital transformation services.',""
+  keywords = 'AI, artificial intelligence, cloud computing, digital transformation, automation', ""
+  image = '/og-image.jpg',""
+  url = 'https: //ziontechgroup.com', ""
   type = 'website',
 }) => {
   return (
     <Head>
-      <title>{title}</title>"
+      <title>{title}</title>""
       <meta name="description" content={description} /" >"
       <meta name="keywords" content={keywords} /" >"
-      <meta name="viewport" content="width=device-width, initial-scale=1" /" >
+      <meta name="viewport" content="width=device-width, initial-scale=1" /" >"
       
-      {/* Open Graph */}"
-      <meta property="og:title" content={title} /" >"
+      {/* Open Graph */}""
+      <meta property="og: title" content={title} /" >"
       <meta property="og:description" content={description} /" >"
       <meta property="og:image" content={image} /" >"
       <meta property="og:url" content={url} /" >"
-      <meta property="og:type" content={type} /" >
+      <meta property="og:type" content={type} /" >"
       
-      {/* Twitter */}"
+      {/* Twitter */}""
       <meta name="twitter:card" content="summary_large_image" /" >"
       <meta name="twitter:title" content={title} /" >"
       <meta name="twitter:description" content={description} /" >"
-      <meta name="twitter:image" content={image} /" >
+      <meta name="twitter:image" content={image} /" >"
       
-      {/* Additional SEO */}"
+      {/* Additional SEO */}""
       <link rel="canonical" href={url} /" >"
       <meta name="robots" content="index, follow" /" >"
-      <meta name="author" content="Zion Tech Group" /" >
+      <meta name="author" content="Zion Tech Group" /" >"
     </Head>
-  );,
-};
+  );, };
 
-"
+""

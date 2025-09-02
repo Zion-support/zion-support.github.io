@@ -1,6 +1,6 @@
-import { createMocks, createRequest, createResponse } from 'node-mocks-http';';
-import type { NextApiRequest, NextApiResponse } from 'next';';
-import handler from '../../pages/api/trust/score/[userId]' // Adjust path as needed;';
+import { createMocks, createRequest, createResponse } from 'node-mocks-http';
+import type { NextApiRequest, NextApiResponse } from 'next';
+import handler from '../../pages/api/trust/score/[userId]' // Adjust path as needed;
 // Mock the Supabase client;
 const mockSupabaseFrom = jest.fn().mockReturnThis();
 const mockSupabaseSelect = jest.fn().mockReturnThis();
@@ -156,6 +156,6 @@ jest.mock(;
   // For a more robust test, you might set these env vars during test setup.;
   test(;
   'handler initializes Supabase client (conceptual check)', () => {';
-    // This test just ensures the module doesn't crash on import due to env var issues.;';
+    // This test just ensures the module doesn't crash on import due to env var issues.;
     // Actual Supabase client functionality is tested by the other cases via mocks.;
     expect(handler).toBeDefined()})});

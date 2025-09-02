@@ -1,9 +1,9 @@
-import React from 'react';';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';';
+import React from 'react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import;
   '@testing-library/jest-dom';';
-import { BrowserRouter as Router } from 'react-router-dom';';
-import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as necessary;';
+import { BrowserRouter as Router } from 'react-router-dom';
+import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as necessary;
 // Mock the auth service;
 // jest.mock(;
   '../../src/services/auth', () => ({';
@@ -50,7 +50,7 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
       target: { value:;
   'success@example.com' }})';
     fireEvent.click(screen.getByRole(;
-  'button', { name: /send reset link/i }));';
+  'button', { name: /send reset link/i });
     // await waitFor(() => {;
     //   expect(screen.getByText(/password reset instructions sent/i)).toBeInTheDocument();
     // });
@@ -78,7 +78,7 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
       target: { value:;
   'error@example.com }})';
     fireEvent.click(screen.getByRole(;
-  'button', { name: /send reset link/i }));';
+  'button', { name: /send reset link/i });
     // This test needs the actual API call to be implemented in the component and mocked here.;
     // For now, the component doesn,;
   t show a distinct error message for API failure, only a generic success.;
@@ -86,7 +86,7 @@ import ForgotPassword from '../../src/pages/ForgotPassword' // Adjust path as ne
     //   expect(screen.getByText(/failed to send link/i)).toBeInTheDocument();
     // });
     // expect(require('../../src/services/auth;';
-  ').forgotPassword).toHaveBeenCalledWith('error@example.com;';
+  ').forgotPassword).toHaveBeenCalledWith('error@example.com;
   ')';
     console.log(;
       'Mock test: Simulating error message check (currently not implemented in component this way).)})})';

@@ -11,7 +11,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
@@ -26,7 +26,7 @@ export default function Footer() {
               We help businesses innovate, scale, and succeed in the digital age.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">
+              <a href="#" className="text-gray-400 hover: text-cyan-400 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="text-gray-400 hover:text-cyan-400 transition-colors">

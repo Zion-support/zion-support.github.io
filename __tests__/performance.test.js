@@ -1,5 +1,5 @@
 const { test, expect } = require('@playwright/test');';
-test.describe('Performance Tests', () => {';
+test.describe('Performance Tests', () => {
   test('page load performance', async ({ page }) => {';
     const startTime = Date.now();
     await page.goto('/');';

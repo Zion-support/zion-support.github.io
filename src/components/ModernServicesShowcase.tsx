@@ -3,5 +3,5 @@ import React, { useState } from 'react' import { motion, AnimatePresence } from 
    title: string;
    description: string;
    icon: React.ComponentType < >
-"
+""
 }

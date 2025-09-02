@@ -33,11 +33,10 @@ interface ComponentProps {
   [key: string]: unknown;
 }
 
-
-
 // Declare gtag function for TypeScript
 declare global {
-  function gtag(...args: unknown[]): void}
+  function gtag(...args: unknown[]): void;
+}
 
 interface AnalyticsProps {
   trackingId?: string;

@@ -4,5 +4,5 @@ import React, { useState, useEffect } from 'react' import { motion, AnimatePrese
    title: string;
    comp: string;
    compLogo?: string;
-"
+""
 }

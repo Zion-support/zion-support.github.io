@@ -1,7 +1,45 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Award, BarChart3, Bot, Brain, Bug, CheckCircle, Clock, Code, Cpu, Cross, Deep, Eye, FileText, From, Globe, Grid, Image, Mail, MessageSquare, Mic, Minimize, Monitor, Network, Phone, Search, Server, Settings, Shield, Star, Target, TrendingUp, Users, Video, Zap, Heart, Satellite } from 'lucide-react';
+import {
+  ArrowRight,
+  Award,
+  BarChart3,
+  Bot,
+  Brain,
+  Bug,
+  CheckCircle,
+  Clock,
+  Code,
+  Cpu,
+  Cross,
+  Deep,
+  Eye,
+  FileText,
+  From,
+  Globe,
+  Grid,
+  Image,
+  Mail,
+  MessageSquare,
+  Mic,
+  Minimize,
+  Monitor,
+  Network,
+  Phone,
+  Search,
+  Server,
+  Settings,
+  Shield,
+  Star,
+  Target,
+  TrendingUp,
+  Users,
+  Video,
+  Zap,
+  Heart,
+  Satellite,
+} from 'lucide-react';
 import Navigation from '../src/components/Navigation';
 import Footer from '../src/components/Footer';
 export default function AIServices() {
@@ -304,7 +342,7 @@ export default function AIServices() {
         'Integration with existing business systems',
         'Real-time monitoring and intervention protocols',
       ],
-      pricing: '$8,000 - $25,000/month',
+      pricing: '$8,000 - $25, 000/month',
       delivery: '8-16 weeks',
       category: 'Autonomous AI',
     },
@@ -321,7 +359,7 @@ export default function AIServices() {
         'Patent landscape analysis',
         'Regulatory compliance and documentation',
       ],
-      pricing: '$15,000 - $50,000/month',
+      pricing: '$15,000 - $50, 000/month',
       delivery: '12-24 weeks',
       category: 'Pharma AI',
     },
@@ -338,7 +376,7 @@ export default function AIServices() {
         'Disaster risk assessment and mitigation',
         'Sustainability reporting and compliance',
       ],
-      pricing: '$10,000 - $35,000/month',
+      pricing: '$10,000 - $35, 000/month',
       delivery: '10-20 weeks',
       category: 'Climate AI',
     },
@@ -355,7 +393,7 @@ export default function AIServices() {
         'Quantum simulation and modeling',
         'Integration with existing computing infrastructure',
       ],
-      pricing: '$20,000 - $75,000/month',
+      pricing: '$20,000 - $75, 000/month',
       delivery: '16-32 weeks',
       category: 'Quantum AI',
     },
@@ -372,7 +410,7 @@ export default function AIServices() {
         'Communication network optimization',
         'Mission risk assessment and mitigation',
       ],
-      pricing: '$25,000 - $100,000/month',
+      pricing: '$25,000 - $100, 000/month',
       delivery: '20-40 weeks',
       category: 'Space AI',
     },
@@ -389,7 +427,7 @@ export default function AIServices() {
         'Low-power computing optimization',
         'Integration with IoT and edge devices',
       ],
-      pricing: '$12,000 - $40,000/month',
+      pricing: '$12,000 - $40, 000/month',
       delivery: '12-24 weeks',
       category: 'Neuromorphic AI',
     },
@@ -405,7 +443,7 @@ export default function AIServices() {
         'Synthetic organism design and testing',
         'Biomanufacturing optimization',
       ],
-      pricing: '$18,000 - $60,000/month',
+      pricing: '$18,000 - $60, 000/month',
       delivery: '16-28 weeks',
       category: 'Synthetic Biology AI',
     },
@@ -421,7 +459,7 @@ export default function AIServices() {
         'Predictive maintenance and diagnostics',
         'Real-time performance optimization',
       ],
-      pricing: '$30,000 - $120,000/month',
+      pricing: '$30,000 - $120, 000/month',
       delivery: '24-48 weeks',
       category: 'Fusion AI',
     },
@@ -438,7 +476,7 @@ export default function AIServices() {
         'Real-time feedback and adaptation',
         'Medical device integration and control',
       ],
-      pricing: '$15,000 - $50,000/month',
+      pricing: '$15,000 - $50, 000/month',
       delivery: '20-36 weeks',
       category: 'BCI AI',
     },
@@ -455,7 +493,7 @@ export default function AIServices() {
         'Passenger safety and comfort optimization',
         'Integration with smart city infrastructure',
       ],
-      pricing: '$25,000 - $80,000/month',
+      pricing: '$25,000 - $80, 000/month',
       delivery: '24-40 weeks',
       category: 'Autonomous Vehicle AI',
     },
@@ -472,7 +510,7 @@ export default function AIServices() {
         'Virtual economy and asset management',
         'Cross-platform integration and compatibility',
       ],
-      pricing: '$20,000 - $70,000/month',
+      pricing: '$20,000 - $70, 000/month',
       delivery: '20-36 weeks',
       category: 'Metaverse AI',
     },
@@ -489,7 +527,7 @@ export default function AIServices() {
         'What-if scenario analysis and planning',
         'Integration with IoT sensors and systems',
       ],
-      pricing: '$12,000 - $45,000/month',
+      pricing: '$12,000 - $45, 000/month',
       delivery: '16-28 weeks',
       category: 'Digital Twin AI',
     },
@@ -506,7 +544,7 @@ export default function AIServices() {
         'Data processing and analytics at the edge',
         'Security and privacy protection',
       ],
-      pricing: '$8,000 - $30,000/month',
+      pricing: '$8,000 - $30, 000/month',
       delivery: '12-24 weeks',
       category: 'Edge AI',
     },
@@ -523,13 +561,14 @@ export default function AIServices() {
         'Cross-chain bridge optimization',
         'Regulatory compliance and reporting',
       ],
-      pricing: '$10,000 - $35,000/month',
+      pricing: '$10,000 - $35, 000/month',
       delivery: '14-26 weeks',
       category: 'Blockchain AI',
     },
     {
       title: 'AI-Powered Autonomous Trading System',
-      description: 'Intelligent algorithmic trading platform with risk management and portfolio optimization',
+      description:
+        'Intelligent algorithmic trading platform with risk management and portfolio optimization',
       icon: TrendingUp,
       features: [
         'Real-time market analysis and pattern recognition',
@@ -537,15 +576,16 @@ export default function AIServices() {
         'Risk management and portfolio optimization',
         'Sentiment analysis from news and social media',
         'Backtesting and strategy validation',
-        'Multi-asset and multi-exchange support'
+        'Multi-asset and multi-exchange support',
       ],
-      pricing: '$8,000 - $35,000/month',
+      pricing: '$8,000 - $35, 000/month',
       delivery: '8-16 weeks',
-      category: 'Trading AI'
+      category: 'Trading AI',
     },
     {
       title: 'AI-Powered Medical Diagnosis Assistant',
-      description: 'Intelligent medical image analysis and diagnostic support system',
+      description:
+        'Intelligent medical image analysis and diagnostic support system',
       icon: Eye,
       features: [
         'Medical image analysis (X-ray, MRI, CT scans)',
@@ -553,15 +593,16 @@ export default function AIServices() {
         'Drug interaction and allergy checking',
         'Treatment recommendation engine',
         'Patient risk assessment and monitoring',
-        'Integration with electronic health records'
+        'Integration with electronic health records',
       ],
-      pricing: '$15,000 - $60,000/month',
+      pricing: '$15,000 - $60, 000/month',
       delivery: '12-24 weeks',
-      category: 'Medical AI'
+      category: 'Medical AI',
     },
     {
       title: 'AI-Powered Legal Document Analysis',
-      description: 'Intelligent legal document review and contract analysis platform',
+      description:
+        'Intelligent legal document review and contract analysis platform',
       icon: FileText,
       features: [
         'Automated contract review and analysis',
@@ -569,15 +610,16 @@ export default function AIServices() {
         'Risk assessment and compliance checking',
         'Due diligence automation',
         'Legal research and precedent analysis',
-        'Document generation and templating'
+        'Document generation and templating',
       ],
-      pricing: '$6,000 - $25,000/month',
+      pricing: '$6,000 - $25, 000/month',
       delivery: '8-14 weeks',
-      category: 'Legal AI'
+      category: 'Legal AI',
     },
     {
       title: 'AI-Powered Energy Management System',
-      description: 'Intelligent energy consumption optimization and renewable energy integration',
+      description:
+        'Intelligent energy consumption optimization and renewable energy integration',
       icon: Zap,
       features: [
         'Smart grid optimization and load balancing',
@@ -585,15 +627,16 @@ export default function AIServices() {
         'Energy consumption pattern analysis',
         'Predictive maintenance for energy infrastructure',
         'Carbon footprint tracking and optimization',
-        'Real-time energy trading and arbitrage'
+        'Real-time energy trading and arbitrage',
       ],
-      pricing: '$10,000 - $40,000/month',
+      pricing: '$10,000 - $40, 000/month',
       delivery: '10-20 weeks',
-      category: 'Energy AI'
+      category: 'Energy AI',
     },
     {
       title: 'AI-Powered Cybersecurity Threat Detection',
-      description: 'Advanced threat detection and response system with behavioral analysis',
+      description:
+        'Advanced threat detection and response system with behavioral analysis',
       icon: Shield,
       features: [
         'Real-time threat detection and analysis',
@@ -601,15 +644,16 @@ export default function AIServices() {
         'Automated incident response and remediation',
         'Zero-day vulnerability identification',
         'Threat intelligence and attribution',
-        'Security orchestration and automation'
+        'Security orchestration and automation',
       ],
-      pricing: '$7,000 - $30,000/month',
+      pricing: '$7,000 - $30, 000/month',
       delivery: '8-16 weeks',
-      category: 'Cybersecurity AI'
+      category: 'Cybersecurity AI',
     },
     {
       title: 'AI-Powered Autonomous Vehicle Fleet Management',
-      description: 'Intelligent fleet optimization and autonomous vehicle coordination system',
+      description:
+        'Intelligent fleet optimization and autonomous vehicle coordination system',
       icon: Network,
       features: [
         'Route optimization and traffic prediction',
@@ -617,15 +661,16 @@ export default function AIServices() {
         'Passenger demand forecasting',
         'Autonomous vehicle coordination',
         'Safety monitoring and incident prevention',
-        'Fleet performance analytics and optimization'
+        'Fleet performance analytics and optimization',
       ],
-      pricing: '$12,000 - $50,000/month',
+      pricing: '$12,000 - $50, 000/month',
       delivery: '12-24 weeks',
-      category: 'Autonomous AI'
+      category: 'Autonomous AI',
     },
     {
       title: 'AI-Powered Climate Change Modeling',
-      description: 'Advanced climate modeling and environmental impact assessment platform',
+      description:
+        'Advanced climate modeling and environmental impact assessment platform',
       icon: Globe,
       features: [
         'Climate change prediction and modeling',
@@ -633,15 +678,16 @@ export default function AIServices() {
         'Carbon sequestration optimization',
         'Weather pattern analysis and forecasting',
         'Ecosystem monitoring and protection',
-        'Sustainability planning and recommendations'
+        'Sustainability planning and recommendations',
       ],
-      pricing: '$15,000 - $60,000/month',
+      pricing: '$15,000 - $60, 000/month',
       delivery: '16-32 weeks',
-      category: 'Climate AI'
+      category: 'Climate AI',
     },
     {
       title: 'AI-Powered Quantum Machine Learning',
-      description: 'Next-generation machine learning leveraging quantum computing for complex pattern recognition',
+      description:
+        'Next-generation machine learning leveraging quantum computing for complex pattern recognition',
       icon: Cpu,
       features: [
         'Quantum neural network training and optimization',
@@ -649,15 +695,16 @@ export default function AIServices() {
         'Quantum kernel methods and support vector machines',
         'Quantum reinforcement learning algorithms',
         'Hybrid quantum-classical model training',
-        'Quantum advantage demonstration and benchmarking'
+        'Quantum advantage demonstration and benchmarking',
       ],
-      pricing: '$25,000 - $100,000/month',
+      pricing: '$25,000 - $100, 000/month',
       delivery: '20-40 weeks',
-      category: 'Quantum ML AI'
+      category: 'Quantum ML AI',
     },
     {
       title: 'AI-Powered Synthetic Media Generation',
-      description: 'Advanced AI system for creating realistic synthetic media including deepfakes and virtual influencers',
+      description:
+        'Advanced AI system for creating realistic synthetic media including deepfakes and virtual influencers',
       icon: Video,
       features: [
         'High-fidelity voice cloning and synthesis',
@@ -665,15 +712,16 @@ export default function AIServices() {
         'Virtual influencer creation and management',
         'Deepfake detection and prevention',
         'Synthetic data generation for training',
-        'Ethical AI and content authenticity verification'
+        'Ethical AI and content authenticity verification',
       ],
-      pricing: '$8,000 - $35,000/month',
+      pricing: '$8,000 - $35, 000/month',
       delivery: '12-24 weeks',
-      category: 'Synthetic Media AI'
+      category: 'Synthetic Media AI',
     },
     {
       title: 'AI-Powered Brain-Computer Interface',
-      description: 'Intelligent neural interface system for direct brain-computer communication and control',
+      description:
+        'Intelligent neural interface system for direct brain-computer communication and control',
       icon: Brain,
       features: [
         'Neural signal acquisition and processing',
@@ -681,15 +729,16 @@ export default function AIServices() {
         'Cognitive state monitoring and analysis',
         'Real-time feedback and adaptation',
         'Medical device integration and control',
-        'Non-invasive brain stimulation optimization'
+        'Non-invasive brain stimulation optimization',
       ],
-      pricing: '$20,000 - $80,000/month',
+      pricing: '$20,000 - $80, 000/month',
       delivery: '24-48 weeks',
-      category: 'BCI AI'
+      category: 'BCI AI',
     },
     {
       title: 'AI-Powered Autonomous Drone Swarm',
-      description: 'Intelligent drone swarm coordination system for complex missions and operations',
+      description:
+        'Intelligent drone swarm coordination system for complex missions and operations',
       icon: Network,
       features: [
         'Swarm formation and coordination algorithms',
@@ -697,15 +746,16 @@ export default function AIServices() {
         'Real-time obstacle avoidance and navigation',
         'Distributed sensing and data fusion',
         'Dynamic task allocation and optimization',
-        'Integration with ground control systems'
+        'Integration with ground control systems',
       ],
-      pricing: '$15,000 - $60,000/month',
+      pricing: '$15,000 - $60, 000/month',
       delivery: '16-32 weeks',
-      category: 'Drone Swarm AI'
+      category: 'Drone Swarm AI',
     },
     {
       title: 'AI-Powered Personalized Medicine',
-      description: 'Intelligent precision medicine platform with genomic analysis and treatment optimization',
+      description:
+        'Intelligent precision medicine platform with genomic analysis and treatment optimization',
       icon: Heart,
       features: [
         'Genomic data analysis and interpretation',
@@ -713,15 +763,16 @@ export default function AIServices() {
         'Drug response prediction and optimization',
         'Biomarker discovery and validation',
         'Clinical trial matching and enrollment',
-        'Integration with electronic health records'
+        'Integration with electronic health records',
       ],
-      pricing: '$18,000 - $70,000/month',
+      pricing: '$18,000 - $70, 000/month',
       delivery: '20-36 weeks',
-      category: 'Precision Medicine AI'
+      category: 'Precision Medicine AI',
     },
     {
       title: 'AI-Powered Space Debris Management',
-      description: 'Intelligent space debris tracking and collision avoidance system',
+      description:
+        'Intelligent space debris tracking and collision avoidance system',
       icon: Satellite,
       features: [
         'Real-time space debris tracking and cataloging',
@@ -729,15 +780,16 @@ export default function AIServices() {
         'Autonomous debris removal mission planning',
         'Satellite constellation protection',
         'Orbital mechanics optimization',
-        'Integration with space agency networks'
+        'Integration with space agency networks',
       ],
-      pricing: '$30,000 - $120,000/month',
+      pricing: '$30,000 - $120, 000/month',
       delivery: '24-48 weeks',
-      category: 'Space Management AI'
+      category: 'Space Management AI',
     },
     {
       title: 'AI-Powered Fusion Energy Control',
-      description: 'Intelligent fusion reactor control system for plasma optimization and energy production',
+      description:
+        'Intelligent fusion reactor control system for plasma optimization and energy production',
       icon: Zap,
       features: [
         'Plasma confinement and stability control',
@@ -745,15 +797,16 @@ export default function AIServices() {
         'Energy output maximization algorithms',
         'Reactor safety monitoring and protection',
         'Predictive maintenance and diagnostics',
-        'Real-time performance optimization'
+        'Real-time performance optimization',
       ],
-      pricing: '$40,000 - $150,000/month',
+      pricing: '$40,000 - $150, 000/month',
       delivery: '32-64 weeks',
-      category: 'Fusion Energy AI'
+      category: 'Fusion Energy AI',
     },
     {
       title: 'AI-Powered Synthetic Biology Design',
-      description: 'Intelligent biological system design and optimization platform',
+      description:
+        'Intelligent biological system design and optimization platform',
       icon: Cpu,
       features: [
         'Genetic circuit design and optimization',
@@ -761,15 +814,16 @@ export default function AIServices() {
         'Metabolic pathway engineering',
         'Synthetic organism design and testing',
         'Biomanufacturing process optimization',
-        'Biosafety and biosecurity assessment'
+        'Biosafety and biosecurity assessment',
       ],
-      pricing: '$22,000 - $85,000/month',
+      pricing: '$22,000 - $85, 000/month',
       delivery: '24-48 weeks',
-      category: 'Synthetic Biology AI'
+      category: 'Synthetic Biology AI',
     },
     {
       title: 'AI-Powered Neuromorphic Computing',
-      description: 'Brain-inspired computing system with spiking neural networks and edge optimization',
+      description:
+        'Brain-inspired computing system with spiking neural networks and edge optimization',
       icon: Brain,
       features: [
         'Spiking neural network design and training',
@@ -777,15 +831,16 @@ export default function AIServices() {
         'Edge AI processing and inference',
         'Real-time learning and adaptation',
         'Low-power computing optimization',
-        'Integration with IoT and edge devices'
+        'Integration with IoT and edge devices',
       ],
-      pricing: '$16,000 - $65,000/month',
+      pricing: '$16,000 - $65, 000/month',
       delivery: '20-40 weeks',
-      category: 'Neuromorphic AI'
+      category: 'Neuromorphic AI',
     },
     {
       title: 'AI-Powered Autonomous Underwater Vehicles',
-      description: 'Intelligent underwater vehicle coordination system for ocean exploration and research',
+      description:
+        'Intelligent underwater vehicle coordination system for ocean exploration and research',
       icon: Network,
       features: [
         'Underwater navigation and mapping',
@@ -793,15 +848,16 @@ export default function AIServices() {
         'Ocean current and weather adaptation',
         'Marine life detection and monitoring',
         'Underwater communication and coordination',
-        'Data collection and analysis automation'
+        'Data collection and analysis automation',
       ],
-      pricing: '$18,000 - $75,000/month',
+      pricing: '$18,000 - $75, 000/month',
       delivery: '24-48 weeks',
-      category: 'Marine AI'
+      category: 'Marine AI',
     },
     {
       title: 'AI-Powered Digital Twin of Earth',
-      description: 'Comprehensive digital twin system for global environmental monitoring and prediction',
+      description:
+        'Comprehensive digital twin system for global environmental monitoring and prediction',
       icon: Globe,
       features: [
         'Real-time global environmental data integration',
@@ -809,15 +865,16 @@ export default function AIServices() {
         'Ecosystem monitoring and analysis',
         'Natural disaster prediction and response',
         'Resource management and optimization',
-        'Sustainability planning and recommendations'
+        'Sustainability planning and recommendations',
       ],
-      pricing: '$50,000 - $200,000/month',
+      pricing: '$50,000 - $200, 000/month',
       delivery: '40-80 weeks',
-      category: 'Earth Digital Twin AI'
+      category: 'Earth Digital Twin AI',
     },
     {
       title: 'AI-Powered Consciousness Simulation',
-      description: 'Advanced AI system for consciousness research and artificial general intelligence development',
+      description:
+        'Advanced AI system for consciousness research and artificial general intelligence development',
       icon: Brain,
       features: [
         'Consciousness modeling and simulation',
@@ -825,12 +882,12 @@ export default function AIServices() {
         'Cognitive architecture design and testing',
         'Self-awareness and introspection capabilities',
         'Ethical AI and consciousness assessment',
-        'Integration with neuroscience research'
+        'Integration with neuroscience research',
       ],
-      pricing: '$100,000 - $500,000/month',
+      pricing: '$100,000 - $500, 000/month',
       delivery: '60-120 weeks',
-      category: 'Consciousness AI'
-    }
+      category: 'Consciousness AI',
+    },
   ];
   const aiTechnologies = [
     {
@@ -896,7 +953,7 @@ export default function AIServices() {
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
+        <link rel="canonical" href="https: //ziontechgroup.com/ai-services" />
       </Head>
 
       <Navigation />
@@ -916,9 +973,10 @@ export default function AIServices() {
               Artificial Intelligence Solutions
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Transform your business with cutting-edge AI technologies. From quantum machine learning 
-              to consciousness simulation, we deliver next-generation intelligent solutions that drive 
-              innovation, efficiency, and competitive advantage across all industries.
+              Transform your business with cutting-edge AI technologies. From
+              quantum machine learning to consciousness simulation, we deliver
+              next-generation intelligent solutions that drive innovation,
+              efficiency, and competitive advantage across all industries.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
@@ -984,7 +1042,7 @@ export default function AIServices() {
             {aiTechnologies.map((tech, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+                className="bg-white rounded-2xl p-6 shadow-sm hover: shadow-md transition-shadow"
               >
                 <div className="flex items-center mb-4">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
@@ -1013,7 +1071,7 @@ export default function AIServices() {
               services include implementation, training, and ongoing support.
               Contact us at{' '}
               <a
-                href="mailto:kleber@ziontechgroup.com"
+                href="mailto: kleber@ziontechgroup.com"
                 className="text-blue-600 hover:text-blue-500"
               >
                 kleber@ziontechgroup.com
@@ -1032,7 +1090,7 @@ export default function AIServices() {
             {aiServices.map((service, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover:shadow-lg transition-all duration-300"
+                className="group relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm hover: shadow-lg transition-all duration-300"
               >
                 <div className="flex items-center gap-x-3 mb-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 group-hover:bg-blue-700 transition-colors">
@@ -1091,7 +1149,7 @@ export default function AIServices() {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="mt-6 text-lg leading-8 text-blue-100">
-              Let's discuss how our AI solutions can drive your business
+              Let&apos;s discuss how our AI solutions can drive your business'
               forward. Get a free consultation and custom proposal.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
@@ -1111,7 +1169,7 @@ export default function AIServices() {
           </div>
         </div>
       </section>
-      
+
       <Footer />
     </>
   );

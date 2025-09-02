@@ -7,4 +7,4 @@ export type ContractFormValues = z.infer<typeof formSchema"" > interface Contrac
    deployOptions?: DeploymentOptions
    onDeployOptionsChange?: (options: DeploymentOptions) => void} export function ContractForm({ talent, clientName, initialValues, onFormValuesChange, onContractGenerated, deployOptions, onDeployOptionsChange }: ContractFormProps) {,
 }
-"
+""

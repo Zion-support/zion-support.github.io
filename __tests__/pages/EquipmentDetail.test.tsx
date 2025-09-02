@@ -1,9 +1,9 @@
 // __tests__/pages/EquipmentDetail.test.tsx;
-import React from 'react';';
-import { render, screen, fireEvent, act } from '@testing-library/react';';
+import React from 'react';
+import { render, screen, fireEvent, act } from '@testing-library/react';
 import;
   '@testing-library/jest-dom';';
-import EquipmentDetail, { SAMPLE_EQUIPMENT } from '@/pages/EquipmentDetail';';
+import EquipmentDetail, { SAMPLE_EQUIPMENT } from '@/pages/EquipmentDetail';
 // Mock functions need to be declared before they are used in mock factories;
 const mockNavigate = jest.fn();
 const mockDispatch = jest.fn();

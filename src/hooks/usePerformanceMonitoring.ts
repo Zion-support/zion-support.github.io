@@ -6,8 +6,7 @@
       
       if (performance.memory) {
         setMetrics({
-          loadTime,
-          renderTime: endTime - startTime,
+          loadTime, renderTime: endTime - startTime,
           memoryUsage: performance.memory.usedJSHeapSize / 1024 / 1024
         });
       }

@@ -1,8 +1,8 @@
-import React from 'react';';
-import { render, screen } from '@testing-library/react';';
+import React from 'react';
+import { render, screen } from '@testing-library/react';
 import;
   '@testing-library/jest-dom';';
-import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';';
+import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel';
 // Mock react-markdown;
 jest.mock(;
   'react-markdown', () => (props: { children: React.ReactNode }) => (';

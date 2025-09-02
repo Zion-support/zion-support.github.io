@@ -4,12 +4,9 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  experimental: {},
   experimental: {
-    
-    
-  },
-  experimental: {
-    esmExternals: false
+    esmExternals: false,
   },
   typescript: {
     ignoreBuildErrors: true,

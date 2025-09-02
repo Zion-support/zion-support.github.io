@@ -2,7 +2,7 @@ module.exports = {
   extends: [
     'next/core-web-vitals',
     'eslint:recommended',
-    '@typescript-eslint/recommended'
+    '@typescript-eslint/recommended',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
@@ -10,7 +10,7 @@ module.exports = {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
     'react/no-unescaped-entities': 'off',
-    'react-hooks/exhaustive-deps': 'warn'
+    'react-hooks/exhaustive-deps': 'warn',
   },
   ignorePatterns: [
     'node_modules/',
@@ -20,6 +20,6 @@ module.exports = {
     'dist/',
     '*.config.js',
     '*.config.cjs',
-    '*.config.mjs'
-  ]
+    '*.config.mjs',
+  ],
 };
