@@ -147,17 +147,17 @@ const PricingGuide: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className='text-center mb-16';
-          >;
+            className='text-center mb-16'
+          >
             <h2 className='text-4xl font-bold text-white mb-4'>
-              What Affects AI Solution Pricing?;
+              What Affects AI Solution Pricing?
             </h2>
             <p className='text-xl text-gray-300'>
               Several key factors determine the cost of your AI implementation;
             </p>
           </motion.div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {pricingFactors.map((factor, index) => (;
+            {pricingFactors.map((factor, index) => (
               <motion.div
                 key={factor.factor}
                 initial={{ opacity: 0, y: 20 }}
@@ -175,7 +175,7 @@ const PricingGuide: React.FC = () => {
                     </div>
                   </div>
                   <ul className='space-y-3'>
-                    {factor.details.map((detail, detailIndex) => (;
+                    {factor.details.map((detail, detailIndex) => (
                       <li key={detailIndex} className='flex items-center text-gray-300'>
                         <CheckCircle className='w-5 h-5 text-green-500 mr-3 flex-shrink-0' />
                         {detail}
@@ -198,14 +198,14 @@ const PricingGuide: React.FC = () => {
             className='text-center mb-16';
           >;
             <h2 className='text-4xl font-bold text-white mb-4'>
-              Real-World Pricing Examples;
+              Real-World Pricing Examples
             </h2>
             <p className='text-xl text-gray-300'>
-              See how different project types are priced;
+              See how different project types are priced
             </p>
           </motion.div>
           <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-            {pricingExamples.map((example, index) => (;
+            {pricingExamples.map((example, index) => (
               <motion.div
                 key={example.scenario}
                 initial={{ opacity: 0, y: 20 }}
