@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
 import { User } from 'lucide-react';
 
 // Common interfaces for better type safety
@@ -39,12 +38,6 @@ interface ComponentProps {
 // Declare gtag function for TypeScript
 declare global {
   function gtag(...args: unknown[]): void}
-=======
-// Declare gtag function for TypeScript
-declare global {
-  function gtag(...args: any[]): void;
-}
->>>>>>> main
 
 interface AnalyticsProps {
   trackingId?: string;
@@ -78,10 +71,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
         });
       }
     };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
     // Listen for route changes (Next.js)
     window.addEventListener('popstate', handleRouteChange);
     return () => {
@@ -107,7 +97,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
         }
       }
     };
-<<<<<<< HEAD
 
     window.addEventListener('load', trackPerformance);
     return () => window.removeEventListener('load', trackPerformance);
@@ -116,13 +105,6 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId }) => {
   return null;
 };
 
-=======
-    window.addEventListener('load', trackPerformance);
-    return () => window.removeEventListener('load', trackPerformance);
-  }, []);
-  return null;
-};
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 // Export tracking functions for use in components
 export const trackEvent = (
   action: string,
@@ -138,10 +120,7 @@ export const trackEvent = (
     });
   }
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export const trackPageView = (url: string, title: string) => {
   if (typeof gtag !== 'undefined') {
     gtag('config', process.env['NEXT_PUBLIC_GA_TRACKING_ID'] || '', {
@@ -150,8 +129,5 @@ export const trackPageView = (url: string, title: string) => {
     });
   }
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default Analytics;

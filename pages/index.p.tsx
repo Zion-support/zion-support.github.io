@@ -93,23 +93,10 @@ export default function Index() {
                 '@type': 'PostalAddress',
                 addressCountry: 'US',
               },
-<<<<<<< HEAD
               'sameAs': [
                 'https://linkedin.com/compunknown/zion-tech-group', 'https://twitter.com/ziontechgroup'
               ]
             })
-=======
-              contactPoint: {
-                '@type': 'ContactPoint',
-                contactType: 'customer service',
-                url: 'https://ziontechgroup.com/contact',
-              },
-              sameAs: [
-                'https://linkedin.com/company/zion-tech-group',
-                'https://twitter.com/ziontechgroup',
-              ],
-            }),
->>>>>>> main
           }}
         />
       </Head>
@@ -187,7 +174,6 @@ export default function Index() {
               border: '2px solid #00d4ff',
               transition: 'all 0.2s',
             }}
-<<<<<<< HEAD
             onMouseOver={e => {
               e.target.style.background = '#00d4ff';
               e.target.style.color = '#0b1220';
@@ -195,15 +181,6 @@ export default function Index() {
             onMouseOut={e => {
               e.target.style.background = 'transparent';
               e.target.style.color = '#00d4ff';
-=======
-            onMouseOver={(e) => {
-              e.target.style.background = '#00d4ff'
-              e.target.style.color = '#0b1220'
-            }}
-            onMouseOut={(e) => {
-              e.target.style.background = 'transparent'
-              e.target.style.color = '#00d4ff'
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             }}
           >
             Get Started

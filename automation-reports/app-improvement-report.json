@@ -14,7 +14,6 @@
       "error": "Command failed: npx @next/bundle-analyzer\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error could not determine executable to run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_48_35_642Z-debug-0.log\n"
     }
   ],
-<<<<<<< HEAD
   "seoImprovements": [
     {
       "command": "npm run sitemap",
@@ -44,16 +43,3 @@
     }
   ]
 }
-=======
-  "summary": {
-    "image_optimization": 3,
-    "seo_improvement": 4,
-    "performance_enhancement": 27,
-    "error_boundary": 1,
-    "accessibility_improvement": 0,
-    "bundle_optimization": 45,
-    "pwa_feature": 0,
-    "code_structure": 2
-  }
-}
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27

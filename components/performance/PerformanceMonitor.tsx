@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
 import { User } from 'lucide-react';
 
 // Common interfaces for better type safety
@@ -36,8 +35,6 @@ interface ComponentProps {
 
 
 
-=======
->>>>>>> main
 interface PerformanceMetrics {
   fcp?: number;
    lcp?: number;
@@ -128,10 +125,6 @@ const PerformanceMonitor: React.FC = () => {
       fmpObserver.disconnect();
       window.removeEventListener('beforeunload', sendMetrics)}
   }, []);
-<<<<<<< HEAD
   return null // This component doesn&apos;t render unknownthing'}
-=======
-  return null // This component doesn&apos;t render anything'}''
->>>>>>> main
 ;
 export default PerformanceMonitor

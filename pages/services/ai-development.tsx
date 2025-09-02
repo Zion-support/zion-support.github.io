@@ -3,23 +3,6 @@ import { Award, Brain, Cloud, Globe, Image, Target, Today, Users, Zap } from 'lu
 
 import Layout from '../../components/Layout';
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-import {
-  Brain,
-  Zap,
-  Target,
-  CheckCircle,
-  ArrowRight,
-  Users,
-  Award,
-  Globe,
-} from 'lucide-react';
-<<<<<<< HEAD
-
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
->>>>>>> main
 const AIDevelopment: NextPage = () => {
   return (
     <Layout
@@ -256,17 +239,10 @@ const AIDevelopment: NextPage = () => {
             Ready to Transform Your Business with AI?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
-<<<<<<< HEAD
             Let's discuss how AI can solve your specific business challenges and
             drive growth.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-=======
-            Let&apos;s discuss how AI can solve your specific business
-            challenges and' drive growth.''
-          </p>
-          <div className="flex flex-col sm: flex-row justify-center gap-4">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
             <Link
               href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
@@ -285,8 +261,5 @@ const AIDevelopment: NextPage = () => {
     </Layout>
   );
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default AIDevelopment;

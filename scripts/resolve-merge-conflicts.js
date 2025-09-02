@@ -24,7 +24,6 @@ function findConflictFiles(dir = 'src') {
     } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
       try {
         const content = fs.readFileSync(filePath, 'utf8');
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> main')) {
           conflictFiles.push(filePath);
         }
       } catch (error) {
@@ -67,17 +66,6 @@ for (const filePath of conflictFiles) {
       // For our key improvement files, keep our version
       console.log(`🔧 Preserving our improvements in: ${filePath}`);
       
-      // Extract our version (between ======= and >>>>>>> comprehensive-improvements)
-      const lines = content.split('\n');
-      let ourVersion = [];
-      let inOurSection = false;
-      
-      for (const line of lines) {
-        if (line.includes('=======')) {
-          inOurSection = true;
-          continue;
-        }
-        if (line.includes('>>>>>>> comprehensive-improvements')) {
           break;
         }
         if (inOurSection) {
@@ -93,17 +81,14 @@ for (const filePath of conflictFiles) {
       // For all other files, accept main branch version
       console.log(`📥 Accepting main branch version: ${filePath}`);
       
-      // Extract main branch version (between ======= and >>>>>>> main)
       const lines = content.split('\n');
       let mainVersion = [];
       let inMainSection = false;
       
       for (const line of lines) {
-        if (line.includes('=======')) {
           inMainSection = true;
           continue;
         }
-        if (line.includes('>>>>>>> main')) {
           break;
         }
         if (inMainSection) {

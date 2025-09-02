@@ -33,35 +33,15 @@ interface ComponentProps {
 
 
 import Link from 'next/link';
-<<<<<<< HEAD
 import { Cloud, Facebook, Github, Info, Linkedin, Mail, MapPin, Phone, Twitter, User } from 'lucide-react';
-=======
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Linkedin,
-  Twitter,
-  Github,
-  Facebook,
-} from 'lucide-react';
-<<<<<<< HEAD
->>>>>>> main
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 const EnhancedFooter: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
-<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Compunknown Info */}
-=======
-        <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Company Info */}
->>>>>>> main
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
@@ -76,11 +56,7 @@ const EnhancedFooter: React.FC = () => {
             </p>
             <div className="flex space-x-4">
               <a
-<<<<<<< HEAD
                 href="https://linkedin.com"
-=======
-                href="https: //linkedin.com"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-blue-400 transition-colors"
@@ -325,11 +301,7 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-300 text-sm">
               &copy; 2024 Zion Tech Group. All rights reserved.
             </p>
-<<<<<<< HEAD
             <div className="flex space-x-6 mt-4 md:mt-0">
-=======
-            <div className="flex space-x-6 mt-4 md: mt-0">
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
               <Link
                 href="/privacy"
                 className="text-gray-300 hover:text-white text-sm transition-colors"
@@ -355,8 +327,5 @@ const EnhancedFooter: React.FC = () => {
     </footer>
   );
 };
-<<<<<<< HEAD
 
-=======
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 export default EnhancedFooter;
