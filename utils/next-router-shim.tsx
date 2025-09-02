@@ -1,7 +1,6 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-
 type LinkProps = React.PropsWithChildren<{
   to?: string;
   href?: string;
@@ -22,10 +21,8 @@ export function useLocation() {
   const hashIndex = asPath.indexOf('#');
   const hash = hashIndex >= 0 ? asPath.substring(hashIndex) : ''
   return {
-    pathname: path,
-    search: query ? `?${query}` : '',
-    hash,
-    state: undefined as unknown,
+    pathname: path, search: query ? `?${query}` : '',
+    hash, state: undefined as unknown,
     key: 'next'
   } as any}
 export const BrowserRouter: React.FC<React.PropsWithChildren<{}>> = ({ children }) => <>{children}</>

@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import EnhancedUserExperience from './EnhancedUserExperience';
-
 describe('EnhancedUserExperience', () => {
   it('renders without crashing', () => {
     render(<EnhancedUserExperience />)

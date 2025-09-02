@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import EnhancedNewsletterForm from './EnhancedNewsletterForm';
-
 describe('EnhancedNewsletterForm', () => {
   it('renders without crashing', () => {
     render(<EnhancedNewsletterForm />)

@@ -1,131 +1,75 @@
 import React, { useState } from 'react.ts';
 import { Link               } from 'react-router-dom.ts';
 import { motion               } from 'framer-motion.ts';
-import { Twitter,
-  Linkedin,
-  Instagram,
-  Globe,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Youtube,
-  Github,
-  Zap,
-  Brain,
-  Shield,
-  Users,
-  HardDrive,
-  TrendingUp,
-  Building2,
-  FileText,
-  HelpCircle,
-  BarChart3,
-  ArrowUp,
-  Heart,
-  Star,
-  CheckCircle,
-  Award,
-  Lock,
-  Eye,
-  Atom,
-  Code,
-  Database,
-  Network,
-  Server;
-  Rocket,
-  Target,
-  Handshake,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Lock,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
-  Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette} from 'lucide-react';
+import { Twitter, Linkedin,
+  Instagram, Globe,
+  Linkedin, Twitter,
+  Facebook, Instagram,
+  Youtube, Github,
+  Zap, Brain,
+  Shield, Users,
+  HardDrive, TrendingUp,
+  Building2, FileText,
+  HelpCircle, BarChart3,
+  ArrowUp, Heart,
+  Star, CheckCircle,
+  Award, Lock,
+  Eye, Atom,
+  Code, Database,
+  Network, Server;
+  Rocket, Target,
+  Handshake, Lightbulb,
+  Cpu, Database,
+  Network, Smartphone,
+  Lock, Code,
+  Server, Chip,
+  Wifi, ShieldCheck,
+  Bot, Workflow,
+  Eye, Sparkles,
+  Atom, Leaf,
+  Gamepad2, Coins,
+  Satellite, Activity,
+  MessageCircle, Search,
+  BarChart, Users2,
+  Settings, Palette} from 'lucide-react';
 export function Footer(...args: any[]): any {
   const currentYear = new Date().getFullYear();
   const [activeSection, setActiveSection] = useState<any>(null);
   const footerSections = [
     {
-      title: 'Comp',
-      icon: Building,
-      links: [{ name: 'About Us', path: '/about', icon: Users },
-        { name: 'Our Story', path: '/about/story', icon: FileText },
-        { name: 'Team', path: '/about/team', icon: Users },
-        { name: 'Careers', path: '/careers', icon: Briefcase },
-        { name: 'Partners', path: '/partners', icon: Network },
-        { name: 'Press', path: '/press', icon: Newspaper },
+      title: 'Comp', icon: Building,
+      links: [{ name: 'About Us', path: '/about', icon: Users }, { name: 'Our Story', path: '/about/story', icon: FileText },
+        { name: 'Team', path: '/about/team', icon: Users }, { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Network }, { name: 'Press', path: '/press', icon: Newspaper },
         { name: 'Contact', path: '/contact', icon: Phone }
-      ]},
-    {
+      ]}, {
       title: 'AI & Quantum Solutions',
-      icon: Brain,
-      category: 'Core Services',
+      icon: Brain, category: 'Core Services',
       services: [
-        { name: 'AI Customer Success Automation', href: '/services/ai-customer-success-automation', badge: 'Popular' },
-        { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', badge: 'New' },
-        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management-enhanced', badge: 'Featured' },
-        { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-enhanced', badge: 'Trending' },
-        { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation-platform', badge: 'Innovative' },
-        { name: 'AI Mental Health Support', href: '/services/ai-mental-health-support-platform', badge: 'Healthcare' },
-        { name: 'AI Smart Home Energy Management', href: '/services/ai-smart-home-energy-management-platform', badge: 'IoT' },
-        { name: 'AI Autonomous Logistics', href: '/services/ai-autonomous-logistics-platform', badge: 'Logistics' },
-        { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', badge: 'Marketing' },
-        { name: 'Quantum Edge Computing', href: '/services/quantum-edge-computing-solutions', badge: 'Quantum' },
-        { name: 'AI Space Technology', href: '/services/ai-space-technology-platform', badge: 'Space Tech' },
-        { name: 'AI Carbon Footprint Management', href: '/services/ai-carbon-footprint-management-platform', badge: 'Green Tech' },
-        { name: 'AI Autonomous Manufacturing', href: '/services/ai-autonomous-manufacturing-platform', badge: 'Manufacturing' },
-        { name: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning', badge: 'ERP' },
-        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', badge: 'Automation' },
-        { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics-platform', badge: 'Analytics' }
-      ]},
-    {
+        { name: 'AI Customer Success Automation', href: '/services/ai-customer-success-automation', badge: 'Popular' }, { name: 'AI Healthcare Analytics Platform', href: '/services/ai-healthcare-analytics-platform', badge: 'New' },
+        { name: 'AI Financial Risk Management', href: '/services/ai-financial-risk-management-enhanced', badge: 'Featured' }, { name: 'AI Supply Chain Optimization', href: '/services/ai-supply-chain-optimization-enhanced', badge: 'Trending' },
+        { name: 'AI Legal Document Automation', href: '/services/ai-legal-document-automation-platform', badge: 'Innovative' }, { name: 'AI Mental Health Support', href: '/services/ai-mental-health-support-platform', badge: 'Healthcare' },
+        { name: 'AI Smart Home Energy Management', href: '/services/ai-smart-home-energy-management-platform', badge: 'IoT' }, { name: 'AI Autonomous Logistics', href: '/services/ai-autonomous-logistics-platform', badge: 'Logistics' },
+        { name: 'AI-Powered SEO', href: '/services/ai-powered-seo', badge: 'Marketing' }, { name: 'Quantum Edge Computing', href: '/services/quantum-edge-computing-solutions', badge: 'Quantum' },
+        { name: 'AI Space Technology', href: '/services/ai-space-technology-platform', badge: 'Space Tech' }, { name: 'AI Carbon Footprint Management', href: '/services/ai-carbon-footprint-management-platform', badge: 'Green Tech' },
+        { name: 'AI Autonomous Manufacturing', href: '/services/ai-autonomous-manufacturing-platform', badge: 'Manufacturing' }, { name: 'AI Enterprise Resource Planning', href: '/services/ai-enterprise-resource-planning', badge: 'ERP' },
+        { name: 'AI Autonomous Business Operations', href: '/services/ai-autonomous-business-operations-platform', badge: 'Automation' }, { name: 'AI Customer Experience Analytics', href: '/services/ai-customer-experience-analytics-platform', badge: 'Analytics' }
+      ]}, {
       title: 'AI Cybersecurity & Infrastructure',
-      icon: Shield,
-      category: 'Security & Infrastructure',
+      icon: Shield, category: 'Security & Infrastructure',
       services: [
-        { name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', badge: 'New' },
-        { name: 'AI-Powered Cybersecurity Suite', href: '/services/ai-powered-cybersecurity-suite', badge: 'Security' },
-        { name: 'Enterprise IT Infrastructure Management', href: '/services/enterprise-it-infrastructure-management', badge: 'Infrastructure' },
-        { name: 'Cloud Migration & Optimization', href: '/services/cloud-migration-and-optimization', badge: 'Cloud' },
-        { name: 'AI Data Analytics Platform', href: '/services/ai-data-analytics-platform', badge: 'Analytics' },
-        { name: 'AI DevOps Automation', href: '/services/ai-devops-automation', badge: 'DevOps' },
+        { name: 'AI-Powered DevOps Automation', href: '/services/ai-powered-devops-automation', badge: 'New' }, { name: 'AI-Powered Cybersecurity Suite', href: '/services/ai-powered-cybersecurity-suite', badge: 'Security' },
+        { name: 'Enterprise IT Infrastructure Management', href: '/services/enterprise-it-infrastructure-management', badge: 'Infrastructure' }, { name: 'Cloud Migration & Optimization', href: '/services/cloud-migration-and-optimization', badge: 'Cloud' },
+        { name: 'AI Data Analytics Platform', href: '/services/ai-data-analytics-platform', badge: 'Analytics' }, { name: 'AI DevOps Automation', href: '/services/ai-devops-automation', badge: 'DevOps' },
         { name: 'Edge Computing Platform', href: '/services/edge-computing-platform', badge: 'Edge' }
-      ]},
-    {
+      ]}, {
       title: 'Micro SaaS Solutions',
-      icon: Code,
-      category: 'Micro SaaS',
+      icon: Code, category: 'Micro SaaS',
       services: [
-        { name: 'AI Email Automation Suite', href: '/services/ai-email-automation-suite', badge: 'New' },
-        { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler', badge: 'New' },
-        { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', badge: 'New' },
-        { name: 'Micro CRM', href: '/services/micro-crm', badge: 'Popular' },
-        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', badge: 'Support' },
-        { name: 'Website Analytics', href: '/services/website-analytics', badge: 'Analytics' }
-      ]},
-    {
+        { name: 'AI Email Automation Suite', href: '/services/ai-email-automation-suite', badge: 'New' }, { name: 'AI Social Media Scheduler', href: '/services/ai-social-media-scheduler', badge: 'New' },
+        { name: 'AI Customer Insights Platform', href: '/services/ai-customer-insights-platform', badge: 'New' }, { name: 'Micro CRM', href: '/services/micro-crm', badge: 'Popular' },
+        { name: 'Helpdesk Platform', href: '/services/helpdesk-platform', badge: 'Support' }, { name: 'Website Analytics', href: '/services/website-analytics', badge: 'Analytics' }
+      ]}, {
       title: 'Solutions',
       links: [
         { name: 'Enterprise Solutions', href: '/enterprise' },
@@ -134,8 +78,7 @@ export function Footer(...args: any[]): any {
         { name: 'Manufacturing', href: '/manufacturing-solutions' },
         { name: 'Industry Solutions', href: '/industry-solutions' },
         { name: 'Emerging Tech', href: '/emerging-tech' }
-      ]},
-    {
+      ]}, {
       title: 'Company',
       links: [
         { name: 'About Us', href: '/about' },
@@ -144,17 +87,11 @@ export function Footer(...args: any[]): any {
         { name: 'Partners', href: '/partners' },
         { name: 'News & Updates', href: '/news' },
         { name: 'Case Studies', href: '/case-studies' }
-      ]},
-    {
+      ]}, {
       title: 'Quantum Computing & Emerging Tech',
-      icon: Atom,
-      services: [
-        { name: 'AI-Quantum Hybrid Computing Platform', href: '/services/ai-quantum-hybrid-platform' },
-        { name: 'Quantum Computing as a Service', href: '/services/quantum-computing-as-a-service' },
-        { name: 'AI Space Technology Platform', href: '/services/ai-space-technology-platform' },
-        { name: 'AI IoT Edge Computing Platform', href: '/services/ai-iot-edge-computing-platform' }
-      ]},
-    {
+      icon: Atom, services: [
+        { name: 'AI-Quantum Hybrid Computing Platform', href: '/services/ai-quantum-hybrid-platform' }, { name: 'Quantum Computing as a Service', href: '/services/quantum-computing-as-a-service' }, { name: 'AI Space Technology Platform', href: '/services/ai-space-technology-platform' }, { name: 'AI IoT Edge Computing Platform', href: '/services/ai-iot-edge-computing-platform' }
+      ]}, {
       title: 'Resources',
       links: [
         { name: 'Documentation', href: '/docs' },
@@ -178,7 +115,7 @@ export function Footer(...args: any[]): any {
   return(
     <footer className='bg-zion-blue-dark border-t border-zion-purple/30'>
       {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8'>
           {/* Company Info */}
           <div className='space-y-4'>
@@ -195,7 +132,7 @@ export function Footer(...args: any[]): any {
             <div className='space-y-3'>
               <div className='flex items-center text-zion-slate-light text-sm'>
                 <Phone className='w-4 h-4 mr-2 text-zion-cyan' />
-                <a href='tel:+13024640950' className='hover:text-zion-cyan transition-colors'>
+                <a href='tel: +13024640950' className='hover:text-zion-cyan transition-colors'>
                   +1 302 464 0950
                 </a>
               </div>
@@ -223,9 +160,9 @@ export function Footer(...args: any[]): any {
                   <Link
                     key={link.name}
                     to={link.path}
-                    className='block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 group';
+                    className='block text-sm text-gray-300 hover: text-cyan-400 transition-colors duration-200 group';
                     <div className='flex items-center space-x-2'>
-                      <link.icon className='w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200' />
+                      <link.icon className='w-3 h-3 text-gray-500 group-hover: text-cyan-400 transition-colors duration-200' />
                       <span>{link.name}</span>
                     </div>
                   </Link>
@@ -233,13 +170,13 @@ export function Footer(...args: any[]): any {
               </div>
     <footer className='bg-gray-900 text-white'>
       {/* Main Footer Content */}
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8'>
           {footerSections.map((section)               => (
             <div key={section.title} className='space-y-4'>
               <motion.button;
                 onClick={() => setActiveSection(activeSection === section.title ? null : section.title)}
-                className='flex items-center space-x-2 text-lg font-semibold text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset rounded p-2'
+                className='flex items-center space-x-2 text-lg font-semibold text-white hover: text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset rounded p-2'
                 aria-expanded={activeSection === section.title}
               >
                 <section.icon className='w-5 h-5' />
@@ -255,7 +192,7 @@ export function Footer(...args: any[]): any {
                     <Link
                       key={link.name}
                       to={link.path}
-                      className='flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group'>
+                      className='flex items-center space-x-2 text-gray-400 hover: text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group'>
                       <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
                       <span className='text-sm'>{link.name}</span>
                     </Link>
@@ -267,7 +204,7 @@ export function Footer(...args: any[]): any {
         </div>
         {/* Contact & Social Section */}
         <div className='mt-12 pt-8 border-t border-gray-700'>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>
             {/* Contact Information */}
             <div className='space-y-4'>
               <h3 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -293,7 +230,7 @@ export function Footer(...args: any[]): any {
               </div>
             </div>
             <div className='flex space-x-4'>
-              <a href='https://linkedin.com/company/ziontechgroup' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>
+              <a href='https: //linkedin.com/company/ziontechgroup' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>
                 <Linkedin className='w-5 h-5' />
               </a>
               <a href='https://twitter.com/ziontechgroup' className='text-zion-slate-light hover:text-zion-cyan transition-colors'>

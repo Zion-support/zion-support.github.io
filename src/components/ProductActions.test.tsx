@@ -1,6 +1,5 @@
 import { render, screen } from '@testing-library/react';
 import ProductActions from './ProductActions';
-
 describe('ProductActions', () => {
   it('renders without crashing', () => {
     render(<ProductActions />)

@@ -1,40 +1,39 @@
 ;import { AlertCircle, RefreshCw } from 'lucide-react';
 export const ProfileErrorState = ({}
-';
+';'
 '';
-''';
-  error = 'Failed to load profile',
-  onRetry}) => {}
+''';'
+  error = 'Failed to load profile', onRetry}) => {}
   return()
-    <div className='max-w-4xl mx-auto px-4 py-8'>'''
+    <div className='max-w-4xl mx-auto px-4 py-8'>''''
       <Card>''''
         <CardHeader className='text-center'>''''
           <div className='w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4'>''''
-            <AlertCircle className='w-8 h-8 text-red-600' />'''
+            <AlertCircle className='w-8 h-8 text-red-600' />''''
           </div>''''
           <h2 className='text-2xl font-bold text-gray-900 mb-2'>
-            Oops! Something went wrong'''
+            Oops! Something went wrong''''
           </h2>''''
-          <p className='text-gray-600'>{error}</p>'''
+          <p className='text-gray-600'>{error}</p>''''
         </CardHeader>''''
         <CardContent className='text-center'>''''
           <div className='space-y-4'>''''
-            <p className='text-sm text-gray-500'>';
-              We're having trouble loading this profile. Please try again or;
+            <p className='text-sm text-gray-500'>';'
+              We're having trouble loading this profile. Please try again or;'
               contact support if the problem persists.
-            </p>''';
+            </p>''';'
 ''''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+            <div className='flex flex-col sm: flex-row gap-4 justify-center'>
               {onRetry && (
-                <Button''';
+                <Button''';'
                   onClick={onRetry}'''';
-                  className='flex items-center space-x-2''''>''''
+                  className='flex items-center space-x-2''''>'''''
                   <RefreshCw className='w-4 h-4' />
                   <span>Try Again</span>
                 </Button>
               )}
-'''
-              <Button''''';
+''''
+              <Button''''';'
                 variant='outline''';
                 onClick={() => (window.location.href = '/')}
               >
@@ -45,6 +44,6 @@ export const ProfileErrorState = ({}
         </CardContent>
       </Card>
     </div>
-  )}'';"
-}'';';
-'''''"
+  )}'';""
+}'';';'
+'''''"'"

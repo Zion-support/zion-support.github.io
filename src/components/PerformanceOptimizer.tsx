@@ -1,4 +1,4 @@
-import { useEffect } from 'react'';interface PerformanceOptimizerProps {
+import { useEffect } from 'react'';interface PerformanceOptimizerProps {'
    children: React.ReactNode}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
   useEffect ( () => {
     // Preload critical resources;
@@ -9,8 +9,8 @@ const preloadCriticalResources = () => {
     // Optimize images;
 const optimizeImages = () => {
       const images = document.querySelectorAll ('img') '      images.forEach (img => {'        if (!img.loading) {
-          img.loading = 'lazy'        }'        if (!img.decoding) {
-          img.decoding = 'async'        }'      })}// Initialize optimizations;
+          img.loading = 'lazy'        }'        if (!img.decoding) {'
+          img.decoding = 'async'        }'      })}// Initialize optimizations;'
     preloadCriticalResources () ;
     optimizeImages () ;
     // Set up intersection observer for lazy loading;

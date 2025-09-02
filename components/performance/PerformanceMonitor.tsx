@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-
 interface PerformanceMetrics {
   fcp?: number;
    lcp?: number;
@@ -75,8 +74,7 @@ const PerformanceMonitor: React.FC = () => {
         fetch('/api/analytics/performance', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json'},
-          body: JSON.stringify({
+            'Content-Type': 'application/json'}, body: JSON.stringify({
             url: window.location.href, timestamp: Date.now(), metrics})}).catch(console.error)}
     }
 ;
@@ -93,6 +91,6 @@ const PerformanceMonitor: React.FC = () => {
       fmpObserver.disconnect();
       window.removeEventListener('beforeunload', sendMetrics)}
   }, []);
-  return null // This component doesn&apos;t render anything'}
+  return null // This component doesn't render anything'}'
 ;
 export default PerformanceMonitor
