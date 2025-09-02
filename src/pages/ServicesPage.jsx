@@ -1,1 +1,47 @@
-import React, { useState, useEffect } from 'react' import { Link    } from 'react-router-dom' import { motion    } from 'framer-motion' import {  Brain, Zap, Shield, Rocket, Cloud, Globe, Code, Database, Network, Lock, Cpu, BarChart3, Users, Target, ArrowRight, CheckCircle, Star, TrendingUp, Server, Search, Filter, Grid, List    } from 'lucide-react'  export default function ServicesPage() { const [activeCategory, setActiveCategory] = useState('all') const [searchQuery, setSearchQuery] = useState('') const [viewMode, setViewMode] = useState('grid')  const serviceCategories = [ { id: 'all', name: 'All Services', icon: Star }, { id: 'ai', name: 'AI Solutions', icon: Brain }, { id: 'quantum', name: 'Quantum Tech', icon: Zap }, { id: 'security', name: 'Cybersecurity', icon: Shield }, { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud }, { id: 'data', name: 'Data & Analytics', icon: Database }, { id: 'iot', name: 'IoT & Edge', icon: Network }, { id: 'blockchain', name: 'Blockchain', icon: Lock } ]  const services = [ { id: 'ai-content-generation', title: 'AI Content Generator Pro', description: 'Generate high-quality content, code, and creative assets with our advanced AI models.', category: 'ai', price: 29, currency: '$', tags: ['AI Content', 'Text Generation', 'Code Generation'], author: { name: 'Zion AI Labs', id: 'zion-ai-labs', avatarUrl: 'https:
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function ServicesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ServicesPage - Zion Tech Group"
+        description="Professional servicespage services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ServicesPage
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional servicespage services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

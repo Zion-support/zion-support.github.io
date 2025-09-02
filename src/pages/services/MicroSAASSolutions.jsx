@@ -1,1 +1,75 @@
- import SEO from '../../components/SEO' import { Code, Zap, Users, TrendingUp, Shield, Building, Cpu, BarChart3 } from 'lucide-react' export default function MicroSAASSolutions() { const services = [ { title: 'Custom SAAS Development', '';' description: 'Tailored software-as-a-service solutions designed specifically for your business needs and industry requirements.',';' icon: Code, '';' features: ['Custom workflows', 'API integration', 'User management', 'Scalable architecture']'},'{';'' title: 'Multi-tenant Architecture', '';' description: 'Efficient multi-tenant systems that maximize resource utilization while maintaining data isolation and security.',';' icon: Users, '';' features: ['Data isolation', 'Resource sharing', 'Customization options', 'Performance optimization']'},'{';'' title: 'Subscription Management', '';' description: 'Comprehensive billing and subscription systems with flexible pricing models and automated renewals.',';' icon: BarChart3, '';' features: ['Flexible pricing', 'Automated billing', 'Usage tracking', 'Payment processing']'},'{';'' title: 'API Development & Integration', '';' description: 'Robust APIs that enable seamless integration with existing systems and third-party applications.',';' icon: Cpu, '';' features: ['RESTful APIs', 'GraphQL support', 'Webhook integration', 'API documentation']'},'{';'' title: 'Analytics & Reporting', '';' description: 'Advanced analytics dashboards providing insights into user behavior, system performance, and business metrics.',';' icon: TrendingUp, '';' features: ['Real-time metrics', 'Custom reports', 'Data visualization', 'Export capabilities'] }' ]'; const benefits = ['{';'' title: 'Rapid Deployment', '';' description: 'Quick time-to-market with agile development methodologies',' icon: Zap'},'{';'' title: 'Scalability', '';' description: 'Built to grow with your business from day one',' icon: TrendingUp'},'{';'' title: 'Cost Efficiency', '';' description: 'Reduced infrastructure costs with cloud-native solutions',' icon: BarChart3'},'{';'' title: 'Security', '';' description: 'Enterprise-grade security and compliance standards', icon: Shield }' ]'; const industries = ['{';'' name: 'Healthcare', '';' description: 'HIPAA-compliant patient management systems',' icon: Building'},'{';'' name: 'Finance', '';' description: 'Regulatory-compliant financial tools',' icon: Building'},'{';'' name: 'Education', '';' description: 'Learning management and student tracking',' icon: Building'},'{';'' name: 'Real Estate', '';' description: 'Property management and client portals','; icon: Building'}';' ]';'' return (<div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple'>''' <SEO title='Micro SAAS Solutions - Zion Tech Group' description='Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries.' keywords='micro SAAS, custom software, subscription management, multi-tenant, API development, business software' canonical='https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function MicroSAASSolutions() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="MicroSAASSolutions - Zion Tech Group"
+        description="Professional microsaassolutions services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              MicroSAASSolutions
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional microsaassolutions services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive microsaassolutions solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,47 @@
-import { jsx as _jsx, jsxs as _jsxs } from 'react/jsx-runtime'' import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/Avatar'' import { cn } from '@/lib/utils'' export function ChatMessage({ message, isUser, timestamp }) {';'' return (_jsxs('div', { className: cn('flex gap-3 mb-4', isUser ? 'flex-row-reverse' : 'flex-row'), children[_jsxs(Avatar, { className: 'w-8 h-8', children[_jsx(AvatarImage, { src: isUser ? '/user-avatar.png' : '/ai-avatar.png' }), _jsx(AvatarFallback, { className: cn('text-xs', isUser ? 'bg-zion-purple text-white' : 'bg-zion-cyan text-white'), children: isUser ? 'U' : 'AI' })] }), _jsxs('div', { className: cn('flex-1 max-w-[80%]', isUser ? 'text-right' : 'text-left'), children[_jsx('div', { className: cn('inline-block p-3 rounded-lg', isUser';' ? 'bg-zion-purple text-white''';' : 'bg-zion-blue-light text-white'), children: _jsx('p', { className: 'text-sm', children: message })}), _jsx('p', { className: 'text-xs text-zion-slate-light mt-1', children: timestamp.toLocaleTimeString() })] })] }))}';'';'";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function ChatMessage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ChatMessage - Zion Tech Group"
+        description="Professional chatmessage services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ChatMessage
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional chatmessage services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

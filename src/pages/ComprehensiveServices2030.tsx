@@ -1,1 +1,47 @@
-import React, { useState, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Search, Filter, Star, CheckCircle, ArrowRight, Phone, Mail, MapPin, ExternalLink, Brain, Shield, Zap, Cloud, Lock, Globe, Cpu, Database, Network, Smartphone, BarChart3, TrendingUp, Users, Building2, Leaf, Car, Heart, Scale, Eye, Rocket, Target, Settings, Calendar, DollarSign, Clock, Award, Globe2, Lightbulb, Code, Palette, Camera, Video, Music, BookOpen, GraduationCap, Gamepad2, Microscope, VirtualReality, TreePine, Satellite    } from 'lucide-react' import { COMPREHENSIVE_SERVICES_2030 } from '../data/comprehensiveServices2030'  const categoryIcons: Record<string, React.ComponentType<any>> = {'AI & Automation': Brain,';Cybersecurity': Shield,';Content Creation': Palette,';Sales & Marketing': Target,';Customer Support': Users,';Data Analytics': BarChart3,';Cloud & DevOps': Cloud,';IoT & Edge': Smartphone,';Digital Twin': Eye,';Blockchain & Web3': Globe,';Healthcare': Heart,';Legal Tech': Scale,';Education': GraduationCap,';Entertainment': Gamepad2,';Research': Microscope,';Metaverse': Vr,';Green Tech': TreePine,';Space Tech': Satellite,'Development': Code }  export default function ComprehensiveServices2030() { const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('All') const [sortBy, setSortBy] = useState('rating') const [priceRange, setPriceRange] = useState([0, 50000])  const categories = ['All', ...Array.from(new Set(COMPREHENSIVE_SERVICES_2030.map(service => service.category)))]  const filteredServices = useMemo(() => { let filtered = COMPREHENSIVE_SERVICES_2030.filter(service => { const matchesSearch = service.title.toLowerCase().includes(searchQuery.toLowerCase()) || service.description.toLowerCase().includes(searchQuery.toLowerCase()) || service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))  const matchesCategory = selectedCategory === 'All' || service.category === selectedCategory  const matchesPrice = service.price >= priceRange[0] && service.price <= priceRange[1]  return matchesSearch && matchesCategory && matchesPrice })
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function ComprehensiveServices2030() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ComprehensiveServices2030 - Zion Tech Group"
+        description="Professional comprehensiveservices2030 services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ComprehensiveServices2030
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional comprehensiveservices2030 services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

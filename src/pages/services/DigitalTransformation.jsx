@@ -1,1 +1,75 @@
- import { Link } from 'react-router-dom'; import SEO from '@/components/SEO'; import { motion } from 'framer-motion'; import { ArrowRight } from 'lucide-react'; const DigitalTransformation = () => { const transformationServices = [{ title: 'Process Automation', '';'; description: 'Streamline operations with intelligent automation solutions', '';'; features: ['Workflow Automation', 'RPA Implementation', 'Business Process Optimization', 'Efficiency Metrics'], '';'; icon: '🤖''},'{';''; title: 'Workflow Optimization', '';'; description: 'Redesign and optimize business workflows for maximum efficiency', '';'; features: ['Process Mapping', 'Bottleneck Analysis', 'Workflow Redesign', 'Performance Monitoring'], '';'; icon: '📊''},'{';''; title: 'Change Management', '';'; description: 'Guide your organization through digital transformation with expert change management', '';'; features: ['Stakeholder Engagement', 'Training Programs', 'Communication Strategy', 'Success Metrics'], '';'; icon: '🔄''},'{';''; title: 'Business Process Optimization', '';'; description: 'Streamline operations and improve efficiency through digital workflows', '';'; features: ['Process Mapping', 'Automation', 'Performance Metrics', 'Continuous Improvement'], '';'; icon: '⚡''},'{';''; title: 'Customer Experience Enhancement', '';'; description: 'Create seamless digital experiences that delight your customers', '';'; features: ['User Journey Mapping', 'Digital Touchpoints', 'Personalization', 'Feedback Systems'], '';'; icon: '🎯''},'{';''; title: 'Data & Analytics Strategy', '';'; description: 'Leverage data insights to drive informed business decisions', '';'; features: ['Data Collection', 'Analytics Platforms', 'Business Intelligence', 'Predictive Modeling'], '';'; icon: '📊''},'{';''; title: 'Technology Infrastructure', '';'; description: 'Modernize your technology stack for scalability and performance', '';'; features: ['Cloud Migration', 'API Integration', 'Microservices', 'DevOps Practices'], '';'; icon: '🏗️''}'; ]';'; const benefits = ['';Increased operational efficiency by 50%', '';Enhanced customer experience and satisfaction', '';Reduced operational costs and waste', '';Improved decision-making with real-time data', '';Competitive advantage in the digital marketplace''; ]';'; const transformationApproach = ['';'{ step: 'Assessment', icon: '🔍', description: 'Evaluate current state and identify opportunities' }, '';'{ step: 'Strategy', icon: '📋', description: 'Develop comprehensive transformation roadmap' }, '';'{ step: 'Implementation', icon: '🚀', description: 'Execute changes with agile methodology' }, '';'{ step: 'Optimization', icon: '📈', description: 'Continuous improvement and scaling' }';'; ]';'' return (<div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white pt-20'>'';' <SEO title='Digital Transformation - Zion Tech Group' description='Transform your business for the digital age with our comprehensive digital transformation services.' keywords='digital transformation, process automation, digital strategy, change management, performance optimization' canonical='https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function DigitalTransformation() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="DigitalTransformation - Zion Tech Group"
+        description="Professional digitaltransformation services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              DigitalTransformation
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional digitaltransformation services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive digitaltransformation solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

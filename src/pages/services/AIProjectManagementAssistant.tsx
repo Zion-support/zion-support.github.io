@@ -1,1 +1,75 @@
- import { Link    } from 'react-router-dom' import {  Calendar, Users, Target, BarChart3, MessageSquare, Phone, Mail, MapPin, CheckCircle, Star, Zap, Shield, Brain, Clock, DollarSign, ArrowRight, TrendingUp, AlertTriangle, GitBranch, FileText,    } from 'lucide-react' import { SEO } from '@/components/SEO'  const AIProjectManagementAssistant = () => { const features = [ { icon: Brain, title: 'AI-Powered Task Prioritization', description:';Intelligent algorithms automatically prioritize tasks based on deadlines, dependencies, team capacity, and business impact.', benefits: [';Reduce project delays by 45%',';Optimize resource allocation',';Focus on high-impact tasks', ], }, { icon: Users, title: 'Smart Team Collaboration', description:';AI-driven insights into team performance, workload distribution, and collaboration patterns to improve productivity.', benefits: [';Increase team efficiency by 30%',';Better workload balance',';Enhanced communication', ], }, { icon: Target, title: 'Predictive Risk Management', description:';Advanced analytics identify potential project risks before they occur, enabling proactive mitigation strategies.', benefits: [';Prevent 60% of project issues',';Reduce unexpected delays',';Better resource planning', ], }, { icon: BarChart3, title: 'Real-time Progress Analytics', description:';Comprehensive dashboards with AI-generated insights on project health, milestone tracking, and performance metrics.', benefits: [';Instant project visibility',';Data-driven decisions',';Improved stakeholder communication', ], }, ]  const integrations = [ { name: 'Jira', description:';Full integration with issue tracking and project management', }, { name: 'Asana', description: 'Seamless task and project synchronization' }, { name: 'Microsoft Project', description: 'Enterprise project management integration', }, { name: 'Trello', description: 'Visual project board management' }, { name: 'Slack', description: 'Team communication and notifications' }, { name: 'GitHub', description: 'Code repository and development workflow' }, ]  const pricingTiers = [ { name: 'Starter', price: 299, period: 'month', description: 'Perfect for small project teams', features: [';Up to 10 team members',';AI task prioritization',';Basic risk management',';Project templates',';Email integration',';Basic analytics',';Email support', ], popular: false, }, { name: 'Professional', price: 599, period: 'month', description: 'Ideal for growing project organizations', features: [';Up to 50 team members',';Advanced AI features',';Predictive risk management',';Team performance analytics',';Full integrations',';Priority support',';Custom workflows',';Advanced reporting', ], popular: true, }, { name: 'Enterprise', price: 1299, period: 'month', description: 'For large organizations with complex projects', features: [';Unlimited team members',';Custom AI models',';Advanced analytics',';API access',';White-label options',';Dedicated account manager',';Custom integrations',';SLA guarantees', ], popular: false, }, ]  const testimonials = [ { name: 'David Martinez', role: 'Project Director', company: 'InnovateTech Solutions', content:";AI Project Management Assistant has revolutionized our project delivery.We've reduced delays by 40% and improved team productivity significantly.", rating: 5, }, { name: 'Jennifer Lee', role: 'Program Manager', company: 'Global Dynamics', content:';The predictive risk management feature has saved us countless hours and prevented major project setbacks.ROI within the first quarter!', rating: 5, }, { name: 'Robert Wilson', role: 'Senior PMO', company: 'TechFlow Enterprises', content:'Real-time analytics and AI insights give us unprecedented visibility into project health.Stakeholder confidence has never been higher.', rating: 5, }, ] " return ("" <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">" <SEO"" title="AI Project Management Assistant — Zion Tech Group | Intelligent Project Management"" description="Transform your project management with AI-powered task prioritization, risk management, team collaboration, and real-time analytics.Reduce delays by 45%."" keywords="AI project management, project management software, task prioritization, risk management, team collaboration"" canonical="https:
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function AIProjectManagementAssistant() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AIProjectManagementAssistant - Zion Tech Group"
+        description="Professional aiprojectmanagementassistant services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AIProjectManagementAssistant
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional aiprojectmanagementassistant services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive aiprojectmanagementassistant solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

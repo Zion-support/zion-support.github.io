@@ -1,1 +1,75 @@
- import { motion } from 'framer-motion' import {  Link, Shield, Eye, CheckCircle, Clock, DollarSign, Users, Globe, Lock, Brain, ArrowRight, Star, TrendingUp, Award, Phone, Mail, MapPin, ExternalLink, BarChart3, Zap, Database } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function BlockchainSupplyChainTransparency() { const features = [';End-to-end supply chain traceability with blockchain', '';Real-time product journey tracking from source to consumer', '';Smart contracts for automated compliance verification', '';Immutable audit trail for regulatory compliance', '';Supplier performance scoring and verification', '';Sustainability and ESG metrics tracking', '';Counterfeit detection and prevention', '';Integration with IoT sensors and RFID systems''; ]'; ';' const benefits = ['';Increase supply chain transparency by 100%', '';Reduce compliance costs by 40-60%', '';Improve supplier accountability and performance', '';Enable real-time risk assessment and mitigation', '';Build consumer trust and brand loyalty', '';Meet regulatory requirements automatically' ]';' const pricing = ['{';'' plan: 'Starter', '';' price: '$1, 499','';' period: '/month',';' features: ['';Up to 1, 000 products tracked','';Basic blockchain traceability', '';Standard compliance reporting', '';Email support', '';Basic analytics dashboard'' ]'},'{';'' plan: 'Professional', '';' price: '$3, 999','';' period: '/month',';' features: ['';Up to 10, 000 products tracked','';Advanced traceability features', '';Smart contract automation', '';Priority support', '';Advanced analytics', '';API access'' ]'},'{';'' plan: 'Enterprise', '';' price: '$8, 999','';' period: '/month',';' features: ['';Unlimited products tracked', '';Custom blockchain solutions', '';Dedicated support team', '';Full transparency suite', '';White-label solution', '';Custom integrations' ]' }'; ]'; ';' return ('';' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'' <SEO '';' title='Blockchain Supply Chain Transparency Platform - Zion Tech Group'';' description='Revolutionary blockchain-based supply chain transparency platform with end-to-end traceability, smart contracts, and automated compliance. Increase transparency by 100% and reduce compliance costs by 40-60%.''/>';' {}''' <section className='relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8'>''' <div className='max-w-7xl mx-auto'>' <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';' transition={{ duration: 0.8 }}'';' className='text-center'';' >''' <div className='flex justify-center mb-6'>''' <div className='p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full'>''' <Link className='h-8 w-8 text-white' />' </div>'' </div>''' <h1 className='text-4xl md: text-6xl font-bold text-white mb-6'>'; Blockchain Supply Chain Transparency Platform'' </h1>''' <p className='text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>'; Transform your supply chain with blockchain-powered transparency, end-to-end traceability,'; and automated compliance. Build trust with consumers and meet regulatory requirements seamlessly.'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function BlockchainSupplyChainTransparency() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Blockchain Supply Chain Transparency - Zion Tech Group"
+        description="Professional blockchain supply chain transparency services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Blockchain Supply Chain Transparency
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional blockchain supply chain transparency services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive blockchain supply chain transparency solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

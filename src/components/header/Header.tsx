@@ -1,2 +1,47 @@
-import React, { useState } from 'react' import { Link } from 'react-router-dom' import { MainNavigation } from './MainNavigation' import { MobileMenu } from './MobileMenu' import { Logo } from './Logo' import { Menu, X, Search, Bell, User, ShoppingBag } from 'lucide-react' import { SearchFunctionality } from '../SearchFunctionality'  export function Header() { const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [showSearch, setShowSearch] = useState(false)  const toggleMobileMenu = () => { setIsMobileMenuOpen(!isMobileMenuOpen) }  const closeMobileMenu = () => setIsMobileMenuOpen(false) const toggleSearch = () => setShowSearch(!showSearch)  return ( <> {} <div className="bg-zion-slate-darker border-b border-zion-purple/10">"" <div className="container mx-auto px-4 sm: px-6 lg:px-8">"" <div className="flex h-12 items-center justify-between text-sm">"" <div className="flex items-center space-x-6">"" <div className="text-zion-slate-light">"" 📧 <a href="mailto: kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">kleber@ziontechgroup.com</a>" </div>"" <div className="text-zion-slate-light hidden sm: block">"" 📞 <a href="tel: +13024640950" className="hover:text-zion-cyan transition-colors">+1 (302) 464-0950</a> </div>" </div>"" <div className="flex items-center space-x-4">"" <Link to="/help" className="text-zion-slate-light hover: text-zion-cyan transition-colors"> Support" </Link>"" <Link to="/careers" className="text-zion-slate-light hover: text-zion-cyan transition-colors"> Careers" </Link>"" <Link to="/pricing" className="text-zion-slate-light hover: text-zion-cyan transition-colors"> Pricing" </Link>"" <div className="flex items-center space-x-2">"" <span className="text-zion-slate-light text-xs">Follow us: </span>"" <a href="https:""";
-import React, { useState } from 'react' import { Link } from 'react-router-dom' import { MainNavigation } from './MainNavigation' import { MobileMenu } from './MobileMenu' import { Logo } from './Logo' import { Menu, X, Search, Bell, User, ShoppingBag } from 'lucide-react' import { SearchFunctionality } from '../SearchFunctionality'  export function Header() { const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false) const [showSearch, setShowSearch] = useState(false)  const toggleMobileMenu = () => { setIsMobileMenuOpen(!isMobileMenuOpen) }  const closeMobileMenu = () => setIsMobileMenuOpen(false) const toggleSearch = () => setShowSearch(!showSearch)  return ( <> {} <div className='bg-zion-slate-darker border-b border-zion-purple/10'>'' <div className='container mx-auto px-4 sm: px-6 lg:px-8'>'' <div className='flex h-12 items-center justify-between text-sm'>'' <div className='flex items-center space-x-6'>'' <div className='text-zion-slate-light'>'' 📧 <a href='mailto: kleber@ziontechgroup.com' className='hover:text-zion-cyan transition-colors'>kleber@ziontechgroup.com</a>' </div>'' <div className='text-zion-slate-light hidden sm: block'>'' 📞 <a href='tel: +13024640950' className='hover:text-zion-cyan transition-colors'>+1 (302) 464-0950</a> </div>' </div>'' <div className='flex items-center space-x-4'>'' <Link to='/help' className='text-zion-slate-light hover: text-zion-cyan transition-colors'> Support' </Link>'' <Link to='/careers' className='text-zion-slate-light hover: text-zion-cyan transition-colors'> Careers' </Link>'' <Link to='/pricing' className='text-zion-slate-light hover: text-zion-cyan transition-colors'> Pricing' </Link>'' <div className='flex items-center space-x-2'>'' <span className='text-zion-slate-light text-xs'>Follow us: </span>'' <a href='https:''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function Header() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Header - Zion Tech Group"
+        description="Professional header services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Header
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional header services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

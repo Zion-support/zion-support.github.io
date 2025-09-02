@@ -1,1 +1,47 @@
-import React, { useState, useEffect } from 'react' import { Link, useLocation } from 'react-router-dom' import { motion, AnimatePresence } from 'framer-motion' import { Menu, X, ChevronDown, Globe, Brain, Cloud, Shield, Zap, Users, Phone, Mail, MapPin, Search, User, ShoppingCart, Bell } from 'lucide-react' const EnhancedHeader: React.FC = () => { const [isOpen, setIsOpen] = useState(false) const [isScrolled, setIsScrolled] = useState(false) const [activeDropdown, setActiveDropdown] = useState<string | null>(null) const [searchQuery, setSearchQuery] = useState('') const location = useLocation() useEffect(() => { const handleScroll = () => { setIsScrolled(window.scrollY > 20) } window.addEventListener('scroll', handleScroll) return () => window.removeEventListener('scroll', handleScroll) }, []) const navigationItems = [ { name: 'Home', href: '/' }, { name: 'Services', href: '/services', dropdown: [ { name: 'AI Solutions', href: '/services/ai-services', icon: Brain, description: 'Cutting-edge AI services', subItems: [ { name: 'Content Intelligence', href: '/services/ai-content-intelligence-platform' }, { name: 'Customer Success', href: '/services/ai-customer-success-automation' }, { name: 'Financial Forecasting', href: '/services/ai-financial-forecasting-engine' }, { name: 'Healthcare Diagnostics', href: '/services/ai-healthcare-diagnostic-platform' } ] }, { name: 'IT & Security', href: '/services/it-services', icon: Shield, description: 'Enterprise security & infrastructure', subItems: [ { name: 'Zero Trust Security', href: '/services/zero-trust-security-platform' }, { name: 'Edge Computing', href: '/services/edge-computing-orchestrator' }, { name: 'Cloud DevOps', href: '/services/cloud-devops' }, { name: 'Cybersecurity', href: '/services/cybersecurity' } ] }, { name: 'Blockchain & Web3', href: '/services/blockchain-services', icon: Globe, description: 'Next-gen blockchain solutions', subItems: [ { name: 'DeFi Platform', href: '/services/defi-yield-optimization-platform' }, { name: 'NFT Marketplace', href: '/services/nft-marketplace-platform' }, { name: 'Supply Chain', href: '/services/blockchain-supply-chain-platform' }, { name: 'Smart Contracts', href: '/services/smart-contract-development' } ] }, { name: 'Sustainability', href: '/services/sustainability', icon: Zap, description: 'Green tech solutions', subItems: [ { name: 'Carbon Tracking', href: '/services/carbon-footprint-tracking-platform' }, { name: 'Energy Management', href: '/services/sustainable-technology' }, { name: 'ESG Reporting', href: '/services/esg-analytics-platform' } ] } ] }, { name: 'Solutions', href: '/solutions', dropdown: [ { name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale business solutions' }, { name: 'Startups', href: '/solutions/startups', description: 'Growth-focused solutions' }, { name: 'Healthcare', href: '/solutions/healthcare', description: 'Medical technology solutions' }, { name: 'Financial Services', href: '/solutions/financial', description: 'Fintech and banking solutions' } ] }, { name: 'About', href: '/about' }, { name: 'Blog', href: '/blog' }, { name: 'Contact', href: '/contact' } ] const contactInfo = [ { icon: Phone, text: '+1 302 464 0950', href: 'tel:+13024640950' }, { icon: Mail, text: 'kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com' }, { icon: MapPin, text: '364 E Main St STE 1008, Middletown DE 19709', href: '#' } ] const toggleDropdown = (name: string) => { setActiveDropdown(activeDropdown === name ? null : name) } const closeMobileMenu = () => { setIsOpen(false) setActiveDropdown(null) } const handleSearch = (e: React.FormEvent) => { e.preventDefault() if (searchQuery.trim()) {''
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function EnhancedHeader() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="EnhancedHeader - Zion Tech Group"
+        description="Professional enhancedheader services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              EnhancedHeader
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional enhancedheader services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,10 +1,47 @@
- import { Helmet } from 'react-helmet-async'  interface SEOHeadProps {
-   title: string;
-   description: string;
-   keywords?: string[];
-   canonicalUrl?: string;
-   ogImage?: string;
-   ogType?: 'website' | 'article' | 'service';
-   structuredData?: object;
-   noIndex?: boolean;
-   noFollow?: boolean} export function SEOHead({ title, description, keywords = [], canonicalUrl, ogImage = '/images/zion-tech-group-og.jpg', ogType = 'website', structuredData, noIndex = false, noFollow = false }: SEOHeadProps) { const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions` const defaultKeywords = ['AI services',';technology solutions',';enterprise automation',';cybersecurity',';quantum computing',';blockchain solutions',';cloud services',';digital transformation','Zion Tech Group' ]  const allKeywords = [...new Set([...defaultKeywords, ...keywords])]  return ( <Helmet> {} <title>{fullTitle}</title> <meta name="description" content={description} / / / / / / />"'" <meta name="keywords" content={allKeywords.join(', ')} / / / / / / />"'" <meta name="author" content="Zion Tech Group" / / / / / / />"'" <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} / / / / / / />';" {}"'" {canonicalUrl && <link rel="canonical" href={canonicalUrl} / / / / / / />}';" {}"'" <meta property="og: title" content={fullTitle} / / / / / / />"'" <meta property="og: description" content={description} / / / / / / />"'" <meta property="og: type" content={ogType} / / / / / / />"'" <meta property="og: image" content={ogImage} / / / / / / />"'" <meta property="og: url" content={canonicalUrl || window.location.href} / / / / / / />"'" <meta property="og: site_name" content="Zion Tech Group" / / / / / / />"'" <meta property="og: locale" content="en_US" / / / / / / />';" {}"'" <meta name="twitter: card" content="summary_large_image" / / / / / / />"'" <meta name="twitter: title" content={fullTitle} / / / / / / />"'" <meta name="twitter: description" content={description} / / / / / / />"'" <meta name="twitter: image" content={ogImage} / / / / / / />"'" <meta name="twitter: site" content="@ziontechgroup" / / / / / / />';" {}"'" <meta name="viewport" content="width=device-width, initial-scale=1.0" / / / / / / />"'" <meta name="theme-color" content="#0ea5e9" / / / / / / />"'" <meta name="msapplication-TileColor" content="#0ea5e9" / / / / / / />'{}';" {structuredData && ("'" <script type="application/ld+json">" {JSON.stringify(structuredData)}' </script>')}';" {}"'" <script type="application/ld+json">'{JSON.stringify({';"';@context": "https:""`"} export function SEOHead({ title, description, keywords = [], canonicalUrl, ogImage = '/images/zion-tech-group-og.jpg', ogType = 'website', structuredData, noIndex = false, noFollow = false }: SEOHeadProps) { const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions` const defaultKeywords = ['AI services',';technology solutions',';enterprise automation',';cybersecurity',';quantum computing',';blockchain solutions',';cloud services',';digital transformation','Zion Tech Group' ]  const allKeywords = [...new Set([...defaultKeywords, ...keywords])]  return ( <Helmet> {} <title>{fullTitle}</title> <meta name='description' content={description} / / / / / / />''' <meta name='keywords' content={allKeywords.join(', ')} / / / / / / />''' <meta name='author' content='Zion Tech Group' / / / / / / />''' <meta name='robots' content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} / / / / / / />';' {}''' {canonicalUrl && <link rel='canonical' href={canonicalUrl} / / / / / / />}';' {}''' <meta property='og: title' content={fullTitle} / / / / / / />''' <meta property='og: description' content={description} / / / / / / />''' <meta property='og: type' content={ogType} / / / / / / />''' <meta property='og: image' content={ogImage} / / / / / / />''' <meta property='og: url' content={canonicalUrl || window.location.href} / / / / / / />''' <meta property='og: site_name' content='Zion Tech Group' / / / / / / />''' <meta property='og: locale' content='en_US' / / / / / / />';' {}''' <meta name='twitter: card' content='summary_large_image' / / / / / / />''' <meta name='twitter: title' content={fullTitle} / / / / / / />''' <meta name='twitter: description' content={description} / / / / / / />''' <meta name='twitter: image' content={ogImage} / / / / / / />''' <meta name='twitter: site' content='@ziontechgroup' / / / / / / />';' {}''' <meta name='viewport' content='width=device-width, initial-scale=1.0' / / / / / / />''' <meta name='theme-color' content='#0ea5e9' / / / / / / />''' <meta name='msapplication-TileColor' content='#0ea5e9' / / / / / / />'{}';' {structuredData && (''' <script type='application/ld+json'>' {JSON.stringify(structuredData)}' </script>')}';' {}''' <script type='application/ld+json'>'{JSON.stringify({';'';@context': 'https:''`"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function SEOHead() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="SEOHead - Zion Tech Group"
+        description="Professional seohead services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              SEOHead
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional seohead services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

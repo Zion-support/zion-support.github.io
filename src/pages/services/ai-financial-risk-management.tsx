@@ -1,2 +1,75 @@
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, TrendingUp, Target, Zap, AlertTriangle, Cloud, CheckCircle, ArrowRight, Lightbulb, Cpu, Database, Network, Eye, Sparkles, Rocket, Globe, Clock, Award, Star, MessageCircle, Phone, Mail, ShoppingCart, DollarSign, Heart, Factory, BarChart3, Calendar, Mail as MailIcon, Share2, Monitor, PieChart, Headphones, LifeBuoy, MessageSquare, Activity, Target as TargetIcon, TrendingDown, AlertTriangle as AlertTriangleIcon, Lock, Scale, Gauge, TrendingUp as TrendingUpIcon, AlertCircle, CheckSquare, FileText, BarChart, PieChart as PieChartIcon    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AIFinancialRiskManagement() { const features = [ { icon: Brain, title: 'AI Risk Assessment', description: 'Advanced machine learning algorithms for real-time risk evaluation and threat detection' }, { icon: Shield, title: 'Compliance Monitoring', description: 'Automated regulatory compliance tracking and reporting for financial institutions' }, { icon: TrendingUp, title: 'Predictive Analytics', description: 'Forecast market risks and identify potential threats before they materialize' }, { icon: Target, title: 'Portfolio Optimization', description: 'AI-driven portfolio management with risk-adjusted return optimization' }, { icon: AlertTriangle, title: 'Real-time Alerts', description: 'Instant notifications for risk threshold breaches and compliance violations' }, { icon: BarChart3, title: 'Comprehensive Reporting', description: 'Detailed risk analytics and regulatory reporting with customizable dashboards' } ]  const benefits = ['Reduce financial losses by up to 60% with predictive risk management',';Ensure 100% regulatory compliance with automated monitoring systems',';Improve decision-making with real-time risk insights and analytics',';Optimize portfolio performance through AI-driven risk assessment',';Reduce manual compliance workload by 80% with automation',';Gain competitive advantage with advanced risk intelligence capabilities' ]  const useCases = [ { industry: 'Investment Banking', applications: ['Portfolio risk management', 'Market risk analysis', 'Credit risk assessment', 'Regulatory compliance'], icon: DollarSign }, { industry: 'Insurance', applications: ['Underwriting risk', 'Claims fraud detection', 'Actuarial modeling', 'Regulatory reporting'], icon: Shield }, { industry: 'Commercial Banking', applications: ['Credit risk analysis', 'Loan portfolio management', 'Basel compliance', 'Stress testing'], icon: Factory }, { industry: 'Asset Management', applications: ['Portfolio optimization', 'Risk-adjusted returns', 'ESG risk assessment', 'Performance attribution'], icon: BarChart } ]  const technologies = ['Machine Learning & Deep Learning',';Natural Language Processing',';Predictive Analytics',';Real-time Data Processing',';Blockchain Security',';Cloud-Native Architecture' ]  const pricing = [ { plan: 'Professional', price: '$899', period: '/month', description: 'Perfect for mid-size financial institutions and investment firms', features: [';Up to 100 portfolio monitoring',';Basic AI risk assessment',';Regulatory compliance tracking',';Real-time risk alerts',';Standard reporting dashboard',';Email support',';API access(limited)' ], cta: 'Get Started', popular: false }, { plan: 'Enterprise', price: '$1,899', period: '/month', description: 'Ideal for large financial institutions and multinational banks', features: [';Unlimited portfolio monitoring',';Advanced AI risk modeling',';Multi-jurisdiction compliance',';Custom risk thresholds',';Advanced analytics & reporting',';Priority support',';Full API access',';Custom integrations',';Dedicated risk manager' ], cta: 'Start Free Trial', popular: true }, { plan: 'Institution', price: '$3,599', period: '/month', description: 'For major financial institutions with complex risk management needs', features: [';Custom AI model development',';White-label solutions',';On-premise deployment',';Advanced compliance automation',';Custom regulatory reporting',';24/7 dedicated support',';Custom training programs',';Risk consulting services' ], cta: 'Contact Sales', popular: false } ]  const containerVariants = { hidden: { opacity: 0  }, visible: { opacity: 1, transition: { staggerChildren: 0.1  } } }  const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.5  } } }  return ( <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">'" <SEO "';" title="AI-Powered Financial Risk Management Platform - Zion Tech Group"';" description="Transform financial risk management with AI-powered insights, compliance automation, and predictive analytics.Ensure regulatory compliance and optimize portfolio performance."';" keywords="AI financial risk management, risk assessment, compliance monitoring, portfolio optimization, regulatory reporting, financial technology"';" canonical="https:
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Shield, TrendingUp, Target, Zap, AlertTriangle, Cloud, CheckCircle, ArrowRight, Lightbulb, Cpu, Database, Network, Eye, Sparkles, Rocket, Globe, Clock, Award, Star, MessageCircle, Phone, Mail, ShoppingCart, DollarSign, Heart, Factory, BarChart3, Calendar, Mail as MailIcon, Share2, Monitor, PieChart, Headphones, LifeBuoy, MessageSquare, Activity, Target as TargetIcon, TrendingDown, AlertTriangle as AlertTriangleIcon, Lock, Scale, Gauge, TrendingUp as TrendingUpIcon, AlertCircle, CheckSquare, FileText, BarChart, PieChart as PieChartIcon    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AIFinancialRiskManagement() { const features = [ { icon: Brain, title: 'AI Risk Assessment', description: 'Advanced machine learning algorithms for real-time risk evaluation and threat detection' }, { icon: Shield, title: 'Compliance Monitoring', description: 'Automated regulatory compliance tracking and reporting for financial institutions' }, { icon: TrendingUp, title: 'Predictive Analytics', description: 'Forecast market risks and identify potential threats before they materialize' }, { icon: Target, title: 'Portfolio Optimization', description: 'AI-driven portfolio management with risk-adjusted return optimization' }, { icon: AlertTriangle, title: 'Real-time Alerts', description: 'Instant notifications for risk threshold breaches and compliance violations' }, { icon: BarChart3, title: 'Comprehensive Reporting', description: 'Detailed risk analytics and regulatory reporting with customizable dashboards' } ]  const benefits = ['Reduce financial losses by up to 60% with predictive risk management',';Ensure 100% regulatory compliance with automated monitoring systems',';Improve decision-making with real-time risk insights and analytics',';Optimize portfolio performance through AI-driven risk assessment',';Reduce manual compliance workload by 80% with automation',';Gain competitive advantage with advanced risk intelligence capabilities' ]  const useCases = [ { industry: 'Investment Banking', applications: ['Portfolio risk management', 'Market risk analysis', 'Credit risk assessment', 'Regulatory compliance'], icon: DollarSign }, { industry: 'Insurance', applications: ['Underwriting risk', 'Claims fraud detection', 'Actuarial modeling', 'Regulatory reporting'], icon: Shield }, { industry: 'Commercial Banking', applications: ['Credit risk analysis', 'Loan portfolio management', 'Basel compliance', 'Stress testing'], icon: Factory }, { industry: 'Asset Management', applications: ['Portfolio optimization', 'Risk-adjusted returns', 'ESG risk assessment', 'Performance attribution'], icon: BarChart } ]  const technologies = ['Machine Learning & Deep Learning',';Natural Language Processing',';Predictive Analytics',';Real-time Data Processing',';Blockchain Security',';Cloud-Native Architecture' ]  const pricing = [ { plan: 'Professional', price: '$899', period: '/month', description: 'Perfect for mid-size financial institutions and investment firms', features: [';Up to 100 portfolio monitoring',';Basic AI risk assessment',';Regulatory compliance tracking',';Real-time risk alerts',';Standard reporting dashboard',';Email support',';API access(limited)' ], cta: 'Get Started', popular: false }, { plan: 'Enterprise', price: '$1,899', period: '/month', description: 'Ideal for large financial institutions and multinational banks', features: [';Unlimited portfolio monitoring',';Advanced AI risk modeling',';Multi-jurisdiction compliance',';Custom risk thresholds',';Advanced analytics & reporting',';Priority support',';Full API access',';Custom integrations',';Dedicated risk manager' ], cta: 'Start Free Trial', popular: true }, { plan: 'Institution', price: '$3,599', period: '/month', description: 'For major financial institutions with complex risk management needs', features: [';Custom AI model development',';White-label solutions',';On-premise deployment',';Advanced compliance automation',';Custom regulatory reporting',';24/7 dedicated support',';Custom training programs',';Risk consulting services' ], cta: 'Contact Sales', popular: false } ]  const containerVariants = { hidden: { opacity: 0  }, visible: { opacity: 1, transition: { staggerChildren: 0.1  } } }  const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.5  } } }  return ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900'>'' <SEO '';' title='AI-Powered Financial Risk Management Platform - Zion Tech Group'';' description='Transform financial risk management with AI-powered insights, compliance automation, and predictive analytics.Ensure regulatory compliance and optimize portfolio performance.'';' keywords='AI financial risk management, risk assessment, compliance monitoring, portfolio optimization, regulatory reporting, financial technology'';' canonical="https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function aifinancialriskmanagement() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai financial risk management - Zion Tech Group"
+        description="Professional ai financial risk management services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai financial risk management
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai financial risk management services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai financial risk management solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

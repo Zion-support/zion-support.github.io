@@ -1,51 +1,47 @@
-';const LoadingSpinner = ({' size = 'md', color = 'blue',' text, className = '}) => {' const sizeClasses = { sm: 'w - 4 h - 4', md: 'w - 8 h - 8',' lg: 'w - 12 h - 12'}' const colorClasses = {' blue: 'text - blue - 500', white: 'text - white',' gray: 'text - gray - 500'}' return () ' <div className={`flex flex - col items - center justify - center ${className}`}>` <div`` className={`${sizeClasses[size]} ${colorClasses[color]} animate - spin`}` > <svg className='w - full h - full' fill='none' viewBox='0 0 24 24'>' <circle' className='opacity - 25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4' />' <path' className='opacity - 75' fill='currentColor' d='M4 12a8 8 0 018 - 8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3 - 2.647z' />' </svg> </div> {text && (' <p className='mt - 3 text - sm text - gray - 500 animate - pulse'>{text}</p>') }' </div>)  } export default LoadingSpinner'`;'` '';''`';const LoadingSpinner = ({}
-';
-  size = 'md',';
-  color = 'blue',
-  text,';
-  className = ''}) => {}
-  const sizeClasses = {}
-';
-'';
-''';
-    sm: 'w-4 h-4',''';
-    md: 'w-8 h-8',''';
-    lg: 'w-12 h-12'}
-  const colorClasses = {}
-';
-'';
-''';
-    blue: 'text-blue-500',''';
-    white: 'text-white',''';
-    gray: 'text-gray-500'}
-  return()
-    <div className={`flex flex-col items-center justify-center ${className}`}>```
-      <div````
-        className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}
-      >
-        <svg className='w-full h-full' fill='none' viewBox='0 0 24 24'>'''
-          <circle'''';
-            className='opacity-25'''';
-            cx='12'''';
-            cy='12'''';
-            r='10'''';
-            stroke='currentColor'''';
-            strokeWidth='4'''/>'''
-          <path''''
-            className='opacity-75'''';
-            fill='currentColor'''';
-            d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'''/>
-        </svg>
-      </div>
-      {text && (<p className='mt-3 text-sm text-gray-500 animate-pulse'>{text}</p>)}
-    </div>)}
-export default LoadingSpinner;
-export { LoadingSpinner }
-;
-export { LoadingSpinner }
-;
-export { LoadingSpinner }
-;
-export { LoadingSpinner }
-;
-export { LoadingSpinner }
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function LoadingSpinner() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="LoadingSpinner - Zion Tech Group"
+        description="Professional loadingspinner services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              LoadingSpinner
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional loadingspinner services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

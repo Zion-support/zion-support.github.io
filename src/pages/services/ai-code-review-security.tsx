@@ -1,2 +1,75 @@
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Code, Shield, Bug, Zap, Eye, Brain, Lock, CheckCircle, ArrowRight, AlertTriangle, GitBranch, Database, Server, Globe, Clock, Award, Star, MessageCircle, Phone, Mail, MapPin, Building, Users, TrendingUp, Target, Rocket, Sparkles, Cpu, Network, FileCode, Search, BarChart3, Settings, RefreshCw, GitPullRequest, GitCommit, GitMerge, GitCompare, GitBranch2, GitPullRequestClosed, GitCommit2, GitMerge2, GitCompare2, GitBranch3, GitPullRequestDraft, GitCommit3, GitMerge3, GitCompare3, GitBranch4, GitPullRequest2, GitCommit4, GitMerge4, GitCompare4, GitBranch5, GitPullRequest3, GitCommit5, GitMerge5, GitCompare5    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AICodeReviewSecurity() { const features = [ { icon: Brain, title: 'AI-Powered Code Analysis', description: 'Advanced machine learning algorithms that understand code context and identify potential issues' }, { icon: Shield, title: 'Security Vulnerability Detection', description: 'Comprehensive security scanning for OWASP Top 10, CWE, and custom security rules' }, { icon: Bug, title: 'Automated Bug Detection', description: 'Static and dynamic analysis to catch bugs before they reach production' }, { icon: Code, title: 'Multi-Language Support', description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, Go, Rust' }, { icon: GitBranch, title: 'Git Integration', description: 'Seamless integration with GitHub, GitLab, Bitbucket, and Azure DevOps' }, { icon: Zap, title: 'Real-time Analysis', description: 'Instant feedback on every commit, pull request, and code review' } ]  const benefits = ['Reduce security vulnerabilities by 85%',';Decrease bug density by 60%',';Accelerate code review process by 3x',';Improve code quality and maintainability',';Ensure compliance with security standards',';Reduce technical debt and refactoring costs' ]  const useCases = [ { industry: 'Financial Services', applications: ['PCI DSS compliance', 'Secure coding standards', 'Fraud prevention', 'Regulatory compliance'], icon: Shield }, { industry: 'Healthcare', applications: ['HIPAA compliance', 'Medical device security', 'Patient data protection', 'Clinical system validation'], icon: Lock }, { industry: 'E-commerce', applications: ['Payment security', 'User data protection', 'API security', 'Mobile app security'], icon: Globe }, { industry: 'Government', applications: ['FedRAMP compliance', 'FISMA requirements', 'National security standards', 'Public sector security'], icon: Building } ]  const technologies = ['SonarQube Enterprise',';Snyk Security Platform',';Veracode Static Analysis',';Checkmarx SAST',';Fortify Static Code Analyzer',';CodeQL(GitHub)',';Semgrep',';Custom ML Models',';OpenAI Codex Integration',';GitHub Copilot Security' ]  const pricingPlans = [ { name: 'Developer', description: 'Perfect for individual developers and small teams', price: { monthly: 49, annual: 490 }, features: [';Up to 5 repositories',';Basic security scanning',';Code quality metrics',';GitHub integration',';Email support',';Monthly security reports' ], icon: Code, color: 'from-blue-500 to-cyan-500', popular: false, cta: 'Start Free Trial', link: '/contact' }, { name: 'Team', description: 'Ideal for development teams and growing companies', price: { monthly: 199, annual: 1990 }, features: [';Up to 25 repositories',';Advanced security scanning',';Custom security rules',';Priority support',';Team collaboration tools',';API access',';Custom integrations',';Training sessions' ], icon: Users, color: 'from-purple-500 to-pink-500', popular: true, cta: 'Get Started', link: '/contact' }, { name: 'Enterprise', description: 'For large organizations with complex security needs', price: { monthly: 799, annual: 7990 }, features: [';Unlimited repositories',';Custom security policies',';Dedicated security team',';24/7 priority support',';On-premise deployment',';Custom integrations',';White-label solutions',';SLA guarantees',';Compliance reporting' ], icon: Building, color: 'from-orange-500 to-red-500', popular: false, cta: 'Contact Sales', link: '/contact' } ]  const securityFeatures = [ { title: 'Static Application Security Testing(SAST)', description: 'Analyze source code for security vulnerabilities without executing the application', benefits: ['Early vulnerability detection', 'Cost-effective security testing', 'Comprehensive code coverage'] }, { title: 'Dynamic Application Security Testing(DAST)', description: 'Test running applications for security vulnerabilities from an external perspective', benefits: ['Real-world attack simulation', 'Runtime vulnerability detection', 'API security testing'] }, { title: 'Software Composition Analysis(SCA)', description: 'Identify and manage open source dependencies and their associated security risks', benefits: ['License compliance', 'Vulnerability tracking', 'Dependency management'] }, { title: 'Interactive Application Security Testing(IAST)', description: 'Combine SAST and DAST approaches for comprehensive security analysis', benefits: ['Hybrid security testing', 'Accurate vulnerability detection', 'Reduced false positives'] } ]  return ( <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">'" <SEO "';" title="AI-Powered Code Review & Security Analysis | Zion Tech Group"';" description="Advanced AI-powered code review and security analysis service.Detect vulnerabilities, improve code quality, and ensure compliance with industry standards.50+ languages supported."';" keywords="AI code review, security analysis, static analysis, dynamic analysis, code quality, vulnerability detection, secure coding, OWASP, CWE, Git integration"';" canonical="https:
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Code, Shield, Bug, Zap, Eye, Brain, Lock, CheckCircle, ArrowRight, AlertTriangle, GitBranch, Database, Server, Globe, Clock, Award, Star, MessageCircle, Phone, Mail, MapPin, Building, Users, TrendingUp, Target, Rocket, Sparkles, Cpu, Network, FileCode, Search, BarChart3, Settings, RefreshCw, GitPullRequest, GitCommit, GitMerge, GitCompare, GitBranch2, GitPullRequestClosed, GitCommit2, GitMerge2, GitCompare2, GitBranch3, GitPullRequestDraft, GitCommit3, GitMerge3, GitCompare3, GitBranch4, GitPullRequest2, GitCommit4, GitMerge4, GitCompare4, GitBranch5, GitPullRequest3, GitCommit5, GitMerge5, GitCompare5    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AICodeReviewSecurity() { const features = [ { icon: Brain, title: 'AI-Powered Code Analysis', description: 'Advanced machine learning algorithms that understand code context and identify potential issues' }, { icon: Shield, title: 'Security Vulnerability Detection', description: 'Comprehensive security scanning for OWASP Top 10, CWE, and custom security rules' }, { icon: Bug, title: 'Automated Bug Detection', description: 'Static and dynamic analysis to catch bugs before they reach production' }, { icon: Code, title: 'Multi-Language Support', description: 'Support for 50+ programming languages including Python, JavaScript, Java, C++, Go, Rust' }, { icon: GitBranch, title: 'Git Integration', description: 'Seamless integration with GitHub, GitLab, Bitbucket, and Azure DevOps' }, { icon: Zap, title: 'Real-time Analysis', description: 'Instant feedback on every commit, pull request, and code review' } ]  const benefits = ['Reduce security vulnerabilities by 85%',';Decrease bug density by 60%',';Accelerate code review process by 3x',';Improve code quality and maintainability',';Ensure compliance with security standards',';Reduce technical debt and refactoring costs' ]  const useCases = [ { industry: 'Financial Services', applications: ['PCI DSS compliance', 'Secure coding standards', 'Fraud prevention', 'Regulatory compliance'], icon: Shield }, { industry: 'Healthcare', applications: ['HIPAA compliance', 'Medical device security', 'Patient data protection', 'Clinical system validation'], icon: Lock }, { industry: 'E-commerce', applications: ['Payment security', 'User data protection', 'API security', 'Mobile app security'], icon: Globe }, { industry: 'Government', applications: ['FedRAMP compliance', 'FISMA requirements', 'National security standards', 'Public sector security'], icon: Building } ]  const technologies = ['SonarQube Enterprise',';Snyk Security Platform',';Veracode Static Analysis',';Checkmarx SAST',';Fortify Static Code Analyzer',';CodeQL(GitHub)',';Semgrep',';Custom ML Models',';OpenAI Codex Integration',';GitHub Copilot Security' ]  const pricingPlans = [ { name: 'Developer', description: 'Perfect for individual developers and small teams', price: { monthly: 49, annual: 490 }, features: [';Up to 5 repositories',';Basic security scanning',';Code quality metrics',';GitHub integration',';Email support',';Monthly security reports' ], icon: Code, color: 'from-blue-500 to-cyan-500', popular: false, cta: 'Start Free Trial', link: '/contact' }, { name: 'Team', description: 'Ideal for development teams and growing companies', price: { monthly: 199, annual: 1990 }, features: [';Up to 25 repositories',';Advanced security scanning',';Custom security rules',';Priority support',';Team collaboration tools',';API access',';Custom integrations',';Training sessions' ], icon: Users, color: 'from-purple-500 to-pink-500', popular: true, cta: 'Get Started', link: '/contact' }, { name: 'Enterprise', description: 'For large organizations with complex security needs', price: { monthly: 799, annual: 7990 }, features: [';Unlimited repositories',';Custom security policies',';Dedicated security team',';24/7 priority support',';On-premise deployment',';Custom integrations',';White-label solutions',';SLA guarantees',';Compliance reporting' ], icon: Building, color: 'from-orange-500 to-red-500', popular: false, cta: 'Contact Sales', link: '/contact' } ]  const securityFeatures = [ { title: 'Static Application Security Testing(SAST)', description: 'Analyze source code for security vulnerabilities without executing the application', benefits: ['Early vulnerability detection', 'Cost-effective security testing', 'Comprehensive code coverage'] }, { title: 'Dynamic Application Security Testing(DAST)', description: 'Test running applications for security vulnerabilities from an external perspective', benefits: ['Real-world attack simulation', 'Runtime vulnerability detection', 'API security testing'] }, { title: 'Software Composition Analysis(SCA)', description: 'Identify and manage open source dependencies and their associated security risks', benefits: ['License compliance', 'Vulnerability tracking', 'Dependency management'] }, { title: 'Interactive Application Security Testing(IAST)', description: 'Combine SAST and DAST approaches for comprehensive security analysis', benefits: ['Hybrid security testing', 'Accurate vulnerability detection', 'Reduced false positives'] } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'' <SEO '';' title='AI-Powered Code Review & Security Analysis | Zion Tech Group'';' description='Advanced AI-powered code review and security analysis service.Detect vulnerabilities, improve code quality, and ensure compliance with industry standards.50+ languages supported.'';' keywords='AI code review, security analysis, static analysis, dynamic analysis, code quality, vulnerability detection, secure coding, OWASP, CWE, Git integration'';' canonical="https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function aicodereviewsecurity() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai code review security - Zion Tech Group"
+        description="Professional ai code review security services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai code review security
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai code review security services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai code review security solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

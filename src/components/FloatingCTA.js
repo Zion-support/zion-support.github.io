@@ -1,6 +1,47 @@
-import React, { useState, useEffect } from;
-  'react' import { Link } from;
-  'react-router-dom' export function FloatingCTA() { const [showScrollTop, setShowScrollTop] = useState(false) useEffect(() => { const handleScroll = () => { setShowScrollTop(window.scrollY > 400) } window.addEventListener(
-  'scroll', handleScroll) return () => window.removeEventListener(
-  'scroll', handleScroll) }, []) const scrollToTop = () => { window.scrollTo({ top: 0, behavior:;
-  'smooth' })} return ( <> {} {showScrollTop && ( <button onClick={scrollToTop} className='fixed bottom-24 right-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-full shadow-2xl hover: shadow-cyan-500/25 transition-all duration-300 z-40 hover:scale-110' > <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'> <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 10l7-7m0 0l7 7m-7-7v18' /> </svg> </button> )} {} <Link to='/contact' className='fixed bottom-6 left-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-3 rounded-full shadow-2xl hover: shadow-purple-500/25 transition-all duration-300 z-40 hover:scale-105' > <div className='flex items-center space-x-2'> <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'> <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' /> </svg> <span className='text-sm font-medium'>Contact Us</span> </div> </Link> </> ) }''import React, { useState, useEffect } from 'react' import { Link    } from 'react-router-dom' export function FloatingCTA() { const [showScrollTop, setShowScrollTop] = useState(false) useEffect(() => { const handleScroll = () => { setShowScrollTop(window.scrollY > 400) } window.addEventListener('scroll', handleScroll) return () => window.removeEventListener('scroll', handleScroll) }, []) const scrollToTop = () => { window.scrollTo({ top: 0, behavior: 'smooth' })} return (<> {} {showScrollTop && ( <button onClick={scrollToTop} className='fixed bottom-24 right-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white p-3 rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 z-40 hover:scale-110' > <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'> <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 10l7-7m0 0l7 7m-7-7v18' /> </svg> </button> )} {} <Link to='/contact' className='fixed bottom-6 left-6 bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-3 rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 z-40 hover:scale-105' > <div className='flex items-center space-x-2'> <svg className='w-5 h-5' fill='none' stroke='currentColor' viewBox='0 0 24 24'> <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' /> </svg> <span className='text-sm font-medium'>Contact Us</span> </div> </Link> </> ) }
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function FloatingCTA() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="FloatingCTA - Zion Tech Group"
+        description="Professional floatingcta services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              FloatingCTA
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional floatingcta services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,75 @@
- import { motion } from 'framer-motion' import {  Atom, Zap, Brain, CheckCircle, Clock, DollarSign, Users, Shield, Globe, Award, Star, ArrowRight, Phone, Mail, MapPin, ExternalLink, Cpu, Database, Cloud, Smartphone, Lock, BarChart3, TrendingUp, Target, Rocket } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function QuantumComputingAsAService() { const features = [ { icon: <Atom className='w-6 h-6' />, '';' title: 'Quantum Processing Units', '';' description: 'Access to state-of-the-art quantum processors with 100+ qubits for complex computational tasks''},'{''' icon: <Brain className='w-6 h-6' />, '';' title: 'Quantum Machine Learning', '';' description: 'Advanced quantum algorithms for machine learning, optimization, and pattern recognition''},'{''' icon: <Zap className='w-6 h-6' />, '';' title: 'Quantum Simulation Engine', '';' description: 'High-fidelity quantum simulation for chemistry, materials science, and drug discovery''},'{''' icon: <Database className='w-6 h-6' />, '';' title: 'Quantum Database', '';' description: 'Quantum-enhanced database systems for ultra-fast search and optimization queries''},'{''' icon: <Target className='w-6 h-6' />, '';' title: 'Quantum Cryptography', '';' description: 'Unbreakable encryption using quantum key distribution and quantum-resistant algorithms''},'{''' icon: <Rocket className='w-6 h-6' />, '';' title: 'Quantum API Gateway', '';' description: 'RESTful APIs and SDKs for seamless integration with existing applications' } ]';' const pricing = ['{';'' name: 'Quantum Starter', '';' price: '$999', '';' period: '/month',';' features: ['';Up to 100 quantum operations/day', '';Basic quantum algorithms', '';Standard simulation tools', '';Email support', '';Basic quantum education resources', '';Community forum access' ],' popular: false'},'{';'' name: 'Quantum Professional', '';' price: '$2, 999','';' period: '/month',';' features: ['';Up to 1, 000 quantum operations/day','';Advanced quantum algorithms', '';Full simulation suite', '';Priority support', '';Custom algorithm development', '';API access', '';Dedicated quantum engineer' ],' popular: true'},'{';'' name: 'Quantum Enterprise', '';' price: '$9, 999','';' period: '/month',';' features: ['';Unlimited quantum operations', '';Custom quantum circuits', '';White-label solutions', '';On-premise deployment', '';Custom integrations', '';Dedicated support team', '';SLA guarantees', '';Training and certification' ], popular: false' }'; ]'; ';' const benefits = ['';Solve complex problems 1000x faster than classical computers', '';Breakthrough discoveries in drug discovery and materials science', '';Unbreakable quantum encryption for data security', '';Revolutionary optimization for logistics and finance', '';Access to cutting-edge quantum technology without infrastructure costs', '';Future-proof your organization with quantum capabilities' ]';' const useCases = ['{';'' industry: 'Pharmaceuticals', '';' description: 'Quantum simulation for drug discovery, protein folding, and molecular dynamics', '';' advantage: '1000x faster drug discovery''},'{';'' industry: 'Financial Services', '';' description: 'Quantum optimization for portfolio management, risk assessment, and trading algorithms', '';' advantage: 'Exponential speed improvement''},'{';'' industry: 'Materials Science', '';' description: 'Quantum simulation for new materials, battery technology, and superconductors', '';' advantage: 'Revolutionary material discovery''},'{';'' industry: 'Logistics & Supply Chain', '';' description: 'Quantum optimization for route planning, inventory management, and resource allocation', '';' advantage: 'Optimal solutions in seconds'' }'; ]'; ';' const quantumAlgorithms = ['';Grover&apos;s Algorithm for database search', '';Shor&apos;s Algorithm for factoring', '';Quantum Fourier Transform', '';Quantum Approximate Optimization Algorithm (QAOA)', '';Variational Quantum Eigensolver (VQE)', '';Quantum Machine Learning algorithms''; ]'; ';' return (''' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'' <SEO '';' title='Quantum Computing as a Service Platform - Zion Tech Group'';' description='Access cutting-edge quantum computing power through our cloud platform. Solve complex problems 1000x faster with quantum algorithms and simulation tools.''/>';' {}''' <section className='relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8'>''' <div className='max-w-7xl mx-auto text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8 }}';' >''' <h1 className='text-5xl md: text-6xl font-bold text-white mb-6'>'; Quantum Computing as a Service'' </h1>''' <p className='text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>'; Access the power of quantum computing without the complexity. Our cloud platform provides quantum processing,'; algorithms, and simulation tools to solve previously impossible computational challenges.'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function quantumcomputingasaservice() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="quantum computing as a service - Zion Tech Group"
+        description="Professional quantum computing as a service services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              quantum computing as a service
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional quantum computing as a service services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive quantum computing as a service solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,2 +1,47 @@
-' import { useQuery  } from '@tanstack/react-query'' import { getWallet } from '@/api/wallet'' import { Skeleton } from '@/components/ui/skeleton'  const Wallet: any = () => {} const { data, isLoading } = useQuery({}';' queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className="p-4 space-y-4">"""" <h1 className="text-2xl font-bold">Wallet</h1>"""" <Skeleton className="h-6 w-24" />"""" <Skeleton className="h-32 w-full" /> </div> ) } const points: any = data?.points ?? 0 const history: any = data?.history ?? []'" return ("""" <div className="p-4">"""" <h1 className="text-2xl font-bold mb-4">Wallet</h1>"""" <section className="mb-4">"""" <h2 className="text-lg font-semibold">Points</h2> <p>{points}</p>" </section>"" <section>"""" <h2 className="text-lg font-semibold">Transaction History</h2> {history.length === 0 ? (" <p>No transactions yet.</p>"" ) : ("""" <ul className="space-y-2"> {history.map((item, idx) => ( <li key={idx}>{}</li> ))} </ul> )} </section> </div> ) } " export default Wallet'; 
-'; import { useQuery  } from '@tanstack/react-query'' import { getWallet } from '@/api/wallet'' import { Skeleton } from '@/components/ui/skeleton'  const Wallet: any = () => {} const { data, isLoading } = useQuery({}';' queryKey: ['wallet'], queryFn: getWallet})  if(isLoading) {} return () <div className='p-4 space-y-4'>'''' <h1 className='text-2xl font-bold'>Wallet</h1>'''' <Skeleton className='h-6 w-24' />'''' <Skeleton className='h-32 w-full' /> </div> ) } const points: any = data?.points ?? 0 const history: any = data?.history ?? []'' return ('''' <div className='p-4'>'''' <h1 className='text-2xl font-bold mb-4'>Wallet</h1>'''' <section className='mb-4'>'''' <h2 className='text-lg font-semibold'>Points</h2> <p>{points}</p>' </section>'' <section>'''' <h2 className='text-lg font-semibold'>Transaction History</h2> {history.length === 0 ? (' <p>No transactions yet.</p>'' ) : ('''' <ul className='space-y-2'> {history.map((item, idx) => ( <li key={idx}>{}</li> ))} </ul> )} </section> </div> ) } ' export default Wallet'; ''''';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function Wallet() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Wallet - Zion Tech Group"
+        description="Professional wallet services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Wallet
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional wallet services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

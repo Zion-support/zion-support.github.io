@@ -1,2 +1,75 @@
- import { Link    } from 'react-router-dom' import {  TrendingUp, Target, Users, BarChart3, MessageSquare, Phone, Mail, MapPin, CheckCircle, Star, Zap, Shield, Brain, Clock, DollarSign, ArrowRight, Lock, Eye, AlertTriangle, Network, Bug,    } from 'lucide-react' import { SEO } from '@/components/SEO'  const AICybersecurityThreatIntelligencePlatform = () => { const features = [ { icon: Brain, title: 'AI-Powered Threat Detection', description:';Advanced machine learning algorithms analyze network traffic, user behavior, and system logs to identify potential security threats in real-time.', benefits: [';Detect threats 90% faster',';Reduce false positives by 75%',';24/7 automated monitoring', ], }, { icon: Eye, title: 'Real-time Threat Intelligence', description:';Continuous monitoring of global threat landscapes with AI-driven analysis of emerging cyber threats and attack patterns.', benefits: [';Real-time threat updates',';Proactive threat prevention',';Global threat awareness', ], }, { icon: Shield, title: 'Automated Incident Response', description:';Intelligent automation that responds to security incidents immediately, containing threats and minimizing potential damage.', benefits: [';Instant threat containment',';Reduced response time',';Minimized damage impact', ], }, { icon: Network, title: 'Behavioral Analytics', description:';AI-powered user and entity behavior analytics that identify anomalous activities and potential insider threats.', benefits: [';Detect insider threats',';Identify compromised accounts',';Behavioral risk scoring', ], }, ]  const integrations = [ { name: 'SIEM Systems', description: 'Security information and event management integration', }, { name: 'EDR Solutions', description: 'Endpoint detection and response platform sync', }, { name: 'Firewalls', description: 'Next-generation firewall integration' }, { name: 'Active Directory', description: 'User authentication and access control', }, { name: 'Cloud Platforms', description: 'AWS, Azure, and Google Cloud security', }, { name: 'Ticketing Systems', description: 'ServiceNow, Jira, and other ITSM tools', }, ]  const pricingTiers = [ { name: 'Essential', price: 799, period: 'month', description: 'Perfect for small to medium businesses', features: [';Up to 100 endpoints',';Basic threat detection',';Real-time monitoring',';Email alerts',';Basic reporting',';Email support',';Standard compliance', ], popular: false, }, { name: 'Professional', price: 1999, period: 'month', description: 'Ideal for growing organizations', features: [';Up to 1000 endpoints',';Advanced AI features',';Threat intelligence',';Automated response',';Full integrations',';Priority support',';Custom dashboards',';Advanced analytics', ], popular: true, }, { name: 'Enterprise', price: 4999, period: 'month', description: 'For large enterprises and MSSPs', features: [';Unlimited endpoints',';Custom AI models',';Advanced analytics',';API access',';White-label options',';Dedicated account manager',';Custom integrations',';SLA guarantees', ], popular: false, }, ]  const testimonials = [ { name: 'David Chen', role: 'CISO', company: 'Global Financial Services', content:';AI Cybersecurity Threat Intelligence Platform has revolutionized our security operations.We detect threats 90% faster and have reduced false positives significantly.', rating: 5, }, { name: 'Sarah Rodriguez', role: 'Security Operations Manager', company: 'Tech Innovation Corp', content:';The automated incident response and real-time threat intelligence have given us unprecedented visibility into our security posture.Our response time has improved dramatically.', rating: 5, }, { name: 'Michael Thompson', role: 'Director of IT Security', company: 'Healthcare Network', content:'The behavioral analytics and insider threat detection features have helped us identify and prevent security incidents before they become major problems.', rating: 5, }, ]  return ( <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">" <SEO"" title="AI Cybersecurity Threat Intelligence Platform — Zion Tech Group | Intelligent Cybersecurity"" description="Transform your cybersecurity with AI-powered threat detection, real-time intelligence, automated response, and behavioral analytics.Detect threats 90% faster and reduce false positives by 75%."" keywords="AI cybersecurity, threat intelligence, threat detection, incident response, behavioral analytics, security AI"" canonical="https:
- import { Link    } from 'react-router-dom' import {  TrendingUp, Target, Users, BarChart3, MessageSquare, Phone, Mail, MapPin, CheckCircle, Star, Zap, Shield, Brain, Clock, DollarSign, ArrowRight, Lock, Eye, AlertTriangle, Network, Bug,    } from 'lucide-react' import { SEO } from '@/components/SEO'  const AICybersecurityThreatIntelligencePlatform = () => { const features = [ { icon: Brain, title: 'AI-Powered Threat Detection', description:';Advanced machine learning algorithms analyze network traffic, user behavior, and system logs to identify potential security threats in real-time.', benefits: [';Detect threats 90% faster',';Reduce false positives by 75%',';24/7 automated monitoring', ], }, { icon: Eye, title: 'Real-time Threat Intelligence', description:';Continuous monitoring of global threat landscapes with AI-driven analysis of emerging cyber threats and attack patterns.', benefits: [';Real-time threat updates',';Proactive threat prevention',';Global threat awareness', ], }, { icon: Shield, title: 'Automated Incident Response', description:';Intelligent automation that responds to security incidents immediately, containing threats and minimizing potential damage.', benefits: [';Instant threat containment',';Reduced response time',';Minimized damage impact', ], }, { icon: Network, title: 'Behavioral Analytics', description:';AI-powered user and entity behavior analytics that identify anomalous activities and potential insider threats.', benefits: [';Detect insider threats',';Identify compromised accounts',';Behavioral risk scoring', ], }, ]  const integrations = [ { name: 'SIEM Systems', description: 'Security information and event management integration', }, { name: 'EDR Solutions', description: 'Endpoint detection and response platform sync', }, { name: 'Firewalls', description: 'Next-generation firewall integration' }, { name: 'Active Directory', description: 'User authentication and access control', }, { name: 'Cloud Platforms', description: 'AWS, Azure, and Google Cloud security', }, { name: 'Ticketing Systems', description: 'ServiceNow, Jira, and other ITSM tools', }, ]  const pricingTiers = [ { name: 'Essential', price: 799, period: 'month', description: 'Perfect for small to medium businesses', features: [';Up to 100 endpoints',';Basic threat detection',';Real-time monitoring',';Email alerts',';Basic reporting',';Email support',';Standard compliance', ], popular: false, }, { name: 'Professional', price: 1999, period: 'month', description: 'Ideal for growing organizations', features: [';Up to 1000 endpoints',';Advanced AI features',';Threat intelligence',';Automated response',';Full integrations',';Priority support',';Custom dashboards',';Advanced analytics', ], popular: true, }, { name: 'Enterprise', price: 4999, period: 'month', description: 'For large enterprises and MSSPs', features: [';Unlimited endpoints',';Custom AI models',';Advanced analytics',';API access',';White-label options',';Dedicated account manager',';Custom integrations',';SLA guarantees', ], popular: false, }, ]  const testimonials = [ { name: 'David Chen', role: 'CISO', company: 'Global Financial Services', content:';AI Cybersecurity Threat Intelligence Platform has revolutionized our security operations.We detect threats 90% faster and have reduced false positives significantly.', rating: 5, }, { name: 'Sarah Rodriguez', role: 'Security Operations Manager', company: 'Tech Innovation Corp', content:';The automated incident response and real-time threat intelligence have given us unprecedented visibility into our security posture.Our response time has improved dramatically.', rating: 5, }, { name: 'Michael Thompson', role: 'Director of IT Security', company: 'Healthcare Network', content:'The behavioral analytics and insider threat detection features have helped us identify and prevent security incidents before they become major problems.', rating: 5, }, ]  return ( <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">" <SEO"" title="AI Cybersecurity Threat Intelligence Platform — Zion Tech Group | Intelligent Cybersecurity"" description="Transform your cybersecurity with AI-powered threat detection, real-time intelligence, automated response, and behavioral analytics.Detect threats 90% faster and reduce false positives by 75%."" keywords="AI cybersecurity, threat intelligence, threat detection, incident response, behavioral analytics, security AI"" canonical="https:
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function AICybersecurityThreatIntelligencePlatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AICybersecurityThreatIntelligencePlatform - Zion Tech Group"
+        description="Professional aicybersecuritythreatintelligenceplatform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AICybersecurityThreatIntelligencePlatform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional aicybersecuritythreatintelligenceplatform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive aicybersecuritythreatintelligenceplatform solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

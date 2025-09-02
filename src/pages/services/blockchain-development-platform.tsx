@@ -1,1 +1,75 @@
- import { motion } from 'framer-motion' import {  Link, Shield, Brain, CheckCircle, Clock, DollarSign, Users, Globe, Award, Star, ArrowRight, Phone, Mail, MapPin, ExternalLink, Cpu, Database, Cloud, Smartphone, Lock, BarChart3, TrendingUp, Target, Rocket, Zap, Code, Network, Wallet } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function BlockchainDevelopmentPlatform() { const features = [ { icon: <Code className='w-6 h-6' />, '';' title: 'Smart Contract Development', '';' description: 'Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain applications''},'{''' icon: <Network className='w-6 h-6' />, '';' title: 'Multi-Chain Support', '';' description: 'Build on Ethereum, Polygon, Binance Smart Chain, Solana, and other leading blockchain networks''},'{''' icon: <Shield className='w-6 h-6' />, '';' title: 'Security & Auditing', '';' description: 'Comprehensive security audits, penetration testing, and vulnerability assessment for blockchain applications''},'{''' icon: <Wallet className='w-6 h-6' />, '';' title: 'Wallet Integration', '';' description: 'Seamless integration with MetaMask, WalletConnect, and custom wallet solutions''},'{''' icon: <Database className='w-6 h-6' />, '';' title: 'Blockchain Infrastructure', '';' description: 'Node management, RPC endpoints, and blockchain data indexing services''},'{''' icon: <Rocket className='w-6 h-6' />, '';' title: 'Deployment & Management', '';' description: 'Automated deployment, monitoring, and maintenance of blockchain applications' } ]';' const pricing = ['{';'' name: 'Developer', '';' price: '$299', '';' period: '/month',';' features: ['';Smart contract development', '';Basic security audit', '';Multi-chain deployment', '';API access', '';Email support', '';Community forum access', '';Documentation & tutorials' ],' popular: false'},'{';'' name: 'Professional', '';' price: '$1, 299','';' period: '/month',';' features: ['';Advanced smart contracts', '';Comprehensive security audit', '';Custom blockchain solutions', '';Priority support', '';Custom integrations', '';Performance optimization', '';Dedicated developer', '';SLA guarantees' ],' popular: true'},'{';'' name: 'Enterprise', '';' price: '$4, 999','';' period: '/month',';' features: ['';Custom blockchain networks', '';White-label solutions', '';On-premise deployment', '';Custom security protocols', '';Dedicated support team', '';Training and certification', '';Compliance consulting', '';24/7 monitoring' ], popular: false' }'; ]'; ';' const benefits = ['';Launch blockchain applications 3x faster', '';Reduce development costs by 60%', '';Ensure 99.9% security with audited contracts', '';Access to enterprise-grade infrastructure', '';Multi-chain compatibility for maximum reach', '';Expert blockchain development team' ]';' const useCases = ['{';'' industry: 'DeFi & Finance', '';' description: 'Decentralized exchanges, lending platforms, yield farming, and financial instruments','';' advantage: 'Launch DeFi protocols in weeks''},'{';'' industry: 'NFTs & Gaming', '';' description: 'NFT marketplaces, gaming platforms, digital collectibles, and metaverse applications','';' advantage: 'Create NFT ecosystems rapidly''},'{';'' industry: 'Supply Chain', '';' description: 'Transparent tracking, authentication, and verification of products and materials', '';' advantage: 'End-to-end traceability''},'{';'' industry: 'Healthcare', '';' description: 'Secure medical records, drug authentication, and patient data management', '';' advantage: 'HIPAA-compliant blockchain'' }'; ]'; ';' const blockchainNetworks = ['';Ethereum (ETH)', '';Polygon (MATIC)', '';Binance Smart Chain (BSC)', '';Solana (SOL)', '';Cardano (ADA)', '';Polkadot (DOT)', '';Avalanche (AVAX)', '';Arbitrum (ARB)''; ]'; ';' const services = ['';Smart Contract Development', '';DApp Frontend Development', '';Blockchain API Development', '';Security Auditing', '';Token Development (ERC-20, ERC-721)', '';DeFi Protocol Development', '';NFT Marketplace Development', '';Blockchain Consulting''; ]'; ';' return (''' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'' <SEO '';' title='Blockchain Development & Smart Contract Platform - Zion Tech Group'';' description='Comprehensive blockchain development platform for DeFi, NFTs, DAOs, and enterprise applications. Launch blockchain apps 3x faster with audited smart contracts.''/>';' {}''' <section className='relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8'>''' <div className='max-w-7xl mx-auto text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8 }}';' >''' <h1 className='text-5xl md: text-6xl font-bold text-white mb-6'>'; Blockchain Development Platform'' </h1>''' <p className='text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>'; Build, deploy, and manage blockchain applications with our comprehensive development platform.'; Launch DeFi protocols, NFT marketplaces, and enterprise solutions with audited smart contracts.'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function blockchaindevelopmentplatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="blockchain development platform - Zion Tech Group"
+        description="Professional blockchain development platform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              blockchain development platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional blockchain development platform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive blockchain development platform solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

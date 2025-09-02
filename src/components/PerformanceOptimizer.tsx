@@ -1,29 +1,47 @@
-import { useEffect } from 'react'';interface PerformanceOptimizerProps {
-   children: React.ReactNode}export const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({ children }) => {
-  useEffect ( () => {
-    // Preload critical resources;
-const preloadCriticalResources = () => {
-      const criticalFonts = [';https: //fonts.googleapis.com / css2?family = Orbitron:wght@400;600 & display = swap''      ]';criticalFonts.forEach (font => {
-        const link = document.createElement ('link') '        link.rel = 'preload'        link.as = 'style'        link.href = font'        document.head.appendChild (link) })}
-;
-    // Optimize images;
-const optimizeImages = () => {
-      const images = document.querySelectorAll ('img') '      images.forEach (img => {'        if (!img.loading) {
-          img.loading = 'lazy'        }'        if (!img.decoding) {
-          img.decoding = 'async'        }'      })}// Initialize optimizations;
-    preloadCriticalResources () ;
-    optimizeImages () ;
-    // Set up intersection observer for lazy loading;
-const observer = new IntersectionObserver ( (entries) => {
-        entries.forEach (entry => {
-          if (entry.isIntersecting) {
-            const target = entry.target as HTMLElement;
-            if (target.dataset.src) {
-target.style.backgroundImage = `url (${target.dataset.src}) `              target.removeAttribute ('data - src') '              observer.unobserve (target) '            }
-          }
-        })}, { rootMargin: '50px' }') ';// Observe lazy load elements;
-    const lazyElements = document.querySelectorAll ('[data - src]') '    lazyElements.forEach (el => observer.observe (el) ) ';return () => {
-      observer.disconnect () }
-  }, []) 
-  return <>{children}</>
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function PerformanceOptimizer() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="PerformanceOptimizer - Zion Tech Group"
+        description="Professional performanceoptimizer services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              PerformanceOptimizer
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional performanceoptimizer services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
 }

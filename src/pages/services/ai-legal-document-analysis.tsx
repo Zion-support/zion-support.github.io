@@ -1,1 +1,75 @@
- import { motion } from 'framer-motion' import {  FileText, Search, Shield, Zap, Brain, CheckCircle, Clock, DollarSign, Users, BarChart3, Lock, Globe, Award, Star, ArrowRight, Phone, Mail, MapPin, ExternalLink } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AILegalDocumentAnalysis() { const features = [ { icon: <Brain className='w-6 h-6' />, '';' title: 'AI-Powered Contract Analysis', '';' description: 'Advanced NLP algorithms analyze contracts, identify risks, and extract key terms with 99.2% accuracy''},'{''' icon: <Search className='w-6 h-6' />, '';' title: 'Intelligent Document Search', '';' description: 'Semantic search across millions of legal documents with context-aware results and relevance scoring''},'{''' icon: <Shield className='w-6 h-6' />, '';' title: 'Compliance Monitoring', '';' description: 'Real-time compliance tracking with automated alerts for regulatory changes and deadline management''},'{''' icon: <Zap className='w-6 h-6' />, '';' title: 'Automated Risk Assessment', '';' description: 'AI-driven risk scoring and mitigation recommendations for legal documents and contracts''},'{''' icon: <Users className='w-6 h-6' />, '';' title: 'Collaborative Review', '';' description: 'Multi-user document review with version control, comments, and approval workflows''},'{''' icon: <BarChart3 className='w-6 h-6' />, '';' title: 'Analytics Dashboard', '';' description: 'Comprehensive insights into document patterns, risk trends, and compliance metrics' } ]';' const pricing = ['{';'' name: 'Starter', '';' price: '$299', '';' period: '/month',';' features: ['';Up to 100 documents/month', '';Basic AI analysis', '';Standard search', '';Email support', '';Basic compliance alerts' ],' popular: false'},'{';'' name: 'Professional', '';' price: '$799', '';' period: '/month',';' features: ['';Up to 1, 000 documents/month','';Advanced AI analysis', '';Semantic search', '';Priority support', '';Full compliance monitoring', '';Risk assessment', '';API access' ],' popular: true'},'{';'' name: 'Enterprise', '';' price: '$1, 999','';' period: '/month',';' features: ['';Unlimited documents', '';Custom AI models', '';Advanced analytics', '';Dedicated support', '';Custom integrations', '';White-label options', '';SLA guarantees' ], popular: false' }'; ]'; ';' const benefits = ['';Reduce legal review time by 85%', '';Identify contract risks 3x faster', '';Ensure 100% compliance accuracy', '';Save $50, 000+ annually on legal costs','';Improve contract negotiation outcomes', '';Streamline due diligence processes''; ]'; ';' return (''' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'' <SEO '';' title='AI-Powered Legal Document Analysis Platform - Zion Tech Group'';' description='Advanced AI platform for legal document analysis, contract review, and compliance monitoring. Reduce legal review time by 85% with intelligent automation.''/>';' {}''' <section className='relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8'>''' <div className='max-w-7xl mx-auto text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8 }}';' >''' <h1 className='text-5xl md: text-6xl font-bold text-white mb-6'>'; AI-Powered Legal Document Analysis'' </h1>''' <p className='text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>'; Transform your legal operations with intelligent document analysis, automated risk assessment, and compliance monitoring.'; Reduce review time by 85% while improving accuracy and reducing costs.'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function ailegaldocumentanalysis() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai legal document analysis - Zion Tech Group"
+        description="Professional ai legal document analysis services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai legal document analysis
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai legal document analysis services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai legal document analysis solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,2 +1,75 @@
- import { motion } from 'framer-motion' import { SEO } from '@/components/SEO'  const AIHealthcareDiagnostics: React.FC = () => { const features = ['AI-powered medical image analysis (X-ray, MRI, CT, ultrasound)',';Real-time diagnostic assistance for radiologists and physicians',';Predictive analytics for disease progression and treatment outcomes',';Automated medical report generation with clinical insights',';Multi-modal data fusion for comprehensive patient assessment',';HIPAA-compliant secure data handling and patient privacy',';Integration with major EHR systems (Epic, Cerner, Allscripts)',';Real-time clinical decision support and alerts',';Automated quality assurance and error detection',';Continuous learning from clinical outcomes and feedback' ]  const benefits = ['Improve diagnostic accuracy by 25-40% through AI assistance',';Reduce radiologist workload by 30-50% with automation',';Accelerate diagnosis time from hours to minutes',';Enhance early detection of critical conditions',';Reduce healthcare costs through preventive care optimization' ]  const pricing = [ { plan: 'Clinic', price: '$2, 999', period: 'month', features: ['Up to 1, 000 studies/month', 'Basic AI diagnostics', 'Standard EHR integration', 'Email support', 'Basic reporting'], popular: false }, { plan: 'Hospital', price: '$7, 999', period: 'month', features: ['Up to 10, 000 studies/month', 'Advanced AI algorithms', 'Full EHR integration', 'Priority support', 'Advanced analytics', 'Custom workflows'], popular: true }, { plan: 'Health System', price: '$19, 999', period: 'month', features: ['Unlimited studies', 'Custom AI models', 'Multi-EHR integration', 'Dedicated support', 'White-label solution', 'On-premise deployment'], popular: false } ]  const specialties = ['Radiology & Imaging',';Cardiology',';Oncology',';Neurology',';Pathology',';Emergency Medicine',';Primary Care',';Specialty Clinics' ]  const compliance = ['HIPAA Compliance',';FDA 510(k) Clearance',';SOC 2 Type II',';ISO 13485',';GDPR Compliance','HITECH Act Compliance' ]  return ( <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-blue-100">'" <SEO "';" title="AI Healthcare Diagnostics Platform | Zion Tech Group"';" description="Revolutionary AI-powered healthcare diagnostics platform that enhances medical imaging analysis, improves diagnostic accuracy, and accelerates patient care delivery."';" keywords="AI healthcare, medical diagnostics, medical imaging, AI radiology, healthcare AI, diagnostic assistance"'/>';" {}"'" <section className="relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-teal-900 text-white">"'" <div className="absolute inset-0 bg-black/20"></div>"'" <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">" <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';" transition={{ duration: 0.8 }}"';" className="text-center"';" >"'" <div className="flex justify-center mb-6">"'" <div className="p-3 bg-green-500/20 rounded-full">"'" <Stethoscope className="w-8 h-8 text-green-300" />' </div>'" </div>"'" <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-green-300 to-blue-300 bg-clip-text text-transparent">'; AI Healthcare Diagnostics Platform'" </h1>"'" <p className="text-xl md: text-2xl text-green-100 mb-8 max-w-4xl mx-auto">'; Transform healthcare delivery with AI-powered diagnostic assistance, medical image analysis, and clinical decision support'" </p>"'" <div className="flex flex-col sm: flex-row gap-4 justify-center">'" <a"';" href="https:""";
- import { motion } from 'framer-motion' import { SEO } from '@/components/SEO'  const AIHealthcareDiagnostics: React.FC = () => { const features = ['AI-powered medical image analysis (X-ray, MRI, CT, ultrasound)',';Real-time diagnostic assistance for radiologists and physicians',';Predictive analytics for disease progression and treatment outcomes',';Automated medical report generation with clinical insights',';Multi-modal data fusion for comprehensive patient assessment',';HIPAA-compliant secure data handling and patient privacy',';Integration with major EHR systems (Epic, Cerner, Allscripts)',';Real-time clinical decision support and alerts',';Automated quality assurance and error detection',';Continuous learning from clinical outcomes and feedback' ]  const benefits = ['Improve diagnostic accuracy by 25-40% through AI assistance',';Reduce radiologist workload by 30-50% with automation',';Accelerate diagnosis time from hours to minutes',';Enhance early detection of critical conditions',';Reduce healthcare costs through preventive care optimization' ]  const pricing = [ { plan: 'Clinic', price: '$2, 999', period: 'month', features: ['Up to 1, 000 studies/month', 'Basic AI diagnostics', 'Standard EHR integration', 'Email support', 'Basic reporting'], popular: false }, { plan: 'Hospital', price: '$7, 999', period: 'month', features: ['Up to 10, 000 studies/month', 'Advanced AI algorithms', 'Full EHR integration', 'Priority support', 'Advanced analytics', 'Custom workflows'], popular: true }, { plan: 'Health System', price: '$19, 999', period: 'month', features: ['Unlimited studies', 'Custom AI models', 'Multi-EHR integration', 'Dedicated support', 'White-label solution', 'On-premise deployment'], popular: false } ]  const specialties = ['Radiology & Imaging',';Cardiology',';Oncology',';Neurology',';Pathology',';Emergency Medicine',';Primary Care',';Specialty Clinics' ]  const compliance = ['HIPAA Compliance',';FDA 510(k) Clearance',';SOC 2 Type II',';ISO 13485',';GDPR Compliance','HITECH Act Compliance' ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-blue-100'>'' <SEO '';' title='AI Healthcare Diagnostics Platform | Zion Tech Group'';' description='Revolutionary AI-powered healthcare diagnostics platform that enhances medical imaging analysis, improves diagnostic accuracy, and accelerates patient care delivery.'';' keywords='AI healthcare, medical diagnostics, medical imaging, AI radiology, healthcare AI, diagnostic assistance''/>';' {}''' <section className='relative overflow-hidden bg-gradient-to-r from-green-900 via-blue-900 to-teal-900 text-white'>''' <div className='absolute inset-0 bg-black/20'></div>''' <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24'>' <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';' transition={{ duration: 0.8 }}'';' className='text-center'';' >''' <div className='flex justify-center mb-6'>''' <div className='p-3 bg-green-500/20 rounded-full'>''' <Stethoscope className='w-8 h-8 text-green-300' />' </div>'' </div>''' <h1 className='text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-green-300 to-blue-300 bg-clip-text text-transparent'>'; AI Healthcare Diagnostics Platform'' </h1>''' <p className='text-xl md: text-2xl text-green-100 mb-8 max-w-4xl mx-auto'>'; Transform healthcare delivery with AI-powered diagnostic assistance, medical image analysis, and clinical decision support'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function aihealthcarediagnostics() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai healthcare diagnostics - Zion Tech Group"
+        description="Professional ai healthcare diagnostics services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai healthcare diagnostics
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai healthcare diagnostics services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai healthcare diagnostics solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

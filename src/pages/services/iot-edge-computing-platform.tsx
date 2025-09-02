@@ -1,1 +1,75 @@
- import { motion    } from 'framer-motion' import {  Cpu, Zap, Brain, CheckCircle, Clock, DollarSign, Users, Shield, Globe, Award, Star, ArrowRight, Phone, Mail, MapPin, ExternalLink, Database, Cloud, Smartphone, Lock, BarChart3, TrendingUp, Target, Rocket, Wifi, Activity, Server, Network    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function IoTEdgeComputingPlatform() { const features = [ { icon: <Cpu className='w-6 h-6' />,'';' title: 'Edge Computing Nodes','';' description: 'Distributed edge computing infrastructure with real-time processing capabilities and low-latency response''},'{''' icon: <Activity className='w-6 h-6' />,'';' title: 'IoT Device Management','';' description: 'Comprehensive management of IoT sensors, devices, and gateways with automated provisioning and monitoring''},'{''' icon: <Brain className='w-6 h-6' />,'';' title: 'AI at the Edge','';' description: 'Local AI processing and machine learning models for real-time decision making without cloud dependency''},'{''' icon: <Network className='w-6 h-6' />,'';' title: '5G & LPWAN Support','';' description: 'Multi-network connectivity supporting 5G, LoRaWAN, Sigfox, and other IoT communication protocols''},'{''' icon: <Database className='w-6 h-6' />,'';' title: 'Edge Data Processing','';' description: 'Local data processing, filtering, and analytics to reduce bandwidth and improve response times''},'{''' icon: <Shield className='w-6 h-6' />,'';' title: 'Edge Security','';' description: 'Advanced security protocols, encryption, and access control for edge computing environments' } ]';' const pricing = ['{';'' name: 'IoT Starter','';' price: '$199','';' period: '/month',';' features: ['';Up to 100 IoT devices','';Basic edge computing','';Standard monitoring','';Email alerts','';Basic analytics dashboard','';Email support','';Community forum access' ],' popular: false'},'{';'' name: 'IoT Professional','';' price: '$899','';' period: '/month',';' features: ['';Up to 1,000 IoT devices','';Advanced edge computing','';AI at the edge','';Real-time monitoring','';Custom dashboards','';API access','';Priority support','';SLA guarantees' ],' popular: true'},'{';'' name: 'IoT Enterprise','';' price: '$2,999','';' period: '/month',';' features: ['';Unlimited IoT devices','';Custom edge solutions','';On-premise deployment','';Custom integrations','';White-label options','';Dedicated support team','';Training and certification','';24/7 monitoring' ], popular: false' }'; ]'; ';' const benefits = ['';Reduce latency by 90% with edge processing','';Lower bandwidth costs by 70%','';Improve reliability with offline capabilities','';Scale IoT deployments 10x faster','';Real-time decision making at the edge','';Enhanced security and privacy' ]';' const useCases = ['{';'' industry: 'Smart Cities','';' description: 'Traffic management, environmental monitoring, smart lighting, and public safety systems','';' advantage: 'Real-time city management''},'{';'' industry: 'Industrial IoT','';' description: 'Predictive maintenance, quality control, supply chain optimization, and safety monitoring','';' advantage: 'Zero-downtime operations''},'{';'' industry: 'Healthcare','';' description: 'Patient monitoring, medical device management, and remote healthcare delivery','';' advantage: '24/7 patient care''},'{';'' industry: 'Agriculture','';' description: 'Precision farming, crop monitoring, irrigation control, and livestock tracking','';' advantage: 'Optimized crop yields'' }'; ]'; ';' const iotProtocols = ['';MQTT','';CoAP','';HTTP/HTTPS','';LoRaWAN','';Sigfox','';NB-IoT','';Bluetooth Low Energy','';Zigbee''; ]'; ';' const edgeCapabilities = ['';Real-time data processing','';Local AI inference','';Data filtering & aggregation','';Edge-to-cloud synchronization','';Offline operation','';Local storage management','';Device provisioning','';Firmware updates''; ]'; ';' return (''' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'' <SEO '';' title='IoT Edge Computing Platform - Zion Tech Group'';' description='Comprehensive IoT edge computing platform for smart cities, industrial IoT, healthcare, and agriculture.Reduce latency by 90% and lower bandwidth costs by 70%.''/>';' {}''' <section className='relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8'>''' <div className='max-w-7xl mx-auto text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8  }}';' >''' <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'; IoT Edge Computing Platform'' </h1>''' <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>'; Transform your IoT deployments with our edge computing platform.Process data locally, reduce latency by 90%,'; and enable real-time decision making without cloud dependency.'' </p>''' <div className='flex flex-col sm:flex-row gap-4 justify-center'>'' <a'';' href="https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function iotedgecomputingplatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="iot edge computing platform - Zion Tech Group"
+        description="Professional iot edge computing platform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              iot edge computing platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional iot edge computing platform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive iot edge computing platform solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

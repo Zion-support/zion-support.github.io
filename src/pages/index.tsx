@@ -1,1 +1,47 @@
- import Head from 'next / head' import Link from 'next / link' export default React.memo(function Home () { return (<> <Head> <title > Zion Tech Group - Leading AI & Technology Solutions</title> <meta name='description' content='Transform your business with Zion Tech Group & aposs cutting - edge AI solutions, quantum computing, and innovative micro SAAS services.' / /> <meta name='viewport' content='width = device - width, initial - scale = 1' / /> <link rel='icon' href='/favicon.ico' / /> </Head> <div className='min - h-screen bg - gradient - to - br from - slate - 50 via - white to - blue - 50'> {} <nav className='bg - white / 80 backdrop - blur - md shadow - lg border - b border - gray - 200 sticky top - 0 z - 50'> <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'> <div className='flex justify - between items - center h - 16'> <div className='flex items - center'> <h1 className='text - 2xl font - bold text - gray - 900'>Zion Tech Group</h1> </div> <div className='hidden md:flex space - x-8'> <Link href='/' className='text - gray - 700 hover:text - blue - 600 transition - colors'>Home</Link> <Link href='/services' className='text - gray - 700 hover:text - blue - 600 transition - colors'>Services</Link> <Link href='/solutions' className='text - gray - 700 hover:text - blue - 600 transition - colors'>Solutions</Link> <Link href='/about' className='text - gray - 700 hover:text - blue - 600 transition - colors'>About</Link> <Link href='/contact' className='text - gray - 700 hover:text - blue - 600 transition - colors'>Contact</Link> </div> </div> </div> </nav> {} <section className='py - 20 sm:py - 32'> <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'> <h1 className='text - 4xl sm:text - 6xl font - bold text - gray - 900 mb - 6'> Transform Your Business with < span className='text - blue - 600'> AI - Powered Solutions</span> </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto mb - 8'> Leading - edge technology solutions for modern businesses. From AI automation to quantum computing, we help you stay ahead of the curve. </p> <div className='flex flex - col sm: flex - row gap - 4 justify - center'> <Link href='/services' className='bg - blue - 600 text - white px - 8 py - 3 rounded - lg hover:bg - blue - 700 transition - colors'> Explore Services </Link> <Link href='/contact' className='border border - blue - 600 text - blue - 600 px - 8 py - 3 rounded - lg hover:bg - blue - 50 transition - colors'> Get Started </Link> </div> </div> </section> {} <section className='py - 20 bg - white'> <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'> <h2 className='text - 3xl font - bold text - center text - gray - 900 mb - 12'>Our Core Services</h2> <div className='grid md:grid - cols - 3 gap - 8'> <div className='text - center p - 6 rounded - lg border border - gray - 200'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>AI Solutions</h3> <p className='text - gray - 600'>Cutting - edge artificial intelligence solutions for business automation and optimization.</p> </div> <div className='text - center p - 6 rounded - lg border border - gray - 200'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>Micro SAAS</h3> <p className='text - gray - 600'>Scalable software - as - a-service solutions tailored to your specific business needs.</p> </div> <div className='text - center p - 6 rounded - lg border border - gray - 200'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>IT Services</h3> <p className='text - gray - 600'>Comprehensive IT infrastructure and support services for modern enterprises.</p> </div> </div> </div> </section> {} <section className='py - 20 bg - gray - 50'> <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'> <h2 className='text - 3xl font - bold text - gray - 900 mb - 8'>Ready to Get Started?</h2> <div className='grid md:grid - cols - 3 gap - 8'> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Phone</h3> <p className='text - gray - 600'>+1 302 464 0950</p> </div> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Email</h3> <p className='text - gray - 600'>kleber@ziontechgroup.com</p> </div> <div> <h3 className='text - lg font - semibold text - gray - 900 mb - 2'>Address</h3> <p className='text - gray - 600'>364 E Main St STE 1008 < br / />Middletown DE 19709</p> </div> </div> </div> </section> </div> </>)  }''''"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function index() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="index - Zion Tech Group"
+        description="Professional index services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              index
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional index services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

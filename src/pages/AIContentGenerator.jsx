@@ -1,1 +1,47 @@
- import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card'';'' import { Button } from '@/components / ui / button'';'' import { Badge } from '@/components / ui / badge'';'' import SEO from '@/components / SEO'';'' import { PenTool, FileText, Brain, Zap, Target, Users, ArrowRight, CheckCircle, Star, Globe, Shield, Type, Video, ShoppingBag, Mail } from 'lucide - react'';'' import { Link } from 'react - router - dom'' export default function AIContentGenerator () {'; const features = ['{';'' title: 'AI Writing Assistant', '';' description: 'Generate high - quality content for blogs, social media, and marketing campaigns', '';' icon: <PenTool className='h - 6 w - 6 text - zion - cyan'/>'},'{';'' title: 'Multi - Format Support', '';' description: 'Create content in various formats: text, images, videos, and audio',''' icon: <FileText className='h - 6 w - 6 text - zion - purple'/>'},'{';'' title: 'Brand Voice Consistency', '';' description: 'Maintain your brand & apos;s unique voice across all content pieces', ''' icon: <Type className='h - 6 w - 6 text - zion - blue'/>'},'{';'' title: 'SEO Optimization', '';' description: 'AI - powered SEO suggestions to improve content visibility and ranking', ''' icon: <Target className='h - 6 w - 6 text - zion - cyan'/> }' ]'; const contentTypes = ['{';'' import: { SEO }, from, '@/components / SEO':  , '';' import: { Button }, from, '@/components / ui / button':  , '';' import: { Card, CardContent, CardDescription, CardHeader, CardTitle }, from, '@/components / ui / card':  , '';' import: { Badge }, from, '@/components / ui / badge':  , '';' import: { Check, Brain, Zap, FileText, Globe, Users, Shield, Clock, Star }, from, 'lucide - react':  , '';' import: { Link }, from, 'react - router - dom':  ,'; function: AIContentGenerator () '}, {';' const: features = ['';AI - powered content generation for any industry', '';SEO - optimized content with keyword research', '';Multiple content formats (blogs, social media, emails) ', '';Brand voice customization and consistency', '';Plagiarism - free, original content','';Real - time content optimization', '';Multi - language support (100 + languages) ', '';Content calendar and scheduling', '';Performance analytics and insights', '';Team collaboration tools', '';API access for enterprise integration', '';24 / 7 customer support', '';' title, 'Blog Posts','';' description, 'Long - form articles and blog content',''' icon, <FileText className='h - 8 w - 8 text - zion - cyan'/>' ]'},'{';'' title: 'Social Media', '';' description: 'Posts for all major social platforms', ''' icon: <Users className='h - 8 w - 8 text - zion - purple'/>'},'{';'' title: 'Marketing Copy', '';' description: 'Ads, landing pages, and promotional content', ''' icon: <Target className='h - 8 w - 8 text - zion - blue'/>'},'{';'' title: 'Product Descriptions', '';' description: 'Compelling product and service descriptions', ''' icon: <ShoppingBag className='h - 8 w - 8 text - zion - cyan'/>'},'{';'' title: 'Email Campaigns', '';' description: 'Newsletters and email marketing content', ''' icon: <Mail className='h - 8 w - 8 text - zion - purple'/>'},'{';'' title: 'Video Scripts', '';' description: 'Scripts for video content and presentations', ''' icon: <Video className='h - 8 w - 8 text - zion - blue'/> }' ]'; const pricingPlans = ['{';'' name: 'Starter', '';' price: '$49', '';' period: '/month', '';' description: 'Perfect for individuals and small businesses',';' features: ['';Up to 50 content pieces / month', '';Basic AI writing tools', '';Standard templates', '';Email support', '';Basic SEO suggestions' ],' popular: false'},'{';'' name: 'Professional', '';' price: '$149', '';' period: '/month', '';' description: 'Advanced content creation for growing businesses',';' features: ['';Up to 200 content pieces / month', '';Advanced AI writing tools', '';Custom templates', '';Priority support', '';Advanced SEO optimization', '';Brand voice training', '';Multi - language support' ],' popular: true'},'{';'' name: 'Enterprise', '';' title: 'Blog Content Creation', '';' description: 'Generate engaging blog posts, articles, and long - form content optimized for SEO and reader engagement.', ''' icon: <FileText className='h - 8 w - 8 text - zion - cyan'/>'},'{';'' title: 'Social Media Marketing', '';' description: 'Create compelling social media posts, captions, and campaigns across all platforms.', ''' icon: <Globe className='h - 8 w - 8 text - zion - purple'/>'},'{';'' title: 'Email Marketing', '';' description: 'Generate personalized email campaigns, newsletters, and automated sequences.', ''' icon: <Users className='h - 8 w - 8 text - zion - cyan'/>'},'{';'' title: 'Product Descriptions', '';' description: 'Create compelling product descriptions, features, and marketing copy.', ''' icon: <Zap className='h - 8 w - 8 text - zion - purple'/>, '';' price: '$399', '';' period: '/month', '';' description: 'Full - scale content creation for large organizations',';' features: ['';Unlimited content pieces', '';Custom AI models', '';White - label solutions', '';Dedicated support', '';Advanced analytics', '';API access', '';Custom integrations' ], popular: false }' ]'; const testimonials = ['{';'' name: 'Jennifer Martinez', '';' role: 'Marketing Director, GrowthBrand','';' content: 'Zion & apos;s AI Content Generator increased our content output by 300% while maintaining quality. Game - changer!',' rating: 5'},'{';'' name: 'David Kim', '';' role: 'Content Creator, TechBlog','';' content: 'The AI writing assistant is incredibly intuitive. It understands context and generates engaging content.',' rating: 5'},'{';'' name: 'Lisa Thompson', '';' role: 'CEO, StartupXYZ','';' content: 'We & apos;ve saved countless hours on content creation. The ROI is immediate and substantial.','; rating: 5'}';' ]''' return (<div className='min - h-screen bg - gradient - to - br from - zion - slate - dark via - zion - purple - dark to - zion - slate - dark'>''' <SEO title='AI Content Generator - Zion Tech Group' description='Create engaging, high - quality content with AI - powered writing tools. Generate blogs, social media posts, and marketing copy instantly.' keywords='AI content generator, content creation, AI writing, marketing copy, Zion Tech Group' canonical='https:''''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function AIContentGenerator() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AIContentGenerator - Zion Tech Group"
+        description="Professional aicontentgenerator services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AIContentGenerator
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional aicontentgenerator services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

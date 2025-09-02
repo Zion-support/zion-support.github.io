@@ -1,2 +1,47 @@
-" import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown const navigationItems = [ {} " " name: "Home", " href: "/"," icon: <Home className="w-5 h-5"/>, " description: "Welcome to the future" }, {} " name: "Services", " href: "/services"," icon: <Briefcase className="w-5 h-5"/>, " description: "Our revolutionary solutions"," children[" { name: "AI & Automation", href: "/services/ai-automation", icon: <Brain className="w-4 h-4"/> }, " { name: "Micro SaaS", href: "/services/micro-saas", icon: <Zap className="w-4 h-4"/> }," { name: "Cloud & Infrastructure", href: "/services/cloud-infrastructure", icon: <Globe className="w-4 h-4"/> }, " { name: "Cybersecurity", href: "/services/cybersecurity", icon: <Shield className="w-4 h-4"/> }," { name: "Quantum Computing", href: "/services/quantum-computing", icon: <Rocket className="w-4 h-4"/> } ] }, {} " name: "About", " href: "/about"," icon: <Users className="w-5 h-5"/>, " description: "Our mission and vision" }, {} " name: "Contact", " href: "/contact"," icon: <Phone className="w-5 h-5"/>, " description: "Get in touch with us" ] export { function } export default function FuturisticNavigation() {} const [isOpen, setIsOpen] = useState(false) const [activeDropdown, setActiveDropdown] = useState(null) const [scrolled, setScrolled] = useState(false) useEffect(() => {} const handleScroll = () => {} setScrolled(window.scrollY > 20)}" window.addEventListener("scroll", handleScroll)" return () => window.removeEventListener("scroll", handleScroll)}, []) const toggleMenu = () => setIsOpen(!isOpen) const closeMenu = () => setIsOpen(false)" return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled"` ? "bg-black/80 backdrop-blur-md border-b border-cyan-500/20"`"` : "bg-transparent"}`}>" {}" <div className="absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-transparent to-blue-900/10 opacity-0 transition-opacity duration-300 hover:opacity-100"/>" <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">" <div className="flex items-center justify-between h-16"> {} <motion.div initial = {} { opacity: 0, x: -20 }} animate = {} { opacity: 1, x: 0 " }} className="flex items-center space-x-3">" <div className="relative">" <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center">" <Zap className="w-6 h-6 text-white"/> </div>"'""`
-' import { Menu, X, Home, Briefcase, Users, Phone, Globe, Zap, Brain, Shield, Rocket, ChevronDown const navigationItems = [ {} ' ' name: 'Home', ' href: '/',' icon: <Home className='w-5 h-5'/>, ' description: 'Welcome to the future' }, {} ' name: 'Services', ' href: '/services',' icon: <Briefcase className='w-5 h-5'/>, ' description: 'Our revolutionary solutions',' children[' { name: 'AI & Automation', href: '/services/ai-automation', icon: <Brain className='w-4 h-4'/> }, ' { name: 'Micro SaaS', href: '/services/micro-saas', icon: <Zap className='w-4 h-4'/> },' { name: 'Cloud & Infrastructure', href: '/services/cloud-infrastructure', icon: <Globe className='w-4 h-4'/> }, ' { name: 'Cybersecurity', href: '/services/cybersecurity', icon: <Shield className='w-4 h-4'/> },' { name: 'Quantum Computing', href: '/services/quantum-computing', icon: <Rocket className='w-4 h-4'/> } ] }, {} ' name: 'About', ' href: '/about',' icon: <Users className='w-5 h-5'/>, ' description: 'Our mission and vision' }, {} ' name: 'Contact', ' href: '/contact',' icon: <Phone className='w-5 h-5'/>, ' description: 'Get in touch with us' ] export { function } export default function FuturisticNavigation() {} const [isOpen, setIsOpen] = useState(false) const [activeDropdown, setActiveDropdown] = useState(null) const [scrolled, setScrolled] = useState(false) useEffect(() => {} const handleScroll = () => {} setScrolled(window.scrollY > 20)}' window.addEventListener('scroll', handleScroll)' return () => window.removeEventListener('scroll', handleScroll)}, []) const toggleMenu = () => setIsOpen(!isOpen) const closeMenu = () => setIsOpen(false)' return (<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled'` ? 'bg-black/80 backdrop-blur-md border-b border-cyan-500/20'`'` : 'bg-transparent'}`}>' {}' <div className='absolute inset-0 bg-gradient-to-r from-cyan-900/10 via-transparent to-blue-900/10 opacity-0 transition-opacity duration-300 hover:opacity-100'/>' <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>' <div className='flex items-center justify-between h-16'> {} <motion.div initial = {} { opacity: 0, x: -20 }} animate = {} { opacity: 1, x: 0 ' }} className='flex items-center space-x-3'>' <div className='relative'>' <div className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center'>' <Zap className='w-6 h-6 text-white'/> </div>'';''`"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function FuturisticNavigation() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="FuturisticNavigation - Zion Tech Group"
+        description="Professional futuristicnavigation services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              FuturisticNavigation
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional futuristicnavigation services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

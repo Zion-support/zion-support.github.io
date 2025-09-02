@@ -1,1 +1,47 @@
- import { Link } from 'react-router-dom' import { motion } from 'framer-motion' import {  Zap, Brain, Shield, Cloud, Rocket, Heart, ShoppingCart, Phone, Mail, MapPin, Globe, MessageCircle, ArrowRight, Facebook, Twitter, Linkedin, Instagram, Youtube, Github } from 'lucide-react'  export function EnhancedFooter() { const footerSections = [ { title: 'AI & Machine Learning',';' links: ['';' { name: 'AI Business Intelligence', href: '/services/ai-business-intelligence' },'';' { name: 'AI Autonomous Business Intelligence', href: '/services/ai-autonomous-business-intelligence-platform' },'';' { name: 'AI Healthcare Analytics', href: '/services/ai-healthcare-analytics-platform' },'';' { name: 'AI Content Marketing Suite', href: '/services/ai-content-marketing-suite' },'';' { name: 'AI Customer Support', href: '/services/ai-customer-support-automation' },'';' { name: 'AI Project Management', href: '/services/ai-project-management' },' ]'},'{';'' title: 'Cybersecurity & Compliance',';' links: ['';' { name: 'AI Cybersecurity Platform', href: '/services/ai-cybersecurity-platform' },'';' { name: 'AI Cybersecurity Threat Intelligence', href: '/services/ai-cybersecurity-threat-intelligence-platform' },'';' { name: 'Zero Trust Network Access', href: '/services/zero-trust-network-access' },'';' { name: 'SOC2 Compliance Automation', href: '/services/soc2-compliance-automation' },'';' { name: 'Security Headers & CSP', href: '/services/security-headers-csp' },'';' { name: 'Smart Contract Risk Scanner', href: '/services/smart-contract-risk-scanner' },' ]'},'{';'' title: 'Cloud & Infrastructure',';' links: ['';' { name: 'Cloud DevOps', href: '/services/cloud-devops' },'';' { name: 'IT Infrastructure', href: '/services/it-infrastructure' },'';' { name: 'FinOps Advisor', href: '/services/finops-advisor' },'';' { name: 'Cloud Cost Optimizer', href: '/services/cloud-cost-optimizer' },'';' { name: 'Infrastructure Monitoring', href: '/services/infrastructure' },'';' { name: 'Uptime SLA Monitor', href: '/services/uptime-sla-monitor' },' ]'},'{';'' title: 'Digital Transformation',';' links: ['';' { name: 'Digital Twin', href: '/services/digital-twin' },'';' { name: 'Digital Transformation', href: '/services/digital-transformation' },'';' { name: 'IT Consulting', href: '/it-consulting' },'';' { name: 'Change Management', href: '/services/change-management' },'';' { name: 'Strategy Development', href: '/services/strategy-development' },'';' { name: 'Implementation Planning', href: '/services/implementation-planning' },' ]'},'{';'' title: 'Emerging Technologies',';' links: ['';' { name: 'Quantum Computing', href: '/services/quantum-computing' },'';' { name: 'IoT Edge Computing', href: '/services/iot-edge-computing' },'';' { name: 'AI Quantum Hybrid Platform', href: '/services/ai-quantum-hybrid-platform' },'';' { name: 'Space Technology', href: '/space-tech' },'';' { name: 'Blockchain Solutions', href: '/services/blockchain-enterprise-solutions' },'';' { name: 'Edge Computing Platform', href: '/services/edge-computing-platform' },' ]'},'{';'' title: 'Micro SaaS Solutions',';' links: ['';' { name: 'Micro CRM', href: '/services/micro-crm' },'';' { name: 'Helpdesk Platform', href: '/services/helpdesk' },'';' { name: 'Website Analytics', href: '/services/website-analytics' },'';' { name: 'IT Helpdesk', href: '/services/it-helpdesk' },'';' { name: 'Affiliate Tracking', href: '/services/affiliate-tracking' },'';' { name: 'Mobile Survey', href: '/services/mobile-survey' }, ]' }'; ]'; ';' const companyLinks = ['';' { name: 'About Us', href: '/about' },'';' { name: 'Our Team', href: '/team' },'';' { name: 'Careers', href: '/careers' },'';' { name: 'News & Updates', href: '/news' },'';' { name: 'Case Studies', href: '/case-studies' },'';' { name: 'Testimonials', href: '/testimonials' },'; ]'; ';' const supportLinks = ['';' { name: 'Help Center', href: '/help' },'';' { name: 'Documentation', href: '/docs' },'';' { name: 'API Reference', href: '/api' },'';' { name: 'Status Page', href: '/status' },'';' { name: 'Contact Support', href: '/contact' },'';' { name: 'Training', href: '/training' },'; ]'; ';' const legalLinks = ['';' { name: 'Privacy Policy', href: '/privacy' },'';' { name: 'Terms of Service', href: '/terms' },'';' { name: 'Cookie Policy', href: '/cookies' },'';' { name: 'GDPR Compliance', href: '/gdpr' },'';' { name: 'Security', href: '/security' },'';' { name: 'Compliance', href: '/compliance' },'; ]'; ';' const socialLinks = ['';' { name: 'Facebook', href: 'https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function EnhancedFooter() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="EnhancedFooter - Zion Tech Group"
+        description="Professional enhancedfooter services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              EnhancedFooter
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional enhancedfooter services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

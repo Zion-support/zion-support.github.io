@@ -1,1 +1,75 @@
- import { motion } from 'framer-motion' import {  FileText, Shield, Zap, Users, CheckCircle, ArrowRight, Scale, Clock, DollarSign, Star, Award, Globe, Lock, BarChart3, Target, TrendingUp, Phone, Mail, MapPin } from 'lucide-react'  const AILegalDocumentAutomationPlatform = () => { const features = [ { icon: <FileText className='w-6 h-6' />, '';' title: 'Smart Document Analysis', '';' description: 'AI-powered analysis of legal documents with 99.9% accuracy for contract review, compliance checking, and risk assessment.''},'{''' icon: <Shield className='w-6 h-6' />, '';' title: 'Compliance Automation', '';' description: 'Automated compliance checking against regulatory frameworks including GDPR, SOX, HIPAA, and industry-specific requirements.''},'{''' icon: <Zap className='w-6 h-6' />, '';' title: 'Contract Generation', '';' description: 'Intelligent contract generation with customizable templates, clause libraries, and automated negotiation support.''},'{''' icon: <Users className='w-6 h-6' />, '';' title: 'Collaborative Workflow', '';' description: 'Multi-user collaboration with role-based access control, approval workflows, and audit trails.''},'{''' icon: <CheckCircle className='w-6 h-6' />, '';' title: 'Risk Assessment', '';' description: 'AI-powered risk identification and scoring for contracts, legal documents, and business agreements.''},'{''' icon: <BarChart3 className='w-6 h-6' />, '';' title: 'Analytics Dashboard', '';' description: 'Comprehensive analytics on document processing, compliance status, and legal risk metrics.' } ]';' const pricingPlans = ['{';'' name: 'Starter', '';' price: '$299', '';' period: '/month', '';' description: 'Perfect for small law firms and solo practitioners',';' features: ['';Up to 100 documents/month', '';Basic AI analysis', '';Standard templates', '';Email support', '';Basic compliance checking' ],' popular: false'},'{';'' name: 'Professional', '';' price: '$799', '';' period: '/month', '';' description: 'Ideal for growing law firms and legal departments',';' features: ['';Up to 500 documents/month', '';Advanced AI analysis', '';Custom templates', '';Priority support', '';Full compliance suite', '';Risk assessment tools', '';Collaborative workflows' ],' popular: true'},'{';'' name: 'Enterprise', '';' price: '$1, 999','';' period: '/month', '';' description: 'For large law firms and corporate legal departments',';' features: ['';Unlimited documents', '';Enterprise AI models', '';Custom integrations', '';Dedicated support', '';Advanced analytics', '';API access', '';White-label options', '';Custom training' ], popular: false } ]';' const benefits = ['{''' icon: <Clock className='w-8 h-8' />, '';' title: '90% Time Savings', '';' description: 'Reduce document review time from hours to minutes with AI automation''},'{''' icon: <DollarSign className='w-8 h-8' />, '';' title: 'Cost Reduction', '';' description: 'Cut legal document processing costs by up to 70%''},'{''' icon: <Shield className='w-8 h-8' />, '';' title: 'Risk Mitigation', '';' description: 'Identify and prevent legal risks before they become issues''},'{''' icon: <TrendingUp className='w-8 h-8' />, '';' title: 'Scalability', '';' description: 'Handle increasing document volumes without proportional cost increases'' }'; ]'; ';' return (''' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';' {}''' <section className='relative py-20 px-4 sm: px-6 lg:px-8'>''' <div className='max-w-7xl mx-auto text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8 }}';' >''' <div className='flex items-center justify-center mb-6'>''' <Scale className='w-12 h-12 text-blue-500 mr-3' />''' <h1 className='text-4xl md: text-6xl font-bold text-white'>';' AI Legal Document''' <span className='text-blue-500 block'>Automation Platform</span>' </h1>'' </div>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>'; Transform your legal practice with AI-powered document automation.'; Generate, analyze, and manage legal documents with unprecedented speed and accuracy.'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function ailegaldocumentautomationplatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai legal document automation platform - Zion Tech Group"
+        description="Professional ai legal document automation platform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai legal document automation platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai legal document automation platform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai legal document automation platform solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

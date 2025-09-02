@@ -1,2 +1,47 @@
- import { motion    } from 'framer-motion' import {  Shield, Eye, Zap, Lock, AlertTriangle, BarChart3, Cloud, Database, Cpu, Target, CheckCircle, Star, ArrowRight, Headphones, Lightbulb, Globe, Phone, Mail, MapPin, Network, Key, Monitor    } from 'lucide-react'  export default function AICybersecurityIntelligencePlatform() { const features = [ { icon: Shield, title: 'AI Threat Detection', description: 'Real-time identification of advanced cyber threats using machine learning' }, { icon: Eye, title: 'Behavioral Analytics', description: 'Monitor and analyze user and system behavior patterns for anomalies' }, { icon: Zap, title: 'Automated Response', description: 'Instant threat mitigation and incident response automation' }, { icon: Lock, title: 'Zero Trust Security', description: 'Implement comprehensive zero-trust architecture with AI validation' } ]  const capabilities = [ { title: 'Advanced Threat Intelligence', description: 'AI-powered analysis of global threat feeds and real-time risk assessment', icon: AlertTriangle }, { title: 'Predictive Security Analytics', description: 'Forecast potential security breaches before they occur', icon: BarChart3 }, { title: 'Intelligent Incident Response', description: 'Automated threat containment and recovery procedures', icon: Zap }, { title: 'Security Posture Assessment', description: 'Continuous evaluation of security controls and compliance status', icon: Target }, { title: 'Cloud Security Monitoring', description: 'Comprehensive protection for multi-cloud environments', icon: Cloud }, { title: 'Compliance Automation', description: 'Automated compliance reporting for SOC2, GDPR, HIPAA, and more', icon: CheckCircle } ]  const benefits = ['Reduce security incidents by up to 80%',';Decrease incident response time by 90%',';Achieve 99.9% threat detection accuracy',';Automate 70% of security operations',';Real-time security posture monitoring',';Proactive threat prevention and mitigation' ]  const pricing = [ { plan: 'Essential', price: '$499', period: '/month', features: [';Up to 100 endpoints',';Basic threat detection',';Email security',';Standard reporting',';Email support',';Basic compliance tools' ], popular: false }, { plan: 'Professional', price: '$1,299', period: '/month', features: [';Up to 1,000 endpoints',';Advanced AI threat detection',';Full security suite',';24/7 monitoring',';Priority support',';Advanced compliance',';Custom dashboards' ], popular: true }, { plan: 'Enterprise', price: '$2,999', period: '/month', features: [';Unlimited endpoints',';Custom AI models',';White-label solution',';Dedicated security team',';Advanced threat hunting',';Custom integrations',';On-premise deployment' ], popular: false } ]  const securityMetrics = [ { metric: '99.9%', label: 'Threat Detection Rate' }, { metric: '< 30s', label: 'Response Time' }, { metric: '24/7', label: 'Monitoring Coverage' }, { metric: 'Zero', label: 'False Positives' } ]  return ( <div className="min-h-screen bg-futuristic">';" {}"'" <section className="relative pt-32 pb-20 overflow-hidden">"'" <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-slate-900 to-slate-900"></div>"'" <div className="container mx-auto px-4 relative z-10">" <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';" transition={{ duration: 0.8  }}"';" className="text-center max-w-4xl mx-auto"';" >"'" <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">'; AI Cybersecurity Intelligence Platform'" </h1>"'" <p className="text-xl text-gray-300 mb-8">'; Next-generation cybersecurity powered by artificial intelligence.Detect, prevent, and respond to threats in real-time with unprecedented accuracy.'" </p>"'" <div className="flex flex-col sm:flex-row gap-4 justify-center">'" <a "';" href="https:
- import { motion    } from 'framer-motion' import {  Shield, Eye, Zap, Lock, AlertTriangle, BarChart3, Cloud, Database, Cpu, Target, CheckCircle, Star, ArrowRight, Headphones, Lightbulb, Globe, Phone, Mail, MapPin, Network, Key, Monitor    } from 'lucide-react'  export default function AICybersecurityIntelligencePlatform() { const features = [ { icon: Shield, title: 'AI Threat Detection', description: 'Real-time identification of advanced cyber threats using machine learning' }, { icon: Eye, title: 'Behavioral Analytics', description: 'Monitor and analyze user and system behavior patterns for anomalies' }, { icon: Zap, title: 'Automated Response', description: 'Instant threat mitigation and incident response automation' }, { icon: Lock, title: 'Zero Trust Security', description: 'Implement comprehensive zero-trust architecture with AI validation' } ]  const capabilities = [ { title: 'Advanced Threat Intelligence', description: 'AI-powered analysis of global threat feeds and real-time risk assessment', icon: AlertTriangle }, { title: 'Predictive Security Analytics', description: 'Forecast potential security breaches before they occur', icon: BarChart3 }, { title: 'Intelligent Incident Response', description: 'Automated threat containment and recovery procedures', icon: Zap }, { title: 'Security Posture Assessment', description: 'Continuous evaluation of security controls and compliance status', icon: Target }, { title: 'Cloud Security Monitoring', description: 'Comprehensive protection for multi-cloud environments', icon: Cloud }, { title: 'Compliance Automation', description: 'Automated compliance reporting for SOC2, GDPR, HIPAA, and more', icon: CheckCircle } ]  const benefits = ['Reduce security incidents by up to 80%',';Decrease incident response time by 90%',';Achieve 99.9% threat detection accuracy',';Automate 70% of security operations',';Real-time security posture monitoring',';Proactive threat prevention and mitigation' ]  const pricing = [ { plan: 'Essential', price: '$499', period: '/month', features: [';Up to 100 endpoints',';Basic threat detection',';Email security',';Standard reporting',';Email support',';Basic compliance tools' ], popular: false }, { plan: 'Professional', price: '$1,299', period: '/month', features: [';Up to 1,000 endpoints',';Advanced AI threat detection',';Full security suite',';24/7 monitoring',';Priority support',';Advanced compliance',';Custom dashboards' ], popular: true }, { plan: 'Enterprise', price: '$2,999', period: '/month', features: [';Unlimited endpoints',';Custom AI models',';White-label solution',';Dedicated security team',';Advanced threat hunting',';Custom integrations',';On-premise deployment' ], popular: false } ]  const securityMetrics = [ { metric: '99.9%', label: 'Threat Detection Rate' }, { metric: '< 30s', label: 'Response Time' }, { metric: '24/7', label: 'Monitoring Coverage' }, { metric: 'Zero', label: 'False Positives' } ]  return ( <div className='min-h-screen bg-futuristic'>';' {}''' <section className='relative pt-32 pb-20 overflow-hidden'>''' <div className='absolute inset-0 bg-gradient-to-br from-red-900/20 via-slate-900 to-slate-900'></div>''' <div className='container mx-auto px-4 relative z-10'>' <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';' transition={{ duration: 0.8  }}'';' className='text-center max-w-4xl mx-auto'';' >''' <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'; AI Cybersecurity Intelligence Platform'' </h1>''' <p className='text-xl text-gray-300 mb-8'>'; Next-generation cybersecurity powered by artificial intelligence.Detect, prevent, and respond to threats in real-time with unprecedented accuracy.'' </p>''' <div className='flex flex-col sm:flex-row gap-4 justify-center'>'' <a '';' href='https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function aicybersecurityintelligenceplatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai cybersecurity intelligence platform - Zion Tech Group"
+        description="Professional ai cybersecurity intelligence platform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai cybersecurity intelligence platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai cybersecurity intelligence platform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

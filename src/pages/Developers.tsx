@@ -1,1 +1,47 @@
- import { Link    } from 'react-router-dom' import { Code, Zap, Shield, Cloud, Rocket, Target, TrendingUp, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, BarChart3, MessageCircle, BookOpen, ShoppingCart, DollarSign, Gauge, HelpCircle, Search, PenTool, GitFork, Atom, Truck, Building, Github, Terminal, Database, Server, Network, Key, Download, Play, ExternalLink    } from 'lucide-react' import { SEO } from '../components/SEO'  export default function Developers() { const apis = [ { name: 'AI Analytics API', description: 'Access our AI-powered analytics and insights through RESTful APIs', category: 'Analytics', endpoints: ['/v1/analytics', '/v1/insights', '/v1/predictions'], documentation: '/docs/api/analytics', status: 'Production' }, { name: 'AI Workflow API', description: 'Integrate AI workflow automation into your applications', category: 'Automation', endpoints: ['/v1/workflows', '/v1/tasks', '/v1/triggers'], documentation: '/docs/api/workflows', status: 'Production' }, { name: 'AI Content API', description: 'Generate and manage AI-powered content programmatically', category: 'Content', endpoints: ['/v1/content', '/v1/generation', '/v1/optimization'], documentation: '/docs/api/content', status: 'Beta' }, { name: 'AI Security API', description: 'Integrate AI-powered security and compliance features', category: 'Security', endpoints: ['/v1/security', '/v1/compliance', '/v1/threats'], documentation: '/docs/api/security', status: 'Production' } ]  const sdks = [ { name: 'JavaScript/TypeScript', description: 'Official SDK for Node.js and browser environments', version: 'v2.1.0', downloads: '50K+', repository: 'https:
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function Developers() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Developers - Zion Tech Group"
+        description="Professional developers services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Developers
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional developers services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

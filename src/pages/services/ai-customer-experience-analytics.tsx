@@ -1,2 +1,75 @@
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Users, BarChart3, TrendingUp, Brain, Zap, Eye, MessageCircle, CheckCircle, ArrowRight, Heart, Star, Globe, Phone, Mail, MapPin, Building, Target, Rocket, Sparkles, Cpu, Network, Database, Shield, Lock, Clock, Award    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AICustomerExperienceAnalytics() { const features = [ { icon: Brain, title: 'AI-Powered Sentiment Analysis', description: 'Advanced NLP algorithms that understand customer emotions and intent across all channels' }, { icon: Eye, title: 'Real-time Customer Journey Tracking', description: 'Monitor customer interactions across touchpoints with predictive behavior modeling' }, { icon: BarChart3, title: 'Predictive Analytics', description: 'Forecast customer churn, lifetime value, and satisfaction scores using machine learning' }, { icon: MessageCircle, title: 'Omnichannel Analytics', description: 'Unified view of customer experience across web, mobile, social, and support channels' }, { icon: Zap, title: 'Automated Insights', description: 'AI-generated recommendations for improving customer satisfaction and retention' }, { icon: Target, title: 'Personalization Engine', description: 'Dynamic content and experience optimization based on real-time customer behavior' } ]  const benefits = ['Increase customer satisfaction by 35%',';Reduce customer churn by 25%',';Improve conversion rates by 40%',';Boost customer lifetime value by 30%',';Reduce support costs by 20%',';Accelerate product-market fit discovery' ]  const useCases = [ { industry: 'E-commerce', applications: ['Customer journey optimization', 'Personalized recommendations', 'Cart abandonment analysis', 'Customer segmentation'], icon: Globe }, { industry: 'SaaS', applications: ['User onboarding optimization', 'Feature adoption tracking', 'Customer success metrics', 'Product usage analytics'], icon: Cpu }, { industry: 'Financial Services', applications: ['Customer satisfaction monitoring', 'Service quality metrics', 'Compliance tracking', 'Risk assessment'], icon: Shield }, { industry: 'Healthcare', applications: ['Patient experience tracking', 'Service quality metrics', 'Compliance monitoring', 'Outcome analysis'], icon: Heart } ]  const pricingPlans = [ { name: 'Starter', description: 'Perfect for small businesses starting their CX journey', price: { monthly: 299, annual: 2990 }, features: [';Up to 10,000 customer interactions/month',';Basic sentiment analysis',';Customer journey mapping',';Email support',';Standard integrations',';Monthly reports' ], icon: Rocket, color: 'from-blue-500 to-cyan-500', popular: false, cta: 'Start Free Trial', link: '/contact' }, { name: 'Professional', description: 'Ideal for growing companies with advanced CX needs', price: { monthly: 799, annual: 7990 }, features: [';Up to 100,000 interactions/month',';Advanced AI analytics',';Predictive modeling',';Priority support',';Custom integrations',';Real-time dashboards',';API access',';Training sessions' ], icon: Building, color: 'from-purple-500 to-pink-500', popular: true, cta: 'Get Started', link: '/contact' }, { name: 'Enterprise', description: 'For large organizations with complex CX requirements', price: { monthly: 1999, annual: 19990 }, features: [';Unlimited interactions',';Custom AI models',';Dedicated CX team',';24/7 priority support',';On-premise deployment',';White-label solutions',';SLA guarantees',';Compliance reporting' ], icon: Globe, color: 'from-orange-500 to-red-500', popular: false, cta: 'Contact Sales', link: '/contact' } ]  return ( <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">'" <SEO "';" title="AI-Powered Customer Experience Analytics | Zion Tech Group"';" description="Transform customer experience with AI-powered analytics.Track customer journeys, analyze sentiment, and optimize engagement across all channels."';" keywords="customer experience analytics, AI analytics, sentiment analysis, customer journey, predictive analytics, CX optimization"';" canonical="https:
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Users, BarChart3, TrendingUp, Brain, Zap, Eye, MessageCircle, CheckCircle, ArrowRight, Heart, Star, Globe, Phone, Mail, MapPin, Building, Target, Rocket, Sparkles, Cpu, Network, Database, Shield, Lock, Clock, Award    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AICustomerExperienceAnalytics() { const features = [ { icon: Brain, title: 'AI-Powered Sentiment Analysis', description: 'Advanced NLP algorithms that understand customer emotions and intent across all channels' }, { icon: Eye, title: 'Real-time Customer Journey Tracking', description: 'Monitor customer interactions across touchpoints with predictive behavior modeling' }, { icon: BarChart3, title: 'Predictive Analytics', description: 'Forecast customer churn, lifetime value, and satisfaction scores using machine learning' }, { icon: MessageCircle, title: 'Omnichannel Analytics', description: 'Unified view of customer experience across web, mobile, social, and support channels' }, { icon: Zap, title: 'Automated Insights', description: 'AI-generated recommendations for improving customer satisfaction and retention' }, { icon: Target, title: 'Personalization Engine', description: 'Dynamic content and experience optimization based on real-time customer behavior' } ]  const benefits = ['Increase customer satisfaction by 35%',';Reduce customer churn by 25%',';Improve conversion rates by 40%',';Boost customer lifetime value by 30%',';Reduce support costs by 20%',';Accelerate product-market fit discovery' ]  const useCases = [ { industry: 'E-commerce', applications: ['Customer journey optimization', 'Personalized recommendations', 'Cart abandonment analysis', 'Customer segmentation'], icon: Globe }, { industry: 'SaaS', applications: ['User onboarding optimization', 'Feature adoption tracking', 'Customer success metrics', 'Product usage analytics'], icon: Cpu }, { industry: 'Financial Services', applications: ['Customer satisfaction monitoring', 'Service quality metrics', 'Compliance tracking', 'Risk assessment'], icon: Shield }, { industry: 'Healthcare', applications: ['Patient experience tracking', 'Service quality metrics', 'Compliance monitoring', 'Outcome analysis'], icon: Heart } ]  const pricingPlans = [ { name: 'Starter', description: 'Perfect for small businesses starting their CX journey', price: { monthly: 299, annual: 2990 }, features: [';Up to 10,000 customer interactions/month',';Basic sentiment analysis',';Customer journey mapping',';Email support',';Standard integrations',';Monthly reports' ], icon: Rocket, color: 'from-blue-500 to-cyan-500', popular: false, cta: 'Start Free Trial', link: '/contact' }, { name: 'Professional', description: 'Ideal for growing companies with advanced CX needs', price: { monthly: 799, annual: 7990 }, features: [';Up to 100,000 interactions/month',';Advanced AI analytics',';Predictive modeling',';Priority support',';Custom integrations',';Real-time dashboards',';API access',';Training sessions' ], icon: Building, color: 'from-purple-500 to-pink-500', popular: true, cta: 'Get Started', link: '/contact' }, { name: 'Enterprise', description: 'For large organizations with complex CX requirements', price: { monthly: 1999, annual: 19990 }, features: [';Unlimited interactions',';Custom AI models',';Dedicated CX team',';24/7 priority support',';On-premise deployment',';White-label solutions',';SLA guarantees',';Compliance reporting' ], icon: Globe, color: 'from-orange-500 to-red-500', popular: false, cta: 'Contact Sales', link: '/contact' } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900'>'' <SEO '';' title='AI-Powered Customer Experience Analytics | Zion Tech Group'';' description='Transform customer experience with AI-powered analytics.Track customer journeys, analyze sentiment, and optimize engagement across all channels.'';' keywords='customer experience analytics, AI analytics, sentiment analysis, customer journey, predictive analytics, CX optimization'';' canonical="https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function aicustomerexperienceanalytics() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai customer experience analytics - Zion Tech Group"
+        description="Professional ai customer experience analytics services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai customer experience analytics
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai customer experience analytics services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai customer experience analytics solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

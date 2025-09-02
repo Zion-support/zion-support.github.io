@@ -1,1 +1,75 @@
- import { motion    } from 'framer-motion' import SEOOptimizer from '../../components/SEOOptimizer' import {  Cpu, Brain, Zap, TrendingUp, CheckCircle, ArrowRight, Server, Cloud, Shield, Workflow, Target, Rocket, Lightbulb, Star, Award, Handshake, Phone, Mail, MapPin, Code, GitBranch, Database, Network, Activity, Monitor, Smartphone, Tablet, Laptop, Settings, Cog, Wrench, Bug, TestTube, Rocket, Scale, Lock, Key, RefreshCw, Play, Pause, Stop, AlertTriangle, Info, CheckCircle2, XCircle, Clock, Calendar, BarChart3, PieChart, LineChart, Target2, Users, UserCheck, UserX, Globe, Wifi, Bluetooth, HardDrive, MemoryStick, Router, Switch, Hub, Terminal, Command, Shell, TerminalSquare, Code2, Brackets, Braces, Parentheses, Hash, AtSign, Percent, Plus, Minus, Divide, X, Equal, NotEqual, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, Infinity, Pi, Sigma, Omega, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Rho, Tau, Upsilon, Phi, Chi, Psi    } from 'lucide-react'  const AIDevOpsAutomationPlatform = () => { const features = [ { icon: <Brain className='w-6 h-6' />,'';' title: 'AI-Powered CI/CD','';' description: 'Intelligent continuous integration and deployment that automatically optimizes build processes and deployment strategies.''},'{''' icon: <Workflow className='w-6 h-6' />,'';' title: 'Automated Testing','';' description: 'AI-driven test automation that intelligently identifies test scenarios and optimizes test coverage.''},'{''' icon: <Shield className='w-6 h-6' />,'';' title: 'Security Automation','';' description: 'Automated security scanning, vulnerability assessment, and compliance monitoring with AI-powered threat detection.''},'{''' icon: <Scale className='w-6 h-6' />,'';' title: 'Infrastructure Scaling','';' description: 'Intelligent auto-scaling that predicts demand and automatically adjusts resources for optimal performance.''},'{''' icon: <Monitor className='w-6 h-6' />,'';' title: 'Proactive Monitoring','';' description: 'AI-powered monitoring that predicts issues before they occur and automatically triggers remediation.''},'{''' icon: <Code className='w-6 h-6' />,'';' title: 'Code Quality Analysis','';' description: 'Automated code review with AI-powered suggestions for improvements, security, and best practices.'' }'; ]'; ';' const benefits = ['';Reduce deployment time by 80%','';Improve code quality by 60%','';Reduce infrastructure costs by 40%','';Eliminate 90% of manual errors','';24/7 automated operations','';Real-time performance optimization','';Predictive issue resolution','';Scalable to any team size' ]';' const pricing = ['{';'' name: 'Starter','';' price: '$3,999','';' period: '/month','';' description: 'Perfect for small development teams',';' features: ['';Up to 10 developers','';Basic CI/CD pipelines','';Automated testing','';Basic monitoring','';Email support','';Standard security'' ]'},'{';'' name: 'Professional','';' price: '$7,999','';' period: '/month','';' description: 'Ideal for growing development teams',';' features: ['';Up to 50 developers','';Advanced CI/CD','';AI-powered testing','';Advanced monitoring','';Priority support','';API access','';Custom workflows' ],' popular: true'},'{';'' name: 'Enterprise','';' price: '$15,999','';' period: '/month','';' description: 'For large organizations and enterprises',';' features: [''Unlimited developers','';Full AI suite','';Custom AI models','';Dedicated support','';Advanced security','';White-label options' ] } ]';' const automationAreas = ['{''' icon: <GitBranch className='w-8 h-8' />,'';' title: 'Code Management','';' description: 'Automated Git workflows, branch management, and code review processes''},'{''' icon: <TestTube className='w-8 h-8' />,'';' title: 'Testing & QA','';' description: 'Automated testing, quality gates, and continuous quality assurance''},'{''' icon: <Deploy className='w-8 h-8' />,'';' title: 'Deployment','';' description: 'Intelligent deployment strategies with rollback and blue-green deployments''},'{''' icon: <Monitor className='w-8 h-8' />,'';' title: 'Monitoring','';' description: 'Real-time monitoring, alerting, and automated incident response''},'{''' icon: <Scale className='w-8 h-8' />,'';' title: 'Infrastructure','';' description: 'Automated provisioning, scaling, and infrastructure management''},'{''' icon: <Shield className='w-8 h-8' />,'';' title: 'Security','';' description: 'Automated security scanning, compliance, and threat detection' }' ]'; '; const seoData = {';'' title: 'AI DevOps Automation Platform | Zion Tech Group','';' description: 'Revolutionary AI-powered DevOps automation platform that streamlines CI/CD, testing, and infrastructure management.Reduce deployment time by 80% and eliminate manual errors.','';' keywords: 'AI DevOps, DevOps automation, CI/CD automation, automated testing, infrastructure automation, DevOps platform','';' url: 'https:
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function aidevopsautomationplatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai devops automation platform - Zion Tech Group"
+        description="Professional ai devops automation platform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai devops automation platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai devops automation platform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai devops automation platform solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

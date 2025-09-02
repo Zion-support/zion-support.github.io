@@ -1,2 +1,75 @@
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, PenTool, TrendingUp, Target, Zap, Shield, Cloud, Users, CheckCircle, ArrowRight, Lightbulb, Cpu, Database, Network, Eye, Sparkles, Rocket, Globe, Clock, Award, Star, MessageCircle, Phone, Mail, ShoppingCart, DollarSign, Heart, Factory, BarChart3, Calendar, Mail as MailIcon, Share2, Monitor, PieChart    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AIContentMarketingAutomation() { const features = [ { icon: Brain, title: 'AI Content Generation', description: 'Generate high-quality, SEO-optimized content using advanced language models' }, { icon: PenTool, title: 'Multi-Format Content', description: 'Create blogs, social media posts, emails, and landing pages from single prompts' }, { icon: TrendingUp, title: 'Performance Analytics', description: 'Track content performance with AI-powered insights and optimization recommendations' }, { icon: Target, title: 'Audience Segmentation', description: 'Automatically segment audiences and personalize content for maximum engagement' }, { icon: Calendar, title: 'Smart Scheduling', description: 'AI-optimized posting schedules based on audience behavior and engagement patterns' }, { icon: Share2, title: 'Cross-Platform Distribution', description: 'Automatically distribute content across multiple channels with platform-specific optimization' } ]  const benefits = ['10x faster content creation with AI assistance',';Improved SEO rankings through intelligent optimization',';Increased engagement with personalized content',';Cost reduction through automation',';Better ROI tracking and analytics',';Consistent brand voice across all channels' ]  const useCases = [ { industry: 'E-commerce', applications: ['Product descriptions', 'Email campaigns', 'Social media content', 'Blog posts'], icon: ShoppingCart }, { industry: 'B2B Marketing', applications: ['Thought leadership content', 'Case studies', 'White papers', 'LinkedIn posts'], icon: Users }, { industry: 'Agency Services', applications: ['Client content creation', 'Campaign management', 'Performance reporting', 'A/B testing'], icon: Globe }, { industry: 'SaaS Companies', applications: ['Feature announcements', 'User onboarding', 'Support documentation', 'Community content'], icon: Cpu } ]  const technologies = ['OpenAI GPT-4 & Claude',';Natural Language Processing',';Machine Learning Algorithms',';SEO Optimization Tools',';Social Media APIs',';Analytics & Reporting' ]  const pricing = [ { plan: 'Starter', price: '$299', period: '/month', description: 'Perfect for small businesses and startups', features: [';AI content generation(50 pieces/month)',';Basic SEO optimization',';Social media scheduling',';Email marketing automation',';Basic analytics dashboard',';Email support' ], cta: 'Get Started', popular: false }, { plan: 'Professional', price: '$599', period: '/month', description: 'Ideal for growing businesses and marketing teams', features: [';AI content generation(200 pieces/month)',';Advanced SEO optimization',';Multi-platform distribution',';Advanced audience segmentation',';Performance analytics',';Priority support',';Custom templates' ], cta: 'Start Free Trial', popular: true }, { plan: 'Enterprise', price: '$1,299', period: '/month', description: 'For large organizations with complex needs', features: [';Unlimited AI content generation',';Custom AI model training',';Advanced analytics & reporting',';API access',';Dedicated account manager',';Custom integrations',';White-label options' ], cta: 'Contact Sales', popular: false } ]  const containerVariants = { hidden: { opacity: 0  }, visible: { opacity: 1, transition: { staggerChildren: 0.1  } } }  const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.5  } } }  return ( <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">'" <SEO "';" title="AI Content Marketing Automation Platform - Zion Tech Group"';" description="Transform your content marketing with AI-powered automation.Generate, optimize, and distribute content across all channels with intelligent automation."';" keywords="AI content marketing, content automation, AI writing, marketing automation, content generation, SEO optimization"';" canonical="https:
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, PenTool, TrendingUp, Target, Zap, Shield, Cloud, Users, CheckCircle, ArrowRight, Lightbulb, Cpu, Database, Network, Eye, Sparkles, Rocket, Globe, Clock, Award, Star, MessageCircle, Phone, Mail, ShoppingCart, DollarSign, Heart, Factory, BarChart3, Calendar, Mail as MailIcon, Share2, Monitor, PieChart    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AIContentMarketingAutomation() { const features = [ { icon: Brain, title: 'AI Content Generation', description: 'Generate high-quality, SEO-optimized content using advanced language models' }, { icon: PenTool, title: 'Multi-Format Content', description: 'Create blogs, social media posts, emails, and landing pages from single prompts' }, { icon: TrendingUp, title: 'Performance Analytics', description: 'Track content performance with AI-powered insights and optimization recommendations' }, { icon: Target, title: 'Audience Segmentation', description: 'Automatically segment audiences and personalize content for maximum engagement' }, { icon: Calendar, title: 'Smart Scheduling', description: 'AI-optimized posting schedules based on audience behavior and engagement patterns' }, { icon: Share2, title: 'Cross-Platform Distribution', description: 'Automatically distribute content across multiple channels with platform-specific optimization' } ]  const benefits = ['10x faster content creation with AI assistance',';Improved SEO rankings through intelligent optimization',';Increased engagement with personalized content',';Cost reduction through automation',';Better ROI tracking and analytics',';Consistent brand voice across all channels' ]  const useCases = [ { industry: 'E-commerce', applications: ['Product descriptions', 'Email campaigns', 'Social media content', 'Blog posts'], icon: ShoppingCart }, { industry: 'B2B Marketing', applications: ['Thought leadership content', 'Case studies', 'White papers', 'LinkedIn posts'], icon: Users }, { industry: 'Agency Services', applications: ['Client content creation', 'Campaign management', 'Performance reporting', 'A/B testing'], icon: Globe }, { industry: 'SaaS Companies', applications: ['Feature announcements', 'User onboarding', 'Support documentation', 'Community content'], icon: Cpu } ]  const technologies = ['OpenAI GPT-4 & Claude',';Natural Language Processing',';Machine Learning Algorithms',';SEO Optimization Tools',';Social Media APIs',';Analytics & Reporting' ]  const pricing = [ { plan: 'Starter', price: '$299', period: '/month', description: 'Perfect for small businesses and startups', features: [';AI content generation(50 pieces/month)',';Basic SEO optimization',';Social media scheduling',';Email marketing automation',';Basic analytics dashboard',';Email support' ], cta: 'Get Started', popular: false }, { plan: 'Professional', price: '$599', period: '/month', description: 'Ideal for growing businesses and marketing teams', features: [';AI content generation(200 pieces/month)',';Advanced SEO optimization',';Multi-platform distribution',';Advanced audience segmentation',';Performance analytics',';Priority support',';Custom templates' ], cta: 'Start Free Trial', popular: true }, { plan: 'Enterprise', price: '$1,299', period: '/month', description: 'For large organizations with complex needs', features: [';Unlimited AI content generation',';Custom AI model training',';Advanced analytics & reporting',';API access',';Dedicated account manager',';Custom integrations',';White-label options' ], cta: 'Contact Sales', popular: false } ]  const containerVariants = { hidden: { opacity: 0  }, visible: { opacity: 1, transition: { staggerChildren: 0.1  } } }  const itemVariants = { hidden: { y: 20, opacity: 0 }, visible: { y: 0, opacity: 1, transition: { duration: 0.5  } } }  return ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>'' <SEO '';' title='AI Content Marketing Automation Platform - Zion Tech Group'';' description='Transform your content marketing with AI-powered automation.Generate, optimize, and distribute content across all channels with intelligent automation.'';' keywords='AI content marketing, content automation, AI writing, marketing automation, content generation, SEO optimization'';' canonical="https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function aicontentmarketingautomation() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai content marketing automation - Zion Tech Group"
+        description="Professional ai content marketing automation services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai content marketing automation
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai content marketing automation services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai content marketing automation solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

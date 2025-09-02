@@ -1,18 +1,47 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import {  Eye, EyeOff, Volume2, VolumeX, Move, Type, Contrast, Accessibility, X, Settings, Keyboard, MousePointer, Monitor, Smartphone } from 'lucide-react'  interface AccessibilityFeatures {
-   highContrast: boolean;
-   reducedMotion: boolean;
-   largeText: boolean;
-   focusHighlight: boolean;
-   screenReaderMode: boolean;
-   highContrastText: boolean;
-   increasedSpacing: boolean;
-   cursorEnhancement: boolean;
-   keyboardNavigation: boolean;
-   colorBlindnessSupport: boolean} interface FocusTrapConfig {
-   containerRef: React.RefObject<HTMLElement>
-   onEscape?: () => void;
-   returnFocus?: boolean} interface AccessibilityAnnouncement {
-   message: string;
-   priority: 'polite' | 'assertive';
-   id: number
-   timestamp: number} export function AccessibilityEnhancer({ showAccessibilityPanel = false }: { showAccessibilityPanel?: boolean }) { const [features, setFeatures] = useState<AccessibilityFeatures>({ highContrast: false, reducedMotion: false, largeText: false, focusHighlight: true, screenReaderMode: false, highContrastText: false, increasedSpacing: false, cursorEnhancement: false, keyboardNavigation: false, colorBlindnessSupport: false })  const [announcements, setAnnouncements] = useState<AccessibilityAnnouncement[]>([]) const [currentAnnouncement, setCurrentAnnouncement] = useState<string>('') const [isMenuOpen, setIsMenuOpen] = useState(false) const [activeTab, setActiveTab] = useState<'visual' | 'navigation' | 'audio' | 'advanced'>('visual') const [fontSize, setFontSize] = useState(16) const [lineHeight, setLineHeight] = useState(1.5) const [letterSpacing, setLetterSpacing] = useState(0)  const menuRef = useRef<HTMLDivElement>(null) const buttonRef = useRef<HTMLButtonElement>(null) const focusableElementsRef = useRef<HTMLElement[]>([]) ';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function AccessibilityEnhancer() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AccessibilityEnhancer - Zion Tech Group"
+        description="Professional accessibilityenhancer services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AccessibilityEnhancer
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional accessibilityenhancer services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

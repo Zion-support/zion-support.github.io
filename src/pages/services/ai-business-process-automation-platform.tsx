@@ -1,1 +1,75 @@
- import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import {  Brain, Zap, Workflow, BarChart3, Users, Shield, Clock, DollarSign, CheckCircle, ArrowRight, Play, Pause, Settings, Monitor, TrendingUp, Target, Rocket, Star, Phone, Mail, MapPin    } from 'lucide-react'  export default function AIBusinessProcessAutomationPlatform() { const features = [';Intelligent Workflow Design & Orchestration','';AI-Powered Decision Making & Routing','';Real-time Process Monitoring & Analytics','';Automated Document Processing & Extraction','';Smart Form Generation & Validation','';Multi-department Process Coordination','';Compliance & Audit Trail Management','';Integration with 100+ Business Systems','';Mobile-First Process Execution','';Predictive Process Optimization''; ]'; ';' const benefits = ['';Reduce manual processing time by 85%','';Increase process accuracy to 99.5%','';Cut operational costs by 60%','';Improve employee productivity by 75%','';Accelerate decision-making by 90%','';Ensure 100% compliance adherence' ]';' const pricing = ['{';'' name: 'Starter','';' price: '$299','';' period: '/month','';' description: 'Perfect for small teams and basic automation needs',';' features: ['';Up to 10 automated workflows','';Basic AI decision making','';Standard integrations','';Email support','';Basic analytics dashboard' ],' popular: false'},'{';'' name: 'Professional','';' price: '$799','';' period: '/month','';' description: 'Ideal for growing businesses with complex processes',';' features: ['';Up to 50 automated workflows','';Advanced AI decision making','';100+ system integrations','';Priority support','';Advanced analytics & reporting','';Custom workflow templates' ],' popular: true'},'{';'' name: 'Enterprise','';' price: '$1,999','';' period: '/month','';' description: 'For large organizations with enterprise-scale automation',';' features: ['';Unlimited automated workflows','';Custom AI model training','';Unlimited integrations','';24/7 dedicated support','';Custom development','';Advanced security features','';Multi-tenant architecture' ], popular: false } ]';' const useCases = [' {';'' title: 'HR Onboarding Automation','';' description: 'Streamline employee onboarding with automated document processing, task assignments, and compliance checks',';' icon: Users,'';' savings: 'Save 15 hours per new hire''},'{';'' title: 'Invoice Processing','';' description: 'Automate invoice capture, approval workflows, and payment processing with AI-powered validation',';' icon: DollarSign,'';' savings: 'Reduce processing time by 80%''},'{';'' title: 'Customer Service Routing','';' description: 'Intelligently route customer inquiries to the right agents based on complexity and expertise',';' icon: Monitor,'';' savings: 'Improve response time by 70%''},'{';'' title: 'Sales Process Management','';' description: 'Automate lead scoring, follow-up scheduling, and opportunity tracking',';' icon: Target,'';' savings: 'Increase conversion rates by 40%' } ]  const stats = [ { number: '500+', label: 'Companies Automated', icon: Users }, { number: '10,000+', label: 'Workflows Created', icon: Workflow }, { number: '99.5%', label: 'Process Accuracy', icon: CheckCircle }, { number: '85%', label: 'Time Savings', icon: Clock } ] ' return ('; <>' <Helmet>'' <title>AI Business Process Automation Platform - Zion Tech Group</title>''' <meta name='description' content='Transform your business operations with our AI-powered process automation platform.Reduce costs by 60%, improve accuracy to 99.5%, and accelerate decision-making by 90%.' / / / / / />''' <meta name='keywords' content='AI automation, business process automation, workflow automation, process optimization, AI decision making' / / / / / />''' <link rel='canonical' href='https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function aibusinessprocessautomationplatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai business process automation platform - Zion Tech Group"
+        description="Professional ai business process automation platform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai business process automation platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai business process automation platform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai business process automation platform solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,47 @@
-import React, { useMemo, useState } from 'react.ts' import { Link } from 'react - router - dom.ts' import { motion } from 'framer - motion.ts' import { Search, ArrowRight, DollarSign, ExternalLink, Workflow, MessageSquare, Globe, Brain, Shield, Cloud, Cpu, Zap, Rocket, Heart, Lock, Users, BarChart3, Target, TrendingUp, Award, Star, CheckCircle, Clock, Phone, Mail, MapPin } from 'lucide - react' import SEO from '@/components / SEO' import { INNOVATIVE_MICRO_SAAS_SERVICES_2026, SPECIALIZED_SERVICES_2026 } from '../data / innovativeMicroSaasServices2026'  const Services2026: React.FC = () : JSX.Element => { const [query, setQuery] = useState ('')  const [selectedCategory, setSelectedCategory] = useState ('all')  const [sortBy, setSortBy] = useState ('innovation')   const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026, ...SPECIALIZED_SERVICES_2026]  const categories = [ { id: anyanyanyanyanyanyanyanyanyanyanyanyany & apos;all', name: 'All Services', icon: GitFork, count: allServices.length }, { id: 'AI & Analytics', name: 'AI & Analytics', icon: Brain, count: allServices.filter (s => s.category === 'AI & Analytics') .length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany & apos;Quantum Computing', name: 'Quantum Computing', icon: Zap, count: allServices.filter (s => s.category === 'Quantum Computing') .length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany & apos;Cybersecurity', name: 'Cybersecurity', icon: Shield, count: allServices.filter (s => s.category === 'Cybersecurity') .length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany & apos;IoT & Edge Computing', name: 'IoT & Edge', icon: Cpu, count: allServices.filter (s => s.category === 'IoT & Edge Computing') .length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany & apos;AI & Content', name: 'AI & Content', icon: MessageSquare, count: allServices.filter (s => s.category === 'AI & Content') .length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany & apos;Digital Twin', name: 'Digital Twin', icon: Rocket, count: allServices.filter (s => s.category === 'Digital Twin') .length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany & apos;AI & HR', name: 'AI & HR', icon: Users, count: allServices.filter (s => s.category === 'AI & HR') .length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany & apos;Sustainability', name: 'Sustainability', icon: Heart, count: allServices.filter (s => s.category === 'Sustainability') .length }, { id: anyanyanyanyanyanyanyanyanyanyanyanyany & aposAI & IoT', name: 'AI & IoT', icon: BarChart3, count: allServices.filter (s => s.category === 'AI & IoT') .length } ]  const filteredAndSorted = useMemo ( () => { let filtered = allServices ';'
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function Services2026() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Services2026 - Zion Tech Group"
+        description="Professional services2026 services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Services2026
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional services2026 services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

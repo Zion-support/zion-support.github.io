@@ -1,1 +1,75 @@
- import { SEO } from '../../components/SEO' import { Link } from 'react-router-dom'  export default function AIProductivitySuite() { const features = [ { title: 'AI-Powered Task Management', '';' description: 'Intelligent task prioritization, deadline optimization, and automated scheduling based on your work patterns',';' icon: Target, '';' benefits: ['Smart prioritization', 'Automated scheduling', 'Workload balancing', 'Performance insights']'},'{';'' title: 'Intelligent Document Processing', '';' description: 'AI-driven document analysis, summarization, and content extraction from any format',';' icon: Brain, '';' benefits: ['Document summarization', 'Content extraction', 'Format conversion', 'Search optimization']'},'{';'' title: 'Smart Meeting Assistant', '';' description: 'Automated meeting notes, action item tracking, and follow-up reminders with CRM integration',';' icon: Users, '';' benefits: ['Auto-transcription', 'Action tracking', 'CRM sync', 'Follow-up automation']'},'{';'' title: 'Predictive Analytics Dashboard', '';' description: 'Real-time insights into productivity patterns, bottlenecks, and optimization opportunities',';' icon: BarChart3, '';' benefits: ['Performance metrics', 'Bottleneck detection', 'Optimization suggestions', 'Trend analysis']'},'{';'' title: 'Cross-Platform Synchronization', '';' description: 'Seamless integration across all devices and platforms with real-time sync',';' icon: Cloud, '';' benefits: ['Multi-device sync', 'Offline access', 'Real-time updates', 'Cross-platform compatibility'] } ]';' const pricingPlans = ['{';'' name: 'Starter', '';' price: '$29', '';' period: '/month', '';' description: 'Perfect for individuals and small teams',';' features: ['';AI task management', '';Basic document processing', '';Meeting assistant (5 hours/month)', '';Basic analytics', '';Email support' ],' popular: false'},'{';'' name: 'Professional', '';' price: '$79', '';' period: '/month', '';' description: 'Ideal for growing businesses and teams',';' features: ['';Everything in Starter', '';Advanced AI features', '';Unlimited meeting assistance', '';Advanced analytics', '';Priority support', '';Team collaboration tools' ],' popular: true'},'{';'' name: 'Enterprise', '';' price: '$199', '';' period: '/month', '';' description: 'For large organizations with advanced needs',';' features: ['';Everything in Professional', '';Custom AI training', '';Advanced integrations', '';Dedicated support', '';Custom reporting', '';SLA guarantees' ], popular: false } ]';' const useCases = ['{';'' industry: 'Legal', '';' description: 'Automated contract analysis, case research, and document management', '';' benefits: ['Time savings', 'Accuracy improvement', 'Cost reduction']'},'{';'' industry: 'Healthcare', '';' description: 'Patient data analysis, appointment scheduling, and medical record management', '';' benefits: ['Efficiency gains', 'Compliance adherence', 'Patient satisfaction']'},'{';'' industry: 'Finance', '';' description: 'Financial document processing, compliance monitoring, and risk assessment', '';' benefits: ['Risk reduction', 'Compliance automation', 'Operational efficiency']'},'{';'' industry: 'Education', '';' description: 'Student performance tracking, content creation, and administrative automation', '';' benefits: ['Student engagement', 'Administrative efficiency', 'Personalized learning'] } ]';' const testimonials = ['{';'' name: 'Sarah Chen', '';' role: 'Operations Director', '';' company: 'TechFlow Solutions', '';' content: 'The AI Productivity Suite has transformed our workflow. We&apos;ve seen a 40% increase in team productivity and significant time savings on routine tasks.',' rating: 5'},'{';'' name: 'Michael Rodriguez', '';' role: 'CEO', '';' company: 'InnovateCorp', '';' content: 'The intelligent task management and meeting assistance features have streamlined our operations. ROI was achieved within the first quarter.',' rating: 5'},'{';'' name: 'Dr. Emily Watson', '';' role: 'Medical Director', '';' company: 'HealthFirst Clinic', '';' content: 'Document processing and patient data management have never been easier. The AI accuracy is impressive and saves us hours daily.', rating: 5' }'; ]'; ';' return ('';' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'' <SEO '';' title='AI Productivity Suite - Zion Tech Group'';' description='Transform your workflow with our comprehensive AI-powered productivity suite. Intelligent task management, document processing, and analytics to boost efficiency.'';' keywords='AI productivity, task management, document processing, meeting assistant, workflow automation, business efficiency'';' canonical='https:'''''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function AIProductivitySuite() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AIProductivitySuite - Zion Tech Group"
+        description="Professional aiproductivitysuite services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AIProductivitySuite
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional aiproductivitysuite services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive aiproductivitysuite solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

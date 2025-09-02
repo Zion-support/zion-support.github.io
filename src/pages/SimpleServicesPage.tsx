@@ -1,1 +1,47 @@
-import React, { useState } from 'react'' import { Link    } from 'react-router-dom' import {} Brain, Cloud, Shield, Server, Zap, Globe, Cpu, Database, Network, Smartphone, Code, Chip, Wifi, Bot, Eye, Sparkles, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, BarChart3, Users2, Settings, Palette, Rocket, Award, TrendingUp, GraduationCap, MessageCircle, HelpCircle, Phone, Mail, MapPin, Globe as GlobeIcon, Lock, DollarSign, Users } from 'lucide-react' import { ADVANCED_INNOVATIVE_SERVICES_2025 } from '@/data/advancedInnovativeServices2025'';" import { EMERGING_TECH_SERVICES_2025 } from '@/data/emergingTechServices2025'  export default function SimpleServicesPage(function SimpleServicesPage(function SimpleServicesPage() {): any {): any {} const [searchQuery, setSearchQuery] = useState('') const [selectedCategory, setSelectedCategory] = useState('all')  const categories: any = [] { id: 'all', name: 'All Services', icon: Zap, color: 'from-blue-500 to-cyan-500' }, { id: 'ai', name: 'AI & Analytics', icon: Brain, color: 'from-purple-500 to-pink-500' }, { id: 'quantum', name: 'Quantum Computing', icon: Rocket, color: 'from-blue-500 to-cyan-500' }, { id: 'blockchain', name: 'Blockchain', icon: Lock, color: 'from-purple-500 to-blue-500' }, { id: 'iot', name: 'IoT & Edge', icon: Cpu, color: 'from-green-500 to-cyan-500' }, { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-purple-500 to-red-500' }, { id: 'healthcare', name: 'Healthcare', icon: Users, color: 'from-pink-500 to-purple-500' }, { id: 'finance', name: 'Finance', icon: DollarSign, color: 'from-green-500 to-blue-500' }, { id: 'manufacturing', name: 'Manufacturing', icon: Server, color: 'from-blue-500 to-purple-500' }, { id: 'sustainability', name: 'Sustainability', icon: Globe, color: 'from-orange-500 to-green-500' } ] ;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function SimpleServicesPage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="SimpleServicesPage - Zion Tech Group"
+        description="Professional simpleservicespage services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              SimpleServicesPage
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional simpleservicespage services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

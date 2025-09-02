@@ -1,3 +1,47 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 
-;
-import React, { useState, useEffect, useCallback } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  BarChart3, Users, Eye, MousePointer, Clock, TrendingUp, TrendingDown, Activity, Globe, Smartphone, Monitor, MapPin, Calendar, Download, Share2, Filter, RefreshCw, X, ChevronDown, ChevronUp    } from 'lucide-react' import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts'  interface AnalyticsData { pageViews: number uniqueVisitors: number bounceRate: number avgSessionDuration: number topPages: Array<{ page: string views: number change: number  }> trafficSources: Array<{ source: string percentage: number color: string  }> deviceTypes: Array<{ device: string percentage: number color: string  }> geographicData: Array<{ country: string visitors: number change: number  }> hourlyTraffic: Array<{ hour: number visitors: number  }> weeklyTrends: Array<{ week: string visitors: number pageViews: number  }> } interface AnalyticsDashboardProps { showPanel?: boolean autoRefresh?: boolean refreshInterval?: number } export function AnalyticsDashboard({ showPanel = true, autoRefresh = true, refreshInterval = 30000 }: AnalyticsDashboardProps) { const [isOpen, setIsOpen] = useState(false) const [isExpanded, setIsExpanded] = useState(false) const [timeRange, setTimeRange] = useState<'1h' | '24h' | '7d' | '30d'>('24h') const [isLoading, setIsLoading] = useState(false) const [lastUpdate, setLastUpdate] = useState<Date>(new Date())  const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({ pageViews: 0, uniqueVisitors: 0, bounceRate: 0, avgSessionDuration: 0, topPages: [], trafficSources: [], deviceTypes: [], geographicData: [], hourlyTraffic: [], weeklyTrends: [] })
+export default function AnalyticsDashboard() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AnalyticsDashboard - Zion Tech Group"
+        description="Professional analyticsdashboard services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AnalyticsDashboard
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional analyticsdashboard services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

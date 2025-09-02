@@ -1,1 +1,47 @@
-' ' ' ' ' export { function } export default function ApiKeysManager() { const { apiKeys, loading, newApiKey, fetchApiKeys, createApiKey, deleteApiKey, toggleApiKey, updateApiKeyScopes, regenerateApiKey, revokeApiKey, clearNewApiKey } = useApiKeys() const [showCreateDialog, setShowCreateDialog] = useState(false) const [newKeyName, setNewKeyName] = useState(') const [selectedScopes, setSelectedScopes] = useState([]) const [showRegenerateConfirm, setShowRegenerateConfirm] = useState(null) const [showDeleteConfirm, setShowDeleteConfirm] = useState(null) const scopeOptions = [' { value: 'jobs:read', label: 'Read Jobs', description: 'Access to view job listings' }, { value: 'jobs:write', label: 'Write Jobs', description: 'Create and manage job listings' }, { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' }, { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' }, { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' } ] const handleCreateKey = async () => { if (!newKeyName.trim() || selectedScopes.length === 0) return await createApiKey(newKeyName.trim(), selectedScopes) setNewKeyName(') setSelectedScopes([]) setShowCreateDialog(false)} const handleScopeToggle = (scope) => { setSelectedScopes(prev => prev.includes(scope) ? prev.filter(s => s !== scope) [...prev, scope])} const getExampleCode = (apiKey) => { ' return `curl -X GET 'https:'''`";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function ApiKeysManager() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ApiKeysManager - Zion Tech Group"
+        description="Professional apikeysmanager services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ApiKeysManager
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional apikeysmanager services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

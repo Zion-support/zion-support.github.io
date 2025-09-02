@@ -1,1 +1,75 @@
- import { motion } from 'framer-motion' import {  TrendingUp, DollarSign, Brain, Zap, CheckCircle, Clock, Shield, Users, BarChart3, Lock, Globe, Award, Star, ArrowRight, Phone, Mail, MapPin, ExternalLink, TrendingUp, Target, Cpu, Activity } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AIFinancialTrading() { const features = [ { icon: <Brain className='w-6 h-6' />, '';' title: 'AI-Powered Market Analysis', '';' description: 'Advanced machine learning algorithms analyze market patterns, sentiment, and trends with 92% accuracy''},'{''' icon: <TrendingUp className='w-6 h-6' />, '';' title: 'Predictive Trading Signals', '';' description: 'Real-time trading signals based on AI analysis of multiple data sources and market indicators''},'{''' icon: <Target className='w-6 h-6' />, '';' title: 'Portfolio Optimization', '';' description: 'Intelligent portfolio rebalancing and risk management with automated position sizing''},'{''' icon: <Activity className='w-6 h-6' />, '';' title: 'Real-time Market Monitoring', '';' description: '24/7 market surveillance with instant alerts for trading opportunities and risk events''},'{''' icon: <Shield className='w-6 h-6' />, '';' title: 'Advanced Risk Management', '';' description: 'Multi-layered risk controls including stop-loss automation and position limit management''},'{''' icon: <BarChart3 className='w-6 h-6' />, '';' title: 'Performance Analytics', '';' description: 'Comprehensive trading performance metrics, backtesting, and strategy optimization tools' } ]';' const pricing = ['{';'' name: 'Starter', '';' price: '$299', '';' period: '/month',';' features: ['';Basic AI trading signals', '';Portfolio tracking', '';Email alerts', '';Standard analytics', '';Basic risk management' ],' popular: false'},'{';'' name: 'Professional', '';' price: '$799', '';' period: '/month',';' features: ['';Advanced AI algorithms', '';Real-time signals', '';Portfolio optimization', '';Priority support', '';Advanced analytics', '';API access', '';Custom strategies' ],' popular: true'},'{';'' name: 'Institutional', '';' price: '$1, 999','';' period: '/month',';' features: ['';Custom AI models', '';White-label platform', '';Dedicated support', '';SLA guarantees', '';Advanced risk controls', '';Multi-account management', '';On-premise deployment' ], popular: false' }'; ]'; ';' const benefits = ['';Increase trading returns by 25-40%', '';Reduce trading risks by 60%', '';Automate 80% of trading decisions', '';24/7 market monitoring and alerts', '';Professional-grade risk management', '';Access to institutional-level tools' ]';' const tradingStrategies = ['{';'' strategy: 'Momentum Trading', '';' description: 'AI-powered momentum detection and trend following with dynamic position sizing', '';' performance: '35% annual return''},'{';'' strategy: 'Mean Reversion', '';' description: 'Statistical arbitrage using machine learning to identify overbought/oversold conditions', '';' performance: '28% annual return''},'{';'' strategy: 'Sentiment Analysis', '';' description: 'Social media and news sentiment analysis for market direction prediction', '';' performance: '42% annual return''},'{';'' strategy: 'Multi-Factor Models', '';' description: 'Combined technical, fundamental, and macroeconomic factor analysis', '';' performance: '38% annual return'' }'; ]'; ';' return (''' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'' <SEO '';' title='AI-Powered Financial Trading Platform - Zion Tech Group'';' description='Revolutionary AI platform for financial trading, portfolio optimization, and risk management. Increase returns by 25-40% while reducing risks by 60%.''/>';' {}''' <section className='relative overflow-hidden py-20 px-4 sm: px-6 lg:px-8'>''' <div className='max-w-7xl mx-auto text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8 }}';' >''' <h1 className='text-5xl md: text-6xl font-bold text-white mb-6'>'; AI-Powered Financial Trading Platform'' </h1>''' <p className='text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>'; Transform your trading with intelligent algorithms, predictive analytics, and automated risk management.'; Increase returns by 25-40% while reducing risks by 60%.'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function aifinancialtrading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai financial trading - Zion Tech Group"
+        description="Professional ai financial trading services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai financial trading
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai financial trading services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai financial trading solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

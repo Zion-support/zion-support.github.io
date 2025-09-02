@@ -1,11 +1,47 @@
-import React, { useState, useRef, useEffect } from 'react' import { motion } from 'framer-motion'  interface OptimizedImageProps {
-   src: string;
-   alt: string;
-   width?: number;
-   height?: number;
-   className?: string;
-   priority?: boolean;
-   sizes?: string;
-   placeholder?: string;
-   onLoad?: () => void
-   onError?: () => void} export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className = '', priority = false, sizes = '100vw', placeholder = 'data: image/svg+xmlbase64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=', onLoad, onError }) => { const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = 'eager' } }, [priority])  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return ( <div className={`bg-gray-200 flex items-center justify-center ${className}`} style={{ width: width || 'auto', height: height || 'auto' }} > <span className="text-gray-500 text-sm">Image failed to load</span> </div> ) } return ( <div className={`relative overflow-hidden ${className}`}> {}" {!isLoaded && (' <motion.div' initial={{ opacity: 1 }}';" exit={{ opacity: 0 }}"';" className="absolute inset-0 bg-gray-100 animate-pulse" style={{ width: width || '100%', height: height || '100%' }} /> )} {} <motion.img ref={imgRef} src={isLoaded ? src : placeholder} alt={alt} width={width} height={height} sizes={sizes} loading={priority ? 'eager' : 'lazy'} className={`transition-opacity duration-300 ${ isLoaded ? 'opacity-100' : 'opacity-0' }`} onLoad={handleLoad} onError={handleError} style={{ width: width ? `${width}px` : '100%', height: height ? `${height}px` : 'auto'" }}'/>'{}';" {!isLoaded && !hasError && ("'" <div className="absolute inset-0 flex items-center justify-center">"'" <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500"></div> </div> )} </div> ) } '`"} export const OptimizedImage: React.FC<OptimizedImageProps> = ({ src, alt, width, height, className = '', priority = false, sizes = '100vw', placeholder = 'data: image/svg+xmlbase64, PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2YzZjRmNiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE0IiBmaWxsPSIjOTNhM2E0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+TG9hZGluZy4uLjwvdGV4dD48L3N2Zz4=', onLoad, onError }) => { const [isLoaded, setIsLoaded] = useState(false) const [hasError, setHasError] = useState(false) const imgRef = useRef<HTMLImageElement>(null)  useEffect(() => { if (priority && imgRef.current) { imgRef.current.loading = 'eager' } }, [priority])  const handleLoad = () => { setIsLoaded(true) onLoad?.() }  const handleError = () => { setHasError(true) onError?.() }  if (hasError) { return ( <div className={`bg-gray-200 flex items-center justify-center ${className}`} style={{ width: width || 'auto', height: height || 'auto' }} > <span className='text-gray-500 text-sm'>Image failed to load</span> </div> ) } return ( <div className={`relative overflow-hidden ${className}`}> {}' {!isLoaded && (' <motion.div' initial={{ opacity: 1 }}';' exit={{ opacity: 0 }}'';' className='absolute inset-0 bg-gray-100 animate-pulse' style={{ width: width || '100%', height: height || '100%' }} /> )} {} <motion.img ref={imgRef} src={isLoaded ? src : placeholder} alt={alt} width={width} height={height} sizes={sizes} loading={priority ? 'eager' : 'lazy'} className={`transition-opacity duration-300 ${ isLoaded ? 'opacity-100' : 'opacity-0' }`} onLoad={handleLoad} onError={handleError} style={{ width: width ? `${width}px` : '100%', height: height ? `${height}px` : 'auto'' }}'/>'{}';' {!isLoaded && !hasError && (''' <div className='absolute inset-0 flex items-center justify-center'>''' <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-cyan-500'></div> </div> )} </div> ) } ';`"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function OptimizedImage() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="OptimizedImage - Zion Tech Group"
+        description="Professional optimizedimage services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              OptimizedImage
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional optimizedimage services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

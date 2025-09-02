@@ -1,1 +1,47 @@
- export default function CybersecuritySuite () { const features = [ '24 / 7 threat monitoring and detection', 'Real - time security incident response', 'Advanced threat intelligence feeds', 'Automated vulnerability scanning', 'Penetration testing and security audits', 'Compliance reporting (GDPR, HIPAA, SOC2) ', 'Security awareness training platform', 'Endpoint detection and response (EDR) ', 'Network traffic analysis', 'Cloud security monitoring', 'Incident response automation', 'Security metrics and dashboards' ] const pricingPlans = [ { name: 'Essential', price: '$199', period: '/month', description: 'Perfect for small businesses and startups', features[';Basic threat monitoring', 'Vulnerability scanning (monthly) ', 'Security awareness training', 'Basic incident response', 'Email support', 'Security dashboard' ], popular: false }, { name: 'Professional', price: '$499', period: '/month', description: 'Ideal for growing businesses', features[';Advanced threat monitoring', 'Real - time vulnerability scanning', 'Penetration testing (quarterly) ', 'Automated incident response', 'Priority support', 'Advanced analytics', 'Compliance reporting', 'Security team training' ], popular: true }, { name: 'Enterprise', price: '$1, 299', period: '/month', description: 'For large organizations with advanced security needs', features[';Full - spectrum threat monitoring', 'Continuous vulnerability assessment', 'Advanced penetration testing', 'Custom incident response playbooks', '24 / 7 phone support', 'Custom security integrations', 'Dedicated security analyst', 'Advanced compliance frameworks', 'Custom security training', 'API access & integrations' ], popular: false ] const securityServices = [ { title: 'Threat Detection & Response', description: 'Advanced AI - powered threat detection with automated response capabilities to neutralize threats in real - time.', icon: <Eye className='h - 8 w - 8 text - zion - cyan'/> }, { title: 'Vulnerability Management', description: 'Continuous vulnerability assessment and prioritization with automated remediation workflows.', icon: <AlertTriangle className='h - 8 w - 8 text - zion - purple'/> }, { title: 'Security Compliance', description: 'Automated compliance monitoring and reporting for major frameworks including GDPR, HIPAA, and SOC2.', icon: <Shield className='h - 8 w - 8 text - zion - cyan'/> }, { title: 'Incident Response', description: 'Rapid incident response with automated playbooks and expert security team support.', icon: <Shield className='h - 8 w - 8 text - zion - purple'/> ] const complianceFrameworks = [ 'GDPR (General Data Protection Regulation) ', 'HIPAA (Health Insurance Portability and Accountability Act) ', 'SOC 2 (System and Organization Controls) ', 'ISO 27001 (Information Security Management) ', 'PCI DSS (Payment Card Industry Data Security Standard) ', 'NIST Cybersecurity Framework', 'CIS Controls', 'FedRAMP (Federal Risk and Authorization Management Program) ' ] return (<div className='min - h-screen bg - gradient - to - b from - zion - blue - dark via - zion - slate to - background'> <SEO title='Cybersecurity Suite - Zion Tech Group' description='Comprehensive security monitoring, threat detection, and incident response for businesses of all sizes. Starting at $199 / month.' keywords='cybersecurity, threat detection, security monitoring, incident response, compliance, security audit' canonical='https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function CybersecuritySuite() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="CybersecuritySuite - Zion Tech Group"
+        description="Professional cybersecuritysuite services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              CybersecuritySuite
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional cybersecuritysuite services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

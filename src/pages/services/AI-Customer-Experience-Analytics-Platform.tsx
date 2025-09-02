@@ -1,1 +1,75 @@
- import { motion    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import {  Brain, Users, BarChart3, TrendingUp, Target, MessageCircle, Eye, Heart, CheckCircle, ArrowRight, Star, Activity, Smartphone, Globe, Zap, Phone, Mail, MapPin, Monitor, PieChart, LineChart, ShoppingCart    } from 'lucide-react'  export default function AICustomerExperienceAnalyticsPlatform() { const features = [';Real-time Customer Journey Mapping','';AI-Powered Sentiment Analysis','';Predictive Customer Behavior Modeling','';Multi-channel Experience Tracking','';Automated Customer Feedback Analysis','';Personalization Engine & Recommendations','';Customer Lifetime Value Prediction','';Churn Risk Assessment & Prevention','';Voice & Text Analytics','';Advanced Reporting & Dashboards''; ]'; ';' const benefits = ['';Increase customer satisfaction by 45%','';Reduce customer churn by 35%','';Boost customer lifetime value by 60%','';Improve response time by 80%','';Enhance personalization accuracy by 90%','';Increase conversion rates by 55%' ]';' const pricing = ['{';'' name: 'Starter','';' price: '$199','';' period: '/month','';' description: 'Perfect for small businesses starting with CX analytics',';' features: ['';Up to 10,000 customer interactions/month','';Basic sentiment analysis','';Standard reporting dashboard','';Email support','';3 user seats' ],' popular: false'},'{';'' name: 'Professional','';' price: '$599','';' period: '/month','';' description: 'Ideal for growing companies with advanced CX needs',';' features: ['';Up to 100,000 customer interactions/month','';Advanced AI analytics','';Multi-channel tracking','';Priority support','';Custom dashboards','';10 user seats','';API access' ],' popular: true'},'{';'' name: 'Enterprise','';' price: '$1,499','';' period: '/month','';' description: 'For large organizations with enterprise-scale CX requirements',';' features: ['';Unlimited customer interactions','';Custom AI model training','';Advanced predictive analytics','';24/7 dedicated support','';Custom development','';Unlimited user seats','';White-label solutions' ], popular: false } ]';' const useCases = [' {';'' title: 'E-commerce Customer Journey','';' description: 'Track customer behavior across your online store to optimize conversion funnels and reduce cart abandonment',';' icon: ShoppingCart,'';' impact: 'Increase conversions by 40%''},'{';'' title: 'Customer Support Optimization','';' description: 'Analyze support interactions to identify pain points and improve response quality and speed',';' icon: MessageCircle,'';' impact: 'Reduce support tickets by 30%''},'{';'' title: 'Product Experience Enhancement','';' description: 'Understand how customers use your products to identify improvement opportunities and new features',';' icon: Target,'';' impact: 'Boost product adoption by 50%''},'{';'' title: 'Marketing Campaign Optimization','';' description: 'Track campaign performance and customer engagement to optimize marketing spend and messaging',';' icon: TrendingUp,'';' impact: 'Improve ROI by 65%' } ]  const stats = [ { number: '1M+', label: 'Customer Interactions Analyzed', icon: Activity }, { number: '95%', label: 'Sentiment Analysis Accuracy', icon: Brain }, { number: '45%', label: 'Average Satisfaction Increase', icon: Star }, { number: '35%', label: 'Churn Reduction', icon: TrendingUp } ]';' const analyticsTypes = ['{';'' name: 'Behavioral Analytics','';' description: 'Track how customers interact with your products and services',';' icon: Eye,'';' metrics: ['Click patterns', 'Navigation paths', 'Feature usage', 'Session duration']'},'{';'' name: 'Sentiment Analysis','';' description: 'Understand customer emotions and satisfaction levels',';' icon: Heart,'';' metrics: ['Emotion detection', 'Satisfaction scoring', 'Feedback analysis', 'Trend identification']'},'{';'' name: 'Predictive Analytics','';' description: 'Forecast customer behavior and identify opportunities',';' icon: TrendingUp,'';' metrics: ['Churn prediction', 'LTV forecasting', 'Next-best-action', 'Demand prediction']'},'{';'' name: 'Journey Analytics','';' description: 'Map complete customer experiences across touchpoints',';' icon: Globe,'';' metrics: ['Touchpoint mapping', 'Journey optimization', 'Bottleneck identification', 'Experience scoring'] } ] ' return ('; <>' <Helmet>'' <title>AI Customer Experience Analytics Platform - Zion Tech Group</title>''' <meta name='description' content='Transform customer experiences with AI-powered analytics.Increase satisfaction by 45%, reduce churn by 35%, and boost customer lifetime value by 60%.' / / / / / />''' <meta name='keywords' content='customer experience analytics, AI analytics, customer journey mapping, sentiment analysis, predictive analytics' / / / / / />''' <link rel='canonical' href='https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function AICustomerExperienceAnalyticsPlatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AI Customer Experience Analytics Platform - Zion Tech Group"
+        description="Professional ai customer experience analytics platform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Customer Experience Analytics Platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai customer experience analytics platform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai customer experience analytics platform solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

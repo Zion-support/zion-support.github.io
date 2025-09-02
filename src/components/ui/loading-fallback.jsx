@@ -1,2 +1,47 @@
- import { motion } from 'framer-motion' import { Loader2 export function LoadingFallback({ message = "Loading...", size = 'md', className = " }) {} const sizeClasses = {}';'; sm: 'w-6 h-6', ''' md: 'w-8 h-8', ''' lg: 'w-12 h-12' } const textSizes = {}';'; sm: 'text-sm', ''' md: 'text-base', ''' lg: 'text-lg' } return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>" <motion.div animate={{ rotate: 360 }} transition = {}"';""" { duration: 1, repeat: Infinity,"""" ease: "linear"""`;""`;"`"" }} className={`${sizeClasses[size]} text-zion-purple`}>"""" <Loader2 className="w-full h-full"/> </motion.div> <motion.p initial = {} { opacity: 0, y: 10 }} animate = {} { opacity: 1, y: 0 }} transition = {} { delay: 0.2, duration: 0.3`}} className={`${textSizes[size]} text-zion-slate-light text-center`}>" {message}"" </motion.p>"""'""" <motion.div className="flex space-x-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {} { delay: 0.4," duration: 0.3'; """" }}>"""" {[0, 1, 2].map((i) => (<motion.div key={i} className="w-2 h-2 bg-zion-purple rounded-full" animate = {} {} scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }} transition = {} {} duration: 1.5, repeat: Infinity, delay: i * 0.2 }}/>))}" </motion.div>"" </div>)}"""';"`";
- import { motion } from 'framer-motion' import { Loader2 export function LoadingFallback({ message = 'Loading...', size = 'md', className = ' }) {} const sizeClasses = {}';'; sm: 'w-6 h-6', ''' md: 'w-8 h-8', ''' lg: 'w-12 h-12' } const textSizes = {}';' sm: 'text-sm', ''' md: 'text-base', ''' lg: 'text-lg' } return (<div className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}>' <motion.div animate={{ rotate: 360 }} transition = {}'';''' { duration: 1, repeat: Infinity,'''' ease: 'linear'''`;''`;'`'' }} className={`${sizeClasses[size]} text-zion-purple`}>'''' <Loader2 className='w-full h-full'/> </motion.div> <motion.p initial = {} { opacity: 0, y: 10 }} animate = {} { opacity: 1, y: 0 }} transition = {} { delay: 0.2, duration: 0.3`}} className={`${textSizes[size]} text-zion-slate-light text-center`}>' {message}'' </motion.p>''''''' <motion.div className='flex space-x-1' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition = {} { delay: 0.4,' duration: 0.3'; '''' }}>'''' {[0, 1, 2].map((i) => (<motion.div key={i} className='w-2 h-2 bg-zion-purple rounded-full' animate = {} {} scale: [1, 1.2, 1], opacity: [0.5, 1, 0.5] }} transition = {} {} duration: 1.5, repeat: Infinity, delay: i * 0.2 }}/>))}' </motion.div>'' </div>)}'''';'`";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function loadingfallback() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="loading fallback - Zion Tech Group"
+        description="Professional loading fallback services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              loading fallback
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional loading fallback services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,47 @@
- export default ScrollToTop export default ScrollToTop export default ScrollToTop export function ScrollToTop = () => { const [isVisible, setIsVisible] = useState (false)  useEffect ( () => { const toggleVisibility = () => { if (window.pageYOffset > 300) { setIsVisible (true) } else { setIsVisible (false) } } window.addEventListener ('scroll', toggleVisibility)  return () => window.removeEventListener ('scroll', toggleVisibility) }, [])  const scrollToTop = () => { window.scrollTo ({ top: 0, behavior: 'smooth'})} return (className = 'fixed bottom - 8 right - 8 w - 14 h - 14 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white rounded - full shadow - lg hover: shadow - xl transition - all duration - 300 flex items - center justify - center z - 50') aria - label';Back to top' initial = {} { opacity: 0, scale 0, y 20} } animate = {} { opacity: 1, scale 1, y 0} } exit = {} { opacity: 0, scale 0, y 20} whileHover = {} { scale: 1.1, y -2, boxShadow'0 20px 25px - 5px rgba (59, 130, 246, 0.3) , 0 10px 10px - 5px rgba (59, 130, 246, 0.2) '} whileTap = {} { scale: 0.95} transition = {} { ' type: 'spring', stiffness 400, damping 17} >' <svg className='w - 6 h - 6'/> , <>' {isVisible && (<button onClick={scrollToTop} className='fixed bottom - 8 right - 8 z - 50 w - 12 h - 12 bg - gradient - to - r from - blue - 600 to - cyan - 600 text - white rounded - full shadow - lg hover: shadow - xl transform hover:-translate - y-1 transition - all duration - 300 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:ring - offset - 2' aria - label='Scroll to top'>' <svg className='w - 6 h - 6 mx - auto' fill='none' stroke='currentColor' viewBox='0 0 24 24'>' <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M5 10l7 - 7m0 0l7 7m - 7-7v18'/> </svg> </button>) } </>  export default ScrollToTop export default ScrollToTop export default ScrollToTop';'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function ScrollToTop() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ScrollToTop - Zion Tech Group"
+        description="Professional scrolltotop services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ScrollToTop
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional scrolltotop services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

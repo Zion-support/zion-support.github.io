@@ -1,50 +1,47 @@
-;import { AlertCircle, RefreshCw } from 'lucide-react';
-export const ProfileErrorState = ({}
-';
-'';
-''';
-  error = 'Failed to load profile',
-  onRetry}) => {}
-  return()
-    <div className='max-w-4xl mx-auto px-4 py-8'>'''
-      <Card>''''
-        <CardHeader className='text-center'>''''
-          <div className='w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4'>''''
-            <AlertCircle className='w-8 h-8 text-red-600' />'''
-          </div>''''
-          <h2 className='text-2xl font-bold text-gray-900 mb-2'>
-            Oops! Something went wrong'''
-          </h2>''''
-          <p className='text-gray-600'>{error}</p>'''
-        </CardHeader>''''
-        <CardContent className='text-center'>''''
-          <div className='space-y-4'>''''
-            <p className='text-sm text-gray-500'>';
-              We're having trouble loading this profile. Please try again or;
-              contact support if the problem persists.
-            </p>''';
-''''
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              {onRetry && (
-                <Button''';
-                  onClick={onRetry}'''';
-                  className='flex items-center space-x-2''''>''''
-                  <RefreshCw className='w-4 h-4' />
-                  <span>Try Again</span>
-                </Button>
-              )}
-'''
-              <Button''''';
-                variant='outline''';
-                onClick={() => (window.location.href = '/')}
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function ProfileErrorState() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ProfileErrorState - Zion Tech Group"
+        description="Professional profileerrorstate services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ProfileErrorState
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional profileerrorstate services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
               >
-                Go Home
-              </Button>
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
             </div>
-          </div>
-        </CardContent>
-      </Card>
+          </motion.div>
+        </div>
+      </section>
     </div>
-  )}'';"
-}'';';
-'''''"
+  );
+}

@@ -1,2 +1,47 @@
-''' import SEO from '@/components/SEO'''' import { ProtectedRoute } from '@/components/ProtectedRoute'''' import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent' function ContractBuilderPage() {} return (<ProtectedRoute> <> <SEO title="Smart Contract Builder | Zion AI Marketplace" description="Create and deploy blockchain-backed smart contracts for your projects"/>""";" """" <main className="container mx-auto py-10 px-4"> <ContractBuilderContent /> </main> </> </ProtectedRoute>)} export default ContractBuilderPage export default ContractBuilderPage export default ContractBuilderPage export default ContractBuilderPage export default ContractBuilderPage export default ContractBuilderPage;" export default ContractBuilderPage;";" export default ContractBuilderPage'""";" '"'"""
-''' import SEO from '@/components/SEO'''' import { ProtectedRoute } from '@/components/ProtectedRoute'''' import { ContractBuilderContent } from '@/components/contracts/page/ContractBuilderContent' function ContractBuilderPage() {} return (<ProtectedRoute> <> <SEO title='Smart Contract Builder | Zion AI Marketplace' description='Create and deploy blockchain-backed smart contracts for your projects'/>''';' '''' <main className='container mx-auto py-10 px-4'> <ContractBuilderContent /> </main> </> </ProtectedRoute>)} export default ContractBuilderPage export default ContractBuilderPage export default ContractBuilderPage export default ContractBuilderPage export default ContractBuilderPage export default ContractBuilderPage;' export default ContractBuilderPage;';' export default ContractBuilderPage'''';' '''''';'''
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function ContractBuilder() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ContractBuilder - Zion Tech Group"
+        description="Professional contractbuilder services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ContractBuilder
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional contractbuilder services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

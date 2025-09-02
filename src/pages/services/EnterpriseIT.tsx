@@ -1,1 +1,75 @@
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import { SEO } from '@/components/SEO' import {  Building, Server, Shield, Cloud, Users, Globe, Lock, TrendingUp, CheckCircle, ArrowRight    } from 'lucide-react'  export default function EnterpriseIT() { const enterpriseServices = [ { title: 'Infrastructure Design','';' description: 'Scalable enterprise infrastructure architecture and planning',';' icon: Building,'';' features: ['Network architecture', 'Server infrastructure', 'Storage solutions', 'Security framework']'},'{';'' title: 'Server Management','';' description: 'Comprehensive server administration and optimization',';' icon: Server,'';' features: ['Performance monitoring', 'Capacity planning', 'Backup management', 'Disaster recovery']'},'{';'' title: 'Storage Solutions','';' description: 'Enterprise storage infrastructure and data management',';' icon: Cloud,'';' features: ['SAN/NAS systems', 'Cloud storage', 'Data archiving', 'Backup solutions']'},'{';'' title: 'Security Infrastructure','';' description: 'Multi-layered security and compliance solutions',';' icon: Shield,'';' features: ['Firewall management', 'Intrusion detection', 'Access control', 'Compliance monitoring']' }'; ]'; ';' const benefits = ['';Improved operational efficiency and productivity','';Enhanced security and compliance','';Scalable infrastructure for business growth','';Reduced IT costs and complexity','';Better disaster recovery and business continuity','';24/7 monitoring and proactive support' ]';' const industries = ['{';'' title: 'Financial Services','';' description: 'Secure, compliant IT infrastructure for banks, insurance, and fintech companies',' icon: TrendingUp'},'{';'' title: 'Healthcare','';' description: 'HIPAA-compliant systems for hospitals, clinics, and medical research',' icon: Shield'},'{';'' title: 'Manufacturing','';' description: 'Industrial IT solutions for smart factories and supply chain management',' icon: Building'},'{';'' title: 'Retail','';' description: 'E-commerce platforms and retail management systems',' icon: Users'},'{';'' title: 'Education','';' description: 'Learning management systems and campus IT infrastructure',' icon: Globe'},'{';'' title: 'Government','';' description: 'Secure, compliant systems for public sector organizations', icon: Lock' }'; ]'; ';' return ('';' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'' <SEO '';' title='Enterprise IT Solutions - Zion Tech Group'';' description='Comprehensive enterprise IT services that provide the foundation for business success, from infrastructure design to ongoing management and support.'';' keywords='enterprise IT, infrastructure, server management, storage solutions, security infrastructure'';' canonical="https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function EnterpriseIT() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="EnterpriseIT - Zion Tech Group"
+        description="Professional enterpriseit services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              EnterpriseIT
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional enterpriseit services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive enterpriseit solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

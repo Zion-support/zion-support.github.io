@@ -1,3 +1,47 @@
- import { motion } from 'framer - motion' import { Brain, Zap, Globe, Rocket } from 'lucide - react' interface LoadingSpinnerProps {
-  message?: string
-   size?: 'sm' | 'md' | 'lg'} const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({ message = 'Loading...', size = 'md' }) => { const sizeClasses = { sm: 'w - 8 h - 8', md: 'w - 16 h - 16', lg: 'w - 24 h - 24' } const textSizeClasses = { sm: 'text - sm', md: 'text - base', lg: 'text - lg' } const icons = [Brain, Zap, Globe, Rocket] const [currentIcon, setCurrentIcon] = React.useState (0)  React.useEffect ( () => { const interval = setInterval ( () => { setCurrentIcon ( (prev) => (prev + 1) % icons.length)  }, 1000)  return () => clearInterval (interval)  }, [icons.length])  const CurrentIcon = icons[currentIcon] return (<div className='min - h-screen flex items - center justify - center bg - zion - slate - dark'> <div className='flex flex - col items - center space - y-6'> {} <div className='relative'> <motion.div className={`${sizeClasses[size]} border - 4 border - zion - cyan / 20 border - t-zion - cyan rounded - full`} animate={{ rotate: 360 }} transition={{ duration: 1, repeat: Infinity, ease: 'linear' }} /> <motion.div className='absolute inset - 0 flex items - center justify - center' animate={{ scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity }} > <CurrentIcon className={`${sizeClasses[size]} text - zion - cyan`} /> </motion.div> </div> {} <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }} className='text - center' > <div className={`${textSizeClasses[size]} text - zion - cyan font - medium mb - 2`}> {message} </div> {} <div className='flex space - x-1 justify - center'> {[0, 1, 2].map ( (i) => (<motion.div key={i} className='w - 2 h - 2 bg - zion - cyan rounded - full' animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 1, repeat: Infinity, delay: i * 0.2 }} />) ) } </div> </motion.div> {} <div className='w - 48 h - 1 bg - zion - slate - light / 30 rounded - full overflow - hidden'> <motion.div className='h - full bg - gradient - to - r from - zion - cyan to - zion - purple' initial={{ width: 0 }} animate={{ width: '100%' }} transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }} /> </div> </div> </div>)  } export default LoadingSpinner';`"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function LoadingSpinner() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="LoadingSpinner - Zion Tech Group"
+        description="Professional loadingspinner services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              LoadingSpinner
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional loadingspinner services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,47 @@
-import React, { useState } from 'react' import { motion    } from 'framer-motion' import {  Server, Cloud, Shield, Database, Network, Lock, Zap, Cpu, HardDrive, Wifi, Globe, Code, GitBranch, Activity, BarChart3, Users, Building2, Car, Plane, Ship, Factory, Warehouse, ShoppingCart, Bank, GraduationCap, Stethoscope, Phone, Mail, MapPin, CheckCircle, TrendingUp, Star, ArrowRight, ExternalLink, Download, Upload, Share, Bookmark, MessageCircle, PhoneCall, VideoCall, MailOpen, Send, Plus, Minus, Bot, GitFork, Sparkles, MessageSquare, FileText, Search, Calendar, Clock, Timer, Stopwatch, Thermometer, Gauge, Compass, Map, Filter, SortAsc, SortDesc, ChevronDown, ChevronUp, BookOpen as BookIcon, GraduationCap as GraduationIcon, DollarSign as DollarIcon, CreditCard as CreditIcon, ShoppingCart as CartIcon, Truck as TruckIcon, Warehouse as WarehouseIcon, Factory as FactoryIcon, Building2 as BuildingIcon, Home as HomeIcon, Store as StoreIcon, Bank as BankIcon, Insurance as InsuranceIcon, Law as LawIcon, Gavel as GavelIcon, FileText as FileIcon, Calendar as CalendarIcon2, Clock as ClockIcon2, Timer as TimerIcon, Stopwatch as StopwatchIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Compass as CompassIcon, Map as MapIcon, Search as SearchIcon2, Filter as FilterIcon, SortAsc as SortAscIcon, SortDesc as SortDescIcon, ChevronDown as ChevronDownIcon, ChevronUp as ChevronUpIcon, ExternalLink as ExternalLinkIcon, Download as DownloadIcon, Upload as UploadIcon, Share as ShareIcon, Bookmark as BookmarkIcon, MessageCircle as MessageIcon, PhoneCall as PhoneCallIcon, VideoCall as VideoCallIcon, MailOpen as MailOpenIcon, Send as SendIcon, Plus as PlusIcon, Minus as MinusIcon    } from 'lucide-react'  const ITInfrastructureInnovation2029: React.FC = () => { const [activeCategory, setActiveCategory] = useState('all')  const categories = [ { id: 'all', name: 'All Solutions', icon: Sparkles, color: 'from-purple-500 to-pink-500' }, { id: 'cloud-migration', name: 'Cloud Migration', icon: Cloud, color: 'from-blue-500 to-cyan-500' }, { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500' }, { id: 'devops-automation', name: 'DevOps & Automation', icon: GitBranch, color: 'from-green-500 to-emerald-500' }, { id: 'data-infrastructure', name: 'Data Infrastructure', icon: Database, color: 'from-indigo-500 to-purple-500' }, { id: 'network-security', name: 'Network & Security', icon: Network, color: 'from-yellow-500 to-orange-500' }, { id: 'edge-computing', name: 'Edge Computing', icon: Cpu, color: 'from-gray-500 to-blue-500' }, { id: 'quantum-ready', name: 'Quantum Ready', icon: Atom, color: 'from-purple-500 to-indigo-500' } ]  const itInfrastructureServices = [
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function ITInfrastructureInnovation2029() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ITInfrastructureInnovation2029 - Zion Tech Group"
+        description="Professional itinfrastructureinnovation2029 services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ITInfrastructureInnovation2029
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional itinfrastructureinnovation2029 services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

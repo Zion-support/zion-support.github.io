@@ -1,3 +1,47 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
 
-;
-import React, { useState, useEffect, useRef, useCallback } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import {  Search, X, Filter, TrendingUp, Clock, Star, MapPin, Users, Building, Code, Shield, Brain, Zap, ArrowRight, ChevronDown, CheckCircle, Sparkles, Target, Globe, Cpu, Database, Network, Smartphone, Server, Lock, Eye, Settings, BookOpen, FileText, Video, Microphone, Camera, Lightbulb, Rocket, Atom, Leaf, Gamepad2, Coins, Satellite, Activity, MessageCircle, BarChart, Users2, Palette, Heart, Share2, Download, ExternalLink    } from 'lucide-react'  interface SearchResult { id: string title: string description: string type: 'service' | 'page' | 'article' | 'case-study' | 'tool' category: string tags: string[] url: string relevance: number lastUpdated: Date views: number rating: number  } interface SearchFilter { type: string[] category: string[] tags: string[] dateRange: 'all' | 'week' | 'month' | 'year' sortBy: 'relevance' | 'date' | 'popularity' | 'rating'  } export function AdvancedSearch() { const [isOpen, setIsOpen] = useState(false) const [query, setQuery] = useState('') const [results, setResults] = useState<SearchResult[]>([]) const [suggestions, setSuggestions] = useState<string[]>([]) const [filters, setFilters] = useState<SearchFilter>({ type: [], category: [], tags: [], dateRange: 'all', sortBy: 'relevance' }) const [isSearching, setIsSearching] = useState(false) const [showFilters, setShowFilters] = useState(false) const [recentSearches, setRecentSearches] = useState<string[]>([]) const [popularSearches, setPopularSearches] = useState<string[]>([])  const searchInputRef = useRef<HTMLInputElement>(null) const searchTimeoutRef = useRef<NodeJS.Timeout>() 
+export default function AdvancedSearch() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AdvancedSearch - Zion Tech Group"
+        description="Professional advancedsearch services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AdvancedSearch
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional advancedsearch services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

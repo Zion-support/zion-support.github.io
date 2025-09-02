@@ -1,2 +1,47 @@
- import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className="bg - gray - 900 text - white py - 8">"'" <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8">"'" <div className="grid grid - cols - 1 md: grid - cols - 4 gap - 8">';" {}"'" <div className="space - y-4">"'" <h3 className="text - xl font - bold text - cyan - 400">Zion Tech Group</h3>"'" <p className="text - gray - 300">'; Transforming businesses through cutting - edge technology and expert consulting.'" </p>"'" <div className="flex space - x-4">"'" <a href="https:"""";
- import { Link } from 'react - router - dom'  export const SimpleFooter: React.FC = () => { const currentYear = new Date () .getFullYear ()   return ( <footer className='bg - gray - 900 text - white py - 8'>''' <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'>''' <div className='grid grid - cols - 1 md: grid - cols - 4 gap - 8'>';' {}''' <div className='space - y-4'>''' <h3 className='text - xl font - bold text - cyan - 400'>Zion Tech Group</h3>''' <p className='text - gray - 300'>'; Transforming businesses through cutting - edge technology and expert consulting.'' </p>''' <div className='flex space - x-4'>''' <a href='https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function SimpleFooter() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="SimpleFooter - Zion Tech Group"
+        description="Professional simplefooter services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              SimpleFooter
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional simplefooter services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,47 @@
-'; import { cn } from '@/lib/utils'  export function GradientHeading({} children, ' variant = 'primary', ' size = '2xl', ' className = '', customGradient}) {} const gradients = {}';'; primary: '''';bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent', ''' secondary: '''';bg-gradient-to-r from-zion-blue via-zion-cyan to-zion-purple bg-clip-text text-transparent', ''' accent: '''';bg-gradient-to-r from-zion-purple via-zion-cyan to-zion-blue bg-clip-text text-transparent', '' custom: ''' customGradient ||'''';bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent'}  const getGradientClasses = () => {} return gradients[variant] }  const getSizeClasses = () => {} const sizes = {}';'; xs: 'text-xs', ''' sm: 'text-sm', ''' md: 'text-base', ''' lg: 'text-lg', ''' xl: 'text-xl', 2xl': 'text-2xl',3xl': 'text-3xl', 4xl': 'text-4xl',5xl': 'text-5xl', 6xl': 'text-6xl'} return sizes[size] }' return()'' <h1''' className={cn('''';font-bold leading-tight', getSizeClasses(), getGradientClasses(), className )} > {children} </h1> ) }';';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function GradientHeading() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="GradientHeading - Zion Tech Group"
+        description="Professional gradientheading services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              GradientHeading
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional gradientheading services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

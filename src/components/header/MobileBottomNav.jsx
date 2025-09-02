@@ -1,2 +1,47 @@
-';"" import { Link, useLocation    } from 'react-router-dom'';"" import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart    } from 'lucide-react'';"" import { useCart } from '@/context/CartContext'';"" import { cn } from '@/lib/utils'';"" import { useAuth } from '@/hooks/useAuth'';"" import { useFavorites } from '@/hooks/useFavorites' export function MobileBottomNav({ unreadCount = 0 }) { const location = useLocation() const { user } = useAuth() const isAuthenticated = !!user const { count: favoritesCount } = useFavorites() const { items } = useCart()" const cartCount = items.reduce((sum, i) => sum + i.quantity, 0)'; const navItems = ['{';"" name: "Home","';" href: "/",';" icon: Home,"';" matches: (path) => path === "/"'},'{';"" name: "Browse","';" href: "/talent",';" icon: Search,"';" matches: (path) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")'},'{';"" name: "Community","';" href: "/community",';" icon: MessageCircle,"';" matches: (path) => path.startsWith("/community") || path.startsWith("/forum")'},'{';"" name: "Messages","';" href: "/messages",';" icon: MessageSquare,"';" matches: (path) => path.startsWith("/messages") || path.startsWith("/inbox"), badge: unreadCount," authRequired: true'},'{';"" name: "Cart","';" href: "/cart",';" icon: ShoppingCart,"';" matches: (path) => path.startsWith("/cart")," badge: cartCount'},'{';"" name: "Dashboard","';" href: "/dashboard",';" icon: User,"';" matches: (path) => path.startsWith("/dashboard"), authRequired: true" }'; ]
-';'' import { Link, useLocation    } from 'react-router-dom'';'' import { Home, Search, MessageSquare, User, MessageCircle, ShoppingCart    } from 'lucide-react'';'' import { useCart } from '@/context/CartContext'';'' import { cn } from '@/lib/utils'';'' import { useAuth } from '@/hooks/useAuth'';'' import { useFavorites } from '@/hooks/useFavorites' export function MobileBottomNav({ unreadCount = 0 }) { const location = useLocation() const { user } = useAuth() const isAuthenticated = !!user const { count: favoritesCount } = useFavorites() const { items } = useCart()' const cartCount = items.reduce((sum, i) => sum + i.quantity, 0)'; const navItems = ['{';'' name: 'Home','';' href: '/',';' icon: Home,'';' matches: (path) => path === '/''},'{';'' name: 'Browse','';' href: '/talent',';' icon: Search,'';' matches: (path) => path.startsWith('/talent') || path.startsWith('/categories') || path.startsWith('/marketplace')'},'{';'' name: 'Community','';' href: '/community',';' icon: MessageCircle,'';' matches: (path) => path.startsWith('/community') || path.startsWith('/forum')'},'{';'' name: 'Messages','';' href: '/messages',';' icon: MessageSquare,'';' matches: (path) => path.startsWith('/messages') || path.startsWith('/inbox'), badge: unreadCount,' authRequired: true'},'{';'' name: 'Cart','';' href: '/cart',';' icon: ShoppingCart,'';' matches: (path) => path.startsWith('/cart'),' badge: cartCount'},'{';'' name: 'Dashboard','';' href: '/dashboard',';' icon: User,'';' matches: (path) => path.startsWith('/dashboard'), authRequired: true' }'; ]';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function MobileBottomNav() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="MobileBottomNav - Zion Tech Group"
+        description="Professional mobilebottomnav services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              MobileBottomNav
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional mobilebottomnav services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

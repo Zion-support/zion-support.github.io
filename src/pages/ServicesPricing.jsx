@@ -1,1 +1,47 @@
- export default function ServicesPricing () { const pricingTiers = [ { name: 'Starter', description: 'Perfect for small businesses and startups', price: 'From $500', priceRange: '500 - 1,999', features[';Basic AI Integration', 'Standard Security', 'Email Support', 'Basic Analytics', '5 User Licenses', 'Standard Templates' ], notIncluded[';Advanced Customization', 'Priority Support', 'Custom Integrations', 'Advanced Analytics' ], color: 'from - emerald - 500 to - green - 600', popular: false }, { name: 'Professional', description: 'Ideal for growing businesses and teams', price: 'From $2, 000', priceRange: '2, 000 - 4,999', features[';Advanced AI Features', 'Enhanced Security', 'Priority Support', 'Advanced Analytics', 'Unlimited Users', 'Custom Templates', 'API Access', 'Integration Support' ], notIncluded[';Enterprise Security', 'Custom Development', 'Dedicated Account Manager' ], color: 'from - blue - 500 to - indigo - 600', popular: true }, { name: 'Enterprise', description: 'For large organizations with complex needs', price: 'From $5, 000', priceRange: '5, 000 - 15,000', features[';Full AI Suite', 'Enterprise Security', '24 / 7 Premium Support', 'Custom Analytics', 'Unlimited Everything', 'Custom Development', 'Dedicated Account Manager', 'SLA Guarantees', 'Custom Integrations', 'Training & Onboarding' ], notIncluded[], color: 'from - purple - 500 to - indigo - 600', popular: false ] const serviceCategories = [ { name: 'AI Services', icon: <Zap className='w - 6 h - 6'/>, services[ { name: 'AI Chatbot Platform', starter: 899, professional: 2999, enterprise: 5999 }, { name: 'Content Generation Suite', starter: 499, professional: 899, enterprise: 1999 }, { name: 'Data Analytics Platform', starter: 999, professional: 1999, enterprise: 4999 }, { name: 'Computer Vision API', starter: 799, professional: 1499, enterprise: 3999 } ] }, { name: 'IT Services', icon: <Shield className='w - 6 h - 6'/>, services[ { name: 'Cloud Migration', starter: 1999, professional: 4999, enterprise: 9999 }, { name: 'Cybersecurity Audit', starter: 1499, professional: 3999, enterprise: 7999 }, { name: 'DevOps Automation', starter: 999, professional: 3499, enterprise: 6999 }, { name: 'Infrastructure Setup', starter: 1299, professional: 2999, enterprise: 5999 } ] }, { name: 'Business Solutions', icon: <TrendingUp className='w - 6 h - 6'/>, services[ { name: 'Workflow Automation', starter: 799, professional: 2499, enterprise: 4999 }, { name: 'Customer Support System', starter: 599, professional: 1799, enterprise: 3999 }, { name: 'Project Management', starter: 699, professional: 1999, enterprise: 4499 }, { name: 'HR Management Suite', starter: 899, professional: 2499, enterprise: 5499 } ] }, { name: 'Digital Solutions', icon: <Globe className='w - 6 h - 6'/>, services[ { name: 'E - commerce Optimization', starter: 1499, professional: 3999, enterprise: 7999 }, { name: 'Marketing Automation', starter: 999, professional: 2999, enterprise: 5999 }, { name: 'Web Development', starter: 1999, professional: 4999, enterprise: 9999 }, { name: 'Mobile App Development', starter: 2999, professional: 6999, enterprise: 14999 } ] ] const benefits = [ { icon: <CheckCircle className='w - 8 h - 8'/>, title: 'Scalable Solutions', description: 'Start with what you need and scale up as your business grows' }, { icon: <Shield className='w - 8 h - 8'/>, title: 'Enterprise Security', description: 'Bank - level security and compliance for all our solutions' }, { icon: <Clock className='w - 8 h - 8'/>, title: 'Rapid Deployment', description: 'Get up and running in days, not months' }, { icon: <Users className='w - 8 h - 8'/>, title: 'Expert Support', description: '24 / 7 technical support and dedicated account management' }, { icon: <TrendingUp className='w - 8 h - 8'/>, title: 'Proven ROI', description: 'Track record of delivering measurable business outcomes' }, { icon: <BarChart3 className='w - 8 h - 8'/>, title: 'Continuous Innovation', description: 'Regular updates and new features to keep you ahead' ] const [selectedTier, setSelectedTier] = useState ('professional')  return (<div className='min - h-screen bg - gradient - to - br from - zion - blue - dark via - zion - blue to - zion - blue - light'> <SEO title='Micro SAAS Services Pricing - Zion Tech Group' description='Transparent pricing for our comprehensive micro SAAS services. Choose from Starter, Professional, or Enterprise tiers to match your business needs and budget.' keywords='micro SAAS pricing, service costs, AI services pricing, IT solutions pricing' url='https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function ServicesPricing() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ServicesPricing - Zion Tech Group"
+        description="Professional servicespricing services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ServicesPricing
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional servicespricing services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

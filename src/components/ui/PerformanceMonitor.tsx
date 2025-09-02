@@ -1,15 +1,47 @@
-import React, { useEffect, useState, useCallback } from 'react' import { motion, AnimatePresence } from 'framer-motion' import { Activity, Zap, Clock, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react'  interface PerformanceMetrics {
-   fcp: number | null;
-   lcp: number | null;
-   fid: number | null;
-   cls: number | null;
-   ttfb: number | null;
-   domLoad: number | null;
-   windowLoad: number | null} interface PerformanceMonitorProps {
-   showDetails?: boolean;
-   autoHide?: boolean;
-   threshold?: {
-   fcp: number;
-   lcp: number;
-   fid: number;
-   cls: number} } export const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false, autoHide = true, threshold = { fcp: 1800, lcp: 2500, fid: 100, cls: 0.1 } }) => { const [metrics, setMetrics] = useState<PerformanceMetrics>({ fcp: null, lcp: null, fid: null, cls: null, ttfb: null, domLoad: null, windowLoad: null }) const [isVisible, setIsVisible] = useState(true) const [isExpanded, setIsExpanded] = useState(false)  const getPerformanceScore = useCallback((metric: keyof PerformanceMetrics): number => { if (!metrics[metric]) return 0  const value = metrics[metric]! const thresholdValue = threshold[metric as keyof typeof threshold]  if (metric === 'cls') {';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function PerformanceMonitor() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="PerformanceMonitor - Zion Tech Group"
+        description="Professional performancemonitor services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              PerformanceMonitor
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional performancemonitor services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,47 @@
- export default function Profile () { export default Profile const { user, isLoading, logout } = useAuth ()  const navigate = useNavigate ()  useEffect ( () => { if (!isLoading && !user) { toast.error ('Please log in to view your profile')  router ('/login?redirect=/profile')  } }, [user, isLoading, navigate])  if (isLoading) { return (<> <div className='min - h-screen bg - zion - blue flex items - center justify - center'> <div className='animate - pulse text - white'>Loading profile...</div> </div> </>) } if (!user) { return (<> <div className='min - h-screen bg - zion - blue flex items - center justify - center'> <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 max - w-md'> <h1 className='text - xl font - bold text - white mb - 4'>Please log in</h1> <p className='text - zion - slate mb - 4'>You need to be logged in to view your profile.</p> <Button onClick={ () => router ('/login?redirect=/profile') } className='bg - gradient - to - r from - zion - purple to - zion - purple - dark hover: from - zion - purple - light hover:to - zion - purple text - white'> Go to Login </Button> </div> </div> </>) } return (<> <div className='min - h-screen bg - zion - blue'> <div className='container mx - auto px - 4 py - 8'> <h1 className='text - 2xl font - bold text - white mb - 8'>My Profile</h1> <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6'> <div className='flex flex - col md: flex - row gap - 6'> <div className='md:w - 1/3'> <div className='w - 32 h - 32 rounded - full bg - zion - purple flex items - center justify - center text - 3xl font - bold text - white mb - 4 mx - auto md:mx - 0'> {user.displayName ? user.displayName.split (') .map (name => name[0]) .join (') : user.email?.charAt (0) } </div> </div> <div className='md: w - 2/3'> <h2 className='text - xl font - bold text - white'>{user.displayName || 'User'}</h2> <p className='text - zion - slate - light mb - 4'>{user.email}</p> <Button onClick={ () => { logout ()  router ('/')  }} variant='outline' className='border - zion - blue - light text - zion - slate - light hover: bg - zion - blue - light hover:text - white'> Logout </Button> </div> </div> </div> </div> </div> </>) }  }}}} '';'"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function Profile() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Profile - Zion Tech Group"
+        description="Professional profile services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Profile
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional profile services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

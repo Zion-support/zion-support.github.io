@@ -1,1 +1,75 @@
-import { motion } from 'framer-motion'  import SEO from '@/components/SEO'  const AISEOOptimizer: React.FC = () => (''' <div className='min-h-screen bg-slate-900 text-white'>''' <SEO title='AI SEO Optimizer - Zion Tech Group' description='On-page AI SEO optimization with content brief generation, keyword clustering, internal linking, and SERP monitoring.' />''' <section className='container mx-auto px-4 py-12'>''' <h1 className='text-4xl font-bold mb-3'>AI SEO Optimizer</h1>''' <p className='text-slate-300 max-w-3xl'>Boost organic traffic with AI-driven keyword clustering, content briefs, schema markup suggestions, and internal linking. Monitor rank movements and automate optimization tasks.</p>'' </section>''' <section className='container mx-auto px-4 pb-8 grid md: grid-cols-3 gap-6'>''' <div className='p-6 bg-slate-800 rounded-xl border border-slate-700'>''' <h3 className='font-semibold mb-2'>Capabilities</h3>''' <ul className='list-disc ml-5 text-slate-300 space-y-1'> <li>Keyword clustering and topical maps</li> <li>AI content briefs with headings and FAQs</li>' <li>Internal link graph recommendations</li>' <li>Schema.org and meta tag suggestions</li>' </ul>'' </div>''' <div className='p-6 bg-slate-800 rounded-xl border border-slate-700'>''' <h3 className='font-semibold mb-2'>Integrations</h3>''' <ul className='list-disc ml-5 text-slate-300 space-y-1'> <li>Google Search Console & Analytics</li>' <li>WordPress, Shopify, Headless CMS</li>' <li>Ahrefs/SEMrush data import</li>' </ul>'' </div>''' <div className='p-6 bg-slate-800 rounded-xl border border-slate-700'>''' <h3 className='font-semibold mb-2'>Pricing</h3>''' <ul className='text-slate-300 space-y-1'> <li>Starter: $49/mo for 5 sites</li> <li>Growth: $149/mo for 20 sites</li>' <li>Agency: $399/mo unlimited sites, API</li>' </ul>' </div>'' </section>''' <section className='container mx-auto px-4 pb-16 space-x-4'>''' <a href='/contact' className='inline-block px-6 py-3 rounded-lg bg-cyan-600 hover: bg-cyan-500 transition'>Request demo</a>''' <a href='https:''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function AISEOOptimizer() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AISEOOptimizer - Zion Tech Group"
+        description="Professional aiseooptimizer services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AISEOOptimizer
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional aiseooptimizer services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive aiseooptimizer solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,75 @@
- import { motion } from 'framer-motion' import {  Home, TrendingUp, Brain, Shield, Users, CheckCircle, ArrowRight, BarChart3, Clock, DollarSign, Target, Zap, Eye, Lock, Globe, Activity, LineChart, PieChart, AlertTriangle, Settings, Database, Phone, Mail, MapPin, Building, MapPinIcon, Calculator } from 'lucide-react'  const AIRealEstateAnalyticsPlatform = () => { const features = [ { icon: <Brain className='w-6 h-6' />, '';' title: 'AI-Powered Market Analysis', '';' description: 'Advanced machine learning algorithms analyze real estate markets in real-time, providing predictive insights for investment decisions with 92% accuracy.''},'{''' icon: <TrendingUp className='w-6 h-6' />, '';' title: 'Predictive Property Valuation', '';' description: 'AI models predict property values based on market trends, neighborhood data, and economic indicators, helping investors make informed decisions.''},'{''' icon: <Building className='w-6 h-6' />, '';' title: 'Portfolio Optimization', '';' description: 'Intelligent portfolio management tools that optimize real estate investments based on risk tolerance, market conditions, and investment goals.''},'{''' icon: <MapPinIcon className='w-6 h-6' />, '';' title: 'Geographic Market Intelligence', '';' description: 'Comprehensive geographic analysis including neighborhood trends, school ratings, crime statistics, and future development plans.'' }'; ]'; ';' const benefits = ['';Increase investment returns by 25-40% through AI-driven insights', '';Reduce market research time from weeks to hours', '';Identify undervalued properties before they hit the market', '';Optimize portfolio allocation for maximum returns', '';Stay ahead of market trends with predictive analytics', '';Comprehensive risk assessment and mitigation strategies' ]';' const pricing = ['{';'' plan: 'Starter', '';' price: '$199', '';' period: '/month',';' features: ['';Basic market analysis', '';Property valuation estimates', '';Market trend reports', '';Email support'' ]'},'{';'' plan: 'Professional', '';' price: '$399', '';' period: '/month',';' features: ['';Advanced AI analytics', '';Portfolio optimization', '';Real-time market alerts', '';Priority support', '';Custom reports'' ]'},'{';'' plan: 'Enterprise', '';' price: '$799', '';' period: '/month',';' features: [''Full AI platform access', '';Custom AI model training', '';API access', '';Dedicated account manager', '';White-label solutions' ] } ]';' const useCases = ['{';'' title: 'Real Estate Investors', '';' description: 'Identify high-potential properties and optimize investment portfolios with AI-driven insights.''},'{';'' title: 'Property Developers', '';' description: 'Analyze market demand and identify optimal locations for new developments.''},'{';'' title: 'Real Estate Agents', '';' description: 'Provide clients with data-driven market insights and property recommendations.''},'{';'' title: 'Financial Institutions', '';' description: 'Assess real estate collateral values and manage portfolio risk effectively.'' }'; ]'; ';' return (''' <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>';' {}''' <section className='relative py-20 px-4 sm: px-6 lg:px-8'>''' <div className='max-w-7xl mx-auto text-center'> <motion.div' initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}'; transition={{ duration: 0.8 }}';' >''' <div className='flex items-center justify-center mb-6'>''' <Home className='w-12 h-12 text-blue-500 mr-3' />''' <h1 className='text-4xl md: text-6xl font-bold text-white'>';' AI Real Estate Analytics''' <span className='text-blue-500 block'>Platform</span>' </h1>'' </div>''' <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>'; Transform your real estate investments with AI-powered market analysis, predictive valuations,'; and intelligent portfolio optimization. Make data-driven decisions that maximize returns.'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:'''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function airealestateanalyticsplatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai real estate analytics platform - Zion Tech Group"
+        description="Professional ai real estate analytics platform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai real estate analytics platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai real estate analytics platform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai real estate analytics platform solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

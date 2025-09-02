@@ -1,1 +1,47 @@
- export default AIMatcher const [currentStep, setCurrentStep] = useState (1)  const [answers, setAnswers] = useState ({ })  const [recommendations, setRecommendations] = useState ([])  const questions = [ { id: 'industry', question: 'What industry are you in?', options[';Technology & Software', 'Healthcare & Life Sciences', 'Financial Services', 'Manufacturing & Industrial', 'Retail & E-commerce', 'Education & Training', 'Government & Public Sector', 'Other' ] }, { id: 'comp_size', question: 'What is your comp size?', options[';Startup (1 - 50 employees) ', 'Small Business (51 - 200 employees) ', 'Medium Business (201 - 1000 employees) ', 'Enterprise (1000 + employees) ' ] }, { id: 'ai_goals', question: 'What are your primary AI goals?', options[';Automate repetitive tasks', 'Improve customer experience', 'Enhance decision making', 'Optimize operations', 'Increase revenue', 'Reduce costs', 'Innovate products / services' ] }, { id: 'budget', question: 'What is your budget range for AI implementation?', options[';Under $10, 000', '$10, 000 - $50,000', '$50,000 - $200, 000', '$200, 000 - $1,000, 000', 'Over $1, 000,000' ] }, { id: 'timeline', question: 'What is your implementation timeline?', options[';Immediate (0 - 3 months) ', 'Short - term (3 - 6 months) ', 'Medium - term (6 - 12 months) ', 'Long - term (1 + years) ' ] ] const aiSolutions = [ { name: 'AI Business Intelligence', description: 'Advanced analytics and business intelligence powered by artificial intelligence', category: 'Analytics & Insights', bestFor['Data - driven decision making', 'Performance tracking', 'Market analysis'], features['Predictive Analytics', 'Real - time Dashboards', 'Custom Reports'], href: '/services / ai - business - intelligence', icon: TrendingUp }, { name: 'AI Marketing Automation', description: 'Intelligent marketing automation with AI - driven optimization', category: 'Marketing & Sales', bestFor['Customer acquisition', 'Campaign optimization', 'Lead generation'], features['Campaign Automation', 'Customer Segmentation', 'ROI Optimization'], href: '/services / ai - marketing - automation', icon: Target }, { name: 'AI Workflow Automation', description: 'Streamline business processes with intelligent automation', category: 'Process Automation', bestFor['Operational efficiency', 'Error reduction', 'Cost savings'], features['Process Optimization', 'Workflow Design', 'Integration'], href: '/services / ai - workflow - automation', icon: Zap }, { name: 'AI - Powered IT Asset Management', description: 'Intelligent IT asset lifecycle management', category: 'IT Management', bestFor['Asset optimization', 'Cost management', 'Compliance'], features['Asset Tracking', 'Predictive Maintenance', 'Cost Analytics'], href: '/ai - powered - it - asset - management', icon: Cloud }, { name: 'Autonomous Business Operations', description: 'AI - driven business process automation platform', category: 'Business Operations', bestFor['End - to - end automation', 'Scalability', 'Innovation'], features['Process Automation', 'Decision Support', 'Performance Analytics'], href: '/autonomous - business - operations - platform', icon: Brain }, { name: 'AI Customer Service Automation', description: 'Intelligent customer service and support automation', category: 'Customer Experience', bestFor['24 / 7 support', 'Response time improvement', 'Customer satisfaction'], features['Chatbot Integration', 'Ticket Routing', 'Knowledge Management'], href: '/services / ai - customer - service - automation', icon: Users ] const handlePrevious = () => { if (currentStep > 1) { setCurrentStep (currentStep - 1) } } const generateRecommendations = () => {''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function AIMatcher() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="AIMatcher - Zion Tech Group"
+        description="Professional aimatcher services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AIMatcher
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional aimatcher services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

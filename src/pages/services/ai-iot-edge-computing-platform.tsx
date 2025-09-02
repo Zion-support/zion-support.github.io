@@ -1,2 +1,75 @@
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Cpu, Zap, Brain, Network, Server, Cloud, CheckCircle, ArrowRight, Code, Database, Shield, Clock, Award, Star, MessageCircle, Phone, Mail, MapPin, Building, Users, TrendingUp, Target, Rocket, Sparkles, Globe, Lock, RefreshCw, Wifi, Bluetooth, Radio, Satellite, Smartphone, Tablet, Monitor, HardDrive, MemoryStick, CircuitBoard, Microchip, Sensor, Camera, Thermometer, Gauge, Activity, BarChart3, PieChart, LineChart, AreaChart    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AIIoTEdgeComputingPlatform() { const features = [ { icon: Brain, title: 'AI-Powered Edge Intelligence', description: 'Machine learning models that run directly on IoT devices for real-time decision making' }, { icon: Zap, title: 'Real-time Data Processing', description: 'Process sensor data at the edge with sub-millisecond latency for immediate insights' }, { icon: Network, title: 'Distributed Edge Computing', description: 'Intelligent workload distribution across edge nodes for optimal performance and reliability' }, { icon: Server, title: 'Edge-to-Cloud Orchestration', description: 'Seamless data flow between edge devices and cloud infrastructure with intelligent routing' }, { icon: Cloud, title: 'Hybrid Cloud Integration', description: 'Support for multi-cloud environments with intelligent data placement and processing' }, { icon: Shield, title: 'Edge Security & Privacy', description: 'Advanced security protocols including encryption, authentication, and secure boot' } ]  const benefits = ['Reduce latency by 90%',';Lower bandwidth costs by 70%',';Improve data privacy and security',';Enable real-time decision making',';Reduce cloud dependency',';Scale IoT deployments efficiently' ]  const useCases = [ { industry: 'Manufacturing', applications: ['Predictive maintenance', 'Quality control', 'Supply chain monitoring', 'Energy optimization'], icon: Cpu }, { industry: 'Healthcare', applications: ['Patient monitoring', 'Medical device management', 'Telemedicine', 'Clinical analytics'], icon: Shield }, { industry: 'Smart Cities', applications: ['Traffic management', 'Environmental monitoring', 'Public safety', 'Energy management'], icon: Globe }, { industry: 'Agriculture', applications: ['Precision farming', 'Crop monitoring', 'Livestock tracking', 'Weather prediction'], icon: Network } ]  const technologies = ['TensorFlow Lite',';ONNX Runtime',';Apache Kafka',';MQTT Protocol',';Kubernetes Edge',';Docker Edge',';Azure IoT Edge',';AWS Greengrass',';Google Cloud IoT',';NVIDIA Jetson',';Intel OpenVINO',';ARM Cortex-M',';RISC-V',';LoRaWAN',';5G Networks' ]  const pricingPlans = [ { name: 'Starter', description: 'Perfect for small IoT projects and prototypes', price: { monthly: 299, annual: 2990 }, features: [';Up to 100 edge devices',';Basic AI models',';Cloud integration',';Email support',';Standard security',';Monthly reports' ], icon: Rocket, color: 'from-orange-500 to-red-500', popular: false, cta: 'Start Free Trial', link: '/contact' }, { name: 'Professional', description: 'Ideal for production IoT deployments', price: { monthly: 899, annual: 8990 }, features: [';Up to 1,000 edge devices',';Advanced AI models',';Real-time analytics',';Priority support',';Custom integrations',';Advanced security',';API access',';Training sessions' ], icon: Building, color: 'from-blue-500 to-cyan-500', popular: true, cta: 'Get Started', link: '/contact' }, { name: 'Enterprise', description: 'For large-scale IoT operations', price: { monthly: 2499, annual: 24990 }, features: [';Unlimited edge devices',';Custom AI models',';Dedicated IoT team',';24/7 priority support',';On-premise deployment',';White-label solutions',';SLA guarantees',';Compliance reporting' ], icon: Globe, color: 'from-purple-500 to-pink-500', popular: false, cta: 'Contact Sales', link: '/contact' } ]  return ( <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900">'" <SEO "';" title="AI-Powered IoT Edge Computing Platform | Zion Tech Group"';" description="Transform IoT with AI-powered edge computing.Process data at the edge, reduce latency, and enable real-time decision making with intelligent edge devices."';" keywords="IoT edge computing, edge AI, real-time processing, IoT platform, edge analytics, distributed computing"';" canonical="https:
- import { motion    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Cpu, Zap, Brain, Network, Server, Cloud, CheckCircle, ArrowRight, Code, Database, Shield, Clock, Award, Star, MessageCircle, Phone, Mail, MapPin, Building, Users, TrendingUp, Target, Rocket, Sparkles, Globe, Lock, RefreshCw, Wifi, Bluetooth, Radio, Satellite, Smartphone, Tablet, Monitor, HardDrive, MemoryStick, CircuitBoard, Microchip, Sensor, Camera, Thermometer, Gauge, Activity, BarChart3, PieChart, LineChart, AreaChart    } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AIIoTEdgeComputingPlatform() { const features = [ { icon: Brain, title: 'AI-Powered Edge Intelligence', description: 'Machine learning models that run directly on IoT devices for real-time decision making' }, { icon: Zap, title: 'Real-time Data Processing', description: 'Process sensor data at the edge with sub-millisecond latency for immediate insights' }, { icon: Network, title: 'Distributed Edge Computing', description: 'Intelligent workload distribution across edge nodes for optimal performance and reliability' }, { icon: Server, title: 'Edge-to-Cloud Orchestration', description: 'Seamless data flow between edge devices and cloud infrastructure with intelligent routing' }, { icon: Cloud, title: 'Hybrid Cloud Integration', description: 'Support for multi-cloud environments with intelligent data placement and processing' }, { icon: Shield, title: 'Edge Security & Privacy', description: 'Advanced security protocols including encryption, authentication, and secure boot' } ]  const benefits = ['Reduce latency by 90%',';Lower bandwidth costs by 70%',';Improve data privacy and security',';Enable real-time decision making',';Reduce cloud dependency',';Scale IoT deployments efficiently' ]  const useCases = [ { industry: 'Manufacturing', applications: ['Predictive maintenance', 'Quality control', 'Supply chain monitoring', 'Energy optimization'], icon: Cpu }, { industry: 'Healthcare', applications: ['Patient monitoring', 'Medical device management', 'Telemedicine', 'Clinical analytics'], icon: Shield }, { industry: 'Smart Cities', applications: ['Traffic management', 'Environmental monitoring', 'Public safety', 'Energy management'], icon: Globe }, { industry: 'Agriculture', applications: ['Precision farming', 'Crop monitoring', 'Livestock tracking', 'Weather prediction'], icon: Network } ]  const technologies = ['TensorFlow Lite',';ONNX Runtime',';Apache Kafka',';MQTT Protocol',';Kubernetes Edge',';Docker Edge',';Azure IoT Edge',';AWS Greengrass',';Google Cloud IoT',';NVIDIA Jetson',';Intel OpenVINO',';ARM Cortex-M',';RISC-V',';LoRaWAN',';5G Networks' ]  const pricingPlans = [ { name: 'Starter', description: 'Perfect for small IoT projects and prototypes', price: { monthly: 299, annual: 2990 }, features: [';Up to 100 edge devices',';Basic AI models',';Cloud integration',';Email support',';Standard security',';Monthly reports' ], icon: Rocket, color: 'from-orange-500 to-red-500', popular: false, cta: 'Start Free Trial', link: '/contact' }, { name: 'Professional', description: 'Ideal for production IoT deployments', price: { monthly: 899, annual: 8990 }, features: [';Up to 1,000 edge devices',';Advanced AI models',';Real-time analytics',';Priority support',';Custom integrations',';Advanced security',';API access',';Training sessions' ], icon: Building, color: 'from-blue-500 to-cyan-500', popular: true, cta: 'Get Started', link: '/contact' }, { name: 'Enterprise', description: 'For large-scale IoT operations', price: { monthly: 2499, annual: 24990 }, features: [';Unlimited edge devices',';Custom AI models',';Dedicated IoT team',';24/7 priority support',';On-premise deployment',';White-label solutions',';SLA guarantees',';Compliance reporting' ], icon: Globe, color: 'from-purple-500 to-pink-500', popular: false, cta: 'Contact Sales', link: '/contact' } ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900'>'' <SEO '';' title='AI-Powered IoT Edge Computing Platform | Zion Tech Group'';' description='Transform IoT with AI-powered edge computing.Process data at the edge, reduce latency, and enable real-time decision making with intelligent edge devices.'';' keywords='IoT edge computing, edge AI, real-time processing, IoT platform, edge analytics, distributed computing'';' canonical="https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function aiiotedgecomputingplatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai iot edge computing platform - Zion Tech Group"
+        description="Professional ai iot edge computing platform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai iot edge computing platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai iot edge computing platform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai iot edge computing platform solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

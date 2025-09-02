@@ -1,1 +1,47 @@
-import React, { createContext, useContext, useState } from 'react' const Popover({ children }) {} const [isOpen, setIsOpen] = useState(false) return (<PopoverContext.Provider value = {} { isOpen, setIsOpen }}> <div className='relative'> {children} </div> </PopoverContext.Provider>)}' export function PopoverTrigger({ children, className = '' }) {} const context = useContext(PopoverContext) if (!context)' throw new Error('PopoverTrigger must be used within Popover') return (<div className={className} onClick={() => context.setIsOpen(!context.isOpen)}> {children} </div>)}' export function PopoverContent({ children, className = '' }) {} const context = useContext(PopoverContext) if (!context)' throw new Error('PopoverContent must be used within Popover') if (!context.isOpen) return null return (<div className={`absolute z-50 mt-2 w-64 bg-white rounded-md shadow-lg border border-gray-200 p-4 ${className}`}>' {children}'' </div>)}''`'';'`''`';';'''`"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function popover() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="popover - Zion Tech Group"
+        description="Professional popover services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              popover
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional popover services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

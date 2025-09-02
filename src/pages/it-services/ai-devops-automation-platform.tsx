@@ -1,2 +1,47 @@
- import { motion    } from 'framer-motion' import {  Zap, Code, Cloud, Database, Server, Shield, BarChart3, Target, CheckCircle, Star, ArrowRight, Headphones, Lightbulb, Globe, Phone, Mail, MapPin, GitBranch, Monitor, Settings, Workflow    } from 'lucide-react'  export default function AIDevOpsAutomationPlatform() { const features = [ { icon: Zap, title: 'AI-Powered Automation', description: 'Intelligent automation of CI/CD pipelines and deployment processes' }, { icon: Code, title: 'Smart Code Analysis', description: 'Automated code review, testing, and quality assurance' }, { icon: Cloud, title: 'Multi-Cloud Management', description: 'Unified management across AWS, Azure, GCP, and on-premise' }, { icon: Database, title: 'Infrastructure as Code', description: 'Automated infrastructure provisioning and configuration management' } ]  const capabilities = [ { title: 'Intelligent CI/CD Pipelines', description: 'AI-optimized build, test, and deployment workflows with automatic optimization', icon: Workflow }, { title: 'Automated Testing & QA', description: 'Machine learning-powered test generation and quality assurance automation', icon: CheckCircle }, { title: 'Smart Infrastructure Management', description: 'Automated scaling, monitoring, and optimization of cloud resources', icon: Server }, { title: 'Security & Compliance', description: 'Automated security scanning, vulnerability assessment, and compliance checks', icon: Shield }, { title: 'Performance Monitoring', description: 'Real-time application performance monitoring and optimization', icon: Monitor }, { title: 'Disaster Recovery', description: 'Automated backup, recovery, and business continuity solutions', icon: Database } ]  const benefits = ['Reduce deployment time by up to 80%',';Decrease infrastructure costs by 40%',';Improve code quality by 60%',';Achieve 99.9% deployment success rate',';Automate 90% of DevOps tasks',';Real-time monitoring and alerting' ]  const pricing = [ { plan: 'Starter', price: '$399', period: '/month', features: [';Up to 10 applications',';Basic CI/CD pipelines',';Cloud monitoring',';Email support',';Standard integrations',';Basic reporting' ], popular: false }, { plan: 'Professional', price: '$999', period: '/month', features: [';Up to 50 applications',';Advanced AI automation',';Multi-cloud support',';Priority support',';Custom dashboards',';Advanced analytics',';API access' ], popular: true }, { plan: 'Enterprise', price: '$2,499', period: '/month', features: [';Unlimited applications',';Custom AI models',';White-label solution',';Dedicated DevOps team',';Advanced security',';Custom integrations',';On-premise deployment' ], popular: false } ]  const devopsMetrics = [ { metric: '80%', label: 'Faster Deployments' }, { metric: '40%', label: 'Cost Reduction' }, { metric: '99.9%', label: 'Uptime SLA' }, { metric: '24/7', label: 'Monitoring' } ]  return ( <div className="min-h-screen bg-futuristic">';" {}"'" <section className="relative pt-32 pb-20 overflow-hidden">"'" <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-slate-900 to-slate-900"></div>"'" <div className="container mx-auto px-4 relative z-10">" <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';" transition={{ duration: 0.8  }}"';" className="text-center max-w-4xl mx-auto"';" >"'" <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">'; AI DevOps Automation Platform'" </h1>"'" <p className="text-xl text-gray-300 mb-8">'; Transform your development operations with intelligent automation, AI-powered insights, and seamless multi-cloud management'" </p>"'" <div className="flex flex-col sm:flex-row gap-4 justify-center">'" <a "';" href="https:
- import { motion    } from 'framer-motion' import {  Zap, Code, Cloud, Database, Server, Shield, BarChart3, Target, CheckCircle, Star, ArrowRight, Headphones, Lightbulb, Globe, Phone, Mail, MapPin, GitBranch, Monitor, Settings, Workflow    } from 'lucide-react'  export default function AIDevOpsAutomationPlatform() { const features = [ { icon: Zap, title: 'AI-Powered Automation', description: 'Intelligent automation of CI/CD pipelines and deployment processes' }, { icon: Code, title: 'Smart Code Analysis', description: 'Automated code review, testing, and quality assurance' }, { icon: Cloud, title: 'Multi-Cloud Management', description: 'Unified management across AWS, Azure, GCP, and on-premise' }, { icon: Database, title: 'Infrastructure as Code', description: 'Automated infrastructure provisioning and configuration management' } ]  const capabilities = [ { title: 'Intelligent CI/CD Pipelines', description: 'AI-optimized build, test, and deployment workflows with automatic optimization', icon: Workflow }, { title: 'Automated Testing & QA', description: 'Machine learning-powered test generation and quality assurance automation', icon: CheckCircle }, { title: 'Smart Infrastructure Management', description: 'Automated scaling, monitoring, and optimization of cloud resources', icon: Server }, { title: 'Security & Compliance', description: 'Automated security scanning, vulnerability assessment, and compliance checks', icon: Shield }, { title: 'Performance Monitoring', description: 'Real-time application performance monitoring and optimization', icon: Monitor }, { title: 'Disaster Recovery', description: 'Automated backup, recovery, and business continuity solutions', icon: Database } ]  const benefits = ['Reduce deployment time by up to 80%',';Decrease infrastructure costs by 40%',';Improve code quality by 60%',';Achieve 99.9% deployment success rate',';Automate 90% of DevOps tasks',';Real-time monitoring and alerting' ]  const pricing = [ { plan: 'Starter', price: '$399', period: '/month', features: [';Up to 10 applications',';Basic CI/CD pipelines',';Cloud monitoring',';Email support',';Standard integrations',';Basic reporting' ], popular: false }, { plan: 'Professional', price: '$999', period: '/month', features: [';Up to 50 applications',';Advanced AI automation',';Multi-cloud support',';Priority support',';Custom dashboards',';Advanced analytics',';API access' ], popular: true }, { plan: 'Enterprise', price: '$2,499', period: '/month', features: [';Unlimited applications',';Custom AI models',';White-label solution',';Dedicated DevOps team',';Advanced security',';Custom integrations',';On-premise deployment' ], popular: false } ]  const devopsMetrics = [ { metric: '80%', label: 'Faster Deployments' }, { metric: '40%', label: 'Cost Reduction' }, { metric: '99.9%', label: 'Uptime SLA' }, { metric: '24/7', label: 'Monitoring' } ]  return ( <div className='min-h-screen bg-futuristic'>';' {}''' <section className='relative pt-32 pb-20 overflow-hidden'>''' <div className='absolute inset-0 bg-gradient-to-br from-purple-900/20 via-slate-900 to-slate-900'></div>''' <div className='container mx-auto px-4 relative z-10'>' <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';' transition={{ duration: 0.8  }}'';' className='text-center max-w-4xl mx-auto'';' >''' <h1 className='text-5xl md:text-6xl font-bold text-white mb-6'>'; AI DevOps Automation Platform'' </h1>''' <p className='text-xl text-gray-300 mb-8'>'; Transform your development operations with intelligent automation, AI-powered insights, and seamless multi-cloud management'' </p>''' <div className='flex flex-col sm:flex-row gap-4 justify-center'>'' <a '';' href='https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function aidevopsautomationplatform() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai devops automation platform - Zion Tech Group"
+        description="Professional ai devops automation platform services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai devops automation platform
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai devops automation platform services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

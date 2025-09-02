@@ -1,1 +1,47 @@
-import * as React from 'react'' import { Sheet, SheetContent } from '@/components/ui/sheet'' import { cn } from '@/lib/utils'' import { useSidebar } from './sidebar-context' export const Sidebar = React.forwardRef((props, ref) => {} const { isMobile, state, openMobile, setOpenMobile } = useSidebar()' if (props.collapsible === 'none') {} return() <div' className={cn('';flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground', props.className )} ref={ref} {...props} > {props.children} </div> ) } if (isMobile) {} return() <Sheet open={openMobile} onOpenChange={setOpenMobile} {...props}> <SheetContent data-sidebar='sidebar'''' data-mobile='true'''' className='w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]: hidden'' style={{}' '--sidebar-width': '18rem'}}'' side={props.side}'''' >'''' <div className='flex h-full w-full flex-col'>{props.children}</div> </SheetContent> </Sheet> ) }' return()'' <div'''' ref={ref}'''' className='group peer hidden md: block text-sidebar-foreground'' data-state={state}' data-collapsible={state === 'collapsed' ? props.collapsible : ''} data-variant={props.variant} data-side={props.side} >' {}'' <div''' className={cn('''';duration-200 relative h-svh w-[--sidebar-width] bg-transparent transition-[width] ease-linear', group-data-[collapsible=offcanvas]: w-0', group-data-[side=right]: rotate-180', ''' props.variant === 'floating' || props.variant === 'inset''''' ? 'group-data-[collapsible=icon]: w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]''''' : 'group-data-[collapsible=icon]: w-[--sidebar-width-icon] )}' />'' <div''' className={cn('''';duration-200 fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left, right,width] ease-linear md: flex', ''' props.side === 'left''''' ? 'left-0 group-data-[collapsible=offcanvas]: left-[calc(var(--sidebar-width)*-1)]''''' : 'right-0 group-data-[collapsible=offcanvas]: right-[calc(var(--sidebar-width)*-1)]', '''';';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function sidebarmain() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="sidebar main - Zion Tech Group"
+        description="Professional sidebar main services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              sidebar main
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional sidebar main services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

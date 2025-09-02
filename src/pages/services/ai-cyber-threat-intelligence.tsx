@@ -1,2 +1,75 @@
- import { motion } from 'framer-motion' import { SEO } from '@/components/SEO'  const AICyberThreatIntelligence: React.FC = () => { const features = ['AI-powered threat detection and analysis in real-time',';Advanced behavioral analytics for anomaly detection',';Machine learning-based threat hunting and investigation',';Automated threat intelligence gathering and correlation',';Predictive threat modeling and risk assessment',';Real-time security event correlation and alerting',';Integration with major SIEM and security tools',';Automated incident response and remediation',';Threat actor profiling and attribution analysis',';Continuous learning from global threat landscape' ]  const benefits = ['Detect threats 10x faster than traditional security tools',';Reduce false positives by 60-80% through AI filtering',';Improve threat response time from hours to minutes',';Proactively identify emerging threats before they impact',';Reduce security operations costs by 30-50%' ]  const pricing = [ { plan: 'Professional', price: '$3, 999', period: 'month', features: ['Up to 1, 000 endpoints', 'Basic AI threat detection', 'Standard integrations', 'Email support', 'Basic reporting'], popular: false }, { plan: 'Enterprise', price: '$9, 999', period: 'month', features: ['Up to 10, 000 endpoints', 'Advanced AI analytics', 'Full security tool integration', 'Priority support', 'Advanced analytics', 'Custom workflows'], popular: true }, { plan: 'Global', price: '$24, 999', period: 'month', features: ['Unlimited endpoints', 'Custom AI models', 'Multi-tenant deployment', 'Dedicated support', 'White-label solution', 'On-premise deployment'], popular: false } ]  const threatTypes = ['Advanced Persistent Threats (APT)',';Ransomware & Malware',';Phishing & Social Engineering',';Insider Threats',';DDoS Attacks',';Zero-day Exploits',';Supply Chain Attacks',';Cloud Security Threats' ]  const integrations = ['Splunk Enterprise Security',';IBM QRadar',';Microsoft Sentinel',';Palo Alto Networks',';CrowdStrike Falcon',';Carbon Black',';Rapid7 InsightIDR','Exabeam' ]  return ( <div className="min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-purple-100">'" <SEO "';" title="AI Cyber Threat Intelligence Platform | Zion Tech Group"';" description="Revolutionary AI-powered cyber threat intelligence platform that provides real-time threat detection, analysis, and automated response capabilities for enterprise security."';" keywords="AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security analytics, threat hunting"'/>';" {}"'" <section className="relative overflow-hidden bg-gradient-to-r from-red-900 via-purple-900 to-indigo-900 text-white">"'" <div className="absolute inset-0 bg-black/20"></div>"'" <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24">" <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';" transition={{ duration: 0.8 }}"';" className="text-center"';" >"'" <div className="flex justify-center mb-6">"'" <div className="p-3 bg-red-500/20 rounded-full">"'" <Shield className="w-8 h-8 text-red-300" />' </div>'" </div>"'" <h1 className="text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-red-300 to-purple-300 bg-clip-text text-transparent">'; AI Cyber Threat Intelligence Platform'" </h1>"'" <p className="text-xl md: text-2xl text-red-100 mb-8 max-w-4xl mx-auto">'; Stay ahead of cyber threats with AI-powered intelligence, real-time detection, and automated response capabilities'" </p>"'" <div className="flex flex-col sm: flex-row gap-4 justify-center">'" <a"';" href="https:""";
- import { motion } from 'framer-motion' import { SEO } from '@/components/SEO'  const AICyberThreatIntelligence: React.FC = () => { const features = ['AI-powered threat detection and analysis in real-time',';Advanced behavioral analytics for anomaly detection',';Machine learning-based threat hunting and investigation',';Automated threat intelligence gathering and correlation',';Predictive threat modeling and risk assessment',';Real-time security event correlation and alerting',';Integration with major SIEM and security tools',';Automated incident response and remediation',';Threat actor profiling and attribution analysis',';Continuous learning from global threat landscape' ]  const benefits = ['Detect threats 10x faster than traditional security tools',';Reduce false positives by 60-80% through AI filtering',';Improve threat response time from hours to minutes',';Proactively identify emerging threats before they impact',';Reduce security operations costs by 30-50%' ]  const pricing = [ { plan: 'Professional', price: '$3, 999', period: 'month', features: ['Up to 1, 000 endpoints', 'Basic AI threat detection', 'Standard integrations', 'Email support', 'Basic reporting'], popular: false }, { plan: 'Enterprise', price: '$9, 999', period: 'month', features: ['Up to 10, 000 endpoints', 'Advanced AI analytics', 'Full security tool integration', 'Priority support', 'Advanced analytics', 'Custom workflows'], popular: true }, { plan: 'Global', price: '$24, 999', period: 'month', features: ['Unlimited endpoints', 'Custom AI models', 'Multi-tenant deployment', 'Dedicated support', 'White-label solution', 'On-premise deployment'], popular: false } ]  const threatTypes = ['Advanced Persistent Threats (APT)',';Ransomware & Malware',';Phishing & Social Engineering',';Insider Threats',';DDoS Attacks',';Zero-day Exploits',';Supply Chain Attacks',';Cloud Security Threats' ]  const integrations = ['Splunk Enterprise Security',';IBM QRadar',';Microsoft Sentinel',';Palo Alto Networks',';CrowdStrike Falcon',';Carbon Black',';Rapid7 InsightIDR','Exabeam' ]  return ( <div className='min-h-screen bg-gradient-to-br from-slate-50 via-red-50 to-purple-100'>'' <SEO '';' title='AI Cyber Threat Intelligence Platform | Zion Tech Group'';' description='Revolutionary AI-powered cyber threat intelligence platform that provides real-time threat detection, analysis, and automated response capabilities for enterprise security.'';' keywords='AI cybersecurity, threat intelligence, threat detection, cybersecurity AI, security analytics, threat hunting''/>';' {}''' <section className='relative overflow-hidden bg-gradient-to-r from-red-900 via-purple-900 to-indigo-900 text-white'>''' <div className='absolute inset-0 bg-black/20'></div>''' <div className='relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-24'>' <motion.div'; initial={{ opacity: 0, y: 20 }}'; animate={{ opacity: 1, y: 0 }}';' transition={{ duration: 0.8 }}'';' className='text-center'';' >''' <div className='flex justify-center mb-6'>''' <div className='p-3 bg-red-500/20 rounded-full'>''' <Shield className='w-8 h-8 text-red-300' />' </div>'' </div>''' <h1 className='text-5xl md: text-6xl font-bold mb-6 bg-gradient-to-r from-red-300 to-purple-300 bg-clip-text text-transparent'>'; AI Cyber Threat Intelligence Platform'' </h1>''' <p className='text-xl md: text-2xl text-red-100 mb-8 max-w-4xl mx-auto'>'; Stay ahead of cyber threats with AI-powered intelligence, real-time detection, and automated response capabilities'' </p>''' <div className='flex flex-col sm: flex-row gap-4 justify-center'>'' <a'';' href='https:''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../../components/SEO';
+
+export default function aicyberthreatintelligence() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ai cyber threat intelligence - Zion Tech Group"
+        description="Professional ai cyber threat intelligence services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ai cyber threat intelligence
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional ai cyber threat intelligence services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We provide comprehensive ai cyber threat intelligence solutions tailored to your requirements.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 1</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 2</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50">
+              <h3 className="text-xl font-semibold text-white mb-3">Service 3</h3>
+              <p className="text-gray-300">Professional service description</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

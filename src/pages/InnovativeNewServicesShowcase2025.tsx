@@ -1,1 +1,47 @@
-import React, { useState, useEffect } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Helmet  } from 'react-helmet-async' import {  Brain, Shield, Zap, TrendingUp, Star, CheckCircle, ArrowRight, Phone, Mail, Globe, MapPin, Clock, Users, Target, BarChart3, Cpu, Database, Lock, Eye, Search, FileText, Video, Settings, Leaf, Rocket, Award, DollarSign, PieChart, Activity, Smartphone, Monitor, Server    } from 'lucide-react' import { innovativeMicroSaasServices2025, innovativeITServices2025, innovativeAIServices2025 } from '../data/innovativeNewServices2025'  const InnovativeNewServicesShowcase2025: React.FC = () => { const [activeTab, setActiveTab] = useState('micro-saas') const [selectedService, setSelectedService] = useState<any>(null) const [isModalOpen, setIsModalOpen] = useState(false)  const openServiceModal = (service: any) => { setSelectedService(service) setIsModalOpen(true) }  const closeModal = () => { setIsModalOpen(false) setSelectedService(null) }  const tabs = [ { id: 'micro-saas', label: 'Micro SAAS Services', icon: <Server className='w-5 h-5' />, count: innovativeMicroSaasServices2025.length },''' { id: 'it-services', label: 'IT Services', icon: <Cpu className='w-5 h-5' />, count: innovativeITServices2025.length },''' { id: 'ai-services', label: 'AI Services', icon: <Brain className='w-5 h-5' />, count: innovativeAIServices2025.length } ]  const getServicesByTab = () => { switch(activeTab) { case 'micro-saas': return innovativeMicroSaasServices2025 case 'it-services': return innovativeITServices2025 case 'ai-services': return innovativeAIServices2025 default: return [] } }';' const getServiceIcon = (category: string) => {' switch(category.toLowerCase()) {';' case 'customer analytics':''' return <BarChart3 className='w-6 h-6' />';' case 'document security':''' return <Shield className='w-6 h-6' />';' case 'video intelligence':''' return <Video className='w-6 h-6' />';' case 'business automation':''' return <Settings className='w-6 h-6' />';' case 'energy management':''' return <Leaf className='w-6 h-6' />';' case 'cybersecurity':''' return <Lock className='w-6 h-6' />';' case 'infrastructure':''' return <Server className='w-6 h-6' />';' case 'devops':''' return <Rocket className='w-6 h-6' />';' case 'research & development':''' return <Search className='w-6 h-6' />';' case 'financial ai':''' return <DollarSign className='w-6 h-6' />';' case 'healthcare ai':''' return <Activity className='w-6 h-6' />';' default:''' return <Star className='w-6 h-6' /> } } ' return (' <>' <Helmet>'' <title>Innovative New Services 2025 - Zion Tech Group | Cutting-Edge Solutions</title>''' <meta name='description' content='Discover Zion Tech Group's revolutionary new services for 2025.AI-powered platforms, quantum-ready solutions, and cutting-edge micro SAAS services that transform businesses.' / / / / / />''' <meta name='keywords' content='AI services, micro SAAS, IT services, quantum computing, edge AI, cybersecurity, business automation, Zion Tech Group' / / / / / />''' <meta property='og:title' content='Innovative New Services 2025 - Zion Tech Group' / / / / / />''' <meta property='og:description' content='Revolutionary AI, IT, and micro SAAS services for 2025.Transform your business with cutting-edge technology solutions.' / / / / / />''' <meta property='og:url' content='https:;
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function InnovativeNewServicesShowcase2025() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="InnovativeNewServicesShowcase2025 - Zion Tech Group"
+        description="Professional innovativenewservicesshowcase2025 services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              InnovativeNewServicesShowcase2025
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional innovativenewservicesshowcase2025 services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

@@ -1,1 +1,47 @@
- import Head from 'next / head' import Link from 'next / link' export default React.memo(function Solutions () { return (<> <Head> <title > Solutions - Zion Tech Group</title> <meta name='description' content='Technology solutions for your business' / /> </Head> <main className='min - h-screen bg - white'> <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 20'> <div className='text - center mb - 16'> <h1 className='text - 4xl font - bold text - gray - 900 mb - 6'> Our Solutions </h1> <p className='text - xl text - gray - 600 max - w-3xl mx - auto'> Tailored technology solutions to meet your specific needs. </p> </div> <div className='grid md:grid - cols - 2 lg:grid - cols - 3 gap - 8'> <div className='p - 6 border border - gray - 200 rounded - lg'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>Enterprise Solutions</h3> <p className='text - gray - 600 mb - 4'>Scalable solutions for large organizations.</p> <p className='text - blue - 600 font - semibold'>Custom pricing</p> </div> <div className='p - 6 border border - gray - 200 rounded - lg'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>SMB Solutions</h3> <p className='text - gray - 600 mb - 4'>Cost - effective solutions for small businesses.</p> <p className='text - blue - 600 font - semibold'>Starting from $1, 000 / month</p> </div> <div className='p - 6 border border - gray - 200 rounded - lg'> <h3 className='text - xl font - semibold text - gray - 900 mb - 4'>Startup Solutions</h3> <p className='text - gray - 600 mb - 4'>Innovative solutions for growing startups.</p> <p className='text - blue - 600 font - semibold'>Starting from $800 / month</p> </div> </div> <div className='text - center mt - 12'> <Link href='/contact' className='bg - blue - 600 text - white px - 8 py - 3 rounded - lg hover: bg - blue - 700 transition - colors'> Learn More </Link> </div> </div> </main> </>) }''"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function solutions() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="solutions - Zion Tech Group"
+        description="Professional solutions services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              solutions
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional solutions services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

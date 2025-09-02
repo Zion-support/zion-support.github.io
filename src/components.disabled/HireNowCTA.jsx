@@ -1,67 +1,47 @@
-;
-;import { MessageCircle, Calendar, Star } from 'lucide-react';
-export const HireNowCTA = ({}
-  hourlyRate,
-  availability,
-  rating,
-  reviewCount}) => {}
-  return()
-    <Card className='sticky top-4'>'''
-      <CardHeader>''''
-        <CardTitle className='text-xl'>Hire This Talent</CardTitle>'''
-      </CardHeader>''''
-      <CardContent className='space-y-6'>''''
-        <div className='text-center'>''''
-          <div className='text-3xl font-bold text-blue-600 mb-2'>
-            ${hourlyRate}'''
-          </div>''''
-          <div className='text-gray-600'>per hour</div>
-        </div>''';
-''''
-        <div className='space-y-3'>''''
-          <div className='flex items-center justify-between'>''''
-            <span className='text-gray-600'>Rating</span>''''
-            <div className='flex items-center space-x-1'>''''
-              <Star className='w-4 h-4 text-yellow-400 fill-current' />''''
-              <span className='font-medium'>{rating}</span>''''
-              <span className='text-gray-500'>({reviewCount})</span>
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function HireNowCTA() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="HireNowCTA - Zion Tech Group"
+        description="Professional hirenowcta services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              HireNowCTA
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional hirenowcta services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
             </div>
-          </div>''';
-''''
-          <div className='flex items-center justify-between'>''''
-            <span className='text-gray-600'>Availability</span>'
-            <Badge''
-              variant={availability === 'available' ? 'default' : 'secondary'}
-              className={}
-';
-'';
-''';
-                availability === 'available''''';
-                  ? 'bg-green-100 text-green-800''''';
-                  : ''}
-            >{availability}
-            </Badge>
-          </div>
-        </div>''';
-''''
-        <div className='space-y-3'>''''
-          <Button className='w-full bg-blue-600 hover:bg-blue-700'>''''
-            <MessageCircle className='w-4 h-4 mr-2' />
-            Send Message
-          </Button>''';
-''''
-          <Button variant='outline' className='w-full'>''''
-            <Calendar className='w-4 h-4 mr-2' />
-            Schedule Call
-          </Button>
-        </div>''';
-''''
-        <div className='text-center text-sm text-gray-500'>
-          <p>Response time: Usually within 2 hours</p>
-          <p>Available for new projects</p>
+          </motion.div>
         </div>
-      </CardContent>
-    </Card>
-  )}'';"
-}'';';
-'''''"
+      </section>
+    </div>
+  );
+}

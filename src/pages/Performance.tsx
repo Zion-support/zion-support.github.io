@@ -1,1 +1,47 @@
- import { motion } from 'framer - motion' import { EnhancedSEO } from '@/components / EnhancedSEO' import PerformanceDashboard from '@/components / PerformanceDashboard' import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card' import { Badge } from '@/components / ui / badge' import {  Zap, Gauge, TrendingUp, Shield, Cpu, Database, Globe, Smartphone, Cloud, Lock } from 'lucide - react'  const Performance: React.FC = () => { const performanceFeatures = [ { icon: Zap, title: 'Real - time Monitoring', '';' description: 'Live performance metrics with Core Web Vitals tracking', '';' color: 'from - yellow - 500 to - orange - 500''},'{';' icon: Gauge, '';' title: 'Performance Scoring', '';' description: 'Automated performance grading from A to F with actionable insights', '';' color: 'from - blue - 500 to - cyan - 500''},'{';' icon: TrendingUp, '';' title: 'Optimization Recommendations', '';' description: 'AI - powered suggestions for performance improvements', '';' color: 'from - green - 500 to - emerald - 500''},'{';' icon: Shield, '';' title: 'Security Monitoring', '';' description: 'Comprehensive security metrics and threat detection', '';' color: 'from - red - 500 to - pink - 500''},'{';' icon: Cpu, '';' title: 'Resource Analysis', '';' description: 'Detailed CPU, memory, and network performance insights', '';' color: 'from - purple - 500 to - indigo - 500''},'{'' icon: Database, '';' title: 'Data Optimization', '';' description: 'Database performance and query optimization monitoring', '';' color: 'from - teal - 500 to - blue - 500' } ]';' const optimizationStrategies = ['{';'' title: 'Code Splitting', '';' description: 'Implement dynamic imports and route - based code splitting for faster initial loads', '';' impact: 'High', '';' effort: 'Medium''},'{';'' title: 'Image Optimization', '';' description: 'Use WebP format, lazy loading, and responsive images for better performance', '';' impact: 'High', '';' effort: 'Low''},'{';'' title: 'Bundle Optimization', '';' description: 'Tree shaking, minification, and compression for smaller bundle sizes', '';' impact: 'Medium', '';' effort: 'Low''},'{';'' title: 'Caching Strategy', '';' description: 'Implement effective caching policies for static assets and API responses', '';' impact: 'High', '';' effort: 'Medium''},'{';'' title: 'CDN Integration', '';' description: 'Use Content Delivery Networks for global performance optimization', '';' impact: 'High', '';' effort: 'Medium''},'{';'' title: 'Database Indexing', '';' description: 'Optimize database queries and implement proper indexing strategies', '';' impact: 'Medium', '';' effort: 'High' } ]';' return (' <>'' <EnhancedSEO'';' title='Performance Monitoring & Optimization - Zion Tech Group'';' description='Advanced performance monitoring, Core Web Vitals tracking, and AI - powered optimization recommendations. Transform your application & apos;s performance with real - time insights.'';' keywords='performance monitoring, Core Web Vitals, optimization, performance dashboard, web performance, Zion Tech Group'';' canonical='https:''''";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function Performance() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Performance - Zion Tech Group"
+        description="Professional performance services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Performance
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional performance services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}

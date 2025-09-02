@@ -1,7 +1,47 @@
- import { motion } from 'framer-motion' import { cn } from '@/lib/utils'  interface ModernCardProps {
-   children: React.ReactNode;
-   className?: string;
-   variant?: 'default' | 'elevated' | 'glass' | 'neon';
-   hoverEffect?: boolean;
-   onClick?: () => void
-   disabled?: boolean} export const ModernCard: React.FC<ModernCardProps> = ({ children, className, variant = 'default', hoverEffect = true, onClick, disabled = false}) => { const baseClasses = cn(';relative overflow-hidden rounded-2xl transition-all duration-300','focus-within: ring-2 focus-within:ring-zion-cyan focus-within:ring-offset-2 focus-within:ring-offset-zion-slate', className )  const variantClasses = { default: 'bg-zion-slate/80 backdrop-blur-sm border border-zion-slate-light/20', elevated: 'bg-zion-slate/90 backdrop-blur-md border border-zion-cyan/30 shadow-2xl', glass: 'bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl', neon: 'bg-zion-slate/80 backdrop-blur-sm border border-zion-cyan/50 shadow-neon' }  const hoverClasses = hoverEffect && !disabled ? 'hover: scale-105 hover:shadow-2xl' : ''  return ( <motion.div className={cn(baseClasses, variantClasses[variant], hoverClasses)} whileHover={hoverEffect && !disabled ? { y: -8 } : {}} whileTap={onClick && !disabled ? { scale: 0.98 } : {}} onClick={onClick} role={onClick ? 'button' : undefined} tabIndex={onClick && !disabled ? 0 : undefined} onKeyDown={(e) => { if (onClick && !disabled && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault() onClick() } }} disabled={disabled} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeOut' }} > <div className="relative z-10 p-6">'{children}' </div>';" {}"'" <div className="absolute inset-0 opacity-20">"'" <div className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl" />"'" <div className="absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-zion-purple/20 to-transparent rounded-full blur-2xl" />" </div>'{}'{hoverEffect && ('" <motion.div"';" className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10 opacity-0" whileHover={{ opacity: 1 }} transition={{ duration: 0.3 }} />" )}' </motion.div>')';" }';"'"""} export const ModernCard: React.FC<ModernCardProps> = ({ children, className, variant = 'default', hoverEffect = true, onClick, disabled = false}) => { const baseClasses = cn(';relative overflow-hidden rounded-2xl transition-all duration-300','focus-within: ring-2 focus-within:ring-zion-cyan focus-within:ring-offset-2 focus-within:ring-offset-zion-slate', className )  const variantClasses = { default: 'bg-zion-slate/80 backdrop-blur-sm border border-zion-slate-light/20', elevated: 'bg-zion-slate/90 backdrop-blur-md border border-zion-cyan/30 shadow-2xl', glass: 'bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl', neon: 'bg-zion-slate/80 backdrop-blur-sm border border-zion-cyan/50 shadow-neon' }  const hoverClasses = hoverEffect && !disabled ? 'hover: scale-105 hover:shadow-2xl' : ''  return ( <motion.div className={cn(baseClasses, variantClasses[variant], hoverClasses)} whileHover={hoverEffect && !disabled ? { y: -8 } : {}} whileTap={onClick && !disabled ? { scale: 0.98 } : {}} onClick={onClick} role={onClick ? 'button' : undefined} tabIndex={onClick && !disabled ? 0 : undefined} onKeyDown={(e) => { if (onClick && !disabled && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault() onClick() } }} disabled={disabled} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, ease: 'easeOut' }} > <div className='relative z-10 p-6'>'{children}' </div>';' {}''' <div className='absolute inset-0 opacity-20'>''' <div className='absolute top-0 left-0 w-32 h-32 bg-gradient-to-br from-zion-cyan/20 to-transparent rounded-full blur-3xl' />''' <div className='absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-tl from-zion-purple/20 to-transparent rounded-full blur-2xl' />' </div>'{}'{hoverEffect && ('' <motion.div'';' className='absolute inset-0 bg-gradient-to-r from-zion-cyan/10 via-transparent to-zion-purple/10 opacity-0' whileHover={{ opacity: 1 }} transition={{ duration: 0.3 }} />' )}' </motion.div>')';' }';'';''"
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '../components/SEO';
+
+export default function ModernCard() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="ModernCard - Zion Tech Group"
+        description="Professional moderncard services by Zion Tech Group"
+      />
+      
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ModernCard
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              Professional moderncard services designed to meet your business needs.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg transition-all duration-300"
+              >
+                Get Started
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-400/10 transition-all duration-300"
+              >
+                Learn More
+              </motion.button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+    </div>
+  );
+}
