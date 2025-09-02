@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   Menu, 
@@ -8,32 +8,26 @@ import {
   Users, 
   Briefcase, 
   Phone, 
-  Mail, 
   ChevronDown,
   Brain,
   Shield,
   Cloud,
-  Database,
-  Network,
-  Zap,
-  Target,
   DollarSign,
   BookOpen,
   Calendar,
   FileText,
   Award,
-  Globe,
+  Target,
   Search,
   ArrowRight
 } from 'lucide-react';
 import { Button } from '../ui/Button';
-import { Badge } from '../ui/Badge';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const location = useLocation();
+  const location = { pathname: typeof window !== 'undefined' ? window.location.pathname : '/' } as { pathname: string };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +45,7 @@ const Header: React.FC = () => {
       icon: Briefcase,
       dropdown: [
         { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Artificial Intelligence solutions' },
-        { name: 'IT Services', href: '/it-services', icon: Network, description: 'Information Technology services' },
+        { name: 'IT Services', href: '/it-services', icon: Briefcase, description: 'Information Technology services' },
         { name: 'Micro SaaS', href: '/micro-saas', icon: Cloud, description: 'Micro Software as a Service' },
         { name: 'Cybersecurity', href: '/services/ai-autonomous-cybersecurity-platform', icon: Shield, description: 'AI-powered security solutions' },
         { name: 'Customer Experience', href: '/services/ai-customer-experience-platform', icon: Users, description: 'AI-driven customer experience' },
@@ -86,7 +80,7 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
               <Brain className="w-5 h-5 text-white" />
             </div>
@@ -109,7 +103,7 @@ const Header: React.FC = () => {
                   </div>
                 ) : (
                   <Link
-                    to={item.href}
+                    href={item.href}
                     className={`flex items-center space-x-1 transition-colors ${
                       isActive(item.href)
                         ? 'text-blue-400'
@@ -137,7 +131,7 @@ const Header: React.FC = () => {
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
-                            to={dropdownItem.href}
+                            href={dropdownItem.href}
                             className="flex items-start space-x-3 p-3 rounded-lg hover:bg-slate-700 transition-colors group"
                           >
                             <dropdownItem.icon className="w-5 h-5 text-blue-400 mt-0.5 group-hover:text-blue-300" />
@@ -162,11 +156,11 @@ const Header: React.FC = () => {
 
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
+            <Button>
               <Search className="w-4 h-4 mr-2" />
               Search
             </Button>
-            <Button size="sm" className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+            <Button className="bg-gradient-to-r from-blue-500 to-purple-600 text-white">
               Get Started
             </Button>
           </div>
@@ -204,7 +198,7 @@ const Header: React.FC = () => {
                         {item.dropdown.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
-                            to={dropdownItem.href}
+                            href={dropdownItem.href}
                             className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
                             onClick={() => setIsMenuOpen(false)}
                           >
@@ -216,7 +210,7 @@ const Header: React.FC = () => {
                     </div>
                   ) : (
                     <Link
-                      to={item.href}
+                      href={item.href}
                       className={`flex items-center space-x-2 transition-colors ${
                         isActive(item.href)
                           ? 'text-blue-400'
@@ -232,11 +226,11 @@ const Header: React.FC = () => {
               ))}
               
               <div className="pt-4 border-t border-slate-700 space-y-3">
-                <Button variant="outline" size="sm" className="w-full">
+                <Button className="w-full">
                   <Search className="w-4 h-4 mr-2" />
                   Search
                 </Button>
-                <Button size="sm" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white">
                   Get Started
                 </Button>
               </div>
