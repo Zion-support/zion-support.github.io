@@ -40,4 +40,4 @@ export const AccessibilityProvider = ({ children }) => {}
         const settings = {}
   highContrast,
             reducedMotion,"""
-            fontSize,"'"""
+            fontSize,

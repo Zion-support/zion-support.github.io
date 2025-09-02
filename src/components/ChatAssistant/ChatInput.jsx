@@ -23,4 +23,3 @@ import { Send export function ChatInput({ onSend, disabled = false }) {    const
         <Send className="h-5 w-5"/>
       </Button>
     </form>)}'"""
-'"'"""

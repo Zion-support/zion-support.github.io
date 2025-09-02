@@ -28,7 +28,7 @@ import {;
 export function MainNavigation({ className }) {;
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  return (;
+  return (
     <nav className={cn('hidden md: flex items-center space-x-6', className)}>;
       {' '};
       <NavLink;
