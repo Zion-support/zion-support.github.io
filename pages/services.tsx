@@ -1,11 +1,17 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from 'lucide-react'
-import PageTransition from '../src/components/PageTransition'
+import React from
+  'react'
+import { Link } from
+  'react-router-dom'
+import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from
+  'lucide-react'
+import PageTransition from
+  '../src/components/PageTransition'
 
 export default function Services() {
-	const title = 'Services — Zion Tech Group'
-	const description = 'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
+	const title =
+  'Services — Zion Tech Group'
+	const description =
+  'AI autonomous systems, cloud platforms, cybersecurity, and micro SaaS delivery.'
 
 	return (
 		<PageTransition>
@@ -222,6 +228,186 @@ export default function Services() {
 								</Link>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Expanded Service Catalog */}
+			<section className="py-24 sm:py-32 bg-white">
+				<div className="mx-auto max-w-7xl px-6 lg:px-8">
+					<div className="mx-auto max-w-3xl text-center mb-14">
+						<h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Expanded Service Catalog</h2>
+						<p className="mt-6 text-lg leading-8 text-gray-600">
+							More real, production-ready services across AI, IT, and Micro SaaS. Transparent starting prices and clear outcomes. Visit our website at
+							{' '}
+							<a href="https://ziontechgroup.com" className="text-blue-600 hover:text-blue-500 underline" target="_blank" rel="noreferrer">ziontechgroup.com</a>.
+						</p>
+
+						<p className="mt-3 text-sm text-gray-500">
+							Average market price ranges referenced from public agency rate cards and vendor quotes.
+							For tailored pricing, see our
+							{' '}
+							<Link to="/pricing-guide" className="text-blue-600 hover:text-blue-500 underline">Pricing Guide</Link>.
+						</p>
+					</div>
+
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+						{/* AI Services */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Brain className="h-5 w-5 text-blue-600" />
+								<h3 className="font-semibold text-gray-900">Revenue AI Agents (Sales/CS)</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Multi-agent copilots for SDR, AM, and Support with guardrails.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Integrates CRM, Helpdesk, and Knowledge Base</li>
+								<li>• Measurable pipeline lift and deflection</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-blue-600">Starting $8k–$25k</span>
+								<Link to="/contact" className="text-blue-600 hover:text-blue-500">Talk to us →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Database className="h-5 w-5 text-indigo-600" />
+								<h3 className="font-semibold text-gray-900">Data Engineering as a Service</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Modern ELT, dbt, and warehouse modeling, with governance.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Snowflake/BigQuery/Redshift, Lakehouse setups</li>
+								<li>• Data quality SLAs and observability</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-indigo-600">Starting $10k–$40k</span>
+								<Link to="/contact" className="text-indigo-600 hover:text-indigo-500">Get estimate →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Server className="h-5 w-5 text-emerald-600" />
+								<h3 className="font-semibold text-gray-900">MLOps Platform Setup</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">CI/CD for models, feature stores, evals, and monitoring.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Vertex/SageMaker/Databricks integrations</li>
+								<li>• Reproducible pipelines and governance</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-emerald-600">Starting $15k–$60k</span>
+								<Link to="/contact" className="text-emerald-600 hover:text-emerald-500">Learn more →</Link>
+							</div>
+						</div>
+
+						{/* IT & Cloud */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Cloud className="h-5 w-5 text-green-600" />
+								<h3 className="font-semibold text-gray-900">FinOps & Cloud Cost Optimization</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Rightsizing, savings plans, architectural refactors for cost.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Typical 20–45% monthly savings</li>
+								<li>• Automated policy enforcement</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-green-600">Assessments $4k–$12k</span>
+								<Link to="/contact" className="text-green-600 hover:text-green-500">Start now →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Shield className="h-5 w-5 text-purple-600" />
+								<h3 className="font-semibold text-gray-900">SOC-as-a-Service</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Managed detection & response with 24/7 coverage.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• SIEM, EDR, and threat intel</li>
+								<li>• Incident playbooks and compliance</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-purple-600">From $3k/mo</span>
+								<Link to="/contact" className="text-purple-600 hover:text-purple-500">Request details →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Globe className="h-5 w-5 text-orange-600" />
+								<h3 className="font-semibold text-gray-900">Fractional CTO/Architecture Advisory</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Strategy, roadmap, and architecture leadership on-demand.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Platform modernization & product strategy</li>
+								<li>• Vendor selection and governance</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-orange-600">From $4k/mo</span>
+								<Link to="/contact" className="text-orange-600 hover:text-orange-500">Book intro →</Link>
+							</div>
+						</div>
+
+						{/* Micro SaaS */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Code className="h-5 w-5 text-rose-600" />
+								<h3 className="font-semibold text-gray-900">AI Content Localization SaaS</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Translate and culturally adapt content at scale.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Multi-market SEO and brand alignment</li>
+								<li>• Human-in-the-loop quality controls</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-rose-600">From $199/mo</span>
+								<Link to="/contact" className="text-rose-600 hover:text-rose-500">Request demo →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<BarChart3 className="h-5 w-5 text-sky-600" />
+								<h3 className="font-semibold text-gray-900">Predictive Maintenance Toolkit</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Out-of-the-box anomaly detection for equipment and IoT.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Sensor ingestion, dashboards, and alerts</li>
+								<li>• Edge or cloud deployment options</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-sky-600">From $299/mo</span>
+								<Link to="/contact" className="text-sky-600 hover:text-sky-500">See live demo →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Lock className="h-5 w-5 text-teal-600" />
+								<h3 className="font-semibold text-gray-900">Compliance Copilot (SOC2/HIPAA/GDPR)</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Automated evidence collection and continuous controls.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Policy templates and auditor-ready reports</li>
+								<li>• Ticketing and alerting integrations</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-teal-600">From $249/mo</span>
+								<Link to="/contact" className="text-teal-600 hover:text-teal-500">Book a walkthrough →</Link>
+							</div>
+						</div>
+					</div>
+
+					<div className="mt-10 text-center text-sm text-gray-500">
+						Need something custom? Email
+						{' '}
+						<a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-500">kleber@ziontechgroup.com</a>
+						{' '}
+						or call
+						{' '}
+						<a href="tel:+13024640950" className="text-blue-600 hover:text-blue-500">+1 302 464 0950</a>.
 					</div>
 				</div>
 			</section>

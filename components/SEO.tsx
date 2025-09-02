@@ -77,17 +77,17 @@ const SEO: React.FC<SEOProps> = ({
           "description": "Leading provider of AI-powered solutions and technology services",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "364 E Main St STE 1008",
-            "addressLocality": "Middletown",
-            "addressRegion": "DE",
-            "postalCode": "19709",
+            "streetAddress": "123 Technology Drive",
+            "addressLocality": "San Francisco",
+            "addressRegion": "CA",
+            "postalCode": "94105",
             "addressCountry": "US"
           },
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+1-302-464-0950",
+            "telephone": "+1-555-123-4567",
             "contactType": "customer service",
-            "email": "kleber@ziontechgroup.com"
+            "email": "contact@ziontechgroup.com"
           },
           "sameAs": [
             "https://linkedin.com/company/ziontechgroup",

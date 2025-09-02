@@ -1,26 +1,35 @@
-import React from 'react';
-import Head from 'next/head';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import React from
+  'react';
+import Head from
+  'next/head';
+import Link from
+  'next/link';
+import { motion } from
+  'framer-motion';
 import { 
 <:pages/zero-trust-network-architecture-2029.tsxShield, CheckCircle, ArrowRight, Star, Phone, Mail, MapPin, 
   Zap, Sparkles, Lock, Cpu, Database, Cloud, Users, 
   Briefcase, BookOpen, MessageCircle, TrendingUp,
   Target, Layers, Globe, Brain, Atom, Building, Network,
   Eye, Key, Server, LockKeyhole, Fingerprint, ShieldCheck
-} from 'lucide-react';
-import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
-import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+} from,
+  lucide-react';
+import UltraFuturisticNavigation2029 from
+  '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from
+  '../components/layout/UltraFuturisticFooter2029';
 
 const contactInfo = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  mobile: '+1 302 464 0950,
+  email:,
+  kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709,
+  website:,
+  https: //ziontechgroup.com
 };
 
-const features = [
-  'Identity verification',
+const features = [,
+  Identity verification',
   'Device trust scoring',
   'Continuous monitoring',
   'Micro-segmentation',
@@ -49,8 +58,10 @@ const useCases = [
 ];
 
 const technology = [
-<:pages/zero-trust-network-architecture-2029.tsx'Zero Trust Architecture',
-  'Identity Management',
+<: pages/zero-trust-network-architecture-2029.tsx
+  'Zero Trust Architecture,
+,
+  Identity Management',
   'Network Security',
   'AI-Powered Analytics',
   'Automation Systems',
@@ -59,46 +70,54 @@ const technology = [
 
 const pricingPlans = [
   {
-    name: 'Zero Trust Starter',
-    price: '$29,999',
-    period: '/month',
-    description: 'Perfect for small to medium enterprises',
+    name: 'Zero Trust Starter,
+    price:,
+  $29,999',
+    period: '/month,
+    description:,
+  Perfect for small to medium enterprises',
     features: [
-      'Basic identity verification',
-      'Device trust scoring',
-      'Network monitoring',
-      'Basic support',
-      'Training modules'
+  'Basic identity verification,
+  'Device trust scoring',
+  'Network monitoring',
+  'Basic support',
+  'Training modules'
     ],
     popular: false
   },
   {
-    name: 'Zero Trust Enterprise',
-    price: '$59,999',
-    period: '/month',
-    description: 'For large enterprises and organizations',
+    name:,
+  Zero Trust Enterprise',
+    price: $59,999,
+  ,
+    period: '/month,
+    description:,
+  For large enterprises and organizations',
     features: [
-      'Advanced identity management',
-      'Full micro-segmentation',
-      'AI threat detection',
-      'Priority support',
-      'Custom training',
-      'Integration services'
+  'Advanced identity management,
+  'Full micro-segmentation',
+  'AI threat detection',
+  'Priority support',
+  'Custom training',
+  'Integration services'
     ],
     popular: true
   },
   {
-    name: 'Zero Trust Government',
-    price: '$119,999',
-    period: '/month',
-    description: 'For government and military organizations',
+    name:,
+  Zero Trust Government',
+    price: $119,999,
+  ,
+    period: '/month,
+    description:,
+  For government and military organizations',
     features: [
-      'Military-grade security',
-      'Custom compliance',
-      'On-site deployment',
-      '24/7 dedicated support',
-      'Full compliance certification',
-      'Complete training program'
+  'Military-grade security,
+  'Custom compliance',
+  'On-site deployment',
+  '24/7 dedicated support',
+  'Full compliance certification',
+  'Complete training program'
     ],
     popular: false
   }
@@ -210,9 +229,12 @@ export default function ZeroTrustNetworkArchitecture2029() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }} className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
-                { number: '400%', label: 'ROI within 18 months', icon: TrendingUp },
-                { number: '$3.2B', label: 'Market size by 2029', icon: DollarSign },
-                { number: '24/7', label: 'Expert support', icon: Shield }
+                { number:,
+  400%', label: 'ROI within 18 months, icon: TrendingUp },
+                { number:,
+  $3.2B', label: 'Market size by 2029, icon: DollarSign },
+                { number:,
+  24/7', label: 'Expert support, icon: Shield }
               ].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-2xl font-bold text-cyan-400 mb-2">{stat.number}</div>
@@ -436,7 +458,8 @@ key={index}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative ${plan.popular ? 'scale-105' : ''}`}
+                className={`relative ${plan.popular ?,
+  scale-105': '}`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">

@@ -1,30 +1,101 @@
-import React from 'react';'import type { NextPage } from 'next';'import MainLayout from '../components/layout/MainLayout';'import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } from 'lucide-react';'import Link from 'next/link';''const Help: NextPage = () => {
+React from
+  'react';
+import type { NextPage } from
+  'next';'MainLayout from
+  '../components/layout/MainLayout';
+import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } from
+  'lucide-react';'import Link from
+  'next/link';'
+  'const Help: NextPage = () => {
   const helpCategories = [;
     {;
-      icon: Book, title: 'Getting Started','      description: 'Learn the basics and get up and running quickly', articles: ['        'Welcome to Zion Tech Group','        'Setting up your account', 'Understanding our services','        'First steps guide''      ]'    }, {;
+      icon: Book, title:,
+  Getting Started
+  ','      description: 'Learn the basics and get up and running quickly, articles: [
+  '        'Welcome to Zion Tech Group
+  ',' 
+  'Setting up your account',
+  'Understanding our services',
+  '        'First steps guide'
+  '      ]'    }, {;
       icon: FileText,
-      title: 'User Guides', description: 'Detailed guides for using our services','      articles: ['        'Service management', 'Account settings','        'Billing and payments', 'Security best practices''      ]'    }, {;
+      title:,
+  User Guides', description: 'Detailed guides for using our services,
+,
+  articles: [' 
+  'Service management,
+  'Account settings',
+  '        'Billing and payments
+  ', 'Security best practices'
+  '      ]'    }, {;
       icon: Video,
-      title: 'Video Tutorials', description: 'Watch step-by-step video tutorials','      articles: ['        'Platform overview', 'Service configuration','        'Troubleshooting common issues', 'Advanced features''      ]'    }, {;
+      title:,
+  Video Tutorials', description: 'Watch step-by-step video tutorials,
+,
+  articles: [' 
+  'Platform overview,
+  'Service configuration',
+  '        'Troubleshooting common issues
+  ', 'Advanced features'
+  '      ]'    }, {;
       icon: MessageCircle,
-      title: 'FAQ', description: 'Frequently asked questions and answers','      articles: ['        'General questions', 'Technical support','        'Billing questions', 'Service-specific FAQs''      ]'    }
+      title:,
+  FAQ', description: 'Frequently asked questions and answers,
+,
+  articles: [' 
+  'General questions,
+,
+  Technical support',
+  '        'Billing questions
+  ', 'Service-specific FAQs'
+  '      ]'    }
   ];
 
   const popularArticles = [;
     {
-      title: 'How to get started with our services', category: 'Getting Started','      views: '1.2k views''    }, {'      title: 'Understanding your billing and payments','      category: 'Billing', views: '890 views''    },'    {;
-      title: 'Setting up two-factor authentication', category: 'Security','      views: '756 views''    }, {'      title: 'Troubleshooting common login issues','      category: 'Technical', views: '634 views''    },'    {;
-      title: 'Managing your account settings', category: 'Account','      views: '521 views''    }'  ];
+      title: 'How to get started with our services, category:,
+  Getting Started',
+  '      views: '1.2k views'    }, {,
+  title: 'Understanding your billing and payments,
+,
+  category: 'Billing, views:,
+  890 views'
+  '    },'    {;
+      title: 'Setting up two-factor authentication, category:,
+  Security',
+  '      views: '756 views'    }, {,
+  title: 'Troubleshooting common login issues,
+,
+  category: 'Technical, views:,
+  634 views'
+  '    },'    {;
+      title: 'Managing your account settings, category:,
+  Account',
+  '      views: '521 views'    }'  ];
 
   const supportOptions = [;
     {
-      icon: MessageCircle, title: 'Live Chat','      description: 'Get instant help from our support team', availability: 'Available 24/7','      action: 'Start Chat''    }, {'      icon: Phone,;
-      title: 'Phone Support', description: 'Speak directly with our technical experts','      availability: 'Mon-Fri 9AM-6PM EST', action: 'Call +1 302 464 0950''    },'    {;
-      icon: Mail, title: 'Email Support','      description: 'Send us your questions and get detailed responses', availability: 'Response within 24 hours','      action: 'Send Email''    }'  ];
+      icon: MessageCircle, title:,
+  Live Chat',
+  '      description: 'Get instant help from our support team, availability:,
+  Available 24/7
+  ','      action: 'Start Chat'    }, {
+  '      icon: Phone,;
+      title:,
+  Phone Support
+  ', description: 'Speak directly with our technical experts,'      availability:,
+  Mon-Fri 9AM-6PM EST', action: 'Call +1 302 464 0950'    },
+  '    {;
+      icon: Mail, title:,
+  Email Support
+  ','      description: 'Send us your questions and get detailed responses, availability:,
+  Response within 24 hours',
+  '      action: 'Send Email'    }'  ];
 
   return (
     <MainLayout
-      title="Help Center - Zion Tech Group""      description="Get help and support for Zion Tech Group services. Find guides, tutorials, FAQs, and contact our support team for assistance.""      keywords="help center, support, documentation, tutorials, FAQ, customer service""    >"      <div className="min-h-screen bg-gray-50">"        {/* Hero Section */}"        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"          <div className="container mx-auto px-4 text-center">"            <h1 className="text-4xl md: text-5xl font-bold mb-6">Help Center</h1>"            <p className="text-xl text-gray-200 max-w-3xl mx-auto">"              Find answers, get support, and learn how to make the most of our services. "              We&apos;re here to help you succeed.''            </p>'          </div>
+      title="Help Center - Zion Tech Group""      description="Get help and support for Zion Tech Group services. Find guides, tutorials, FAQs, and contact our support team for assistance.""      keywords="help center, support, documentation, tutorials, FAQ, customer service""    >"      <div className="min-h-screen bg-gray-50">"        {/* Hero Section */}"        <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">"          <div className="container mx-auto px-4 text-center">"            <h1 className="text-4xl md: text-5xl font-bold mb-6">Help Center</h1>"            <p className="text-xl text-gray-200 max-w-3xl mx-auto">"              Find answers, get support, and learn how to make the most of our services. "              We&apos;re here to help you succeed.'
+  '            </p>'          </div>
         </section>
 
         {/* Search Bar */}

@@ -1,1 +1,2 @@
-import React from 'react'; export default function EditPostPage () {''
+import React from 'react'; export default function EditPostPage () {
+}
