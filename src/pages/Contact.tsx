@@ -685,6 +685,7 @@ const Contact: React.FC = () => {
                   )}
                 </button>
               </form>
+              )}
             </motion.div>
 
             {/* Additional Information */}

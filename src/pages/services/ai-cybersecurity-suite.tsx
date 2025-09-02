@@ -1,9 +1,9 @@
-import React from 'react.ts';
-import { Helmet               } from 'react-helmet-async.ts';
-import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity               } from 'lucide-react.ts';
-import { Link               } from 'react-router-dom.ts';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Shield, Brain, Zap, Users, Lock, Eye, AlertTriangle, ArrowRight, CheckCircle, Play, Download, Mail, Globe, Target, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-export default function AICybersecuritySuite(...args: []):  {
+export default function AICybersecuritySuite() {
   return (
     <>
       <Helmet>
@@ -33,6 +33,7 @@ export default function AICybersecuritySuite(...args: []):  {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-500 to-orange-600 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
                   Get Protected
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
