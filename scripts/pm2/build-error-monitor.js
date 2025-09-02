@@ -10,6 +10,7 @@ import path from
 class BuildErrorMonitor {
   constructor() {
     this.buildCheckInterval = process.env.BUILD_CHECK_INTERVAL || 900000; // 15 minutes
+<<<<<<< HEAD
     this.autoFixBuild = process.env.AUTO_FIX_BUILD ===
   'true';
     this.reportErrors = process.env.REPORT_ERRORS ===
@@ -19,6 +20,13 @@ class BuildErrorMonitor {
     
     console.log(
   '🏗️ Build Error Monitor started');
+=======
+    this.autoFixBuild = process.env.AUTO_FIX_BUILD === 'true';
+    this.reportErrors = process.env.REPORT_ERRORS === 'true';
+    this.logFile = 'error-reports/build-error-monitor-report.json';
+
+    console.log('🏗️ Build Error Monitor started');
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     console.log(`Build check interval: ${this.buildCheckInterval}ms`);
     console.log(`Auto-fix build: ${this.autoFixBuild}`);
   }
@@ -26,7 +34,7 @@ class BuildErrorMonitor {
   async start() {
     // Initial build check
     await this.checkBuildErrors();
-    
+
     // Set up interval checking
     setInterval(async () => {
       await this.checkBuildErrors();
@@ -34,9 +42,14 @@ class BuildErrorMonitor {
   }
 
   async checkBuildErrors() {
+<<<<<<< HEAD
     console.log(
   '🔍 Checking build errors...');
     
+=======
+    console.log('🔍 Checking build errors...');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     const report = {
       timestamp: new Date().toISOString(),
       buildStatus:
@@ -46,17 +59,17 @@ class BuildErrorMonitor {
       fixes: {
         applied: [],
         failed: [],
-        skipped: []
+        skipped: [],
       },
       buildTime: null,
-      suggestions: []
+      suggestions: [],
     };
 
     try {
       const startTime = Date.now();
       const buildResult = await this.runBuild();
       const endTime = Date.now();
-      
+
       report.buildTime = endTime - startTime;
       report.buildStatus = buildResult.success ?,
   success': 'failed;
@@ -72,14 +85,23 @@ class BuildErrorMonitor {
 
       // Save report
       this.saveReport(report);
+<<<<<<< HEAD
       
       const status = report.buildStatus ===,
   success' ?
   '✅': '❌;
       console.log(`${status} Build check complete. Status: ${report.buildStatus}`);
+=======
+
+      const status = report.buildStatus === 'success' ? '✅' : '❌';
+      console.log(
+        `${status} Build check complete. Status: ${report.buildStatus}`
+      );
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
       console.log(`Build time: ${report.buildTime}ms`);
-      console.log(`Errors: ${report.errors.length}, Warnings: ${report.warnings.length}`);
-      
+      console.log(
+        `Errors: ${report.errors.length}, Warnings: ${report.warnings.length}`
+      );
     } catch (error) {
       console.error(
   'Error during build check:,
@@ -93,72 +115,109 @@ class BuildErrorMonitor {
 
   async runBuild() {
     try {
+<<<<<<< HEAD
       const output = execSync(
   'npm run build', { 
         stdio: 'pipe,
         timeout: 300000 // 5 minutes timeout
+=======
+      const output = execSync('npm run build', {
+        stdio: 'pipe',
+        timeout: 300000, // 5 minutes timeout
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
       }).toString();
-      
+
       return {
         success: true,
         errors: [],
         warnings: this.parseWarningsFromOutput(output),
-        output
+        output,
       };
     } catch (error) {
-      const output = error.stdout ? error.stdout.toString() : error.stderr.toString();
-      
+      const output = error.stdout
+        ? error.stdout.toString()
+        : error.stderr.toString();
+
       return {
         success: false,
         errors: this.parseErrorsFromOutput(output),
         warnings: this.parseWarningsFromOutput(output),
-        output
+        output,
       };
     }
   }
 
   parseErrorsFromOutput(output) {
     const errors = [];
+<<<<<<< HEAD
     const lines = output.split(,
   \\n');
     
+=======
+    const lines = output.split('\\n');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      
+
       // Vite/Rollup errors
+<<<<<<< HEAD
       if (line.includes(
   '✗') || line.includes(
   'Error: ') || line.includes(
   'error TS')) {
+=======
+      if (
+        line.includes('✗') ||
+        line.includes('Error:') ||
+        line.includes('error TS')
+      ) {
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         errors.push({
           type:
   'build,
           message: line.trim(),
           line: i + 1,
+<<<<<<< HEAD
           severity:,
   error'
+=======
+          severity: 'error',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         });
       }
-      
+
       // Module resolution errors
+<<<<<<< HEAD
       if (line.includes(
   'Cannot resolve module') || line.includes(
   'Module not found')) {
+=======
+      if (
+        line.includes('Cannot resolve module') ||
+        line.includes('Module not found')
+      ) {
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         errors.push({
           type: 'module,
           message: line.trim(),
           line: i + 1,
+<<<<<<< HEAD
           severity:,
   error'
+=======
+          severity: 'error',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         });
       }
     }
-    
+
     return errors;
   }
 
   parseWarningsFromOutput(output) {
     const warnings = [];
+<<<<<<< HEAD
     const lines = output.split(
   '\\n');
     
@@ -168,16 +227,28 @@ class BuildErrorMonitor {
       if (line.includes(
   'warning') || line.includes(
   '⚠')) {
+=======
+    const lines = output.split('\\n');
+
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+
+      if (line.includes('warning') || line.includes('⚠')) {
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         warnings.push({
           type: 'warning,
           message: line.trim(),
           line: i + 1,
+<<<<<<< HEAD
           severity:
   'warning'
+=======
+          severity: 'warning',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         });
       }
     }
-    
+
     return warnings;
   }
 
@@ -187,7 +258,9 @@ class BuildErrorMonitor {
         const fixed = await this.fixBuildError(error);
         if (fixed) {
           report.fixes.applied.push(error);
-          console.log(`✅ Fixed build error: ${error.message.substring(0, 50)}...`);
+          console.log(
+            `✅ Fixed build error: ${error.message.substring(0, 50)}...`
+          );
         } else {
           report.fixes.failed.push(error);
         }
@@ -200,7 +273,7 @@ class BuildErrorMonitor {
 
   async fixBuildError(error) {
     const { message, type } = error;
-    
+
     try {
       // Fix module resolution errors
       if (type ===
@@ -208,21 +281,21 @@ class BuildErrorMonitor {
   'Cannot resolve module')) {
         return await this.fixModuleResolutionError(message);
       }
-      
+
       // Fix import/export errors
       if (message.includes(
   'import') || message.includes(
   'export')) {
         return await this.fixImportExportError(message);
       }
-      
+
       // Fix dependency errors
       if (message.includes(
   'dependency') || message.includes(
   'package')) {
         return await this.fixDependencyError(message);
       }
-      
+
       return false;
     } catch (error) {
       console.error(
@@ -237,9 +310,9 @@ class BuildErrorMonitor {
   ']([^"']+)["
   ']/);
     if (!moduleMatch) return false;
-    
+
     const moduleName = moduleMatch[1];
-    
+
     // Try to install missing dependencies
     if (!moduleName.startsWith('.
   ') && !moduleName.startsWith('/
@@ -253,7 +326,7 @@ class BuildErrorMonitor {
         console.error(`Failed to install ${moduleName}:`, error.message);
       }
     }
-    
+
     return false;
   }
 
@@ -262,6 +335,7 @@ class BuildErrorMonitor {
     const commonFixes = [
       {
         pattern: /export\s*{\s*default\s*}/,
+<<<<<<< HEAD
         replacement: 'export default {}
   '
       },
@@ -270,8 +344,16 @@ class BuildErrorMonitor {
         replacement: 'import
   '
       }
+=======
+        replacement: 'export default {}',
+      },
+      {
+        pattern: /import\s*{\s*}\s*from/,
+        replacement: 'import',
+      },
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-    
+
     // This would need file-specific logic
     // For now, just return false to indicate no fix applied
     return false;
@@ -291,39 +373,62 @@ class BuildErrorMonitor {
         console.error(`Failed to install ${packageName}:`, error.message);
       }
     }
-    
+
     return false;
   }
 
   generateBuildSuggestions(report) {
     const suggestions = [];
-    
+
     // Performance suggestions
+<<<<<<< HEAD
     if (report.buildTime > 60000) { // More than 1 minute
       suggestions.push(,
   Consider optimizing build performance - build time is over 1 minute
   ');
+=======
+    if (report.buildTime > 60000) {
+      // More than 1 minute
+      suggestions.push(
+        'Consider optimizing build performance - build time is over 1 minute'
+      );
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     }
-    
+
     // Error pattern suggestions
     const moduleErrors = report.errors.filter(e => e.type === 'module
   ').length;
     if (moduleErrors > 0) {
-      suggestions.push(`Found ${moduleErrors} module resolution errors - check import paths and dependencies`);
+      suggestions.push(
+        `Found ${moduleErrors} module resolution errors - check import paths and dependencies`
+      );
     }
+<<<<<<< HEAD
     
     const tsErrors = report.errors.filter(e => e.message.includes('TS
   ')).length;
+=======
+
+    const tsErrors = report.errors.filter(e => e.message.includes('TS')).length;
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     if (tsErrors > 0) {
-      suggestions.push(`Found ${tsErrors} TypeScript errors - run type checking separately`);
+      suggestions.push(
+        `Found ${tsErrors} TypeScript errors - run type checking separately`
+      );
     }
-    
+
     // Warning suggestions
     if (report.warnings.length > 10) {
+<<<<<<< HEAD
       suggestions.push('High number of warnings detected - consider addressing them for better code quality
   ');
+=======
+      suggestions.push(
+        'High number of warnings detected - consider addressing them for better code quality'
+      );
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     }
-    
+
     return suggestions;
   }
 

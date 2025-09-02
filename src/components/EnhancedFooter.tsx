@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -316,3 +317,6 @@ import React from,
   /support' } ] } ]; const socialLinks = [ { name: 'LinkedIn, href:,
   https: ''
 >>>>>>> origin/main
+=======
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1

@@ -14,15 +14,26 @@ const AISalesAssistant: NextPage = () => (
   >
     <section className="bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 text-white py-16">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">AI Sales Assistant</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          AI Sales Assistant
+        </h1>
         <p className="text-lg text-gray-200 mb-6">
-          Automatically research prospects, score leads, and generate context-aware, multi-channel outreach that books more meetings.
+          Automatically research prospects, score leads, and generate
+          context-aware, multi-channel outreach that books more meetings.
         </p>
         <div className="flex flex-wrap gap-3">
-          <span className="px-3 py-1 rounded bg-white/10">CRM Sync (HubSpot/Salesforce)</span>
-          <span className="px-3 py-1 rounded bg-white/10">AI Personalization</span>
-          <span className="px-3 py-1 rounded bg-white/10">Omnichannel (Email/LinkedIn)</span>
-          <span className="px-3 py-1 rounded bg-white/10">Meeting Scheduler</span>
+          <span className="px-3 py-1 rounded bg-white/10">
+            CRM Sync (HubSpot/Salesforce)
+          </span>
+          <span className="px-3 py-1 rounded bg-white/10">
+            AI Personalization
+          </span>
+          <span className="px-3 py-1 rounded bg-white/10">
+            Omnichannel (Email/LinkedIn)
+          </span>
+          <span className="px-3 py-1 rounded bg-white/10">
+            Meeting Scheduler
+          </span>
         </div>
       </div>
     </section>
@@ -51,7 +62,9 @@ const AISalesAssistant: NextPage = () => (
         </div>
         <div className="p-6 border rounded-lg">
           <h3 className="text-xl font-semibold mb-2">Enterprise</h3>
-          <p className="text-gray-600 mb-4">For complex ICPs and strict compliance.</p>
+          <p className="text-gray-600 mb-4">
+            For complex ICPs and strict compliance.
+          </p>
           <ul className="text-sm text-gray-700 space-y-2 mb-4">
             <li>• Custom scoring models</li>
             <li>• SSO, audit logs, approvals</li>
@@ -68,13 +81,21 @@ const AISalesAssistant: NextPage = () => (
         <ul className="grid md:grid-cols-3 gap-4 text-gray-700">
           <li className="p-4 bg-white rounded border">2-4x reply rate lift</li>
           <li className="p-4 bg-white rounded border">20-35% more meetings</li>
-          <li className="p-4 bg-white rounded border">1-2 hours saved/day/rep</li>
+          <li className="p-4 bg-white rounded border">
+            1-2 hours saved/day/rep
+          </li>
         </ul>
         <div className="mt-6 text-sm text-gray-600">
-          Pricing competitive with tools like Apollo, Clay, Outreach, and Lavender.
+          Pricing competitive with tools like Apollo, Clay, Outreach, and
+          Lavender.
         </div>
         <div className="mt-4">
-          <Link href="/contact" className="inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg">Start a trial</Link>
+          <Link
+            href="/contact"
+            className="inline-block bg-emerald-600 text-white px-6 py-3 rounded-lg"
+          >
+            Start a trial
+          </Link>
         </div>
       </div>
     </section>
@@ -82,4 +103,3 @@ const AISalesAssistant: NextPage = () => (
 );
 
 export default AISalesAssistant;
-

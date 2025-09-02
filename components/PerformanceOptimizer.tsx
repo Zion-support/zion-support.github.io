@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 
 interface PerformanceOptimizerProps {
   preloadImages?: string[];
+=======
+import React, { useEffect } from 'react';'import Head from 'next/head';''interface PerformanceOptimizerProps {preloadImages?: string[];'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   preloadFonts?: string[];
   criticalCSS?: string;
 }
@@ -42,12 +46,17 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       }
 
       // Resource hints for better performance
+<<<<<<< HEAD
       const addResourceHint = (href: string, as: string, type?: string) => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.href = href;
         link.as = as;
         if (type) link.type = type;
+=======
+      const addResourceHint = (href: string, as: string, type?: string) => {;
+        const link = document.createElement('link');'        link.rel = 'preload';'        link.href = href;'        link.as = as;if (type) link.type = type;'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         document.head.appendChild(link);
       };
 
@@ -72,6 +81,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       {/* Preload critical resources */}
       {preloadImages.map((image, index) => (
         <link
+<<<<<<< HEAD
           key={`preload-image-${index}`}
           rel="preload"
           as="image"
@@ -92,6 +102,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
             }
           }}
         />
+=======
+key={`preload-image-${index}`}`          rel="preload""          as="image""          href={image}"        />))}"
+      
+      {preloadFonts.map((font, index) => (
+        <link
+key={`preload-font-${index}`}`          rel="preload""          as="style""          href={font}"          onLoad={() => {"
+            const link = document.querySelector(`link[href="${font}"]`);"            if (link) {"              (link as HTMLLinkElement).rel = 'stylesheet';'            }'          }}`        />
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
       ))}
       
       {/* Performance hints */}

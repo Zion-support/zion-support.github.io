@@ -29,20 +29,34 @@ const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !serviceKey) {
+<<<<<<< HEAD
   const errorMessage =,
   CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.;
+=======
+  const errorMessage =
+    'CRITICAL: SUPABASE_URL or SUPABASE_SERVICE_ROLE_KEY is missing for backend auth API. Service cannot start.';
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   console.error(errorMessage);
   throw new Error(errorMessage);
 }
 
 const supabase = createClient(supabaseUrl, serviceKey);
 
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse<LoginSuccessResponse | ErrorResponse>) {
   if (req.method !==
   'POST') {
     res.setHeader(
   'Allow',
   'POST');
+=======
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse<LoginSuccessResponse | ErrorResponse>
+) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
   }
 
@@ -50,14 +64,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const { email, password } = req.body as LoginRequestBody;
 
     if (!email || !password) {
+<<<<<<< HEAD
       return res.status(400).json({ error:
   'Email and password are required.' });
+=======
+      return res
+        .status(400)
+        .json({ error: 'Email and password are required.' });
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     }
 
     // Attempt to sign in with Supabase
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
-      password
+      password,
     });
 
     if (error) {
@@ -66,26 +86,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
       if (error.message && /Email not confirmed/i.test(error.message)) {
         return res.status(403).json({
-          error: "Email not confirmed. Please check your inbox to verify your email.",
-          code: "EMAIL_NOT_CONFIRMED"
+          error:
+            'Email not confirmed. Please check your inbox to verify your email.',
+          code: 'EMAIL_NOT_CONFIRMED',
         });
-      } else if (error.message && /Invalid login credentials/i.test(error.message)) {
+      } else if (
+        error.message &&
+        /Invalid login credentials/i.test(error.message)
+      ) {
         return res.status(401).json({
-          error: "Invalid email or password.",
-          code: "INVALID_CREDENTIALS"
+          error: 'Invalid email or password.',
+          code: 'INVALID_CREDENTIALS',
         });
       } else {
         return res.status(400).json({
-          error: error.message || "Login failed.",
-          code: "LOGIN_ERROR"
+          error: error.message || 'Login failed.',
+          code: 'LOGIN_ERROR',
         });
       }
     }
 
     if (!data.user || !data.session) {
       return res.status(500).json({
-        error: "Login successful but no user or session returned.",
-        code: "NO_SESSION"
+        error: 'Login successful but no user or session returned.',
+        code: 'NO_SESSION',
       });
     }
 
@@ -93,15 +117,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     return res.status(200).json({
       user: data.user,
       session: data.session,
-      message: "Login successful"
+      message: 'Login successful',
     });
-
   } catch (error) {
     console.error(
   'Unexpected error in login handler:', error);
     return res.status(500).json({
-      error: "An unexpected error occurred during login.",
-      code: "UNEXPECTED_ERROR"
+      error: 'An unexpected error occurred during login.',
+      code: 'UNEXPECTED_ERROR',
     });
   }
 }

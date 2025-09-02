@@ -66,14 +66,19 @@ class BuildOptimizer {
       optimizations: [],
       warnings: [],
       errors: [],
-      metrics: {}
+      metrics: {},
     };
   }
 
   async optimize() {
+<<<<<<< HEAD
     console.log(
   '🚀 Starting build optimization...');
     
+=======
+    console.log('🚀 Starting build optimization...');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     try {
       await this.cleanConsoleStatements();
       await this.optimizeImages();
@@ -83,11 +88,19 @@ class BuildOptimizer {
       await this.generateRobotsTxt();
       await this.optimizeManifest();
       await this.generateReport();
+<<<<<<< HEAD
       
       console.log(
   '✅ Build optimization completed successfully!');
       console.log(`📊 Optimization report saved to: ${path.join(this.buildDir,
   'optimization-report.json')}`);
+=======
+
+      console.log('✅ Build optimization completed successfully!');
+      console.log(
+        `📊 Optimization report saved to: ${path.join(this.buildDir, 'optimization-report.json')}`
+      );
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     } catch (error) {
       console.error(
   '❌ Build optimization failed:', error.message);
@@ -98,6 +111,7 @@ class BuildOptimizer {
   }
 
   async cleanConsoleStatements() {
+<<<<<<< HEAD
     console.log(
   '🧹 Cleaning console statements...');
     
@@ -106,109 +120,159 @@ class BuildOptimizer {
   '.tsx',
   '.js',
   '.jsx']);
+=======
+    console.log('🧹 Cleaning console statements...');
+
+    const files = this.getAllFiles(this.srcDir, ['.ts', '.tsx', '.js', '.jsx']);
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     let cleanedFiles = 0;
-    
+
     for (const file of files) {
       try {
         let content = fs.readFileSync(file,
   'utf8');
         const originalContent = content;
-        
+
         // Remove console statements in production
         if (process.env.NODE_ENV ===
   'production') {
           content = content
+<<<<<<< HEAD
             .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g, '
   ')
             .replace(/\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g, '')
             .replace(/\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\//g, '
   ');
+=======
+            .replace(/console\.(log|warn|error|info|debug)\([^)]*\);?/g, '')
+            .replace(
+              /\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);?/g,
+              ''
+            )
+            .replace(
+              /\/\*[\s\S]*?console\.(log|warn|error|info|debug)\([^)]*\);?[\s\S]*?\*\//g,
+              ''
+            );
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         }
-        
+
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           cleanedFiles++;
         }
       } catch (error) {
-        this.optimizationReport.warnings.push(`Failed to clean console statements in ${file}: ${error.message}`);
+        this.optimizationReport.warnings.push(
+          `Failed to clean console statements in ${file}: ${error.message}`
+        );
       }
     }
-    
-    this.optimizationReport.optimizations.push(`Cleaned console statements from ${cleanedFiles} files`);
+
+    this.optimizationReport.optimizations.push(
+      `Cleaned console statements from ${cleanedFiles} files`
+    );
     console.log(`✅ Cleaned console statements from ${cleanedFiles} files`);
   }
 
   async optimizeImages() {
+<<<<<<< HEAD
     console.log('🖼️ Optimizing images...
   ');
     
     const imageDir = path.join(this.projectRoot, 'public
   ', 'images
   ');
+=======
+    console.log('🖼️ Optimizing images...');
+
+    const imageDir = path.join(this.projectRoot, 'public', 'images');
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     if (!fs.existsSync(imageDir)) {
       this.optimizationReport.warnings.push('Images directory not found
   ');
       return;
     }
-    
-    const images = fs.readdirSync(imageDir).filter(file => 
-      /\.(jpg|jpeg|png|gif|webp)$/i.test(file)
-    );
-    
+
+    const images = fs
+      .readdirSync(imageDir)
+      .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file));
+
     let optimizedImages = 0;
-    
+
     for (const image of images) {
       try {
         const imagePath = path.join(imageDir, image);
         const stats = fs.statSync(imagePath);
         const sizeKB = Math.round(stats.size / 1024);
-        
-        if (sizeKB > 100) { // Images larger than 100KB
-          this.optimizationReport.warnings.push(`Large image detected: ${image} (${sizeKB}KB)`);
+
+        if (sizeKB > 100) {
+          // Images larger than 100KB
+          this.optimizationReport.warnings.push(
+            `Large image detected: ${image} (${sizeKB}KB)`
+          );
         }
-        
+
         optimizedImages++;
       } catch (error) {
-        this.optimizationReport.warnings.push(`Failed to optimize image ${image}: ${error.message}`);
+        this.optimizationReport.warnings.push(
+          `Failed to optimize image ${image}: ${error.message}`
+        );
       }
     }
-    
-    this.optimizationReport.optimizations.push(`Processed ${optimizedImages} images`);
+
+    this.optimizationReport.optimizations.push(
+      `Processed ${optimizedImages} images`
+    );
     console.log(`✅ Processed ${optimizedImages} images`);
   }
 
   async optimizeCSS() {
+<<<<<<< HEAD
     console.log('🎨 Optimizing CSS...
   ');
     
     const cssFiles = this.getAllFiles(this.srcDir, ['.css
   ']);
+=======
+    console.log('🎨 Optimizing CSS...');
+
+    const cssFiles = this.getAllFiles(this.srcDir, ['.css']);
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     let optimizedCSS = 0;
-    
+
     for (const file of cssFiles) {
       try {
+<<<<<<< HEAD
         let content = fs.readFileSync(file, 'utf8
   ');
         
+=======
+        let content = fs.readFileSync(file, 'utf8');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         // Remove unused CSS (basic implementation)
         content = content
           .replace(/\s+/g, ' 
   ') // Remove extra whitespace
           .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
           .trim();
-        
+
         fs.writeFileSync(file, content);
         optimizedCSS++;
       } catch (error) {
-        this.optimizationReport.warnings.push(`Failed to optimize CSS in ${file}: ${error.message}`);
+        this.optimizationReport.warnings.push(
+          `Failed to optimize CSS in ${file}: ${error.message}`
+        );
       }
     }
-    
-    this.optimizationReport.optimizations.push(`Optimized ${optimizedCSS} CSS files`);
+
+    this.optimizationReport.optimizations.push(
+      `Optimized ${optimizedCSS} CSS files`
+    );
     console.log(`✅ Optimized ${optimizedCSS} CSS files`);
   }
 
   async optimizeJavaScript() {
+<<<<<<< HEAD
     console.log(
   '⚡ Optimizing JavaScript...');
     
@@ -217,13 +281,28 @@ class BuildOptimizer {
   '.tsx',
   '.js',
   '.jsx']);
+=======
+    console.log('⚡ Optimizing JavaScript...');
+
+    const jsFiles = this.getAllFiles(this.srcDir, [
+      '.ts',
+      '.tsx',
+      '.js',
+      '.jsx',
+    ]);
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     let optimizedJS = 0;
-    
+
     for (const file of jsFiles) {
       try {
+<<<<<<< HEAD
         let content = fs.readFileSync(file,
   'utf8');
         
+=======
+        let content = fs.readFileSync(file, 'utf8');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         // Basic optimizations
         content = content
           .replace(/\s+/g,
@@ -232,22 +311,31 @@ class BuildOptimizer {
   ') // Remove single-line comments
           .replace(/\/\*[\s\S]*?\*\//g, '') // Remove multi-line comments
           .trim();
-        
+
         fs.writeFileSync(file, content);
         optimizedJS++;
       } catch (error) {
-        this.optimizationReport.warnings.push(`Failed to optimize JavaScript in ${file}: ${error.message}`);
+        this.optimizationReport.warnings.push(
+          `Failed to optimize JavaScript in ${file}: ${error.message}`
+        );
       }
     }
-    
-    this.optimizationReport.optimizations.push(`Optimized ${optimizedJS} JavaScript files`);
+
+    this.optimizationReport.optimizations.push(
+      `Optimized ${optimizedJS} JavaScript files`
+    );
     console.log(`✅ Optimized ${optimizedJS} JavaScript files`);
   }
 
   async generateSitemap() {
+<<<<<<< HEAD
     console.log(,
   🗺️ Generating sitemap...');
     
+=======
+    console.log('🗺️ Generating sitemap...');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -279,6 +367,7 @@ class BuildOptimizer {
     <priority>0.7</priority>
   </url>
 </urlset>`;
+<<<<<<< HEAD
     
     fs.writeFileSync(path.join(this.buildDir,
   'sitemap.xml'), sitemap);
@@ -292,6 +381,17 @@ class BuildOptimizer {
     console.log(
   '🤖 Generating robots.txt...');
     
+=======
+
+    fs.writeFileSync(path.join(this.buildDir, 'sitemap.xml'), sitemap);
+    this.optimizationReport.optimizations.push('Generated sitemap.xml');
+    console.log('✅ Generated sitemap.xml');
+  }
+
+  async generateRobotsTxt() {
+    console.log('🤖 Generating robots.txt...');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     const robotsTxt = `User-agent: *
 Allow: /
 
@@ -302,6 +402,7 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /private/`;
+<<<<<<< HEAD
     
     fs.writeFileSync(path.join(this.buildDir,
   'robots.txt'), robotsTxt);
@@ -315,31 +416,46 @@ Disallow: /private/`;
     console.log(
   '📱 Optimizing manifest...');
     
+=======
+
+    fs.writeFileSync(path.join(this.buildDir, 'robots.txt'), robotsTxt);
+    this.optimizationReport.optimizations.push('Generated robots.txt');
+    console.log('✅ Generated robots.txt');
+  }
+
+  async optimizeManifest() {
+    console.log('📱 Optimizing manifest...');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     const manifest = {
-      name: "Zion Tech Group",
-      short_name: "Zion Tech",
-      description: "Leading AI & Technology Solutions",
-      start_url: "/",
-      display: "standalone",
-      background_color: "#0f172a",
-      theme_color: "#0ea5e9",
+      name: 'Zion Tech Group',
+      short_name: 'Zion Tech',
+      description: 'Leading AI & Technology Solutions',
+      start_url: '/',
+      display: 'standalone',
+      background_color: '#0f172a',
+      theme_color: '#0ea5e9',
       icons: [
         {
-          src: "/icon-192.png",
-          sizes: "192x192",
-          type: "image/png"
+          src: '/icon-192.png',
+          sizes: '192x192',
+          type: 'image/png',
         },
         {
-          src: "/icon-512.png",
-          sizes: "512x512",
-          type: "image/png"
-        }
-      ]
+          src: '/icon-512.png',
+          sizes: '512x512',
+          type: 'image/png',
+        },
+      ],
     };
-    
+
     fs.writeFileSync(
+<<<<<<< HEAD
       path.join(this.buildDir,
   'manifest.json'), 
+=======
+      path.join(this.buildDir, 'manifest.json'),
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
       JSON.stringify(manifest, null, 2)
     );
     this.optimizationReport.optimizations.push(
@@ -353,9 +469,9 @@ Disallow: /private/`;
       totalOptimizations: this.optimizationReport.optimizations.length,
       totalWarnings: this.optimizationReport.warnings.length,
       totalErrors: this.optimizationReport.errors.length,
-      buildTime: new Date().toISOString()
+      buildTime: new Date().toISOString(),
     };
-    
+
     fs.writeFileSync(
       path.join(this.buildDir,
   'optimization-report.json'),
@@ -365,22 +481,22 @@ Disallow: /private/`;
 
   getAllFiles(dir, extensions) {
     let files = [];
-    
+
     if (!fs.existsSync(dir)) return files;
-    
+
     const items = fs.readdirSync(dir);
-    
+
     for (const item of items) {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         files = files.concat(this.getAllFiles(fullPath, extensions));
       } else if (extensions.some(ext => item.endsWith(ext))) {
         files.push(fullPath);
       }
     }
-    
+
     return files;
   }
 }

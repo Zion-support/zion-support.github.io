@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -746,3 +747,9 @@ function App() {
 };
 
 export default App;
+=======
+import React, { Suspense, lazy, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { ErrorBoundary } from 'react-error-boundary';
+('');
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1

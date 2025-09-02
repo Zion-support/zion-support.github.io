@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+=======
+import { type ClassValue, clsx } from 'clsx';'import { twMerge } from 'tailwind-merge';''export function cn(...inputs: ClassValue[]) {return twMerge(clsx(inputs));}';
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1

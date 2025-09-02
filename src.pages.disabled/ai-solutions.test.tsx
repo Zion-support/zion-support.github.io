@@ -1,0 +1,15 @@
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import ai-solutions from './ai-solutions';
+
+describe('ai-solutions', () => {
+  it('renders without crashing', () => {
+    render(<ai-solutions />);
+    expect(screen.getByRole('main') || screen.getByText(/.*/)).toBeInTheDocument();
+  });
+
+  it('displays expected content', () => {
+    render(<ai-solutions />);
+    // Add specific test assertions based on component content
+  });
+});

@@ -12,6 +12,7 @@ import Link from
 const Startups: NextPage = () => {
   const solutions = [
     {
+<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
       title:
   'MVP Development,
       description:
@@ -58,12 +59,41 @@ const Startups: NextPage = () => {
   'Email marketing campaigns',
   'Social media management',
   'Conversion optimization'
+=======
+      title: 'MVP Development', description: 'Rapid development of minimum viable products to validate your ideas',
+      icon: <Rocket className="w-8 h-8" />, features: [
+        'Agile development methodology',
+        'Rapid prototyping', 'User feedback integration',
+        'Scalable architecture'
+      ]
+    }, {
+      title: 'AI-Powered Analytics',
+      description: 'Data-driven insights to make informed business decisions', icon: <Target className="w-8 h-8" />,
+      features: [
+        'Real-time analytics dashboard', 'Predictive modeling',
+        'Customer behavior analysis', 'Performance optimization'
+      ]
+    }, {
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions that grow with your startup', icon: <Globe className="w-8 h-8" />,
+      features: [
+        'Auto-scaling infrastructure', 'Cost optimization',
+        'High availability', 'Global deployment'
+      ]
+    }, {
+      title: 'Digital Marketing Automation',
+      description: 'Automated marketing tools to accelerate growth', icon: <Zap className="w-8 h-8" />,
+      features: [
+        'Lead generation automation', 'Email marketing campaigns',
+        'Social media management', 'Conversion optimization'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
       ]
     }
   ];
 
   const benefits = [
     {
+<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
       icon: <Rocket className="w-6 h-6" />,
       title:,
   Fast Time to Market',
@@ -86,11 +116,26 @@ const Startups: NextPage = () => {
       title:,
   Expert Guidance',
       description: 'Access to experienced entrepreneurs and technical experts
+=======
+      icon: <Rocket className="w-6 h-6" />, title: 'Fast Time to Market',
+      description: 'Launch your product 3x faster with our proven methodologies'
+    }, {
+      icon: <DollarSign className="w-6 h-6" />,
+      title: 'Cost Effective', description: 'Startup-friendly pricing with flexible payment options'
+    },
+    {
+      icon: <Shield className="w-6 h-6" />, title: 'Scalable Solutions',
+      description: 'Built to scale from day one as your startup grows'
+    }, {
+      icon: <Users className="w-6 h-6" />,
+      title: 'Expert Guidance', description: 'Access to experienced entrepreneurs and technical experts'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
     }
   ];
 
   const packages = [
     {
+<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
       name:,
   Launch',
       price: $2,999,
@@ -137,14 +182,43 @@ const Startups: NextPage = () => {
   'Ongoing optimization'
       ],
       popular: false
+=======
+      name: 'Launch', price: '$2,999', description: 'Perfect for early-stage startups',
+      features: [
+        'MVP development (4-6 weeks)', 'Basic cloud infrastructure',
+        'Essential integrations', 'Email support',
+        'Basic analytics setup'
+      ], popular: false
+    },
+    {
+      name: 'Scale', price: '$7,999', description: 'Ideal for growing startups',
+      features: [
+        'Full product development (8-12 weeks)', 'Advanced cloud infrastructure',
+        'AI-powered analytics', 'Priority support',
+        'Marketing automation', 'Team training'
+      ], popular: true
+    },
+    {
+      name: 'Enterprise', price: 'Custom',
+      description: 'Complete solution for established startups', features: [
+        'Custom development timeline',
+        'Enterprise-grade infrastructure', 'Advanced AI solutions',
+        'Dedicated team', '24/7 support',
+        'Custom integrations', 'Ongoing optimization'
+      ], popular: false
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
     }
   ];
 
   return (
     <MainLayout
       title="Startup Solutions - Zion Tech Group"
+<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
       description="Accelerate your startup,
   s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure."
+=======
+      description="Accelerate your startup&apos;s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure."'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -153,11 +227,15 @@ const Startups: NextPage = () => {
             Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
+<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
             Accelerate your startups growth with our comprehensive technology solutions. 
+=======
+            Accelerate your startup&apos;s growth with our comprehensive technology solutions. '
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
             From MVP development to scaling infrastructure, we help startups succeed.
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+          <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Start Your Journey
             </Link>
@@ -198,7 +276,7 @@ const Startups: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             {solutions.map((solution, index) => (
               <div key={index} className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="text-blue-600 mb-4">
@@ -230,7 +308,7 @@ const Startups: NextPage = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="text-blue-600 mb-4 flex justify-center">
@@ -250,12 +328,16 @@ const Startups: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Startup Packages</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
               Choose the package that fits your startup
   's current stage and needs.
+=======
+              Choose the package that fits your startup&apos;s current stage and needs.'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {packages.map((pkg, index) => (
               <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${pkg.popular ?,
   ring-2 ring-blue-500
@@ -289,10 +371,15 @@ const Startups: NextPage = () => {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     pkg.popular
+<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
                       ?,
   bg-blue-600 hover: bg-blue-700 text-white'
                       :
   'bg-gray-100 hover:bg-gray-200 text-gray-900
+=======
+                      ? 'bg-blue-600 hover: bg-blue-700 text-white'
+                      : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
                   }`}
                 >
                   Get Started
@@ -309,11 +396,11 @@ const Startups: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Startup Success Stories</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how we've helped startups achieve their goals and scale successfully.
+              See how we&apos;ve helped startups achieve their goals and scale successfully.'
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 {[...Array(5)].map((_, i) => (
@@ -321,8 +408,8 @@ const Startups: NextPage = () => {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "Zion Tech Group helped us launch our MVP in just 6 weeks. Their expertise and 
-                startup-friendly approach made all the difference."
+                "Zion Tech Group helped us launch our MVP in just 6 weeks. Their expertise and "
+                startup-friendly approach made all the difference.""
               </p>
               <div className="font-semibold text-gray-900">Sarah Chen</div>
               <div className="text-sm text-gray-500">CEO, TechStart Inc.</div>
@@ -335,8 +422,8 @@ const Startups: NextPage = () => {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "The scalability of their solutions allowed us to grow from 100 to 10,000 users 
-                without any major infrastructure changes."
+                "The scalability of their solutions allowed us to grow from 100 to 10, 000 users "
+                without any major infrastructure changes.""
               </p>
               <div className="font-semibold text-gray-900">Michael Rodriguez</div>
               <div className="text-sm text-gray-500">CTO, GrowthApp</div>
@@ -349,8 +436,8 @@ const Startups: NextPage = () => {
                 ))}
               </div>
               <p className="text-gray-600 mb-4">
-                "Their AI-powered analytics gave us insights we never had before. It completely 
-                transformed our decision-making process."
+                "Their AI-powered analytics gave us insights we never had before. It completely "
+                transformed our decision-making process.""
               </p>
               <div className="font-semibold text-gray-900">Emily Johnson</div>
               <div className="text-sm text-gray-500">Founder, DataViz Pro</div>
@@ -368,7 +455,7 @@ const Startups: NextPage = () => {
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Join the ranks of successful startups that have transformed their ideas into reality with our help.
           </p>
-          <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <Link href="/contact" className="bg-white text-blue-600 hover: bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
             Start Your Success Story
           </Link>
         </div>

@@ -1,1 +1,2 @@
+
 interface EquipmentSpecification {}; name: string; value: string}; interface EquipmentDetails {}; id: string; name: string; description: string; brand: string; category: string; subcategory?: string; images: string[]; price: number; currency: string; rating?: number; reviewCount?: number; inStock: boolean; expectedShipping?: string; specifications: EquipmentSpecification[]; features: string[]; warranty?: string; returnPolicy?: string; weightKg?: number; widthCm?: number; heightCm?: number; depthCm?: number};

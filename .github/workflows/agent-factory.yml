@@ -89,10 +89,10 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-      
+
       - name: Install linkinator
         run: npm install -g linkinator
-      
+
       - name: Run crawler (linkinator) on shard
         run: |
           set -e
@@ -166,7 +166,7 @@ jobs:
       - name: Open/Update issue with summary
         uses: peter-evans/create-issue-from-file@v5
         with:
-          title: "Broken links report"
+          title: 'Broken links report'
           content-filepath: BROKEN_SUMMARY.md
           labels: link-check, automated
           assignees: ''

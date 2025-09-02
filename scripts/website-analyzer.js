@@ -15,6 +15,7 @@ function analyzeWebsite() {
   console.log(
   '🔍 Analyzing Zion Tech Group Website...\n');
 
+<<<<<<< HEAD
   const srcDir = path.join(__dirname,
   '..',
   'src');
@@ -29,30 +30,45 @@ function analyzeWebsite() {
   const appContent = fs.readFileSync(appTsxPath,
   'utf8');
   
+=======
+  const srcDir = path.join(__dirname, '..', 'src');
+  const pagesDir = path.join(srcDir, 'pages');
+  const componentsDir = path.join(srcDir, 'components');
+
+  // Read App.tsx to extract all routes
+  const appTsxPath = path.join(srcDir, 'App.tsx');
+  const appContent = fs.readFileSync(appTsxPath, 'utf8');
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   // Extract route paths from App.tsx
   const routeRegex = /path="([^"]+)"/g;
   const routes = [];
   let match;
-  
+
   while ((match = routeRegex.exec(appContent)) !== null) {
     routes.push(match[1]);
   }
-  
+
   console.log(`📊 Found ${routes.length} routes in App.tsx:`);
   routes.forEach(route => console.log(`  - ${route}`));
-  
+
   // Check which pages exist
   const existingPages = [];
   const missingPages = [];
+<<<<<<< HEAD
   
   function scanDirectory(dir, basePath = '
   ') {
+=======
+
+  function scanDirectory(dir, basePath = '') {
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     const items = fs.readdirSync(dir);
-    
+
     items.forEach(item => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
-      
+
       if (stat.isDirectory()) {
         scanDirectory(fullPath, path.join(basePath, item));
       } else if (item.endsWith('.tsx
@@ -63,14 +79,15 @@ function analyzeWebsite() {
       }
     });
   }
-  
+
   scanDirectory(pagesDir);
-  
+
   console.log(`\n📁 Found ${existingPages.length} existing page files:`);
   existingPages.forEach(page => console.log(`  - ${page}`));
-  
+
   // Check for missing pages
   routes.forEach(route => {
+<<<<<<< HEAD
     if (route ===
   '*') return; // Skip 404 route
     
@@ -82,33 +99,51 @@ function analyzeWebsite() {
       page.includes(route.replace(/\//g, '-
   ')) ||
       page.includes(route.replace(/\//g, ''))
+=======
+    if (route === '*') return; // Skip 404 route
+
+    const routePath = route.replace(/^\//, '').replace(/\//g, '-');
+    const hasPage = existingPages.some(
+      page =>
+        page.includes(routePath) ||
+        page.includes(route.replace(/\//g, '-')) ||
+        page.includes(route.replace(/\//g, ''))
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     );
-    
+
     if (!hasPage) {
       missingPages.push(route);
     }
   });
-  
+
   console.log(`\n❌ Found ${missingPages.length} missing pages:`);
   missingPages.forEach(page => console.log(`  - ${page}`));
-  
+
   // Check for placeholder pages (files with minimal content)
   const placeholderPages = [];
   existingPages.forEach(pagePath => {
     const fullPath = path.join(pagesDir, pagePath +
   '.tsx');
     if (fs.existsSync(fullPath)) {
+<<<<<<< HEAD
       const content = fs.readFileSync(fullPath,
   'utf8');
       if (content.length < 5000) { // Less than 5KB is considered placeholder
+=======
+      const content = fs.readFileSync(fullPath, 'utf8');
+      if (content.length < 5000) {
+        // Less than 5KB is considered placeholder
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
         placeholderPages.push(pagePath);
       }
     }
   });
-  
-  console.log(`\n⚠️  Found ${placeholderPages.length} placeholder pages (minimal content):`);
+
+  console.log(
+    `\n⚠️  Found ${placeholderPages.length} placeholder pages (minimal content):`
+  );
   placeholderPages.forEach(page => console.log(`  - ${page}`));
-  
+
   // Generate analysis report
   const report = {
     timestamp: new Date().toISOString(),
@@ -118,18 +153,18 @@ function analyzeWebsite() {
     placeholderPages: placeholderPages.length,
     routes: routes,
     missing: missingPages,
-    placeholders: placeholderPages
+    placeholders: placeholderPages,
   };
-  
+
   fs.writeFileSync(
     path.join(__dirname,
   '..',
   'website-analysis-report.json'),
     JSON.stringify(report, null, 2)
   );
-  
+
   console.log(`\n📝 Analysis report saved to website-analysis-report.json`);
-  
+
   return report;
 }
 

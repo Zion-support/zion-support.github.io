@@ -1,3 +1,4 @@
+<<<<<<< HEAD:pages.disabled_auto/solutions/index.tsx
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -6,6 +7,24 @@ import Link from
   'next/link';
 import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from
   'lucide-react';
+=======
+import type { NextPage } from 'next';
+import MainLayout from '../../components/layout/MainLayout';
+import Link from 'next/link';
+import {
+  Building,
+  Users,
+  Rocket,
+  Heart,
+  DollarSign,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Zap,
+  Shield,
+  Brain,
+} from 'lucide-react';
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/index.tsx
 
 const Solutions: NextPage = () => {
   return (
@@ -16,20 +35,30 @@ const Solutions: NextPage = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+          <h1 className="text-5xl md: text-6xl font-bold mb-6">
             Technology
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Solutions</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              {' '}
+              Solutions
+            </span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Tailored technology solutions for businesses of all sizes and industries. 
-            From startups to enterprises, we have the expertise to transform your operations.
+            Tailored technology solutions for businesses of all sizes and
+            industries. From startups to enterprises, we have the expertise to
+            transform your operations.
           </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
               Get Your Solution
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link
+              href="/services"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
               View All Services
             </Link>
           </div>
@@ -40,30 +69,47 @@ const Solutions: NextPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Service Categories</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Service Categories
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We offer comprehensive technology solutions across three main categories, 
-              each designed to address specific business needs and challenges.
+              We offer comprehensive technology solutions across three main
+              categories, each designed to address specific business needs and
+              challenges.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
+
+          <div className="grid md: grid-cols-3 gap-8">
             {/* Micro SaaS */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 p-8 rounded-xl text-center">
               <div className="w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Zap className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Micro SaaS Solutions</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Micro SaaS Solutions
+              </h3>
               <p className="text-gray-600 mb-6">
-                Focused, affordable software solutions that solve specific business problems with minimal overhead.
+                Focused, affordable software solutions that solve specific
+                business problems with minimal overhead.
               </p>
               <div className="space-y-2 mb-6">
-                <div className="text-sm text-gray-600">• 8+ Specialized Applications</div>
-                <div className="text-sm text-gray-600">• Starting at $19/month</div>
-                <div className="text-sm text-gray-600">• Quick Implementation</div>
-                <div className="text-sm text-gray-600">• Scalable Solutions</div>
+                <div className="text-sm text-gray-600">
+                  • 8+ Specialized Applications
+                </div>
+                <div className="text-sm text-gray-600">
+                  • Starting at $19/month
+                </div>
+                <div className="text-sm text-gray-600">
+                  • Quick Implementation
+                </div>
+                <div className="text-sm text-gray-600">
+                  • Scalable Solutions
+                </div>
               </div>
-              <Link href="/services/micro-saas" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
+              <Link
+                href="/services/micro-saas"
+                className="bg-blue-600 hover: bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block"
+              >
                 Explore Micro SaaS
               </Link>
             </div>
@@ -73,17 +119,29 @@ const Solutions: NextPage = () => {
               <div className="w-20 h-20 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Shield className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">IT Services & Solutions</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                IT Services & Solutions
+              </h3>
               <p className="text-gray-600 mb-6">
-                Comprehensive IT infrastructure, security, and development services for modern businesses.
+                Comprehensive IT infrastructure, security, and development
+                services for modern businesses.
               </p>
               <div className="space-y-2 mb-6">
-                <div className="text-sm text-gray-600">• 8+ Professional Services</div>
-                <div className="text-sm text-gray-600">• Starting at $2,000/project</div>
-                <div className="text-sm text-gray-600">• Enterprise-Grade Security</div>
+                <div className="text-sm text-gray-600">
+                  • 8+ Professional Services
+                </div>
+                <div className="text-sm text-gray-600">
+                  • Starting at $2, 000/project
+                </div>
+                <div className="text-sm text-gray-600">
+                  • Enterprise-Grade Security
+                </div>
                 <div className="text-sm text-gray-600">• 24/7 Support</div>
               </div>
-              <Link href="/services/it-services" className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
+              <Link
+                href="/services/it-services"
+                className="bg-purple-600 hover: bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block"
+              >
                 Explore IT Services
               </Link>
             </div>
@@ -93,17 +151,27 @@ const Solutions: NextPage = () => {
               <div className="w-20 h-20 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Brain className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">AI & Machine Learning</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                AI & Machine Learning
+              </h3>
               <p className="text-gray-600 mb-6">
-                Cutting-edge artificial intelligence solutions to automate processes and gain competitive advantages.
+                Cutting-edge artificial intelligence solutions to automate
+                processes and gain competitive advantages.
               </p>
               <div className="space-y-2 mb-6">
                 <div className="text-sm text-gray-600">• 8+ AI Solutions</div>
-                <div className="text-sm text-gray-600">• Starting at $5,000/project</div>
+                <div className="text-sm text-gray-600">
+                  • Starting at $5,000/project
+                </div>
                 <div className="text-sm text-gray-600">• Custom AI Models</div>
-                <div className="text-sm text-gray-600">• Advanced Analytics</div>
+                <div className="text-sm text-gray-600">
+                  • Advanced Analytics
+                </div>
               </div>
-              <Link href="/services/ai-services" className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block">
+              <Link
+                href="/services/ai-services"
+                className="bg-green-600 hover: bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors inline-block"
+              >
                 Explore AI Services
               </Link>
             </div>
@@ -115,21 +183,27 @@ const Solutions: NextPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Solutions by Business Type</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Solutions by Business Type
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We understand that different business types have unique needs. 
-              Our solutions are tailored to meet your specific requirements and challenges.
+              We understand that different business types have unique needs. Our
+              solutions are tailored to meet your specific requirements and
+              challenges.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                 <Building className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Enterprise Solutions</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                Enterprise Solutions
+              </h3>
               <p className="text-gray-600 mb-4">
-                Comprehensive technology solutions for large organizations with complex infrastructure needs.
+                Comprehensive technology solutions for large organizations with
+                complex infrastructure needs.
               </p>
               <ul className="text-sm text-gray-600 space-y-2 mb-6">
                 <li>• Digital Transformation</li>
@@ -148,9 +222,12 @@ const Solutions: NextPage = () => {
               <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
                 <Users className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Small Business Solutions</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                Small Business Solutions
+              </h3>
               <p className="text-gray-600 mb-4">
-                Cost-effective technology solutions designed for growing small and medium businesses.
+                Cost-effective technology solutions designed for growing small
+                and medium businesses.
               </p>
               <ul className="text-sm text-gray-600 space-y-2 mb-6">
                 <li>• Business Process Automation</li>
@@ -171,7 +248,8 @@ const Solutions: NextPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Startup Solutions</h3>
               <p className="text-gray-600 mb-4">
-                Agile technology solutions to help startups scale quickly and efficiently.
+                Agile technology solutions to help startups scale quickly and
+                efficiently.
               </p>
               <ul className="text-sm text-gray-600 space-y-2 mb-6">
                 <li>• MVP Development</li>
@@ -193,21 +271,27 @@ const Solutions: NextPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Industry-Specific Solutions</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Industry-Specific Solutions
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We understand the unique challenges and requirements of different industries. 
-              Our solutions are tailored to meet industry-specific needs and compliance requirements.
+              We understand the unique challenges and requirements of different
+              industries. Our solutions are tailored to meet industry-specific
+              needs and compliance requirements.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gray-50 rounded-lg p-6">
               <div className="flex items-center space-x-3 mb-4">
                 <Heart className="w-6 h-6 text-red-600" />
-                <h3 className="text-lg font-semibold text-gray-900">Healthcare</h3>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  Healthcare
+                </h3>
               </div>
               <p className="text-gray-600 mb-4">
-                HIPAA-compliant solutions for hospitals, clinics, and healthcare providers.
+                HIPAA-compliant solutions for hospitals, clinics, and healthcare
+                providers.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Electronic Health Records</li>
@@ -223,7 +307,8 @@ const Solutions: NextPage = () => {
                 <h3 className="text-lg font-semibold text-gray-900">Finance</h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Secure, compliant solutions for banking, insurance, and fintech companies.
+                Secure, compliant solutions for banking, insurance, and fintech
+                companies.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Banking Applications</li>
@@ -236,10 +321,13 @@ const Solutions: NextPage = () => {
             <div className="bg-gray-50 rounded-lg p-6">
               <div className="flex items-center space-x-3 mb-4">
                 <Building className="w-6 h-6 text-blue-600" />
-                <h3 className="text-lg font-semibold text-gray-900">Manufacturing</h3>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  Manufacturing
+                </h3>
               </div>
               <p className="text-gray-600 mb-4">
-                IoT and automation solutions for smart manufacturing and Industry 4.0.
+                IoT and automation solutions for smart manufacturing and
+                Industry 4.0.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Smart Factory Solutions</li>
@@ -252,10 +340,13 @@ const Solutions: NextPage = () => {
             <div className="bg-gray-50 rounded-lg p-6">
               <div className="flex items-center space-x-3 mb-4">
                 <Globe className="w-6 h-6 text-purple-600" />
-                <h3 className="text-lg font-semibold text-gray-900">Retail & E-commerce</h3>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  Retail & E-commerce
+                </h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Omnichannel solutions for retail chains and e-commerce platforms.
+                Omnichannel solutions for retail chains and e-commerce
+                platforms.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• E-commerce Platforms</li>
@@ -268,10 +359,13 @@ const Solutions: NextPage = () => {
             <div className="bg-gray-50 rounded-lg p-6">
               <div className="flex items-center space-x-3 mb-4">
                 <Rocket className="w-6 h-6 text-orange-600" />
-                <h3 className="text-lg font-semibold text-gray-900">Energy & Utilities</h3>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  Energy & Utilities
+                </h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Smart grid solutions and energy management systems for utility companies.
+                Smart grid solutions and energy management systems for utility
+                companies.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Smart Grid Management</li>
@@ -284,10 +378,13 @@ const Solutions: NextPage = () => {
             <div className="bg-gray-50 rounded-lg p-6">
               <div className="flex items-center space-x-3 mb-4">
                 <Users className="w-6 h-6 text-indigo-600" />
-                <h3 className="text-lg font-semibold text-gray-900">Government</h3>
+                <h3 className="text-lg font-semibold text-gray-900">
+                  Government
+                </h3>
               </div>
               <p className="text-gray-600 mb-4">
-                Secure, scalable solutions for government agencies and public sector organizations.
+                Secure, scalable solutions for government agencies and public
+                sector organizations.
               </p>
               <ul className="text-sm text-gray-600 space-y-1">
                 <li>• Citizen Portal Systems</li>
@@ -304,20 +401,24 @@ const Solutions: NextPage = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our Solutions?</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our Solutions?
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine industry expertise with technical excellence to deliver solutions that drive real business value.
+              We combine industry expertise with technical excellence to deliver
+              solutions that drive real business value.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold mb-4">Industry Expertise</h3>
               <p className="text-gray-600">
-                Deep understanding of industry-specific challenges, regulations, and best practices.
+                Deep understanding of industry-specific challenges, regulations,
+                and best practices.
               </p>
             </div>
 
@@ -325,9 +426,12 @@ const Solutions: NextPage = () => {
               <div className="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Customized Approach</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                Customized Approach
+              </h3>
               <p className="text-gray-600">
-                Solutions tailored to your specific business needs, processes, and objectives.
+                Solutions tailored to your specific business needs, processes,
+                and objectives.
               </p>
             </div>
 
@@ -335,9 +439,12 @@ const Solutions: NextPage = () => {
               <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-10 h-10 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-4">Scalable Architecture</h3>
+              <h3 className="text-xl font-semibold mb-4">
+                Scalable Architecture
+              </h3>
               <p className="text-gray-600">
-                Solutions designed to grow with your business and handle increased demands.
+                Solutions designed to grow with your business and handle
+                increased demands.
               </p>
             </div>
 
@@ -347,7 +454,8 @@ const Solutions: NextPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Ongoing Support</h3>
               <p className="text-gray-600">
-                Continuous support, monitoring, and optimization for long-term success.
+                Continuous support, monitoring, and optimization for long-term
+                success.
               </p>
             </div>
           </div>
@@ -358,20 +466,24 @@ const Solutions: NextPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Solution Development Process</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Our Solution Development Process
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A proven methodology for delivering successful technology solutions that meet your business objectives.
+              A proven methodology for delivering successful technology
+              solutions that meet your business objectives.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+
+          <div className="grid md: grid-cols-2 lg:grid-cols-5 gap-8">
             <div className="text-center">
               <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-blue-600">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Discovery</h3>
               <p className="text-gray-600">
-                We analyze your business needs, challenges, and objectives to understand your requirements.
+                We analyze your business needs, challenges, and objectives to
+                understand your requirements.
               </p>
             </div>
 
@@ -381,7 +493,8 @@ const Solutions: NextPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Strategy</h3>
               <p className="text-gray-600">
-                We develop a comprehensive solution strategy aligned with your business goals.
+                We develop a comprehensive solution strategy aligned with your
+                business goals.
               </p>
             </div>
 
@@ -391,7 +504,8 @@ const Solutions: NextPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Design</h3>
               <p className="text-gray-600">
-                We design the solution architecture and user experience based on your requirements.
+                We design the solution architecture and user experience based on
+                your requirements.
               </p>
             </div>
 
@@ -401,7 +515,8 @@ const Solutions: NextPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Development</h3>
               <p className="text-gray-600">
-                We build your solution using industry best practices and modern technologies.
+                We build your solution using industry best practices and modern
+                technologies.
               </p>
             </div>
 
@@ -411,7 +526,8 @@ const Solutions: NextPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Deployment</h3>
               <p className="text-gray-600">
-                We deploy your solution and provide ongoing support and optimization.
+                We deploy your solution and provide ongoing support and
+                optimization.
               </p>
             </div>
           </div>
@@ -421,15 +537,24 @@ const Solutions: NextPage = () => {
       {/* CTA Section */}
       <section className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Find Your Solution?</h2>
+          <h2 className="text-4xl font-bold mb-6">
+            Ready to Find Your Solution?
+          </h2>
           <p className="text-xl mb-8 text-gray-300 max-w-3xl mx-auto">
-            Let's discuss your business needs and find the perfect technology solution to drive your success.
+            Let&apos;s discuss your business needs and find the perfect
+            technology solution to drive your success.'
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+          <div className="flex flex-col sm: flex-row justify-center gap-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
               Get Started Today
             </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
+            <Link
+              href="/services"
+              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
+            >
               Explore Our Services
             </Link>
           </div>

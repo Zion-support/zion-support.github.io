@@ -28,8 +28,9 @@
     "readme:generate": "node scripts/generate-readme.js",
     "search:index": "node scripts/generate-search-index.js",
     "content:fix": "node automation/content-quality-fixer.cjs && node automation/content-quality-analyzer.cjs",
-    "perf:monitor": "node scripts/performance-monitor.js",
+    "perf:monitor": "node scripts/performance-monitor.cjs",
     "perf:audit": "npm run perf:monitor",
+    "health:check": "node scripts/health-check.cjs",
     "dev": "next dev",
     "dev:vite": "vite",
     "build": "NEXT_TELEMETRY_DISABLED=1 NEXT_DISABLE_ESLINT=1 next build",
@@ -43,7 +44,13 @@
     "format:check": "prettier --check .",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "build": "next build",
+    "app:improve": "node scripts/automation/comprehensive-app-improver.cjs",
+    "build:analyze": "ANALYZE=true npm run build",
+    "test:ci": "npm run test -- --coverage --watchAll=false",
+    "lint:fix": "eslint . --fix",
+    "type:check": "tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.1",
@@ -95,6 +102,7 @@
     "openai": "^5.11.0",
     "path": "^0.12.7",
     "postcss": "^8.4.32",
+<<<<<<< HEAD
     "queue-microtask": "^1.2.3",
     "react": "^17.0.2",
     "react-datepicker": "^8.4.0",
@@ -130,3 +138,22 @@
     "npm": ">=10.0.0"
   }
 }
+=======
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^12.3.4",
+    "jest": "^29.0.0",
+    "msw": "^2.11.1",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.4.1",
+    "typescript": "^5.0.0"
+  }
+}
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1

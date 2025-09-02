@@ -28,7 +28,7 @@ class WebsiteAnalyzer {
         missingPages: 0,
         redirects: 0,
         errors: 0,
-        warnings: 0
+        warnings: 0,
       },
       brokenLinks: [],
       workingLinks: [],
@@ -36,7 +36,7 @@ class WebsiteAnalyzer {
       missingPages: [],
       errors: [],
       warnings: [],
-      recommendations: []
+      recommendations: [],
     };
 
     this.checkedUrls = new Set();
@@ -63,9 +63,16 @@ class WebsiteAnalyzer {
     // Generate report
     this.generateReport();
 
+<<<<<<< HEAD
     console.log(
   '\n✅ Analysis completed!');
     console.log(`📊 Total links checked: ${this.results.summary.totalLinksChecked}`);
+=======
+    console.log('\n✅ Analysis completed!');
+    console.log(
+      `📊 Total links checked: ${this.results.summary.totalLinksChecked}`
+    );
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     console.log(`🔗 Working links: ${this.results.summary.workingLinks}`);
     console.log(`❌ Broken links: ${this.results.summary.brokenLinks}`);
     console.log(`🔄 Redirects: ${this.results.summary.redirects}`);
@@ -78,15 +85,15 @@ class WebsiteAnalyzer {
 
     try {
       console.log(`🔍 Checking: ${url}`);
-      
+
       const response = await axios.get(url, {
         timeout: TIMEOUT,
         maxRedirects: 5,
-        validateStatus: (status) => status < 400
+        validateStatus: status => status < 400,
       });
 
       this.results.summary.totalLinksChecked++;
-      
+
       if (response.status >= 200 && response.status < 300) {
         this.results.summary.workingLinks++;
         this.results.workingLinks.push({
@@ -94,17 +101,24 @@ class WebsiteAnalyzer {
           status: response.status,
           parentUrl,
           headers: response.headers,
-          contentLength: response.data?.length || 0
+          contentLength: response.data?.length || 0,
         });
 
         // Extract links from the page content
         if (response.data) {
           const links = this.extractLinks(response.data, url);
           for (const link of links) {
+<<<<<<< HEAD
             if (link.startsWith(
   '/') || link.startsWith(BASE_URL)) {
               const fullUrl = link.startsWith(
   '/') ? `${BASE_URL}${link}` : link;
+=======
+            if (link.startsWith('/') || link.startsWith(BASE_URL)) {
+              const fullUrl = link.startsWith('/')
+                ? `${BASE_URL}${link}`
+                : link;
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
               if (!this.checkedUrls.has(fullUrl)) {
                 this.linkQueue.push({ url: fullUrl, parentUrl: url });
               }
@@ -117,24 +131,27 @@ class WebsiteAnalyzer {
           url,
           status: response.status,
           redirectLocation: response.headers.location,
-          parentUrl
+          parentUrl,
         });
       }
-
     } catch (error) {
       this.results.summary.totalLinksChecked++;
-      
+
       if (error.response) {
         const status = error.response.status;
-        
+
         if (status === 404) {
           this.results.summary.missingPages++;
           this.results.missingPages.push({
             url,
             status,
             parentUrl,
+<<<<<<< HEAD
             error:
   'Page not found'
+=======
+            error: 'Page not found',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
           });
         } else {
           this.results.summary.brokenLinks++;
@@ -142,7 +159,7 @@ class WebsiteAnalyzer {
             url,
             status,
             parentUrl,
-            error: error.message
+            error: error.message,
           });
         }
       } else {
@@ -150,7 +167,7 @@ class WebsiteAnalyzer {
         this.results.brokenLinks.push({
           url,
           parentUrl,
-          error: error.message
+          error: error.message,
         });
       }
     }
@@ -162,16 +179,17 @@ class WebsiteAnalyzer {
   ]([^"']+)["
   ']/g;
     let match;
-    
+
     while ((match = linkRegex.exec(html)) !== null) {
       links.push(match[1]);
     }
-    
+
     return links;
   }
 
   async checkNavigationLinks() {
     const navigationLinks = [
+<<<<<<< HEAD
       '/
   ',
       '/about
@@ -208,6 +226,26 @@ class WebsiteAnalyzer {
   ',
       '/terms
   '
+=======
+      '/',
+      '/about',
+      '/contact',
+      '/services',
+      '/ai-services',
+      '/it-services',
+      '/micro-saas',
+      '/solutions',
+      '/case-studies',
+      '/white-papers',
+      '/webinars',
+      '/blog',
+      '/careers',
+      '/team',
+      '/pricing',
+      '/help',
+      '/privacy',
+      '/terms',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     for (const link of navigationLinks) {
@@ -218,6 +256,7 @@ class WebsiteAnalyzer {
 
   async checkServicePages() {
     const servicePages = [
+<<<<<<< HEAD
       '/services/ai-supply-chain-optimization
   ',
       '/services/ai-cybersecurity-platform
@@ -252,6 +291,25 @@ class WebsiteAnalyzer {
   ',
       '/services/digital-transformation
   '
+=======
+      '/services/ai-supply-chain-optimization',
+      '/services/ai-cybersecurity-platform',
+      '/services/ai-healthcare-platform',
+      '/services/ai-quantum-hybrid-platform',
+      '/services/ai-business-intelligence',
+      '/services/ai-sales-copilot',
+      '/services/ai-content-marketing-automation',
+      '/services/ai-hr-platform',
+      '/services/ai-legal-research-platform',
+      '/services/ai-education-platform',
+      '/services/cloud-devops',
+      '/services/zero-trust-network-architecture',
+      '/services/ai-compliance-copilot',
+      '/services/blockchain-enterprise-solutions',
+      '/services/quantum-computing',
+      '/services/iot-edge',
+      '/services/digital-transformation',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     for (const link of servicePages) {
@@ -262,6 +320,7 @@ class WebsiteAnalyzer {
 
   async checkAdditionalPages() {
     const additionalPages = [
+<<<<<<< HEAD
       '/enterprise
   ',
       '/healthcare
@@ -310,6 +369,32 @@ class WebsiteAnalyzer {
   ',
       '/schedule-demo
   '
+=======
+      '/enterprise',
+      '/healthcare',
+      '/financial',
+      '/manufacturing',
+      '/retail',
+      '/government',
+      '/education',
+      '/startup',
+      '/marketplace',
+      '/talent',
+      '/community',
+      '/research-development',
+      '/training',
+      '/tutorials',
+      '/support',
+      '/faq',
+      '/news',
+      '/events',
+      '/partners',
+      '/signup',
+      '/login',
+      '/dashboard',
+      '/request-quote',
+      '/schedule-demo',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     ];
 
     for (const link of additionalPages) {
@@ -322,19 +407,33 @@ class WebsiteAnalyzer {
     // Calculate success rate
     const total = this.results.summary.totalLinksChecked;
     const working = this.results.summary.workingLinks;
+<<<<<<< HEAD
     const successRate = total > 0 ? ((working / total) * 100).toFixed(2): '0.00;
     
+=======
+    const successRate =
+      total > 0 ? ((working / total) * 100).toFixed(2) : '0.00';
+
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     this.results.summary.successRate = `${successRate}%`;
 
     // Generate recommendations
     this.generateRecommendations();
 
     // Save report
+<<<<<<< HEAD
     const reportPath = path.join(__dirname, '..
   ', 'comprehensive-website-analysis-report.json
   ');
+=======
+    const reportPath = path.join(
+      __dirname,
+      '..',
+      'comprehensive-website-analysis-report.json'
+    );
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-    
+
     console.log(`📄 Report saved to: ${reportPath}`);
   }
 
@@ -344,9 +443,13 @@ class WebsiteAnalyzer {
         type: 'critical
   ',
         message: `Fix ${this.results.summary.brokenLinks} broken links to improve user experience and SEO`,
+<<<<<<< HEAD
         action:,
   Review and fix all broken links identified in the report
   '
+=======
+        action: 'Review and fix all broken links identified in the report',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
       });
     }
 
@@ -354,9 +457,14 @@ class WebsiteAnalyzer {
       this.results.recommendations.push({
         type: 'important,
         message: `Create ${this.results.summary.missingPages} missing pages that are referenced in navigation`,
+<<<<<<< HEAD
         action:,
   Create content for all missing pages or update navigation to remove broken references
   '
+=======
+        action:
+          'Create content for all missing pages or update navigation to remove broken references',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
       });
     }
 
@@ -364,9 +472,14 @@ class WebsiteAnalyzer {
       this.results.recommendations.push({
         type: 'info,
         message: `${this.results.summary.redirects} redirects found - consider updating direct links`,
+<<<<<<< HEAD
         action:,
   Update navigation and internal links to point directly to final URLs
   '
+=======
+        action:
+          'Update navigation and internal links to point directly to final URLs',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
       });
     }
 
@@ -375,7 +488,7 @@ class WebsiteAnalyzer {
       this.results.recommendations.push({
         type: 'warning,
         message: `Success rate is ${this.results.summary.successRate} - aim for 95%+`,
-        action: 'Address all issues to improve overall website reliability'
+        action: 'Address all issues to improve overall website reliability',
       });
     }
   }

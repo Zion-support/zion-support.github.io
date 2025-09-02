@@ -32,7 +32,7 @@ jobs:
               repo: context.repo.repo,
               pull_number: context.issue.number
             });
-            
+
             if (pr.mergeable && !pr.mergeable_state.includes('blocked')) {
               core.setOutput('ready', 'true');
             } else {

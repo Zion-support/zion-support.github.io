@@ -12,7 +12,7 @@ const Index: NextPage = () => {
         <title>Index - Zion Tech Solutions</title>
         <meta name="description" content="Index blog post" />
       </Head>
-      
+
       <main>
         <h1>Index</h1>
         <p>Blog content coming soon...</p>

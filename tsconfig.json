@@ -99,8 +99,13 @@
   },
   "include": [
     "next-env.d.ts",
+<<<<<<< HEAD
     "pages/**/*",
     "src/**/*",
+=======
+    "**/*.ts",
+    "**/*.tsx",
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -120,6 +125,26 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.backup",
+<<<<<<< HEAD
     "**/*.disabled"
+=======
+    "**/*.disabled",
+    "src/utils/generateRandomListing.ts",
+    "src/utils/linkChecker.ts",
+    "src/utils/mimeTypeFallback.ts",
+    "src/utils/passwordStrength.tsx",
+    "src/utils/resourceMonitor.ts",
+    "src/utils/seoOptimizer.tsx",
+    "src/utils/serviceWorkerRegistration.ts",
+    "src/utils/unitConversion.ts",
+    "src/utils/withErrorLogging.ts",
+    "src/utils/generateRandomBlogPost.ts",
+    "src/pages/solutions/EnterpriseSolutions.tsx",
+    "src/utils/sitemapGenerator.tsx",
+    "src/pages/zion-hire-ai.tsx",
+    "src/pages/webinars.tsx",
+    "src/routes/*Routes.tsx",
+    "src/pages/services/**",
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
   ]
 }

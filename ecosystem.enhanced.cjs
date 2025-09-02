@@ -163,6 +163,6 @@ module.exports = {
       out_file: './logs/security-monitor-out.log',
       merge_logs: true,
       log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-    }
-  ]
+    },
+  ],
 };

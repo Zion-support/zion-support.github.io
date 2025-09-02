@@ -20,9 +20,13 @@ const FAQ: NextPage = () => {
 
   const faqCategories = [
     {
+<<<<<<< HEAD:pages.disabled_auto/faq.tsx
       title:,
   General Questions',
       questions: [
+=======
+      title: 'General Questions', questions: [
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
         {
           question:
   'What services does Zion Tech Group offer?,
@@ -30,6 +34,7 @@ const FAQ: NextPage = () => {
   Zion Tech Group offers a comprehensive range of technology services including AI development, quantum computing solutions, blockchain infrastructure, micro SaaS applications, IT services, and digital transformation consulting. We help businesses modernize their operations and leverage cutting-edge technologies.'
         },
         {
+<<<<<<< HEAD:pages.disabled_auto/faq.tsx
           question: 'How long has Zion Tech Group been in business?,
           answer:,
   Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'
@@ -118,6 +123,63 @@ const FAQ: NextPage = () => {
           question: 'What technologies do you work with?,
           answer:
   'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
+=======
+          question: 'How long has Zion Tech Group been in business?', answer: 'Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'
+        }, {
+          question: 'What industries do you serve?',
+          answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet the specific needs and challenges of each industry.'
+        }, {
+          question: 'Where is Zion Tech Group located?',
+          answer: 'Our headquarters is located at 364 E Main St STE 1008, Middletown DE 19709. We also serve clients globally through our remote services and partnerships.'
+        }
+      ]
+    }, {
+      title: 'Services & Solutions',
+      questions: [
+        {
+          question: 'What is micro SaaS development?', answer: 'Micro SaaS refers to small, focused software-as-a-service applications that solve specific business problems. These applications are typically lightweight, cost-effective, and designed to address niche market needs with minimal overhead.'
+        }, {
+          question: 'Do you offer custom development services?',
+          answer: 'Yes, we specialize in custom development services including web applications, mobile apps, e-commerce solutions, API development, and database design. Our team works closely with clients to understand their unique requirements and deliver tailored solutions.'
+        },
+        {
+          question: 'What AI services do you provide?', answer: 'Our AI services include custom AI model development, machine learning solutions, natural language processing, computer vision, predictive analytics, and AI integration into existing systems. We help businesses leverage AI to improve efficiency and decision-making.'
+        }, {
+          question: 'Do you provide cloud migration services?',
+          answer: 'Yes, we offer comprehensive cloud migration services to help businesses move their infrastructure and applications to the cloud. This includes planning, execution, and ongoing support to ensure a smooth transition.'
+        }
+      ]
+    }, {
+      title: 'Pricing & Billing',
+      questions: [
+        {
+          question: 'How do you price your services?', answer: 'Our pricing varies depending on the scope and complexity of the project. We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a detailed quote based on your specific needs.'
+        },
+        {
+          question: 'Do you offer payment plans?', answer: 'Yes, we understand that technology investments can be significant. We offer flexible payment plans and can work with you to create a payment schedule that fits your budget and project timeline.'
+        }, {
+          question: 'What is included in your support services?',
+          answer: 'Our support services include technical support, maintenance, updates, monitoring, and troubleshooting. The level of support depends on your service agreement and can be customized to meet your specific needs.'
+        }, {
+          question: 'Do you offer free consultations?',
+          answer: 'Yes, we offer free initial consultations to discuss your project requirements and provide recommendations. This helps us understand your needs and provide accurate estimates for our services.'
+        }
+      ]
+    }, {
+      title: 'Technical Support',
+      questions: [
+        {
+          question: 'What kind of technical support do you provide?', answer: 'We provide comprehensive technical support including 24/7 monitoring, troubleshooting, maintenance, updates, and emergency support. Our support team is available to help resolve issues quickly and efficiently.'
+        },
+        {
+          question: 'How quickly do you respond to support requests?', answer: 'Our response times vary based on the severity of the issue. Critical issues are addressed immediately, while non-critical requests are typically responded to within 24 hours. We have different support tiers available to meet various needs.'
+        }, {
+          question: 'Do you provide training for your solutions?',
+          answer: 'Yes, we provide comprehensive training for all our solutions. This includes user training, administrator training, and documentation to ensure your team can effectively use and maintain the systems we implement.'
+        },
+        {
+          question: 'What technologies do you work with?', answer: 'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
         }
       ]
     }
@@ -126,18 +188,22 @@ const FAQ: NextPage = () => {
   return (
     <MainLayout
       title="Frequently Asked Questions - Zion Tech Group"
+<<<<<<< HEAD:pages.disabled_auto/faq.tsx
       description="Find answers to common questions about Zion Tech Group
   's services, pricing, and support. Get the information you need to make informed decisions about your technology needs."
+=======
+      description="Find answers to common questions about Zion Tech Group&apos;s services, pricing, and support. Get the information you need to make informed decisions about your technology needs."'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
       keywords="FAQ, frequently asked questions, support, help, services, pricing, technical support"
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h1>
+            <h1 className="text-4xl md: text-5xl font-bold mb-6">Frequently Asked Questions</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Find answers to common questions about our services, pricing, and support. 
-              Can't find what you're looking for? Contact us directly.
+              Can&apos;t find what you&apos;re looking for? Contact us directly.
             </p>
           </div>
         </section>
@@ -156,7 +222,7 @@ const FAQ: NextPage = () => {
                     return (
                       <div key={itemIndex} className="border border-gray-200 rounded-lg">
                         <button
-                          className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 transition-colors"
+                          className="w-full px-6 py-4 text-left flex justify-between items-center hover: bg-gray-50 transition-colors"
                           onClick={() => toggleItem(globalIndex)}
                         >
                           <span className="font-semibold text-gray-900">{item.question}</span>
@@ -190,7 +256,7 @@ const FAQ: NextPage = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="bg-white rounded-lg p-6 text-center shadow-lg">
                 <Phone className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>

@@ -16,15 +16,15 @@ const filesToRewrite = [
   'src/pages/Sitemap.jsx',
   'src/pages/HomePage.tsx',
   'src/pages/ServicesPage.tsx',
-  'src/pages/ComprehensiveSitemap.tsx'
+  'src/pages/ComprehensiveSitemap.tsx',
 ];
 
 function createBasicPage(filePath) {
   const fileName = path.basename(filePath, path.extname(filePath));
   const componentName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
-  
+
   let content = '';
-  
+
   if (filePath.endsWith('.tsx')) {
     content = `import React from 'react';
 import { Link } from 'react-router-dom';
@@ -84,7 +84,7 @@ export default function ${componentName}() {
   );
 }`;
   }
-  
+
   return content;
 }
 
