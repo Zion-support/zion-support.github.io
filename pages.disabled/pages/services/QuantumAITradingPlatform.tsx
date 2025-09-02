@@ -34,11 +34,10 @@ import {}
   Gauge,
   BarChart,
   LineChart,
-  PieChart} from 'lucide-react.ts';
-
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
-export default function QuantumAITradingPlatform(...args: any[]): any {
-'const [activeTab, setActiveTab] = useState('overview');
+  PieChart} from,
+  lucide-react.ts';: pages.disabled/pages/services/QuantumAITradingPlatform.tsx
+export default function QuantumAITradingPlatform(...args: any[]): any {const [activeTab, setActiveTab] = useState('overview
+  ');
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {}
@@ -65,7 +64,8 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
                 duration: 3 + i * 0.2,
                 repeat: Infinity,
                 delay: i * 0.1,'
-                ease: 'easeInOut'}}
+                ease:
+  'easeInOut'}}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
               style={{
 
@@ -82,8 +82,9 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
             opacity: [0.2, 0.5, 0.2]}}
           transition={{}
             duration: 4,
-            repeat: Infinity,'
-            ease: 'easeInOut'}}
+            repeat: Infinity,
+,
+  ease: 'easeInOut}}
         />
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
 "
@@ -94,7 +95,8 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
           transition={{}
             duration: 5,
             repeat: Infinity,'
-            ease: 'easeInOut',
+            ease:
+  'easeInOut',
             delay: 1}}
         />
       </div>
@@ -115,7 +117,8 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6">
               Quantum AI Hybrid Trading Platform"
             </h1>""
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">'
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+  '
               The world's first quantum-powered trading platform combining
               quantum computing with AI algorithms for ultra-fast, intelligenttrading decisions and market prediction.
             </p>
@@ -172,17 +175,21 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
       {/* Navigation Tabs */}""
       <section className="relative py-8 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
-          <div className="flex flex-wrap justify-center gap-2 mb-8">'
-            {['overview',features',pricing',technical',contact'].map()
+          <div className="flex flex-wrap justify-center gap-2 mb-8">,
+  {['overview
+  ',features',pricing
+  ',technical',contact
+  '].map()
               tab => (
                 <button
                   key={tab}`
                   onClick={() => setActiveTab(tab)}``
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
 '
-                    activeTab === tab''
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25'''`
-                      : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white'``}`}
+                    activeTab === tab'
+  '
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25''
+  '`: 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white``}`}
                 >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
@@ -197,7 +204,8 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
       <section className="relative py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <AnimatePresence mode="wait">'
-            {activeTab === 'overview' && ("
+            {activeTab ===
+  'overview' && ("
               <motion.div""
                 key="overview"
                 initial={{ opacity: 0, y: 20 }}
@@ -281,8 +289,9 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
               </motion.div>
             )}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
-'
-            {activeTab === 'features' && ("
+  '
+            {activeTab === 'features
+  ' && ("
               <motion.div""
                 key="features"
                 initial={{ opacity: 0, y: 20 }}
@@ -325,7 +334,8 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
             )}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
 '
-            {activeTab === 'pricing' && ("
+            {activeTab ===
+  'pricing' && ("
               <motion.div""
                 key="pricing"
                 initial={{ opacity: 0, y: 20 }}
@@ -439,8 +449,9 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
               </motion.div>
             )}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
-'
-            {activeTab === 'technical' && ("
+  '
+            {activeTab === 'technical
+  ' && ("
               <motion.div""
                 key="technical"
                 initial={{ opacity: 0, y: 20 }}
@@ -544,7 +555,8 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
             )}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
 '
-            {activeTab === 'contact' && ("
+            {activeTab ===
+  'contact' && ("
               <motion.div""
                 key="contact"
                 initial={{ opacity: 0, y: 20 }}
@@ -614,5 +626,6 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
         </div>
       </section>
     </div>
-  )}'"`
+  )}
+  '"`
 '"`'"`

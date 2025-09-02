@@ -1,56 +1,91 @@
+<<<<<<< HEAD
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from "../src/components/layout/MainLayout";
 import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+=======
+import React from,
+  react';
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../components/layout/MainLayout';
+import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
+  'lucide-react';
+import Link from
+  'next/link';
+>>>>>>> origin/main
 
 const API: NextPage = () => {
   const apiEndpoints = [
     {
-      method: 'GET',
-      endpoint: '/api/v1/users',
-      description: 'Retrieve user information',
-      category: 'Users'
+      method:
+  'GET,
+      endpoint:,
+  /api/v1/users',
+      description: 'Retrieve user information,
+      category:,
+  Users'
     },
     {
-      method: 'POST',
-      endpoint: '/api/v1/users',
-      description: 'Create a new user',
-      category: 'Users'
+      method: 'POST,
+      endpoint:,
+  /api/v1/users',
+      description: 'Create a new user,
+      category:,
+  Users'
     },
     {
-      method: 'GET',
-      endpoint: '/api/v1/projects',
-      description: 'List all projects',
-      category: 'Projects'
+      method: 'GET,
+      endpoint:,
+  /api/v1/projects',
+      description: 'List all projects,
+      category:,
+  Projects'
     },
     {
-      method: 'POST',
-      endpoint: '/api/v1/projects',
-      description: 'Create a new project',
-      category: 'Projects'
+      method: 'POST,
+      endpoint:,
+  /api/v1/projects',
+      description: 'Create a new project,
+      category:,
+  Projects'
     },
     {
-      method: 'GET',
-      endpoint: '/api/v1/analytics',
-      description: 'Get analytics data',
-      category: 'Analytics'
+      method: 'GET,
+      endpoint:,
+  /api/v1/analytics',
+      description: 'Get analytics data,
+      category:,
+  Analytics'
     },
     {
-      method: 'POST',
-      endpoint: '/api/v1/webhooks',
-      description: 'Create a webhook',
-      category: 'Webhooks'
+      method: 'POST,
+      endpoint:,
+  /api/v1/webhooks',
+      description: 'Create a webhook,
+      category:,
+  Webhooks'
     }
   ];
 
   const sdkLanguages = [
-    { name: 'JavaScript', version: '2.1.0', icon: '🟨' },
-    { name: 'Python', version: '1.8.2', icon: '🐍' },
-    { name: 'PHP', version: '1.5.0', icon: '🐘' },
-    { name: 'Java', version: '1.3.0', icon: '☕' },
-    { name: 'Go', version: '1.2.0', icon: '🐹' },
-    { name: 'Ruby', version: '1.1.0', icon: '💎' }
+    { name: 'JavaScript, version:,
+  2.1.0', icon: '🟨 },
+    { name:,
+  Python', version: '1.8.2, icon:,
+  🐍' },
+    { name: 'PHP, version:,
+  1.5.0', icon: '🐘 },
+    { name:,
+  Java', version: '1.3.0, icon:,
+  ☕' },
+    { name: 'Go, version:,
+  1.2.0', icon: '🐹 },
+    { name:,
+  Ruby', version: '1.1.0, icon:
+  '💎' }
   ];
 
   return (
@@ -198,10 +233,15 @@ const API: NextPage = () => {
                       <tr key={index} className="hover:bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap">
                           <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                            endpoint.method === 'GET' ? 'bg-green-100 text-green-800' :
-                            endpoint.method === 'POST' ? 'bg-blue-100 text-blue-800' :
-                            endpoint.method === 'PUT' ? 'bg-yellow-100 text-yellow-800' :
-                            'bg-red-100 text-red-800'
+                            endpoint.method ===,
+  GET' ?
+  'bg-green-100 text-green-800': endpoint.method ===
+  'POST' ?
+  'bg-blue-100 text-blue-800' :
+                            endpoint.method ===
+  'PUT' ?
+  'bg-yellow-100 text-yellow-800' :
+  'bg-red-100 text-red-800
                           }`}>
                             {endpoint.method}
                           </span>

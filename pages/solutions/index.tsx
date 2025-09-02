@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 import MainLayout from "../../src/components/layout/MainLayout";
 import Link from 'next/link';
 import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from 'lucide-react';
+=======
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../../components/layout/MainLayout';
+import Link from
+  'next/link';
+import { Building, Users, Rocket, Heart, DollarSign, Globe, CheckCircle, ArrowRight, Zap, Shield, Brain } from
+  'lucide-react';
+>>>>>>> origin/main
 
 const Solutions: NextPage = () => {
   return (

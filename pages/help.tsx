@@ -1,106 +1,136 @@
+<<<<<<< HEAD
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from "../src/components/layout/MainLayout";
 import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } from 'lucide-react';
 import Link from 'next/link';
+=======
+import React from
+  'react';
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../components/layout/MainLayout';
+import { Search, Book, Video, MessageCircle, Phone, Mail, FileText, Download } from
+  'lucide-react';
+import Link from
+  'next/link';
+>>>>>>> origin/main
 
 const Help: NextPage = () => {
   const helpCategories = [
     {
       icon: Book,
-      title: 'Getting Started',
-      description: 'Learn the basics and get up and running quickly',
+      title:,
+  Getting Started',
+      description: 'Learn the basics and get up and running quickly,
       articles: [
-        'Welcome to Zion Tech Group',
-        'Setting up your account',
-        'Understanding our services',
-        'First steps guide'
+  'Welcome to Zion Tech Group',
+  'Setting up your account',
+  'Understanding our services',
+  'First steps guide'
       ]
     },
     {
       icon: FileText,
-      title: 'User Guides',
-      description: 'Detailed guides for using our services',
+      title:,
+  User Guides',
+      description: 'Detailed guides for using our services,
       articles: [
-        'Service management',
-        'Account settings',
-        'Billing and payments',
-        'Security best practices'
+  'Service management',
+  'Account settings',
+  'Billing and payments',
+  'Security best practices'
       ]
     },
     {
       icon: Video,
-      title: 'Video Tutorials',
-      description: 'Watch step-by-step video tutorials',
+      title:,
+  Video Tutorials',
+      description: 'Watch step-by-step video tutorials,
       articles: [
-        'Platform overview',
-        'Service configuration',
-        'Troubleshooting common issues',
-        'Advanced features'
+  'Platform overview',
+  'Service configuration',
+  'Troubleshooting common issues',
+  'Advanced features'
       ]
     },
     {
       icon: MessageCircle,
-      title: 'FAQ',
-      description: 'Frequently asked questions and answers',
-      articles: [
-        'General questions',
-        'Technical support',
-        'Billing questions',
-        'Service-specific FAQs'
+      title:,
+  FAQ',
+      description: 'Frequently asked questions and answers,
+      articles: [,
+  General questions',
+  'Technical support',
+  'Billing questions',
+  'Service-specific FAQs'
       ]
     }
   ];
 
   const popularArticles = [
     {
-      title: 'How to get started with our services',
-      category: 'Getting Started',
-      views: '1.2k views'
+      title: 'How to get started with our services,
+      category:,
+  Getting Started',
+      views: '1.2k views
     },
     {
-      title: 'Understanding your billing and payments',
-      category: 'Billing',
-      views: '890 views'
+      title:,
+  Understanding your billing and payments',
+      category: 'Billing,
+      views:,
+  890 views'
     },
     {
-      title: 'Setting up two-factor authentication',
-      category: 'Security',
-      views: '756 views'
+      title: 'Setting up two-factor authentication,
+      category:,
+  Security',
+      views: '756 views
     },
     {
-      title: 'Troubleshooting common login issues',
-      category: 'Technical',
-      views: '634 views'
+      title:,
+  Troubleshooting common login issues',
+      category: 'Technical,
+      views:,
+  634 views'
     },
     {
-      title: 'Managing your account settings',
-      category: 'Account',
-      views: '521 views'
+      title: 'Managing your account settings,
+      category:,
+  Account',
+      views: '521 views
     }
   ];
 
   const supportOptions = [
     {
       icon: MessageCircle,
-      title: 'Live Chat',
-      description: 'Get instant help from our support team',
-      availability: 'Available 24/7',
-      action: 'Start Chat'
+      title:,
+  Live Chat',
+      description: 'Get instant help from our support team,
+      availability:,
+  Available 24/7',
+      action: 'Start Chat
     },
     {
       icon: Phone,
-      title: 'Phone Support',
-      description: 'Speak directly with our technical experts',
-      availability: 'Mon-Fri 9AM-6PM EST',
-      action: 'Call +1 302 464 0950'
+      title:,
+  Phone Support',
+      description: 'Speak directly with our technical experts,
+      availability:,
+  Mon-Fri 9AM-6PM EST',
+      action: 'Call +1 302 464 0950
     },
     {
       icon: Mail,
-      title: 'Email Support',
-      description: 'Send us your questions and get detailed responses',
-      availability: 'Response within 24 hours',
-      action: 'Send Email'
+      title:,
+  Email Support',
+      description: 'Send us your questions and get detailed responses,
+      availability:,
+  Response within 24 hours',
+      action: 'Send Email
     }
   ];
 

@@ -1,10 +1,16 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
+=======
+import React, { useState } from
+  'react';
+>>>>>>> origin/main
 
 export const EnhancedHeader: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
+<<<<<<< HEAD
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Services', href: '/services' },
@@ -12,6 +18,24 @@ export const EnhancedHeader: React.FC = () => {
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' }
+=======
+    { label:,
+  Home', href: '/ },
+    { label:,
+  Services', href: '/services },
+    { label:,
+  Solutions', href: '/solutions },
+    { label:,
+  Enterprise', href: '/enterprise },
+    { label:,
+  Request Quote', href: '/request-quote },
+    { label:,
+  Case Studies', href: '/case-studies },
+    { label:,
+  Careers', href: '/careers },
+    { label:,
+  Contact', href: '/contact }
+>>>>>>> origin/main
   ];
 
   const serviceLinks = [

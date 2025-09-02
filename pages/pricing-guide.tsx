@@ -31,7 +31,8 @@ import {
   Calculator,
   BookOpen,
   Lightbulb,
-  HelpCircle
+  HelpCircle,
+  Network as NetworkIcon,
 } from 'lucide-react';
 
 const PricingGuide: React.FC = () => {
@@ -66,7 +67,7 @@ const PricingGuide: React.FC = () => {
         "Complex integrations: $4,000 - $10,000",
         "Enterprise integrations: $10,000 - $25,000+"
       ],
-      icon: Network,
+      icon: NetworkIcon,
       color: "from-purple-500 to-pink-500"
     },
     {

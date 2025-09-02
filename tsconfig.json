@@ -67,7 +67,11 @@
         "src/styles/*"
       ],
       "@data/*": [
+<<<<<<< HEAD
         "src/data/*"
+=======
+        "data/*"
+>>>>>>> origin/main
       ],
       "@services/*": [
         "src/services/*"
@@ -99,8 +103,18 @@
   },
   "include": [
     "next-env.d.ts",
+<<<<<<< HEAD
     "**/*.ts",
     "**/*.tsx",
+=======
+    "pages/**/*",
+    "components/**/*.ts",
+    "components/**/*.tsx",
+    "data/services.ts",
+    "styles/**/*",
+    "types/**/*",
+    "utils/**/*",
+>>>>>>> origin/main
     ".next/types/**/*.ts"
   ],
   "exclude": [
@@ -120,6 +134,12 @@
     "**/*.test.ts",
     "**/*.test.tsx",
     "**/*.spec.ts",
+<<<<<<< HEAD
     "**/*.spec.tsx"
+=======
+    "**/*.spec.tsx",
+    "**/*.backup",
+    "**/*.disabled"
+>>>>>>> origin/main
   ]
 }

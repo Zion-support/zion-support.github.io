@@ -4,7 +4,8 @@ import {}
   DollarSign,
   ExternalLink,
   Phone,
-  Mail} from 'lucide-react.ts';
+  Mail} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/PriceIntelligenceService.tsx
 const PriceIntelligenceService: React.FC = (): JSX.Element => {
@@ -25,9 +26,13 @@ const PriceIntelligenceService: React.FC = (): JSX.Element => {
 :pages.disabled/pages/services/PriceIntelligenceService.tsx
         </p>"
 ""
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">'
+        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
+  '
           {[''
-            'Competitor crawl + marketplace APIs',SKU matching and outlier detection',Price elasticity and cannibalization models',MAP compliance alerts and workflows',Channel-specific rules and overrides',BI dashboards and anomaly alerts',
+  'Competitor crawl + marketplace APIs',SKU matching and outlier detection
+  ',Price elasticity and cannibalization models',MAP compliance alerts and workflows
+  ',Channel-specific rules and overrides',BI dashboards and anomaly alerts
+  ',
           ].map(b => (
             <div"key={b}""
               className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4""
@@ -75,4 +80,4 @@ const PriceIntelligenceService: React.FC = (): JSX.Element => {
 ;
 :pages.disabled/pages/services/PriceIntelligenceService.tsx
 export { PriceIntelligenceService };export default PriceIntelligenceService;'"
-'"'"
+  '"'"

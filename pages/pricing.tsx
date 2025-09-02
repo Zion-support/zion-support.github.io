@@ -1,9 +1,24 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 
 
 
 
+=======
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { SEO } from
+  '../components/SEO';
+import { Button } from
+  '../components/ui/Button';
+import { Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';
+>>>>>>> origin/main
 import { 
   CheckCircle, 
   Star, 
@@ -27,7 +42,8 @@ import {
   Rocket,
   Heart,
   Sparkles
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 const Pricing: React.FC = () => {
   const pricingPlans = [
@@ -165,7 +181,8 @@ const Pricing: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.1 * index }}
                 className="relative"
               >
-                <Card className={`p-8 h-full ${plan.popular ? 'ring-2 ring-purple-500 scale-105' : ''}`}>
+                <Card className={`p-8 h-full ${plan.popular ?,
+  ring-2 ring-purple-500 scale-105': '}`}>
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white">

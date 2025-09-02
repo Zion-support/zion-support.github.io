@@ -1,51 +1,81 @@
+<<<<<<< HEAD
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from "../src/components/layout/MainLayout";
 import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from 'lucide-react';
+=======
+import React from
+  'react';
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../components/layout/MainLayout';
+import { Cookie, Settings, Shield, Eye, Database, CheckCircle } from
+  'lucide-react';
+>>>>>>> origin/main
 
 const Cookies: NextPage = () => {
   const cookieTypes = [
     {
       icon: Cookie,
-      title: 'Essential Cookies',
-      description: 'These cookies are necessary for the website to function and cannot be switched off.',
-      examples: ['Authentication', 'Security', 'Load balancing']
+      title:,
+  Essential Cookies',
+      description: 'These cookies are necessary for the website to function and cannot be switched off.,
+      examples: [
+  'Authentication',
+  'Security',
+  'Load balancing']
     },
     {
       icon: Settings,
-      title: 'Functional Cookies',
-      description: 'These cookies enable enhanced functionality and personalization.',
-      examples: ['User preferences', 'Language settings', 'Customization']
+      title:,
+  Functional Cookies',
+      description: 'These cookies enable enhanced functionality and personalization.,
+      examples: [
+  'User preferences',
+  'Language settings',
+  'Customization']
     },
     {
       icon: Eye,
-      title: 'Analytics Cookies',
-      description: 'These cookies help us understand how visitors interact with our website.',
-      examples: ['Page views', 'User behavior', 'Performance metrics']
+      title:,
+  Analytics Cookies',
+      description: 'These cookies help us understand how visitors interact with our website.,
+      examples: [
+  'Page views',
+  'User behavior',
+  'Performance metrics']
     },
     {
       icon: Database,
-      title: 'Marketing Cookies',
-      description: 'These cookies are used to deliver relevant advertisements and marketing campaigns.',
-      examples: ['Ad targeting', 'Campaign tracking', 'Conversion measurement']
+      title:,
+  Marketing Cookies',
+      description: 'These cookies are used to deliver relevant advertisements and marketing campaigns.,
+      examples: [
+  'Ad targeting',
+  'Campaign tracking',
+  'Conversion measurement']
     }
   ];
 
   const cookieFeatures = [
     {
       icon: Shield,
-      title: 'Cookie Consent',
-      description: 'We obtain your consent before setting non-essential cookies.'
+      title:,
+  Cookie Consent',
+      description: 'We obtain your consent before setting non-essential cookies.
     },
     {
       icon: Settings,
-      title: 'Cookie Management',
-      description: 'You can manage your cookie preferences at any time.'
+      title:,
+  Cookie Management',
+      description: 'You can manage your cookie preferences at any time.
     },
     {
       icon: CheckCircle,
-      title: 'Transparency',
-      description: 'We provide clear information about the cookies we use.'
+      title:,
+  Transparency',
+      description: 'We provide clear information about the cookies we use.
     }
   ];
 

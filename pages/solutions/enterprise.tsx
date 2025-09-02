@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 
 import Link from 'next/link';
 import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from 'lucide-react';
+=======
+import type { NextPage } from
+  'next';
+import Layout from
+  '../../components/Layout';
+import Link from
+  'next/link';
+import { Building, Users, Shield, Zap, Database, Globe, CheckCircle } from
+  'lucide-react';
+>>>>>>> origin/main
 
 const EnterpriseSolutions: NextPage = () => {
   return (
@@ -175,7 +186,8 @@ const EnterpriseSolutions: NextPage = () => {
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold mb-2">Scalability Issues</h4>
-                    <p className="text-gray-600">Systems that can't handle growth and increased user demands effectively.</p>
+                    <p className="text-gray-600">Systems that can
+  't handle growth and increased user demands effectively.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

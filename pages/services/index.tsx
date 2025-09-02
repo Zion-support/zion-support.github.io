@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import type { NextPage } from 'next';
 import MainLayout from "../../src/components/layout/MainLayout";
@@ -5,38 +6,66 @@ import { services, getServicesByCategory } from '../../data/services';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+=======
+import React from,
+  react';
+import type { NextPage } from
+  'next';
+import MainLayout from
+  '../../components/layout/MainLayout';
+import { services, getServicesByCategory } from
+  '../../data/services';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, DollarSign, Target, Rocket } from
+  'lucide-react';
+import Link from
+  'next/link';
+import { motion } from
+  'framer-motion';
+>>>>>>> origin/main
 const ServicesPage: NextPage = () => {
-  const microSaasServices = getServicesByCategory('micro-saas');
-  const itServices = getServicesByCategory('it-services');
-  const aiServices = getServicesByCategory('ai-services');
+  const microSaasServices = getServicesByCategory(
+  'micro-saas');
+  const itServices = getServicesByCategory(
+  'it-services');
+  const aiServices = getServicesByCategory(
+  'ai-services');
 
   const stats = [
-    { number: '80+', label: 'Micro SaaS Solutions', icon: Zap },
-    { number: '35+', label: 'IT Services', icon: Shield },
-    { number: '30+', label: 'AI Services', icon: Globe },
-    { number: '500+', label: 'Projects Completed', icon: TrendingUp },
+    { number:
+  '80+, label:
+  'Micro SaaS Solutions', icon: Zap },
+    { number:,
+  35+', label: 'IT Services, icon: Shield },
+    { number:,
+  30+', label: 'AI Services, icon: Globe },
+    { number:,
+  500+', label: 'Projects Completed, icon: TrendingUp },
   ];
 
   const benefits = [
     {
       icon: <DollarSign className="w-8 h-8" />,
-      title: 'Competitive Pricing',
-      description: 'Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
+      title:,
+  Competitive Pricing',
+      description: Transparent, market-competitive pricing with flexible plans to fit your budget and scale with your business.'
     },
     {
       icon: <Target className="w-8 h-8" />,
-      title: 'Proven Results',
-      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.'
+      title:,
+  Proven Results',
+      description: 'Track record of successful implementations with measurable ROI and client satisfaction across all industries.
     },
     {
       icon: <Rocket className="w-8 h-8" />,
-      title: 'Fast Implementation',
-      description: 'Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
+      title:,
+  Fast Implementation',
+      description: Rapid deployment and implementation with minimal downtime, getting you up and running quickly.'
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: 'Expert Support',
-      description: '24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
+      title:,
+  Expert Support',
+      description: 24/7 expert support from our experienced team of developers, engineers, and AI specialists.'
     }
   ];
 
@@ -328,6 +357,11 @@ const ServicesPage: NextPage = () => {
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Discover our most popular and innovative solutions that are transforming businesses across industries.
             </p>
+            <div className="mt-6">
+              <Link href="/services/expanded" className="inline-block text-blue-600 hover:text-blue-700 font-semibold underline">
+                Browse the expanded services catalog
+              </Link>
+            </div>
           </motion.div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

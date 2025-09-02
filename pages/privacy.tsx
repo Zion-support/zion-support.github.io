@@ -1,8 +1,21 @@
+<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 
 
 
+=======
+import React from
+  'react';
+import { motion } from
+  'framer-motion';
+import { SEO } from
+  '../components/SEO';
+import { Card } from
+  '../components/ui/Card';
+import { Badge } from
+  '../components/ui/Badge';
+>>>>>>> origin/main
 import { 
   Shield,
   Lock,
@@ -20,7 +33,8 @@ import {
   Trash2,
   Download,
   ArrowRight
-} from 'lucide-react';
+} from
+  'lucide-react';
 
 const Privacy: React.FC = () => {
   const lastUpdated = "2025-01-15";

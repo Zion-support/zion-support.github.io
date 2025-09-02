@@ -1,13 +1,24 @@
+<<<<<<< HEAD
 import type { NextPage } from 'next';
 
 import Link from 'next/link';
 import { Users, Briefcase, Heart, Zap, CheckCircle } from 'lucide-react';
+=======
+import type { NextPage } from,
+  next';
+import Layout from
+  '../components/Layout';
+import Link from
+  'next/link';
+import { Users, Briefcase, Heart, Zap, CheckCircle } from
+  'lucide-react';
+>>>>>>> origin/main
 
 const Careers: NextPage = () => {
   return (
     <Layout
       title="Careers at Zion Tech Group - Join Our Team"
-      description="Join Zion Tech Group and be part of a team that's transforming businesses through innovative technology solutions. Explore career opportunities and grow with us."
+      description="Join Zion Tech Group and be part of a team thats transforming businesses through innovative technology solutions. Explore career opportunities and grow with us."
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -38,12 +49,13 @@ const Careers: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Work at Zion Tech Group?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're building a culture of innovation, collaboration, and continuous learning. 
+              We,
+  re building a culture of innovation, collaboration, and continuous learning. 
               Here's what makes us special.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
               <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
                 <Users className="w-8 h-8 text-blue-600" />
@@ -61,7 +73,7 @@ const Careers: NextPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-600">
-                Work with the latest technologies and frameworks. We're always exploring new 
+                Work with the latest technologies and frameworks. Were always exploring new 
                 tools and approaches to solve complex business challenges.
               </p>
             </div>
