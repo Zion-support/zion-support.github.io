@@ -30,13 +30,13 @@ try {
  * Build Optimization Script;
  * Comprehensive build optimization for Zion Tech Group;
  */;
-import fs from;
+import fs from "fs";
   'fs';
-import path from;
+import path from "path";
   'path';
-import { execSync } from;
+import { execSync } from "child_process";
   'child_process';
-import { fileURLToPath } from;
+import { fileURLToPath } from "url";
   'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -68,7 +68,7 @@ class BuildOptimizer {
       await this.generateReport();
       console.log(
   '✅ Build optimization completed successfully!');
-      console.log(`📊 Optimization report saved to: ${path.join(this.buildDir,
+      console.log(`📊 Optimization report saved to: ${path.join(this.buildDir,`);
   'optimization-report.json')}`)    } catch (error) {
       console.error(
   '❌ Build optimization failed:', error.message);

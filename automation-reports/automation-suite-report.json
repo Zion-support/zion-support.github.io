@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-09-02T21:22:03.716Z",
+  "timestamp": "2025-09-02T21:41:13.951Z",
   "summary": {
     "total": 8,
     "successful": 4,
@@ -10,7 +10,7 @@
       "command": "npm run lint:fix",
       "description": "ESLint Fix",
       "success": false,
-      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"lint:fix\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_22_03_129Z-debug-0.log\n"
+      "error": "Command failed: npm run lint:fix\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm error Missing script: \"lint:fix\"\nnpm error\nnpm error To see a list of scripts, run:\nnpm error   npm run\nnpm error A complete log of this run can be found in: /home/ubuntu/.npm/_logs/2025-09-02T21_41_13_364Z-debug-0.log\n"
     },
     {
       "command": "npm run type-check",
@@ -77,10 +77,6 @@
       "result": {
         "issues": [
           {
-            "file": "/workspace/src/components/SEO.tsx",
-            "issue": "Potential XSS vulnerability"
-          },
-          {
             "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
             "issue": "Potential XSS vulnerability"
           },
@@ -89,7 +85,7 @@
             "issue": "Use of eval() detected"
           }
         ],
-        "count": 3
+        "count": 2
       }
     },
     {
@@ -110,15 +106,7 @@
             "issue": "Console.log in production code"
           },
           {
-            "file": "/workspace/src/components/MobileExperienceEnhancer.tsx",
-            "issue": "Console.log in production code"
-          },
-          {
             "file": "/workspace/src/components/PerformanceMonitor.tsx",
-            "issue": "Console.log in production code"
-          },
-          {
-            "file": "/workspace/src/components/seo/SEOEnhancer.tsx",
             "issue": "Console.log in production code"
           },
           {
@@ -126,7 +114,7 @@
             "issue": "Console.log in production code"
           }
         ],
-        "count": 7
+        "count": 5
       }
     }
   ]

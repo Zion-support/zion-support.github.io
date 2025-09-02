@@ -1,12 +1,5 @@
-import { Route, Routes } from 'react-router-dom';"
-import { ProtectedRoute } from '../components/ProtectedRoute';"
-import TalentDirectory from '../pages/TalentDirectory';"
-import TalentsPage from '../pages/TalentsPage';"
-import TalentProfilePage from '../pages/TalentProfilePage';"
-import SavedTalentsPage from '../pages/SavedTalentsPage';"
-import CreateTalentProfile from '../pages/CreateTalentProfile';"
 import { Route, Routes } from 'react-router-dom';
-import { ProtectedRoute, } from '../components/ProtectedRoute';
+import { ProtectedRoute } from '../components/ProtectedRoute';
 import TalentDirectory from '../pages/TalentDirectory';
 import TalentsPage from '../pages/TalentsPage';
 import TalentProfilePage from '../pages/TalentProfilePage';
@@ -23,4 +16,5 @@ export default function TalentRoutes() {
       <Route path="create" element={<CreateTalentProfile />} />
       <Route path="profile" element={<ProfilePage />} />
     </Routes>
-  )}"
+  );
+}
