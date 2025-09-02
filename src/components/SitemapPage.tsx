@@ -1,1 +1,0 @@
-export function SitemapPage(...args: any[]): any { { name: "White Papers", url: "/white-papers" },; 

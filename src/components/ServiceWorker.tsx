@@ -1,1 +1,0 @@
-export function ServiceWorker(...args: any[]): any { const [swState, setSwState] = useState<any>({ 

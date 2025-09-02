@@ -1,1 +1,0 @@
-import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => { icon: Shield}; 

@@ -4,12 +4,16 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta charSet="utf-8" />
+        <meta name="theme-color" content="#1e3a8a" />
+        <meta name="color-scheme" content="light dark" />
         <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <link rel="manifest" href="/site.webmanifest" />
-        <meta name="theme-color" content="#0a0a1a" />
-        <meta name="color-scheme" content="dark light" />
-        <link rel="canonical" href="https://ziontechgroup.com/" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
       <body>
         <Main />

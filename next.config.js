@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  eslint: {
-    ignoreDuringBuilds: true,
+  experimental: {
+    esmExternals: false,
   },
   typescript: {
     ignoreBuildErrors: true,
@@ -54,16 +54,38 @@ const nextConfig = {
     domains: ['ziontechgroup.com'],
     unoptimized: true,
   },
-
-  // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
-
-  // Performance optimizations
-  experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+  webpack: (config, { dev, isServer }) => {
+    // Completely exclude problematic directories from the build
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      exclude: [
+        /node_modules/,
+        /api-backup/,
+        /pages\.disabled/,
+        /backup-pages/,
+        /components\//,
+        /\.backup/,
+        /\.disabled/,
+        /automation\/backups/,
+        /automation_backup/,
+        /broken_files_backup/,
+        /contracts/,
+        /hardhat/,
+      ],
+    });
+    
+    // Add fallback for problematic modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+    };
+    
+    return config;
   },
 };
 

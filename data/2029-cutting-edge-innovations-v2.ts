@@ -36,13 +36,7 @@ export interface CuttingEdge2029Service {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
+reviews: number;export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
   // AI Consciousness & Emotional Intelligence
   {
     id: 'ai-consciousness-evolution-platform',
@@ -510,7 +504,6 @@ export const cuttingEdge2029Services: CuttingEdge2029Service[] = [
     rating: 4.8,
     reviews: 134
 ];
-<<<<<<< HEAD
 export const getPopularCuttingEdge2029Services = () => {;
   return cuttingEdge2029Services.filter(service => service.popular)};
 export const getCuttingEdge2029ServicesByCategory = (category: string) => {;
@@ -523,13 +516,8 @@ export const getCuttingEdge2029ServicesByCategory = (category: string) => {;
 };
 export const getCuttingEdge2029ServicesByPriceRange = (minPrice: number, maxPrice: number) => {;
   return cuttingEdge2029Services.filter(service => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
-    const price = parseInt(service.price.replace(/[^0-9]/g, ''));
-<<<<<<< HEAD
-    return price >= minPrice && price <= maxPrice;
+const price = parseInt(service.price.replace(/[^0-9]/g, ''));
+return price >= minPrice && price <= maxPrice;
   });
 };
 }}
-=======
-    return price >= minPrice && price <= maxPrice})};
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

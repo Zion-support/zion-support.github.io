@@ -36,13 +36,7 @@ export interface EnterpriseITService2030 {
   launchDate: string;
   customers: number;
   rating: number;
-<<<<<<< HEAD
-  reviews: number;
-
-=======
-  reviews: number}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const enterpriseITServices2030: EnterpriseITService2030[] = [
+reviews: number;export const enterpriseITServices2030: EnterpriseITService2030[] = [
   // Autonomous DevOps Platform 2030
   {
     id: 'autonomous-devops-platform-2030',

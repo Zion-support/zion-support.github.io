@@ -1,1 +1,0 @@
-" if (sortBy === "featured") return b.featured ? 1 : -1;" if (sortBy === "price-low") return parseFloat(a.pricing.monthly.replace(/[^0-9]/g, ")) - parseFloat(b.pricing.monthly.replace(/[^0-9]/g, "));" if (sortBy === "price-high") return parseFloat(b.pricing.monthly.replace(/[^0-9]/g, ")) - parseFloat(a.pricing.monthly.replace(/[^0-9]/g, ")); 

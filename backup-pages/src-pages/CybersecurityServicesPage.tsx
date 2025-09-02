@@ -18,9 +18,6 @@
   Key'
 } from 'lucide-react';
 
-
-
-
     name: 'Threat Detection & Response',
     description: 'AI-powered security monitoring and incident response',
     icon: Eye,
@@ -32,7 +29,6 @@
     name: 'Zero Trust Security',
     description: 'Identity verification and access management',
     icon: Lock,
-=======
 '
     id: anythreat-detection',;'
     name: 'Threat Detection & Response','    description: 'AI-powered security monitoring and incident response',
@@ -58,7 +54,6 @@ export default function CybersecurityServicesPage(...args: any[]): any {
       case 'hourly': return 'Hourly';
       case 'project-based': return 'Project-based';
       default: return model}
-=======
 '
       case 'one-time': return 'One-time';'
       case 'monthly': return 'Monthly';'
@@ -134,7 +129,6 @@ export default function CybersecurityServicesPage(...args: any[]): any {
             <div className="grid gap-6 md: anygrid-cols-2">
               {SECURITY_SERVICE_CATEGORIES.map((category)  => {
 
-                
                 return ("
                   <Card key={category.id} className="text-center hover:shadow-lg transition-shadow cursor-pointer border-red-500/20">
                     <CardHeader>"
@@ -402,9 +396,7 @@ function SecurityServiceCard(...args: any[]): any {
   const [priceRange, setPriceRange] = useState<any>('all');
 
   // Filter only security services
-  
-  
-    
+
     let matchesPrice = true;
     if (priceRange === 'low') matchesPrice = service.price < 500;
     else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000;
@@ -421,12 +413,10 @@ function SecurityServiceCard(...args: any[]): any {
       default: return <DollarSign className="w-4 h-4"  />}
   };
 
-  
       case 'monthly': return 'Monthly';
       case 'hourly': return 'Hourly';
       case 'project-based': return 'Project-based';
       default: return model}
-=======
 '
       case 'one-time': return 'One-time';'
       case 'monthly': return 'Monthly';'
@@ -542,8 +532,6 @@ function SecurityServiceCard(...args: any[]): any {
   Database,
   Monitor"
 } from "lucide-react";
-
-
 
                 setSelectedSubcategory('all');
                 setPriceRange('all')}}>                Clear Filters

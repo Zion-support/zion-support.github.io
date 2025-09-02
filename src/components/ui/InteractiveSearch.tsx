@@ -1,1 +1,0 @@
-interface InteractiveSearchProps {} // Add your props here; placeholder?: string; onSearch: query: string void; className?: string; const InteractiveSearch: React.FC<InteractiveSearchProps> = ({ placeholder = "Search...", ; onSearch, ;" 

@@ -18,25 +18,13 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
   ))];
 
   // Filter services based on search and filters
-<<<<<<<< HEAD:pages.disabled/root_pages/expanded-services-pricing-2027.page.tsx
+<:pages.disabled/root_pages/expanded-services-pricing-2027.page.tsx
   const filteredServices = useMemo(: unknown {;
     return ALL_EXPANDED_SERVICES_PRICING.filter(service => {;
       const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
-      '
-========
-  const filteredServices = useMemo(() => {
-    return ALL_EXPANDED_SERVICES_PRICING.filter(service => {
-      const term = searchTerm.toLowerCase();
-      const matchesSearch =
-        service.serviceName.toLowerCase().includes(term) ||
-        service.category.toLowerCase().includes(term) ||
-        service.subcategory.toLowerCase().includes(term);
-
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/expanded-services-pricing-2027.page.tsx
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
+      'const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
       
       return matchesSearch && matchesCategory && matchesSubcategory;
     });
