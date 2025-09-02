@@ -291,6 +291,74 @@ export default function AIServices() {
       category: 'Market AI',
     },
     {
+      title: 'Edge AI Computing Platform',
+      description:
+        'Distributed AI processing at the edge for real-time decision making and reduced latency',
+      icon: Cpu,
+      features: [
+        'Real-time AI inference at the edge',
+        'Distributed model training and deployment',
+        'Low-latency decision making',
+        'Offline AI processing capabilities',
+        'Edge device management and optimization',
+        'Federated learning implementation',
+      ],
+      pricing: '$7,999 - $29,999/month',
+      delivery: '10-16 weeks',
+      category: 'Edge AI',
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Systems',
+      description:
+        'Advanced AI systems for autonomous vehicle navigation, safety, and fleet management',
+      icon: Car,
+      features: [
+        'Real-time object detection and path planning',
+        'Predictive maintenance and diagnostics',
+        'Fleet optimization and routing',
+        'Safety monitoring and incident prevention',
+        'Integration with smart city infrastructure',
+        'Regulatory compliance and reporting',
+      ],
+      pricing: '$15,999 - $99,999/month',
+      delivery: '16-24 weeks',
+      category: 'Autonomous AI',
+    },
+    {
+      title: 'AI-Powered Climate Change Modeling',
+      description:
+        'Advanced climate modeling and environmental impact assessment using AI and machine learning',
+      icon: Globe,
+      features: [
+        'Climate pattern prediction and analysis',
+        'Environmental impact assessment',
+        'Carbon footprint optimization',
+        'Renewable energy forecasting',
+        'Disaster risk prediction and mitigation',
+        'Sustainability reporting and compliance',
+      ],
+      pricing: '$12,999 - $49,999/month',
+      delivery: '12-20 weeks',
+      category: 'Climate AI',
+    },
+    {
+      title: 'AI-Powered Space Technology Platform',
+      description:
+        'Advanced AI systems for space exploration, satellite management, and aerospace operations',
+      icon: Satellite,
+      features: [
+        'Satellite orbit optimization and management',
+        'Space debris tracking and collision avoidance',
+        'Autonomous spacecraft navigation',
+        'Earth observation data analysis',
+        'Space mission planning and optimization',
+        'Real-time space weather monitoring',
+      ],
+      pricing: '$25,999 - $199,999/month',
+      delivery: '20-32 weeks',
+      category: 'Space AI',
+    },
+    {
       title: 'AI-Powered Drug Discovery Platform',
       description:
         'Advanced AI system for pharmaceutical research, drug discovery, and molecular design',
