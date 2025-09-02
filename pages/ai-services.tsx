@@ -527,6 +527,118 @@ export default function AIServices() {
       delivery: '14-26 weeks',
       category: 'Blockchain AI',
     },
+    {
+      title: 'AI-Powered Autonomous Trading System',
+      description: 'Intelligent algorithmic trading platform with risk management and portfolio optimization',
+      icon: TrendingUp,
+      features: [
+        'Real-time market analysis and pattern recognition',
+        'Automated trading strategy execution',
+        'Risk management and portfolio optimization',
+        'Sentiment analysis from news and social media',
+        'Backtesting and strategy validation',
+        'Multi-asset and multi-exchange support'
+      ],
+      pricing: '$8,000 - $35,000/month',
+      delivery: '8-16 weeks',
+      category: 'Trading AI'
+    },
+    {
+      title: 'AI-Powered Medical Diagnosis Assistant',
+      description: 'Intelligent medical image analysis and diagnostic support system',
+      icon: Eye,
+      features: [
+        'Medical image analysis (X-ray, MRI, CT scans)',
+        'Symptom analysis and differential diagnosis',
+        'Drug interaction and allergy checking',
+        'Treatment recommendation engine',
+        'Patient risk assessment and monitoring',
+        'Integration with electronic health records'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '12-24 weeks',
+      category: 'Medical AI'
+    },
+    {
+      title: 'AI-Powered Legal Document Analysis',
+      description: 'Intelligent legal document review and contract analysis platform',
+      icon: FileText,
+      features: [
+        'Automated contract review and analysis',
+        'Legal document classification and extraction',
+        'Risk assessment and compliance checking',
+        'Due diligence automation',
+        'Legal research and precedent analysis',
+        'Document generation and templating'
+      ],
+      pricing: '$6,000 - $25,000/month',
+      delivery: '8-14 weeks',
+      category: 'Legal AI'
+    },
+    {
+      title: 'AI-Powered Energy Management System',
+      description: 'Intelligent energy consumption optimization and renewable energy integration',
+      icon: Zap,
+      features: [
+        'Smart grid optimization and load balancing',
+        'Renewable energy forecasting and integration',
+        'Energy consumption pattern analysis',
+        'Predictive maintenance for energy infrastructure',
+        'Carbon footprint tracking and optimization',
+        'Real-time energy trading and arbitrage'
+      ],
+      pricing: '$10,000 - $40,000/month',
+      delivery: '10-20 weeks',
+      category: 'Energy AI'
+    },
+    {
+      title: 'AI-Powered Cybersecurity Threat Detection',
+      description: 'Advanced threat detection and response system with behavioral analysis',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Behavioral anomaly detection',
+        'Automated incident response and remediation',
+        'Zero-day vulnerability identification',
+        'Threat intelligence and attribution',
+        'Security orchestration and automation'
+      ],
+      pricing: '$7,000 - $30,000/month',
+      delivery: '8-16 weeks',
+      category: 'Cybersecurity AI'
+    },
+    {
+      title: 'AI-Powered Autonomous Vehicle Fleet Management',
+      description: 'Intelligent fleet optimization and autonomous vehicle coordination system',
+      icon: Network,
+      features: [
+        'Route optimization and traffic prediction',
+        'Vehicle health monitoring and maintenance',
+        'Passenger demand forecasting',
+        'Autonomous vehicle coordination',
+        'Safety monitoring and incident prevention',
+        'Fleet performance analytics and optimization'
+      ],
+      pricing: '$12,000 - $50,000/month',
+      delivery: '12-24 weeks',
+      category: 'Autonomous AI'
+    },
+    {
+      title: 'AI-Powered Climate Change Modeling',
+      description: 'Advanced climate modeling and environmental impact assessment platform',
+      icon: Globe,
+      features: [
+        'Climate change prediction and modeling',
+        'Environmental impact assessment',
+        'Carbon sequestration optimization',
+        'Weather pattern analysis and forecasting',
+        'Ecosystem monitoring and protection',
+        'Sustainability planning and recommendations'
+      ],
+      pricing: '$15,000 - $60,000/month',
+      delivery: '16-32 weeks',
+      category: 'Climate AI'
+    }
   ];
   const aiTechnologies = [
     {
@@ -625,7 +737,7 @@ export default function AIServices() {
                 <ArrowRight className="ml-2 h-4 w-4 inline" />
               </Link>
               <Link
-                href="/pricing-guide"
+                href="/pricing"
                 className="text-sm font-semibold leading-6 text-gray-900 hover:text-blue-600"
               >
                 View Pricing <span aria-hidden="true">→</span>
