@@ -1,7 +1,6 @@
 import React from
   'react'
-import { Link } from
-  'react-router-dom'
+import Link from 'next/link'
 import { ArrowRight, Brain, Cloud, Shield, Zap, Database, Server, Lock, BarChart3, Users, Globe, Code, CheckCircle, Star, TrendingUp, Clock, Award } from
   'lucide-react'
 import PageTransition from
@@ -16,7 +15,7 @@ export default function Services() {
 	return (
 		<PageTransition>
 			{/* Hero Section */}
-			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm: py-32">
+			<section className="bg-gradient-to-br from-slate-50 to-blue-50 py-20 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="mx-auto max-w-2xl text-center">
 						<div className="flex items-center justify-center mb-4">
@@ -34,7 +33,7 @@ export default function Services() {
 			</section>
 
 			{/* Services Grid */}
-			<section className="py-24 sm: py-32">
+			<section className="py-24 sm:py-32">
 				<div className="mx-auto max-w-7xl px-6 lg:px-8">
 					<div className="grid gap-8 lg:grid-cols-2">
 						{/* AI Autonomous Systems */}
@@ -75,7 +74,7 @@ export default function Services() {
 									<span>2-4 weeks delivery</span>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-500 transition-colors group"
 									aria-label="Get started with AI services"
 								>
@@ -123,8 +122,8 @@ export default function Services() {
 									<span>4-8 weeks delivery</span>
 								</div>
 								<Link
-									to="/contact"
-									className="inline-flex items-center text-sm font-semibold text-green-600 hover: text-green-500 transition-colors group"
+									href="/contact"
+									className="inline-flex items-center text-sm font-semibold text-green-600 hover:text-green-500 transition-colors group"
 									aria-label="Get started with cloud services"
 								>
 									Get started with Cloud
@@ -171,7 +170,7 @@ export default function Services() {
 									<span>3-6 weeks delivery</span>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-sm font-semibold text-purple-600 hover:text-purple-500 transition-colors group"
 									aria-label="Get started with cybersecurity services"
 								>
@@ -219,7 +218,7 @@ export default function Services() {
 									<span>6-12 weeks delivery</span>
 								</div>
 								<Link
-									to="/contact"
+									href="/contact"
 									className="inline-flex items-center text-sm font-semibold text-orange-600 hover:text-orange-500 transition-colors group"
 									aria-label="Get started with custom software services"
 								>
@@ -247,7 +246,7 @@ export default function Services() {
 							Average market price ranges referenced from public agency rate cards and vendor quotes.
 							For tailored pricing, see our
 							{' '}
-							<Link to="/pricing-guide" className="text-blue-600 hover: text-blue-500 underline">Pricing Guide</Link>.
+							<Link href="/pricing-guide" className="text-blue-600 hover:text-blue-500 underline">Pricing Guide</Link>.
 						</p>
 					</div>
 
@@ -265,7 +264,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-blue-600">Starting $8k–$25k</span>
-								<Link to="/contact" className="text-blue-600 hover: text-blue-500">Talk to us →</Link>
+								<Link href="/contact" className="text-blue-600 hover:text-blue-500">Talk to us →</Link>
 							</div>
 						</div>
 
@@ -281,7 +280,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-indigo-600">Starting $10k–$40k</span>
-								<Link to="/contact" className="text-indigo-600 hover: text-indigo-500">Get estimate →</Link>
+								<Link href="/contact" className="text-indigo-600 hover:text-indigo-500">Get estimate →</Link>
 							</div>
 						</div>
 
@@ -297,7 +296,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-emerald-600">Starting $15k–$60k</span>
-								<Link to="/contact" className="text-emerald-600 hover: text-emerald-500">Learn more →</Link>
+								<Link href="/contact" className="text-emerald-600 hover:text-emerald-500">Learn more →</Link>
 							</div>
 						</div>
 
@@ -314,7 +313,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-green-600">Assessments $4k–$12k</span>
-								<Link to="/contact" className="text-green-600 hover: text-green-500">Start now →</Link>
+								<Link href="/contact" className="text-green-600 hover:text-green-500">Start now →</Link>
 							</div>
 						</div>
 
@@ -330,7 +329,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-purple-600">From $3k/mo</span>
-								<Link to="/contact" className="text-purple-600 hover: text-purple-500">Request details →</Link>
+								<Link href="/contact" className="text-purple-600 hover:text-purple-500">Request details →</Link>
 							</div>
 						</div>
 
@@ -346,7 +345,59 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-orange-600">From $4k/mo</span>
-								<Link to="/contact" className="text-orange-600 hover: text-orange-500">Book intro →</Link>
+								<Link href="/contact" className="text-orange-600 hover:text-orange-500">Book intro →</Link>
+							</div>
+						</div>
+
+						{/* AI Services - Additional */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Brain className="h-5 w-5 text-violet-600" />
+								<h3 className="font-semibold text-gray-900">AI-Powered Business Intelligence</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Automated insights, predictive analytics, and intelligent reporting.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Natural language query interface</li>
+								<li>• Automated anomaly detection and alerts</li>
+								<li>• Custom dashboard generation</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-violet-600">From $399/mo</span>
+								<Link href="/contact" className="text-violet-600 hover:text-violet-500">Schedule demo →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Database className="h-5 w-5 text-cyan-600" />
+								<h3 className="font-semibold text-gray-900">Intelligent Document Processing</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Extract, classify, and process documents with AI accuracy.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• OCR with 99%+ accuracy</li>
+								<li>• Automated data extraction and validation</li>
+								<li>• Workflow automation and routing</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-cyan-600">From $299/mo</span>
+								<Link href="/contact" className="text-cyan-600 hover:text-cyan-500">Try free trial →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Zap className="h-5 w-5 text-yellow-600" />
+								<h3 className="font-semibold text-gray-900">AI Test Automation Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Self-healing test scripts and intelligent test case generation.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Visual regression testing with AI</li>
+								<li>• Automated test maintenance</li>
+								<li>• Cross-browser and device testing</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-yellow-600">From $199/mo</span>
+								<Link href="/contact" className="text-yellow-600 hover:text-yellow-500">Start testing →</Link>
 							</div>
 						</div>
 
@@ -363,7 +414,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-rose-600">From $199/mo</span>
-								<Link to="/contact" className="text-rose-600 hover:text-rose-500">Request demo →</Link>
+								<Link href="/contact" className="text-rose-600 hover:text-rose-500">Request demo →</Link>
 							</div>
 						</div>
 
@@ -379,7 +430,7 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-sky-600">From $299/mo</span>
-								<Link to="/contact" className="text-sky-600 hover: text-sky-500">See live demo →</Link>
+								<Link href="/contact" className="text-sky-600 hover:text-sky-500">See live demo →</Link>
 							</div>
 						</div>
 
@@ -395,7 +446,111 @@ export default function Services() {
 							</ul>
 							<div className="flex items-center justify-between text-sm">
 								<span className="font-semibold text-teal-600">From $249/mo</span>
-								<Link to="/contact" className="text-teal-600 hover: text-teal-500">Book a walkthrough →</Link>
+								<Link href="/contact" className="text-teal-600 hover:text-teal-500">Book a walkthrough →</Link>
+							</div>
+						</div>
+
+						{/* Additional IT Services */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Server className="h-5 w-5 text-lime-600" />
+								<h3 className="font-semibold text-gray-900">DevOps Automation Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Complete CI/CD pipelines with infrastructure as code.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• GitOps workflows and automated deployments</li>
+								<li>• Infrastructure monitoring and alerting</li>
+								<li>• Multi-cloud orchestration</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-lime-600">From $599/mo</span>
+								<Link href="/contact" className="text-lime-600 hover:text-lime-500">Get started →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Globe className="h-5 w-5 text-pink-600" />
+								<h3 className="font-semibold text-gray-900">Digital Transformation Consulting</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">End-to-end modernization strategy and implementation.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Legacy system migration and modernization</li>
+								<li>• Cloud-native architecture design</li>
+								<li>• Change management and training</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-pink-600">From $8k–$50k</span>
+								<Link href="/contact" className="text-pink-600 hover:text-pink-500">Schedule consultation →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<BarChart3 className="h-5 w-5 text-amber-600" />
+								<h3 className="font-semibold text-gray-900">Infrastructure Monitoring & Observability</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">Real-time monitoring with AI-powered anomaly detection.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Application performance monitoring (APM)</li>
+								<li>• Log aggregation and analysis</li>
+								<li>• Predictive scaling and optimization</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-amber-600">From $199/mo</span>
+								<Link href="/contact" className="text-amber-600 hover:text-amber-500">Monitor now →</Link>
+							</div>
+						</div>
+
+						{/* Additional Micro SaaS */}
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Users className="h-5 w-5 text-emerald-600" />
+								<h3 className="font-semibold text-gray-900">Smart Project Management Suite</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">AI-powered project tracking with intelligent resource allocation.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Automated task prioritization and scheduling</li>
+								<li>• Team performance analytics and insights</li>
+								<li>• Integration with popular tools (Slack, Jira, etc.)</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-emerald-600">From $149/mo</span>
+								<Link href="/contact" className="text-emerald-600 hover:text-emerald-500">Start free trial →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Star className="h-5 w-5 text-indigo-600" />
+								<h3 className="font-semibold text-gray-900">Customer Feedback Intelligence Platform</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">AI-driven sentiment analysis and actionable insights from customer feedback.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Multi-channel feedback aggregation</li>
+								<li>• Sentiment analysis and trend identification</li>
+								<li>• Automated response recommendations</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-indigo-600">From $99/mo</span>
+								<Link href="/contact" className="text-indigo-600 hover:text-indigo-500">Analyze feedback →</Link>
+							</div>
+						</div>
+
+						<div className="rounded-2xl border border-gray-200 p-6 shadow-sm hover:shadow-md transition">
+							<div className="flex items-center gap-3 mb-3">
+								<Zap className="h-5 w-5 text-red-600" />
+								<h3 className="font-semibold text-gray-900">Workflow Automation Engine</h3>
+							</div>
+							<p className="text-sm text-gray-600 mb-3">No-code workflow builder with AI-powered optimization suggestions.</p>
+							<ul className="text-sm text-gray-700 space-y-1 mb-4">
+								<li>• Visual workflow designer with drag-and-drop</li>
+								<li>• 500+ pre-built integrations</li>
+								<li>• AI-powered efficiency recommendations</li>
+							</ul>
+							<div className="flex items-center justify-between text-sm">
+								<span className="font-semibold text-red-600">From $79/mo</span>
+								<Link href="/contact" className="text-red-600 hover:text-red-500">Automate workflows →</Link>
 							</div>
 						</div>
 					</div>
@@ -423,7 +578,7 @@ export default function Services() {
 							We follow a proven methodology that ensures quality, speed, and successful outcomes.
 						</p>
 					</div>
-					<div className="grid grid-cols-1 md: grid-cols-4 gap-8">
+					<div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 						<div className="text-center group">
 							<div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-100 group-hover:bg-blue-200 transition-colors mb-4">
 								<span className="text-2xl font-bold text-blue-600">1</span>
@@ -468,15 +623,15 @@ export default function Services() {
 						</p>
 						<div className="mt-10 flex items-center justify-center gap-x-6">
 							<Link
-								to="/contact"
-								className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover: bg-gray-50 transition-all duration-200 hover:scale-105"
+								href="/contact"
+								className="group rounded-md bg-white px-8 py-4 text-sm font-semibold text-blue-600 shadow-sm hover:bg-gray-50 transition-all duration-200 hover:scale-105"
 								aria-label="Contact us to get started"
 							>
 								Contact Us
 								<ArrowRight className="ml-2 h-4 w-4 inline group-hover:translate-x-1 transition-transform" />
 							</Link>
 							<Link
-								to="/"
+								href="/"
 								className="text-sm font-semibold leading-6 text-white hover:text-blue-100 transition-colors group"
 								aria-label="Back to homepage"
 							>
