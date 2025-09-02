@@ -1,8 +1,12 @@
 // __tests__/pages/EquipmentDetail.test.tsx
-import React from 'react';
-import { render, screen, fireEvent, act } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import EquipmentDetail, { SAMPLE_EQUIPMENT } from '@/pages/EquipmentDetail';
+import React from
+  'react';
+import { render, screen, fireEvent, act } from
+  '@testing-library/react';
+import
+  '@testing-library/jest-dom';
+import EquipmentDetail, { SAMPLE_EQUIPMENT } from
+  '@/pages/EquipmentDetail';
 
 // Mock functions need to be declared before they are used in mock factories
 const mockNavigate = jest.fn();
@@ -12,31 +16,38 @@ const mockInfoFnForToast = jest.fn();
 const mockSuccessFnForToast = jest.fn();
 
 // Mock dependencies
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
+jest.mock(
+  'react-router-dom', () => ({
+  ...jest.requireActual(
+  'react-router-dom'),
   useParams: jest.fn(),
   useNavigate: () => mockNavigate, // This pattern works because mockNavigate is returned by a function
   useLocation: jest.fn(),
 }));
 
-jest.mock('@/hooks/useAuth', () => ({
+jest.mock(
+  '@/hooks/useAuth', () => ({
   useAuth: jest.fn(),
 }));
 
-jest.mock('@/context/CartContext', () => ({
+jest.mock(
+  '@/context/CartContext', () => ({
   useCart: jest.fn(),
 }));
 
 // Revised mock for use-toast to avoid ReferenceError
-jest.mock('@/hooks/use-toast', () => ({
+jest.mock(
+  '@/hooks/use-toast', () => ({
   toast: {
     info: (...args: unknown[]) => mockInfoFnForToast(...args), // Changed any[] to unknown[]
     success: (...args: unknown[]) => mockSuccessFnForToast(...args), // Changed any[] to unknown[]
   },
 }));
 
-describe('EquipmentDetail - Add To Cart', () => {
-  const testProductId = 'pro-camera-x1000';
+describe(
+  'EquipmentDetail - Add To Cart', () => {
+  const testProductId =
+  'pro-camera-x1000';
   const originalSampleEquipment = JSON.parse(JSON.stringify(SAMPLE_EQUIPMENT));
 
   beforeEach(() => {
@@ -57,39 +68,51 @@ describe('EquipmentDetail - Add To Cart', () => {
     if (!SAMPLE_EQUIPMENT[testProductId]) {
       SAMPLE_EQUIPMENT[testProductId] = {
         id: testProductId,
-        name: 'Test Pro Camera',
-        description: 'Test camera description.',
-        brand: 'TestBrand',
-        category: 'Cameras',
-        images: ['/images/equipment-placeholder.svg'],
+        name:,
+  Test Pro Camera',
+        description: 'Test camera description.,
+        brand:,
+  TestBrand',
+        category: 'Cameras,
+        images: [
+  '/images/equipment-placeholder.svg'],
         price: 100,
-        currency: '$',
+        currency:
+  '$',
         inStock: true,
         specifications: [],
         features: [],
         rating: 4.5,
         reviewCount: 10,
-        expectedShipping: '1 day',
-        warranty: '1 year',
-        returnPolicy: '30 days',
+        expectedShipping:,
+  1 day',
+        warranty: '1 year,
+        returnPolicy:
+  '30 days',
       };
     }
 
-    require('react-router-dom').useParams.mockReturnValue({
+    require(
+  'react-router-dom').useParams.mockReturnValue({
       id: testProductId,
     });
-    require('react-router-dom').useLocation.mockReturnValue({
+    require(
+  'react-router-dom').useLocation.mockReturnValue({
       pathname: `/equipment/${testProductId}`,
-      search: '?from=test',
+      search:
+  '?from=test',
     });
-    require('@/context/CartContext').useCart.mockReturnValue({
+    require(
+  '@/context/CartContext').useCart.mockReturnValue({
       items: [],
       dispatch: mockDispatch,
     });
   });
 
-  test('unauthenticated user clicking "Add to Cart" is redirected to login and shown a toast', async () => {
-    require('@/hooks/useAuth').useAuth.mockReturnValue({
+  test(
+  'unauthenticated user clicking "Add to Cart" is redirected to login and shown a toast', async () => {
+    require(
+  '@/hooks/useAuth').useAuth.mockReturnValue({
       isAuthenticated: false,
       user: null,
       isLoading: false,
@@ -97,7 +120,8 @@ describe('EquipmentDetail - Add To Cart', () => {
 
     render(<EquipmentDetail />);
 
-    const addToCartButton = screen.getByRole('button', {
+    const addToCartButton = screen.getByRole(
+  'button', {
       name: /add to cart/i,
     });
     await act(async () => {
@@ -114,23 +138,27 @@ describe('EquipmentDetail - Add To Cart', () => {
 
     expect(mockInfoFnForToast).toHaveBeenCalledTimes(1);
     expect(mockInfoFnForToast).toHaveBeenCalledWith(
-      'Please log in to add items to your cart.'
+  'Please log in to add items to your cart.'
     );
 
     expect(mockDispatch).not.toHaveBeenCalled();
     expect(mockSuccessFnForToast).not.toHaveBeenCalled();
   });
 
-  test('authenticated user clicking "Add to Cart" adds item and shows success toast', async () => {
-    require('@/hooks/useAuth').useAuth.mockReturnValue({
+  test(
+  'authenticated user clicking "Add to Cart" adds item and shows success toast', async () => {
+    require(
+  '@/hooks/useAuth').useAuth.mockReturnValue({
       isAuthenticated: true,
-      user: { id: 'test-user' },
+      user: { id:
+  'test-user' },
       isLoading: false,
     });
 
     render(<EquipmentDetail />);
 
-    const addToCartButton = screen.getByRole('button', {
+    const addToCartButton = screen.getByRole(
+  'button', {
       name: /add to cart/i,
     });
 
@@ -143,7 +171,8 @@ describe('EquipmentDetail - Add To Cart', () => {
 
     expect(mockDispatch).toHaveBeenCalledTimes(1);
     expect(mockDispatch).toHaveBeenCalledWith({
-      type: 'ADD_ITEM',
+      type:
+  'ADD_ITEM',
       payload: {
         id: product.id,
         name: product.name,
@@ -158,7 +187,8 @@ describe('EquipmentDetail - Add To Cart', () => {
     );
 
     expect(mockNavigate).not.toHaveBeenCalledWith(
-      expect.stringContaining('/login')
+      expect.stringContaining(
+  '/login')
     );
     expect(mockInfoFnForToast).not.toHaveBeenCalled();
   });

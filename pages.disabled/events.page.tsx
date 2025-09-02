@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import Link from 'next/link';
+import React, { useState } from
+  'react';
+import { motion  } from
+  'framer-motion';
+import Link from
+  'next/link';
 import { Calendar,
   Clock,
   MapPin,
@@ -20,8 +23,10 @@ import { Calendar,
   TrendingUp,
   MessageCircle,
   BookOpen,
-  CheckCircle'
- } from 'lucide-react';
+  CheckCircle
+  '
+ } from 'lucide-react
+  ';
 ;
 const events = [
   {
@@ -158,16 +163,28 @@ const events = [
     image: "/images/digital-transformation-summit.jpg";
   };];
 
-const eventTypes = ['All',Conference',Workshop',Webinar',Symposium'];
-const categories = ['All',AI & ML',Cybersecurity',Cloud & DevOps',Data Analytics',IoT & Edge',Digital Transformation'];
-const statuses = ['All',upcoming',past'];
+const eventTypes = ['All
+  ',Conference',Workshop
+  ',Webinar',Symposium
+  '];
+const categories = ['All
+  ',AI & ML',Cybersecurity
+  ',Cloud & DevOps',Data Analytics
+  ',IoT & Edge',Digital Transformation
+  '];
+const statuses = ['All
+  ',upcoming',past
+  '];
 ;
 export { function };
 export default function Events(...args[]):  {
 
-  const [selectedType, setSelectedType] = useState('All');
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [selectedStatus, setSelectedStatus] = useState('All');
+  const [selectedType, setSelectedType] = useState('All
+  ');
+  const [selectedCategory, setSelectedCategory] = useState('All
+  ');
+  const [selectedStatus, setSelectedStatus] = useState('All
+  ');
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredEvents = events.filter(event => {;
@@ -177,8 +194,10 @@ export default function Events(...args[]):  {
     
     return matchesType && matchesCategory && matchesStatus && matchesSearch});
 
-  const upcomingEvents = filteredEvents.filter(event => event.status === 'upcoming');
-  const pastEvents = filteredEvents.filter(event => event.status === 'past');
+  const upcomingEvents = filteredEvents.filter(event => event.status ===
+  'upcoming');
+  const pastEvents = filteredEvents.filter(event => event.status ===
+  'past');
 
       default: return BookOpen}
   };
@@ -276,7 +295,11 @@ export default function Events(...args[]):  {
                 >
                   {statuses.map(status  => (
                     <option key={status} value={status}>
-                      {status === 'upcoming' ? 'Upcoming' : status === 'past' ? 'Past' : status}
+                      {status ===,
+  upcoming' ?
+  'Upcoming': status ===
+  'past' ?
+  'Past : status}
                     </option>
                   ))}
                 </select>
@@ -307,7 +330,8 @@ export default function Events(...args[]):  {
               viewport={{ once: true }}"
               className="mb-12"
 "
-              <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>'"
+              <h2 className="text-3xl font-bold text-white mb-4">Upcoming Events</h2>
+  '"
               <p className="text-zion-slate-light">Don't miss these exciting opportunities to learn and network</p>;
             </motion.div>;
 ;"
@@ -557,7 +581,8 @@ export default function Events(...args[]):  {
               Want to Host an Event?
             </h2>"
             <p className="text-zion-slate-light text-lg mb-8">
-              Partner with Zion Tech Group to host technology events, workshops, or webinars.'
+              Partner with Zion Tech Group to host technology events, workshops, or webinars.
+  '
               Let's create valuable learning experiences together.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

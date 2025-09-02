@@ -40,7 +40,8 @@ import {}
   Calculator,
   PieChart,
   Target,
-  AlertTriangle} from 'lucide-react';
+  AlertTriangle} from
+  'lucide-react';
 
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
 export default function CloudFinOpsOptimizer() {
@@ -245,7 +246,8 @@ export default function CloudFinOpsOptimizer() {
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
               Perfect For Your Organization"
             </h2>""
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">'
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
+  '
               Whether you're a startup or enterprise, our FinOps solution scales
               with your needs
             </p>
@@ -311,5 +313,6 @@ export default function CloudFinOpsOptimizer() {
       </section>
     </div>
 :pages.disabled/pages/services/cloud-finops-optimizer.tsx
-  )}'"
+  )}
+  '"
 '"'"
