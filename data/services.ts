@@ -59,6 +59,253 @@ export const services: Service[] = [
     icon: '📝'
   },
   {
+    id: 'ai-contract-clause-checker',
+    name: 'AI Contract Clause Checker',
+    category: 'micro-saas',
+    description: 'Instantly review contracts for risky clauses, missing terms, and compliance issues with explainable AI suggestions.',
+    features: [
+      'Risky clause detection and highlights',
+      'Jurisdiction-aware templates',
+      'Playbook and fallback language library',
+      'Version comparison and redlines',
+      'Export to DOCX/PDF',
+      'Secure data handling and audit log',
+      'API for CLM integration',
+      'Multi-language support'
+    ],
+    pricing: { starter: 39, professional: 99, enterprise: 299, currency: 'USD' },
+    benefits: [
+      'Reduce legal review time by 60%',
+      'Improve compliance and reduce risk',
+      'Enable business teams to self-serve',
+      'Lower outside counsel costs'
+    ],
+    useCases: ['Sales contract review', 'Vendor agreements', 'DPAs and NDAs', 'MSAs and SOWs'],
+    technologies: ['OpenAI', 'RAG', 'Vector DB', 'React', 'Node.js'],
+    link: 'https://ziontechgroup.com/services/ai-contract-clause-checker',
+    icon: '⚖️'
+  },
+  {
+    id: 'customer-feedback-analyzer',
+    name: 'Customer Feedback Analyzer',
+    category: 'micro-saas',
+    description: 'Aggregate app reviews, NPS, tickets, and social mentions into one AI-structured insight hub with themes and priorities.',
+    features: [
+      'Unified feedback ingestion',
+      'Topic and sentiment clustering',
+      'Impact vs effort prioritization',
+      'Release note generator',
+      'Slack/Jira bi-directional sync',
+      'Dashboards and alerts',
+      'Multi-brand and locale support',
+      'Data export/API'
+    ],
+    pricing: { starter: 29, professional: 79, enterprise: 249, currency: 'USD' },
+    benefits: ['Faster product decisions', 'Higher CSAT/NPS', 'Less manual tagging', 'Clear roadmap inputs'],
+    useCases: ['Product ops', 'Support ops', 'Marketing insights', 'Voice of customer'],
+    technologies: ['NLP', 'Embeddings', 'React', 'Node.js', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/customer-feedback-analyzer',
+    icon: '🗣️'
+  },
+  {
+    id: 'invoice-processing-automation',
+    name: 'Invoice Processing Automation',
+    category: 'micro-saas',
+    description: 'Extract, validate, and reconcile invoices from email and portals with 2/3-way PO matching and ERP sync.',
+    features: [
+      'Document capture and OCR',
+      'Key-value extraction and validation',
+      'PO and receipt matching',
+      'Duplicate and fraud detection',
+      'Approval workflows',
+      'ERP connectors (NetSuite, SAP, QuickBooks)',
+      'Exception handling queue',
+      'Audit trail and reports'
+    ],
+    pricing: { starter: 49, professional: 149, enterprise: 399, currency: 'USD' },
+    benefits: ['Cut AP processing cost 50%+', 'Faster closing', 'Fewer errors', 'Better cash visibility'],
+    useCases: ['Accounts payable', 'Shared service centers', 'Procurement', 'Finance ops'],
+    technologies: ['OCR', 'OpenAI', 'ETL', 'React', 'Node.js'],
+    link: 'https://ziontechgroup.com/services/invoice-processing-automation',
+    icon: '🧾'
+  },
+  {
+    id: 'no-code-data-pipelines',
+    name: 'No‑Code Data Pipelines',
+    category: 'micro-saas',
+    description: 'Drag-and-drop pipelines to move and transform data between SaaS apps, warehouses, and lakes with governance.',
+    features: [
+      'Visual pipeline builder',
+      'Prebuilt connectors',
+      'Scheduled and event-driven runs',
+      'Data quality checks',
+      'Schema evolution handling',
+      'Credential vault and RBAC',
+      'Observability and retries',
+      'Versioning and change review'
+    ],
+    pricing: { starter: 59, professional: 199, enterprise: 799, currency: 'USD' },
+    benefits: ['Ship integrations faster', 'Reduce engineering toil', 'Reliable pipelines', 'Lower TCO'],
+    useCases: ['RevOps integrations', 'Analytics ingestion', 'Back-office automation', 'Data sharing'],
+    technologies: ['dbt', 'Airflow', 'Fivetran-style', 'React', 'Node.js'],
+    link: 'https://ziontechgroup.com/services/no-code-data-pipelines',
+    icon: '🧩'
+  },
+  {
+    id: 'ai-video-subtitle-generator',
+    name: 'AI Video Subtitle Generator',
+    category: 'micro-saas',
+    description: 'Auto-generate multilingual, brand-styled subtitles and captions for marketing and training videos with high accuracy.',
+    features: [
+      'High-accuracy transcription',
+      'Speaker diarization',
+      'On-brand style templates',
+      '40+ languages and locales',
+      'Burn-in and SRT/VTT export',
+      'Batch processing',
+      'Team collaboration',
+      'YouTube/Vimeo/TikTok integrations'
+    ],
+    pricing: { starter: 15, professional: 49, enterprise: 199, currency: 'USD' },
+    benefits: ['Faster localization', 'Accessible content', 'Higher engagement', 'Lower editing cost'],
+    useCases: ['Marketing teams', 'Course creators', 'Internal training', 'Agencies'],
+    technologies: ['Whisper', 'FFmpeg', 'React', 'Node.js', 'GPU'],
+    link: 'https://ziontechgroup.com/services/ai-video-subtitle-generator',
+    icon: '🎬'
+  },
+  {
+    id: 'zero-trust-network-deployment',
+    name: 'Zero Trust Network Deployment',
+    category: 'it-services',
+    description: 'Design and roll out zero-trust architectures with identity-aware access, micro-segmentation, and continuous verification.',
+    features: [
+      'Current-state assessment',
+      'Identity and device posture',
+      'Policy and micro-segmentation',
+      'Secure access to apps and data',
+      'MFA/SSO rollout',
+      'SIEM/SOAR integrations',
+      'Runbooks and training',
+      'Ongoing monitoring'
+    ],
+    pricing: { starter: 25000, professional: 90000, enterprise: 250000, currency: 'USD' },
+    benefits: ['Reduce lateral movement risk', 'Meet compliance goals', 'Stronger security posture', 'Better user experience'],
+    useCases: ['Remote workforce', 'Hybrid cloud', 'Regulated industries', 'High-value assets'],
+    technologies: ['Okta', 'Zscaler', 'CrowdStrike', 'Azure AD', 'Kubernetes'],
+    link: 'https://ziontechgroup.com/services/zero-trust-network-deployment',
+    icon: '🔒'
+  },
+  {
+    id: 'managed-kubernetes-platform',
+    name: 'Managed Kubernetes Platform Engineering',
+    category: 'it-services',
+    description: 'Platform engineering for Kubernetes with GitOps, golden paths, cost governance, and secure multi-tenant clusters.',
+    features: [
+      'Cluster landing zone',
+      'GitOps with Argo CD/Flux',
+      'Golden path developer portals',
+      'Network and policy baselines',
+      'Observability and SLOs',
+      'FinOps guardrails',
+      'Backup and DR',
+      'Playbooks and enablement'
+    ],
+    pricing: { starter: 40000, professional: 120000, enterprise: 300000, currency: 'USD' },
+    benefits: ['Faster delivery', 'Secure by default', 'Predictable costs', 'Happier developers'],
+    useCases: ['Microservices estates', 'Data platforms', 'ML workloads', 'Edge'],
+    technologies: ['Kubernetes', 'Terraform', 'Argo CD', 'Istio', 'Grafana'],
+    link: 'https://ziontechgroup.com/services/managed-kubernetes-platform',
+    icon: '☸️'
+  },
+  {
+    id: 'data-platform-modernization',
+    name: 'Data Platform Modernization Assessment',
+    category: 'it-services',
+    description: 'Comprehensive assessment to modernize your data platform across ingestion, storage, transformation, governance, and BI.',
+    features: [
+      'Current-state review',
+      'Architecture blueprint',
+      'Cost and performance analysis',
+      'Security and compliance review',
+      'Roadmap and quick wins',
+      'Pilot implementation',
+      'Change management',
+      'Executive briefing'
+    ],
+    pricing: { starter: 18000, professional: 60000, enterprise: 180000, currency: 'USD' },
+    benefits: ['Lower data latency', 'Reduced spend', 'Higher trust and adoption', 'Faster insights'],
+    useCases: ['Warehouse to lakehouse', 'Marketing data hub', 'Realtime analytics', 'Self-serve BI'],
+    technologies: ['Snowflake', 'BigQuery', 'Databricks', 'dbt', 'Airflow'],
+    link: 'https://ziontechgroup.com/services/data-platform-modernization',
+    icon: '🗄️'
+  },
+  {
+    id: 'genai-customer-support-agent',
+    name: 'GenAI Customer Support Agent',
+    category: 'ai-services',
+    description: 'Deploy source-grounded AI agents that deflect tickets, resolve issues, and hand off with full context to human agents.',
+    features: [
+      'Omnichannel chat and email',
+      'Citations and step validation',
+      'Escalation with context packs',
+      'PII redaction and guardrails',
+      'Multi-lingual support',
+      'CS platform integrations',
+      'A/B experiments and analytics',
+      'Human-in-the-loop review'
+    ],
+    pricing: { starter: 7000, professional: 25000, enterprise: 150000, currency: 'USD' },
+    benefits: ['Lower handle time', 'Higher first-contact resolution', 'Happier customers', 'Lower cost per ticket'],
+    useCases: ['E-commerce support', 'SaaS troubleshooting', 'Telecom billing', 'Banking FAQs'],
+    technologies: ['RAG', 'OpenAI', 'LangChain', 'Next.js', 'Zendesk/Freshdesk'],
+    link: 'https://ziontechgroup.com/services/genai-customer-support-agent',
+    icon: '🤝'
+  },
+  {
+    id: 'document-intelligence-suite',
+    name: 'Document Intelligence Suite',
+    category: 'ai-services',
+    description: 'End-to-end document AI for extraction, classification, validation, and workflows across PDFs, scans, and forms.',
+    features: [
+      'Layout-aware extraction',
+      'Few-shot customization',
+      'Document classification',
+      'Business rule validation',
+      'Human review UI',
+      'ERP/CRM integrations',
+      'Monitoring and QA',
+      'Security and compliance'
+    ],
+    pricing: { starter: 8000, professional: 30000, enterprise: 180000, currency: 'USD' },
+    benefits: ['Reduce manual entry', 'Faster SLAs', 'Higher accuracy', 'Scalable automation'],
+    useCases: ['KYC/AML', 'Claims intake', 'Loan processing', 'HR onboarding'],
+    technologies: ['Transformers', 'OCR', 'Python', 'React', 'Node.js'],
+    link: 'https://ziontechgroup.com/services/document-intelligence-suite',
+    icon: '📄'
+  },
+  {
+    id: 'predictive-maintenance-iot',
+    name: 'Predictive Maintenance for IoT Fleets',
+    category: 'ai-services',
+    description: 'Sensor-driven predictive maintenance to reduce unplanned downtime with anomaly detection and failure prediction.',
+    features: [
+      'Edge and cloud ingestion',
+      'Feature engineering for time series',
+      'Anomaly and failure models',
+      'Maintenance scheduling',
+      'Technician mobile app',
+      'CMMS/ERP integrations',
+      'Drift monitoring',
+      'ROI dashboards'
+    ],
+    pricing: { starter: 12000, professional: 60000, enterprise: 250000, currency: 'USD' },
+    benefits: ['Reduce downtime 20–40%', 'Lower spare part costs', 'Higher asset life', 'Safer operations'],
+    useCases: ['Manufacturing lines', 'Wind turbines', 'Fleet vehicles', 'Mining equipment'],
+    technologies: ['IoT', 'Time-series ML', 'Azure/AWS IoT', 'Grafana', 'Airflow'],
+    link: 'https://ziontechgroup.com/services/predictive-maintenance-iot',
+    icon: '⚙️'
+  },
+  {
     id: 'ai-meeting-notes-assistant',
     name: 'AI Meeting Notes Assistant',
     category: 'micro-saas',
@@ -5873,6 +6120,352 @@ export const services: Service[] = [
     technologies: ['Python', 'Prophet', 'NeuralForecast', 'dbt', 'Snowflake/BigQuery'],
     link: 'https://ziontechgroup.com/services/ai-sales-forecasting-suite',
     icon: '📈'
+  },
+  {
+    id: 'ai-compliance-monitoring-suite',
+    name: 'AI Compliance Monitoring Suite',
+    category: 'ai-services',
+    description: 'Automated monitoring for SOC 2, HIPAA, and GDPR controls with evidence collection and auditor-ready reports.',
+    features: [
+      'Continuous control monitoring',
+      'Automated evidence capture',
+      'Policy change detection',
+      'Vendor risk scoring',
+      'Real-time alerts and dashboards',
+      'Auditor collaboration workspace',
+      'API and SIEM integrations',
+      'Report exports (PDF/CSV)'
+    ],
+    pricing: { starter: 8000, professional: 30000, enterprise: 120000, currency: 'USD' },
+    benefits: [
+      'Reduce audit preparation time by 70%',
+      'Lower compliance risk',
+      'Single source of truth for controls',
+      'Auditor-ready evidence'
+    ],
+    useCases: ['SOC 2 Type I/II readiness', 'HIPAA compliance', 'GDPR DPIA tracking', 'Vendor risk management'],
+    technologies: ['OpenAI', 'Supabase/Postgres', 'Node.js', 'React', 'SIEM APIs'],
+    link: 'https://ziontechgroup.com/services/ai-compliance-monitoring-suite',
+    icon: '✅'
+  },
+  {
+    id: 'mlops-foundation-pack',
+    name: 'MLOps Foundation Pack',
+    category: 'it-services',
+    description: 'Production-grade MLOps setup with feature store, CI/CD for models, monitoring, and governance.',
+    features: [
+      'Model registry and versioning',
+      'Feature store setup',
+      'CI/CD pipelines for training and deploy',
+      'Data and model lineage',
+      'Model performance monitoring',
+      'Shadow/canary deployments',
+      'RBAC and audit trails',
+      'Playbooks and enablement'
+    ],
+    pricing: { starter: 25000, professional: 90000, enterprise: 250000, currency: 'USD' },
+    benefits: [
+      'Faster model time-to-production',
+      'Reduced operational risk',
+      'Repeatable, governed workflows',
+      'Improved reliability of ML systems'
+    ],
+    useCases: ['Forecasting platforms', 'Recommendation engines', 'Fraud detection', 'NLP copilots'],
+    technologies: ['Docker/K8s', 'MLflow', 'dbt', 'Argo/GitHub Actions', 'Prometheus/Grafana'],
+    link: 'https://ziontechgroup.com/services/mlops-foundation-pack',
+    icon: '🧰'
+  },
+  {
+    id: 'ai-knowledge-base-copilot',
+    name: 'AI Knowledge Base Copilot',
+    category: 'micro-saas',
+    description: 'Self-serve AI assistant that answers from your docs, tickets, and wikis with citations and guardrails.',
+    features: [
+      'RAG with citations',
+      'Connector library (Confluence, Notion, Zendesk)',
+      'Feedback loops and fine-tuning',
+      'Admin console with redaction',
+      'Multilingual support',
+      'Embeddings and vector search',
+      'Access controls and SSO',
+      'Analytics and deflection rates'
+    ],
+    pricing: { starter: 39, professional: 129, enterprise: 399, currency: 'USD' },
+    benefits: ['Higher case deflection', 'Faster onboarding', 'Consistent answers with sources', 'Reduced support costs'],
+    useCases: ['Customer support portals', 'Internal IT helpdesk', 'Partner enablement', 'Product documentation'],
+    technologies: ['OpenAI', 'Vector DB', 'Next.js', 'Node.js', 'SSO/OAuth'],
+    link: 'https://ziontechgroup.com/services/ai-knowledge-base-copilot',
+    icon: '📚'
+  },
+  {
+    id: 'cloud-cost-optimizer',
+    name: 'Cloud Cost Optimizer',
+    category: 'it-services',
+    description: 'FinOps assessment and automation to reduce AWS, GCP, and Azure spend without sacrificing performance.',
+    features: [
+      'Billing and usage analysis',
+      'Right-sizing and auto-scheduling',
+      'Reserved/Savings Plans modeling',
+      'Storage and data transfer optimization',
+      'Kubernetes cost allocation',
+      'Alerting and anomaly detection',
+      'Monthly optimization reports',
+      'Automation-as-code delivery'
+    ],
+    pricing: { starter: 5000, professional: 20000, enterprise: 80000, currency: 'USD' },
+    benefits: ['Cut 20–40% of cloud spend', 'Visibility by team/service', 'No performance regression', 'Continuous savings'],
+    useCases: ['SaaS platforms', 'Data pipelines', 'Ecommerce workloads', 'ML training clusters'],
+    technologies: ['AWS/GCP/Azure', 'Kubecost', 'Terraform', 'BigQuery/Athena', 'Looker/Data Studio'],
+    link: 'https://ziontechgroup.com/services/cloud-cost-optimizer',
+    icon: '💸'
+  },
+  {
+    id: 'ai-security-copilot-managed',
+    name: 'AI Security Copilot (Managed)',
+    category: 'ai-services',
+    description: 'Managed AI assistant for SecOps that triages alerts, summarizes incidents, and suggests playbooks.',
+    features: [
+      'Alert triage and deduplication',
+      'Incident summarization',
+      'Playbook recommendations',
+      'SOAR ticket enrichment',
+      'Threat intel enrichment',
+      'Knowledge base citations',
+      'SOC metrics and QA',
+      'On-prem or SaaS options'
+    ],
+    pricing: { starter: 12000, professional: 45000, enterprise: 180000, currency: 'USD' },
+    benefits: ['Faster MTTR', 'Reduced alert fatigue', 'Consistent response', 'Improved analyst productivity'],
+    useCases: ['SOC augmentation', 'Managed detection and response', 'IR playbook automation'],
+    technologies: ['SIEM/SOAR', 'RAG', 'OpenAI', 'K8s', 'Elasticsearch'],
+    link: 'https://ziontechgroup.com/services/ai-security-copilot-managed',
+    icon: '🛡️'
+  },
+  {
+    id: 'sales-enablement-studio',
+    name: 'Sales Enablement Studio',
+    category: 'micro-saas',
+    description: 'Personalized microsites, proposals, and ROI calculators auto-generated for every prospect with analytics.',
+    features: [
+      'Prospect microsite generator',
+      'ROI calculator builder',
+      'Proposal templates with e-sign',
+      'CRM and MAP integrations',
+      'AI copy and design suggestions',
+      'Engagement analytics',
+      'ABM asset personalization',
+      'Team collaboration'
+    ],
+    pricing: { starter: 59, professional: 149, enterprise: 399, currency: 'USD' },
+    benefits: ['Higher win rates', 'Shorter sales cycles', 'On-brand experiences at scale', 'Deal intelligence'],
+    useCases: ['B2B SaaS sales', 'Agencies', 'Channel/partner sales', 'Enterprise pursuits'],
+    technologies: ['Next.js', 'Stripe', 'HubSpot/Salesforce', 'OpenAI'],
+    link: 'https://ziontechgroup.com/services/sales-enablement-studio',
+    icon: '🧾'
+  }
+  ,
+  {
+    id: 'gdpr-dsar-portal',
+    name: 'GDPR/DSAR Request Portal',
+    category: 'micro-saas',
+    description: 'Self-serve data subject access request (DSAR) intake, verification, fulfillment workflows, and auditor-ready logs.',
+    features: [
+      'Secure request intake forms',
+      'Identity verification and consent tracking',
+      'Automated data export across systems',
+      'Deadline and SLA management',
+      'Redaction tools and legal holds',
+      'Auditable activity history',
+      'Email templates and status portal',
+      'API and webhook integrations'
+    ],
+    pricing: { starter: 49, professional: 149, enterprise: 499, currency: 'USD' },
+    benefits: [
+      'Reduce compliance workload',
+      'Meet GDPR/CCPA deadlines',
+      'Improve data privacy posture',
+      'Lower legal risk'
+    ],
+    useCases: ['SaaS vendors', 'E‑commerce', 'Healthcare providers', 'Financial services'],
+    technologies: ['Node.js', 'React', 'PostgreSQL', 'S3', 'KMS'],
+    link: 'https://ziontechgroup.com/services/gdpr-dsar-portal',
+    icon: '🛡️'
+  },
+  {
+    id: 'price-intelligence-monitor',
+    name: 'Price Intelligence Monitor',
+    category: 'micro-saas',
+    description: 'Competitor price monitoring, MAP violations alerts, and automated repricing recommendations for retail and D2C.',
+    features: [
+      'Competitor product matching',
+      'MAP policy detection',
+      'Dynamic pricing recommendations',
+      'Channel breakouts and reports',
+      'Alerting and anomaly detection',
+      'API and Google Sheets sync',
+      'Scheduled crawls',
+      'Dashboard and exports'
+    ],
+    pricing: { starter: 79, professional: 199, enterprise: 599, currency: 'USD' },
+    benefits: ['Protect margins', 'React to market changes', 'Reduce manual tracking', 'Win Buy Box more often'],
+    useCases: ['Retailers', 'Brands', 'Distributors', 'Marketplaces'],
+    technologies: ['Headless browsers', 'Cheerio', 'Node.js', 'PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/price-intelligence-monitor',
+    icon: '💹'
+  },
+  {
+    id: 'micro-crm-lite',
+    name: 'Micro CRM Lite',
+    category: 'micro-saas',
+    description: 'Lightweight CRM with pipeline, email tracking, and AI assist for SMBs wanting simplicity over bloat.',
+    features: [
+      'Kanban pipeline',
+      'Email tracking and templates',
+      'Contact enrichment',
+      'Basic reporting',
+      'AI drafting suggestions',
+      'Zapier/Make integrations',
+      'CSV import/export',
+      'Mobile-friendly UI'
+    ],
+    pricing: { starter: 19, professional: 49, enterprise: 129, currency: 'USD' },
+    benefits: ['Faster deal cycles', 'Lower tool cost', 'Team adoption increases', 'Zero heavy setup'],
+    useCases: ['Agencies', 'Consultancies', 'Local services', 'Freelancers'],
+    technologies: ['React', 'Node.js', 'SQLite/PostgreSQL'],
+    link: 'https://ziontechgroup.com/services/micro-crm-lite',
+    icon: '📇'
+  },
+  {
+    id: 'cloud-finops-optimizer',
+    name: 'Cloud FinOps Optimizer',
+    category: 'it-services',
+    description: 'Assessment and implementation to cut cloud costs using rightsizing, savings plans, storage classes, and architecture changes.',
+    features: [
+      'Spend analysis and tagging hygiene',
+      'Rightsizing and autoscaling plans',
+      'Savings plans and reservations',
+      'Storage lifecycle and archive strategy',
+      'Idle/underused resource cleanup',
+      'Cost guardrails and budgets',
+      'Dashboards and alerts',
+      'Hands-on remediation'
+    ],
+    pricing: { starter: 8000, professional: 20000, enterprise: 75000, currency: 'USD' },
+    benefits: ['Cut 20–45% cloud spend', 'Faster ROI', 'Predictable budgets', 'Better tagging governance'],
+    useCases: ['AWS/GCP/Azure estates', 'Kubernetes clusters', 'Data platforms', 'SaaS infra'],
+    technologies: ['AWS/GCP/Azure', 'Terraform', 'Kubernetes', 'Cost Explorer/BigQuery'],
+    link: 'https://ziontechgroup.com/services/cloud-finops-optimizer',
+    icon: '☁️'
+  },
+  {
+    id: 'zero-trust-rollout',
+    name: 'Zero Trust Security Rollout',
+    category: 'it-services',
+    description: 'Design and implement zero trust across identity, devices, networks, and workloads to reduce breach risk.',
+    features: [
+      'Identity-centric segmentation',
+      'MFA, PAM, and SSO hardening',
+      'Device posture and EDR integration',
+      'Microsegmentation and policy',
+      'Secrets management and vaulting',
+      'Continuous verification',
+      'SIEM/SOAR integrations',
+      'Playbooks and training'
+    ],
+    pricing: { starter: 25000, professional: 95000, enterprise: 350000, currency: 'USD' },
+    benefits: ['Lower lateral movement', 'Audit-ready security', 'Reduced incident blast radius', 'Modernized access'],
+    useCases: ['Hybrid cloud', 'Remote workforce', 'Regulated industries', 'M&A transitions'],
+    technologies: ['Okta/AAD', 'ZTA gateways', 'EDR/MDM', 'HashiCorp Vault', 'Kubernetes'],
+    link: 'https://ziontechgroup.com/services/zero-trust-rollout',
+    icon: '🔐'
+  },
+  {
+    id: 'modern-data-mesh',
+    name: 'Modern Data Mesh Enablement',
+    category: 'it-services',
+    description: 'Standing up domain-oriented data products with governance, catalogs, and self-service analytics.',
+    features: [
+      'Domain modeling and contracts',
+      'Data product templates',
+      'Catalog, lineage, and quality SLAs',
+      'Streaming and batch ingestion',
+      'Semantic layer and metrics',
+      'Federated governance operating model',
+      'Observability and cost controls',
+      'Enablement and training'
+    ],
+    pricing: { starter: 35000, professional: 125000, enterprise: 400000, currency: 'USD' },
+    benefits: ['Faster analytics delivery', 'Higher data trust', 'Reduced bottlenecks', 'Reusable data products'],
+    useCases: ['Enterprise analytics', 'ML feature platforms', 'Finance and ops reporting'],
+    technologies: ['dbt', 'Open table formats', 'Airflow', 'Kafka', 'BI/semantic tools'],
+    link: 'https://ziontechgroup.com/services/modern-data-mesh',
+    icon: '🗂️'
+  },
+  {
+    id: 'rag-search-platform',
+    name: 'RAG Search Platform',
+    category: 'ai-services',
+    description: 'Retrieval-augmented generation search over your documents with citations, access control, and safety guardrails.',
+    features: [
+      'Connectors for Drive/SharePoint/Confluence',
+      'Chunking and embeddings optimization',
+      'Hybrid/vector search with filters',
+      'Citations and source previews',
+      'Role-based access control',
+      'Feedback loops and analytics',
+      'Admin console and red-teaming',
+      'APIs and chat widgets'
+    ],
+    pricing: { starter: 4000, professional: 18000, enterprise: 120000, currency: 'USD' },
+    benefits: ['Reduce search time', 'Trustworthy answers with sources', 'Knowledge reuse', 'Lower support volume'],
+    useCases: ['Internal knowledge bases', 'Support portals', 'Compliance wikis', 'Research teams'],
+    technologies: ['OpenAI/OSS LLMs', 'Vector DB', 'Node.js', 'React'],
+    link: 'https://ziontechgroup.com/services/rag-search-platform',
+    icon: '🔎'
+  },
+  {
+    id: 'custom-llm-fine-tuning',
+    name: 'Custom LLM Fine‑Tuning & Evaluation',
+    category: 'ai-services',
+    description: 'Dataset curation, supervised fine-tuning, preference optimization, eval harnesses, and deployment for your domain.',
+    features: [
+      'Data collection and cleaning',
+      'SFT/DPO/LoRA pipelines',
+      'Task-specific eval suites',
+      'Safety and bias checks',
+      'Latency and cost optimization',
+      'Serving and autoscaling',
+      'Monitoring and drift detection',
+      'Human-in-the-loop review'
+    ],
+    pricing: { starter: 15000, professional: 60000, enterprise: 300000, currency: 'USD' },
+    benefits: ['Higher task accuracy', 'Domain-aligned outputs', 'Lower inference cost', 'IP ownership'],
+    useCases: ['Customer support', 'Document Q&A', 'Agent workflows', 'Content generation'],
+    technologies: ['PyTorch', 'TRL', 'vLLM/TGI', 'Weights & Biases', 'Cloud GPUs'],
+    link: 'https://ziontechgroup.com/services/custom-llm-fine-tuning',
+    icon: '🧪'
+  },
+  {
+    id: 'mlops-foundations',
+    name: 'MLOps Foundations',
+    category: 'ai-services',
+    description: 'End-to-end MLOps setup covering data/versioning, CI/CD for models, feature stores, and observability.',
+    features: [
+      'Experiment tracking',
+      'Model registry and promotion gates',
+      'Feature store setup',
+      'CI/CD pipelines for ML',
+      'Canary and shadow deployments',
+      'Data validation and drift alerts',
+      'Cost and performance monitoring',
+      'Playbooks and enablement'
+    ],
+    pricing: { starter: 25000, professional: 90000, enterprise: 250000, currency: 'USD' },
+    benefits: ['Fewer failed releases', 'Faster iteration', 'Traceability and governance', 'Operational reliability'],
+    useCases: ['Recommendation systems', 'Forecasting', 'NLP/vision deployments', 'Personalization'],
+    technologies: ['MLflow', 'Feast', 'Kubeflow/Vertex/SageMaker', 'dbt', 'Airflow'],
+    link: 'https://ziontechgroup.com/services/mlops-foundations',
+    icon: '⚙️'
   }
 ];
 
