@@ -1,89 +1,55 @@
 import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import { services, getServicesByCategory } from '../data/services';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock } from 'lucide-react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '../components/SEO';
+import { Button } from '../components/ui/Button';
+import { Card } from '../components/ui/Card';
+import { Badge } from '../components/ui/Badge';
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, Brain, Cloud, Database, Network, Target, Phone, Mail } from 'lucide-react';
 
-const Home: NextPage = () => {
-  const microSaasServices = getServicesByCategory('micro-saas');
-  const itServices = getServicesByCategory('it-services');
-  const aiServices = getServicesByCategory('ai-services');
-
+const Home: React.FC = () => {
   const stats = [
-    { number: '500+', label: 'Projects Completed', icon: TrendingUp },
-    { number: '50+', label: 'Happy Clients', icon: Users },
-    { number: '99.9%', label: 'Uptime Guarantee', icon: Award },
-    { number: '24/7', label: 'Support Available', icon: Clock },
+    { number: '500+', label: 'Projects Completed' },
+    { number: '50+', label: 'Happy Clients' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'Support Available' },
+  ];
+
+  const services = [
+    {
+      title: "AI Services",
+      description: "Cutting-edge artificial intelligence solutions",
+      icon: Brain,
+      href: "/ai-services"
+    },
+    {
+      title: "IT Services", 
+      description: "Comprehensive information technology services",
+      icon: Network,
+      href: "/it-services"
+    },
+    {
+      title: "Micro SaaS",
+      description: "Scalable software as a service solutions",
+      icon: Cloud,
+      href: "/micro-saas"
+    }
   ];
 
   return (
-    <MainLayout>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="Zion Tech Group - Leading AI & Technology Solutions" 
+        description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results."
+      />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-black opacity-10"></div>
-        <div className="container mx-auto px-4 text-center relative z-10">
-          <motion.h1 
-            className="text-5xl md:text-6xl font-bold mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            Transform Your Business with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Zion Tech Group</span>
-          </motion.h1>
-          <motion.p 
-            className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Leading technology solutions provider helping businesses transform their digital presence 
-            with cutting-edge AI, cloud architecture, and innovative development services.
-          </motion.p>
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105 hover:shadow-lg">
-              Get Started Today
-            </Link>
-            <Link href="/services" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-all duration-300 cursor-pointer inline-block text-lg hover:scale-105">
-              Explore Services
-            </Link>
-          </motion.div>
-
-          {/* Enhanced Stats */}
-          <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <motion.div 
-                  key={stat.label}
-                  className="text-center group"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <div className="flex justify-center mb-2">
-                    <IconComponent className="w-8 h-8 text-blue-400 group-hover:text-purple-400 transition-colors" />
-                  </div>
-                  <div className="text-3xl font-bold text-blue-400 group-hover:text-purple-400 transition-colors">{stat.number}</div>
-                  <div className="text-gray-300">{stat.label}</div>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+      <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20 overflow-hidden">
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
+          <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
         </div>
-      </section>
 
       {/* Services Overview */}
       <section className="py-20 bg-gray-50">
@@ -305,7 +271,7 @@ const Home: NextPage = () => {
           </motion.div>
         </div>
       </section>
-    </MainLayout>
+    </div>
   );
 };
 
