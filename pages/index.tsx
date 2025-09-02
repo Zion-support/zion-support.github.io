@@ -16,21 +16,24 @@ export default function Home() {
   const services = [
     {
       title: 'AI Services',
-      description: 'Cutting-edge artificial intelligence solutions',
+      description: 'Revolutionary AI solutions including autonomous systems, machine learning, and intelligent automation',
       icon: Brain,
-      href: '/services/ai-services'
+      href: '/ai-services',
+      features: ['AI-Powered Drug Discovery', 'Quantum Computing Interface', 'Climate Analytics', 'Space Analytics']
     },
     {
       title: 'IT Services',
-      description: 'Comprehensive information technology services',
+      description: 'Comprehensive IT infrastructure, cybersecurity, cloud solutions, and digital transformation',
       icon: Network,
-      href: '/services/it-services'
+      href: '/it-services',
+      features: ['Zero Trust Security', 'Edge Computing', 'Digital Twin Platforms', 'Hyperautomation']
     },
     {
       title: 'Micro SaaS',
-      description: 'Scalable software as a service solutions',
+      description: 'Innovative micro SaaS solutions for modern businesses with rapid deployment',
       icon: Cloud,
-      href: '/services/micro-saas'
+      href: '/micro-saas',
+      features: ['Affiliate Marketing Tracker', 'Contract Management', 'Video Content Generator', 'Energy Management']
     }
   ];
 
@@ -125,9 +128,22 @@ export default function Home() {
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">{service.title}</h3>
                   <p className="text-gray-600 mb-6 text-center">{service.description}</p>
+                  
+                  {/* Featured Services */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-700 mb-3">Featured Solutions:</h4>
+                    <div className="grid grid-cols-2 gap-2">
+                      {service.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                          {feature}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
                   <Link href={service.href} className="block">
                     <div className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center">
-                      Learn More
+                      Explore Services
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </Link>
@@ -157,6 +173,85 @@ export default function Home() {
                   <p className="text-gray-600">{feature.description}</p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing & Contact Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Competitive Pricing & Expert Support</h2>
+              <p className="text-lg text-gray-600">
+                Transparent pricing with flexible solutions tailored to your business needs
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {/* Pricing Highlights */}
+              <div className="bg-white rounded-lg p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Service Pricing Ranges</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                    <span className="text-gray-700">Micro SaaS Solutions</span>
+                    <span className="font-semibold text-blue-600">$99 - $8,000/month</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                    <span className="text-gray-700">AI Services</span>
+                    <span className="font-semibold text-blue-600">$1,500 - $100,000/month</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3 border-b border-gray-100">
+                    <span className="text-gray-700">IT Services</span>
+                    <span className="font-semibold text-blue-600">$1,500 - $100,000/month</span>
+                  </div>
+                  <div className="flex justify-between items-center py-3">
+                    <span className="text-gray-700">Enterprise Solutions</span>
+                    <span className="font-semibold text-blue-600">Custom Pricing</span>
+                  </div>
+                </div>
+                <div className="mt-6 p-4 bg-blue-50 rounded-lg">
+                  <p className="text-sm text-blue-800">
+                    <strong>Free Consultation:</strong> All projects start with a complimentary strategy session to understand your needs and provide accurate pricing.
+                  </p>
+                </div>
+              </div>
+
+              {/* Contact Information */}
+              <div className="bg-white rounded-lg p-8 shadow-sm">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Get In Touch</h3>
+                <div className="space-y-4">
+                  <div className="flex items-center">
+                    <Phone className="w-5 h-5 text-blue-600 mr-3" />
+                    <div>
+                      <p className="font-semibold text-gray-900">Phone</p>
+                      <a href="tel:+13024640950" className="text-blue-600 hover:text-blue-700">+1 302 464 0950</a>
+                    </div>
+                  </div>
+                  <div className="flex items-center">
+                    <Mail className="w-5 h-5 text-blue-600 mr-3" />
+                    <div>
+                      <p className="font-semibold text-gray-900">Email</p>
+                      <a href="mailto:kleber@ziontechgroup.com" className="text-blue-600 hover:text-blue-700">kleber@ziontechgroup.com</a>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="w-5 h-5 text-blue-600 mr-3 mt-1">
+                      <svg fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">Address</p>
+                      <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <Link href="/contact" className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center block">
+                    Schedule Free Consultation
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>

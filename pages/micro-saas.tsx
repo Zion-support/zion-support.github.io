@@ -1,9 +1,9 @@
 import React from 'react';
-import { ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
+import { Activity, ArrowRight, Award, BarChart3, Brain, Calendar, CheckCircle, Clock, Cloud, Code, Database, FileText, From, Globe, Grid, MessageSquare, Mobile, Monitor, Network, No, Rapid, Server, Settings, Shield, Smartphone, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
 import Head from 'next/head';
 import Link from 'next/link';
-import PageTransition from '../src/components/PageTransition';
+// import PageTransition from '../src/components/PageTransition';
 export default function MicroSaaS() {
   const title = 'Micro SaaS Solutions — Zion Tech Group';
   const description =
@@ -298,6 +298,159 @@ export default function MicroSaaS() {
       pricing: '$199 - $799/month',
       delivery: '3-4 weeks',
       category: 'Customer Success SaaS',
+    },
+    {
+      title: 'AI-Powered Affiliate Marketing Tracker',
+      description:
+        'Comprehensive affiliate marketing platform with fraud detection and automated payouts',
+      icon: Network,
+      features: [
+        'Real-time affiliate performance tracking',
+        'Advanced fraud detection algorithms',
+        'Automated commission calculations',
+        'Cross-device attribution tracking',
+        'Custom referral link generation',
+        'Automated payment processing',
+      ],
+      pricing: '$299 - $1,500/month',
+      delivery: '3-5 weeks',
+      category: 'Marketing SaaS',
+    },
+    {
+      title: 'Intelligent Contract Management System',
+      description:
+        'AI-powered contract analysis, risk assessment, and automated compliance monitoring',
+      icon: FileText,
+      features: [
+        'Automated contract analysis and risk assessment',
+        'Compliance monitoring and alerts',
+        'Contract lifecycle management',
+        'AI-powered clause recommendations',
+        'Renewal and expiration tracking',
+        'Integration with legal databases',
+      ],
+      pricing: '$499 - $2,000/month',
+      delivery: '4-6 weeks',
+      category: 'Legal SaaS',
+    },
+    {
+      title: 'AI-Powered Video Content Generator',
+      description:
+        'Automated video creation platform with AI voice synthesis and dynamic content',
+      icon: Monitor,
+      features: [
+        'AI-generated video content from text',
+        'Multiple voice synthesis options',
+        'Dynamic template customization',
+        'Brand consistency enforcement',
+        'Multi-language support',
+        'Social media optimization',
+      ],
+      pricing: '$199 - $999/month',
+      delivery: '2-4 weeks',
+      category: 'Video SaaS',
+    },
+    {
+      title: 'Smart Energy Management Platform',
+      description:
+        'IoT-powered energy monitoring and optimization for commercial buildings',
+      icon: Zap,
+      features: [
+        'Real-time energy consumption monitoring',
+        'Predictive maintenance alerts',
+        'Cost optimization recommendations',
+        'Carbon footprint tracking',
+        'Integration with smart devices',
+        'Automated energy efficiency reports',
+      ],
+      pricing: '$399 - $1,500/month',
+      delivery: '4-6 weeks',
+      category: 'IoT SaaS',
+    },
+    {
+      title: 'AI-Powered Learning Management System',
+      description:
+        'Intelligent e-learning platform with personalized learning paths and progress tracking',
+      icon: Brain,
+      features: [
+        'Personalized learning path generation',
+        'AI-powered content recommendations',
+        'Automated assessment and grading',
+        'Progress tracking and analytics',
+        'Multi-format content support',
+        'Gamification and engagement tools',
+      ],
+      pricing: '$299 - $1,200/month',
+      delivery: '4-7 weeks',
+      category: 'Education SaaS',
+    },
+    {
+      title: 'Intelligent Supply Chain Optimizer',
+      description:
+        'AI-driven supply chain management with predictive analytics and risk mitigation',
+      icon: Network,
+      features: [
+        'Predictive demand forecasting',
+        'Supply chain risk assessment',
+        'Automated vendor management',
+        'Route optimization algorithms',
+        'Real-time inventory tracking',
+        'Sustainability impact monitoring',
+      ],
+      pricing: '$2,000 - $8,000/month',
+      delivery: '5-8 weeks',
+      category: 'Supply Chain SaaS',
+    },
+    {
+      title: 'AI-Powered Cybersecurity Monitor',
+      description:
+        'Advanced threat detection and response system with automated incident management',
+      icon: Shield,
+      features: [
+        'Real-time threat detection and analysis',
+        'Automated incident response workflows',
+        'Behavioral anomaly detection',
+        'Compliance monitoring and reporting',
+        'Integration with security tools',
+        '24/7 monitoring and alerts',
+      ],
+      pricing: '$1,500 - $6,000/month',
+      delivery: '4-6 weeks',
+      category: 'Security SaaS',
+    },
+    {
+      title: 'Smart Healthcare Analytics Platform',
+      description:
+        'AI-powered healthcare data analysis with predictive insights and patient monitoring',
+      icon: Activity,
+      features: [
+        'Patient health trend analysis',
+        'Predictive health risk assessment',
+        'Treatment outcome optimization',
+        'Real-time patient monitoring',
+        'HIPAA-compliant data processing',
+        'Integration with EHR systems',
+      ],
+      pricing: '$3,000 - $12,000/month',
+      delivery: '6-10 weeks',
+      category: 'Healthcare SaaS',
+    },
+    {
+      title: 'AI-Powered Real Estate Analytics',
+      description:
+        'Intelligent property valuation and market analysis with investment recommendations',
+      icon: TrendingUp,
+      features: [
+        'Automated property valuation models',
+        'Market trend analysis and forecasting',
+        'Investment opportunity scoring',
+        'Neighborhood analytics and insights',
+        'Property comparison tools',
+        'ROI calculation and projections',
+      ],
+      pricing: '$499 - $2,500/month',
+      delivery: '3-5 weeks',
+      category: 'Real Estate SaaS',
     },
     {
       title: 'Intelligent Meeting Scheduler',
@@ -644,7 +797,7 @@ export default function MicroSaaS() {
     },
   ];
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -926,6 +1079,6 @@ export default function MicroSaaS() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }
