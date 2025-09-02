@@ -42,6 +42,10 @@ export function EnhancedFooter() {
         { name: 'Smart City Solutions', href: '/services/ai-smart-city-infrastructure-management', description: 'Urban infrastructure management' },
         { name: 'Autonomous Systems', href: '/services/ai-autonomous-vehicle-management-platform', description: 'AI-powered automation' },
         { name: 'Micro SaaS', href: '/micro-saas', description: 'Lightweight applications' },
+        { name: 'AI Email Marketing', href: '/services/ai-autonomous-email-marketing-platform', description: 'AI-powered email automation' },
+        { name: 'AI Affiliate Tracking', href: '/services/ai-affiliate-marketing-tracking-platform', description: 'Advanced affiliate marketing' },
+        { name: 'AI E-commerce Returns', href: '/services/ai-ecommerce-return-management-platform', description: 'Streamlined return management' },
+        { name: 'AI Learning Management', href: '/services/ai-learning-management-system', description: 'AI-powered educational platform' },
         { name: 'Consulting', href: '/it-consulting', description: 'Technology advisory' },
 
       ]

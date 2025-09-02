@@ -126,6 +126,30 @@ const microSaaS: Service[] = [
     priceRange: '$299 - $1,999/mo',
     learnMoreUrl: 'https://huggingface.co/',
   },
+  {
+    title: 'AI Autonomous Email Marketing Platform',
+    description: 'AI-powered email marketing with automated content creation, segmentation, and optimization.',
+    priceRange: '$99 - $799/mo',
+    learnMoreUrl: '/services/ai-autonomous-email-marketing-platform',
+  },
+  {
+    title: 'AI Affiliate Marketing Tracking Platform',
+    description: 'Advanced affiliate tracking with AI fraud detection, attribution modeling, and automated payments.',
+    priceRange: '$149 - $999/mo',
+    learnMoreUrl: '/services/ai-affiliate-marketing-tracking-platform',
+  },
+  {
+    title: 'AI E-commerce Return Management Platform',
+    description: 'Streamlined return processing with AI-powered fraud detection and inventory optimization.',
+    priceRange: '$79 - $499/mo',
+    learnMoreUrl: '/services/ai-ecommerce-return-management-platform',
+  },
+  {
+    title: 'AI Learning Management System',
+    description: 'AI-powered LMS with personalized learning paths, automated content creation, and predictive analytics.',
+    priceRange: '$99 - $799/mo',
+    learnMoreUrl: '/services/ai-learning-management-system',
+  },
 ];
 
 const Services: React.FC = (): JSX.Element => {

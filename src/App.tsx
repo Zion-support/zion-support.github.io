@@ -182,6 +182,15 @@ const QuantumEnhancedCybersecurityOperationsCenter = createLazyComponent(() => i
 const AIDrivenSustainabilityAnalyticsPlatform = createLazyComponent(() => import('./pages/services/ai-driven-sustainability-analytics-platform'));
 const AutonomousDigitalTwinManagementSystem = createLazyComponent(() => import('./pages/services/autonomous-digital-twin-management-system'));
 
+// New Innovative Micro SAAS Services 2025
+const AIAutonomousEmailMarketingPlatform = createLazyComponent(() => import('./pages/services/ai-autonomous-email-marketing-platform'));
+const AIAffiliateMarketingTrackingPlatform = createLazyComponent(() => import('./pages/services/ai-affiliate-marketing-tracking-platform'));
+const AIEcommerceReturnManagementPlatform = createLazyComponent(() => import('./pages/services/ai-ecommerce-return-management-platform'));
+const AILearningManagementSystem = createLazyComponent(() => import('./pages/services/ai-learning-management-system'));
+
+// New Services Showcase 2025
+const NewInnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/NewInnovativeServicesShowcase2025'));
+
 // 2025 Innovative Services
 const InnovativeServicesLanding2025 = createLazyComponent(() => import('./pages/InnovativeServicesLanding2025'));
 
@@ -319,6 +328,7 @@ function App() {
                     <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
                     <Route path="/ultimate-innovative-services-showcase-2025" element={<UltimateInnovativeServicesShowcase2025 />} />
                     <Route path="/new-services-showcase-2025" element={<NewServicesShowcase2025 />} />
+                    <Route path="/new-innovative-services-showcase-2025" element={<NewInnovativeServicesShowcase2025 />} />
 
                     {/* Service Detail Routes */}
                     <Route path="/services/ai-business-intelligence" element={<AIBusinessIntelligence />} />
@@ -381,6 +391,12 @@ function App() {
                     <Route path="/services/quantum-enhanced-cybersecurity-operations-center" element={<QuantumEnhancedCybersecurityOperationsCenter />} />
                     <Route path="/services/ai-driven-sustainability-analytics-platform" element={<AIDrivenSustainabilityAnalyticsPlatform />} />
                     <Route path="/services/autonomous-digital-twin-management-system" element={<AutonomousDigitalTwinManagementSystem />} />
+
+                    {/* New Innovative Micro SAAS Services 2025 */}
+                    <Route path="/services/ai-autonomous-email-marketing-platform" element={<AIAutonomousEmailMarketingPlatform />} />
+                    <Route path="/services/ai-affiliate-marketing-tracking-platform" element={<AIAffiliateMarketingTrackingPlatform />} />
+                    <Route path="/services/ai-ecommerce-return-management-platform" element={<AIEcommerceReturnManagementPlatform />} />
+                    <Route path="/services/ai-learning-management-system" element={<AILearningManagementSystem />} />
 
                     {/* Additional Service Routes */}
                     <Route path="/services/ai-cybersecurity" element={<AICybersecurity />} />

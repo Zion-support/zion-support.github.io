@@ -42,6 +42,7 @@ export function EnhancedHeader() {
     { name: 'Home', href: '/', current: true },
     { name: 'About', href: '/about', current: false },
     { name: 'Services', href: '/services', current: false },
+    { name: 'New Services 2025', href: '/new-innovative-services-showcase-2025', current: false },
     { name: 'Innovative Services 2028', href: '/innovative-services-showcase-2028', current: false },
     { name: 'Pricing Guide', href: '/comprehensive-pricing-guide-2028', current: false },
     { name: 'Solutions', href: '/solutions', current: false },
@@ -153,6 +154,10 @@ export function EnhancedHeader() {
         { name: 'AI Content Marketing', href: '/services/ai-content-marketing-suite', description: 'AI-powered content creation' },
         { name: 'Customer Support Automation', href: '/services/ai-customer-support-automation', description: 'Intelligent support automation' },
         { name: 'Website Analytics', href: '/services/website-analytics', description: 'Performance insights' },
+        { name: 'AI Email Marketing Platform', href: '/services/ai-autonomous-email-marketing-platform', description: 'AI-powered email marketing automation' },
+        { name: 'AI Affiliate Tracking Platform', href: '/services/ai-affiliate-marketing-tracking-platform', description: 'Advanced affiliate marketing with AI' },
+        { name: 'AI E-commerce Returns', href: '/services/ai-ecommerce-return-management-platform', description: 'Streamlined return management' },
+        { name: 'AI Learning Management System', href: '/services/ai-learning-management-system', description: 'AI-powered educational platform' },
       ]
     }
   ];
