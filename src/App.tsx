@@ -115,6 +115,10 @@ const AIDigitalTwinPlatform = createLazyComponent(() => import('./pages/services
 const AIEdgeComputingPlatform = createLazyComponent(() => import('./pages/services/AI-Edge-Computing-Platform'));
 const AIQuantumMachineLearning = createLazyComponent(() => import('./pages/services/AI-Quantum-Machine-Learning'));
 
+// Additional New AI Services
+const AIAutonomousBusinessManager = createLazyComponent(() => import('./pages/services/AI-Autonomous-Business-Manager'));
+const AIQuantumComputingPlatform = createLazyComponent(() => import('./pages/services/AI-Quantum-Computing-Platform'));
+
 // Quantum Computing Services
 const QuantumComputing = createLazyComponent(() => import('./pages/services/QuantumComputing'));
 const QuantumAIPlatform = createLazyComponent(() => import('./pages/services/QuantumAIPlatform'));
@@ -377,6 +381,10 @@ function App() {
                   <Route path="/services/ai-esg-compliance-platform" element={<AIESGCompliancePlatform />} />
                   <Route path="/services/ai-digital-twin-platform" element={<AIDigitalTwinPlatform />} />
                   <Route path="/services/ai-edge-computing-platform" element={<AIEdgeComputingPlatform />} />
+
+                  {/* Additional New AI Service Routes */}
+                  <Route path="/services/ai-autonomous-business-manager" element={<AIAutonomousBusinessManager />} />
+                  <Route path="/services/ai-quantum-computing-platform" element={<AIQuantumComputingPlatform />} />
 
                   {/* 2025 New Innovative Services */}
                   <Route path="/services/ai-supply-chain-risk-management" element={<AISupplyChainRiskManagement />} />
