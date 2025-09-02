@@ -155,7 +155,7 @@ contact: {phone: string;
 export interface ErrorInfo {
   message: string;
    code?: string;
-   details?: any;
+   details?: unknown;
    timestamp: string;
    userAgent?: string;
    url?: string}
@@ -178,7 +178,7 @@ export interface FormField {
     message?: string}
 }
 export interface FormState {
-  values: Record<string, any>
+  values: Record<string, unknown>
    errors: Record<string, string>
    touched: Record<string, boolean>
    isSubmitting: boolean;
@@ -215,12 +215,12 @@ export interface ApiError {
   status: number;
    message: string;
    code?: string;
-   details?: any}
+   details?: unknown}
 export interface ApiRequest {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
   url: string;
-  data?: any;
-  params?: Record<string, any>;
+  data?: unknown;
+  params?: Record<string, unknown>;
   headers?: Record<string, string>}
 // Environment types;
 export interface Environment {
