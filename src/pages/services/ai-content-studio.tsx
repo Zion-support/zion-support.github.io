@@ -2,7 +2,10 @@ import React from 'react';
 import { SEO } from '../../components/SEO';
 import { motion } from 'framer-motion';
 import { 
-  Workflow, 
+  PenTool, 
+  Image, 
+  Video, 
+  FileText, 
   Zap, 
   Users, 
   Shield, 
@@ -20,126 +23,118 @@ import {
   Lightbulb, 
   Sparkles, 
   Brain,
-  Settings,
-  Clock,
-  Database,
-  Link,
-  Bot,
-  Cpu,
+  Palette,
+  Camera,
+  Mic,
+  Edit3,
+  Type,
   Layers,
-  GitBranch,
-  Play,
-  Pause,
-  RotateCcw
+  Wand2
 } from 'lucide-react';
 
-const AIWorkflowAutomation: React.FC = () => {
+const AIContentStudio: React.FC = () => {
   const features = [
     {
-      icon: Workflow,
-      title: 'Visual Workflow Builder',
-      description: 'Create complex automation workflows with our intuitive drag-and-drop interface',
+      icon: PenTool,
+      title: 'AI Writing Assistant',
+      description: 'Generate high-quality content for blogs, social media, and marketing materials',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Bot,
-      title: 'AI-Powered Automation',
-      description: 'Intelligent bots that learn and adapt to your business processes automatically',
+      icon: Image,
+      title: 'AI Image Generation',
+      description: 'Create stunning visuals and graphics using advanced AI image models',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Link,
-      title: '500+ Integrations',
-      description: 'Connect with popular tools like Slack, Salesforce, HubSpot, and more',
+      icon: Video,
+      title: 'AI Video Creation',
+      description: 'Produce engaging video content with AI-powered editing and effects',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: Clock,
-      title: 'Real-Time Processing',
-      description: 'Execute workflows instantly with sub-second response times',
+      icon: FileText,
+      title: 'Content Optimization',
+      description: 'Optimize content for SEO, readability, and engagement automatically',
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      icon: Shield,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with encryption, audit logs, and compliance features',
+      icon: Zap,
+      title: 'Multi-Platform Publishing',
+      description: 'Automatically adapt and publish content across multiple platforms',
       color: 'from-red-500 to-pink-500'
     },
     {
       icon: BarChart3,
-      title: 'Analytics & Insights',
-      description: 'Track workflow performance and optimize processes with detailed analytics',
+      title: 'Performance Analytics',
+      description: 'Track content performance and get AI-powered insights for improvement',
       color: 'from-indigo-500 to-blue-500'
     }
   ];
 
-  const automationTypes = [
+  const contentTypes = [
     {
-      title: 'Sales Automation',
-      description: 'Automate lead scoring, follow-ups, and pipeline management',
-      icon: Target,
-      benefits: ['Lead qualification', 'Email sequences', 'CRM updates', 'Pipeline tracking'],
-      pricing: '$49/month',
+      title: 'Blog Posts & Articles',
+      description: 'AI-generated long-form content with research and citations',
+      icon: FileText,
+      benefits: ['SEO optimized', 'Research-backed', 'Multiple formats', 'Auto-publishing'],
+      pricing: '$29/month',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      title: 'Marketing Automation',
-      description: 'Streamline campaigns, content distribution, and customer engagement',
+      title: 'Social Media Content',
+      description: 'Engaging posts, captions, and stories for all social platforms',
       icon: Users,
-      benefits: ['Campaign management', 'Social media posting', 'Email marketing', 'Analytics'],
-      pricing: '$39/month',
+      benefits: ['Platform-specific', 'Trending topics', 'Hashtag optimization', 'Scheduling'],
+      pricing: '$19/month',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      title: 'HR Automation',
-      description: 'Automate recruitment, onboarding, and employee management processes',
-      icon: Users,
-      benefits: ['Resume screening', 'Interview scheduling', 'Onboarding workflows', 'Performance tracking'],
-      pricing: '$59/month',
+      title: 'Marketing Materials',
+      description: 'Professional copy for ads, emails, and promotional content',
+      icon: Target,
+      benefits: ['A/B testing', 'Conversion focused', 'Brand voice', 'Campaign tracking'],
+      pricing: '$39/month',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      title: 'Finance Automation',
-      description: 'Automate invoicing, expense management, and financial reporting',
-      icon: BarChart3,
-      benefits: ['Invoice generation', 'Expense tracking', 'Payment processing', 'Financial reports'],
-      pricing: '$69/month',
+      title: 'Visual Content',
+      description: 'AI-generated images, infographics, and video content',
+      icon: Image,
+      benefits: ['Custom styles', 'Brand consistency', 'High resolution', 'Multiple formats'],
+      pricing: '$49/month',
       color: 'from-yellow-500 to-orange-500'
     }
   ];
 
   const benefits = [
-    'Reduce manual work by 90%',
-    'Increase productivity by 300%',
-    'Eliminate human errors',
-    '24/7 automated operations',
-    'Scalable workflows',
-    'Cost savings up to 70%',
-    'Faster decision making',
-    'Improved compliance'
+    'Save 80% content creation time',
+    'Increase engagement by 150%',
+    '24/7 content generation',
+    'Multi-language support',
+    'Brand voice consistency',
+    'SEO optimization',
+    'Performance tracking',
+    'Unlimited revisions'
   ];
 
-  const integrations = [
-    'Salesforce',
-    'HubSpot',
-    'Slack',
-    'Microsoft Teams',
-    'Google Workspace',
-    'Zapier',
-    'Mailchimp',
-    'QuickBooks',
-    'Shopify',
-    'WordPress',
-    'Jira',
-    'Trello'
+  const technologies = [
+    'GPT-4 & Claude',
+    'DALL-E & Midjourney',
+    'Runway ML',
+    'Adobe Creative Suite',
+    'Canva Integration',
+    'WordPress Publishing',
+    'Social Media APIs',
+    'Analytics Dashboard'
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
-        title="AI Workflow Automation - Zion Tech Group"
-        description="Revolutionary AI-powered workflow automation platform. Automate business processes, reduce manual work, and increase productivity with intelligent automation."
-        keywords="workflow automation, business process automation, AI automation, workflow builder, process optimization, Zion Tech Group"
+        title="AI Content Studio - Zion Tech Group"
+        description="Revolutionary AI-powered content creation platform. Generate blogs, social media, videos, and marketing materials with advanced AI technology."
+        keywords="AI content creation, content marketing, AI writing, video generation, social media automation, Zion Tech Group"
         ogType="website"
       />
 
@@ -153,27 +148,27 @@ const AIWorkflowAutomation: React.FC = () => {
               transition={{ duration: 0.8 }}
               className="space-y-8"
             >
-              <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium">
-                <Bot className="w-4 h-4" />
-                AI Workflow Automation
+              <div className="inline-flex items-center gap-3 px-4 py-2 bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium">
+                <Brain className="w-4 h-4" />
+                AI Content Creation
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold text-white leading-tight">
-                AI Workflow
-                <span className="block bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-                  Automation
+                AI Content
+                <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Studio
                 </span>
               </h1>
               <p className="text-xl text-gray-300 leading-relaxed">
-                Transform your business with intelligent automation. Create powerful workflows that work 24/7, reduce manual tasks, and boost productivity across your entire organization.
+                Transform your content strategy with our AI-powered studio. Generate high-quality blogs, social media posts, videos, and marketing materials in minutes, not hours.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="btn-futuristic bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700">
-                  <Play className="w-5 h-5" />
-                  Start Automating
+                <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
+                  <PenTool className="w-5 h-5" />
+                  Start Creating
                 </button>
                 <button className="btn-futuristic-outline">
-                  <Workflow className="w-5 h-5" />
-                  View Templates
+                  <FileText className="w-5 h-5" />
+                  View Examples
                 </button>
               </div>
             </motion.div>
@@ -184,17 +179,17 @@ const AIWorkflowAutomation: React.FC = () => {
               className="relative"
             >
               <div className="relative z-10">
-                <div className="w-full h-96 bg-gradient-to-br from-green-500/20 via-blue-500/20 to-cyan-500/20 rounded-2xl border border-green-500/30 flex items-center justify-center">
+                <div className="w-full h-96 bg-gradient-to-br from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl border border-blue-500/30 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="w-24 h-24 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                      <Bot className="w-12 h-12 text-white" />
+                    <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                      <Brain className="w-12 h-12 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">AI Automation</h3>
-                    <p className="text-gray-300">Intelligent Workflows</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">AI Content Studio</h3>
+                    <p className="text-gray-300">Create Amazing Content</p>
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/10 to-blue-500/10 rounded-2xl blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl blur-3xl"></div>
             </motion.div>
           </div>
         </div>
@@ -211,10 +206,10 @@ const AIWorkflowAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Automation Features
+              AI-Powered Content Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered automation platform combines intelligent workflows with enterprise-grade features to transform your business operations.
+              Our AI Content Studio combines cutting-edge artificial intelligence with creative tools to revolutionize your content creation process.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -225,7 +220,7 @@ const AIWorkflowAutomation: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300 hover:bg-slate-700/50"
+                className="group p-6 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
@@ -238,7 +233,7 @@ const AIWorkflowAutomation: React.FC = () => {
         </div>
       </section>
 
-      {/* Automation Types Section */}
+      {/* Content Types Section */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -249,38 +244,38 @@ const AIWorkflowAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Automation Solutions
+              Content Creation Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From sales to finance, automate every aspect of your business with our specialized automation solutions.
+              From blog posts to video content, our AI studio creates professional-quality content for all your marketing needs.
             </p>
           </motion.div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {automationTypes.map((automation, index) => (
+            {contentTypes.map((content, index) => (
               <motion.div
-                key={automation.title}
+                key={content.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-green-500/50 transition-all duration-300"
+                className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300"
               >
                 <div className="flex items-start gap-4 mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-br ${automation.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
-                    <automation.icon className="w-8 h-8 text-white" />
+                  <div className={`w-16 h-16 bg-gradient-to-br ${content.color} rounded-xl flex items-center justify-center flex-shrink-0`}>
+                    <content.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold text-white mb-2">{automation.title}</h3>
-                    <p className="text-gray-400 leading-relaxed mb-2">{automation.description}</p>
-                    <div className="text-2xl font-bold text-green-400">{automation.pricing}</div>
+                    <h3 className="text-2xl font-semibold text-white mb-2">{content.title}</h3>
+                    <p className="text-gray-400 leading-relaxed mb-2">{content.description}</p>
+                    <div className="text-2xl font-bold text-blue-400">{content.pricing}</div>
                   </div>
                 </div>
                 <div className="space-y-3">
                   <h4 className="text-lg font-semibold text-white">Key Features:</h4>
                   <ul className="space-y-2">
-                    {automation.benefits.map((benefit, idx) => (
+                    {content.benefits.map((benefit, idx) => (
                       <li key={idx} className="flex items-center gap-3 text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-blue-400 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
@@ -303,10 +298,10 @@ const AIWorkflowAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Why Choose AI Automation?
+              Why Choose AI Content Studio?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of intelligent automation that works around the clock to optimize your business processes.
+              Experience the future of content creation with AI-powered tools that deliver exceptional results.
             </p>
           </motion.div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -317,9 +312,9 @@ const AIWorkflowAutomation: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-green-500/50 transition-all duration-300 hover:bg-slate-600/50"
+                className="p-6 bg-slate-700/50 rounded-xl border border-slate-600/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-600/50"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-6 h-6 text-white" />
                 </div>
                 <p className="text-white font-medium text-sm leading-relaxed">{benefit}</p>
@@ -329,7 +324,7 @@ const AIWorkflowAutomation: React.FC = () => {
         </div>
       </section>
 
-      {/* Integrations Section */}
+      {/* Technologies Section */}
       <section className="py-20">
         <div className="container-responsive">
           <motion.div
@@ -340,26 +335,26 @@ const AIWorkflowAutomation: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Seamless Integrations
+              Advanced AI Technologies
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Connect with your favorite tools and platforms to create powerful automated workflows.
+              Powered by the latest AI models and creative tools to deliver professional-quality content.
             </p>
           </motion.div>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {technologies.map((tech, index) => (
               <motion.div
-                key={integration}
+                key={tech}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-green-500/50 transition-all duration-300 hover:bg-slate-700/50 group"
+                className="p-6 bg-slate-800/50 rounded-xl border border-slate-700/50 text-center hover:border-blue-500/50 transition-all duration-300 hover:bg-slate-700/50 group"
               >
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <Link className="w-6 h-6 text-white" />
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-6 h-6 text-white" />
                 </div>
-                <p className="text-white font-medium text-sm leading-relaxed">{integration}</p>
+                <p className="text-white font-medium text-sm leading-relaxed">{tech}</p>
               </motion.div>
             ))}
           </div>
@@ -367,7 +362,7 @@ const AIWorkflowAutomation: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-cyan-500/10">
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10">
         <div className="container-responsive text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -377,13 +372,13 @@ const AIWorkflowAutomation: React.FC = () => {
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-3xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Business?
+              Ready to Transform Your Content?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using AI Workflow Automation to streamline operations and boost productivity.
+              Join thousands of creators using AI Content Studio to produce amazing content faster than ever before.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="btn-futuristic bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700">
+              <button className="btn-futuristic bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
                 <MessageCircle className="w-5 h-5" />
                 Start Free Trial
               </button>
@@ -410,11 +405,11 @@ const AIWorkflowAutomation: React.FC = () => {
                 Get Started Today
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Ready to transform your business with AI automation? Our team of automation experts is here to help you implement intelligent workflows that drive results.
+                Ready to revolutionize your content creation? Our AI Content Studio team is here to help you get started with the most advanced content generation tools available.
               </p>
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -423,7 +418,7 @@ const AIWorkflowAutomation: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -432,7 +427,7 @@ const AIWorkflowAutomation: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -449,38 +444,38 @@ const AIWorkflowAutomation: React.FC = () => {
               viewport={{ once: true }}
               className="p-8 bg-slate-800/50 rounded-2xl border border-slate-700/50"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Request Automation Demo</h3>
+              <h3 className="text-2xl font-semibold text-white mb-6">Request AI Content Demo</h3>
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input
                     type="text"
                     placeholder="First Name"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                   <input
                     type="text"
                     placeholder="Last Name"
-                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <input
                   type="text"
                   placeholder="Company"
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
                 <textarea
-                  placeholder="Tell us about your automation needs..."
+                  placeholder="Tell us about your content needs..."
                   rows={4}
-                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 bg-slate-700/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
                 ></textarea>
                 <button
                   type="submit"
-                  className="w-full btn-futuristic bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-600 hover:to-blue-700"
+                  className="w-full btn-futuristic bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
                 >
                   <MessageCircle className="w-5 h-5" />
                   Request Demo
@@ -494,4 +489,4 @@ const AIWorkflowAutomation: React.FC = () => {
   );
 };
 
-export default AIWorkflowAutomation;
+export default AIContentStudio;
