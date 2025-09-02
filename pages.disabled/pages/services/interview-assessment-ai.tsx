@@ -19,7 +19,8 @@ import {}
   Heart,
   MessageCircle,
   Calendar,
-  Award as Trophy} from 'lucide-react.ts';
+  Award as Trophy} from
+  'lucide-react.ts';
 
 :pages.disabled/pages/services/interview-assessment-ai.tsx
 export default function InterviewAssessmentAI(...args: any[]): any {
@@ -276,5 +277,6 @@ export default function InterviewAssessmentAI(...args: any[]): any {
       </section>
     </div>
 :pages.disabled/pages/services/interview-assessment-ai.tsx
-  )}'"
+  )}
+  '"
 '"'"

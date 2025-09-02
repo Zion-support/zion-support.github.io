@@ -186,7 +186,8 @@ const IoTServices = () => {
             Ready to Connect Your World?"
           </h2>""
           <p className="text-xl text-gray-300 mb-8">
-            Let's discuss how IoT solutions can transform your business
+            Let
+  's discuss how IoT solutions can transform your business
             operations and unlock new opportunities."
           </p>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
@@ -203,4 +204,5 @@ const IoTServices = () => {
 ;
 :pages.disabled/pages/services/IoTServices.tsx
 export { IoTServices };'"
-export default IoTServices}}}'"'"
+export default IoTServices}}}
+  '"'"
