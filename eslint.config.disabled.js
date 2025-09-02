@@ -253,6 +253,6 @@ export default [
       '**/components/**',
       'test*.js',
       'test*.ts',
-      'test*.tsx';
+      'test*.tsx'
     ]}
 ];
