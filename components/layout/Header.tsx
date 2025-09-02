@@ -9,6 +9,7 @@ const Header: React.FC = () => {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Products', href: '/products' },
+    { name: 'Solutions', href: '/solutions' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
@@ -73,6 +74,12 @@ const Header: React.FC = () => {
                   </svg>
                 </button>
                 <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <Link
+                    href="/services"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold border-b border-gray-100"
+                  >
+                    All Services
+                  </Link>
                   {serviceCategories.map((category) => (
                     <Link
                       key={category.name}
@@ -82,6 +89,42 @@ const Header: React.FC = () => {
                       {category.name}
                     </Link>
                   ))}
+                </div>
+              </div>
+
+              {/* Solutions Dropdown */}
+              <div className="relative group">
+                <button className="text-gray-700 hover:text-blue-600 font-medium transition-colors flex items-center">
+                  Solutions
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <Link
+                    href="/solutions"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors font-semibold border-b border-gray-100"
+                  >
+                    All Solutions
+                  </Link>
+                  <Link
+                    href="/solutions/enterprise"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    Enterprise Solutions
+                  </Link>
+                  <Link
+                    href="/solutions/small-business"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    Small Business
+                  </Link>
+                  <Link
+                    href="/solutions/startups"
+                    className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition-colors"
+                  >
+                    Startup Solutions
+                  </Link>
                 </div>
               </div>
 
@@ -125,6 +168,13 @@ const Header: React.FC = () => {
                 {/* Mobile Services */}
                 <div className="border-t border-gray-200 pt-4">
                   <div className="text-gray-700 font-medium mb-2">Services</div>
+                  <Link
+                    href="/services"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors font-semibold"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    All Services
+                  </Link>
                   {serviceCategories.map((category) => (
                     <Link
                       key={category.name}
@@ -135,6 +185,39 @@ const Header: React.FC = () => {
                       {category.name}
                     </Link>
                   ))}
+                </div>
+
+                {/* Mobile Solutions */}
+                <div className="border-t border-gray-200 pt-4">
+                  <div className="text-gray-700 font-medium mb-2">Solutions</div>
+                  <Link
+                    href="/solutions"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors font-semibold"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    All Solutions
+                  </Link>
+                  <Link
+                    href="/solutions/enterprise"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Enterprise Solutions
+                  </Link>
+                  <Link
+                    href="/solutions/small-business"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Small Business
+                  </Link>
+                  <Link
+                    href="/solutions/startups"
+                    className="block py-2 text-gray-600 hover:text-blue-600 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Startup Solutions
+                  </Link>
                 </div>
 
                 {/* Mobile CTA */}
