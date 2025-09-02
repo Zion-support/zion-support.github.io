@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-const About: React.FC = (): JSX.Element => {
-=======
-import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
-import { SEO   } from '@/components/SEO';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { SEO } from '@/components/SEO';
 import { Users, 
   Target, 
   Award, 
@@ -23,9 +20,9 @@ import { Users,
   Cloud,
   Lock,
   Database
-  } from 'lucide-react.ts';
+} from 'lucide-react';
 
-export default function About(...args: any[]): any {
+export default function About() {
   const stats = [
     { number: '500+', label: 'Projects Completed', description: 'Successfully delivered across industries' },
     { number: '50+', label: 'Team Members', description: 'Expert professionals and specialists' },
@@ -119,7 +116,6 @@ export default function About(...args: any[]): any {
     }
   ];
 
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
   return (
     <div className="min-h-screen bg-slate-900">
       <SEO 

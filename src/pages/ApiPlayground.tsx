@@ -1,11 +1,9 @@
-import React, { useState } from 'react.ts';
-<<<<<<< HEAD
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info export default function ApiPlayground(...args: any[]): any {
-=======
-import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, Zap as ZapIcon, RefreshCw, CheckCircle2, AlertCircle, Info   } from 'lucide-react.ts';
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { SEO } from '@/components/SEO';
+import { Code, Play, Copy, Download, BookOpen, Search, Filter, ExternalLink, ArrowRight, Brain, Cloud, Shield, Database, Zap, Globe, Target, TrendingUp, Award, CheckCircle, Calendar, MapPin, DollarSign, FileText, Lightbulb, Microscope, Rocket, Network, Cpu, Lock, BarChart3, Palette, Smartphone, Eye, Star, Terminal, Settings, RefreshCw, CheckCircle2, AlertCircle, Info } from 'lucide-react';
 
-export default function ApiPlayground(...args: any[]): any {
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+export default function ApiPlayground() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
   const [activeMethod, setActiveMethod] = useState('all');
@@ -15,21 +13,21 @@ export default function ApiPlayground(...args: any[]): any {
   const [isLoading, setIsLoading] = useState(false);
   const [activeTab, setActiveTab] = useState('playground');
 
-  const categories = [;
-    { id: 'all', name: 'All Categories', icon: <Code className="w-5 h-5" />, count: 0 },;
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },;
-    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },;
-    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },;
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },;
-    { id: 'iot', name: 'IoT & Edge', icon: <Network className="w-5 h-5" />, count: 4 };
+  const categories = [
+    { id: 'all', name: 'All Categories', icon: <Code className="w-5 h-5" />, count: 0 },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: 8 },
+    { id: 'cloud', name: 'Cloud & Infrastructure', icon: <Cloud className="w-5 h-5" />, count: 6 },
+    { id: 'security', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: 5 },
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-5 h-5" />, count: 7 },
+    { id: 'iot', name: 'IoT & Edge', icon: <Network className="w-5 h-5" />, count: 4 }
   ];
 
-  const methods = [;
-    { id: 'all', name: 'All Methods', count: 0 },;
-    { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' },;
-    { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' },;
-    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },;
-    { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' };
+  const methods = [
+    { id: 'all', name: 'All Methods', count: 0 },
+    { id: 'GET', name: 'GET', count: 0, color: 'text-green-400' },
+    { id: 'POST', name: 'POST', count: 0, color: 'text-blue-400' },
+    { id: 'PUT', name: 'PUT', count: 0, color: 'text-yellow-400' },
+    { id: 'DELETE', name: 'DELETE', count: 0, color: 'text-red-400' }
   ];
 
   const apis = [
@@ -97,7 +95,7 @@ export default function ApiPlayground(...args: any[]): any {
             type: "compute",
             status: "running",
             region: "us-east-1"
-
+          }
         ],
         total: 1
       },
@@ -206,92 +204,60 @@ export default function ApiPlayground(...args: any[]): any {
             location: "building-a",
             status: "active",
             last_reading: 22.5
-<<<<<<< HEAD
-
+          }
         ],
         total: 1
       },
       documentation: 'https://docs.ziontechgroup.com/api/iot-devices',
       sdk: 'https://github.com/ziontechgroup/iot-sdk',
       featured: false
-
-=======
-          }
-        ],;
-        total: 1;
-      },;
-      documentation: 'https://docs.ziontechgroup.com/api/iot-devices',;
-      sdk: 'https://github.com/ziontechgroup/iot-sdk',;
-      featured: false;
-    };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+    }
   ];
 
   // Update counts
-<<<<<<< HEAD
-  categories.forEach(cat = > {;
-    cat.count = apis.filter(api => api.category === cat.id).length});
-
-  methods.forEach(method = > {;
-    method.count = apis.filter(api => api.method === method.id).length});
-=======
-  categories.forEach(cat = > {;
+  categories.forEach(cat => {
     cat.count = apis.filter(api => api.category === cat.id).length;
   });
 
-  methods.forEach(method = > {;
+  methods.forEach(method => {
     method.count = apis.filter(api => api.method === method.id).length;
   });
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const filteredApis = apis.filter(api => {;
-    const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const filteredApis = apis.filter(api => {
+    const matchesSearch = api.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          api.description.toLowerCase().includes(searchQuery.toLowerCase());
 
-    const matchesCategory = activeCategory === 'all' || api.category === category.id;
-    const matchesMethod = activeMethod === 'all' || api.method === method.id;
+    const matchesCategory = activeCategory === 'all' || api.category === activeCategory;
+    const matchesMethod = activeMethod === 'all' || api.method === activeMethod;
 
     return matchesSearch && matchesCategory && matchesMethod;
   });
 
-<<<<<<< HEAD
-  const getCategoryIcon = (categoryId: anystring)   => {;
-    return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />};
-
-  const getMethodColor = (method: anystring)   => {;
-    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light'};
-
-  const getCategoryIcon = (categoryId: anystring)  => {;
+  const getCategoryIcon = (categoryId: string) => {
     return categories.find(c => c.id === categoryId)?.icon || <Code className="w-5 h-5" />;
   };
 
-  const getMethodColor = (method: anystring)  => {;
-    return methods.find(m => m.id === method)?.color || 'text-zion-slate-light';
+  const getMethodColor = (method: string) => {
+    return methods.find(m => m.id === method)?.color || 'text-slate-300';
   };
 
-  const getStatusColor = (status: anystring)  => {;
-    switch (status) {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const getStatusColor = (status: string) => {
+    switch (status) {
       case 'stable': return 'text-green-400';
       case 'beta': return 'text-yellow-400';
       case 'alpha': return 'text-red-400';
-<<<<<<< HEAD
-      default: return 'text-zion-slate-light';
-
-=======
-      default: return 'text-zion-slate-light'}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+      default: return 'text-slate-300';
+    }
   };
 
-<<<<<<< HEAD
-  const handleApiSelect = (api: any)  => {;
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
+  const handleApiSelect = (api: any) => {
     setSelectedApi(api);
     setRequestBody(JSON.stringify(api.requestExample, null, 2));
     setResponseData('');
-    setActiveTab('playground')};
+    setActiveTab('playground');
+  };
 
-  const handleTestApi = async () => {;
+  const handleTestApi = async () => {
     if (!selectedApi) return;
 
     setIsLoading(true);
@@ -299,18 +265,15 @@ export default function ApiPlayground(...args: any[]): any {
     // Simulate API call
     setTimeout(() => {
       setResponseData(JSON.stringify(selectedApi.responseExample, null, 2));
-      setIsLoading(false)}, 1500)};
+      setIsLoading(false);
+    }, 1500);
+  };
 
-<<<<<<< HEAD
-  const copyToClipboard = (text: anystring)   => {;
-    navigator.clipboard.writeText(text)};
-=======
-  const copyToClipboard = (text: anystring)  => {;
+  const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
   };
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
 
-  const downloadResponse = () => {;
+  const downloadResponse = () => {
     if (!responseData) return;
 
     const blob = new Blob([responseData], { type: 'application/json' });
@@ -321,24 +284,47 @@ export default function ApiPlayground(...args: any[]): any {
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-    URL.revokeObjectURL(url)};
+    URL.revokeObjectURL(url);
+  };
 
   return (
-    <div className = "min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      <SEO 
+        title="API Playground - Zion Tech Group"
+        description="Explore, test, and integrate with our powerful APIs. Build amazing applications with our comprehensive developer tools."
+        keywords="API, playground, developer tools, integration, testing, documentation"
+        canonical="https://ziontechgroup.com/api-playground"
+      />
+      
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-purple py-20">
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
         <div className="container mx-auto px-4 text-center">
-          <div className="flex justify-center mb-6">
-            <div className="p-4 bg-zion-cyan/20 rounded-full">
-              <Code className="w-16 h-16 text-zion-cyan" />
+          <motion.div 
+            className="flex justify-center mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="p-4 bg-cyan-500/20 rounded-full">
+              <Code className="w-16 h-16 text-cyan-400" />
             </div>
-          </div>
-          <h1 className="text-5xl font-bold text-white mb-6">
+          </motion.div>
+          <motion.h1 
+            className="text-5xl font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             API Playground
-          </h1>
-          <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+          </motion.h1>
+          <motion.p 
+            className="text-xl text-slate-200 max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             Explore, test, and integrate with our powerful APIs. Build amazing applications with our comprehensive developer tools.
-          </p>
+          </motion.p>
         </div>
       </div>
 
@@ -346,15 +332,20 @@ export default function ApiPlayground(...args: any[]): any {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             {/* Search and Filters */}
-            <div className="mb-8">
+            <motion.div 
+              className="mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
               <div className="relative mb-6">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search APIs..."
-                  className="w-full pl-12 pr-4 py-4 bg-zion-slate border border-zion-slate-light rounded-lg text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent"
+                  className="w-full pl-12 pr-4 py-4 bg-slate-800 border border-slate-600 rounded-lg text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 />
               </div>
 
@@ -367,10 +358,10 @@ export default function ApiPlayground(...args: any[]): any {
                       onClick={() => setActiveCategory(category.id)}
                       className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors ${
                         activeCategory === category.id
-                          ? 'bg-zion-cyan text-zion-slate-dark'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                          ? 'bg-cyan-500 text-slate-900'
+                          : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
                       }`}
-
+                    >
                       {category.icon}
                       {category.name} ({category.count})
                     </button>
@@ -385,34 +376,44 @@ export default function ApiPlayground(...args: any[]): any {
                       onClick={() => setActiveMethod(method.id)}
                       className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                         activeMethod === method.id
-                          ? 'bg-zion-purple text-white'
-                          : 'bg-zion-slate text-zion-slate-light hover:bg-zion-slate-light hover:text-white'
+                          ? 'bg-purple-500 text-white'
+                          : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
                       }`}
-
+                    >
                       {method.name} ({method.count})
                     </button>
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {/* API List */}
               <div className="lg:col-span-1">
-                <h2 className="text-2xl font-bold text-white mb-6">Available APIs</h2>
+                <motion.h2 
+                  className="text-2xl font-bold text-white mb-6"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.8 }}
+                >
+                  Available APIs
+                </motion.h2>
                 <div className="space-y-4">
-                  {filteredApis.map((api) => (
-                    <div
+                  {filteredApis.map((api, index) => (
+                    <motion.div
                       key={api.id}
                       onClick={() => handleApiSelect(api)}
-                      className={`bg-zion-slate border border-zion-slate-light rounded-lg p-4 cursor-pointer hover:border-zion-cyan transition-colors ${
-                        selectedApi?.id === api.id ? 'border-zion-cyan ring-2 ring-zion-cyan/20' : ''
+                      className={`bg-slate-800 border border-slate-600 rounded-lg p-4 cursor-pointer hover:border-cyan-500 transition-colors ${
+                        selectedApi?.id === api.id ? 'border-cyan-500 ring-2 ring-cyan-500/20' : ''
                       }`}
-
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.8 + index * 0.1 }}
+                    >
                       <div className="flex items-start justify-between mb-3">
                         <div className="flex items-center gap-2">
                           {getCategoryIcon(api.category)}
-                          <span className="text-sm text-zion-slate-light bg-zion-slate-light/20 px-2 py-1 rounded-full">
+                          <span className="text-sm text-slate-300 bg-slate-700/50 px-2 py-1 rounded-full">
                             {categories.find(c => c.id === api.category)?.name}
                           </span>
                         </div>
@@ -427,21 +428,21 @@ export default function ApiPlayground(...args: any[]): any {
                       </div>
 
                       <h3 className="text-lg font-semibold text-white mb-2">{api.name}</h3>
-                      <p className="text-zion-slate-light text-sm mb-3">{api.description}</p>
+                      <p className="text-slate-300 text-sm mb-3">{api.description}</p>
 
-                      <div className="flex items-center justify-between text-xs text-zion-slate-light">
+                      <div className="flex items-center justify-between text-xs text-slate-300">
                         <span>v{api.version}</span>
                         <span>{api.rateLimit}</span>
                       </div>
 
                       {api.featured && (
                         <div className="mt-3">
-                          <span className="px-2 py-1 bg-zion-cyan text-zion-slate-dark rounded-full text-xs font-medium">
+                          <span className="px-2 py-1 bg-cyan-500 text-slate-900 rounded-full text-xs font-medium">
                             Featured
                           </span>
                         </div>
                       )}
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
@@ -449,13 +450,18 @@ export default function ApiPlayground(...args: any[]): any {
               {/* API Playground */}
               <div className="lg:col-span-2">
                 {selectedApi ? (
-                  <div className="bg-zion-slate border border-zion-slate-light rounded-lg">
+                  <motion.div 
+                    className="bg-slate-800 border border-slate-600 rounded-lg"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 1.0 }}
+                  >
                     {/* API Header */}
-                    <div className="p-6 border-b border-zion-slate-light">
+                    <div className="p-6 border-b border-slate-600">
                       <div className="flex items-center justify-between mb-4">
                         <div>
                           <h2 className="text-2xl font-bold text-white">{selectedApi.name}</h2>
-                          <p className="text-zion-slate-light">{selectedApi.description}</p>
+                          <p className="text-slate-300">{selectedApi.description}</p>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${getMethodColor(selectedApi.method)}`}>
@@ -467,42 +473,42 @@ export default function ApiPlayground(...args: any[]): any {
                         </div>
                       </div>
 
-                      <div className="bg-zion-slate-dark p-4 rounded-lg font-mono text-sm">
-                        <div className="text-zion-slate-light mb-2">Endpoint:</div>
+                      <div className="bg-slate-900 p-4 rounded-lg font-mono text-sm">
+                        <div className="text-slate-400 mb-2">Endpoint:</div>
                         <div className="text-white">{selectedApi.baseUrl}{selectedApi.endpoint}</div>
                       </div>
                     </div>
 
                     {/* Tabs */}
-                    <div className="flex border-b border-zion-slate-light">
+                    <div className="flex border-b border-slate-600">
                       <button
                         onClick={() => setActiveTab('playground')}
                         className={`px-6 py-3 font-medium transition-colors ${
                           activeTab === 'playground'
-                            ? 'text-zion-cyan border-b-2 border-zion-cyan'
-                            : 'text-zion-slate-light hover:text-white'
+                            ? 'text-cyan-500 border-b-2 border-cyan-500'
+                            : 'text-slate-300 hover:text-white'
                         }`}
-
+                      >
                         Playground
                       </button>
                       <button
                         onClick={() => setActiveTab('docs')}
                         className={`px-6 py-3 font-medium transition-colors ${
                           activeTab === 'docs'
-                            ? 'text-zion-cyan border-b-2 border-zion-cyan'
-                            : 'text-zion-slate-light hover:text-white'
+                            ? 'text-cyan-500 border-b-2 border-cyan-500'
+                            : 'text-slate-300 hover:text-white'
                         }`}
-
+                      >
                         Documentation
                       </button>
                       <button
                         onClick={() => setActiveTab('sdk')}
                         className={`px-6 py-3 font-medium transition-colors ${
                           activeTab === 'sdk'
-                            ? 'text-zion-cyan border-b-2 border-zion-cyan'
-                            : 'text-zion-slate-light hover:text-white'
-                          }`}
-
+                            ? 'text-cyan-500 border-b-2 border-cyan-500'
+                            : 'text-slate-300 hover:text-white'
+                        }`}
+                      >
                         SDK
                       </button>
                     </div>
@@ -514,20 +520,20 @@ export default function ApiPlayground(...args: any[]): any {
                           {/* Request */}
                           <div>
                             <h3 className="text-lg font-semibold text-white mb-3">Request</h3>
-                            <div className="bg-zion-slate-dark p-4 rounded-lg">
+                            <div className="bg-slate-900 p-4 rounded-lg">
                               <div className="flex items-center justify-between mb-2">
-                                <span className="text-zion-slate-light text-sm">Request Body (JSON)</span>
+                                <span className="text-slate-400 text-sm">Request Body (JSON)</span>
                                 <button
                                   onClick={() => copyToClipboard(requestBody)}
-                                  className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-
+                                  className="text-cyan-500 hover:text-cyan-400 transition-colors"
+                                >
                                   <Copy className="w-4 h-4" />
                                 </button>
                               </div>
                               <textarea
                                 value={requestBody}
                                 onChange={(e) => setRequestBody(e.target.value)}
-                                className="w-full h-32 bg-zion-slate border border-zion-slate-light rounded p-3 text-white font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-zion-cyan"
+                                className="w-full h-32 bg-slate-800 border border-slate-600 rounded p-3 text-white font-mono text-sm resize-none focus:outline-none focus:ring-2 focus:ring-cyan-500"
                                 placeholder="Enter request body..."
                               />
                             </div>
@@ -538,8 +544,8 @@ export default function ApiPlayground(...args: any[]): any {
                             <button
                               onClick={handleTestApi}
                               disabled={isLoading}
-                              className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
-
+                              className="bg-cyan-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed inline-flex items-center gap-2"
+                            >
                               {isLoading ? (
                                 <>
                                   <RefreshCw className="w-5 h-5 animate-spin" />
@@ -558,20 +564,20 @@ export default function ApiPlayground(...args: any[]): any {
                           {responseData && (
                             <div>
                               <h3 className="text-lg font-semibold text-white mb-3">Response</h3>
-                              <div className="bg-zion-slate-dark p-4 rounded-lg">
+                              <div className="bg-slate-900 p-4 rounded-lg">
                                 <div className="flex items-center justify-between mb-2">
-                                  <span className="text-zion-slate-light text-sm">Response Data</span>
+                                  <span className="text-slate-400 text-sm">Response Data</span>
                                   <div className="flex items-center gap-2">
                                     <button
                                       onClick={() => copyToClipboard(responseData)}
-                                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-
+                                      className="text-cyan-500 hover:text-cyan-400 transition-colors"
+                                    >
                                       <Copy className="w-4 h-4" />
                                     </button>
                                     <button
                                       onClick={downloadResponse}
-                                      className="text-zion-cyan hover:text-zion-cyan-light transition-colors"
-
+                                      className="text-cyan-500 hover:text-cyan-400 transition-colors"
+                                    >
                                       <Download className="w-4 h-4" />
                                     </button>
                                   </div>
@@ -591,7 +597,7 @@ export default function ApiPlayground(...args: any[]): any {
                             <h3 className="text-lg font-semibold text-white mb-3">Parameters</h3>
                             <div className="space-y-3">
                               {selectedApi.parameters.map((param, index) => (
-                                <div key={index} className="bg-zion-slate-dark p-4 rounded-lg">
+                                <div key={index} className="bg-slate-900 p-4 rounded-lg">
                                   <div className="flex items-center justify-between mb-2">
                                     <span className="text-white font-medium">{param.name}</span>
                                     <div className="flex items-center gap-2">
@@ -600,10 +606,10 @@ export default function ApiPlayground(...args: any[]): any {
                                       }`}>
                                         {param.required ? 'Required' : 'Optional'}
                                       </span>
-                                      <span className="text-zion-slate-light text-sm">{param.type}</span>
+                                      <span className="text-slate-300 text-sm">{param.type}</span>
                                     </div>
                                   </div>
-                                  <p className="text-zion-slate-light text-sm">{param.description}</p>
+                                  <p className="text-slate-300 text-sm">{param.description}</p>
                                 </div>
                               ))}
                             </div>
@@ -614,8 +620,8 @@ export default function ApiPlayground(...args: any[]): any {
                               href={selectedApi.documentation}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="bg-zion-purple text-white px-6 py-3 rounded-lg font-semibold hover:bg-zion-purple-light transition-colors inline-flex items-center gap-2"
-
+                              className="bg-purple-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-600 transition-colors inline-flex items-center gap-2"
+                            >
                               <BookOpen className="w-5 h-5" />
                               View Full Documentation
                             </a>
@@ -627,19 +633,19 @@ export default function ApiPlayground(...args: any[]): any {
                         <div className="space-y-6">
                           <div>
                             <h3 className="text-lg font-semibold text-white mb-3">SDK & Libraries</h3>
-                            <div className="bg-zion-slate-dark p-6 rounded-lg">
+                            <div className="bg-slate-900 p-6 rounded-lg">
                               <div className="text-center">
-                                <Code className="w-16 h-16 text-zion-cyan mx-auto mb-4" />
+                                <Code className="w-16 h-16 text-cyan-500 mx-auto mb-4" />
                                 <h4 className="text-xl font-semibold text-white mb-2">Official SDK</h4>
-                                <p className="text-zion-slate-light mb-4">
+                                <p className="text-slate-300 mb-4">
                                   Get started quickly with our official SDKs and libraries
                                 </p>
                                 <a
                                   href={selectedApi.sdk}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="bg-zion-cyan text-zion-slate-dark px-6 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors inline-flex items-center gap-2"
-
+                                  className="bg-cyan-500 text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-colors inline-flex items-center gap-2"
+                                >
                                   <ExternalLink className="w-5 h-5" />
                                   View SDK
                                 </a>
@@ -649,15 +655,20 @@ export default function ApiPlayground(...args: any[]): any {
                         </div>
                       )}
                     </div>
-                  </div>
+                  </motion.div>
                 ) : (
-                  <div className="bg-zion-slate border border-zion-slate-light rounded-lg p-12 text-center">
-                    <Code className="w-16 h-16 text-zion-slate-light mx-auto mb-4" />
+                  <motion.div 
+                    className="bg-slate-800 border border-slate-600 rounded-lg p-12 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 1.0 }}
+                  >
+                    <Code className="w-16 h-16 text-slate-400 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold text-white mb-2">Select an API</h3>
-                    <p className="text-zion-slate-light">
+                    <p className="text-slate-300">
                       Choose an API from the list to start testing and exploring
                     </p>
-                  </div>
+                  </motion.div>
                 )}
               </div>
             </div>
@@ -666,37 +677,42 @@ export default function ApiPlayground(...args: any[]): any {
       </div>
 
       {/* CTA Section */}
-      <div className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple">
+      <div className="py-16 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <motion.h2 
+            className="text-3xl font-bold text-white mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
             Ready to Build Something Amazing?
-          </h2>
-          <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
+          </motion.h2>
+          <motion.p 
+            className="text-xl text-slate-200 mb-8 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             Get your API keys, explore our documentation, and start building with our powerful APIs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <button className="bg-zion-cyan text-zion-slate-dark px-8 py-3 rounded-lg font-semibold hover:bg-zion-cyan-light transition-colors">
+          </motion.p>
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <button className="bg-cyan-500 text-slate-900 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
               Get API Keys
             </button>
-            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-zion-slate-dark transition-colors">
+            <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-colors">
               View Documentation
-<<<<<<< HEAD
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </div>
-  )};
-=======;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
-    </div>;
   );
-<<<<<<< HEAD
-}}}}}}
-=======
 }
->>>>>>> cursor/fix-project-errors-and-automate-future-fixes-53bd
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3

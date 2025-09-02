@@ -1,6 +1,5 @@
 import { ProductListing  } from '@/types/listings';
 
-<<<<<<< HEAD
 export const ULTIMATE_REAL_SERVICES_2025: ProductListing[] = [
   {
     id: "ai-enterprise-chatbot-platform",
@@ -511,28 +510,619 @@ export const ULTIMATE_REAL_SERVICES_2025: ProductListing[] = [
     roi: "350% within 10 months",
     setupTime: "10-12 weeks",
     integrations: ["CMS Platforms", "Social Media", "Marketing Tools", "Analytics Platforms", "Workflow Management"]
-
+  },
+  {
+    id: "metaverse-development-platform",
+    title: "Enterprise Metaverse Development & Virtual World Platform",
+    description: "Complete metaverse creation platform with 3D world building, avatar customization, virtual commerce, and social interaction tools.",
+    category: "Metaverse",
+    subcategory: "Virtual Worlds",
+    price: 44999,
+    currency: "$",
+    tags: ["Metaverse", "Virtual Worlds", "3D Development", "Avatar System", "Virtual Commerce", "Social VR"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/metaverse-platform.jpg"],
+    createdAt: "2024-04-05T10:00:00.000Z",
+    rating: 4.6,
+    reviewCount: 34,
+    featured: true,
+    location: "Global",
+    availability: "20-28 Weeks",
+    aiScore: 87,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/metaverse-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$40,000-60,000",
+    competitors: ["Meta Horizon Worlds", "Roblox Studio", "Unity Metaverse"],
+    roi: "800% within 36 months",
+    setupTime: "20-28 weeks",
+    integrations: ["VR Headsets", "3D Modeling Tools", "Payment Systems", "Social Platforms", "Analytics"]
+  },
+  {
+    id: "ai-powered-recruitment-platform",
+    title: "AI-Powered Talent Acquisition & Recruitment Platform",
+    description: "Intelligent recruitment system with automated candidate screening, skill matching, interview scheduling, and predictive hiring analytics.",
+    category: "HR Tech",
+    subcategory: "Recruitment",
+    price: 12999,
+    currency: "$",
+    tags: ["AI Recruitment", "Talent Acquisition", "Candidate Screening", "Skill Matching", "Predictive Hiring", "HR Analytics"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-recruitment-platform.jpg"],
+    createdAt: "2024-04-10T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "8-12 Weeks",
+    aiScore: 93,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-recruitment-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$12,000-20,000",
+    competitors: ["HireVue", "Pymetrics", "HiredScore"],
+    roi: "400% within 12 months",
+    setupTime: "8-12 weeks",
+    integrations: ["ATS Systems", "Job Boards", "LinkedIn", "Calendar Systems", "HRIS Platforms"]
+  },
+  {
+    id: "blockchain-nft-marketplace",
+    title: "Enterprise NFT Marketplace & Digital Asset Platform",
+    description: "Complete NFT marketplace with minting, trading, auction systems, and digital asset management for brands and creators.",
+    category: "Blockchain",
+    subcategory: "NFT Platform",
+    price: 22999,
+    currency: "$",
+    tags: ["NFT Marketplace", "Digital Assets", "Blockchain", "Smart Contracts", "Auction System", "Brand NFTs"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/nft-marketplace.jpg"],
+    createdAt: "2024-04-15T10:00:00.000Z",
+    rating: 4.5,
+    reviewCount: 67,
+    featured: true,
+    location: "Global",
+    availability: "12-16 Weeks",
+    aiScore: 88,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/nft-marketplace",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$20,000-35,000",
+    competitors: ["OpenSea", "Rarible", "Foundation"],
+    roi: "600% within 18 months",
+    setupTime: "12-16 weeks",
+    integrations: ["Ethereum", "Polygon", "Payment Gateways", "Digital Wallets", "Social Media"]
+  },
+  {
+    id: "ai-customer-sentiment-analysis",
+    title: "Real-Time AI Customer Sentiment Analysis Platform",
+    description: "Advanced sentiment analysis system with emotion detection, trend analysis, and automated response recommendations for customer service.",
+    category: "AI Development",
+    subcategory: "Sentiment Analysis",
+    price: 8999,
+    currency: "$",
+    tags: ["Sentiment Analysis", "Customer Experience", "Emotion Detection", "Trend Analysis", "Automated Responses", "CX Analytics"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/sentiment-analysis.jpg"],
+    createdAt: "2024-04-20T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 134,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 94,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/sentiment-analysis",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$8,000-15,000",
+    competitors: ["Brandwatch", "Sprinklr", "Hootsuite Insights"],
+    roi: "300% within 8 months",
+    setupTime: "6-8 weeks",
+    integrations: ["Social Media", "CRM Systems", "Customer Support", "Analytics Platforms", "Marketing Tools"]
+  },
+  {
+    id: "quantum-machine-learning",
+    title: "Quantum Machine Learning & AI Optimization Platform",
+    description: "Quantum-enhanced machine learning platform with quantum algorithms for optimization, pattern recognition, and complex problem solving.",
+    category: "Quantum Computing",
+    subcategory: "Machine Learning",
+    price: 39999,
+    currency: "$",
+    tags: ["Quantum ML", "Quantum Algorithms", "Optimization", "Pattern Recognition", "Complex Problem Solving", "Quantum AI"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/quantum-ml.jpg"],
+    createdAt: "2024-04-25T10:00:00.000Z",
+    rating: 4.4,
+    reviewCount: 28,
+    featured: true,
+    location: "Global",
+    availability: "16-24 Weeks",
+    aiScore: 85,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-ml",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$35,000-55,000",
+    competitors: ["IBM Quantum ML", "Google Quantum AI", "Microsoft Azure Quantum"],
+    roi: "700% within 30 months",
+    setupTime: "16-24 weeks",
+    integrations: ["Quantum Computers", "ML Frameworks", "Data Platforms", "Research Tools", "Cloud Services"]
+  },
+  {
+    id: "autonomous-drones-platform",
+    title: "AI-Powered Autonomous Drones & UAV Management Platform",
+    description: "Complete drone fleet management system with autonomous navigation, mission planning, data collection, and real-time monitoring.",
+    category: "Autonomous Systems",
+    subcategory: "Drone Technology",
+    price: 29999,
+    currency: "$",
+    tags: ["Autonomous Drones", "UAV Management", "Mission Planning", "Data Collection", "Real-time Monitoring", "Drone Fleet"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/autonomous-drones.jpg"],
+    createdAt: "2024-05-01T10:00:00.000Z",
+    rating: 4.6,
+    reviewCount: 45,
+    featured: true,
+    location: "Global",
+    availability: "14-20 Weeks",
+    aiScore: 91,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/autonomous-drones",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$25,000-40,000",
+    competitors: ["DJI Enterprise", "Skydio", "Parrot Professional"],
+    roi: "500% within 20 months",
+    setupTime: "14-20 weeks",
+    integrations: ["Drone Hardware", "GPS Systems", "Camera Systems", "Data Analytics", "Mapping Software"]
+  },
+  {
+    id: "ai-powered-legal-tech",
+    title: "AI-Powered Legal Technology & Contract Analysis Platform",
+    description: "Intelligent legal document analysis, contract review, compliance checking, and legal research automation platform.",
+    category: "Legal Tech",
+    subcategory: "Document Analysis",
+    price: 18999,
+    currency: "$",
+    tags: ["Legal Tech", "Contract Analysis", "Document Review", "Compliance", "Legal Research", "AI Law"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/legal-tech-platform.jpg"],
+    createdAt: "2024-05-05T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 78,
+    featured: true,
+    location: "Global",
+    availability: "10-14 Weeks",
+    aiScore: 92,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/legal-tech-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$18,000-30,000",
+    competitors: ["Kira Systems", "Luminance", "ContractPodAi"],
+    roi: "400% within 16 months",
+    setupTime: "10-14 weeks",
+    integrations: ["Document Management", "Legal Databases", "E-signature", "Case Management", "Compliance Tools"]
+  },
+  {
+    id: "biometric-authentication-platform",
+    title: "Advanced Biometric Authentication & Identity Management Platform",
+    description: "Multi-modal biometric authentication system with facial recognition, fingerprint scanning, voice recognition, and behavioral analysis.",
+    category: "Cybersecurity",
+    subcategory: "Biometric Security",
+    price: 16999,
+    currency: "$",
+    tags: ["Biometric Authentication", "Facial Recognition", "Fingerprint Scanning", "Voice Recognition", "Behavioral Analysis", "Identity Management"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/biometric-authentication.jpg"],
+    createdAt: "2024-05-10T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 95,
+    featured: true,
+    location: "Global",
+    availability: "8-12 Weeks",
+    aiScore: 93,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/biometric-authentication",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$15,000-25,000",
+    competitors: ["Face++", "IDEMIA", "NEC Biometrics"],
+    roi: "350% within 14 months",
+    setupTime: "8-12 weeks",
+    integrations: ["Access Control", "HR Systems", "Mobile Apps", "Security Systems", "Identity Providers"]
+  },
+  {
+    id: "ai-powered-marketing-automation",
+    title: "AI-Powered Marketing Automation & Personalization Platform",
+    description: "Intelligent marketing automation with predictive analytics, personalized content, multi-channel campaigns, and ROI optimization.",
+    category: "Marketing AI",
+    subcategory: "Automation",
+    price: 13999,
+    currency: "$",
+    tags: ["Marketing Automation", "Personalization", "Predictive Analytics", "Multi-channel", "ROI Optimization", "AI Marketing"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/marketing-automation.jpg"],
+    createdAt: "2024-05-15T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 156,
+    featured: true,
+    location: "Global",
+    availability: "8-10 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/marketing-automation",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$12,000-22,000",
+    competitors: ["HubSpot", "Marketo", "Pardot"],
+    roi: "450% within 12 months",
+    setupTime: "8-10 weeks",
+    integrations: ["CRM Systems", "Email Platforms", "Social Media", "Analytics Tools", "E-commerce"]
+  },
+  {
+    id: "quantum-financial-modeling",
+    title: "Quantum Financial Modeling & Risk Assessment Platform",
+    description: "Quantum-enhanced financial modeling with portfolio optimization, risk assessment, algorithmic trading, and market prediction.",
+    category: "Fintech",
+    subcategory: "Quantum Finance",
+    price: 34999,
+    currency: "$",
+    tags: ["Quantum Finance", "Financial Modeling", "Portfolio Optimization", "Risk Assessment", "Algorithmic Trading", "Market Prediction"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/quantum-finance.jpg"],
+    createdAt: "2024-05-20T10:00:00.000Z",
+    rating: 4.5,
+    reviewCount: 42,
+    featured: true,
+    location: "Global",
+    availability: "18-24 Weeks",
+    aiScore: 86,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-finance",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$30,000-50,000",
+    competitors: ["Goldman Sachs Quantum", "JP Morgan Quantum", "Barclays Quantum"],
+    roi: "600% within 24 months",
+    setupTime: "18-24 weeks",
+    integrations: ["Trading Platforms", "Risk Management", "Market Data", "Portfolio Systems", "Compliance Tools"]
+  },
+  {
+    id: "ai-powered-education-platform",
+    title: "AI-Powered Personalized Learning & Education Platform",
+    description: "Intelligent education platform with adaptive learning, personalized curriculum, student analytics, and automated assessment.",
+    category: "EdTech",
+    subcategory: "Personalized Learning",
+    price: 11999,
+    currency: "$",
+    tags: ["EdTech", "Personalized Learning", "Adaptive Learning", "Student Analytics", "Automated Assessment", "AI Education"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-education-platform.jpg"],
+    createdAt: "2024-05-25T10:00:00.000Z",
+    rating: 4.7,
+    reviewCount: 89,
+    featured: true,
+    location: "Global",
+    availability: "10-14 Weeks",
+    aiScore: 94,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-education-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$10,000-20,000",
+    competitors: ["Duolingo", "Khan Academy", "Coursera"],
+    roi: "350% within 16 months",
+    setupTime: "10-14 weeks",
+    integrations: ["LMS Systems", "Student Information", "Assessment Tools", "Content Management", "Analytics Platforms"]
+  },
+  {
+    id: "autonomous-robotics-platform",
+    title: "AI-Powered Autonomous Robotics & Automation Platform",
+    description: "Complete robotics automation platform with autonomous navigation, task planning, human-robot collaboration, and industrial automation.",
+    category: "Robotics",
+    subcategory: "Autonomous Systems",
+    price: 49999,
+    currency: "$",
+    tags: ["Autonomous Robotics", "Task Planning", "Human-Robot Collaboration", "Industrial Automation", "Robot Fleet", "AI Robotics"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/autonomous-robotics.jpg"],
+    createdAt: "2024-06-01T10:00:00.000Z",
+    rating: 4.4,
+    reviewCount: 23,
+    featured: true,
+    location: "Global",
+    availability: "28-36 Weeks",
+    aiScore: 84,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/autonomous-robotics",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$45,000-70,000",
+    competitors: ["Boston Dynamics", "ABB Robotics", "KUKA Robotics"],
+    roi: "800% within 36 months",
+    setupTime: "28-36 weeks",
+    integrations: ["Robot Hardware", "Industrial Systems", "Safety Systems", "Monitoring Tools", "Analytics Platforms"]
+  },
+  {
+    id: "ai-powered-sales-intelligence",
+    title: "AI-Powered Sales Intelligence & Lead Scoring Platform",
+    description: "Intelligent sales platform with lead scoring, opportunity prediction, sales forecasting, and automated follow-up systems.",
+    category: "Sales AI",
+    subcategory: "Intelligence",
+    price: 9999,
+    currency: "$",
+    tags: ["Sales Intelligence", "Lead Scoring", "Opportunity Prediction", "Sales Forecasting", "Automated Follow-up", "AI Sales"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/sales-intelligence.jpg"],
+    createdAt: "2024-06-05T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 167,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 96,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/sales-intelligence",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$8,000-15,000",
+    competitors: ["Salesforce Einstein", "HubSpot Sales Hub", "Pipedrive"],
+    roi: "400% within 10 months",
+    setupTime: "6-8 weeks",
+    integrations: ["CRM Systems", "Email Platforms", "Social Media", "Analytics Tools", "Communication Platforms"]
+  },
+  {
+    id: "quantum-cryptography-network",
+    title: "Quantum Cryptography Network & Secure Communication Platform",
+    description: "Quantum key distribution network with ultra-secure communication, quantum-resistant protocols, and future-proof encryption.",
+    category: "Quantum Security",
+    subcategory: "Cryptography",
+    price: 37999,
+    currency: "$",
+    tags: ["Quantum Cryptography", "Quantum Key Distribution", "Secure Communication", "Quantum-resistant Protocols", "Future-proof Encryption", "Quantum Network"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/quantum-cryptography.jpg"],
+    createdAt: "2024-06-10T10:00:00.000Z",
+    rating: 4.3,
+    reviewCount: 19,
+    featured: true,
+    location: "Global",
+    availability: "20-28 Weeks",
+    aiScore: 82,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-cryptography",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$35,000-60,000",
+    competitors: ["Quantum Xchange", "ID Quantique", "Toshiba Quantum"],
+    roi: "700% within 30 months",
+    setupTime: "20-28 weeks",
+    integrations: ["Network Infrastructure", "Security Systems", "Communication Platforms", "Quantum Hardware", "Monitoring Tools"]
+  },
+  {
+    id: "ai-powered-customer-support",
+    title: "AI-Powered Customer Support & Service Automation Platform",
+    description: "Intelligent customer support system with automated responses, ticket routing, sentiment analysis, and 24/7 availability.",
+    category: "Customer Service",
+    subcategory: "AI Support",
+    price: 7999,
+    currency: "$",
+    tags: ["AI Customer Support", "Automated Responses", "Ticket Routing", "Sentiment Analysis", "24/7 Support", "Service Automation"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/ai-customer-support.jpg"],
+    createdAt: "2024-06-15T10:00:00.000Z",
+    rating: 4.9,
+    reviewCount: 234,
+    featured: true,
+    location: "Global",
+    availability: "4-6 Weeks",
+    aiScore: 97,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/ai-customer-support",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$7,000-12,000",
+    competitors: ["Zendesk", "Intercom", "Freshdesk"],
+    roi: "300% within 6 months",
+    setupTime: "4-6 weeks",
+    integrations: ["Help Desk Systems", "CRM Platforms", "Communication Tools", "Knowledge Base", "Analytics Platforms"]
+  },
+  {
+    id: "blockchain-decentralized-finance",
+    title: "Blockchain DeFi Platform & Decentralized Finance Solutions",
+    description: "Complete DeFi platform with lending, borrowing, yield farming, liquidity pools, and decentralized exchange capabilities.",
+    category: "Blockchain",
+    subcategory: "DeFi",
+    price: 26999,
+    currency: "$",
+    tags: ["DeFi", "Decentralized Finance", "Lending", "Borrowing", "Yield Farming", "Liquidity Pools"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/defi-platform.jpg"],
+    createdAt: "2024-06-20T10:00:00.000Z",
+    rating: 4.6,
+    reviewCount: 56,
+    featured: true,
+    location: "Global",
+    availability: "14-18 Weeks",
+    aiScore: 89,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/defi-platform",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$25,000-40,000",
+    competitors: ["Compound", "Aave", "Uniswap"],
+    roi: "600% within 20 months",
+    setupTime: "14-18 weeks",
+    integrations: ["Ethereum", "Smart Contracts", "Digital Wallets", "Oracle Networks", "Analytics Tools"]
+  },
+  {
+    id: "ai-powered-product-recommendation",
+    title: "AI-Powered Product Recommendation & Personalization Engine",
+    description: "Intelligent product recommendation system with collaborative filtering, content-based filtering, and real-time personalization.",
+    category: "AI Development",
+    subcategory: "Recommendation Engine",
+    price: 10999,
+    currency: "$",
+    tags: ["Product Recommendations", "Personalization", "Collaborative Filtering", "Content-based Filtering", "Real-time AI", "E-commerce"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/product-recommendation.jpg"],
+    createdAt: "2024-06-25T10:00:00.000Z",
+    rating: 4.8,
+    reviewCount: 145,
+    featured: true,
+    location: "Global",
+    availability: "6-8 Weeks",
+    aiScore: 95,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/product-recommendation",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$10,000-18,000",
+    competitors: ["Amazon Personalize", "Google Recommendations", "Netflix Recommendation"],
+    roi: "350% within 8 months",
+    setupTime: "6-8 weeks",
+    integrations: ["E-commerce Platforms", "Analytics Tools", "User Behavior", "Product Catalogs", "A/B Testing"]
+  },
+  {
+    id: "autonomous-vehicle-fleet-management",
+    title: "AI-Powered Autonomous Vehicle Fleet Management Platform",
+    description: "Complete autonomous vehicle fleet management with route optimization, safety monitoring, maintenance scheduling, and passenger management.",
+    category: "Autonomous Systems",
+    subcategory: "Vehicle Fleet",
+    price: 54999,
+    currency: "$",
+    tags: ["Autonomous Vehicles", "Fleet Management", "Route Optimization", "Safety Monitoring", "Maintenance Scheduling", "Passenger Management"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/autonomous-vehicle-fleet.jpg"],
+    createdAt: "2024-07-01T10:00:00.000Z",
+    rating: 4.3,
+    reviewCount: 18,
+    featured: true,
+    location: "Global",
+    availability: "28-36 Weeks",
+    aiScore: 83,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/autonomous-vehicle-fleet",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$50,000-80,000",
+    competitors: ["Waymo", "Tesla Autopilot", "Cruise Automation"],
+    roi: "900% within 42 months",
+    setupTime: "28-36 weeks",
+    integrations: ["Vehicle Systems", "GPS Navigation", "Safety Systems", "Fleet Management", "Passenger Apps"]
+  },
+  {
+    id: "ai-powered-energy-optimization",
+    title: "AI-Powered Energy Optimization & Smart Grid Management Platform",
+    description: "Intelligent energy management system with demand forecasting, renewable integration, grid optimization, and cost reduction.",
+    category: "Energy Tech",
+    subcategory: "Smart Grid",
+    price: 41999,
+    currency: "$",
+    tags: ["Energy Optimization", "Smart Grid", "Demand Forecasting", "Renewable Integration", "Grid Optimization", "Cost Reduction"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/energy-optimization.jpg"],
+    createdAt: "2024-07-05T10:00:00.000Z",
+    rating: 4.5,
+    reviewCount: 34,
+    featured: true,
+    location: "Global",
+    availability: "20-26 Weeks",
+    aiScore: 87,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/energy-optimization",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$40,000-65,000",
+    competitors: ["GE Grid Solutions", "Siemens Smart Grid", "ABB Energy Management"],
+    roi: "700% within 30 months",
+    setupTime: "20-26 weeks",
+    integrations: ["Grid Infrastructure", "Renewable Energy", "Energy Storage", "Monitoring Systems", "Analytics Platforms"]
+  },
+  {
+    id: "quantum-drug-discovery",
+    title: "Quantum Drug Discovery & Pharmaceutical Research Platform",
+    description: "Quantum-enhanced drug discovery platform with molecular simulation, protein folding, drug design, and clinical trial optimization.",
+    category: "Healthcare AI",
+    subcategory: "Drug Discovery",
+    price: 59999,
+    currency: "$",
+    tags: ["Quantum Drug Discovery", "Molecular Simulation", "Protein Folding", "Drug Design", "Clinical Trials", "Pharmaceutical Research"],
+    author: { name: "Zion Tech Group", id: "zion-tech-group", email: "kleber@ziontechgroup.com", avatarUrl: "https://ziontechgroup.com/logo.png" },
+    images: ["https://ziontechgroup.com/images/quantum-drug-discovery.jpg"],
+    createdAt: "2024-07-10T10:00:00.000Z",
+    rating: 4.2,
+    reviewCount: 12,
+    featured: true,
+    location: "Global",
+    availability: "32-40 Weeks",
+    aiScore: 80,
+    contactInfo: {
+      phone: "+1 302 464 0950",
+      email: "kleber@ziontechgroup.com",
+      website: "https://ziontechgroup.com/quantum-drug-discovery",
+      address: "364 E Main St STE 1008 Middletown DE 19709"
+    },
+    marketPrice: "$55,000-90,000",
+    competitors: ["IBM Quantum Life Sciences", "Google Quantum AI", "Microsoft Quantum"],
+    roi: "1000% within 48 months",
+    setupTime: "32-40 weeks",
+    integrations: ["Research Platforms", "Molecular Databases", "Clinical Systems", "Analytics Tools", "Regulatory Compliance"]
+  }
 ];
 
-=======
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
 export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
   "AI Development": {
     icon: "🤖",
     description: "Advanced artificial intelligence solutions and development platforms",
-  count: 4
-  
-
-
-
-
-
-
-},
+    count: 7
+  },
   "Cybersecurity": {
     icon: "🔒",
     description: "Comprehensive security solutions and threat protection",
-    count: 2
+    count: 3
   },
   "Cloud Services": {
     icon: "☁️",
@@ -542,12 +1132,12 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
   "Blockchain": {
     icon: "⛓️",
     description: "Distributed ledger technology and smart contract solutions",
-    count: 1
+    count: 3
   },
   "Quantum Computing": {
     icon: "⚛️",
     description: "Quantum computing platforms and quantum-resistant solutions",
-    count: 2
+    count: 4
   },
   "IoT": {
     icon: "📡",
@@ -567,12 +1157,12 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
   "Fintech": {
     icon: "💳",
     description: "Financial technology and payment processing solutions",
-    count: 1
+    count: 2
   },
   "Healthcare AI": {
     icon: "🏥",
     description: "AI-powered healthcare and medical diagnostic solutions",
-    count: 1
+    count: 2
   },
   "Smart Cities": {
     icon: "🏙️",
@@ -582,35 +1172,67 @@ export const ULTIMATE_SERVICE_CATEGORIES_2025 = {
   "Augmented Reality": {
     icon: "👁️",
     description: "AR/VR solutions and immersive technology platforms",
-<<<<<<< HEAD
     count: 1
   },
   "Logistics AI": {
     icon: "🚚",
     description: "AI-powered logistics and supply chain automation",
     count: 1
-
-=======
-    count: 1;
-  },;
-  "Logistics AI": {;
-    icon: "🚚",;
-    description: "AI-powered logistics and supply chain automation",;
-    count: 1;
-  };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  },
+  "Metaverse": {
+    icon: "🌐",
+    description: "Metaverse development and virtual world platforms",
+    count: 1
+  },
+  "HR Tech": {
+    icon: "👥",
+    description: "Human resources technology and recruitment solutions",
+    count: 1
+  },
+  "Legal Tech": {
+    icon: "⚖️",
+    description: "Legal technology and document analysis solutions",
+    count: 1
+  },
+  "Marketing AI": {
+    icon: "📢",
+    description: "AI-powered marketing automation and personalization",
+    count: 1
+  },
+  "EdTech": {
+    icon: "🎓",
+    description: "Educational technology and personalized learning platforms",
+    count: 1
+  },
+  "Robotics": {
+    icon: "🤖",
+    description: "Autonomous robotics and industrial automation solutions",
+    count: 1
+  },
+  "Sales AI": {
+    icon: "💰",
+    description: "AI-powered sales intelligence and lead scoring",
+    count: 1
+  },
+  "Customer Service": {
+    icon: "🎧",
+    description: "AI-powered customer support and service automation",
+    count: 1
+  },
+  "Autonomous Systems": {
+    icon: "🚗",
+    description: "Autonomous vehicles, drones, and robotic systems",
+    count: 3
+  },
+  "Energy Tech": {
+    icon: "⚡",
+    description: "Energy optimization and smart grid management",
+    count: 1
+  }
 };
 
 export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
-  "Chatbots": { icon: "💬",
-  count: 1 
-
-
-
-
-
-
-},
+  "Chatbots": { icon: "💬", count: 1 },
   "Threat Intelligence": { icon: "🛡️", count: 1 },
   "Migration": { icon: "🚀", count: 1 },
   "Supply Chain": { icon: "📦", count: 1 },
@@ -620,13 +1242,31 @@ export const ULTIMATE_SERVICE_SUBCATEGORIES_2025 = {
   "Data Privacy": { icon: "🔐", count: 1 },
   "Microservices": { icon: "🔧", count: 1 },
   "Predictive Analytics": { icon: "📊", count: 1 },
-  "Payment Processing": { icon: "💸", count: 1 },;
-  "Diagnostics": { icon: "🔍", count: 1 },;
-  "Infrastructure": { icon: "🏗️", count: 1 },;
-  "E-commerce": { icon: "🛒", count: 1 },;
-  "Autonomous Systems": { icon: "🚗", count: 1 },;
-  "Cryptography": { icon: "🔑", count: 1 },;
-  "Content Generation": { icon: "✍️", count: 1 };
+  "Payment Processing": { icon: "💸", count: 1 },
+  "Diagnostics": { icon: "🔍", count: 1 },
+  "Infrastructure": { icon: "🏗️", count: 1 },
+  "E-commerce": { icon: "🛒", count: 1 },
+  "Autonomous Systems": { icon: "🚗", count: 1 },
+  "Cryptography": { icon: "🔑", count: 1 },
+  "Content Generation": { icon: "✍️", count: 1 },
+  "Virtual Worlds": { icon: "🌐", count: 1 },
+  "Recruitment": { icon: "👥", count: 1 },
+  "NFT Platform": { icon: "🖼️", count: 1 },
+  "Sentiment Analysis": { icon: "😊", count: 1 },
+  "Machine Learning": { icon: "🧠", count: 1 },
+  "Drone Technology": { icon: "🚁", count: 1 },
+  "Document Analysis": { icon: "📄", count: 1 },
+  "Biometric Security": { icon: "👁️", count: 1 },
+  "Automation": { icon: "⚙️", count: 1 },
+  "Quantum Finance": { icon: "💰", count: 1 },
+  "Personalized Learning": { icon: "🎓", count: 1 },
+  "Intelligence": { icon: "🧠", count: 1 },
+  "AI Support": { icon: "🎧", count: 1 },
+  "DeFi": { icon: "🏦", count: 1 },
+  "Recommendation Engine": { icon: "🎯", count: 1 },
+  "Vehicle Fleet": { icon: "🚗", count: 1 },
+  "Smart Grid": { icon: "⚡", count: 1 },
+  "Drug Discovery": { icon: "💊", count: 1 }
 };
 
 export const ULTIMATE_PRICING_TIERS_2025 = {
@@ -646,23 +1286,13 @@ export const ULTIMATE_PRICING_TIERS_2025 = {
   "Professional": {
     range: "$15,000 - $30,000",
     description: "Advanced solutions with enhanced features and support",
-<<<<<<< HEAD
     features: ["Advanced functionality", "Priority support", "Extended integrations", "Customization options", "Training"]
   },
   "Enterprise": {
     range: "$30,000 - $50,000",
     description: "Comprehensive solutions for large organizations",
     features: ["Full functionality", "24/7 support", "All integrations", "Custom development", "Dedicated account manager", "SLA guarantees"]
-
-=======
-    features: ["Advanced functionality", "Priority support", "Extended integrations", "Customization options", "Training"];
-  },;
-  "Enterprise": {;
-    range: "$30,000 - $50,000",;
-    description: "Comprehensive solutions for large organizations",;
-    features: ["Full functionality", "24/7 support", "All integrations", "Custom development", "Dedicated account manager", "SLA guarantees"];
-  };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  }
 };
 
 export const ULTIMATE_CONTACT_INFO_2025 = {
@@ -690,23 +1320,6 @@ export const ULTIMATE_SERVICE_GUARANTEES_2025 = {
   support: "Comprehensive technical support and maintenance included",
   updates: "Regular feature updates and security patches",
   security: "Enterprise-grade security and compliance certifications",
-<<<<<<< HEAD
   scalability: "Built to scale with your business growth",
   integration: "Seamless integration with existing systems and workflows"
-};}}}
-=======
-  scalability: "Built to scale with your business growth",;
-  ;
-  ;
-  ;
-  ;
-  integration: "Seamless integration with existing systems and workflows";
-;
-
-
-
-
-
-
 };
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
