@@ -1,7 +1,6 @@
 'use client';'
 ''
 import Image from 'next/image';''
-import { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
   src: string;
