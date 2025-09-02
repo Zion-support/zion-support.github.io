@@ -12,9 +12,9 @@ const ServicesPage: NextPage = () => {
   const aiServices = getServicesByCategory('ai-services');
 
   const stats = [
-    { number: '50+', label: 'Micro SaaS Solutions', icon: Zap },
-    { number: '25+', label: 'IT Services', icon: Shield },
-    { number: '20+', label: 'AI Services', icon: Globe },
+    { number: '60+', label: 'Micro SaaS Solutions', icon: Zap },
+    { number: '35+', label: 'IT Services', icon: Shield },
+    { number: '30+', label: 'AI Services', icon: Globe },
     { number: '500+', label: 'Projects Completed', icon: TrendingUp },
   ];
 
@@ -47,7 +47,7 @@ const ServicesPage: NextPage = () => {
       description="Comprehensive technology solutions including Micro SaaS, IT Services, and AI Services. Transform your business with our innovative solutions."
     >
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white section-padding">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h1 
@@ -112,7 +112,7 @@ const ServicesPage: NextPage = () => {
       </section>
 
       {/* Service Categories */}
-      <section className="py-20 bg-gray-50">
+      <section className="section-padding bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -279,7 +279,7 @@ const ServicesPage: NextPage = () => {
       </section>
 
       {/* Featured Services */}
-      <section className="py-20 bg-gray-50">
+      <section className="section-padding bg-gray-50">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"

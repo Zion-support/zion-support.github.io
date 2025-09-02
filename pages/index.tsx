@@ -42,7 +42,8 @@ const Home: NextPage = () => {
             Leading technology solutions provider helping businesses transform their digital presence 
             with cutting-edge AI, quantum computing, blockchain infrastructure, and innovative development services. 
             From AI-powered micro SaaS applications to enterprise-grade autonomous systems, we deliver measurable results 
-            that drive growth, efficiency, and competitive advantage. Trusted by 500+ companies worldwide.
+            that drive growth, efficiency, and competitive advantage. Trusted by 500+ companies worldwide with 60+ Micro SaaS solutions, 
+            35+ IT services, and 30+ AI services including quantum AI, drug discovery, and space exploration technologies.
           </motion.p>
           
           <motion.div 
