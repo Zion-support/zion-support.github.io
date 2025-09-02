@@ -130,104 +130,174 @@ const AIIntelligentContractAnalyzer = createLazyComponent(() => import('./pages/
 const AISustainabilityAnalyticsPlatform = createLazyComponent(() => import('./pages/services/AI-Sustainability-Analytics-Platform'));
 const AIHealthcarePredictiveAnalytics = createLazyComponent(() => import('./pages/services/AI-Healthcare-Predictive-Analytics'));
 
-// New Autonomous AI Services Showcase 2025
-const NewAutonomousAIServicesShowcase2025 = createLazyComponent(() => import('./pages/NewAutonomousAIServicesShowcase2025'));
+// 2025 Innovative Services Showcase and Pricing Guide
+const InnovativeServicesShowcase2025 = createLazyComponent(() => import('./pages/InnovativeServicesShowcase2025'));
+const ComprehensivePricingGuide2025 = createLazyComponent(() => import('./pages/ComprehensivePricingGuide2025'));
 
-// Dashboard Components
-const AdminDashboard = createLazyComponent(() => import('./pages/AdminDashboard'));
-const TestingDashboard = createLazyComponent(() => import('./components/testing/TestingDashboard'));
-const MonitoringDashboard = createLazyComponent(() => import('./components/monitoring/MonitoringDashboard'));
+// Error Fallback Component
+const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <div className="text-center text-white max-w-md mx-auto p-8">
+      <h1 className="text-4xl font-bold mb-4 text-red-400">Something went wrong</h1>
+      <p className="text-gray-300 mb-6">
+        {error.message || 'An unexpected error occurred'}
+      </p>
+      <div className="space-y-3">
+        <button
+          onClick={resetErrorBoundary}
+          className="w-full bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          Try again
+        </button>
+        <button
+          onClick={() => window.location.href = '/'}
+          className="w-full bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg transition-colors"
+        >
+          Go home
+        </button>
+      </div>
+    </div>
+  </div>
+);
+>>>>>>> origin/clean-new-services-2025
 
 function App() {
   return (
     <HelmetProvider>
-      <ErrorBoundary>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <SimpleHeader />
-          
-          <main className="flex-1">
-            <Suspense fallback={<LoadingSpinner />}>
-              <AnimatePresence mode="wait">
-                <Routes>
-                  {/* Core Routes */}
-                  <Route path="/" element={<Home />} />
-                  <Route path="/home" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/team" element={<Team />} />
-                  <Route path="/partners" element={<Partners />} />
-                  <Route path="/help-center" element={<HelpCenter />} />
-                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-                  <Route path="/terms-of-service" element={<TermsOfService />} />
-                  <Route path="/services" element={<Services />} />
-                  <Route path="/pricing" element={<Pricing />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/news" element={<News />} />
-                  <Route path="/careers" element={<Careers />} />
-                  <Route path="/login" element={<Login />} />
-                  <Route path="/marketplace" element={<Marketplace />} />
-                  <Route path="/documentation" element={<Documentation />} />
-                  <Route path="/training" element={<Training />} />
-                  <Route path="/webinars" element={<Webinars />} />
-                  <Route path="/research" element={<Research />} />
-                  <Route path="/sitemap" element={<Sitemap />} />
-                  
-                  {/* New Autonomous AI Services 2025 */}
-                  <Route path="/services/ai-autonomous-content-marketing-platform" element={<AIAutonomousContentMarketingPlatform />} />
-                  <Route path="/services/ai-autonomous-customer-success-platform" element={<AIAutonomousCustomerSuccessPlatform />} />
-                  <Route path="/services/ai-autonomous-devops-platform" element={<AIAutonomousDevOpsPlatform />} />
-                  <Route path="/services/ai-autonomous-sales-platform" element={<AIAutonomousSalesPlatform />} />
-                  <Route path="/services/ai-autonomous-hr-platform" element={<AIAutonomousHRPlatform />} />
-                  
-                  {/* New Innovative AI Services 2025 */}
-                  <Route path="/services/ai-intelligent-contract-analyzer" element={<AIIntelligentContractAnalyzer />} />
-                  <Route path="/services/ai-sustainability-analytics-platform" element={<AISustainabilityAnalyticsPlatform />} />
-                  <Route path="/services/ai-healthcare-predictive-analytics" element={<AIHealthcarePredictiveAnalytics />} />
-                  
-                  {/* Showcase pages */}
-                  <Route path="/new-autonomous-ai-services-2025" element={<NewAutonomousAIServicesShowcase2025 />} />
-                  
-                  {/* Dashboard routes */}
-                  <Route path="/admin" element={<AdminDashboard />} />
-                  <Route path="/testing" element={<TestingDashboard />} />
-                  <Route path="/monitoring" element={<MonitoringDashboard />} />
-                  
-                  {/* Legacy routes for compatibility */}
-                  <Route path="/privacy" element={<PrivacyPolicy />} />
-                  <Route path="/terms" element={<TermsOfService />} />
-                  <Route path="/help" element={<HelpCenter />} />
-                </Routes>
-              </AnimatePresence>
-            </Suspense>
-          </main>
-          
-          <SimpleFooter />
-          
-          {/* Enhanced Components */}
-          <ComprehensiveOptimizer
-            enabled={true}
-            showPanel={false}
-            position="top-left"
-            autoOptimize={true}
-          />
-          
-          <ComprehensiveSEOEnhancer
-            enabled={true}
-            showPanel={false}
-            position="bottom-right"
-            autoOptimize={true}
-          />
-          
-          <AccessibilityEnhancer
-            enabled={true}
-            showPanel={false}
-            position="top-right"
-          />
-          
-          <SmartNotificationSystem />
-          <ChatAssistant />
-          <MobileExperienceEnhancer />
-        </div>
+      <ErrorBoundary fallback={<ErrorFallback error={new Error()} resetErrorBoundary={() => {}} />}>
+        <Router>
+          <div className="App min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+            {/* SEO Component */}
+            <SEO
+              title="Zion Tech Group - Leading AI & Technology Solutions"
+              description="Transform your business with Zion Tech Group's cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Leading the future of technology."
+              keywords="AI solutions, quantum computing, micro SAAS, technology consulting, digital transformation"
+              ogImage="/og-image.jpg"
+              canonicalUrl="https://ziontechgroup.com"
+            />
+
+            {/* Performance Optimizer */}
+            <PerformanceOptimizer enabled={true} />
+
+            {/* Enhanced Accessibility */}
+            <EnhancedAccessibilityEnhancer enabled={true} />
+
+            {/* Security Enhancer */}
+            <SecurityEnhancer enabled={true} />
+
+            {/* Mobile Experience Enhancer */}
+            <MobileExperienceEnhancer enabled={true} />
+
+            {/* Advanced Analytics */}
+            <AdvancedAnalytics enabled={true} showMetrics={true} />
+
+            {/* Header */}
+            <EnhancedHeader />
+
+            {/* Main Content */}
+            <main className="flex-1">
+              <Suspense fallback={<LoadingSpinner />}>
+                <AnimatePresence mode="wait">
+                  <Routes>
+                    {/* Core Routes */}
+                    <Route
+                      path="/"
+                      element={
+                        <div className="min-h-screen">
+                          <Home />
+                        </div>
+                      }
+                    />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/careers" element={<Careers />} />
+                    <Route path="/partners" element={<Partners />} />
+                    <Route path="/services" element={<Services />} />
+                    <Route path="/faq" element={<FAQ />} />
+                    <Route path="/privacy" element={<Privacy />} />
+                    <Route path="/terms" element={<Terms />} />
+                    <Route path="/cookies" element={<Cookies />} />
+                    <Route path="/data-protection" element={<DataProtection />} />
+                    <Route path="/accessibility" element={<Accessibility />} />
+                    <Route path="/sitemap" element={<Sitemap />} />
+
+                    {/* Service Routes */}
+                    <Route path="/services-pricing" element={<ServicesPricingPage />} />
+                    <Route path="/system-status" element={<SystemStatus />} />
+                    <Route path="/search" element={<Search />} />
+                    <Route path="/documentation" element={<Documentation />} />
+                    <Route path="/marketplace" element={<Marketplace />} />
+                    <Route path="/training" element={<Training />} />
+                    <Route path="/webinars" element={<Webinars />} />
+                    <Route path="/api-playground" element={<ApiPlayground />} />
+                    <Route path="/research" element={<Research />} />
+                    <Route path="/categories" element={<Categories />} />
+                    <Route path="/login" element={<Login />} />
+
+                    {/* 2028 Innovative AI Services */}
+                    <Route path="/services/ai-autonomous-vehicle-management-platform" element={<AIAutonomousVehicleManagementPlatform />} />
+                    <Route path="/services/ai-smart-city-infrastructure-management" element={<AISmartCityInfrastructureManagement />} />
+                    <Route path="/services/ai-quantum-financial-trading-platform" element={<AIQuantumFinancialTradingPlatform />} />
+
+                    {/* 2028 Services Showcase */}
+                    <Route path="/innovative-services-showcase-2028" element={<InnovativeServicesShowcase2028 />} />
+
+                    {/* 2025 Innovative Services Showcase and Pricing Guide */}
+                    <Route path="/innovative-services-showcase-2025" element={<InnovativeServicesShowcase2025 />} />
+                    <Route path="/comprehensive-pricing-guide-2025" element={<ComprehensivePricingGuide2025 />} />
+
+                    {/* 404 Page */}
+                    <Route
+                      path="*"
+                      element={
+                        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+                          <div className="text-center text-white">
+                            <h1 className="text-6xl font-bold mb-4">404</h1>
+                            <h2 className="text-2xl font-semibold mb-4">Page Not Found</h2>
+                            <p className="text-gray-300 mb-8">
+                              The page you're looking for doesn't exist or has been moved.
+                            </p>
+                            <button
+                              onClick={() => window.history.back()}
+                              className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors mr-4"
+                            >
+                              Go Back
+                            </button>
+                            <button
+                              onClick={() => window.location.href = '/'}
+                              className="px-6 py-3 bg-gray-500 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                            >
+                              Go Home
+                            </button>
+                          </div>
+                        </div>
+                      }
+                    />
+                  </Routes>
+                </AnimatePresence>
+              </Suspense>
+            </main>
+
+            {/* Footer */}
+            <EnhancedFooter />
+
+            {/* Floating Action Button */}
+            <FloatingActionButton enabled={true} />
+
+            {/* Smart Notification System */}
+            <SmartNotificationSystem enabled={true} />
+
+            {/* Chat Assistant */}
+            <ChatAssistant
+              enabled={true}
+              position="bottom-right"
+              theme="auto"
+              language="en"
+            />
+          </div>
+        </Router>
+>>>>>>> origin/clean-new-services-2025
       </ErrorBoundary>
     </HelmetProvider>
   );
