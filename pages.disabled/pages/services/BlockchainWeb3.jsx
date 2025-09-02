@@ -1,4 +1,5 @@
-import React from 'react';
+import React from
+  'react';
 import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, Lock, Eye, Target const BlockchainWeb3 = () => {}
     const blockchainServices = []
         {}
@@ -273,7 +274,8 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
                 <Globe className="w-24 h-24 text-blue-400 mx-auto mb-4"/>""
                 <h3 className="text-2xl font-bold text-white mb-2">Web3 Revolution</h3>""
 :pages.disabled/pages/services/BlockchainWeb3.jsx
-                <p className="text-gray-300 mb-6">'
+                <p className="text-gray-300 mb-6">
+  '
                   We're at the forefront of the Web3 revolution, building
                   decentralized applications that empower users and organizations."</p>""
                 <div className="text-sm text-gray-400">
@@ -338,7 +340,8 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
 :pages.disabled/pages/services/BlockchainWeb3.jsx
             Ready to Build on the Blockchain?"
           </h2>""
-          <p className="text-xl text-gray-300 mb-8">'
+          <p className="text-xl text-gray-300 mb-8">
+  '
             Let's discuss how blockchain technology can transform your business
             and create new opportunities for growth and innovation."
           </p>""
@@ -355,4 +358,5 @@ import { Link as LinkIcon, Shield, Users, Globe, Database, Network, TrendingUp, 
 export { BlockchainWeb3 };
 :pages.disabled/pages/services/BlockchainWeb3.jsx
 export default BlockchainWeb3;'"
-}}}}'"'"
+}}}}
+  '"'"
