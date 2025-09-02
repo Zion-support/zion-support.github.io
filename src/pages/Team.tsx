@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
-=======
-import { motion } from 'framer-motion';"
->>>>>>> c85b090ce825e411719bdab0fc9c351cfd986e27
 import { SEO } from '../components/SEO';
 import { 
   Linkedin, Twitter, Github, Mail, Award, Users, 
   Brain, Atom, Shield, Rocket, Globe, Code, 
-  Star, CheckCircle, TrendingUp, Target ;",
+  Star, CheckCircle, TrendingUp, Target
 } from 'lucide-react';
 export default function Team() {
   const teamMembers = [
