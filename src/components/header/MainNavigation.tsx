@@ -253,22 +253,56 @@ export function MainNavigation({ className }: MainNavigationProps) {
         </button>
         
         {isResourcesOpen && (
-          <div className="absolute top-full left-0 mt-2 w-64 bg-zion-slate-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
-            <div className="p-4 space-y-3">
-              <Link to="/blog" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
-                Blog
-              </Link>
-              <Link to="/docs" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
-                Documentation
-              </Link>
-              <Link to="/white-papers" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
-                White Papers
-              </Link>
-              <Link to="/webinars" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
-                Webinars
-              </Link>
-              <Link to="/training" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
-                Training
+          <div className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark border border-zion-purple/20 rounded-lg shadow-xl z-50">
+            <div className="p-4 grid grid-cols-2 gap-4">
+              {/* Learning & Documentation */}
+              <div>
+                <h3 className="text-zion-cyan font-semibold text-sm mb-3 flex items-center">
+                  <BookOpen className="w-4 h-4 mr-2" />
+                  Learning
+                </h3>
+                <div className="space-y-2">
+                  <Link to="/blog" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Blog
+                  </Link>
+                  <Link to="/documentation" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Documentation
+                  </Link>
+                  <Link to="/training" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Training
+                  </Link>
+                  <Link to="/webinars" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Webinars
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Research & Support */}
+              <div>
+                <h3 className="text-zion-cyan font-semibold text-sm mb-3 flex items-center">
+                  <FileText className="w-4 h-4 mr-2" />
+                  Research & Support
+                </h3>
+                <div className="space-y-2">
+                  <Link to="/white-papers" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    White Papers
+                  </Link>
+                  <Link to="/case-studies" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Case Studies
+                  </Link>
+                  <Link to="/help-center" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    Help Center
+                  </Link>
+                  <Link to="/faq" className="block text-sm text-zion-slate-light hover:text-zion-cyan transition-colors">
+                    FAQ
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="border-t border-zion-purple/20 p-4">
+              <Link to="/resources" className="text-zion-cyan hover:text-zion-cyan/80 text-sm font-medium flex items-center">
+                View All Resources
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
@@ -303,11 +337,4 @@ export function MainNavigation({ className }: MainNavigationProps) {
   );
 }
 
-import React, { useState              } from 'react.ts';
-import { Link                } from 'react-router-dom.ts';
-import { cn                } from '@/lib/utils';
-import { NavLink                } from 'react-router-dom.ts';
-import { ChevronDown, Zap, Brain, Shield, Users, HardDrive, TrendingUp                } from 'lucide-react.ts';
-export function MainNavigation(...args[]: any):  {
-    const [isServicesOpen, setIsServicesOpen] = useState(false);
-    const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+

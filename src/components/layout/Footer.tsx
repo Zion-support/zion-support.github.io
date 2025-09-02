@@ -38,72 +38,64 @@ import {
   Linkedin,
   Facebook,
   Instagram,
-  Youtube
+  Youtube,
+  Briefcase,
+  Handshake,
+  Video,
+  GraduationCap,
+  HelpCircle
 } from 'lucide-react';
 
 const footerSections = [
   {
-    title: "AI & Automation Services",
-    icon: Brain,
+    title: "Services",
+    icon: Zap,
     links: [
-      { name: "AI Business Intelligence", href: "/services/ai-business-intelligence-dashboard", icon: BarChart3 },
-      { name: "AI Customer Support", href: "/services/ai-customer-support-automation", icon: MessageCircle },
-      { name: "AI Project Management", href: "/services/ai-project-management-platform", icon: Workflow },
-      { name: "AI Marketing Automation", href: "/services/ai-marketing-automation-platform", icon: TrendingUp },
-      { name: "AI Enterprise Automation", href: "/services/ai-enterprise-automation-platform", icon: Building2 },
-      { name: "AI Workflow Orchestrator", href: "/services/ai-workflow-orchestrator", icon: Workflow },
-      { name: "AI Financial Trading", href: "/services/ai-financial-trading-platform", icon: TrendingUp },
-      { name: "AI Healthcare Analytics", href: "/services/ai-healthcare-analytics-platform", icon: Heart },
-      { name: "AI Educational Content Creation", href: "/services/ai-educational-content-creation-platform", icon: BookOpen },
-      { name: "AI Legal Automation", href: "/services/ai-legal-document-automation-platform", icon: FileText },
-      { name: "AI Legal Research Platform", href: "/services/ai-autonomous-legal-research-platform", icon: FileText },
-      { name: "AI HR Platform", href: "/services/ai-hr-platform", icon: Users },
-      { name: "AI Real Estate Investment Analytics", href: "/services/ai-real-estate-investment-analytics-platform", icon: Building2 },
-      { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
-      { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield }
+      { name: "AI Solutions", href: "/services/ai", icon: Brain },
+      { name: "Cloud Services", href: "/services/cloud", icon: Cloud },
+      { name: "Cybersecurity", href: "/services/cybersecurity", icon: Shield },
+      { name: "Infrastructure", href: "/services/infrastructure", icon: Server },
+      { name: "Digital Transformation", href: "/services/transformation", icon: Sparkles },
+      { name: "Consulting", href: "/services/consulting", icon: Users },
+      { name: "All Services", href: "/services", icon: Layers }
     ]
   },
   {
-    title: "Cloud & Infrastructure",
-    icon: Cloud,
-    links: [
-      { name: "Cloud & DevOps", href: "/services/cloud-devops", icon: Cloud },
-      { name: "Infrastructure Management", href: "/services/it-infrastructure-management", icon: Server },
-      { name: "Cybersecurity Solutions", href: "/services/cybersecurity", icon: Shield },
-      { name: "Blockchain Enterprise", href: "/services/blockchain-enterprise-solutions", icon: Network },
-      { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", icon: Atom },
-      { name: "Cloud FinOps Optimizer", href: "/services/cloud-finops-optimizer", icon: DollarSign },
-      { name: "Digital Transformation", href: "/services/digital-transformation", icon: Sparkles },
-      { name: "Emerging Technologies", href: "/emerging-tech", icon: Rocket }
-    ]
-  },
-  {
-    title: "Industry Solutions",
+    title: "Solutions",
     icon: Target,
     links: [
-      { name: "Healthcare Solutions", href: "/solutions/healthcare", icon: Heart },
+      { name: "Healthcare", href: "/solutions/healthcare", icon: Heart },
       { name: "Financial Services", href: "/solutions/financial", icon: DollarSign },
       { name: "Manufacturing", href: "/solutions/manufacturing", icon: Factory },
-      { name: "Government Solutions", href: "/solutions/government", icon: Building2 },
-      { name: "Retail Solutions", href: "/solutions/retail", icon: Briefcase },
-      { name: "Enterprise Solutions", href: "/enterprise", icon: Building2 },
-      { name: "Cloud Solutions", href: "/cloud-solutions", icon: Cloud },
-      { name: "Industry Overview", href: "/industry-solutions", icon: Target }
+      { name: "Government", href: "/solutions/government", icon: Building2 },
+      { name: "Retail", href: "/solutions/retail", icon: Briefcase },
+      { name: "Enterprise", href: "/solutions/enterprise", icon: Building2 },
+      { name: "All Solutions", href: "/solutions", icon: Target }
     ]
   },
   {
-    title: "Emerging Technologies",
-    icon: Sparkles,
+    title: "Company",
+    icon: Building2,
     links: [
-      { name: "AI Space Technology", href: "/services/ai-space-technology-platform", icon: Satellite },
-      { name: "Quantum Computing", href: "/services/ai-quantum-computing-solutions", icon: Atom },
-      { name: "Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", icon: Truck },
-      { name: "AI-Powered SEO", href: "/services/ai-powered-seo", icon: Search },
-      { name: "AI Cybersecurity", href: "/services/ai-cybersecurity-threat-intelligence", icon: Shield },
-      { name: "Micro SaaS Solutions", href: "/services/micro-saas-solutions-comprehensive", icon: Layers },
-      { name: "Innovation Showcase 2026", href: "/innovative-services-showcase-2026", icon: Star },
-      { name: "2025 Services Showcase", href: "/comprehensive-services-showcase-2025", icon: Star },
-      { name: "Future Technologies", href: "/innovative-services-showcase-2032", icon: Rocket }
+      { name: "About Us", href: "/about", icon: Users },
+      { name: "Leadership", href: "/leadership", icon: Star },
+      { name: "Careers", href: "/careers", icon: Briefcase },
+      { name: "Partners", href: "/partners", icon: Handshake },
+      { name: "News", href: "/news", icon: FileText },
+      { name: "Contact", href: "/contact", icon: MessageCircle }
+    ]
+  },
+  {
+    title: "Resources",
+    icon: BookOpen,
+    links: [
+      { name: "Blog", href: "/blog", icon: FileText },
+      { name: "Documentation", href: "/documentation", icon: BookOpen },
+      { name: "Case Studies", href: "/case-studies", icon: BarChart3 },
+      { name: "Webinars", href: "/webinars", icon: Video },
+      { name: "Training", href: "/training", icon: GraduationCap },
+      { name: "Help Center", href: "/help-center", icon: HelpCircle },
+      { name: "FAQ", href: "/faq", icon: HelpCircle }
     ]
   }
 ];
@@ -231,8 +223,17 @@ export const Footer: React.FC = () => {
                 <Link to="/terms" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
                   Terms of Service
                 </Link>
-                <Link to="/legal" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
-                  Legal
+                <Link to="/data-protection" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
+                  Data Protection
+                </Link>
+                <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
+                  Cookie Policy
+                </Link>
+                <Link to="/accessibility" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
+                  Accessibility
+                </Link>
+                <Link to="/sitemap" className="text-gray-400 hover:text-cyan-400 text-sm transition-colors">
+                  Sitemap
                 </Link>
               </div>
             </div>
