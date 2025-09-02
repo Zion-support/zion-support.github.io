@@ -35,6 +35,8 @@ const Header: React.FC = () => {
     { name: 'Enterprise Solutions', href: '/solutions/enterprise' },
     { name: 'Custom Development', href: '/solutions/custom-development' },
     { name: 'Digital Transformation', href: '/solutions/digital-transformation' },
+    { name: 'Small Business', href: '/solutions/small-business' },
+    { name: 'Startups', href: '/solutions/startups' },
   ];
 
   return (
