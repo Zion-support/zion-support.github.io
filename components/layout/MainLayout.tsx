@@ -4,6 +4,7 @@ import Header from './Header';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
+import PWARegistration from '../PWARegistration';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -46,6 +47,15 @@ const MainLayout: React.FC<MainLayoutProps> = ({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        
+        {/* PWA Manifest */}
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#0ea5e9" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+        <meta name="msapplication-TileColor" content="#0ea5e9" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
         
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -101,6 +111,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       
       <PerformanceOptimizer />
       <AccessibilityEnhancer />
+      <PWARegistration />
       
       <div className="min-h-screen flex flex-col">
         <Header />
