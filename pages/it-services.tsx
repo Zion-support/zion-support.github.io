@@ -3,7 +3,7 @@ import { ArrowRight, Award, BarChart3, Brain, Carbon, CheckCircle, Clock, Cloud,
 
 import Head from 'next/head';
 import Link from 'next/link';
-import PageTransition from '../src/components/PageTransition';
+// import PageTransition from '../src/components/PageTransition';
 export default function ITServices() {
   const title = 'IT Services — Zion Tech Group';
   const description =
@@ -300,6 +300,171 @@ export default function ITServices() {
         'Enterprise blockchain solutions with smart contracts and DeFi integration',
       icon: Network,
       features: [
+        'Enterprise blockchain platform development',
+        'Smart contract auditing and optimization',
+        'DeFi protocol integration and development',
+        'Cross-chain interoperability solutions',
+        'NFT marketplace and tokenization',
+        'Blockchain governance and DAO implementation',
+      ],
+      pricing: '$12,000 - $80,000/month',
+      delivery: '12-24 weeks',
+      category: 'Web3 Services',
+    },
+    {
+      title: 'AI Infrastructure & MLOps',
+      description:
+        'Complete AI infrastructure setup with machine learning operations and model deployment',
+      icon: Brain,
+      features: [
+        'AI/ML infrastructure design and setup',
+        'Model training and deployment pipelines',
+        'MLOps and model lifecycle management',
+        'GPU cluster management and optimization',
+        'AI model monitoring and governance',
+        'AutoML and hyperparameter optimization',
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '8-16 weeks',
+      category: 'AI Infrastructure',
+    },
+    {
+      title: 'Edge Computing & Distributed Systems',
+      description:
+        'Edge computing infrastructure with distributed system architecture and optimization',
+      icon: Cpu,
+      features: [
+        'Edge computing platform design and deployment',
+        'Distributed system architecture and optimization',
+        'Real-time data processing and streaming',
+        'Edge AI and inference optimization',
+        'Multi-cloud and hybrid edge solutions',
+        'Edge security and device management',
+      ],
+      pricing: '$6,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Edge Computing',
+    },
+    {
+      title: 'Cybersecurity Operations Center (SOC)',
+      description:
+        '24/7 security monitoring and incident response with advanced threat detection',
+      icon: Shield,
+      features: [
+        '24/7 security monitoring and alerting',
+        'Advanced threat detection and response',
+        'Security incident investigation and forensics',
+        'Threat intelligence and analysis',
+        'Security awareness training and simulation',
+        'Compliance monitoring and reporting',
+      ],
+      pricing: '$10,000 - $60,000/month',
+      delivery: '6-12 weeks',
+      category: 'Security Operations',
+    },
+    {
+      title: 'Digital Twin & Simulation Platforms',
+      description:
+        'Digital twin development and simulation platforms for industrial and business applications',
+      icon: Monitor,
+      features: [
+        'Digital twin architecture and development',
+        'Real-time simulation and modeling',
+        'IoT sensor integration and data processing',
+        'Predictive maintenance and optimization',
+        'Virtual testing and validation',
+        'Integration with existing systems',
+      ],
+      pricing: '$15,000 - $100,000/month',
+      delivery: '12-24 weeks',
+      category: 'Digital Twin',
+    },
+    {
+      title: 'Zero Trust Security Architecture',
+      description:
+        'Comprehensive zero trust security implementation with identity and access management',
+      icon: Shield,
+      features: [
+        'Zero trust architecture design and implementation',
+        'Identity and access management (IAM)',
+        'Micro-segmentation and network security',
+        'Continuous authentication and monitoring',
+        'Privileged access management (PAM)',
+        'Security policy automation and enforcement',
+      ],
+      pricing: '$12,000 - $75,000/month',
+      delivery: '10-20 weeks',
+      category: 'Zero Trust',
+    },
+    {
+      title: 'Hyperautomation & RPA Solutions',
+      description:
+        'Intelligent process automation with robotic process automation and AI integration',
+      icon: Settings,
+      features: [
+        'Robotic process automation (RPA) implementation',
+        'Intelligent document processing and OCR',
+        'Workflow automation and optimization',
+        'AI-powered decision making and routing',
+        'Process mining and discovery',
+        'Integration with enterprise systems',
+      ],
+      pricing: '$5,000 - $35,000/month',
+      delivery: '6-16 weeks',
+      category: 'Automation',
+    },
+    {
+      title: 'Advanced Data Engineering & Lakehouse',
+      description:
+        'Modern data engineering with data lakehouse architecture and real-time processing',
+      icon: Database,
+      features: [
+        'Data lakehouse architecture design',
+        'Real-time data streaming and processing',
+        'Data pipeline automation and orchestration',
+        'Data quality and governance implementation',
+        'Advanced analytics and ML integration',
+        'Multi-cloud data strategy and migration',
+      ],
+      pricing: '$8,000 - $50,000/month',
+      delivery: '10-20 weeks',
+      category: 'Data Engineering',
+    },
+    {
+      title: 'Cloud-Native Application Development',
+      description:
+        'Modern cloud-native application development with microservices and serverless architecture',
+      icon: Cloud,
+      features: [
+        'Microservices architecture design and implementation',
+        'Serverless application development',
+        'Container orchestration and management',
+        'API-first development and integration',
+        'Cloud-native security and monitoring',
+        'Performance optimization and scaling',
+      ],
+      pricing: '$6,000 - $40,000/month',
+      delivery: '8-16 weeks',
+      category: 'Cloud Native',
+    },
+    {
+      title: 'Advanced Network Security & SD-WAN',
+      description:
+        'Next-generation network security with software-defined wide area networking',
+      icon: Network,
+      features: [
+        'SD-WAN design and implementation',
+        'Next-generation firewall deployment',
+        'Network segmentation and micro-segmentation',
+        'Advanced threat protection and detection',
+        'Network performance monitoring and optimization',
+        'Cloud connectivity and hybrid networking',
+      ],
+      pricing: '$8,000 - $45,000/month',
+      delivery: '8-16 weeks',
+      category: 'Network Security',
+      icon: Network,
+      features: [
         'Multi-chain blockchain architecture design',
         'Smart contract development and auditing',
         'DeFi protocol integration and optimization',
@@ -592,7 +757,7 @@ export default function ITServices() {
     },
   ];
   return (
-    <PageTransition>
+    <>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -854,6 +1019,6 @@ export default function ITServices() {
           </div>
         </div>
       </section>
-    </PageTransition>
+    </>
   );
 }

@@ -31,10 +31,19 @@ const Navigation: React.FC = () => {
         { name: 'Project Management', href: '/solutions/project-management' },
         { name: 'Workflow Automation', href: '/solutions/workflow-automation' }
       ]
-    }, 
-    { name: 'About', href: '/about' }, 
-    { name: 'Blog', href: '/blog' }, 
-    { name: 'Careers', href: '/careers' }, 
+    },
+    {
+      name: 'Company',
+      href: '/about',
+      dropdown: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' }
+      ]
+    },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '/contact' }
   ];
 
