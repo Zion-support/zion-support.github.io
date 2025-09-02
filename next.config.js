@@ -1,19 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   experimental: {
     esmExternals: false,
     optimizeCss: false,
     optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-icons'],
     scrollRestoration: true,
   },
-  output: 'standalone',
   images: {
     domains: ['ziontechgroup.com'],
     unoptimized: true,
@@ -22,35 +15,24 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   webpack: (config, { dev, isServer }) => {
-    // Exclude contracts directory from compilation
+    // Completely exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
-      include: [
-        /src/,
-        /pages/,
-        /components/,
-      ],
       exclude: [
         /node_modules/,
-        /contracts/,
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
+        /components\//,
         /\.backup/,
         /\.disabled/,
         /automation\/backups/,
         /automation_backup/,
         /broken_files_backup/,
         /contracts/,
-        /cypress/,
+        /hardhat/,
       ],
     });
-    
-    // Exclude contracts directory specifically
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'hardhat/config': false,
-    };
     
     // Add fallback for problematic modules
     config.resolve.fallback = {
