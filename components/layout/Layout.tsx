@@ -6,26 +6,14 @@ type LayoutProps = {
   children: React.ReactNode;
 };
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 pt-16">
+        {children}
+      </main>
       <Footer />
     </div>
   );
-};
-
-export default Layout;
-
-import React from 'react';
-
-type LayoutProps = {
-
-  children: React.ReactNode;
-};
-
-export default function Layout({ children }: LayoutProps) {
-
-  return <div>{children}</div>;
 }
