@@ -299,13 +299,12 @@ export const EnhancedHeader: React.FC = () => {;
   const [mobileOpen, setMobileOpen] = useState(false);
 ;
   const navLinks = [
-    { label: 'Home', href: '/' },;
-    { label: 'Services', href: '/services' },;
-    { label: 'Solutions', href: '/solutions' },;
-    { label: 'Enterprise', href: '/enterprise' },;
-    { label: 'Request Quote', href: '/request-quote' },;
-    { label: 'Case Studies', href: '/case-studies' },;
-    { label: 'Careers', href: '/careers' },;
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Services', href: '/services' },
+    { label: 'Solutions', href: '/solutions' },
+    { label: 'Team', href: '/team' },
+    { label: 'Careers', href: '/careers' },
     { label: 'Contact', href: '/contact' }
   ];
 ;

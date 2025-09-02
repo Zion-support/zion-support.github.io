@@ -79,10 +79,11 @@ export const Sidebar: React.FC = () => {;
   ];
 ;
   const companyLinks = [
-    { name: 'About Us', href: '/about', icon: Users },;
-    { name: 'Our Team', href: '/team', icon: Award },;
-    { name: 'Careers', href: '/careers', icon: Users },;
-    { name: 'Partners', href: '/partners', icon: Award },;
+    { name: 'About Us', href: '/about', icon: Users },
+    { name: 'Our Team', href: '/team', icon: Award },
+    { name: 'Careers', href: '/careers', icon: Users },
+    { name: 'Partners', href: '/partners', icon: Award },
+    { name: 'News', href: '/news', icon: Users },
     { name: 'Contact', href: '/contact', icon: HelpCircle }
   ];
 ;

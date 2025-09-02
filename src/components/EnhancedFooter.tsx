@@ -75,16 +75,15 @@ export function EnhancedFooter() {;
         { name: 'Space Technology', href: '/solutions/space-tech', icon: Network }
       ];
     },;
-    {;
-      title: 'Company',;
+    {
+      title: 'Company',
       links: [
-        { name: 'About Us', href: '/about', icon: Users },;
-        { name: 'Our Team', href: '/team', icon: Award },;
-        { name: 'Careers', href: '/careers', icon: Users },;
-        { name: 'News & Press', href: '/press', icon: BookOpen },;
-        { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },;
+        { name: 'About Us', href: '/about', icon: Users },
+        { name: 'Our Team', href: '/team', icon: Award },
+        { name: 'Careers', href: '/careers', icon: Users },
+        { name: 'News', href: '/news', icon: BookOpen },
         { name: 'Partners', href: '/partners', icon: Handshake }
-      ];
+      ]
     },;
     {;
       title: 'Resources',;
