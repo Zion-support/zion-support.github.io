@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { MobileSidebarToggle } from './MobileSidebarToggle';
-import {
-  Menu,
+import React, { useState, useEffect               } from 'react.ts';
+import { Link, useLocation               } from 'react-router-dom.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { MobileSidebarToggle               } from './MobileSidebarToggle';
+import { Menu,
   X,
   Search,
   User,
@@ -179,13 +178,13 @@ import {
   SkipBack2Dodecagon,
   SkipForward2Dodecagon
 } from 'lucide-react';
-export const FuturisticNavigation: React.FC = () => {;
+export const FuturisticNavigation: React.FC = (): JSX.Element => {;
   const [searchQuery, setSearchQuery] = useState('');
   const [activeDropdown, setActiveDropdown] = useState<any>(null);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   useEffect(() => {
-    const handleScroll: React.FC = ($2) => {;
+    const handleScroll = () => {;
       setScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
@@ -193,16 +192,15 @@ export const FuturisticNavigation: React.FC = () => {;
   useEffect(() => {
     setActiveDropdown(null);
   }, [location.pathname]);
-  const handleSearch: React.FC = ($2) => {;
+  const handleSearch = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)               => {;
     e.preventDefault();
     if (searchQuery.trim()) {
       window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
-
   };
-  const toggleDropdown: React.FC = ($2) => {;
+  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
-  const toggleDropdown: React.FC = ($2) => {;
+  const toggleDropdown = (dropdown: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)                => {;
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
   // Enhanced service categories with better organization
   const serviceCategories = [
@@ -210,7 +208,7 @@ export const FuturisticNavigation: React.FC = () => {;
       name: "AI & Machine Learning",
       icon: Brain,
       color: 'from-zion-cyan to-zion-blue',
-      dropdown[;
+      dropdown[
         { name: 'AI Autonomous Trading', href: '/ai-services/autonomous-trading', icon: DollarSign, description: 'AI-powered financial trading platform' },
         { name: 'AI Consciousness Simulator', href: '/ai-services/consciousness-simulator', icon: Brain, description: 'Quantum AI consciousness research' },
         { name: 'AI Business Operations', href: '/ai-services/business-operations', icon: Building, description: 'Autonomous business management' },
@@ -220,11 +218,11 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: 'View All AI Services', href: '/ultimate-services-2027', icon: Sparkles, description: 'Complete AI services showcase' },
         { name: 'Innovative Services 2028', href: '/innovative-services-2028', icon: Crown, description: 'Latest innovative services for 2028' }
       ]
-    },;
+    },
     {
       name: "Micro SAAS Solutions",
       icon: Cloud,
-      services[;
+      services[
         { name: "Micro SAAS Services", href: "/micro-saas" },
         { name: "Business Tools", href: "/micro-saas/business-tools" },
         { name: "Productivity Apps", href: "/micro-saas/productivity" },
@@ -232,11 +230,11 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: "Custom Development", href: "/micro-saas/custom" },
         { name: "Marketplace", href: "/marketplace" }
       ]
-    },;
+    },
     {
       name: "IT Infrastructure",
       icon: Server,
-      services[;
+      services[
         { name: "IT Services", href: "/it-services" },
         { name: "Cloud Solutions", href: "/it-services/cloud" },
         { name: "Cybersecurity", href: "/it-services/cybersecurity" },
@@ -244,11 +242,11 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: "Data Management", href: "/it-services/data" },
         { name: "Network Security", href: "/it-services/network-security" }
       ]
-    },;
+    },
     {
       name: "Emerging Technologies",
       icon: Rocket,
-      services[;
+      services[
         { name: "Quantum Computing", href: "/emerging-tech/quantum" },
         { name: "Blockchain & Web3", href: "/emerging-tech/blockchain" },
         { name: "Edge Computing", href: "/emerging-tech/edge" },
@@ -256,7 +254,7 @@ export const FuturisticNavigation: React.FC = () => {;
         { name: "Green Technology", href: "/green-it" },
         { name: "Space Technology", href: "/emerging-tech/space" }
       ]
-    },;
+    },
     {
       name: '2028 Services',
       href: '/innovative-services-2028',
@@ -285,25 +283,12 @@ export const FuturisticNavigation: React.FC = () => {;
               initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.5 }}
-
               <Link to="/" className="flex items-center space-x-3 group">
                 <div className="relative">
                   <div className="w-12 h-12 bg-gradient-to-br from-zion-cyan via-zion-purple to-zion-blue rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-zion-cyan/25">
@@ -327,38 +312,19 @@ export const FuturisticNavigation: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.1 
-
-
-
-
-
-
 }}
               >
                 <Link
                   to="/about"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
-
                   <Users className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                   <span className="font-medium">About</span>
                 </Link>
@@ -367,38 +333,19 @@ export const FuturisticNavigation: React.FC = () => {;
                 initial = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: 0.15 
-
-
-
-
-
-
 }}
               >
                 <Link
                   to="/partners"
                   className="nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10"
-
                   <Handshake className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                   <span className="font-medium">Partners</span>
                 </Link>
@@ -410,32 +357,14 @@ export const FuturisticNavigation: React.FC = () => {;
                     initial = {
   { opacity: 0,
   y: -20 
-
-
-
-
-
-
 }}
                     animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                     transition = {
   { duration: 0.5,
   delay: (index + 2) * 0.1 
-
-
-
-
-
-
 }}
                     onClick={() => toggleDropdown(category.name)}
                     className={`nav-link flex items-center space-x-2 px-4 py-2 rounded-lg transition-all duration-300 group ${
@@ -443,7 +372,6 @@ export const FuturisticNavigation: React.FC = () => {;
                         ? 'text-zion-cyan bg-zion-cyan/10 shadow-lg shadow-zion-cyan/20'
                         : 'hover:text-zion-cyan hover:bg-zion-cyan/5 hover:shadow-lg hover:shadow-zion-cyan/10'
                     }`}
-
                     <category.icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
                     <span className="font-medium">{category.name}</span>
                     <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${
@@ -452,41 +380,22 @@ export const FuturisticNavigation: React.FC = () => {;
                   </motion.button>
                   {/* Enhanced Dropdown Menu */}
                   <AnimatePresence>
-                    {activeDropdown === category.name && (;
+                    {activeDropdown === category.name && (
                       <motion.div
                         initial = {
   { opacity: 0, y: -10,
   scale: 0.95 
-
-
-
-
-
-
 }}
                         animate = {
   { opacity: 1, y: 0,
   scale: 1 
-
-
-
-
-
-
 }}
                         exit = {
   { opacity: 0, y: -10,
   scale: 0.95 
-
-
-
-
-
-
 }}
                         transition={{ duration: 0.2 }}
                         className="absolute top-full left-0 mt-2 w-80 bg-zion-slate-dark/95 backdrop-blur-xl border border-zion-cyan/20 rounded-xl shadow-2xl shadow-zion-cyan/20 overflow-hidden"
-
                         <div className="p-4">
                           <div className="mb-4">
                             <h3 className="text-lg font-semibold text-zion-cyan mb-2">{category.name}</h3>
@@ -499,38 +408,19 @@ export const FuturisticNavigation: React.FC = () => {;
                                 initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
                                 animate = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                                 transition = {
   { duration: 0.3,
   delay: subIndex * 0.05 
-
-
-
-
-
-
 }}
                               >
                                 <Link
                                   to={service.href}
                                   className="flex items-start space-x-3 p-3 rounded-lg hover:bg-zion-cyan/10 transition-all duration-300 group"
-
                                   <div className="w-8 h-8 bg-gradient-to-br from-zion-cyan/20 to-zion-purple/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                     <Brain className="w-4 h-4 text-zion-cyan" /> {/* Using Brain icon for consistency */}
                                   </div>
@@ -540,10 +430,10 @@ export const FuturisticNavigation: React.FC = () => {;
                                     </h4>
                                   </div>
                                 </Link>
-                              </motion.div>;
+                              </motion.div>
                             ))}
                           </div>
-                        </div>;
+                        </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
@@ -551,9 +441,9 @@ export const FuturisticNavigation: React.FC = () => {;
               ))}
             </nav>
             {/* Right side actions */}
-            <div className="flex items-center space-x-4">;
+            <div className="flex items-center space-x-4">
               {/* Search */}
-              <form onSubmit={handleSearch} className="hidden md:block">;
+              <form onSubmit={handleSearch} className="hidden md:block">
                 <div className="relative">
                   <input
                     type="text"
@@ -566,26 +456,23 @@ export const FuturisticNavigation: React.FC = () => {;
                 </div>
               </form>
               {/* User actions */}
-              <div className="flex items-center space-x-2">;
+              <div className="flex items-center space-x-2">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-
                   <Bell className="w-5 h-5" />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-
                   <User className="w-5 h-5" />
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="p-2 text-zion-slate-light hover:text-zion-cyan hover:bg-zion-cyan/10 rounded-lg transition-all duration-300"
-
                   <ShoppingCart className="w-5 h-5" />
                 </motion.button>
               </div>

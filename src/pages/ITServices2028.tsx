@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain, Zap, Shield, Users, Globe, ArrowRight, CheckCircle, Star,
   Server, Cloud, Database, Network, Lock, Code, Rocket, Building,
   Search, Phone, Mail, Cpu, Monitor, Smartphone, Wifi, Bluetooth,
   Satellite, Atom, Leaf, Space, Handshake, Calendar, DollarSign,
@@ -14,7 +13,7 @@ import {
   Percent, Euro, Pound, Yen, CreditCard, Wallet, Banknote, Coins,
   PiggyBank, Safe, Vault, LockKeyhole, Key, Fingerprint, QrCode,
   Barcode, Scan, Camera, VideoOff, Mic, MicOff, Volume2, VolumeX
- } from 'lucide-react';
+              } from 'lucide-react.ts';
 
 const itServices2028 = [
   {
@@ -24,7 +23,7 @@ const itServices2028 = [
     price: '$45,999',
     period: '/month',
     description: 'Revolutionary quantum-ready cloud infrastructure that provides unprecedented performance, security, and scalability for enterprise applications.',
-    features[;
+    features[
       'Quantum-ready computing nodes',
       'Advanced AI optimization',
       'Zero-latency networking',
@@ -35,7 +34,7 @@ const itServices2028 = [
       'Global CDN',
       'API management',
       'DevOps automation'
-    ],;
+    ],
     popular: true,
     icon: Cloud,
     color: 'from-blue-600 to-cyan-700',
@@ -54,7 +53,7 @@ const itServices2028 = [
     price: '$32,999',
     period: '/month',
     description: 'Advanced AI-powered cybersecurity platform that provides real-time threat detection, automated response, and predictive security analytics.',
-    features[;
+    features[
       'AI threat detection',
       'Behavioral analysis',
       'Zero-trust architecture',
@@ -65,7 +64,7 @@ const itServices2028 = [
       'Penetration testing',
       'Vulnerability assessment',
       'Security training'
-    ],;
+    ],
     popular: true,
     icon: Shield,
     color: 'from-red-600 to-pink-700',
@@ -84,7 +83,7 @@ const itServices2028 = [
     price: '$28,999',
     period: '/month',
     description: 'Revolutionary quantum database platform that provides unprecedented speed, security, and scalability for enterprise data management.',
-    features[;
+    features[
       'Quantum query optimization',
       'Real-time data processing',
       'Advanced encryption',
@@ -95,7 +94,7 @@ const itServices2028 = [
       'Disaster recovery',
       'Performance monitoring',
       'API integration'
-    ],;
+    ],
     popular: false,
     icon: Database,
     color: 'from-green-600 to-emerald-700',
@@ -114,7 +113,7 @@ const itServices2028 = [
     price: '$22,999',
     period: '/month',
     description: 'AI-powered network optimization platform that automatically manages, secures, and optimizes enterprise network infrastructure.',
-    features[;
+    features[
       'AI network monitoring',
       'Automatic optimization',
       'Traffic analysis',
@@ -125,7 +124,7 @@ const itServices2028 = [
       'Network analytics',
       'Alert management',
       'Reporting tools'
-    ],;
+    ],
     popular: true,
     icon: Network,
     color: 'from-purple-600 to-indigo-700',
@@ -144,7 +143,7 @@ const itServices2028 = [
     price: '$35,999',
     period: '/month',
     description: 'Advanced quantum-powered DevOps platform that automates software development, testing, deployment, and operations processes.',
-    features[;
+    features[
       'AI-powered CI/CD',
       'Automated testing',
       'Deployment automation',
@@ -155,7 +154,7 @@ const itServices2028 = [
       'Infrastructure as code',
       'Security scanning',
       'Compliance automation'
-    ],;
+    ],
     popular: true,
     icon: Rocket,
     color: 'from-orange-600 to-red-700',
@@ -174,7 +173,7 @@ const itServices2028 = [
     price: '$25,999',
     period: '/month',
     description: 'Comprehensive AI-powered data analytics platform that provides real-time insights, predictive analytics, and automated reporting.',
-    features[;
+    features[
       'Real-time data processing',
       'AI-powered insights',
       'Predictive analytics',
@@ -185,7 +184,7 @@ const itServices2028 = [
       'Collaboration tools',
       'Mobile access',
       'API integration'
-    ],;
+    ],
     popular: false,
     icon: BarChart3,
     color: 'from-emerald-600 to-teal-700',
@@ -206,5 +205,4 @@ const itServices2028 = [
     </div>;
   );
 };
-
 export default ITServices2028;}}

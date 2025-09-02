@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Cpu, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Cpu, 
   Network, 
   Zap, 
   Globe, 
@@ -22,10 +21,10 @@ import {
   Server,
   Router,
   Satellite
-} from 'lucide-react';
-import { SEO } from '@/src/src/components/SEO';
+             } from 'lucide-react.ts';
+import { SEO              } from '@/components/SEO';
 
-export default function IoTEdgeComputing() {
+export default function IoTEdgeComputing(...args: any[]): any {
   const features = [
     {
       icon: Cpu,
@@ -48,7 +47,6 @@ export default function IoTEdgeComputing() {
       description: "Distributed edge computing infrastructure worldwide"
     }
   ];
-
   const services = [
     {
       title: "Edge Computing Infrastructure",
@@ -75,7 +73,6 @@ export default function IoTEdgeComputing() {
       features: ["Edge firewall", "Device authentication", "Data encryption"]
     }
   ];
-
   const technologies = [
     "Edge Computing Platforms",
     "IoT Protocols (MQTT, CoAP, HTTP)",
@@ -86,14 +83,12 @@ export default function IoTEdgeComputing() {
     "Real-time Streaming",
     "Edge Security Frameworks"
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <SEO 
         title="IoT Edge Computing Services - Zion Tech Group"
         description="Revolutionary IoT and edge computing solutions for real-time processing, low-latency applications, and connected ecosystems."
       />
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20">
         <div className="absolute inset-0">
@@ -101,7 +96,6 @@ export default function IoTEdgeComputing() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
         </div>
-        
         <div className="relative z-10 container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -113,19 +107,16 @@ export default function IoTEdgeComputing() {
               <Cpu className="w-4 h-4 mr-2" />
               Edge Computing
             </div>
-            
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               IoT Edge Computing
               <span className="block bg-gradient-to-r from-green-400 via-blue-500 to-cyan-600 bg-clip-text text-transparent">
                 Solutions
               </span>
             </h1>
-            
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
               Transform your business with IoT and edge computing that brings processing power closer to your data sources. 
               Enable real-time insights, reduce latency, and create connected ecosystems.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -144,7 +135,6 @@ export default function IoTEdgeComputing() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -163,8 +153,8 @@ export default function IoTEdgeComputing() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -182,7 +172,6 @@ export default function IoTEdgeComputing() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-4">
@@ -201,8 +190,8 @@ export default function IoTEdgeComputing() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {services.map((service, index)              => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -228,7 +217,6 @@ export default function IoTEdgeComputing() {
           </div>
         </div>
       </section>
-
       {/* Technologies Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
@@ -246,8 +234,8 @@ export default function IoTEdgeComputing() {
             </p>
           </motion.div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {technologies.map((tech, index)              => (
               <motion.div
                 key={tech}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -262,7 +250,6 @@ export default function IoTEdgeComputing() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-green-500/10 to-blue-500/10">
         <div className="container mx-auto px-4 text-center">
@@ -277,7 +264,6 @@ export default function IoTEdgeComputing() {
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
               Join the IoT revolution and unlock real-time insights and connected ecosystems for your business.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"

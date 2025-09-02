@@ -1,3 +1,5 @@
+export type ServiceVariant =
+  | 'default'
   | 'holographic'
   | 'quantum'
   | 'cyberpunk'
@@ -22,9 +24,7 @@
   | 'quantum-iot'
   | 'quantum-logistics'
   | 'quantum-financial'
-  | 'quantum-holographic'
   | 'quantum-neural'
-  | 'quantum-cyberpunk'
   | 'neural-quantum-cyberpunk'
   | 'quantum-energy'
   | 'quantum-futuristic'
@@ -87,15 +87,14 @@
   | 'quantum-security'
   | 'quantum-ai-interface'
   | 'ai-autonomous-vehicles'
-  | 'quantum-iot-revolutionary'
   | 'space-futuristic'
   | 'consulting-futuristic'
   | 'api-futuristic'
-  | 'integration-futuristic';
-  | 'monitoring-futuristic';
-  | 'backup-futuristic';
-  | 'analytics-futuristic';
-  | 'emerging-tech';
-  | 'space-tech';
-  | 'autonomous-systems';
+  | 'integration-futuristic'
+  | 'monitoring-futuristic'
+  | 'backup-futuristic'
+  | 'analytics-futuristic'
+  | 'emerging-tech'
+  | 'space-tech'
+  | 'autonomous-systems'
   | 'quantum-futuristic';

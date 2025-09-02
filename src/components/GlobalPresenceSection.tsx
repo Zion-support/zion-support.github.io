@@ -1,14 +1,13 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Globe,
+import React from 'react.ts';
+import { motion               } from 'framer-motion.ts';
+import { Globe,
   MapPin,
   Users,
   Clock,
   Star,
   Award,
   CheckCircle
-} from 'lucide-react';
+              } from 'lucide-react.ts';
 
       established: '2022';
     };
@@ -43,15 +42,14 @@ const globalOffices = [
     description: "Canadian market and development center";
   };
 ];
-
-const globalStats = [
-  { label: "Countries Served", value: "25+", icon: "🌍" },
-  { label: "Global Clients", value: "500+", icon: "👥" },
-  { label: "Languages Supported", value: "15+", icon: "🗣️" },
-  { label: "24/7 Support", value: "Global", icon: "⏰" }
+const globalStats = [;
+  { label: "Countries Served", value: "25+", icon: "🌍" },;
+  { label: "Global Clients", value: "500+", icon: "👥" },;
+  { label: "Languages Supported", value: "15+", icon: "🗣️" },;
+  { label: "24/7 Support", value: "Global", icon: "⏰" };
 ];
 
-export function GlobalPresenceSection() {
+export function GlobalPresenceSection(...args: any[]): any {
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -60,22 +58,10 @@ export function GlobalPresenceSection() {
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -95,36 +81,18 @@ export function GlobalPresenceSection() {
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
-  { duration: 0.6,
+  { duration: anyanyanyanyanyanyanyanyanyanyanyanyanyany0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
         >;
-          {globalStats.map((stat, index)  => {;
+          {globalStats.map((stat, index)                => {;
             const IconComponent = stat.icon;
             return (
               <div key = {stat.label} className="text-center">
@@ -137,105 +105,58 @@ export function GlobalPresenceSection() {
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-600">{stat.label}</div>
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {globalStats.map((stat, index) => (
-            <div key={stat.label} className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">{stat.icon}</span>
               </div>
             )})}
         </motion.div>
 
         {/* Global Offices */}
         <motion.div 
-          className="mb-16";
+          className="mb-16"
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
         >
           <h3 className="text-3xl font-bold text-white text-center mb-12">
             Strategic Global Locations
           </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {globalOffices.map((office, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {globalOffices.map((office, index)               => (
               <motion.div
                 key={office.city}
                 className="bg-slate-800 border border-slate-700 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/25 group"
                 initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 transition = {
   { duration: 0.6,
   delay: 0.6 + index * 0.1 
-
-
-
-
-
-
 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">{office.icon}</span>
                 </div>
-                
                 <div className="mb-2">
                   <span className="px-3 py-1 bg-blue-600/20 text-blue-400 text-xs font-semibold rounded-full">
                     {office.type}
                   </span>
                 </div>
-                
                 <h4 className="text-lg font-bold text-white mb-1">{office.city}</h4>
                 <p className="text-gray-400 text-sm mb-3">{office.country}</p>
                 <p className="text-gray-300 text-xs">{office.description}</p>
@@ -243,40 +164,21 @@ export function GlobalPresenceSection() {
             ))}
           </div>
         </motion.div>
-
         {/* Global Map Visualization */}
         <motion.div 
           className="text-center mb-12"
           initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.8 
-
-
-
-
-
-
 }}
         >
           <div className="bg-slate-800 border border-slate-700 rounded-2xl p-8">
@@ -290,39 +192,20 @@ export function GlobalPresenceSection() {
             </p>
           </div>
         </motion.div>
-
         <motion.div 
           className="text-center"
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 1.0 
-
-
-
-
-
-
 }}
         >
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-white">
@@ -348,7 +231,6 @@ export function GlobalPresenceSection() {
       </div>;
     </section>;
   )};
-
 export default GlobalPresenceSection;
             <span className="text-2xl">→</span>;
           </div>;
@@ -357,6 +239,5 @@ export default GlobalPresenceSection;
     </section>;
   );
 }
-
 export default GlobalPresenceSection;
 export default GlobalPresenceSection;

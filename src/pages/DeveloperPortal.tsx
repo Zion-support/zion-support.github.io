@@ -1,5 +1,6 @@
+import React from 'react.ts';
 import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import { motion              } from 'framer-motion.ts';
 import {
   Code,
   BookOpen,
@@ -31,26 +32,25 @@ import {
   Target,
   Award,
   Lightbulb
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
 const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-
   const apiFeatures = [
     {
-      icon: Code,;
+      icon: Code,
       title: 'Code Examples',
       description: 'Ready-to-use code snippets in multiple languages',
       category: 'Development'
     },
     {
-      icon: Terminal,;
+      icon: Terminal,
       title: 'API Playground',
       description: 'Test APIs directly in your browser',
       category: 'Testing'
     },
     {
-      icon: BookOpen,;
+      icon: BookOpen,
       title: 'Documentation',
       description: 'Comprehensive guides and tutorials',
       category: 'Learning'
@@ -62,22 +62,21 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       category: 'Integration';
     };
   ];
-
   const resources = [
     {
-      title: 'Getting Started Guide',;
+      title: 'Getting Started Guide',
       description: 'Quick start tutorial for new developers',
       icon: '🚀',
       difficulty: 'Beginner'
     },
     {
-      title: 'API Reference',;
+      title: 'API Reference',
       description: 'Complete endpoint documentation',
       icon: '📚',
       difficulty: 'All Levels'
     },
     {
-      title: 'Best Practices',;
+      title: 'Best Practices',
       description: 'Development guidelines and patterns',
       icon: '⭐',
       difficulty: 'Intermediate'
@@ -89,29 +88,27 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       difficulty: 'All Levels';
     };
   ];
-
   const community = [
     {
-      language: 'JavaScript',;
+      language: 'JavaScript',
       code: `const response = await fetch('https://api.ziontechgroup.com/v1/data', {
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY',;
+    'Authorization': 'Bearer YOUR_API_KEY',
     'Content-Type': 'application/json';
   };
 });
-
 const data = await response.json();
 // // // // console.log(data);`,
       icon: Code
     },
     {
-      name: 'GitHub Discussions',;
+      name: 'GitHub Discussions',
       description: 'Open source collaboration',
       members: '1.8K+',
       icon: '🐙'
     },
     {
-      name: 'Discord Server',;
+      name: 'Discord Server',
       description: 'Real-time developer chat',
       members: '3.2K+',
       icon: '🎮'
@@ -123,28 +120,24 @@ const data = await response.json();
       icon: '📝';
     };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Developer Portal - Zion Tech Group"
         description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
       />
-
       {/* Hero Section */}
       <section className="relative py-32 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 left-20 w-64 h-64 border border-zion-cyan rounded-full animate-pulse"></div>
           <div className="absolute bottom-20 right-20 w-48 h-48 border border-zion-purple rounded-full animate-pulse delay-1000"></div>
         </div>
-
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="flex justify-center mb-8">
             <div className="w-24 h-24 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center">
               <Code className="w-12 h-12 text-white" />
             </div>
           </div>
-
           <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
             Developer{' '}
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
@@ -155,7 +148,6 @@ const data = await response.json();
             Build amazing applications with our powerful APIs, comprehensive documentation,
             and developer tools. Everything you need to integrate Zion Tech Group's services.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Get Started
@@ -166,7 +158,6 @@ const data = await response.json();
           </div>
         </div>
       </section>
-
       {/* Tools Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -174,26 +165,13 @@ const data = await response.json();
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Developer Tools
             </h2>
@@ -202,39 +180,21 @@ const data = await response.json();
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {quickStartSteps.map((step, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {quickStartSteps.map((step, index)               => (
               <motion.div
                 key={tool.title}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
               >
@@ -244,15 +204,12 @@ const data = await response.json();
                     {step.step}
                   </div>
                 </div>
-
                 <div className="mt-4 text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl flex items-center justify-center mx-auto mb-4">
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
-
                   <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
                   <p className="text-zion-slate-light text-sm mb-4 leading-relaxed">{step.description}</p>
-
                   <button className="bg-zion-cyan/20 text-zion-cyan border border-zion-cyan px-4 py-2 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm font-medium">
                     {step.action}
                   </button>
@@ -267,7 +224,6 @@ const data = await response.json();
           </div>
         </div>
       </section>
-
       {/* Resources Section */}
       <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -275,26 +231,13 @@ const data = await response.json();
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Learning Resources
             </h2>
@@ -303,8 +246,8 @@ const data = await response.json();
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            {apiFeatures.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {apiFeatures.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -315,17 +258,14 @@ const data = await response.json();
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-
                 <h3 className="text-lg font-bold text-white mb-3 text-center">{feature.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{feature.description}</p>
-
                 <div className="flex items-center justify-between">
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                     feature.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'
                   }`}>
                     {feature.status}
                   </span>
-
                   <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm">
                     View Docs
                   </button>
@@ -335,9 +275,8 @@ const data = await response.json();
           </div>
         </div>
       </section>
-
       {/* Code Examples */}
-      <section className="py-20 bg-zion-slate-dark">;
+      <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -348,8 +287,8 @@ const data = await response.json();
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {codeExamples.map((example, index) => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+            {codeExamples.map((example, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -362,13 +301,11 @@ const data = await response.json();
                     <example.icon className="w-6 h-6 text-zion-cyan" />
                     <h3 className="text-lg font-bold text-white">{example.language}</h3>
                   </div>
-
                   <div className="bg-zion-slate-dark/80 rounded-lg p-4 mb-4">
                     <pre className="text-zion-slate-light text-sm overflow-x-auto">
                       <code>{example.code}</code>
                     </pre>
                   </div>
-
                   <button className="w-full bg-zion-cyan/20 text-zion-cyan border border-zion-cyan py-2 px-4 rounded-lg hover:bg-zion-cyan hover:text-white transition-all duration-300 text-sm font-medium">
                     Copy Code
                   </button>
@@ -378,9 +315,8 @@ const data = await response.json();
           </div>
         </div>
       </section>
-
       {/* Resources */}
-      <section className="py-20 bg-zion-blue-dark">;
+      <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -391,42 +327,23 @@ const data = await response.json();
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {resources.map((resource, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {resources.map((resource, index)              => (
               <motion.div
                 key={resource.title}
                 initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -20 : 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
-
                 <div className="flex items-start space-x-4">
                   <div className="text-4xl">{resource.icon}</div>
                   <div className="flex-1">
@@ -446,7 +363,6 @@ const data = await response.json();
 
                 <h3 className="text-lg font-bold text-white mb-3 text-center">{resource.title}</h3>
                 <p className="text-zion-slate-light text-sm mb-4 text-center leading-relaxed">{resource.description}</p>
-
                 <div className="flex items-center justify-between">
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                     resource.badge === 'Complete' ? 'bg-green-500/20 text-green-400' :
@@ -458,44 +374,29 @@ const data = await response.json();
                   }`}>
                     {resource.badge}
                   </span>
-
                   <button className="text-zion-cyan hover:text-white transition-colors duration-300 text-sm group-hover:translate-x-1 transition-transform duration-300">
                     View Resource
                   </button>
                 </div>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Quick Start Section */}
-      <section className="py-16 px-4 bg-slate-800/30">;
+      <section className="py-16 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
-
             <h2 className="text-4xl font-bold text-white mb-4">
               Quick Start
             </h2>
@@ -503,40 +404,20 @@ const data = await response.json();
               Get up and running in minutes
             </p>
           </motion.div>
-
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
             className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"
-
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
@@ -560,7 +441,6 @@ const data = await response.json();
                 </div>
               </div>
             </div>
-
             <div className="mt-8 text-center">
               <button className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-green-500/20">
                 Start Building Now
@@ -569,9 +449,8 @@ const data = await response.json();
           </motion.div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">;
+      <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Ready to Build Something Amazing?
@@ -580,7 +459,6 @@ const data = await response.json();
             Join thousands of developers who are already building innovative applications
             with our powerful APIs and services.
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-gradient-to-r from-zion-cyan to-zion-purple text-white rounded-xl font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-zion-cyan/25">
               Get API Keys
@@ -600,6 +478,5 @@ const data = await response.json();
     </div>;
   );
 };
-
 export default DeveloperPortal;
 }}}}

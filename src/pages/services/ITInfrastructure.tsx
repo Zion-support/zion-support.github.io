@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
-import {
-  Server,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Server,
   Shield,
   Cloud,
   Database,
@@ -11,9 +11,9 @@ import {
   Cpu,
   HardDrive,
   Check
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
-const ITInfrastructure: React.FC = ($2) => {
+const ITInfrastructure = () => {
   const services = [
     {
       icon: <Server className="w-8 h-8" />,
@@ -52,7 +52,6 @@ const ITInfrastructure: React.FC = ($2) => {
       features: ["Performance analysis", "Capacity planning", "Optimization strategies", "Continuous monitoring"]
     }
   ];
-
   const benefits = [
     "99.9% uptime guarantee",
     "24/7 monitoring and support",
@@ -61,7 +60,6 @@ const ITInfrastructure: React.FC = ($2) => {
     "Cost optimization",
     "Compliance ready"
   ];
-
   return (
     <div className="min-h-screen bg-zion-slate-dark">
       {/* Hero Section */}
@@ -89,7 +87,6 @@ const ITInfrastructure: React.FC = ($2) => {
           </motion.div>
         </div>
       </section>
-
       {/* Services Grid */}
       <section className="py-20 bg-zion-slate-dark">
         <div className="container mx-auto px-4">
@@ -109,8 +106,8 @@ const ITInfrastructure: React.FC = ($2) => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -139,7 +136,6 @@ const ITInfrastructure: React.FC = ($2) => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 bg-zion-blue-dark">
         <div className="container mx-auto px-4">
@@ -159,8 +155,8 @@ const ITInfrastructure: React.FC = ($2) => {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+              {benefits.map((benefit, index)              => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
@@ -179,7 +175,6 @@ const ITInfrastructure: React.FC = ($2) => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-zion-slate-dark to-zion-blue-dark">
         <div className="container mx-auto px-4 text-center">
@@ -211,5 +206,4 @@ const ITInfrastructure: React.FC = ($2) => {
     </div>
   );
 };
-
 export default ITInfrastructure;

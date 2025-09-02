@@ -1,26 +1,23 @@
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { cn  } from '@/src/src/lib/utils';
+import { motion                } from 'framer-motion.ts';
+import { cn                } from '@/lib/utils';
 
 interface SkeletonProps extends React.PropsWithChildren<{}> {
-
   className?: string;
   variant?: 'default' | 'circular' | 'rectangular' | 'text' | 'avatar' | 'card';
   width?: string | number;
   height?: string | number;
   lines?: number;
   animated?: boolean}
-
 const Skeleton: React.FC<SkeletonProps> = ({
   className,
-variant:  'default',;
+  variant = 'default',;
   width,;
   height,;
   lines = 1,;
   animated = true,;
 }) => {;
   const baseClasses = 'bg-slate-200 dark:bg-slate-700 rounded';
-
   const variants = {
   default: 'h-4 w-full',
     circular: 'rounded-full',
@@ -33,24 +30,16 @@ variant:  'default',;
   ;
   card: 'w-full h-32 rounded-lg';
   ;
-
-
-
-
-
-
 };
-
   const skeletonClasses = cn(;
     baseClasses,;
     variants[variant],;
     className;
   );
-
   if (variant = == 'text' && lines > 1) {
     return (
       <div className="space-y-2">
-        {Array.from({ length: lines }).map((_, index)  => (
+        {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanylines }).map((_, index)                => (
           <motion.div
             key={index}
             className = {
@@ -59,23 +48,11 @@ variant:  'default',;
               'h-4',
   index === lines - 1 ? 'w-3/4' : 'w-full'
             )
-
-
-
-
-
-
 }
             initial={animated ? { opacity: 0.5 } : {}}
             animate = {
   animated ? { opacity: [0.5, 1,
   0.5] 
-
-
-
-
-
-
 } : {}}
             transition = {
   {
@@ -83,24 +60,18 @@ variant:  'default',;
               repeat: Infinity,
               ease: 'easeInOut',
   delay: index * 0.1
-            
-
 ;
 ;
 ;
-
-
 }};
           />;
         ))};
       </div>;
     );
   }
-
   const style: React.CSSProperties = { /* empty */ };
   if (width) style.width = typeof width === 'number' ? `${width}px` : width;
   if (height) style.height = typeof height === 'number' ? `${height}px` : height;
-
   return (
     <motion.div
       className = {skeletonClasses}
@@ -109,12 +80,6 @@ variant:  'default',;
       animate = {
   animated ? { opacity: [0.5, 1,
   0.5] 
-
-
-
-
-
-
 } : {}}
       transition = {
   {
@@ -124,26 +89,15 @@ variant:  'default',;
       ;
 ;
 ;
-
-
-
-
 }};
     />;
   );
 };
-
 // Specialized skeleton components
 export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) => (
   <div className = {
   cn('p-6 space-y-4',
   className)
-
-
-
-
-
-
 }>
     <Skeleton variant="rectangular" height={24} width="60%" />
     <Skeleton variant="text" lines={3} />;
@@ -154,7 +108,6 @@ export const CardSkeleton: React.FC<{ className?: string }> = ({ className }) =>
     </div>;
   </div>;
 );
-
 export const TableSkeleton: React.FC<{ rows?: number; columns?: number; className?: string }> = ({
   rows = 5,
   columns = 4,
@@ -163,34 +116,33 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number; classNam
   <div className = {
   cn('space-y-3',
   className)
-
-
-
-
-
-
 }>
     {/* Header */}
     <div className="flex space-x-4">
-      {Array.from({ length: columns }).map((_, index)  => (
+      {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, index)                => (
         <Skeleton key={index} variant="rectangular" height={20} width="100%" />
       ))}
     </div>
     {/* Rows */}
-    {Array.from({ length: rows }).map((_, rowIndex)  => (
+    {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrows }).map((_, rowIndex)                => (
       <div key={rowIndex} className="flex space-x-4">
-        {Array.from({ length: columns }).map((_, colIndex) => (;
+        {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanycolumns }).map((_, colIndex)               => (;
           <Skeleton key={colIndex} variant="rectangular" height={16} width="100%" />;
         ))};
       </div>;
     ))};
   </div>;
 );
-
 export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
   items = 5,
   className
 }) => (
+  <div className = {
+  cn('space-y-4',
+  className)
+
+}>
+    {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyitems }).map((_, index)                => (
   <div className = {
   cn('space-y-4',
   className)
@@ -201,7 +153,7 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
 
 
 }>
-    {Array.from({ length: items }).map((_, index) => (
+    {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyitems }).map((_, index)               => (
       <div key={index} className="flex items-center space-x-4">
         <Skeleton variant="circular" width={40} height={40} />
         <div className="flex-1 space-y-2">;
@@ -212,7 +164,6 @@ export const ListSkeleton: React.FC<{ items?: number; className?: string }> = ({
     ))};
   </div>;
 );
-
 export const GridSkeleton: React.FC<{
   rows?: number;
   columns?: number;
@@ -226,19 +177,12 @@ export const GridSkeleton: React.FC<{
   <div className = {
   cn('grid gap-4',
   className)
-
-
-
-
-
-
 } style={{
-    gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`
+    gridTemplateColumns: anyanyanyanyanyanyanyanyanyanyanyanyanyany`repeat(${columns}, minmax(0, 1fr))`
   }}>;
-    {Array.from({ length: rows * columns }).map((_, index) => (;
+    {Array.from({ length: anyanyanyanyanyanyanyanyanyanyanyanyanyanyrows * columns }).map((_, index)               => (;
       <Skeleton key={index} variant="card" height={itemHeight} />;
     ))};
   </div>;
 );
-
 export default Skeleton;}</motion.div></motion.div>}

@@ -5,6 +5,7 @@ A comprehensive automation system that solves all issues and keeps changes synce
 ## 🚀 Features
 
 ### Core Automation
+
 - **Intelligent File Watching**: Monitors all project files for changes
 - **Automatic Repository Sync**: Commits and pushes changes automatically
 - **Smart Build Triggers**: Automatically builds when relevant files change
@@ -12,6 +13,7 @@ A comprehensive automation system that solves all issues and keeps changes synce
 - **Security Scanning**: Regular security audits and vulnerability fixes
 
 ### Issue Resolution
+
 - **Automatic Problem Detection**: Identifies issues before they become problems
 - **Self-Healing System**: Automatically resolves common issues
 - **Conflict Resolution**: Handles git merge conflicts automatically
@@ -19,6 +21,7 @@ A comprehensive automation system that solves all issues and keeps changes synce
 - **Dependency Management**: Ensures all dependencies are properly installed
 
 ### Monitoring & Health
+
 - **Real-time Health Monitoring**: Continuous system health checks
 - **Performance Metrics**: CPU, memory, and disk usage monitoring
 - **Error Tracking**: Comprehensive error logging and reporting
@@ -28,6 +31,7 @@ A comprehensive automation system that solves all issues and keeps changes synce
 ## 🛠️ Installation
 
 ### Prerequisites
+
 - Node.js (v16 or higher)
 - npm or yarn
 - Git
@@ -36,12 +40,14 @@ A comprehensive automation system that solves all issues and keeps changes synce
 ### Quick Start
 
 1. **Clone the repository** (if not already done):
+
    ```bash
    git clone https://github.com/Zion-Holdings/zion.app.git
    cd zion.app
    ```
 
 2. **Run the startup script**:
+
    ```bash
    chmod +x scripts/start-pm2-sync-system.sh
    ./scripts/start-pm2-sync-system.sh
@@ -175,19 +181,25 @@ ecosystem.config.cjs                # PM2 configuration
 ## 🔄 How It Works
 
 ### 1. File Watching
+
 The system monitors all project files using `chokidar`:
+
 - Watches `src/`, `pages/`, `components/`, `utils/`, `public/`
 - Ignores `node_modules/`, `.next/`, `dist/`, `build/`, `logs/`
 - Debounces changes to avoid excessive processing
 
 ### 2. Change Detection
+
 When files change, the system:
+
 - Determines if changes require a build
 - Determines if changes require tests
 - Queues changes for processing
 
 ### 3. Automatic Processing
+
 Every 30 seconds, the system:
+
 - Stages all pending changes
 - Commits changes with descriptive messages
 - Pushes to the repository
@@ -195,7 +207,9 @@ Every 30 seconds, the system:
 - Runs tests if needed
 
 ### 4. Health Monitoring
+
 Every minute, the system:
+
 - Checks PM2 process status
 - Verifies file system integrity
 - Validates git repository status
@@ -203,7 +217,9 @@ Every minute, the system:
 - Scans for security vulnerabilities
 
 ### 5. Issue Resolution
+
 When issues are detected:
+
 - Automatically restarts failed processes
 - Installs missing dependencies
 - Fixes security vulnerabilities
@@ -215,6 +231,7 @@ When issues are detected:
 ### Common Issues
 
 **Process not starting:**
+
 ```bash
 # Check PM2 logs
 pm2 logs pm2-sync-automation
@@ -227,6 +244,7 @@ pm2 restart pm2-sync-automation
 ```
 
 **Git issues:**
+
 ```bash
 # Check git status
 git status
@@ -240,6 +258,7 @@ git clean -fd
 ```
 
 **Build failures:**
+
 ```bash
 # Clear build cache
 rm -rf .next dist build node_modules/.cache
@@ -253,6 +272,7 @@ npm run build
 ```
 
 **High memory usage:**
+
 ```bash
 # Check memory usage
 pm2 monit
@@ -327,12 +347,14 @@ pm2 logs --lines 100
 ### Production Deployment
 
 1. **Set environment variables**:
+
    ```bash
    export NODE_ENV=production
    export AUTOMATION_INTERVAL=30000
    ```
 
 2. **Start with PM2**:
+
    ```bash
    pm2 start ecosystem.config.cjs --env production
    ```

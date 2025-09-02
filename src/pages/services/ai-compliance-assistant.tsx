@@ -5,200 +5,157 @@ import {
   CheckCircle, 
   AlertTriangle, 
   FileText, 
+  Users, 
   Zap, 
-  Brain, 
-  BarChart3,
   ArrowRight,
-  Star,
-  Award,
-  Rocket,
-  Lightbulb,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
   Lock,
-  Code,
-  Server,
-  Chip,
-  Wifi,
-  ShieldCheck,
-  Bot,
-  Workflow,
   Eye,
-  Sparkles,
-  Atom,
-  Leaf,
-  Gamepad2,
-  Coins,
-  Satellite,
-  Activity,
-  MessageCircle,
-  Search,
-  BarChart,
-  Users2,
-  Settings,
-  Palette,
-  Calculator,
-  PieChart,
+  Database,
+  Globe,
+  Clock,
   Target,
-  Scale,
-  Gavel,
-  Clipboard,
-  BookOpen
+  Lightbulb,
+  Star,
+  BarChart3
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function AIComplianceAssistant() {
   const features = [
     {
       icon: Shield,
       title: "Automated Compliance Monitoring",
-      description: "24/7 monitoring of regulatory requirements and compliance status across all systems"
+      description: "Continuously monitor your systems and processes for compliance violations in real-time."
     },
     {
       icon: CheckCircle,
-      title: "Real-time Risk Assessment",
-      description: "Instant identification and evaluation of compliance risks and violations"
-    },
-    {
-      icon: FileText,
-      title: "Document Management",
-      description: "Intelligent document review, classification, and compliance verification"
-    },
-    {
-      icon: Brain,
-      title: "AI-Powered Auditing",
-      description: "Machine learning algorithms that continuously improve compliance detection accuracy"
+      title: "Regulatory Updates",
+      description: "Stay current with the latest regulatory changes and automatically update compliance requirements."
     },
     {
       icon: AlertTriangle,
-      title: "Proactive Alerts",
-      description: "Early warning system for potential compliance issues before they become violations"
+      title: "Risk Assessment",
+      description: "Identify potential compliance risks before they become violations with AI-powered analysis."
     },
     {
-      icon: BarChart3,
-      title: "Comprehensive Reporting",
-      description: "Detailed compliance reports and analytics for stakeholders and regulators"
+      icon: FileText,
+      title: "Documentation Management",
+      description: "Automatically generate and maintain compliance documentation and audit trails."
+    },
+    {
+      icon: Users,
+      title: "Role-Based Access",
+      description: "Ensure proper access controls and user permissions across your compliance systems."
+    },
+    {
+      icon: Zap,
+      title: "Instant Alerts",
+      description: "Receive immediate notifications when compliance issues are detected or thresholds are exceeded."
     }
   ];
 
   const benefits = [
-    "Reduce compliance violations by up to 90% through proactive monitoring",
-    "Automate 80% of routine compliance tasks and documentation",
-    "Achieve 100% audit readiness with real-time compliance tracking",
-    "Reduce compliance costs by 60% through intelligent automation",
-    "Improve regulatory reporting accuracy and timeliness",
-    "Ensure consistent compliance across all business units and locations"
+    {
+      icon: Target,
+      title: "Reduced Compliance Risk",
+      description: "Minimize the risk of regulatory violations and associated penalties through proactive monitoring."
+    },
+    {
+      icon: Lightbulb,
+      title: "Operational Efficiency",
+      description: "Automate routine compliance tasks and focus resources on strategic initiatives."
+    },
+    {
+      icon: Clock,
+      title: "Real-Time Visibility",
+      description: "Get instant insights into your compliance status across all systems and processes."
+    },
+    {
+      icon: Star,
+      title: "Audit Readiness",
+      description: "Maintain continuous audit readiness with comprehensive documentation and monitoring."
+    }
   ];
 
   const complianceAreas = [
     {
       title: "GDPR & Data Privacy",
-      description: "Personal data protection, consent management, and privacy compliance"
+      description: "Ensure compliance with data protection regulations and privacy requirements."
     },
     {
       title: "SOX & Financial Compliance",
-      description: "Financial reporting, internal controls, and audit requirements"
+      description: "Maintain financial reporting compliance and internal control requirements."
     },
     {
       title: "HIPAA & Healthcare",
-      description: "Patient data protection and healthcare information security"
+      description: "Protect patient data and maintain healthcare industry compliance standards."
     },
     {
       title: "ISO Standards",
-      description: "Quality management, information security, and environmental standards"
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Financial Services",
-      description: "Banks, insurance companies, and fintech firms with strict regulatory requirements"
-    },
-    {
-      title: "Healthcare Organizations",
-      description: "Hospitals, clinics, and health tech companies handling sensitive patient data"
-    },
-    {
-      title: "E-commerce & Retail",
-      description: "Online businesses managing customer data and payment compliance"
-    },
-    {
-      title: "Manufacturing & Supply Chain",
-      description: "Companies with complex regulatory requirements across multiple jurisdictions"
+      description: "Achieve and maintain ISO certification across quality, security, and environmental standards."
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue via-zion-blue-dark to-zion-purple">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-green-50">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-32 pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative overflow-hidden bg-gradient-to-r from-green-600 to-blue-700 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <div className="inline-flex items-center space-x-2 bg-zion-purple/20 text-zion-cyan px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Shield className="w-4 h-4" />
-              <span>AI-Powered Compliance</span>
+            <div className="flex justify-center mb-6">
+              <div className="p-3 bg-white/20 rounded-full">
+                <Shield className="h-8 w-8 text-white" />
+              </div>
             </div>
-            
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
               AI Compliance Assistant
             </h1>
-            
-            <p className="text-xl text-zion-slate-light max-w-3xl mx-auto mb-8">
-              Stay ahead of regulatory requirements with intelligent compliance automation, 
-              real-time monitoring, and AI-driven risk assessment that keeps your business compliant 24/7.
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-green-100">
+              Stay compliant with confidence using our AI-powered compliance monitoring and management platform.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-zion-cyan to-zion-purple text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors"
               >
-                Start Free Trial
-                <ArrowRight className="inline ml-2 w-5 h-5" />
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-zion-cyan text-zion-cyan px-8 py-4 rounded-lg font-semibold text-lg hover:bg-zion-cyan hover:text-white transition-all duration-300"
+                Get Started
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-green-600 transition-colors"
               >
-                Schedule Demo
-              </motion.button>
+                View All Services
+              </Link>
             </div>
           </motion.div>
-        </div>
-        
-        {/* Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-zion-cyan/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple/10 rounded-full blur-3xl"></div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 relative">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Intelligent Compliance Features
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive Compliance Management
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Advanced AI capabilities that automate and streamline your compliance operations
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our AI-powered platform provides end-to-end compliance monitoring and management capabilities.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <motion.div
@@ -206,13 +163,18 @@ export default function AIComplianceAssistant() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300 group"
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
               >
-                <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-6 h-6 text-white" />
+                <div className="flex items-center justify-center w-16 h-16 bg-green-100 rounded-lg mb-6">
+                  <feature.icon className="h-8 w-8 text-green-600" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-zion-slate-light">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -220,73 +182,70 @@ export default function AIComplianceAssistant() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-zion-blue-dark/30 relative">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Transform Your Compliance Operations
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Our AI Compliance Assistant?
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Experience significant improvements in compliance efficiency and risk reduction
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Experience the benefits of automated compliance management that reduces risk and improves efficiency.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {benefits.slice(0, 3).map((benefit, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
-            
-            <div className="space-y-6">
-              {benefits.slice(3).map((benefit, index) => (
-                <motion.div
-                  key={index + 3}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="flex items-start space-x-4"
-                >
-                  <CheckCircle className="w-6 h-6 text-zion-cyan mt-1 flex-shrink-0" />
-                  <span className="text-zion-slate-light text-lg">{benefit}</span>
-                </motion.div>
-              ))}
-            </div>
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="flex items-start space-x-4"
+              >
+                <div className="flex-shrink-0">
+                  <div className="flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg">
+                    <benefit.icon className="h-6 w-6 text-green-600" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {benefit.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Compliance Areas Section */}
-      <section className="py-20 relative">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Comprehensive Compliance Coverage
             </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Support for major regulatory frameworks and industry standards
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Our platform covers a wide range of compliance areas to meet your organization's needs.
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {complianceAreas.map((area, index) => (
               <motion.div
@@ -294,54 +253,15 @@ export default function AIComplianceAssistant() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 hover:border-zion-cyan/50 transition-all duration-300"
+                viewport={{ once: true }}
+                className="bg-gray-50 p-8 rounded-xl border border-gray-200"
               >
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Scale className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-white mb-2">{area.title}</h3>
-                    <p className="text-zion-slate-light">{area.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="py-20 bg-zion-blue-dark/30 relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Perfect For Your Industry
-            </h2>
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored compliance solutions for various industry requirements
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-zion-blue-dark/50 border border-zion-purple/30 rounded-xl p-6 text-center hover:border-zion-cyan/50 transition-all duration-300"
-              >
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                <p className="text-zion-slate-light text-sm">{useCase.description}</p>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                  {area.title}
+                </h3>
+                <p className="text-gray-600">
+                  {area.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -349,38 +269,34 @@ export default function AIComplianceAssistant() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-zion-purple to-zion-purple-dark relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-blue-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Simplify Compliance?
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Simplify Your Compliance?
             </h2>
-            <p className="text-xl text-zion-slate-light mb-8">
-              Join organizations already automating their compliance operations with AI
+            <p className="text-xl mb-8 text-green-100 max-w-3xl mx-auto">
+              Join organizations that trust our AI-powered compliance platform to manage their regulatory requirements.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-zion-cyan text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-lg shadow-zion-cyan/25 hover:shadow-xl hover:shadow-zion-cyan/40 transition-all duration-300"
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-white text-green-600 font-semibold rounded-lg hover:bg-green-50 transition-colors"
               >
-                Start Compliant Today
-                <Rocket className="inline ml-2 w-5 h-5" />
-              </motion.button>
-              
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-zion-purple transition-all duration-300"
+                Get Started Today
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/services"
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-green-600 transition-colors"
               >
-                Contact Sales
-                <MessageCircle className="inline ml-2 w-5 h-5" />
-              </motion.button>
+                Explore All Services
+              </Link>
             </div>
           </motion.div>
         </div>

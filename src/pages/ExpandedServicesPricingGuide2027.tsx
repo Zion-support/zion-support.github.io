@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import {
-  Search,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Search,
   Filter,
   Grid3X3,
   List,
@@ -60,11 +59,10 @@ import {
   Info,
   AlertTriangle,
   Zap
-import { SEO } from '@/src/src/components/SEO';
-import {
-  ALL_EXPANDED_SERVICES_PRICING,
+import { SEO              } from '@/components/SEO';
+import { ALL_EXPANDED_SERVICES_PRICING,
   type ExpandedServicePricing
-} from '@/src/src/data/expandedServicesPricing2027';
+             } from '@/data/expandedServicesPricing2027';
 
       pricing = pricing.filter(p => p.category === selectedCategory)}
     if (searchQuery) {
@@ -75,7 +73,7 @@ import {
       )};
     setFilteredPricing(pricing)}, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon: React.FC = ($2) => {
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => {
     switch (category) {
       case 'Cybersecurity':;
       pricing = pricing.filter(p => ;
@@ -83,25 +81,24 @@ import {
         p.category.toLowerCase().includes(searchQuery.toLowerCase()) ||;
         p.subcategory.toLowerCase().includes(searchQuery.toLowerCase());
       );
-
     setFilteredPricing(pricing);
   }, [selectedCategory, searchQuery]);
 
-  const getCategoryIcon: React.FC = ($2) => {;
+  const getCategoryIcon = (category: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {;
     switch (category) {;
       case 'Cybersecurity':;
         return Shield;
-      case 'Data Analytics':;
+      case 'Data Analytics':
         return BarChart3;
-      case 'Cloud & DevOps':;
+      case 'Cloud & DevOps':
         return Cloud;
-      case 'IoT & Edge Computing':;
+      case 'IoT & Edge Computing':
         return IoT;
-      case 'Financial Technology':;
+      case 'Financial Technology':
         return FinTech;
-      case 'Healthcare Technology':;
+      case 'Healthcare Technology':
         return Healthcare;
-      default:;
+      default:
         return Rocket}
   };
 
@@ -118,7 +115,6 @@ import {
       </motion.div>;
     );
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
       <SEO
@@ -126,7 +122,6 @@ import {
         description="Comprehensive pricing guide for our expanded innovative services. Compare pricing tiers, ROI analysis, and market positioning across all service categories."
         keywords="pricing guide, service pricing, ROI analysis, market comparison, cybersecurity pricing, data analytics pricing, cloud DevOps pricing"
       />
-
       {/* Hero Section */}
       <div className="relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -135,26 +130,13 @@ import {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6"
-
               Expanded Services
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
                 Pricing Guide 2027
@@ -164,73 +146,35 @@ import {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.2 
-
-
-
-
-
-
 }}
               className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto"
             >
               Comprehensive pricing information, ROI analysis, and market comparisons for all our expanded innovative services.
               Find the perfect pricing tier for your business needs.
             </motion.p>
-
             {/* Contact Info */}
             <motion.div
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition = {
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
-
 }}
               className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-6 inline-block"
-
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-blue-600" />
@@ -258,12 +202,11 @@ import {
             </motion.div>
           </div>
         </div>
-      </div>;
-
+      </div>
       {/* Pricing Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Filters and Search */}
-        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-8">;
+        <div className="bg-white dark:bg-slate-800 rounded-2xl shadow-lg p-6 mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
             {/* Search */}
             <div className="flex-1 max-w-md">
@@ -278,15 +221,14 @@ import {
                 />
               </div>
             </div>
-
             {/* Category Filter */}
             <div className="flex items-center space-x-4">
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="px-4 py-2 border border-gray-300 dark: border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
+                className="px-4 py-2 border border-gray-300 dark: anyanyanyanyanyanyanyanyanyanyanyanyanyborder-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-slate-700 dark:text-white"
               >
-                {categories.map((category)  => (
+                {categories.map((category)               => (
                   <option key={category} value={category}>
                     {category}
                   </option>
@@ -295,18 +237,16 @@ import {
             </div>
           </div>
         </div>
-
         {/* Pricing Count */}
-        <div className="mb-8">;
+        <div className="mb-8">
           <p className="text-gray-600 dark:text-gray-300">
             Showing {filteredPricing.length} of {ALL_EXPANDED_SERVICES_PRICING.length} pricing plans
           </p>
         </div>
-
         {/* Pricing Grid */}
         {filteredPricing.length > 0 ? (
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {filteredPricing.map((pricing)  => renderPricingCard(pricing))}
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {filteredPricing.map((pricing)               => renderPricingCard(pricing))}
           </div>
         ) : (
           <div className="text-center py-16">
@@ -320,9 +260,8 @@ import {
           </div>
         )}
       </div>
-
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">;
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Get Started?
@@ -335,14 +274,12 @@ import {
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center space-x-2"
-
               <Mail className="w-5 h-5" />
               <span>Get Custom Quote</span>
             </a>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200 flex items-center space-x-2"
-
               <Phone className="w-5 h-5" />
               <span>Call Sales Team</span>
             </a>;
@@ -352,5 +289,4 @@ import {
     </div>;
   );
 };
-
 export default ExpandedServicesPricingGuide2027;}}}}}}

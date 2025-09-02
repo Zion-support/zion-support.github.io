@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import { SEO } from "../components/SEO";
-import { innovativeMicroSaasServices2030 } from "../data/innovativeMicroSaasServices2030";
-import { comprehensiveITServices2030 } from "../data/comprehensiveITServices2030";
-import { comprehensiveAIServices2030 } from "../data/comprehensiveAIServices2030";
+import React, { useState } from 'react.ts';
+import { SEO               } from '../components/SEO';
+import { innovativeMicroSaasServices2030               } from '../data/innovativeMicroSaasServices2030';
+import { comprehensiveITServices2030               } from '../data/comprehensiveITServices2030';
+import { comprehensiveAIServices2030               } from '../data/comprehensiveAIServices2030';
 
-const ComprehensiveServicesShowcase2030: React.FC = () => {;
-  const [activeTab, setActiveTab] = useState<'microsaas' | 'it' | 'ai'>('microsaas');
+const ComprehensiveServicesShowcase2030: React.FC = (): JSX.Element => {;
+  const [activeTab, setActiveTab] = useState<any>('microsaas');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const getFilteredServices: React.FC = ($2) => {;
-    let services: unknown[] = [];
-    
+  const getFilteredServices = () => {;
+    let services: any[] = [];
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -22,23 +20,19 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
       case 'ai':
         services = comprehensiveAIServices2030;
         break}
-
     if (searchTerm) {
       services = services.filter(service => ;
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||;
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
-        service.tags.some((tag: string) => tag.toLowerCase().includes(searchTerm.toLowerCase()));
+        service.tags.some((tag: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring)               => tag.toLowerCase().includes(searchTerm.toLowerCase()));
       );
     }
-
     if (selectedCategory !== 'all') {
       services = services.filter(service => service.category === selectedCategory)};
 ;
     return services};
-
-  const getCategories: React.FC = ($2) => {;
-    let services: unknown[] = [];
-    
+  const getCategories = () => {;
+    let services: any[] = [];
     switch (activeTab) {
       case 'microsaas':
         services = innovativeMicroSaasServices2030;
@@ -49,11 +43,9 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
       case 'ai':
         services = comprehensiveAIServices2030;
         break}
-
     const categories = [...new Set(services.map(service => service.category))];
     return categories};
-
-  const renderServiceCard: React.FC = ($2) => {
+  const renderServiceCard = (service)  => {
     if (activeTab === 'microsaas') {
       return (
         <div key={service.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden">
@@ -64,9 +56,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 {service.pricing}
               </span>
             </div>
-
             <p className="text-gray-600 mb-4">{service.description}</p>
-
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold text-gray-900">${service.price.toLocaleString()}</span>
@@ -79,11 +69,10 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 <strong>ROI:</strong> {service.roi}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
               <div className="grid grid-cols-2 gap-2">
-                {service.features.slice(0, 6).map((feature: string, index: number)  => (
+                {service.features.slice(0, 6).map((feature: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                     {feature}
@@ -91,11 +80,10 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 ))}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
               <div className="space-y-1">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
+                {service.benefits.slice(0, 4).map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     {benefit}
@@ -103,29 +91,26 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 ))}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Target Audience:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.targetAudience.slice(0, 3).map((audience: string, index: number)  => (
+                {service.targetAudience.slice(0, 3).map((audience: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <span key={index} className="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded-full">
                     {audience}
                   </span>
                 ))}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.technologies.slice(0, 5).map((tech: string, index: number)  => (
+                {service.technologies.slice(0, 5).map((tech: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
-
             <div className="border-t pt-4">
               <div className="flex items-center justify-between text-sm text-gray-600 mb-2">
                 <span><strong>Setup Time:</strong> {service.setupTime}</span>
@@ -135,7 +120,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 <span><strong>Market Size:</strong> {service.marketSize}</span>
                 <span><strong>Growth Rate:</strong> {service.growthRate}</span>
               </div>
-
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
                   <strong>Contact:</strong><br />
@@ -151,7 +135,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
-
                   Learn More
                 </a>;
               </div>;
@@ -169,9 +152,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 {service.category}
               </span>
             </div>
-
             <p className="text-gray-600 mb-4">{service.description}</p>
-
             <div className="mb-4">
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <div>
@@ -190,11 +171,10 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 <strong>ROI:</strong> {service.roi}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
               <div className="grid grid-cols-2 gap-2">
-                {service.features.slice(0, 6).map((feature: string, index: number)  => (
+                {service.features.slice(0, 6).map((feature: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
                     {feature}
@@ -202,11 +182,10 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 ))}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
               <div className="space-y-1">
-                {service.benefits.slice(0, 4).map((benefit: string, index: number)  => (
+                {service.benefits.slice(0, 4).map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
                     {benefit}
@@ -214,18 +193,16 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 ))}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.technologies.slice(0, 5).map((tech: string, index: number)  => (
+                {service.technologies.slice(0, 5).map((tech: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <span key={index} className="px-2 py-1 text-xs bg-green-100 text-green-700 rounded-full">
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
-
             <div className="border-t pt-4">
               <div className="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
                 <div>
@@ -237,7 +214,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   <strong>Support:</strong> {service.support}
                 </div>
               </div>
-
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
                   <strong>Contact:</strong><br />
@@ -253,7 +229,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300"
-
                   Learn More
                 </a>;
               </div>;
@@ -276,9 +251,7 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 </div>
               </div>
             </div>
-
             <p className="text-gray-600 mb-4">{service.description}</p>
-
             <div className="mb-4">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-2xl font-bold text-gray-900">${service.price.toLocaleString()}</span>
@@ -294,22 +267,20 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 <strong>ROI:</strong> {service.roi}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">AI Models:</h4>
               <div className="flex flex-wrap gap-2 mb-3">
-                {service.aiModels.slice(0, 4).map((model: string, index: number)  => (
+                {service.aiModels.slice(0, 4).map((model: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <span key={index} className="px-2 py-1 text-xs bg-purple-100 text-purple-700 rounded-full">
                     {model}
                   </span>
                 ))}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
               <div className="grid grid-cols-2 gap-2">
-                {service.features.slice(0, 6).map((feature: string, index: number)  => (
+                {service.features.slice(0, 6).map((feature: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <div key={index} className="flex items-center text-sm text-gray-600">
                     <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
                     {feature}
@@ -317,29 +288,26 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 ))}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.useCases.slice(0, 4).map((useCase: string, index: number)  => (
+                {service.useCases.slice(0, 4).map((useCase: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <span key={index} className="px-2 py-1 text-xs bg-pink-100 text-pink-700 rounded-full">
                     {useCase}
                   </span>
                 ))}
               </div>
             </div>
-
             <div className="mb-4">
               <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
               <div className="flex flex-wrap gap-2">
-                {service.technologies.slice(0, 5).map((tech: string, index: number)  => (
+                {service.technologies.slice(0, 5).map((tech: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)                => (
                   <span key={index} className="px-2 py-1 text-xs bg-blue-100 text-blue-700 rounded-full">
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
-
             <div className="border-t pt-4">
               <div className="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
                 <div>
@@ -351,7 +319,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   <strong>Training Data:</strong> {service.trainingData}
                 </div>
               </div>
-
               <div className="flex items-center justify-between">
                 <div className="text-sm text-gray-600">
                   <strong>Contact:</strong><br />
@@ -367,7 +334,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300"
-
                   Learn More
                 </a>;
               </div>;
@@ -377,7 +343,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
       );
     }
   };
-
   return (
     <>
       <SEO
@@ -387,7 +352,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
         ogImage="https://ziontechgroup.com/images/services-showcase-2030.jpg"
         ogUrl="https://ziontechgroup.com/comprehensive-services-showcase-2030"
       />
-
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">
         {/* Hero Section */}
         <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 text-white">
@@ -417,7 +381,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>
           </div>
         </div>
-
         {/* Contact Banner */}
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-6">
           <div className="container mx-auto px-4 text-center">
@@ -444,7 +407,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
             </div>
           </div>
         </div>
-
         {/* Main Content */}
         <div className="container mx-auto px-4 py-12">
           {/* Search and Filter */}
@@ -463,7 +425,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
                 className="px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-
                 <option value="all">All Categories</option>
                 {getCategories().map((category) => (
                   <option key={category} value={category}>{category}</option>
@@ -471,7 +432,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
               </select>
             </div>
           </div>
-
           {/* Service Tabs */}
           <div className="mb-8">
             <div className="flex flex-wrap gap-2 justify-center">
@@ -482,7 +442,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                     ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-
                 Micro SAAS Services ({innovativeMicroSaasServices2030.length})
               </button>
               <button
@@ -492,7 +451,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                     ? 'bg-gradient-to-r from-green-600 to-blue-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-
                 IT Services ({comprehensiveITServices2030.length})
               </button>
               <button
@@ -502,14 +460,12 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
                     ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
-
                 AI Services ({comprehensiveAIServices2030.length})
               </button>
             </div>
           </div>
-
           {/* Services Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
             {getFilteredServices().map(renderServiceCard)}
           </div>
 ;
@@ -528,7 +484,6 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
               </button>
             </div>
           )}
-
           {/* Contact CTA */}
           <div className="mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white text-center">
             <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
@@ -539,13 +494,11 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
               <a
                 href="tel:+13024640950"
                 className="px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-
                 Call Now: +1 302 464 0950
               </a>
               <a
                 href="mailto:kleber@ziontechgroup.com"
                 className="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
-
                 Email Us
               </a>
             </div>;
@@ -555,5 +508,4 @@ const ComprehensiveServicesShowcase2030: React.FC = () => {;
     </>;
   );
 };
-
 export default ComprehensiveServicesShowcase2030;}}}}}

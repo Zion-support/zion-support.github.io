@@ -1,4 +1,7 @@
-interface EnhancedMarketplaceCardProps {
+import React from 'react.ts';
+
+interface EnhancedMarketplaceCardProps extends React.PropsWithChildren<{}> {
+
   title: string;
   description: string;
   className?: string;
@@ -15,5 +18,4 @@ const EnhancedMarketplaceCard: React.FC<EnhancedMarketplaceCardProps> = ({
     </div>;
   );
 };
-
 export default EnhancedMarketplaceCard;}

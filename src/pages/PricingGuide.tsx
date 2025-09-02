@@ -1,5 +1,5 @@
-import React, { useState } from 'react.ts';
-import { Link  } from 'react-router-dom.ts';
+import React, { useState              } from 'react.ts';
+import { Link               } from 'react-router-dom.ts';
 import { Calculator, 
   Check, 
   X, 
@@ -26,45 +26,40 @@ import { Calculator,
   Atom,
   Satellite
 } from 'lucide-react';
-import { SEO } from "../components/SEO";
+import { SEO              } from '../components/SEO';
 
-export default function PricingGuide(...args[]):  {
+export default function PricingGuide(...args[]: any):  {
   const [selectedCurrency, setSelectedCurrency] = useState('USD');
   const [selectedPeriod, setSelectedPeriod] = useState('monthly');
-
   const currencyRates = {
   USD: { symbol: '$',
   rate: 1 ;
 ;
 ;
 ;
-
-
-
 },;
     EUR: { symbol: '€', rate: 0.85 },;
     GBP: { symbol: '£', rate: 0.73 };
   };
-
   const pricingPlans = [
     {
       name: "Starter",
       icon: Zap,
       description: "Perfect for small businesses getting started with AI",
       price: { monthly: 299, yearly: 2990 },
-      features[;
+      features[
         "AI Business Intelligence Basic",
         "Cloud Infrastructure (10GB)",
         "Basic Support (Email)",
         "Monthly Reports",
         "2 User Licenses"
-      ],;
-      notIncluded[;
+      ],
+      notIncluded[
         "Advanced Analytics",
         "Custom AI Models",
         "Priority Support",
         "API Access"
-      ],;
+      ],
       cta: "Get Started",
       popular: false
     },
@@ -73,7 +68,7 @@ export default function PricingGuide(...args[]):  {
       icon: Brain,
       description: "Ideal for growing companies with advanced needs",
       price: { monthly: 799, yearly: 7990 },
-      features[;
+      features[
         "Everything in Starter",
         "Advanced AI Analytics",
         "Custom AI Model Training",
@@ -82,12 +77,12 @@ export default function PricingGuide(...args[]):  {
         "API Access",
         "10 User Licenses",
         "Quarterly Strategy Sessions"
-      ],;
-      notIncluded[;
+      ],
+      notIncluded[
         "Enterprise Security",
         "Custom Development",
         "Dedicated Account Manager"
-      ],;
+      ],
       cta: "Start Free Trial",
       popular: true
     },
@@ -96,7 +91,7 @@ export default function PricingGuide(...args[]):  {
       icon: Rocket,
       description: "Full-scale solutions for large organizations",
       price: { monthly: 2499, yearly: 24990 },
-      features[;
+      features[
         "Everything in Professional",
         "Enterprise Security Suite",
         "Custom Development",
@@ -114,36 +109,35 @@ export default function PricingGuide(...args[]):  {
       popular: false;
     };
   ];
-
   const servicePricing = [
     {
       category: "AI & Machine Learning",
       icon: Brain,
-      services[;
+      services[
         { name: "AI Business Intelligence", price: "From $299/month", description: "Advanced analytics and insights" },
         { name: "AI Sales Copilot", price: "From $199/month", description: "Intelligent sales automation" },
         { name: "AI Compliance Assistant", price: "From $399/month", description: "Automated compliance management" },
         { name: "LLM Content Studio", price: "From $149/month", description: "AI-powered content creation" }
       ]
-    },;
+    },
     {
       category: "Cloud & DevOps",
       icon: Cloud,
-      services[;
+      services[
         { name: "Cloud DevOps", price: "From $599/month", description: "End-to-end cloud solutions" },
         { name: "Cloud FinOps Optimizer", price: "From $299/month", description: "Cost optimization strategies" },
         { name: "FinOps Advisor", price: "From $499/month", description: "Financial operations consulting" }
       ]
-    },;
+    },
     {
       category: "Cybersecurity",
       icon: Shield,
-      services[;
+      services[
         { name: "AI Compliance Copilot", price: "From $399/month", description: "AI-powered security compliance" },
         { name: "Zero Trust Architecture", price: "From $799/month", description: "Modern security framework" },
         { name: "Incident Response Platform", price: "From $599/month", description: "Rapid threat response" }
       ]
-    },;
+    },
     {
       category: "IT Infrastructure",
       icon: Cpu,
@@ -161,7 +155,6 @@ export default function PricingGuide(...args[]):  {
         title="Pricing Guide - Zion Tech Group"
         description="Comprehensive pricing information for AI, cloud, cybersecurity, and emerging technology services. Transparent pricing with flexible plans for all business sizes."
       />
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -176,7 +169,6 @@ export default function PricingGuide(...args[]):  {
               Transparent, competitive pricing for cutting-edge technology solutions.
               Choose the plan that fits your business needs and scale as you grow.
             </p>
-
             {/* Currency and Billing Toggle */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
               <div className="flex items-center space-x-4">
@@ -185,13 +177,11 @@ export default function PricingGuide(...args[]):  {
                   value={selectedCurrency}
                   onChange={(e) => setSelectedCurrency(e.target.value)}
                   className="bg-slate-700 border border-slate-600 text-white rounded-lg px-3 py-2 focus:outline-none focus:border-cyan-400"
-
                   <option value="USD">USD ($)</option>
                   <option value="EUR">EUR (€)</option>
                   <option value="GBP">GBP (£)</option>
                 </select>
               </div>
-
               <div className="flex items-center space-x-4">
                 <span className="text-slate-300">Billing:</span>
                 <div className="flex bg-slate-700 rounded-lg p-1">
@@ -202,7 +192,6 @@ export default function PricingGuide(...args[]):  {
                         ? 'bg-cyan-500 text-white'
                         : 'text-slate-300 hover:text-white'
                     }`}
-
                     Monthly
                   </button>
                   <button
@@ -212,9 +201,8 @@ export default function PricingGuide(...args[]):  {
                         ? 'bg-cyan-500 text-white'
                         : 'text-slate-300 hover:text-white'
                     }`}
-
                     Yearly
-                    {savings > 0 && (;
+                    {savings > 0 && (
                       <span className="ml-1 text-xs bg-green-500 text-white px-2 py-1 rounded-full">
                         Save {savings}%
                       </span>
@@ -225,25 +213,23 @@ export default function PricingGuide(...args[]):  {
             </div>
           </div>
         </div>
-
         {/* Background Elements */}
-        <div className="absolute inset-0 -z-10">;
+        <div className="absolute inset-0 -z-10">
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
         </div>
       </section>
-
       {/* Pricing Plans */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">Choose Your Plan</h2>
             <p className="text-xl text-slate-300">Flexible pricing options designed to scale with your business</p>
           </div>
           
-          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index)  => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricingPlans.map((plan, index)               => (
               <div key={index} className={`relative bg-slate-800/50 border rounded-2xl p-8 ${
                 plan.popular
                   ? 'border-cyan-500/50 bg-gradient-to-br from-slate-800/50 to-cyan-900/20'
@@ -256,14 +242,12 @@ export default function PricingGuide(...args[]):  {
                     </div>
                   </div>
                 )}
-
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full mb-4">
                     <plan.icon className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-slate-400 mb-6">{plan.description}</p>
-
                   <div className="mb-6">
                     <div className="text-4xl font-bold text-white">
                       {calculatePrice(plan.price[selectedPeriod as keyof typeof plan.price])}
@@ -272,7 +256,6 @@ export default function PricingGuide(...args[]):  {
                       </span>
                     </div>
                   </div>
-
                   <Link
                     to={plan.cta === "Contact Sales" ? "/contact" : "/request-quote"}
                     className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
@@ -280,24 +263,21 @@ export default function PricingGuide(...args[]):  {
                         ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-600 hover:to-blue-700'
                         : 'bg-slate-700 text-white hover:bg-slate-600 border border-slate-600'
                     }`}
-
                     {plan.cta}
                   </Link>
                 </div>
-
                 <div className="space-y-4">
-                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: unknown</h4>
-                  {plan.features.map((feature, featureIndex)  => (
+                  <h4 className="text-lg font-semibold text-white mb-4">What's Included: anyanyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                  {plan.features.map((feature, featureIndex)               => (
                     <div key={featureIndex} className="flex items-center text-slate-300">
                       <Check className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-sm">{feature}</span>
                     </div>
                   ))}
-
                   {plan.notIncluded.length > 0 && (
                     <>
-                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: unknown</h4>
-                      {plan.notIncluded.map((feature, featureIndex)  => (
+                      <h4 className="text-lg font-semibold text-white mb-4 mt-6">Not Included: anyanyanyanyanyanyanyanyanyanyanyanyanyany</h4>
+                      {plan.notIncluded.map((feature, featureIndex)               => (
                         <div key={featureIndex} className="flex items-center text-slate-500">
                           <X className="w-5 h-5 text-red-400 mr-3 flex-shrink-0" />
                           <span className="text-sm">{feature}</span>
@@ -306,22 +286,21 @@ export default function PricingGuide(...args[]):  {
                     </>
                   )}
                 </div>
-              </div>;
+              </div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Service-Specific Pricing */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-white mb-4">Service-Specific Pricing</h2>
             <p className="text-xl text-slate-300">Detailed pricing for individual services and solutions</p>
           </div>
           
-          <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
-            {servicePricing.map((category, index)  => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {servicePricing.map((category, index)               => (
               <div key={index} className="bg-slate-800/50 border border-slate-700/50 rounded-2xl p-8">
                 <div className="flex items-center mb-6">
                   <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">
@@ -329,7 +308,6 @@ export default function PricingGuide(...args[]):  {
                   </div>
                   <h3 className="text-2xl font-bold text-white ml-4">{category.category}</h3>
                 </div>
-
                 <div className="space-y-4">
                   {category.services.map((service, serviceIndex) => (
                     <div key={serviceIndex} className="p-4 bg-slate-700/30 rounded-lg">
@@ -346,9 +324,8 @@ export default function PricingGuide(...args[]):  {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 border border-cyan-500/30 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
@@ -361,14 +338,12 @@ export default function PricingGuide(...args[]):  {
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200"
-
                 <MessageCircle className="w-5 h-5 mr-2" />
                 Get Custom Quote
               </Link>
               <Link
                 to="/services-overview"
                 className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200"
-
                 <BarChart3 className="w-5 h-5 mr-2" />
                 View All Services
               </Link>

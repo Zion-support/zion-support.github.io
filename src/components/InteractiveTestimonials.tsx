@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
 import {
   Star,
   Quote,
@@ -10,7 +10,21 @@ import {
   Users,
   Award,
   TrendingUp
-} from 'lucide-react';
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'lucide-react.ts';
 
 const testimonials = [
   {
@@ -69,31 +83,41 @@ const testimonials = [
     results: ["100% compliance", "Zero incidents", "Automated security"];
   };
 ];
-
 const categories = ["All", "AI & Infrastructure", "Quantum Computing", "AI Research", "Manufacturing IoT", "Cybersecurity"];
 
-export function InteractiveTestimonials() {
+export function InteractiveTestimonials(...args: any[]): any {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedTestimonial, setSelectedTestimonial] = useState(0);
-
   const filteredTestimonials = selectedCategory === "All" ;
     ? testimonials ;
     : testimonials.filter(t => t.category === selectedCategory);
-
   const currentTestimonial = filteredTestimonials[selectedTestimonial];
-
-  const nextTestimonial: React.FC = ($2) => {;
+  const nextTestimonial = () => {;
     setSelectedTestimonial((prev) => ;
       prev === filteredTestimonials.length - 1 ? 0 : prev + 1;
     );
   };
-
-  const prevTestimonial: React.FC = ($2) => {;
+  const prevTestimonial = () => {;
     setSelectedTestimonial((prev) => ;
       prev === 0 ? filteredTestimonials.length - 1 : prev - 1;
     );
   };
 
+  const goToTestimonial = (index: anyanyanyanyanyanyanyanyanyanyanyanyanyanynumber)               => {
+    setCurrentIndex(index);
+  };
+  const togglePlayPause = () => {
+    setIsPlaying(!isPlaying);
+  };
+  // Auto-advance testimonials
+  React.useEffect(() => {
+    if (!isPlaying) return;
+    const interval = setInterval(() => {
+      nextTestimonial();
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [isPlaying, currentIndex]);
+  const currentTestimonial = testimonials[currentIndex];
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -102,22 +126,10 @@ export function InteractiveTestimonials() {
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -131,31 +143,6 @@ export function InteractiveTestimonials() {
           </p>
         </motion.div>
 
-        {/* Category Filter */}
-        <motion.div
-          className="flex flex-wrap justify-center gap-3 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          {categories.map((category) => (
-            <button
-              key={category}
-              onClick={() => {
-                setSelectedCategory(category);
-                setSelectedTestimonial(0);
-              }}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-                selectedCategory === category
-                  ? 'bg-blue-600 text-white shadow-lg shadow-blue-500/25'
-                  : 'bg-slate-700 text-gray-300 hover:bg-slate-600 hover:text-white'
-              }`}
-            >
-              {category}
-            </button>
-          ))}
-        </motion.div>
               className="bg-white rounded-3xl shadow-2xl p-12 max-w-4xl mx-auto"
             >
               <div className="text-center mb-8">
@@ -181,7 +168,6 @@ export function InteractiveTestimonials() {
                   </span>
                 </div>
               </div>
-
               <blockquote className="text-center mb-8">
                 <Quote className="h-12 w-12 text-blue-200 mx-auto mb-4" />
                 <p className="text-xl text-gray-700 italic leading-relaxed">
@@ -189,8 +175,8 @@ export function InteractiveTestimonials() {
                 </p>
               </blockquote>
 
-              <div className="grid md: grid-cols-3 gap-6">
-                {Object.entries(currentTestimonial.metrics).map(([key, value])  => (
+              <div className="grid md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-6">
+                {Object.entries(currentTestimonial.metrics).map(([key, value])                => (
                   <div key={key} className="text-center p-4 bg-blue-50 rounded-xl">
                     <div className="text-2xl font-bold text-blue-600 mb-1">
                       {value}
@@ -203,7 +189,6 @@ export function InteractiveTestimonials() {
               </div>
             </motion.div>
           </AnimatePresence>
-
           {/* Navigation Arrows */}
           <button
             onClick={previousTestimonial}
@@ -218,9 +203,8 @@ export function InteractiveTestimonials() {
             <ChevronRight className="h-6 w-6 text-gray-600" />
           </button>
         </div>
-
         {/* Testimonial Indicators */}
-        <div className="flex justify-center mb-8">;
+        <div className="flex justify-center mb-8">
           <div className="flex space-x-2">
             {testimonials.map((_, index) => (
               <button
@@ -233,9 +217,8 @@ export function InteractiveTestimonials() {
             ))}
           </div>
         </div>
-
         {/* Play/Pause Controls */}
-        <div className="flex justify-center mb-8">;
+        <div className="flex justify-center mb-8">
           <button
             onClick={togglePlayPause}
             className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
@@ -253,18 +236,15 @@ export function InteractiveTestimonials() {
             )}
           </button>
         </div>
-
         {/* CTA Section */}
         <motion.div
           initial = {
   { opacity: 0,
-  y: 20 ;
-
+  y: 20 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 ;
-
+  y: 0 
 }}
         {/* Category Filter */}
         <motion.div 
@@ -272,22 +252,10 @@ export function InteractiveTestimonials() {
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -315,7 +283,6 @@ export function InteractiveTestimonials() {
       </div>;
     </section>;
   )};
-
 export default InteractiveTestimonials;
             <span className="text-2xl">→</span>;
           </div>;
@@ -324,6 +291,5 @@ export default InteractiveTestimonials;
     </section>;
   );
 }
-
 export default InteractiveTestimonials;
 export default InteractiveTestimonials;

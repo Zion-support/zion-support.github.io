@@ -1,19 +1,18 @@
-import React, { useState } from 'react.ts';
-import { Heart  } from 'lucide-react';
+import React, { useState  
+} from 'react.ts';
+import { Heart                } from 'lucide-react.ts';
 
 interface FavoriteButtonProps extends React.PropsWithChildren<{}> {
-
   itemId: string;
   itemType: 'product' | 'talent' | 'equipment' | 'service';
   className?: string}
 
-export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteButtonProps) {;
+export function FavoriteButton(...args: any[]): any {;
   const [isFavorited, setIsFavorited] = useState(false);
 
-  const handleToggleFavorite: React.FC = ($2) => {;
+  const handleToggleFavorite = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent)               => {;
     e.stopPropagation();
     setIsFavorited(!isFavorited);
-
     // Here you would typically make an API call to save/remove from favorites
     if (isFavorited) {
       // Remove from favorites
@@ -26,7 +25,6 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       // Add to favorites
       console.log(`Added ${itemType} ${itemId} to favorites`)}
   };
-
   return (
     <button
       onClick = {handleToggleFavorite}
@@ -44,7 +42,7 @@ export function FavoriteButton({ itemId, itemType, className = '' }: FavoriteBut
       />
     </button>
   )};
-className: {`w-4 h-4 transition-all duration-300 ${;
+        className={`w-4 h-4 transition-all duration-300 ${;
           isFavorited ? 'fill-current' : '';
         }`} ;
       />;

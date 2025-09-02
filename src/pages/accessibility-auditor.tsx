@@ -1,7 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Eye,
+import React from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Eye,
   Shield,
   CheckCircle,
   AlertTriangle,
@@ -18,11 +17,10 @@ import {
   Phone,
   Mail,
   MessageCircle
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
-export default function AccessibilityPage() {
+export default function AccessibilityPage(...args: any[]): any {
   const currentYear = new Date().getFullYear();
-
   const accessibilityFeatures = [
     {
       category: 'Visual Accessibility',
@@ -70,7 +68,6 @@ export default function AccessibilityPage() {
       ]
     }
   ];
-
   const complianceStandards = [
     {
       standard: 'WCAG 2.1 AA',
@@ -107,7 +104,6 @@ export default function AccessibilityPage() {
       items: ["Code validation", "Performance optimization", "Mobile responsiveness", "Cross-browser compatibility"];
     };
   ];
-
   const accessibilityTools = [
     {
       name: 'Screen Reader Support',
@@ -130,7 +126,6 @@ export default function AccessibilityPage() {
       icon: Zap
     }
   ];
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -140,7 +135,6 @@ export default function AccessibilityPage() {
       }
     }
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -151,7 +145,6 @@ export default function AccessibilityPage() {
       }
     }
   };
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -169,12 +162,11 @@ export default function AccessibilityPage() {
               provide inclusive user experiences.
             </p>
           </div>
-
           {/* Key Features */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Comprehensive Accessibility Testing</h2>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index)  => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+              {features.map((feature, index)               => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300 text-center">
                   <div className="text-4xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -183,13 +175,12 @@ export default function AccessibilityPage() {
               ))}
             </div>
           </div>
-
           {/* Compliance Standards */}
           <div className="mb-16">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20">
               <h2 className="text-3xl font-bold text-center mb-8">Compliance Standards We Test</h2>
-              <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-5 gap-4">
-                {complianceStandards.map((standard, index)  => (
+              <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-4">
+                {complianceStandards.map((standard, index)               => (
                   <div key={index} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                     <span className="text-blue-400 font-semibold">{standard}</span>
                   </div>
@@ -197,12 +188,11 @@ export default function AccessibilityPage() {
               </div>
             </div>
           </div>
-
           {/* Testing Areas */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Testing Areas</h2>
-            <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
-              {testingAreas.map((area, index)  => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {testingAreas.map((area, index)               => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                   <h3 className="text-xl font-semibold text-white mb-4">{area.category}</h3>
                   <ul className="space-y-2">
@@ -217,7 +207,6 @@ export default function AccessibilityPage() {
               ))}
             </div>
           </div>
-
           {/* Process */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Our Audit Process</h2>
@@ -229,7 +218,6 @@ export default function AccessibilityPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Initial Assessment</h3>
                 <p className="text-gray-300 text-sm">Comprehensive review of your current accessibility status</p>
               </div>
-
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">2</span>
@@ -237,7 +225,6 @@ export default function AccessibilityPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Automated Testing</h3>
                 <p className="text-gray-300 text-sm">Run comprehensive automated accessibility tests</p>
               </div>
-
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">3</span>
@@ -245,7 +232,6 @@ export default function AccessibilityPage() {
                 <h3 className="text-lg font-semibold text-white mb-2">Manual Review</h3>
                 <p className="text-gray-300 text-sm">Expert manual testing and validation</p>
               </div>
-
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 text-center">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl font-bold text-white">4</span>
@@ -255,7 +241,6 @@ export default function AccessibilityPage() {
               </div>
             </div>
           </div>
-
           {/* Benefits */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12">Why Choose Our Accessibility Auditor?</h2>
@@ -281,7 +266,6 @@ export default function AccessibilityPage() {
                   </li>
                 </ul>
               </div>
-
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20">
                 <h3 className="text-xl font-semibold text-white mb-4">Technical Benefits</h3>
                 <ul className="space-y-3 text-gray-300">
@@ -305,7 +289,6 @@ export default function AccessibilityPage() {
               </div>
             </div>
           </div>
-
           {/* CTA Section */}
           <div className="text-center">
             <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 max-w-4xl mx-auto">
@@ -318,13 +301,11 @@ export default function AccessibilityPage() {
                 <Link
                   to="/contact"
                   className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300"
-
                   Get Accessibility Audit
                 </Link>
                 <Link
                   to="/services"
                   className="inline-flex items-center px-6 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300"
-
                   View All Services
                 </Link>
               </div>

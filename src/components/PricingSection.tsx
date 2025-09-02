@@ -1,9 +1,7 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Check, Star, Zap, Shield, Brain, Cloud export const PricingSection: React.FC = () => {
 import React from 'react.ts';
-import { motion  } from 'framer-motion.ts';
-import { Link  } from 'react-router-dom.ts';
+import { motion                } from 'framer-motion.ts';
+import { Link                } from 'react-router-dom.ts';
+import { Check, Star, Zap, Shield, Brain, Cloud                } from 'lucide-react.ts';
 
       icon: Shield;
     };
@@ -61,7 +59,7 @@ const pricingTiers = [
   };
 ];
 
-export function PricingSection() {
+export function PricingSection(...args: any[]): any {
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <div className="max-w-7xl mx-auto px-6">
@@ -70,22 +68,10 @@ export function PricingSection() {
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -99,41 +85,23 @@ export function PricingSection() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {pricingTiers.map((tier, index) => (
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+          {pricingTiers.map((tier, index)               => (
             <motion.div
               key={tier.name}
               className={`relative ${tier.popular ? 'scale-105' : ''}`}
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               viewport={{ once: true }}
               transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
             >
               {tier.popular && (
@@ -142,7 +110,36 @@ export function PricingSection() {
                     Most Popular
                   </span>
                 </div>
-
+              )}
+              <div className={`bg-slate-800 border-2 ${tier.popular ? 'border-purple-500' : 'border-slate-700'} rounded-2xl p-8 h-full relative overflow-hidden`}>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-slate-700 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-bold text-white mb-2">{tier.name}</h3>
+                  <p className="text-gray-400 text-sm mb-6">{tier.description}</p>
+                  <div className="mb-8">
+                    <span className="text-4xl font-bold text-white">{tier.price}</span>
+                    <span className="text-gray-400">{tier.period}</span>
+                  </div>
+                )}
+                <div className="text-center mb-8">
+                  <div className="flex justify-center mb-4">
+                    <div className="p-3 bg-blue-100 rounded-full">
+                      <IconComponent className="h-8 w-8 text-blue-600" />
+                    </div>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    {plan.name}
+                  </h3>
+                  <div className="flex items-baseline justify-center mb-2">
+                    <span className="text-5xl font-bold text-gray-900">
+                      {plan.price}
+                    </span>
+                    <span className="text-xl text-gray-600 ml-1">
+                      {plan.period}
+                    </span>
+                  </div>
+                  <p className="text-gray-600">{plan.description}</p>
+                </div>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
@@ -151,7 +148,6 @@ export function PricingSection() {
                     </li>
                   ))}
                 </ul>
-
                 <Link
                   to="/contact"
                   className={`block w-full text-center py-3 px-6 rounded-lg font-medium transition-colors duration-200 ${
@@ -159,45 +155,25 @@ export function PricingSection() {
                       ? 'bg-blue-600 hover:bg-blue-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                   }`}
-
                   Get Started
-                </Link>;
-              </motion.div>;
+                </Link>
+              </motion.div>
             )})}
         </div>
-
         <motion.div 
           className="mt-16 text-center"
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
-
 }}
         >
           <p className="text-gray-400 mb-6">
@@ -215,6 +191,5 @@ export function PricingSection() {
     </section>;
   );
 }
-
 export default PricingSection;
 export default PricingSection;

@@ -1,144 +1,194 @@
 import React, { Suspense, lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { Sidebar } from './components/Sidebar';
-import { ErrorBoundary } from 'react-error-boundary';
-import { LoadingSpinner } from './components/ui/loading-spinner';
+import { motion, AnimatePresence } from 'framer-motion';
+import { HelmetProvider } from 'react-helmet-async';
 
 // Enhanced Components
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import EnhancedAccessibilityEnhancer from './components/EnhancedAccessibilityEnhancer';
-import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import PerformanceMonitor from './components/PerformanceMonitor';
+import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import SEOOptimizer from './components/SEOOptimizer';
+import { SmartNotificationSystem } from './components/SmartNotificationSystem';
 import { ChatAssistant } from './components/ChatAssistant';
+import { MobileExperienceEnhancer } from './components/MobileExperienceEnhancer';
+import ComprehensiveOptimizer from './components/ComprehensiveOptimizer';
+import ComprehensiveSEOEnhancer from './components/ComprehensiveSEOEnhancer';
+
+// Simple loading component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
+  </div>
+);
+// Simple header component
+const SimpleHeader = () => (
+  <header className="bg-white shadow-sm">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="flex justify-between items-center h-16">
+        <div className="flex items-center">
+          <a href="/" className="text-xl font-bold text-gray-900">
+            Zion Tech Group
+          </a>
+        </div>
+        <nav className="hidden md:flex space-x-8">
+          <a href="/" className="text-gray-700 hover:text-blue-600">Home</a>
+          <a href="/about" className="text-gray-700 hover:text-blue-600">About</a>
+          <a href="/services" className="text-gray-700 hover:text-blue-600">Services</a>
+          <a href="/contact" className="text-gray-700 hover:text-blue-600">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+);
+
+// Simple footer component
+const SimpleFooter = () => (
+  <footer className="bg-gray-900 text-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Company</h3>
+          <ul className="space-y-2">
+            <li><a href="/about" className="hover:text-blue-400">About</a></li>
+            <li><a href="/team" className="hover:text-blue-400">Team</a></li>
+            <li><a href="/careers" className="hover:text-blue-400">Careers</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Services</h3>
+          <ul className="space-y-2">
+            <li><a href="/services" className="hover:text-blue-400">All Services</a></li>
+            <li><a href="/ai-solutions" className="hover:text-blue-400">AI Solutions</a></li>
+            <li><a href="/cloud-services" className="hover:text-blue-400">Cloud Services</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Support</h3>
+          <ul className="space-y-2">
+            <li><a href="/help-center" className="hover:text-blue-400">Help Center</a></li>
+            <li><a href="/contact" className="hover:text-blue-400">Contact</a></li>
+            <li><a href="/documentation" className="hover:text-blue-400">Documentation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold mb-4">Legal</h3>
+          <ul className="space-y-2">
+            <li><a href="/privacy-policy" className="hover:text-blue-400">Privacy Policy</a></li>
+            <li><a href="/terms-of-service" className="hover:text-blue-400">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+        <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+);
 
 // Enhanced lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
   return (props: any) => (
-    <Suspense fallback={fallback || <LoadingSpinner />}>
+    <Suspense fallback={<div className="flex items-center justify-center min-h-screen">Loading...</div>}>
       <LazyComponent {...props} />
     </Suspense>
   );
 };
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./pages/HomePage'));
-const ServicesPage = lazy(() => import('./pages/ServicesPage'));
-const SolutionsPage = lazy(() => import('./pages/SolutionsPage'));
-const AboutPage = lazy(() => import('./pages/AboutPage'));
-const ContactPage = lazy(() => import('./pages/ContactPage'));
-const BlogPage = lazy(() => import('./pages/BlogPage'));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
-const ComprehensiveServicesPage = lazy(() => import('./pages/ComprehensiveServicesPage'));
-const Sitemap = lazy(() => import('./pages/Sitemap'));
-const ComprehensiveSitemap = lazy(() => import('./pages/ComprehensiveSitemap'));
-const Support = lazy(() => import('./pages/Support'));
-const Training = lazy(() => import('./pages/Training'));
-const Helpdesk = lazy(() => import('./pages/Helpdesk'));
-const RevolutionaryServicesPage = lazy(() => import('./pages/RevolutionaryServicesPage'));
-const NewServicesShowcase2025 = lazy(() => import('./pages/NewServicesShowcase2025'));
-const EnhancedNewServices2025 = lazy(() => import('./pages/EnhancedNewServices2025'));
-const PricingPage = lazy(() => import('./pages/PricingPage'));
-
-// Service Pages
-const AISolutions = lazy(() => import('./pages/services/AISolutions'));
-const QuantumComputing = lazy(() => import('./pages/services/QuantumComputing'));
-const Cybersecurity = lazy(() => import('./pages/services/Cybersecurity'));
-
-// Loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen bg-gray-900">
-    <div className="text-center">
-      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-cyan-500 mx-auto mb-4"></div>
-      <p className="text-gray-400">Loading...</p>
-    </div>
-  </div>
-);
-
-// Lazy load pages - only import existing ones
+// Core pages with optimized imports
 const Home = createLazyComponent(() => import('./pages/Home'));
 const About = createLazyComponent(() => import('./pages/About'));
 const Contact = createLazyComponent(() => import('./pages/Contact'));
+const Team = createLazyComponent(() => import('./pages/Team'));
+const Partners = createLazyComponent(() => import('./pages/Partners'));
+const HelpCenter = createLazyComponent(() => import('./pages/Help'));
+const PrivacyPolicy = createLazyComponent(() => import('./pages/PrivacyPolicy'));
+const TermsOfService = createLazyComponent(() => import('./pages/TermsOfService'));
 const Services = createLazyComponent(() => import('./pages/Services'));
-const Solutions = createLazyComponent(() => import('./pages/Solutions'));
-const RequestQuote = createLazyComponent(() => import('./pages/RequestQuote'));
-const Dashboard = createLazyComponent(() => import('./pages/Dashboard'));
-const Login = createLazyComponent(() => import('./pages/Login'));
-const FAQ = createLazyComponent(() => import('./pages/FAQ'));
-const Privacy = createLazyComponent(() => import('./pages/Privacy'));
-const Terms = createLazyComponent(() => import('./pages/Terms'));
-const Cookies = createLazyComponent(() => import('./pages/Cookies'));
 const Pricing = createLazyComponent(() => import('./pages/Pricing'));
-const Help = createLazyComponent(() => import('./pages/Help'));
+const Blog = createLazyComponent(() => import('./pages/Blog'));
 const News = createLazyComponent(() => import('./pages/News'));
 const Careers = createLazyComponent(() => import('./pages/Careers'));
-const Support = createLazyComponent(() => import('./pages/Support'));
-const WhitePapers = createLazyComponent(() => import('./pages/WhitePapers'));
-const ComprehensivePricing = createLazyComponent(() => import('./pages/ComprehensivePricing'));
+const Login = createLazyComponent(() => import('./pages/Login'));
+const Marketplace = createLazyComponent(() => import('./pages/Marketplace'));
+const Documentation = createLazyComponent(() => import('./pages/Documentation'));
+const Training = createLazyComponent(() => import('./pages/Training'));
+const Webinars = createLazyComponent(() => import('./pages/Webinars'));
+const Research = createLazyComponent(() => import('./pages/Research'));
+const Sitemap = createLazyComponent(() => import('./pages/Sitemap'));
 
 function App() {
-  const [sidebarOpen, setSidebarOpen] = React.useState(false);
-
   return (
-    <ErrorBoundary fallback={<div>Something went wrong. Please refresh the page.</div>}>
-      <div className="App">
-        <Header />
-        <div className="flex pt-16">
-          <Sidebar />
-          <main className="flex-1 ml-64 min-h-screen">
-            <Suspense fallback={<PageLoader />}>
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/services/*" element={<ServicesPage />} />
-                <Route path="/services/ai-solutions" element={<AISolutions />} />
-                <Route path="/services/quantum-computing" element={<QuantumComputing />} />
-                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                <Route path="/comprehensive-services" element={<ComprehensiveServicesPage />} />
-                <Route path="/revolutionary-services" element={<RevolutionaryServicesPage />} />
-                <Route path="/new-services-2025" element={<NewServicesShowcase2025 />} />
-                <Route path="/enhanced-new-services-2025" element={<EnhancedNewServices2025 />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/solutions" element={<SolutionsPage />} />
-                <Route path="/solutions/*" element={<SolutionsPage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/about/*" element={<AboutPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/blog/*" element={<BlogPage />} />
-                <Route path="/careers" element={<AboutPage />} />
-                <Route path="/partners" element={<AboutPage />} />
-                <Route path="/press" element={<AboutPage />} />
-                <Route path="/case-studies" element={<BlogPage />} />
-                <Route path="/research-development" element={<BlogPage />} />
-                <Route path="/docs" element={<BlogPage />} />
-                <Route path="/api" element={<BlogPage />} />
-                <Route path="/developer" element={<BlogPage />} />
-                <Route path="/help" element={<Helpdesk />} />
-                <Route path="/training" element={<Training />} />
-                <Route path="/community" element={<BlogPage />} />
-                <Route path="/support" element={<Support />} />
-                <Route path="/sitemap" element={<Sitemap />} />
-                <Route path="/comprehensive-sitemap" element={<ComprehensiveSitemap />} />
-                <Route path="/privacy-policy" element={<BlogPage />} />
-                <Route path="/terms-of-service" element={<BlogPage />} />
-                <Route path="/cookie-policy" element={<BlogPage />} />
-                <Route path="/request-quote" element={<ContactPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
+    <HelmetProvider>
+      <ErrorBoundary>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <SimpleHeader />
+          
+          <main className="flex-1">
+            <Suspense fallback={<LoadingSpinner />}>
+              <AnimatePresence mode="wait">
+                <Routes>
+                  {/* Core Routes */}
+                  <Route path="/" element={<Home />} />
+                  <Route path="/home" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                  <Route path="/contact" element={<Contact />} />
+                  <Route path="/team" element={<Team />} />
+                  <Route path="/partners" element={<Partners />} />
+                  <Route path="/help-center" element={<HelpCenter />} />
+                  <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                  <Route path="/terms-of-service" element={<TermsOfService />} />
+                  <Route path="/services" element={<Services />} />
+                  <Route path="/pricing" element={<Pricing />} />
+                  <Route path="/blog" element={<Blog />} />
+                  <Route path="/news" element={<News />} />
+                  <Route path="/careers" element={<Careers />} />
+                  <Route path="/login" element={<Login />} />
+                  <Route path="/marketplace" element={<Marketplace />} />
+                  <Route path="/documentation" element={<Documentation />} />
+                  <Route path="/training" element={<Training />} />
+                  <Route path="/webinars" element={<Webinars />} />
+                  <Route path="/research" element={<Research />} />
+                  <Route path="/sitemap" element={<Sitemap />} />
+                  
+                  {/* Legacy routes for compatibility */}
+                  <Route path="/privacy" element={<PrivacyPolicy />} />
+                  <Route path="/terms" element={<TermsOfService />} />
+                  <Route path="/help" element={<HelpCenter />} />
+                </Routes>
+              </AnimatePresence>
             </Suspense>
           </main>
+          
+          <SimpleFooter />
+          
+          {/* Enhanced Components */}
+          <ComprehensiveOptimizer
+            enabled={true}
+            showPanel={false}
+            position="top-left"
+            autoOptimize={true}
+          />
+          
+          <ComprehensiveSEOEnhancer
+            enabled={true}
+            showPanel={false}
+            position="bottom-right"
+            autoOptimize={true}
+          />
+          
+          <AccessibilityEnhancer
+            enabled={true}
+            showPanel={false}
+            position="top-right"
+          />
+          
+          <SmartNotificationSystem />
+          <ChatAssistant />
+          <MobileExperienceEnhancer />
         </div>
-        <Footer />
-        
-        {/* Enhanced Components */}
-        <PerformanceOptimizer />
-        <EnhancedAccessibilityEnhancer />
-        <MobileExperienceEnhancer />
-        <ChatAssistant />
-      </div>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 

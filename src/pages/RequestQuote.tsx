@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
-import { 
-  Calculator, 
+=======
+import React, { useState } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { SEO              } from '../components/SEO';
+import { Calculator, 
   FileText, 
   Clock, 
   CheckCircle, 
@@ -37,77 +37,74 @@ import {
   Package,
   Truck,
   Headphones
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 } from 'lucide-react';
 
-export default function RequestQuote() {
+export default function RequestQuote(...args: any[]): any {
+
   const [formData, setFormData] = useState({
-    companyName: '',
-    contactName: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
-    companySize: '',
+    company: '',
     industry: '',
-    projectType: '',
-    budget: '',
+    projectSize: '',
     timeline: '',
-    description: '',
-    services: [] as string[],
-    urgency: 'medium',
-    preferredContact: 'email'
+    budget: '',
+    description: ''
   });
 
   const [formStep, setFormStep] = useState(1);
-  const [expandedService, setExpandedService] = useState<string | null>(null);
+  const [expandedService, setExpandedService] = useState<any>(null);
   const [isSubmitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const companySizes = [
-    '1-10 employees',
-    '11-50 employees',
-    '51-200 employees',
-    '201-500 employees',
-    '500+ employees'
+    { value: 'startup', label: 'Startup (1-50 employees)' },
+    { value: 'small', label: 'Small Business (51-200 employees)' },
+    { value: 'medium', label: 'Medium Business (201-1000 employees)' },
+    { value: 'large', label: 'Large Enterprise (1000+ employees)' }
   ];
 
   const industries = [
-    'Technology',
-    'Healthcare',
-    'Finance',
-    'Manufacturing',
-    'Retail',
-    'Education',
-    'Real Estate',
-    'Consulting',
-    'Non-profit',
-    'Other'
+    { value: 'technology', label: 'Technology' },
+    { value: 'healthcare', label: 'Healthcare' },
+    { value: 'finance', label: 'Financial Services' },
+    { value: 'manufacturing', label: 'Manufacturing' },
+    { value: 'retail', label: 'Retail & E-commerce' },
+    { value: 'education', label: 'Education' },
+    { value: 'government', label: 'Government' },
+    { value: 'nonprofit', label: 'Non-profit' },
+    { value: 'other', label: 'Other' }
   ];
 
-  const projectTypes = [
-    'New Development',
-    'System Upgrade',
-    'Integration',
-    'Consulting',
-    'Support & Maintenance',
-    'Training',
-    'Other'
-  ];
-
-  const budgets = [
-    'Under $10,000',
-    '$10,000 - $25,000',
-    '$25,000 - $50,000',
-    '$50,000 - $100,000',
-    '$100,000 - $250,000',
-    '$250,000+'
+  const budgetRanges = [
+    { value: 'under-50k', label: 'Under $50,000' },
+    { value: '50k-100k', label: '$50,000 - $100,000' },
+    { value: '100k-250k', label: '$100,000 - $250,000' },
+    { value: '250k-500k', label: '$250,000 - $500,000' },
+    { value: '500k-1m', label: '$500,000 - $1,000,000' },
+    { value: 'over-1m', label: 'Over $1,000,000' }
   ];
 
   const timelines = [
-    'ASAP',
-    '1-2 weeks',
-    '1-2 months',
-    '3-6 months',
-    '6+ months',
-    'Flexible'
+    { value: 'immediate', label: 'Immediate (0-3 months)' },
+    { value: 'short-term', label: 'Short-term (3-6 months)' },
+    { value: 'medium-term', label: 'Medium-term (6-12 months)' },
+    { value: 'long-term', label: 'Long-term (1+ years)' }
   ];
 
   const urgencyLevels = [
@@ -285,39 +282,40 @@ export default function RequestQuote() {
     }
   ];
 
-  const handleInputChange: React.FC = ($2) => {
+  const handleInputChange = (field: anyanyanyanyanyanyanyanyanyanyanyanyanystring, value: string | string[])              => {
     setFormData(prev => ({
       ...prev,
-      [field]: value
+      [name]: value
     }));
   };
 
-  const toggleService: React.FC = ($2) => {
+=======
+  const toggleService = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setFormData(prev => ({
       ...prev,
-      services: prev.services.includes(serviceId)
-        ? prev.services.filter(id => id !== serviceId)
+      services: anyanyanyanyanyanyanyanyanyanyanyanyanyprev.services.includes(serviceId)
+        ? prev.services.filter(id              => id !== serviceId)
         : [...prev.services, serviceId]
     }));
   };
 
-  const toggleServiceExpansion: React.FC = ($2) => {
+  const toggleServiceExpansion = (serviceId: anyanyanyanyanyanyanyanyanyanyanyanyanystring)              => {
     setExpandedService(expandedService === serviceId ? null : serviceId);
   };
 
-  const nextStep: React.FC = ($2) => {
+  const nextStep = () => {
     if (formStep < 3) {
       setFormStep(formStep + 1);
     }
   };
 
-  const prevStep: React.FC = ($2) => {
+  const prevStep = () => {
     if (formStep > 1) {
       setFormStep(formStep - 1);
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {;
+  const handleSubmit = async (e: anyanyanyanyanyanyanyanyanyanyanyanyanyReact.FormEvent)              => {;
     e.preventDefault();
     setSubmitting(true);
     
@@ -328,7 +326,7 @@ export default function RequestQuote() {
     setSubmitted(true);
   };
 
-  const resetForm: React.FC = ($2) => {
+  const resetForm = () => {
     setFormData({
       companyName: '',
       contactName: '',
@@ -386,95 +384,30 @@ export default function RequestQuote() {
                   <div className="text-gray-300 text-sm">Our team reviews your requirements and project scope</div>
                 </div>
               </div>
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-blue-500/20 text-blue-400 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</div>
-                <div>
-                  <div className="text-white font-medium">Detailed Proposal</div>
-                  <div className="text-gray-300 text-sm">We'll send you a comprehensive proposal with pricing and timeline</div>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-purple-500/20 text-purple-400 rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">3</div>
-                <div>
-                  <div className="text-white font-medium">Follow-up Call</div>
-                  <div className="text-gray-300 text-sm">Schedule a call to discuss the proposal and answer questions</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={resetForm}
-              className="px-8 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded-lg hover:from-green-500 hover:to-blue-600 transition-all duration-200 hover:scale-105"
-            >
-              Request Another Quote
-            </button>
-            <a
-              href="mailto:info@ziontechgroup.com"
-              className="px-8 py-3 border border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-200"
-            >
-              Contact Us
-            </a>
-          </div>
-        </motion.div>
-      </div>
-    );
-  }
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <SEO 
-        title="Request Quote - Zion Tech Group"
-        description="Get a custom quote for your technology project. Our team will provide detailed pricing and timelines for your specific needs."
-      />
-      
-      {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-blue-500/10 to-purple-500/10"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-2xl mb-6">
-              <Calculator className="w-10 h-10 text-green-400" />
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Get Your <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Custom Quote</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Tell us about your project and we'll provide a detailed quote with pricing, 
-              timeline, and implementation plan tailored to your specific needs.
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Benefits */}
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
-                key={benefit.title}
+                key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="text-center"
+                className="text-center group"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-4">
-                  <benefit.icon className="w-8 h-8 text-blue-400" />
+                <div className="w-20 h-20 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-cyan-400">
+                    {feature.icon}
+                  </div>
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">{benefit.title}</h3>
-                <p className="text-gray-300 text-sm">{benefit.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-400 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Main Form Section */}
       <section className="py-20">
@@ -663,9 +596,9 @@ export default function RequestQuote() {
                             <select
                               value={formData.urgency}
                               onChange={(e) => handleInputChange('urgency', e.target.value)}
-                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus:outline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
+                              className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white focus: anyanyanyanyanyanyanyanyanyanyanyanyanyoutline-none focus:border-green-400 focus:ring-2 focus:ring-green-400/20 transition-all duration-200"
                             >
-                              {urgencyLevels.map((level) => (
+                              {urgencyLevels.map((level)              => (
                                 <option key={level.value} value={level.value}>
                                   {level.label} - {level.description}
                                 </option>
@@ -700,8 +633,8 @@ export default function RequestQuote() {
                         
                         <div>
                           <label className="block text-white font-medium mb-4">Select Services (Optional)</label>
-                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            {services.map((service) => (
+                          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-4">
+                            {services.map((service)              => (
                               <div key={service.id} className="relative">
                                 <input
                                   type="checkbox"
@@ -736,8 +669,8 @@ export default function RequestQuote() {
 
                         <div>
                           <label className="block text-white font-medium mb-4">Preferred Contact Method</label>
-                          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                            {contactMethods.map((method) => (
+                          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-4">
+                            {contactMethods.map((method)              => (
                               <div key={method.value} className="relative">
                                 <input
                                   type="radio"
@@ -911,66 +844,34 @@ export default function RequestQuote() {
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1 }}
+            className="text-center"
           >
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Need Immediate Assistance?
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Get Started?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Our team is here to help. Contact us directly for urgent inquiries 
-              or to discuss your project in detail.
+            <p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto">
+              Contact us today to discuss your project requirements and get a personalized quote.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl mb-4">
-                  <Mail className="w-8 h-8 text-blue-400" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2">Email Us</h3>
-                <p className="text-gray-300 text-sm mb-3">Get a quick response</p>
-                <a
-                  href="mailto:info@ziontechgroup.com"
-                  className="text-green-400 hover:text-green-300 transition-colors duration-200"
-                >
-                  info@ziontechgroup.com
-                </a>
-              </div>
-              
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl mb-4">
-                  <Phone className="w-8 h-8 text-green-400" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2">Call Us</h3>
-                <p className="text-gray-300 text-sm mb-3">Speak with an expert</p>
-                <a
-                  href="tel:+13024640950"
-                  className="text-green-400 hover:text-green-300 transition-colors duration-200"
-                >
-                  +1 (302) 464-0950
-                </a>
-              </div>
-              
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-xl mb-4">
-                  <Headphones className="w-8 h-8 text-purple-400" />
-                </div>
-                <h3 className="text-lg font-bold text-white mb-2">Live Chat</h3>
-                <p className="text-gray-300 text-sm mb-3">Instant support</p>
-                <button className="text-green-400 hover:text-green-300 transition-colors duration-200">
-                  Start Chat
-                </button>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="tel:+1-800-ZION-TECH"
+                className="bg-gradient-to-r from-zion-cyan to-zion-blue hover:from-zion-cyan-light hover:to-zion-blue-light text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105"
+              >
+                Call Now
+              </a>
+              <a
+                href="mailto:info@ziontechgroup.com"
+                className="border border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300"
+              >
+                Send Email
+              </a>
             </div>
           </motion.div>
         </div>
-      </section>
+      </div>
+
     </div>
-  )};
-            </div>;
-          </div>;
-        </motion.div>;
-      </div>;
-    </div>;
   );
 }

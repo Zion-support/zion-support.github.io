@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
 import { 
   Users, 
   MessageSquare, 
@@ -220,9 +221,9 @@ import {
   UserEditOff,
   UserSearch3,
   UserSearchOff
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
-const AICustomerSuccessPlatform: React.FC = ($2) => {
+const AICustomerSuccessPlatform = () => {
   const features = [
     {
       icon: Brain,
@@ -255,7 +256,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
       description: 'Continuous monitoring of customer engagement and satisfaction metrics'
     }
   ];
-
   const benefits = [
     'Reduce customer churn by up to 40%',
     'Increase customer lifetime value by 35%',
@@ -264,7 +264,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
     'Enable proactive issue resolution before escalation',
     'Scale customer success operations efficiently'
   ];
-
   const useCases = [
     {
       industry: 'SaaS Companies',
@@ -283,7 +282,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
       description: 'Monitor account health and provide proactive financial advisory'
     }
   ];
-
   const pricing = [
     {
       plan: 'Starter',
@@ -324,7 +322,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
       ]
     }
   ];
-
   const integrations = [
     'Salesforce CRM',
     'HubSpot',
@@ -337,7 +334,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
     'Zapier',
     'Webhook APIs'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}
@@ -384,7 +380,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
@@ -402,8 +397,8 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -421,7 +416,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -439,8 +433,8 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -455,7 +449,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
@@ -473,8 +466,8 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -489,7 +482,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -507,8 +499,8 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -545,7 +537,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
           </div>
         </div>
       </section>
-
       {/* Integrations Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-7xl mx-auto">
@@ -563,8 +554,8 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-5 gap-6">
+            {integrations.map((integration, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -578,7 +569,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -614,7 +604,6 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">
         <div className="max-w-4xl mx-auto text-center">
@@ -665,5 +654,4 @@ const AICustomerSuccessPlatform: React.FC = ($2) => {
     </div>
   );
 };
-
 export default AICustomerSuccessPlatform;

@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
 import { 
   Star, 
   Zap, 
@@ -53,10 +53,10 @@ import {
   PhoneCall,
   Mail as MailIcon,
   MapPin as MapPinIcon
-} from 'lucide-react';
-import EnhancedSEOManager from "../components/EnhancedSEOManager";
+             } from 'lucide-react';
+import EnhancedSEOManager from '../components/EnhancedSEOManager';
 
-export default function ComprehensiveImprovements2025() {
+export default function ComprehensiveImprovements2025(...args: any[]): any {
   const improvements = [
     {
       category: 'AI & Machine Learning Services',
@@ -135,7 +135,6 @@ export default function ComprehensiveImprovements2025() {
       ];
     };
   ];
-
   const features = [
     {
       title: 'Futuristic Design',
@@ -174,7 +173,6 @@ export default function ComprehensiveImprovements2025() {
       color: 'from-blue-500 to-cyan-500';
     };
   ];
-
   const benefits = [
     {
       title: 'Enhanced User Experience',
@@ -213,7 +211,6 @@ export default function ComprehensiveImprovements2025() {
       color: 'from-red-500 to-orange-500';
     };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <EnhancedSEOManager 
@@ -222,40 +219,20 @@ export default function ComprehensiveImprovements2025() {
         keywords = {
   ['platform improvements', 'AI services', 'technology enhancements', 'digital transformation',
   'Zion Tech Group']
-
-
-
-
-
-
 }
       />
-      
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 lg:py-32">
         <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-transparent to-pink-900/20"></div>
-        
         <div className="relative max-w-7xl mx-auto text-center">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
           >
@@ -294,7 +271,6 @@ export default function ComprehensiveImprovements2025() {
           </motion.div>
         </div>
       </section>
-
       {/* Improvements Grid */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -302,22 +278,10 @@ export default function ComprehensiveImprovements2025() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -332,39 +296,21 @@ export default function ComprehensiveImprovements2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {improvements.map((improvement, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {improvements.map((improvement, index)              => (
               <motion.div
                 key={improvement.category}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -375,7 +321,6 @@ export default function ComprehensiveImprovements2025() {
                     <improvement.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div className="mb-6">
                   <div className="inline-block px-3 py-1 bg-purple-600/20 text-purple-400 text-xs font-medium rounded-full mb-3">
@@ -393,7 +338,6 @@ export default function ComprehensiveImprovements2025() {
                     ))}
                   </ul>
                 </div>
-
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -401,7 +345,6 @@ export default function ComprehensiveImprovements2025() {
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 bg-slate-800/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -409,22 +352,10 @@ export default function ComprehensiveImprovements2025() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -439,39 +370,21 @@ export default function ComprehensiveImprovements2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={feature.title}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -482,7 +395,6 @@ export default function ComprehensiveImprovements2025() {
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
@@ -492,7 +404,6 @@ export default function ComprehensiveImprovements2025() {
                     {feature.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -500,7 +411,6 @@ export default function ComprehensiveImprovements2025() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -508,22 +418,10 @@ export default function ComprehensiveImprovements2025() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -538,39 +436,21 @@ export default function ComprehensiveImprovements2025() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={benefit.title}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-all duration-300 hover:border-purple-500/50"
@@ -581,7 +461,6 @@ export default function ComprehensiveImprovements2025() {
                     <benefit.icon className="w-8 h-8 text-white" />
                   </div>
                 </div>
-
                 {/* Content */}
                 <div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">
@@ -591,7 +470,6 @@ export default function ComprehensiveImprovements2025() {
                     {benefit.description}
                   </p>
                 </div>
-
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </motion.div>
@@ -599,7 +477,6 @@ export default function ComprehensiveImprovements2025() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -607,22 +484,10 @@ export default function ComprehensiveImprovements2025() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

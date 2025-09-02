@@ -1,5 +1,6 @@
-import React, { useState } from 'react.ts';
-import { motion  } from 'framer-motion.ts';
+import React, { useState               } from 'react.ts';
+import { motion                } from 'framer-motion.ts';
+import { Mail, CheckCircle, ArrowRight, Bell, TrendingUp, Zap                } from 'lucide-react.ts';
 
       description: "Get exclusive access to tech trends and analysis";
     },;
@@ -9,7 +10,6 @@ import { motion  } from 'framer-motion.ts';
       description: "Be the first to know about beta programs and launches";
     };
   ];
-
   if (isSubscribed) {
     return (
       <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
@@ -18,26 +18,13 @@ import { motion  } from 'framer-motion.ts';
             initial = {
   { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   scale: 1 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.5 }}
             className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 rounded-3xl p-12 border border-green-500/20"
-
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full mb-6">
               <CheckCircle className="w-10 h-10 text-white" />
             </div>
@@ -57,7 +44,6 @@ import { motion  } from 'framer-motion.ts';
       </section>;
     );
   }
-
   return (
     <section className = "py-20 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800">
       <div className="max-w-7xl mx-auto px-6">
@@ -67,25 +53,12 @@ import { motion  } from 'framer-motion.ts';
             initial = {
   { opacity: 0,
   x: -30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
-
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Stay Ahead with Zion Tech Group
             </h2>
@@ -93,7 +66,6 @@ import { motion  } from 'framer-motion.ts';
               Get exclusive access to the latest technology insights, service updates, and industry trends.
               Join thousands of professionals who trust us to keep them informed.
             </p>
-
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -101,35 +73,16 @@ import { motion  } from 'framer-motion.ts';
                   initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   className="flex items-start"
-
                   <div className="inline-flex items-center justify-center w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full mr-4 flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -137,47 +90,27 @@ import { motion  } from 'framer-motion.ts';
                     <h3 className="text-lg font-semibold text-white mb-1">{benefit.title}</h3>
                     <p className="text-gray-400">{benefit.description}</p>
                   </div>
-                </motion.div>;
+                </motion.div>
               ))}
             </div>
-
             <div className="flex items-center text-sm text-gray-400">
               <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
               <span>No spam, unsubscribe at  time</span>
             </div>
           </motion.div>
-
           {/* Right Column - Newsletter Form */}
           <motion.div
             initial = {
   { opacity: 0,
   x: 30 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
           >
             <div className="bg-gradient-to-br from-slate-700 to-slate-600 rounded-3xl p-8 border border-slate-500">
@@ -188,7 +121,6 @@ import { motion  } from 'framer-motion.ts';
                 <h3 className="text-2xl font-bold text-white mb-2">Subscribe to Our Newsletter</h3>
                 <p className="text-gray-300">Get the latest updates delivered to your inbox</p>
               </div>
-
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
@@ -204,13 +136,11 @@ import { motion  } from 'framer-motion.ts';
                     required
                   />
                 </div>
-
                 <button
                   type="submit"
                   disabled={isLoading || !email}
                   className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25 flex items-center justify-center"
-
-                  {isLoading ? (;
+                  {isLoading ? (
                     <div className="flex items-center">
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
                       Subscribing...
@@ -223,7 +153,6 @@ import { motion  } from 'framer-motion.ts';
                   )}
                 </button>
               </form>
-
               <div className="mt-6 text-center">
                 <p className="text-xs text-gray-400">
                   By subscribing, you agree to our{' '}
@@ -243,5 +172,4 @@ import { motion  } from 'framer-motion.ts';
     </section>;
   );
 };
-
 export default NewsletterSection;}}}

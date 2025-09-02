@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { Link              } from 'react-router-dom.ts';
+import { motion              } from 'framer-motion.ts';
 import {
   BookOpen,
   FileText,
@@ -9,47 +9,22 @@ import {
   Search,
   Filter,
   ArrowRight,
-  Star,
-  Sparkles,
-  Brain,
-  Cloud,
-  Shield,
-  Database,
-  Globe,
-  Cpu,
-  Zap,
-  Rocket,
-  Heart,
-  Scale,
-  PenTool,
-  TrendingUp,
-  Lock,
-  Server,
-  Smartphone,
-  Atom,
-  Leaf,
-  Building,
-  Car,
-  Factory,
-  City,
-  CheckCircle,
   Play,
   Pause,
   Stop
  } from 'lucide-react';
-
 const Resources: React.FC = (): JSX.Element => {;
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
-
   const categories = [
-    { id: 'all', name: 'All Resources', count: 45, icon: BookOpen },
-    { id: 'case-studies', name: 'Case Studies', count: 12, icon: BarChart3 },
-    { id: 'white-papers', name: 'White Papers', count: 8, icon: FileText },
-    { id: 'webinars', name: 'Webinars', count: 15, icon: Video },;
-    { id: 'support', name: 'Support', count: 10, icon: HelpCircle };
+    { id: 'all', name: 'All Resources', icon: BookOpen, count: 156 },
+    { id: 'documentation', name: 'Documentation', icon: FileText, count: 42 },
+    { id: 'case-studies', name: 'Case Studies', icon: TrendingUp, count: 28 },
+    { id: 'white-papers', name: 'White Papers', icon: Download, count: 35 },
+    { id: 'webinars', name: 'Webinars', icon: Video, count: 23 },
+    { id: 'training', name: 'Training', icon: Headphones, count: 18 },
+    { id: 'research', name: 'Research', icon: BookOpen, count: 10 }
   ];
-
   const featuredResources = [
     {
       id: 1,
@@ -153,7 +128,7 @@ const Resources: React.FC = (): JSX.Element => {;
       views: 3200,
       rating: 4.7,
       image: '/resources/cybersecurity-ai-webinar.jpg',
-      tags['Cybersecurity', 'AI', 'Webinar', 'Security'],;
+      tags['Cybersecurity', 'AI', 'Webinar', 'Security'],
       featured: false,
       fileSize: '450 MB',
       fileType: 'MP4',
@@ -171,7 +146,7 @@ const Resources: React.FC = (): JSX.Element => {;
       downloads: 1560,
       rating: 4.6,
       image: '/resources/blockchain-supply-chain.jpg',
-      tags['Blockchain', 'Supply Chain', 'Enterprise', 'Implementation'],;
+      tags['Blockchain', 'Supply Chain', 'Enterprise', 'Implementation'],
       featured: false,
       fileSize: '2.1 MB',
       fileType: 'PDF',
@@ -189,7 +164,7 @@ const Resources: React.FC = (): JSX.Element => {;
       downloads: 2100,
       rating: 4.8,
       image: '/resources/iot-edge-computing.jpg',
-      tags['IoT', 'Edge Computing', 'Architecture', 'Best Practices'],;
+      tags['IoT', 'Edge Computing', 'Architecture', 'Best Practices'],
       featured: false,
       fileSize: '3.2 MB',
       fileType: 'PDF',
@@ -207,7 +182,7 @@ const Resources: React.FC = (): JSX.Element => {;
       downloads: 3200,
       rating: 4.9,
       image: '/resources/ai-consciousness-research.jpg',
-      tags['AI Consciousness', 'Research', 'Breakthrough', 'Simulation'],;
+      tags['AI Consciousness', 'Research', 'Breakthrough', 'Simulation'],
       featured: false,
       items: [
         { title: 'Getting Started FAQ', type: 'FAQ', readTime: '5 min', featured: false },
@@ -231,7 +206,6 @@ const Resources: React.FC = (): JSX.Element => {;
       ];
     };
   ];
-
   const additionalResources = [
     {
       id: 'api-docs',
@@ -266,7 +240,6 @@ const Resources: React.FC = (): JSX.Element => {;
       href: '/community';
     };
   ];
-
   const contactInfo = {
   phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',;
@@ -276,14 +249,7 @@ const Resources: React.FC = (): JSX.Element => {;
   ;
   address: '364 E Main St STE 1008 Middletown DE 19709';
   ;
-
-
-
-
-
-
 };
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}
@@ -293,22 +259,10 @@ const Resources: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             className="text-center"
@@ -336,14 +290,12 @@ const Resources: React.FC = (): JSX.Element => {;
             </div>
           </motion.div>
         </div>
-        
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
         </div>
       </section>
-
       {/* Featured Resources */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -351,22 +303,19 @@ const Resources: React.FC = (): JSX.Element => {;
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-16"
-
           <h2 className="text-3xl font-bold font-rajdhani text-cyan-400 text-center mb-8 uppercase tracking-wider">
             Featured Resources
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredResources.map((resource, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredResources.map((resource, index)              => (
               <motion.div
                 key={resource.name}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-
                 <Link
                   to={resource.href}
                   className="block p-6 bg-black/50 backdrop-blur-xl border border-cyan-500/30 rounded-2xl hover:border-cyan-400/50 transition-all duration-300 group h-full"
-
                   <div className={`w-12 h-12 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <resource.icon className="w-6 h-6 text-white" />
                   </div>
@@ -387,25 +336,22 @@ const Resources: React.FC = (): JSX.Element => {;
                     </span>
                     <ExternalLink className="w-4 h-4 text-cyan-500 group-hover:text-cyan-400 transition-colors" />
                   </div>
-                </Link>;
+                </Link>
               </motion.div>
             ))}
           </div>
-        </motion.div>;
-
+        </motion.div>
         {/* Resource Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
-          {resourceCategories.map((category, categoryIndex) => (;
+        <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+          {resourceCategories.map((category, categoryIndex)              => (
             <motion.div
               initial = {
   { opacity: 0,
   y: 20 
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
 }}
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
@@ -414,8 +360,8 @@ const Resources: React.FC = (): JSX.Element => {;
               <p className="text-zion-slate-light">Our most popular and valuable resources</p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">;
-              {featuredResources.map((resource, index)  => {;
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">;
+              {featuredResources.map((resource, index)               => {;
                 const ResourceIcon = getResourceIcon(resource.type);
                 return (
                   <motion.article
@@ -423,17 +369,14 @@ const Resources: React.FC = (): JSX.Element => {;
                     initial = {
   { opacity: 0,
   y: 20 
-
 }}
                     animate = {
   { opacity: 1,
   y: 0 
-
 }}
                     transition = {
   { duration: 0.5,
   delay: index * 0.1 
-
 }}
                     className="group"
                   >
@@ -447,7 +390,6 @@ const Resources: React.FC = (): JSX.Element => {;
                           </span>
                         </div>
                       </div>
-
                       <div className="p-6">
                         <div className="flex items-center space-x-4 text-sm text-zion-slate-light mb-4">
                           <span className="flex items-center">
@@ -463,19 +405,15 @@ const Resources: React.FC = (): JSX.Element => {;
                             {resource.downloads?.toLocaleString() || resource.views?.toLocaleString()}
                           </span>
                         </div>
-
                         <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300">
                           {resource.title}
                         </h3>
-
                         <p className="text-zion-slate-light mb-4 leading-relaxed">
                           {resource.description}
                         </p>
-
                     <Link
                       to={resource.href}
                       className="block p-3 rounded-lg bg-gray-900/50 hover:bg-gray-800/70 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300 group"
-
                       <div className="flex items-start justify-between">
                         <div className="flex items-start space-x-3 flex-1">
                           <resource.icon className="w-4 h-4 text-cyan-400 mt-1 flex-shrink-0" />
@@ -493,10 +431,9 @@ const Resources: React.FC = (): JSX.Element => {;
                   </motion.article>
                 )})}
             </div>
-          </div>;
+          </div>
         </section>
       )}
-
       {/* Regular Resources Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -504,22 +441,10 @@ const Resources: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -533,39 +458,21 @@ const Resources: React.FC = (): JSX.Element => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {resourceCategories.filter(cat => cat.featured).map((category, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {resourceCategories.filter(cat              => cat.featured).map((category, index) => (
               <motion.div
                 key={category.id}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="group relative"
@@ -580,7 +487,6 @@ const Resources: React.FC = (): JSX.Element => {;
                   <p className="text-gray-300 mb-6 leading-relaxed">
                     {category.description}
                   </p>
-                  
                   <div className="space-y-3 mb-6">
                     {category.items.slice(0, 2).map((item, idx) => (
                       <div key={idx} className="flex items-center justify-between p-3 bg-white/5 rounded-lg">
@@ -597,15 +503,12 @@ const Resources: React.FC = (): JSX.Element => {;
                           )}
                         </div>
                       </div>
-
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-zion-cyan transition-colors duration-300 line-clamp-2">
                         {resource.title}
                       </h3>
-
                       <p className="text-zion-slate-light mb-4 leading-relaxed line-clamp-3">
                         {resource.description}
                       </p>
-
                       <div className="flex flex-wrap gap-2 mb-4">
                         {resource.tags.slice(0, 2).map((tag, idx) => (
                           <span
@@ -615,15 +518,14 @@ const Resources: React.FC = (): JSX.Element => {;
                             {tag}
                           </span>
                           <ExternalLink className="w-3 h-3 text-cyan-500/50 group-hover:text-cyan-400 transition-colors" />
-                        </div>;
-                      </div>;
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </motion.article>;
+                </motion.article>
               )})}
           </div>
         </div>
-
       {/* All Resources Grid */}
       <section className="py-20">
         <div className="container-responsive">
@@ -631,22 +533,10 @@ const Resources: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -661,40 +551,22 @@ const Resources: React.FC = (): JSX.Element => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {resourceCategories.map((category, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-6">
+            {resourceCategories.map((category, index)              => (
               <motion.div
                 key={category.id}
                 id={category.id}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.05 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
                 className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70"
@@ -708,7 +580,6 @@ const Resources: React.FC = (): JSX.Element => {;
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">
                   {category.description}
                 </p>
-                
                 <div className="space-y-2 mb-4">
                   {category.items.slice(0, 3).map((item, idx) => (
                     <div key={idx} className="flex items-center justify-between text-sm">
@@ -719,7 +590,6 @@ const Resources: React.FC = (): JSX.Element => {;
                     </div>
                   ))}
                 </div>
-                
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-500">
                     {category.items.length} resources
@@ -731,7 +601,6 @@ const Resources: React.FC = (): JSX.Element => {;
           </div>
         </div>
       </section>
-
       {/* Additional Resources */}
       <section className="py-20">
         <div className="container-responsive">
@@ -739,22 +608,10 @@ const Resources: React.FC = (): JSX.Element => {;
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
@@ -768,56 +625,55 @@ const Resources: React.FC = (): JSX.Element => {;
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalResources.map((resource, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-6">
+            {additionalResources.map((resource, index)              => (
               <motion.div
                 key={resource.id}
                 id={resource.id}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 viewport={{ once: true }}
-                className="group bg-slate-800/50 rounded-xl p-6 border border-slate-700/50 hover:border-cyan-400/30 transition-all duration-300 hover:bg-slate-800/70 text-center"
+                className={`bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-cyan-500/50 transition-all duration-300 group ${
+                  resource.featured ? 'ring-2 ring-cyan-500/30' : ''
+                }`}
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${resource.color} rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <resource.icon className="w-8 h-8 text-white" />
+                {/* Featured Badge */}
+                {resource.featured && (
+                  <div className="absolute -top-3 -right-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold">
+                    Featured
+                  </div>
+                )}
+
+                {/* Header */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className={`w-12 h-12 bg-gradient-to-br ${getCategoryColor(resource.category)} rounded-lg flex items-center justify-center`}>
+                    {React.createElement(getCategoryIcon(resource.category), { className: "w-6 h-6 text-white" })}
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <button className="p-2 text-gray-400 hover:text-cyan-400 transition-colors">
+                      <Bookmark className="w-4 h-4" />
+                    </button>
+                    <button className="p-2 text-gray-400 hover:text-cyan-400 transition-colors">
+                      <Share2 className="w-4 h-4" />
+                    </button>
+                  </div>
                 </div>
-                
                 <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {resource.title}
                 </h3>
-                
                 <p className="text-gray-400 mb-4 text-sm leading-relaxed">
                   {resource.description}
                 </p>
-                
                 <Link
                   to={resource.href}
                   className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium text-sm"
@@ -828,36 +684,47 @@ const Resources: React.FC = (): JSX.Element => {;
               </motion.div>
             ))}
           </div>
+
+          {filteredResources.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-20"
+            >
+              <div className="w-24 h-24 bg-slate-800/50 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Search className="w-12 h-12 text-gray-400" />
+              </div>
+              <h3 className="text-2xl font-semibold text-white mb-2">No resources found</h3>
+              <p className="text-gray-400 mb-6">
+                Try adjusting your search terms or category filter
+              </p>
+              <button
+                onClick={() => {
+                  setSearchTerm('');
+                  setSelectedCategory('all');
+                }}
+                className="px-6 py-3 bg-cyan-500 text-white rounded-lg hover:bg-cyan-600 transition-colors"
+              >
+                Clear Filters
+              </button>
+            </motion.div>
+          )}
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-20">
-        <div className="container-responsive">
+      <section className="py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center"
           >
             <div className="bg-gradient-to-r from-slate-800/50 to-slate-700/50 rounded-3xl p-12 border border-slate-600/50">
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -867,7 +734,6 @@ const Resources: React.FC = (): JSX.Element => {;
                 Can't find what you're looking for? Our team is here to help you access 
                 the right resources and support for your needs.
               </p>
-              
               {/* Contact Information */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                 <div className="text-center">
@@ -879,7 +745,6 @@ const Resources: React.FC = (): JSX.Element => {;
                     {contactInfo.phone}
                   </a>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Mail className="w-6 h-6 text-white" />
@@ -889,7 +754,6 @@ const Resources: React.FC = (): JSX.Element => {;
                     {contactInfo.email}
                   </a>
                 </div>
-                
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <MapPin className="w-6 h-6 text-white" />
@@ -900,7 +764,6 @@ const Resources: React.FC = (): JSX.Element => {;
                   </p>
                 </div>
               </div>
-              
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   to="/contact"

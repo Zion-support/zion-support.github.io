@@ -1,39 +1,32 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Logo } from '@/src/src/components/header/Logo';
-import { PointsBadge } from '@/src/src/components/loyalty/PointsBadge';
-import { UserMenu } from '@/src/src/components/header/UserMenu';
-import { LanguageSelector } from '@/src/src/components/header/LanguageSelector';
-import { ModeToggle } from '@/src/src/components/ModeToggle';
-import { useAuth } from '@/src/src/hooks/useAuth';
-import { useIsMobile } from '@/src/src/hooks/use-mobile';
-import { useMessaging } from '@/src/src/context/MessagingContext';
-import { EnhancedSearchInput } from '@/src/src/components/search/EnhancedSearchInput';
-import { generateSearchSuggestions } from '@/src/src/data/marketplaceData';
-import { slugify } from '@/src/src/lib/slugify';
-import { ResponsiveNavigation } from '@/src/src/components/navigation/ResponsiveNavigation';
-import { MobileMenu } from '@/src/src/components/header/MobileMenu';
-import { MobileBottomNav } from '@/src/src/components/header/MobileBottomNav';
-import { Menu, X, ShoppingCart import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
-import type { RootState } from '@/src/src/store';
+import { Menu, X, ShoppingCart } from 'lucide-react';
+import { Logo } from '@/components/Logo';
+import { ResponsiveNavigation } from '@/components/navigation/ResponsiveNavigation';
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { MobileMenu } from '@/components/header/MobileMenu';
+import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import { useAuth } from '@/context/auth/AuthContext';
+import { useIsMobile } from '@/hooks/useIsMobile';
+import { useMessaging } from '@/context/MessagingContext';
+import { generateSearchSuggestions, slugify } from '@/utils/searchUtils';
+import type { RootState } from '@/store';
 
       // // // // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('');
-
       // // // // console.log('PrimaryNav search submit:', query);
       router.push(`/search/${slugify(query)}`);
       setQuery('')}
 // Theme toggle component
-const ModeToggle: React.FC = ($2) => {;
+const ModeToggle = () => {;
   const [isDark, setIsDark] = useState(false);
-
-  const toggleTheme: React.FC = ($2) => {;
+  const toggleTheme = () => {;
     setIsDark(!isDark);
     // Add theme switching logic here
   };
-
   return (
     <>
       <header
@@ -41,15 +34,22 @@ const ModeToggle: React.FC = ($2) => {;
         role="navigation"
         aria-label="Primary"
         data-testid="header"
-
         <div className="container flex flex-wrap items-center justify-between gap-2 min-h-16 px-4 sm:px-6">
           <Logo />
-
           {/* Navigation - hidden on mobile, shown on desktop */}
           <div className="hidden md:block order-1 flex-shrink-0">
             <ResponsiveNavigation />
           </div>
-
+          {/* Actions container with responsive layout */}
+          <div className="hidden md:flex items-center gap-2 order-2 flex-shrink-0 min-w-0">
+            {/* Search form with clamped width */}
+            <form onSubmit={handleSubmit} className="flex-shrink-0" style = {
+  { width: 'clamp(12rem, 20vw,
+  16rem)' 
+}}>
+              <EnhancedSearchInput
+                value={query}
+                onChange={setQuery}
                   // // // // // // // console.log('PrimaryNav search suggestion selected:', sugg);
                 onSelectSuggestion = {
   (sugg) => {
@@ -60,7 +60,6 @@ const ModeToggle: React.FC = ($2) => {;
                   if (sugg.id) {
                     // Product listings with IDs go to product detail page
                     router.push(`/marketplace/listing/${sugg.id
-
 }`)} else if (sugg.type = == 'doc' && sugg.slug && sugg.slug.startsWith('/')) {
                     // Documentation suggestions navigate directly to their path
                     router.push(sugg.slug)} else if (sugg.type === 'blog' && sugg.slug) {
@@ -69,7 +68,6 @@ const ModeToggle: React.FC = ($2) => {;
                     // Default: search results page with slug;
                     router.push(`/search/${sugg.slug || slugify(sugg.text)}`)};
                   setQuery('');
-
                   // Track analytics event
                   if (typeof window !== 'null' && window.gtag) {
                     window.gtag('event', 'search_suggestion_click', {
@@ -78,10 +76,11 @@ const ModeToggle: React.FC = ($2) => {;
                       suggestion_id: sugg.id || sugg.slug
                     })}
                 }}
-                searchSuggestions = {suggestions}
+                suggestions={suggestions}
+                placeholder={t('search.placeholder')}
+                className="w-full"
               />
             </form>
-
             {/* Compact actions group */}
             <div className="flex items-center gap-1">
               <PointsBadge />
@@ -93,7 +92,6 @@ const ModeToggle: React.FC = ($2) => {;
                     aria-label = {
   t('nav.cart',
   'Cart')
-
 }
                   >
                     <ShoppingCart aria-hidden="true" className="h-5 w-5 text-foreground hover:text-primary" />
@@ -111,13 +109,11 @@ const ModeToggle: React.FC = ($2) => {;
                 </HoverCardContent>
               </HoverCard>
             </div>
-
             {/* Compact controls group */}
             <div className="flex items-center gap-1 border-l border-primary/20 pl-1 ml-1">
               <ModeToggle />
               <LanguageSelector />
             </div>
-
             {/* Auth links - flex wrap for very small screens */}
             <div className="flex items-center gap-1 flex-wrap">
               {!isLoggedIn && (
@@ -126,21 +122,32 @@ const ModeToggle: React.FC = ($2) => {;
                     href="/auth/login"
                     className="text-sm hover:text-primary whitespace-nowrap"
                     data-testid="login-link"
-
                     {t('auth.login')}
                   </Link>
                   <Link
                     href="/signup"
                     className="text-sm hover:text-primary whitespace-nowrap"
-
                     {t('auth.signup')}
                   </Link>
                 </>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <button
+                    onClick={() => router.push('/login')}
+                    className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {t('auth.login')}
+                  </button>
+                  <button
+                    onClick={() => router.push('/signup')}
+                    className="px-4 py-2 text-sm font-medium bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors"
+                  >
+                    {t('auth.signup')}
+                  </button>
+                </div>
               )}
-              {isLoggedIn && <UserMenu />}
             </div>
           </div>
-
           {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -149,7 +156,6 @@ const ModeToggle: React.FC = ($2) => {;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
-
         {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
@@ -157,32 +163,14 @@ const ModeToggle: React.FC = ($2) => {;
               initial = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   height: 'auto' 
-
-
-
-
-
-
 }}
               exit = {
   { opacity: 0,
   height: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.3 }}
               className="lg:hidden bg-slate-900/95 backdrop-blur-md border-t border-white/10"
@@ -207,7 +195,6 @@ const ModeToggle: React.FC = ($2) => {;
                     </div>
                   </div>
                 ))}
-                
                 <div className="pt-4 border-t border-white/10 space-y-2">
                   <Link 
                     to="/solutions" 

@@ -27,12 +27,12 @@ class UnifiedAutomationDashboard {
   log(message, level = 'INFO') {
     const timestamp = new Date().toISOString();
     const logMessage = `[${timestamp}] [${level}] ${message}`;
-    
+
     console.log(logMessage);
-    
+
     // Write to log file
     fs.appendFileSync(this.logFile, logMessage + '\n');
-    
+
     // Write errors to error file
     if (level === 'ERROR') {
       fs.appendFileSync(this.errorFile, logMessage + '\n');
@@ -57,7 +57,7 @@ class UnifiedAutomationDashboard {
       'comprehensive-error-fixer-report.json',
       'ai-improvements.json',
       'performance-optimizations.json',
-      'test-results.json'
+      'test-results.json',
     ];
 
     for (const file of reportFiles) {
@@ -79,7 +79,7 @@ class UnifiedAutomationDashboard {
     const analysis = {
       timestamp: new Date().toISOString(),
       metrics: {},
-      recommendations: []
+      recommendations: [],
     };
 
     try {
@@ -117,10 +117,9 @@ class UnifiedAutomationDashboard {
         });
         analysis.metrics.bundleSize = {
           totalFiles: files.length,
-          totalSize: `${(totalSize / 1024 / 1024).toFixed(2)} MB`
+          totalSize: `${(totalSize / 1024 / 1024).toFixed(2)} MB`,
         };
       }
-
     } catch (error) {
       this.log(`Code quality analysis failed: ${error.message}`, 'ERROR');
     }
@@ -149,16 +148,16 @@ class UnifiedAutomationDashboard {
             memory: p.monit.memory,
             cpu: p.monit.cpu,
             uptime: p.pm2_env.pm_uptime,
-            restarts: p.pm2_env.restart_time
-          }))
+            restarts: p.pm2_env.restart_time,
+          })),
         },
         automationReports: reports,
         codeQuality: codeQuality,
         summary: {
           totalIssues: this.calculateTotalIssues(reports, codeQuality),
           criticalIssues: this.identifyCriticalIssues(reports, codeQuality),
-          nextActions: this.generateNextActions(reports, codeQuality)
-        }
+          nextActions: this.generateNextActions(reports, codeQuality),
+        },
       };
 
       // Save dashboard data
@@ -172,7 +171,6 @@ class UnifiedAutomationDashboard {
 
       this.log(`Dashboard generated successfully at ${htmlPath}`);
       return dashboard;
-
     } catch (error) {
       this.log(`Dashboard generation failed: ${error.message}`, 'ERROR');
       throw error;
@@ -181,17 +179,23 @@ class UnifiedAutomationDashboard {
 
   calculateTotalIssues(reports, codeQuality) {
     let total = 0;
-    
+
     if (reports['console-error-fixer']) {
-      total += (reports['console-error-fixer'].consoleErrors || 0);
-      total += (reports['console-error-fixer'].throwStatements || 0);
+      total += reports['console-error-fixer'].consoleErrors || 0;
+      total += reports['console-error-fixer'].throwStatements || 0;
     }
-    
-    if (codeQuality.metrics.typescript && codeQuality.metrics.typescript.status === 'failed') {
+
+    if (
+      codeQuality.metrics.typescript &&
+      codeQuality.metrics.typescript.status === 'failed'
+    ) {
       total += codeQuality.metrics.typescript.errors;
     }
-    
-    if (codeQuality.metrics.eslint && codeQuality.metrics.eslint.status === 'failed') {
+
+    if (
+      codeQuality.metrics.eslint &&
+      codeQuality.metrics.eslint.status === 'failed'
+    ) {
       total += codeQuality.metrics.eslint.issues;
     }
 
@@ -200,12 +204,18 @@ class UnifiedAutomationDashboard {
 
   identifyCriticalIssues(reports, codeQuality) {
     const critical = [];
-    
-    if (codeQuality.metrics.typescript && codeQuality.metrics.typescript.status === 'failed') {
+
+    if (
+      codeQuality.metrics.typescript &&
+      codeQuality.metrics.typescript.status === 'failed'
+    ) {
       critical.push('TypeScript compilation errors preventing build');
     }
-    
-    if (codeQuality.metrics.eslint && codeQuality.metrics.eslint.status === 'failed') {
+
+    if (
+      codeQuality.metrics.eslint &&
+      codeQuality.metrics.eslint.status === 'failed'
+    ) {
       critical.push('ESLint issues affecting code quality');
     }
 
@@ -214,17 +224,28 @@ class UnifiedAutomationDashboard {
 
   generateNextActions(reports, codeQuality) {
     const actions = [];
-    
-    if (codeQuality.metrics.typescript && codeQuality.metrics.typescript.status === 'failed') {
+
+    if (
+      codeQuality.metrics.typescript &&
+      codeQuality.metrics.typescript.status === 'failed'
+    ) {
       actions.push('Run TypeScript compiler to identify and fix type errors');
     }
-    
-    if (codeQuality.metrics.eslint && codeQuality.metrics.eslint.status === 'failed') {
+
+    if (
+      codeQuality.metrics.eslint &&
+      codeQuality.metrics.eslint.status === 'failed'
+    ) {
       actions.push('Run ESLint to identify and fix code style issues');
     }
-    
-    if (reports['console-error-fixer'] && reports['console-error-fixer'].consoleErrors > 0) {
-      actions.push('Review and remove console.log statements from production code');
+
+    if (
+      reports['console-error-fixer'] &&
+      reports['console-error-fixer'].consoleErrors > 0
+    ) {
+      actions.push(
+        'Review and remove console.log statements from production code'
+      );
     }
 
     return actions;
@@ -337,14 +358,18 @@ class UnifiedAutomationDashboard {
                         </tr>
                     </thead>
                     <tbody>
-                        ${dashboard.pm2Status.processes.map(process => `
+                        ${dashboard.pm2Status.processes
+                          .map(
+                            process => `
                             <tr class="border-b border-gray-700">
                                 <td class="py-2 font-medium">${process.name}</td>
                                 <td class="py-2">
                                     <span class="px-2 py-1 rounded text-xs font-medium ${
-                                        process.status === 'online' ? 'bg-green-500 text-white' :
-                                        process.status === 'errored' ? 'bg-red-500 text-white' :
-                                        'bg-yellow-500 text-black'
+                                      process.status === 'online'
+                                        ? 'bg-green-500 text-white'
+                                        : process.status === 'errored'
+                                          ? 'bg-red-500 text-white'
+                                          : 'bg-yellow-500 text-black'
                                     }">${process.status}</span>
                                 </td>
                                 <td class="py-2">${(process.memory / 1024 / 1024).toFixed(1)} MB</td>
@@ -352,7 +377,9 @@ class UnifiedAutomationDashboard {
                                 <td class="py-2">${Math.floor(process.uptime / 1000 / 60)}m</td>
                                 <td class="py-2">${process.restarts}</td>
                             </tr>
-                        `).join('')}
+                        `
+                          )
+                          .join('')}
                     </tbody>
                 </table>
             </div>
@@ -366,7 +393,10 @@ class UnifiedAutomationDashboard {
                     <h3 class="text-lg font-semibold mb-3">TypeScript</h3>
                     <div class="flex items-center">
                         <span class="px-3 py-1 rounded text-sm font-medium ${
-                            dashboard.codeQuality.metrics.typescript.status === 'passed' ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+                          dashboard.codeQuality.metrics.typescript.status ===
+                          'passed'
+                            ? 'bg-green-500 text-white'
+                            : 'bg-red-500 text-white'
                         }">${dashboard.codeQuality.metrics.typescript.status}</span>
                         <span class="ml-2 text-gray-400">${dashboard.codeQuality.metrics.typescript.errors} errors</span>
                     </div>
@@ -375,7 +405,10 @@ class UnifiedAutomationDashboard {
                     <h3 class="text-lg font-semibold mb-3">ESLint</h3>
                     <div class="flex items-center">
                         <span class="px-3 py-1 rounded text-sm font-medium ${
-                            dashboard.codeQuality.metrics.eslint.status === 'passed' ? 'bg-green-500 text-white' : 'bg-red-500 text-white'
+                          dashboard.codeQuality.metrics.eslint.status ===
+                          'passed'
+                            ? 'bg-green-500 text-white'
+                            : 'bg-red-500 text-white'
                         }">${dashboard.codeQuality.metrics.eslint.status}</span>
                         <span class="ml-2 text-gray-400">${dashboard.codeQuality.metrics.eslint.issues} issues</span>
                     </div>
@@ -387,29 +420,41 @@ class UnifiedAutomationDashboard {
         <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 mb-8">
             <h2 class="text-2xl font-bold mb-4 text-neon-pink">⚡ Next Actions</h2>
             <div class="space-y-3">
-                ${dashboard.summary.nextActions.map(action => `
+                ${dashboard.summary.nextActions
+                  .map(
+                    action => `
                     <div class="flex items-start">
                         <div class="w-2 h-2 bg-neon-pink rounded-full mt-2 mr-3"></div>
                         <p class="text-gray-300">${action}</p>
                     </div>
-                `).join('')}
+                `
+                  )
+                  .join('')}
             </div>
         </div>
 
         <!-- Critical Issues -->
-        ${dashboard.summary.criticalIssues.length > 0 ? `
+        ${
+          dashboard.summary.criticalIssues.length > 0
+            ? `
             <div class="bg-red-900/20 border border-red-500 rounded-lg p-6 mb-8">
                 <h2 class="text-2xl font-bold mb-4 text-red-400">🚨 Critical Issues</h2>
                 <div class="space-y-3">
-                    ${dashboard.summary.criticalIssues.map(issue => `
+                    ${dashboard.summary.criticalIssues
+                      .map(
+                        issue => `
                         <div class="flex items-start">
                             <div class="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3"></div>
                             <p class="text-red-300">${issue}</p>
                         </div>
-                    `).join('')}
+                    `
+                      )
+                      .join('')}
                 </div>
             </div>
-        ` : ''}
+        `
+            : ''
+        }
 
         <footer class="text-center text-gray-500 mt-12">
             <p>Dashboard auto-refreshes every 5 minutes</p>
@@ -429,27 +474,29 @@ class UnifiedAutomationDashboard {
 
   async start() {
     this.log('Starting unified automation dashboard...');
-    
+
     try {
       // Generate initial dashboard
       await this.generateDashboard();
-      
+
       // Set up periodic dashboard updates
-      setInterval(async () => {
-        try {
-          await this.generateDashboard();
-        } catch (error) {
-          this.log(`Dashboard update failed: ${error.message}`, 'ERROR');
-        }
-      }, 5 * 60 * 1000); // Every 5 minutes
-      
+      setInterval(
+        async () => {
+          try {
+            await this.generateDashboard();
+          } catch (error) {
+            this.log(`Dashboard update failed: ${error.message}`, 'ERROR');
+          }
+        },
+        5 * 60 * 1000
+      ); // Every 5 minutes
+
       this.log('Unified automation dashboard started successfully');
-      
+
       // Keep the process running
       setInterval(() => {
         this.log('Dashboard heartbeat...');
       }, 60000); // Every minute
-      
     } catch (error) {
       this.log(`Failed to start dashboard: ${error.message}`, 'ERROR');
       throw error;
@@ -460,18 +507,18 @@ class UnifiedAutomationDashboard {
 // Main execution
 if (require.main === module) {
   const dashboard = new UnifiedAutomationDashboard();
-  
+
   // Handle graceful shutdown
   process.on('SIGINT', () => {
     dashboard.log('Shutting down gracefully...');
     process.exit(0);
   });
-  
+
   process.on('SIGTERM', () => {
     dashboard.log('Shutting down gracefully...');
     process.exit(0);
   });
-  
+
   dashboard.start().catch(error => {
     dashboard.log(`Fatal error: ${error.message}`, 'ERROR');
     process.exit(1);

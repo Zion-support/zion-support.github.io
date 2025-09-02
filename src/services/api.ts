@@ -16,106 +16,74 @@ class ApiError extends Error {
   }
 }
 
+interface ApiClientOptions {
+  method?: string;
+  headers?: Record<string, string>;
+  body?: string;
+  timeout?: number;
+}
 
-// Generic fetch wrapper with error handling
-async function apiRequest<T>(
+// Generic API client function
+async function apiClient<T>(
   endpoint: string,
-  options: RequestInit = {}
+  options: ApiClientOptions = {}
 ): Promise<ApiResponse<T>> {
-  const url = `${API_BASE_URL}${endpoint}`;
+  const {
+    method = 'GET',
+    headers = {},
+    body,
+    timeout = 10000
+  } = options;
 
-  
-  const config: RequestInit = {
-    method: options.method || 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-      ...options.headers,
-    },
-    ...options,
-  };
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), timeout);
 
   try {
+    const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+      method,
+      headers: {
+        'Content-Type': 'application/json',
+        ...headers,
+      },
+      body,
+      signal: controller.signal,
+    });
 
-    const response = await fetch(url, config);
+    clearTimeout(timeoutId);
 
     if (!response.ok) {
-      throw new ApiError(response.status, `HTTP error! status: ${response.status}`);
+      throw new ApiError(response.status, `HTTP ${response.status}: ${response.statusText}`);
     }
 
     const data = await response.json();
-    return data;
+    return {
+      success: true,
+      data,
+    };
   } catch (error) {
+    clearTimeout(timeoutId);
+    
     if (error instanceof ApiError) {
       throw error;
-
     }
-    throw new ApiError(500, `Network error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    
+    throw new ApiError(0, error instanceof Error ? error.message : 'Unknown error occurred');
   }
 }
 
+// API methods
 export const api = {
+  get: <T>(endpoint: string, headers?: Record<string, string>) =>
+    apiClient<T>(endpoint, { method: 'GET', headers }),
 
-  // Health check
-  health: () => apiRequest('/health'),
+  post: <T>(endpoint: string, data: any, headers?: Record<string, string>) =>
+    apiClient<T>(endpoint, { method: 'POST', body: JSON.stringify(data), headers }),
 
-  // Users
-  getUsers: () => apiRequest<Array<any>>('/users'),
-  getUser: (id: number) => apiRequest<{ id: number; name: string; email: string }>(`/users/${id}`),
-  createUser: (userData: { name: string; email: string }) =>
-    apiRequest<{ id: number; name: string; email: string; createdAt: string }>('/users', {
-      method: 'POST',
-      body: JSON.stringify(userData),
-    }),
-  updateUser: (id: number, userData: { name?: string; email?: string }) =>
-    apiRequest<{ id: number; name: string; email: string; updatedAt: string }>(`/users/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(userData),
-    }),
-  deleteUser: (id: number) => apiRequest(`/users/${id}`, { method: 'DELETE' }),
+  put: <T>(endpoint: string, data: any, headers?: Record<string, string>) =>
+    apiClient<T>(endpoint, { method: 'PUT', body: JSON.stringify(data), headers }),
 
-  // Authentication
-  login: (credentials: { email: string; password: string }) =>
-    apiRequest<{ token: string; user: unknown }>('/auth/login', {
-      method: 'POST',
-      body: JSON.stringify(credentials),
-    }),
-  register: (userData: { name: string; email: string; password: string }) =>
-    apiRequest<{ token: string; user: unknown }>('/auth/register', {
-      method: 'POST',
-      body: JSON.stringify(userData),
-    }),
-  logout: () => apiRequest('/auth/logout', { method: 'POST' }),
-
-  // Products/Services
-  getProducts: () => apiRequest<Array<any>>('/products'),
-  getProduct: (id: number) => apiRequest<any>(`/products/${id}`),
-  createProduct: (productData: unknown) =>
-    apiRequest<any>('/products', {
-      method: 'POST',
-      body: JSON.stringify(productData),
-    }),
-  updateProduct: (id: number, productData: unknown) =>
-    apiRequest<any>(`/products/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(productData),
-    }),
-  deleteProduct: (id: number) => apiRequest(`/products/${id}`, { method: 'DELETE' }),
-
-  // Orders
-  getOrders: () => apiRequest<Array<any>>('/orders'),
-  getOrder: (id: number) => apiRequest<any>(`/orders/${id}`),
-  createOrder: (orderData: unknown) =>
-    apiRequest<any>('/orders', {
-      method: 'POST',
-      body: JSON.stringify(orderData),
-    }),
-  updateOrder: (id: number, orderData: unknown) =>
-    apiRequest<any>(`/orders/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify(orderData),
-    }),
-  deleteOrder: (id: number) => apiRequest(`/orders/${id}`, { method: 'DELETE' }),
-
+  delete: <T>(endpoint: string, headers?: Record<string, string>) =>
+    apiClient<T>(endpoint, { method: 'DELETE', headers }),
 };
 
-export default api;
+export { ApiError };

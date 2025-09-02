@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { 
-  Brain, 
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain, 
   GitFork, 
   Shield, 
   Users, 
@@ -115,9 +114,9 @@ import {
   Gamepad2 as Gamepad2Icon3,
   Coins as CoinsIcon3,
   Satellite as SatelliteIcon3
-} from 'lucide-react';
+             } from 'lucide-react.ts';
 
-export default function NewInnovativeServices2025() {
+export default function NewInnovativeServices2025(...args: any[]): any {
   const featuredServices = [
     {
       title: "AI Workflow Orchestrator",
@@ -153,7 +152,6 @@ export default function NewInnovativeServices2025() {
       popular: false;
     };
   ];
-
   const serviceCategories = [
     {
       name: "AI & Machine Learning",
@@ -208,7 +206,6 @@ export default function NewInnovativeServices2025() {
       color: "from-zion-purple to-zion-orange";
     };
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -231,7 +228,6 @@ export default function NewInnovativeServices2025() {
       description: "Advanced security measures and compliance automation protect your business and data";
     };
   ];
-
   return (
     <div className = "min-h-screen bg-gradient-to-br from-zion-slate-900 via-zion-slate-800 to-zion-slate-900">
       {/* Futuristic Animated Background */}
@@ -239,7 +235,6 @@ export default function NewInnovativeServices2025() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/5 via-transparent to-zion-purple/5"></div>
       </div>
-
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
@@ -248,22 +243,10 @@ export default function NewInnovativeServices2025() {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
             >
@@ -271,16 +254,13 @@ export default function NewInnovativeServices2025() {
                 <Sparkles className="w-4 h-4 mr-2" />
                 2025 Innovative Services Showcase
               </div>
-              
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-cyan bg-clip-text text-transparent">
                 Revolutionary AI Services
               </h1>
-              
               <p className="text-xl md:text-2xl text-zion-slate-300 mb-8 max-w-4xl mx-auto leading-relaxed">
                 Discover our cutting-edge AI-powered micro SAAS services designed to transform your business. 
                 From workflow automation to data governance, we provide innovative solutions that drive growth and efficiency.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -310,22 +290,10 @@ export default function NewInnovativeServices2025() {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -339,39 +307,21 @@ export default function NewInnovativeServices2025() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {featuredServices.map((service, index) => (
+            <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {featuredServices.map((service, index)              => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className={`relative bg-zion-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300 ${
@@ -385,7 +335,6 @@ export default function NewInnovativeServices2025() {
                       </span>
                     </div>
                   )}
-                  
                   <div className="text-center mb-6">
                     <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-xl flex items-center justify-center mx-auto mb-4`}>
                       <service.icon className="w-8 h-8 text-white" />
@@ -397,7 +346,6 @@ export default function NewInnovativeServices2025() {
                     <p className="text-zion-slate-300 mb-4">{service.description}</p>
                     <div className="text-2xl font-bold text-zion-cyan mb-4">{service.price}</div>
                   </div>
-                  
                   <ul className="space-y-3 mb-6">
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-zion-slate-300">
@@ -406,7 +354,6 @@ export default function NewInnovativeServices2025() {
                       </li>
                     ))}
                   </ul>
-                  
                   <Link to={service.link}>
                     <motion.button
                       whileHover={{ scale: 1.02 }}
@@ -425,7 +372,6 @@ export default function NewInnovativeServices2025() {
             </div>
           </div>
         </section>
-
         {/* Service Categories */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/30">
           <div className="max-w-7xl mx-auto">
@@ -433,22 +379,10 @@ export default function NewInnovativeServices2025() {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -462,39 +396,21 @@ export default function NewInnovativeServices2025() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {serviceCategories.map((category, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {serviceCategories.map((category, index)              => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-slate-600/50 rounded-xl p-8 hover:border-zion-cyan/40 transition-all duration-300"
@@ -522,7 +438,6 @@ export default function NewInnovativeServices2025() {
             </div>
           </div>
         </section>
-
         {/* Benefits */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
@@ -530,22 +445,10 @@ export default function NewInnovativeServices2025() {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -559,39 +462,21 @@ export default function NewInnovativeServices2025() {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+              {benefits.map((benefit, index)              => (
                 <motion.div
                   key={index}
                   initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.8,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
                   className="bg-zion-slate-800/50 backdrop-blur-sm border border-zion-cyan/20 rounded-xl p-6 hover:border-zion-cyan/40 transition-all duration-300 text-center"
@@ -606,7 +491,6 @@ export default function NewInnovativeServices2025() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-cyan/10 via-zion-purple/10 to-zion-cyan/10">
           <div className="max-w-4xl mx-auto text-center">
@@ -614,22 +498,10 @@ export default function NewInnovativeServices2025() {
               initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
@@ -641,7 +513,6 @@ export default function NewInnovativeServices2025() {
                 Join forward-thinking organizations that are already leveraging our AI-powered services 
                 to drive innovation and growth.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -663,7 +534,6 @@ export default function NewInnovativeServices2025() {
             </motion.div>
           </div>
         </section>
-
         {/* Contact Information */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-800/50">
           <div className="max-w-4xl mx-auto text-center">

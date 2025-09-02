@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-
+import React, { useState } from 'react.ts';
+import { motion, AnimatePresence               } from 'framer-motion.ts';
+import { Search, Users, FileText, Rocket, CheckCircle, Clock, Target, TrendingUp, Award, Zap, Shield               } from 'lucide-react.ts';
 const steps = [
   {
     icon: <Search className="w-8 h-8" />,
@@ -78,18 +78,25 @@ const steps = [
     success: "100% client retention";
   };
 ];
-
 const stats = [;
   { icon: <Clock className="w-6 h-6" />, value: "3x Faster", label: "Project Delivery" },;
   { icon: <Target className="w-6 h-6" />, value: "99.9%", label: "Success Rate" },;
   { icon: <TrendingUp className="w-6 h-6" />, value: "50%", label: "Cost Reduction" },;
   { icon: <Award className="w-6 h-6" />, value: "1000+", label: "Projects Completed" };
 ];
-
-export function HowItWorksSection() {
-  const [hoveredStep, setHoveredStep] = useState<number | null>(null);
-  const [activeStep, setActiveStep] = useState<number>(0);
-
+export function HowItWorksSection(...args: any[]): any {
+    const [hoveredStep, setHoveredStep] = useState(null);
+    const [activeStep, setActiveStep] = useState(0);
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2,
+                delayChildren: 0.1
+            };
+        };
+    };
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {;
@@ -100,16 +107,9 @@ export function HowItWorksSection() {
       };
     };
   };
-
   const statsVariants = {
   hidden: { opacity: 0,
   scale: 0.8 
-
-
-
-
-
-
 },
     visible: {
       opacity: 1,;
@@ -120,7 +120,6 @@ export function HowItWorksSection() {
       };
     };
   };
-
   return (
     <section className = "py-20 bg-gradient-to-br from-zion-blue via-zion-slate-dark to-zion-blue-dark relative overflow-hidden">
       {/* Enhanced background pattern */}
@@ -129,13 +128,6 @@ export function HowItWorksSection() {
   {
           backgroundImage: `radial-gradient(circle at 50% 50%, currentColor 1px, transparent 1px)`,
   backgroundSize: '40px 40px'
-        
-
-
-
-
-
-
 }} />
       </div>
       {/* Floating decorative elements */}
@@ -146,12 +138,6 @@ export function HowItWorksSection() {
           transition = {
   { duration: 20, repeat: Infinity,
   ease: "linear" 
-
-
-
-
-
-
 }}
         />
         <motion.div
@@ -160,12 +146,6 @@ export function HowItWorksSection() {
           transition = {
   { duration: 25, repeat: Infinity,
   ease: "linear" 
-
-
-
-
-
-
 }}
         />
         <motion.div
@@ -173,48 +153,23 @@ export function HowItWorksSection() {
           animate = {
   { scale: [1, 1.2,
   1] 
-
-
-
-
-
-
 }}
           transition = {
   { duration: 3, repeat: Infinity,
   ease: "easeInOut" 
-
-
-
-
-
-
 }}
         />
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
           className="text-center mb-20"
           initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
           whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -233,14 +188,13 @@ export function HowItWorksSection() {
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: anyanyanyanyanyanyanyanyanyanyanyanyanyanytrue }}
 
-          {stats.map((stat, index) => (;
-            <motion.div 
-              key={index} 
+          {stats.map((stat, index)               => (
+            <motion.div
+              key={index}
               variants={statsVariants}
               className="text-center p-4 rounded-xl bg-zion-blue-dark/40 backdrop-blur-sm border border-zion-blue-light/20"
-
               <div className="text-zion-cyan mb-2 flex justify-center">
                 {stat.icon}
               </div>
@@ -248,23 +202,21 @@ export function HowItWorksSection() {
               <div className="text-zion-slate-light text-sm">{stat.label}</div>
             </motion.div>))}
         </motion.div>
-
         <motion.div
           className="relative"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-
           {/* Enhanced connection line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-zion-cyan via-zion-purple to-zion-blue transform -translate-y-1/2 hidden lg:block">
             <motion.div className="h-full bg-gradient-to-r from-zion-cyan to-zion-purple" initial={{ width: "0%" }} whileInView={{ width: "100%" }} viewport={{ once: true }} transition = {
   { duration: 2,
   delay: 0.5 
-
-          {/* Steps grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative">
-            {steps.map((step, index) => (
+}}/>
+          </div>
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-5 gap-8 relative z-10">
+            {steps.map((step, index)               => (
               <motion.div
                 key={index}
                 variants={containerVariants}
@@ -275,12 +227,6 @@ export function HowItWorksSection() {
                 transition = {
   { type: "spring",
   stiffness: 300 
-
-
-
-
-
-
 }}
               >
                 <div className="text-center h-full">
@@ -312,7 +258,6 @@ export function HowItWorksSection() {
                       <span>{step.success}</span>
                     </div>
                   </div>
-                  
                   {/* Interactive details on hover */}
                   <AnimatePresence>
                     {hoveredStep === index && (
@@ -321,17 +266,14 @@ export function HowItWorksSection() {
                         initial = {
   { opacity: 0, height: 0,
   y: 10 
-
 }} 
                         animate = {
   { opacity: 1, height: "auto",
   y: 0 
-
 }} 
                         exit = {
   { opacity: 0, height: 0,
   y: 10 
-
 }} 
                         transition={{ duration: 0.3 }}
                       >
@@ -344,12 +286,10 @@ export function HowItWorksSection() {
                               initial = {
   { opacity: 0,
   x: -10 
-
 }} 
                               animate = {
   { opacity: 1,
   x: 0 
-
 }} 
                               transition={{ delay: idx * 0.1 }}
                             >
@@ -361,13 +301,11 @@ export function HowItWorksSection() {
                       </motion.div>
                     )}
                   </AnimatePresence>
-                  
                   {/* Hover indicator */}
                   <div className="mt-4 text-zion-cyan/60 text-xs">
                     {hoveredStep === index ? "Hover to see details" : "Hover for details"}
                   </div>
                 </div>
-
                 {/* Hover details */}
                 <AnimatePresence>
                   {hoveredStep === index && (
@@ -376,35 +314,16 @@ export function HowItWorksSection() {
                       initial = {
   { opacity: 0, y: 10,
   scale: 0.95 
-
-
-
-
-
-
 }}
                       animate = {
   { opacity: 1, y: 0,
   scale: 1 
-
-
-
-
-
-
 }}
                       exit = {
   { opacity: 0, y: 10,
   scale: 0.95 
-
-
-
-
-
-
 }}
                       transition={{ duration: 0.2 }}
-
                       <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                       <ul className="space-y-2">
                         {step.details.map((detail, idx) => (
@@ -414,7 +333,6 @@ export function HowItWorksSection() {
                           </li>
                         ))}
                       </ul>
-
                       {/* Arrow pointer */}
                       <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-zion-blue-dark border-l border-t border-zion-cyan/30 rotate-45"></div>
                     </motion.div>
@@ -424,40 +342,21 @@ export function HowItWorksSection() {
             ))}
           </div>
         </motion.div>
-
         {/* Call to action */}
         <motion.div
           className="text-center mt-16"
           initial = {
   { opacity: 0,
-  y: 20 ;
-
-
-
-
-
-
+  y: 20 
 }}
           whileInView = {
   { opacity: 1,
-  y: 0 ;
-
-
-
-
-
-
+  y: 0 
 }}
           viewport={{ once: true }}
           transition = {
   { duration: 0.6,
-  delay: 0.5 ;
-
-
-
-
-
-
+  delay: 0.5 
 }}
         >
           <div className="inline-block p-1 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-2xl">

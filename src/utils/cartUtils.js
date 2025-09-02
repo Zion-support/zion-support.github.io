@@ -4,10 +4,10 @@
  */
 
 // Constants
-const CART_STORAGE_KEY = 'zion_cart_guest';
-const TAX_RATE = 0.08; // 8% tax rate
-const SHIPPING_THRESHOLD = 100; // Free shipping over $100
-const SHIPPING_COST = 9.99;
+const CART_STORAGE_KEY = 'zion_cart';
+const DEFAULT_TAX_RATE = 0.08; // 8% tax rate
+const MAX_QUANTITY = 99;
+const MIN_QUANTITY = 1;
 
 /**
  * Validate cart item structure
@@ -15,80 +15,121 @@ const SHIPPING_COST = 9.99;
  * @returns {boolean} Whether item is valid
  */
 export const validateCartItem = (item) => {
-  if (!item || typeof item !== 'object') return false;
-  
+  if (!item || typeof item !== 'object') {
+    return false;
+  }
+
   const requiredFields = ['id', 'name', 'price', 'quantity'];
-  return requiredFields.every(field => itemObject.prototype.hasOwnProperty.call(field) && item[field] !== null && item[field] !== undefined);
+  for (const field of requiredFields) {
+    if (!(field in item)) {
+      return false;
+    }
+  }
+
+  if (typeof item.id !== 'string' && typeof item.id !== 'number') {
+    return false;
+  }
+
+  if (typeof item.name !== 'string' || item.name.trim() === '') {
+    return false;
+  }
+
+  if (typeof item.price !== 'number' || item.price < 0 || isNaN(item.price)) {
+    return false;
+  }
+
+  if (typeof item.quantity !== 'number' || item.quantity < MIN_QUANTITY || item.quantity > MAX_QUANTITY) {
+    return false;
+  }
+
+  return true;
 };
 
 /**
  * Add item to cart
  * @param {Array} cart - Current cart array
  * @param {Object} newItem - Item to add
- * @returns {Array} Updated cart
+ * @returns {Array} Updated cart array
  */
 export const addToCart = (cart, newItem) => {
   if (!validateCartItem(newItem)) {
-    console.error('Invalid cart item:', newItem);
+    console.warn('Invalid cart item:', newItem);
     return cart;
   }
 
   const existingItemIndex = cart.findIndex(item => item.id === newItem.id);
-  
+
   if (existingItemIndex !== -1) {
     // Update existing item quantity
     const updatedCart = [...cart];
-    updatedCart[existingItemIndex] = {
-      ...updatedCart[existingItemIndex],
-      quantity: updatedCart[existingItemIndex].quantity + newItem.quantity
-    };
+    const existingItem = updatedCart[existingItemIndex];
+    const newQuantity = existingItem.quantity + newItem.quantity;
+    
+    if (newQuantity <= MAX_QUANTITY) {
+      updatedCart[existingItemIndex] = {
+        ...existingItem,
+        quantity: newQuantity
+      };
+    } else {
+      // Cap at max quantity
+      updatedCart[existingItemIndex] = {
+        ...existingItem,
+        quantity: MAX_QUANTITY
+      };
+    }
+    
     return updatedCart;
   } else {
     // Add new item
-    return [...cart, { ...newItem, addedAt: new Date().toISOString() }];
+    return [...cart, { ...newItem }];
   }
 };
 
 /**
  * Remove item from cart
  * @param {Array} cart - Current cart array
- * @param {string} itemId - ID of item to remove
- * @returns {Array} Updated cart
+ * @param {string|number} itemId - ID of item to remove
+ * @returns {Array} Updated cart array
  */
 export const removeFromCart = (cart, itemId) => {
   return cart.filter(item => item.id !== itemId);
 };
 
 /**
- * Update item quantity
+ * Update item quantity in cart
  * @param {Array} cart - Current cart array
- * @param {string} itemId - ID of item to update
- * @param {number} quantity - New quantity
- * @returns {Array} Updated cart
+ * @param {string|number} itemId - ID of item to update
+ * @param {number} newQuantity - New quantity
+ * @returns {Array} Updated cart array
  */
-export const updateItemQuantity = (cart, itemId, quantity) => {
-  if (quantity <= 0) {
+export const updateCartItemQuantity = (cart, itemId, newQuantity) => {
+  if (newQuantity < MIN_QUANTITY) {
     return removeFromCart(cart, itemId);
+  }
+
+  if (newQuantity > MAX_QUANTITY) {
+    newQuantity = MAX_QUANTITY;
   }
 
   return cart.map(item => 
     item.id === itemId 
-      ? { ...item, quantity, updatedAt: new Date().toISOString() }
+      ? { ...item, quantity: newQuantity }
       : item
   );
 };
 
 /**
- * Clear cart
- * @returns {Array} Empty cart
+ * Clear all items from cart
+ * @param {Array} cart - Current cart array
+ * @returns {Array} Empty cart array
  */
-export const clearCart = () => {
+export const clearCart = (cart) => {
   return [];
 };
 
 /**
  * Check if cart is empty
- * @param {Array} cart - Cart array
+ * @param {Array} cart - Cart array to check
  * @returns {boolean} Whether cart is empty
  */
 export const isCartEmpty = (cart) => {
@@ -96,61 +137,75 @@ export const isCartEmpty = (cart) => {
 };
 
 /**
- * Get cart item count
+ * Get total number of items in cart
  * @param {Array} cart - Cart array
  * @returns {number} Total item count
  */
 export const getCartItemCount = (cart) => {
-  if (isCartEmpty(cart)) return 0;
-  return cart.reduce((total, item) => total + (item.quantity || 0), 0);
+  if (isCartEmpty(cart)) {
+    return 0;
+  }
+  
+  return cart.reduce((total, item) => total + item.quantity, 0);
+};
+
+/**
+ * Get unique item count in cart
+ * @param {Array} cart - Cart array
+ * @returns {number} Unique item count
+ */
+export const getUniqueItemCount = (cart) => {
+  if (isCartEmpty(cart)) {
+    return 0;
+  }
+  
+  return cart.length;
 };
 
 /**
  * Calculate cart subtotal
  * @param {Array} cart - Cart array
- * @returns {number} Subtotal amount
+ * @returns {number} Cart subtotal
  */
 export const calculateCartSubtotal = (cart) => {
-  if (isCartEmpty(cart)) return 0;
-  return cart.reduce((total, item) => total + ((item.price || 0) * (item.quantity || 0)), 0);
+  if (isCartEmpty(cart)) {
+    return 0;
+  }
+  
+  return cart.reduce((subtotal, item) => {
+    const itemTotal = item.price * item.quantity;
+    return subtotal + itemTotal;
+  }, 0);
 };
 
 /**
  * Calculate tax amount
  * @param {number} subtotal - Cart subtotal
+ * @param {number} taxRate - Tax rate (default: 8%)
  * @returns {number} Tax amount
  */
-export const calculateTax = (subtotal) => {
-  return subtotal * TAX_RATE;
+export const calculateTax = (subtotal, taxRate = DEFAULT_TAX_RATE) => {
+  return subtotal * taxRate;
 };
 
 /**
- * Calculate shipping cost
- * @param {number} subtotal - Cart subtotal
- * @returns {number} Shipping cost
- */
-export const calculateShipping = (subtotal) => {
-  return subtotal >= SHIPPING_THRESHOLD ? 0 : SHIPPING_COST;
-};
-
-/**
- * Calculate cart total
+ * Calculate cart total with tax
  * @param {Array} cart - Cart array
+ * @param {number} taxRate - Tax rate (default: 8%)
  * @returns {Object} Cart totals
  */
-export const calculateCartTotal = (cart) => {
+export const calculateCartTotal = (cart, taxRate = DEFAULT_TAX_RATE) => {
   const subtotal = calculateCartSubtotal(cart);
-  const tax = calculateTax(subtotal);
-  const shipping = calculateShipping(subtotal);
-  const total = subtotal + tax + shipping;
+  const tax = calculateTax(subtotal, taxRate);
+  const total = subtotal + tax;
+  const itemCount = getCartItemCount(cart);
 
   return {
     subtotal,
     tax,
-    shipping,
     total,
-    itemCount: getCartItemCount(cart),
-    uniqueItems: cart.length
+    itemCount,
+    taxRate
   };
 };
 
@@ -184,7 +239,6 @@ export const getCartSummary = (cart) => {
     uniqueItems: cart.length,
     subtotal: formatPrice(total.subtotal),
     tax: formatPrice(total.tax),
-    shipping: formatPrice(total.shipping),
     total: formatPrice(total.total),
     isEmpty: isCartEmpty(cart)
   };
@@ -241,31 +295,35 @@ export const getCartKey = (userId = null) => {
  * @returns {Array} Merged cart
  */
 export const mergeCarts = (cart1, cart2) => {
-  if (!Array.isArray(cart1) || !Array.isArray(cart2)) {
-    return Array.isArray(cart1) ? cart1 : (Array.isArray(cart2) ? cart2 : []);
+  if (isCartEmpty(cart1)) {
+    return cart2;
+  }
+  
+  if (isCartEmpty(cart2)) {
+    return cart1;
   }
 
-  const merged = [...cart1];
+  const mergedCart = [...cart1];
   
   cart2.forEach(item2 => {
-    if (validateCartItem(item2)) {
-      const existingIndex = merged.findIndex(item1 => item1.id === item2.id);
+    const existingItemIndex = mergedCart.findIndex(item1 => item1.id === item2.id);
+    
+    if (existingItemIndex !== -1) {
+      // Merge quantities
+      const existingItem = mergedCart[existingItemIndex];
+      const newQuantity = Math.min(existingItem.quantity + item2.quantity, MAX_QUANTITY);
       
-      if (existingIndex !== -1) {
-        // Merge quantities
-        merged[existingIndex] = {
-          ...merged[existingIndex],
-          quantity: merged[existingIndex].quantity + item2.quantity,
-          updatedAt: new Date().toISOString()
-        };
-      } else {
-        // Add new item
-        merged.push({ ...item2, addedAt: new Date().toISOString() });
-      }
+      mergedCart[existingItemIndex] = {
+        ...existingItem,
+        quantity: newQuantity
+      };
+    } else {
+      // Add new item
+      mergedCart.push(item2);
     }
   });
-
-  return merged;
+  
+  return mergedCart;
 };
 
 /**
@@ -276,4 +334,108 @@ export const mergeCarts = (cart1, cart2) => {
  */
 export const mergeCartItems = (cart1, cart2) => {
   return mergeCarts(cart1, cart2);
+};
+
+/**
+ * Get cart statistics
+ * @param {Array} cart - Cart array
+ * @returns {Object} Cart statistics
+ */
+export const getCartStats = (cart) => {
+  if (isCartEmpty(cart)) {
+    return {
+      totalItems: 0,
+      uniqueItems: 0,
+      averagePrice: 0,
+      highestPrice: 0,
+      lowestPrice: 0
+    };
+  }
+
+  const prices = cart.map(item => item.price);
+  const totalItems = getCartItemCount(cart);
+  const uniqueItems = getUniqueItemCount(cart);
+  const averagePrice = prices.reduce((sum, price) => sum + price, 0) / prices.length;
+  const highestPrice = Math.max(...prices);
+  const lowestPrice = Math.min(...prices);
+
+  return {
+    totalItems,
+    uniqueItems,
+    averagePrice: Math.round(averagePrice * 100) / 100,
+    highestPrice,
+    lowestPrice
+  };
+};
+
+/**
+ * Sort cart items by various criteria
+ * @param {Array} cart - Cart array
+ * @param {string} sortBy - Sort criteria ('name', 'price', 'quantity', 'date')
+ * @param {string} sortOrder - Sort order ('asc' or 'desc')
+ * @returns {Array} Sorted cart array
+ */
+export const sortCartItems = (cart, sortBy = 'name', sortOrder = 'asc') => {
+  if (isCartEmpty(cart)) {
+    return cart;
+  }
+
+  const sortedCart = [...cart];
+  
+  sortedCart.sort((a, b) => {
+    let aValue, bValue;
+    
+    switch (sortBy) {
+      case 'name':
+        aValue = a.name.toLowerCase();
+        bValue = b.name.toLowerCase();
+        break;
+      case 'price':
+        aValue = a.price;
+        bValue = b.price;
+        break;
+      case 'quantity':
+        aValue = a.quantity;
+        bValue = b.quantity;
+        break;
+      case 'date':
+        aValue = a.addedAt || 0;
+        bValue = b.addedAt || 0;
+        break;
+      default:
+        aValue = a.name.toLowerCase();
+        bValue = b.name.toLowerCase();
+    }
+    
+    if (sortOrder === 'desc') {
+      return bValue > aValue ? 1 : -1;
+    } else {
+      return aValue > bValue ? 1 : -1;
+    }
+  });
+  
+  return sortedCart;
+};
+
+export default {
+  validateCartItem,
+  addToCart,
+  removeFromCart,
+  updateCartItemQuantity,
+  clearCart,
+  isCartEmpty,
+  getCartItemCount,
+  getUniqueItemCount,
+  calculateCartSubtotal,
+  calculateTax,
+  calculateCartTotal,
+  formatPrice,
+  getCartSummary,
+  exportCartData,
+  importCartData,
+  getCartKey,
+  mergeCarts,
+  mergeCartItems,
+  getCartStats,
+  sortCartItems
 };

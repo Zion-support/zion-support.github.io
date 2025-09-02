@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion, AnimatePresence              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
   Zap,
   Lock,
   Cloud,
@@ -27,14 +26,13 @@ import {
   ChevronDown,
   ChevronUp
 } from 'lucide-react';
-import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo } from "../data/innovativeServices2028";
+import { innovativeServices2028, serviceCategories, pricingTiers, contactInfo              } from '../data/innovativeServices2028';
 
-export default function InnovativeServices2028(...args[]):  {
+export default function InnovativeServices2028(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [sortBy, setSortBy] = useState('name');
   const [expandedService, setExpandedService] = useState<any>(null);
-
   const filteredServices = innovativeServices2028.filter(service => {
     const matchesCategory = selectedCategory === 'all' ||
       serviceCategories.find(cat => cat.id === selectedCategory)?.services.includes(service.id);
@@ -42,16 +40,15 @@ export default function InnovativeServices2028(...args[]):  {
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||;
       service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch});
-
   const sortedServices = [...filteredServices].sort((a, b) => {;
     switch (sortBy) {;
       case 'price':;
         return a.price - b.price;
-      case 'roi':;
+      case 'roi':
         return parseInt(b.roi.split('%')[0]) - parseInt(a.roi.split('%')[0]);
-      case 'name':;
+      case 'name':
         return a.name.localeCompare(b.name);
-      default:;
+      default:
         return 0}
   });
 

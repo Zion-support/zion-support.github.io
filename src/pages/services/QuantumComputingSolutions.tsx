@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
 import { 
   Atom, 
   Zap, 
@@ -46,9 +46,9 @@ import {
   Bluetooth,
   Radio
 } from 'lucide-react';
-import { SEO } from '../../components/SEO';
+import { SEO              } from '../../components/SEO';
 
-export default function QuantumComputingSolutions() {
+export default function QuantumComputingSolutions(...args: any[]): any {
   const features = [
     {
       icon: Atom,
@@ -71,7 +71,6 @@ export default function QuantumComputingSolutions() {
       description: 'From small quantum circuits to enterprise-scale quantum applications.'
     }
   ];
-
   const capabilities = [
     {
       title: 'Quantum Algorithms',
@@ -98,7 +97,6 @@ export default function QuantumComputingSolutions() {
       benefits: ['Post-quantum crypto', 'Quantum key distribution', 'Secure networks']
     }
   ];
-
   const useCases = [
     {
       industry: 'Financial Services',
@@ -125,7 +123,6 @@ export default function QuantumComputingSolutions() {
       metrics: ['Grid Efficiency', 'Energy Savings', 'Forecast Accuracy']
     }
   ];
-
   const pricing = [
     {
       name: 'Starter',
@@ -177,7 +174,6 @@ export default function QuantumComputingSolutions() {
       popular: false
     }
   ];
-
   const benefits = [
     {
       icon: Zap,
@@ -200,7 +196,6 @@ export default function QuantumComputingSolutions() {
       description: 'Stay ahead of the curve with cutting-edge quantum technology.'
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
       <SEO 
@@ -208,7 +203,6 @@ export default function QuantumComputingSolutions() {
         description="Harness the power of quantum computing for exponential performance gains. Solve complex problems 1000x faster with our quantum solutions."
         keywords="quantum computing, quantum algorithms, quantum AI, quantum optimization, quantum simulation, quantum security"
       />
-
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">
         <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 animate-pulse"></div>
@@ -249,7 +243,6 @@ export default function QuantumComputingSolutions() {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -267,8 +260,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -286,7 +279,6 @@ export default function QuantumComputingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
@@ -304,8 +296,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {capabilities.map((capability, index) => (
+          <div className="grid grid-cols-1 lg: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {capabilities.map((capability, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
@@ -335,7 +327,6 @@ export default function QuantumComputingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -353,8 +344,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -379,7 +370,6 @@ export default function QuantumComputingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50">
         <div className="max-w-7xl mx-auto">
@@ -397,8 +387,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {pricing.map((plan, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -417,7 +407,6 @@ export default function QuantumComputingSolutions() {
                     </span>
                   </div>
                 )}
-
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
@@ -426,7 +415,6 @@ export default function QuantumComputingSolutions() {
                   </div>
                   <p className="text-gray-400">{plan.description}</p>
                 </div>
-
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
@@ -435,7 +423,6 @@ export default function QuantumComputingSolutions() {
                     </li>
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -452,7 +439,6 @@ export default function QuantumComputingSolutions() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -470,8 +456,8 @@ export default function QuantumComputingSolutions() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -489,7 +475,6 @@ export default function QuantumComputingSolutions() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-indigo-600/20 to-purple-600/20">
         <div className="max-w-4xl mx-auto text-center">

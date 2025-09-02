@@ -1,9 +1,8 @@
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import {
-  Brain,
+import React, { useState, useEffect } from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Link              } from 'react-router-dom.ts';
+import { Brain,
   Shield,
   TrendingUp,
   Zap,
@@ -107,10 +106,10 @@ import {
   Truck,;
   Briefcase;
 } from 'lucide-react';
-import { MICRO_SAAS_SERVICES } from '@/src/src/data/microSaasServices';
-import SEO from '@/src/src/components/SEO';
-import { Button } from '@/src/src/components/ui/button';
-import { Badge } from '@/src/src/components/ui/badge';
+import { MICRO_SAAS_SERVICES              } from '@/data/microSaasServices';
+import SEO from '@/components/SEO';
+import { Button              } from '@/components/ui/button';
+import { Badge              } from '@/components/ui/badge';
 
 // Sample data for demonstration
 const MICRO_SAAS_SERVICES = [
@@ -166,7 +165,6 @@ const MICRO_SAAS_SERVICES = [
     images: ['/images/analytics.jpg'];
   };
 ];
-
 const categories = [;
   { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4" />, count: MICRO_SAAS_SERVICES.length },;
   { id: 'Business Tools', name: 'Business Tools', icon: <Briefcase className="w-4 h-4" />, count: 1 },;
@@ -181,7 +179,7 @@ const pricingModels = [;
   { id: 'one-time', name: 'One-time' },;
   { id: 'usage-based', name: 'Usage-based' };
 ];
-export default function ComprehensiveServicesOverview2027(...args[]):  {
+export default function ComprehensiveServicesOverview2027(...args[]: any):  {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedPricing, setSelectedPricing] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -223,22 +221,10 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
       initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
       animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
       transition={{ duration: 0.5 }}
       className="group relative bg-gradient-to-br from-zion-blue-dark/50 to-zion-slate-dark/50 border border-zion-blue-light/20 rounded-2xl p-6 hover:border-zion-purple/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-zion-purple/20"
@@ -314,21 +300,18 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
               initial = {
   { opacity: 0,
   height: 0 
-
 }}
               animate = {
   { opacity: 1,
   height: 'auto' 
-
 }}
               exit = {
   { opacity: 0,
   height: 0 
-
 }}
               className="space-y-2"
             >
-              {service.benefits.map((benefit: string, index: number)  => (
+              {service.benefits.map((benefit: anyanyanyanyanyanyanyanyanyanyanyanyanystring, index: number)               => (
                 <div key={index} className="flex items-start space-x-2">
                   <CheckCircle className="w-4 h-4 text-zion-cyan mt-0.5 flex-shrink-0" />
                   <span className="text-zion-slate-light text-sm">{benefit}</span>
@@ -367,7 +350,6 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
       </div>;
     </motion.div>;
   );
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       <SEO
@@ -394,39 +376,20 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition = {
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
-
 }}
             className="text-xl text-zion-slate-light max-w-3xl mx-auto"
           >
             Discover our complete portfolio of cutting-edge technology solutions, from AI-powered innovations to enterprise-grade infrastructure services.
           </motion.p>
         </div>
-
         {/* Filters and Controls */}
         <div className="mb-12 space-y-6">
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
@@ -497,7 +460,6 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                     size="sm"
                     onClick={() => setViewMode('grid')}
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
-
                     <Grid className="w-4 h-4" />
                   </Button>
                   <Button
@@ -505,15 +467,13 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                     size="sm"
                     onClick={() => setViewMode('list')}
                     className="bg-zion-cyan hover:bg-zion-cyan-light"
-
                     <List className="w-4 h-4" />
                   </Button>
                 </div>
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value as any)}
+                  onChange={(e) => setSortBy(e.target.value as )}
                   className="bg-zion-slate-dark/50 border border-zion-blue-light/20 text-white rounded-lg px-3 py-2"
-
                   <option value="rating">Sort by Rating</option>
                   <option value="price">Sort by Price</option>
                   <option value="aiScore">Sort by AI Score</option>
@@ -528,13 +488,12 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   variant={selectedCategory === category.id ? 'default' : 'outline'}
                   onClick={() => setSelectedCategory(category.id)}
                   className={selectedCategory === category.id ? 'bg-zion-cyan hover:bg-zion-cyan-light' : 'border-zion-blue-light/20 text-zion-slate-light hover:bg-zion-blue-dark/30'}
-
                   {category.icon}
                   <span className="ml-2">{category.name}</span>
                   <Badge variant="secondary" className="ml-2 bg-zion-purple/80">
                     {category.count}
                   </Badge>
-                </Button>;
+                </Button>
               ))}
             </div>
             <div className="flex flex-wrap gap-4">
@@ -544,19 +503,18 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
                   variant={selectedPricing === pricing.id ? 'default' : 'outline'}
                   onClick={() => setSelectedPricing(pricing.id)}
                   className={selectedPricing === pricing.id ? 'bg-zion-purple hover:bg-zion-purple-light' : 'border-zion-purple/20 text-zion-slate-light hover:bg-zion-purple/30'}
-
                   {pricing.name}
                 </Button>
               ))}
             </div>
           </div>
           {/* Services Grid */}
-<div className: {`grid gap-8 ${
+          <div className={`grid gap-8 ${
             viewMode === 'grid'
-              ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+              ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3'
               : 'grid-cols-1'
           }`}>
-            {filteredServices.map((service) => (;
+            {filteredServices.map((service)              => (
               <ServiceCard key={service.id} service={service} />
             ))}
           </div>
@@ -575,12 +533,12 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
           </div>
         </div>
         {/* Services Grid */}
-<div className: {`grid gap-8 ${
+        <div className={`grid gap-8 ${
           viewMode === 'grid' 
-            ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3' 
+            ? 'grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3' 
             : 'grid-cols-1'
         }`}>
-          {filteredServices.map((service) => (;
+          {filteredServices.map((service)              => (
             <ServiceCard key={service.id} service={service} />
           ))};
         </div>;
@@ -601,7 +559,7 @@ export default function ComprehensiveServicesOverview2027(...args[]):  {
         )}
       </div>
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">;
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-zion-blue-dark/20 to-zion-purple/20">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Business?

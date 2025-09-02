@@ -1,9 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SEO from '@/src/src/components/SEO';
+import { Link, Shield, Zap, BarChart3, Target, CheckCircle, ArrowRight, Globe, Users, Clock, Eye, Cpu, Network, Database, Lock, Smartphone } from 'lucide-react';
+import SEO from '../../components/SEO';
 import { Link as RouterLink } from 'react-router-dom';
 
-export default function Blockchain(...args[]):  {
+export default function Blockchain() {
   const features = [
     {
       icon: Link,
@@ -36,7 +37,6 @@ export default function Blockchain(...args[]):  {
       description: "Seamless communication between different blockchain networks";
     };
   ];
-
   const pricing = [
     {
       name: "Starter",
@@ -86,7 +86,6 @@ export default function Blockchain(...args[]):  {
       popular: false;
     };
   ];
-
   const benefits = [
     {
       icon: Shield,
@@ -109,7 +108,6 @@ export default function Blockchain(...args[]):  {
       description: "Build trust through verifiable and auditable processes";
     };
   ];
-
   const useCases = [
     {
       icon: Globe,
@@ -130,7 +128,6 @@ export default function Blockchain(...args[]):  {
       examples: ["Patient data", "Drug tracking", "Clinical trials"];
     };
   ];
-
   return (
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}
@@ -147,17 +144,14 @@ export default function Blockchain(...args[]):  {
               <Lock className="w-5 h-5 text-green-400" />
               <span className="text-green-400 font-medium">Blockchain Solutions</span>
             </div>
-
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               Trust Through
               <span className="text-gradient"> Technology</span>
             </h1>
-
             <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
               Build trust, transparency, and efficiency with blockchain technology.
               Transform your business with decentralized solutions.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn-futuristic px-8 py-4 text-lg">
                 Start Blockchain Project
@@ -170,7 +164,6 @@ export default function Blockchain(...args[]):  {
           </motion.div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20">
         <div className="container-responsive">
@@ -178,12 +171,10 @@ export default function Blockchain(...args[]):  {
             initial = {
   { opacity: 0,
   y: 20 
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
@@ -197,24 +188,21 @@ export default function Blockchain(...args[]):  {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)               => (
               <motion.div
                 key={feature.title}
                 initial = {
   { opacity: 0,
   y: 20 
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
 }}
                 viewport={{ once: true }}
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group"
@@ -239,25 +227,12 @@ export default function Blockchain(...args[]):  {
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
-
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-sm font-medium mb-6">
                 <Link className="w-4 h-4 mr-2" />
                 Blockchain Innovation
@@ -273,49 +248,33 @@ export default function Blockchain(...args[]):  {
                 <RouterLink
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
-
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
                 <RouterLink
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
-
                   Request Quote
                 </RouterLink>
               </div>
-            </motion.div>;
+            </motion.div>
           </div>
         </section>
-
         {/* Use Cases Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="container-responsive">
             <motion.div
               className="text-center mb-16"
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-4xl font-bold text-white mb-4">
                 Blockchain Applications
               </h2>
@@ -324,43 +283,24 @@ export default function Blockchain(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {useCases.map((useCase, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+              {useCases.map((useCase, index)              => (
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
                   initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
-
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                     <useCase.icon className="w-6 h-6 text-white" />
                   </div>
@@ -374,40 +314,26 @@ export default function Blockchain(...args[]):  {
                       </li>
                     ))}
                   </ul>
-                </motion.div>;
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Features Section */}
-        <section className="py-20 bg-white/5">;
+        <section className="py-20 bg-white/5">
           <div className="container-responsive">
             <motion.div
               className="text-center mb-16"
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our Blockchain?
               </h2>
@@ -416,82 +342,49 @@ export default function Blockchain(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index)              => (
                 <motion.div
                   key={index}
                   className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
                   initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
-
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
                   <p className="text-zinc-400">{feature.description}</p>
-                </motion.div>;
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
-        <section className="py-20">;
+        <section className="py-20">
           <div className="container-responsive">
             <motion.div
               className="text-center mb-16"
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-4xl font-bold text-white mb-4">
                 Transparent Pricing
               </h2>
@@ -500,8 +393,8 @@ export default function Blockchain(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map((plan, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8 max-w-6xl mx-auto">
+              {pricing.map((plan, index)              => (
                 <motion.div
                   key={index}
                   className={`relative p-8 rounded-2xl ${
@@ -512,43 +405,23 @@ export default function Blockchain(...args[]):  {
                   initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
-
-                  {plan.popular && (;
+                  {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
                         Most Popular
                       </span>
                     </div>
                   )}
-
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="flex items-baseline justify-center mb-2">
@@ -557,7 +430,6 @@ export default function Blockchain(...args[]):  {
                     </div>
                     <p className="text-zinc-400">{plan.description}</p>
                   </div>
-
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-zinc-300">
@@ -566,7 +438,6 @@ export default function Blockchain(...args[]):  {
                       </li>
                     ))}
                   </ul>
-
                   <RouterLink
                     to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}
                     className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
@@ -574,43 +445,28 @@ export default function Blockchain(...args[]):  {
                         ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600'
                         : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'
                     }`}
-
                     {plan.cta}
-                  </RouterLink>;
+                  </RouterLink>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
-        <section className="py-20 bg-white/5">;
+        <section className="py-20 bg-white/5">
           <div className="container-responsive">
             <motion.div
               className="text-center mb-16"
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-4xl font-bold text-white mb-4">
                 Business Benefits
               </h2>
@@ -619,43 +475,24 @@ export default function Blockchain(...args[]):  {
               </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map((benefit, index) => (
+            <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+              {benefits.map((benefit, index)              => (
                 <motion.div
                   key={index}
                   className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm"
                   initial = {
   { opacity: 0,
   x: index % 2 === 0 ? -30 : 30 
-
-
-
-
-
-
 }}
                   whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
                   transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                   viewport={{ once: true }}
-
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center flex-shrink-0">
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
@@ -663,39 +500,25 @@ export default function Blockchain(...args[]):  {
                     <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                     <p className="text-zinc-400">{benefit.description}</p>
                   </div>
-                </motion.div>;
+                </motion.div>
               ))}
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">;
+        <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">
           <div className="container-responsive text-center">
             <motion.div
               initial = {
   { opacity: 0,
   y: 30 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Go Blockchain?
               </h2>
@@ -706,14 +529,12 @@ export default function Blockchain(...args[]):  {
                 <RouterLink
                   to="/contact"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
-
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </RouterLink>
                 <RouterLink
                   to="/request-quote"
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300"
-
                   Get Custom Quote
                 </RouterLink>
               </div>

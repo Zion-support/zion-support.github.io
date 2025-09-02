@@ -1,358 +1,745 @@
 import { motion } from 'framer-motion';
-import { SEO } from '../components/SEO';
 import { 
   Shield, 
-  Lock, 
   Eye, 
+  Lock, 
   Database, 
   Globe, 
+  UserCheck,
+  FileText,
+  Calendar,
+  Phone,
+  Mail,
+  MapPin,
+  ChevronRight,
   CheckCircle,
   AlertTriangle,
-  FileText,
-  Mail,
-  Users,
-  Settings,
-  Trash2,
-  Download
+  Info
 } from 'lucide-react';
 
-const Privacy: React.FC = () => {
-  const lastUpdated = 'December 15, 2024';
-
-  const privacyPrinciples = [
-    {
-      icon: Shield,
-      title: 'Data Protection',
-      description: 'We implement industry-standard security measures to protect your personal information.'
-    },
-    {
-      icon: Lock,
-      title: 'Privacy by Design',
-      description: 'Privacy considerations are built into every aspect of our services and systems.'
-    },
-    {
-      icon: Eye,
-      title: 'Transparency',
-      description: 'We are clear about what data we collect, how we use it, and your rights.'
-    },
-    {
-      icon: Users,
-      title: 'User Control',
-      description: 'You have full control over your personal data and can request changes or deletion.'
-    }
-  ];
+export default function Privacy() {
+  const lastUpdated = 'January 15, 2025';
+  const effectiveDate = 'January 15, 2025';
 
   const dataCategories = [
     {
+      icon: UserCheck,
       title: 'Personal Information',
-      description: 'Name, email address, phone number, and company information',
-      examples: ['Contact details', 'Account information', 'Business details']
+      description: 'Name, email address, phone number, company information, and other contact details.',
+      examples: ['Full name', 'Email address', 'Phone number', 'Company name', 'Job title']
     },
     {
-      title: 'Usage Data',
-      description: 'Information about how you use our services and website',
-      examples: ['Login times', 'Feature usage', 'Performance metrics']
-    },
-    {
+      icon: Database,
       title: 'Technical Data',
-      description: 'Device information and technical specifications',
-      examples: ['IP address', 'Browser type', 'Device information']
+      description: 'Information about your device, browser, and how you interact with our services.',
+      examples: ['IP address', 'Browser type', 'Device information', 'Usage analytics', 'Cookies']
     },
     {
-      title: 'Communication Data',
-      description: 'Records of our interactions and communications',
-      examples: ['Support tickets', 'Email correspondence', 'Chat logs']
+      icon: Globe,
+      title: 'Usage Information',
+      description: 'Data about how you use our website, services, and applications.',
+      examples: ['Pages visited', 'Time spent on site', 'Features used', 'Search queries', 'Error logs']
     },
     {
-      title: 'Business Information',
-      description: 'Business-related data and project information',
-      examples: [
-        'Project requirements and specifications',
-        'Service usage and performance data',
-        'Payment and billing information',
-        'Support and communication records'
-      ]
+      icon: Eye,
+      title: 'Marketing Data',
+      description: 'Information about your preferences and interactions with our marketing communications.',
+      examples: ['Email preferences', 'Content interests', 'Campaign responses', 'Social media interactions']
     }
   ];
 
   const dataUses = [
     {
-      purpose: 'Service Delivery',
-      description: 'To provide and maintain our services, process transactions, and deliver support.'
+      icon: CheckCircle,
+      title: 'Service Provision',
+      description: 'To provide, maintain, and improve our services and customer support.'
     },
     {
-      purpose: 'Communication',
-      description: 'To communicate with you about our services, updates, and support.'
+      icon: CheckCircle,
+      title: 'Communication',
+      description: 'To communicate with you about our services, updates, and relevant information.'
     },
     {
-      purpose: 'Security',
-      description: 'To ensure the security and integrity of our systems and services.'
+      icon: CheckCircle,
+      title: 'Analytics',
+      description: 'To analyze usage patterns and improve our website and services.'
     },
     {
-      purpose: 'Analytics',
-      description: 'To analyze usage patterns and improve our services and user experience.'
+      icon: CheckCircle,
+      title: 'Marketing',
+      description: 'To send you relevant marketing communications with your consent.'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Legal Compliance',
+      description: 'To comply with legal obligations and protect our rights and safety.'
+    }
+  ];
+
+  const dataSharing = [
+    {
+      icon: Shield,
+      title: 'Service Providers',
+      description: 'Trusted third-party vendors who help us operate our business and provide services.',
+      examples: ['Cloud hosting providers', 'Analytics services', 'Email marketing platforms', 'Customer support tools']
+    },
+    {
+      icon: Globe,
+      title: 'Business Partners',
+      description: 'Strategic partners with whom we collaborate to provide integrated solutions.',
+      examples: ['Technology partners', 'Consulting firms', 'Industry associations', 'Research institutions']
+    },
+    {
+      icon: FileText,
+      title: 'Legal Requirements',
+      description: 'When required by law, court order, or government request.',
+      examples: ['Regulatory compliance', 'Legal proceedings', 'Government investigations', 'Public safety']
+    },
+    {
+      icon: UserCheck,
+      title: 'With Your Consent',
+      description: 'When you explicitly authorize us to share your information.',
+      examples: ['Integration requests', 'Referral programs', 'Joint marketing initiatives', 'Custom solutions']
     }
   ];
 
   const userRights = [
     {
-      right: 'Access',
-      description: 'Request a copy of your personal data that we hold.'
-    },
-    {
-      right: 'Rectification',
-      description: 'Request correction of inaccurate or incomplete personal data.'
-    },
-    {
-      right: 'Erasure',
-      description: 'Request deletion of your personal data under certain circumstances.'
-    },
-    {
-      right: 'Portability',
-      description: 'Request transfer of your data to another service provider.'
-    },
-    {
-      right: 'Objection',
-      description: 'Object to processing of your personal data in certain situations.'
-    },
-    {
-      right: 'Restriction',
-      description: 'Request limitation of processing of your personal data.'
-    }
-  ];
-
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: 'Email',
-      value: 'privacy@ziontechgroup.com',
-      href: 'mailto:privacy@ziontechgroup.com'
+      icon: Eye,
+      title: 'Access',
+      description: 'Request a copy of the personal data we hold about you.'
     },
     {
       icon: FileText,
-      label: 'Data Protection Officer',
-      value: 'dpo@ziontechgroup.com',
-      href: 'mailto:dpo@ziontechgroup.com'
+      title: 'Correction',
+      description: 'Request correction of inaccurate or incomplete personal data.'
+    },
+    {
+      icon: Database,
+      title: 'Deletion',
+      description: 'Request deletion of your personal data in certain circumstances.'
+    },
+    {
+      icon: Lock,
+      title: 'Restriction',
+      description: 'Request restriction of processing in certain circumstances.'
     },
     {
       icon: Globe,
-      label: 'Address',
-      value: '364 E Main St STE 1008, Middletown DE 19709',
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
+      title: 'Portability',
+      description: 'Request transfer of your data to another service provider.'
+    },
+    {
+      icon: UserCheck,
+      title: 'Objection',
+      description: 'Object to processing of your data for certain purposes.'
+    }
+  ];
+
+  const securityMeasures = [
+    {
+      icon: Shield,
+      title: 'Encryption',
+      description: 'All data is encrypted in transit and at rest using industry-standard protocols.'
+    },
+    {
+      icon: Lock,
+      title: 'Access Controls',
+      description: 'Strict access controls and authentication mechanisms protect your data.'
+    },
+    {
+      icon: Database,
+      title: 'Data Minimization',
+      description: 'We only collect and retain data that is necessary for our services.'
+    },
+    {
+      icon: Eye,
+      title: 'Regular Audits',
+      description: 'Regular security audits and assessments ensure ongoing protection.'
+    },
+    {
+      icon: UserCheck,
+      title: 'Employee Training',
+      description: 'All employees receive regular training on data protection and privacy.'
+    },
+    {
+      icon: Globe,
+      title: 'Incident Response',
+      description: 'Comprehensive incident response plans for any data security issues.'
     }
   ];
 
   return (
-    <>
-      <SEO 
-        title="Privacy Policy - Zion Tech Group"
-        description="Learn how Zion Tech Group protects your privacy and handles your personal data in accordance with GDPR and other privacy regulations."
-        keywords="privacy policy, data protection, GDPR, data rights, personal information, Zion Tech Group, privacy"
-      />
-      <div className="min-h-screen bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
-        {/* Header */}
-        <section className="pt-32 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden pt-32 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.8 }}
             >
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
-                  <Shield className="w-8 h-8 text-white" />
+              <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-full text-blue-400 text-sm font-medium mb-8">
+                <Shield className="w-4 h-4 mr-2" />
+                Privacy & Data Protection
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Privacy
+                <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                  {' '}Policy
+                </span>
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                We are committed to protecting your privacy and ensuring the security of your personal information. This policy explains how we collect, use, and safeguard your data.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a
+                  href="#data-collection"
+                  className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 group"
+                >
+                  Learn More
+                  <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href="#contact"
+                  className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg border border-white/20 transition-all duration-300"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </section>
+
+            {/* Information Sharing */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-semibold text-white mb-4 flex items-center">
+                <Users className="h-6 w-6 mr-3 text-blue-400" />
+                Information Sharing
+              </h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                We do not sell, trade, or rent your personal information to third parties. 
+                We may share your information only in the following circumstances:
+              </p>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>With your explicit consent</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>To comply with legal requirements</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>With trusted service providers who assist in our operations</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-4 w-4 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                  <span>To protect our rights, property, or safety</span>
+                </li>
+              </ul>
+            </section>
+
+            {/* Data Security */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-semibold text-white mb-4 flex items-center">
+                <Lock className="h-6 w-6 mr-3 text-blue-400" />
+                Data Security
+              </h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                We implement appropriate technical and organizational security measures to protect 
+                your personal information against unauthorized access, alteration, disclosure, or destruction.
+              </p>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="text-center bg-white/5 rounded-lg p-4">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Lock className="h-6 w-6 text-blue-400" />
+                  </div>
+                  <h4 className="font-medium text-white mb-2">Encryption</h4>
+                  <p className="text-gray-300 text-sm">SSL/TLS encryption for data transmission</p>
+                </div>
+                <div className="text-center bg-white/5 rounded-lg p-4">
+                  <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Shield className="h-6 w-6 text-green-400" />
+                  </div>
+                  <h4 className="font-medium text-white mb-2">Access Control</h4>
+                  <p className="text-gray-300 text-sm">Strict access controls and authentication</p>
+                </div>
+                <div className="text-center bg-white/5 rounded-lg p-4">
+                  <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Database className="h-6 w-6 text-purple-400" />
+                  </div>
+                  <h4 className="font-medium text-white mb-2">Secure Storage</h4>
+                  <p className="text-gray-300 text-sm">Secure data centers and backup systems</p>
                 </div>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
-                Privacy Policy
-              </h1>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-                We are committed to protecting your privacy and ensuring the security of your personal information.
-                This policy explains how we collect, use, and protect your data.
+            </section>
+
+            {/* Your Rights */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-semibold text-white mb-4">Your Rights</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                You have the following rights regarding your personal information:
               </p>
-              <div className="text-sm text-gray-400">
-                Last updated: {lastUpdated}
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="font-medium text-white mb-2">Access & Portability</h4>
+                  <p className="text-gray-300 text-sm">
+                    Request access to your data and receive it in a portable format.
+                  </p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="font-medium text-white mb-2">Correction</h4>
+                  <p className="text-gray-300 text-sm">
+                    Request correction of inaccurate or incomplete information.
+                  </p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="font-medium text-white mb-2">Deletion</h4>
+                  <p className="text-gray-300 text-sm">
+                    Request deletion of your personal information.
+                  </p>
+                </div>
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="font-medium text-white mb-2">Objection</h4>
+                  <p className="text-gray-300 text-sm">
+                    Object to processing of your personal information.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            {/* Cookies */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-semibold text-white mb-4">Cookies & Tracking</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                We use cookies and similar technologies to enhance your experience, analyze usage, 
+                and provide personalized content. You can control cookie settings through your browser.
+              </p>
+              <div className="bg-white/5 rounded-lg p-6">
+                <h4 className="font-medium text-white mb-3">Types of Cookies We Use:</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>Essential:</strong> Required for basic website functionality</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>Analytics:</strong> Help us understand how visitors use our site</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-4 w-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" />
+                    <span><strong>Functional:</strong> Remember your preferences and settings</span>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            {/* Contact Information */}
+            <section className="mb-8">
+              <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                If you have any questions about this Privacy Policy or our data practices, 
+                please contact us:
+              </p>
+              <div className="bg-white/5 rounded-lg p-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-medium text-white mb-2">Zion Tech Group</h4>
+                    <p className="text-gray-300 text-sm">
+                      Email: privacy@ziontechgroup.com<br />
+                      Phone: +1 (555) 123-4567<br />
+                      Address: 123 Tech Street, Innovation City, IC 12345
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-white mb-2">Data Protection Officer</h4>
+                    <p className="text-gray-300 text-sm">
+                      Email: dpo@ziontechgroup.com<br />
+                      For urgent privacy concerns
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Updates */}
+            <section>
+              <h2 className="text-2xl font-semibold text-white mb-4">Updates to This Policy</h2>
+              <p className="text-gray-300 leading-relaxed">
+                We may update this Privacy Policy from time to time. We will notify you of any 
+                material changes by posting the new policy on this page and updating the "Last updated" date. 
+                We encourage you to review this policy periodically.
+              </p>
+            </section>
+          </div>
+        </div>
+        
+        {/* Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl"></div>
+        </div>
+      </section>
+
+      {/* Policy Overview */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Policy Overview
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              This Privacy Policy describes how Zion Tech Group collects, uses, and protects your personal information when you use our services.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300">
+                <Calendar className="w-16 h-16 text-blue-400 mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-white mb-3">Last Updated</h3>
+                <p className="text-gray-400">{lastUpdated}</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300">
+                <FileText className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-white mb-3">Effective Date</h3>
+                <p className="text-gray-400">{effectiveDate}</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300">
+                <Globe className="w-16 h-16 text-green-400 mx-auto mb-6" />
+                <h3 className="text-xl font-semibold text-white mb-3">Scope</h3>
+                <p className="text-gray-400">Global Coverage</p>
               </div>
             </motion.div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Privacy Principles */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl font-bold text-white mb-12 text-center"
-            >
-              Our Privacy Principles
-            </motion.h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {privacyPrinciples.map((principle, index) => (
-                <motion.div
-                  key={principle.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center">
-                      <principle.icon className="w-5 h-5 text-white" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-white">{principle.title}</h3>
-                  </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">{principle.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Data Categories */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl font-bold text-white mb-12 text-center"
-            >
-              Data We Collect
-            </motion.h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {dataCategories.map((category, index) => (
-                <motion.div
-                  key={category.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/30 rounded-lg p-4 border border-slate-700/30"
-                >
-                  <h3 className="text-white font-semibold mb-2">{category.title}</h3>
-                  <p className="text-gray-300 text-sm mb-3">{category.description}</p>
-                  <div className="space-y-1">
-                    {category.examples.map((example, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <CheckCircle className="w-3 h-3 text-green-400" />
-                        <span className="text-gray-400 text-xs">{example}</span>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Data Uses */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl font-bold text-white mb-12 text-center"
-            >
-              How We Use Your Data
-            </motion.h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {dataUses.map((use, index) => (
-                <motion.div
-                  key={use.purpose}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/30 rounded-lg p-4 border border-slate-700/30"
-                >
-                  <h3 className="text-white font-semibold mb-2">{use.purpose}</h3>
-                  <p className="text-gray-300 text-sm">{use.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* User Rights */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl font-bold text-white mb-12 text-center"
-            >
-              Your Rights
-            </motion.h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {userRights.map((right, index) => (
-                <motion.div
-                  key={right.right}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="bg-slate-800/30 rounded-lg p-4 border border-slate-700/30"
-                >
-                  <h3 className="text-white font-semibold mb-2">{right.right}</h3>
-                  <p className="text-gray-300 text-sm">{right.description}</p>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Contact Information */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl font-bold text-white mb-12 text-center"
-            >
-              Contact Us
-            </motion.h2>
-            
-            <p className="text-gray-300 mb-8 text-center">
-              If you have any questions about this Privacy Policy or want to exercise your rights, please contact us:
+      {/* Data Collection */}
+      <section id="data-collection" className="py-20 bg-white/5 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Information We Collect
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We collect various types of information to provide and improve our services, ensure security, and communicate with you effectively.
             </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {contactInfo.map((contact, index) => (
-                <a
-                  key={contact.label}
-                  href={contact.href}
-                  className="bg-slate-800/50 rounded-lg p-4 border border-slate-700/50 hover:border-blue-500/50 transition-colors"
-                >
-                  <div className="flex items-center gap-3">
-                    <contact.icon className="w-6 h-6 text-blue-400" />
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {dataCategories.map((category, index) => (
+              <motion.div
+                key={category.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <category.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{category.title}</h3>
+                  <p className="text-gray-400 mb-4 leading-relaxed">{category.description}</p>
+                  
+                  <div className="space-y-2">
+                    <p className="text-sm font-medium text-gray-300">Examples:</p>
+                    <ul className="space-y-1">
+                      {category.examples.map((example, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
+                          {example}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* How We Use Data */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              How We Use Your Information
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We use the information we collect for specific, legitimate business purposes that benefit both you and our services.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {dataUses.map((use, index) => (
+              <motion.div
+                key={use.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <use.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{use.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{use.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Data Sharing */}
+      <section className="py-20 bg-white/5 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Information Sharing
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We are committed to protecting your privacy and only share your information in specific, limited circumstances.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {dataSharing.map((sharing, index) => (
+              <motion.div
+                key={sharing.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <sharing.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{sharing.title}</h3>
+                  <p className="text-gray-400 mb-4 leading-relaxed">{sharing.description}</p>
+                  
+                  <div className="space-y-2">
+                    <p className="text-sm font-medium text-gray-300">Examples:</p>
+                    <ul className="space-y-1">
+                      {sharing.examples.map((example, idx) => (
+                        <li key={idx} className="flex items-center text-sm text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2"></div>
+                          {example}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* User Rights */}
+      <section className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Your Rights
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              You have important rights regarding your personal information. We are committed to honoring these rights and providing you with control over your data.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {userRights.map((right, index) => (
+              <motion.div
+                key={right.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <right.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{right.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{right.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Security Measures */}
+      <section className="py-20 bg-white/5 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Data Security
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We implement comprehensive security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {securityMeasures.map((measure, index) => (
+              <motion.div
+                key={measure.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="text-center"
+              >
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/30 transition-all duration-300 hover:bg-white/10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6 mx-auto">
+                    <measure.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{measure.title}</h3>
+                  <p className="text-gray-400 leading-relaxed">{measure.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Information */}
+      <section id="contact" className="py-20 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center"
+          >
+            <div className="p-12 rounded-3xl bg-gradient-to-r from-blue-600 to-purple-600 relative overflow-hidden">
+              <div className="relative z-10">
+                <h2 className="text-4xl font-bold text-white mb-6">
+                  Questions About Privacy?
+                </h2>
+                <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                  If you have any questions about this Privacy Policy or how we handle your data, please don't hesitate to contact us.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                  <div className="text-center">
+                    <Mail className="w-12 h-12 text-white mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Email</h3>
+                    <p className="text-blue-100">privacy@ziontechgroup.com</p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <Phone className="w-12 h-12 text-white mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Phone</h3>
+                    <p className="text-blue-100">+1 (302) 555-0123</p>
+                  </div>
+                  
+                  <div className="text-center">
+                    <MapPin className="w-12 h-12 text-white mx-auto mb-4" />
+                    <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
+                    <p className="text-blue-100">123 Innovation Drive<br />Middletown, DE 19709</p>
+                  </div>
+                </div>
+                
+                <div className="mt-8 p-6 bg-white/10 rounded-2xl border border-white/20">
+                  <div className="flex items-start space-x-3">
+                    <Info className="w-6 h-6 text-blue-200 mt-1 flex-shrink-0" />
                     <div className="text-left">
-                      <div className="text-white font-semibold">{contact.label}</div>
-                      <div className="text-gray-300 text-sm">{contact.value}</div>
+                      <h4 className="text-lg font-semibold text-white mb-2">Data Protection Officer</h4>
+                      <p className="text-blue-100">
+                        For specific privacy concerns or to exercise your data rights, you can also contact our Data Protection Officer directly at{' '}
+                        <a href="mailto:dpo@ziontechgroup.com" className="underline hover:text-white transition-colors">
+                          dpo@ziontechgroup.com
+                        </a>
+                      </p>
                     </div>
                   </div>
-                </a>
-              ))}
+                </div>
+              </div>
+              
+              {/* Background Elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
             </div>
-          </div>
-        </section>
-      </div>
-    </>
+          </motion.div>
+        </div>
+      </section>
+    </div>
   );
-};
-
-export default Privacy;
+}

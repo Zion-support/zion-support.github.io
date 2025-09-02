@@ -1,42 +1,36 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-interface User {
+export interface User {
   id: string;
   email: string;
   name: string;
+  role: string;
   avatar?: string;
+  company?: string;
+  preferences?: Record<string, any>;
 }
 
 interface AuthState {
-  isLoggedIn: boolean;
-  isAuthenticated: boolean;
-  isLoading: boolean;
   user: User | null;
   token: string | null;
-
+  isAuthenticated: boolean;
+  isLoading: boolean;
   error: string | null;
-
 }
 
 const initialState: AuthState = {
-  isLoggedIn: false,
-  isAuthenticated: false,
-  isLoading: false,
   user: null,
   token: null,
+  isAuthenticated: false,
+  isLoading: false,
   error: null,
 };
-
 
 const authSlice = createSlice({
   name: 'auth',
   initialState,
   reducers: {
-    setLoggedIn: (state, action: PayloadAction<boolean>) => {
-      state.isLoggedIn = action.payload;
-    },
     setUser: (state, action: PayloadAction<User>) => {
-
       state.user = action.payload;
       state.isAuthenticated = true;
       state.error = null;
@@ -45,10 +39,9 @@ const authSlice = createSlice({
       state.token = action.payload;
     },
     logout: (state) => {
-      state.isLoggedIn = false;
       state.user = null;
-      state.isAuthenticated = false;
       state.token = null;
+      state.isAuthenticated = false;
       state.error = null;
     },
     setLoading: (state, action: PayloadAction<boolean>) => {
@@ -60,19 +53,22 @@ const authSlice = createSlice({
     clearError: (state) => {
       state.error = null;
     },
+    updateUser: (state, action: PayloadAction<Partial<User>>) => {
+      if (state.user) {
+        state.user = { ...state.user, ...action.payload };
+      }
+    },
   },
 });
 
-
-export const { 
-  setLoggedIn, 
-  setUser, 
-  setToken, 
-  logout, 
-  setLoading, 
-  setError, 
-  clearError 
+export const {
+  setUser,
+  setToken,
+  logout,
+  setLoading,
+  setError,
+  clearError,
+  updateUser,
 } = authSlice.actions;
-
 
 export default authSlice.reducer;

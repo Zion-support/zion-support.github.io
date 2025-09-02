@@ -43,6 +43,7 @@
 ### **Immediate Actions:**
 
 1. **Review Current State**:
+
    ```bash
    git log --oneline -20
    git status
@@ -59,21 +60,25 @@
 ### **Strategic Recommendations:**
 
 #### **Option 1: Focus on Small, Targeted Changes**
+
 - Lower the `MAX_FILES_PER_BRANCH` threshold to 100-200 files
 - Focus only on branches with minimal, safe changes
 - Implement manual review for any merges
 
 #### **Option 2: Batch Process by Category**
+
 - Group branches by similarity (same naming pattern)
 - Process one category at a time
 - Implement rollback mechanisms
 
 #### **Option 3: Automated Testing Integration**
+
 - Add automated testing before and after each merge
 - Implement CI/CD pipeline integration
 - Add rollback capabilities
 
 #### **Option 4: Manual Review Process**
+
 - Select 5-10 most promising branches manually
 - Review changes in detail before merging
 - Focus on quality over quantity
@@ -95,18 +100,21 @@
 ## 🛠️ **Available Scripts**
 
 ### **1. Smart Merge Script** (`smart-merge-manageable-prs.sh`)
+
 - Filters branches by file count
 - Configurable thresholds
 - Intelligent conflict resolution
 - Safe processing with backups
 
 ### **2. Comprehensive Merge Script** (`merge-all-open-prs.sh`)
+
 - Processes all branches
 - Handles conflicts automatically
 - Large batch processing
 - Progress tracking
 
 ### **3. Continuation Script** (`continue-merge-all-prs.sh`)
+
 - Continues from specific branch numbers
 - Resumes interrupted processes
 - Batch size control

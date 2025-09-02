@@ -1,17 +1,58 @@
 import React from 'react.ts';
-import { X  } from 'lucide-react';
+import { X   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+} from 'lucide-react.ts';
 
 interface Filter {
 
-  key: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  key: anyanyanyanyanyanyanyanyanyanyanyanyanyanystring;
   value: string;
-  label: string}
+label: string;
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
-
   filters: Filter[];
-  onRemoveFilter: (key: string)  => void;
-  onClearAll: ()  => void}
+  onRemoveFilter: anyanyanyanyanyanyanyanyanyanyanyanyanyany(key: string)                => void;
+  onClearAll: anyanyanyanyanyanyanyanyanyanyanyanyanyany()                => void}
 
         className="text-sm text-zion-slate-light hover: text-zion-cyan transition-colors underline";
       >;

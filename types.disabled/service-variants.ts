@@ -1,4 +1,4 @@
-export type ServiceVariant = 
+export type ServiceVariant =
   // Core variants
   | 'default'
   | 'holographic'
@@ -6,7 +6,7 @@ export type ServiceVariant =
   | 'cyberpunk'
   | 'neural'
   | 'standard'
-  
+
   // Quantum variants
   | 'quantum-holographic'
   | 'quantum-advanced'
@@ -77,7 +77,7 @@ export type ServiceVariant =
   | 'quantum-trading-enterprise'
   | 'quantum-reality-fusion'
   | 'quantum-reality'
-  
+
   // AI variants
   | 'ai-futuristic'
   | 'ai-autonomous'
@@ -169,7 +169,7 @@ export type ServiceVariant =
   | 'ai-industrial'
   | 'ai-creative-enterprise'
   | 'ai-education-enterprise'
-  
+
   // Holographic variants
   | 'holographic-advanced'
   | 'holographic-education'
@@ -181,7 +181,7 @@ export type ServiceVariant =
   | 'holographic-neural'
   | 'holographic-quantum'
   | 'holographic-retail'
-  
+
   // Neural variants
   | 'neural-cyberpunk'
   | 'neural-evolution-futuristic'
@@ -192,10 +192,10 @@ export type ServiceVariant =
   | 'neural-revolutionary'
   | 'neuromorphic-computing'
   | 'neuromorphic-enterprise'
-  
+
   // Cyberpunk variants
   | 'cyberpunk-holographic'
-  
+
   // Enterprise variants
   | 'enterprise-futuristic'
   | 'autonomous-it-enterprise'
@@ -259,7 +259,7 @@ export type ServiceVariant =
   | 'zero-trust-advanced'
   | 'zero-trust-advanced-2033'
   | 'zero-trust-enterprise'
-  
+
   // Futuristic variants
   | 'ai-futuristic'
   | 'agriculture-futuristic'
@@ -320,7 +320,7 @@ export type ServiceVariant =
   | 'supply-chain-futuristic'
   | 'training-futuristic'
   | 'transportation-futuristic'
-  
+
   // Revolutionary variants
   | 'ai-revolutionary'
   | 'ai-quantum-revolutionary'
@@ -331,7 +331,7 @@ export type ServiceVariant =
   | 'quantum-logistics-revolutionary'
   | 'neural-revolutionary'
   | 'quantum-revolutionary'
-  
+
   // Advanced variants
   | 'autonomous-bpa-advanced'
   | 'autonomous-cybersecurity-advanced-2033'
@@ -344,7 +344,7 @@ export type ServiceVariant =
   | 'quantum-trading-advanced'
   | 'zero-trust-advanced'
   | 'zero-trust-advanced-2033'
-  
+
   // Specialized variants
   | '5g-futuristic'
   | 'ai-services'
@@ -436,7 +436,7 @@ export type ServiceVariant =
   | 'consciousness-quantum'
   | 'reality-engineering'
   | 'dimensional-tech'
-  
+
   // Legacy variants
   | 'digital-marketing'
   | 'email-marketing'

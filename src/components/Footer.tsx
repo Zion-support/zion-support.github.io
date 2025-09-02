@@ -1,13 +1,9 @@
-import { Link } from 'react-router-dom';
-import { 
-  Twitter, 
-  Linkedin, 
-  Facebook, 
-  Instagram, 
-  Github, 
-  Mail, 
-  Phone, 
-  MapPin, 
+import React, { useState } from 'react.ts';
+import { Link               } from 'react-router-dom.ts';
+import { motion               } from 'framer-motion.ts';
+import { Twitter,
+  Linkedin,
+  Instagram,
   Globe, 
   Linkedin, 
   Twitter, 
@@ -24,15 +20,20 @@ import {
   Building2,
   FileText,
   HelpCircle,
-  Activity,
-  Cpu,
-  GraduationCap,
   BarChart3,
   ArrowUp,
   Heart,
   Star,
   CheckCircle,
   Award,
+  Lock,
+  Eye,
+  Atom,
+  Code,
+  Database,
+  Network,
+  Server
+=======
   Rocket,
   Target,
   Handshake,
@@ -65,19 +66,13 @@ import {
   Palette
 } from 'lucide-react';
 
-export function Footer() {
+export function Footer(...args: any[]): any {
   const currentYear = new Date().getFullYear();
-
-<<<<<<< HEAD
-  // Handle scroll to show/hide scroll to top button
-  React.useEffect(() => {
-    const handleScroll: React.FC = ($2) => {
-      setShowScrollTop(window.scrollY > 400);
-    };
+  const [activeSection, setActiveSection] = useState<any>(null);
 
   const footerSections = [
     {
-      title: 'Company',
+      title: 'Comp',
       icon: Building,
       links: [
         { name: 'About Us', path: '/about', icon: Users },
@@ -92,95 +87,104 @@ export function Footer() {
     {
       title: 'AI & Quantum Solutions',
       icon: Brain,
-      links: [
-        { name: 'AI Solutions Overview', path: '/services/ai-solutions', icon: Brain },
-        { name: 'Quantum Computing', path: '/services/quantum-computing', icon: Atom },
-        { name: 'AI Business Intelligence', path: '/services/ai-business-intelligence', icon: TrendingUp },
-        { name: 'AI Sales Copilot', path: '/services/ai-sales-copilot', icon: Users },
-        { name: 'AI Marketing Automation', path: '/services/ai-marketing-automation', icon: TrendingUp },
-        { name: 'AI Healthcare Platform', path: '/services/ai-healthcare-platform', icon: Heart },
-        { name: 'AI Project Management', path: '/services/ai-project-management', icon: Target },
-        { name: 'Quantum AI Hybrid Platform', path: '/services/ai-quantum-hybrid-platform', icon: Atom },
-        { name: 'New Services 2025', path: '/new-services-2025', icon: Star },
-        { name: 'Enhanced Services 2025', path: '/enhanced-new-services-2025', icon: Star }
+      category: "Core Services",
+      services: [
+        { name: "AI Customer Success Automation", href: "/services/ai-customer-success-automation", badge: "Popular" },
+        { name: "AI Healthcare Analytics Platform", href: "/services/ai-healthcare-analytics-platform", badge: "New" },
+        { name: "AI Financial Risk Management", href: "/services/ai-financial-risk-management-enhanced", badge: "Featured" },
+        { name: "AI Supply Chain Optimization", href: "/services/ai-supply-chain-optimization-enhanced", badge: "Trending" },
+        { name: "AI Legal Document Automation", href: "/services/ai-legal-document-automation-platform", badge: "Innovative" },
+        { name: "AI Mental Health Support", href: "/services/ai-mental-health-support-platform", badge: "Healthcare" },
+        { name: "AI Smart Home Energy Management", href: "/services/ai-smart-home-energy-management-platform", badge: "IoT" },
+        { name: "AI Autonomous Logistics", href: "/services/ai-autonomous-logistics-platform", badge: "Logistics" },
+        { name: "AI-Powered SEO", href: "/services/ai-powered-seo", badge: "Marketing" },
+        { name: "Quantum Edge Computing", href: "/services/quantum-edge-computing-solutions", badge: "Quantum" },
+        { name: "AI Space Technology", href: "/services/ai-space-technology-platform", badge: "Space Tech" },
+        { name: "AI Carbon Footprint Management", href: "/services/ai-carbon-footprint-management-platform", badge: "Green Tech" },
+        { name: "AI Autonomous Manufacturing", href: "/services/ai-autonomous-manufacturing-platform", badge: "Manufacturing" },
+        { name: "AI Enterprise Resource Planning", href: "/services/ai-enterprise-resource-planning", badge: "ERP" },
+        { name: "AI Autonomous Business Operations", href: "/services/ai-autonomous-business-operations-platform", badge: "Automation" },
+        { name: "AI Customer Experience Analytics", href: "/services/ai-customer-experience-analytics-platform", badge: "Analytics" }
+
       ]
     },
     {
-      title: 'Advanced Technology',
-      icon: Cpu,
-      links: [
-        { name: 'Cybersecurity Platform', path: '/services/ai-cybersecurity-platform', icon: Shield },
-        { name: 'Quantum AI Trading', path: '/services/quantum-ai-trading-platform', icon: Atom },
-        { name: 'Space Technology', path: '/services/space-tech', icon: Rocket },
-        { name: 'Digital Twin', path: '/services/digital-twin', icon: Eye },
-        { name: 'IoT Edge Computing', path: '/services/iot-edge-computing', icon: Activity },
-        { name: 'Green IT Solutions', path: '/services/green-it', icon: Heart },
-        { name: 'Zero Trust Network', path: '/services/zero-trust-network-access', icon: Lock },
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud }
+      title: "AI Cybersecurity & Infrastructure",
+      icon: Shield,
+      category: "Security & Infrastructure",
+      services: [
+        { name: "AI-Powered Cybersecurity Suite", href: "/services/ai-powered-cybersecurity-suite", badge: "Security" },
+        { name: "Enterprise IT Infrastructure Management", href: "/services/enterprise-it-infrastructure-management", badge: "Infrastructure" },
+        { name: "Cloud Migration & Optimization", href: "/services/cloud-migration-and-optimization", badge: "Cloud" },
+        { name: "AI Data Analytics Platform", href: "/services/ai-data-analytics-platform", badge: "Analytics" },
+        { name: "AI DevOps Automation", href: "/services/ai-devops-automation", badge: "DevOps" },
+        { name: "Edge Computing Platform", href: "/services/edge-computing-platform", badge: "Edge" }
       ]
     },
     {
-      title: 'Core Services',
-      icon: Zap,
+      title: 'Solutions',
       links: [
-        { name: 'Digital Transformation', path: '/services/digital-transformation', icon: Rocket },
-        { name: 'Data Analytics', path: '/services/data-analytics', icon: TrendingUp },
-        { name: 'API Development', path: '/services/api-development', icon: Code },
-        { name: 'Database Solutions', path: '/services/database-solutions', icon: Database },
-        { name: 'Network Infrastructure', path: '/services/network-infrastructure', icon: Network },
-        { name: 'Server Management', path: '/services/server-management', icon: Server },
-        { name: 'Training & Education', path: '/training', icon: GraduationCap },
-        { name: 'Support & Helpdesk', path: '/support', icon: HelpCircle }
+        { name: 'Enterprise Solutions', href: '/enterprise' },
+        { name: 'Healthcare Tech', href: '/solutions/healthcare' },
+        { name: 'Financial Solutions', href: '/financial-solutions' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions' },
+        { name: 'Industry Solutions', href: '/industry-solutions' },
+        { name: 'Emerging Tech', href: '/emerging-tech' }
+      ]
+    },
+    {
+      title: 'Company',
+      links: [
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Partners', href: '/partners' },
+        { name: 'News & Updates', href: '/news' },
+        { name: 'Case Studies', href: '/case-studies' }
+      ]
+    },
+    {
+      title: "Quantum Computing & Emerging Tech",
+      icon: Atom,
+      services: [
+        { name: "AI-Quantum Hybrid Computing Platform", href: "/services/ai-quantum-hybrid-platform" },
+        { name: "Quantum Computing as a Service", href: "/services/quantum-computing-as-a-service" },
+        { name: "AI Space Technology Platform", href: "/services/ai-space-technology-platform" },
+        { name: "AI IoT Edge Computing Platform", href: "/services/ai-iot-edge-computing-platform" }
       ]
     },
     {
       title: 'Resources',
-      icon: FileText,
       links: [
-        { name: 'Blog', path: '/blog', icon: FileText },
-        { name: 'Case Studies', path: '/case-studies', icon: FileText },
-        { name: 'Research & Development', path: '/research-development', icon: Activity },
-        { name: 'Documentation', path: '/docs', icon: FileText },
-        { name: 'API Reference', path: '/api', icon: Code },
-        { name: 'Developer Portal', path: '/developer', icon: Code },
-        { name: 'Sitemap', path: '/sitemap', icon: Map },
-        { name: 'Comprehensive Sitemap', path: '/comprehensive-sitemap', icon: Map }
+        { name: 'Documentation', href: '/docs' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Support Center', href: '/help' },
+        { name: 'Training', href: '/training' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Research', href: '/research-development' }
       ]
     }
   ];
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const solutions = [
+    { name: "Enterprise Solutions", href: "/solutions/enterprise" },
+    { name: "Healthcare Solutions", href: "/solutions/healthcare" },
+    { name: "Financial Solutions", href: "/solutions/financial" },
+    { name: "Government Solutions", href: "/solutions/government" },
+    { name: "Manufacturing Solutions", href: "/solutions/manufacturing" },
+    { name: "Retail Solutions", href: "/solutions/retail" },
+    { name: "Education Solutions", href: "/solutions/education" },
+    { name: "Startup Solutions", href: "/solutions/startup" }
+  ];
 
-  // Toggle section expansion (for mobile)
-  const toggleSection: React.FC = ($2) => {
-    setExpandedSections(prev => {
-      const newSet = new Set(prev);
-      if (newSet.has(title)) {
-        newSet.delete(title);
-      } else {
-        newSet.add(title);
-      }
-      return newSet;
-    });
-  };
+=======
 
-  // Scroll to top function
-  const scrollToTop: React.FC = ($2) => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
-
-
-
+=======
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-purple/30">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           
           {/* Company Info */}
           <div className="space-y-4">
@@ -194,6 +198,110 @@ export function Footer() {
               Leading provider of innovative AI, IT, and Micro SAAS solutions. 
               Transforming businesses through cutting-edge technology and expert consulting.
             </p>
+            <div className="space-y-3">
+              <div className="flex items-center text-zion-slate-light text-sm">
+                <Phone className="w-4 h-4 mr-2 text-zion-cyan" />
+                <a href="tel:+13024640950" className="hover:text-zion-cyan transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center text-zion-slate-light text-sm">
+                <Mail className="w-4 h-4 mr-2 text-zion-cyan" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-zion-cyan transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Service Sections */}
+          {footerSections.slice(1, 6).map((section) => (
+            <div key={section.title} className="space-y-4">
+              <div className="flex items-center space-x-2">
+                <section.icon className="w-5 h-5 text-cyan-400" />
+                <h3 className="font-semibold text-white">{section.title}</h3>
+              </div>
+
+              <div className="space-y-2">
+                {section.links.map((link) => (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className="block text-sm text-gray-300 hover:text-cyan-400 transition-colors duration-200 group"
+
+                    <div className="flex items-center space-x-2">
+                      <link.icon className="w-3 h-3 text-gray-500 group-hover:text-cyan-400 transition-colors duration-200" />
+                      <span>{link.name}</span>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+    <footer className="bg-gray-900 text-white">
+      {/* Main Footer Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+          {footerSections.map((section)               => (
+            <div key={section.title} className="space-y-4">
+              <motion.button
+                onClick={() => setActiveSection(activeSection === section.title ? null : section.title)}
+                className="flex items-center space-x-2 text-lg font-semibold text-white hover:text-cyan-400 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset rounded p-2"
+                aria-expanded={activeSection === section.title}
+              >
+                <section.icon className="w-5 h-5" />
+                <span>{section.title}</span>
+              </motion.button>
+              
+              <motion.div
+                initial={false}
+                animate={{ height: activeSection === section.title ? 'auto' : 0, opacity: activeSection === section.title ? 1 : 0 }}
+                transition={{ duration: 0.3 }}
+                className="overflow-hidden"
+              >
+                <div className="space-y-2">
+                  {section.links.map((link) => (
+                    <Link
+                      key={link.name}
+                      to={link.path}
+                      className="flex items-center space-x-2 text-gray-400 hover:text-cyan-400 transition-colors p-2 rounded focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-inset group"
+                    >
+                      <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                      <span className="text-sm">{link.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          ))}
+        </div>
+
+        {/* Contact & Social Section */}
+        <div className="mt-12 pt-8 border-t border-gray-700">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Contact Information */}
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-white flex items-center space-x-2">
+                <Mail className="w-5 h-5 text-cyan-400" />
+                <span>Get in Touch</span>
+              </h3>
+              <div className="space-y-3">
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <Mail className="w-4 h-4 text-cyan-400" />
+                  <span>contact@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <span>+1 (555) 123-4567</span>
+                </div>
+                <div className="flex items-center space-x-3 text-gray-400">
+                  <MapPin className="w-4 h-4 text-cyan-400" />
+                  <span>123 Innovation Drive, Tech City, TC 12345</span>
+                </div>
+=======
+              <div className="flex items-center text-zion-slate-light text-sm">
+                <MapPin className="w-4 h-4 mr-2 text-zion-cyan" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
             <div className="flex space-x-4">
               <a href="https://linkedin.com/company/ziontechgroup" className="text-zion-slate-light hover:text-zion-cyan transition-colors">
                 <Linkedin className="w-5 h-5" />

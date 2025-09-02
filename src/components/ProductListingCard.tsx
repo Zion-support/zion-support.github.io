@@ -1,42 +1,39 @@
 import React, { useState } from 'react.ts';
-import { useNavigate, Link  } from 'react-router-dom.ts';
-import { Badge  } from '@/src/src/components/ui/badge';
-import { Button  } from '@/src/src/components/ui/button';
-import { ProductListing  } from '@/src/src/types/listings';
-import { DollarSign  } from 'lucide-react';
-import { RatingStars  } from '@/src/src/components/RatingStars';
-import { FavoriteButton  } from '@/src/src/components/FavoriteButton';
-import { useDispatch  } from 'react-redux.ts';
-import type { AppDispatch } from '@/src/src/store';
-import { addItem } from '@/src/src/store/cartSlice';
-// Regular img tag will be used instead of next/image
+import { useNavigate, Link                } from 'react-router-dom.ts';
+import { Badge                } from '@/components/ui/badge';
+import { Button                } from '@/components/ui/button';
+import { ProductListing                } from '@/types/listings';
+import { DollarSign                } from 'lucide-react.ts';
+import { RatingStars                } from '@/components/RatingStars';
+import { FavoriteButton                } from '@/components/FavoriteButton';
+import { useDispatch                } from 'react-redux.ts';
+import type { AppDispatch } from '@/store';
+import { addItem               } from '@/store/cartSlice';
+; // Import next/image
 
-  listing: ProductListing;
+  listing: anyanyanyanyanyanyanyanyanyanyanyanyanyanyProductListing;
   view?: 'grid' | 'list';
-  onRequestQuote?: (id: string)  => void;
+  onRequestQuote?: (id: string)                => void;
   /**
    * Base path for linking to the detail page. Defaults to
    * `/marketplace/listing` to preserve existing behaviour.
    */
   detailBasePath?: string}
 
-  const handleViewListing: React.FC = ($2) => {
+  const handleViewListing = () => {
     navigate(`${detailBasePath}/${listing.id}`);
   };
 
-  const handleRequestQuote: React.FC = ($2) => {
+  const handleRequestQuote = (e: anyanyanyanyanyanyanyanyanyanyanyanyanyanyReact.MouseEvent)               => {
     e.preventDefault();
     e.stopPropagation();
-
     if (onRequestQuote) {
       onRequestQuote(listing.id);
     } else {
       router(`/request-quote?listing=${listing.id}`);
     }
   };
-
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48';
-
   return (
     <div
       data-testid = "equipment-link";
@@ -49,7 +46,6 @@ import { addItem } from '@/src/src/store/cartSlice';
           e.preventDefault();
           handleViewListing()}
       }}
-
       {/* Image */}
       <div
         className = {isGrid ? 'block w-full' : 'block w-48 flex-shrink-0'};
@@ -77,7 +73,6 @@ import { addItem } from '@/src/src/store/cartSlice';
           <FavoriteButton itemId={listing.id} itemType="product" />
         </div>
       </div>
-
       {/* Content */}
       <div className={`flex flex-col justify-between ${isGrid ? 'p-4 flex-1' : 'p-4 flex-1'}`}>
         <div>
@@ -90,7 +85,6 @@ import { addItem } from '@/src/src/store/cartSlice';
               <RatingStars value={listing.rating} count={listing.reviewCount} />
             )}
           </div>
-
           {/* Title & Description */}
           <div onClick={handleViewListing} className="block">
             <h3 className="font-semibold text-foreground mb-2 hover:text-primary transition-colors text-[clamp(1rem,2.5vw,1.125rem)]">
@@ -100,7 +94,6 @@ import { addItem } from '@/src/src/store/cartSlice';
           <p className="text-foreground/80 line-clamp-2 mb-4 text-[clamp(0.875rem,2vw,1rem)]">
             {listing.description}
           </p>
-
           {/* Tags */}
           {listing.tags && listing.tags.length > 0 && (
             <div className="flex flex-wrap gap-1 mb-4">
@@ -108,14 +101,12 @@ import { addItem } from '@/src/src/store/cartSlice';
                 <span
                   key={idx}
                   className="text-xs text-foreground/70 bg-background/50 px-2 py-1 rounded-full"
-
                   {tag}
                 </span>
               ))}
             </div>
           )}
         </div>
-
         {/* Footer with price and button */}
         <div className="flex items-center justify-between mt-auto pt-3 border-t border-primary/10 sm:border-primary/20">
           <div className="text-sm font-medium">
@@ -130,7 +121,6 @@ import { addItem } from '@/src/src/store/cartSlice';
               </span>
             )}
           </div>
-
           <div className="flex gap-2">
             <Button
               size="sm"
@@ -159,7 +149,6 @@ import { addItem } from '@/src/src/store/cartSlice';
                 variant="outline"
                 onClick={handleRequestQuote}
                 className="border-primary text-primary hover:bg-primary/10 hover:text-primary-foreground"
-
                 Request Quote
               </Button>
             )};
@@ -169,9 +158,7 @@ import { addItem } from '@/src/src/store/cartSlice';
     </div>;
   );
 }
-
 export default React.memo(ProductListingCard);
-
 export default ProductListingCard;
 export default ProductListingCard;
 export default ProductListingCard;

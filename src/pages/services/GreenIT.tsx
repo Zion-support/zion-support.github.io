@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Leaf,
+import React from 'react.ts';
+import { motion              } from 'framer-motion.ts';
+import { Leaf,
   Zap,
   Shield,
   Globe,
@@ -27,7 +26,7 @@ import {
 } from 'lucide-react';
 import SEO from '../../components/SEO';
 
-export default function GreenIT() {
+export default function GreenIT(...args: any[]): any {
   const features = [
     {
       icon: Leaf,
@@ -50,7 +49,6 @@ export default function GreenIT() {
       description: 'Implement IT asset lifecycle management with recycling and refurbishment programs.';
     };
   ];
-
   const solutions = [
     {
       title: 'Energy-Efficient Data Centers',
@@ -77,7 +75,6 @@ export default function GreenIT() {
       benefits: ['Reduced computational overhead', 'Lower energy consumption', 'Improved performance'];
     };
   ];
-
   const useCases = [
     {
       industry: 'Enterprise',
@@ -104,7 +101,6 @@ export default function GreenIT() {
       metrics: ['Production Efficiency', 'Energy Consumption', 'Environmental Compliance'];
     };
   ];
-
   const benefits = [
     {
       icon: TrendingUp,
@@ -127,14 +123,12 @@ export default function GreenIT() {
       description: 'Enhance brand image through commitment to sustainability';
     };
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO
         title="Green IT Services - Zion Tech Group"
         description="Transform your IT infrastructure with sustainable, energy-efficient solutions. Reduce carbon footprint, lower costs, and meet environmental compliance standards."
       />
-
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-emerald-500/10"></div>
@@ -143,26 +137,13 @@ export default function GreenIT() {
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center"
-
             <div className="inline-flex items-center px-4 py-2 bg-green-400/20 text-green-400 rounded-full text-sm font-medium mb-6">
               <Leaf className="w-4 h-4 mr-2" />
               Sustainable Technology
@@ -185,10 +166,9 @@ export default function GreenIT() {
             </div>
           </motion.div>
         </div>
-      </section>;
-
+      </section>
       {/* Green IT Services */}
-      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">;
+      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -200,8 +180,8 @@ export default function GreenIT() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {greenServices.map((service, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-3 gap-8">
+            {greenServices.map((service, index)               => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-8 h-8 text-white"/>
@@ -222,9 +202,8 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
-
       {/* Green Technologies */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">;
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -236,8 +215,8 @@ export default function GreenIT() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md: grid-cols-3 gap-8">
-            {greenTechnologies.map((tech, index)  => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-3 gap-8">
+            {greenTechnologies.map((tech, index)               => (
               <div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-green-500/50 transition-all duration-300">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <tech.icon className="w-8 h-8 text-white"/>
@@ -256,34 +235,20 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">;
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div
               initial = {
   { opacity: 0,
   x: -20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
-
               <h2 className="text-4xl font-bold text-white mb-6">
                 What is Green IT?
               </h2>
@@ -316,31 +281,17 @@ export default function GreenIT() {
                 </div>
               </div>
             </motion.div>
-
             <motion.div
               initial = {
   { opacity: 0,
   x: 20 
-
-
-
-
-
-
 }}
               whileInView = {
   { opacity: 1,
   x: 0 
-
-
-
-
-
-
 }}
               transition={{ duration: 0.6 }}
               className="relative"
-
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-slate-700/50">
                 <div className="flex items-center justify-between mb-6">
                   <h3 className="text-xl font-semibold text-white">Sustainability Dashboard</h3>
@@ -375,34 +326,20 @@ export default function GreenIT() {
           </div>
         </div>
       </section>
-
       {/* Key Features */}
-      <section className="py-20 bg-slate-800/30">;
+      <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Key Features
             </h2>
@@ -412,80 +349,47 @@ export default function GreenIT() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index)              => (
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Core Solutions */}
-      <section className="py-20">;
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Core Solutions
             </h2>
@@ -495,42 +399,23 @@ export default function GreenIT() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {solutions.map((solution, index)              => (
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
                     <solution.icon className="w-8 h-8 text-green-400" />
@@ -546,39 +431,25 @@ export default function GreenIT() {
                     </div>
                   ))}
                 </div>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Industry Use Cases */}
-      <section className="py-20 bg-slate-800/30">;
+      <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Industry Use Cases
             </h2>
@@ -588,42 +459,23 @@ export default function GreenIT() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 gap-8">
+            {useCases.map((useCase, index)              => (
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 p-8 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105"
-
                 <div className="flex items-center space-x-4 mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center">
                     <useCase.icon className="w-8 h-8 text-green-400" />
@@ -639,39 +491,25 @@ export default function GreenIT() {
                     </div>
                   ))}
                 </div>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Benefits */}
-      <section className="py-20">;
+      <section className="py-20">
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Business Benefits
             </h2>
@@ -681,80 +519,47 @@ export default function GreenIT() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-2 lg:grid-cols-4 gap-8">
+            {benefits.map((benefit, index)              => (
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="bg-slate-800/50 p-6 rounded-xl border border-slate-700/50 hover:border-green-400/50 transition-all duration-300 hover:scale-105 text-center"
-
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400/20 to-emerald-500/20 rounded-xl flex items-center justify-center mx-auto mb-6">
                   <benefit.icon className="w-8 h-8 text-green-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300">{benefit.description}</p>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* Implementation Process */}
-      <section className="py-20 bg-slate-800/30">;
+      <section className="py-20 bg-slate-800/30">
         <div className="container mx-auto px-6">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Implementation Process
             </h2>
@@ -763,7 +568,7 @@ export default function GreenIT() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md: anyanyanyanyanyanyanyanyanyanyanyanyanygrid-cols-4 gap-8">
             {[
               {
                 step: '01',
@@ -785,78 +590,45 @@ export default function GreenIT() {
                 title: 'Optimization',
                 description: 'Monitor performance and continuously improve sustainability metrics'
 
-            ].map((phase, index) => (;
+            ].map((phase, index)              => (
               <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
                 whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
-
 }}
                 className="text-center"
-
                 <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
                   {phase.step}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{phase.title}</h3>
                 <p className="text-gray-300">{phase.description}</p>
-              </motion.div>;
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">;
+      <section className="py-20 bg-gradient-to-r from-green-500/10 to-emerald-500/10">
         <div className="container mx-auto px-6 text-center">
           <motion.div
             initial = {
   { opacity: 0,
   y: 20 
-
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
-
 }}
             transition={{ duration: 0.6 }}
-
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Go Green with Your IT?
             </h2>
