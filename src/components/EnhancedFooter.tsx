@@ -1,103 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Linkedin, 
-  Twitter, 
-  Github,
-  Facebook,
-  Instagram,
-  Zap,
-  Brain,
-  Server,
-  Shield,
-  Users,
-  Building2,
-  FileText,
-  Rocket,
-  Target,
-  Atom,
-  Network,
-  Cloud,
-  Lock,
-  TrendingUp,
-  Workflow,
-  MessageCircle,
-  Calendar,
-  PenTool,
-  Activity,
-  Cpu,
-  Wifi,
-  Satellite,
-  Handshake,
-  BookOpen,
-  Video,
-  GraduationCap,
-  Lightbulb,
-  Star,
-  HelpCircle,
-  BarChart3,
-  ShoppingCart,
-  Heart,
-  Factory,
-  DollarSign,
-  Briefcase,
-  Award,
-  ExternalLink,
-  ArrowUp,
-  Sparkles,
-  CheckCircle,
-  Monitor,
-  Headphones,
-  Truck,
-  Search,
-  Layers,
-  Database,
-  Calculator,
-  Leaf,
-  Store,
-  Plane,
-  Ship,
-  Train,
-  Car,
-  Warehouse,
-  CreditCard,
-  PiggyBank,
-  ChartLine,
-  PieChart,
-  TrendingDown,
-  AlertTriangle,
-  Clock,
-  UserCheck,
-  UserPlus,
-  UserMinus,
-  UserX,
-  UserCog,
-  UserEdit,
-  UserSearch,
-  UserVoice,
-  UserHeart,
-  UserStar,
-  UserCheckCircle,
-  UserPlusCircle,
-  UserMinusCircle,
-  UserXCircle,
-  UserCogCircle,
-  UserEditCircle,
-  UserSearchCircle,
-  UserVoiceCircle,
-  UserHeartCircle,
-  UserStarCircle,
-  Code,
-  Home,
-  Scale,
-  ChevronUp
+  Zap, Mail, Phone, MapPin, Globe, Twitter, Linkedin, 
+  Facebook, Instagram, Youtube, Github, ArrowRight,
+  Shield, Users, Code, Building, BookOpen, HelpCircle
 } from 'lucide-react';
 
-export const EnhancedFooter: React.FC = () => {
+export function EnhancedFooter() {
+
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
@@ -108,89 +19,122 @@ export const EnhancedFooter: React.FC = () => {
     {
       title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Team', href: '/team' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Press & Media', href: '/press' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Contact', href: '/contact' }
+        { name: 'About Us', href: '/about', description: 'Our mission and values' },
+        { name: 'Our Team', href: '/team', description: 'Meet our experts' },
+        { name: 'Leadership', href: '/leadership', description: 'Executive team' },
+        { name: 'Careers', href: '/careers', description: 'Join our team' },
+        { name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+        { name: 'News', href: '/news', description: 'Latest updates' },
+
       ]
     },
     {
       title: 'Services',
       links: [
-        { name: 'AI Solutions', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud & DevOps', href: '/cloud-devops' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Data Analytics', href: '/data-analytics' },
-        { name: 'Micro SAAS', href: '/micro-saas' }
+        { name: 'AI Solutions', href: '/ai-solutions', description: 'Machine learning & automation' },
+        { name: 'Cloud Services', href: '/services/cloud-devops', description: 'Infrastructure & DevOps' },
+        { name: 'Cybersecurity', href: '/services/ai-cybersecurity-platform', description: 'Security & compliance' },
+        { name: 'Digital Transformation', href: '/services/digital-transformation', description: 'Business modernization' },
+        { name: 'Micro SaaS', href: '/micro-saas', description: 'Lightweight applications' },
+        { name: 'Consulting', href: '/it-consulting', description: 'Technology advisory' },
+
       ]
     },
     {
       title: 'Solutions',
       links: [
-        { name: 'Enterprise', href: '/solutions/enterprise' },
-        { name: 'Healthcare', href: '/solutions/healthcare' },
-        { name: 'Financial Services', href: '/solutions/financial' },
-        { name: 'Manufacturing', href: '/solutions/manufacturing' },
-        { name: 'Retail', href: '/solutions/retail' },
-        { name: 'Government', href: '/solutions/government' }
+        { name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale solutions' },
+        { name: 'Healthcare', href: '/solutions/healthcare', description: 'Medical technology' },
+        { name: 'Financial', href: '/financial-solutions', description: 'Fintech solutions' },
+        { name: 'Manufacturing', href: '/manufacturing-solutions', description: 'Industry 4.0' },
+        { name: 'Research & Development', href: '/research-development', description: 'Innovation labs' },
+        { name: 'Green IT', href: '/green-it', description: 'Sustainable technology' },
+
       ]
     },
     {
       title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog' },
-        { name: 'Case Studies', href: '/case-studies' },
-        { name: 'White Papers', href: '/white-papers' },
-        { name: 'Documentation', href: '/documentation' },
-        { name: 'Webinars', href: '/webinars' },
-        { name: 'Training', href: '/training' }
+        { name: 'Blog', href: '/blog', description: 'Insights & updates' },
+        { name: 'Case Studies', href: '/case-studies', description: 'Success stories' },
+        { name: 'White Papers', href: '/white-papers', description: 'In-depth research' },
+        { name: 'Webinars', href: '/webinars', description: 'Educational content' },
+        { name: 'Documentation', href: '/documentation', description: 'Technical guides' },
+        { name: 'API Reference', href: '/api', description: 'Developer resources' },
+
       ]
     },
     {
       title: 'Support',
       links: [
-        { name: 'Help Center', href: '/help' },
-        { name: 'System Status', href: '/status' },
-        { name: 'API Documentation', href: '/api' },
-        { name: 'Developer Portal', href: '/developer-portal' },
-        { name: 'Community', href: '/community' },
-        { name: 'Contact Support', href: '/contact' }
+        { name: 'Help Center', href: '/help', description: 'Find answers' },
+        { name: 'FAQ', href: '/faq', description: 'Common questions' },
+        { name: 'Contact Support', href: '/support', description: 'Get help' },
+        { name: 'Training', href: '/training', description: 'Skill development' },
+        { name: 'Status Page', href: '/status', description: 'Service status' },
+        { name: 'Community', href: '/community', description: 'User forums' },
       ]
     }
   ];
 
+  const legalLinks = [
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Data Protection', href: '/data-protection' },
+    { name: 'Accessibility', href: '/accessibility' },
+    { name: 'Sitemap', href: '/sitemap' },
+  ];
+
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook },
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram }
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'text-blue-400 hover:text-blue-300' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'text-blue-600 hover:text-blue-500' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'text-blue-700 hover:text-blue-600' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'text-pink-500 hover:text-pink-400' },
+    { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube, color: 'text-red-500 hover:text-red-400' },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'text-gray-600 hover:text-gray-500' },
   ];
 
   const contactInfo = [
-    { icon: Mail, text: 'info@ziontechgroup.com', href: 'mailto:info@ziontechgroup.com' },
-    { icon: Phone, text: '+1 (555) 123-4567', href: 'tel:+15551234567' },
-    { icon: MapPin, text: '123 Tech Street, Innovation City, IC 12345', href: '#' }
+    {
+      icon: Mail,
+      label: 'Email',
+      value: 'contact@ziontechgroup.com',
+      href: 'mailto:contact@ziontechgroup.com',
+      description: 'Send us a message'
+    },
+    {
+      icon: Phone,
+      label: 'Phone',
+      value: '+1 (555) 123-4567',
+      href: 'tel:+15551234567',
+      description: 'Call us directly'
+    },
+    {
+      icon: MapPin,
+      label: 'Address',
+      value: '123 Tech Street, Innovation City, IC 12345',
+      href: 'https://maps.google.com/?q=123+Tech+Street+Innovation+City',
+      description: 'Visit our headquarters'
+    }
   ];
 
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
+          
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-7 h-7 text-white" />
+              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <Zap className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Zion Tech Group
-              </span>
+              <span className="text-2xl font-bold">Zion Tech Group</span>
             </div>
+            
+
             <p className="text-gray-300 mb-6 leading-relaxed">
               Leading the future of technology with cutting-edge AI solutions, 
               quantum computing, and innovative micro SAAS services. 
@@ -198,22 +142,44 @@ export const EnhancedFooter: React.FC = () => {
             </p>
             
             {/* Contact Information */}
-            <div className="space-y-3">
-              {contactInfo.map((contact, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <contact.icon className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                  {contact.href !== '#' ? (
-                    <a 
-                      href={contact.href} 
-                      className="text-gray-300 hover:text-cyan-400 transition-colors"
+            <div className="space-y-4">
+              {contactInfo.map((contact) => (
+                <div key={contact.label} className="flex items-start space-x-3">
+                  <div className="w-8 h-8 bg-blue-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <contact.icon className="w-4 h-4 text-blue-400" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium text-gray-300">{contact.label}</div>
+                    <a
+                      href={contact.href}
+                      className="text-white hover:text-blue-400 transition-colors font-medium"
                     >
-                      {contact.text}
+                      {contact.value}
                     </a>
-                  ) : (
-                    <span className="text-gray-300">{contact.text}</span>
-                  )}
+                    <div className="text-xs text-gray-400">{contact.description}</div>
+                  </div>
                 </div>
               ))}
+            </div>
+
+            {/* Social Links */}
+            <div className="mt-6">
+              <h4 className="text-sm font-semibold text-gray-300 mb-3">Follow Us</h4>
+              <div className="flex space-x-3">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center transition-colors hover:bg-gray-700 ${social.color}`}
+                    aria-label={social.name}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
+              </div>
+
             </div>
           </div>
 
@@ -221,23 +187,32 @@ export const EnhancedFooter: React.FC = () => {
           {footerSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-lg font-semibold text-white mb-4 flex items-center">
-                {section.title === 'Company' && <Building2 className="w-5 h-5 text-cyan-400 mr-2" />}
-                {section.title === 'Services' && <Server className="w-5 h-5 text-cyan-400 mr-2" />}
-                {section.title === 'Solutions' && <Target className="w-5 h-5 text-cyan-400 mr-2" />}
-                {section.title === 'Resources' && <BookOpen className="w-5 h-5 text-cyan-400 mr-2" />}
-                {section.title === 'Support' && <HelpCircle className="w-5 h-5 text-cyan-400 mr-2" />}
+                {section.title === 'Company' && <Building className="w-5 h-5 mr-2 text-blue-400" />}
+                {section.title === 'Services' && <Code className="w-5 h-5 mr-2 text-green-400" />}
+                {section.title === 'Solutions' && <Users className="w-5 h-5 mr-2 text-purple-400" />}
+                {section.title === 'Resources' && <BookOpen className="w-5 h-5 mr-2 text-orange-400" />}
+                {section.title === 'Support' && <HelpCircle className="w-5 h-5 mr-2 text-red-400" />}
                 {section.title}
               </h3>
-              <ul className="space-y-2">
+              
+              <ul className="space-y-3">
+
                 {section.links.map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.href}
-                      className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 flex items-center group"
+                      className="group flex items-start space-x-2 text-gray-300 hover:text-white transition-colors"
                     >
-                      <span className="group-hover:translate-x-1 transition-transform duration-200">
-                        {link.name}
-                      </span>
+                      <ArrowRight className="w-3 h-3 mt-1 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <div>
+                        <div className="font-medium group-hover:text-blue-400 transition-colors">
+                          {link.name}
+                        </div>
+                        <div className="text-xs text-gray-500 group-hover:text-gray-400 transition-colors">
+                          {link.description}
+                        </div>
+                      </div>
+
                     </Link>
                   </li>
                 ))}
@@ -245,82 +220,92 @@ export const EnhancedFooter: React.FC = () => {
             </div>
           ))}
         </div>
+      </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-16 pt-8 border-t border-gray-700">
-          <div className="max-w-2xl mx-auto text-center">
+      {/* Newsletter Section */}
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
-              Stay Updated with Latest Tech Insights
+              Stay Updated with Zion Tech Group
             </h3>
-            <p className="text-gray-300 mb-6">
-              Get the latest updates on AI advancements, quantum computing breakthroughs, 
-              and industry insights delivered to your inbox.
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Get the latest insights on AI, quantum computing, and emerging technologies. 
+              Join our newsletter for exclusive content and updates.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            
+            <form className="max-w-md mx-auto flex space-x-3">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-white/10 border border-cyan-500/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20"
+                className="flex-1 px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                required
               />
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 transform hover:scale-105">
+              <button
+                type="submit"
+                className="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+              >
                 Subscribe
               </button>
-            </div>
+            </form>
+
           </div>
         </div>
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-gray-700">
-        <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
+      <div className="border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            
             {/* Copyright */}
-            <div className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
+            <div className="flex items-center space-x-2 text-gray-400">
+              <Shield className="w-4 h-4" />
+              <span>© {currentYear} Zion Tech Group. All rights reserved.</span>
             </div>
 
             {/* Legal Links */}
-            <div className="flex items-center space-x-6 text-sm">
-              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy
-              </Link>
-              <Link to="/accessibility" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                Accessibility
-              </Link>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 hover:bg-cyan-500/20 border border-gray-600 hover:border-cyan-400 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 transition-all duration-200"
+            <div className="flex flex-wrap justify-center md:justify-end space-x-6">
+              {legalLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.href}
+                  className="text-gray-400 hover:text-white transition-colors text-sm"
                 >
-                  <social.icon className="w-5 h-5" />
-                </a>
+                  {link.name}
+                </Link>
+
               ))}
             </div>
+          </div>
+
+          {/* Additional Info */}
+          <div className="mt-6 pt-6 border-t border-gray-800 text-center text-gray-500 text-sm">
+            <p>
+              Zion Tech Group is a leading technology company specializing in AI solutions, 
+              quantum computing, and digital transformation services. 
+              <span className="mx-2">•</span>
+              ISO 27001 Certified
+              <span className="mx-2">•</span>
+              SOC 2 Type II Compliant
+              <span className="mx-2">•</span>
+              GDPR Ready
+            </p>
           </div>
         </div>
       </div>
 
-      {/* Scroll to Top Button */}
-      <button
-        onClick={scrollToTop}
-        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-110 z-40"
-        aria-label="Scroll to top"
+      {/* Back to Top Button */}
+      <motion.button
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        className="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        aria-label="Back to top"
       >
-        <ChevronUp className="w-6 h-6 mx-auto" />
-      </button>
+        <ArrowRight className="w-6 h-6 transform rotate-[-90deg] mx-auto" />
+      </motion.button>
     </footer>
   );
-};
+}
+

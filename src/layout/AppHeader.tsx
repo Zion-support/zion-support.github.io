@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react.ts';
-import { Link              } from 'react-router-dom.ts';
-import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, Code, Truck, Building, ShoppingCart, BookOpen, MessageCircle, HelpCircle              } from 'lucide-react.ts';
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Menu, X, Search, User, Bell, ChevronDown, Zap, Brain, Shield, Cloud, Rocket, Globe, Cpu, Lock, Heart, Users, ShoppingCart, BookOpen, MessageCircle, HelpCircle, DollarSign, Gauge, Workflow, Atom, Star, Target, TrendingUp, Award, Code, Truck, Building, BarChart3, PenTool, Eye, Server, Smartphone, Database, Network, Clock, ArrowRight, PanelLeft, Sparkles, Phone, Mail, MapPin, Satellite, FileText } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import { ThemeToggle              } from '../components/ThemeToggle';
 import { ZionLoadingSpinner              } from '../components/ui/EnhancedLoadingSpinner';
 import { Sidebar              } from '../components/Sidebar';
@@ -28,16 +29,77 @@ export function AppHeader(...args: any[]): any {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-          <nav className="hidden lg: anyanyanyanyanyanyanyanyanyanyanyanyanyflex items-center space-x-8">
-            {/* Main Navigation */}
-            {mainNavigation.map((item)              => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+  const handleSearch = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      setIsSearching(true);
+      try {
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+      } finally {
+        setIsSearching(false);
+      }
+    }
+  };
 
-                {item.name}
-=======
+  const navigation = [
+    { name: 'Home', href: '/', current: true },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'Services', href: '/services', current: false },
+    { name: 'Pricing', href: '/pricing', current: false },
+    { name: 'Solutions', href: '/solutions', current: false },
+    { name: 'Pricing', href: '/services', current: false },
+    { name: 'Blog', href: '/blog', current: false },
+    { name: 'Help Center', href: '/help', current: false },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
+  ];
+
+  // Organized services by category - only include existing pages
+  const services = [
+    { name: 'AI Email Responder', href: '/services/ai-email-responder', icon: Brain, description: 'On-brand AI replies with HITL and analytics' },
+    { name: 'Mobile Surveys', href: '/services/mobile-first-surveys', icon: Users, description: 'High-converting responsive surveys' },
+    { name: 'Meeting Summarizer', href: '/services/meeting-summarizer', icon: MessageCircle, description: 'Auto minutes, action items, sync to Slack' },
+    { name: 'AI SEO Optimizer', href: '/services/ai-seo-optimizer', icon: TrendingUp, description: 'Briefs, schema, internal linking' },
+    { name: 'Developer API Tester', href: '/services/developer-api-tester', icon: Code, description: 'Mock servers and contract tests' },
+    { name: 'AI & Analytics', href: '/services', icon: Brain, description: 'Machine Learning & Data Science' },
+    { name: 'SOC-as-a-Service (MDR)', href: '/services', icon: Shield, description: '24/7 monitoring & incident response' },
+    { name: 'Cloud Cost Optimizer', href: '/services', icon: Cloud, description: 'FinOps savings with automation' },
+    { name: 'AI SEO Optimizer', href: '/services', icon: Rocket, description: 'Content scoring & SERP parity' },
+    { name: 'Quantum Computing', href: '/services', icon: Rocket, description: 'Quantum AI & Optimization' },
+    { name: 'Cybersecurity', href: '/services', icon: Shield, description: 'AI-Powered Security' },
+    { name: 'Cloud & DevOps', href: '/services/cloud-devops', icon: Cloud, description: 'Infrastructure & Automation' },
+    { name: 'IoT & Edge', href: '/services', icon: Cpu, description: 'Smart Devices & Networks' },
+    { name: 'Blockchain', href: '/services', icon: Lock, description: 'DeFi & Smart Contracts' },
+    { name: 'Healthcare Tech', href: '/solutions/healthcare', icon: Heart, description: 'AI Medicine & Diagnostics' },
+    { name: 'Sustainability', href: '/services', icon: Globe, description: 'Green IT Solutions' },
+    { name: 'Micro SaaS', href: '/services/micro-saas-solutions', icon: ShoppingCart, description: 'Productized SaaS for niches' },
+    { name: 'AI SEO Auditor', href: '/services/ai-seo-auditor', icon: Zap, description: 'CWV, schema, backlinks, autofix' },
+    { name: 'AI Agent Helpdesk', href: '/services/customer-support-chatbot', icon: Users, description: 'Autonomous support & assist' },
+    { name: 'AI Auto Email', href: '/services/ai-auto-email-responder', icon: MessageCircle, description: 'Faster replies, CRM logging' },
+    { name: 'Feedback Surveys', href: '/services/mobile-feedback-surveys', icon: Users, description: 'NPS/CSAT with AI insights' },
+    { name: 'Compliance Copilot', href: '/services/ai-compliance-copilot', icon: Shield, description: 'SOC2/ISO evidence automation' },
+    { name: 'LLM Content Studio', href: '/services/llm-content-studio', icon: BookOpen, description: 'On-brand AI content' },
+    { name: 'FinOps Advisor', href: '/services/finops-advisor', icon: DollarSign, description: 'Cloud cost optimization' },
+    { name: 'AI SEO Auditor', href: '/services/ai-seo-auditor', icon: Search, description: 'On-site audits and fixes' },
+    { name: 'Support Chatbot', href: '/services/customer-support-chatbot', icon: MessageCircle, description: 'Deflect tickets with RAG' },
+    { name: 'Landing Page Generator', href: '/services/landing-page-generator', icon: Globe, description: 'Generate and A/B test pages' },
+    { name: 'Price Intelligence', href: '/services/price-intelligence-service', icon: BarChart3, description: 'Competitor tracking + pricing' },
+    { name: 'Dev Productivity Copilot', href: '/services/developer-productivity-copilot', icon: GitBranch, description: 'PR review, tests, CI insights' },
+>>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
+  ];
+
+  // Quick links for easy access
+  const quickLinks = [
+    { name: 'Marketplace', href: '/marketplace', icon: ShoppingCart },
+    { name: 'Case Studies', href: '/case-studies', icon: BookOpen },
+    { name: 'FAQ', href: '/faq', icon: HelpCircle },
+    { name: 'Sitemap', href: '/sitemap', icon: Globe },
+    { name: 'Request Quote', href: '/request-quote', icon: MessageCircle },
+    { name: 'Call +1 302 464 0950', href: 'tel:+13024640950', icon: Phone },
+    { name: 'Email kleber@ziontechgroup.com', href: 'mailto:kleber@ziontechgroup.com', icon: Mail },
+  ];
+
   // Group services by category for better organization
   const servicesByCategory = services.reduce((acc, service) => {
     if (!acc[service.category]) {

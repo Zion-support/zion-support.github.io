@@ -2,8 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { SEO } from '@/components/SEO';
-import { 
-  Users, 
+import { Users, 
+
   Target, 
   Award, 
   Globe, 
@@ -45,7 +45,8 @@ export default function About() {
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Heart,
+      icon: Users,
+
       title: 'Partnership Approach',
       description: 'We work as an extension of your team, building long-term relationships based on trust and mutual success.',
       color: 'from-green-500 to-emerald-500'

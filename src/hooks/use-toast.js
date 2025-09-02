@@ -31,9 +31,18 @@ export const useToast = () => {
     setToasts(prev => prev.filter(t => t.id !== id));
   }, []);
 
+  const clearAll = useCallback(() => {
+    setToasts([]);
+  }, []);
+
+
   return {
     toast,
     dismiss,
+    clearAll,
     toasts
   };
 };
+
+export default useToast;
+
