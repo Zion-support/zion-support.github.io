@@ -46,20 +46,20 @@ export default function Contact() {
     {
       icon: Mail,
       title: 'Email Us',
-      details: 'info@ziontechgroup.com',
-      link: 'mailto:info@ziontechgroup.com'
+      details: 'kleber@ziontechgroup.com',
+      link: 'mailto:kleber@ziontechgroup.com'
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: '+1 (302) 464-0950',
+      details: '+1 302 464 0950',
       link: 'tel:+13024640950'
     },
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: 'Delaware, USA',
-      link: '#'
+      details: '364 E Main St STE 1008 Middletown DE 19709',
+      link: 'https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709'
     },
     {
       icon: Clock,
