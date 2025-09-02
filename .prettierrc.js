@@ -1,3 +1,5 @@
+/* eslint-env node */
+/* global module */
 module.exports = {
   semi: true,
   trailingComma: 'es5',
