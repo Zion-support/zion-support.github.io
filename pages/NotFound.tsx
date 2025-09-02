@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import SEO from '../components/SEO';
 import { Button } from '../components/ui/Button';
 import { Card } from '../components/ui/Card';
@@ -30,7 +29,7 @@ const NotFound: React.FC = () => {
     <div className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center px-4'>
       <SEO
         title='Page Not Found - Zion Tech Group'
-        description='The page you are looking for does not exist. Find what you need with our helpful navigation and search options.'
+        description="The page you're looking for doesn't exist. Find what you need with our helpful navigation and search options."
       />
       <div className='max-w-4xl mx-auto text-center'>
         <motion.div
@@ -58,10 +57,10 @@ const NotFound: React.FC = () => {
           >
             <h2 className='text-4xl font-bold text-white mb-4'>Page Not Found</h2>
             <p className='text-xl text-gray-300 mb-6'>
-              Sorry, the page you are looking for doesn&apos;t exist or has been moved.
+              Sorry, the page you're looking for doesn't exist or has been moved.
             </p>
             <p className='text-gray-400'>
-              Don&apos;t worry, we&apos;ll help you find what you are looking for.
+              Don't worry, we'll help you find what you're looking for.
             </p>
           </motion.div>
           {/* Action Buttons */}
@@ -93,7 +92,7 @@ const NotFound: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
-          >
+          >;
             <Card className='p-8'>
               <h3 className='text-2xl font-bold text-white mb-6'>Popular Pages</h3>
               <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
@@ -127,16 +126,16 @@ const NotFound: React.FC = () => {
               <p className='text-gray-300 mb-6'>
                 If you can&apos;t find what you&apos;re looking for, our team is here to help.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
+              <div className='flex flex-col sm: flex-row gap-4 justify-center'>
+                <a
                   href='/contact'
                   className='inline-flex items-center px-6 py-3 rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:opacity-90 transition-opacity'
                 >
                   <Phone className='w-5 h-5 mr-2' />
                   Contact Support
-                </Link>
+                </a>
                 <a
-                  href='mailto:kleber@ziontechgroup.com'
+                  href='mailto:support@ziontechgroup.com'
                   className='inline-flex items-center px-6 py-3 rounded-lg border border-slate-600 text-gray-300 hover:bg-slate-700 transition-colors'
                 >
                   <Mail className='w-5 h-5 mr-2' />
@@ -148,6 +147,7 @@ const NotFound: React.FC = () => {
         </motion.div>
       </div>
     </div>
-  )}
-
+  );
+};
+;
 export default NotFound;
