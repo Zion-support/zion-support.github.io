@@ -169,30 +169,7 @@ module.exports = {
       pmx: true
     },
 
-    // Log Cleaner - runs daily at 2 AM
-    {
-      name: 'log-cleaner',
-      script: './scripts/log-cleaner.js',
-      instances: 1,
-      autorestart: false,
-      watch: false,
-      max_memory_restart: '200M',
-      env: {
-        NODE_ENV: 'production'
-      },
-      error_file: './logs/log-cleaner-error.log',
-      out_file: './logs/log-cleaner-out.log',
-      log_file: './logs/log-cleaner-combined.log',
-      time: false,
-      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
-      merge_logs: false,
-      max_restarts: 3,
-      min_uptime: '5s',
-      restart_delay: 2000,
-      cron_restart: '0 2 * * *', // Run daily at 2 AM
-      pmx: true
->>>>>>> origin/cursor/install-dependencies-and-fix-errors-827a
-    }
+    
   ],
 
   deploy: {
