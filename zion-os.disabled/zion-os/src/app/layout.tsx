@@ -1,21 +1,30 @@
-import './globals.css';
-import type { ReactNode } from 'react';
-import { Navigation } from '@/components/Navigation';
+import,
+  ./globals.css';
+import type { ReactNode } from
+  'react';
+import { Navigation } from
+  '@/components/Navigation';
 
 export const metadata = {
-  title: 'Zion OS - Sovereign AI-Powered Digital Economies',
-  description:
-    'Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.',
-  keywords:
-    'AI, digital economy, blockchain, governance, marketplace, deployment, Zion',
-  authors: [{ name: 'Zion Tech Group' }],
-  viewport: 'width=device-width, initial-scale=1',
-  robots: 'index, follow',
+  title: 'Zion OS - Sovereign AI-Powered Digital Economies,
+  description:,
+  Launch sovereign AI-powered digital economies with one click. Unified deployment protocol for Zion ecosystems with marketplace, governance, identity, and more.',
+  keywords: AI, digital economy, blockchain, governance, marketplace, deployment, Zion,
+  ,
+  authors: [{ name:
+  'Zion Tech Group }],
+  viewport:,
+  width=device-width, initial-scale=1',
+  robots: index, follow,
+  ,
   openGraph: {
-    title: 'Zion OS - Sovereign AI-Powered Digital Economies',
-    description: 'Launch sovereign AI-powered digital economies with one click',
-    type: 'website',
-    locale: 'en_US',
+    title:
+  'Zion OS - Sovereign AI-Powered Digital Economies,
+    description:,
+  Launch sovereign AI-powered digital economies with one click',
+    type: 'website,
+    locale:
+  'en_US',
   },
 };
 ;

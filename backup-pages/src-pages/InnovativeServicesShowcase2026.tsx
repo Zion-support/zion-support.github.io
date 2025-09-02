@@ -1,9 +1,13 @@
 
-'
-  const [selectedCategory, setSelectedCategory] = useState('all');'
-  const [searchQuery, setSearchQuery] = useState('');'
-  const [selectedCategory, setSelectedCategory] = useState('All');'
-  const [sortBy, setSortBy] = useState('innovation');
+,
+  const [selectedCategory, setSelectedCategory] = useState('all
+  ');'
+  const [searchQuery, setSearchQuery] = useState('
+  ');'
+  const [selectedCategory, setSelectedCategory] = useState(
+  'All');'
+  const [sortBy, setSortBy] = useState(
+  'innovation');
 
     // Filter by search query
     if (searchQuery) {
@@ -14,8 +18,10 @@
         service.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()));
       );
 
-    // Filter by category'
-    if (selectedCategory !== 'All') {
+    // Filter by category
+  '
+    if (selectedCategory !== 'All
+  ') {
 
       filtered = filtered.filter(service => service.category === selectedCategory);
 
@@ -24,48 +30,64 @@
 
       switch (sortBy) {
 
-        case 'price':
-          return a.price - b.price;
-        case 'innovation':'
-          return b.innovationLevel === 'Revolutionary' ? 1 : -1;
-        case 'roi':'
-          return parseInt(b.roi.split('-')[0]) - parseInt(a.roi.split('-')[0]);
+        case 'price
+  ': return a.price - b.price;
+        case 'innovation
+  ':'
+          return b.innovationLevel ===
+  'Revolutionary' ? 1 : -1;
+        case
+  'roi':
+  '
+          return parseInt(b.roi.split('-
+  ')[0]) - parseInt(a.roi.split('-)[0]);
         default:
           return 0})}) ;
 
     return filtered}, [searchQuery, selectedCategory, sortBy]) ;
 
     switch (category) {;
-      case 'AI & Automation':;
+      case,
+  AI & Automation
+  ': ;
         return <Cpu className="w-5 h-5"  />;
-      case 'Quantum Computing':;"
+      case 'Quantum Computing
+  ':;"
         return <Zap className="w-5 h-5"  />;
-      case 'Blockchain':;"
+      case 'Blockchain
+  ':;"
         return <Database className="w-5 h-5"  />;
-      case 'Cybersecurity':;"
+      case 'Cybersecurity
+  ':;"
         return <Shield className="w-5 h-5"  />;
-      case 'IoT':;"
+      case 'IoT
+  ':;"
         return <Globe className="w-5 h-5"  />;
-      case 'AI & Content':;"
+      case 'AI & Content
+  ':;"
         return <Cpu className="w-5 h-5"  />;
-      case 'DevOps':;"
+      case 'DevOps
+  ':;"
         return <Database className="w-5 h-5"  />;
-      case 'Finance':;"
+      case 'Finance
+  ':;"
         return <TrendingUp className="w-5 h-5"  />;
-      case 'Sustainability':;"
+      case 'Sustainability:;"
         return <Leaf className="w-5 h-5"  />;
       default:
         return 0}
   }) }};
 
   ;
+  ;,
+  'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600,
+,
+  'Advanced
+  ': 'bg-gradient-to-r from-blue-600 to-cyan-600,;  ;
   ;
-'
-  'Revolutionary': 'bg-gradient-to-r from-purple-600 to-pink-600','
-      'Advanced': 'bg-gradient-to-r from-blue-600 to-cyan-600',;  ;
-  ;
-  ;
-  'Cutting-Edge': 'bg-gradient-to-r from-green-600 to-emerald-600';
+  ;,
+  Cutting-Edge
+  ': 'bg-gradient-to-r from-green-600 to-emerald-600;
     };
     return()
       <span className = {`${colors[level as keyof typeof colors] || colors.Advanced} text-white text-xs px-2 py-1 rounded-full font-semibold`}>;
@@ -213,11 +235,15 @@
                 <div className="absolute top-4 right-4">`
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
 
-                    service.innovationLevel === 'Cutting-edge''
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white''
-                      : service.innovationLevel === 'Advanced''
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white''
-                      : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white'`
+                    service.innovationLevel ===,
+  Cutting-edge'
+  '
+                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
+  ': service.innovationLevel === 'Advanced'
+  '
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
+  '
+                      : 'bg-gradient-to-r from-green-500 to-emerald-500 text-white`
                   }`}>
                     {service.innovationLevel}
                   </span>
@@ -372,7 +398,8 @@
 "
             <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Business?</h2>"
             <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-              Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape.'
+              Our innovative services are designed to give you a competitive edge in the rapidly evolving technology landscape.
+  '
               Let's discuss how we can help you achieve your goals.
             </p>
 "

@@ -52,7 +52,8 @@ import {}
   Heart,
   Monitor,
   Laptop,
-  ShoppingBag} from 'lucide-react';
+  ShoppingBag} from
+  'lucide-react';
 
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
 export default function AICustomerSupportAutomation() {
@@ -295,5 +296,6 @@ export default function AICustomerSupportAutomation() {
       </section>
     </div>
 :pages.disabled/pages/services/ai-customer-support-automation.tsx
-  )}'"
+  )}
+  '"
 '"'"
