@@ -16,7 +16,7 @@ class CodeQualityMonitor {;
     } catch (error) {;
       // // // // // // // console.error('Failed to write to log file:', error.message);
     };
-=======;
+;
     this.metrics = {;
   complexity: 0,;
       maintainability: 0,;
