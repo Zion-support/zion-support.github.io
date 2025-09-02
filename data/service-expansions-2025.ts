@@ -11,14 +11,8 @@ export interface ServiceExpansion2025 {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const serviceExpansions2025: ServiceExpansion2025[] = [
+address: string;
+  };export const serviceExpansions2025: ServiceExpansion2025[] = [
   {
     id: "ai-workflow-automation",
     name: "AI Workflow Automation",

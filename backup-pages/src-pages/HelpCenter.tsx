@@ -1,56 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  Search,
-  HelpCircle,
-  MessageCircle,
-  Phone,
-  Mail,
-  BookOpen,
-  Video,
-  FileText,
-  ChevronDown,
-  ChevronRight,
-  Star,
-  ChevronDown,
-  ChevronRight,
-  ExternalLink,
-  Lightbulb,
-  TrendingUp,
-  Target,
-  Heart,
-  Building,
-  Cpu,
-  Lock,
-  Atom,
-  Network,
-  Eye,
-  BarChart3,
-  MessageSquare,
-  Calendar,
-  Clock,
-  CheckCircle,
-  AlertCircle,
-  Info'
-} from 'lucide-react';
-
-interface HelpSection {
-
-  id: string;
-  title: string;
-  icon: unknown;
-  description: string;
-  articles: Array<{
-
-    title: string;
-    description: string;
-    path?: string;
-    external?: boolean;
-    difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
-    readTime: string}[]}
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 interface FAQItem {
 
   question: string;
@@ -350,20 +298,14 @@ export function HelpCenter() {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set(['getting-started']));
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  
     if (query.trim() === '') {
-=======
-    setSearchQuery(query);'    if (query.trim() === '') {
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+setSearchQuery(query);'    if (query.trim() === '') {
 
       setFilteredFAQs(faqData);
       return;
 
-    
     setFilteredFAQs (filtered) };
 
-  
-  
   return()
     <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light pt-24">"      <div className="container-responsive">
         {/* Header */}

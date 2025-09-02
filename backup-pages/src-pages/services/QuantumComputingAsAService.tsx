@@ -1,7 +1,6 @@
 
 const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
-  
     {;
       icon: Target,;
       title: 'Quantum Simulation',;
@@ -9,19 +8,16 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       color: 'from-indigo-500 to-purple-500'};
   ];
 
-  
         'On-premise deployment options',;
         'Research partnerships';
       ],;
-=======
-        'Unlimited quantum computing hours','
+'Unlimited quantum computing hours','
         'Custom quantum hardware access','
         'Dedicated quantum team','
         '24/7 phone support','
         'Custom integrations',;'
         'On-premise deployment options',;'        'Research partnerships';
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       cta: 'Contact Sales',;
       popular: false};
   ]},;
@@ -31,7 +27,6 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
       metrics: ['40% cost reduction',Optimal route planning',Real-time optimization']};
   ];
 
-  
     'Python',Qiskit',Cirq',PennyLane',Q#',Julia',MATLAB',;
     'AWS Braket',Azure Quantum',Google Cloud',IBM Quantum',;
     'REST APIs',GraphQL',Webhooks',Docker',Kubernetes';
@@ -43,19 +38,11 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
-      <SEO
-========
+<=
       <SEO "
-<<<<<<< HEAD
->>>>>>>> main:backup-pages/src-pages/services/QuantumComputingAsAService.tsx
-        title="Quantum Computing as a Service - Zion Tech Group"
-        description="Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support."
-       />
-=======
+
         title="Quantum Computing as a Service - Zion Tech Group""        description="Access cutting-edge quantum computing power without infrastructure investment. Solve complex problems 100x faster with our quantum computing platform and expert support."
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden py-20">"
@@ -117,12 +104,9 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               Our quantum computing platform delivers unprecedented performance for complex problems
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/QuantumComputingAsAService.tsx
-          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
+>          <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index (
               <motion.div
                 key={index}
@@ -291,16 +275,11 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               Everything you need to harness the power of quantum computing for your business
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
-
-          <div className="grid md: grid-cols-3 gap-8">
-            {useCases.map((useCase, index)  => (
-========
+<=
           "
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map(feature: unknown, index: unknown (
->>>>>>>> main:backup-pages/src-pages/services/QuantumComputingAsAService.tsx
-              <motion.div
+>              <motion.div
                 key={index}
                 initial = {
 
@@ -353,32 +332,17 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}`
                 className={`bg-slate-800 rounded-xl p-8 border-2 ${
@@ -452,32 +416,17 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="bg-slate-800 rounded-xl p-6 border border-slate-700"
@@ -509,12 +458,9 @@ const QuantumComputingAsAService: React.FC = (): JSX.Element => {
               Connect with your existing development tools and cloud platforms
             </p>
           </div>
-<<<<<<<< HEAD:pages.disabled/pages/services/QuantumComputingAsAService.tsx
-
-========
+<=
           "
->>>>>>>> main:backup-pages/src-pages/services/QuantumComputingAsAService.tsx
-          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
+>          <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">
             {integrations.map(integration: unknown, index: unknown (
               <motion.div
                 key={index}

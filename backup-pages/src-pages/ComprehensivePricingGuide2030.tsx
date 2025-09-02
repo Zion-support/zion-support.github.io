@@ -1,82 +1,36 @@
-<<<<<<< HEAD
-import { CheckCircle, 
 
-
-  Star, 
-  Zap, 
-  Shield, 
-  TrendingUp, 
-  Brain, 
-  Server, 
-  Globe, 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  ExternalLink,
-  DollarSign,
-  CreditCard,
-  Wallet,
-  Coins,
-  PiggyBank,
-  Calculator,
-  BarChart3,
-  Target,
-  ArrowRight,
-  Search'
-} from 'lucide-react';
-
-const ComprehensivePricingGuide2030: React.FC = () => {;
-  const [activeCategory, setActiveCategory] = useState('all');
-=======
 const ComprehensivePricingGuide2030: React.FC = () => {;'
   const [activeCategory, setActiveCategory] = useState('all');'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   const [searchTerm, setSearchTerm] = useState('');
 
-  
     ...innovativeAIServices2030,;
     ...innovativeCybersecurityServices2030,;
     ...innovativeCloudDevOpsServices2030;
   ];
 
-  
-    
                          service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) ||;
                          service.tags.some (tag => tag.toLowerCase () .includes (searchTerm.toLowerCase () ) ) ;
     return matchesCategory && matchesSearch}) ;
 
-  
     { id: 'all', name: 'All Services', icon: Star, count: allServices.length },;
     { id: 'ai', name: 'AI Services', icon: Brain, count: innovativeAIServices2030.length },;
     { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: innovativeCybersecurityServices2030.length },;
     { id: 'cloud', name: 'Cloud & DevOps', icon: Cloud, count: innovativeCloudDevOpsServices2030.length };
   ];
 
-<<<<<<< HEAD
-  
-    if (category.toLowerCase().includes('ai')) return Brain;
-    if (category.toLowerCase().includes('cybersecurity')) return Shield;
-    if (category.toLowerCase().includes('cloud')) return Cloud;
-    return Star};
-=======
   const getCategoryIcon = (category: string) => {;'
     if (category.toLowerCase().includes('ai')) return Brain;'
     if (category.toLowerCase().includes('cybersecurity')) return Shield;'    if (category.toLowerCase().includes('cloud')) return Cloud;
     return Star};
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
-  
     if (price < 300) return { tier: 'Starter', color: 'bg-green-600/20 border-green-500/30 text-green-300' };
     if (price < 600) return { tier: 'Professional', color: 'bg-blue-600/20 border-blue-500/30 text-blue-300' };
     if (price < 1000) return { tier: 'Enterprise', color: 'bg-purple-600/20 border-purple-500/30 text-purple-300' };
     return { tier: 'Premium', color: 'bg-orange-600/20 border-orange-500/30 text-orange-300' }};
 
-  
         'Basic AI features',Email support',Up to 5 users',Standard integrations',Community forum access',Basic analytics',Mobile app access'
       ],;
-=======
-      features[;'
+features[;'
         'Basic AI features','
         'Email support','
         'Up to 5 users','
@@ -84,7 +38,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
         'Community forum access','
         'Basic analytics','        'Mobile app access'
       ],;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       color: 'from-cyan-500 to-blue-600',
       popular: false,
       bestFor: 'Small businesses, startups, individual professionals'
@@ -278,8 +231,7 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
         <div className="max-w-7xl mx-auto">;"
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">;
             {filteredServices.map((service, index) => {;
-              
-              
+
               return()
                 <motion.div
                   key = {service.id}
@@ -299,11 +251,6 @@ const ComprehensivePricingGuide2030: React.FC = () => {;'
 
   { duration: 0.5,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                   className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all group"

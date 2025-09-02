@@ -1,11 +1,10 @@
 module.exports = {
   apps: [
-    // Main application
     {
-      name: 'bolt-app',
+      name: 'zion-website',
       script: 'npm',
-      args: 'start',
-      cwd: './',
+      args: 'run dev',
+      cwd: '/workspace',
       instances: 1,
       autorestart: true,
       watch: false,
@@ -16,8 +15,14 @@ module.exports = {
       },
       env_production: {
         NODE_ENV: 'production',
-        NODE_OPTIONS: '--max-old-space-size=6144 --openssl-legacy-provider'
-      }
+        PORT: 3000
+      },
+      log_file: './logs/zion-website.log',
+      out_file: './logs/zion-website-out.log',
+      error_file: './logs/zion-website-error.log',
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: false,
+      time: false
     },
 
     // PM2 Error Prevention Automation - runs every 5 minutes (HIGHEST PRIORITY)
@@ -32,19 +37,27 @@ module.exports = {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '300000' // 5 minutes
       },
-      log_file: './automation/logs/pm2-error-prevention.log',
-      error_file: './automation/logs/pm2-error-prevention-error.log',
-      out_file: './automation/logs/pm2-error-prevention-out.log'
+      error_file: './logs/error-monitor-error.log',
+      out_file: './logs/error-monitor-out.log',
+      log_file: './logs/error-monitor-combined.log',
+      time: false,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: false,
+      max_restarts: 10,
+      min_uptime: '5s',
+      restart_delay: 2000,
+      cron_restart: '*/10 * * * *', // Run every 10 minutes
+      pmx: true
     },
 
     // Continuous console error fixer - runs every 15 minutes
     {
-      name: 'console-error-fixer',
-      script: './scripts/automation/console-error-fixer.cjs',
+      name: 'health-checker',
+      script: './scripts/health-checker.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      max_memory_restart: '512M',
+      max_memory_restart: '300M',
       env: {
         NODE_ENV: 'production',
         AUTOMATION_INTERVAL: '900000' // 15 minutes
@@ -394,14 +407,12 @@ module.exports = {
 
   deploy: {
     production: {
-      user: 'root',
+      user: 'deploy',
       host: 'localhost',
       ref: 'origin/main',
-      repo: 'git@github.com:your-username/bolt.new.zion.app.git',
-      path: '/workspace/production',
-      'pre-deploy-local': '',
-      'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.cjs --env production',
-      'pre-setup': ''
+      repo: 'git@github.com:your-username/your-repo.git',
+      path: '/var/www/production',
+      'post-deploy': 'npm install && pm2 reload ecosystem.config.cjs --env production'
     }
   }
 };

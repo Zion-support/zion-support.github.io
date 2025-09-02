@@ -31,18 +31,10 @@ const Marketplace: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
 
-  
-  
-  
-  
-    
     return matchesCategory && matchesSearch}) ;
 
-  
       case 'price':
-=======
-        return b.rating - a.rating;'      case 'price':
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+return b.rating - a.rating;'      case 'price':
         return ('
           parseFloat(a.price.replace(/[^0-9.]/g,)) -'
           parseFloat(b.price.replace(/[^0-9.]/g,))
@@ -56,7 +48,6 @@ const Marketplace: React.FC = () => {
     }
   }) ;
 
-  
       case 'service':'
         return 'bg-green-500/20 text-green-400';
       case 'hardware':'
@@ -65,7 +56,6 @@ const Marketplace: React.FC = () => {
         return 'bg-slate-500/20 text-slate-400'}
   };
 
-  
       case 'popular':'
         return 'bg-blue-500/20 text-blue-400';
       case 'trending':'
@@ -74,9 +64,6 @@ const Marketplace: React.FC = () => {
         return 'bg-slate-500/20 text-slate-400'}
   };
 
-  
-    
-    
     for (let i = 0; i < fullStars; i++) {
 
       stars.push()
@@ -89,20 +76,16 @@ const Marketplace: React.FC = () => {
         <Star key="half" className="w-4 h-4 text-yellow-400 fill-current"  />
       )}
 
-    
     for (let i = 0; i < emptyStars; i++) {
 "
       stars.push(<Star key={`empty-${i}`} className="w-4 h-4 text-gray-400"  />)}
 
     return stars};
 
-  
     return category ? category.icon : Globe};
 
-  
     return category ? category.name : 'General'};
 
-  
       case 'Best Seller':'
         return 'bg-gradient-to-r from-green-500 to-emerald-500';
       case 'Trending':'
@@ -154,12 +137,8 @@ const Marketplace: React.FC = () => {
                 <div className="relative">"
                   <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-cyan-light"  />
                   <input"
-<<<<<<< HEAD
-                    type="text"
-                    placeholder="Search solutions, vendors, or technologies..."
-=======
+
                     type="text""                    placeholder="Search solutions, vendors, or technologies..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}"
                     className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-zion-cyan-light focus:outline-none focus:ring-2 focus:ring-zion-purple focus:border-transparent"

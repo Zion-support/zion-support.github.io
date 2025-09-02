@@ -48,19 +48,9 @@ const researchAreas = [
     icon: Brain,
     description: 'Advancing the frontiers of AI through innovative research in neural networks, natural language processing, and computer vision.',
     color: 'from-purple-500 to-indigo-600',
-<<<<<<<< HEAD:pages.disabled/root_pages/research-development.page.tsx
+<:pages.disabled/root_pages/research-development.page.tsx
     focus = ['
-      'Deep Learning Architectures',Natural Language Processing',Computer Vision & Image Recognition',Reinforcement Learning',AI Ethics & Responsible AI',Edge AI & Federated Learning'
-========
-    focus: [
-      'Deep Learning Architectures',
-      'Natural Language Processing',
-      'Computer Vision & Image Recognition',
-      'Reinforcement Learning',
-      'AI Ethics & Responsible AI',
-      'Edge AI & Federated Learning'
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/research-development.page.tsx
-    ],
+      'Deep Learning Architectures',Natural Language Processing',Computer Vision & Image Recognition',Reinforcement Learning',AI Ethics & Responsible AI',Edge AI & Federated Learning'],
     publications: 15,
     patents: 8,
     projects: 12
@@ -72,19 +62,9 @@ const researchAreas = [
     icon: Atom,
     description: 'Exploring quantum computing applications and developing quantum-resistant cryptographic solutions.',
     color: 'from-blue-500 to-cyan-600',
-<<<<<<<< HEAD:pages.disabled/root_pages/research-development.page.tsx
+<:pages.disabled/root_pages/research-development.page.tsx
     focus = ['
-      'Quantum Algorithms',Quantum Cryptography',Quantum Machine Learning',Quantum Error Correction',Post-Quantum Cryptography',Quantum Sensing'
-========
-    focus: [
-      'Quantum Algorithms',
-      'Quantum Cryptography',
-      'Quantum Machine Learning',
-      'Quantum Error Correction',
-      'Post-Quantum Cryptography',
-      'Quantum Sensing'
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/research-development.page.tsx
-    ],
+      'Quantum Algorithms',Quantum Cryptography',Quantum Machine Learning',Quantum Error Correction',Post-Quantum Cryptography',Quantum Sensing'],
     publications: 8,
     patents: 5,
     projects: 6
@@ -96,19 +76,9 @@ const researchAreas = [
     icon: Shield,
     description: 'Developing next-generation security solutions to protect against evolving cyber threats.',
     color: 'from-red-500 to-pink-600',
-<<<<<<<< HEAD:pages.disabled/root_pages/research-development.page.tsx
+<:pages.disabled/root_pages/research-development.page.tsx
     focus = ['
-      'Threat Intelligence',Zero-Trust Security',Privacy-Preserving Technologies',Blockchain Security',IoT Security',AI-Powered Security'
-========
-    focus: [
-      'Threat Intelligence',
-      'Zero-Trust Security',
-      'Privacy-Preserving Technologies',
-      'Blockchain Security',
-      'IoT Security',
-      'AI-Powered Security'
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/research-development.page.tsx
-    ],
+      'Threat Intelligence',Zero-Trust Security',Privacy-Preserving Technologies',Blockchain Security',IoT Security',AI-Powered Security'],
     publications: 22,
     patents: 12,
     projects: 18
@@ -120,19 +90,9 @@ const researchAreas = [
     icon: Zap,
     description: 'Researching distributed computing paradigms and intelligent edge systems for real-time processing.',
     color: 'from-yellow-500 to-orange-600',
-<<<<<<<< HEAD:pages.disabled/root_pages/research-development.page.tsx
+<:pages.disabled/root_pages/research-development.page.tsx
     focus = ['
-      'Edge AI & Machine Learning',5G & 6G Networks',IoT Security & Privacy',Edge Computing Optimization',Real-time Data Processing',Smart City Technologies'
-========
-    focus: [
-      'Edge AI & Machine Learning',
-      '5G & 6G Networks',
-      'IoT Security & Privacy',
-      'Edge Computing Optimization',
-      'Real-time Data Processing',
-      'Smart City Technologies'
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/research-development.page.tsx
-    ],
+      'Edge AI & Machine Learning',5G & 6G Networks',IoT Security & Privacy',Edge Computing Optimization',Real-time Data Processing',Smart City Technologies'],
     publications: 18,
     patents: 9,
     projects: 14
@@ -144,19 +104,9 @@ const researchAreas = [
     icon: TrendingUp,
     description: 'Advancing data analytics methodologies and developing tools for extracting meaningful insights from complex datasets.',
     color: 'from-green-500 to-emerald-600',
-<<<<<<<< HEAD:pages.disabled/root_pages/research-development.page.tsx
+<:pages.disabled/root_pages/research-development.page.tsx
     focus = ['
-      'Big Data Processing',Predictive Analytics',Data Visualization',Statistical Modeling',Real-time Analytics',Data Privacy & Ethics'
-========
-    focus: [
-      'Big Data Processing',
-      'Predictive Analytics',
-      'Data Visualization',
-      'Statistical Modeling',
-      'Real-time Analytics',
-      'Data Privacy & Ethics'
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/research-development.page.tsx
-    ],
+      'Big Data Processing',Predictive Analytics',Data Visualization',Statistical Modeling',Real-time Analytics',Data Privacy & Ethics'],
     publications: 25,
     patents: 15,
     projects: 20
@@ -168,7 +118,7 @@ const researchAreas = [
     icon: Cloud,
     description: 'Researching cloud computing architectures and developing scalable, resilient cloud solutions.',
     color: 'from-indigo-500 to-purple-600',
-<<<<<<<< HEAD:pages.disabled/root_pages/research-development.page.tsx
+<:pages.disabled/root_pages/research-development.page.tsx
     focus = ['
       'Microservices Architecture',Container Orchestration',Serverless Computing',Multi-cloud Strategies',Cloud Security',;
       'DevOps Automation';
@@ -176,22 +126,7 @@ const researchAreas = [
     publications: 20,;
     patents: 10,;
     projects: 16;
-  };
-========
-    focus: [
-      'Microservices Architecture',
-      'Container Orchestration',
-      'Serverless Computing',
-      'Multi-cloud Strategies',
-      'Cloud Security',
-      'DevOps Automation'
-    ],
-    publications: 20,
-    patents: 10,
-    projects: 16
-  }
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/research-development.page.tsx
-];
+  };];
 ;
 const researchProjects = [
   {
@@ -440,21 +375,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}"
@@ -533,21 +458,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -569,32 +484,17 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}"
@@ -648,21 +548,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -685,32 +575,17 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                   whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                   transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                   viewport={{ once: true }}"
@@ -806,21 +681,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -840,32 +705,17 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -924,21 +774,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -958,32 +798,17 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 whileInView = {
 
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 viewport={{ once: true }}"
@@ -1050,21 +875,11 @@ export default function ResearchDevelopment(...args[]):  {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
 
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}

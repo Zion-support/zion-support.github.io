@@ -117,8 +117,7 @@ class AutoMergeConflictResolver {
 
   resolveImportConflicts(content, filePath) {
     // Handle import conflicts by keeping the most complete version
-    const importPattern = /<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>> .*?\n/g;
-    
+    const importPattern = /\s*\n(.*?)\n    
     return content.replace(importPattern, (match, headContent, incomingContent) => {
       const headImports = headContent.match(/import.*?from.*?['"]/g) || [];
       const incomingImports = incomingContent.match(/import.*?from.*?['"]/g) || [];
@@ -140,8 +139,7 @@ class AutoMergeConflictResolver {
 
   resolveComponentConflicts(content, filePath) {
     // Handle component conflicts by keeping the most recent version
-    const componentPattern = /<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>> .*?\n/g;
-    
+    const componentPattern = /\s*\n(.*?)\n    
     return content.replace(componentPattern, (match, headContent, incomingContent) => {
       // Prefer incoming content for components (usually more recent)
       return incomingContent.trim();
@@ -159,12 +157,11 @@ class AutoMergeConflictResolver {
     }
     
     // Default: keep incoming content
-    return content.replace(/<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>> .*?\n/g, '$2');
-  }
+    return content.replace(/\s*\n(.*?)\n  }
 
   resolvePackageJsonConflict(content) {
     try {
-      const headMatch = content.match(/<<<<<<< HEAD\s*\n(.*?)\n=======/s);
+      const headMatch = content.match(//s);
       const incomingMatch = content.match(/=======\s*\n(.*?)\n>>>>>>>/s);
       
       if (headMatch && incomingMatch) {
@@ -187,12 +184,11 @@ class AutoMergeConflictResolver {
     }
     
     // Fallback: remove conflict markers
-    return content.replace(/<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>> .*?\n/g, '$2');
-  }
+    return content.replace(/\s*\n(.*?)\n  }
 
   resolveTsConfigConflict(content) {
     // For tsconfig.json, prefer the more complete configuration
-    const headMatch = content.match(/<<<<<<< HEAD\s*\n(.*?)\n=======/s);
+    const headMatch = content.match(//s);
     const incomingMatch = content.match(/=======\s*\n(.*?)\n>>>>>>>/s);
     
     if (headMatch && incomingMatch) {
@@ -203,16 +199,13 @@ class AutoMergeConflictResolver {
       return headConfig.length > incomingConfig.length ? headConfig : incomingConfig;
     }
     
-    return content.replace(/<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>> .*?\n/g, '$2');
-  }
+    return content.replace(/\s*\n(.*?)\n  }
 
   removeConflictMarkers(content) {
     // Remove any remaining conflict markers
     return content
-      .replace(/<<<<<<< HEAD\s*\n/g, '')
-      .replace(/=======\s*\n/g, '')
-      .replace(/>>>>>>> .*?\n/g, '');
-  }
+      .replace(/\s*\n/g, '')
+      .replace(/  }
 
   async processBranch(branchName) {
     this.log(`🔄 Processing branch: ${branchName}`);

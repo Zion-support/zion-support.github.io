@@ -1,61 +1,4 @@
-<<<<<<< HEAD
-import { Brain, 
-import { revolutionaryMicroSaasServices2028, 
 
-
-  Cloud, 
-  Shield, 
-  Rocket, 
-  Cpu, 
-  Lock, 
-  Heart, 
-  Globe,
-  Zap,
-  Users,
-  ShoppingCart,
-  MessageCircle,
-  BookOpen,
-  DollarSign,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Award,
-  Lightbulb,
-  Database,
-  Network,
-  Smartphone,
-  Server,
-  Scale,
-  Truck,
-  Target,
-  Building,
-  Home,
-  Wrench,
-  FileText,
-  Video,
-  Mic,
-  Camera,
-  Phone,
-  Mail,
-  MapPin,
-  ExternalLink,
-  Calendar,
-  Clock,
-  BarChart3,
-  Target as TargetIcon,
-  Check,
-  X,
-  Play,
-  ChevronRight,
-  ChevronLeft'
- } from 'lucide-react';
-  revolutionaryITInfrastructureServices2028, 
-  revolutionaryAIServices2028 '
- } from '@/data/innovativeMicroSaasServices2028';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -75,45 +18,33 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
       default: return Rocket}
   };
 
-  
       'from-green-600 to-emerald-600',;
       'from-red-600 to-orange-600',;
       'from-indigo-600 to-purple-600',;
       'from-yellow-600 to-orange-600',;
       'from-teal-600 to-blue-600',;
       'from-pink-600 to-red-600';
-=======
-      'from-blue-600 to-cyan-600','
+'from-blue-600 to-cyan-600','
       'from-purple-600 to-pink-600',;'
       'from-green-600 to-emerald-600',;'
       'from-red-600 to-orange-600',;'
       'from-indigo-600 to-purple-600',;'
       'from-yellow-600 to-orange-600',;'
       'from-teal-600 to-blue-600',;'      'from-pink-600 to-red-600';
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     ];
     return colors[Math.abs (category.length) % colors.length]};
 
-  
     setCurrentTestimonial ( (prev) => (prev + 1) % testimonials.length) };
 
-  
     setCurrentTestimonial ( (prev) => (prev - 1 + testimonials.length) % testimonials.length) };
   return ("
     <div className = "min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO "
-<<<<<<< HEAD
-        title="Comprehensive Services Landing 2028 - Zion Tech Group"
-        description="Discover our comprehensive suite of innovative micro SAAS, IT infrastructure, and AI services for 2028. Transform your business with cutting-edge technology solutions."
-        keywords="comprehensive services 2028, micro SAAS, IT services, AI services, technology solutions, business transformation"
-        canonical="https://ziontechgroup.com/comprehensive-services-landing-2028"
-       />
-=======
+
         title="Comprehensive Services Landing 2028 - Zion Tech Group""
         description="Discover our comprehensive suite of innovative micro SAAS, IT infrastructure, and AI services for 2028. Transform your business with cutting-edge technology solutions.""
         keywords="comprehensive services 2028, micro SAAS, IT services, AI services, technology solutions, business transformation""        canonical="https://ziontechgroup.com/comprehensive-services-landing-2028"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 
       {/* Hero Section */}"
       <section className="relative overflow-hidden">"
@@ -158,11 +89,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.8,
   delay: 0.2 
 
-
-
-
-
-
 }}"
             className="text-xl text-zion-slate-light max-w-4xl mx-auto mb-8"
 
@@ -186,11 +112,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.8,
   delay: 0.4 
-
-
-
-
-
 
 }}"
             className="flex flex-wrap justify-center gap-4"
@@ -237,11 +158,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="text-center"
@@ -302,11 +218,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-zion-cyan/50 transition-all duration-300 hover:scale-105 group"
@@ -387,11 +298,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}"
             className="text-center mt-12"
@@ -476,12 +382,8 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 "
             <div className="flex items-center justify-center gap-4 mt-8">
               <Button"
-<<<<<<< HEAD
-                variant="ghost"
-                size="sm"
-=======
+
                 variant="ghost""                size="sm"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 onClick={prevTestimonial}"
                 className="text-zion-slate-light hover:text-white"
 "
@@ -500,12 +402,8 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
               </div>
 
               <Button"
-<<<<<<< HEAD
-                variant="ghost"
-                size="sm"
-=======
+
                 variant="ghost""                size="sm"
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                 onClick={nextTestimonial}"
                 className="text-zion-slate-light hover:text-white"
 "
@@ -559,11 +457,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.1 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -592,11 +485,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -627,11 +515,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.3 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -660,11 +543,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -695,11 +573,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.5 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -728,11 +601,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.6 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -768,11 +636,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { opacity: 0,
   scale: 0.9 
-
-
-
-
-
 
 }}"
             className="bg-zion-blue-dark border border-zion-cyan/30 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
@@ -935,11 +798,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.1 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -972,11 +830,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}"
               className="text-center"
@@ -1011,11 +864,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
   { duration: 0.6,
   delay: 0.3 
 
-
-
-
-
-
 }}"
               className="text-center"
 "
@@ -1047,11 +895,6 @@ export default function ComprehensiveServicesLanding2028(...args[]):  {
 
   { duration: 0.6,
   delay: 0.4 
-
-
-
-
-
 
 }}"
             className="text-center mt-12"

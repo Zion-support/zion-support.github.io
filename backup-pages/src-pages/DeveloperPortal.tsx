@@ -1,48 +1,4 @@
-<<<<<<< HEAD
-import {
 
-  Code,
-  BookOpen,
-  Zap,
-  Shield,
-  Users,
-  MessageSquare,
-  Github,
-  ExternalLink,
-  Terminal,
-  Webhook,
-  Key,
-  Mail,
-  ArrowRight,
-  Check,
-  Star,
-  Download,
-  Play,
-  Settings,
-  Database,
-  Globe,
-  Lock,
-  Rocket,
-  Crown,
-  Sparkles,
-  ChevronRight,
-  Clock,
-  BarChart3,
-  Target,
-  Award,
-  Lightbulb'
-} from 'lucide-react';
-
-const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
-
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  
-      title: 'Code Examples',
-      description: 'Ready-to-use code snippets in multiple languages',
-      category: 'Development'
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -65,16 +21,13 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       category: 'Integration'};
   ];
 
-  
       description: 'Quick start tutorial for new developers',
       icon: '🚀',
       difficulty: 'Beginner'
-=======
 '
       title: 'Getting Started Guide',;'
       description: 'Quick start tutorial for new developers','
       icon: '🚀','      difficulty: 'Beginner'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
@@ -97,7 +50,6 @@ const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
       difficulty: 'All Levels'};
   ];
 
-  
       code: `
     'Content-Type': 'application/json'}}) ;
 
@@ -213,11 +165,6 @@ const data = await response.json();`
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
@@ -387,11 +334,6 @@ const data = await response.json();`
   { duration: 0.6,
   delay: index * 0.1 
 
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
 "
@@ -482,11 +424,6 @@ const data = await response.json();`
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}"
             className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"

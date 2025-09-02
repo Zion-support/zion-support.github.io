@@ -1,52 +1,4 @@
-<<<<<<< HEAD
-import { Star, 
 
-
-  CheckCircle, 
-  ArrowRight, 
-  Zap, 
-  Brain, 
-  Shield, 
-  Cloud, 
-  Rocket, 
-  Globe,
-  Cpu,
-  Lock,
-  Heart,
-  Users,
-  ShoppingCart,
-  BookOpen,
-  MessageCircle,
-  HelpCircle,
-  DollarSign,
-  Gauge,
-  Workflow,
-  Atom,
-  Target,
-  Award,
-  Code,
-  Truck,
-  Building,
-  BarChart3,
-  PenTool,
-  Eye,
-  Server,
-  Smartphone,
-  Database,
-  Network,
-  Clock,
-  Search,
-  Filter,
-  Grid,
-  List,
-  TrendingUp,
-  Sparkles,
-  Crown,
-  Gem'
- } from 'lucide-react.ts';
-
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 export default function ComprehensivePricing2029(...args: any[]): any {
 
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -54,28 +6,22 @@ export default function ComprehensivePricing2029(...args: any[]): any {
   const [viewMode, setViewMode] = useState<any>('grid');
   const [sortBy, setSortBy] = useState<any>('popularity');
 
-  
   // Combine all services
-  
-  
-    
+
     return matchesCategory && matchesSearch}) ;
 
   // Sort services
   
       case 'rating':
         return b.rating - a.rating;
-=======
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));'      case 'rating':
+return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', ''));'      case 'rating':
         return b.rating - a.rating;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0) ;
       default:
         return 0}
   }) ;
 
-  
     return iconMap[category] || Cpu};
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -191,12 +137,8 @@ export default function ComprehensivePricing2029(...args: any[]): any {
               <div className="flex-1 relative">"
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search services by name, description, or features..."
-=======
+
                   type="text""                  placeholder="Search services by name, description, or features..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}"
                   className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"

@@ -11,14 +11,8 @@ export interface EmergingTech2026ServiceV2 {
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-    address: string;
-  };
-
-=======
-    address: string}}
->>>>>>> 93c877c1f5b152c458bc28f698e09e33b34cdae3
-export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
+address: string;
+  };export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   {
     id: "2026-emerging-tech-v2",
     name: "2026 Emerging Tech Platform V2",

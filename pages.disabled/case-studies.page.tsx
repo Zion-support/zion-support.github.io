@@ -1,13 +1,7 @@
-<<<<<<<< HEAD:src/pages/case-studies.tsx.backup.1756558703296
+<:src/pages/case-studies.tsx.backup.1756558703296
 import React, { useState } from 'react.ts';
 import { motion          } from 'framer-motion.ts';
-import { Link          } from 'react-router-dom.ts';
-========
-import React, { useState } from 'react';
-import { motion  } from 'framer-motion';
-import Link from 'next/link';
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/case-studies.page.tsx
-import { CheckCircle,
+import { Link          } from 'react-router-dom.ts';import { CheckCircle,
   TrendingUp,
   Users,
   DollarSign,
@@ -167,12 +161,7 @@ const caseStudies = [
     duration: "15 months",
     roi: "500%",
     image: "/images/case-study-6.jpg"
-<<<<<<<< HEAD:src/pages/case-studies.tsx.backup.1756558703296
-
-========
-  },
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/case-studies.page.tsx
-];
+<:src/pages/case-studies.tsx.backup.1756558703296];
 
 const industries = ['All', 'Technology', 'Healthcare', 'Finance', 'Banking', 'Manufacturing', 'Retail'];
 const technologies = ['All', 'AI/ML', 'Cloud Computing', 'Cybersecurity', 'IoT', 'Data Analytics', 'DevOps'];
@@ -203,20 +192,10 @@ export default function CaseStudies(...args: any[]): any {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             animate = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}
@@ -297,30 +276,15 @@ export default function CaseStudies(...args: any[]): any {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
                 animate = {
   { opacity: 1,
   y: 0 
 
-
-
-
-
-
 }}
                 transition = {
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}
                 className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-zion-cyan/30 transition-all duration-300"
@@ -429,20 +393,10 @@ export default function CaseStudies(...args: any[]): any {
   { opacity: 0,
   y: 20 
 
-
-
-
-
-
 }}
             whileInView = {
   { opacity: 1,
   y: 0 
-
-
-
-
-
 
 }}
             transition={{ duration: 0.6 }}

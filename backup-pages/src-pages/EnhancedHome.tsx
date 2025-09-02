@@ -91,8 +91,6 @@ FuturisticBackground.displayName = 'FuturisticBackground';
 
 // Enhanced hero section component
 
-  
-  
   }, [heroSlides.length]) }, [heroSlides.length]) ;
 
   useEffect ( () => {
@@ -291,10 +289,8 @@ StatsSection.displayName = 'StatsSection';
 
 });
 
-=======
-  )});
+)});
 '
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
 CTASection.displayName = 'CTASection';
 
 // Main EnhancedHome component
@@ -304,7 +300,6 @@ const EnhancedHome: React.FC = () => {
   useEffect ( () => {
     setIsLoaded (true) }, []) ;
 
-  
     if (servicesSection) {
 
       servicesSection.scrollIntoView({ behavior: 'smooth' })}
@@ -320,18 +315,11 @@ const EnhancedHome: React.FC = () => {
   return()
     <>
       <EnhancedSEO "
-<<<<<<< HEAD
-        title="Zion Tech Group - Leading AI Solutions & Technology Services"
-        description="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation."
-        keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services"
-        type="website"
-       />
-=======
+
         title="Zion Tech Group - Leading AI Solutions & Technology Services""
         description="Transform your business with cutting-edge AI solutions, quantum computing, and innovative micro SAAS services. Expert technology consulting and digital transformation.""
         keywords="AI solutions, quantum computing, micro SAAS, digital transformation, technology consulting, machine learning, cybersecurity, cloud services""        type="website"
        />
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
       
       <FuturisticBackground  />
       "      <div className="relative z-10">
