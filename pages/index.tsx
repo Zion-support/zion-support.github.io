@@ -46,6 +46,28 @@ const Home: NextPage = () => {
           </motion.p>
           
           <motion.div 
+            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 mb-8 max-w-4xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+          >
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">$2.5M+</div>
+                <div className="text-gray-200">Average Client ROI</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">99.9%</div>
+                <div className="text-gray-200">Uptime Guarantee</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                <div className="text-gray-200">Expert Support</div>
+              </div>
+            </div>
+          </motion.div>
+          
+          <motion.div 
             className="flex flex-col sm:flex-row justify-center gap-4 mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -207,6 +229,86 @@ const Home: NextPage = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
               </Link>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Market Leadership Section */}
+      <section className="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div className="container mx-auto px-4">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Market-Leading Technology Solutions</h2>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              We're at the forefront of technological innovation, delivering cutting-edge solutions that give our clients a competitive edge in today's digital landscape. Our comprehensive portfolio spans from revolutionary AI services to enterprise-grade infrastructure solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-6 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="text-4xl mb-4">🚀</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Innovation First</h3>
+              <p className="text-gray-600 text-sm">
+                Pioneering quantum computing, AI, and blockchain solutions that set industry standards
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-6 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="text-4xl mb-4">💰</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Proven ROI</h3>
+              <p className="text-gray-600 text-sm">
+                Average client sees $2.5M+ ROI with 300% faster time-to-market
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-6 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="text-4xl mb-4">🏆</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Industry Recognition</h3>
+              <p className="text-gray-600 text-sm">
+                Award-winning solutions trusted by Fortune 500 companies worldwide
+              </p>
+            </motion.div>
+
+            <motion.div 
+              className="bg-white rounded-xl shadow-lg p-6 text-center"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              <div className="text-4xl mb-4">🔒</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Enterprise Security</h3>
+              <p className="text-gray-600 text-sm">
+                Bank-grade security with SOC 2 compliance and zero-trust architecture
+              </p>
             </motion.div>
           </div>
         </div>
