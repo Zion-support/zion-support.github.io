@@ -1,6 +1,5 @@
-<<<<<<< HEAD:pages.disabled_auto/api.tsx
-import React from,
-  react';
+<<<<<<< HEAD
+import React from, react';'
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -10,139 +9,92 @@ import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from
 import Link from
   'next/link';
 =======
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import {
-  Code,
-  Key,
-  Globe,
-  Database,
-  Shield,
-  Zap,
-  BookOpen,
-  ExternalLink,
-} from 'lucide-react';
-import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../components/layout/MainLayout'
+import { Code, Key, Globe, Database, Shield, Zap, BookOpen, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const API: NextPage = () => {
   const apiEndpoints = [
     {
-<<<<<<< HEAD:pages.disabled_auto/api.tsx
-      method:
-  'GET,
+<<<<<<< HEAD
+      method: 'GET, '
       endpoint:,
-  /api/v1/users',
-      description: 'Retrieve user information,
-      category:,
-  Users'
+  /api/v1/users', '
+      description: 'Retrieve user information,'
+      category:, Users''
     },
     {
-      method: 'POST,
+      method: 'POST, '
       endpoint:,
-  /api/v1/users',
-      description: 'Create a new user,
-      category:,
-  Users'
+  /api/v1/users', '
+      description: 'Create a new user,'
+      category:, Users''
     },
     {
-      method: 'GET,
+      method: 'GET, '
       endpoint:,
-  /api/v1/projects',
-      description: 'List all projects,
-      category:,
-  Projects'
+  /api/v1/projects', '
+      description: 'List all projects,'
+      category:, Projects''
     },
     {
-      method: 'POST,
+      method: 'POST, '
       endpoint:,
-  /api/v1/projects',
-      description: 'Create a new project,
-      category:,
-  Projects'
+  /api/v1/projects', '
+      description: 'Create a new project,'
+      category:, Projects''
     },
     {
-      method: 'GET,
+      method: 'GET, '
       endpoint:,
-  /api/v1/analytics',
-      description: 'Get analytics data,
-      category:,
-  Analytics'
+  /api/v1/analytics', '
+      description: 'Get analytics data,'
+      category:, Analytics''
     },
     {
-      method: 'POST,
+      method: 'POST, '
       endpoint:,
-  /api/v1/webhooks',
-      description: 'Create a webhook,
-      category:,
-  Webhooks'
-    }
-  ];
-
-  const sdkLanguages = [
-    { name: 'JavaScript, version:,
-  2.1.0', icon: '🟨 },
-    { name:,
-  Python', version: '1.8.2, icon:,
-  🐍' },
-    { name: 'PHP, version:,
-  1.5.0', icon: '🐘 },
-    { name:,
-  Java', version: '1.3.0, icon:,
-  ☕' },
-    { name: 'Go, version:,
-  1.2.0', icon: '🐹 },
-    { name:,
-  Ruby', version: '1.1.0, icon:
-  '💎' }
+  /api/v1/webhooks', '
+      description: 'Create a webhook,'
+      category:, Webhooks''
 =======
-      method: 'GET',
-      endpoint: '/api/v1/users',
-      description: 'Retrieve user information',
-      category: 'Users',
-    },
-    {
-      method: 'POST',
-      endpoint: '/api/v1/users',
-      description: 'Create a new user',
-      category: 'Users',
-    },
-    {
-      method: 'GET',
-      endpoint: '/api/v1/projects',
-      description: 'List all projects',
-      category: 'Projects',
-    },
-    {
-      method: 'POST',
-      endpoint: '/api/v1/projects',
-      description: 'Create a new project',
-      category: 'Projects',
-    },
-    {
-      method: 'GET',
-      endpoint: '/api/v1/analytics',
-      description: 'Get analytics data',
-      category: 'Analytics',
-    },
-    {
-      method: 'POST',
-      endpoint: '/api/v1/webhooks',
-      description: 'Create a webhook',
-      category: 'Webhooks',
-    },
-  ];
+      method: 'GET', endpoint: '/api/v1/users', description: 'Retrieve user information', category: 'Users'
+    }, {
+      method: 'POST', endpoint: '/api/v1/users', description: 'Create a new user', category: 'Users'
+    }, {
+      method: 'GET', endpoint: '/api/v1/projects', description: 'List all projects', category: 'Projects'
+    }, {
+      method: 'POST', endpoint: '/api/v1/projects', description: 'Create a new project', category: 'Projects'
+    }, {
+      method: 'GET', endpoint: '/api/v1/analytics', description: 'Get analytics data', category: 'Analytics'
+    }, {
+      method: 'POST', endpoint: '/api/v1/webhooks', description: 'Create a webhook', category: 'Webhooks'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+    }
+  ]
 
   const sdkLanguages = [
-    { name: 'JavaScript', version: '2.1.0', icon: '🟨' },
-    { name: 'Python', version: '1.8.2', icon: '🐍' },
-    { name: 'PHP', version: '1.5.0', icon: '🐘' },
-    { name: 'Java', version: '1.3.0', icon: '☕' },
-    { name: 'Go', version: '1.2.0', icon: '🐹' },
-    { name: 'Ruby', version: '1.1.0', icon: '💎' },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
+<<<<<<< HEAD
+    { name: 'JavaScript, version:,'
+  2.1.0', icon: '🟨 },
+    { name:, Python', version: '1.8.2, icon:,
+  🐍' }, '
+    { name: 'PHP, version:, '
+  1.5.0', icon: '🐘 }, { name:,
+  Java', version: '1.3.0, icon:, ☕' },'
+    { name: 'Go, version:,'
+  1.2.0', icon: '🐹 },
+    { name:, Ruby', version: '1.1.0, icon: '💎' }
   ];
+=======
+    { name: 'JavaScript', version: '2.1.0', icon: '🟨' }, { name: 'Python', version: '1.8.2', icon: '🐍' },
+    { name: 'PHP', version: '1.5.0', icon: '🐘' }, { name: 'Java', version: '1.3.0', icon: '☕' },
+    { name: 'Go', version: '1.2.0', icon: '🐹' }, { name: 'Ruby', version: '1.1.0', icon: '💎' }
+  ]
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
   return (
     <MainLayout
@@ -153,23 +105,17 @@ const API: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-              API Reference
-            </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">API Reference</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Complete API documentation for integrating with Zion Tech Group
-            services.
+            Complete API documentation for integrating with Zion Tech Group services.
           </p>
-
+          
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">
               Get API Key
             </button>
-            <Link
-              href="/documentation"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
-            >
+            <Link href="/documentation" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               View Documentation
             </Link>
           </div>
@@ -180,34 +126,23 @@ const API: NextPage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              API Overview
-            </h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">API Overview</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our RESTful API provides programmatic access to all Zion Tech
-              Group services.
+              Our RESTful API provides programmatic access to all Zion Tech Group services.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             <div className="bg-blue-50 p-6 rounded-lg text-center">
               <Globe className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                RESTful API
-              </h3>
-              <p className="text-gray-600">
-                Standard HTTP methods and status codes
-              </p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">RESTful API</h3>
+              <p className="text-gray-600">Standard HTTP methods and status codes</p>
             </div>
 
             <div className="bg-green-50 p-6 rounded-lg text-center">
               <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Secure
-              </h3>
-              <p className="text-gray-600">
-                OAuth 2.0 and API key authentication
-              </p>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Secure</h3>
+              <p className="text-gray-600">OAuth 2.0 and API key authentication</p>
             </div>
 
             <div className="bg-purple-50 p-6 rounded-lg text-center">
@@ -218,9 +153,7 @@ const API: NextPage = () => {
 
             <div className="bg-orange-50 p-6 rounded-lg text-center">
               <Database className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                Reliable
-              </h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Reliable</h3>
               <p className="text-gray-600">99.9% uptime guarantee</p>
             </div>
           </div>
@@ -242,17 +175,14 @@ const API: NextPage = () => {
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                API Key Authentication
-              </h3>
+              <h3 className="text-2xl font-semibold text-gray-900 mb-6">API Key Authentication</h3>
               <p className="text-gray-600 mb-6">
-                Include your API key in the Authorization header of your
-                requests:
+                Include your API key in the Authorization header of your requests:
               </p>
-
+              
               <div className="bg-gray-900 text-green-400 p-6 rounded-lg mb-6 overflow-x-auto">
                 <pre className="text-sm">
-                  {`curl -H "Authorization: Bearer YOUR_API_KEY" \\
+{`curl -H "Authorization: Bearer YOUR_API_KEY" \\
      -H "Content-Type: application/json" \\
      https://api.ziontechgroup.com/v1/users`}
                 </pre>
@@ -260,9 +190,7 @@ const API: NextPage = () => {
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">
-                    Getting Your API Key
-                  </h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Getting Your API Key</h4>
                   <ol className="list-decimal list-inside text-gray-600 space-y-2">
                     <li>Sign up for a Zion Tech Group account</li>
                     <li>Navigate to your dashboard</li>
@@ -272,9 +200,7 @@ const API: NextPage = () => {
                   </ol>
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-3">
-                    Rate Limits
-                  </h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Rate Limits</h4>
                   <ul className="list-disc list-inside text-gray-600 space-y-2">
                     <li>Free tier: 1, 000 requests/hour</li>
                     <li>Pro tier: 10,000 requests/hour</li>
@@ -292,9 +218,7 @@ const API: NextPage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              API Endpoints
-            </h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">API Endpoints</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Explore our comprehensive API endpoints organized by category.
             </p>
@@ -306,49 +230,26 @@ const API: NextPage = () => {
                 <table className="w-full">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Method
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Endpoint
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Description
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Category
-                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Method</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Endpoint</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
                     {apiEndpoints.map((endpoint, index) => (
                       <tr key={index} className="hover: bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap">
-<<<<<<< HEAD:pages.disabled_auto/api.tsx
                           <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                            endpoint.method ===,
-  GET' ?
+                            endpoint.method ===, GET' ?'
   'bg-green-100 text-green-800': endpoint.method ===
   'POST' ?
   'bg-blue-100 text-blue-800' :
                             endpoint.method ===
   'PUT' ?
   'bg-yellow-100 text-yellow-800' :
-  'bg-red-100 text-red-800
+  'bg-red-100 text-red-800'
                           }`}>
-=======
-                          <span
-                            className={`px-2 py-1 text-xs font-semibold rounded-full ${
-                              endpoint.method === 'GET'
-                                ? 'bg-green-100 text-green-800'
-                                : endpoint.method === 'POST'
-                                  ? 'bg-blue-100 text-blue-800'
-                                  : endpoint.method === 'PUT'
-                                    ? 'bg-yellow-100 text-yellow-800'
-                                    : 'bg-red-100 text-red-800'
-                            }`}
-                          >
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/api.tsx
                             {endpoint.method}
                           </span>
                         </td>
@@ -377,12 +278,9 @@ const API: NextPage = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Software Development Kits
-            </h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Software Development Kits</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Use our official SDKs to integrate with our API in your preferred
-              programming language.
+              Use our official SDKs to integrate with our API in your preferred programming language.
             </p>
           </div>
 
@@ -392,9 +290,7 @@ const API: NextPage = () => {
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{sdk.icon}</span>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {sdk.name}
-                    </h3>
+                    <h3 className="text-xl font-semibold text-gray-900">{sdk.name}</h3>
                     <p className="text-gray-600">v{sdk.version}</p>
                   </div>
                 </div>
@@ -402,10 +298,7 @@ const API: NextPage = () => {
                   <button className="flex-1 bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors">
                     Install
                   </button>
-                  <Link
-                    href={`/docs/sdk/${sdk.name.toLowerCase()}`}
-                    className="flex-1 border border-blue-600 text-blue-600 hover: bg-blue-50 px-4 py-2 rounded-lg font-semibold transition-colors text-center"
-                  >
+                  <Link href={`/docs/sdk/${sdk.name.toLowerCase()}`} className="flex-1 border border-blue-600 text-blue-600 hover: bg-blue-50 px-4 py-2 rounded-lg font-semibold transition-colors text-center">
                     Docs
                   </Link>
                 </div>
@@ -419,9 +312,7 @@ const API: NextPage = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Interactive API Explorer
-            </h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Interactive API Explorer</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Test our API endpoints directly in your browser.
             </p>
@@ -429,14 +320,10 @@ const API: NextPage = () => {
 
           <div className="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">
-                Try the API
-              </h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Try the API</h3>
               <div className="space-y-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Endpoint
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">Endpoint</label>
                   <select className="w-full px-3 py-2 border border-gray-300 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500">
                     <option>GET /api/v1/users</option>
                     <option>POST /api/v1/users</option>
@@ -445,9 +332,7 @@ const API: NextPage = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    API Key
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">API Key</label>
                   <input
                     type="password"
                     placeholder="Enter your API key"
@@ -470,20 +355,13 @@ const API: NextPage = () => {
             Need API Support?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Our developer support team is here to help you integrate with our
-            API.
+            Our developer support team is here to help you integrate with our API.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link
-              href="/help"
-              className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
-            >
+            <Link href="/help" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               API Support
             </Link>
-            <Link
-              href="/contact"
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg"
-            >
+            <Link href="/contact" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
               Contact Us
             </Link>
           </div>

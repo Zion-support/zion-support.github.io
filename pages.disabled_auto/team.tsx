@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from
   'react';
 import { motion } from
@@ -11,34 +12,27 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-<<<<<<< HEAD:pages.disabled_auto/team.tsx
-  Linkedin,
-  Twitter,
-  Mail,
-  Globe,
-  Award,
-  Star,
-  Users,
-  Brain,
-  Shield,
-  Cloud,
-  Database,
-  Network,
-  Zap,
-  Target,
-  TrendingUp,
-  Phone,
-  MapPin,
-  Calendar,
-  GraduationCap,
-  Briefcase,
-  Heart,
-  Sparkles,
-  CheckCircle,
-  ArrowRight
+  Linkedin, Twitter,
+  Mail, Globe,
+  Award, Star,
+  Users, Brain,
+  Shield, Cloud,
+  Database, Network,
+  Zap, Target,
+  TrendingUp, Phone,
+  MapPin, Calendar,
+  GraduationCap, Briefcase,
+  Heart, Sparkles,
+  CheckCircle, ArrowRight
 } from
   'lucide-react';
 =======
+import React from 'react'
+import { motion } from 'framer-motion'
+import { SEO } from '../components/SEO'
+import { Button } from '../components/ui/Button'
+import { Card } from '../components/ui/Card'
+import { Badge } from '../components/ui/Badge'
   Linkedin, Twitter,
   Mail, Globe,
   Award, Star,
@@ -52,7 +46,7 @@ import {
   Heart, Sparkles,
   CheckCircle, ArrowRight
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const Team: React.FC = () => {
   const teamMembers = [
@@ -124,25 +118,19 @@ const Team: React.FC = () => {
 
   const values = [
     {
-<<<<<<< HEAD:pages.disabled_auto/team.tsx
-      title: "Innovation First",
-      description: "We push the boundaries of what
-  's possible with AI and technology",
+<<<<<<< HEAD
+      title: "Innovation First", description: "We push the boundaries of what"
+  's possible with AI and technology",'"
 =======
-      title: "Innovation First", description: "We push the boundaries of what&apos;s possible with AI and technology", '
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/team.tsx
+      title: "Innovation First", description: "We push the boundaries of what&aposs possible with AI and technology", ''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       icon: Brain
-    },
-    {
-      title: "Client Success", description: "Our success is measured by the success of our clients",
-      icon: Target
     }, {
-      title: "Ethical AI",
-      description: "We develop AI solutions that are fair, transparent, and beneficial", icon: Shield
-    },
-    {
-      title: "Continuous Learning", description: "We stay at the forefront of technology through constant learning",
-      icon: TrendingUp
+      title: "Client Success", description: "Our success is measured by the success of our clients", icon: Target
+    }, {
+      title: "Ethical AI", description: "We develop AI solutions that are fair, transparent, and beneficial", icon: Shield
+    }, {
+      title: "Continuous Learning", description: "We stay at the forefront of technology through constant learning", icon: TrendingUp
     }
   ];
 
@@ -405,7 +393,7 @@ const Team: React.FC = () => {
               Join Our Team
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              We&apos;re always looking for talented individuals who share our passion for AI and innovation. '
+              We&apos;re always looking for talented individuals who share our passion for AI and innovation. ''
               Join us in building the future of technology.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">

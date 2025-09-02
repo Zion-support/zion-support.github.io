@@ -34,8 +34,7 @@ export class ErrorBoundary extends React.Component {
     if (hasError) {
       if (React.isValidElement(fallback)) {
         return React.cloneElement(fallback, {
-          error: error || new Error('Unknown error'),
-          resetErrorBoundary: this.resetErrorBoundary,
+          error: error || new Error('Unknown error'), resetErrorBoundary: this.resetErrorBoundary,
         });
       }
       return fallback || null;

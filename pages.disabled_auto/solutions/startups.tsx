@@ -1,5 +1,5 @@
-import React from,
-  react';
+<<<<<<< HEAD
+import React from, react';'
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -8,217 +8,168 @@ import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSig
   'lucide-react';
 import Link from
   'next/link';
+=======
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../../components/layout/MainLayout'
+import { CheckCircle, Star, Users, Zap, Shield, Globe, Rocket, Target, DollarSign } from 'lucide-react'
+import Link from 'next/link'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const Startups: NextPage = () => {
   const solutions = [
     {
-<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
-      title:
-  'MVP Development,
-      description:
-  'Rapid development of minimum viable products to validate your ideas',
-      icon: <Rocket className="w-8 h-8" />,
-      features: [,
-  Agile development methodology',
+<<<<<<< HEAD
+      title: 'MVP Development, '
+      description: 'Rapid development of minimum viable products to validate your ideas',
+      icon: <Rocket className="w-8 h-8" />, features: [,
+  Agile development methodology', '
   'Rapid prototyping',
-  'User feedback integration',
-  'Scalable architecture'
+  'User feedback integration', 'Scalable architecture'
       ]
-    },
-    {
-      title: 'AI-Powered Analytics,
-      description:
-  'Data-driven insights to make informed business decisions',
-      icon: <Target className="w-8 h-8" />,
-      features: [,
-  Real-time analytics dashboard',
-  'Predictive modeling',
-  'Customer behavior analysis',
+    }, {
+      title: 'AI-Powered Analytics,'
+      description: 'Data-driven insights to make informed business decisions', icon: <Target className="w-8 h-8" />,
+      features: [, Real-time analytics dashboard','
+  'Predictive modeling', 'Customer behavior analysis',
   'Performance optimization'
       ]
-    },
-    {
-      title: 'Cloud Infrastructure,
-      description:
-  'Scalable cloud solutions that grow with your startup',
-      icon: <Globe className="w-8 h-8" />,
-      features: [,
-  Auto-scaling infrastructure',
-  'Cost optimization',
-  'High availability',
+    }, {
+      title: 'Cloud Infrastructure,'
+      description: 'Scalable cloud solutions that grow with your startup', icon: <Globe className="w-8 h-8" />,
+      features: [, Auto-scaling infrastructure','
+  'Cost optimization', 'High availability',
   'Global deployment'
       ]
-    },
-    {
-      title: 'Digital Marketing Automation,
-      description:
-  'Automated marketing tools to accelerate growth',
-      icon: <Zap className="w-8 h-8" />,
+    }, {
+      title: 'Digital Marketing Automation,'
+      description: 'Automated marketing tools to accelerate growth', icon: <Zap className="w-8 h-8" />,
       features: [
-  'Lead generation automation',
-  'Email marketing campaigns',
-  'Social media management',
-  'Conversion optimization'
+  'Lead generation automation', 'Email marketing campaigns',
+  'Social media management', 'Conversion optimization'
 =======
-      title: 'MVP Development', description: 'Rapid development of minimum viable products to validate your ideas',
-      icon: <Rocket className="w-8 h-8" />, features: [
-        'Agile development methodology',
-        'Rapid prototyping', 'User feedback integration',
-        'Scalable architecture'
+      title: 'MVP Development', description: 'Rapid development of minimum viable products to validate your ideas', icon: <Rocket className="w-8 h-8" />, features: [
+        'Agile development methodologyRapid prototypingUser feedback integration', 'Scalable architecture'
       ]
     }, {
       title: 'AI-Powered Analytics',
       description: 'Data-driven insights to make informed business decisions', icon: <Target className="w-8 h-8" />,
       features: [
-        'Real-time analytics dashboard', 'Predictive modeling',
-        'Customer behavior analysis', 'Performance optimization'
+        'Real-time analytics dashboardPredictive modelingCustomer behavior analysis', 'Performance optimization'
       ]
     }, {
       title: 'Cloud Infrastructure',
       description: 'Scalable cloud solutions that grow with your startup', icon: <Globe className="w-8 h-8" />,
       features: [
-        'Auto-scaling infrastructure', 'Cost optimization',
-        'High availability', 'Global deployment'
+        'Auto-scaling infrastructureCost optimizationHigh availability', 'Global deployment'
       ]
     }, {
       title: 'Digital Marketing Automation',
       description: 'Automated marketing tools to accelerate growth', icon: <Zap className="w-8 h-8" />,
       features: [
-        'Lead generation automation', 'Email marketing campaigns',
-        'Social media management', 'Conversion optimization'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
+        'Lead generation automationEmail marketing campaignsSocial media management', 'Conversion optimization'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       ]
     }
-  ];
+  ]
 
   const benefits = [
     {
-<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
-      icon: <Rocket className="w-6 h-6" />,
-      title:,
-  Fast Time to Market',
-      description: 'Launch your product 3x faster with our proven methodologies
-    },
-    {
-      icon: <DollarSign className="w-6 h-6" />,
-      title:,
-  Cost Effective',
-      description: 'Startup-friendly pricing with flexible payment options
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title:,
-  Scalable Solutions',
-      description: 'Built to scale from day one as your startup grows
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title:,
-  Expert Guidance',
-      description: 'Access to experienced entrepreneurs and technical experts
-=======
-      icon: <Rocket className="w-6 h-6" />, title: 'Fast Time to Market',
+<<<<<<< HEAD
+      icon: <Rocket className="w-6 h-6" />, title:,
+  Fast Time to Market', '
       description: 'Launch your product 3x faster with our proven methodologies'
-    }, {
-      icon: <DollarSign className="w-6 h-6" />,
-      title: 'Cost Effective', description: 'Startup-friendly pricing with flexible payment options'
     },
     {
-      icon: <Shield className="w-6 h-6" />, title: 'Scalable Solutions',
+      icon: <DollarSign className="w-6 h-6" />, title:,
+  Cost Effective', '
+      description: 'Startup-friendly pricing with flexible payment options'
+    },
+    {
+      icon: <Shield className="w-6 h-6" />, title:,
+  Scalable Solutions', '
       description: 'Built to scale from day one as your startup grows'
+    },
+    {
+      icon: <Users className="w-6 h-6" />, title:,
+  Expert Guidance', '
+      description: 'Access to experienced entrepreneurs and technical experts'
+=======
+      icon: <Rocket className="w-6 h-6" />, title: 'Fast Time to Market', description: 'Launch your product 3x faster with our proven methodologies'
     }, {
-      icon: <Users className="w-6 h-6" />,
-      title: 'Expert Guidance', description: 'Access to experienced entrepreneurs and technical experts'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
+      icon: <DollarSign className="w-6 h-6" />, title: 'Cost Effective', description: 'Startup-friendly pricing with flexible payment options'
+    }, {
+      icon: <Shield className="w-6 h-6" />, title: 'Scalable Solutions', description: 'Built to scale from day one as your startup grows'
+    }, {
+      icon: <Users className="w-6 h-6" />, title: 'Expert Guidance', description: 'Access to experienced entrepreneurs and technical experts'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
-  ];
+  ]
 
   const packages = [
     {
-<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
-      name:,
-  Launch',
-      price: $2,999,
-  ,
-      description: 'Perfect for early-stage startups,
+<<<<<<< HEAD
+      name:, Launch','
+      price: $2, 999,
+  , description: 'Perfect for early-stage startups,'
       features: [
-  'MVP development (4-6 weeks)',
-  'Basic cloud infrastructure',
-  'Essential integrations',
-  'Email support',
+  'MVP development (4-6 weeks)', 'Basic cloud infrastructure',
+  'Essential integrations', 'Email support',
   'Basic analytics setup'
-      ],
-      popular: false
+      ], popular: false
     },
     {
-      name:,
-  Scale',
-      price: $7,999,
-  ,
-      description: 'Ideal for growing startups,
+      name:, Scale','
+      price: $7, 999,
+  , description: 'Ideal for growing startups,'
       features: [
-  'Full product development (8-12 weeks)',
-  'Advanced cloud infrastructure',
-  'AI-powered analytics',
-  'Priority support',
-  'Marketing automation',
-  'Team training'
-      ],
-      popular: true
+  'Full product development (8-12 weeks)', 'Advanced cloud infrastructure',
+  'AI-powered analytics', 'Priority support',
+  'Marketing automation', 'Team training'
+      ], popular: true
     },
     {
-      name:,
-  Enterprise',
-      price: 'Custom,
+      name:, Enterprise','
+      price: 'Custom, '
       description:,
-  Complete solution for established startups',
+  Complete solution for established startups', '
       features: [
-  'Custom development timeline,
-  'Enterprise-grade infrastructure',
-  'Advanced AI solutions',
-  'Dedicated team',
-  '24/7 support',
-  'Custom integrations',
-  'Ongoing optimization'
-      ],
-      popular: false
+  'Custom development timeline,'
+  'Enterprise-grade infrastructure', 'Advanced AI solutions',
+  'Dedicated team', '24/7 support',
+  'Custom integrations', 'Ongoing optimization'
+      ], popular: false
 =======
-      name: 'Launch', price: '$2,999', description: 'Perfect for early-stage startups',
-      features: [
-        'MVP development (4-6 weeks)', 'Basic cloud infrastructure',
-        'Essential integrations', 'Email support',
+      name: 'Launch', price: '$2, 999', description: 'Perfect for early-stage startups', features: [
+        'MVP development (4-6 weeks)Basic cloud infrastructureEssential integrations', 'Email support',
         'Basic analytics setup'
       ], popular: false
     },
     {
       name: 'Scale', price: '$7,999', description: 'Ideal for growing startups',
       features: [
-        'Full product development (8-12 weeks)', 'Advanced cloud infrastructure',
-        'AI-powered analytics', 'Priority support',
-        'Marketing automation', 'Team training'
+        'Full product development (8-12 weeks)Advanced cloud infrastructureAI-powered analytics', 'Priority supportMarketing automationTeam training'
       ], popular: true
     },
     {
       name: 'Enterprise', price: 'Custom',
       description: 'Complete solution for established startups', features: [
-        'Custom development timeline',
-        'Enterprise-grade infrastructure', 'Advanced AI solutions',
-        'Dedicated team', '24/7 support',
-        'Custom integrations', 'Ongoing optimization'
+        'Custom development timelineEnterprise-grade infrastructureAdvanced AI solutions',
+        'Dedicated team24/7 supportCustom integrations', 'Ongoing optimization'
       ], popular: false
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
   ];
 
   return (
     <MainLayout
       title="Startup Solutions - Zion Tech Group"
-<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
-      description="Accelerate your startup,
-  s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure."
+<<<<<<< HEAD
+      description="Accelerate your startup, "
+  s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure.""
 =======
-      description="Accelerate your startup&apos;s growth with our comprehensive technology solutions. From MVP development to scaling infrastructure."'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
+      description="Accelerate your startup&aposs growth with our comprehensive technology solutions. From MVP development to scaling infrastructure."''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -227,11 +178,11 @@ const Startups: NextPage = () => {
             Startup <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
+<<<<<<< HEAD
             Accelerate your startups growth with our comprehensive technology solutions. 
 =======
-            Accelerate your startup&apos;s growth with our comprehensive technology solutions. '
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
+            Accelerate your startup&apos;s growth with our comprehensive technology solutions. ''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             From MVP development to scaling infrastructure, we help startups succeed.
           </p>
           
@@ -328,19 +279,18 @@ const Startups: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Startup Packages</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
+<<<<<<< HEAD
               Choose the package that fits your startup
-  's current stage and needs.
+  's current stage and needs.'
 =======
-              Choose the package that fits your startup&apos;s current stage and needs.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
+              Choose the package that fits your startup&aposs current stage and needs.''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             </p>
           </div>
           
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {packages.map((pkg, index) => (
-              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${pkg.popular ?,
-  ring-2 ring-blue-500
+              <div key={index} className={`bg-white p-8 rounded-lg shadow-lg relative ${pkg.popular ?, ring-2 ring-blue-500
   ': '}`}>
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -371,15 +321,14 @@ const Startups: NextPage = () => {
                   href="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     pkg.popular
-<<<<<<< HEAD:pages.disabled_auto/solutions/startups.tsx
-                      ?,
-  bg-blue-600 hover: bg-blue-700 text-white'
+<<<<<<< HEAD
+                      ?, bg-blue-600 hover: bg-blue-700 text-white''
                       :
-  'bg-gray-100 hover:bg-gray-200 text-gray-900
+  'bg-gray-100 hover:bg-gray-200 text-gray-900'
 =======
                       ? 'bg-blue-600 hover: bg-blue-700 text-white'
                       : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/solutions/startups.tsx
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                   }`}
                 >
                   Get Started
@@ -396,7 +345,7 @@ const Startups: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Startup Success Stories</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how we&apos;ve helped startups achieve their goals and scale successfully.'
+              See how we&aposve helped startups achieve their goals and scale successfully.''
             </p>
           </div>
           

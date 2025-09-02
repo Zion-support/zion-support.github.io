@@ -1,10 +1,15 @@
 import type { Config } from,
   tailwindcss'
 export default {
+<<<<<<< HEAD
   content: [./pages/**/*.{js,ts,jsx,tsx,mdx}',
 ,
   ./components/**/*.{js,ts,jsx,tsx,mdx}',
   './app/**/*.{js,ts,jsx,tsx,mdx}',
+=======
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}./components/**/*.{js,ts,jsx,tsx,mdx}./app/**/*.{js,ts,jsx,tsx,mdx}',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   ],
   darkMode: 'class,
   theme: {
@@ -84,6 +89,7 @@ export default {
         }
       },
       fontFamily: {
+<<<<<<< HEAD
         sans: [,
   Inter',
   'ui-sans-serif',
@@ -124,6 +130,27 @@ export default {
   ui-sans-serif',
   'system-ui',
   'sans-serif',
+=======
+        sans: [
+          'Interui-sans-serifsystem-ui',
+          '-apple-systemBlinkMacSystemFontSegoe UI',
+          'RobotoHelvetica NeueArial',
+          'Noto Sanssans-serifApple Color Emoji',
+          'Segoe UI EmojiSegoe UI SymbolNoto Color Emoji',
+        ],
+        mono: [
+          'JetBrains MonoFira CodeMonaco',
+          'ConsolasLiberation MonoCourier New',
+          'monospace',
+        ],
+        display: [
+          'Orbitronui-sans-serifsystem-ui',
+          'sans-serif',
+        ],
+        body: [
+          'Rajdhaniui-sans-serifsystem-ui',
+          'sans-serif',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
         ],
       },
       fontSize: {

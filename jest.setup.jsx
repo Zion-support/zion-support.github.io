@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import,
   @testing-library/jest-dom';
+=======
+import '@testing-library/jest-dom'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 // Mock Next.js router
 jest.mock(
@@ -26,7 +30,7 @@ jest.mock(
       isFallback: false,
     };
   },
-}));
+}))
 
 // Mock Next.js Image component
 jest.mock(
@@ -36,7 +40,7 @@ jest.mock(
     // eslint-disable-next-line @next/next/no-img-element
     return <img {...props} />;
   },
-}));
+}))
 
 // Mock Next.js Link component
 jest.mock(

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
+<<<<<<< HEAD
 import React from
   'react';
 import type { NextPage } from
@@ -10,195 +10,117 @@ import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from
 import Link from
   'next/link';
 =======
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import {
-  Book,
-  Code,
-  Database,
-  Cloud,
-  Shield,
-  Zap,
-  Download,
-  ExternalLink,
-} from 'lucide-react';
-import Link from 'next/link';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../components/layout/MainLayout'
+import { Book, Code, Database, Cloud, Shield, Zap, Download, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const Documentation: NextPage = () => {
   const docCategories = [
     {
-      icon: Book,
-      title:,
-  Getting Started',
-      description: 'Quick start guides and basic setup instructions,
+<<<<<<< HEAD
+      icon: Book, title:,
+  Getting Started', '
+      description: 'Quick start guides and basic setup instructions,'
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
-        { title:,
-  Introduction to Zion Tech Group', href: '/docs/introduction },
-        { title:,
+        { title:, Introduction to Zion Tech Group', href: '/docs/introduction }, { title:,
   Account Setup', href: '/docs/account-setup },
-        { title:,
-  First Steps', href: '/docs/first-steps },
-        { title:,
+        { title:, First Steps', href: '/docs/first-steps }, { title:,
   Basic Configuration', href: '/docs/basic-config }
-      ]
 =======
-        {
-          title: 'Introduction to Zion Tech Group',
-          href: '/docs/introduction',
-        },
-        { title: 'Account Setup', href: '/docs/account-setup' },
-        { title: 'First Steps', href: '/docs/first-steps' },
-        { title: 'Basic Configuration', href: '/docs/basic-config' },
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-    },
-    {
+      icon: Book, title: 'Getting Started', description: 'Quick start guides and basic setup instructions', articles: [
+        { title: 'Introduction to Zion Tech Group', href: '/docs/introduction' }, { title: 'Account Setup', href: '/docs/account-setup' }, { title: 'First Steps', href: '/docs/first-steps' }, { title: 'Basic Configuration', href: '/docs/basic-config' }
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+      ]
+    }, {
       icon: Code,
-      title:,
-  API Reference',
-      description: 'Complete API documentation and examples,
+<<<<<<< HEAD
+      title:, API Reference','
+      description: 'Complete API documentation and examples, '
+=======
+      title: 'API Reference', description: 'Complete API documentation and examples', >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
         { title:,
   Authentication', href: '/docs/api/auth },
-        { title:,
-  Endpoints', href: '/docs/api/endpoints },
-        { title:,
+        { title:, Endpoints', href: '/docs/api/endpoints }, { title:,
   SDKs', href: '/docs/api/sdks },
-        { title:,
-  Rate Limits', href: '/docs/api/rate-limits }
+        { title:, Rate Limits', href: '/docs/api/rate-limits }
       ]
-=======
-        { title: 'Authentication', href: '/docs/api/auth' },
-        { title: 'Endpoints', href: '/docs/api/endpoints' },
-        { title: 'SDKs', href: '/docs/api/sdks' },
-        { title: 'Rate Limits', href: '/docs/api/rate-limits' },
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-    },
-    {
+    }, {
       icon: Database,
-      title:,
-  Data Management',
-      description: Data handling, storage, and processing guides,
-  ,
+<<<<<<< HEAD
+      title:, Data Management','
+      description: Data handling, storage, and processing guides,  ,
+=======
+      title: 'Data Management', description: 'Data handling, storage, and processing guides',
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
         { title:
-  'Data Models, href:,
-  /docs/data/models' },
-        { title: 'Data Import/Export, href:,
-  /docs/data/import-export' },
-        { title: 'Data Security, href:,
-  /docs/data/security' },
-        { title: 'Backup & Recovery, href:
+  'Data Models, href:,'
+  /docs/data/models' }, '
+        { title: 'Data Import/Export, href:, '
+  /docs/data/import-export' },'
+        { title: 'Data Security, href:,'
+  /docs/data/security' }, '
+        { title: 'Backup & Recovery, href: '
   '/docs/data/backup' }
       ]
-=======
-        { title: 'Data Models', href: '/docs/data/models' },
-        { title: 'Data Import/Export', href: '/docs/data/import-export' },
-        { title: 'Data Security', href: '/docs/data/security' },
-        { title: 'Backup & Recovery', href: '/docs/data/backup' },
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-    },
-    {
+    }, {
       icon: Cloud,
-      title:,
-  Cloud Services',
-      description: 'Cloud infrastructure and deployment guides,
+<<<<<<< HEAD
+      title:, Cloud Services','
+      description: 'Cloud infrastructure and deployment guides, '
+=======
+      title: 'Cloud Services', description: 'Cloud infrastructure and deployment guides', >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
         { title:,
   Cloud Setup', href: '/docs/cloud/setup },
-        { title:,
-  Deployment', href: '/docs/cloud/deployment },
-        { title:,
+        { title:, Deployment', href: '/docs/cloud/deployment }, { title:,
   Scaling', href: '/docs/cloud/scaling },
-        { title:,
-  Monitoring', href: '/docs/cloud/monitoring }
+        { title:, Monitoring', href: '/docs/cloud/monitoring }
       ]
-=======
-        { title: 'Cloud Setup', href: '/docs/cloud/setup' },
-        { title: 'Deployment', href: '/docs/cloud/deployment' },
-        { title: 'Scaling', href: '/docs/cloud/scaling' },
-        { title: 'Monitoring', href: '/docs/cloud/monitoring' },
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-    },
-    {
+    }, {
       icon: Shield,
-      title:,
-  Security',
-      description: 'Security best practices and implementation,
+<<<<<<< HEAD
+      title:, Security','
+      description: 'Security best practices and implementation, '
+=======
+      title: 'Security', description: 'Security best practices and implementation', >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
         { title:,
   Security Overview', href: '/docs/security/overview },
-        { title:,
-  Authentication', href: '/docs/security/auth },
-        { title:,
+        { title:, Authentication', href: '/docs/security/auth }, { title:,
   Authorization', href: '/docs/security/authorization },
-        { title:,
-  Compliance', href: '/docs/security/compliance }
+        { title:, Compliance', href: '/docs/security/compliance }
       ]
-=======
-        { title: 'Security Overview', href: '/docs/security/overview' },
-        { title: 'Authentication', href: '/docs/security/auth' },
-        { title: 'Authorization', href: '/docs/security/authorization' },
-        { title: 'Compliance', href: '/docs/security/compliance' },
-      ],
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
-    },
-    {
+    }, {
       icon: Zap,
-      title:,
-  Advanced Features',
-      description: 'Advanced functionality and customization,
+<<<<<<< HEAD
+      title:, Advanced Features','
+      description: 'Advanced functionality and customization, '
+=======
+      title: 'Advanced Features', description: 'Advanced functionality and customization', >>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       articles: [
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
         { title:,
   Custom Integrations', href: '/docs/advanced/integrations },
-        { title:,
-  Workflow Automation', href: '/docs/advanced/automation },
-        { title:,
+        { title:, Workflow Automation', href: '/docs/advanced/automation }, { title:,
   Performance Optimization', href: '/docs/advanced/performance },
-        { title:,
-  Troubleshooting', href: '/docs/advanced/troubleshooting }
+        { title:, Troubleshooting', href: '/docs/advanced/troubleshooting }
       ]
     }
-  ];
+  ]
 
   const quickLinks = [
-    { title:,
-  API Playground', href: '/api-playground, icon: Code },
-    { title:,
-  Status Page', href: '/status, icon: Zap },
-    { title:,
-  Support', href: '/help, icon: Book },
-    { title:,
-  Community', href: '/community, icon: ExternalLink }
+<<<<<<< HEAD
+    { title:, API Playground', href: '/api-playground, icon: Code },
+    { title:, Status Page', href: '/status, icon: Zap },
+    { title:, Support', href: '/help, icon: Book },
+    { title:, Community', href: '/community, icon: ExternalLink }
 =======
-        { title: 'Custom Integrations', href: '/docs/advanced/integrations' },
-        { title: 'Workflow Automation', href: '/docs/advanced/automation' },
-        {
-          title: 'Performance Optimization',
-          href: '/docs/advanced/performance',
-        },
-        { title: 'Troubleshooting', href: '/docs/advanced/troubleshooting' },
-      ],
-    },
-  ];
-
-  const quickLinks = [
-    { title: 'API Playground', href: '/api-playground', icon: Code },
-    { title: 'Status Page', href: '/status', icon: Zap },
-    { title: 'Support', href: '/help', icon: Book },
-    { title: 'Community', href: '/community', icon: ExternalLink },
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+    { title: 'API Playground', href: '/api-playground', icon: Code }, { title: 'Status Page', href: '/status', icon: Zap }, { title: 'Support', href: '/help', icon: Book }, { title: 'Community', href: '/community', icon: ExternalLink }
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   ];
 
   return (
@@ -211,13 +133,10 @@ const Documentation: NextPage = () => {
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md: text-5xl font-bold mb-6">
-              Documentation
-            </h1>
+            <h1 className="text-4xl md: text-5xl font-bold mb-6">Documentation</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Comprehensive guides, API references, and technical resources to
-              help you make the most of our services and build amazing
-              solutions.
+              Comprehensive guides, API references, and technical resources to help you 
+              make the most of our services and build amazing solutions.
             </p>
           </div>
         </section>
@@ -244,33 +163,22 @@ const Documentation: NextPage = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Documentation Categories
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Documentation Categories</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Browse our documentation organized by topic and complexity
-                level.
+                Browse our documentation organized by topic and complexity level.
               </p>
             </div>
-
+            
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {docCategories.map((category, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow"
-                >
+                <div key={index} className="bg-gray-50 rounded-lg p-6 hover: shadow-lg transition-shadow">
                   <category.icon className="w-12 h-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {category.title}
-                  </h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{category.title}</h3>
                   <p className="text-gray-600 mb-4">{category.description}</p>
                   <ul className="space-y-2">
                     {category.articles.map((article, idx) => (
                       <li key={idx}>
-                        <Link
-                          href={article.href}
-                          className="text-blue-600 hover: text-blue-700 text-sm flex items-center"
-                        >
+                        <Link href={article.href} className="text-blue-600 hover: text-blue-700 text-sm flex items-center">
                           {article.title}
                           <ExternalLink className="w-3 h-3 ml-1" />
                         </Link>
@@ -287,46 +195,31 @@ const Documentation: NextPage = () => {
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Getting Started
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Getting Started</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                New to our platform? Start here with our essential guides and
-                tutorials.
+                New to our platform? Start here with our essential guides and tutorials.
               </p>
             </div>
-
+            
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg shadow-lg p-8">
                 <div className="grid grid-cols-1 md: grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                      Quick Start Guide
-                    </h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Start Guide</h3>
                     <p className="text-gray-600 mb-4">
-                      Get up and running in minutes with our step-by-step quick
-                      start guide.
+                      Get up and running in minutes with our step-by-step quick start guide.
                     </p>
-                    <Link
-                      href="/docs/quick-start"
-                      className="text-blue-600 font-semibold hover:text-blue-700"
-                    >
+                    <Link href="/docs/quick-start" className="text-blue-600 font-semibold hover:text-blue-700">
                       Start Here →
                     </Link>
                   </div>
-
+                  
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                      API Overview
-                    </h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">API Overview</h3>
                     <p className="text-gray-600 mb-4">
-                      Learn about our API capabilities and how to integrate with
-                      our services.
+                      Learn about our API capabilities and how to integrate with our services.
                     </p>
-                    <Link
-                      href="/docs/api/overview"
-                      className="text-blue-600 font-semibold hover:text-blue-700"
-                    >
+                    <Link href="/docs/api/overview" className="text-blue-600 font-semibold hover:text-blue-700">
                       View API Docs →
                     </Link>
                   </div>
@@ -340,76 +233,45 @@ const Documentation: NextPage = () => {
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Additional Resources
-              </h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Additional Resources</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Explore additional resources to enhance your development
-                experience.
+                Explore additional resources to enhance your development experience.
               </p>
             </div>
-
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="bg-gray-50 rounded-lg p-6 text-center">
                 <Download className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  SDKs & Libraries
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Download our official SDKs and libraries
-                </p>
-                <Link
-                  href="/docs/sdks"
-                  className="text-blue-600 font-semibold hover:text-blue-700"
-                >
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">SDKs & Libraries</h3>
+                <p className="text-gray-600 text-sm mb-4">Download our official SDKs and libraries</p>
+                <Link href="/docs/sdks" className="text-blue-600 font-semibold hover:text-blue-700">
                   Download →
                 </Link>
               </div>
-
+              
               <div className="bg-gray-50 rounded-lg p-6 text-center">
                 <Code className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Code Examples
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Browse code examples and samples
-                </p>
-                <Link
-                  href="/docs/examples"
-                  className="text-blue-600 font-semibold hover:text-blue-700"
-                >
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Code Examples</h3>
+                <p className="text-gray-600 text-sm mb-4">Browse code examples and samples</p>
+                <Link href="/docs/examples" className="text-blue-600 font-semibold hover:text-blue-700">
                   View Examples →
                 </Link>
               </div>
-
+              
               <div className="bg-gray-50 rounded-lg p-6 text-center">
                 <Book className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Tutorials
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Step-by-step tutorials and guides
-                </p>
-                <Link
-                  href="/docs/tutorials"
-                  className="text-blue-600 font-semibold hover:text-blue-700"
-                >
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Tutorials</h3>
+                <p className="text-gray-600 text-sm mb-4">Step-by-step tutorials and guides</p>
+                <Link href="/docs/tutorials" className="text-blue-600 font-semibold hover:text-blue-700">
                   Start Learning →
                 </Link>
               </div>
-
+              
               <div className="bg-gray-50 rounded-lg p-6 text-center">
                 <ExternalLink className="w-12 h-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Community
-                </h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Join our developer community
-                </p>
-                <Link
-                  href="/community"
-                  className="text-blue-600 font-semibold hover:text-blue-700"
-                >
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Community</h3>
+                <p className="text-gray-600 text-sm mb-4">Join our developer community</p>
+                <Link href="/community" className="text-blue-600 font-semibold hover:text-blue-700">
                   Join Community →
                 </Link>
               </div>
@@ -422,13 +284,12 @@ const Documentation: NextPage = () => {
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-4">Need Help?</h2>
             <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD:pages.disabled_auto/documentation.tsx
+<<<<<<< HEAD
               Can
-  't find what you're looking for? Our support team is here to help.
+  't find what you&apos;re looking for? Our support team is here to help.
 =======
-              Can&apos;t find what you&apos;re looking for? Our support team is
-              here to help.
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/documentation.tsx
+              Can&apos;t find what you&apos;re looking for? Our support team is here to help.
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             </p>
             <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link

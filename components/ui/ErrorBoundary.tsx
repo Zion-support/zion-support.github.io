@@ -1,12 +1,14 @@
 <<<<<<< HEAD
 React, { Component, ErrorInfo, ReactNode } from
   'react';
-import { AlertTriangle, RefreshCw } from 'lucide-react';
-  'lucide-react';'
-  'interface Props {children: ReactNode;
+import { AlertTriangle, RefreshCw } from
+  'lucide-react';''
+  'interface Props {children: ReactNode;'
 =======
-import React, { Component, ErrorInfo, ReactNode } from 'react';'import { AlertTriangle, RefreshCw } from 'lucide-react';''interface Props {children: ReactNode;'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+import React, { Component, ErrorInfo, ReactNode } from 'react'
+import  { AlertTriangle, RefreshCw } from 'lucide-react''interface Props {'
+  children: ReactNode
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   fallback?: ReactNode;
 }
 
@@ -24,9 +26,12 @@ public state: State = {;hasError: false
   }
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-console.error(,
-  ErrorBoundary caught an error: , error, errorInfo);'  }
-  'private handleRetry = () => {
+<<<<<<< HEAD
+console.error(, ErrorBoundary caught an error:  , error, errorInfo);'  }'
+  'private handleRetry = () => {'
+=======
+console.error('ErrorBoundary caught an error: ', error, errorInfo)'  }'private handleRetry = () => {
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     this.setState({ hasError: false, error: undefined });
   };
 
@@ -38,21 +43,21 @@ console.error(,
 
       return (
 <<<<<<< HEAD
-<div className="min-h-screen flex items-center justify-center bg-gray-50">"          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">"            <div className="flex justify-center mb-4">"              <AlertTriangle className="w-12 h-12 text-red-500" />"            </div>"            <h2 className="text-xl font-semibold text-gray-900 mb-2">"              Something went wrong"            </h2>
-            <p className="text-gray-600 mb-6">"              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.,
-  '            </p>
-  '            <button
+<div className="min-h-screen flex items-center justify-center bg-gray-50">"          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">"            <div className="flex justify-center mb-4">"              <AlertTriangle className="w-12 h-12 text-red-500" />"            </div>"            <h2 className="text-xl font-semibold text-gray-900 mb-2">"              Something went wrong"            </h2>"
+            <p className="text-gray-600 mb-6">"              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.,"
+  '            </p>'
+  '            <button'
               onClick={this.handleRetry}
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors""            >"              <RefreshCw className="w-4 h-4 mr-2" />"              Try Again"            </button>
-            {process.env.NODE_ENV === 'development
-  ' && this.state.error && (              <details className="mt-4 text-left">"                <summary className="cursor-pointer text-sm text-gray-500">"                  Error Details"                </summary>
+            {process.env.NODE_ENV === 'development'
+  ' && this.state.error && (              <details className="mt-4 text-left">"                <summary className="cursor-pointer text-sm text-gray-500">"                  Error Details"                </summary>'"
 =======
 <div className="min-h-screen flex items-center justify-center bg-gray-50">"          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6 text-center">"            <div className="flex justify-center mb-4">"              <AlertTriangle className="w-12 h-12 text-red-500" />"            </div>"            <h2 className="text-xl font-semibold text-gray-900 mb-2">"              Something went wrong"            </h2>"
-            <p className="text-gray-600 mb-6">"              We&apos;re sorry, but something unexpected happened. Please try refreshing the page.''            </p>'            <button'"
+            <p className="text-gray-600 mb-6">"              We&aposre sorry, but something unexpected happened. Please try refreshing the page.''            </p>'            <button'"
               onClick={this.handleRetry}
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors""            >"              <RefreshCw className="w-4 h-4 mr-2" />"              Try Again"            </button>
             {process.env.NODE_ENV === 'development' && this.state.error && ('              <details className="mt-4 text-left">"                <summary className="cursor-pointer text-sm text-gray-500">"                  Error Details"                </summary>'"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                 <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">"                  {this.state.error.stack}"                </pre></details>
             )}
           </div>

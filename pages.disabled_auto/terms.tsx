@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from
   'react';
 import { motion } from
@@ -9,24 +10,21 @@ import { Card } from
 import { Badge } from
   '../components/ui/Badge';
 import { 
-<<<<<<< HEAD:pages.disabled_auto/terms.tsx
-  FileText,
-  Scale,
-  AlertTriangle,
-  CheckCircle,
-  Calendar,
-  Globe,
-  Mail,
-  Phone,
-  ArrowRight,
-  Shield,
-  Users,
-  DollarSign,
-  Clock,
-  BookOpen
+  FileText, Scale,
+  AlertTriangle, CheckCircle,
+  Calendar, Globe,
+  Mail, Phone,
+  ArrowRight, Shield,
+  Users, DollarSign,
+  Clock, BookOpen
 } from
   'lucide-react';
 =======
+import React from 'react'
+import { motion } from 'framer-motion'
+import { SEO } from '../components/SEO'
+import { Card } from '../components/ui/Card'
+import { Badge } from '../components/ui/Badge'
   FileText, Scale,
   AlertTriangle, CheckCircle,
   Calendar, Globe,
@@ -35,10 +33,10 @@ import {
   Users, DollarSign,
   Clock, BookOpen
 } from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const Terms: React.FC = () => {
-  const lastUpdated = "2025-01-15";
+  const lastUpdated = "2025-01-15"
 
   const sections = [
     {
@@ -79,16 +77,15 @@ const Terms: React.FC = () => {
       id: "limitation-of-liability",
       title: "Limitation of Liability", icon: AlertTriangle,
       content: [
-<<<<<<< HEAD:pages.disabled_auto/terms.tsx
-        "Our services are provided
-  'as is' without warranties of any kind",
+<<<<<<< HEAD
+        "Our services are provided"
+  'as is' without warranties of any kind", "
         "We are not liable for any indirect, incidental, or consequential damages",
-        "Our total liability is limited to the amount paid for the specific service",
-        "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
+        "Our total liability is limited to the amount paid for the specific service", "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
 =======
         "Our services are provided 'as is' without warranties of any kind", "We are not liable for any indirect, incidental, or consequential damages",
         "Our total liability is limited to the amount paid for the specific service", "Some jurisdictions may not allow limitation of liability, so these limitations may not apply"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       ]
     }
   ];
@@ -101,12 +98,12 @@ const Terms: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO 
         title="Terms of Service - Zion Tech Group" 
-<<<<<<< HEAD:pages.disabled_auto/terms.tsx
-        description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group
-  's AI services and solutions."
+<<<<<<< HEAD
+        description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group"
+  's AI services and solutions."'"
 =======
-        description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group&apos;s AI services and solutions."'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/terms.tsx
+        description="Read our Terms of Service to understand the terms and conditions for using Zion Tech Group&aposs AI services and solutions."''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       />
       
       {/* Hero Section */}
@@ -125,7 +122,7 @@ const Terms: React.FC = () => {
               Terms of Service
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              These terms and conditions govern your use of Zion Tech Group&apos;s services and solutions.'
+              These terms and conditions govern your use of Zion Tech Group&apos;s services and solutions.''
             </p>
             <div className="flex items-center justify-center text-gray-400">
               <Calendar className="w-4 h-4 mr-2" />

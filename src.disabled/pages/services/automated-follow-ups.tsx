@@ -20,7 +20,7 @@ const AutomatedFollowUps: React.FC = () => {
         <p className="text-gray-300">Starter $99/mo, Growth $299/mo, Scale $899/mo.</p>
       </div>
       <div className="mt-6 text-blue-400">
-        <a href="https://www.hubspot.com/" target="_blank" rel="noopener noreferrer">HubSpot</a>
+        <a href="https: //www.hubspot.com/" target="_blank" rel="noopener noreferrer">HubSpot</a>
         {" • "}
         <a href="https://www.salesforce.com/" target="_blank" rel="noopener noreferrer">Salesforce</a>
         {" • "}

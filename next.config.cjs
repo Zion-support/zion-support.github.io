@@ -1,45 +1,22 @@
-<<<<<<< HEAD
-/** @type {import('next').NextConfig} */
-const path = require('path');
-
-=======
 /** @type {import(
   'next').NextConfig} */
->>>>>>> origin/main
 const nextConfig = {
   reactStrictMode: true,
-<<<<<<< HEAD:next.config.js
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-=======
 eslint: {
     ignoreDuringBuilds: true,
   },
->>>>>>> origin/main:next.config.cjs
   experimental: {
     esmExternals: false,
     newNextLinkBehavior: true,
   },
-<<<<<<< HEAD
-=======
   typescript: {
     ignoreBuildErrors: true,
   },
->>>>>>> origin/main
   eslint: {
     ignoreDuringBuilds: true,
   },
   typescript: {
-<<<<<<< HEAD
-    ignoreBuildErrors: true,
-  },
-=======
     ignoreBuildErrors: true,},
->>>>>>> origin/main
   images: {
     domains: [
   'ziontechgroup.com'],
@@ -49,7 +26,8 @@ eslint: {
     removeConsole: process.env.NODE_ENV ===
   'production',
   },
-  webpack: (config) => {
+  webpack: (config, { dev, isServer }) => {
+    // Completely exclude problematic directories from the build
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       exclude: [
@@ -66,37 +44,33 @@ eslint: {
         /hardhat/,
       ],
     });
-
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      'react-router-dom': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
-      'react-router': path.resolve(__dirname, 'utils/next-router-shim.tsx'),
-    };
-
+    
+    // Add fallback for problematic modules
     config.resolve.fallback = {
       ...config.resolve.fallback,
       fs: false,
       net: false,
       tls: false,
     };
-
-    return config;
+    
+    return config
   },
-<<<<<<< HEAD
-  pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-=======
   // Try to exclude problematic directories at the Next.js level
+<<<<<<< HEAD:next.config.cjs
   pageExtensions: [
   'tsx',
   'ts',
   'jsx',
   'js'],
->>>>>>> origin/main
+=======
+  pageExtensions: ['tsxtsjsx', 'js'],
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3:next.config.js
   onDemandEntries: {
+    // period (in ms) where the server will keep pages in the buffer
     maxInactiveAge: 25 * 1000,
+    // number of pages that should be kept simultaneously without being disposed
     pagesBufferLength: 2,
   },
 };
 
-module.exports = nextConfig;
-
+export default nextConfig;

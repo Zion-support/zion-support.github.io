@@ -12,8 +12,7 @@ export interface Service {
 }
 
 export function findServicesByCategory(
-  allServiceArrays: Service[][],
-  categoryIncludes: string
+  allServiceArrays: Service[][], categoryIncludes: string
 ): Service[] {
   const results: Service[] = [];
   
@@ -46,8 +45,7 @@ allServiceArrays: Service[][], tagIncludes: string): Service[] {
 }
 
 export function findServicesByPriceRange(
-  allServiceArrays: Service[][],
-  minPrice: number,
+  allServiceArrays: Service[][], minPrice: number,
   maxPrice: number
 ): Service[] {
   const results: Service[] = [];

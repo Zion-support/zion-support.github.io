@@ -1,28 +1,27 @@
-<<<<<<< HEAD:pages/careers.tsx
-import type { NextPage } from 'next';
-import Layout from '../components/Layout';
-import Link from 'next/link';
-import { Users, Briefcase, Heart, Zap, CheckCircle } from 'lucide-react';
-=======
-import type { NextPage } from,
-  next';
+<<<<<<< HEAD
+import type { NextPage } from, next';'
 import Layout from
   '../components/Layout';
 import Link from
   'next/link';
 import { Users, Briefcase, Heart, Zap, CheckCircle } from
   'lucide-react';
->>>>>>> origin/main:pages.disabled_auto/careers.tsx
+=======
+import type { NextPage } from 'next'
+import Layout from '../components/Layout'
+import Link from 'next/link'
+import { Users, Briefcase, Heart, Zap, CheckCircle } from 'lucide-react';
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const Careers: NextPage = () => {
   return (
     <Layout
       title="Careers at Zion Tech Group - Join Our Team"
-<<<<<<< HEAD:pages.disabled_auto/careers.tsx
+<<<<<<< HEAD
       description="Join Zion Tech Group and be part of a team thats transforming businesses through innovative technology solutions. Explore career opportunities and grow with us."
 =======
-      description="Join Zion Tech Group and be part of a team that&apos;s transforming businesses through innovative technology solutions. Explore career opportunities and grow with us."'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/careers.tsx
+      description="Join Zion Tech Group and be part of a team that&aposs transforming businesses through innovative technology solutions. Explore career opportunities and grow with us."''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -32,7 +31,7 @@ const Careers: NextPage = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400"> Team</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Be part of a team that&apos;s transforming businesses through innovative technology solutions. '
+            Be part of a team that&apos;s transforming businesses through innovative technology solutions. ''
             Grow your career with us and make a real impact.
           </p>
           
@@ -53,14 +52,13 @@ const Careers: NextPage = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Work at Zion Tech Group?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD:pages.disabled_auto/careers.tsx
-              We,
-  re building a culture of innovation, collaboration, and continuous learning. 
-              Here's what makes us special.
-=======
-              We&apos;re building a culture of innovation, collaboration, and continuous learning. '
+<<<<<<< HEAD
+              We, re building a culture of innovation, collaboration, and continuous learning. 
               Here&apos;s what makes us special.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/careers.tsx
+=======
+              We&aposre building a culture of innovation, collaboration, and continuous learning. ''
+              Here&apos;s what makes us special.''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
             </p>
           </div>
           
@@ -82,11 +80,11 @@ const Careers: NextPage = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-600">
-<<<<<<< HEAD:pages.disabled_auto/careers.tsx
+<<<<<<< HEAD
                 Work with the latest technologies and frameworks. Were always exploring new 
 =======
-                Work with the latest technologies and frameworks. We&apos;re always exploring new '
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/careers.tsx
+                Work with the latest technologies and frameworks. We&aposre always exploring new ''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                 tools and approaches to solve complex business challenges.
               </p>
             </div>

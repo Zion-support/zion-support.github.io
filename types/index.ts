@@ -181,7 +181,8 @@ export interface CompanyInfo {
     zip: string;
     country: string;
   };
-contact: {;phone: string;
+  contact: {
+    phone: string;
     email: string;
     website: string;
   };
@@ -209,7 +210,10 @@ export interface LoadingState {
 export interface FormField {
   name: string;
   label: string;
-type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';'  required: boolean;'  placeholder?: string;options?: { value: string; label: string }[];
+  type: 'text' | 'email' | 'tel' | 'textarea' | 'select' | 'checkbox' | 'radio';
+  required: boolean;
+  placeholder?: string;
+  options?: { value: string; label: string }[];
   validation?: {
     min?: number;
     max?: number;
@@ -232,23 +236,45 @@ export type DeepPartial<T> = {
   [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
 };
 
-// Component prop types;export interface BaseComponentProps {
+// Component prop types
+
+export interface BaseComponentProps {
   className?: string;
   children?: React.ReactNode;
   id?: string;
-'data-testid'?: string;'}'
+  'data-testid'?: string;
+}
+
 export interface ButtonProps extends BaseComponentProps {
+<<<<<<< HEAD
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';'  size?: 'sm' | 'md' | 'lg';'  disabled?: boolean;'  loading?: boolean;'
+=======
+<<<<<<< HEAD
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
+  size?: 'sm' | 'md' | 'lg';
+  disabled?: boolean;
+  loading?: boolean;
+=======
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';'  size?: 'sm' | 'md' | 'lg';'  disabled?: boolean;'  loading?: boolean;'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+>>>>>>> origin/cursor/enhance-ziontechgroup-website-with-new-services-and-improvements-8c53
   onClick?: () => void;
-  type?: 'button' | 'submit' | 'reset';'}'
+  type?: 'button' | 'submit' | 'reset';
+}
+
 export interface InputProps extends BaseComponentProps {
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';'  placeholder?: string;'  value?: string;onChange?: (value: string) => void;
+  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number';
+  placeholder?: string;
+  value?: string;
+  onChange?: (value: string) => void;
   error?: string;
   disabled?: boolean;
   required?: boolean;
 }
 
-// API types;export interface ApiError {
+// API types
+
+export interface ApiError {
   status: number;
   message: string;
   code?: string;
@@ -256,12 +282,19 @@ export interface InputProps extends BaseComponentProps {
 }
 
 export interface ApiRequest {
-method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';'  url: string;'  data?: any;params?: Record<string, any>;
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
+  url: string;
+  data?: any;
+  params?: Record<string, any>;
   headers?: Record<string, string>;
 }
 
-// Environment types;
+// Environment types
+
 export interface Environment {
-  NODE_ENV: 'development' | 'production' | 'test';'  NEXT_PUBLIC_API_URL?: string;'  NEXT_PUBLIC_APP_URL?: string;NEXT_PUBLIC_GA_ID?: string;
+  NODE_ENV: 'development' | 'production' | 'test';
+  NEXT_PUBLIC_API_URL?: string;
+  NEXT_PUBLIC_APP_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
   NEXT_PUBLIC_SENTRY_DSN?: string;
 }

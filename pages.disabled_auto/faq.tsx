@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from
   'react';
 import type { NextPage } from
@@ -6,6 +7,12 @@ import MainLayout from
   '../components/layout/MainLayout';
 import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from
   'lucide-react';
+=======
+import React, { useState } from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../components/layout/MainLayout'
+import { ChevronDown, ChevronUp, HelpCircle, MessageCircle, Phone, Mail } from 'lucide-react';
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const FAQ: NextPage = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
@@ -16,121 +23,96 @@ const FAQ: NextPage = () => {
         ? prev.filter(item => item !== index)
         : [...prev, index]
     );
-  };
+  }
 
   const faqCategories = [
     {
-<<<<<<< HEAD:pages.disabled_auto/faq.tsx
-      title:,
-  General Questions',
+<<<<<<< HEAD
+      title:, General Questions','
       questions: [
 =======
       title: 'General Questions', questions: [
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
         {
           question:
-  'What services does Zion Tech Group offer?,
-          answer:,
-  Zion Tech Group offers a comprehensive range of technology services including AI development, quantum computing solutions, blockchain infrastructure, micro SaaS applications, IT services, and digital transformation consulting. We help businesses modernize their operations and leverage cutting-edge technologies.'
+  'What services does Zion Tech Group offer?,'
+          answer:, Zion Tech Group offers a comprehensive range of technology services including AI development, quantum computing solutions, blockchain infrastructure, micro SaaS applications, IT services, and digital transformation consulting. We help businesses modernize their operations and leverage cutting-edge technologies.''
+        }, {
+<<<<<<< HEAD
+          question: 'How long has Zion Tech Group been in business?,'
+          answer:, Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.''
+        }, {
+          question: 'What industries do you serve?,'
+          answer:, We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet the specific needs and challenges of each industry.''
         },
         {
-<<<<<<< HEAD:pages.disabled_auto/faq.tsx
-          question: 'How long has Zion Tech Group been in business?,
+          question: 'Where is Zion Tech Group located?, '
           answer:,
-  Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'
-        },
-        {
-          question: 'What industries do you serve?,
-          answer:,
-  We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet the specific needs and challenges of each industry.'
-        },
-        {
-          question: 'Where is Zion Tech Group located?,
-          answer:,
-  Our headquarters is located at 364 E Main St STE 1008, Middletown DE 19709. We also serve clients globally through our remote services and partnerships.'
+  Our headquarters is located at 364 E Main St STE 1008, Middletown DE 19709. We also serve clients globally through our remote services and partnerships.''
         }
       ]
-    },
-    {
-      title: 'Services & Solutions,
+    }, {
+      title: 'Services & Solutions,'
       questions: [
         {
-          question:,
-  What is micro SaaS development?',
+          question:, What is micro SaaS development?','
           answer: Micro SaaS refers to small, focused software-as-a-service applications that solve specific business problems. These applications are typically lightweight, cost-effective, and designed to address niche market needs with minimal overhead.,
-  },
-        {
-          question: 'Do you offer custom development services?,
-          answer:,
-  Yes, we specialize in custom development services including web applications, mobile apps, e-commerce solutions, API development, and database design. Our team works closely with clients to understand their unique requirements and deliver tailored solutions.'
-        },
-        {
-          question: 'What AI services do you provide?,
-          answer:,
-  Our AI services include custom AI model development, machine learning solutions, natural language processing, computer vision, predictive analytics, and AI integration into existing systems. We help businesses leverage AI to improve efficiency and decision-making.'
-        },
-        {
-          question: 'Do you provide cloud migration services?,
-          answer:,
-  Yes, we offer comprehensive cloud migration services to help businesses move their infrastructure and applications to the cloud. This includes planning, execution, and ongoing support to ensure a smooth transition.'
+  }, {
+          question: 'Do you offer custom development services?,'
+          answer:, Yes, we specialize in custom development services including web applications, mobile apps, e-commerce solutions, API development, and database design. Our team works closely with clients to understand their unique requirements and deliver tailored solutions.''
+        }, {
+          question: 'What AI services do you provide?,'
+          answer:, Our AI services include custom AI model development, machine learning solutions, natural language processing, computer vision, predictive analytics, and AI integration into existing systems. We help businesses leverage AI to improve efficiency and decision-making.''
+        }, {
+          question: 'Do you provide cloud migration services?,'
+          answer:, Yes, we offer comprehensive cloud migration services to help businesses move their infrastructure and applications to the cloud. This includes planning, execution, and ongoing support to ensure a smooth transition.''
         }
       ]
-    },
-    {
-      title: 'Pricing & Billing,
+    }, {
+      title: 'Pricing & Billing,'
       questions: [
         {
-          question:,
-  How do you price your services?',
-          answer: Our pricing varies depending on the scope and complexity of the project. We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a detailed quote based on your specific needs.,
-  },
+          question:, How do you price your services?','
+          answer: Our pricing varies depending on the scope and complexity of the project. We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a detailed quote based on your specific needs., },
         {
-          question: 'Do you offer payment plans?,
+          question: 'Do you offer payment plans?, '
           answer:,
-  Yes, we understand that technology investments can be significant. We offer flexible payment plans and can work with you to create a payment schedule that fits your budget and project timeline.'
+  Yes, we understand that technology investments can be significant. We offer flexible payment plans and can work with you to create a payment schedule that fits your budget and project timeline.''
         },
         {
-          question: 'What is included in your support services?,
+          question: 'What is included in your support services?, '
           answer:,
-  Our support services include technical support, maintenance, updates, monitoring, and troubleshooting. The level of support depends on your service agreement and can be customized to meet your specific needs.'
-        },
-        {
-          question: 'Do you offer free consultations?,
-          answer:,
-  Yes, we offer free initial consultations to discuss your project requirements and provide recommendations. This helps us understand your needs and provide accurate estimates for our services.'
+  Our support services include technical support, maintenance, updates, monitoring, and troubleshooting. The level of support depends on your service agreement and can be customized to meet your specific needs.''
+        }, {
+          question: 'Do you offer free consultations?,'
+          answer:, Yes, we offer free initial consultations to discuss your project requirements and provide recommendations. This helps us understand your needs and provide accurate estimates for our services.''
         }
       ]
-    },
-    {
-      title: 'Technical Support,
+    }, {
+      title: 'Technical Support,'
       questions: [
         {
-          question:,
-  What kind of technical support do you provide?',
-          answer: We provide comprehensive technical support including 24/7 monitoring, troubleshooting, maintenance, updates, and emergency support. Our support team is available to help resolve issues quickly and efficiently.,
-  },
+          question:, What kind of technical support do you provide?','
+          answer: We provide comprehensive technical support including 24/7 monitoring, troubleshooting, maintenance, updates, and emergency support. Our support team is available to help resolve issues quickly and efficiently., },
         {
-          question: 'How quickly do you respond to support requests?,
+          question: 'How quickly do you respond to support requests?, '
           answer:,
-  Our response times vary based on the severity of the issue. Critical issues are addressed immediately, while non-critical requests are typically responded to within 24 hours. We have different support tiers available to meet various needs.'
+  Our response times vary based on the severity of the issue. Critical issues are addressed immediately, while non-critical requests are typically responded to within 24 hours. We have different support tiers available to meet various needs.''
         },
         {
-          question: 'Do you provide training for your solutions?,
+          question: 'Do you provide training for your solutions?, '
           answer:,
-  Yes, we provide comprehensive training for all our solutions. This includes user training, administrator training, and documentation to ensure your team can effectively use and maintain the systems we implement.'
+  Yes, we provide comprehensive training for all our solutions. This includes user training, administrator training, and documentation to ensure your team can effectively use and maintain the systems we implement.''
         },
         {
-          question: 'What technologies do you work with?,
-          answer:
-  'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
+          question: 'What technologies do you work with?, '
+          answer: 'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
 =======
           question: 'How long has Zion Tech Group been in business?', answer: 'Zion Tech Group has been providing technology solutions and services for several years, helping businesses across various industries transform their digital presence and achieve their technology goals.'
         }, {
-          question: 'What industries do you serve?',
-          answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet the specific needs and challenges of each industry.'
+          question: 'What industries do you serve?', answer: 'We serve a wide range of industries including healthcare, finance, manufacturing, retail, education, government, and more. Our solutions are tailored to meet the specific needs and challenges of each industry.'
         }, {
-          question: 'Where is Zion Tech Group located?',
-          answer: 'Our headquarters is located at 364 E Main St STE 1008, Middletown DE 19709. We also serve clients globally through our remote services and partnerships.'
+          question: 'Where is Zion Tech Group located?', answer: 'Our headquarters is located at 364 E Main St STE 1008, Middletown DE 19709. We also serve clients globally through our remote services and partnerships.'
         }
       ]
     }, {
@@ -179,7 +161,7 @@ const FAQ: NextPage = () => {
         },
         {
           question: 'What technologies do you work with?', answer: 'We work with a wide range of technologies including React, Vue.js, Angular, Node.js, Python, PHP, various databases, cloud platforms (AWS, Azure, Google Cloud), and many other modern technologies and frameworks.'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
         }
       ]
     }
@@ -188,12 +170,12 @@ const FAQ: NextPage = () => {
   return (
     <MainLayout
       title="Frequently Asked Questions - Zion Tech Group"
-<<<<<<< HEAD:pages.disabled_auto/faq.tsx
-      description="Find answers to common questions about Zion Tech Group
-  's services, pricing, and support. Get the information you need to make informed decisions about your technology needs."
+<<<<<<< HEAD
+      description="Find answers to common questions about Zion Tech Group"
+  's services, pricing, and support. Get the information you need to make informed decisions about your technology needs."'"
 =======
-      description="Find answers to common questions about Zion Tech Group&apos;s services, pricing, and support. Get the information you need to make informed decisions about your technology needs."'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/faq.tsx
+      description="Find answers to common questions about Zion Tech Group&aposs services, pricing, and support. Get the information you need to make informed decisions about your technology needs."''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       keywords="FAQ, frequently asked questions, support, help, services, pricing, technical support"
     >
       <div className="min-h-screen bg-gray-50">

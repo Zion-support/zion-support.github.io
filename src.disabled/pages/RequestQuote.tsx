@@ -26,7 +26,7 @@ const RequestQuote: React.FC = () => {
           <label className="block text-sm font-medium text-gray-700">Project details</label>
           <textarea className="mt-1 w-full rounded-md border border-gray-300 px-3 py-2" rows={5} placeholder="Describe what you need" />
         </div>
-        <button type="submit" className="rounded-md bg-blue-600 px-5 py-2.5 text-white hover:bg-blue-700">Submit</button>
+        <button type="submit" className="rounded-md bg-blue-600 px-5 py-2.5 text-white hover: bg-blue-700">Submit</button>
       </form>
     </div>
   );

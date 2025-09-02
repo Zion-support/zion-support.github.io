@@ -1,12 +1,19 @@
+<<<<<<< HEAD
 React, { useState, useEffect              } from
   'react.ts';
-import Link from 'next/link';
-  'next/link.ts';'{ motion, AnimatePresence               } from
+import Link from
+  'next/link.ts';'{ motion, AnimatePresence               } from'
   'framer-motion.ts';
-import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ;'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star
+import { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, ;'  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star'
               } from
-  'lucide-react.ts';'
-  'interface SidebarItem {name: string;
+  'lucide-react.ts';''
+  'interface SidebarItem {name: string;'
+=======
+import React, { useState, useEffect              } from 'react.ts'
+import  Link from 'next/link.ts''import { motion, AnimatePresence               } from 'framer-motion.ts';'
+import  { X, Menu, Home, Zap, Brain, Atom, Shield, Rocket, Globe, Phone, Mail, MapPin, ChevronRight, ChevronDown, '  Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Users, FileText, HelpCircle, BookOpen, Target, TrendingUp, Star'
+              } from 'lucide-react.ts'''interface SidebarItem {name: string;
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   href: string;
   icon: React.ReactNode;
   description?: string;
@@ -24,278 +31,233 @@ const sidebarSections = [;
   {
 
 <<<<<<< HEAD
-    title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap,
-,
-  color: 'from-cyan-500 to-blue-600, items[,
+    title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap,'
+, color: 'from-cyan-500 to-blue-600, items[, '
   {
-  ';
-        name: 'AI & Consciousness,'        href:
-  '/ai-services', icon: Brain,
+  ';'
+        name: 'AI & Consciousness, '        href: '/ai-services', icon: Brain, 
 ,
-  description: 'Advanced AI consciousness and evolution platforms, subItems[,
-  { name: 'AI Consciousness Evolution, href:,
-  /ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem, href:,
-  /ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance, href:,
-  /ai-ethics-governance' }, { name: 'AI Creativity Studio, href:,
-  /ai-creativity-studio' }, { name: 'AI Education Platform, href:,
-  /ai-education-platform' }, { name: 'AI Healthcare Diagnostics, href:,
-  /ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence, href:,
-  /ai-financial-intelligence' }, { name: 'AI Sustainability Platform, href:,
-  /ai-sustainability-platform' }, { name: 'AI Emotional Intelligence, href:,
-  /ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer, href:,
-  /ai-legal-contract-analyzer' }
+  description: 'Advanced AI consciousness and evolution platforms, subItems[,'
+  { name: 'AI Consciousness Evolution, href:,'
+  /ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem, href:, /ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance, href:,
+  /ai-ethics-governance' }, { name: 'AI Creativity Studio, href:, /ai-creativity-studio' }, { name: 'AI Education Platform, href:,
+  /ai-education-platform' }, { name: 'AI Healthcare Diagnostics, href:, /ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence, href:,
+  /ai-financial-intelligence' }, { name: 'AI Sustainability Platform, href:, /ai-sustainability-platform' }, { name: 'AI Emotional Intelligence, href:,
+  /ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer, href:, /ai-legal-contract-analyzer' }'
   '        ]'      }, {;
 
-        name: 'Quantum Computing,
+        name: 'Quantum Computing, '
 ,
-  href: '/quantum-services, icon: Atom,'        description:,
-  Next-generation quantum computing solutions', subItems[
+  href: '/quantum-services, icon: Atom,'        description:, Next-generation quantum computing solutions', subItems['
   '          { name: 'Quantum Cloud Infrastructure, href:,
   /quantum-cloud-infrastructure
-  ' }, { name: 'Quantum Bio-Computing, href:,
-  /quantum-bio-computing
+  ' }, { name: 'Quantum Bio-Computing, href:, /quantum-bio-computing
   ' }, { name: 'Quantum Energy Platform, href:,
   /quantum-energy-platform
-  ' }, { name: 'Quantum Materials Discovery, href:,
-  /quantum-materials-discovery
+  ' }, { name: 'Quantum Materials Discovery, href:, /quantum-materials-discovery
   ' }, { name: 'Quantum Robotics, href:,
   /quantum-robotics
-  ' }, { name: 'Quantum Internet Security, href:,
-  /quantum-internet-security
+  ' }, { name: 'Quantum Internet Security, href:, /quantum-internet-security
   ' }, { name: 'Quantum Logistics, href:,
   /quantum-logistics-optimization
-  ' }, { name: 'Quantum Cybersecurity, href:,
-  /quantum-cybersecurity-platform
+  ' }, { name: 'Quantum Cybersecurity, href:, /quantum-cybersecurity-platform
   ' }'        ]
-  '      }, {;
+  '      }, {;'
 
-        name: 'Enterprise IT,'        href:
-  '/enterprise-it', icon: Shield,
+        name: 'Enterprise IT, '        href: '/enterprise-it', icon: Shield, 
 ,
-  description: 'Enterprise-grade IT infrastructure and security, subItems[,
-  { name: 'Edge Computing Orchestrator, href:,
-  /edge-computing-orchestration' }, { name: 'Zero Trust Security Platform, href:,
-  /zero-trust-network-architecture' }, { name: 'Blockchain Enterprise Platform, href:,
-  /blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps, href:,
-  /ai-powered-devops' }, { name: 'Quantum Networking, href:,
-  /quantum-networking' }, { name: 'Autonomous IT Operations, href:,
-  /autonomous-it-operations' }, { name: 'Quantum Data Center, href:,
-  /quantum-data-center' }, { name: 'Quantum Cloud Migration, href:,
-  /quantum-cloud-migration' }
+  description: 'Enterprise-grade IT infrastructure and security, subItems[,'
+  { name: 'Edge Computing Orchestrator, href:,'
+  /edge-computing-orchestration' }, { name: 'Zero Trust Security Platform, href:, /zero-trust-network-architecture' }, { name: 'Blockchain Enterprise Platform, href:,
+  /blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps, href:, /ai-powered-devops' }, { name: 'Quantum Networking, href:,
+  /quantum-networking' }, { name: 'Autonomous IT Operations, href:, /autonomous-it-operations' }, { name: 'Quantum Data Center, href:,
+  /quantum-data-center' }, { name: 'Quantum Cloud Migration, href:, /quantum-cloud-migration' }'
   '        ]'      }, {;
 
-        name: 'Micro SAAS,
+        name: 'Micro SAAS, '
 ,
-  href: '/micro-saas, icon: Rocket,'        description:,
-  AI-powered micro SAAS solutions', subItems[
+  href: '/micro-saas, icon: Rocket,'        description:, AI-powered micro SAAS solutions', subItems['
   '          { name: 'AI Content Factory Platform, href:,
   /ai-content-factory
-  ' }, { name: 'CRM Intelligence & Automation, href:,
-  /crm-intelligence-automation
+  ' }, { name: 'CRM Intelligence & Automation, href:, /crm-intelligence-automation
   ' }, { name: 'AI Decision Engine Platform, href:,
   /ai-decision-engine
-  ' }, { name: 'E-commerce Optimization, href:,
-  /ecommerce-optimization-platform
+  ' }, { name: 'E-commerce Optimization, href:, /ecommerce-optimization-platform
   ' }, { name: 'AI HR & Talent Platform, href:,
   /ai-hr-talent-platform
-  ' }, { name: 'Financial Analytics Platform, href:,
-  /financial-analytics-platform
+  ' }, { name: 'Financial Analytics Platform, href:, /financial-analytics-platform
   ' }, { name: 'Supply Chain Intelligence, href:,
   /supply-chain-intelligence
-  ' }, { name: 'Marketing Automation Platform, href:,
-  /marketing-automation-platform
+  ' }, { name: 'Marketing Automation Platform, href:, /marketing-automation-platform
   ' }, { name: 'Project Management AI, href:,
   /project-management-ai
   ' }'        ]
-  '      }, {;
+  '      }, {;'
 
-        name: 'Space Technology,'        href:
-  '/space-tech', icon: Globe,
+        name: 'Space Technology, '        href: '/space-tech', icon: Globe, 
 ,
-  description: 'Cutting-edge space exploration and mining, subItems[,
-  { name: 'Space Mining Platform, href:,
-  /space-mining-platform' }, { name: 'Satellite Technology, href:,
-  /satellite-technology' }, { name: 'Space Resource Management, href:,
-  /space-resource-management' }, { name: 'Interplanetary Communication, href:,
-  /interplanetary-communication' }
+  description: 'Cutting-edge space exploration and mining, subItems[,'
+  { name: 'Space Mining Platform, href:,'
+  /space-mining-platform' }, { name: 'Satellite Technology, href:, /satellite-technology' }, { name: 'Space Resource Management, href:,
+  /space-resource-management' }, { name: 'Interplanetary Communication, href:, /interplanetary-communication' }'
   '        ]'      }, {;
 
-        name: 'Emerging Tech,
+        name: 'Emerging Tech, '
 ,
-  href: '/emerging-tech, icon: Sparkles,'        description:,
-  Future technologies and innovations', subItems[
+  href: '/emerging-tech, icon: Sparkles,'        description:, Future technologies and innovations', subItems['
   '          { name: 'Brain-Computer Interface, href:,
   /brain-computer-interface
-  ' }, { name: 'Autonomous Vehicle AI, href:,
-  /autonomous-vehicle-ai
+  ' }, { name: 'Autonomous Vehicle AI, href:, /autonomous-vehicle-ai
   ' }, { name: 'Advanced Robotics, href:,
   /advanced-robotics
-  ' }, { name: 'Biotechnology Platform, href:,
-  /biotechnology-platform
+  ' }, { name: 'Biotechnology Platform, href:, /biotechnology-platform
   ' }'        ]
-  '
-    ]
-  }, {;
+  ''
+=======
+    title: anyanyanyanyanyanyanyanyanyanyanyanyany&aposRevolutionary Services', icon: Zap,'    color: 'from-cyan-500 to-blue-600', items['      {'
+        name: 'AI & Consciousness', '        href: '/ai-services', icon: Brain, '        description: 'Advanced AI consciousness and evolution platforms', subItems['          { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }, { name: 'AI Creativity Studio', href: '/ai-creativity-studio' }, { name: 'AI Education Platform', href: '/ai-education-platform' }, { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' }, { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' }, { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }'        ]'      }, {'
 
+        name: 'Quantum Computing', '        href: '/quantum-services', icon: Atom, '        description: 'Next-generation quantum computing solutions', subItems['          { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }, { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' }, { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' }, { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery' }, { name: 'Quantum Robotics', href: '/quantum-robotics' }, { name: 'Quantum Internet Security', href: '/quantum-internet-security' }, { name: 'Quantum Logistics', href: '/quantum-logistics-optimization' }, { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform' }'        ]'      }, {'
+
+        name: 'Enterprise IT', '        href: '/enterprise-it', icon: Shield, '        description: 'Enterprise-grade IT infrastructure and security', subItems['          { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration' }, { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture' }, { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }, { name: 'Quantum Networking', href: '/quantum-networking' }, { name: 'Autonomous IT Operations', href: '/autonomous-it-operations' }, { name: 'Quantum Data Center', href: '/quantum-data-center' }, { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }'        ]'      }, {'
+
+        name: 'Micro SAAS', '        href: '/micro-saas', icon: Rocket, '        description: 'AI-powered micro SAAS solutions', subItems['          { name: 'AI Content Factory Platform', href: '/ai-content-factory' }, { name: 'CRM Intelligence & Automation', href: '/crm-intelligence-automation' }, { name: 'AI Decision Engine Platform', href: '/ai-decision-engine' }, { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform' }, { name: 'AI HR & Talent Platform', href: '/ai-hr-talent-platform' }, { name: 'Financial Analytics Platform', href: '/financial-analytics-platform' }, { name: 'Supply Chain Intelligence', href: '/supply-chain-intelligence' }, { name: 'Marketing Automation Platform', href: '/marketing-automation-platform' }, { name: 'Project Management AI', href: '/project-management-ai' }'        ]'      }, {'
+
+        name: 'Space Technology', '        href: '/space-tech', icon: Globe, '        description: 'Cutting-edge space exploration and mining', subItems['          { name: 'Space Mining Platform', href: '/space-mining-platform' }, { name: 'Satellite Technology', href: '/satellite-technology' }, { name: 'Space Resource Management', href: '/space-resource-management' }, { name: 'Interplanetary Communication', href: '/interplanetary-communication' }'        ]'      }, {'
+
+        name: 'Emerging Tech', '        href: '/emerging-tech', icon: Sparkles, '        description: 'Future technologies and innovations', subItems['          { name: 'Brain-Computer Interface', href: '/brain-computer-interface' }, { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' }, { name: 'Advanced Robotics', href: '/advanced-robotics' }, { name: 'Biotechnology Platform', href: '/biotechnology-platform' }'        ]''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
+    ]
+  }, {
+
+<<<<<<< HEAD
     title: 'Industry Solutions,'    icon: Target, color:,
-  from-purple-500 to-pink-600',
+  from-purple-500 to-pink-600', '
   '    items['      {;
 
-        name: 'Healthcare, href:
+        name: 'Healthcare, href: '
   '/healthcare-solutions',
-  '        icon: Heart, description:,
+  '        icon: Heart, description:,'
   AI-powered healthcare diagnostics and solutions
-  ','        subItems[
-  '          { name: 'AI Healthcare Diagnostics, href:,
-  /ai-healthcare-diagnostics
-  ' },'          { name: 'Medical Imaging AI, href:,
-  /medical-imaging-ai' },
-  '          { name: 'Drug Discovery Platform, href:,
-  /drug-discovery-platform
+  ', '        subItems[
+  '          { name: 'AI Healthcare Diagnostics, href:, /ai-healthcare-diagnostics
+  ' },'          { name: 'Medical Imaging AI, href:,'
+  /medical-imaging-ai' }, '
+  '          { name: 'Drug Discovery Platform, href:, /drug-discovery-platform
   ' }'        ]
-  '      }, {;
+  '      }, {;'
 
-        name: 'Financial Services,'        href:
-  '/financial-solutions', icon: BarChart3,
+        name: 'Financial Services, '        href: '/financial-solutions', icon: BarChart3, 
 ,
-  description: 'Advanced financial intelligence and analytics, subItems[,
-  { name: 'AI Financial Intelligence, href:,
-  /ai-financial-intelligence' }, { name: 'Quantum Trading Platform, href:,
-  /quantum-financial-trading' }, { name: 'Risk Assessment AI, href:,
-  /risk-assessment-ai' }
+  description: 'Advanced financial intelligence and analytics, subItems[,'
+  { name: 'AI Financial Intelligence, href:,'
+  /ai-financial-intelligence' }, { name: 'Quantum Trading Platform, href:, /quantum-financial-trading' }, { name: 'Risk Assessment AI, href:,
+  /risk-assessment-ai' }'
   '        ]'      }, {;
 
-        name: 'Manufacturing,
+        name: 'Manufacturing, '
 ,
-  href: '/manufacturing-solutions, icon: Settings,'        description:,
-  Industry 4.0 and smart manufacturing', subItems[
+  href: '/manufacturing-solutions, icon: Settings,'        description:, Industry 4.0 and smart manufacturing', subItems['
   '          { name: 'Smart Factory Platform, href:,
   /smart-factory-platform
-  ' }, { name: 'Predictive Maintenance AI, href:,
-  /predictive-maintenance-ai
+  ' }, { name: 'Predictive Maintenance AI, href:, /predictive-maintenance-ai
   ' }, { name: 'Quality Control AI, href:,
   /quality-control-ai
   ' }'        ]
-  '      }, {;
+  '      }, {;'
 
-        name: 'Retail & E-commerce,'        href:
-  '/retail-solutions', icon: Eye,
+        name: 'Retail & E-commerce, '        href: '/retail-solutions', icon: Eye, 
 ,
-  description: 'E-commerce optimization and retail intelligence, subItems[,
-  { name: 'E-commerce Optimization, href:,
-  /ecommerce-optimization-platform' }, { name: 'Customer Behavior AI, href:,
-  /customer-behavior-ai' }, { name: 'Inventory Management AI, href:,
-  /inventory-management-ai' }
+  description: 'E-commerce optimization and retail intelligence, subItems[,'
+  { name: 'E-commerce Optimization, href:,'
+  /ecommerce-optimization-platform' }, { name: 'Customer Behavior AI, href:, /customer-behavior-ai' }, { name: 'Inventory Management AI, href:,
+  /inventory-management-ai' }'
   '        ]'      }, {;
 
-        name: 'Government & Defense,
+        name: 'Government & Defense, '
 ,
-  href: '/government-solutions, icon: Shield,'        description:,
-  Secure government and defense solutions', subItems[
+  href: '/government-solutions, icon: Shield,'        description:, Secure government and defense solutions', subItems['
   '          { name: 'Cybersecurity Platform, href:,
   /quantum-cybersecurity-platform
-  ' }, { name: 'Data Protection AI, href:,
-  /data-protection-ai
+  ' }, { name: 'Data Protection AI, href:, /data-protection-ai
   ' }, { name: 'Threat Detection AI, href:,
   /threat-detection-ai
   ' }'        ]
-  '      }, {;
+  '      }, {;'
 
-        name: 'Education,'        href:
-  '/education-solutions', icon: Award,
+        name: 'Education, '        href: '/education-solutions', icon: Award, 
 ,
-  description: 'AI-powered education and learning platforms, subItems[,
-  { name: 'AI Education Platform, href:,
-  /ai-education-platform' }, { name: 'Personalized Learning AI, href:,
-  /personalized-learning-ai' }, { name: 'Student Performance AI, href:,
-  /student-performance-ai' }
+  description: 'AI-powered education and learning platforms, subItems[,'
+  { name: 'AI Education Platform, href:,'
+  /ai-education-platform' }, { name: 'Personalized Learning AI, href:, /personalized-learning-ai' }, { name: 'Student Performance AI, href:,
+  /student-performance-ai' }'
   '        ]'
-    ]
-  }, {;
-
-    title: 'Comp & Resources,
-  '    icon: Users, color:,
-  from-green-500 to-emerald-600
-  ','    items[
-  '      {;
 =======
-    title: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Revolutionary Services', icon: Zap,'    color: 'from-cyan-500 to-blue-600', items['      {';
-        name: 'AI & Consciousness', '        href: '/ai-services', icon: Brain, '        description: 'Advanced AI consciousness and evolution platforms', subItems['          { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution' }, { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' }, { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }, { name: 'AI Creativity Studio', href: '/ai-creativity-studio' }, { name: 'AI Education Platform', href: '/ai-education-platform' }, { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' }, { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' }, { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform' }, { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform' }, { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }'        ]'      }, {;'
+    title: 'Industry Solutions', '    icon: Target, color: 'from-purple-500 to-pink-600', '    items['      {'
 
-        name: 'Quantum Computing', '        href: '/quantum-services', icon: Atom, '        description: 'Next-generation quantum computing solutions', subItems['          { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }, { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' }, { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' }, { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery' }, { name: 'Quantum Robotics', href: '/quantum-robotics' }, { name: 'Quantum Internet Security', href: '/quantum-internet-security' }, { name: 'Quantum Logistics', href: '/quantum-logistics-optimization' }, { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform' }'        ]'      }, {;'
+        name: 'Healthcare', href: '/healthcare-solutions', '        icon: Heart, description: 'AI-powered healthcare diagnostics and solutions', '        subItems['          { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' }, '          { name: 'Medical Imaging AI', href: '/medical-imaging-ai' }, '          { name: 'Drug Discovery Platform', href: '/drug-discovery-platform' }'        ]'      }, {'
 
-        name: 'Enterprise IT', '        href: '/enterprise-it', icon: Shield, '        description: 'Enterprise-grade IT infrastructure and security', subItems['          { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration' }, { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture' }, { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform' }, { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }, { name: 'Quantum Networking', href: '/quantum-networking' }, { name: 'Autonomous IT Operations', href: '/autonomous-it-operations' }, { name: 'Quantum Data Center', href: '/quantum-data-center' }, { name: 'Quantum Cloud Migration', href: '/quantum-cloud-migration' }'        ]'      }, {;'
+        name: 'Financial Services', '        href: '/financial-solutions', icon: BarChart3, '        description: 'Advanced financial intelligence and analytics', subItems['          { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' }, { name: 'Quantum Trading Platform', href: '/quantum-financial-trading' }, { name: 'Risk Assessment AI', href: '/risk-assessment-ai' }'        ]'      }, {'
 
-        name: 'Micro SAAS', '        href: '/micro-saas', icon: Rocket, '        description: 'AI-powered micro SAAS solutions', subItems['          { name: 'AI Content Factory Platform', href: '/ai-content-factory' }, { name: 'CRM Intelligence & Automation', href: '/crm-intelligence-automation' }, { name: 'AI Decision Engine Platform', href: '/ai-decision-engine' }, { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform' }, { name: 'AI HR & Talent Platform', href: '/ai-hr-talent-platform' }, { name: 'Financial Analytics Platform', href: '/financial-analytics-platform' }, { name: 'Supply Chain Intelligence', href: '/supply-chain-intelligence' }, { name: 'Marketing Automation Platform', href: '/marketing-automation-platform' }, { name: 'Project Management AI', href: '/project-management-ai' }'        ]'      }, {;'
+        name: 'Manufacturing', '        href: '/manufacturing-solutions', icon: Settings, '        description: 'Industry 4.0 and smart manufacturing', subItems['          { name: 'Smart Factory Platform', href: '/smart-factory-platform' }, { name: 'Predictive Maintenance AI', href: '/predictive-maintenance-ai' }, { name: 'Quality Control AI', href: '/quality-control-ai' }'        ]'      }, {'
 
-        name: 'Space Technology', '        href: '/space-tech', icon: Globe, '        description: 'Cutting-edge space exploration and mining', subItems['          { name: 'Space Mining Platform', href: '/space-mining-platform' }, { name: 'Satellite Technology', href: '/satellite-technology' }, { name: 'Space Resource Management', href: '/space-resource-management' }, { name: 'Interplanetary Communication', href: '/interplanetary-communication' }'        ]'      }, {;'
+        name: 'Retail & E-commerce', '        href: '/retail-solutions', icon: Eye, '        description: 'E-commerce optimization and retail intelligence', subItems['          { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform' }, { name: 'Customer Behavior AI', href: '/customer-behavior-ai' }, { name: 'Inventory Management AI', href: '/inventory-management-ai' }'        ]'      }, {'
 
-        name: 'Emerging Tech', '        href: '/emerging-tech', icon: Sparkles, '        description: 'Future technologies and innovations', subItems['          { name: 'Brain-Computer Interface', href: '/brain-computer-interface' }, { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' }, { name: 'Advanced Robotics', href: '/advanced-robotics' }, { name: 'Biotechnology Platform', href: '/biotechnology-platform' }'        ]''
-    ]
-  }, {;
-
-    title: 'Industry Solutions', '    icon: Target, color: 'from-purple-500 to-pink-600', '    items['      {;'
-
-        name: 'Healthcare', href: '/healthcare-solutions','        icon: Heart, description: 'AI-powered healthcare diagnostics and solutions','        subItems['          { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics' },'          { name: 'Medical Imaging AI', href: '/medical-imaging-ai' },'          { name: 'Drug Discovery Platform', href: '/drug-discovery-platform' }'        ]'      }, {;'
-
-        name: 'Financial Services', '        href: '/financial-solutions', icon: BarChart3, '        description: 'Advanced financial intelligence and analytics', subItems['          { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' }, { name: 'Quantum Trading Platform', href: '/quantum-financial-trading' }, { name: 'Risk Assessment AI', href: '/risk-assessment-ai' }'        ]'      }, {;'
-
-        name: 'Manufacturing', '        href: '/manufacturing-solutions', icon: Settings, '        description: 'Industry 4.0 and smart manufacturing', subItems['          { name: 'Smart Factory Platform', href: '/smart-factory-platform' }, { name: 'Predictive Maintenance AI', href: '/predictive-maintenance-ai' }, { name: 'Quality Control AI', href: '/quality-control-ai' }'        ]'      }, {;'
-
-        name: 'Retail & E-commerce', '        href: '/retail-solutions', icon: Eye, '        description: 'E-commerce optimization and retail intelligence', subItems['          { name: 'E-commerce Optimization', href: '/ecommerce-optimization-platform' }, { name: 'Customer Behavior AI', href: '/customer-behavior-ai' }, { name: 'Inventory Management AI', href: '/inventory-management-ai' }'        ]'      }, {;'
-
-        name: 'Government & Defense', '        href: '/government-solutions', icon: Shield, '        description: 'Secure government and defense solutions', subItems['          { name: 'Cybersecurity Platform', href: '/quantum-cybersecurity-platform' }, { name: 'Data Protection AI', href: '/data-protection-ai' }, { name: 'Threat Detection AI', href: '/threat-detection-ai' }'        ]'      }, {;'
+        name: 'Government & Defense', '        href: '/government-solutions', icon: Shield, '        description: 'Secure government and defense solutions', subItems['          { name: 'Cybersecurity Platform', href: '/quantum-cybersecurity-platform' }, { name: 'Data Protection AI', href: '/data-protection-ai' }, { name: 'Threat Detection AI', href: '/threat-detection-ai' }'        ]'      }, {'
 
         name: 'Education', '        href: '/education-solutions', icon: Award, '        description: 'AI-powered education and learning platforms', subItems['          { name: 'AI Education Platform', href: '/ai-education-platform' }, { name: 'Personalized Learning AI', href: '/personalized-learning-ai' }, { name: 'Student Performance AI', href: '/student-performance-ai' }'        ]''
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     ]
-  }, {;
+  }, {
 
-    title: 'Comp & Resources', '    icon: Users, color: 'from-green-500 to-emerald-600', '    items['      {;'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+<<<<<<< HEAD
+    title: 'Comp & Resources,'
+  '    icon: Users, color:,'
+  from-green-500 to-emerald-600
+  ', '    items[
+  '      {;'
 
         name: 'About Us, href: '/about
   ','        icon: Users, description:,
-  Learn about Zion Tech Group',
-  '        subItems['          { name: 'Our Mission, href:,
-  /mission' },
+  Learn about Zion Tech Group', '
+  '        subItems['          { name: 'Our Mission, href:, '
+  /mission' },'
   '          { name: 'Leadership Team, href:,
   /leadership
-  ' },'          { name: 'Comp History, href:,
-  /history' },
+  ' }, '          { name: 'Comp History, href:, '
+  /history' },'
   '          { name: 'Careers, href:,
   /careers
   ' }'        ]
-  '      }, {;
+  '      }, {;'
 
-<<<<<<< HEAD
-        name: 'Resources,'        href:
-  '/resources', icon: BookOpen,
+        name: 'Resources, '        href: '/resources', icon: BookOpen, 
 ,
-  description: 'Educational content and documentation, subItems[,
-  { name: 'Documentation, href:,
-  /docs' }, { name: 'API Reference, href:,
-  /api-docs' }, { name: 'Blog & News, href:,
-  /blog' }, { name: 'Case Studies, href:,
-  /case-studies' }, { name: 'Whitepapers, href:,
-  /whitepapers' }, { name: 'Webinars, href:,
-  /webinars' }
+  description: 'Educational content and documentation, subItems[,'
+  { name: 'Documentation, href:,'
+  /docs' }, { name: 'API Reference, href:, /api-docs' }, { name: 'Blog & News, href:,
+  /blog' }, { name: 'Case Studies, href:, /case-studies' }, { name: 'Whitepapers, href:,
+  /whitepapers' }, { name: 'Webinars, href:, /webinars' }'
   '        ]'      }, {;
 
-        name: 'Support,
+        name: 'Support, '
 ,
-  href: '/support, icon: HelpCircle,'        description:,
-  Get help and support', subItems[
+  href: '/support, icon: HelpCircle,'        description:, Get help and support', subItems['
   '          { name: 'Contact Support, href:,
   /contact-support
-  ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:,
+  ' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs, href:,'
   /training';'},;'          { name: 'Community Forum, href:,
-  /community' },;'          { name: 'Knowledge Base, href:
+  /community' },;'          { name: 'Knowledge Base, href: '
   '/knowledge-base' };'        ];'      };];
 =======
-        name: 'Resources', '        href: '/resources', icon: BookOpen, '        description: 'Educational content and documentation', subItems['          { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api-docs' }, { name: 'Blog & News', href: '/blog' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'Whitepapers', href: '/whitepapers' }, { name: 'Webinars', href: '/webinars' }'        ]'      }, {;'
+    title: 'Comp & Resources', '    icon: Users, color: 'from-green-500 to-emerald-600', '    items['      {'
 
-        name: 'Support', '        href: '/support', icon: HelpCircle, '        description: 'Get help and support', subItems['          { name: 'Contact Support', href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&apos;Training Programs', href: '/training';'},;'          { name: 'Community Forum', href: '/community' },;'          { name: 'Knowledge Base', href: '/knowledge-base' };'        ];'      };];'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+        name: 'About Us', href: '/about', '        icon: Users, description: 'Learn about Zion Tech Group', '        subItems['          { name: 'Our Mission', href: '/mission' }, '          { name: 'Leadership Team', href: '/leadership' }, '          { name: 'Comp History', href: '/history' }, '          { name: 'Careers', href: '/careers' }'        ]'      }, {
+
+        name: 'Resources', '        href: '/resources', icon: BookOpen, '        description: 'Educational content and documentation', subItems['          { name: 'Documentation', href: '/docs' }, { name: 'API Reference', href: '/api-docs' }, { name: 'Blog & News', href: '/blog' }, { name: 'Case Studies', href: '/case-studies' }, { name: 'Whitepapers', href: '/whitepapers' }, { name: 'Webinars', href: '/webinars' }'        ]'      }, {'
+
+        name: 'Support', '        href: '/support', icon: HelpCircle, '        description: 'Get help and support', subItems['          { name: 'Contact Support', href: '/contact-support' }, { name: anyanyanyanyanyanyanyanyanyanyanyanyany&aposTraining Programs', href: '/training''},;'          { name: 'Community Forum', href: '/community' },'          { name: 'Knowledge Base', href: '/knowledge-base' }'        ];'      };]'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
   };
 ];
 
@@ -330,14 +292,18 @@ export default function EnhancedSidebar2025(...args[]: any): {const [expandedSec
 
     if (isOpen) {
 
+<<<<<<< HEAD
 document.body.style.overflow =
-  'hidden'} else {'
+  'hidden'} else {''
   '      document.body.style.overflow = 'unset
-  '};
-   return () => {;
+  '}';'    return () => {;'
       document.body.style.overflow =
-  'unset'}}, [isOpen]);'
-  '  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return (
+  'unset'}}, [isOpen]);''
+  '  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === href;return ('
+=======
+document.body.style.overflow = 'hidden'} else {''      document.body.style.overflow = 'unset'}''    return () => {;
+      document.body.style.overflow = 'unset'}}, [isOpen])''  const isActive = (href: anyanyanyanyanyanyanyanyanyanyanyanyanystring)               => router.pathname === hrefreturn (
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     <>
       {/* Backdrop */}
       <AnimatePresence>
@@ -353,19 +319,17 @@ className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden""          
       {/* Sidebar */}
       <motion.div
 <<<<<<< HEAD
-initial={{ x:,
-  -100%
+initial={{ x:, -100%
   ' }}'        animate={{ x: isOpen ? 0 :
-  '-100% }}
+  '-100% }}'
 ,
-  transition = {'
-  { type: 'spring, damping: 25,
-,
-  stiffness: 200}}
+  transition = {''
+  { type: 'spring, damping: 25,'
+, stiffness: 200}}
 =======
 initial={{ x: '-100%' }}'        animate={{ x: isOpen ? 0 : '-100%' }}'        transition = {''
-  { type: 'spring', damping: 25,'  stiffness: 200 '}}
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+  { type: 'spring', damping: 25, '  stiffness: 200 '}}
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`
         {/* Header */}
         <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6">"          <div className="flex items-center justify-between mb-6">"            <div className="flex items-center gap-3">"              <div className="relative">"                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">"                  <Zap className="w-6 h-6 text-white" />"                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20"></div>"              </div>"              <div>"
@@ -386,8 +350,7 @@ className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r
           {sidebarSections.map((section, sectionIndex) => (
             <div key={sectionIndex} className="space-y-3">"              <button"                onClick={() => toggleSection(section.title)}
                 className="w-full flex items-center justify-between p-3 bg-gray-800/30 hover: bg-gray-800/50 rounded-lg border border-gray-700/30 transition-all duration-300 group"""                <div className="flex items-center gap-3">"                  <div className={`w-8 h-8 bg-gradient-to-r ${section.color} rounded-lg flex items-center justify-center`}>"                    <section.icon className="w-4 h-4 text-white" />"                  </div>"                  <span className="text-white font-semibold">{section.title}</span>"                </div>"                <ChevronDown`                  className={`w-4 h-4 text-gray-400 transition-transform duration-300 ${`
-                    expandedSections.has(section.title) ?,
-  rotate-180': ''                  }`}'                />`              </button><AnimatePresence>
+                    expandedSections.has(section.title) ?, rotate-180': ''                  }`}'                />`              </button><AnimatePresence>
                 {expandedSections.has(section.title) && (
                   <motion.div
                     initial = {
@@ -395,10 +358,13 @@ className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r
 { opacity: 0, height: 0}}
                     animate = {
 
+<<<<<<< HEAD
 { opacity: 1,;
-  height:
-  'auto' '
-  '}}
+  height: 'auto' ''
+  '}}'
+=======
+{ opacity: 1, height: 'auto' ''}}
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                     exit = {
 
 { opacity: 0, height: 0}}
@@ -410,8 +376,7 @@ className="space-y-2 ml-6"""                    {section.items.map((item, itemIn
                           {item.subItems && item.subItems.length > 0 && (
                             <ChevronRight
                               className={`w-4 h-4 text-gray-500 transition-transform duration-300 ${`
-                                expandedItems.has(item.name) ?,
-  rotate-90
+                                expandedItems.has(item.name) ?, rotate-90
   ': ''                              }`}'                            />`                          )}</button>
 
                         {/* Sub-items */}
@@ -424,9 +389,12 @@ className="space-y-2 ml-6"""                    {section.items.map((item, itemIn
 { opacity: 0, height: 0}}
                                 animate = {
 
+<<<<<<< HEAD
 { opacity: 1,;
-  height:
-  'auto' ''}}
+  height: 'auto' ''}}
+=======
+{ opacity: 1, height: 'auto' ''}}
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                                 exit = {
 
 { opacity: 0, height: 0}}

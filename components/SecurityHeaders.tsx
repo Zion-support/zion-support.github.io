@@ -1,21 +1,20 @@
+<<<<<<< HEAD
 import React, { useEffect } from,
   react';'
-  'const SecurityHeaders: React.FC = () => {
+  'const SecurityHeaders: React.FC = () => {'
   useEffect(() => {
     // Add security headers via meta tags
     const addSecurityHeaders = () => {;
       const securityMetaTags = [;
-<<<<<<< HEAD
-        { name: 'referrer, content:,
+        { name: 'referrer, content:,'
   strict-origin-when-cross-origin
-  ' },'        { name: 'x-content-type-options, content:,
-  nosniff' },
+  ' }, '        { name: 'x-content-type-options, content:, '
+  nosniff' },'
   '        { name: 'x-frame-options, content:,
   DENY
-  ' },'        { name: 'x-xss-protection, content:,
-  1; mode=block' }, { name: 'permissions-policy, content:,
-  camera=(), microphone=(), geolocation=(), interest-cohort=()' }, { name: 'content-security-policy, content: "default-src,
-  self'; script-src
+  ' }, '        { name: 'x-xss-protection, content:, '
+  1; mode=block' }, { name: 'permissions-policy, content:, camera=(), microphone=(), geolocation=(), interest-cohort=()' }, { name: 'content-security-policy, content: "default-src, "
+  self'; script-src'
   'self' 
   'unsafe-inline' 
   'unsafe-eval' https: //fonts.googleapis.com https://www.google-analytics.com; style-src
@@ -24,26 +23,33 @@ import React, { useEffect } from,
   'self' https: //fonts.gstatic.com; img-src
   'self' data: https:; connect-src
   'self' https: //api.ziontechgroup.com; frame-ancestors
-  'none;" }"      ];"
-=======
-        { name: 'referrer', content: 'strict-origin-when-cross-origin' },'        { name: 'x-content-type-options', content: 'nosniff' },'        { name: 'x-frame-options', content: 'DENY' },'        { name: 'x-xss-protection', content: '1; mode=block' }, { name: 'permissions-policy', content: 'camera=(), microphone=(), geolocation=(), interest-cohort=()' }, { name: 'content-security-policy', content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //fonts.googleapis.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com; font-src 'self' https: //fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https: //api.ziontechgroup.com; frame-ancestors 'none';" }"      ];"'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+  'none;" }"      ];"'"
       securityMetaTags.forEach(tag => {
         const meta = document.createElement(
   'meta');'        meta.httpEquiv = tag.name;'        meta.content = tag.content;document.head.appendChild(meta);
+=======
+import React, { useEffect } from 'react'''const SecurityHeaders: React.FC = () => {
+  useEffect(() => {
+    // Add security headers via meta tags
+    const addSecurityHeaders = () => {;
+      const securityMetaTags = [
+        { name: 'referrer', content: 'strict-origin-when-cross-origin' },'        { name: 'x-content-type-options', content: 'nosniff' },'        { name: 'x-frame-options', content: 'DENY' },'        { name: 'x-xss-protection', content: '1 mode=block' }, { name: 'permissions-policy', content: 'camera=(), microphone=(), geolocation=(), interest-cohort=()' }, { name: 'content-security-policy', content: "default-src 'self' script-src 'self' 'unsafe-inline' 'unsafe-eval' https: //fonts.googleapis.com https://www.google-analytics.com style-src 'self' 'unsafe-inline' https: //fonts.googleapis.com font-src 'self' https: //fonts.gstatic.com img-src 'self' data: https: connect-src 'self' https: //api.ziontechgroup.com frame-ancestors 'none';" }"      ]"'
+      securityMetaTags.forEach(tag => {
+        const meta = document.createElement('meta')'        meta.httpEquiv = tag.name;'        meta.content = tag.content;document.head.appendChild(meta);
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
       });
     };
 
     // Add Content Security Policy for inline styles
-const addCSPForInlineStyles = () => {;
 <<<<<<< HEAD
+const addCSPForInlineStyles = () => {;
       const style = document.createElement(
-  'style');'      style.setAttribute(
-  'nonce',
-  'csp-nonce-' + Math.random().toString(36).substr(2, 9));'      document.head.appendChild(style);'    };// Initialize security headers
+  'style');'      style.setAttribute('
+  'nonce', 'csp-nonce-' + Math.random().toString(36).substr(2, 9));'      document.head.appendChild(style);'    };// Initialize security headers
 =======
-      const style = document.createElement('style');'      style.setAttribute('nonce', 'csp-nonce-' + Math.random().toString(36).substr(2, 9));'      document.head.appendChild(style);'    };// Initialize security headers'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1
+const addCSPForInlineStyles = () => {
+      const style = document.createElement('style')'      style.setAttribute('nonce', 'csp-nonce-' + Math.random().toString(36).substr(2, 9))'      document.head.appendChild(style);'    }// Initialize security headers'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     addSecurityHeaders();
     addCSPForInlineStyles();
   }, []);

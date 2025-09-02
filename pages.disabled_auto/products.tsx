@@ -1,6 +1,5 @@
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
-import React from,
-  react';
+<<<<<<< HEAD
+import React from, react';'
 import type { NextPage } from
   'next';
 import MainLayout from
@@ -10,258 +9,153 @@ import Link from
 import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from
   'lucide-react';
 =======
-import React from 'react';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import Link from 'next/link';
-import {
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Zap,
-  Globe,
-  Shield,
-} from 'lucide-react';
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
+import React from 'react'
+import type { NextPage } from 'next'
+import MainLayout from '../components/layout/MainLayout'
+import Link from 'next/link'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Globe, Shield } from 'lucide-react'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
 const Products: NextPage = () => {
   const products = [
     {
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
-      title:
-  'AI Business Intelligence Platform,
+<<<<<<< HEAD
+      title: 'AI Business Intelligence Platform, '
       description:,
-  Transform your data into actionable insights with our advanced AI-powered analytics platform.',
+  Transform your data into actionable insights with our advanced AI-powered analytics platform.', '
       features: [
-  'Real-time data visualization,
-,
-  Predictive analytics',
-  'Custom dashboard creation',
-  'Automated reporting',
+  'Real-time data visualization,'
+, Predictive analytics','
+  'Custom dashboard creation', 'Automated reporting',
   'Multi-source data integration'
-=======
-      title: 'AI Business Intelligence Platform',
-      description:
-        'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
-      features: [
-        'Real-time data visualization',
-        'Predictive analytics',
-        'Custom dashboard creation',
-        'Automated reporting',
-        'Multi-source data integration',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
-      ],
-      pricing: 'Starting at $299/month,
-      category:
-  'AI & Analytics',
-      rating: 4.9,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
-      users:,
-  500+',
-      image: '/products/ai-bi-platform.jpg
-    },
-    {
+      ], pricing: 'Starting at $299/month,'
+      category: 'AI & Analytics', rating: 4.9,
+      users:, 500+','
+      image: '/products/ai-bi-platform.jpg'
+    }, {
       title:,
-  Cloud Migration Suite',
-      description: 'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.,
-      features: [,
-  Automated migration planning',
-  'Zero-downtime migration',
-  'Cost optimization analysis',
-  'Security compliance checks',
-  '24/7 migration support'
-=======
-      users: '500+',
-      image: '/products/ai-bi-platform.jpg',
-    },
-    {
-      title: 'Cloud Migration Suite',
-      description:
-        'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.',
-      features: [
-        'Automated migration planning',
-        'Zero-downtime migration',
-        'Cost optimization analysis',
-        'Security compliance checks',
-        '24/7 migration support',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
-      ],
-      pricing: 'Starting at $199/month,
-      category:
-  'Cloud Computing',
-      rating: 4.8,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
-      users:,
-  300+',
-      image: '/products/cloud-migration.jpg
-    },
-    {
+  Cloud Migration Suite', '
+      description: 'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.,'
+      features: [, Automated migration planning','
+  'Zero-downtime migration', 'Cost optimization analysis',
+  'Security compliance checks', '24/7 migration support'
+      ], pricing: 'Starting at $199/month,'
+      category: 'Cloud Computing', rating: 4.8,
+      users:, 300+','
+      image: '/products/cloud-migration.jpg'
+    }, {
       title:,
-  Cybersecurity Monitoring System',
-      description: 'Protect your business with our advanced threat detection and response platform.,
-      features: [,
-  Real-time threat monitoring',
-  'Automated incident response',
-  'Compliance reporting',
-  'Security awareness training',
-  '24/7 SOC support'
-=======
-      users: '300+',
-      image: '/products/cloud-migration.jpg',
-    },
-    {
-      title: 'Cybersecurity Monitoring System',
-      description:
-        'Protect your business with our advanced threat detection and response platform.',
-      features: [
-        'Real-time threat monitoring',
-        'Automated incident response',
-        'Compliance reporting',
-        'Security awareness training',
-        '24/7 SOC support',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
-      ],
-      pricing: 'Starting at $399/month,
-      category:
-  'Cybersecurity',
-      rating: 4.9,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
-      users:,
-  200+',
-      image: '/products/cybersecurity-monitoring.jpg
-    },
-    {
+  Cybersecurity Monitoring System', '
+      description: 'Protect your business with our advanced threat detection and response platform.,'
+      features: [, Real-time threat monitoring','
+  'Automated incident response', 'Compliance reporting',
+  'Security awareness training', '24/7 SOC support'
+      ], pricing: 'Starting at $399/month,'
+      category: 'Cybersecurity', rating: 4.9,
+      users:, 200+','
+      image: '/products/cybersecurity-monitoring.jpg'
+    }, {
       title:,
-  Micro SaaS Development Kit',
-      description: 'Build and launch your own micro SaaS products with our comprehensive development framework.,
-      features: [,
-  Pre-built templates',
-  'Payment integration',
-  'User management system',
-  'Analytics dashboard',
-  'Deployment automation'
-=======
-      users: '200+',
-      image: '/products/cybersecurity-monitoring.jpg',
-    },
-    {
-      title: 'Micro SaaS Development Kit',
-      description:
-        'Build and launch your own micro SaaS products with our comprehensive development framework.',
-      features: [
-        'Pre-built templates',
-        'Payment integration',
-        'User management system',
-        'Analytics dashboard',
-        'Deployment automation',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
-      ],
-      pricing: 'Starting at $149/month,
-      category:
-  'SaaS Development',
-      rating: 4.7,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
-      users:,
-  150+',
-      image: '/products/micro-saas-kit.jpg
-    },
-    {
+  Micro SaaS Development Kit', '
+      description: 'Build and launch your own micro SaaS products with our comprehensive development framework.,'
+      features: [, Pre-built templates','
+  'Payment integration', 'User management system',
+  'Analytics dashboard', 'Deployment automation'
+      ], pricing: 'Starting at $149/month,'
+      category: 'SaaS Development', rating: 4.7,
+      users:, 150+','
+      image: '/products/micro-saas-kit.jpg'
+    }, {
       title:,
-  Digital Transformation Hub',
-      description: 'Accelerate your digital transformation with our integrated suite of modernization tools.,
-      features: [,
-  Process automation',
-  'Legacy system integration',
-  'Workflow optimization',
-  'Change management tools',
-  'ROI tracking'
-=======
-      users: '150+',
-      image: '/products/micro-saas-kit.jpg',
-    },
-    {
-      title: 'Digital Transformation Hub',
-      description:
-        'Accelerate your digital transformation with our integrated suite of modernization tools.',
-      features: [
-        'Process automation',
-        'Legacy system integration',
-        'Workflow optimization',
-        'Change management tools',
-        'ROI tracking',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
-      ],
-      pricing: 'Starting at $249/month,
-      category:
-  'Digital Transformation',
-      rating: 4.8,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
-      users:,
-  400+',
-      image: '/products/digital-transformation.jpg
-    },
-    {
+  Digital Transformation Hub', '
+      description: 'Accelerate your digital transformation with our integrated suite of modernization tools.,'
+      features: [, Process automation','
+  'Legacy system integration', 'Workflow optimization',
+  'Change management tools', 'ROI tracking'
+      ], pricing: 'Starting at $249/month,'
+      category: 'Digital Transformation', rating: 4.8,
+      users:, 400+','
+      image: '/products/digital-transformation.jpg'
+    }, {
       title:,
-  IoT Edge Computing Platform',
-      description: 'Connect and manage your IoT devices with our powerful edge computing solution.,
-      features: [,
-  Device management',
-  'Edge analytics',
-  'Real-time processing',
-  'Data synchronization',
-  'Remote monitoring'
+  IoT Edge Computing Platform', '
+      description: 'Connect and manage your IoT devices with our powerful edge computing solution.,'
+      features: [, Device management','
+  'Edge analytics', 'Real-time processing',
+  'Data synchronization', 'Remote monitoring'
+      ], pricing: 'Starting at $179/month,'
+      category: 'IoT & Edge Computing', rating: 4.6,
+      users:, 100+','
+      image: '/products/iot-edge-platform.jpg'
 =======
-      users: '400+',
-      image: '/products/digital-transformation.jpg',
+      title: 'AI Business Intelligence Platform', description: 'Transform your data into actionable insights with our advanced AI-powered analytics platform.',
+      features: [
+        'Real-time data visualizationPredictive analyticsCustom dashboard creation', 'Automated reporting',
+        'Multi-source data integration'
+      ], pricing: 'Starting at $299/month',
+      category: 'AI & Analytics', rating: 4.9,
+      users: '500+', image: '/products/ai-bi-platform.jpg'
     },
     {
-      title: 'IoT Edge Computing Platform',
-      description:
-        'Connect and manage your IoT devices with our powerful edge computing solution.',
+      title: 'Cloud Migration Suite', description: 'Seamlessly migrate your infrastructure to the cloud with our comprehensive migration tools.',
       features: [
-        'Device management',
-        'Edge analytics',
-        'Real-time processing',
-        'Data synchronization',
-        'Remote monitoring',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
-      ],
-      pricing: 'Starting at $179/month,
-      category:
-  'IoT & Edge Computing',
-      rating: 4.6,
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
-      users:,
-  100+',
-      image: '/products/iot-edge-platform.jpg
+        'Automated migration planningZero-downtime migrationCost optimization analysis', 'Security compliance checks',
+        '24/7 migration support'
+      ], pricing: 'Starting at $199/month',
+      category: 'Cloud Computing', rating: 4.8,
+      users: '300+', image: '/products/cloud-migration.jpg'
+    },
+    {
+      title: 'Cybersecurity Monitoring System', description: 'Protect your business with our advanced threat detection and response platform.',
+      features: [
+        'Real-time threat monitoringAutomated incident responseCompliance reporting', 'Security awareness training',
+        '24/7 SOC support'
+      ], pricing: 'Starting at $399/month',
+      category: 'Cybersecurity', rating: 4.9,
+      users: '200+', image: '/products/cybersecurity-monitoring.jpg'
+    },
+    {
+      title: 'Micro SaaS Development Kit', description: 'Build and launch your own micro SaaS products with our comprehensive development framework.',
+      features: [
+        'Pre-built templatesPayment integrationUser management system', 'Analytics dashboard',
+        'Deployment automation'
+      ], pricing: 'Starting at $149/month',
+      category: 'SaaS Development', rating: 4.7,
+      users: '150+', image: '/products/micro-saas-kit.jpg'
+    },
+    {
+      title: 'Digital Transformation Hub', description: 'Accelerate your digital transformation with our integrated suite of modernization tools.',
+      features: [
+        'Process automationLegacy system integrationWorkflow optimization', 'Change management tools',
+        'ROI tracking'
+      ], pricing: 'Starting at $249/month',
+      category: 'Digital Transformation', rating: 4.8,
+      users: '400+', image: '/products/digital-transformation.jpg'
+    },
+    {
+      title: 'IoT Edge Computing Platform', description: 'Connect and manage your IoT devices with our powerful edge computing solution.',
+      features: [
+        'Device managementEdge analyticsReal-time processing', 'Data synchronization',
+        'Remote monitoring'
+      ], pricing: 'Starting at $179/month',
+      category: 'IoT & Edge Computing', rating: 4.6,
+      users: '100+', image: '/products/iot-edge-platform.jpg'
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
     }
-  ];
+  ]
 
   const categories = [
-  'All Products',
-  'AI & Analytics',
-  'Cloud Computing',
-  'Cybersecurity',
-  'SaaS Development',
-  'Digital Transformation',
+<<<<<<< HEAD
+  'All Products', 'AI & Analytics',
+  'Cloud Computing', 'Cybersecurity',
+  'SaaS Development', 'Digital Transformation',
   'IoT & Edge Computing'
+  ];
 =======
-      users: '100+',
-      image: '/products/iot-edge-platform.jpg',
-    },
-  ];
-
-  const categories = [
-    'All Products',
-    'AI & Analytics',
-    'Cloud Computing',
-    'Cybersecurity',
-    'SaaS Development',
-    'Digital Transformation',
-    'IoT & Edge Computing',
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
-  ];
+    'All ProductsAI & AnalyticsCloud Computing', 'CybersecuritySaaS DevelopmentDigital Transformation',
+    'IoT & Edge Computing'
+  ]
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
 
   return (
     <MainLayout
@@ -272,14 +166,10 @@ const Products: NextPage = () => {
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
-            Our{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-              Products
-            </span>
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Products</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
-            Powerful, scalable solutions designed to transform your business and
-            drive innovation.
+            Powerful, scalable solutions designed to transform your business and drive innovation.
           </p>
         </div>
       </section>
@@ -293,15 +183,8 @@ const Products: NextPage = () => {
               <button
                 key={index}
                 className={`px-6 py-2 rounded-full font-medium transition-colors ${
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
                   index === 0 
-                    ?,
-  bg-blue-600 text-white': 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600
-=======
-                  index === 0
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600'
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
+                    ?, bg-blue-600 text-white': 'bg-white text-gray-600 hover:bg-blue-50 hover:text-blue-600
                 }`}
               >
                 {category}
@@ -312,10 +195,7 @@ const Products: NextPage = () => {
           {/* Products Grid */}
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow"
-              >
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover: shadow-xl transition-shadow">
                 <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
                 <div className="p-6">
                   <div className="flex items-center justify-between mb-3">
@@ -324,37 +204,30 @@ const Products: NextPage = () => {
                     </span>
                     <div className="flex items-center gap-1">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-sm text-gray-600">
-                        {product.rating}
-                      </span>
+                      <span className="text-sm text-gray-600">{product.rating}</span>
                     </div>
                   </div>
-
+                  
                   <h2 className="text-xl font-bold text-gray-900 mb-3">
                     {product.title}
                   </h2>
-
-                  <p className="text-gray-600 mb-4">{product.description}</p>
-
+                  
+                  <p className="text-gray-600 mb-4">
+                    {product.description}
+                  </p>
+                  
                   <div className="mb-4">
-                    <h3 className="font-semibold text-gray-700 mb-2">
-                      Key Features:
-                    </h3>
+                    <h3 className="font-semibold text-gray-700 mb-2">Key Features:</h3>
                     <ul className="space-y-1">
-                      {product.features
-                        .slice(0, 3)
-                        .map((feature, featureIndex) => (
-                          <li
-                            key={featureIndex}
-                            className="flex items-center gap-2 text-sm text-gray-600"
-                          >
-                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                            <span>{feature}</span>
-                          </li>
-                        ))}
+                      {product.features.slice(0, 3).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                          <span>{feature}</span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
-
+                  
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2 text-sm text-gray-500">
                       <Users className="w-4 h-4" />
@@ -364,18 +237,16 @@ const Products: NextPage = () => {
                       {product.pricing}
                     </span>
                   </div>
-
+                  
                   <div className="flex gap-3">
-<<<<<<< HEAD:pages.disabled_auto/products.tsx
                     <Link 
-                      href={`/products/${product.title.toLowerCase().replace(/\s+/g,
-  '-')}`}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
-=======
-                    <Link
+<<<<<<< HEAD
                       href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}
                       className="flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
->>>>>>> cursor/automate-test-fix-improve-and-merge-code-99d1:pages/products.tsx
+=======
+                      href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      className="flex-1 bg-blue-600 hover: bg-blue-700 text-white text-center py-2 px-4 rounded-lg font-semibold transition-colors"
+>>>>>>> cursor/automate-test-fix-improve-and-merge-code-48f3
                     >
                       Learn More
                     </Link>
@@ -398,60 +269,41 @@ const Products: NextPage = () => {
               Why Choose Our Products?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our products are built with enterprise-grade security,
-              scalability, and performance in mind.
+              Our products are built with enterprise-grade security, scalability, and performance in mind.
             </p>
           </div>
-
+          
           <div className="grid md: grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Enterprise Security
-              </h3>
-              <p className="text-gray-600">
-                Bank-level security with end-to-end encryption and compliance
-                certifications.
-              </p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
+              <p className="text-gray-600">Bank-level security with end-to-end encryption and compliance certifications.</p>
             </div>
-
+            
             <div className="text-center">
               <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                High Performance
-              </h3>
-              <p className="text-gray-600">
-                Optimized for speed and reliability with 99.9% uptime guarantee.
-              </p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">High Performance</h3>
+              <p className="text-gray-600">Optimized for speed and reliability with 99.9% uptime guarantee.</p>
             </div>
-
+            
             <div className="text-center">
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Globe className="w-8 h-8 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Global Scale
-              </h3>
-              <p className="text-gray-600">
-                Deployed across multiple regions with worldwide support
-                coverage.
-              </p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Global Scale</h3>
+              <p className="text-gray-600">Deployed across multiple regions with worldwide support coverage.</p>
             </div>
-
+            
             <div className="text-center">
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                Expert Support
-              </h3>
-              <p className="text-gray-600">
-                24/7 support from our team of certified technology experts.
-              </p>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Expert Support</h3>
+              <p className="text-gray-600">24/7 support from our team of certified technology experts.</p>
             </div>
           </div>
         </div>
@@ -464,17 +316,16 @@ const Products: NextPage = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Start your journey with our products today and see the difference
-            they can make for your business.
+            Start your journey with our products today and see the difference they can make for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link 
               href="/contact"
               className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
               Get Started Today
             </Link>
-            <Link
+            <Link 
               href="/services"
               className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold transition-colors"
             >
