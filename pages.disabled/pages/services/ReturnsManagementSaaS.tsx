@@ -7,9 +7,7 @@
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO""
->>>>>>> pr-10728
-        title="E-commerce Returns Management SaaS - Zion Tech Group""
-        description="Automate returns labels, RMA approvals, tracking, refunds, and analytics. Integrates with Shopify, WooCommerce, BigCommerce, and custom stores.""
+        title="E-commerce Returns Management SaaS - Zion Tech Group""        description="Automate returns labels, RMA approvals, tracking, refunds, and analytics. Integrates with Shopify, WooCommerce, BigCommerce, and custom stores.""
         keywords="returns management, RMA, e-commerce, Shopify, automation, logistics""
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
         canonical="/services/returns-management"
@@ -28,9 +26,7 @@
         <div className="flex items-center gap-3 mb-6 text-cyan-300">""
           <Package className="h-5 w-5"  />"          <span className="text-sm font-semibold">RETURNS MANAGEMENT</span>
         </div>""
->>>>>>> pr-10728
-        <h1 className="text-4xl font-bold">Reduce returns friction and costs</h1>""
-        <p className="mt-3 text-slate-300 max-w-2xl">
+        <h1 className="text-4xl font-bold">Reduce returns friction and costs</h1>""        <p className="mt-3 text-slate-300 max-w-2xl">
           Streamline returns with branded portals, label generation, smart approvals, carrier pick-ups, refund workflows,
           exchanges, and analytics to cut costs and lift repeat purchase rate.
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
@@ -40,9 +36,7 @@
         </p>"
         </p>
 ""
->>>>>>> pr-10728
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">""
-          <div className="rounded-xl border border-white/10 bg-white/5 p-6">""
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">""          <div className="rounded-xl border border-white/10 bg-white/5 p-6">""
             <div className="mb-2 font-semibold">Capabilities</div>""
             <ul className="space-y-2 text-sm text-slate-300">""
               <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Branded self-serve returns portal</li>""
@@ -57,9 +51,7 @@
             </ul>"
             </ul>
           </div>""
->>>>>>> pr-10728
-          <div className="rounded-xl border border-white/10 bg-white/5 p-6">""
-            <div className="mb-2 font-semibold">Integrations</div>""
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">""            <div className="mb-2 font-semibold">Integrations</div>""
             <ul className="space-y-2 text-sm text-slate-300">""
               <li className="flex items-center gap-2"><Truck className="h-4 w-4 text-cyan-300" /> Shopify, WooCommerce, BigCommerce, Magento</li>""
               <li className="flex items-center gap-2"><Truck className="h-4 w-4 text-cyan-300" /> UPS, USPS, FedEx, DHL</li>""
@@ -76,9 +68,7 @@
           </div>
         </div>
 ""
->>>>>>> pr-10728
-        <div className="mt-8 grid md:grid-cols-2 gap-6">""
-          <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
+        <div className="mt-8 grid md:grid-cols-2 gap-6">""          <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
             <h3 className="font-semibold mb-2">Pricing</h3>""
             <ul className="text-slate-300 space-y-1">
               <li>Starter: $49/mo up to 200 returns</li>
@@ -106,9 +96,7 @@
                 Market benchmarks: <a className="text-cyan-400 hover:underline" href="https://apps.shopify.com/categories/store-management-returns-exchanges" target="_blank" rel="noreferrer">Shopify App Store (Returns)</a>
               </li>
               <li>""
->>>>>>> pr-10728
-                Logistics APIs: <a className="text-cyan-400 hover:underline" href="https://developer.ups.com/" target="_blank" rel="noreferrer">UPS</a>, <a className="text-cyan-400 hover:underline" href="https://www.fedex.com/en-us/developer.html" target="_blank" rel="noreferrer">FedEx</a>
-              </li>
+                Logistics APIs: <a className="text-cyan-400 hover:underline" href="https://developer.ups.com/" target="_blank" rel="noreferrer">UPS</a>, <a className="text-cyan-400 hover:underline" href="https://www.fedex.com/en-us/developer.html" target="_blank" rel="noreferrer">FedEx</a>              </li>
             </ul>
           </div>
 :pages.disabled/pages/services/ReturnsManagementSaaS.tsx
@@ -132,9 +120,7 @@
         <div className="mt-8">""
           <a href="/contact" className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">;
             Book a demo;""
->>>>>>> pr-10728
-            <LinkIcon className="w-4 h-4"  />;          </a>;
-        </div>;
+            <LinkIcon className="w-4 h-4"  />;          </a>;        </div>;
       </section>;
     </div>;
   )};
@@ -148,4 +134,3 @@ export default ReturnsManagementSaaS}
 export default ReturnsManagementSaaS}'"'"
 export { ReturnsManagementSaaS };
 export default ReturnsManagementSaaS}'""
->>>>>>> pr-10728

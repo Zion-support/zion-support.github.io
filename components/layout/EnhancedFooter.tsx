@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  return (
-    <footer className="bg-gray-900 text-white">
+  return (    <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
@@ -17,20 +16,17 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               with cutting-edge AI, cloud architecture, and innovative development services.
             </p>
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            </ul>
-          </div>
+            </ul>          </div>
 
           {/* Solutions */}
           <div>
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            </ul>
-          </div>
+            </ul>          </div>
 
           {/* Contact Info */}
           <div>
 ursor/automate-test-fix-improve-and-merge-code-48f3
-              </div>
-              <div className="flex items-center space-x-2">
+              </div>              <div className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-blue-400" />
                 <span className="text-gray-300">+1 (555) 123-4567</span>
               </div>
@@ -43,8 +39,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
         </div>
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-          </div>
-        </div>
+          </div>        </div>
       </div>
     </footer>
   );

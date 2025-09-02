@@ -6,9 +6,7 @@ import {
 
 import {}
   Brain,
->>>>>>> pr-10728
-  Zap,
-  TrendingUp,
+  Zap,  TrendingUp,
   Users,
   Shield,
   BarChart3,
@@ -92,27 +90,8 @@ import {}
   Jitter,
   Ridge,
 :pages.disabled/pages/services/AISolutions.tsx
-
-  Joy} from
-  'lucide-react';
-;
-export function AISolutions(...args: unknown[]): unknown {
-
-  return<div className="min-h-screen bg-gray-900 text-white">
-
-  Joy} from 'lucide-react';
-;
-export function AISolutions(...args: unknown[]): unknown {
-
-  return 
-  Joy
-} from 'lucide-react';
-;
-export function AISolutions(...args: unknown[]): unknown {}
-  return;
-    <div className="min-h-screen bg-gray-900 text-white">
->>>>>>> pr-10728
       {/* Hero Section */}"
+  return<div className="min-h-screen bg-gray-900 text-white">      {/* Hero Section */}"
       <section className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20">"
         <div className="absolute inset-0 bg-black/20"></div>"
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -156,9 +135,7 @@ export function AISolutions(...args: unknown[]): unknown {}
                 to="/request-quote""
                 className="bg-white/10 hover:bg-white/20 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white/20""
               >
->>>>>>> pr-10728
-                Request Quote;
-              </Link>
+                Request Quote;              </Link>
             </div>
           </motion.div>
         </div>
@@ -188,9 +165,7 @@ export function AISolutions(...args: unknown[]): unknown {}
               Comprehensive AI Capabilities;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
->>>>>>> pr-10728
-              Our AI solutions cover the full spectrum of artificial;
-              intelligence technologies, enabling businesses to harness the;
+              Our AI solutions cover the full spectrum of artificial;              intelligence technologies, enabling businesses to harness the;
               power of machine learning and automation.
             </p>
           </motion.div>
@@ -217,9 +192,7 @@ export function AISolutions(...args: unknown[]): unknown {}
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-cyan-500/20 rounded-lg">
                     <feature.icon className="w-6 h-6 text-cyan-400" />
->>>>>>> pr-10728
-                  </div>"
-                  <h3 className="text-xl font-semibold text-white">
+                  </div>"                  <h3 className="text-xl font-semibold text-white">
                     {feature.title}
                   </h3>
                 </div>"
@@ -239,9 +212,7 @@ export function AISolutions(...args: unknown[]): unknown {}
                       className="flex items-center gap-2 text-sm text-gray-400""
                     >
                       <CheckCircle className="w-4 h-4 text-cyan-400"  />
->>>>>>> pr-10728
-                      {benefit}
-                    </li>
+                      {benefit}                    </li>
                   ))}
                 </ul>
               </motion.div>
@@ -274,9 +245,7 @@ export function AISolutions(...args: unknown[]): unknown {}
               Industry Applications;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
->>>>>>> pr-10728
-              Discover how AI solutions are transforming industries and creating;
-              new opportunities for innovation and growth.
+              Discover how AI solutions are transforming industries and creating;              new opportunities for innovation and growth.
             </p>
           </motion.div>
 "
@@ -298,9 +267,7 @@ export function AISolutions(...args: unknown[]): unknown {}
                 className="bg-gradient-to-r from-gray-800 to-gray-700 rounded-lg p-8 border border-gray-600""
               >
                 <div className="flex items-center gap-4 mb-6">
->>>>>>> pr-10728
-                  <div;
-                    className={`p-3 rounded-lg bg-gradient-to-r ${useCase.color}`}
+                  <div;                    className={`p-3 rounded-lg bg-gradient-to-r ${useCase.color}`}
                   >"
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>"
@@ -323,9 +290,7 @@ export function AISolutions(...args: unknown[]): unknown {}
                       className="flex items-center gap-3 text-gray-300""
                     >
                       <ArrowRight className="w-4 h-4 text-cyan-400"  />
->>>>>>> pr-10728
-                      {application}
-                    </li>
+                      {application}                    </li>
                   ))}
                 </ul>
               </motion.div>
@@ -358,9 +323,7 @@ export function AISolutions(...args: unknown[]): unknown {}
               Cutting-Edge Technologies;
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
->>>>>>> pr-10728
-              We leverage the latest AI technologies and frameworks to deliver;
-              robust, scalable, and efficient solutions for our clients.
+              We leverage the latest AI technologies and frameworks to deliver;              robust, scalable, and efficient solutions for our clients.
             </p>
           </motion.div>
 "
@@ -374,9 +337,7 @@ export function AISolutions(...args: unknown[]): unknown {}
             {technologies.map(tech: unknown, index: unknown (
               <motion.div;
                 key={tech.name}
->>>>>>> pr-10728
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 20 }}                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
 :pages.disabled/pages/services/AISolutions.tsx
                 viewport={{ once: true }}"
@@ -393,9 +354,7 @@ export function AISolutions(...args: unknown[]): unknown {}
                 <div className="flex items-center gap-3 mb-4">
                   <tech.icon className="w-6 h-6 text-cyan-400" />
                   <h3 className="text-lg font-semibold text-white">
->>>>>>> pr-10728
-                    {tech.name}
-                  </h3>
+                    {tech.name}                  </h3>
                 </div>"
                 <p className="text-gray-400 text-sm">{tech.description}</p>
               </motion.div>
@@ -447,9 +406,7 @@ export function AISolutions(...args: unknown[]): unknown {}
                 to="/services""
                 className="bg-transparent hover:bg-white/10 text-white px-8 py-3 rounded-lg font-semibold transition-colors border border-white""
               >
->>>>>>> pr-10728
-                Explore All Services;
-              </Link>
+                Explore All Services;              </Link>
             </div>
           </motion.div>
         </div>

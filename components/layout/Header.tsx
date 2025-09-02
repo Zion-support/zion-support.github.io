@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  Home, Users, 
-  Briefcase, Phone, 
+  Home, Users,   Briefcase, Phone, 
   Mail, ChevronDown,
   Brain, Shield,
   Cloud, Database,
@@ -11,8 +10,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   Globe, Search,
   ArrowRight
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -24,14 +22,12 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${`      isScrolled 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-          <nav className="hidden lg:flex items-center space-x-8">"            {navigation.map((item) => ("              <div key={item.name} className="relative">"                {item.dropdown ? ("                  <div
-                    className="flex items-center space-x-1 text-gray-300 hover: text-white transition-colors cursor-pointer""                    onMouseEnter={() => setActiveDropdown(item.name)}"                    onMouseLeave={() => setActiveDropdown(null)}>
+          <nav className="hidden lg:flex items-center space-x-8">"            {navigation.map((item) => ("              <div key={item.name} className="relative">"                {item.dropdown ? ("                  <div                    className="flex items-center space-x-1 text-gray-300 hover: text-white transition-colors cursor-pointer""                    onMouseEnter={() => setActiveDropdown(item.name)}"                    onMouseLeave={() => setActiveDropdown(null)}>
                     <item.icon className="w-4 h-4" />"                    <span>{item.name}</span>"                    <ChevronDown className="w-4 h-4" />"                  </div>"                ) : (
                   <Link
 to={item.href}
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                <AnimatePresence>
-                  {activeDropdown === item.name && item.dropdown && (
+                <AnimatePresence>                  {activeDropdown === item.name && item.dropdown && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -84,8 +80,7 @@ animate={{ opacity: 1, height: 'auto'
                     <Link
 to={item.href}
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                      <item.icon className="w-5 h-5" />"                      <span>{item.name}</span>"                    </Link>)}
-                </div>
+                      <item.icon className="w-5 h-5" />"                      <span>{item.name}</span>"                    </Link>)}                </div>
               ))}
               
               <div className="pt-4 border-t border-slate-700 space-y-3">"                <Button variant="outline" size="sm" className="w-full">"                  <Search className="w-4 h-4 mr-2" />"                  Search"                </Button>

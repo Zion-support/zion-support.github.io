@@ -1,41 +1,35 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                manualInterventions: 2,;
-                cost: 150,;
+                manualInterventions: 2,;                cost: 150,;
                 efficiency: 94;
         ],;
         rules[;
             {;
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                manualInterventions: 1,;
-                cost: 200,;
+                manualInterventions: 1,;                cost: 200,;
                 efficiency: 89;
         ],;
         rules[;
             {;
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                manualInterventions: 0,;
-                cost: 50,;
+                manualInterventions: 0,;                cost: 50,;
                 efficiency: 98;""
         ],;";"
         rules[;";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    };
-];
+    };];
 export function AdvancedAIBusinessProcessAutomation() {;
     const [isOpen, setIsOpen] = useState(false);
     const [isMinimized, setIsMinimized] = useState(false);
     const [isFullscreen, setIsFullscreen] = useState(false);
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    const [showAIInsights, setShowAIInsights] = useState(true);
-    const [showAutomation, setShowAutomation] = useState(true);
+    const [showAIInsights, setShowAIInsights] = useState(true);    const [showAutomation, setShowAutomation] = useState(true);
     const [businessProcesses, setBusinessProcesses] = useState(mockBusinessProcesses);
     const [selectedProcess, setSelectedProcess] = useState(null);
     const [isExecuting, setIsExecuting] = useState(false);
     const containerRef = useRef(null);
     const getStatusColor = (status) => {;
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            default: return <FileText className="w-4 h-4"/>};
-    };
+            default: return <FileText className="w-4 h-4"/>};    };
     const formatPercentage = (value) => {;
         return `${value}%`};
     const executeProcess = async (processId) => {;
@@ -44,8 +38,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
         await new Promise (resolve => setTimeout (resolve, 2000) ) ;
         setIsExecuting (false) ;
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            : p))};
-    const filteredProcesses = businessProcesses.filter(process => {;
+            : p))};    const filteredProcesses = businessProcesses.filter(process => {;
         const matchesSearch = process.name.toLowerCase().includes(searchQuery.toLowerCase()) ||;""
             process.description.toLowerCase().includes(searchQuery.toLowerCase());";"
         return matchesCategory && matchesStatus && matchesSearch});";"
@@ -70,8 +63,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <Maximize2 className="w-4 h-4"/>;""
           </button>;";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      {/* Header */}";"";"
-      <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">";"";"
+      {/* Header */}";"";"      <div className="bg-gradient-to-r from-zion-blue to-zion-purple text-white p-4 flex items-center justify-between">";"";"
         <div className="flex items-center gap-3">";"";"
           <Workflow className="w-6 h-6"/>";"";"
           <div>";"";"
@@ -134,8 +126,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
         </div>;";"
       </div>;";"";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-              <div className="bg-gradient-to-br from-zion-blue to-zion-purple text-white p-6 rounded-xl">";"";"
-                <div className="flex items-center justify-between">";"";"
+              <div className="bg-gradient-to-br from-zion-blue to-zion-purple text-white p-6 rounded-xl">";"";"                <div className="flex items-center justify-between">";"";"
                   <div>";"";"
                     <p className="text-zion-blue-light text-sm">Total Processes</p>";"";"
                     <p className="text-3xl font-bold">{businessProcesses.length}</p>";"";"
@@ -148,8 +139,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                   <div>";"";"
                     <p className="text-green-100 text-sm">Active Processes</p>";"";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                    </p>";"";"
-                  </div>";"";"
+                    </p>";"";"                  </div>";"";"
                   <CheckCircle className="w-12 h-12 text-white/50"/>;"";""
                 </div>";"";"
               </div>";"";"
@@ -207,8 +197,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                           {process.lastExecuted.toLocaleDateString()};"";""
                         </p>";"";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                        </span>";"";"
-                        <span className="text-xs text-zion-slate-light">;
+                        </span>";"";"                        <span className="text-xs text-zion-slate-light">;
                           {process.executionHistory[0]?.duration || 0}s;
                         </span>;
                       </div>;
@@ -216,8 +205,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                 </div>;";"
               </div>;";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                <div className="flex items-start justify-between mb-4">";"";"
-                  <div className="flex items-start gap-3">";"";"
+                <div className="flex items-start justify-between mb-4">";"";"                  <div className="flex items-start gap-3">";"";"
                     <div className="p-2 bg-zion-blue/10 rounded-lg">;";"
                       {getCategoryIcon(process.category)};"";""
                     </div>";"";"
@@ -261,8 +249,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${getPriorityColor(process.priority)}`}>;
                     {process.priority};
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                {showAIInsights && (<div className="mb-4">";"";"
-                    <h4 className="font-medium text-sm mb-2 flex items-center gap-2">";"";"
+                {showAIInsights && (<div className="mb-4">";"";"                    <h4 className="font-medium text-sm mb-2 flex items-center gap-2">";"";"
                       <Brain className="w-4 h-4 text-zion-blue"/>;"";""
                       AI Insights";"";"
                     </h4>";"";"
@@ -282,8 +269,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                       {process.rules.map(rule => (<div key={rule.id} className="p-3 bg-zion-slate-light/10 rounded-lg">";"";"
                           <div className="flex items-center justify-between mb-2">";"";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                            </span>";"";"
-                          </div>";"";"
+                            </span>";"";"                          </div>";"";"
                           <p className="text-xs text-zion-slate-light mb-2">If: {rule.condition}</p>";"";"
                           <p className="text-xs text-zion-slate-light">Then: {rule.action}</p>";"";"
                           <div className="flex items-center justify-between mt-2">";"";"
@@ -298,8 +284,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                     </div>;";"
                   </div>)};";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">";"";"
-                                 <Settings className="w-5 h-5 text-zion-blue"/>;"";""
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">";"";"                                 <Settings className="w-5 h-5 text-zion-blue"/>;"";""
                  Automation Engine Status";"";"
               </h3>";"";"
               <div className="grid grid-cols-1 md: grid-cols-3 gap-4">";"";"
@@ -343,16 +328,14 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                       </div>";"";"
                     </div>";"";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                      </span>";"";"
-                      <button className="p-2 text-zion-slate-light hover: text-zion-slate hover:bg-zion-slate-light/10 rounded-lg">";"";"
+                      </span>";"";"                      <button className="p-2 text-zion-slate-light hover: text-zion-slate hover:bg-zion-slate-light/10 rounded-lg">";"";"
                         <Edit3 className="w-4 h-4"/>;
                       </button>;
                     </div>;""
                   </div>) ) };";"
               </div>;";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                <h3 className="text-lg font-semibold mb-4">Efficiency Trends</h3>";"";"
-                <div className="h-64 bg-zion-slate-light/10 rounded-lg flex items-center justify-center">";"";"
+                <h3 className="text-lg font-semibold mb-4">Efficiency Trends</h3>";"";"                <div className="h-64 bg-zion-slate-light/10 rounded-lg flex items-center justify-center">";"";"
                   <div className="text-center">";"";"
                     <BarChart3 className="w-16 h-16 text-zion-slate-light mx-auto mb-2"/>";"";"
                     <p className="text-zion-slate-light">Efficiency trend chart</p>;";"
@@ -410,21 +393,18 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                 </table>;";"
               </div>;";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">";"";"
-                <Brain className="w-5 h-5 text-zion-blue"/>;"";""
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">";"";"                <Brain className="w-5 h-5 text-zion-blue"/>;"";""
                 AI Optimization Recommendations";"";"
               </h3>";"";"
               <div className="space-y-4">";"";"
                 {businessProcesses.map(process => (<div key={process.id} className="p-4 bg-zion-slate-light/10 rounded-lg">";"";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                      </span>";"";"
-                    </div>";"";"
+                      </span>";"";"                    </div>";"";"
                     <div className="space-y-2">";"";"
                       {process.aiInsights.map((insight, idx) => (<div key={idx} className="flex items-start gap-2 text-sm">";"";"
                           <Lightbulb className="w-4 h-4 text-yellow-500 mt-0.5 flex-shrink-0"/>";"";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                          Apply AI Optimization;
-                        </button>;""
+                          Apply AI Optimization;                        </button>;""
                       </div>) };";"
                   </div>) ) };";"
               </div>;"";""
@@ -441,8 +421,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                     <span className="font-medium text-yellow-800 dark: text-yellow-200">Manual Processes</span>";"";"
                   </div>";"";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                  </p>";"";"
-                  <button className="px-3 py-1 bg-yellow-600 text-white rounded text-sm hover: bg-yellow-700">;";"
+                  </p>";"";"                  <button className="px-3 py-1 bg-yellow-600 text-white rounded text-sm hover: bg-yellow-700">;";"
                     View Details;"";""
                   </button>";"";"
                 </div>";"";"

@@ -72,8 +72,7 @@ class BuildOptimizer {
 
   async optimize() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    try {
-      await this.cleanConsoleStatements();
+    try {      await this.cleanConsoleStatements();
       await this.optimizeImages();
       await this.optimizeCSS();
       await this.optimizeJavaScript();
@@ -82,8 +81,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       await this.optimizeManifest();
       await this.generateReport();
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    } catch (error) {
-      console.error(
+    } catch (error) {      console.error(
   '❌ Build optimization failed:', error.message);
       this.optimizationReport.errors.push(error.message);
       await this.generateReport();
@@ -94,7 +92,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   async cleanConsoleStatements() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
     let cleanedFiles = 0;
-
     for (const file of files) {
       try {
         let content = fs.readFileSync(file,
@@ -107,7 +104,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
           content = content
 ursor/automate-test-fix-improve-and-merge-code-99d1
         }
-
         if (content !== originalContent) {
           fs.writeFileSync(file, content);
           cleanedFiles++;
@@ -127,8 +123,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   async optimizeImages() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    if (!fs.existsSync(imageDir)) {
-      this.optimizationReport.warnings.push('Images directory not found
+    if (!fs.existsSync(imageDir)) {      this.optimizationReport.warnings.push('Images directory not found
   ');
       return;
     }
@@ -173,8 +168,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     for (const file of cssFiles) {
       try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        // Remove unused CSS (basic implementation)
-        content = content
+        // Remove unused CSS (basic implementation)        content = content
           .replace(/\s+/g, ' 
   ') // Remove extra whitespace
           .replace(/\/\*[\s\S]*?\*\//g, '') // Remove comments
@@ -202,8 +196,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     for (const file of jsFiles) {
       try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        // Basic optimizations
-        content = content
+        // Basic optimizations        content = content
           .replace(/\s+/g,
   ' ') // Remove extra whitespace
           .replace(/\/\/.*$/gm, '
@@ -228,8 +221,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   async generateSitemap() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ziontechgroup.com/</loc>
     <lastmod>${new Date().toISOString().split(
@@ -260,8 +252,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   </url>
 </urlset>`;
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    const robotsTxt = `User-agent: *
-Allow: /
+    const robotsTxt = `User-agent: *Allow: /
 
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
@@ -271,8 +262,7 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /private/`;
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    const manifest = {
-      name: 'Zion Tech Group',
+    const manifest = {      name: 'Zion Tech Group',
       short_name: 'Zion Tech',
       description: 'Leading AI & Technology Solutions',
       start_url: '/',
@@ -295,8 +285,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
     fs.writeFileSync(
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      JSON.stringify(manifest, null, 2)
-    );
+      JSON.stringify(manifest, null, 2)    );
     this.optimizationReport.optimizations.push(
   'Generated manifest.json');
     console.log(

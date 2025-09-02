@@ -14,7 +14,6 @@ const AccessibilityEnhancer: React.FC = () => {
     setHighContrast(savedHighContrast);
     setFontSize(savedFontSize);
     setReducedMotion(prefersReducedMotion);
-
     // Apply initial styles
     applyAccessibilityStyles(savedHighContrast, savedFontSize, prefersReducedMotion);
   }, []);
@@ -25,15 +24,13 @@ const AccessibilityEnhancer: React.FC = () => {
     // High contrast mode
     if (highContrast) {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    <>
-      {/* Accessibility Controls */}
+    <>      {/* Accessibility Controls */}
 <div className="accessibility-controls fixed top-4 right-4 z-50 bg-white dark: bg-gray-800 shadow-lg rounded-lg p-4 border">"        <h3 className="text-sm font-semibold mb-2 text-gray-900 dark:text-white">"          Accessibility Options"        </h3>"
         
         <div className="space-y-2">"          <button"            onClick={toggleHighContrast}
             className={`w-full px-3 py-1 text-xs rounded ${`              isHighContrast 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-              </button>
-            ))}
+              </button>            ))}
           </div>
         </div>
       </div>

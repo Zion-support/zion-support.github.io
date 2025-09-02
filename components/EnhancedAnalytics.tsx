@@ -1,13 +1,11 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  Eye, MousePointer, 
-  Clock, TrendingUp, 
+  Eye, MousePointer,   Clock, TrendingUp, 
   Globe, Smartphone,
   Monitor, Tablet,
   Download, Share2,
   Heart, MessageCircle
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  uniqueVisitors: number;
-  bounceRate: number;
+  uniqueVisitors: number;  bounceRate: number;
   avgSessionDuration: number;
   topPages: Array<{ page: string; views: number }>;
   trafficSources: Array<{ source: string; percentage: number }>;
@@ -33,8 +31,7 @@ showRealTime = true, autoRefresh = true,refreshInterval = 30000
   const [analytics, setAnalytics] = useState<AnalyticsData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  const generateMockAnalytics = useCallback((): AnalyticsData => {;const baseViews = Math.floor(Math.random() * 1000) + 500;
-    const baseVisitors = Math.floor(baseViews * 0.7);
+  const generateMockAnalytics = useCallback((): AnalyticsData => {;const baseViews = Math.floor(Math.random() * 1000) + 500;    const baseVisitors = Math.floor(baseViews * 0.7);
     
     return {
 pageViews: baseViews, uniqueVisitors: baseVisitors,;
@@ -68,7 +65,6 @@ pageViews: baseViews, uniqueVisitors: baseVisitors,;
     } catch (error) {
 ursor/automate-test-fix-improve-and-merge-code-48f3
   }, [generateMockAnalytics]);
-
   useEffect(() => {
     fetchAnalytics();
 
@@ -84,7 +80,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   if (!analytics) {
     return (
 <div className="flex items-center justify-center p-8">"        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>"      </div>"    )"
@@ -144,8 +139,7 @@ className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow border border-gray-20
           <div className="space-y-3">"            {analytics.topPages.map((page, index) => ("              <div key={page.page} className="flex items-center justify-between">"                <div className="flex items-center space-x-3">"                  <div className="w-8 h-8 bg-blue-100 dark: bg-blue-900 rounded-full flex items-center justify-center">"                    <span className="text-sm font-bold text-blue-600 dark:text-blue-400">"                      {index + 1}"                    </span>"
                   </div>
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                <span className="text-sm font-semibold text-gray-900 dark:text-white">"                  {formatNumber(page.views)}"                </span></div>
-            ))}
+                <span className="text-sm font-semibold text-gray-900 dark:text-white">"                  {formatNumber(page.views)}"                </span></div>            ))}
           </div>
         </motion.div>
 

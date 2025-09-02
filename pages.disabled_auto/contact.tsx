@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData, [e.target.name]: e.target.value
@@ -13,8 +12,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     // Simulate form submission
     setTimeout(() => {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      });
-    }, 2000);
+      });    }, 2000);
   }
 
   const contactInfo = [
@@ -27,20 +25,17 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   const services = [
 ursor/automate-test-fix-improve-and-merge-code-48f3
   ];
-
   return (
     <MainLayout
       title="Contact Us - Zion Tech Group"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    >
-      {/* Hero Section */}
+    >      {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md: text-6xl font-bold mb-6 leading-tight">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            </h1>
-            <p className="text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed">
+            </h1>            <p className="text-xl md: text-2xl mb-8 text-gray-200 leading-relaxed">
               Ready to transform your business with cutting-edge technology? 
               Get in touch with our expert team today.
             </p>
@@ -90,8 +85,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   'success' && (
                 <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                </div>
-              )}
+                </div>              )}
 
               {submitStatus === 'error'
   ' && ('
@@ -263,8 +257,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Quick Response Guarantee</h3>
                 <p className="text-gray-600 mb-4">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                  for all inquiries.
-                </p>
+                  for all inquiries.                </p>
                 <div className="flex items-center text-blue-600">
                   <MessageSquare className="w-5 h-5 mr-2" />
                   <span className="font-medium">Response within 24 hours</span>

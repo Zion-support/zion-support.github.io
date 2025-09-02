@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3:src/pages/services/ai-services.tsx
-
 const AIServices: React.FC = () => {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12 text-white">
@@ -10,8 +9,7 @@ const AIServices: React.FC = () => {
         <li><Link className="text-blue-400" to="/services/ai-seo-optimizer">AI SEO Optimizer</Link></li>
       </ul>
     </div>
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-services.tsx
-  );
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/ai-services.tsx  );
 };
 ;
 export default AIServices;

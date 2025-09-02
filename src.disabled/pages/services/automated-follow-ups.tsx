@@ -1,5 +1,4 @@
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/automated-follow-ups.tsx
-  );
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/services/automated-follow-ups.tsx  );
 };
 ;
 export default AutomatedFollowUps;

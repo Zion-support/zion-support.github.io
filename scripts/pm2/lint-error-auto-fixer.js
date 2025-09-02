@@ -14,8 +14,7 @@ class LintErrorAutoFixer {
   'true';
     this.maxWarnings = parseInt(process.env.MAX_WARNINGS) || 10;
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);
-    console.log(`Auto-fix lint: ${this.autoFixLint}`);
+    console.log(`Lint check interval: ${this.lintCheckInterval}ms`);    console.log(`Auto-fix lint: ${this.autoFixLint}`);
     console.log(`Max warnings: ${this.maxWarnings}`);
   }
 
@@ -31,8 +30,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   async checkAndFixLintErrors() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    const report = {
-      timestamp: new Date().toISOString(),
+    const report = {      timestamp: new Date().toISOString(),
       summary: {
         totalErrors: 0,
         totalWarnings: 0,
@@ -86,13 +84,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       // Try to run ESLint with auto-fix first
 ursor/automate-test-fix-improve-and-merge-code-99d1
       }).toString();
-
       return {
         success: true,
         errors: [],
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      };
-    } catch (error) {
+      };    } catch (error) {
       const output = error.stdout
         ? error.stdout.toString()
         : error.stderr.toString();
@@ -100,15 +96,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       return {
         success: false,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      };
-    }
+      };    }
   }
 
   parseLintOutput(output, severity) {
     const issues = [];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    for (const line of lines) {
-      // Parse ESLint output format
+    for (const line of lines) {      // Parse ESLint output format
       const match = line.match(
         /^\\s*(.+?):(\\d+):(\\d+):\\s+(error|warning)\\s+(.+?)\\s+([\\w\\/-]+)$/
       );
@@ -122,8 +116,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
           message: message.trim(),
           rule: rule.trim(),
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        });
-      }
+        });      }
     }
 
     return issues;
@@ -142,8 +135,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ');
     } catch (error) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      // Manual fixes for common issues
-      for (const issue of [...report.errors, ...report.warnings]) {
+      // Manual fixes for common issues      for (const issue of [...report.errors, ...report.warnings]) {
         try {
           const fixed = await this.fixLintIssue(issue);
           if (fixed) {
@@ -177,8 +169,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      if (line > lines.length) {
-        return false;
+      if (line > lines.length) {        return false;
       }
 
       let modified = false;
@@ -225,8 +216,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       if (modified) {
         // Create backup
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        // Write fixed content
-        const newContent = lines.join('\\n
+        // Write fixed content        const newContent = lines.join('\\n
   ');
         fs.writeFileSync(file, newContent);
         return true;
@@ -242,8 +232,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   fixUnusedVars(lines, lineIndex, message) {
     const line = lines[lineIndex];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    if (varMatch) {
-      const varName = varMatch[1];
+    if (varMatch) {      const varName = varMatch[1];
       // Comment out unused variables
       if (
         line.includes(`const ${varName}`) ||
@@ -272,8 +261,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   fixQuotes(lines, lineIndex, message) {
     const line = lines[lineIndex];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      // Convert double quotes to single quotes
-      lines[lineIndex] = line.replace(/"/g, "'");
+      // Convert double quotes to single quotes      lines[lineIndex] = line.replace(/"/g, "'");
       return true;
     } else if (message.includes(
   'double quotes')) {
@@ -290,8 +278,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   fixSemicolons(lines, lineIndex, message) {
     const line = lines[lineIndex];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      lines[lineIndex] = line + ';';
-      return true;
+      lines[lineIndex] = line + ';';      return true;
     } else if (message.includes(
   'Extra semicolon')) {
       lines[lineIndex] = line.replace(/;+$/, '
@@ -341,8 +328,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   fixPreferConst(lines, lineIndex) {
     const line = lines[lineIndex];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      // Only fix if it's a simple let declaration that could be const
-      lines[lineIndex] = line.replace(
+      // Only fix if it's a simple let declaration that could be const      lines[lineIndex] = line.replace(
   'let ',
   'const ');
       return true;

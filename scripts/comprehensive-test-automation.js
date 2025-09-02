@@ -302,7 +302,7 @@ test('Performance test - Bundle size', async ({ page }) => {
 
   printTestSummary() {
     console.log('\n📊 Test Summary:');
-    console.log('================');
+    console.log('==');
     
     Object.entries(this.testResults).forEach(([category, results]) => {
       const status = results.failed > 0 ? '❌' : '✅';

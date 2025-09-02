@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-const createJestConfig = nextJest({
-  // Provide the path to your Next.js app to load next.config.js and .env files
+const createJestConfig = nextJest({  // Provide the path to your Next.js app to load next.config.js and .env files
   dir: './
 });
 

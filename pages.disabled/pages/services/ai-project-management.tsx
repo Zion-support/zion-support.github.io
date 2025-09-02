@@ -48,9 +48,7 @@ export default function AIProjectManagement(...args: any[]): any {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative overflow-hidden py-20 lg:py-32">""
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative overflow-hidden py-20 lg:py-32">""        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -60,9 +58,7 @@ export default function AIProjectManagement(...args: any[]): any {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center max-w-4xl mx-auto""
-          >""
+            className="text-center max-w-4xl mx-auto""          >""
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-full border border-orange-400/30 mb-6">""
               <Target className="w-5 h-5 text-orange-400 mr-2"  />""
               <span className="text-orange-300 font-medium">
@@ -91,9 +87,7 @@ export default function AIProjectManagement(...args: any[]): any {}
               <span className="text-white">That Delivers Results</span>
             </h1>
 ""
->>>>>>> pr-10728
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your project delivery with AI-powered management that;
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">              Transform your project delivery with AI-powered management that;
               optimizes planning, resource allocation, and risk management.
               Deliver projects faster, cheaper, and with unprecedented success;
               rates.
@@ -134,9 +128,7 @@ export default function AIProjectManagement(...args: any[]): any {}
               >""
                 <Video className="w-5 h-5 mr-2"  />                Watch Demo;
               </motion.button>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -146,9 +138,7 @@ export default function AIProjectManagement(...args: any[]): any {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="container mx-auto px-4">
+      <section className="py-20">""        <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -158,7 +148,6 @@ export default function AIProjectManagement(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -169,9 +158,7 @@ export default function AIProjectManagement(...args: any[]): any {}
               Advanced AI Technology for Better Project Delivery"
               Advanced AI Technology for Better Project Delivery;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management platform combines machine;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Our AI-powered project management platform combines machine;
               learning, predictive analytics, and automation to deliver;
               exceptional project outcomes.
             </p>
@@ -182,9 +169,7 @@ export default function AIProjectManagement(...args: any[]): any {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">            {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -195,9 +180,7 @@ export default function AIProjectManagement(...args: any[]): any {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-300 group""
-              >""
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-orange-400/30 transition-all duration-300 group""              >""
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-orange-400/40 group-hover:to-red-500/40 transition-all duration-300">""
 :pages.disabled/pages/services/ai-project-management.tsx
                   <feature.icon className="w-6 h-6 text-orange-400" />"
@@ -212,9 +195,7 @@ export default function AIProjectManagement(...args: any[]): any {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+                <p className="text-gray-300">{feature.description}</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -226,9 +207,7 @@ export default function AIProjectManagement(...args: any[]): any {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-800/30">""
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-slate-800/30">""        <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -238,7 +217,6 @@ export default function AIProjectManagement(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -249,9 +227,7 @@ export default function AIProjectManagement(...args: any[]): any {}
               Proven Results & Benefits"
               Proven Results & Benefits;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management delivers measurable improvements;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Our AI-powered project management delivers measurable improvements;
               in delivery time, cost reduction, and project success rates.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -261,9 +237,7 @@ export default function AIProjectManagement(...args: any[]): any {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">            {benefits.map((benefit, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -274,9 +248,7 @@ export default function AIProjectManagement(...args: any[]): any {}
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4""
-              >""
+                className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4""              >""
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0"  />"                <span className="text-white font-medium">{benefit}</span>
               </motion.div>
             ))}
@@ -290,9 +262,7 @@ export default function AIProjectManagement(...args: any[]): any {}
 "
 
       {/* Solutions Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="container mx-auto px-4">
+      <section className="py-20">""        <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -302,7 +272,6 @@ export default function AIProjectManagement(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -313,9 +282,7 @@ export default function AIProjectManagement(...args: any[]): any {}
               Flexible Solutions for Every Project"
               Flexible Solutions for Every Project;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose from our range of AI-powered project management solutions;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Choose from our range of AI-powered project management solutions;
               designed to meet your specific project needs and scale with your;
               organization.
             </p>
@@ -326,9 +293,7 @@ export default function AIProjectManagement(...args: any[]): any {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">            {solutions.map((solution, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -339,9 +304,7 @@ export default function AIProjectManagement(...args: any[]): any {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-orange-400/30 transition-all duration-300""
-              >""
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8 hover:border-orange-400/30 transition-all duration-300""              >""
                 <h3 className="text-2xl font-semibold text-white mb-4">
 :pages.disabled/pages/services/ai-project-management.tsx
                   {solution.title}"
@@ -362,9 +325,7 @@ export default function AIProjectManagement(...args: any[]): any {}
                   {solution.features.map((feature, featureIndex) => (
                     <div;
                       key={featureIndex}""
->>>>>>> pr-10728
-                      className="flex items-center space-x-3""
-                    >""
+                      className="flex items-center space-x-3""                    >""
                       <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </div>
                   ))}
@@ -381,9 +342,7 @@ export default function AIProjectManagement(...args: any[]): any {}
                 <div className="text-3xl font-bold text-orange-400 mb-6">
                   {solution.price}
                 </div>""
->>>>>>> pr-10728
-                <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">
-                  Get Started;
+                <button className="w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300">                  Get Started;
                 </button>
               </motion.div>
             ))}
@@ -397,9 +356,7 @@ export default function AIProjectManagement(...args: any[]): any {}
 "
 
       {/* Project Types Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-800/30">""
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-slate-800/30">""        <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -409,7 +366,6 @@ export default function AIProjectManagement(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -420,9 +376,7 @@ export default function AIProjectManagement(...args: any[]): any {}
               Optimized for Any Project Type"
               Optimized for Any Project Type;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered project management platform is designed to handle;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Our AI-powered project management platform is designed to handle;
               diverse project types across all industries and complexity levels.
             </p>
 :pages.disabled/pages/services/ai-project-management.tsx
@@ -432,9 +386,7 @@ export default function AIProjectManagement(...args: any[]): any {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6">
-            {projectTypes.map((projectType, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-3 lg:grid-cols-6 gap-6">            {projectTypes.map((projectType, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -445,7 +397,6 @@ export default function AIProjectManagement(...args: any[]): any {}
                 whileInView={{ opacity: 1, scale: 1 }}"
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-slate-700/30 rounded-lg p-4 text-center hover:bg-slate-700/50 transition-all duration-300""
               >""
                 <div className="w-12 h-12 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">""
@@ -456,9 +407,7 @@ export default function AIProjectManagement(...args: any[]): any {}
                   <GitBranch className="w-6 h-6 text-orange-400"  />"
                   <GitBranch className="w-6 h-6 text-orange-400"  />
                 </div>""
->>>>>>> pr-10728
-                <span className="text-white font-medium text-sm">
-                  {projectType}
+                <span className="text-white font-medium text-sm">                  {projectType}
                 </span>              </motion.div>
             ))}
           </div>
@@ -471,9 +420,7 @@ export default function AIProjectManagement(...args: any[]): any {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">""
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10">""        <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -528,9 +475,7 @@ export default function AIProjectManagement(...args: any[]): any {}
               >""
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950;
               </motion.button>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
     </div>
@@ -544,4 +489,3 @@ export default function AIProjectManagement(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728

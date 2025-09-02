@@ -1,5 +1,4 @@
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Enterprise.tsx
-export default Enterprise;
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/Enterprise.tsxexport default Enterprise;
 
 ;
 const Enterprise: React.FC = () => {;

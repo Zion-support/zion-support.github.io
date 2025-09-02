@@ -70,8 +70,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       const errorOutput = error.stdout || error.message;
       const errors = this.parseTypeScriptErrors(errorOutput);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return { success: false, errors };
-    }
+      return { success: false, errors };    }
   }
 
   async checkESLintErrors() {
@@ -82,8 +81,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       const errorOutput = error.stdout || error.message;
       const errors = this.parseESLintErrors(errorOutput);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return { success: false, errors };
-    }
+      return { success: false, errors };    }
   }
 
   async checkBuildErrors() {
@@ -94,15 +92,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       const errorOutput = error.stdout || error.message;
       const errors = this.parseBuildErrors(errorOutput);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return { success: false, errors };
-    }
+      return { success: false, errors };    }
   }
 
   parseTypeScriptErrors(output) {
     const errors = [];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    for (const line of lines) {
-      if (line.includes(
+    for (const line of lines) {      if (line.includes(
   ': error TS)) {
         const match = line.match(/^(.+?)\((\d+),(\d+)\): error (TS\d+): (.+)$/);
         if (match) {
@@ -126,8 +122,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   parseESLintErrors(output) {
     const errors = [];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    for (const line of lines) {
-      if (line.includes(
+    for (const line of lines) {      if (line.includes(
   'error') || line.includes(
   'warning')) {
         errors.push({
@@ -144,8 +139,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   parseBuildErrors(output) {
     const errors = [];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    for (const line of lines) {
-      if (line.includes(
+    for (const line of lines) {      if (line.includes(
   'Error: ') || line.includes(
   'ERROR')) {
         errors.push({
@@ -163,8 +157,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   async triggerAutoFixer(errors) {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      // Write errors to a temporary file for the auto-fixer
-      const errorFile = path.join(
+      // Write errors to a temporary file for the auto-fixer      const errorFile = path.join(
         this.errorReportDir,
         `errors-${Date.now()}.json`
       );
@@ -177,8 +170,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   'node', [autoFixerScript, errorFile], {
         detached: true,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    } catch (error) {
-      this.log(
+    } catch (error) {      this.log(
   'error',
   'Failed to trigger auto-fixer', error);
     }
@@ -196,29 +188,25 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       summary: {
         totalErrors: this.errors.length,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
-      errors: this.errors,
+      },      errors: this.errors,
       recommendations: this.generateRecommendations(),
     };
 
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    return report;
-  }
+    return report;  }
 
   generateRecommendations() {
     const recommendations = [];
 ursor/automate-test-fix-improve-and-merge-code-99d1
     }
-
     return recommendations;
   }
 
   async run() {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      // Check for different types of errors
-      const checks = await Promise.allSettled([
+      // Check for different types of errors      const checks = await Promise.allSettled([
         this.checkTypeScriptErrors(),
         this.checkESLintErrors(),
         this.checkBuildErrors(),
@@ -242,8 +230,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         await this.triggerAutoFixer(this.errors);
       }
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    } catch (error) {
-      this.log(
+    } catch (error) {      this.log(
   'error',
   'Error monitoring cycle failed', error);
     }
@@ -258,5 +245,4 @@ if (isMainModule) {
   // Run once immediately
 ursor/automate-test-fix-improve-and-merge-code-99d1
 }
-
 export default ErrorMonitor;

@@ -102,4 +102,3 @@ export default function SimplePage() {
     </div>
   );
 }
->>>>>>> pr-10705

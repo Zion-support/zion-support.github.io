@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 interface InteractiveButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
@@ -17,7 +16,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   const [isHovered, setIsHovered] = useState(false)
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   return (
     <motion.button
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`}
@@ -52,7 +50,6 @@ interface AnimatedCardProps {
   children: React.ReactNode;
   className?: string;
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   useEffect(() => {
     if (isInView) controls.start(
   'visible');
@@ -112,7 +109,6 @@ interface FloatingActionButtonProps {
   icon: React.ReactNode;
   onClick: () => void;
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   return (
     <div className={`fixed ${positionClasses[position]} z-50`}>
       <motion.button

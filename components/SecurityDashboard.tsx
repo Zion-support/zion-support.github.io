@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  overallScore: number;
-  vulnerabilities: {;critical: number;
+  overallScore: number;  vulnerabilities: {;critical: number;
     high: number;
     medium: number;
     low: number;
@@ -31,8 +30,7 @@ const mockData: SecurityMetrics = {;
   }
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  return (
-    <div className="space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500" />"          Security Dashboard"        </h2></div>"
+  return (    <div className="space-y-6">"      <div className="flex items-center justify-between">"        <h2 className="text-2xl font-bold text-gray-900 dark: text-white flex items-center">"          <Shield className="w-6 h-6 mr-2 text-blue-500" />"          Security Dashboard"        </h2></div>"
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

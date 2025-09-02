@@ -39,8 +39,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       image: '🚀,
       featured: false,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    return matchesIndustry && matchesService;
-  });
+    return matchesIndustry && matchesService;  });
 
   const featuredCaseStudies = caseStudies.filter(study => study.featured);
 
@@ -224,8 +223,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         <div className="mb-8">
           <p className="text-gray-600">
 ursor/automate-test-fix-improve-and-merge-code-99d1
-          </p>
-        </div>
+          </p>        </div>
 
         {/* All Case Studies */}
         <section className="mb-16">

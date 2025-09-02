@@ -3,24 +3,8 @@ export default LinkChecker;
 :pages.disabled/utils/linkChecker.tsx
 export interface LinkInfo {
 export interface PageInfo {
-
-:pages.disabled/utils/linkChecker.tsxexport interface LinkInfo {}
-export interface PageInfo {}
-url: string;
-  status:
-  'working' |
-  'broken' |
-  'missing' |
-  'external';
-
-:pages.disabled/utils/linkChecker.tsx
-
-export interface LinkInfo {}
-export interface PageInfo {}
-  url: string;
-  status: 'working' | 'broken' | 'missing' | 'external';
->>>>>>> pr-10728
   page: string;
+  'external';  page: string;
   anchor?: string;
   error?: string}
 
@@ -40,8 +24,6 @@ export interface PageInfo {}
 :pages.disabled/utils/linkChecker.tsx
 '
   constructor (baseUrl: string = 'https://ziontechgroup.com') {
->>>>>>> pr-10728
-
     this.baseUrl = baseUrl}
 
   // Check if a link is internal or external
@@ -108,8 +90,6 @@ export interface PageInfo {}
   // Extract all links from a page;
   extractLinks (pageContent: string, pagePath: string) : LinkInfo[] {}
     const links: LinkInfo[] = [];
->>>>>>> pr-10728
-
     // Extract href attributes from anchor tags;
     let match;
 
@@ -172,46 +152,6 @@ export interface PageInfo {}
           page: pagePath
         }) }
     }
->>>>>>> pr-10728
-
-    return links}
-
-:pages.disabled/utils/linkChecker.tsx
-  // Check if a page exists
-  async checkPageExists (url: string: any): Promise < any> {
-
-    try {
-      return response.ok} catch {
-
-      return false}
-  }
-
-  // Check all links on a page
-  async checkPageLinks (pagePath: string, pageContent: string: any): Promise < any> {
-
-    const checkedLinks: LinkInfo[] = [];
-
-    for (const link of links) {
-
-      if (this.visitedUrls.has (link.url) ) {continue}
-
-      if (this.visitedUrls.has (link.url) ) {
-
-  // Check if a page exists;
-  async checkPageExists (url: string: any): Promise < any> {}
-    try {}
-      return response.ok} catch {}
-      return false}
-  }
-
-  // Check all links on a page;
-  async checkPageLinks (pagePath: string, pageContent: string: any): Promise < any> {}
-    const checkedLinks: LinkInfo[] = [];
-
-    for (const link of links) {}
-      if (this.visitedUrls.has (link.url) ) {}
-        continue}
->>>>>>> pr-10728
 
       this.visitedUrls.add (link.url) ;
 
@@ -239,8 +179,6 @@ export interface PageInfo {}
           this.missingPages.push (link.url) }
       } else {}
         link.status = 'external'}
->>>>>>> pr-10728
-
       checkedLinks.push (link) }
 
 :pages.disabled/utils/linkChecker.tsx
@@ -302,7 +240,5 @@ export interface PageInfo {}
   // Get all missing pages;
   getMissingPages () : string[] {}
     return this.missingPages}
->>>>>>> pr-10728
 }
-
 '`

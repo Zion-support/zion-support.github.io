@@ -11,9 +11,7 @@
             AI-Powered Email Responder"
             AI-Powered Email Responder;
           </h1>""
->>>>>>> pr-10728
-          <p className="mt-4 text-lg text-slate-300 max-w-3xl">
-            Reduce response times and triage inboxes with an on-brand,
+          <p className="mt-4 text-lg text-slate-300 max-w-3xl">            Reduce response times and triage inboxes with an on-brand,
             compliant, and secure AI assistant that drafts and automates;
             replies, prioritizes important threads, and escalates to humans when;
             needed.
@@ -25,9 +23,7 @@
         </header>"
         </header>
 ""
->>>>>>> pr-10728
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">""
-          <div className="lg:col-span-2 space-y-8">""
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">""          <div className="lg:col-span-2 space-y-8">""
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">Key Capabilities</h2>""
               <ul className="grid sm:grid-cols-2 gap-3 text-slate-300">""
@@ -63,9 +59,7 @@
                 <li className="p-3 rounded-lg bg-slate-800/50">
                   Approval workflows with human-in-the-loop (HITL)
                 </li>""
->>>>>>> pr-10728
-                <li className="p-3 rounded-lg bg-slate-800/50">
-                  Analytics: response time, CSAT proxy, deflection rate;
+                <li className="p-3 rounded-lg bg-slate-800/50">                  Analytics: response time, CSAT proxy, deflection rate;
                 </li>
               </ul>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
@@ -83,9 +77,7 @@
               <h2 className="text-2xl font-semibold mb-3">
                 Pricing (avg market ranges)
               </h2>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-slate-300">
-                <li>Starter: $299–$499/mo — up to 3 inboxes, 10k emails/mo</li>
+              <ul className="space-y-2 text-slate-300">                <li>Starter: $299–$499/mo — up to 3 inboxes, 10k emails/mo</li>
                 <li>
                   Growth: $799–$1,499/mo — 10 inboxes, 50k emails/mo, basic HITL;
                 </li>
@@ -103,9 +95,7 @@
                   Enterprise: Custom — on-prem/VPC, DLP, custom compliance;
                 </li>
               </ul>""
->>>>>>> pr-10728
-              <p className="mt-3 text-sm text-slate-400">
-                Benchmarks informed by public pricing from common CX platforms;
+              <p className="mt-3 text-sm text-slate-400">                Benchmarks informed by public pricing from common CX platforms;
                 and AI add-ons.
               </p>
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
@@ -115,7 +105,6 @@
             </div>"
             </div>
 ""
->>>>>>> pr-10728
             <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>""
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
@@ -126,7 +115,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://workspace.google.com/marketplace""
                     target="_blank""
@@ -137,7 +125,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     Google Workspace Marketplace;
                   </a>
                 </li>
@@ -148,7 +135,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://learn.microsoft.com/exchange/""
                     target="_blank""
@@ -159,7 +145,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     Microsoft Exchange/Outlook documentation;
                   </a>
                 </li>
@@ -170,7 +155,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://platform.openai.com/docs""
                     target="_blank""
@@ -181,7 +165,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     OpenAI Platform docs;
                   </a>
                 </li>
@@ -192,7 +175,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://developers.google.com/gmail/api""
                     target="_blank""
@@ -203,9 +185,7 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
-                    Gmail API;
-                  </a>
+                    Gmail API;                  </a>
                 </li>
               </ul>
             </div>
@@ -216,9 +196,7 @@
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <aside className="space-y-6">""
-            <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
+          <aside className="space-y-6">""            <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
               <h3 className="text-xl font-semibold">Get a Quote</h3>""
               <p className="mt-2 text-slate-300">
 :pages.disabled/pages/services/AIPoweredEmailResponder.tsx
@@ -242,9 +220,7 @@
                 Contact Us;
               </a>
             </div>""
->>>>>>> pr-10728
-            <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""
-              <h3 className="text-xl font-semibold">Implementation</h3>""
+            <div className="rounded-2xl border border-cyan-400/20 bg-slate-900/60 p-6">""              <h3 className="text-xl font-semibold">Implementation</h3>""
               <ul className="mt-2 space-y-2 text-slate-300">
                 <li>2–4 weeks typical deployment</li>
                 <li>SAML/SSO, RBAC, audit logs</li>
@@ -264,4 +240,3 @@ export default AIPoweredEmailResponder;"
 '"'"
 export default AIPoweredEmailResponder;
 '""
->>>>>>> pr-10728

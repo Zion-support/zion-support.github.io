@@ -33,9 +33,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative py-20 overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative py-20 overflow-hidden">""        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-workflow-automation.tsx
@@ -45,9 +43,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
-            className="text-center max-w-4xl mx-auto""
-          >""
+            className="text-center max-w-4xl mx-auto""          >""
             <div className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-400/30 rounded-full text-cyan-300 text-sm font-medium mb-6">""
 :pages.disabled/pages/services/ai-workflow-automation.tsx
               <Workflow className="w-4 h-4 mr-2"  />              AI-Powered Automation"
@@ -80,9 +76,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
                 Get Started;
               </button>""
->>>>>>> pr-10728
-              <button className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
-                Watch Demo;
+              <button className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">                Watch Demo;
               </button>
             </div>
           </motion.div>
@@ -95,9 +89,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="container mx-auto px-4">
+      <section className="py-20">""        <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-workflow-automation.tsx
@@ -107,7 +99,6 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -118,9 +109,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
               Intelligent Automation Features"
               Intelligent Automation Features;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Our AI workflow automation platform combines cutting-edge;
+            <p className="text-xl text-slate-300 max-w-3xl mx-auto">              Our AI workflow automation platform combines cutting-edge;
               technology with intuitive design to deliver powerful automation;
               capabilities.
             </p>
@@ -131,9 +120,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md: anygrid-cols-2 lg:grid-cols-3 gap-8">            {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -144,9 +131,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105""
-              >""
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-200 hover:scale-105""              >""
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/ai-workflow-automation.tsx
                   <feature.icon className="w-6 h-6 text-cyan-400" />"
@@ -161,9 +146,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-slate-300 leading-relaxed">
-                  {feature.description}
+                <p className="text-slate-300 leading-relaxed">                  {feature.description}
                 </p>
               </motion.div>
             ))}
@@ -177,9 +160,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-800/30">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-slate-800/30">""        <div className="container mx-auto px-4">""
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div;
               initial={{ opacity: 0, x: -20 }}
@@ -213,9 +194,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
               </p>""
               <div className="grid grid-cols-1 gap-4">
                 {benefits.map((benefit, index) => (""
->>>>>>> pr-10728
-                  <div key={index} className="flex items-center space-x-3">""
-                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />"                    <span className="text-slate-300">{benefit}</span>
+                  <div key={index} className="flex items-center space-x-3">""                    <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0"  />"                    <span className="text-slate-300">{benefit}</span>
                   </div>
                 ))}
               </div>
@@ -230,9 +209,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
               whileInView={{ opacity: 1, x: 0 }}"
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
-              className="relative""
-            >""
+              className="relative""            >""
               <div className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-2xl p-8 border border-cyan-400/30">""
                 <div className="text-center">""
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">""
@@ -243,9 +220,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
                     <Zap className="w-10 h-10 text-white"  />"
                     <Zap className="w-10 h-10 text-white"  />
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    Ready to Automate?"
+                  <h3 className="text-2xl font-bold text-white mb-4">                    Ready to Automate?"
                   </h3>"                  <p className="text-slate-300 mb-6">
 :pages.disabled/pages/services/ai-workflow-automation.tsx
                     Start your AI workflow automation journey today and see the
@@ -256,9 +231,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
                     Start your AI workflow automation journey today and see the;
                     transformation in action.
                   </p>""
->>>>>>> pr-10728
-                  <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200">
-                    Schedule Demo;
+                  <button className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200">                    Schedule Demo;
                   </button>
                 </div>
               </div>
@@ -273,9 +246,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20">""        <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-workflow-automation.tsx
@@ -285,9 +256,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
-            className="max-w-3xl mx-auto""
-          >""
+            className="max-w-3xl mx-auto""          >""
             <h2 className="text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-workflow-automation.tsx
               Ready to Automate Your Workflows?"
@@ -312,9 +281,7 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-200 hover:scale-105 shadow-lg shadow-cyan-500/20">
                 Get Started Now;
               </button>""
->>>>>>> pr-10728
-              <button className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">
-                Contact Sales;
+              <button className="px-8 py-4 border border-cyan-400/30 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/10 transition-all duration-200">                Contact Sales;
               </button>
             </div>
           </motion.div>
@@ -331,4 +298,3 @@ export default function AIWorkflowAutomation(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728

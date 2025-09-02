@@ -16,9 +16,7 @@ const InfrastructureServices = () => {}
               IT Infrastructure Solutions"
               IT Infrastructure Solutions;
             </h1>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Build robust, scalable infrastructure for your business needs.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Build robust, scalable infrastructure for your business needs.
             </p>
           </div>
 :pages.disabled/pages/services/Infrastructure.jsx
@@ -28,9 +26,7 @@ const InfrastructureServices = () => {}
         </div>"
         </div>
       </section>""
->>>>>>> pr-10728
-      <section className="py-16 bg-white">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+      <section className="py-16 bg-white">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl">""
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
@@ -73,9 +69,7 @@ const InfrastructureServices = () => {}
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
                 Data Centers;
               </h3>""
->>>>>>> pr-10728
-              <p className="text-slate-600">
-                Reliable hosting and colocation solutions.
+              <p className="text-slate-600">                Reliable hosting and colocation solutions.
               </p>
             </div>
           </div>
@@ -100,9 +94,7 @@ const InfrastructureServices = () => {}
             to="/contact""
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300""
           >
->>>>>>> pr-10728
-            Get Started;
-          </Link>
+            Get Started;          </Link>
         </div>
       </section>
     </div>
@@ -117,4 +109,3 @@ export default InfrastructureServices;'"
 '"'"
 export default InfrastructureServices;
 '""
->>>>>>> pr-10728

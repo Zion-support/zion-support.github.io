@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
+  lcp?: number;  fid?: number;
   cls?: number;
   ttfb?: number;
 }
@@ -20,8 +19,7 @@ const PerformanceMonitor: React.FC = () => {
       entries.forEach((entry) => {
         switch (entry.entryType) {
           case 'largest-contentful-paint':
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-            break;
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));            break;
           case 'first-input':
             setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
             break;
@@ -38,8 +36,7 @@ const PerformanceMonitor: React.FC = () => {
 
     // Show metrics after 3 seconds
     const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 3000);
+      setIsVisible(true);    }, 3000);
 
     return () => {
       observer.disconnect();
@@ -64,8 +61,7 @@ const PerformanceMonitor: React.FC = () => {
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs">
       <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>
-      <div className="space-y-2 text-xs">
-        {metrics.lcp && (
+      <div className="space-y-2 text-xs">        {metrics.lcp && (
           <div className="flex justify-between">
             <span className="text-gray-600">LCP: </span>
             <span className={getScoreColor(metrics.lcp, { good: 2500, poor: 4000 })}>

@@ -4,26 +4,22 @@ const Status: NextPage = () => {
   const services = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const getStatusIcon = (status: string) => {
     switch (status) {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  }
+    }  }
 
   const getStatusColor = (status: string) => {
     switch (status) {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  }
+    }  }
 
   const incidents = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ];
+    }  ];
 
   return (
     <MainLayout
@@ -53,8 +49,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               </div>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-              </p>
-            </div>
+              </p>            </div>
             
             {/* Status Overview Cards */}
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">

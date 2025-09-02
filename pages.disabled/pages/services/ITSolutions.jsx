@@ -6,9 +6,7 @@ import { Shield, Database, Monitor } from
   'lucide-react';
 
 import { Shield, Database, Monitor } from 'lucide-react';
->>>>>>> pr-10728
-:pages.disabled/pages/services/ITSolutions.jsx
-const ITSolutions = () => {
+:pages.disabled/pages/services/ITSolutions.jsxconst ITSolutions = () => {
     const features = [
         {
 "
@@ -60,9 +58,7 @@ const ITSolutions = () => {}
             description: "Multi-layered security for your IT infrastructure""
     ];
     const benefits = [""
->>>>>>> pr-10728
-        "Improved system reliability and performance",""
-        "Reduced IT operational costs",""
+        "Improved system reliability and performance",""        "Reduced IT operational costs",""
         "Enhanced data security and compliance",""
         "Streamlined business processes",""
         "Expert technical support and maintenance""
@@ -76,9 +72,7 @@ const ITSolutions = () => {}
 "
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-20">""
-        <div className="absolute inset-0 bg-black/20"></div>""
+      <section className="relative bg-gradient-to-br from-teal-900 via-teal-800 to-cyan-900 text-white py-20">""        <div className="absolute inset-0 bg-black/20"></div>""
         <div className="relative container mx-auto px-4 text-center">""
 :pages.disabled/pages/services/ITSolutions.jsx
           <motion.h1 className="text-5xl md:text-6xl font-bold mb-6" initial = {
@@ -141,9 +135,7 @@ const ITSolutions = () => {}
 }}>
             Optimize your IT infrastructure with our comprehensive solutions designed to improve;
             efficiency, security, and performance across your organization.
->>>>>>> pr-10728
-          </motion.p>
-          <motion.div initial = {}
+          </motion.p>          <motion.div initial = {}
   { opacity: 0,
 :pages.disabled/pages/services/ITSolutions.jsx
   y: 20
@@ -167,9 +159,7 @@ const ITSolutions = () => {}
 "
 }}>""
   y: 20;
->>>>>>> pr-10728
-}} animate = {}
-  { opacity: 1,
+}} animate = {}  { opacity: 1,
   y: 0;
 }} transition = {}
   { duration: 0.8,
@@ -179,9 +169,7 @@ const ITSolutions = () => {}
 <button className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-teal-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
 
             <button className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-teal-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
->>>>>>> pr-10728
-              Optimize Your IT;
-            </button>
+              Optimize Your IT;            </button>
           </motion.div>
         </div>
       </section>
@@ -192,9 +180,7 @@ const ITSolutions = () => {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-white">""        <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Our IT Capabilities</h2>""
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -237,9 +223,7 @@ const ITSolutions = () => {}
                 </div>""
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>""
           </div>
->>>>>>> pr-10728
-""
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""
+""          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">""
             {features.map((feature, index) => (<motion.div key={feature.title} className="text-center p-6 bg-gray-50 rounded-xl hover:shadow-lg transition-all duration-300" initial = {}
   { opacity: 0,
   y: 20;
@@ -258,9 +242,7 @@ const ITSolutions = () => {}
 <p className="text-gray-600">{feature.description}</p>
 
                 <p className="text-gray-600">{feature.description}</p>
->>>>>>> pr-10728
-              </motion.div>))}
-          </div>
+              </motion.div>))}          </div>
         </div>
       </section>
 :pages.disabled/pages/services/ITSolutions.jsx
@@ -270,9 +252,7 @@ const ITSolutions = () => {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gray-50">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-gray-50">""        <div className="container mx-auto px-4">""
           <div className="max-w-4xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Our IT Solutions?</h2>""
@@ -314,9 +294,7 @@ const ITSolutions = () => {}
                     <TrendingUp className="w-4 h-4 text-teal-600"/>"
                   </div>""
                 Experience the benefits of optimized IT infrastructure;
->>>>>>> pr-10728
-              </p>
-            </div>
+              </p>            </div>
 ""
             <div className="space-y-6">""
               {benefits.map((benefit, index) => (<motion.div key={index} className="flex items-center p-4 bg-white rounded-lg shadow-sm" initial = {}
@@ -336,9 +314,7 @@ const ITSolutions = () => {}
 <span className="text-lg text-gray-700">{benefit}</span>
 
                   <span className="text-lg text-gray-700">{benefit}</span>
->>>>>>> pr-10728
-                </motion.div>))}
-            </div>
+                </motion.div>))}            </div>
           </div>
         </div>
       </section>
@@ -349,7 +325,6 @@ const ITSolutions = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
       <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600 text-white">""
         <div className="container mx-auto px-4 text-center">""
           <h2 className="text-4xl font-bold mb-6">Ready to Optimize Your IT?</h2>""
@@ -364,9 +339,7 @@ const ITSolutions = () => {}
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let's discuss how our IT solutions can improve your business operations and performance.
           </p>""
->>>>>>> pr-10728
-          <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-            Schedule a Consultation;
+          <button className="bg-white text-teal-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">            Schedule a Consultation;
           </button>
         </div>
       </section>
@@ -382,4 +355,3 @@ export default ITSolutions;'"
 }}'"'"
 export default ITSolutions;
 }}'""
->>>>>>> pr-10728

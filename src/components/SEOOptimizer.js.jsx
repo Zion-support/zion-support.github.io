@@ -3,10 +3,8 @@
 import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState (false) ; const [isAnalyzing, setIsAnalyzing] = useState (false) ; const [report, setReport] = useState (null) ; const [selectedPage, setSelectedPage] = useState (null) ; const analyzeSEO = useCallback (async () => { setIsAnalyzing (true) ; try {'';
 
 import React from 'react'; const SEOOptimizer = () => { const [isOpen, setIsOpen] = useState(false); const [isAnalyzing, setIsAnalyzing] = useState(false); const [report, setReport] = useState(null); const [selectedPage, setSelectedPage] = useState(null); const analyzeSEO = useCallback(async () => { setIsAnalyzing(true) ; try {
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
 
-import React, { useState, useEffect, useCallback } from 'react';'''
-import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';'''import { Search, TrendingUp, Zap, AlertTriangle, RefreshCw, Download } from 'lucide-react';
 const SEOOptimizer = () => {}
     const [isOpen, setIsOpen] = useState (false) ;
     const [isAnalyzing, setIsAnalyzing] = useState (false) ;
@@ -468,4 +466,3 @@ export { SEOOptimizer };
 export { SEOOptimizer };
 
 export { SEOOptimizer };
->>>>>>> pr-10728

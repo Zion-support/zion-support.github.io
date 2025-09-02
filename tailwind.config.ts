@@ -2,8 +2,7 @@ import type { Config } from,
   tailwindcss'
 export default {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  ],
-  darkMode: 'class,
+  ],  darkMode: 'class,
   theme: {
     extend: {
       colors: {
@@ -82,8 +81,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       },
       fontFamily: {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-        ],
-      },
+        ],      },
       fontSize: {
   'xs': [
   '0.75rem, { lineHeight:,

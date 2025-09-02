@@ -1,12 +1,10 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx
-import { 
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsximport { 
   Mail, Phone, 
   MapPin, Send, 
   CheckCircle, AlertCircle,
   User, Building,
   MessageSquare
 ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -20,8 +18,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.t
     
     // Simulate form submission
     try {
-ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx
-    } catch (error) {
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx    } catch (error) {
       setSubmitStatus(
   'error');
     } finally {
@@ -31,7 +28,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.t
 
   const services = [
 ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx
-
   if (submitStatus ===
   'success') {
     return (
@@ -45,8 +41,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.t
         </div>
         <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
         <p className="text-zion-slate-light mb-6">
-ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx
-        >
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/ContactForm.tsx        >
           Send Another Message
         </button>
       </motion.div>

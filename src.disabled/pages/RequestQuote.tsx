@@ -1,5 +1,4 @@
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/RequestQuote.tsx
-export default RequestQuote;
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/RequestQuote.tsxexport default RequestQuote;
 
 ;
 const RequestQuote: React.FC = () => {;

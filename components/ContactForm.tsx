@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 
 interface FormData {
   name: string;
-  email: string;
-  company: string;
+  email: string;  company: string;
   service: string;
   message: string;
 }
@@ -17,6 +16,11 @@ const ContactForm: React.FC = () => {
     message: ''
   });
 
+const [formData, setFormData] = useState<FormData>({;
+
+    name:, ', email: ', '    company:,'
+  ', service: ',
+, message: '});'  const [isSubmitting, setIsSubmitting] = useState(false);'  const [isSubmitted, setIsSubmitted] = useState(false);'
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -28,8 +32,7 @@ const ContactForm: React.FC = () => {
     if (!formData.message.trim()) newErrors.message = 'Message is required';
     
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
-  };
+    return Object.keys(newErrors).length === 0;  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -54,7 +57,6 @@ const ContactForm: React.FC = () => {
       setFormData({
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   const handleChange = (;e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
@@ -78,7 +80,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
         animate={{ opacity: 1, scale: 1 }}
 ursor/automate-test-fix-improve-and-merge-code-48f3
       </div>
-
       <div className="grid grid-cols-1 lg: grid-cols-2 gap-8 mb-8">"        <div>"          <h3 className="text-xl font-semibold text-gray-900 mb-4">"            Contact Information"          </h3>
           <div className="space-y-4">"            <div className="flex items-center space-x-3">"              <Mail className="w-5 h-5 text-blue-600" />"              <div>"                <p className="font-medium text-gray-900">Email</p>"                <p className="text-gray-600">kleber@ziontechgroup.com</p>"              </div>"            </div>"
             <div className="flex items-center space-x-3">"              <Phone className="w-5 h-5 text-blue-600" />"              <div>"                <p className="font-medium text-gray-900">Phone</p>"                <p className="text-gray-600">+1 (302) 464-0950</p>"              </div>"            </div>

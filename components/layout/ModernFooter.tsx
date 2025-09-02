@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  Mail, Phone,
-  MapPin, Linkedin,
+  Mail, Phone,  MapPin, Linkedin,
   Twitter, Github,
   Zap, Shield,
   Cpu, Database,

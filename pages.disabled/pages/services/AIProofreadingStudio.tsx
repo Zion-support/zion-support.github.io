@@ -10,9 +10,7 @@ const AIProofreadingStudio: React.FC = (): JSX.Element => (
       <h1 className="text-4xl font-bold mb-4">AI Proofreading Studio</h1>"      <p className="text-slate-300 max-w-3xl">Improve clarity, tone, and accuracy across blogs, docs, and emails. Enforce brand voice and compliance with customizable playbooks.</p>"
       <h1 className="text-4xl font-bold mb-4">AI Proofreading Studio</h1>"      <p className="text-slate-300 max-w-3xl">Improve clarity, tone, and accuracy across blogs, docs, and emails. Enforce brand voice and compliance with customizable playbooks.</p>
     </section>""
->>>>>>> pr-10728
-    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
+    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">What it does</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
           <li>Grammar, style, and readability enhancements</li>
@@ -26,9 +24,7 @@ const AIProofreadingStudio: React.FC = (): JSX.Element => (
         </ul>"
         </ul>
       </div>""
->>>>>>> pr-10728
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
-        <h3 className="font-semibold mb-2">Connectors</h3>""
+      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""        <h3 className="font-semibold mb-2">Connectors</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
           <li>Google Docs, Office 365, Notion</li>
           <li>CMS: WordPress, Webflow, Ghost</li>
@@ -40,9 +36,7 @@ const AIProofreadingStudio: React.FC = (): JSX.Element => (
         </ul>"
         </ul>
       </div>""
->>>>>>> pr-10728
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
-        <h3 className="font-semibold mb-2">Pricing</h3>""
+      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""        <h3 className="font-semibold mb-2">Pricing</h3>""
         <ul className="text-slate-300 space-y-1">
           <li>Creator: $29/mo per seat</li>
           <li>Team: $149/mo up to 10 seats</li>
@@ -55,9 +49,7 @@ const AIProofreadingStudio: React.FC = (): JSX.Element => (
       </div>;"
       </div>;
     </section>;""
->>>>>>> pr-10728
-    <section className="container mx-auto px-4 pb-16">;""
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Start free trial</a>;
+    <section className="container mx-auto px-4 pb-16">;""      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Start free trial</a>;
     </section>;
   </div>;
 );
@@ -72,4 +64,3 @@ export default AIProofreadingStudio;
 '"'"
 
 '""
->>>>>>> pr-10728

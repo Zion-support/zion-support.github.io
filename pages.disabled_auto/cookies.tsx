@@ -4,14 +4,12 @@ const Cookies: NextPage = () => {
   const cookieTypes = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const cookieFeatures = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ];
+    }  ];
 
   return (
     <MainLayout

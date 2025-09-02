@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  Clock,
-  CheckCircle,
+  Clock,  CheckCircle,
   Star,
   ArrowRight,
   Play,
@@ -8,7 +7,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   Calendar,
   DollarSign,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
 export default function AISalesCopilot() {
   return (
     <>

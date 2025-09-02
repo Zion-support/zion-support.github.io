@@ -17,9 +17,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}""
->>>>>>> pr-10728
-        <section className="relative pt-32 pb-20 overflow-hidden">""
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-600/10"></div>""
+        <section className="relative pt-32 pb-20 overflow-hidden">""          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-teal-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
               <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-emerald-400 text-sm font-medium mb-8">""
@@ -42,9 +40,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 <span className="bg-gradient-to-r from-emerald-400 to-teal-500 bg-clip-text text-transparent"> Advisor</span>
               </h1>
 ""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Optimize your cloud costs with AI-powered FinOps advisory services. Reduce spending,
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">                Optimize your cloud costs with AI-powered FinOps advisory services. Reduce spending,
                 improve resource utilization, and maximize your cloud investment ROI.
 :pages.disabled/pages/services/finops-advisor.tsx
               </p>"
@@ -74,9 +70,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 <button className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo;
                 </button>
->>>>>>> pr-10728
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </section>
 :pages.disabled/pages/services/finops-advisor.tsx
@@ -86,9 +80,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 "
 
         {/* Features Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
@@ -98,9 +90,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 Cloud Financial Optimization"
                 Cloud Financial Optimization;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our FinOps platform provides comprehensive tools for managing cloud costs,
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our FinOps platform provides comprehensive tools for managing cloud costs,
                 optimizing resources, and improving financial operations.
               </p>
 :pages.disabled/pages/services/finops-advisor.tsx
@@ -190,9 +180,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
-                  <p className="text-slate-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""                  <p className="text-slate-300">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -205,9 +193,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 "
 
         {/* Cost Optimization Areas Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
@@ -217,9 +203,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 Cost Optimization Areas"
                 Cost Optimization Areas;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Identify and optimize key areas of cloud spending for maximum cost savings.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Identify and optimize key areas of cloud spending for maximum cost savings.
               </p>
 :pages.disabled/pages/services/finops-advisor.tsx
             </div>"
@@ -340,9 +324,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                   <p className="text-slate-300 mb-4">{area.description}</p>""
                   <ul className="space-y-1">
                     {area.benefits.map((benefit, benefitIndex) => (""
->>>>>>> pr-10728
-                      <li key={benefitIndex} className="text-sm text-emerald-400 flex items-center">""
-                        <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
+                      <li key={benefitIndex} className="text-sm text-emerald-400 flex items-center">""                        <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -358,9 +340,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 "
 
         {/* FinOps Framework Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
@@ -370,9 +350,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 FinOps Framework Implementation"
                 FinOps Framework Implementation;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Implement industry-standard FinOps practices for sustainable cloud cost management.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Implement industry-standard FinOps practices for sustainable cloud cost management.
               </p>
 :pages.disabled/pages/services/finops-advisor.tsx
             </div>"
@@ -434,9 +412,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
-                  <p className="text-slate-300">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""                  <p className="text-slate-300">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -449,9 +425,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 "
 
         {/* Cost Savings Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
@@ -461,9 +435,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 Proven Cost Savings"
                 Proven Cost Savings;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our FinOps solutions deliver measurable cost reductions and improved cloud efficiency.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our FinOps solutions deliver measurable cost reductions and improved cloud efficiency.
               </p>
 :pages.disabled/pages/services/finops-advisor.tsx
             </div>"
@@ -480,9 +452,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
               <div>""
                 <div className="space-y-6">
                   {[""
->>>>>>> pr-10728
-                    "Average 30-40% reduction in cloud costs",""
-                    "Improved resource utilization by 50-60%",""
+                    "Average 30-40% reduction in cloud costs",""                    "Improved resource utilization by 50-60%",""
                     "Faster cost optimization decision-making",""
                     "Better budget predictability and planning",""
                     "Enhanced team accountability and cost awareness",""
@@ -508,7 +478,6 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 <h3 className="text-2xl font-semibold text-white mb-4">Cost Savings Metrics</h3>""
                 <div className="space-y-4">
                   {[""
->>>>>>> pr-10728
                     { metric: "30-40%", label: "Cost Reduction", description: "Average savings" },""
                     { metric: "50-60%", label: "Resource Utilization", description: "Improvement" },""
                     { metric: "70%", label: "Faster Decisions", description: "Optimization speed" },""
@@ -519,9 +488,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                     { metric: "90%", label: "Cost Visibility", description: "Transparency" }"
                     { metric: "90%", label: "Cost Visibility", description: "Transparency" }
                   ].map((item, index)  => (""
->>>>>>> pr-10728
-                    <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">""
-                      <div className="text-2xl font-bold text-emerald-400 mb-1">{item.metric}</div>""
+                    <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">""                      <div className="text-2xl font-bold text-emerald-400 mb-1">{item.metric}</div>""
                       <div className="text-sm text-slate-300">{item.label}</div>""
                       <div className="text-xs text-slate-400">{item.description}</div>
                     </div>
@@ -538,9 +505,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 "
 
         {/* Tools & Integrations Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
@@ -550,9 +515,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 FinOps Tools & Integrations"
                 FinOps Tools & Integrations;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Comprehensive tools and integrations for complete cloud financial management.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Comprehensive tools and integrations for complete cloud financial management.
               </p>
 :pages.disabled/pages/services/finops-advisor.tsx
             </div>"
@@ -673,9 +636,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                   <p className="text-slate-300 mb-4">{tool.description}</p>""
                   <ul className="space-y-1">
                     {tool.features.map((feature, featureIndex) => (""
->>>>>>> pr-10728
-                      <li key={featureIndex} className="text-sm text-emerald-400 flex items-center">""
-                        <CheckCircle className="w-3 h-3 mr-2"  />                        {feature}
+                      <li key={featureIndex} className="text-sm text-emerald-400 flex items-center">""                        <CheckCircle className="w-3 h-3 mr-2"  />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -691,9 +652,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 "
 
         {/* Implementation Process Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
@@ -703,9 +662,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 Implementation Process"
                 Implementation Process;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our systematic approach ensures successful FinOps implementation and cost optimization.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our systematic approach ensures successful FinOps implementation and cost optimization.
               </p>
 :pages.disabled/pages/services/finops-advisor.tsx
             </div>"
@@ -780,9 +737,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                   <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
-                  <p className="text-slate-300">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""                  <p className="text-slate-300">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -795,9 +750,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
 "
 
         {/* CTA Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-600/10">;""
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-gradient-to-r from-emerald-500/10 to-teal-600/10">;""          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/finops-advisor.tsx
               Ready to Optimize Your Cloud Costs?"
@@ -833,9 +786,7 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-emerald-500/30 text-emerald-400 font-semibold rounded-lg hover:bg-emerald-500/10 transition-all duration-200""
               >
->>>>>>> pr-10728
-                Explore All Services;
-              </Link>;
+                Explore All Services;              </Link>;
             </div>;
           </div>;
         </section>;
@@ -849,4 +800,3 @@ export { function };export default function FinOpsAdvisor(...args: []):  {}
   )}}}}}}}'"'"
     </>
   )}}}}}}}'""
->>>>>>> pr-10728

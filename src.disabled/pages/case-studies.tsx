@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:src/pages/case-studies.tsx
-
 ;
   return (;
     <div className="max - w-5xl mx - auto px - 4 py - 12 text - white">";

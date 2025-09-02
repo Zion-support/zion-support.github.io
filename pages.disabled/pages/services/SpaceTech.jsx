@@ -26,9 +26,7 @@ const SpaceTech = () => {}
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
             Space Technology Solutions;
           </h1>""
->>>>>>> pr-10728
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            This service page is under development. Contact us for more;
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">            This service page is under development. Contact us for more;
             information.
 :pages.disabled/pages/services/SpaceTech.jsx
           </p>"
@@ -43,9 +41,7 @@ const SpaceTech = () => {}
             to="/contact""
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 text-lg""
           >
->>>>>>> pr-10728
-            Contact Us for More Information;
-          </Link>
+            Contact Us for More Information;          </Link>
         </div>
       </section>
     </div>
@@ -61,4 +57,3 @@ export default SpaceTech;'"
 '"'"
 export default SpaceTech;
 '""
->>>>>>> pr-10728

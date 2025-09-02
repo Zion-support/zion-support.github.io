@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const staticPages = [
     '/',
@@ -14,7 +13,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     '/privacy',
     '/terms'
   ];
-
   const allPages = [
     ...staticPages, ...blogPages,
     ...servicePages, ...categoryPages,
@@ -26,8 +24,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .map((page) => {
       const priority = page === '/' ? '1.0' : '0.8';
       const changefreq = page === '/' ? 'daily' : 'weekly';
-      
-      return `
+            return `
     <url>
       <loc>${baseUrl}${page}</loc>
       <lastmod>${new Date().toISOString()}</lastmod>
@@ -38,5 +35,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .join('')}
 </urlset>`;
 
-  res.status(200).send(sitemap);
-}
+  res.status(200).send(sitemap);}

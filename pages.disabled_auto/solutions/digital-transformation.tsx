@@ -4,8 +4,7 @@ const DigitalTransformation: NextPage = () => {
   const transformationServices = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const transformationStages = [
     {
@@ -16,7 +15,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   const industries = [
 ursor/automate-test-fix-improve-and-merge-code-48f3
   ];
-
   return (
     <MainLayout
       title="Digital Transformation Solutions - Zion Tech Group"

@@ -1,22 +1,5 @@
-
-import React from
-  'react';'
-import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from
-  'lucide-react';
-:pages.disabled/solutions/AIBusinessIntelligence.jsx
-const AIBusinessIntelligence = () => {
-    const benefits = ["Data-driven decision making across all business areas",""
-
-import React from 'react';'
-import { Brain, TrendingUp, Users, Globe, Cpu, Lightbulb, BarChart3, PieChart, Activity, Search } from 'lucide-react';
-:pages.disabled/solutions/AIBusinessIntelligence.jsx
-const AIBusinessIntelligence = () => {
-    const benefits = [
-const AIBusinessIntelligence = () => {}
-    const benefits = []
-        "Data-driven decision making across all business areas",""
->>>>>>> pr-10728
         "Real-time insights and instant access to critical information",""
+    const benefits = ["Data-driven decision making across all business areas",""        "Real-time insights and instant access to critical information",""
         "Automated reporting and reduced manual analysis time",""
         "Predictive capabilities for proactive business planning",""
         "Improved operational efficiency and cost optimization",""
@@ -112,9 +95,7 @@ const AIBusinessIntelligence = () => {}
     ];""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto text-center">""
+      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto text-center">""
           <div className="mb-8">""
             <div className="inline-flex items-center px-4 py-2 bg-violet-500/10 text-violet-400 rounded-full text-sm font-medium mb-6">""
               <BarChart3 className="w-4 h-4 mr-2"/>
@@ -149,9 +130,7 @@ const AIBusinessIntelligence = () => {}
               <a href="#features" className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Explore Features;
               </a>""
->>>>>>> pr-10728
-              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-                Get Started;
+              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">                Get Started;
               </a>
             </div>
           </div>
@@ -164,9 +143,7 @@ const AIBusinessIntelligence = () => {}
 "
 
       {/* BI Features */}""
->>>>>>> pr-10728
-      <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
@@ -176,9 +153,7 @@ const AIBusinessIntelligence = () => {}
               Business Intelligence Features"
               Business Intelligence Features;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI-powered BI platform provides comprehensive analytics;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              Our AI-powered BI platform provides comprehensive analytics;
               and insights for informed decision making.
             </p>
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
@@ -188,7 +163,6 @@ const AIBusinessIntelligence = () => {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
             {biFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -199,9 +173,7 @@ const AIBusinessIntelligence = () => {}
                   <feature.icon className="w-8 h-8 text-white"/>"
                   <feature.icon className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                <p className="text-gray-300 mb-4">{feature.description}</p>""
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""                <p className="text-gray-300 mb-4">{feature.description}</p>""
                 <ul className="space-y-2">""
                   {feature.features.map((item, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">""
                       <div className="w-1.5 h-1.5 bg-violet-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
@@ -219,9 +191,7 @@ const AIBusinessIntelligence = () => {}
 "
 
       {/* BI Solutions */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
@@ -231,9 +201,7 @@ const AIBusinessIntelligence = () => {}
               BI Solutions"
               BI Solutions;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Comprehensive business intelligence solutions covering all;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              Comprehensive business intelligence solutions covering all;
               aspects of your business operations.
             </p>
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
@@ -243,7 +211,6 @@ const AIBusinessIntelligence = () => {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {biSolutions.map((solution, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-violet-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -254,9 +221,7 @@ const AIBusinessIntelligence = () => {}
                   <solution.icon className="w-8 h-8 text-white"/>"
                   <solution.icon className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>""
-                <p className="text-gray-300 mb-4">{solution.description}</p>""
+                <h3 className="text-xl font-semibold text-white mb-3">{solution.title}</h3>""                <p className="text-gray-300 mb-4">{solution.description}</p>""
                 <ul className="space-y-2">""
                   {solution.capabilities.map((capability, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">""
                       <div className="w-1.5 h-1.5 bg-violet-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
@@ -296,9 +261,7 @@ const AIBusinessIntelligence = () => {}
                 Our AI-powered BI platform transforms raw data into actionable;
                 insights that drive business growth and success.
               </p>""
->>>>>>> pr-10728
-              <ul className="space-y-3">""
-                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">""
+              <ul className="space-y-3">""                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">""
                     <div className="w-2 h-2 bg-violet-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
@@ -309,9 +272,7 @@ const AIBusinessIntelligence = () => {}
               </ul>"
               </ul>
             </div>""
->>>>>>> pr-10728
-            <div className="bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-2xl p-8 border border-violet-500/30">""
-              <div className="text-center">""
+            <div className="bg-gradient-to-br from-violet-500/20 to-purple-500/20 rounded-2xl p-8 border border-violet-500/30">""              <div className="text-center">""
                 <Lightbulb className="w-24 h-24 text-violet-400 mx-auto mb-4"/>""
                 <h3 className="text-2xl font-bold text-white mb-2">Data Intelligence</h3>""
                 <p className="text-gray-300 mb-6">
@@ -324,9 +285,7 @@ const AIBusinessIntelligence = () => {}
                   Transform your data into intelligent insights that drive;
                   better decisions and business outcomes.
                 </p>""
->>>>>>> pr-10728
-                <div className="text-sm text-gray-400">
-                  <p>• AI-powered analytics</p>
+                <div className="text-sm text-gray-400">                  <p>• AI-powered analytics</p>
                   <p>• Real-time insights</p>
                   <p>• Predictive capabilities</p>
                 </div>
@@ -342,7 +301,6 @@ const AIBusinessIntelligence = () => {}
 "
 
       {/* Implementation Process */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -353,7 +311,6 @@ const AIBusinessIntelligence = () => {}
             Implementation Process"
             Implementation Process;
           </h2>""
->>>>>>> pr-10728
           <p className="text-xl text-gray-300 mb-8">
             A structured approach to implementing AI-powered business;
             intelligence in your organization.
@@ -364,7 +321,6 @@ const AIBusinessIntelligence = () => {}
           </p>"
           </p>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {implementation.map((phase, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-r from-violet-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -375,9 +331,7 @@ const AIBusinessIntelligence = () => {}
                   {index + 1}"
                   {index + 1}
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>""
-                <p className="text-gray-300 mb-2">{phase.description}</p>""
+                <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>""                <p className="text-gray-300 mb-2">{phase.description}</p>""
                 <p className="text-sm text-violet-400">{phase.duration}</p>
               </div>))}
           </div>
@@ -390,9 +344,7 @@ const AIBusinessIntelligence = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-4xl mx-auto text-center">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/solutions/AIBusinessIntelligence.jsx
             Ready to Transform Your Business Intelligence?"
@@ -417,9 +369,7 @@ const AIBusinessIntelligence = () => {}
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-lg hover:from-violet-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Start Your Journey;
             </a>""
->>>>>>> pr-10728
-            <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Solutions;
+            <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">              View All Solutions;
             </a>
           </div>
         </div>
@@ -436,4 +386,3 @@ export default AIBusinessIntelligence;'"
 }}}}'"'"
 export default AIBusinessIntelligence;
 }}}}'""
->>>>>>> pr-10728

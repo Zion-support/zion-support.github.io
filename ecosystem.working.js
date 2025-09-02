@@ -61,8 +61,7 @@ module.exports = {
   500M',
       env: {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
-      error_file:,
+      },      error_file:,
   ./logs/error-monitor-error.log',
       out_file: './logs/error-monitor-out.log,
       log_file:
@@ -77,7 +76,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       restart_delay: 2000,
 ursor/automate-test-fix-improve-and-merge-code-99d1
     },
-
     {
       name: 'syntax-fixer,
       script:
@@ -89,8 +87,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   500M',
       env: {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
-      error_file:,
+      },      error_file:,
   ./logs/syntax-fixer-error.log',
       out_file: './logs/syntax-fixer-out.log,
       log_file:
@@ -105,7 +102,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       restart_delay: 2000,
 ursor/automate-test-fix-improve-and-merge-code-99d1
     },
-
     {
       name: 'build-health-check,
       script:
@@ -117,8 +113,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   300M',
       env: {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
-      error_file:,
+      },      error_file:,
   ./logs/build-health-error.log',
       out_file: './logs/build-health-out.log,
       log_file:
@@ -133,7 +128,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       restart_delay: 1000,
 ursor/automate-test-fix-improve-and-merge-code-99d1
     },
-
     {
       name: 'merge-conflict-resolver,
       script:
@@ -145,8 +139,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   500M',
       env: {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      },
-      error_file:,
+      },      error_file:,
   ./logs/merge-resolver-error.log',
       out_file: './logs/merge-resolver-out.log,
       log_file:
@@ -161,7 +154,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       restart_delay: 5000,
 ursor/automate-test-fix-improve-and-merge-code-99d1
     },
-
     // Enhanced automation processes
     {
       name: 'ai-code-analyzer,

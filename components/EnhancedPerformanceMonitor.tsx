@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 interface PerformanceMetrics {
-  lcp: number;
-  fid: number;
+  lcp: number;  fid: number;
   cls: number;
   ttfb: number;
   fmp: number;
@@ -58,7 +57,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
 
         // Calculate TTFB
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
         // Calculate TTI (Time to Interactive) - simplified
         metrics.tti = Math.round(performance.now());
 
@@ -75,8 +73,7 @@ const finalMetrics = {;
       // Observe different types of performance entries
       try {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      setTimeout(() => {
-        resolve({
+      setTimeout(() => {        resolve({
           fcp: 0, lcp: 0, fid: 0, cls: 0, ttfb: 0, fmp: 0, tti: 0, score: 0
         });
       }, 5000);
@@ -92,7 +89,6 @@ const updateMetrics = useCallback(async () => {;setIsLoading(true);
       // Generate alerts based on metrics
 ursor/automate-test-fix-improve-and-merge-code-48f3
   }, [collectMetrics]);
-
   useEffect(() => {
     updateMetrics();
 
@@ -103,8 +99,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   }, [updateMetrics, autoRefresh, refreshInterval]);
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  if (!showDetails) {
-    return (
+  if (!showDetails) {    return (
       <div className="fixed bottom-4 right-4 z-50">"        <motion.div"          initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 border border-gray-200 dark:border-gray-700""        >"          <div className="flex items-center space-x-2">"            <Activity className="w-4 h-4 text-blue-500" />"            <span className="text-sm font-medium">Performance</span>"            {metrics && ("              <span className={`text-sm font-bold ${getScoreColor(metrics.score)}`}>`                {metrics.score}</span>
@@ -149,8 +144,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                  <motion.div
-                    key={index}
+                  <motion.div                    key={index}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
 className="flex items-center text-sm text-red-600 dark:text-red-400 bg-red-50 dark:bg-red-900/20 p-2 rounded""                  >"                    <AlertTriangle className="w-3 h-3 mr-2" />"                    {alert}"                  </motion.div>))}

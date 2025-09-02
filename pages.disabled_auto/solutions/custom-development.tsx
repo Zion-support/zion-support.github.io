@@ -4,14 +4,12 @@ const CustomDevelopment: NextPage = () => {
   const developmentServices = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const developmentProcess = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const technologies = [
     { name: 'React, category:,'

@@ -1,28 +1,6 @@
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
-
-import React from,
-  react';
-import { SEO } from
-  '@/components/SEO';
-import { Link } from
-  'react-router-dom';import {
-
-import {}
-Check,
-
-import React from 'react';
-import { SEO } from '@/components/SEO';
-import { Link } from 'react-router-dom';
-import React from 'react';'
-import { SEO } from '@/components/SEO';'
-import Link from 'next/link';
-:pages.disabled/pages/services/IoTEdgeComputing.jsx
-import {
-
-import {}
-  Check,
->>>>>>> pr-10728
   Wifi,
+Check,  Wifi,
   Cpu,
   Database,
   Shield,
@@ -36,9 +14,7 @@ import {}
   Globe,'
   Target} from 'lucide-react';
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
->>>>>>> pr-10728
-export default function IoTEdgeComputingServices() {
-'
+export default function IoTEdgeComputingServices() {'
   const industries = ['
   '
     'Smart Cities & Municipalities,Manufacturing & Industry 4.0,
@@ -146,9 +122,7 @@ export default function IoTEdgeComputingServices() {}
   return()
     <div className="min-h-screen bg-background">
       <SEO""
->>>>>>> pr-10728
-        title="IoT & Edge Computing Services - Zion Tech Group""
-        description="Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems.""
+        title="IoT & Edge Computing Services - Zion Tech Group""        description="Comprehensive IoT solutions, edge computing infrastructure, and smart device management platforms for connected ecosystems.""
         keywords="IoT services, edge computing, smart devices, IoT platform, device management, IoT analytics, smart cities""
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
         canonical="https://ziontechgroup.com/services/iot-edge-computing"
@@ -161,9 +135,7 @@ export default function IoTEdgeComputingServices() {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20">""
-        <div className="absolute inset-0 bg-black/20"></div>""
+      <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20">""        <div className="absolute inset-0 bg-black/20"></div>""
         <div className="relative container mx-auto px-4 text-center">""
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-green-400 via-emerald-400 to-teal-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -173,9 +145,7 @@ export default function IoTEdgeComputingServices() {}
             IoT & Edge Computing Services"
             IoT & Edge Computing Services;
           </h1>""
->>>>>>> pr-10728
-          <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with cutting-edge IoT solutions and edge;
+          <p className="text-xl md:text-2xl text-green-100 max-w-4xl mx-auto leading-relaxed">            Transform your business with cutting-edge IoT solutions and edge;
             computing infrastructure. Connect, monitor, and optimize your;
             operations with intelligent device management.
           </p>
@@ -188,9 +158,7 @@ export default function IoTEdgeComputingServices() {}
 "
 
       {/* Services Overview */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-white">""        <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -200,9 +168,7 @@ export default function IoTEdgeComputingServices() {}
               Our IoT & Edge Services"
               Our IoT & Edge Services;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              End-to-end IoT solutions that help businesses build, deploy, and;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">              End-to-end IoT solutions that help businesses build, deploy, and;
               manage connected ecosystems with real-time insights and;
               intelligent automation.
             </p>
@@ -221,9 +187,7 @@ export default function IoTEdgeComputingServices() {}
             {iotServices.map((service, index) => (
               <div;
                 key={service.title}""
->>>>>>> pr-10728
-                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200""
-              >""
+                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-shadow border border-gray-200""              >""
                 <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-6">""
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
                   <service.icon className="w-8 h-8 text-green-600" />"
@@ -238,9 +202,7 @@ export default function IoTEdgeComputingServices() {}
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
                   {service.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-600 mb-4">{service.description}</p>""
-                <div className="mb-4">""
+                <p className="text-gray-600 mb-4">{service.description}</p>""                <div className="mb-4">""
                   <p className="text-lg font-semibold text-green-600">
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
                     {service.price}"
@@ -265,9 +227,7 @@ export default function IoTEdgeComputingServices() {}
                   {service.features.slice(0, 4).map((feature, featureIndex) => (
                     <li;
                       key={featureIndex}""
->>>>>>> pr-10728
-                      className="flex items-center text-sm text-gray-700""
-                    >""
+                      className="flex items-center text-sm text-gray-700""                    >""
                       <Check className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
@@ -282,9 +242,7 @@ export default function IoTEdgeComputingServices() {}
                 </ul>""
                 <div className="space-y-2">
                   {service.benefits.slice(0, 2).map((benefit, benefitIndex) => (""
->>>>>>> pr-10728
-                    <div key={benefitIndex} className="text-sm text-gray-600">""
-                      <span className="font-medium">✓</span> {benefit}
+                    <div key={benefitIndex} className="text-sm text-gray-600">""                      <span className="font-medium">✓</span> {benefit}
                     </div>
                   ))}
                 </div>
@@ -300,9 +258,7 @@ export default function IoTEdgeComputingServices() {}
 "
 
       {/* Use Cases Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gray-50">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-gray-50">""        <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -312,9 +268,7 @@ export default function IoTEdgeComputingServices() {}
               Real-World IoT Use Cases"
               Real-World IoT Use Cases;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Proven IoT solutions that deliver measurable business value across;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">              Proven IoT solutions that deliver measurable business value across;
               diverse industries.
             </p>
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -332,9 +286,7 @@ export default function IoTEdgeComputingServices() {}
             {useCases.map((useCase, index) => (
               <div;
                 key={useCase.title}""
->>>>>>> pr-10728
-                className="bg-white rounded-xl p-8 shadow-lg border border-gray-200""
-              >""
+                className="bg-white rounded-xl p-8 shadow-lg border border-gray-200""              >""
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
                   {useCase.title}"
@@ -349,9 +301,7 @@ export default function IoTEdgeComputingServices() {}
                 <p className="text-gray-600 mb-6 leading-relaxed">
                   {useCase.description}
                 </p>""
->>>>>>> pr-10728
-                <div className="grid grid-cols-2 gap-4">""
-                  <div className="bg-green-50 p-4 rounded-lg">""
+                <div className="grid grid-cols-2 gap-4">""                  <div className="bg-green-50 p-4 rounded-lg">""
                     <div className="text-sm text-gray-600 mb-1">
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
                       Expected ROI"
@@ -376,9 +326,7 @@ export default function IoTEdgeComputingServices() {}
                     <div className="text-sm text-gray-600 mb-1">
                       Implementation;
                     </div>""
->>>>>>> pr-10728
-                    <div className="text-lg font-semibold text-blue-600">
-                      {useCase.implementation}
+                    <div className="text-lg font-semibold text-blue-600">                      {useCase.implementation}
                     </div>
                   </div>
                 </div>
@@ -408,9 +356,7 @@ export default function IoTEdgeComputingServices() {}
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Why Choose Our IoT Services?
               </h2>""
->>>>>>> pr-10728
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                Our IoT expertise combined with cutting-edge edge computing;
+              <p className="text-lg text-gray-600 mb-8 leading-relaxed">                Our IoT expertise combined with cutting-edge edge computing;
                 technologies enables us to deliver solutions that provide real;
                 business value and competitive advantage.
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -424,9 +370,7 @@ export default function IoTEdgeComputingServices() {}
 ""
               <div className="space-y-4">
                 {benefits.map((benefit, index) => (""
->>>>>>> pr-10728
-                  <div key={index} className="flex items-start">""
-                    <Check className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />""
+                  <div key={index} className="flex items-start">""                    <Check className="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" />""
                     <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}
@@ -454,7 +398,6 @@ export default function IoTEdgeComputingServices() {}
                 Discover how IoT can transform your business with our;
                 comprehensive IoT readiness assessment and strategy session.
               </p>""
->>>>>>> pr-10728
               <div className="space-y-3 mb-6">""
                 <div className="flex justify-between">""
                   <span className="text-gray-600">Assessment Value:</span>""
@@ -465,9 +408,7 @@ export default function IoTEdgeComputingServices() {}
                   <span className="font-semibold text-gray-900">$3,000</span>"
                   <span className="font-semibold text-gray-900">$3,000</span>
                 </div>""
->>>>>>> pr-10728
-                <div className="flex justify-between">""
-                  <span className="text-gray-600">Your Cost:</span>""
+                <div className="flex justify-between">""                  <span className="text-gray-600">Your Cost:</span>""
                   <span className="font-semibold text-green-600">FREE</span>
                 </div>
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -483,9 +424,7 @@ export default function IoTEdgeComputingServices() {}
                 to="/contact""
                 className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors inline-block w-full text-center""
               >
->>>>>>> pr-10728
-                Schedule Assessment;
-              </Link>
+                Schedule Assessment;              </Link>
             </div>
           </div>
         </div>
@@ -497,9 +436,7 @@ export default function IoTEdgeComputingServices() {}
 "
 
       {/* Industries Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gray-50">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-gray-50">""        <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -509,9 +446,7 @@ export default function IoTEdgeComputingServices() {}
               Industries We Serve"
               Industries We Serve;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our IoT solutions are tailored to meet the unique challenges and;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">              Our IoT solutions are tailored to meet the unique challenges and;
               opportunities across diverse industry sectors.
             </p>
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -529,7 +464,6 @@ export default function IoTEdgeComputingServices() {}
             {industries.map((industry, index) => (
               <div;
                 key={industry}""
->>>>>>> pr-10728
                 className="bg-white rounded-xl p-6 text-center hover:bg-green-50 transition-colors border border-gray-200""
               >""
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -540,9 +474,7 @@ export default function IoTEdgeComputingServices() {}
                   <Target className="w-8 h-8 text-green-600" />"
                   <Target className="w-8 h-8 text-green-600" />
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-lg font-semibold text-gray-900">
-                  {industry}
+                <h3 className="text-lg font-semibold text-gray-900">                  {industry}
                 </h3>
               </div>
             ))}
@@ -556,9 +488,7 @@ export default function IoTEdgeComputingServices() {}
 "
 
       {/* Technologies Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-white">""        <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -568,9 +498,7 @@ export default function IoTEdgeComputingServices() {}
               IoT Technologies We Use"
               IoT Technologies We Use;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We leverage cutting-edge IoT and edge computing technologies to;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">              We leverage cutting-edge IoT and edge computing technologies to;
               build robust, scalable, and innovative solutions for our clients.
             </p>
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -588,9 +516,7 @@ export default function IoTEdgeComputingServices() {}
             {technologies.map((tech, index) => (
               <div;
                 key={tech}""
->>>>>>> pr-10728
-                className="bg-gray-50 rounded-lg p-4 text-center hover:bg-green-50 transition-colors border border-gray-200""
-              >""
+                className="bg-gray-50 rounded-lg p-4 text-center hover:bg-green-50 transition-colors border border-gray-200""              >""
                 <span className="text-gray-700 font-medium text-sm">
                   {tech}
                 </span>
@@ -606,9 +532,7 @@ export default function IoTEdgeComputingServices() {}
 "
 
       {/* Process Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gray-50">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-gray-50">""        <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -618,9 +542,7 @@ export default function IoTEdgeComputingServices() {}
               Our IoT Implementation Process"
               Our IoT Implementation Process;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              A proven methodology for delivering successful IoT solutions that;
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">              A proven methodology for delivering successful IoT solutions that;
               drive business value.
             </p>
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -630,9 +552,7 @@ export default function IoTEdgeComputingServices() {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="max-w-6xl mx-auto">""
-            <div className="grid md:grid-cols-6 gap-8">""
+          <div className="max-w-6xl mx-auto">""            <div className="grid md:grid-cols-6 gap-8">""
               <div className="text-center">""
                 <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
@@ -648,9 +568,7 @@ export default function IoTEdgeComputingServices() {}
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   Discovery;
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-600 text-sm">
-                  Understand business needs and IoT opportunities;
+                <p className="text-gray-600 text-sm">                  Understand business needs and IoT opportunities;
                 </p>
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
               </div>"
@@ -673,9 +591,7 @@ export default function IoTEdgeComputingServices() {}
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   Architecture;
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-600 text-sm">
-                  Design IoT architecture and edge strategy;
+                <p className="text-gray-600 text-sm">                  Design IoT architecture and edge strategy;
                 </p>
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
               </div>"
@@ -698,9 +614,7 @@ export default function IoTEdgeComputingServices() {}
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   Development;
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-600 text-sm">
-                  Build IoT platform and edge infrastructure;
+                <p className="text-gray-600 text-sm">                  Build IoT platform and edge infrastructure;
                 </p>
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
               </div>"
@@ -723,9 +637,7 @@ export default function IoTEdgeComputingServices() {}
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   Testing;
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-600 text-sm">
-                  Validate IoT solution and edge performance;
+                <p className="text-gray-600 text-sm">                  Validate IoT solution and edge performance;
                 </p>
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
               </div>"
@@ -748,9 +660,7 @@ export default function IoTEdgeComputingServices() {}
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   Deployment;
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-600 text-sm">
-                  Launch IoT solution and edge nodes;
+                <p className="text-gray-600 text-sm">                  Launch IoT solution and edge nodes;
                 </p>
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
               </div>"
@@ -773,9 +683,7 @@ export default function IoTEdgeComputingServices() {}
                 <h3 className="text-lg font-bold text-gray-900 mb-2">
                   Optimization;
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-600 text-sm">
-                  Monitor, maintain, and scale IoT solution;
+                <p className="text-gray-600 text-sm">                  Monitor, maintain, and scale IoT solution;
                 </p>
               </div>
             </div>
@@ -789,9 +697,7 @@ export default function IoTEdgeComputingServices() {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">""
-        <div className="container mx-auto px-4 text-center">""
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">""        <div className="container mx-auto px-4 text-center">""
           <h2 className="text-4xl font-bold mb-6">
 :pages.disabled/pages/services/IoTEdgeComputing.jsx
             Ready to Connect Your World?"
@@ -830,9 +736,7 @@ export default function IoTEdgeComputingServices() {}
               to="/services""
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors""
             >
->>>>>>> pr-10728
-              Explore All Services;
-            </Link>
+              Explore All Services;            </Link>
           </div>
         </div>
       </section>
@@ -848,4 +752,3 @@ export default function IoTEdgeComputingServices() {}
 '"'"
 }
 '""
->>>>>>> pr-10728

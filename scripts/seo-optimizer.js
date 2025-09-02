@@ -22,7 +22,6 @@ console.log(
 function generateSitemap() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
   ];
-
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages
@@ -33,16 +32,14 @@ ${pages
   T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  fs.writeFileSync(sitemapPath, sitemap);
-  console.log(
+  fs.writeFileSync(sitemapPath, sitemap);  console.log(
   '✅ Generated sitemap.xml');
 }
 
 // 2. Generate robots.txt
 function generateRobotsTxt() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  const robotsTxt = `User-agent: *
-Allow: /
+  const robotsTxt = `User-agent: *Allow: /
 
 # Sitemap
 Sitemap: https://ziontechgroup.com/sitemap.xml
@@ -62,24 +59,21 @@ Allow: /solutions/
 Allow: /about/
 Allow: /contact/`;
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  fs.writeFileSync(robotsPath, robotsTxt);
-  console.log(
+  fs.writeFileSync(robotsPath, robotsTxt);  console.log(
   '✅ Generated robots.txt');
 }
 
 // 3. Generate manifest.json for PWA
 function generateManifest() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-  console.log(
+  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));  console.log(
   '✅ Generated manifest.json');
 }
 
 // 4. Generate structured data
 function generateStructuredData() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  const structuredData = {
-    '@context': 'https://schema.org',
+  const structuredData = {    '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
@@ -112,8 +106,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     ],
   };
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));
-  console.log(
+  fs.writeFileSync(structuredDataPath, JSON.stringify(structuredData, null, 2));  console.log(
   '✅ Generated structured data');
 }
 
@@ -125,8 +118,7 @@ async function main() {
     generateManifest();
     generateStructuredData();
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  } catch (error) {
-    console.error(
+  } catch (error) {    console.error(
   '❌ SEO optimization failed:', error.message);
     process.exit(1);
   }

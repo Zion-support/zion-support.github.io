@@ -4,7 +4,6 @@ function toCamelCase(str) {
     .replace(/^[0-9]/, (match) => {
       const numberWords = {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 };
       return numberWords[match] || match;
     })
@@ -92,8 +91,7 @@ function fixedCount = 0;
   return fixedCount}
 // Start fixing files
 ursor/automate-test-fix-improve-and-merge-code-48f3
-// // // // // // // console.log(`Fixed ${fixedCount} files.`);
-console.log(`Fixed ${fixedCount} files.`);
+// // // // // // // console.log(`Fixed ${fixedCount} files.`);console.log(`Fixed ${fixedCount} files.`);
 ;
 export { toCamelCase };
 export default toCamelCase;

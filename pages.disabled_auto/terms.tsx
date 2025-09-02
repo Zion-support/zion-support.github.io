@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 const Terms: React.FC = () => {
   const lastUpdated = "2025-01-15"
 
@@ -43,8 +42,7 @@ const Terms: React.FC = () => {
       title: "Limitation of Liability", icon: AlertTriangle,
       content: [
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      ]
-    }
+      ]    }
   ];
 
   const contactInfo = {
@@ -56,8 +54,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       <SEO 
         title="Terms of Service - Zion Tech Group" 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      />
-      
+      />      
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">

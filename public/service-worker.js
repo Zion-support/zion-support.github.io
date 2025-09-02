@@ -15,8 +15,7 @@ self.addEventListener(
     caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
   );
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  event.waitUntil(
-    caches.keys().then(keyList =>
+  event.waitUntil(    caches.keys().then(keyList =>
       Promise.all(
         keyList.map(key => {
           if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
@@ -27,8 +26,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     )
   );
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    event.respondWith(
-      caches.open(DATA_CACHE_NAME).then(cache =>
+    event.respondWith(      caches.open(DATA_CACHE_NAME).then(cache =>
         fetch(event.request)
           .then(response => {
             if (response.status === 200) {

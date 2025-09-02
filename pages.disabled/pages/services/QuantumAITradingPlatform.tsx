@@ -47,14 +47,10 @@ export default function QuantumAITradingPlatform(...args: any[]): any {
 '
 export default function QuantumAITradingPlatform(...args: any[]): any {}
   const [activeTab, setActiveTab] = useState('overview');
->>>>>>> pr-10728
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {}
     setIsVisible(true)}, []);
 
->>>>>>> pr-10728
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light text-white relative overflow-hidden">"
       {/* Futuristic Animated Background */}""
       <div className="fixed inset-0 overflow-hidden pointer-events-none">"
@@ -86,32 +82,14 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
               className="absolute w-1 h-1 bg-purple-400 rounded-full opacity-80 shadow-lg shadow-purple-400/50""
               animate={{}
                 x: [0, 120, 0],
->>>>>>> pr-10728
-                y: [0, -120, 0],
-                opacity: [0.4, 1, 0.4],
+                y: [0, -120, 0],                opacity: [0.4, 1, 0.4],
                 scale: [0.5, 1.5, 0.5]}}
               transition={{}
                 duration: 3 + i * 0.2,
                 repeat: Infinity,
                 delay: i * 0.1,'
-
-                ease:
-  'easeInOut'}}
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
-              style={{
-
-                left: `${Math.random() * 100}%`,``top: `${Math.random() * 100}%`}}
-
-                ease: 'easeInOut'}}
-:pages.disabled/pages/services/QuantumAITradingPlatform.tsx
-              style={{
-
-                left: `${Math.random() * 100}%`,``
-              style={{}
-                left: `${Math.random() * 100}%`,`
-                top: `${Math.random() * 100}%`}}
->>>>>>> pr-10728
             />
+                left: `${Math.random() * 100}%`,``top: `${Math.random() * 100}%`}}            />
           ))}
         </div>
 
@@ -129,9 +107,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
           className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl""
           animate={{}
             scale: [1, 1.2, 1],
->>>>>>> pr-10728
-            opacity: [0.2, 0.5, 0.2]}}
-          transition={{}
+            opacity: [0.2, 0.5, 0.2]}}          transition={{}
             duration: 4,
             repeat: Infinity,
 ,
@@ -150,9 +126,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
           className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl""
           animate={{}
             scale: [1.2, 1, 1.2],
->>>>>>> pr-10728
-            opacity: [0.5, 0.2, 0.5]}}
-          transition={{}
+            opacity: [0.5, 0.2, 0.5]}}          transition={{}
             duration: 5,
             repeat: Infinity,'
             ease:
@@ -167,9 +141,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
 "
 
       {/* Header Section */}""
->>>>>>> pr-10728
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto text-center">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -179,9 +151,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="mb-8""
-          >""
+            className="mb-8""          >""
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-400/30 text-purple-400 text-sm font-medium mb-6">""
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
               <Atom className="w-4 h-4 mr-2"  />              Revolutionary Quantum Trading Platform"
@@ -207,9 +177,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
               The world's first quantum-powered trading platform combining;
               quantum computing with AI algorithms for ultra-fast, intelligent;
               trading decisions and market prediction.
->>>>>>> pr-10728
-            </p>
-          </motion.div>
+            </p>          </motion.div>
 
           {/* Key Metrics */}
           <motion.div;
@@ -221,9 +189,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.2 }}""
->>>>>>> pr-10728
-            className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12""
-          >""
+            className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12""          >""
             <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-2xl p-6 backdrop-blur-sm">""
               <div className="text-3xl font-bold text-purple-400 mb-2">
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -261,9 +227,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
               <div className="text-3xl font-bold text-orange-400 mb-2">
                 99.999%
               </div>""
->>>>>>> pr-10728
-              <div className="text-gray-300">Uptime</div>
-            </div>
+              <div className="text-gray-300">Uptime</div>            </div>
           </motion.div>
 
           {/* CTA Buttons */}
@@ -276,9 +240,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}"
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.4 }}""
->>>>>>> pr-10728
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center""
-          >""
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center""          >""
             <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-2xl font-semibold text-white transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/25 flex items-center">""
               <Rocket className="w-5 h-5 mr-2"  />
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -294,9 +256,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
             <button className="px-8 py-4 border-2 border-purple-400/50 hover:border-purple-400 rounded-2xl font-semibold text-purple-400 hover:bg-purple-400/10 transition-all duration-300 flex items-center">""
               <Eye className="w-5 h-5 mr-2"  />              Watch Demo;
             </button>
->>>>>>> pr-10728
-          </motion.div>
-        </div>
+          </motion.div>        </div>
       </section>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
 "
@@ -314,32 +274,8 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                   onClick={() => setActiveTab(tab)}``
                   className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
 '
-
-                    activeTab === tab''
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25'''`
-                      : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white'``
-
-      {/* Navigation Tabs */}""
-      <section className="relative py-8 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
-            {['overview',features',pricing',technical',contact'].map()
-              tab => (
-                <button;
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}`
-                  className={`px-6 py-3 rounded-xl font-medium transition-all duration-300 ${}
->>>>>>> pr-10728
-                    activeTab === tab'
-  '
-                      ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg shadow-purple-500/25''
-
-  '`: 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white``}`}
-
-                      : 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white'`
-                  }`}
->>>>>>> pr-10728
                 >
+  '`: 'bg-zion-slate/50 text-gray-300 hover:bg-zion-slate/70 hover:text-white``}`}                >
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}
                 </button>
               )
@@ -415,9 +351,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                         <h3 className="font-semibold text-white mb-1">
                           Quantum Speed;
                         </h3>""
->>>>>>> pr-10728
-                        <p className="text-gray-400">
-                          1000x faster than traditional trading systems;
+                        <p className="text-gray-400">                          1000x faster than traditional trading systems;
                         </p>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                       </div>"
@@ -438,9 +372,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                         <h3 className="font-semibold text-white mb-1">
                           AI Intelligence;
                         </h3>""
->>>>>>> pr-10728
-                        <p className="text-gray-400">
-                          Advanced machine learning for market prediction;
+                        <p className="text-gray-400">                          Advanced machine learning for market prediction;
                         </p>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                       </div>"
@@ -461,9 +393,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                         <h3 className="font-semibold text-white mb-1">
                           Risk Management;
                         </h3>""
->>>>>>> pr-10728
-                        <p className="text-gray-400">
-                          Real-time risk assessment and mitigation;
+                        <p className="text-gray-400">                          Real-time risk assessment and mitigation;
                         </p>
                       </div>
                     </div>
@@ -474,9 +404,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                   </div>"
                   </div>
                 </div>""
->>>>>>> pr-10728
-                <div className="relative">""
-                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm">""
+                <div className="relative">""                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm">""
                     <div className="text-center">""
                       <Atom className="w-24 h-24 text-purple-400 mx-auto mb-6"  />""
                       <h3 className="text-2xl font-bold text-white mb-4">
@@ -491,9 +419,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                       </h3>"                      <p className="text-gray-300 mb-6">
                         Experience the future of algorithmic trading;
                       </p>""
->>>>>>> pr-10728
-                      <div className="grid grid-cols-2 gap-4 text-sm">""
-                        <div className="text-center">""
+                      <div className="grid grid-cols-2 gap-4 text-sm">""                        <div className="text-center">""
                           <div className="text-2xl font-bold text-purple-400">
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                             50+"
@@ -514,9 +440,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                           <div className="text-2xl font-bold text-pink-400">
                             24/7;
                           </div>""
->>>>>>> pr-10728
-                          <div className="text-gray-400">Market Coverage</div>
-                        </div>
+                          <div className="text-gray-400">Market Coverage</div>                        </div>
                       </div>
                     </div>
                   </div>
@@ -531,7 +455,6 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
 
 '
             {activeTab === 'features' && ("
->>>>>>> pr-10728
               <motion.div""
                 key="features"
                 initial={{ opacity: 0, y: 20 }}
@@ -548,9 +471,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}""
->>>>>>> pr-10728
-                className="space-y-8""
-              >""
+                className="space-y-8""              >""
                 <div className="text-center mb-12">""
                   <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -560,9 +481,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                     Advanced Trading Features"
                     Advanced Trading Features;
                   </h2>""
->>>>>>> pr-10728
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Discover the cutting-edge capabilities that make our quantum;
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">                    Discover the cutting-edge capabilities that make our quantum;
                     trading platform the most advanced in the world;
                   </p>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -572,9 +491,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                 </div>"
                 </div>
 ""
->>>>>>> pr-10728
-                <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-                  {features.map((feature, index) => (
+                <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">                  {features.map((feature, index) => (
                     <motion.div;
                       key={index}
                       initial={{ opacity: 0, y: 20 }}
@@ -585,7 +502,6 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                       animate={{ opacity: 1, y: 0 }}"
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
                       className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm hover:border-purple-400/40 transition-all duration-300 group""
                     >""
                       <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">""
@@ -596,9 +512,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                         <Sparkles className="w-6 h-6 text-white"  />"
                         <Sparkles className="w-6 h-6 text-white"  />
                       </div>""
->>>>>>> pr-10728
-                      <h3 className="text-lg font-semibold text-white mb-2">
-                        {feature}"
+                      <h3 className="text-lg font-semibold text-white mb-2">                        {feature}"
                       </h3>"                      <p className="text-gray-400 text-sm">
                         Revolutionary quantum-powered capability that transforms;
                         trading methodology;
@@ -628,9 +542,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}""
->>>>>>> pr-10728
-                className="space-y-8""
-              >""
+                className="space-y-8""              >""
                 <div className="text-center mb-12">""
                   <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -640,9 +552,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                     Premium Pricing"
                     Premium Pricing;
                   </h2>""
->>>>>>> pr-10728
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Choose the perfect plan for your trading needs with our;
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">                    Choose the perfect plan for your trading needs with our;
                     competitive pricing structure;
                   </p>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -656,9 +566,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
 ""
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {/* Monthly Plan */}""
->>>>>>> pr-10728
-                  <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm relative">""
-                    <div className="text-center">""
+                  <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/30 rounded-3xl p-8 backdrop-blur-sm relative">""                    <div className="text-center">""
                       <h3 className="text-2xl font-bold text-white mb-4">
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         Monthly"
@@ -673,7 +581,6 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                       <div className="text-5xl font-bold text-purple-400 mb-2">
                         {pricing.monthly}
                       </div>""
->>>>>>> pr-10728
                       <div className="text-gray-400 mb-6">per month</div>""
                       <ul className="space-y-3 mb-8 text-left">
                         {pricing.features.slice(0, 3).map((feature, index) => (
@@ -684,9 +591,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                           <li"
                           <li;
                             key={index}""
->>>>>>> pr-10728
-                            className="flex items-center text-gray-300""
-                          >""
+                            className="flex items-center text-gray-300""                          >""
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                            {feature}
                           </li>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -696,9 +601,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                         ))}"
                         ))}
                       </ul>""
->>>>>>> pr-10728
-                      <button className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-xl font-semibold text-white transition-all duration-300">
-                        Get Started;
+                      <button className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-xl font-semibold text-white transition-all duration-300">                        Get Started;
                       </button>
                     </div>
                   </div>
@@ -709,9 +612,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
 "
 
                   {/* Yearly Plan */}""
->>>>>>> pr-10728
-                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400 rounded-3xl p-8 backdrop-blur-sm relative transform scale-105">""
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
+                  <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 border-2 border-purple-400 rounded-3xl p-8 backdrop-blur-sm relative transform scale-105">""                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                       <div className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         Most Popular
@@ -750,9 +651,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                         {pricing.features.map((feature, index) => (
                           <li;
                             key={index}""
->>>>>>> pr-10728
-                            className="flex items-center text-gray-300""
-                          >""
+                            className="flex items-center text-gray-300""                          >""
                             <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                            {feature}
                           </li>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -762,9 +661,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                         ))}"
                         ))}
                       </ul>""
->>>>>>> pr-10728
-                      <button className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-xl font-semibold text-white transition-all duration-300">
-                        Get Started;
+                      <button className="w-full py-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-xl font-semibold text-white transition-all duration-300">                        Get Started;
                       </button>
                     </div>
                   </div>
@@ -775,9 +672,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
 "
 
                   {/* Enterprise Plan */}""
->>>>>>> pr-10728
-                  <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-blue-400/30 rounded-3xl p-8 backdrop-blur-sm relative">""
-                    <div className="text-center">""
+                  <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-blue-400/30 rounded-3xl p-8 backdrop-blur-sm relative">""                    <div className="text-center">""
                       <h3 className="text-2xl font-bold text-white mb-4">
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         Enterprise"
@@ -792,9 +687,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                       <div className="text-5xl font-bold text-blue-400 mb-2">
                         {pricing.enterprise}
                       </div>""
->>>>>>> pr-10728
-                      <div className="text-gray-400 mb-6">custom pricing</div>""
-                      <ul className="space-y-3 mb-8 text-left">""
+                      <div className="text-gray-400 mb-6">custom pricing</div>""                      <ul className="space-y-3 mb-8 text-left">""
                         <li className="flex items-center text-gray-300">""
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -828,9 +721,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                           <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0"  />                          SLA guarantees;
                         </li>
                       </ul>""
->>>>>>> pr-10728
-                      <button className="w-full py-3 border-2 border-blue-400 hover:bg-blue-400/10 rounded-xl font-semibold text-blue-400 transition-all duration-300">
-                        Contact Sales;
+                      <button className="w-full py-3 border-2 border-blue-400 hover:bg-blue-400/10 rounded-xl font-semibold text-blue-400 transition-all duration-300">                        Contact Sales;
                       </button>
                     </div>
                   </div>
@@ -845,7 +736,6 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
 
 '
             {activeTab === 'technical' && ("
->>>>>>> pr-10728
               <motion.div""
                 key="technical"
                 initial={{ opacity: 0, y: 20 }}
@@ -862,9 +752,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}""
->>>>>>> pr-10728
-                className="space-y-8""
-              >""
+                className="space-y-8""              >""
                 <div className="text-center mb-12">""
                   <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -874,9 +762,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                     Technical Specifications"
                     Technical Specifications;
                   </h2>""
->>>>>>> pr-10728
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Built with cutting-edge quantum and AI technology to ensure;
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">                    Built with cutting-edge quantum and AI technology to ensure;
                     maximum performance, security, and reliability;
                   </p>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -886,9 +772,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                 </div>"
                 </div>
 ""
->>>>>>> pr-10728
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">""
-                  <div className="space-y-6">""
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">""                  <div className="space-y-6">""
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm">""
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">""
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -910,9 +794,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                             key={index}""
                             className="bg-zion-slate/50 rounded-lg px-3 py-2 text-center text-sm text-gray-300""
                           >
->>>>>>> pr-10728
-                            {tech}
-                          </div>
+                            {tech}                          </div>
                         ))}
                       </div>
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -930,7 +812,6 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">""
                         <Network className="w-6 h-6 text-purple-400 mr-3"  />                        Integrations;
                       </h3>""
->>>>>>> pr-10728
                       <div className="space-y-2">
                         {technicalSpecs.integrations.map()
                           (integration, index) => (
@@ -941,9 +822,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                             <div"
                             <div;
                               key={index}""
->>>>>>> pr-10728
-                              className="flex items-center text-gray-300""
-                            >""
+                              className="flex items-center text-gray-300""                            >""
                               <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />
                               {integration}
                             </div>
@@ -958,7 +837,6 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                   </div>"
                   </div>
 ""
->>>>>>> pr-10728
                   <div className="space-y-6">""
                     <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-6 backdrop-blur-sm">""
                       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">""
@@ -969,9 +847,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                         <Shield className="w-6 h-6 text-purple-400 mr-3"  />                        Security & Performance"
                         <Shield className="w-6 h-6 text-purple-400 mr-3"  />                        Security & Performance;
                       </h3>""
->>>>>>> pr-10728
-                      <div className="space-y-4">""
-                        <div className="flex justify-between items-center">""
+                      <div className="space-y-4">""                        <div className="flex justify-between items-center">""
                           <span className="text-gray-300">API Endpoints:</span>""
                           <span className="text-purple-400 font-semibold">
                             {technicalSpecs.apiEndpoints}+
@@ -982,9 +858,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                           </span>"
                           </span>
                         </div>""
->>>>>>> pr-10728
-                        <div className="flex justify-between items-center">""
-                          <span className="text-gray-300">Uptime:</span>""
+                        <div className="flex justify-between items-center">""                          <span className="text-gray-300">Uptime:</span>""
                           <span className="text-green-400 font-semibold">
                             {technicalSpecs.uptime}
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -994,9 +868,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                           </span>"
                           </span>
                         </div>""
->>>>>>> pr-10728
-                        <div className="flex justify-between items-center">""
-                          <span className="text-gray-300">Security:</span>""
+                        <div className="flex justify-between items-center">""                          <span className="text-gray-300">Security:</span>""
                           <span className="text-blue-400 font-semibold">
                             Enterprise Grade;
                           </span>
@@ -1025,9 +897,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                         {technicalSpecs.security.map((standard, index) => (
                           <div;
                             key={index}""
->>>>>>> pr-10728
-                            className="flex items-center text-gray-300""
-                          >""
+                            className="flex items-center text-gray-300""                          >""
                             <ShieldCheck className="w-4 h-4 text-green-400 mr-2 flex-shrink-0"  />                            {standard}
                           </div>
                         ))}
@@ -1057,9 +927,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.5 }}""
->>>>>>> pr-10728
-                className="max-w-4xl mx-auto""
-              >""
+                className="max-w-4xl mx-auto""              >""
                 <div className="text-center mb-12">""
                   <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
@@ -1069,9 +937,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                     Get Started Today"
                     Get Started Today;
                   </h2>""
->>>>>>> pr-10728
-                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                    Ready to revolutionize your trading capabilities? Contact;
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">                    Ready to revolutionize your trading capabilities? Contact;
                     our team to learn more about implementing the Quantum AI;
                     Hybrid Trading Platform for your organization.
                   </p>
@@ -1082,7 +948,6 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                 </div>"
                 </div>
 ""
->>>>>>> pr-10728
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
                   <div className="bg-gradient-to-br from-zion-slate/50 to-zion-slate/30 border border-purple-400/20 rounded-2xl p-8 backdrop-blur-sm">""
                     <h3 className="text-2xl font-semibold text-white mb-6">
@@ -1093,9 +958,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                       Contact Information"
                       Contact Information;
                     </h3>""
->>>>>>> pr-10728
-                    <div className="space-y-4">""
-                      <div className="flex items-center text-gray-300">""
+                    <div className="space-y-4">""                      <div className="flex items-center text-gray-300">""
                         <Phone className="w-5 h-5 text-purple-400 mr-3"  />
 :pages.disabled/pages/services/QuantumAITradingPlatform.tsx
                         <span>+1 302 464 0950</span>"
@@ -1120,9 +983,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                         <Globe className="w-5 h-5 text-purple-400 mr-3"  />
                         <span>https://ziontechgroup.com</span>
                       </div>""
->>>>>>> pr-10728
-                      <div className="flex items-start text-gray-300">""
-                        <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1"  />
+                      <div className="flex items-start text-gray-300">""                        <MapPin className="w-5 h-5 text-purple-400 mr-3 mt-1"  />
                         <span>
                           364 E Main St STE 1008;
                           <br />
@@ -1158,9 +1019,7 @@ export default function QuantumAITradingPlatform(...args: any[]): any {}
                       <button className="w-full py-3 border-2 border-purple-400 hover:bg-purple-400/10 rounded-xl font-semibold text-purple-400 transition-all duration-300">
                         Download Brochure;
                       </button>""
->>>>>>> pr-10728
-                      <button className="w-full py-3 border-2 border-blue-400 hover:bg-blue-400/10 rounded-xl font-semibold text-blue-400 transition-all duration-300">
-                        Request Quote;
+                      <button className="w-full py-3 border-2 border-blue-400 hover:bg-blue-400/10 rounded-xl font-semibold text-blue-400 transition-all duration-300">                        Request Quote;
                       </button>
                     </div>
                   </div>

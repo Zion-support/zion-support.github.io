@@ -1,5 +1,4 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3:src/routes/AuthRoutes.tsx
-  return (
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/routes/AuthRoutes.tsx  return (
     <Suspense fallback={<LoadingSpinner />}><Routes>
         <Route path="/login" element={<Login />} />"        <Route path="/signup" element={<Signup />} />"        <Route path="/forgot-password" element={<ForgotPassword />} />"        <Route path="/update-password" element={<UpdatePassword />} />"        <Route path="/onboarding" element={<Onboarding />} />"        <Route path="/talent-onboarding" element={<TalentOnboarding />} />"        <Route path="/service-onboarding" element={<ServiceOnboarding />} />"        <Route path="/profile" element={"          <ProtectedRoute>"            <div>Profile Page</div>"
           </ProtectedRoute>
@@ -11,8 +10,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/routes/AuthRoutes.tsx
         } />
       </Routes>
     </Suspense>
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/routes/AuthRoutes.tsx
-  );
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/routes/AuthRoutes.tsx  );
 };
 ;
 export default AuthRoutes;";

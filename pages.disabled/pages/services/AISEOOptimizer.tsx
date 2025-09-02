@@ -11,9 +11,7 @@
             AI SEO Content Optimizer"
             AI SEO Content Optimizer;
           </h1>""
->>>>>>> pr-10728
-          <p className="mt-4 text-lg text-slate-300 max-w-3xl">
-            Improve rankings with AI-assisted content briefs, on-page audits,
+          <p className="mt-4 text-lg text-slate-300 max-w-3xl">            Improve rankings with AI-assisted content briefs, on-page audits,
             FAQ schema, and internal linking.
           </p>
 :pages.disabled/pages/services/AISEOOptimizer.tsx
@@ -23,9 +21,7 @@
         </header>"
         </header>
 ""
->>>>>>> pr-10728
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">""
-          <div className="lg:col-span-2 space-y-8">""
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">""          <div className="lg:col-span-2 space-y-8">""
             <div className="rounded-2xl border border-amber-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">Features</h2>""
               <ul className="grid sm:grid-cols-2 gap-3 text-slate-300">""
@@ -55,9 +51,7 @@
                 <li className="p-3 rounded-lg bg-slate-800/50">
                   Page speed diagnostics and image optimization tips;
                 </li>""
->>>>>>> pr-10728
-                <li className="p-3 rounded-lg bg-slate-800/50">
-                  Multi-site projects and reporting;
+                <li className="p-3 rounded-lg bg-slate-800/50">                  Multi-site projects and reporting;
                 </li>
               </ul>
 :pages.disabled/pages/services/AISEOOptimizer.tsx
@@ -75,9 +69,7 @@
               <h2 className="text-2xl font-semibold mb-3">
                 Pricing (avg market ranges)
               </h2>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-slate-300">
-                <li>Starter: $49–$99/mo — 3 projects, 50 pages</li>
+              <ul className="space-y-2 text-slate-300">                <li>Starter: $49–$99/mo — 3 projects, 50 pages</li>
                 <li>Growth: $199–$399/mo — 10 projects, 500 pages</li>
                 <li>Agency: $799–$1,499/mo — 50 projects, 5,000 pages, SSO</li>
               </ul>
@@ -88,7 +80,6 @@
             </div>"
             </div>
 ""
->>>>>>> pr-10728
             <div className="rounded-2xl border border-amber-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>""
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
@@ -99,7 +90,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://developers.google.com/search/docs""
                     target="_blank""
@@ -110,7 +100,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     Google Search Central;
                   </a>
                 </li>
@@ -121,7 +110,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://pagespeed.web.dev/""
                     target="_blank""
@@ -132,7 +120,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     PageSpeed Insights;
                   </a>
                 </li>
@@ -143,7 +130,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://schema.org/docs/""
                     target="_blank""
@@ -154,9 +140,7 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
-                    Schema.org;
-                  </a>
+                    Schema.org;                  </a>
                 </li>
               </ul>
             </div>
@@ -181,9 +165,7 @@
                 href="/contact""
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-amber-400 to-pink-400 text-white hover:from-amber-500 hover:to-pink-500""
               >
->>>>>>> pr-10728
-                Get Started;
-              </a>
+                Get Started;              </a>
             </div>
           </aside>
         </section>
@@ -198,4 +180,3 @@ export default AISEOOptimizer;"
 '"'"
 export default AISEOOptimizer;
 '""
->>>>>>> pr-10728

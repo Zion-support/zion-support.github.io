@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 const EnterpriseSolutions: NextPage = () => {
   return (
     <Layout
@@ -173,8 +172,7 @@ const EnterpriseSolutions: NextPage = () => {
                   <div>
                     <h4 className="text-lg font-semibold mb-2">Scalability Issues</h4>
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                  </div>
-                </div>
+                  </div>                </div>
                 <div className="flex items-start space-x-4">
                   <div className="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-red-600 text-sm font-bold">3</span>

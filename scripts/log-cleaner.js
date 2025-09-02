@@ -56,8 +56,7 @@ class LogCleaner {
   async cleanOldLogs() {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      if (!fs.existsSync(this.logDir)) {
-        this.log('info
+      if (!fs.existsSync(this.logDir)) {        this.log('info
   ', 'Log directory does not exist
   ');
         return;
@@ -85,8 +84,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
               file,
               size: stats.size,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-          } catch (error) {
-            this.log('error
+          } catch (error) {            this.log('error
   ', `Failed to delete old log file: ${file}`, error);
             this.errors.push(`Failed to delete ${file}: ${error.message}`);
           }
@@ -103,8 +101,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   async cleanLargeLogs() {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      if (!fs.existsSync(this.logDir)) {
-        return;
+      if (!fs.existsSync(this.logDir)) {        return;
       }
 
       const files = fs.readdirSync(this.logDir);
@@ -127,8 +124,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
             await this.archiveLogFile(filePath, file, stats.size);
           } catch (error) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-            this.errors.push(`Failed to archive ${file}: ${error.message}`);
-          }
+            this.errors.push(`Failed to archive ${file}: ${error.message}`);          }
         }
       }
     } catch (error) {
@@ -141,8 +137,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   async archiveLogFile(filePath, fileName, fileSize) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    // Create archive directory if it doesn't exist
-    if (!fs.existsSync(archiveDir)) {
+    // Create archive directory if it doesn't exist    if (!fs.existsSync(archiveDir)) {
       fs.mkdirSync(archiveDir, { recursive: true });
     }
 
@@ -160,8 +155,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         archiveFile: path.basename(archivePath),
         originalSize: fileSize,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    } catch (error) {
-      this.log(
+    } catch (error) {      this.log(
   'error', `Failed to archive log file: ${fileName}`, error);
       throw error;
     }
@@ -170,8 +164,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   async manageTotalLogSize() {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      if (!fs.existsSync(this.logDir)) {
-        return;
+      if (!fs.existsSync(this.logDir)) {        return;
       }
 
       // Calculate total size
@@ -200,8 +193,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
       calculateDirSize(this.logDir);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      // If total size exceeds limit, delete oldest files
-      if (totalSize > this.maxTotalSize) {
+      // If total size exceeds limit, delete oldest files      if (totalSize > this.maxTotalSize) {
         // Sort files by modification time (oldest first)
         files.sort((a, b) => a.mtime - b.mtime);
 
@@ -227,8 +219,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
               file: file.name,
               size: file.size,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-            this.errors.push(`Failed to delete ${file.name}: ${error.message}`);
-          }
+            this.errors.push(`Failed to delete ${file.name}: ${error.message}`);          }
         }
       }
     } catch (error) {
@@ -242,8 +233,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   async cleanErrorReports() {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      if (!fs.existsSync(this.errorReportDir)) {
-        this.log(
+      if (!fs.existsSync(this.errorReportDir)) {        this.log(
   'info',
   'Error reports directory does not exist');
         return;
@@ -266,14 +256,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
               file,
               size: stats.size,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-            });
-            this.log(
+            });            this.log(
   'info', `Deleted old error report: ${file}`);
           } catch (error) {
             this.log(
 ursor/automate-test-fix-improve-and-merge-code-99d1
-          }
-        }
+          }        }
       }
     } catch (error) {
       this.log(
@@ -286,8 +274,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   async rotatePM2Logs() {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    } catch (error) {
-      this.log('error
+    } catch (error) {      this.log('error
   ', 'Failed to rotate PM2 logs
   ', error);
       this.errors.push(`Failed to rotate PM2 logs: ${error.message}`);
@@ -320,14 +307,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    return report;
-  }
+    return report;  }
 
   async run() {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      // Ensure log directory exists
-      if (!fs.existsSync(this.logDir)) {
+      // Ensure log directory exists      if (!fs.existsSync(this.logDir)) {
         fs.mkdirSync(this.logDir, { recursive: true });
       }
 
@@ -341,8 +326,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       // Generate report
       const report = await this.generateReport();
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return report;
-    } catch (error) {
+      return report;    } catch (error) {
       this.log('error
   ', 'Log cleanup failed
   ', error);
@@ -357,5 +341,4 @@ if (isMainModule) {
   const cleaner = new LogCleaner();
 ursor/automate-test-fix-improve-and-merge-code-99d1
 }
-
 export default LogCleaner;

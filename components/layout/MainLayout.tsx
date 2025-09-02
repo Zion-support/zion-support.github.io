@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 interface MainLayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -10,8 +9,7 @@ interface MainLayoutProps {
 
 const MainLayout: React.FC<MainLayoutProps> = ({
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      <SEOEnhancer 
-        title={title}
+      <SEOEnhancer         title={title}
         description={description}
         keywords={keywords}
         ogImage={ogImage}
@@ -20,8 +18,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
       <PerformanceOptimizer 
         preloadImages={[
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      
-      <AccessibilityEnhancer>
+            <AccessibilityEnhancer>
 <div className="min-h-screen flex flex-col">"          <Header />"          <main id="main-content" className="flex-grow" role="main">"            {children}"          </main>
           <Footer />
         </div></AccessibilityEnhancer>

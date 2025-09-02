@@ -6,9 +6,7 @@ import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Im
 
 import React from 'react';'
 import { Target, TrendingUp, Users, Globe, Cpu, Lightbulb, FileText, PenTool, Image, Video, Music } from 'lucide-react';
->>>>>>> pr-10728
-:pages.disabled/solutions/AIContentGeneration.jsx
-const AIContentGeneration = () => {
+:pages.disabled/solutions/AIContentGeneration.jsxconst AIContentGeneration = () => {
     const contentTypes = [
         {
 
@@ -105,9 +103,7 @@ const AIContentGeneration = () => {}
 
     ];
     const benefits = [""
->>>>>>> pr-10728
-        "Significantly faster content creation",""
-        "Consistent quality and brand voice",""
+        "Significantly faster content creation",""        "Consistent quality and brand voice",""
         "Scalable content production",""
         "Cost-effective content generation",""
         "Multilingual content capabilities",""
@@ -203,9 +199,7 @@ const AIContentGeneration = () => {}
     ];""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto text-center">""
+      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto text-center">""
           <div className="mb-8">""
             <div className="inline-flex items-center px-4 py-2 bg-emerald-500/10 text-emerald-400 rounded-full text-sm font-medium mb-6">""
               <FileText className="w-4 h-4 mr-2"/>
@@ -240,9 +234,7 @@ const AIContentGeneration = () => {}
               <a href="#features" className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Explore Features;
               </a>""
->>>>>>> pr-10728
-              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-                Get Started;
+              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">                Get Started;
               </a>
             </div>
           </div>
@@ -255,9 +247,7 @@ const AIContentGeneration = () => {}
 "
 
       {/* Content Features */}""
->>>>>>> pr-10728
-      <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section id="features" className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/AIContentGeneration.jsx
@@ -267,9 +257,7 @@ const AIContentGeneration = () => {}
               Content Generation Features"
               Content Generation Features;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our AI content generation platform supports multiple content types;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              Our AI content generation platform supports multiple content types;
               and formats for comprehensive content creation.
             </p>
 :pages.disabled/solutions/AIContentGeneration.jsx
@@ -279,7 +267,6 @@ const AIContentGeneration = () => {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
             {contentFeatures.map((feature, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -290,9 +277,7 @@ const AIContentGeneration = () => {}
                   <feature.icon className="w-8 h-8 text-white"/>"
                   <feature.icon className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                <p className="text-gray-300 mb-4">{feature.description}</p>""
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""                <p className="text-gray-300 mb-4">{feature.description}</p>""
                 <ul className="space-y-2">""
                   {feature.features.map((item, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">""
                       <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
@@ -310,9 +295,7 @@ const AIContentGeneration = () => {}
 "
 
       {/* Content Types */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/AIContentGeneration.jsx
@@ -322,9 +305,7 @@ const AIContentGeneration = () => {}
               Content Types"
               Content Types;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Generate diverse content types to meet all your business;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              Generate diverse content types to meet all your business;
               and communication needs.
             </p>
 :pages.disabled/solutions/AIContentGeneration.jsx
@@ -334,7 +315,6 @@ const AIContentGeneration = () => {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {contentTypes.map((contentType, index) => (<div key={index} className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-emerald-500/50 transition-all duration-300">""
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -345,9 +325,7 @@ const AIContentGeneration = () => {}
                   <contentType.icon className="w-8 h-8 text-white"/>"
                   <contentType.icon className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-3">{contentType.title}</h3>""
-                <p className="text-gray-300 mb-4">{contentType.description}</p>""
+                <h3 className="text-xl font-semibold text-white mb-3">{contentType.title}</h3>""                <p className="text-gray-300 mb-4">{contentType.description}</p>""
                 <ul className="space-y-2">""
                   {contentType.capabilities.map((capability, idx) => (<li key={idx} className="text-sm text-gray-400 flex items-start">""
                       <div className="w-1.5 h-1.5 bg-emerald-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
@@ -387,9 +365,7 @@ const AIContentGeneration = () => {}
                 Our AI content generation platform revolutionizes how you create,
                 manage, and distribute content across all channels.
               </p>""
->>>>>>> pr-10728
-              <ul className="space-y-3">""
-                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">""
+              <ul className="space-y-3">""                {benefits.map((benefit, index) => (<li key={index} className="flex items-center text-gray-300">""
                     <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>))}
@@ -400,9 +376,7 @@ const AIContentGeneration = () => {}
               </ul>"
               </ul>
             </div>""
->>>>>>> pr-10728
-            <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30">""
-              <div className="text-center">""
+            <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-2xl p-8 border border-emerald-500/30">""              <div className="text-center">""
                 <Lightbulb className="w-24 h-24 text-emerald-400 mx-auto mb-4"/>""
                 <h3 className="text-2xl font-bold text-white mb-2">Content Innovation</h3>""
                 <p className="text-gray-300 mb-6">
@@ -415,9 +389,7 @@ const AIContentGeneration = () => {}
                   Leverage AI to create engaging, high-quality content that;
                   resonates with your audience and drives results.
                 </p>""
->>>>>>> pr-10728
-                <div className="text-sm text-gray-400">
-                  <p>• Quality content</p>
+                <div className="text-sm text-gray-400">                  <p>• Quality content</p>
                   <p>• Faster production</p>
                   <p>• Consistent voice</p>
                 </div>
@@ -433,7 +405,6 @@ const AIContentGeneration = () => {}
 "
 
       {/* Implementation Process */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -444,7 +415,6 @@ const AIContentGeneration = () => {}
             Implementation Process"
             Implementation Process;
           </h2>""
->>>>>>> pr-10728
           <p className="text-xl text-gray-300 mb-8">
             A structured approach to implementing AI content generation;
             in your organization.
@@ -455,7 +425,6 @@ const AIContentGeneration = () => {}
           </p>"
           </p>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {implementation.map((phase, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold text-white">
@@ -466,9 +435,7 @@ const AIContentGeneration = () => {}
                   {index + 1}"
                   {index + 1}
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>""
-                <p className="text-gray-300 mb-2">{phase.description}</p>""
+                <h3 className="text-xl font-semibold text-white mb-2">{phase.phase}</h3>""                <p className="text-gray-300 mb-2">{phase.description}</p>""
                 <p className="text-sm text-emerald-400">{phase.duration}</p>
               </div>))}
           </div>
@@ -481,9 +448,7 @@ const AIContentGeneration = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-4xl mx-auto text-center">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/solutions/AIContentGeneration.jsx
             Ready to Transform Your Content Creation?"
@@ -508,9 +473,7 @@ const AIContentGeneration = () => {}
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-lg hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Start Creating;
             </a>""
->>>>>>> pr-10728
-            <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-              View All Solutions;
+            <a href="/solutions" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">              View All Solutions;
             </a>
           </div>
         </div>
@@ -527,4 +490,3 @@ export default AIContentGeneration;'"
 }}}}'"'"
 export default AIContentGeneration;
 }}}}'""
->>>>>>> pr-10728

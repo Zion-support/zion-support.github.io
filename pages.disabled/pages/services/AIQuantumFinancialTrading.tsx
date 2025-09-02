@@ -23,9 +23,7 @@ import {
   BarChart3, 
   DollarSign, 
   Target,
->>>>>>> pr-10728
-  CheckCircle,
-  Star,
+  CheckCircle,  Star,
   ArrowRight,
   Cpu,
   Lock,
@@ -42,8 +40,6 @@ import {
   MapPin
   MapPin''
 } from 'lucide-react';
->>>>>>> pr-10728
-
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
 const AIQuantumFinancialTrading = () => {
   const features = [
@@ -154,9 +150,7 @@ const AIQuantumFinancialTrading = () => {
         "Advanced analytics dashboard",;""
         "SLA guarantees",;"        "On-premise deployment";
       ],;
->>>>>>> pr-10728
-      popular: false;
-    };
+      popular: false;    };
   ];
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
 
@@ -209,9 +203,7 @@ const AIQuantumFinancialTrading = () => {
       <section className="relative py-20 overflow-hidden">""
         <div className="absolute inset-0 bg-gradient-to-r from-zion-cyan/10 to-zion-purple/10"></div>""
         <div className="container mx-auto px-4 relative z-10">
->>>>>>> pr-10728
-          <motion.div
-            initial = {
+          <motion.div            initial = {
   { opacity: 0,
   y: 20
 
@@ -261,9 +253,7 @@ const AIQuantumFinancialTrading = () => {
                 <ArrowRight className="ml-2 w-5 h-5"  />"
               </Link>""
               <button className="inline-flex items-center px-8 py-4 border-2 border-zion-cyan text-zion-cyan font-semibold rounded-2xl hover:bg-zion-cyan hover:text-white transition-all duration-300">
->>>>>>> pr-10728
-                Schedule Demo
-              </button>
+                Schedule Demo              </button>
   const benefits = [
     {
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
@@ -330,9 +320,7 @@ const AIQuantumFinancialTrading = () => {
       <section className="relative pt-32 pb-20 overflow-hidden">""
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 to-cyan-900/20"></div>""
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> pr-10728
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
             transition={{ duration: 0.8 }}
@@ -382,9 +370,7 @@ const AIQuantumFinancialTrading = () => {
               <a""
                 href="#demo""
                 className="inline-flex items-center px-8 py-4 border border-purple-400 text-purple-400 font-semibold rounded-lg hover:bg-purple-400 hover:text-white transition-all duration-300"
->>>>>>> pr-10728
-              >
-                Watch Demo
+              >                Watch Demo
               </a>
             </div>
           </motion.div>
@@ -398,9 +384,7 @@ const AIQuantumFinancialTrading = () => {
 "
       {/* Features Section */}""
       <section className="py-20">
->>>>>>> pr-10728
-            initial = {
-  { opacity: 0,
+            initial = {  { opacity: 0,
   y: 20
 
 }}
@@ -433,9 +417,7 @@ const AIQuantumFinancialTrading = () => {
             <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">"
               Our AI-powered trading platform combines the latest in machine learning, quantum computing, and financial technology to give you the edge""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> pr-10728
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
             transition={{ duration: 0.8 }}
@@ -456,9 +438,7 @@ const AIQuantumFinancialTrading = () => {
               Revolutionary Trading Technology"
             </h2>""
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> pr-10728
-              Our platform combines cutting-edge quantum computing with advanced AI algorithms
-              to deliver unprecedented trading performance and profitability.
+              Our platform combines cutting-edge quantum computing with advanced AI algorithms              to deliver unprecedented trading performance and profitability.
             </p>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
           </motion.div>
@@ -473,9 +453,7 @@ const AIQuantumFinancialTrading = () => {
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index()
               <motion.div
->>>>>>> pr-10728
-                key={index}
-                initial = {
+                key={index}                initial = {
   { opacity: 0,
   y: 20
 
@@ -538,9 +516,7 @@ const AIQuantumFinancialTrading = () => {
                 </div>""
                 <h3 className="text-2xl font-bold text-white mb-4">{feature.title}</h3>""
                 <p className="text-gray-300">{feature.description}</p>
->>>>>>> pr-10728
-              </motion.div>
-            ))}
+              </motion.div>            ))}
           </div>
         </div>
       </section>
@@ -585,9 +561,7 @@ const AIQuantumFinancialTrading = () => {
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-6xl mx-auto">
->>>>>>> pr-10728
-            {services.map((service, index)  => (
-              <motion.div
+            {services.map((service, index)  => (              <motion.div
                 key={index}
                 initial = {
   { opacity: 0,
@@ -614,9 +588,7 @@ const AIQuantumFinancialTrading = () => {
       {/* Benefits Section */}""
       <section className="py-20 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> pr-10728
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
             transition={{ duration: 0.8 }}
@@ -651,9 +623,7 @@ const AIQuantumFinancialTrading = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index()
               <motion.div
->>>>>>> pr-10728
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
+                key={index}                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
                 transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -672,9 +642,7 @@ const AIQuantumFinancialTrading = () => {
                 <div className="text-4xl font-bold text-purple-400 mb-4">{benefit.metric}</div>""
                 <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>""
                 <p className="text-gray-300">{benefit.description}</p>
->>>>>>> pr-10728
-              </motion.div>
-            ))}
+              </motion.div>            ))}
           </div>
         </div>
       </section>
@@ -689,9 +657,7 @@ const AIQuantumFinancialTrading = () => {
       {/* Pricing Section */}""
       <section className="py-20">;""
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> pr-10728
-          <motion.div
-            initial = {
+          <motion.div            initial = {
   { opacity: 0,
   y: 20
 
@@ -734,9 +700,7 @@ const AIQuantumFinancialTrading = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {pricingPlans.map(plan: unknown, index: unknown()
               <motion.div
->>>>>>> pr-10728
-                key={index}
-                initial = {
+                key={index}                initial = {
   { opacity: 0,
   y: 20
 
@@ -777,9 +741,7 @@ const AIQuantumFinancialTrading = () => {
                 {plan.popular && (""
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
->>>>>>> pr-10728
-                      Most Popular
-                    </span>
+                      Most Popular                    </span>
                   </div>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
                 )}
@@ -841,9 +803,7 @@ const AIQuantumFinancialTrading = () => {
                       ? 'bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600'''`
                       : 'bg-slate-600 text-white hover:bg-slate-500'``
                   }`}
->>>>>>> pr-10728
-                >
-                  Get Started
+                >                  Get Started
                 </a>
               </motion.div>
             ))}
@@ -915,9 +875,7 @@ const AIQuantumFinancialTrading = () => {
               </div>""
       <section className="py-20 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">""
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> pr-10728
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
+          <motion.div            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
@@ -967,9 +925,7 @@ const AIQuantumFinancialTrading = () => {
               >""
                 <Phone className="mr-2 w-5 h-5"  />                Call Now
               </a>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
@@ -1024,9 +980,7 @@ const AIQuantumFinancialTrading = () => {
               <MapPin className="w-8 h-8 text-purple-400 mb-4"  />""
               <p className="text-gray-300">Address</p>"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
->>>>>>> pr-10728
-          </div>
-        </div>
+          </div>        </div>
       </section>;
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
     </div>;
@@ -1044,9 +998,7 @@ const AIQuantumFinancialTrading = () => {
               <MapPin className="w-8 h-8 text-purple-400 mb-4"  />""
               <p className="text-gray-300">Address</p>;"              <p className="text-white">364 E Main St STE 1008<br />Middletown DE 19709</p>;
             </div>;
->>>>>>> pr-10728
-          </div>;
-        </div>;
+          </div>;        </div>;
       </section>;
     </div>;
 :pages.disabled/pages/services/AIQuantumFinancialTrading.tsx
@@ -1059,4 +1011,3 @@ export default AIQuantumFinancialTrading;
   )};
 '"`
 export default AIQuantumFinancialTrading;'"`'"`
->>>>>>> pr-10728

@@ -10,9 +10,7 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
       <h1 className="text-4xl font-bold mb-4">MLOps Pipeline</h1>"      <p className="text-slate-300 max-w-3xl">Production-grade pipelines with CI/CD, feature stores, model registry, and drift monitoring. Works on AWS, GCP, and Azure.</p>"
       <h1 className="text-4xl font-bold mb-4">MLOps Pipeline</h1>"      <p className="text-slate-300 max-w-3xl">Production-grade pipelines with CI/CD, feature stores, model registry, and drift monitoring. Works on AWS, GCP, and Azure.</p>
     </section>""
->>>>>>> pr-10728
-    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
+    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Components</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
           <li>MLFlow or Vertex AI registry</li>
@@ -26,9 +24,7 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
         </ul>"
         </ul>
       </div>""
->>>>>>> pr-10728
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
-        <h3 className="font-semibold mb-2">Deliverables</h3>""
+      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""        <h3 className="font-semibold mb-2">Deliverables</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
           <li>IaC templates (Terraform)</li>
           <li>Runbooks and dashboards</li>
@@ -40,9 +36,7 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
         </ul>"
         </ul>
       </div>""
->>>>>>> pr-10728
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
-        <h3 className="font-semibold mb-2">Pricing</h3>""
+      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""        <h3 className="font-semibold mb-2">Pricing</h3>""
         <ul className="text-slate-300 space-y-1">
           <li>Assessment: $5,000 one-time</li>
           <li>Implementation: from $25,000</li>
@@ -55,9 +49,7 @@ const MlopsPipeline: React.FC = (): JSX.Element => (
       </div>;"
       </div>;
     </section>;""
->>>>>>> pr-10728
-    <section className="container mx-auto px-4 pb-16">;""
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Talk to an engineer</a>;
+    <section className="container mx-auto px-4 pb-16">;""      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Talk to an engineer</a>;
     </section>;
   </div>;
 );
@@ -72,4 +64,3 @@ export default MlopsPipeline;
 '"'"
 
 '""
->>>>>>> pr-10728

@@ -1,29 +1,8 @@
 
 :pages.disabled/pages/services/ITHelpdesk.tsx
 export default function ITHelpdesk() {
-
-  'Ticketing with SLA and automation rules',;'
-  'Self-service knowledge base and chat widget',;'
-  'Asset inventory and remote assistance',;'
-  'Email-to-ticket and status notifications',;'
-  'Multi-tenant client portals',;'
-  'Reports: MTTR, CSAT, backlog trends,
-  ;
-
-    'Ticketing with SLA and automation rules',;'
-    'Self-service knowledge base and chat widget',;'
-    'Asset inventory and remote assistance',;'
-    'Email-to-ticket and status notifications',;'
-    'Multi-tenant client portals',;'
-export default function ITHelpdesk(function ITHelpdesk() {): any {}
-    'Ticketing with SLA and automation rules',;
-    'Self-service knowledge base and chat widget',;
-    'Asset inventory and remote assistance',;
-    'Email-to-ticket and status notifications',;
-    'Multi-tenant client portals',;
-    'Reports: MTTR, CSAT, backlog trends';
->>>>>>> pr-10728
   ];
+  ;  ];
 
   '
     { name: 'Basic, price:,
@@ -71,9 +50,7 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
           <h2 className="text-3xl font-bold text-zion-slate-dark mb-4">Capabilities</h2>""
           <ul className="space-y-3">
             {features.map((f) => (""
->>>>>>> pr-10728
-              <li key={f} className="flex items-start">""
-                <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                <span className="text-zion-slate-dark">{f}</span>
+              <li key={f} className="flex items-start">""                <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                <span className="text-zion-slate-dark">{f}</span>
               </li>
             ))}
 :pages.disabled/pages/services/ITHelpdesk.tsx
@@ -91,9 +68,7 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
           <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing</h3>""
           <div className="grid md:grid-cols-3 gap-4">
             {pricing.map((p) => (""
->>>>>>> pr-10728
-              <div key={p.name} className="rounded-lg p-4 border border-zion-slate-light/30">""
-                <div className="text-lg font-semibold mb-1">{p.name}</div>""
+              <div key={p.name} className="rounded-lg p-4 border border-zion-slate-light/30">""                <div className="text-lg font-semibold mb-1">{p.name}</div>""
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{p.price}</div>""
                 <ul className="text-sm text-zion-slate-dark space-y-1">
                   {p.details.map((d: unknown (<li key={d}>{d}</li>))}
@@ -106,29 +81,14 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
             ))}"
             ))}
           </div>""
->>>>>>> pr-10728
-          <div className="mt-6 flex gap-3">""
-            <a href="/pricing" className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 transition-colors inline-flex items-center">View Full Pricing <ArrowRight className="w-4 h-4 ml-2" /></a>          </div>
+          <div className="mt-6 flex gap-3">""            <a href="/pricing" className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 transition-colors inline-flex items-center">View Full Pricing <ArrowRight className="w-4 h-4 ml-2" /></a>          </div>
         </div>
 :pages.disabled/pages/services/ITHelpdesk.tsx
       </section>"
 ""
       <section className="pb-16 max-w-6xl mx-auto px-6">""
-
-        <div className="grid md:grid-cols-3 gap-6">
-  '"{[{icon: Ticket, t: 'Tickets & SLAs
-  '}, {icon: Cpu, t: 'Remote Support
-  '}, {icon: Shield, t: 'Security & SSO
-  '}].map((c) => (""
-
-        <div className="grid md:grid-cols-3 gap-6">'"
-      </section>
-""
-      <section className="pb-16 max-w-6xl mx-auto px-6">""
-        <div className="grid md:grid-cols-3 gap-6">
-          {[{icon: Ticket, t: 'Tickets & SLAs'}, {icon: Cpu, t: 'Remote Support'}, {icon: Shield, t: 'Security & SSO'}].map((c) => (""
->>>>>>> pr-10728
             <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">""
+  '}].map((c) => (""            <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">""
               <c.icon className="w-6 h-6 text-zion-cyan mb-3" />""
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>
             </div>
@@ -139,9 +99,7 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
           ))}"
           ))}
         </div>""
->>>>>>> pr-10728
-        <div className="mt-10 text-center">""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
+        <div className="mt-10 text-center">""          <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"><Phone className="w-4 h-4 mr-2" /> +1 302 464 0950</a>;""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com</a>;          </div>;
         </div>;
@@ -155,4 +113,3 @@ export default function ITHelpdesk(function ITHelpdesk() {): any {}
   )}}'"'"
     </div>;
   )}}'""
->>>>>>> pr-10728

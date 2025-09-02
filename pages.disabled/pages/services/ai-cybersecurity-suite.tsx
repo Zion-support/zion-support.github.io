@@ -17,9 +17,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}""
->>>>>>> pr-10728
-        <section className="relative pt-32 pb-20 overflow-hidden">""
-          <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-600/10"></div>""
+        <section className="relative pt-32 pb-20 overflow-hidden">""          <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 to-orange-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
               <div className="inline-flex items-center px-4 py-2 bg-red-500/10 border border-red-500/20 rounded-full text-red-400 text-sm font-medium mb-8">""
@@ -42,9 +40,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                 <span className="bg-gradient-to-r from-red-400 to-orange-500 bg-clip-text text-transparent"> Suite</span>
               </h1>
 ""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Defend against evolving cyber threats with AI-powered security that learns, adapts, and responds;
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">                Defend against evolving cyber threats with AI-powered security that learns, adapts, and responds;
                 in real-time. Protect your digital assets with intelligent threat detection and automated response.
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
               </p>"
@@ -74,9 +70,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                 <button className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Security Demo;
                 </button>
->>>>>>> pr-10728
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </section>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
@@ -86,9 +80,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
 "
 
         {/* Features Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
@@ -98,9 +90,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                 Intelligent Threat Protection"
                 Intelligent Threat Protection;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our AI cybersecurity suite provides comprehensive protection against modern cyber threats;
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our AI cybersecurity suite provides comprehensive protection against modern cyber threats;
                 with intelligent detection and automated response capabilities.
               </p>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
@@ -190,9 +180,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                   <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
-                  <p className="text-slate-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""                  <p className="text-slate-300">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -205,9 +193,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
 "
 
         {/* Security Layers Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
@@ -217,9 +203,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                 Multi-Layer Security Architecture"
                 Multi-Layer Security Architecture;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our defense-in-depth approach ensures comprehensive protection across all attack vectors.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our defense-in-depth approach ensures comprehensive protection across all attack vectors.
               </p>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
             </div>"
@@ -294,9 +278,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                   <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{layer.layer}</span>
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{layer.title}</h3>""
-                  <p className="text-slate-300">{layer.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{layer.title}</h3>""                  <p className="text-slate-300">{layer.description}</p>
                 </div>
               ))}
             </div>
@@ -309,9 +291,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
 "
 
         {/* Threat Intelligence Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
@@ -321,9 +301,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                 AI-Powered Threat Intelligence"
                 AI-Powered Threat Intelligence;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Stay ahead of emerging threats with real-time intelligence and predictive analytics.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Stay ahead of emerging threats with real-time intelligence and predictive analytics.
               </p>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
             </div>"
@@ -340,9 +318,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
               <div>""
                 <div className="space-y-6">
                   {[""
->>>>>>> pr-10728
-                    "Real-time threat feed from global security networks",""
-                    "AI-powered threat correlation and analysis",""
+                    "Real-time threat feed from global security networks",""                    "AI-powered threat correlation and analysis",""
                     "Predictive threat modeling and risk assessment",""
                     "Automated threat hunting and investigation",""
                     "Custom threat intelligence for your industry",""
@@ -368,9 +344,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                 <h3 className="text-2xl font-semibold text-white mb-4">Threat Categories</h3>""
                 <div className="space-y-4">
                   {[""
->>>>>>> pr-10728
-                    { type: "Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },""
-                    { type: "Phishing", icon: Eye, color: "from-orange-500 to-red-500", count: "5M+" },""
+                    { type: "Malware", icon: AlertTriangle, color: "from-red-500 to-pink-500", count: "10M+" },""                    { type: "Phishing", icon: Eye, color: "from-orange-500 to-red-500", count: "5M+" },""
                     { type: "Ransomware", icon: Lock, color: "from-purple-500 to-red-500", count: "2M+" },""
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
                     { type: "DDoS", icon: Activity, color: "from-blue-500 to-cyan-500", count: "1M+" }"
@@ -393,9 +367,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                         </div>""
                         <span className="text-slate-300">{item.type}</span>
                       </div>""
->>>>>>> pr-10728
-                      <span className="text-lg font-bold text-red-400">{item.count}</span>
-                    </div>
+                      <span className="text-lg font-bold text-red-400">{item.count}</span>                    </div>
                   ))}
                 </div>
               </div>
@@ -409,9 +381,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
 "
 
         {/* Compliance Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
@@ -421,9 +391,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                 Compliance & Governance"
                 Compliance & Governance;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Meet regulatory requirements with built-in compliance features and audit capabilities.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Meet regulatory requirements with built-in compliance features and audit capabilities.
               </p>
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
             </div>"
@@ -544,9 +512,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                   <p className="text-slate-300 mb-4">{compliance.description}</p>""
                   <ul className="space-y-1">
                     {compliance.features.map((feature, featureIndex) => (""
->>>>>>> pr-10728
-                      <li key={featureIndex} className="text-sm text-red-400 flex items-center">""
-                        <CheckCircle className="w-3 h-3 mr-2"  />                        {feature}
+                      <li key={featureIndex} className="text-sm text-red-400 flex items-center">""                        <CheckCircle className="w-3 h-3 mr-2"  />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -562,9 +528,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
 "
 
         {/* CTA Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-600/10">;""
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-gradient-to-r from-red-500/10 to-orange-600/10">;""          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-cybersecurity-suite.tsx
               Ready to Secure Your Digital Future?"
@@ -600,9 +564,7 @@ export { function };export default function AICybersecuritySuite(...args: []):  
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-red-500/30 text-red-400 font-semibold rounded-lg hover:bg-red-500/10 transition-all duration-200""
               >
->>>>>>> pr-10728
-                Explore All Services;
-              </Link>;
+                Explore All Services;              </Link>;
             </div>;
           </div>;
         </section>;

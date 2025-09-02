@@ -4,21 +4,18 @@ const SmallBusiness: NextPage = () => {
   const solutions = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      ]
-    }
+      ]    }
   ]
 
   const benefits = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const pricing = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      ]
-    }
+      ]    }
   ];
 
   return (

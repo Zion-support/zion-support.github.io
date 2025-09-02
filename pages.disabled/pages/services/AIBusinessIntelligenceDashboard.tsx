@@ -42,7 +42,6 @@ import {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">"        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
@@ -53,9 +52,7 @@ import {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center relative z-10""
-          >""
+            className="text-center relative z-10""          >""
             <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-400/30 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">""
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
               <Brain className="w-4 h-4 mr-2 text-cyan-400"  />              AI-Powered Business Intelligence
@@ -82,9 +79,7 @@ import {}
               <span className="text-white">Dashboard</span>
             </h1>
 ""
->>>>>>> pr-10728
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-              Transform your business data into actionable insights with our;
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">              Transform your business data into actionable insights with our;
               AI-powered business intelligence platform. Get real-time;
               analytics, predictive insights, and automated reporting that;
               drives growth.
@@ -111,7 +106,6 @@ import {}
                 Start Free Trial""
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>
               <a""
->>>>>>> pr-10728
                 href="#demo""
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group""
               >""
@@ -122,7 +116,6 @@ import {}
                 <Play className="w-5 h-5 mr-2"  />                Watch Demo
                 <Play className="w-5 h-5 mr-2"  />                Watch Demo;
               </a>
->>>>>>> pr-10728
             </div>
           </motion.div>
         </div>
@@ -133,9 +126,7 @@ import {}
 "
 
         {/* Background Elements */}""
->>>>>>> pr-10728
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">""
-          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>""
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">""          <div className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl"></div>""
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-3xl"></div>
         </div>
       </section>
@@ -174,9 +165,7 @@ import {}
                 Powerful Features;
               </span>
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Everything you need to transform your business data into;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Everything you need to transform your business data into;
               actionable intelligence;
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -186,9 +175,7 @@ import {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">            {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -200,9 +187,7 @@ import {}
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
-                className="group""
-              >""
+                className="group""              >""
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">""
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -218,9 +203,7 @@ import {}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {feature.title}
                   </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300 leading-relaxed">
-                    {feature.description}
+                  <p className="text-gray-300 leading-relaxed">                    {feature.description}
                   </p>
                 </div>
               </motion.div>
@@ -263,9 +246,7 @@ import {}
                 Use Cases;
               </span>
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how businesses are using our AI BI platform to drive growth;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              See how businesses are using our AI BI platform to drive growth;
               and efficiency;
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -275,9 +256,7 @@ import {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">            {useCases.map((useCase, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
@@ -289,9 +268,7 @@ import {}
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
-                className="group""
-              >""
+                className="group""              >""
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm">""
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -307,9 +284,7 @@ import {}
                   <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors duration-300">
                     {useCase.title}
                   </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300 leading-relaxed">
-                    {useCase.description}
+                  <p className="text-gray-300 leading-relaxed">                    {useCase.description}
                   </p>
                 </div>
               </motion.div>
@@ -352,9 +327,7 @@ import {}
                 Pricing Plans;
               </span>
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include a;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Choose the plan that fits your business needs. All plans include a;
               14-day free trial.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -364,30 +337,14 @@ import {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+          <div className="grid grid-cols-1 lg: anygrid-cols-3 gap-8">            {pricingPlans.map((plan, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-
-                viewport={{ once: true }}
-,
-  className={`relative ${plan.popular ? 'lg: -mt-8
-  ' : '}`}
-:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-              >"{plan.popular && (""
-
-                viewport={{ once: true }}'
-                className={`relative ${plan.popular ? 'lg:-mt-8' : ''}`}
-:pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
-              >"
-              >
-                {plan.popular && (""
->>>>>>> pr-10728
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
+              >"{plan.popular && (""                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-6 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </div>
@@ -443,9 +400,7 @@ import {}
 ""
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (""
->>>>>>> pr-10728
-                      <li key={idx} className="flex items-center text-gray-300">""
-                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />                        {feature}
+                      <li key={idx} className="flex items-center text-gray-300">""                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -453,29 +408,8 @@ import {}
 "
                   <a""`
                     href="https://ziontechgroup.com/contact"``
-
-                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${,
-  plan.popular'
-  '
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: from-cyan-400 hover:to-blue-400''
-  '`
-                        : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10``}`}
-
-                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${
-'
-                      plan.popular''
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400'''`
-                        : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'``
-
-                  <a""
-                    href="https://ziontechgroup.com/contact"`
-                    className={`w-full py-3 px-6 rounded-xl font-semibold text-center transition-all duration-300 block ${}
-                      plan.popular'
-                        ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:from-cyan-400 hover:to-blue-400''
-                        : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'`
-                    }`}
->>>>>>> pr-10728
                   >
+                        : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10``}`}                  >
                     Start Free Trial;
                   </a>
                 </div>
@@ -509,9 +443,7 @@ import {}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >""
->>>>>>> pr-10728
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""
-              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">""              <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                 What Our Clients Say;
               </span>
             </h2>
@@ -522,9 +454,7 @@ import {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">            {testimonials.map((testimonial, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -536,9 +466,7 @@ import {}
                 transition={{ duration: 0.6, delay: index * 0.1 }}"
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
-                className="group""
-              >""
+                className="group""              >""
                 <div className="glass rounded-2xl p-8 border border-white/20 hover:border-cyan-400/40 transition-all duration-300 group-hover:transform group-hover:scale-105 backdrop-blur-sm h-full">""
                   <div className="flex items-center mb-4">
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -574,9 +502,7 @@ import {}
                     <div className="text-sm text-cyan-400">
                       {testimonial.role}
                     </div>""
->>>>>>> pr-10728
-                    <div className="text-sm text-gray-400">
-                      {testimonial.comp}
+                    <div className="text-sm text-gray-400">                      {testimonial.comp}
                     </div>
                   </div>
                 </div>
@@ -592,9 +518,7 @@ import {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">""
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 relative">""        <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -636,7 +560,6 @@ import {}
                 Start Free Trial""
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform"  />              </a>
               <a""
->>>>>>> pr-10728
                 href="tel:+13024640950""
                 className="border border-cyan-400/30 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 flex items-center group""
               >""
@@ -647,9 +570,7 @@ import {}
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950;
               </a>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/AIBusinessIntelligenceDashboard.tsx
@@ -659,9 +580,7 @@ import {}
 "
 
       {/* Contact Information */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">""
-        <div className="max-w-4xl mx-auto text-center">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">""        <div className="max-w-4xl mx-auto text-center">""
           <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
             <div className="flex flex-col items-center">""
@@ -702,9 +621,7 @@ import {}
                 kleber@ziontechgroup.com;
               </a>
             </div>""
->>>>>>> pr-10728
-            <div className="flex flex-col items-center">""
-              <MapPin className="w-8 h-8 text-cyan-400 mb-4"  />""
+            <div className="flex flex-col items-center">""              <MapPin className="w-8 h-8 text-cyan-400 mb-4"  />""
               <div className="text-white font-semibold">Address</div>"              <div className="text-gray-300 text-sm">
                 364 E Main St STE 1008;
                 <br />

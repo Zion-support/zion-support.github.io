@@ -22,9 +22,7 @@ export default function AIIoTEdgeComputing() {return()
 export default function AIIoTEdgeComputing() {
 export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any {}
   return()
->>>>>>> pr-10728
-    <div className="min-h-screen bg-white">""
-      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">""
+    <div className="min-h-screen bg-white">""      <section className="bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-slate-dark py-20 text-center">""
         <div className="max-w-5xl mx-auto px-6">""
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">""
 :pages.disabled/pages/services/AIIoTEdgeComputing.tsx
@@ -40,9 +38,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             AI IoT Edge Computing;
           </h1>""
->>>>>>> pr-10728
-          <p className="text-zion-slate-light text-xl">
-            Transform your IoT infrastructure with AI-powered edge computing;
+          <p className="text-zion-slate-light text-xl">            Transform your IoT infrastructure with AI-powered edge computing;
             that processes data locally, reduces latency, and enables real-time;
             intelligent decision making.
           </p>        </div>
@@ -69,9 +65,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
             </h2>""
             <ul className="space-y-3">
               {features.map(f => (""
->>>>>>> pr-10728
-                <li key={f} className="flex items-start">""
-                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{f}</span>
+                <li key={f} className="flex items-start">""                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
               ))}
 :pages.disabled/pages/services/AIIoTEdgeComputing.tsx
@@ -93,9 +87,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
               </h3>""
               <ul className="space-y-2">
                 {benefits.map(b => (""
->>>>>>> pr-10728
-                  <li key={b} className="flex items-start">""
-                    <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5"  />"                    <span className="text-zion-slate-dark text-sm">{b}</span>
+                  <li key={b} className="flex items-start">""                    <Zap className="w-4 h-4 text-zion-cyan mr-2 mt-0.5"  />"                    <span className="text-zion-slate-dark text-sm">{b}</span>
                   </li>
                 ))}
               </ul>
@@ -123,9 +115,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
               {tiers.map(t => (
                 <div;
                   key={t.name}""
->>>>>>> pr-10728
-                  className="rounded-lg p-4 border border-zion-slate-light/30""
-                >""
+                  className="rounded-lg p-4 border border-zion-slate-light/30""                >""
                   <div className="text-lg font-semibold mb-1">{t.name}</div>""
                   <div className="text-2xl font-bold text-zion-cyan mb-2">
 :pages.disabled/pages/services/AIIoTEdgeComputing.tsx
@@ -135,9 +125,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
                     {t.price}"
                     {t.price}
                   </div>""
->>>>>>> pr-10728
-                  <ul className="text-sm text-zion-slate-dark space-y-1">
-                    {t.details.map(d => (
+                  <ul className="text-sm text-zion-slate-dark space-y-1">                    {t.details.map(d => (
                       <li key={d}>{d}</li>
                     ))}
                   </ul>
@@ -153,9 +141,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
             </div>""
             <div className="mt-6 flex flex-wrap gap-3">
               <a""
->>>>>>> pr-10728
-                href="/pricing""
-                className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 transition-colors inline-flex items-center""
+                href="/pricing""                className="px-5 py-3 bg-zion-cyan/10 text-zion-slate-dark rounded-lg hover:bg-zion-cyan/20 transition-colors inline-flex items-center""
               >""
                 View Full Pricing <ArrowRight className="w-4 h-4 ml-2"  />
 :pages.disabled/pages/services/AIIoTEdgeComputing.tsx
@@ -165,9 +151,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
               </a>"
               </a>
               <a""
->>>>>>> pr-10728
-                href="https://ziontechgroup.com""
-                target="_blank""
+                href="https://ziontechgroup.com""                target="_blank""
                 rel="noreferrer""
                 className="px-5 py-3 border border-zion-slate-light/40 rounded-lg inline-flex items-center""
               >""
@@ -201,7 +185,6 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
         <div className="mt-12 grid md:grid-cols-3 gap-6">
           {[]
             {}
->>>>>>> pr-10728
               icon: Wifi,
 ,
   title: 'Device Connectivity,'
@@ -227,9 +210,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
 
             <div;
               key={item.title}""
->>>>>>> pr-10728
-              className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
-            >""
+              className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""            >""
               <item.icon className="w-6 h-6 text-zion-cyan mb-3" />""
               <div className="text-zion-slate-dark font-semibold mb-2">
 :pages.disabled/pages/services/AIIoTEdgeComputing.tsx
@@ -239,9 +220,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
                 {item.title}"
                 {item.title}
               </div>""
->>>>>>> pr-10728
-              <div className="text-zion-slate-light text-sm">{item.desc}</div>
-            </div>
+              <div className="text-zion-slate-light text-sm">{item.desc}</div>            </div>
           ))}
 :pages.disabled/pages/services/AIIoTEdgeComputing.tsx
         </div>"
@@ -262,9 +241,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
           </h3>""
           <div className="grid md:grid-cols-2 gap-4">
             {useCases.map(uc => (""
->>>>>>> pr-10728
-              <div key={uc} className="flex items-center">""
-                <Target className="w-5 h-5 text-zion-cyan mr-3"  />"                <span className="text-zion-slate-dark">{uc}</span>
+              <div key={uc} className="flex items-center">""                <Target className="w-5 h-5 text-zion-cyan mr-3"  />"                <span className="text-zion-slate-dark">{uc}</span>
               </div>
             ))}
           </div>
@@ -287,9 +264,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
           </div>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a""
->>>>>>> pr-10728
-              href="tel:+13024640950""
-              className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg""
+              href="tel:+13024640950""              className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg""
             >""
 :pages.disabled/pages/services/AIIoTEdgeComputing.tsx
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
@@ -300,9 +275,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950;
             </a>
             <a""
->>>>>>> pr-10728
-              href="mailto:kleber@ziontechgroup.com""
-              className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg""
+              href="mailto:kleber@ziontechgroup.com""              className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg""
             >""
 :pages.disabled/pages/services/AIIoTEdgeComputing.tsx
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
@@ -322,7 +295,6 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
           <div className="mt-4 text-sm text-zion-slate-light">
             Visit us at{' '}
             <a""
->>>>>>> pr-10728
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
@@ -333,9 +305,7 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
               className="text-zion-cyan hover:underline"
               className="text-zion-cyan hover:underline""
             >
->>>>>>> pr-10728
-              ziontechgroup.com            </a>
-          </div>
+              ziontechgroup.com            </a>          </div>
         </div>
       </section>
     </div>
@@ -347,4 +317,3 @@ export default function AIIoTEdgeComputing(function AIIoTEdgeComputing() {): any
 '"'"
   )}
 '""
->>>>>>> pr-10728

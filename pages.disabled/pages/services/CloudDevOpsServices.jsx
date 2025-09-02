@@ -1,16 +1,5 @@
-
-import React from
-  'react';'
-import { Link } from
-  'react-router-dom';'
-import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from
-  'lucide-react';
-
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Cloud, Server, Database, Shield, GitFork, ArrowRight, CheckCircle, Monitor } from 'lucide-react';
->>>>>>> pr-10728
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
+  'lucide-react';:pages.disabled/pages/services/CloudDevOpsServices.jsx
 const CloudDevOpsServices = () => {
     const cloudServices = [
         {
@@ -28,9 +17,7 @@ const CloudDevOpsServices = () => {}
             description: "Seamless migration to cloud platforms with strategic planning and execution.",
             icon: Cloud,
             features[;""
->>>>>>> pr-10728
-                "Multi-cloud Strategy",""
-                "Legacy System Migration",""
+                "Multi-cloud Strategy",""                "Legacy System Migration",""
                 "Cost Optimization",""
                 "Performance Optimization",""
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -55,9 +42,7 @@ const CloudDevOpsServices = () => {}
             description: "Streamline development and operations with modern DevOps practices and tools.",
             icon: GitFork,
             features: [""
->>>>>>> pr-10728
-                "CI/CD Pipeline Setup",""
-                "Infrastructure as Code",""
+                "CI/CD Pipeline Setup",""                "Infrastructure as Code",""
                 "Automated Testing",""
                 "Deployment Automation",""
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -82,9 +67,7 @@ const CloudDevOpsServices = () => {}
             description: "Manage and scale containerized applications with Kubernetes and Docker.",
             icon: Server,
             features[;""
->>>>>>> pr-10728
-                "Kubernetes Deployment",""
-                "Docker Containerization",""
+                "Kubernetes Deployment",""                "Docker Containerization",""
                 "Service Mesh",""
                 "Auto-scaling",""
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -109,9 +92,7 @@ const CloudDevOpsServices = () => {}
             description: "Optimize and manage databases in cloud environments for performance and reliability.",
             icon: Database,
             features[;""
->>>>>>> pr-10728
-                "Database Migration",""
-                "Performance Tuning",""
+                "Database Migration",""                "Performance Tuning",""
                 "Backup & Recovery",""
                 "High Availability",""
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -136,9 +117,7 @@ const CloudDevOpsServices = () => {}
             description: "Ensure cloud security and compliance with industry standards and best practices.",
             icon: Shield,
             features[;""
->>>>>>> pr-10728
-                "Identity & Access Management",""
-                "Network Security",""
+                "Identity & Access Management",""                "Network Security",""
                 "Data Encryption",""
                 "Compliance Auditing",""
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -163,9 +142,7 @@ const CloudDevOpsServices = () => {}
             description: "Comprehensive monitoring and observability solutions for cloud infrastructure.",
             icon: Monitor,
             features[;""
->>>>>>> pr-10728
-                "Real-time Monitoring",""
-                "Log Management",""
+                "Real-time Monitoring",""                "Log Management",""
                 "Performance Metrics",""
                 "Alert Management",""
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -180,9 +157,7 @@ const CloudDevOpsServices = () => {}
 
     ];
     const benefits = [""
->>>>>>> pr-10728
-        "Faster time to market with automated deployments",""
-        "Improved reliability and uptime",""
+        "Faster time to market with automated deployments",""        "Improved reliability and uptime",""
         "Cost optimization through resource management",""
         "Enhanced security and compliance",""
         "Scalable infrastructure that grows with your business",""
@@ -195,9 +170,7 @@ const CloudDevOpsServices = () => {}
         "Better collaboration between development and operations teams""
     ];
     const technologies = [""
->>>>>>> pr-10728
-        "AWS, Azure, GCP",""
-        "Kubernetes & Docker",""
+        "AWS, Azure, GCP",""        "Kubernetes & Docker",""
         "Terraform & Ansible",""
         "Jenkins & GitLab CI",""
         "Prometheus & Grafana",""
@@ -215,9 +188,7 @@ const CloudDevOpsServices = () => {}
     const cloudPlatforms = []
         {}
 ""
->>>>>>> pr-10728
-            name: "Amazon Web Services",""
-            description: "Leading cloud platform with comprehensive services",""
+            name: "Amazon Web Services",""            description: "Leading cloud platform with comprehensive services",""
             features["EC2, S3, RDS", "Lambda Functions", "CloudFormation", "CloudWatch"];
         },;
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -228,9 +199,7 @@ const CloudDevOpsServices = () => {}
 "
         {}
 ""
->>>>>>> pr-10728
-            name: "Microsoft Azure",""
-            description: "Enterprise-grade cloud solutions for Windows environments",""
+            name: "Microsoft Azure",""            description: "Enterprise-grade cloud solutions for Windows environments",""
             features["Virtual Machines", "Azure DevOps", "Azure Functions", "Application Insights"];
         },;
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -241,9 +210,7 @@ const CloudDevOpsServices = () => {}
 "
         {}
 ""
->>>>>>> pr-10728
-            name: "Google Cloud Platform",""
-            description: "Innovative cloud services with AI and ML capabilities",""
+            name: "Google Cloud Platform",""            description: "Innovative cloud services with AI and ML capabilities",""
             features["Compute Engine", "Cloud Run", "BigQuery", "Cloud Build"];
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
         }"
@@ -256,9 +223,7 @@ const CloudDevOpsServices = () => {}
     ];""
     return (<div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">""
-        <div className="absolute inset-0 bg-black/20"></div>""
+      <section className="relative bg-gradient-to-r from-slate-900 via-blue-900 to-slate-900 text-white py-20">""        <div className="absolute inset-0 bg-black/20"></div>""
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -284,9 +249,7 @@ const CloudDevOpsServices = () => {}
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started;
             </Link>""
->>>>>>> pr-10728
-            <Link to="/request-quote" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
-              Request Quote;
+            <Link to="/request-quote" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">              Request Quote;
             </Link>
           </div>
         </div>
@@ -298,9 +261,7 @@ const CloudDevOpsServices = () => {}
 "
 
       {/* Services Grid */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+      <section className="py-20">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -310,9 +271,7 @@ const CloudDevOpsServices = () => {}
               Comprehensive Cloud & DevOps Solutions"
               Comprehensive Cloud & DevOps Solutions;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              From cloud migration to DevOps transformation, we provide end-to-end;
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">              From cloud migration to DevOps transformation, we provide end-to-end;
               solutions that modernize your infrastructure and accelerate delivery.
             </p>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -322,9 +281,7 @@ const CloudDevOpsServices = () => {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
-            {cloudServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""            {cloudServices.map((service, index) => (<div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-8 border border-slate-100">""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6">""
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
                   <service.icon className="w-8 h-8 text-white"/>"
@@ -345,9 +302,7 @@ const CloudDevOpsServices = () => {}
                 <p className="text-slate-600 mb-6">
                   {service.description}
                 </p>""
->>>>>>> pr-10728
-                <ul className="space-y-2 mb-6">""
-                  {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">""
+                <ul className="space-y-2 mb-6">""                  {service.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">""
                       <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0"/>
                       {feature}
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -361,9 +316,7 @@ const CloudDevOpsServices = () => {}
                 </ul>""
                 <Link to="/contact" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200">
                   Learn More""
->>>>>>> pr-10728
-                  <ArrowRight className="w-4 h-4 ml-2"/>
-                </Link>
+                  <ArrowRight className="w-4 h-4 ml-2"/>                </Link>
               </div>))}
           </div>
         </div>
@@ -375,9 +328,7 @@ const CloudDevOpsServices = () => {}
 "
 
       {/* Cloud Platforms Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+      <section className="py-20 bg-white">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -387,9 +338,7 @@ const CloudDevOpsServices = () => {}
               Multi-Cloud Expertise"
               Multi-Cloud Expertise;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              We work with all major cloud providers to give you the best solutions;
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">              We work with all major cloud providers to give you the best solutions;
               for your specific needs and budget.
             </p>
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -399,9 +348,7 @@ const CloudDevOpsServices = () => {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
-            {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">""
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""            {cloudPlatforms.map((platform, index) => (<div key={index} className="bg-slate-50 rounded-2xl p-8 border border-slate-200">""
                 <h3 className="text-2xl font-bold text-slate-900 mb-4">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
                   {platform.name}"
@@ -416,9 +363,7 @@ const CloudDevOpsServices = () => {}
                 <p className="text-slate-600 mb-6">
                   {platform.description}
                 </p>""
->>>>>>> pr-10728
-                <ul className="space-y-2">""
-                  {platform.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">""
+                <ul className="space-y-2">""                  {platform.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-slate-600">""
                       <CheckCircle className="w-4 h-4 text-blue-500 mr-2 flex-shrink-0"/>
                       {feature}
                     </li>))}
@@ -434,9 +379,7 @@ const CloudDevOpsServices = () => {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-50">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+      <section className="py-20 bg-slate-50">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -446,7 +389,6 @@ const CloudDevOpsServices = () => {}
               Benefits of Cloud & DevOps"
               Benefits of Cloud & DevOps;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Transform your organization with modern cloud and DevOps practices.
             </p>
@@ -457,7 +399,6 @@ const CloudDevOpsServices = () => {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {benefits.map((benefit, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -468,9 +409,7 @@ const CloudDevOpsServices = () => {}
                   <CheckCircle className="w-8 h-8 text-white"/>"
                   <CheckCircle className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
-                <p className="text-lg text-slate-700">{benefit}</p>
-              </div>))}
+                <p className="text-lg text-slate-700">{benefit}</p>              </div>))}
           </div>
         </div>
       </section>
@@ -481,9 +420,7 @@ const CloudDevOpsServices = () => {}
 "
 
       {/* Technologies Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+      <section className="py-20 bg-white">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
@@ -493,7 +430,6 @@ const CloudDevOpsServices = () => {}
               Technologies We Use"
               Technologies We Use;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               We leverage industry-leading tools and technologies to deliver robust solutions.
             </p>
@@ -504,9 +440,7 @@ const CloudDevOpsServices = () => {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">""
-            {technologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">""
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">""            {technologies.map((tech, index) => (<div key={index} className="bg-slate-50 rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300">""
                 <p className="text-slate-700 font-semibold">{tech}</p>
               </div>))}
           </div>
@@ -519,9 +453,7 @@ const CloudDevOpsServices = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-blue-900 text-white">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h2 className="text-4xl font-bold mb-6">
 :pages.disabled/pages/services/CloudDevOpsServices.jsx
             Ready to Modernize Your Infrastructure?"
@@ -548,9 +480,7 @@ const CloudDevOpsServices = () => {}
             <Link to="/contact" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Start Your Transformation;
             </Link>""
->>>>>>> pr-10728
-            <Link to="/case-studies" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">
-              View Case Studies;
+            <Link to="/case-studies" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300">              View Case Studies;
             </Link>
           </div>
         </div>
@@ -566,4 +496,3 @@ export default CloudDevOpsServices;'"
 }}}'"'"
 export default CloudDevOpsServices;
 }}}'""
->>>>>>> pr-10728

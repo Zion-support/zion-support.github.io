@@ -10,8 +10,7 @@ function walk(dir, filelist = []) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      filelist = walk(full, filelist);
-    } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {
+      filelist = walk(full, filelist);    } else if (/\.(md|tsx?|jsx?)$/i.test(entry.name)) {
       filelist.push(full);
     }
   }
@@ -21,22 +20,19 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 function main() {
   const repoRoot = process.cwd();
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  const index = [];
-  for (const dir of srcDirs) {
+  const index = [];  for (const dir of srcDirs) {
     if (!fs.existsSync(dir)) continue;
     for (const file of walk(dir)) {
       try {
         const rel = path.relative(repoRoot, file);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        index.push({ file: rel, title });
-      } catch {}
+        index.push({ file: rel, title });      } catch {}
     }
   }
   const outDir = path.join(repoRoot,
   'public');
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`);
-}
+  console.log(`✅ Search index generated: ${outPath} (${index.length} items)`);}
 
 main();

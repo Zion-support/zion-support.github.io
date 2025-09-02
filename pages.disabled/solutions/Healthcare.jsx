@@ -1,112 +1,13 @@
-
-import React from,
-  react';'
-import { Link } from
-  'react-router-dom';'
-import { Heart, Shield, Users, Activity, Microscope, Pill } from
-  'lucide-react';
-;: pages.disabled/solutions/Healthcare.jsx
-const HealthcareSolutions = () => {
-  const solutions = [
     {
-  '
-      title: 'AI-Powered Patient Care,'
-      description:,
-  '
-        'Intelligent patient monitoring and care management systems.
-  ','
-      features: ['
-  '
-        'Real-time patient monitoring,Predictive health analytics',Automated care protocols
-  ',Patient engagement tools',Care coordination platform
-  ',],
-      icon: Heart,'
-      href:,
-  /services/ai-autonomous-systems'},: pages.disabled/solutions/Healthcare.jsx
-
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Heart, Shield, Users, Activity, Microscope, Pill } from 'lucide-react';
-;
-:pages.disabled/solutions/Healthcare.jsx
-const HealthcareSolutions = () => {
-  const solutions = [
-    {
-'
-      title: 'AI-Powered Patient Care','
-      description:''
-        'Intelligent patient monitoring and care management systems.','
-      features: [''
-        'Real-time patient monitoring',Predictive health analytics',Automated care protocols',Patient engagement tools',Care coordination platform',
-const HealthcareSolutions = () => {}
-  const solutions = []
-    {}
-      title: 'AI-Powered Patient Care',
-      description:'
-        'Intelligent patient monitoring and care management systems.',
-      features: ['
-        'Real-time patient monitoring',Predictive health analytics',Automated care protocols',Patient engagement tools',Care coordination platform'
-      ],
-      icon: Heart,'
-      href: '/services/ai-autonomous-systems'},
-:pages.disabled/solutions/Healthcare.jsx
->>>>>>> pr-10728
-    {
+  /services/ai-autonomous-systems'},: pages.disabled/solutions/Healthcare.jsx    {
   '
       title: 'Medical Imaging AI,'
       description:,
   Advanced AI for diagnostic imaging and analysis.',
   '
       features: [''
-
-  'Radiology image analysis,Pathology detection
-  ',3D imaging reconstruction',Automated reporting
-  ',Quality assurance tools',],
-      icon: Microscope,
-,
-  href: '/services/ai-autonomous-systems},
-:pages.disabled/solutions/Healthcare.jsx
-    {,
-  title: 'Drug Discovery Platform,
-,
-  description: 'AI-driven pharmaceutical research and development.,'
-      features: ['
-  '
-        'Molecular modeling
-  ',Target identification',Clinical trial optimization
-  ',Drug repurposing',Safety prediction
-  ',],
-      icon: Pill,'
-      href:,
-  /services/quantum-technology'},: pages.disabled/solutions/Healthcare.jsx
-
-        'Radiology image analysis',Pathology detection',3D imaging reconstruction',Automated reporting',Quality assurance tools',
-    {}
-      title: 'Medical Imaging AI',
-      description: 'Advanced AI for diagnostic imaging and analysis.',
-      features: ['
-        'Radiology image analysis',Pathology detection',3D imaging reconstruction',Automated reporting',Quality assurance tools'
-      ],
-      icon: Microscope,'
-      href: '/services/ai-autonomous-systems'},
-:pages.disabled/solutions/Healthcare.jsx
     {
-'
-      title: 'Drug Discovery Platform','
-      description: 'AI-driven pharmaceutical research and development.','
-      features: [''
-        'Molecular modeling',Target identification',Clinical trial optimization',Drug repurposing',Safety prediction',
-    {}
-      title: 'Drug Discovery Platform',
-      description: 'AI-driven pharmaceutical research and development.',
-      features: ['
-        'Molecular modeling',Target identification',Clinical trial optimization',Drug repurposing',Safety prediction'
-      ],
-      icon: Pill,'
-      href: '/services/quantum-technology'},
-:pages.disabled/solutions/Healthcare.jsx
->>>>>>> pr-10728
-    {
+  /services/quantum-technology'},: pages.disabled/solutions/Healthcare.jsx    {
   '
       title: 'Healthcare Compliance,'
       description:,
@@ -145,9 +46,7 @@ const HealthcareSolutions = () => {}
       title: 'Enhanced Security','
     {}
       title: 'Healthcare Compliance',
->>>>>>> pr-10728
-      description:'
-  '
+      description:'  '
         'Streamlined workflows reduce costs and improve care delivery.
   ',
       icon: Users},
@@ -160,7 +59,6 @@ const HealthcareSolutions = () => {}
     {}
       title: 'Enhanced Security',
       description: 'HIPAA-compliant solutions protect patient data.',
->>>>>>> pr-10728
       icon: Shield}
   ];
   return()
@@ -171,9 +69,7 @@ const HealthcareSolutions = () => {}
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">"
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Header Section */}""
->>>>>>> pr-10728
-      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto text-center">""
+      <div className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto text-center">""
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
 :pages.disabled/solutions/Healthcare.jsx
             Healthcare AI Solutions"
@@ -214,9 +110,7 @@ const HealthcareSolutions = () => {}
               to="/contact""
               className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300""
             >
->>>>>>> pr-10728
-              Get Healthcare Quote;
-            </Link>
+              Get Healthcare Quote;            </Link>
           </div>
         </div>
       </div>
@@ -227,9 +121,7 @@ const HealthcareSolutions = () => {}
 "
 
       {/* Core Solutions */}""
->>>>>>> pr-10728
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">""
-        <div className="max-w-7xl mx-auto">""
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">""        <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
 :pages.disabled/solutions/Healthcare.jsx
             Healthcare AI Solutions
@@ -240,9 +132,7 @@ const HealthcareSolutions = () => {}
             Healthcare AI Solutions;
           </h2>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => {}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">            {solutions.map((solution, index) => {}
               const Icon = solution.icon;
               return()
 :pages.disabled/solutions/Healthcare.jsx
@@ -252,9 +142,7 @@ const HealthcareSolutions = () => {}
                 <div"
                 <div;
                   key={index}""
->>>>>>> pr-10728
-                  className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300""
-                >""
+                  className="bg-gray-800/30 rounded-2xl p-8 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300""                >""
                   <div className="flex items-center mb-6">""
                     <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mr-4">""
 :pages.disabled/solutions/Healthcare.jsx
@@ -282,9 +170,7 @@ const HealthcareSolutions = () => {}
                     {solution.features.map((feature, featureIndex) => (
                       <li;
                         key={featureIndex}""
->>>>>>> pr-10728
-                        className="flex items-center space-x-3""
-                      >""
+                        className="flex items-center space-x-3""                      >""
                         <div className="w-2 h-2 bg-cyan-400 rounded-full"></div>""
                         <span className="text-gray-300">{feature}</span>
                       </li>
@@ -306,9 +192,7 @@ const HealthcareSolutions = () => {}
                   >
                     Learn More;
                     <svg""
->>>>>>> pr-10728
-                      className="w-4 h-4 ml-2""
-                      fill="none""
+                      className="w-4 h-4 ml-2""                      fill="none""
                       stroke="currentColor""
 :pages.disabled/solutions/Healthcare.jsx
                       viewBox="0 0 24 24"
@@ -319,7 +203,6 @@ const HealthcareSolutions = () => {}
                       viewBox="0 0 24 24""
                     >
                       <path""
->>>>>>> pr-10728
                         strokeLinecap="round""
                         strokeLinejoin="round""
                         strokeWidth={2}""
@@ -330,9 +213,7 @@ const HealthcareSolutions = () => {}
                         d="M9 5l7 7-7 7"
                         d="M9 5l7 7-7 7""
                       />
->>>>>>> pr-10728
-                    </svg>
-                  </Link>
+                    </svg>                  </Link>
                 </div>
               );
             })}
@@ -346,9 +227,7 @@ const HealthcareSolutions = () => {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">""
-        <div className="max-w-7xl mx-auto">""
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">""        <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
 :pages.disabled/solutions/Healthcare.jsx
             Benefits for Healthcare Organizations
@@ -376,9 +255,7 @@ const HealthcareSolutions = () => {}
                   <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-2xl flex items-center justify-center mx-auto mb-6">""
                     <Icon className="w-10 h-10 text-white" />
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>""
-                  <p className="text-gray-300">{benefit.description}</p>
+                  <h3 className="text-xl font-bold mb-4">{benefit.title}</h3>""                  <p className="text-gray-300">{benefit.description}</p>
                 </div>
               );
             })}
@@ -392,9 +269,7 @@ const HealthcareSolutions = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <div className="px-4 sm:px-6 lg:px-8 pb-16">""
-        <div className="max-w-4xl mx-auto text-center">""
+      <div className="px-4 sm:px-6 lg:px-8 pb-16">""        <div className="max-w-4xl mx-auto text-center">""
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-12 border border-cyan-500/30">""
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
 :pages.disabled/solutions/Healthcare.jsx
@@ -434,9 +309,7 @@ const HealthcareSolutions = () => {}
                 to="/contact""
                 className="px-8 py-4 border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black font-semibold rounded-lg transition-all duration-300""
               >
->>>>>>> pr-10728
-                Contact Healthcare Team;
-              </Link>
+                Contact Healthcare Team;              </Link>
             </div>
           </div>
         </div>
@@ -453,4 +326,3 @@ export default HealthcareSolutions;'"
 '"'"
 export default HealthcareSolutions;
 '""
->>>>>>> pr-10728

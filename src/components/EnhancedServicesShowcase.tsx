@@ -109,5 +109,4 @@ const categories = ['All', 'AI & Analytics', 'Quantum Computing', 'Cybersecurity
 
 export default function EnhancedServicesShowcase(...args: unknown[]): unknown {  const [selectedCategory, setSelectedCategory] = useState('All');
   const [hoveredService, setHoveredService] = useState<string | null>(null);
->>>>>>> pr-10728
 

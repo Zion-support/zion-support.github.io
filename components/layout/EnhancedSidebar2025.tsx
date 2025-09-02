@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  href: string;
-  icon: React.ReactNode;
+  href: string;  icon: React.ReactNode;
   description?: string;
   children?: SidebarItem[];
   badge?: string;
@@ -24,8 +23,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   }, {
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  };
-];
+  };];
 
 interface EnhancedSidebar2025Props extends React.PropsWithChildren<{}> {
 
@@ -59,8 +57,7 @@ export default function EnhancedSidebar2025(...args[]: any): {const [expandedSec
     if (isOpen) {
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    <>
-      {/* Backdrop */}
+    <>      {/* Backdrop */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -74,8 +71,7 @@ className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden""          
       {/* Sidebar */}
       <motion.div
 ursor/automate-test-fix-improve-and-merge-code-48f3
-className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`
-        {/* Header */}
+className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r border-gray-800/50 z-50 overflow-y-auto`}`        {/* Header */}
         <div className="sticky top-0 bg-black/80 backdrop-blur-xl border-b border-gray-800/50 p-6">"          <div className="flex items-center justify-between mb-6">"            <div className="flex items-center gap-3">"              <div className="relative">"                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">"                  <Zap className="w-6 h-6 text-white" />"                </div>"                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl blur opacity-20"></div>"              </div>"              <div>"
                 <h2 className="text-xl font-bold bg-gradient-to-r from-white to-cyan-300 bg-clip-text text-transparent">"                  Zion Tech Group"                </h2>
                 <p className="text-gray-400 text-sm">Revolutionary Technology</p>"              </div>"            </div>
@@ -104,7 +100,6 @@ className={`fixed left-0 top-0 h-full w-80 bg-black/95 backdrop-blur-xl border-r
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
                     exit = {
-
 { opacity: 0, height: 0}}
                     transition={{ duration: 0.3 }}
 className="space-y-2 ml-6"""                    {section.items.map((item, itemIndex) => (
@@ -129,7 +124,6 @@ className="space-y-2 ml-6"""                    {section.items.map((item, itemIn
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
                                 exit = {
-
 { opacity: 0, height: 0}}
                                 transition={{ duration: 0.3 }}
 className="space-y-1 ml-6"""                                {item.subItems.map((subItem, subIndex) => (<Link

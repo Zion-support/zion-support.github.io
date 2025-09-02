@@ -1,12 +1,10 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 const Careers: NextPage = () => {
   return (
     <Layout
       title="Careers at Zion Tech Group - Join Our Team"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    >
-      {/* Hero Section */}
+    >      {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
@@ -36,8 +34,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Work at Zion Tech Group?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            </p>
-          </div>
+            </p>          </div>
           
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg p-8 shadow-lg">
@@ -58,8 +55,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
               <p className="text-gray-600">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                tools and approaches to solve complex business challenges.
-              </p>
+                tools and approaches to solve complex business challenges.              </p>
             </div>
 
             <div className="bg-white rounded-lg p-8 shadow-lg">

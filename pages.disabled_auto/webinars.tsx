@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-import { 
-  Calendar, Clock,
+import {   Calendar, Clock,
   Users, Play,
   ArrowRight, Search,
   Filter, Tag,

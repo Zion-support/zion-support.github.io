@@ -78,7 +78,6 @@ describe(
 
 ursor/automate-test-fix-improve-and-merge-code-99d1
   });
-
   it(
   'disables focus when not focusable', () => {
     render(

@@ -1,29 +1,7 @@
 
 :pages.disabled/pages/services/MobileSurvey.tsx
-
-export default function MobileSurvey() {,
-  Mobile-first NPS/CSAT/CES templates',;'
-  'QR code and link campaigns',;'
-  'AI topic clustering and sentiment',;'
-  'Webhooks to CRM/Slack',;'
-  'Kiosk mode for in-person feedback',;'
-  'Multilingual with auto-translate';
-
-export default function MobileSurvey() {
-    'Mobile-first NPS/CSAT/CES templates',;'
-    'QR code and link campaigns',;'
-    'AI topic clustering and sentiment',;'
-    'Webhooks to CRM/Slack',;'
-    'Kiosk mode for in-person feedback',;'
-export default function MobileSurvey(function MobileSurvey() {): any {}
-    'Mobile-first NPS/CSAT/CES templates',;
-    'QR code and link campaigns',;
-    'AI topic clustering and sentiment',;
-    'Webhooks to CRM/Slack',;
-    'Kiosk mode for in-person feedback',;
-    'Multilingual with auto-translate';
->>>>>>> pr-10728
   ];
+  'Multilingual with auto-translate';  ];
 
   '
     { name: 'Starter, price:,
@@ -80,9 +58,7 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
           <h3 className="text-2xl font-semibold text-zion-slate-dark mb-4">Pricing</h3>""
           <div className="grid md:grid-cols-3 gap-4">
             {pricing.map((p) => (""
->>>>>>> pr-10728
-              <div key={p.name} className="rounded-lg p-4 border border-zion-slate-light/30">""
-                <div className="text-lg font-semibold mb-1">{p.name}</div>""
+              <div key={p.name} className="rounded-lg p-4 border border-zion-slate-light/30">""                <div className="text-lg font-semibold mb-1">{p.name}</div>""
                 <div className="text-2xl font-bold text-zion-cyan mb-2">{p.price}</div>""
                 <ul className="text-sm text-zion-slate-dark space-y-1">{p.details.map((d) => (<li key={d}>{d}</li>))}</ul>
               </div>
@@ -110,9 +86,7 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
       <section className="pb-16 max-w-6xl mx-auto px-6">""
         <div className="grid md:grid-cols-3 gap-6">
           {[{icon: MessageSquare, t: 'Conversational UX'}, {icon: Users, t: 'High Completion'}, {icon: BarChart2, t: 'AI Insights'}].map((c) => (""
->>>>>>> pr-10728
-            <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">""
-              <c.icon className="w-6 h-6 text-zion-cyan mb-3" />""
+            <div key={c.t} className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm">""              <c.icon className="w-6 h-6 text-zion-cyan mb-3" />""
               <div className="text-zion-slate-dark font-semibold">{c.t}</div>
             </div>
 :pages.disabled/pages/services/MobileSurvey.tsx
@@ -122,9 +96,7 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
           ))}"
           ))}
         </div>""
->>>>>>> pr-10728
-        <div className="mt-10 text-center">""
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
+        <div className="mt-10 text-center">""          <div className="flex flex-col sm:flex-row gap-4 justify-center">;""
             <a href="tel:+13024640950" className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg"><Phone className="w-4 h-4 mr-2" /> +1 302 464 0950</a>;""
             <a href="mailto:kleber@ziontechgroup.com" className="inline-flex items-center px-5 py-3 border border-zion-cyan text-zion-cyan rounded-lg"><Mail className="w-4 h-4 mr-2" /> kleber@ziontechgroup.com</a>;          </div>;
         </div>;
@@ -138,4 +110,3 @@ export default function MobileSurvey(function MobileSurvey() {): any {}
   )}}'"'"
     </div>;
   )}}'""
->>>>>>> pr-10728

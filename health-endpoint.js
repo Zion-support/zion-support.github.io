@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    res.end(JSON.stringify({
-      status:
+    res.end(JSON.stringify({      status:
   'healthy',
       timestamp: new Date().toISOString(),
       uptime: process.uptime(),
@@ -9,8 +8,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     }))
   } else {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  }
-});
+  }});
 
 server.listen(port, () => {
   console.log(`Health endpoint server running on port ${port}`);

@@ -1,12 +1,10 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-;
-    return context;
+;    return context;
 };// Accessibility Provider Component;
 export const AccessibilityProvider = ({ children }) => {;
     const [highContrast, setHighContrast] = useState(false);
 ursor/automate-test-fix-improve-and-merge-code-48f3
-;}, []);
-    // Save settings to localStorage;
+;}, []);    // Save settings to localStorage;
     useEffect(() => {;
         const settings = {;
   highContrast,;
@@ -20,8 +18,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
         // High contrast mode;
         if (highContrast) {;
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion(!reducedMotion);
-    const value = {;
+    const toggleHighContrast = () => setHighContrast(!highContrast);const toggleReducedMotion = () => setReducedMotion(!reducedMotion);    const value = {;
   highContrast,;
         reducedMotion,;
         fontSize,;
@@ -47,8 +44,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                 setIsOpen(!isOpen);
 ;
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      {/* Floating Accessibility Button */}";"";"
-      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">";"";"
+      {/* Floating Accessibility Button */}";"";"      <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => setIsOpen(true)} className="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-br from-zion-cyan to-zion-purple text-white rounded-full shadow-2xl shadow-zion-cyan/25 z-50 flex items-center justify-center hover: shadow-2xl hover:shadow-zion-cyan/40 transition-all duration-300" aria-label="Open Accessibility Settings">";"";"
         <Accessibility className="w-6 h-6"/>;";"
       </motion.button>;";"
       {/* Accessibility Panel */};"";""
@@ -100,16 +96,14 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                 <div>";"";"
                   <h3 className="text-white font-medium mb-3">Font Size</h3>";"";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                        {size.charAt(0).toUpperCase() + size.slice(1)};
-                      </Button>))};""
+                        {size.charAt(0).toUpperCase() + size.slice(1)};                      </Button>))};""
                   </div>;";"
                 </div>;";"
                 {/* Color Blind Mode */};"";""
                 <div>";"";"
                   <h3 className="text-white font-medium mb-3">Color Blind Support</h3>";"";"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                      </Button>))};";"
-                  </div>;";"
+                      </Button>))};";"                  </div>;";"
                 </div>;"";""
                 {/* Keyboard Shortcuts */}";"";"
                 <div className="bg-zion-blue-dark/50 rounded-lg p-4">";"";"
@@ -156,8 +150,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
         const firstFocusableElement = focusableContent[0];
         const lastFocusableElement = focusableContent[focusableContent.length - 1];
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                if (e.shiftKey) {;
-                    if (document.activeElement === firstFocusableElement) {;
+                if (e.shiftKey) {;                    if (document.activeElement === firstFocusableElement) {;
                         e.preventDefault();
 ;
                         lastFocusableElement.focus();
@@ -167,7 +160,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                         e.preventDefault();
                         firstFocusableElement.focus();
 ursor/automate-test-fix-improve-and-merge-code-48f3
-// Screen Reader Only Text";"";"
-export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);";"
+// Screen Reader Only Text";"";"export const SrOnly = ({ children }) => (<span className="sr-only">{children}</span>);";"
 export default AccessibilityPanel;"";""
 }}}}}}}}}}}}}}}";"";"

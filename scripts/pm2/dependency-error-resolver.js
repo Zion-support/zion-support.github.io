@@ -11,8 +11,7 @@ class DependencyErrorResolver {
   constructor() {
     this.checkInterval = process.env.CHECK_INTERVAL || 600000; // 10 minutes
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    console.log(`Check interval: ${this.checkInterval}ms`);
-    console.log(`Auto-install: ${this.autoInstall}`);
+    console.log(`Check interval: ${this.checkInterval}ms`);    console.log(`Auto-install: ${this.autoInstall}`);
     console.log(`Security check: ${this.securityCheck}`);
   }
 
@@ -28,8 +27,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   async checkDependencyErrors() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    const report = {
-      timestamp: new Date().toISOString(),
+    const report = {      timestamp: new Date().toISOString(),
       dependencies: {
         missing: [],
         outdated: [],
@@ -104,8 +102,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   parseMissingDependencies(output) {
     const missing = [];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    for (const line of lines) {
-      if (line.includes(
+    for (const line of lines) {      if (line.includes(
   'UNMET DEPENDENCY') || line.includes(
   'missing:')) {
         const match = line.match(/([\\w\\-@\\/]+)@([\\d\\.\\^~]+)/);
@@ -114,8 +111,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
             name: match[1],
             version: match[2],
 ursor/automate-test-fix-improve-and-merge-code-99d1
-          });
-        }
+          });        }
       }
     }
 
@@ -130,8 +126,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       if (error.stdout) {
         try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        }
-      }
+        }      }
     }
   }
 
@@ -150,8 +145,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
           via: vuln.via,
           range: vuln.range,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        }));
-      }
+        }));      }
     } catch (error) {
       if (error.stdout) {
         try {
@@ -165,8 +159,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
               via: vuln.via,
               range: vuln.range,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-            }));
-          }
+            }));          }
         } catch (parseError) {
           console.error(
   'Error parsing audit results:', parseError.message);
@@ -197,8 +190,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
               expected: version,
               installed: installedVersion,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-            });
-          }
+            });          }
         }
       }
 
@@ -213,8 +205,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     try {
       const packageJsonPath = path.join(
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      if (fs.existsSync(packageJsonPath)) {
-        const pkg = JSON.parse(fs.readFileSync(packageJsonPath,
+      if (fs.existsSync(packageJsonPath)) {        const pkg = JSON.parse(fs.readFileSync(packageJsonPath,
   'utf8'));
         return pkg.version;
       }
@@ -235,8 +226,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       return expectedMajor === installedMajor;
     }
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return expectedMinor === installedMinor;
-    }
+      return expectedMinor === installedMinor;    }
 
     return installed === expected;
   }
@@ -246,8 +236,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     for (const dep of report.dependencies.missing) {
       try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        report.fixes.installed.push(dep);
-      } catch (error) {
+        report.fixes.installed.push(dep);      } catch (error) {
         console.error(`Failed to install ${dep.name}:`, error.message);
         report.fixes.failed.push({ ...dep, error: error.message });
       }
@@ -258,15 +247,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       if (this.isSafeUpdate(dep.current, dep.wanted)) {
         try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-          report.fixes.updated.push(dep);
-        } catch (error) {
+          report.fixes.updated.push(dep);        } catch (error) {
           console.error(`Failed to update ${dep.name}:`, error.message);
           report.fixes.failed.push({ ...dep, error: error.message });
         }
       } else {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      }
-    }
+      }    }
 
     // Fix vulnerabilities (using npm audit fix)
     if (report.dependencies.vulnerable.length > 0) {
@@ -286,8 +273,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   isSafeUpdate(current, wanted) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    // Only allow minor and patch updates
-    return currentParts[0] === wantedParts[0]; // Same major version
+    // Only allow minor and patch updates    return currentParts[0] === wantedParts[0]; // Same major version
   }
 
   generateRecommendations(report) {
@@ -307,8 +293,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
     if (report.dependencies.vulnerable.length > 0) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      if (critical > 0) {
-        recommendations.push(
+      if (critical > 0) {        recommendations.push(
           `URGENT: Fix ${critical} critical security vulnerabilities`
         );
       }

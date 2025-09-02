@@ -16,21 +16,18 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     }, {
       icon: MessageCircle,
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      ]
-    }
+      ]    }
   ]
 
   const popularArticles = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const supportOptions = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ];
+    }  ];
 
   return (
     <MainLayout

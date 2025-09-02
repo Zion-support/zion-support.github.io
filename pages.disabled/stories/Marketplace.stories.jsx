@@ -11,9 +11,7 @@ const meta = {
 '
 const meta = {}
   title: 'Pages/Marketplace',
->>>>>>> pr-10728
-    component: Marketplace,
-  decorators: []
+    component: Marketplace,  decorators: []
         (Story) => (<MemoryRouter>
         <Story />
       </MemoryRouter>)
@@ -35,11 +33,9 @@ export const Grid = {
 export const Grid = {}
   render: () => {}
         localStorage.setItem('marketplaceView',grid');
->>>>>>> pr-10728
         return <Marketplace />;
 
 }
-
 };: pages.disabled/stories/Marketplace.stories.jsx
 export const List = {
 
@@ -57,9 +53,7 @@ export const List = {
 export const List = {}
   render: () => {}
         localStorage.setItem('marketplaceView',list');
->>>>>>> pr-10728
         return <Marketplace />;
-
 }
 :pages.disabled/stories/Marketplace.stories.jsx
 };'"
@@ -70,4 +64,3 @@ export const List = {}
 }}'"'"
 };
 }}'""
->>>>>>> pr-10728

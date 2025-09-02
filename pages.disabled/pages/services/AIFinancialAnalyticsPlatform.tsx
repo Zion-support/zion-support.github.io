@@ -21,9 +21,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {
 
 export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
   return()
->>>>>>> pr-10728
-    <div className="min-h-screen bg-white">""
-      <section className="bg-gradient-to-br from-green-900 via-green-800 to-green-700 py-20 text-center">""
+    <div className="min-h-screen bg-white">""      <section className="bg-gradient-to-br from-green-900 via-green-800 to-green-700 py-20 text-center">""
         <div className="max-w-5xl mx-auto px-6">""
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">""
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
@@ -41,9 +39,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             AI Financial Analytics Platform;
           </h1>""
->>>>>>> pr-10728
-          <p className="text-green-100 text-xl">
-            Make smarter financial decisions with AI-powered analytics,
+          <p className="text-green-100 text-xl">            Make smarter financial decisions with AI-powered analytics,
             predictive modeling, and real-time market insights.
           </p>        </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
@@ -69,7 +65,6 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             </h2>""
             <ul className="space-y-3">
               {features.map(f => (""
->>>>>>> pr-10728
                 <li key={f} className="flex items-start">""
                   <Check className="w-5 h-5 text-green-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{f}</span>
                 </li>
@@ -80,9 +75,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               ))}"
               ))}
             </ul>""
->>>>>>> pr-10728
-            <div className="mt-6 text-sm text-zion-slate-light">
-              SOC 2 Type II, FINRA, SEC compliant. Real-time market data feeds.
+            <div className="mt-6 text-sm text-zion-slate-light">              SOC 2 Type II, FINRA, SEC compliant. Real-time market data feeds.
               99.99% uptime SLA.
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
             </div>"
@@ -107,9 +100,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               {tiers.map(t => (
                 <div;
                   key={t.name}""
->>>>>>> pr-10728
-                  className="rounded-lg p-4 border border-zion-slate-light/30""
-                >""
+                  className="rounded-lg p-4 border border-zion-slate-light/30""                >""
                   <div className="text-lg font-semibold mb-1">{t.name}</div>""
                   <div className="text-2xl font-bold text-green-600 mb-2">
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
@@ -119,9 +110,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
                     {t.price}"
                     {t.price}
                   </div>""
->>>>>>> pr-10728
-                  <ul className="text-sm text-zion-slate-dark space-y-1">
-                    {t.details.map(d => (
+                  <ul className="text-sm text-zion-slate-dark space-y-1">                    {t.details.map(d => (
                       <li key={d}>{d}</li>
                     ))}
                   </ul>
@@ -137,9 +126,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             </div>""
             <div className="mt-6 flex flex-wrap gap-3">
               <a""
->>>>>>> pr-10728
-                href="/pricing""
-                className="px-5 py-3 bg-green-600/10 text-green-600 rounded-lg hover:bg-green-600/20 transition-colors inline-flex items-center""
+                href="/pricing""                className="px-5 py-3 bg-green-600/10 text-green-600 rounded-lg hover:bg-green-600/20 transition-colors inline-flex items-center""
               >""
                 View Full Pricing <ExternalLink className="w-4 h-4 ml-2"  />
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
@@ -149,9 +136,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               </a>"
               </a>
               <a""
->>>>>>> pr-10728
-                href="https://ziontechgroup.com""
-                target="_blank""
+                href="https://ziontechgroup.com""                target="_blank""
                 rel="noreferrer""
                 className="px-5 py-3 border border-green-600 text-green-600 rounded-lg inline-flex items-center""
               >""
@@ -179,9 +164,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             </h3>""
             <ul className="space-y-3">
               {benefits.map(b => (""
->>>>>>> pr-10728
-                <li key={b} className="flex items-start">""
-                  <TrendingUp className="w-5 h-5 text-green-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{b}</span>
+                <li key={b} className="flex items-start">""                  <TrendingUp className="w-5 h-5 text-green-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{b}</span>
                 </li>
               ))}
             </ul>
@@ -202,9 +185,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             </h3>""
             <ul className="space-y-3">
               {useCases.map(u => (""
->>>>>>> pr-10728
-                <li key={u} className="flex items-start">""
-                  <Target className="w-5 h-5 text-green-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{u}</span>
+                <li key={u} className="flex items-start">""                  <Target className="w-5 h-5 text-green-600 mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{u}</span>
                 </li>
               ))}
             </ul>
@@ -232,9 +213,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             {financialTools.map(t => (
               <div;
                 key={t}""
->>>>>>> pr-10728
-                className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
-              >""
+                className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""              >""
                 <PieChart className="w-6 h-6 text-green-600 mb-3"  />"                <div className="text-zion-slate-dark font-semibold">{t}</div>
               </div>
             ))}
@@ -262,9 +241,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
             {aiCapabilities.map(c => (
               <div;
                 key={c}""
->>>>>>> pr-10728
-                className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
-              >""
+                className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""              >""
                 <Brain className="w-6 h-6 text-green-600 mb-3"  />"                <div className="text-zion-slate-dark font-semibold">{c}</div>
               </div>
             ))}
@@ -300,9 +277,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               <h4 className="font-semibold text-zion-slate-dark mb-1">
                 Data Collection;
               </h4>""
->>>>>>> pr-10728
-              <p className="text-sm text-zion-slate-light">
-                Real-time market data feeds;
+              <p className="text-sm text-zion-slate-light">                Real-time market data feeds;
               </p>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
             </div>"
@@ -323,9 +298,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               <h4 className="font-semibold text-zion-slate-dark mb-1">
                 AI Analysis;
               </h4>""
->>>>>>> pr-10728
-              <p className="text-sm text-zion-slate-light">
-                Machine learning insights;
+              <p className="text-sm text-zion-slate-light">                Machine learning insights;
               </p>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
             </div>"
@@ -346,9 +319,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               <h4 className="font-semibold text-zion-slate-dark mb-1">
                 Risk Assessment;
               </h4>""
->>>>>>> pr-10728
-              <p className="text-sm text-zion-slate-light">
-                Predictive risk modeling;
+              <p className="text-sm text-zion-slate-light">                Predictive risk modeling;
               </p>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
             </div>"
@@ -369,9 +340,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               <h4 className="font-semibold text-zion-slate-dark mb-1">
                 Optimization;
               </h4>""
->>>>>>> pr-10728
-              <p className="text-sm text-zion-slate-light">
-                Portfolio recommendations;
+              <p className="text-sm text-zion-slate-light">                Portfolio recommendations;
               </p>
             </div>
           </div>
@@ -390,9 +359,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
           <h3 className="text-2xl font-bold text-zion-slate-dark mb-4 text-center">
             Regulatory Compliance;
           </h3>""
->>>>>>> pr-10728
-          <div className="grid md:grid-cols-2 gap-6">""
-            <div className="text-center">""
+          <div className="grid md:grid-cols-2 gap-6">""            <div className="text-center">""
               <Shield className="w-12 h-12 text-blue-600 mx-auto mb-3"  />""
               <h4 className="font-semibold text-zion-slate-dark mb-2">
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
@@ -410,7 +377,6 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
                 FINRA, SEC, Basel III, Dodd-Frank compliance;
               </p>
             </div>""
->>>>>>> pr-10728
             <div className="text-center">""
               <Calculator className="w-12 h-12 text-blue-600 mx-auto mb-3"  />""
               <h4 className="font-semibold text-zion-slate-dark mb-2">
@@ -421,9 +387,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
                 Reporting Standards"
                 Reporting Standards;
               </h4>""
->>>>>>> pr-10728
-              <p className="text-sm text-zion-slate-light">
-                Automated regulatory reporting and audits;
+              <p className="text-sm text-zion-slate-light">                Automated regulatory reporting and audits;
               </p>            </div>
           </div>
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
@@ -445,9 +409,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
           </div>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a""
->>>>>>> pr-10728
-              href="tel:+13024640950""
-              className="inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg""
+              href="tel:+13024640950""              className="inline-flex items-center px-5 py-3 bg-green-600 text-white rounded-lg""
             >""
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
@@ -458,9 +420,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950;
             </a>
             <a""
->>>>>>> pr-10728
-              href="mailto:kleber@ziontechgroup.com""
-              className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg""
+              href="mailto:kleber@ziontechgroup.com""              className="inline-flex items-center px-5 py-3 border border-green-600 text-green-600 rounded-lg""
             >""
 :pages.disabled/pages/services/AIFinancialAnalyticsPlatform.tsx
               <Mail className="w-4 h-4 mr-2"  /> kleber@ziontechgroup.com
@@ -478,7 +438,6 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
           <div className="mt-4 text-sm text-zion-slate-light">
             Visit us at:{' '}
             <a""
->>>>>>> pr-10728
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
@@ -489,9 +448,7 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
               className="text-green-600 hover:underline"
               className="text-green-600 hover:underline""
             >
->>>>>>> pr-10728
-              https://ziontechgroup.com            </a>
-          </div>
+              https://ziontechgroup.com            </a>          </div>
         </div>
       </section>
     </div>
@@ -503,4 +460,3 @@ export default function AIFinancialAnalyticsPlatform(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728

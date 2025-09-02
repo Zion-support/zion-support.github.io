@@ -16,7 +16,6 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
         <motion.div;
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}""
->>>>>>> pr-10728
           className="text-center mb-16""
         >""
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-6">
@@ -27,9 +26,7 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
             Micro SaaS Solutions"
             Micro SaaS Solutions;
           </h1>""
->>>>>>> pr-10728
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Scalable, focused software solutions designed to solve specific;
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">            Scalable, focused software solutions designed to solve specific;
             business challenges with transparent pricing and rapid deployment.
           </p>
         </motion.div>
@@ -48,9 +45,7 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
           transition={{ delay: 0.2 }}""
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16""
         >
->>>>>>> pr-10728
-          {solutions.map((solution, index;
-            <motion.div;
+          {solutions.map((solution, index;            <motion.div;
               key={solution.name}
               initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
@@ -60,9 +55,7 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
               animate={{ opacity: 1, y: 0 }}"
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 * index }}""
->>>>>>> pr-10728
-              className="bg-slate-800 rounded-2xl p-6 hover:bg-slate-700 transition-colors group""
-            >""
+              className="bg-slate-800 rounded-2xl p-6 hover:bg-slate-700 transition-colors group""            >""
               <div className="flex items-center space-x-4 mb-4">""
                 <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center">""
                   <solution.icon className="w-6 h-6 text-white" />
@@ -73,9 +66,7 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
                 </div>"
                 </div>
                 <div>""
->>>>>>> pr-10728
-                  <span className="text-xs font-medium text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full">
-                    {solution.category}
+                  <span className="text-xs font-medium text-cyan-400 bg-cyan-400/10 px-2 py-1 rounded-full">                    {solution.category}
                   </span>
                 </div>
 
@@ -102,9 +93,7 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
                     to={service.link}
                     className="block w-full text-center bg-blue-600 text-white px-4 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200""
                   >
->>>>>>> pr-10728
-                    Learn More;
-                  </Link>
+                    Learn More;                  </Link>
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
                   <Link"
                     to="/request-quote""
@@ -116,9 +105,7 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
                     to="/request-quote""
                     className="block w-full text-center border border-gray-300 text-gray-700 px-4 py-3 rounded-lg font-medium hover:bg-gray-50 transition-colors duration-200""
                   >
->>>>>>> pr-10728
-                    Get Quote;
-                  </Link>
+                    Get Quote;                  </Link>
                 </div>
               </div>
             </div>
@@ -191,9 +178,7 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
                 {solution.features.map((feature, featureIndex) => (
                   <div;
                     key={featureIndex}""
->>>>>>> pr-10728
-                    className="flex items-center space-x-2 text-sm""
-                  >""
+                    className="flex items-center space-x-2 text-sm""                  >""
                     <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>""
                     <span className="text-slate-300">{feature}</span>
                   </div>
@@ -205,9 +190,7 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
               </div>"
               </div>
 ""
->>>>>>> pr-10728
-              <button className="w-full mt-6 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-medium transition-colors">
-                Learn More;
+              <button className="w-full mt-6 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-medium transition-colors">                Learn More;
               </button>
             </motion.div>
           ))}
@@ -223,9 +206,7 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
           animate={{ opacity: 1, y: 0 }}"
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}""
->>>>>>> pr-10728
-          className="text-center""
-        >""
+          className="text-center""        >""
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8">""
             <h2 className="text-2xl font-bold text-white mb-4">
 :pages.disabled/pages/services/MicroSAASSolutions.tsx
@@ -253,9 +234,7 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
               <button className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg font-medium transition-colors">
                 Get Free Consultation;
               </button>""
->>>>>>> pr-10728
-              <button className="px-6 py-3 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 rounded-lg font-medium transition-colors">
-                View Pricing;
+              <button className="px-6 py-3 border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 rounded-lg font-medium transition-colors">                View Pricing;
               </button>
             </div>
           </div>
@@ -270,4 +249,3 @@ export default function MicroSAASSolutions(function MicroSAASSolutions() {): any
 '"'"
   )}
 '""
->>>>>>> pr-10728

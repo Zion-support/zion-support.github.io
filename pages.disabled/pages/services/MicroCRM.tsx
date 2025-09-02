@@ -11,9 +11,7 @@ const MicroCRM: React.FC = props {}
   return()
     <div className="min-h-screen bg-futuristic text-white">
       <SEO""
->>>>>>> pr-10728
-        title="Micro CRM for Local Businesses""
-        description="Lightweight customer tracking, reminders, invoices, and reviews for local SMBs.""
+        title="Micro CRM for Local Businesses""        description="Lightweight customer tracking, reminders, invoices, and reviews for local SMBs.""
       />""
       <section className="container-responsive section-padding">""
         <h1 className="heading-responsive text-gradient">Micro CRM</h1>"        <p className="mt-4 max-w-3xl text-zion-slate-light text-responsive">
@@ -28,9 +26,7 @@ const MicroCRM: React.FC = props {}
           invoices with SMS reminders, online payments, and review requests to;
           grow word‑of‑mouth.
         </p>""
->>>>>>> pr-10728
-        <div className="grid-futuristic mt-10">""
-          <div className="card-futuristic">""
+        <div className="grid-futuristic mt-10">""          <div className="card-futuristic">""
             <h2 className="text-xl font-semibold mb-2">Highlights</h2>""
             <ul className="list-disc pl-5 space-y-2 text-zion-slate-light">
               <li>Contacts, pipelines, and tasks in one view</li>
@@ -45,9 +41,7 @@ const MicroCRM: React.FC = props {}
             </ul>"
             </ul>
           </div>""
->>>>>>> pr-10728
-          <div className="card-futuristic">""
-            <h2 className="text-xl font-semibold mb-2">Pricing</h2>""
+          <div className="card-futuristic">""            <h2 className="text-xl font-semibold mb-2">Pricing</h2>""
             <ul className="list-disc pl-5 space-y-2 text-zion-slate-light">
               <li>Solo: $19/mo</li>
               <li>Team: $79/mo up to 10 users</li>
@@ -65,9 +59,7 @@ const MicroCRM: React.FC = props {}
               href="/request-quote""
               className="btn-futuristic mt-4 inline-block""
             >
->>>>>>> pr-10728
-              Get started;
-            </a>
+              Get started;            </a>
           </div>
         </div>
       </section>
@@ -78,9 +70,7 @@ const MicroCRM: React.FC = props {}
 "
 
       {/* Services Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-800/30">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-800/30">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/MicroCRM.tsx
@@ -90,7 +80,6 @@ const MicroCRM: React.FC = props {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -101,9 +90,7 @@ const MicroCRM: React.FC = props {}
               Core CRM Services"
               Core CRM Services;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From contact management to sales tracking, we provide;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              From contact management to sales tracking, we provide;
               comprehensive CRM capabilities for your business.
             </p>
 :pages.disabled/pages/services/MicroCRM.tsx
@@ -127,7 +114,6 @@ const MicroCRM: React.FC = props {}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200""
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -138,9 +124,7 @@ const MicroCRM: React.FC = props {}
                   <Target className="w-8 h-8 text-white"  />"
                   <Target className="w-8 h-8 text-white"  />
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {service.title}"
+                <h3 className="text-xl font-semibold text-white mb-2">                  {service.title}"
                 </h3>"                <p className="text-gray-300 text-sm">{service.description}</p>
               </motion.div>
             ))}
@@ -154,9 +138,7 @@ const MicroCRM: React.FC = props {}
 "
 
       {/* Use Cases Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/MicroCRM.tsx
@@ -166,7 +148,6 @@ const MicroCRM: React.FC = props {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -177,9 +158,7 @@ const MicroCRM: React.FC = props {}
               Perfect For Your Industry"
               Perfect For Your Industry;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our Micro CRM is designed to work seamlessly across various local;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              Our Micro CRM is designed to work seamlessly across various local;
               business types and industries.
             </p>
 :pages.disabled/pages/services/MicroCRM.tsx
@@ -203,7 +182,6 @@ const MicroCRM: React.FC = props {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-blue-500/30 transition-all duration-200""
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -214,9 +192,7 @@ const MicroCRM: React.FC = props {}
                   <Target className="w-8 h-8 text-white"  />"
                   <Target className="w-8 h-8 text-white"  />
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {useCase.industry}"
+                <h3 className="text-xl font-semibold text-white mb-2">                  {useCase.industry}"
                 </h3>"                <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -230,9 +206,7 @@ const MicroCRM: React.FC = props {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">""
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-r from-blue-500/10 to-cyan-500/10">""        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -267,9 +241,7 @@ const MicroCRM: React.FC = props {}
                 Get Started Today""
                 <ArrowRight className="w-5 h-5 ml-2"  />
               </button>"              <button className="px-8 py-4 border border-blue-500/30 text-blue-400 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-200">
->>>>>>> pr-10728
-                Contact Sales;
-              </button>
+                Contact Sales;              </button>
             </div>
           </motion.div>
         </div>
@@ -285,4 +257,3 @@ export default MicroCRM;"
 '"'"
 export default MicroCRM;
 '""
->>>>>>> pr-10728

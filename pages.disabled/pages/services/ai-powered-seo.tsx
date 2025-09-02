@@ -45,9 +45,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative overflow-hidden py-20 lg:py-32">""
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
+      <section className="relative overflow-hidden py-20 lg:py-32">""        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10"></div>"        <div className="container mx-auto px-4 relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
@@ -57,9 +55,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center max-w-4xl mx-auto""
-          >""
+            className="text-center max-w-4xl mx-auto""          >""
             <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full border border-cyan-400/30 mb-6">""
               <Search className="w-5 h-5 text-cyan-400 mr-2"  />"              <span className="text-cyan-300 font-medium">AI-Powered SEO</span>
 :pages.disabled/pages/services/ai-powered-seo.tsx
@@ -85,9 +81,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
               <span className="text-white">That Actually Works</span>
             </h1>
 ""
->>>>>>> pr-10728
-            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your search engine optimization with cutting-edge AI;
+            <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">              Revolutionize your search engine optimization with cutting-edge AI;
               technology. Our machine learning algorithms predict trends,
               optimize content, and drive unprecedented organic growth.
 :pages.disabled/pages/services/ai-powered-seo.tsx
@@ -127,9 +121,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
               >""
                 <Monitor className="w-5 h-5 mr-2"  />                View Demo;
               </motion.button>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/ai-powered-seo.tsx
@@ -139,9 +131,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="container mx-auto px-4">
+      <section className="py-20">""        <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
@@ -151,9 +141,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
-          >""
+            className="text-center mb-16""          >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ai-powered-seo.tsx
               Powered by Advanced AI Technology"
@@ -178,9 +166,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
             </p>
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">            {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -191,9 +177,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 group""
-              >""
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300 group""              >""
                 <div className="w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-lg flex items-center justify-center mb-4 group-hover:from-cyan-400/40 group-hover:to-blue-500/40 transition-all duration-300">""
 :pages.disabled/pages/services/ai-powered-seo.tsx
                   <feature.icon className="w-6 h-6 text-cyan-400" />"
@@ -208,9 +192,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+                <p className="text-gray-300">{feature.description}</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -222,9 +204,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-800/30">""
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-slate-800/30">""        <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
@@ -234,7 +214,6 @@ export default function AIPoweredSEO(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -245,9 +224,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
               Proven Results & Benefits"
               Proven Results & Benefits;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered SEO services deliver measurable results that;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Our AI-powered SEO services deliver measurable results that;
               directly impact your bottom line and competitive position.
             </p>
 :pages.disabled/pages/services/ai-powered-seo.tsx
@@ -257,9 +234,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">            {benefits.map((benefit, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -270,9 +245,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4""
-              >""
+                className="flex items-center space-x-4 bg-slate-700/30 rounded-lg p-4""              >""
                 <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0"  />"                <span className="text-white font-medium">{benefit}</span>
               </motion.div>
             ))}
@@ -286,9 +259,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
 "
 
       {/* Services & Pricing */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="container mx-auto px-4">
+      <section className="py-20">""        <div className="container mx-auto px-4">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/ai-powered-seo.tsx
@@ -298,7 +269,6 @@ export default function AIPoweredSEO(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -309,9 +279,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
               Flexible Service Packages"
               Flexible Service Packages;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the AI-powered SEO solution that fits your business needs;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Choose the AI-powered SEO solution that fits your business needs;
               and budget. All packages include our advanced AI technology and;
               expert support.
             </p>
@@ -322,9 +290,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">            {services.map((service, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -335,9 +301,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300""
-              >""
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-cyan-400/30 transition-all duration-300""              >""
                 <h3 className="text-xl font-semibold text-white mb-3">
 :pages.disabled/pages/services/ai-powered-seo.tsx
                   {service.title}"
@@ -354,9 +318,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
                 <div className="text-2xl font-bold text-cyan-400 mb-4">
                   {service.price}
                 </div>""
->>>>>>> pr-10728
-                <button className="w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">
-                  Get Started;
+                <button className="w-full py-3 px-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-300">                  Get Started;
                 </button>
               </motion.div>
             ))}
@@ -370,9 +332,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">""
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-20 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10">""        <div className="container mx-auto px-4 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -427,9 +387,7 @@ export default function AIPoweredSEO(...args: any[]): any {}
               >""
                 <Phone className="w-5 h-5 mr-2"  />                Call +1 302 464 0950;
               </motion.button>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
     </div>
@@ -441,4 +399,3 @@ export default function AIPoweredSEO(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728

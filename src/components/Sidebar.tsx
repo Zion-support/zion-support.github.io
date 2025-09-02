@@ -40,6 +40,4 @@ export const Sidebar: React.FC = () => {
     </aside>
   );
 };
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
 
->>>>>>> pr-10728

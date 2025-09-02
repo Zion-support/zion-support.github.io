@@ -19,9 +19,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
   return()
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO""
->>>>>>> pr-10728
-        title="Landing Page Generator - Zion Tech Group""
-        description="Generate, A/B test, and deploy high-converting landing pages with AI.""
+        title="Landing Page Generator - Zion Tech Group""        description="Generate, A/B test, and deploy high-converting landing pages with AI.""
       />""
       <section className="container mx-auto px-4 py-16">""
         <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight">
@@ -32,38 +30,14 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
           Landing Page Generator"
           Landing Page Generator;
         </h1>""
->>>>>>> pr-10728
-        <p className="mt-4 max-w-3xl text-slate-300">
-          Create optimized, on-brand pages from a prompt or product brief.
+        <p className="mt-4 max-w-3xl text-slate-300">          Create optimized, on-brand pages from a prompt or product brief.
           Built-in copy, image generation, forms, analytics, and deployment to;
           your stack.
 :pages.disabled/pages/services/LandingPageGenerator.tsx
         </p>"
 ""
-
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">'
-          {[''
-            'On-brand copy and image generation',SEO-ready metadata and schema',A/B testing and analytics hooks',One-click deploy to Vercel/Netlify/S3',Forms with spam protection and CRM sync',Localization and accessibility checks',
-          ].map(b => (
-            <div"
-        </p>
-""
->>>>>>> pr-10728
-        <div className="mt-10 grid gap-6 sm: anygrid-cols-2 lg:grid-cols-3">
-  '
-          {[''
-  'On-brand copy and image generation',SEO-ready metadata and schema
-  ',A/B testing and analytics hooks',One-click deploy to Vercel/Netlify/S3
-  ',Forms with spam protection and CRM sync',Localization and accessibility checks
-  ',
-          ].map(b => (
-
-            <div"key={b}""
-
-            <div;
-              key={b}""
->>>>>>> pr-10728
               className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4""
+            <div"key={b}""              className="flex items-start gap-3 rounded-xl bg-slate-900/60 border border-cyan-400/15 p-4""
             >""
               <CheckCircle2 className="mt-0.5 h-5 w-5 text-cyan-300" />""
               <div className="text-slate-200">{b}</div>
@@ -84,9 +58,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
           <div className="flex items-center gap-2 text-slate-200 font-semibold">""
             <DollarSign className="h-4 w-4"  /> Pricing;
           </div>"          <ul className="mt-3 grid gap-3 sm:grid-cols-2 text-slate-300 text-sm">
->>>>>>> pr-10728
-            <li>Starter: $39/mo + 3 pages</li>
-            <li>Growth: $129/mo + 20 pages</li>
+            <li>Starter: $39/mo + 3 pages</li>            <li>Growth: $129/mo + 20 pages</li>
             <li>Enterprise: Custom; SSO, compliance, SLAs</li>
             <li>Setup: $2k–$8k (brand + components)</li>
 :pages.disabled/pages/services/LandingPageGenerator.tsx
@@ -96,9 +68,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
           </ul>"
           </ul>
           <a""
->>>>>>> pr-10728
-            className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200""
-            href="https://ziontechgroup.com/services""
+            className="mt-3 inline-flex items-center text-cyan-300 hover:text-cyan-200""            href="https://ziontechgroup.com/services""
             target="_blank""
             rel="noreferrer""
           >""
@@ -113,9 +83,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
           </a>""
           <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-slate-300">
             <a""
->>>>>>> pr-10728
-              href="tel:+13024640950""
-              className="inline-flex items-center gap-2 hover:text-cyan-200""
+              href="tel:+13024640950""              className="inline-flex items-center gap-2 hover:text-cyan-200""
             >""
 :pages.disabled/pages/services/LandingPageGenerator.tsx
               <Globe className="h-4 w-4"  /> +1 302 464 0950
@@ -126,7 +94,6 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
               <Globe className="h-4 w-4"  /> +1 302 464 0950;
             </a>
             <a""
->>>>>>> pr-10728
               href="mailto:kleber@ziontechgroup.com""
               className="inline-flex items-center gap-2 hover:text-cyan-200""
             >""
@@ -137,9 +104,7 @@ const LandingPageGenerator: React.FC = (): JSX.Element => {}
               <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com
               <Mail className="h-4 w-4"  /> kleber@ziontechgroup.com;
             </a>          </div>
->>>>>>> pr-10728
-        </div>
-      </section>
+        </div>      </section>
     </div>
   )};
 ;
@@ -151,4 +116,3 @@ export { LandingPageGenerator };export default LandingPageGenerator;'"
 '"'"
 export { LandingPageGenerator };export default LandingPageGenerator;
 '""
->>>>>>> pr-10728

@@ -11,8 +11,7 @@ class BuildErrorMonitor {
   constructor() {
     this.buildCheckInterval = process.env.BUILD_CHECK_INTERVAL || 900000; // 15 minutes
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    console.log(`Build check interval: ${this.buildCheckInterval}ms`);
-    console.log(`Auto-fix build: ${this.autoFixBuild}`);
+    console.log(`Build check interval: ${this.buildCheckInterval}ms`);    console.log(`Auto-fix build: ${this.autoFixBuild}`);
   }
 
   async start() {
@@ -27,8 +26,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   async checkBuildErrors() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    const report = {
-      timestamp: new Date().toISOString(),
+    const report = {      timestamp: new Date().toISOString(),
       buildStatus:
   'unknown',
       errors: [],
@@ -63,8 +61,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       // Save report
       this.saveReport(report);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      console.log(`Build time: ${report.buildTime}ms`);
-      console.log(
+      console.log(`Build time: ${report.buildTime}ms`);      console.log(
         `Errors: ${report.errors.length}, Warnings: ${report.warnings.length}`
       );
     } catch (error) {
@@ -82,7 +79,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
       }).toString();
-
       return {
         success: true,
         errors: [],
@@ -111,8 +107,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
       // Vite/Rollup errors
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        errors.push({
-          type:
+        errors.push({          type:
   'build,
           message: line.trim(),
           line: i + 1,
@@ -127,8 +122,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
           message: line.trim(),
           line: i + 1,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        });
-      }
+        });      }
     }
 
     return errors;
@@ -142,8 +136,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
           message: line.trim(),
           line: i + 1,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        });
-      }
+        });      }
     }
 
     return warnings;
@@ -234,7 +227,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         pattern: /export\s*{\s*default\s*}/,
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     // This would need file-specific logic
     // For now, just return false to indicate no fix applied
     return false;
@@ -264,7 +256,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     // Performance suggestions
 ursor/automate-test-fix-improve-and-merge-code-99d1
     }
-
     // Error pattern suggestions
     const moduleErrors = report.errors.filter(e => e.type === 'module
   ').length;
@@ -274,8 +265,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       );
     }
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    if (tsErrors > 0) {
-      suggestions.push(
+    if (tsErrors > 0) {      suggestions.push(
         `Found ${tsErrors} TypeScript errors - run type checking separately`
       );
     }
@@ -284,7 +274,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     if (report.warnings.length > 10) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
     }
-
     return suggestions;
   }
 

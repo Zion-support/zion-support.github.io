@@ -10,9 +10,7 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
       <h1 className="text-4xl font-bold mb-4">Website AI Chatbot</h1>"      <p className="text-slate-300 max-w-3xl">Deploy an AI chatbot trained on your docs, pages, and FAQs. Deflect support tickets, qualify prospects, and handoff to live agents with transcripts.</p>"
       <h1 className="text-4xl font-bold mb-4">Website AI Chatbot</h1>"      <p className="text-slate-300 max-w-3xl">Deploy an AI chatbot trained on your docs, pages, and FAQs. Deflect support tickets, qualify prospects, and handoff to live agents with transcripts.</p>
     </section>""
->>>>>>> pr-10728
-    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
+    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Capabilities</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
           <li>RAG over your site, PDFs, and knowledge base</li>
@@ -26,9 +24,7 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
         </ul>"
         </ul>
       </div>""
->>>>>>> pr-10728
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
-        <h3 className="font-semibold mb-2">Integrations</h3>""
+      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""        <h3 className="font-semibold mb-2">Integrations</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
           <li>Zendesk, Freshdesk, Intercom</li>
           <li>Slack, Microsoft Teams</li>
@@ -40,9 +36,7 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
         </ul>"
         </ul>
       </div>""
->>>>>>> pr-10728
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
-        <h3 className="font-semibold mb-2">Pricing</h3>""
+      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""        <h3 className="font-semibold mb-2">Pricing</h3>""
         <ul className="text-slate-300 space-y-1">
           <li>Starter: $299/mo up to 1k chats</li>
           <li>Growth: $899/mo up to 10k chats</li>
@@ -55,9 +49,7 @@ const WebsiteAiChatbot: React.FC = (): JSX.Element => (
       </div>;"
       </div>;
     </section>;""
->>>>>>> pr-10728
-    <section className="container mx-auto px-4 pb-16">;""
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Get started</a>;
+    <section className="container mx-auto px-4 pb-16">;""      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Get started</a>;
     </section>;
   </div>;
 );
@@ -72,4 +64,3 @@ export default WebsiteAiChatbot;
 '"'"
 
 '""
->>>>>>> pr-10728

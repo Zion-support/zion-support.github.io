@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
 import UltraFuturisticBackground from
   '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from
@@ -34,7 +33,6 @@ export default function Services2026ShowcaseEnhancedPage() {
   // Map service variants to supported card variants
 ursor/automate-test-fix-improve-and-merge-code-99d1
   };
-
   // Combine all 2026 services including new ones
   const all2026Services = [
     ...innovative2026MicroSaasServicesV2,
@@ -49,7 +47,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   const categories = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
   ];
-
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = all2026Services;
@@ -68,8 +65,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
     // Category filter
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      }
-    }
+      }    }
 
     // Price filter
     if (selectedPriceRange !== 'all
@@ -77,16 +73,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        return true;
-      });
+        return true;      });
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-          return b.rating - a.rating;
-        default:
+          return b.rating - a.rating;        default:
           return a.name.localeCompare(b.name);
       }
     });
@@ -105,7 +99,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     totalServices: all2026Services.length,
 ursor/automate-test-fix-improve-and-merge-code-99d1
   };
-
   return (
     <UltraFuturisticBackground intensity="high">
       <div className="min-h-screen">
@@ -182,8 +175,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                  </motion.div>
-                ))}
+                  </motion.div>                ))}
               </div>
 
               {/* Contact Information */}
@@ -293,8 +285,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   grid')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                      }`}
-                    >
+                      }`}                    >
                       <Grid className="w-4 h-4 mx-auto" />
                     </button>
                     <button
@@ -302,8 +293,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   list')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                      }`}
-                    >
+                      }`}                    >
                       <List className="w-4 h-4 mx-auto" />
                     </button>
                   </div>
@@ -314,8 +304,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
               <div className="text-center">
                 <p className="text-gray-400">
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                </p>
-              </div>
+                </p>              </div>
             </div>
           </div>
         </section>
@@ -341,16 +330,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                 </motion.div>
               ) : (
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                  {filteredServices.map((service, index) => (
-                    <motion.div
+                  {filteredServices.map((service, index) => (                    <motion.div
                       key={service.id}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                    >
-                      <UltraFuturisticCard className="h-full">
+                    >                      <UltraFuturisticCard className="h-full">
                         <div className="p-6">
                           {/* Service Header */}
                           <div className="flex items-start justify-between mb-4">
@@ -457,8 +444,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                           {/* Action Buttons */}
                           <div className="flex space-x-2">
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                            >
-                              Learn More
+                            >                              Learn More
                               <ArrowRight className="w-4 h-4 ml-1" />
                             </button>
                             <button
@@ -502,8 +488,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                >
-                  <Mail className="w-5 h-5 mr-2" />
+                >                  <Mail className="w-5 h-5 mr-2" />
                   Schedule Consultation
                 </button>
                 <button

@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
 export default function Services2026ShowcasePage() {
   const [searchTerm, setSearchTerm] = useState('
   ');
@@ -13,7 +12,6 @@ export default function Services2026ShowcasePage() {
   // Map service variants to supported card variants
 ursor/automate-test-fix-improve-and-merge-code-99d1
   };
-
   // Combine all 2026 services
   const all2026Services = [
     ...innovative2026MicroSaasServicesV2,
@@ -25,7 +23,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   const categories = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
   ];
-
   // Filter and sort services
   const filteredServices = useMemo(() => {
     let filtered = all2026Services;
@@ -47,8 +44,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ') {
       filtered = filtered.filter(service => {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        return true;
-      });
+        return true;      });
     }
 
     // Price range filter
@@ -56,16 +52,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ') {
       filtered = filtered.filter(service => {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        return true;
-      });
+        return true;      });
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        default:
-          return a.name.localeCompare(b.name);
+        default:          return a.name.localeCompare(b.name);
       }
     });
 
@@ -230,8 +224,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
               <div className="text-center">
                 <p className="text-gray-400">
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                </p>
-              </div>
+                </p>              </div>
             </div>
           </div>
         </section>
@@ -254,8 +247,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                     onClick={() => {
                       setSearchTerm('');
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                    Clear Filters
-                  </button>
+                    Clear Filters                  </button>
                 </motion.div>
               ) : (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

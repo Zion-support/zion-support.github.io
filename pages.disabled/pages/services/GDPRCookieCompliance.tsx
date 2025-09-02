@@ -10,9 +10,7 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
       <h1 className="text-4xl font-bold mb-4">GDPR & Cookie Compliance</h1>"      <p className="text-slate-300 max-w-3xl">Detect trackers, auto-categorize cookies, and display geo-aware consent banners. Generate audit-ready logs and policy versions across your properties.</p>"
       <h1 className="text-4xl font-bold mb-4">GDPR & Cookie Compliance</h1>"      <p className="text-slate-300 max-w-3xl">Detect trackers, auto-categorize cookies, and display geo-aware consent banners. Generate audit-ready logs and policy versions across your properties.</p>
     </section>""
->>>>>>> pr-10728
-    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
+    <section className="container mx-auto px-4 pb-8 grid md:grid-cols-3 gap-6">""      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
         <h3 className="font-semibold mb-2">Features</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
           <li>Scanner finds third-party trackers and categorizes cookies</li>
@@ -26,9 +24,7 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
         </ul>"
         </ul>
       </div>""
->>>>>>> pr-10728
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
-        <h3 className="font-semibold mb-2">Integrations</h3>""
+      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""        <h3 className="font-semibold mb-2">Integrations</h3>""
         <ul className="list-disc ml-5 text-slate-300 space-y-1">
           <li>GTM, Segment, Adobe Launch</li>
           <li>HubSpot, Marketo, Salesforce</li>
@@ -40,9 +36,7 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
         </ul>"
         </ul>
       </div>""
->>>>>>> pr-10728
-      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""
-        <h3 className="font-semibold mb-2">Pricing</h3>""
+      <div className="p-6 bg-slate-800 rounded-xl border border-slate-700">""        <h3 className="font-semibold mb-2">Pricing</h3>""
         <ul className="text-slate-300 space-y-1">
           <li>Startup: $49/mo per domain</li>
           <li>Business: $149/mo up to 5 domains</li>
@@ -55,9 +49,7 @@ const GDPRCookieCompliance: React.FC = (): JSX.Element => (
       </div>;"
       </div>;
     </section>;""
->>>>>>> pr-10728
-    <section className="container mx-auto px-4 pb-16">;""
-      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Talk to compliance</a>;
+    <section className="container mx-auto px-4 pb-16">;""      <a href="/contact" className="inline-block px-6 py-3 rounded-lg bg-cyan-600 hover:bg-cyan-500 transition">Talk to compliance</a>;
     </section>;
   </div>;
 );
@@ -72,4 +64,3 @@ export default GDPRCookieCompliance;
 '"'"
 
 '""
->>>>>>> pr-10728

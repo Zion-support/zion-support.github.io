@@ -29,9 +29,7 @@ export default function AIContentGenerator(...args: any[]): any {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative py-20 lg:py-32 overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>""
+      <section className="relative py-20 lg:py-32 overflow-hidden">""        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>""
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center">""
             <div className="max-w-4xl mx-auto mb-12">"              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -42,9 +40,7 @@ export default function AIContentGenerator(...args: any[]): any {}
                 AI Content Generator"
                 AI Content Generator;
               </h1>""
->>>>>>> pr-10728
-              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Revolutionary AI-powered content creation that writes,
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">                Revolutionary AI-powered content creation that writes,
                 optimizes, and scales your content strategy. Generate;
                 high-quality, SEO-optimized content in minutes.
 :pages.disabled/pages/services/ai-content-generator.tsx
@@ -64,9 +60,7 @@ export default function AIContentGenerator(...args: any[]): any {}
                 href="/contact""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25""
               >
->>>>>>> pr-10728
-                Get Started with AI Content Generator;
-              </a>
+                Get Started with AI Content Generator;              </a>
             </div>
           </div>
         </div>
@@ -78,9 +72,7 @@ export default function AIContentGenerator(...args: any[]): any {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white/5">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+      <section className="py-20 bg-white/5">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-content-generator.tsx
@@ -90,9 +82,7 @@ export default function AIContentGenerator(...args: any[]): any {}
               Revolutionary AI Content Generation"
               Revolutionary AI Content Generation;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your content marketing with our advanced AI content;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Transform your content marketing with our advanced AI content;
               generator;
             </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
@@ -102,9 +92,7 @@ export default function AIContentGenerator(...args: any[]): any {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">""
               <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6">""
 :pages.disabled/pages/services/ai-content-generator.tsx
                 <Brain className="w-8 h-8 text-blue-400"  />"
@@ -119,9 +107,7 @@ export default function AIContentGenerator(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 Intelligent Content Creation;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                AI-powered writing that understands your brand voice and creates;
-                engaging, original content;
+                AI-powered writing that understands your brand voice and creates;                engaging, original content;
               </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
             </div>"
@@ -144,9 +130,7 @@ export default function AIContentGenerator(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 SEO Optimization;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                Automatically optimize content for search engines with;
-                intelligent keyword integration;
+                Automatically optimize content for search engines with;                intelligent keyword integration;
               </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
             </div>"
@@ -169,9 +153,7 @@ export default function AIContentGenerator(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 Audience Targeting;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                Create content specifically tailored to your target audience;
-                demographics and preferences;
+                Create content specifically tailored to your target audience;                demographics and preferences;
               </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
             </div>"
@@ -194,9 +176,7 @@ export default function AIContentGenerator(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 Performance Analytics;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                Track content performance and get insights to improve your;
-                content strategy;
+                Track content performance and get insights to improve your;                content strategy;
               </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
             </div>"
@@ -219,9 +199,7 @@ export default function AIContentGenerator(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 Quality Assurance;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                Built-in plagiarism detection and content quality checks ensure;
-                originality;
+                Built-in plagiarism detection and content quality checks ensure;                originality;
               </p>
 :pages.disabled/pages/services/ai-content-generator.tsx
             </div>"
@@ -244,9 +222,7 @@ export default function AIContentGenerator(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 Rapid Content Scaling;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                Generate weeks worth of content in minutes, not hours;
-              </p>
+                Generate weeks worth of content in minutes, not hours;              </p>
             </div>
           </div>
         </div>
@@ -258,9 +234,7 @@ export default function AIContentGenerator(...args: any[]): any {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
+      <section className="py-20">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
 :pages.disabled/pages/services/ai-content-generator.tsx
             Ready to Transform Your Content Strategy?"
@@ -283,9 +257,7 @@ export default function AIContentGenerator(...args: any[]): any {}
             href="/contact""
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25""
           >
->>>>>>> pr-10728
-            Get Started with AI Content Generator;
-          </a>
+            Get Started with AI Content Generator;          </a>
         </div>
       </section>
     </div>
@@ -299,4 +271,3 @@ export default function AIContentGenerator(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728

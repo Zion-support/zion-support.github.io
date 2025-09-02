@@ -4,8 +4,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   height?: number;
   className?: string;
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  style?: React.CSSProperties;
-  onClick?: () => void;
+  style?: React.CSSProperties;  onClick?: () => void;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -69,7 +68,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   if (!isInView) {
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   return()
     <div``      ref={imageRef}```      className={`relative ${className}`}`      style={style}
       onClick={onClick}
@@ -87,8 +85,7 @@ width={fill ? undefined : width}``        height={fill ? undefined : height}``` 
         onLoad={handleLoad}
         onError={handleError}
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  );
-};
+  );};
 
 // HOC for wrapping components with image optimization;
 export const withImageOptimization = <P extends object>(;Component: React.ComponentType<P>

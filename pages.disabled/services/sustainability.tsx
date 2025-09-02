@@ -69,9 +69,7 @@ export default function Sustainability(...args: []):  {}
     {}
       title: 'Carbon Footprint Analysis',
       description: 'Comprehensive environmental impact assessment',
->>>>>>> pr-10728
-      icon: Globe};
-  ]};
+      icon: Globe};  ]};
   ];
 
   return (""
@@ -82,9 +80,7 @@ export default function Sustainability(...args: []):  {}
     <div className = "min-h-screen bg-futuristic">"
     <div className = "min-h-screen bg-futuristic">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative pt-32 pb-20 overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-slate-900 to-slate-900"></div>""
+      <section className="relative pt-32 pb-20 overflow-hidden">""        <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/20 via-slate-900 to-slate-900"></div>""
         <div className="container-responsive relative z-10">
           <motion.div;
             initial = {}
@@ -97,9 +93,7 @@ export default function Sustainability(...args: []):  {}
 
   y: 20;
 }}
->>>>>>> pr-10728
-            animate = {}
-  { opacity: 1,
+            animate = {}  { opacity: 1,
 :pages.disabled/services/sustainability.tsx
   y: 0
 
@@ -109,9 +103,7 @@ export default function Sustainability(...args: []):  {}
   y: 0;
 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
-            className="text-center max-w-4xl mx-auto""
-          >""
+            className="text-center max-w-4xl mx-auto""          >""
             <div className="inline-flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-4 py-2 mb-6">""
               <Heart className="w-5 h-5 text-emerald-400"  />"              <span className="text-emerald-400 font-medium">Green IT & Sustainability</span>
 :pages.disabled/services/sustainability.tsx
@@ -131,9 +123,7 @@ export default function Sustainability(...args: []):  {}
               <span className="text-gradient"> Sustainable Future</span>
             </h1>
 ""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Build a greener tomorrow with sustainable technology solutions.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">              Build a greener tomorrow with sustainable technology solutions.
               Reduce environmental impact while maintaining performance and efficiency.
 :pages.disabled/services/sustainability.tsx
             </p>"
@@ -152,9 +142,7 @@ export default function Sustainability(...args: []):  {}
                 Go Green with Tech""
                 <ArrowRight className="w-5 h-5 ml-2"  />
               </button>"              <button className="btn-outline px-8 py-4 text-lg">
->>>>>>> pr-10728
-                Learn More;
-              </button>
+                Learn More;              </button>
             </div>
           </motion.div>
         </div>
@@ -166,9 +154,7 @@ export default function Sustainability(...args: []):  {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="container-responsive">
+      <section className="py-20">""        <div className="container-responsive">
           <motion.div;
             initial = {}
   { opacity: 0,
@@ -180,9 +166,7 @@ export default function Sustainability(...args: []):  {}
 
   y: 20;
 }}
->>>>>>> pr-10728
-            whileInView = {}
-  { opacity: 1,
+            whileInView = {}  { opacity: 1,
 :pages.disabled/services/sustainability.tsx
   y: 0
 
@@ -195,7 +179,6 @@ export default function Sustainability(...args: []):  {}
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -206,7 +189,6 @@ export default function Sustainability(...args: []):  {}
               Why Choose Sustainable Technology?"
               Why Choose Sustainable Technology?
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Environmental responsibility meets technological innovation;
             </p>
@@ -217,34 +199,14 @@ export default function Sustainability(...args: []):  {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index)  => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">            {features.map((feature, index)  => (
               <motion.div;
                 key={feature.title}
                 initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-
-  y: 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/services/sustainability.tsx
-  y: 0}}
-
-  y: 20
-
-  y: 20;
-}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/services/sustainability.tsx
-  y: 0
-
-  y: 0;
-}}
->>>>>>> pr-10728
                 transition = {}
+  y: 0}}                transition = {}
   { duration: 0.6,
 :pages.disabled/services/sustainability.tsx
   delay: index * 0.1
@@ -255,7 +217,6 @@ export default function Sustainability(...args: []):  {}
   delay: index * 0.1;
 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""
@@ -266,9 +227,7 @@ export default function Sustainability(...args: []):  {}
                   <feature.icon className="w-8 h-8 text-white" />"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                <p className="text-zion-slate-light">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""                <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -281,9 +240,7 @@ export default function Sustainability(...args: []):  {}
 "
 
       {/* Services Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white/5">""
-        <div className="container-responsive">
+      <section className="py-20 bg-white/5">""        <div className="container-responsive">
           <motion.div;
             initial = {}
   { opacity: 0,
@@ -295,9 +252,7 @@ export default function Sustainability(...args: []):  {}
 
   y: 20;
 }}
->>>>>>> pr-10728
-            whileInView = {}
-  { opacity: 1,
+            whileInView = {}  { opacity: 1,
 :pages.disabled/services/sustainability.tsx
   y: 0
 
@@ -310,7 +265,6 @@ export default function Sustainability(...args: []):  {}
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -321,7 +275,6 @@ export default function Sustainability(...args: []):  {}
               Our Sustainability Services"
               Our Sustainability Services;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Comprehensive green technology solutions for eco-conscious businesses;
             </p>
@@ -332,34 +285,14 @@ export default function Sustainability(...args: []):  {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service, index)  => (
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">            {services.map((service, index)  => (
               <motion.div;
                 key={service.title}
                 initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-
-  x: index % 2 === 0 ? -20 : 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/services/sustainability.tsx
-  x: 0}}
-
-  x: index % 2 === 0 ? -20 : 20
-
-  x: index % 2 === 0 ? -20 : 20;
-}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/services/sustainability.tsx
-  x: 0
-
-  x: 0;
-}}
->>>>>>> pr-10728
                 transition = {}
+  x: 0}}                transition = {}
   { duration: 0.6,
 :pages.disabled/services/sustainability.tsx
   delay: index * 0.1
@@ -370,9 +303,7 @@ export default function Sustainability(...args: []):  {}
   delay: index * 0.1;
 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
-                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group""
-              >""
+                className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-8 hover:border-zion-cyan/40 transition-all duration-300 group""              >""
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>""
                 <p className="text-slate-300 mb-4">{service.description}</p>""
                 <div className="text-2xl font-bold text-emerald-400 mb-4">{service.price}</div>""
@@ -383,9 +314,7 @@ export default function Sustainability(...args: []):  {}
                 <ul className="space-y-2">"
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (""
->>>>>>> pr-10728
-                    <li key={featureIndex} className="flex items-center text-sm text-slate-300">""
-                      <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
+                    <li key={featureIndex} className="flex items-center text-sm text-slate-300">""                      <div className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></div>
                       {feature}
                     </li>
                   ))}
@@ -403,9 +332,7 @@ export default function Sustainability(...args: []):  {}
                   whileTap={{ scale: 0.95 }}""
                   className="w-full mt-6 px-4 py-2 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-emerald-600 transition-all duration-300""
                 >
->>>>>>> pr-10728
-                  Get Quote;
-                </motion.button>
+                  Get Quote;                </motion.button>
               </motion.div>
             ))}
           </div>
@@ -418,9 +345,7 @@ export default function Sustainability(...args: []):  {}
 "
 
       {/* Solutions */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="container mx-auto px-4">
+      <section className="py-20">""        <div className="container mx-auto px-4">
           <motion.div;
             initial = {}
   { opacity: 0,
@@ -432,9 +357,7 @@ export default function Sustainability(...args: []):  {}
 
   y: 20;
 }}
->>>>>>> pr-10728
-            whileInView = {}
-  { opacity: 1,
+            whileInView = {}  { opacity: 1,
 :pages.disabled/services/sustainability.tsx
   y: 0
 
@@ -444,9 +367,7 @@ export default function Sustainability(...args: []):  {}
   y: 0;
 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
-            className="text-center mb-16""
-          >""
+            className="text-center mb-16""          >""
             <h2 className="text-4xl font-bold text-white mb-4">
 :pages.disabled/services/sustainability.tsx
 :pages.disabled/services/sustainability.tsx
@@ -464,7 +385,6 @@ export default function Sustainability(...args: []):  {}
               Sustainability Solutions"
             </h2>""
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
->>>>>>> pr-10728
               Discover how sustainable technology can transform various aspects of your business 
 >              and create positive environmental impact
             </p>
@@ -473,9 +393,7 @@ export default function Sustainability(...args: []):  {}
 Sustainability Solutions;
 
               Sustainability Solutions;
->>>>>>> pr-10728
-            </h2>""
-            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+            </h2>""            <p className="text-xl text-slate-300 max-w-3xl mx-auto">
               Discover how sustainable technology can transform various aspects of your business;
               and create positive environmental impact;
             </p>
@@ -488,26 +406,8 @@ Sustainability Solutions;
                 initial = {}
   { opacity: 0,
 :pages.disabled/services/sustainability.tsx
-
-  scale: 0.8}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/services/sustainability.tsx
-  scale: 1}}
-
-  scale: 0.8
-
-  scale: 0.8;
-}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/services/sustainability.tsx
-  scale: 1
-
-  scale: 1;
-}}
->>>>>>> pr-10728
                 transition = {}
+  scale: 1}}                transition = {}
   { duration: 0.6,
 :pages.disabled/services/sustainability.tsx
 :pages.disabled/services/sustainability.tsx
@@ -524,7 +424,6 @@ Sustainability Solutions;
 "
   delay: index * 0.1;
 }}""
->>>>>>> pr-10728
                 className="text-center group""
               >""
                 <div className="w-16 h-16 bg-slate-800 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:bg-slate-700 transition-all duration-300">""
@@ -534,9 +433,7 @@ Sustainability Solutions;
 
                   <solution.icon className="w-8 h-8 text-emerald-400" />
                 </div>
->>>>>>> pr-10728
-              </motion.div>
-            ))}
+              </motion.div>            ))}
           </div>
         </div>
       </section>
@@ -547,9 +444,7 @@ Sustainability Solutions;
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="container-responsive">
+      <section className="py-20">""        <div className="container-responsive">
           <motion.div;
             initial = {}
   { opacity: 0,
@@ -561,9 +456,7 @@ Sustainability Solutions;
 
   y: 20;
 }}
->>>>>>> pr-10728
-            whileInView = {}
-  { opacity: 1,
+            whileInView = {}  { opacity: 1,
 :pages.disabled/services/sustainability.tsx
   y: 0
 
@@ -576,9 +469,7 @@ Sustainability Solutions;
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}""
->>>>>>> pr-10728
-            className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-3xl p-12 text-center relative overflow-hidden""
-          >""
+            className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-3xl p-12 text-center relative overflow-hidden""          >""
             <div className="absolute inset-0 bg-black/20"></div>""
             <div className="relative z-10">""
               <h2 className="text-4xl font-bold text-white mb-6">
@@ -603,9 +494,7 @@ Sustainability Solutions;
                 <button className="bg-white text-emerald-600 px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-colors duration-300">
                   Go Green with Tech;
                 </button>""
->>>>>>> pr-10728
-                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-emerald-600 transition-colors duration-300">
-                  Contact Green Team;
+                <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-emerald-600 transition-colors duration-300">                  Contact Green Team;
                 </button>
               </div>
             </div>
@@ -621,4 +510,3 @@ Sustainability Solutions;
 '"'"
   )}
 '""
->>>>>>> pr-10728

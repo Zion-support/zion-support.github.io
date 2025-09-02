@@ -4,14 +4,12 @@ const AIContentGenerator: NextPage = () => {
   const features = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const pricingPlans = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   return (
     <MainLayout
@@ -129,8 +127,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     plan.popular
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                  }`}
-                >
+                  }`}                >
                   Get Started
                 </Link>
               </div>

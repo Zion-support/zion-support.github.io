@@ -1,15 +1,5 @@
 
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppHeader } from './layout/AppHeader.jsx';
-import { Footer } from './components/Footer.jsx';
-import { ChatAssistant } from './components/ChatAssistant.tsx';
-
 ('');
-
-import React, { Suspense, lazy } from 'react'; import { BrowserRouter as Router, Routes, Route    } from 'react-router-dom'; import { AppHeader } from './layout/AppHeader.jsx'; import { Footer } from './components/Footer.jsx'; import { ChatAssistant } from './components/ChatAssistant.tsx';
->>>>>>> origin/cursor/website-audit-content-update-and-deployment-23ff
-
 // Home and main pages'
 const Home = lazy(() => import('./pages/Home.tsx'));
 const About = lazy(() => import('./pages/About.tsx'));
@@ -145,4 +135,3 @@ export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Site
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
 
 export { Home, About, Contact, BlogPage, PartnersPage, Login, FAQ, Careers, Sitemap, ComprehensivePricing, LoadingSpinner, ServicesPage, App };
->>>>>>> pr-10728

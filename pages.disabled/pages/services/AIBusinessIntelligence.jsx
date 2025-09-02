@@ -245,9 +245,7 @@ const AIBusinessIntelligence = () => {}
     {}
       name: '24/7 Monitoring',
       description: 'Continuous monitoring and alerting',
->>>>>>> pr-10728
-      icon: Clock}
-  ];
+      icon: Clock}  ];
   const containerVariants = {}
     hidden: { opacity: 0 },
     visible: {}
@@ -277,7 +275,6 @@ const AIBusinessIntelligence = () => {}
       <div className="relative overflow-hidden">""
         <div className="absolute inset-0 bg-[linear-gradient(rgba(34,221,210,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,221,210,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
 ""
->>>>>>> pr-10728
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -288,9 +285,7 @@ const AIBusinessIntelligence = () => {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center""
-          >""
+            className="text-center""          >""
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mb-6">""
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
               <TrendingUp className="w-10 h-10 text-white" />"
@@ -343,9 +338,7 @@ const AIBusinessIntelligence = () => {}
                 to="/services-showcase""
                 className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300""
               >
->>>>>>> pr-10728
-                View All Services;
-              </Link>
+                View All Services;              </Link>
             </div>
           </motion.div>
         </div>
@@ -363,9 +356,7 @@ const AIBusinessIntelligence = () => {}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <motion.div;
           variants={containerVariants}""
->>>>>>> pr-10728
-          initial="hidden""
-          whileInView="visible""
+          initial="hidden""          whileInView="visible""
           viewport={{ once: true }}""
           className="text-center mb-16""
         >""
@@ -392,9 +383,7 @@ const AIBusinessIntelligence = () => {}
             <motion.div;
               key={feature.title}
               variants={itemVariants}""
->>>>>>> pr-10728
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300""
-            >""
+              className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 hover:border-blue-500/50 transition-all duration-300""            >""
               <div className="flex items-start mb-4">""
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">""
                   <feature.icon className="w-6 h-6 text-white" />
@@ -411,9 +400,7 @@ const AIBusinessIntelligence = () => {}
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {feature.title}
                   </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {feature.description}
+                  <p className="text-gray-400 text-sm leading-relaxed">                    {feature.description}
                   </p>
                 </div>
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
@@ -439,9 +426,7 @@ const AIBusinessIntelligence = () => {}
                   {feature.benefits.map((benefit, idx) => (
                     <li;
                       key={idx}""
->>>>>>> pr-10728
-                      className="flex items-center text-sm text-gray-400""
-                    >""
+                      className="flex items-center text-sm text-gray-400""                    >""
                       <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                       {benefit}
                     </li>
@@ -459,9 +444,7 @@ const AIBusinessIntelligence = () => {}
 "
 
       {/* Solutions by Industry */}""
->>>>>>> pr-10728
-      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -472,7 +455,6 @@ const AIBusinessIntelligence = () => {}
             viewport={{ once: true }}"
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -483,9 +465,7 @@ const AIBusinessIntelligence = () => {}
               Solutions by Industry"
               Solutions by Industry;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored AI Business Intelligence solutions designed to address;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Tailored AI Business Intelligence solutions designed to address;
               the unique challenges and opportunities in your industry.
             </p>
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
@@ -495,9 +475,7 @@ const AIBusinessIntelligence = () => {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {solutions.map((category, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">            {solutions.map((category, index) => (
               <motion.div;
                 key={category.category}
                 initial={{ opacity: 0, y: 20 }}
@@ -509,9 +487,7 @@ const AIBusinessIntelligence = () => {}
                 viewport={{ once: true }}"
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6""
-              >""
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6""              >""
                 <div className="flex items-center mb-6">""
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg flex items-center justify-center mr-4">""
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
@@ -521,9 +497,7 @@ const AIBusinessIntelligence = () => {}
                     <category.icon className="w-6 h-6 text-white" />"
                     <category.icon className="w-6 h-6 text-white" />
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white">
-                    {category.category}
+                  <h3 className="text-xl font-semibold text-white">                    {category.category}
                   </h3>
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
                 </div>"
@@ -540,9 +514,7 @@ const AIBusinessIntelligence = () => {}
                   {category.solutions.map((solution, idx) => (
                     <li;
                       key={idx}""
->>>>>>> pr-10728
-                      className="flex items-center text-sm text-gray-400""
-                    >""
+                      className="flex items-center text-sm text-gray-400""                    >""
                       <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                       {solution}
                     </li>
@@ -560,9 +532,7 @@ const AIBusinessIntelligence = () => {}
 "
 
       {/* Technology Stack */}""
->>>>>>> pr-10728
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <motion.div;
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">        <motion.div;
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
@@ -572,7 +542,6 @@ const AIBusinessIntelligence = () => {}
           viewport={{ once: true }}"
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
           className="text-center mb-16""
         >""
           <h2 className="text-4xl font-bold text-white mb-6">
@@ -583,9 +552,7 @@ const AIBusinessIntelligence = () => {}
             Technology Stack"
             Technology Stack;
           </h2>""
->>>>>>> pr-10728
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Built on cutting-edge technologies to ensure scalability,
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">            Built on cutting-edge technologies to ensure scalability,
             performance, and reliability for enterprise-grade business;
             intelligence.
           </p>
@@ -596,9 +563,7 @@ const AIBusinessIntelligence = () => {}
         </motion.div>"
         </motion.div>
 ""
->>>>>>> pr-10728
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {technologies.map((tech, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">          {technologies.map((tech, index) => (
             <motion.div;
               key={tech.name}
               initial={{ opacity: 0, y: 20 }}
@@ -610,9 +575,7 @@ const AIBusinessIntelligence = () => {}
               viewport={{ once: true }}"
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
-              className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300""
-            >""
+              className="bg-slate-800/50 backdrop-blur-sm rounded-xl border border-slate-700/50 p-6 text-center hover:border-blue-500/50 transition-all duration-300""            >""
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
                 <tech.icon className="w-8 h-8 text-white" />"
@@ -627,9 +590,7 @@ const AIBusinessIntelligence = () => {}
               <h3 className="text-lg font-semibold text-white mb-2">
                 {tech.name}
               </h3>""
->>>>>>> pr-10728
-              <p className="text-gray-400 text-sm">{tech.description}</p>
-            </motion.div>
+              <p className="text-gray-400 text-sm">{tech.description}</p>            </motion.div>
           ))}
         </div>
       </div>
@@ -640,9 +601,7 @@ const AIBusinessIntelligence = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 border-t border-blue-500/20">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -653,9 +612,7 @@ const AIBusinessIntelligence = () => {}
             viewport={{ once: true }}"
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center""
-          >""
+            className="text-center""          >""
             <h2 className="text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/AIBusinessIntelligence.jsx
               Ready to Transform Your Business Intelligence?"
@@ -696,9 +653,7 @@ const AIBusinessIntelligence = () => {}
                 to="/case-studies""
                 className="border border-blue-400 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-400 hover:text-white transition-all duration-300""
               >
->>>>>>> pr-10728
-                View Case Studies;
-              </Link>
+                View Case Studies;              </Link>
             </div>
           </motion.div>
         </div>
@@ -715,4 +670,3 @@ export default AIBusinessIntelligence;'"
 '"'"
 export default AIBusinessIntelligence;
 '""
->>>>>>> pr-10728

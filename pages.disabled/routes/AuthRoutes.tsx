@@ -20,9 +20,7 @@ const AuthRoutes: any = () => {}
         path="/profile""
         element={}
           <ProtectedRoute>
->>>>>>> pr-10728
-            <div>Profile Page</div>
-          </ProtectedRoute>
+            <div>Profile Page</div>          </ProtectedRoute>
 
       />
 :pages.disabled/routes/AuthRoutes.tsx
@@ -38,9 +36,7 @@ const AuthRoutes: any = () => {}
         path="/dashboard""
         element={}
           <ProtectedRoute>
->>>>>>> pr-10728
-            <div>Dashboard</div>
-          </ProtectedRoute>
+            <div>Dashboard</div>          </ProtectedRoute>
 
       />
 :pages.disabled/routes/AuthRoutes.tsx
@@ -54,9 +50,7 @@ const AuthRoutes: any = () => {}
       <Route""
         path="/settings""
         element={;          <ProtectedRoute>;
->>>>>>> pr-10728
-            <div>Settings</div>;
-          </ProtectedRoute>};
+            <div>Settings</div>;          </ProtectedRoute>};
       />;
     </Routes>;
   )};
@@ -69,4 +63,3 @@ export default AuthRoutes}}}
 export default AuthRoutes}}}'"'"
 
 export default AuthRoutes}}}'""
->>>>>>> pr-10728

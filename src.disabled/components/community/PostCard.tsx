@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/components/community/PostCard.tsx
+:src.disabled/components/community/PostCard.tsx
 import React from 'react.ts';
 
 interface PostCardProps extends React.PropsWithChildren<{
@@ -60,4 +60,3 @@ export default function PostCard(...args[]: any):  {
   );
 }
 
->>>>>>> pr-10728:src/components/community/PostCard.tsx

@@ -16,8 +16,7 @@ function analyzeWebsite() {
   '🔍 Analyzing Zion Tech Group Website...\n');
 
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  // Extract route paths from App.tsx
-  const routeRegex = /path="([^"]+)"/g;
+  // Extract route paths from App.tsx  const routeRegex = /path="([^"]+)"/g;
   const routes = [];
   let match;
 
@@ -33,7 +32,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   const missingPages = [];
 ursor/automate-test-fix-improve-and-merge-code-99d1
     const items = fs.readdirSync(dir);
-
     items.forEach(item => {
       const fullPath = path.join(dir, item);
       const stat = fs.statSync(fullPath);
@@ -58,7 +56,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   routes.forEach(route => {
 ursor/automate-test-fix-improve-and-merge-code-99d1
     );
-
     if (!hasPage) {
       missingPages.push(route);
     }
@@ -74,8 +71,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   '.tsx');
     if (fs.existsSync(fullPath)) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        placeholderPages.push(pagePath);
-      }
+        placeholderPages.push(pagePath);      }
     }
   });
 

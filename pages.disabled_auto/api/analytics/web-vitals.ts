@@ -27,8 +27,7 @@ export default async function handler(
     }
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      metric: data.name,
-      value: data.value, url: data.url,
+      metric: data.name,      value: data.value, url: data.url,
       timestamp: new Date(data.timestamp).toISOString(), });
 
     // Here you would typically send the data to your analytics service
@@ -37,5 +36,4 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     // For now, we&aposll just acknowledge receipt''
     res.status(200).json({ 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  }
-}
+  }}

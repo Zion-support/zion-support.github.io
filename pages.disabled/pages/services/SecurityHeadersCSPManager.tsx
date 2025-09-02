@@ -72,9 +72,7 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
             ].map(f => (
               <div;
                 key={f.title}""
->>>>>>> pr-10728
-                className="rounded-xl border border-white/10 bg-white/5 p-5""
-              >""
+                className="rounded-xl border border-white/10 bg-white/5 p-5""              >""
                 <div className="flex items-center gap-2 text-cyan-300 font-semibold">""
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
                   <CheckCircle className="w-4 h-4"  /> {f.title}"
@@ -94,9 +92,7 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
           </div>""
           <div className="mt-8 text-sm text-slate-300">
             Typical pricing:{' '}""
->>>>>>> pr-10728
-            <span className="font-semibold text-cyan-300">
-              $49–$199/mo per domain;
+            <span className="font-semibold text-cyan-300">              $49–$199/mo per domain;
             </span>
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
             ."
@@ -109,9 +105,7 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
           </div>""
           <div className="mt-4 flex gap-4 text-sm">
             <a""
->>>>>>> pr-10728
-              className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
-              href="https://securityheaders.com/""
+              className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""              href="https://securityheaders.com/""
               target="_blank""
               rel="noreferrer""
             >""
@@ -123,9 +117,7 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
             </a>"
             </a>
             <a""
->>>>>>> pr-10728
-              className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
-              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP""
+              className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""              href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP""
               target="_blank""
               rel="noreferrer""
             >"              MDN: Content-Security-Policy <ExternalLink className="w-3 h-3"  />
@@ -152,9 +144,7 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               Start pilot;
             </Link>
             <a""
->>>>>>> pr-10728
-              href="mailto:kleber@ziontechgroup.com""
-              className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
+              href="mailto:kleber@ziontechgroup.com""              className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
             >""
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
               <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com
@@ -165,7 +155,6 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com;
             </a>
             <a""
->>>>>>> pr-10728
               href="tel:+13024640950""
               className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
             >""
@@ -176,9 +165,7 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
               <Phone className="w-4 h-4"  /> +1 302 464 0950
               <Phone className="w-4 h-4"  /> +1 302 464 0950;
             </a>          </div>
->>>>>>> pr-10728
-        </div>
-      </section>
+        </div>      </section>
     </div>
 :pages.disabled/pages/services/SecurityHeadersCSPManager.tsx
   )}'"
@@ -188,4 +175,3 @@ export default function SecurityHeadersCSPManager(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728

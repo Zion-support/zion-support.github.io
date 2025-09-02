@@ -96,6 +96,9 @@
     "strictBindCallApply": true,
     "strictPropertyInitialization": true,
     "alwaysStrict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": false,
     "tsBuildInfoFile": ".next/tsbuildinfo"
   },
   "include": [
@@ -126,6 +129,5 @@
     "**/*.spec.ts",
     "**/*.spec.tsx",
     "**/*.backup",
-    "**/*.disabled"
-  ]
+    "**/*.disabled"  ]
 }

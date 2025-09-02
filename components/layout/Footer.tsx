@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  Phone, MapPin,
-  Linkedin, Twitter,
+  Phone, MapPin,  Linkedin, Twitter,
   Github, Youtube,
   Instagram, ArrowRight,
   Heart, Globe,
@@ -11,7 +10,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   Target, CheckCircle,
   ExternalLink
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   const serviceCategories = [;
     {
 title: "AI & Automation", icon: Brain,"      color: "text-blue-400", services: ["        { name: "AI Autonomous Cybersecurity Platform", href: "/services/ai-autonomous-cybersecurity-platform" }, { name: "AI Customer Experience Platform", href: "/services/ai-customer-experience-platform" }, { name: "AI Healthcare Diagnostics", href: "/services/ai-healthcare-diagnostics" }, { name: "AI Enterprise Orchestrator", href: "/services/ai-enterprise-orchestrator" }"      ]"    }, {;

@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/marketplace/Equipment.tsx
+:src.disabled/pages/marketplace/Equipment.tsx
 const Equipment: React.FC = () => (;
 	<div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center">;
 		<div className="text-center text-white">;
@@ -10,4 +10,3 @@ const Equipment: React.FC = () => (;
 
 export default Equipment;
 
->>>>>>> pr-10728:src/pages/marketplace/Equipment.tsx

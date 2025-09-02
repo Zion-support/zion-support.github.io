@@ -1,11 +1,9 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services-showcase-2026.tsx
-
   const popularServices = comprehensiveExpandedServices.filter(
     service => service.popular
   );
 
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services-showcase-2026.tsx
-
       {/* Search and Filter Section */}
       <section className="bg-white py-12">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -39,7 +37,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services
             </div>
 
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/comprehensive-services-showcase-2026.tsx
-
       {/* Popular Services Section */}
       {popularServices.length > 0 && (
         <section className="bg-gradient-to-r from-blue-50 to-indigo-50 py-16">

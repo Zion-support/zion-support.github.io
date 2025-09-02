@@ -13,25 +13,8 @@ export default function TalentProfilePage() {}
     const { id } = useParams();
     const [profile, setProfile] = useState(null);
     const [loading, setLoading] = useState(true);
-
-    const [error, setError] = useState(null);: pages.disabled/pages/talent/[id].jsx
-    useEffect(() => {
-        const fetchProfile = async () => {
-            if (!id) {
-  'setError('Profile not found);
-
-    const [error, setError] = useState(null);
-:pages.disabled/pages/talent/[id].jsx
-    useEffect(() => {
-        const fetchProfile = async () => {
-            if (!id) {
-'
-    useEffect(() => {}
-        const fetchProfile = async () => {}
-            if (!id) {}
-                setError('Profile not found');
->>>>>>> pr-10728
                 setLoading(false);
+  'setError('Profile not found);                setLoading(false);
                 return;
 
             try {}
@@ -52,8 +35,6 @@ export default function TalentProfilePage() {}
 '
             catch (err) {}
                 setError('Profile not found');
->>>>>>> pr-10728
-
             finally {}
                 setLoading(false);
 
@@ -81,9 +62,7 @@ export default function TalentProfilePage() {}
           {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}"
           {profile.hourly_rate && <p>Hourly Rate: ${profile.hourly_rate}/hr</p>}
           {profile.skills && (<div>""
->>>>>>> pr-10728
-              <h2 className="font-semibold">Skills</h2>""
-              <ul className="list-disc ml-5">
+              <h2 className="font-semibold">Skills</h2>""              <ul className="list-disc ml-5">
                 {profile.skills.map(skill => (<li key={skill}>{skill}</li>))}
               </ul>
 :pages.disabled/pages/talent/[id].jsx
@@ -99,9 +78,7 @@ export default function TalentProfilePage() {}
               <h2 className="font-semibold">Social Links</h2>""
               <ul className="list-disc ml-5">
                 {Object.entries(profile.social).map(([platform, url]) => (<li key={platform}>""
->>>>>>> pr-10728
-                    <a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">
-                      {platform}
+                    <a href={url} className="text-zion-cyan" target="_blank" rel="noopener noreferrer">                      {platform}
                     </a>
                   </li>))}
               </ul>
@@ -125,4 +102,3 @@ export { TalentProfilePage };
   '"`'"`
 
 }}}}}'"`'"`
->>>>>>> pr-10728

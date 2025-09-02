@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 interface AnalyticsProps {
   trackingId?: string;
 }
-
 const Analytics: React.FC<AnalyticsProps> = ({ 
   trackingId = process.env.NEXT_PUBLIC_GA_TRACKING_ID 
 }) => {
@@ -38,11 +37,9 @@ const Analytics: React.FC<AnalyticsProps> = ({
     window.addEventListener('popstate', handleRouteChange);
     
     return () => {
-      window.removeEventListener('popstate', handleRouteChange);
-    };
+      window.removeEventListener('popstate', handleRouteChange);    };
   }, [trackingId]);
 
   return null;
 };
-
 export default Analytics;

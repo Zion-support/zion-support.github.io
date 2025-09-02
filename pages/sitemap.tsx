@@ -2,8 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { 
-  ExternalLink, Home,
-  Users, Briefcase,
+  ExternalLink, Home,  Users, Briefcase,
   Phone, DollarSign,
   FileText, BookOpen,
   Award, Shield,
@@ -56,7 +55,6 @@ export default function SitemapPage() {
         <title>Sitemap - Zion Tech Group</title>
         <meta name="description" content="Complete sitemap of Zion Tech Group website" />
       </Head>
-
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">

@@ -1,12 +1,10 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    setIsSubmitting(true);
-    
+    setIsSubmitting(true);    
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000))
     
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  return (
-    <div className="max-w-2xl mx-auto p-6">"      <motion.div"        initial={{ opacity: 0, y: 20 }}
+  return (    <div className="max-w-2xl mx-auto p-6">"      <motion.div"        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 p-6""      >"        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">"          Get in Touch"        </h2>
 

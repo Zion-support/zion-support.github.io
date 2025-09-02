@@ -1,12 +1,10 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      ],
-      icon: <Sparkles className="w-8 h-8" />,
+      ],      icon: <Sparkles className="w-8 h-8" />,
       variant: 'quantum
   ' as const,
       popular: false,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
-    {
+    },    {
       name:,
   Professional
   ',
@@ -23,14 +21,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ': ',
       features: [
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      ],
-      icon: <Rocket className="w-8 h-8" />,
+      ],      icon: <Rocket className="w-8 h-8" />,
       variant:
   'ai-futuristic' as const,
       popular: true,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
-    {
+    },    {
       name:,
   Enterprise',
       description: 'For large organizations and enterprises,
@@ -44,8 +40,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   'Save 20%': ',
       features: [
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      ],
-      icon: <Crown className="w-8 h-8" />,
+      ],      icon: <Crown className="w-8 h-8" />,
       variant: 'quantum-futuristic
   ' as const,
       popular: false,
@@ -56,7 +51,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   const marketAnalysis = {
 ursor/automate-test-fix-improve-and-merge-code-99d1
   };
-
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>
       <div className="min-h-screen">
@@ -118,8 +112,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                 <span className="text-gray-400">Monthly</span>
                 <button
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                  className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${
-                    billingCycle ===,
+                  className={`relative inline-flex h-8 w-16 items-center rounded-full transition-colors ${                    billingCycle ===,
   yearly' ?
   'bg-blue-600': 'bg-gray-600
                   }`}
@@ -127,8 +120,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                   <span
                     className={`inline-block h-6 w-6 transform rounded-full bg-white transition-transform ${
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                    }`}
-                  />
+                    }`}                  />
                 </button>
                 <span className="text-gray-400">Yearly (Save 20%)</span>
               </div>
@@ -240,8 +232,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                   viewport={{ once: true }}
                   className={`relative ${
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                  } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}
-                >
+                  } bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm rounded-3xl p-8`}                >
                   {tier.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-semibold">

@@ -56,7 +56,6 @@ export async function rewardOnboarding (...args: any[]) : any {}
       await apiClient ('/functions / v1 / token - manager / earn', {}
         method: 'POST',
         body: JSON.stringify ({}
->>>>>>> pr-10728
           userId,
 ,
   action: 'referral,
@@ -68,6 +67,4 @@ export async function rewardOnboarding (...args: any[]) : any {}
         }) 
       }) }
   }
->>>>>>> pr-10728
-}
-'
+}'

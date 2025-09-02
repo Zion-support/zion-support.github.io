@@ -199,9 +199,7 @@ import {}
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -211,9 +209,7 @@ import {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center""
-          >""
+            className="text-center""          >""
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 text-white text-sm font-medium mb-6">""
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
               <Sparkles className="w-4 h-4 mr-2"  />              AI-Powered Customer Success"
@@ -288,9 +284,7 @@ import {}
                 className="px-8 py-4 border-2 border-blue-500 text-blue-400 rounded-lg font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300""
               >
                 <Play className="w-5 h-5 inline mr-2"  />
->>>>>>> pr-10728
-                Watch Demo;
-              </Link>
+                Watch Demo;              </Link>
             </div>
           </motion.div>
         </div>
@@ -302,9 +296,7 @@ import {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -314,7 +306,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -325,9 +316,7 @@ import {}
               Powerful AI-Driven Features"
               Powerful AI-Driven Features;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI with proven customer success;
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">              Our platform combines cutting-edge AI with proven customer success;
               methodologies;
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -351,9 +340,7 @@ import {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300""
-              >""
+                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300""              >""
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
                   <feature.icon className="w-6 h-6 text-white" />"
@@ -368,9 +355,7 @@ import {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-zion-slate-light">{feature.description}</p>
-              </motion.div>
+                <p className="text-zion-slate-light">{feature.description}</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -382,9 +367,7 @@ import {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -394,7 +377,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -405,9 +387,7 @@ import {}
               Measurable Business Impact"
               Measurable Business Impact;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              See real results with our AI-powered customer success platform;
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">              See real results with our AI-powered customer success platform;
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
           </motion.div>"
@@ -430,9 +410,7 @@ import {}
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="flex items-start space-x-3""
-              >""
+                className="flex items-start space-x-3""              >""
                 <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0"  />"                <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
@@ -446,9 +424,7 @@ import {}
 "
 
       {/* Use Cases Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -458,7 +434,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -469,9 +444,7 @@ import {}
               Industry Solutions"
               Industry Solutions;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored solutions for various industries and business models;
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">              Tailored solutions for various industries and business models;
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
           </motion.div>"
@@ -494,7 +467,6 @@ import {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20""
               >""
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -505,9 +477,7 @@ import {}
                   {useCase.industry}"
                   {useCase.industry}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-zion-slate-light">{useCase.description}</p>
-              </motion.div>
+                <p className="text-zion-slate-light">{useCase.description}</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -519,9 +489,7 @@ import {}
 "
 
       {/* Pricing Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -531,7 +499,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -542,9 +509,7 @@ import {}
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your business needs and scale as you;
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">              Choose the plan that fits your business needs and scale as you;
               grow;
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -562,12 +527,10 @@ import {}
             {pricing.map(plan: unknown, index: unknown (
               <motion.div;
                 key={index}
->>>>>>> pr-10728
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
-
                 className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${,
   index === 1'
   '
@@ -579,9 +542,7 @@ import {}
                   index === 1''
                     ? 'border-blue-500/50 bg-gradient-to-b from-blue-500/10 to-transparent'''`
                     : 'border-zion-slate-light/20'``
->>>>>>> pr-10728
-                }`}"
-              >""
+                }`}"              >""
                 <div className="text-center mb-6">""
                   <h3 className="text-2xl font-bold text-white mb-2">
                     {plan.plan}"
@@ -606,9 +567,7 @@ import {}
                     {plan.price}
                   </div>
                   {index === 1 && (""
->>>>>>> pr-10728
-                    <span className="inline-block bg-blue-500 text-white text-sm px-3 py-1 rounded-full">
-                      Most Popular;
+                    <span className="inline-block bg-blue-500 text-white text-sm px-3 py-1 rounded-full">                      Most Popular;
                     </span>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
                   )}"
@@ -625,9 +584,7 @@ import {}
                   {plan.features.map((feature, featureIndex) => (
                     <li;
                       key={featureIndex}""
->>>>>>> pr-10728
-                      className="flex items-center space-x-3""
-                    >""
+                      className="flex items-center space-x-3""                    >""
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0"  />"                      <span className="text-zion-slate-light">{feature}</span>
                     </li>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -637,9 +594,7 @@ import {}
                   ))}"
                   ))}
                 </ul>""
->>>>>>> pr-10728
-                <button className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200">
-                  Get Started;
+                <button className="w-full py-3 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200">                  Get Started;
                 </button>
               </motion.div>
             ))}
@@ -653,9 +608,7 @@ import {}
 "
 
       {/* Integrations Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -665,7 +618,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -676,9 +628,7 @@ import {}
               Seamless Integrations"
               Seamless Integrations;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Connect with your existing tools and workflows;
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">              Connect with your existing tools and workflows;
             </p>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
           </motion.div>"
@@ -701,9 +651,7 @@ import {}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300""
-              >""
+                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300""              >""
                 <span className="text-zion-slate-light font-medium">
                   {integration}
                 </span>
@@ -719,9 +667,7 @@ import {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -776,9 +722,7 @@ import {}
               >""
                 <MessageSquare className="w-5 h-5 mr-2"  />                Schedule Demo;
               </motion.button>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
@@ -788,9 +732,7 @@ import {}
 "
 
       {/* Contact Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""        <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -823,9 +765,7 @@ import {}
               <div className="flex items-center justify-center space-x-3">""
                 <Phone className="w-6 h-6 text-blue-400"  />"                <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>""
->>>>>>> pr-10728
-              <div className="flex items-center justify-center space-x-3">""
-                <Mail className="w-6 h-6 text-blue-400"  />""
+              <div className="flex items-center justify-center space-x-3">""                <Mail className="w-6 h-6 text-blue-400"  />""
                 <span className="text-zion-slate-light">
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
                   kleber@ziontechgroup.com
@@ -836,9 +776,7 @@ import {}
                   kleber@ziontechgroup.com;
                 </span>
               </div>""
->>>>>>> pr-10728
-              <div className="flex items-center justify-center space-x-3">""
-                <MapPin className="w-6 h-6 text-blue-400"  />""
+              <div className="flex items-center justify-center space-x-3">""                <MapPin className="w-6 h-6 text-blue-400"  />""
                 <span className="text-zion-slate-light">
                   364 E Main St STE 1008;
                   <br />
@@ -853,9 +791,7 @@ import {}
               </div>
             </div>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a""
->>>>>>> pr-10728
-                href="https://ziontechgroup.com/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200""
+                href="https://ziontechgroup.com/contact""                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-200""
               >""
 :pages.disabled/pages/services/AICustomerSuccessPlatform.tsx
                 <ArrowRight className="w-5 h-5 mr-2"  />                Contact Us
@@ -866,7 +802,6 @@ import {}
                 <ArrowRight className="w-5 h-5 mr-2"  />                Contact Us;
               </a>
               <a""
->>>>>>> pr-10728
                 href="https://ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200""
               >""
@@ -877,9 +812,7 @@ import {}
                 <Globe className="w-5 h-5 mr-2"  />                Visit Website
                 <Globe className="w-5 h-5 mr-2"  />                Visit Website;
               </a>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
     </div>

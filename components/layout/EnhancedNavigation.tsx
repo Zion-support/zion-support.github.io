@@ -4,8 +4,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
 
   return (
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            
-            {/* Services Dropdown */}
+                        {/* Services Dropdown */}
             <div className="relative group">
               <button 
                 className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors"
@@ -78,8 +77,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
           </div>
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-          <button
-            className="md:hidden p-2"
+          <button            className="md:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -89,8 +87,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
         {/* Mobile Navigation */}
         {isOpen && (
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            </div>
-          </div>
+            </div>          </div>
         )}
       </div>
     </nav>

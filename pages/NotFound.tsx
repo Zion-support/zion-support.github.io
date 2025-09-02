@@ -3,8 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import SEO from '../components/SEO';
 import { motion } from 'framer-motion';
-import { 
-  Home, ArrowLeft,
+import {   Home, ArrowLeft,
   Search, HelpCircle,
   Phone, Mail,
   Globe, FileText,
@@ -28,8 +27,7 @@ const NotFound: React.FC = () => {
       <SEO 
         title="Page Not Found - Zion Tech Group" 
         description="The page you're looking for doesn't exist. Return to our homepage or explore our services."
-      />
-      
+      />      
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -58,8 +56,7 @@ const NotFound: React.FC = () => {
             <h2 className="text-4xl font-bold text-white mb-4">Page Not Found</h2>
             <p className="text-xl text-gray-300 mb-6">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            </p>
-          </motion.div>
+            </p>          </motion.div>
 
           {/* Action Buttons */}
           <motion.div

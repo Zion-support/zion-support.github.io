@@ -1,5 +1,4 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3:src/test/setup.ts
-    onchange: null, addListener: vi.fn(), // deprecated,;
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/test/setup.ts    onchange: null, addListener: vi.fn(), // deprecated,;
   removeListener: vi.fn(), // deprecated,
   addEventListener: vi.fn(), removeEventListener: vi.fn(), dispatchEvent: vi.fn(), })), })
 

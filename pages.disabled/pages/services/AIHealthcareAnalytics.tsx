@@ -30,9 +30,7 @@ import {}
           </div>"          <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
             AI Healthcare Analytics Platform;
           </h1>""
->>>>>>> pr-10728
-          <p className="text-zion-slate-light text-xl">
-            Transform healthcare delivery with AI-powered analytics, predictive;
+          <p className="text-zion-slate-light text-xl">            Transform healthcare delivery with AI-powered analytics, predictive;
             insights, and clinical decision support.
           </p>
         </div>
@@ -59,9 +57,7 @@ import {}
             </h2>""
             <ul className="space-y-3">
               {features.map(feature => (""
->>>>>>> pr-10728
-                <li key={feature} className="flex items-start">""
-                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{feature}</span>
+                <li key={feature} className="flex items-start">""                  <Check className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -82,9 +78,7 @@ import {}
             </h2>""
             <ul className="space-y-3">
               {benefits.map(benefit => (""
->>>>>>> pr-10728
-                <li key={benefit} className="flex items-start">""
-                  <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{benefit}</span>
+                <li key={benefit} className="flex items-start">""                  <Zap className="w-5 h-5 text-zion-cyan mr-3 mt-0.5"  />"                  <span className="text-zion-slate-dark">{benefit}</span>
                 </li>
               ))}
             </ul>
@@ -112,9 +106,7 @@ import {}
             {useCases.map(useCase => (
               <div;
                 key={useCase}""
->>>>>>> pr-10728
-                className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""
-              >""
+                className="p-6 bg-white border border-zion-slate-light/20 rounded-xl shadow-sm""              >""
                 <Activity className="w-6 h-6 text-zion-cyan mb-3"  />""
                 <div className="text-zion-slate-dark font-semibold">
                   {useCase}
@@ -144,9 +136,7 @@ import {}
             {healthcareSolutions.map(solution => (
               <div;
                 key={solution.specialty}""
->>>>>>> pr-10728
-                className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md""
-              >""
+                className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md""              >""
                 <h3 className="text-xl font-semibold text-zion-slate-dark mb-4">
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
                   {solution.specialty}"
@@ -163,9 +153,7 @@ import {}
                   {solution.solutions.map(sol => (
                     <li;
                       key={sol}""
->>>>>>> pr-10728
-                      className="flex items-start text-sm text-zion-slate-dark""
-                    >""
+                      className="flex items-start text-sm text-zion-slate-dark""                    >""
                       <Check className="w-4 h-4 text-zion-cyan mr-2 mt-0.5"  />                      {sol}
                     </li>
                   ))}
@@ -196,9 +184,7 @@ import {}
             {tiers.map(tier => (
               <div;
                 key={tier.name}""
->>>>>>> pr-10728
-                className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md""
-              >""
+                className="bg-white border border-zion-slate-light/20 rounded-xl p-6 shadow-md""              >""
                 <div className="text-lg font-semibold mb-1">{tier.name}</div>""
                 <div className="text-2xl font-bold text-zion-cyan mb-2">
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
@@ -208,9 +194,7 @@ import {}
                   {tier.price}"
                   {tier.price}
                 </div>""
->>>>>>> pr-10728
-                <ul className="text-sm text-zion-slate-dark space-y-1">
-                  {tier.details.map(detail => (
+                <ul className="text-sm text-zion-slate-dark space-y-1">                  {tier.details.map(detail => (
                     <li key={detail}>{detail}</li>
                   ))}
                 </ul>
@@ -256,9 +240,7 @@ import {}
                       key={tech}""
                       className="px-3 py-1 bg-zion-cyan/10 text-zion-cyan rounded-full text-sm""
                     >
->>>>>>> pr-10728
-                      {tech}
-                    </span>
+                      {tech}                    </span>
                   ))}
                 </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
@@ -286,9 +268,7 @@ import {}
                       key={integration}""
                       className="px-3 py-1 bg-zion-slate-light/10 text-zion-slate-dark rounded-full text-sm""
                     >
->>>>>>> pr-10728
-                      {integration}
-                    </span>
+                      {integration}                    </span>
                   ))}
                 </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
@@ -316,9 +296,7 @@ import {}
                   {technicalSpecs.security.map(sec => (
                     <div;
                       key={sec}""
->>>>>>> pr-10728
-                      className="flex items-center text-sm text-zion-slate-dark""
-                    >""
+                      className="flex items-center text-sm text-zion-slate-dark""                    >""
                       <Shield className="w-4 h-4 text-zion-cyan mr-2"  />                      {sec}
                     </div>
                   ))}
@@ -336,9 +314,7 @@ import {}
                 <h4 className="font-semibold text-zion-slate-dark mb-2">
                   Uptime;
                 </h4>""
->>>>>>> pr-10728
-                <div className="text-2xl font-bold text-zion-cyan">
-                  {technicalSpecs.uptime}
+                <div className="text-2xl font-bold text-zion-cyan">                  {technicalSpecs.uptime}
                 </div>
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
               </div>"
@@ -361,9 +337,7 @@ import {}
                   {technicalSpecs.compliance.map(comp => (
                     <div;
                       key={comp}""
->>>>>>> pr-10728
-                      className="flex items-center text-sm text-zion-slate-dark""
-                    >""
+                      className="flex items-center text-sm text-zion-slate-dark""                    >""
                       <Shield className="w-4 h-4 text-zion-cyan mr-2"  />                      {comp}
                     </div>
                   ))}
@@ -390,9 +364,7 @@ import {}
           </div>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a""
->>>>>>> pr-10728
-              href="tel:+13024640950""
-              className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg""
+              href="tel:+13024640950""              className="inline-flex items-center px-5 py-3 bg-zion-cyan text-white rounded-lg""
             >""
 :pages.disabled/pages/services/AIHealthcareAnalytics.tsx
               <Phone className="w-4 h-4 mr-2"  /> +1 302 464 0950
@@ -417,9 +389,7 @@ import {}
           </div>""
           <div className="mt-4">
             <a""
->>>>>>> pr-10728
-              href="https://ziontechgroup.com""
-              target="_blank""
+              href="https://ziontechgroup.com""              target="_blank""
               rel="noreferrer""
               className="inline-flex items-center text-zion-cyan hover:text-zion-cyan-dark""
             >""
@@ -438,4 +408,3 @@ export { AIHealthcareAnalytics };export default AIHealthcareAnalytics;'"
 '"'"
 export { AIHealthcareAnalytics };export default AIHealthcareAnalytics;
 '""
->>>>>>> pr-10728

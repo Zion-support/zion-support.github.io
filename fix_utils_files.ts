@@ -15,8 +15,7 @@ function fixUtilsFile(...args: unknown[]): unknown {
     );
     content = content.replace(
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    );
-    content = content.replace(
+    );    content = content.replace(
       /const\s+([^=]+)\s*=\s*([^;]+);/g,
       "const $1 = $2;",
     );
@@ -27,8 +26,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     )
     // Fix string literals
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    // Fix variable names
-    content = content.replace(/ht,\s*m,\s*l/g, "html");
+    // Fix variable names    content = content.replace(/ht,\s*m,\s*l/g, "html");
     content = content.replace(/sanitiz,\s*e,\s*d/g, "sanitized");
     content = content.replace(/repla,\s*c,\s*e/g, "replace");
     content = content.replace(/windo,\s*w/g, "window");

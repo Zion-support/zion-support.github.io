@@ -272,9 +272,7 @@ export default function GreenIT() {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative py-20 px-4">""
-        <div className="container mx-auto text-center">
+      <section className="relative py-20 px-4">""        <div className="container mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -285,9 +283,7 @@ export default function GreenIT() {}
             transition={{ duration: 0.6 }}"
             transition={{ duration: 0.6 }}
           >""
->>>>>>> pr-10728
-            <div className="flex justify-center mb-6">""
-              <div className="w-20 h-20 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center">""
+            <div className="flex justify-center mb-6">""              <div className="w-20 h-20 bg-gradient-to-br from-green-400 via-emerald-500 to-teal-600 rounded-2xl flex items-center justify-center">""
                 <Leaf className="w-10 h-10 text-white" />
 :pages.disabled/pages/services/GreenIT.jsx
               </div>"
@@ -334,9 +330,7 @@ export default function GreenIT() {}
                 href="/services-overview""
                 className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300""
               >
->>>>>>> pr-10728
-                View All Services;
-              </a>
+                View All Services;              </a>
             </div>
           </motion.div>
         </div>
@@ -348,9 +342,7 @@ export default function GreenIT() {}
 "
 
       {/* Services Grid */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4">""
-        <div className="container mx-auto">
+      <section className="py-20 px-4">""        <div className="container mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx
@@ -360,7 +352,6 @@ export default function GreenIT() {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -371,9 +362,7 @@ export default function GreenIT() {}
               Green IT Services"
               Green IT Services;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Comprehensive sustainable technology solutions designed to;
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">              Comprehensive sustainable technology solutions designed to;
               minimize environmental impact while maximizing efficiency and;
               performance.
             </p>
@@ -384,9 +373,7 @@ export default function GreenIT() {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">            {services.map((service, index) => (
               <motion.div;
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -397,9 +384,7 @@ export default function GreenIT() {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-green-400/50 transition-all duration-300""
-              >""
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 hover:border-green-400/50 transition-all duration-300""              >""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/GreenIT.jsx
                   <service.icon className="w-8 h-8 text-white" />"
@@ -414,7 +399,6 @@ export default function GreenIT() {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {service.title}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-slate-300 mb-4">{service.description}</p>""
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
@@ -425,9 +409,7 @@ export default function GreenIT() {}
                     <li"
                     <li;
                       key={idx}""
->>>>>>> pr-10728
-                      className="flex items-center text-sm text-slate-400""
-                    >""
+                      className="flex items-center text-sm text-slate-400""                    >""
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
@@ -445,9 +427,7 @@ export default function GreenIT() {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 bg-slate-800/30">""
-        <div className="container mx-auto">
+      <section className="py-20 px-4 bg-slate-800/30">""        <div className="container mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx
@@ -457,7 +437,6 @@ export default function GreenIT() {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -468,9 +447,7 @@ export default function GreenIT() {}
               Benefits of Green IT"
               Benefits of Green IT;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Adopting sustainable technology solutions delivers multiple;
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">              Adopting sustainable technology solutions delivers multiple;
               benefits for your business and the environment.
             </p>
 :pages.disabled/pages/services/GreenIT.jsx
@@ -480,9 +457,7 @@ export default function GreenIT() {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">            {benefits.map((benefit, index) => (
               <motion.div;
                 key={benefit.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -493,9 +468,7 @@ export default function GreenIT() {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="text-center""
-              >""
+                className="text-center""              >""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/GreenIT.jsx
                   <benefit.icon className="w-8 h-8 text-white" />"
@@ -510,9 +483,7 @@ export default function GreenIT() {}
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {benefit.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-slate-300 text-sm">{benefit.description}</p>
-              </motion.div>
+                <p className="text-slate-300 text-sm">{benefit.description}</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -524,9 +495,7 @@ export default function GreenIT() {}
 "
 
       {/* Technologies Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4">""
-        <div className="container mx-auto">
+      <section className="py-20 px-4">""        <div className="container mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/GreenIT.jsx
@@ -536,7 +505,6 @@ export default function GreenIT() {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -547,9 +515,7 @@ export default function GreenIT() {}
               Green Technologies"
               Green Technologies;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Leveraging cutting-edge technologies to create sustainable and;
+            <p className="text-xl text-slate-300 max-w-2xl mx-auto">              Leveraging cutting-edge technologies to create sustainable and;
               energy-efficient IT infrastructure.
             </p>
 :pages.disabled/pages/services/GreenIT.jsx
@@ -559,9 +525,7 @@ export default function GreenIT() {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {technologies.map((tech, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">            {technologies.map((tech, index) => (
               <motion.div;
                 key={tech.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -572,9 +536,7 @@ export default function GreenIT() {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center""
-              >""
+                className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50 text-center""              >""
                 <div className="w-16 h-16 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-xl flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/GreenIT.jsx
                   <tech.icon className="w-8 h-8 text-white" />"
@@ -589,9 +551,7 @@ export default function GreenIT() {}
                 <h3 className="text-lg font-semibold text-white mb-2">
                   {tech.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-slate-300 text-sm">{tech.description}</p>
-              </motion.div>
+                <p className="text-slate-300 text-sm">{tech.description}</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -603,9 +563,7 @@ export default function GreenIT() {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">""
-        <div className="container mx-auto text-center">
+      <section className="py-20 px-4 bg-gradient-to-r from-green-900/20 to-emerald-900/20">""        <div className="container mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -652,9 +610,7 @@ export default function GreenIT() {}
                 href="/services-overview""
                 className="px-8 py-4 border-2 border-green-400 text-green-400 font-semibold rounded-lg hover:bg-green-400 hover:text-white transition-all duration-300""
               >
->>>>>>> pr-10728
-                Explore More Services;
-              </a>
+                Explore More Services;              </a>
             </div>
           </motion.div>
         </div>
@@ -669,4 +625,3 @@ export default function GreenIT() {}
 '"'"
 }
 '""
->>>>>>> pr-10728

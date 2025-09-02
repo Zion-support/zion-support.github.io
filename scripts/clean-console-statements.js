@@ -24,7 +24,6 @@ class ConsoleCleaner {
 
   async cleanConsoleStatements() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
     for (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {

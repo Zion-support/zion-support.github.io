@@ -30,15 +30,13 @@ const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
 if (!supabaseUrl || !serviceKey) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  console.error(errorMessage);
-  throw new Error(errorMessage);
+  console.error(errorMessage);  throw new Error(errorMessage);
 }
 
 const supabase = createClient(supabaseUrl, serviceKey);
 
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
-  }
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });  }
 
   try {
     const { email, password } = req.body as LoginRequestBody;
@@ -46,7 +44,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     if (!email || !password) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
     }
-
     // Attempt to sign in with Supabase
     const { data, error } = await supabase.auth.signInWithPassword({
       email,

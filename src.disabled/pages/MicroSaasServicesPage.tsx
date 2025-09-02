@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/pages/MicroSaasServicesPage.tsx
+:src.disabled/pages/MicroSaasServicesPage.tsx
 import SEO from '@/src/src/components/SEO';
 
 const MicroSAASServicesPage: React.FC = ($2) => {
@@ -167,4 +167,3 @@ const MicroSAASServicesPage: React.FC = ($2) => {
   );
 }
 
->>>>>>> pr-10728:src/pages/MicroSaasServicesPage.tsx

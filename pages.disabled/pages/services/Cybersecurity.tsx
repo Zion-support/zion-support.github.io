@@ -1,31 +1,26 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
 export function Cybersecurity() {
   const features = [
     {
       icon: Shield,
 ursor/automate-test-fix-improve-and-merge-code-99d1
   ];
-
   const services = [
     {
       category: 'Security Assessment,
       icon: Search,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
-    {
+    },    {
       category:
   'Incident Response',
       icon: AlertTriangle,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
-    {
+    },    {
       category:
   'Compliance & Governance',
       icon: ShieldCheck,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    },
-    {
+    },    {
       category:
   'Security Training',
       icon: Users,
@@ -36,7 +31,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     {
 ursor/automate-test-fix-improve-and-merge-code-99d1
   ];
-
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section */}
@@ -93,8 +87,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our cybersecurity services cover every aspect of digital security,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-            </p>
-          </motion.div>
+            </p>          </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (

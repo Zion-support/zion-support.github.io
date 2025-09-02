@@ -1,5 +1,4 @@
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
-  Calendar,
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx  Calendar,
   Clock,
   User,
   ArrowRight,
@@ -25,7 +24,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
   Globe,
   Phone,
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
-
 const Blog: React.FC = () => {
   const blogPosts = [
     {
@@ -307,8 +305,7 @@ const Blog: React.FC = () => {
                       <button
                         key={category.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx
-                        }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/blog.tsx                        }`}
                       >
                         <span>{category.name}</span>
                         <Badge variant="secondary" className="text-xs">

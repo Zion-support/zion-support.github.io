@@ -16,9 +16,7 @@ const BlockchainServices = () => {}
             Blockchain & Web3 Services"
             Blockchain & Web3 Services;
           </h1>""
->>>>>>> pr-10728
-          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-            Leverage blockchain technology and Web3 solutions for your business;
+          <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">            Leverage blockchain technology and Web3 solutions for your business;
             transformation.
           </p>
         </div>
@@ -29,9 +27,7 @@ const BlockchainServices = () => {}
       </section>"
       </section>
 ""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
+      <section className="py-20">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
 :pages.disabled/pages/services/BlockchainServices.jsx
             Coming Soon"
@@ -57,9 +53,7 @@ const BlockchainServices = () => {}
             to="/contact""
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300""
           >
->>>>>>> pr-10728
-            Contact Us;
-          </Link>
+            Contact Us;          </Link>
         </div>
       </section>
     </div>
@@ -73,4 +67,3 @@ export default BlockchainServices;'"
 '"'"
 export default BlockchainServices;
 '""
->>>>>>> pr-10728

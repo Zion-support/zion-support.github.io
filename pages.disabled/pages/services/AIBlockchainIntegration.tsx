@@ -42,9 +42,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>"        <div className="relative max-w-7xl mx-auto text-center">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10"></div>"        <div className="relative max-w-7xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -87,9 +85,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileTap={{ scale: 0.95 }}""
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300""
               >
->>>>>>> pr-10728
-                Get Started Today;
-              </motion.button>
+                Get Started Today;              </motion.button>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
               <motion.button
                 whileHover={{ scale: 1.05 }}"
@@ -103,9 +99,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileTap={{ scale: 0.95 }}""
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300""
               >
->>>>>>> pr-10728
-                Watch Demo;
-              </motion.button>
+                Watch Demo;              </motion.button>
             </div>
           </motion.div>
         </div>
@@ -117,9 +111,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
@@ -129,7 +121,6 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -140,9 +131,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
               Revolutionary Features"
               Revolutionary Features;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI Blockchain Integration platform combines cutting-edge;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Our AI Blockchain Integration platform combines cutting-edge;
               artificial intelligence with blockchain technology to deliver;
               unprecedented capabilities.
             </p>
@@ -153,9 +142,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-4 gap-8">            {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -166,9 +153,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 group""
-              >""
+                className="bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-6 rounded-xl border border-slate-600/50 hover:border-cyan-400/50 transition-all duration-300 group""              >""
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">""
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
                   <feature.icon className="w-8 h-8 text-white" />"
@@ -183,9 +168,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+                <p className="text-gray-300">{feature.description}</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -197,9 +180,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-slate-700/50">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
@@ -209,7 +190,6 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -220,9 +200,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
               Why Choose AI Blockchain Integration?"
               Why Choose AI Blockchain Integration?
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Transform your blockchain operations with intelligent automation;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Transform your blockchain operations with intelligent automation;
               and enhanced security.
             </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
@@ -232,9 +210,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">            {benefits.map((benefit, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -245,9 +221,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="flex items-start space-x-3""
-              >""
+                className="flex items-start space-x-3""              >""
                 <CheckCircle className="w-6 h-6 text-cyan-400 mt-1 flex-shrink-0"  />"                <span className="text-gray-300 text-lg">{benefit}</span>
               </motion.div>
             ))}
@@ -261,9 +235,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
 "
 
       {/* Pricing Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
@@ -273,7 +245,6 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -284,9 +255,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Choose the plan that fits your business needs. All plans include;
               our core AI features.
             </p>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
@@ -296,40 +265,15 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">            {pricing.map((plan, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
-
-                className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${,
-  index === 1''
-                    ?
-  'border-cyan-400/50 shadow-lg shadow-cyan-500/25''
-  '`: 'border-slate-600/50``
-                } relative`}
-              >"{index === 1 && (""
-
-                className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${
-'
-                  index === 1''
-                    ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/25'''`
-                    : 'border-slate-600/50'``
-                } relative`}
-              >"
-                className={`bg-gradient-to-br from-slate-800/50 to-slate-700/50 p-8 rounded-xl border ${}
-                  index === 1'
-                    ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/25''
-                    : 'border-slate-600/50'`
-                } relative`}
-              >
-                {index === 1 && (""
->>>>>>> pr-10728
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
+              >"{index === 1 && (""                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -369,9 +313,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
 ""
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (""
->>>>>>> pr-10728
-                    <li key={featureIndex} className="flex items-center">""
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
+                    <li key={featureIndex} className="flex items-center">""                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0"  />"                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -380,29 +322,8 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 <motion.button
                   whileHover={{ scale: 1.05 }}`
                   whileTap={{ scale: 0.95 }}``
-
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${,
-  index === 1'
-  '
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover: shadow-lg hover:shadow-cyan-500/25''
-  '`
-                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10``}`}
-
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-'
-                    index === 1''
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-500/25'''`
-                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'``
-                <motion.button;
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}`
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
-                    index === 1'
-                      ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white hover:shadow-lg hover:shadow-cyan-500/25''
-                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10'`
-                  }`}
->>>>>>> pr-10728
                 >
+                      : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10``}`}                >
                   Get Started;
                 </motion.button>
               </motion.div>
@@ -417,9 +338,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">""
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">""        <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -456,9 +375,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileTap={{ scale: 0.95 }}""
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300""
               >
->>>>>>> pr-10728
-                Start Free Trial;
-              </motion.button>
+                Start Free Trial;              </motion.button>
 :pages.disabled/pages/services/AIBlockchainIntegration.tsx
               <motion.button
                 whileHover={{ scale: 1.05 }}"
@@ -472,9 +389,7 @@ export default function AIBlockchainIntegration(...args: any[]): any {}
                 whileTap={{ scale: 0.95 }}""
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300""
               >
->>>>>>> pr-10728
-                Contact Sales;
-              </motion.button>
+                Contact Sales;              </motion.button>
             </div>
           </motion.div>
         </div>

@@ -17,9 +17,7 @@ export { function };export default function DigitalTransformation(...args: []): 
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}""
->>>>>>> pr-10728
-        <section className="relative pt-32 pb-20 overflow-hidden">""
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-600/10"></div>""
+        <section className="relative pt-32 pb-20 overflow-hidden">""          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
               <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-8">""
@@ -42,9 +40,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                 <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"> Transformation</span>
               </h1>
 ""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with comprehensive digital transformation services. Modernize operations,
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">                Transform your business with comprehensive digital transformation services. Modernize operations,
                 enhance customer experience, and drive innovation across your organization.
 :pages.disabled/pages/services/digital-transformation.tsx
               </p>"
@@ -74,9 +70,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                 <button className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo;
                 </button>
->>>>>>> pr-10728
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </section>
 :pages.disabled/pages/services/digital-transformation.tsx
@@ -86,9 +80,7 @@ export { function };export default function DigitalTransformation(...args: []): 
 "
 
         {/* Features Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
@@ -98,9 +90,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                 Comprehensive Digital Transformation"
                 Comprehensive Digital Transformation;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our digital transformation services cover every aspect of modernizing your business;
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our digital transformation services cover every aspect of modernizing your business;
                 for the digital age.
               </p>
 :pages.disabled/pages/services/digital-transformation.tsx
@@ -190,9 +180,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
-                  <p className="text-slate-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""                  <p className="text-slate-300">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -205,9 +193,7 @@ export { function };export default function DigitalTransformation(...args: []): 
 "
 
         {/* Transformation Areas Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
@@ -217,9 +203,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                 Digital Transformation Areas"
                 Digital Transformation Areas;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Comprehensive transformation across all critical business functions and processes.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Comprehensive transformation across all critical business functions and processes.
               </p>
 :pages.disabled/pages/services/digital-transformation.tsx
             </div>"
@@ -340,9 +324,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   <p className="text-slate-300 mb-4">{area.description}</p>""
                   <ul className="space-y-1">
                     {area.benefits.map((benefit, benefitIndex) => (""
->>>>>>> pr-10728
-                      <li key={benefitIndex} className="text-sm text-purple-400 flex items-center">""
-                        <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
+                      <li key={benefitIndex} className="text-sm text-purple-400 flex items-center">""                        <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -358,9 +340,7 @@ export { function };export default function DigitalTransformation(...args: []): 
 "
 
         {/* Technology Stack Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
@@ -370,9 +350,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                 Modern Technology Stack"
                 Modern Technology Stack;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Leverage cutting-edge technologies for your digital transformation journey.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Leverage cutting-edge technologies for your digital transformation journey.
               </p>
 :pages.disabled/pages/services/digital-transformation.tsx
             </div>"
@@ -493,9 +471,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   <p className="text-slate-300 mb-4">{tech.description}</p>""
                   <ul className="space-y-1">
                     {tech.features.map((feature, featureIndex) => (""
->>>>>>> pr-10728
-                      <li key={featureIndex} className="text-sm text-purple-400 flex items-center">""
-                        <CheckCircle className="w-3 h-3 mr-2"  />                        {feature}
+                      <li key={featureIndex} className="text-sm text-purple-400 flex items-center">""                        <CheckCircle className="w-3 h-3 mr-2"  />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -511,9 +487,7 @@ export { function };export default function DigitalTransformation(...args: []): 
 "
 
         {/* Benefits Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
@@ -523,9 +497,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                 Digital Transformation Benefits"
                 Digital Transformation Benefits;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Transform your business operations with measurable improvements and competitive advantages.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Transform your business operations with measurable improvements and competitive advantages.
               </p>
 :pages.disabled/pages/services/digital-transformation.tsx
             </div>"
@@ -542,9 +514,7 @@ export { function };export default function DigitalTransformation(...args: []): 
               <div>""
                 <div className="space-y-6">
                   {[""
->>>>>>> pr-10728
-                    "25-40% improvement in operational efficiency",""
-                    "30-50% reduction in operational costs",""
+                    "25-40% improvement in operational efficiency",""                    "30-50% reduction in operational costs",""
                     "Enhanced customer satisfaction and engagement",""
                     "Improved decision-making with data insights",""
                     "Increased agility and market responsiveness",""
@@ -570,7 +540,6 @@ export { function };export default function DigitalTransformation(...args: []): 
                 <h3 className="text-2xl font-semibold text-white mb-4">Transformation Metrics</h3>""
                 <div className="space-y-4">
                   {[""
->>>>>>> pr-10728
                     { metric: "25-40%", label: "Efficiency", description: "Operational improvement" },""
                     { metric: "30-50%", label: "Cost Reduction", description: "Operational costs" },""
                     { metric: "60%+", label: "Customer Satisfaction", description: "Improvement" },""
@@ -581,9 +550,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }"
                     { metric: "80%+", label: "Digital Adoption", description: "Technology adoption" }
                   ].map((item, index)  => (""
->>>>>>> pr-10728
-                    <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">""
-                      <div className="text-2xl font-bold text-purple-400 mb-1">{item.metric}</div>""
+                    <div key={index} className="text-center p-4 bg-slate-700/50 rounded-lg">""                      <div className="text-2xl font-bold text-purple-400 mb-1">{item.metric}</div>""
                       <div className="text-sm text-slate-300">{item.label}</div>""
                       <div className="text-xs text-slate-400">{item.description}</div>
                     </div>
@@ -600,9 +567,7 @@ export { function };export default function DigitalTransformation(...args: []): 
 "
 
         {/* Implementation Process Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
@@ -612,9 +577,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                 Transformation Process"
                 Transformation Process;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our systematic approach ensures successful digital transformation implementation.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our systematic approach ensures successful digital transformation implementation.
               </p>
 :pages.disabled/pages/services/digital-transformation.tsx
             </div>"
@@ -689,9 +652,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
-                  <p className="text-slate-300">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""                  <p className="text-slate-300">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -704,9 +665,7 @@ export { function };export default function DigitalTransformation(...args: []): 
 "
 
         {/* CTA Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10">;""
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-600/10">;""          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/digital-transformation.tsx
               Ready to Transform Your Business?"
@@ -742,9 +701,7 @@ export { function };export default function DigitalTransformation(...args: []): 
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200""
               >
->>>>>>> pr-10728
-                Explore All Services;
-              </Link>;
+                Explore All Services;              </Link>;
             </div>;
           </div>;
         </section>;
@@ -758,4 +715,3 @@ export { function };export default function DigitalTransformation(...args: []): 
   )}}}}}}'"'"
     </>
   )}}}}}}'""
->>>>>>> pr-10728

@@ -17,9 +17,7 @@ export { function };export default function IoTEdge(...args: []):  {}
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}""
->>>>>>> pr-10728
-        <section className="relative pt-32 pb-20 overflow-hidden">""
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-600/10"></div>""
+        <section className="relative pt-32 pb-20 overflow-hidden">""          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
               <div className="inline-flex items-center px-4 py-2 bg-indigo-500/10 border border-indigo-500/20 rounded-full text-indigo-400 text-sm font-medium mb-8">""
@@ -42,9 +40,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                 <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent"> Computing</span>
               </h1>
 ""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Connect and manage your IoT ecosystem with intelligent edge computing. Process data locally,
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">                Connect and manage your IoT ecosystem with intelligent edge computing. Process data locally,
                 reduce latency, and enable real-time decision-making across your connected devices.
 :pages.disabled/pages/services/iot-edge.tsx
               </p>"
@@ -74,9 +70,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                 <button className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo;
                 </button>
->>>>>>> pr-10728
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </section>
 :pages.disabled/pages/services/iot-edge.tsx
@@ -86,9 +80,7 @@ export { function };export default function IoTEdge(...args: []):  {}
 "
 
         {/* Features Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/iot-edge.tsx
@@ -98,9 +90,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                 Intelligent IoT Solutions"
                 Intelligent IoT Solutions;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our IoT and edge computing platform provides comprehensive device management,
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our IoT and edge computing platform provides comprehensive device management,
                 real-time analytics, and intelligent automation capabilities.
               </p>
 :pages.disabled/pages/services/iot-edge.tsx
@@ -190,9 +180,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                   <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
-                  <p className="text-slate-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""                  <p className="text-slate-300">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -205,9 +193,7 @@ export { function };export default function IoTEdge(...args: []):  {}
 "
 
         {/* IoT Applications Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/iot-edge.tsx
@@ -217,9 +203,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                 IoT Applications & Use Cases"
                 IoT Applications & Use Cases;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Discover how IoT and edge computing can transform different industries and operations.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Discover how IoT and edge computing can transform different industries and operations.
               </p>
 :pages.disabled/pages/services/iot-edge.tsx
             </div>"
@@ -340,9 +324,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                   <p className="text-slate-300 mb-4">{application.description}</p>""
                   <ul className="space-y-1">
                     {application.benefits.map((benefit, benefitIndex) => (""
->>>>>>> pr-10728
-                      <li key={benefitIndex} className="text-sm text-indigo-400 flex items-center">""
-                        <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
+                      <li key={benefitIndex} className="text-sm text-indigo-400 flex items-center">""                        <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -358,9 +340,7 @@ export { function };export default function IoTEdge(...args: []):  {}
 "
 
         {/* Edge Computing Benefits Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/iot-edge.tsx
@@ -370,9 +350,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                 Edge Computing Advantages"
                 Edge Computing Advantages;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Process data closer to the source for improved performance, reduced latency, and enhanced security.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Process data closer to the source for improved performance, reduced latency, and enhanced security.
               </p>
 :pages.disabled/pages/services/iot-edge.tsx
             </div>"
@@ -389,9 +367,7 @@ export { function };export default function IoTEdge(...args: []):  {}
               <div>""
                 <div className="space-y-6">
                   {[""
->>>>>>> pr-10728
-                    "Reduce latency by processing data locally on edge devices",""
-                    "Lower bandwidth costs by filtering and processing data at the edge",""
+                    "Reduce latency by processing data locally on edge devices",""                    "Lower bandwidth costs by filtering and processing data at the edge",""
                     "Improve reliability with offline capabilities and local processing",""
                     "Enhance security by keeping sensitive data closer to the source",""
                     "Enable real-time decision making without cloud dependency",""
@@ -417,7 +393,6 @@ export { function };export default function IoTEdge(...args: []):  {}
                 <h3 className="text-2xl font-semibold text-white mb-4">Performance Metrics</h3>""
                 <div className="space-y-4">
                   {[""
->>>>>>> pr-10728
                     { metric: "90%", label: "Reduced Latency" },""
                     { metric: "60%", label: "Bandwidth Savings" },""
                     { metric: "99.9%", label: "Uptime Reliability" },""
@@ -428,9 +403,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                     { metric: "24/7", label: "Local Processing" }"
                     { metric: "24/7", label: "Local Processing" }
                   ].map((item, index)  => (""
->>>>>>> pr-10728
-                    <div key={index} className="flex justify-between items-center">""
-                      <span className="text-slate-300">{item.label}</span>""
+                    <div key={index} className="flex justify-between items-center">""                      <span className="text-slate-300">{item.label}</span>""
                       <span className="text-2xl font-bold text-indigo-400">{item.metric}</span>
                     </div>
                   ))}
@@ -446,9 +419,7 @@ export { function };export default function IoTEdge(...args: []):  {}
 "
 
         {/* Technology Stack Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/iot-edge.tsx
@@ -458,9 +429,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                 Advanced Technology Stack"
                 Advanced Technology Stack;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Built on cutting-edge IoT and edge computing technologies for maximum performance and reliability.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Built on cutting-edge IoT and edge computing technologies for maximum performance and reliability.
               </p>
 :pages.disabled/pages/services/iot-edge.tsx
             </div>"
@@ -527,9 +496,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{index + 1}</span>
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{technology.title}</h3>""
-                  <p className="text-slate-300">{technology.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{technology.title}</h3>""                  <p className="text-slate-300">{technology.description}</p>
                 </div>
               ))}
             </div>
@@ -542,9 +509,7 @@ export { function };export default function IoTEdge(...args: []):  {}
 "
 
         {/* Implementation Process Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/iot-edge.tsx
@@ -554,9 +519,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                 Implementation Process"
                 Implementation Process;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our systematic approach ensures successful IoT and edge computing implementation.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our systematic approach ensures successful IoT and edge computing implementation.
               </p>
 :pages.disabled/pages/services/iot-edge.tsx
             </div>"
@@ -631,9 +594,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
-                  <p className="text-slate-300">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""                  <p className="text-slate-300">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -646,9 +607,7 @@ export { function };export default function IoTEdge(...args: []):  {}
 "
 
         {/* CTA Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-gradient-to-r from-indigo-500/10 to-purple-600/10">;""
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-gradient-to-r from-indigo-500/10 to-purple-600/10">;""          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/iot-edge.tsx
               Ready to Connect Your IoT Ecosystem?"
@@ -684,9 +643,7 @@ export { function };export default function IoTEdge(...args: []):  {}
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-indigo-500/30 text-indigo-400 font-semibold rounded-lg hover:bg-indigo-500/10 transition-all duration-200""
               >
->>>>>>> pr-10728
-                Explore All Services;
-              </Link>;
+                Explore All Services;              </Link>;
             </div>;
           </div>;
         </section>;
@@ -700,4 +657,3 @@ export { function };export default function IoTEdge(...args: []):  {}
   )}}}}}}'"'"
     </>
   )}}}}}}'""
->>>>>>> pr-10728

@@ -1,14 +1,12 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  keywords?: string;
-  image?: string;
+  keywords?: string;  image?: string;
   url?: string;
   type?: string
 }
 
 export const SEO: React.FC<SEOProps> = ({
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    <Helmet>
-      {/* Basic Meta Tags */}
+    <Helmet>      {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />"      <meta name="keywords" content={keywords} />"      <meta name="author" content="Zion Tech Group" />"      <meta name="robots" content="index, follow" />"      <link rel="canonical" href={url} />""      {/* Open Graph / Facebook */}
       <meta property="og: type" content={type} />"      <meta property="og:url" content={url} />"      <meta property="og:title" content={title} />"      <meta property="og:description" content={description} />"      <meta property="og:image" content={image} />"      <meta property="og:site_name" content="Zion Tech Group" />""      {/* Twitter */}"

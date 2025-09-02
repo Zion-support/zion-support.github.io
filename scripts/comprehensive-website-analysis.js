@@ -64,8 +64,7 @@ class WebsiteAnalyzer {
     this.generateReport();
 
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    console.log(`🔗 Working links: ${this.results.summary.workingLinks}`);
-    console.log(`❌ Broken links: ${this.results.summary.brokenLinks}`);
+    console.log(`🔗 Working links: ${this.results.summary.workingLinks}`);    console.log(`❌ Broken links: ${this.results.summary.brokenLinks}`);
     console.log(`🔄 Redirects: ${this.results.summary.redirects}`);
     console.log(`📄 Missing pages: ${this.results.summary.missingPages}`);
   }
@@ -100,8 +99,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
           const links = this.extractLinks(response.data, url);
           for (const link of links) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-              if (!this.checkedUrls.has(fullUrl)) {
-                this.linkQueue.push({ url: fullUrl, parentUrl: url });
+              if (!this.checkedUrls.has(fullUrl)) {                this.linkQueue.push({ url: fullUrl, parentUrl: url });
               }
             }
           }
@@ -128,8 +126,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
             status,
             parentUrl,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-          });
-        } else {
+          });        } else {
           this.results.summary.brokenLinks++;
           this.results.brokenLinks.push({
             url,
@@ -167,7 +164,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const navigationLinks = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     for (const link of navigationLinks) {
       const fullUrl = `${BASE_URL}${link}`;
       await this.checkPage(fullUrl);
@@ -178,7 +174,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const servicePages = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     for (const link of servicePages) {
       const fullUrl = `${BASE_URL}${link}`;
       await this.checkPage(fullUrl);
@@ -189,7 +184,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const additionalPages = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     for (const link of additionalPages) {
       const fullUrl = `${BASE_URL}${link}`;
       await this.checkPage(fullUrl);
@@ -202,14 +196,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const working = this.results.summary.workingLinks;
 ursor/automate-test-fix-improve-and-merge-code-99d1
     this.results.summary.successRate = `${successRate}%`;
-
     // Generate recommendations
     this.generateRecommendations();
 
     // Save report
 ursor/automate-test-fix-improve-and-merge-code-99d1
     fs.writeFileSync(reportPath, JSON.stringify(this.results, null, 2));
-
     console.log(`📄 Report saved to: ${reportPath}`);
   }
 
@@ -220,24 +212,21 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ',
         message: `Fix ${this.results.summary.brokenLinks} broken links to improve user experience and SEO`,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      });
-    }
+      });    }
 
     if (this.results.summary.missingPages > 0) {
       this.results.recommendations.push({
         type: 'important,
         message: `Create ${this.results.summary.missingPages} missing pages that are referenced in navigation`,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      });
-    }
+      });    }
 
     if (this.results.summary.redirects > 0) {
       this.results.recommendations.push({
         type: 'info,
         message: `${this.results.summary.redirects} redirects found - consider updating direct links`,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      });
-    }
+      });    }
 
     if (this.results.summary.successRate < '95%
   ') {

@@ -1,31 +1,7 @@
 
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
-
-export default function AICustomerExperienceSupport(...args: any[]): any {,
-  Automated customer sentiment analysis and satisfaction tracking',;'
-  'Multi-channel support integration (email, chat, phone, social media),;'
-
-  'Predictive customer behavior analysis and proactive support',;'
-  'Personalized customer journey mapping and optimization',;'
-  'Real-time analytics and performance monitoring dashboard',;'
-  'Integration with CRM, helpdesk, and e-commerce platforms',;
-
-export default function AICustomerExperienceSupport(...args: any[]): any {
-
-    'Automated customer sentiment analysis and satisfaction tracking',;'
-    'Multi-channel support integration (email, chat, phone, social media),;'
-    'Predictive customer behavior analysis and proactive support',;'
-    'Personalized customer journey mapping and optimization',;'
-    'Real-time analytics and performance monitoring dashboard',;'
-export default function AICustomerExperienceSupport(...args: any[]): any {}
-    'Automated customer sentiment analysis and satisfaction tracking',;
-    'Multi-channel support integration (email, chat, phone, social media),;
-    'Predictive customer behavior analysis and proactive support',;
-    'Personalized customer journey mapping and optimization',;
-    'Real-time analytics and performance monitoring dashboard',;
-    'Integration with CRM, helpdesk, and e-commerce platforms',;
->>>>>>> pr-10728
   ];
+  'Integration with CRM, helpdesk, and e-commerce platforms',;  ];
 
   '
     'Increase customer satisfaction scores by 35-50%
@@ -73,60 +49,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
 
   '
 
-    { name: 'Twilio, url:,
-  https: //www.twilio.com/ },;,
-  { name: 'Intercom, url:,
-  https: //www.intercom.com/ },;,
-  { name: 'Zendesk, url:,
-  https: //www.zendesk.com/ },;,
-  { name: 'HubSpot, url:,
-  https: //www.hubspot.com/ },;,
-  { name: 'Salesforce, url:,
-  https: //www.salesforce.com/ },;,
-  { name: 'Analytics, url:,
-  https: //analytics.google.com/ },;,
-  { name: 'OpenAI GPT-4, url:,
-  https: //openai.com/gpt-4 },',
-  { name: 'Dialogflow, url:,
-  https: //cloud.google.com/dialogflow },;,
-  '
-    { name: 'Twilio, url:,
-  https: //www.twilio.com/ },;,
-  '
-    { name: 'Intercom, url:,
-  https: //www.intercom.com/ },;,
-  '
-    { name: 'Zendesk, url:,
-  https: //www.zendesk.com/ },;,
-  '
-    { name: 'HubSpot, url:,
-  https: //www.hubspot.com/ },;,
-  '
-    { name: 'Salesforce, url:,
-  https: //www.salesforce.com/ },;,
-  { name: 'Analytics, url:,
-  https: //analytics.google.com/ },;
-:pages.disabled/pages/services/AICustomerExperienceSupport.tsx];
-
-    { name: 'Twilio', url: 'https://www.twilio.com/' },;'
-    { name: 'Intercom', url: 'https://www.intercom.com/' },;'
-    { name: 'Zendesk', url: 'https://www.zendesk.com/' },;'
-    { name: 'HubSpot', url: 'https://www.hubspot.com/' },;'
-    { name: 'Salesforce', url: 'https://www.salesforce.com/' },;'
-    { name: 'Analytics', url: 'https://analytics.google.com/' },;
-'
-    { name: 'OpenAI GPT-4', url: 'https://openai.com/gpt-4' },''
-    { name: 'Dialogflow', url: 'https://cloud.google.com/dialogflow' },;''
-    { name: 'Twilio', url: 'https://www.twilio.com/' },;''
-    { name: 'Intercom', url: 'https://www.intercom.com/' },;''
-    { name: 'Zendesk', url: 'https://www.zendesk.com/' },;''
-    { name: 'HubSpot', url: 'https://www.hubspot.com/' },;''
-    { name: 'Salesforce', url: 'https://www.salesforce.com/' },;'    { name: 'Analytics', url: 'https://analytics.google.com/' },;
-:pages.disabled/pages/services/AICustomerExperienceSupport.tsx
-
-  ];
->>>>>>> pr-10728
-
   return()
     <div className = "min-h-screen bg-futuristic">""
       <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
@@ -140,9 +62,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Customer Experience & Support</span>"
               AI-Powered <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">Customer Experience & Support</span>
             </h1>""
->>>>>>> pr-10728
-            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-:pages.disabled/pages/services/AICustomerExperienceSupport.tsx
+            <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">:pages.disabled/pages/services/AICustomerExperienceSupport.tsx
               Revolutionize your customer support with AI-driven automation, intelligent routing, and personalized experiences.
               Deliver exceptional customer service 24/7 while reducing costs and improving satisfaction.
             </p>""
@@ -161,7 +81,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
                 Get Support Demo""
                 <ArrowRight className="ml-2 h-5 w-5"  />"
               </Link>"              <a href="https://ziontechgroup.com" target="_blank" rel="noreferrer" className="inline-flex items-center px-8 py-3 border border-cyan-500 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500 hover:text-white transition-all duration-200">
->>>>>>> pr-10728
                 Visit Site;
               </a>
             </div>
@@ -172,9 +91,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
           </div>"
           </div>
         </div>""
->>>>>>> pr-10728
-        <div className="absolute inset-0 -z-10">""
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />""
+        <div className="absolute inset-0 -z-10">""          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-blue-500/10" />""
           <div className="absolute top-20 left-20 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl" />""
           <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
         </div>
@@ -185,9 +102,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
       </section>"
       </section>
 ""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">""
           <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
             <div className="flex items-center mb-4">""
               <div className="p-3 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg">""
@@ -204,9 +119,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
             </div>""
             <ul className="space-y-3">
               {features.slice(0, 4).map((item) => (""
->>>>>>> pr-10728
-                <li key={item} className="flex items-center text-slate-300">""
-                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3"  />                  {item}
+                <li key={item} className="flex items-center text-slate-300">""                  <CheckCircle className="h-5 w-5 text-cyan-400 mr-3"  />                  {item}
                 </li>
               ))}
             </ul>
@@ -217,9 +130,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
-            <div className="flex items-center mb-4">""
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""            <div className="flex items-center mb-4">""
               <div className="p-3 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg">""
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
                 <Headphones className="h-8 w-8 text-white"  />"
@@ -234,9 +145,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
             </div>""
             <ul className="space-y-3">
               {supportChannels.slice(0, 5).map((item) => (""
->>>>>>> pr-10728
-                <li key={item} className="flex items-center text-slate-300">""
-                  <CheckCircle className="h-5 w-5 text-purple-400 mr-3"  />                  {item}
+                <li key={item} className="flex items-center text-slate-300">""                  <CheckCircle className="h-5 w-5 text-purple-400 mr-3"  />                  {item}
                 </li>
               ))}
             </ul>
@@ -247,9 +156,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
-            <div className="flex items-center mb-4">""
+          <div className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""            <div className="flex items-center mb-4">""
               <div className="p-3 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg">""
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
                 <Zap className="h-8 w-8 text-white"  />"
@@ -260,9 +167,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
                 <Zap className="h-8 w-8 text-white"  />
               </div>"              <h3 className="ml-3 text-xl font-semibold text-white">Pricing</h3>
             </div>""
->>>>>>> pr-10728
-            <ul className="space-y-3 text-slate-300">
-              <li>Starter: $199/month (up to 1,000 interactions)</li>
+            <ul className="space-y-3 text-slate-300">              <li>Starter: $199/month (up to 1,000 interactions)</li>
               <li>Professional: $599/month (up to 10,000 interactions)</li>
               <li>Enterprise: $1,499/month (unlimited interactions)</li>
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
@@ -272,9 +177,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
               <li>Custom: Tailored enterprise solutions</li>"
               <li>Custom: Tailored enterprise solutions</li>
             </ul>""
->>>>>>> pr-10728
-            <div className="mt-6 text-sm text-slate-400">""
-              Avg. market reference: see <a className="text-cyan-400 hover:underline" href="https://www.gartner.com/en/documents/3991477" target="_blank" rel="noreferrer">Gartner Customer Service</a>
+            <div className="mt-6 text-sm text-slate-400">""              Avg. market reference: see <a className="text-cyan-400 hover:underline" href="https://www.gartner.com/en/documents/3991477" target="_blank" rel="noreferrer">Gartner Customer Service</a>
             </div>
           </div>
         </div>
@@ -285,9 +188,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
       </section>"
       </section>
 ""
->>>>>>> pr-10728
-      <section className="py-12 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
+      <section className="py-12 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-6">Platform Capabilities</h3>""
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">""
             <div className="bg-slate-900/60 border border-slate-700/60 rounded-lg p-6 text-center">""
@@ -353,9 +254,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
               <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg mx-auto mb-3 w-12 h-12 flex items-center justify-center">""
                 <Users className="h-6 w-6 text-white"  />
               </div>""
->>>>>>> pr-10728
-              <h4 className="text-lg font-semibold text-white mb-2">Multi-Channel</h4>"              <p className="text-slate-300 text-sm">
-                Unified support across all customer touchpoints;
+              <h4 className="text-lg font-semibold text-white mb-2">Multi-Channel</h4>"              <p className="text-slate-300 text-sm">                Unified support across all customer touchpoints;
               </p>
             </div>
           </div>
@@ -367,7 +266,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
       </section>"
       </section>
 ""
->>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">AI Capabilities</h3>""
@@ -378,9 +276,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
           <div className="flex flex-wrap gap-3">"
           <div className="flex flex-wrap gap-3">
             {aiCapabilities.map((capability) => (""
->>>>>>> pr-10728
-              <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
-                {capability}
+              <span key={capability} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">                {capability}
               </span>
             ))}
           </div>
@@ -392,7 +288,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
       </section>"
       </section>
 ""
->>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">Platform Integrations</h3>""
@@ -403,9 +298,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
           <div className="flex flex-wrap gap-3">"
           <div className="flex flex-wrap gap-3">
             {integrations.map((integration) => (""
->>>>>>> pr-10728
-              <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">
-                {integration}
+              <span key={integration} className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300">                {integration}
               </span>
             ))}
           </div>
@@ -417,7 +310,6 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
       </section>"
       </section>
 ""
->>>>>>> pr-10728
       <section className="py-12 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto bg-slate-800/50 border border-slate-700/50 rounded-xl p-8">""
           <h3 className="text-2xl font-semibold text-white mb-4">Tech Stack & Tools</h3>""
@@ -428,9 +320,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
           <div className="flex flex-wrap gap-3">"
           <div className="flex flex-wrap gap-3">
             {stack.map((s) => (""
->>>>>>> pr-10728
-              <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">
-                {s.name}
+              <a key={s.name} href={s.url} target="_blank" rel="noreferrer" className="px-4 py-2 bg-slate-900/60 border border-slate-700/60 rounded-lg text-slate-300 hover:text-white hover:border-cyan-500">                {s.name}
               </a>
             ))}
           </div>
@@ -442,9 +332,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
       </section>"
       </section>
 ""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto text-center">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto text-center">""
           <h2 className="text-3xl font-bold text-white mb-8">Transform Your Customer Experience</h2>""
           <div className="flex flex-col sm:flex-row gap-4 justify-center">""
 :pages.disabled/pages/services/AICustomerExperienceSupport.tsx
@@ -464,9 +352,7 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
               Call +1 302 464 0950;
             </a>
           </div>;""
->>>>>>> pr-10728
-          <p className="text-slate-400 mt-6">;""
-            Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
+          <p className="text-slate-400 mt-6">;""            Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:underline">kleber@ziontechgroup.com</a> for enterprise solutions;
           </p>;
         </div>;
       </section>;
@@ -479,4 +365,3 @@ export default function AICustomerExperienceSupport(...args: any[]): any {}
   )}'"'"
     </div>;
   )}'""
->>>>>>> pr-10728

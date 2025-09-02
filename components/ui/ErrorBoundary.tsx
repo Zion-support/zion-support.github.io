@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode;}
 
 interface State {
   hasError: boolean;
@@ -17,8 +16,7 @@ public state: State = {;hasError: false
 
   public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    this.setState({ hasError: false, error: undefined });
-  };
+    this.setState({ hasError: false, error: undefined });  };
 
   public render() {
     if (this.state.hasError) {
@@ -28,8 +26,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
 
       return (
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">"                  {this.state.error.stack}"                </pre></details>
-            )}
+                <pre className="mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto">"                  {this.state.error.stack}"                </pre></details>            )}
           </div>
         </div>
       );

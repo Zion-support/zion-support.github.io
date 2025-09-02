@@ -80,9 +80,7 @@ import {}
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">"
   return()    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative pt-32 pb-20 overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>""
+      <section className="relative pt-32 pb-20 overflow-hidden">""        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-pink-500/10"></div>""
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -93,9 +91,7 @@ import {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center""
-          >""
+            className="text-center""          >""
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full text-purple-400 text-sm font-medium mb-6">""
 :pages.disabled/pages/services/SpaceTech.tsx
               <Rocket className="w-4 h-4 mr-2"  />              Space Technology Solutions
@@ -103,30 +99,6 @@ import {}
 ""
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
               Space""
-
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-  '{' 
-  '}
-                Technology;
-              </span>
-:pages.disabled/pages/services/SpaceTech.tsx
-            </h1>"""
-
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">'
-              <Rocket className="w-4 h-4 mr-2"  />              Space Technology Solutions;
-            </div>
-""
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              Space""
-              <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">
-                {' '}
-                Technology;
-              </span>
-:pages.disabled/pages/services/SpaceTech.tsx
-            </h1>"
-            </h1>
-""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               Pioneer the future with our cutting-edge space technology;
               solutions that enable satellite operations, space communications,
@@ -137,8 +109,12 @@ import {}
               and Earth observation."
               and Earth observation.
             </p>""
->>>>>>> pr-10728
             <div className="flex flex-col sm:flex-row gap-4 justify-center">""
+            </h1>"""            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+              Pioneer the future with our cutting-edge space technology;
+              solutions that enable satellite operations, space communications,
+:pages.disabled/pages/services/SpaceTech.tsx
+              and Earth observation."</p>""            <div className="flex flex-col sm:flex-row gap-4 justify-center">""
               <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200 flex items-center justify-center">""
                 <Play className="w-5 h-5 mr-2"  />
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -154,9 +130,7 @@ import {}
               <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200 flex items-center justify-center">""
                 <Settings className="w-5 h-5 mr-2"  />                Schedule Demo;
               </button>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -166,9 +140,7 @@ import {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -178,7 +150,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -189,9 +160,7 @@ import {}
               Advanced Space Technology Features"
               Advanced Space Technology Features;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our platform provides cutting-edge space technology capabilities;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              Our platform provides cutting-edge space technology capabilities;
               for modern space missions and satellite operations.
             </p>
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -215,9 +184,7 @@ import {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200""
-              >""
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200""              >""
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/SpaceTech.tsx
                   <feature.icon className="w-6 h-6 text-white" />"
@@ -232,9 +199,7 @@ import {}
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-300">{feature.description}</p>
-              </motion.div>
+                <p className="text-gray-300">{feature.description}</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -246,9 +211,7 @@ import {}
 "
 
       {/* Services Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-800/30">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-800/30">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -258,7 +221,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -269,9 +231,7 @@ import {}
               Core Space Technology Services"
               Core Space Technology Services;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              From satellite operations to space communications, we provide;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              From satellite operations to space communications, we provide;
               comprehensive space technology solutions.
             </p>
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -295,9 +255,7 @@ import {}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200""
-              >""
+                className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-200""              >""
                 <div className="flex items-start space-x-4">""
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center flex-shrink-0">""
                     <service.icon className="w-6 h-6 text-white" />
@@ -314,9 +272,7 @@ import {}
                     <h3 className="text-xl font-semibold text-white mb-2">
                       {service.title}
                     </h3>""
->>>>>>> pr-10728
-                    <p className="text-gray-300">{service.description}</p>
-                  </div>
+                    <p className="text-gray-300">{service.description}</p>                  </div>
                 </div>
               </motion.div>
             ))}
@@ -330,9 +286,7 @@ import {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -342,7 +296,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -353,9 +306,7 @@ import {}
               Space Technology Benefits"
               Space Technology Benefits;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Experience measurable improvements in global connectivity,
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              Experience measurable improvements in global connectivity,
               monitoring, and space exploration capabilities.
             </p>
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -381,9 +332,7 @@ import {}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                  className="flex items-start space-x-3""
-                >""
+                  className="flex items-start space-x-3""                >""
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0"  />"                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -407,9 +356,7 @@ import {}
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                  className="flex items-start space-x-3""
-                >""
+                  className="flex items-start space-x-3""                >""
                   <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0"  />"                  <span className="text-gray-300 text-lg">{benefit}</span>
                 </motion.div>
               ))}
@@ -424,9 +371,7 @@ import {}
 "
 
       {/* Use Cases Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-slate-800/30">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-slate-800/30">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -436,7 +381,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -447,9 +391,7 @@ import {}
               Industry Applications"
               Industry Applications;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Our space technology solutions adapt to various industries,
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              Our space technology solutions adapt to various industries,
               providing innovative solutions for global challenges.
             </p>
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -473,7 +415,6 @@ import {}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 text-center hover:border-purple-500/30 transition-all duration-200""
               >""
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -484,9 +425,7 @@ import {}
                   <Target className="w-8 h-8 text-white"  />"
                   <Target className="w-8 h-8 text-white"  />
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {useCase.industry}"
+                <h3 className="text-xl font-semibold text-white mb-2">                  {useCase.industry}"
                 </h3>"                <p className="text-gray-300 text-sm">{useCase.description}</p>
               </motion.div>
             ))}
@@ -526,9 +465,7 @@ import {}
               </p>""
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (""
->>>>>>> pr-10728
-                  <li key={index} className="flex items-center text-gray-300">""
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  <li key={index} className="flex items-center text-gray-300">""                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>
                 ))}
@@ -539,9 +476,7 @@ import {}
               </ul>"
               </ul>
             </div>""
->>>>>>> pr-10728
-            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">""
-              <div className="text-center">""
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">""              <div className="text-center">""
                 <Zap className="w-24 h-24 text-purple-400 mx-auto mb-4"  />""
                 <h3 className="text-2xl font-bold text-white mb-2">
 :pages.disabled/pages/services/SpaceTech.tsx
@@ -557,9 +492,7 @@ import {}
                   Our team has deep expertise in space technology and is;
                   committed to advancing the frontiers of exploration.
                 </p>""
->>>>>>> pr-10728
-                <div className="text-sm text-gray-400">
-                  <p>• Space technology experts</p>
+                <div className="text-sm text-gray-400">                  <p>• Space technology experts</p>
                   <p>• Innovation leadership</p>
                   <p>• Proven methodologies</p>
                 </div>
@@ -575,9 +508,7 @@ import {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">""
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="py-20 bg-gradient-to-r from-purple-500/10 to-pink-500/10">""        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -612,9 +543,7 @@ import {}
                 Get Started Today""
                 <ArrowRight className="w-5 h-5 ml-2"  />
               </button>"              <button className="px-8 py-4 border border-purple-500/30 text-purple-400 font-semibold rounded-lg hover:bg-purple-500/10 transition-all duration-200">
->>>>>>> pr-10728
-                Contact Sales;
-              </button>
+                Contact Sales;              </button>
             </div>
           </motion.div>
         </div>
@@ -630,4 +559,3 @@ export { SpaceTech };export default SpaceTech;'"
 '"'"
 export { SpaceTech };export default SpaceTech;
 '""
->>>>>>> pr-10728

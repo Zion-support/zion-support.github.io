@@ -11,9 +11,7 @@ const QuantumTechnology: any = () => {}
   const quantumServices: any = []
     {}
       title: "Quantum Neural Networks",""
->>>>>>> pr-10728
-      description: "Advanced quantum machine learning algorithms for pattern recognition and data analysis.",""
-      price: "From $35,000/project",""
+      description: "Advanced quantum machine learning algorithms for pattern recognition and data analysis.",""      price: "From $35,000/project",""
       features: ["Quantum algorithms", "Pattern recognition", "Data analysis", "Machine learning"],
       icon: Box;
     },
@@ -25,9 +23,7 @@ const QuantumTechnology: any = () => {}
 "
     {}
 ""
->>>>>>> pr-10728
-      title: "Quantum Edge Computing",""
-      description: "Distributed quantum computing solutions for real-time processing at the edge.",""
+      title: "Quantum Edge Computing",""      description: "Distributed quantum computing solutions for real-time processing at the edge.",""
       price: "From $28,000/month",""
       features: ["Edge processing", "Real-time analytics", "Distributed computing", "Low latency"],
 :pages.disabled/pages/services/QuantumTechnology.tsx
@@ -39,9 +35,7 @@ const QuantumTechnology: any = () => {}
       icon: Zap;
     },
     {;""
->>>>>>> pr-10728
-      title: "Quantum Cryptography",;""
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",;""
+      title: "Quantum Cryptography",;""      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",;""
       price: "From $42,000/month",;"      features: ["Quantum key distribution", "Post-quantum cryptography", "Secure communications", "Threat protection"],;
       icon: Shield};
   ];
@@ -69,9 +63,7 @@ const QuantumTechnology: any = () => {}
 
   const benefits: any = [;""
     "Exponential speedup for complex computational problems",;""
->>>>>>> pr-10728
-    "Unbreakable encryption and enhanced security",;""
-    "Advanced machine learning and AI capabilities",;""
+    "Unbreakable encryption and enhanced security",;""    "Advanced machine learning and AI capabilities",;""
     "Revolutionary breakthroughs in scientific research",;""
     "Competitive advantage in technology innovation",;"    "Future-proof solutions for emerging challenges";
   ];
@@ -86,9 +78,7 @@ const QuantumTechnology: any = () => {}
   return (""
     <div className = "min-h-screen bg-slate-900 text-white">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto text-center">""
+      <section className="relative pt-24 pb-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto text-center">""
           <div className="mb-8">""
             <div className="inline-flex items-center px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium mb-6">""
 :pages.disabled/pages/services/QuantumTechnology.tsx
@@ -122,9 +112,7 @@ const QuantumTechnology: any = () => {}
               <a href="#services" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Explore Services;
               </a>""
->>>>>>> pr-10728
-              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">
-                Get Started;
+              <a href="/contact" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">                Get Started;
               </a>
             </div>
           </div>
@@ -151,7 +139,6 @@ const QuantumTechnology: any = () => {}
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 What is Quantum Computing?
               </h2>""
->>>>>>> pr-10728
               <p className="text-lg text-gray-300 mb-6">
                 Quantum computing leverages the principles of quantum mechanics to process information in ways that;
                 classical computers cannot. By using quantum bits (qubits) that can exist in multiple states simultaneously,
@@ -162,9 +149,7 @@ const QuantumTechnology: any = () => {}
                 quantum computers can solve complex problems exponentially faster."
                 quantum computers can solve complex problems exponentially faster.
               </p>""
->>>>>>> pr-10728
-              <div className="space-y-4">""
-                <div className="flex items-center space-x-3">""
+              <div className="space-y-4">""                <div className="flex items-center space-x-3">""
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>""
 :pages.disabled/pages/services/QuantumTechnology.tsx
                   <span className="text-gray-300">Superposition - Qubits can be in multiple states at once</span>"
@@ -181,9 +166,7 @@ const QuantumTechnology: any = () => {}
                   <div className="w-2 h-2 bg-purple-400 rounded-full"></div>""
                   <span className="text-gray-300">Entanglement - Qubits can be correlated across vast distances</span>
                 </div>""
->>>>>>> pr-10728
-                <div className="flex items-center space-x-3">""
-                  <div className="w-2 h-2 bg-purple-400 rounded-full"></div>""
+                <div className="flex items-center space-x-3">""                  <div className="w-2 h-2 bg-purple-400 rounded-full"></div>""
                   <span className="text-gray-300">Quantum interference - Enables precise control over computations</span>
                 </div>
 :pages.disabled/pages/services/QuantumTechnology.tsx
@@ -193,9 +176,7 @@ const QuantumTechnology: any = () => {}
               </div>"
               </div>
             </div>""
->>>>>>> pr-10728
-            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30">""
-              <div className="text-center">""
+            <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30">""              <div className="text-center">""
                 <Cpu className="h-24 w-24 text-purple-400 mx-auto mb-4" />""
                 <h3 className="text-2xl font-bold mb-2">Quantum Advantage</h3>"                <p className="text-gray-300">
                   Solve problems in minutes that would take classical computers thousands of years;
@@ -212,9 +193,7 @@ const QuantumTechnology: any = () => {}
 "
 
       {/* Quantum Services */}""
->>>>>>> pr-10728
-      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section id="services" className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/QuantumTechnology.tsx
@@ -224,9 +203,7 @@ const QuantumTechnology: any = () => {}
               Our Quantum Services"
               Our Quantum Services;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Cutting-edge quantum technology solutions designed to solve;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              Cutting-edge quantum technology solutions designed to solve;
               the most complex computational challenges.
             </p>
 :pages.disabled/pages/services/QuantumTechnology.tsx
@@ -248,7 +225,6 @@ const QuantumTechnology: any = () => {}
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">""
                   <service.icon className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>""
                 <p className="text-gray-300 mb-4">{service.description}</p>""
                 <p className="text-lg font-semibold text-purple-400 mb-4">{service.price}</p>""
@@ -259,9 +235,7 @@ const QuantumTechnology: any = () => {}
                 <ul className="space-y-2">"
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (""
->>>>>>> pr-10728
-                    <li key={featureIndex} className="text-sm text-gray-400 flex items-start">""
-                      <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
+                    <li key={featureIndex} className="text-sm text-gray-400 flex items-start">""                      <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mr-2 mt-2 flex-shrink-0"></div>
                       {feature}
                     </li>
                   ))}
@@ -278,9 +252,7 @@ const QuantumTechnology: any = () => {}
 "
 
       {/* Quantum Technologies */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/QuantumTechnology.tsx
@@ -290,9 +262,7 @@ const QuantumTechnology: any = () => {}
               Quantum Technologies We Use"
               Quantum Technologies We Use;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Advanced quantum technologies and platforms to build;
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">              Advanced quantum technologies and platforms to build;
               revolutionary computing solutions.
             </p>
 :pages.disabled/pages/services/QuantumTechnology.tsx
@@ -322,9 +292,7 @@ const QuantumTechnology: any = () => {}
                 <p className="text-gray-300 mb-4">{tech.description}</p>""
                 <ul className="space-y-2">
                   {tech.features.map((feature, idx) => (""
->>>>>>> pr-10728
-                    <li key={idx} className="text-sm text-gray-400">
-                      {feature}
+                    <li key={idx} className="text-sm text-gray-400">                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -366,9 +334,7 @@ const QuantumTechnology: any = () => {}
               </p>""
               <ul className="space-y-3">
                 {benefits.map((benefit, index) => (""
->>>>>>> pr-10728
-                  <li key={index} className="flex items-center text-gray-300">""
-                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
+                  <li key={index} className="flex items-center text-gray-300">""                    <div className="w-2 h-2 bg-purple-400 rounded-full mr-3"></div>
                     {benefit}
                   </li>
                 ))}
@@ -379,9 +345,7 @@ const QuantumTechnology: any = () => {}
               </ul>"
               </ul>
             </div>""
->>>>>>> pr-10728
-            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">""
-              <div className="text-center">""
+            <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-purple-500/30">""              <div className="text-center">""
                 <Rocket className="w-24 h-24 text-purple-400 mx-auto mb-4" />""
                 <h3 className="text-2xl font-bold text-white mb-2">Quantum Innovation</h3>"                <p className="text-gray-300 mb-6">
 :pages.disabled/pages/services/QuantumTechnology.tsx
@@ -393,9 +357,7 @@ const QuantumTechnology: any = () => {}
                   Our team is at the forefront of quantum technology research;
                   and development.
                 </p>""
->>>>>>> pr-10728
-                <div className="text-sm text-gray-400">
-                  <p>• Quantum research experts</p>
+                <div className="text-sm text-gray-400">                  <p>• Quantum research experts</p>
                   <p>• Cutting-edge innovation</p>
                   <p>• Future-focused solutions</p>
                 </div>
@@ -411,9 +373,7 @@ const QuantumTechnology: any = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-4xl mx-auto text-center">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/QuantumTechnology.tsx
             Ready for the Quantum Future?"
@@ -439,9 +399,7 @@ const QuantumTechnology: any = () => {}
             <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl">
               Get Started;
             </a>""
->>>>>>> pr-10728
-            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;
-              View All Services;
+            <a href="/services" className="px-8 py-4 border border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300">;              View All Services;
             </a>;
           </div>;
         </div>;
@@ -457,4 +415,3 @@ export default QuantumTechnology}}}
 export default QuantumTechnology}}}'"'"
 
 export default QuantumTechnology}}}'""
->>>>>>> pr-10728

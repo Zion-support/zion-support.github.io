@@ -11,8 +11,7 @@ module.exports = {
   },
   collectCoverageFrom: [
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  ],
-  coverageThreshold: {
+  ],  coverageThreshold: {
     global: {
       branches: 70,
       functions: 70,

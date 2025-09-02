@@ -8,9 +8,7 @@ export default function Blockchain(...args[]):  {
 
 export default function Blockchain(...args[]):  {}
     },;
->>>>>>> pr-10728
-    {;
-      icon: Network,;""
+    {;      icon: Network,;""
       title: "Cross-Chain Interoperability",;""
       description: "Seamless communication between different blockchain networks"};
   ];
@@ -25,7 +23,6 @@ export default function Blockchain(...args[]):  {}
   const pricing: any = []
     {}
 ""
->>>>>>> pr-10728
       name: "Starter",""
       price: "$3,999",""
       period: "/month",""
@@ -36,9 +33,7 @@ export default function Blockchain(...args[]):  {}
       description: "For small businesses exploring blockchain","
       description: "For small businesses exploring blockchain",
       features: [""
->>>>>>> pr-10728
-        "Basic smart contracts",""
-        "Single blockchain deployment",""
+        "Basic smart contracts",""        "Single blockchain deployment",""
         "Email support",""
         "Monthly maintenance",""
         "Security audit""
@@ -54,7 +49,6 @@ export default function Blockchain(...args[]):  {}
 "
     {}
 ""
->>>>>>> pr-10728
       name: "Professional",""
       price: "$9,999",""
       period: "/month",""
@@ -65,9 +59,7 @@ export default function Blockchain(...args[]):  {}
       description: "For growing businesses with blockchain needs","
       description: "For growing businesses with blockchain needs",
       features: [""
->>>>>>> pr-10728
-        "Advanced smart contracts",""
-        "Multi-chain deployment",""
+        "Advanced smart contracts",""        "Multi-chain deployment",""
         "Priority support",""
         "Weekly maintenance",""
         "Security monitoring",""
@@ -84,7 +76,6 @@ export default function Blockchain(...args[]):  {}
 "
     {}
 ""
->>>>>>> pr-10728
       name: "Enterprise",""
       price: "$24,999",""
       period: "/month",""
@@ -95,9 +86,7 @@ export default function Blockchain(...args[]):  {}
       description: "For large-scale blockchain operations","
       description: "For large-scale blockchain operations",
       features: [""
->>>>>>> pr-10728
-        "Custom blockchain solutions",""
-        "Private blockchain networks",""
+        "Custom blockchain solutions",""        "Private blockchain networks",""
         "24/7 support",""
         "Real-time monitoring",;""
 :pages.disabled/pages/services/Blockchain.tsx
@@ -107,7 +96,6 @@ export default function Blockchain(...args[]):  {}
         "White-label solutions",;"        "Dedicated blockchain engineer";"
         "White-label solutions",;"        "Dedicated blockchain engineer";
       ],;""
->>>>>>> pr-10728
       cta: "Contact Sales",;
       popular: false};
   ]},;
@@ -118,9 +106,7 @@ export default function Blockchain(...args[]):  {}
     {;"
     {;
       icon: Users,;""
->>>>>>> pr-10728
-      title: "Trust & Compliance",;""
-      description: "Build trust through verifiable and auditable processes"};
+      title: "Trust & Compliance",;""      description: "Build trust through verifiable and auditable processes"};
   ];
 
 :pages.disabled/pages/services/Blockchain.tsx
@@ -130,9 +116,7 @@ export default function Blockchain(...args[]):  {}
     {;"
     {;
       icon: Shield,;""
->>>>>>> pr-10728
-      title: "Healthcare",;""
-      description: "Secure patient records and pharmaceutical supply chain management",;""
+      title: "Healthcare",;""      description: "Secure patient records and pharmaceutical supply chain management",;""
       examples: ["Patient data", "Drug tracking", "Clinical trials"]};  ];
 :pages.disabled/pages/services/Blockchain.tsx
 "
@@ -145,9 +129,7 @@ export default function Blockchain(...args[]):  {}
   return (""
     <div className="min-h-screen bg-futuristic">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative pt-32 pb-20 overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-slate-900 to-slate-900"></div>""
+      <section className="relative pt-32 pb-20 overflow-hidden">""        <div className="absolute inset-0 bg-gradient-to-br from-green-900/20 via-slate-900 to-slate-900"></div>""
         <div className="container-responsive relative z-10">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
@@ -158,9 +140,7 @@ export default function Blockchain(...args[]):  {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}""
->>>>>>> pr-10728
-            className="text-center max-w-4xl mx-auto""
-          >""
+            className="text-center max-w-4xl mx-auto""          >""
             <div className="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/20 rounded-full px-4 py-2 mb-6">""
               <Lock className="w-5 h-5 text-green-400"  />"              <span className="text-green-400 font-medium">Blockchain Solutions</span>
 :pages.disabled/pages/services/Blockchain.tsx
@@ -180,9 +160,7 @@ export default function Blockchain(...args[]):  {}
               <span className="text-gradient"> Technology</span>
             </h1>
 ""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">
-              Build trust, transparency, and efficiency with blockchain technology.
+            <p className="text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto">              Build trust, transparency, and efficiency with blockchain technology.
               Transform your business with decentralized solutions.
 :pages.disabled/pages/services/Blockchain.tsx
             </p>"
@@ -201,9 +179,7 @@ export default function Blockchain(...args[]):  {}
                 Start Blockchain Project""
                 <ArrowRight className="w-5 h-5 ml-2"  />
               </button>"              <button className="btn-outline px-8 py-4 text-lg">
->>>>>>> pr-10728
-                Learn More;
-              </button>
+                Learn More;              </button>
             </div>
           </motion.div>
         </div>
@@ -215,9 +191,7 @@ export default function Blockchain(...args[]):  {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="container-responsive">
+      <section className="py-20">""        <div className="container-responsive">
           <motion.div;
             initial = {}
   { opacity: 0,
@@ -229,9 +203,7 @@ export default function Blockchain(...args[]):  {}
 
   y: 20;
 }}
->>>>>>> pr-10728
-            whileInView = {}
-  { opacity: 1,
+            whileInView = {}  { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0
 
@@ -244,7 +216,6 @@ export default function Blockchain(...args[]):  {}
 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -255,49 +226,15 @@ export default function Blockchain(...args[]):  {}
               Why Choose Blockchain Technology?"
               Why Choose Blockchain Technology?
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Unprecedented security, transparency, and efficiency;
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">              Unprecedented security, transparency, and efficiency;
             </p>
 :pages.disabled/pages/services/Blockchain.tsx
           </motion.div>"
 ""
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index()
-
-              <motion.divkey={feature.title}
-                initial = {}
-  { opacity: 0,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 20}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 0}}
-
-              <motion.div
-          </motion.div>
-""
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index (
-              <motion.div;
-                key={feature.title}
-                initial = {}
-  { opacity: 0,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 20
-
-  y: 20;
-}}
-                whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
-  y: 0;
-}}
->>>>>>> pr-10728
                 transition = {}
+  y: 0}}                transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx
   delay: index * 0.1
@@ -308,7 +245,6 @@ export default function Blockchain(...args[]):  {}
   delay: index * 0.1;
 }}
                 viewport={{ once: true }}""
->>>>>>> pr-10728
                 className="bg-white/5 backdrop-blur-xl border border-zion-cyan/20 rounded-2xl p-6 hover:border-zion-cyan/40 transition-all duration-300 group""
               >""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">""
@@ -319,9 +255,7 @@ export default function Blockchain(...args[]):  {}
                   <feature.icon className="w-8 h-8 text-white" />"
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>""
->>>>>>> pr-10728
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""
-                <p className="text-zion-slate-light">{feature.description}</p>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>""                <p className="text-zion-slate-light">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -355,9 +289,7 @@ export default function Blockchain(...args[]):  {}
   { opacity: 0,
   y: 30;
 }}
->>>>>>> pr-10728
-              animate = {}
-  { opacity: 1,
+              animate = {}  { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0
 
@@ -414,9 +346,7 @@ export default function Blockchain(...args[]):  {}
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300""
                   Request Quote;
                 </RouterLink>
->>>>>>> pr-10728
-              </div>
-            </motion.div>;
+              </div>            </motion.div>;
           </div>
         </section>
 :pages.disabled/pages/services/Blockchain.tsx
@@ -443,9 +373,7 @@ export default function Blockchain(...args[]):  {}
   { opacity: 0,
   y: 30;
 }}
->>>>>>> pr-10728
-              whileInView = {}
-  { opacity: 1,
+              whileInView = {}  { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0
 
@@ -466,9 +394,7 @@ export default function Blockchain(...args[]):  {}
               <h2 className="text-4xl font-bold text-white mb-4">
                 Blockchain Applications;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-                Discover how blockchain is transforming industries across the globe;
+              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">                Discover how blockchain is transforming industries across the globe;
               </p>
 :pages.disabled/pages/services/Blockchain.tsx
             </motion.div>"
@@ -481,35 +407,8 @@ export default function Blockchain(...args[]):  {}
                   initial = {
 
   { opacity: 0,
-
-  y: 30}}
-                  whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 0}}
-
-  y: 30
-
-            </motion.div>
-""
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {useCases.map(useCase: unknown, index: unknown;
-                <motion.div;
-                  key={index}""
-                  className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300""
-                  initial = {}
-  { opacity: 0,
-  y: 30;
-}}
-                  whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
-  y: 0;
-}}
->>>>>>> pr-10728
                   transition = {}
+  y: 0}}                  transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx
   delay: index * 0.1
@@ -537,9 +436,7 @@ export default function Blockchain(...args[]):  {}
                   <p className="text-zinc-400 mb-4">{useCase.description}</p>""
                   <ul className="space-y-2">
                     {useCase.examples.map((example, exampleIndex) => (""
->>>>>>> pr-10728
-                      <li key={exampleIndex} className="flex items-center text-zinc-300 text-sm">""
-                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0"  />                        {example}
+                      <li key={exampleIndex} className="flex items-center text-zinc-300 text-sm">""                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0"  />                        {example}
                       </li>
                     ))}
                   </ul>
@@ -572,9 +469,7 @@ export default function Blockchain(...args[]):  {}
   { opacity: 0,
   y: 30;
 }}
->>>>>>> pr-10728
-              whileInView = {}
-  { opacity: 1,
+              whileInView = {}  { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0
 
@@ -595,9 +490,7 @@ export default function Blockchain(...args[]):  {}
               <h2 className="text-4xl font-bold text-white mb-4">
                 Why Choose Our Blockchain?
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-                Our comprehensive approach ensures your blockchain solutions are secure, scalable, and innovative;
+              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">                Our comprehensive approach ensures your blockchain solutions are secure, scalable, and innovative;
               </p>
 :pages.disabled/pages/services/Blockchain.tsx
             </motion.div>"
@@ -610,35 +503,8 @@ export default function Blockchain(...args[]):  {}
                   initial = {
 
   { opacity: 0,
-
-  y: 30}}
-                  whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 0}}
-
-  y: 30
-
-            </motion.div>
-""
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map(feature: unknown, index: unknown (
-                <motion.div;
-                  key={index}""
-                  className="p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300""
-                  initial = {}
-  { opacity: 0,
-  y: 30;
-}}
-                  whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
-  y: 0;
-}}
->>>>>>> pr-10728
                   transition = {}
+  y: 0}}                  transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx
   delay: index * 0.1
@@ -658,9 +524,7 @@ export default function Blockchain(...args[]):  {}
                   <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
-                  <p className="text-zinc-400">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""                  <p className="text-zinc-400">{feature.description}</p>
                 </motion.div>;
               ))}
             </div>
@@ -690,9 +554,7 @@ export default function Blockchain(...args[]):  {}
   { opacity: 0,
   y: 30;
 }}
->>>>>>> pr-10728
-              whileInView = {}
-  { opacity: 1,
+              whileInView = {}  { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0
 
@@ -713,9 +575,7 @@ export default function Blockchain(...args[]):  {}
               <h2 className="text-4xl font-bold text-white mb-4">
                 Transparent Pricing;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-                Choose the plan that fits your blockchain needs. All plans include our core blockchain features.
+              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">                Choose the plan that fits your blockchain needs. All plans include our core blockchain features.
               </p>
 :pages.disabled/pages/services/Blockchain.tsx
             </motion.div>"
@@ -724,53 +584,8 @@ export default function Blockchain(...args[]):  {}
               {pricing.map(plan: unknown, index: unknown()
                 <motion.div
                   key={index}
-
-                  className={`relative p-8 rounded-2xl ${,
-  plan.popular''
-                      ?
-  'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50''
-  '`: 'bg-white/5 border border-white/10``} backdrop-blur-sm`}
-                  initial = {}
-  { opacity: 0,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 30}}
-                  whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 0}}
-
-                  className={`relative p-8 rounded-2xl ${
-'
-                    plan.popular''
-                      ? 'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50'''`
-                      : 'bg-white/5 border border-white/10'``
-            </motion.div>
-""
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {pricing.map(plan: unknown, index: unknown (
-                <motion.div;
-                  key={index}
-                  className={`relative p-8 rounded-2xl ${}
-                    plan.popular'
-                      ? 'bg-gradient-to-br from-orange-500/20 to-red-500/20 border-2 border-orange-500/50''
-                      : 'bg-white/5 border border-white/10'`
-                  } backdrop-blur-sm`}
-                  initial = {}
-  { opacity: 0,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 30
-
-  y: 30;
-}}
-                  whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/Blockchain.tsx
-  y: 0
-
-  y: 0;
-}}
->>>>>>> pr-10728
                   transition = {}
+  y: 0}}                  transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx
   delay: index * 0.1
@@ -786,9 +601,7 @@ export default function Blockchain(...args[]):  {}
                   viewport={{ once: true }}
 
                   {plan.popular && (;""
->>>>>>> pr-10728
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
-                      <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""                      <span className="px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-semibold rounded-full">
                         Most Popular;
                       </span>
                     </div>
@@ -799,9 +612,7 @@ export default function Blockchain(...args[]):  {}
                   )}"
                   )}
 ""
->>>>>>> pr-10728
-                  <div className="text-center mb-6">""
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
+                  <div className="text-center mb-6">""                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>""
                     <div className="flex items-baseline justify-center mb-2">""
                       <span className="text-4xl font-bold text-white">{plan.price}</span>""
 :pages.disabled/pages/services/Blockchain.tsx
@@ -821,9 +632,7 @@ export default function Blockchain(...args[]):  {}
 ""
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (""
->>>>>>> pr-10728
-                      <li key={featureIndex} className="flex items-center text-zinc-300">""
-                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0"  />                        {feature}
+                      <li key={featureIndex} className="flex items-center text-zinc-300">""                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0"  />                        {feature}
                       </li>
                     ))}
                   </ul>
@@ -831,28 +640,6 @@ export default function Blockchain(...args[]):  {}
 "
                   <RouterLink""`
                     to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}``
-
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${,
-  plan.popular'
-  '
-                        ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover: from-orange-600 hover:to-red-600''
-  '`
-                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20``}`}
-
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-'
-                      plan.popular''
-                        ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600'''`
-                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'``
-
-                  <RouterLink""
-                    to={plan.name === "Enterprise" ? "/contact" : "/request-quote"}`
-                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${}
-                      plan.popular'
-                        ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600''
-                        : 'bg-white/10 text-white hover:bg-white/20 border border-white/20'`
-                    }`}
->>>>>>> pr-10728
 
                     {plan.cta}
                   </RouterLink>;
@@ -885,9 +672,7 @@ export default function Blockchain(...args[]):  {}
   { opacity: 0,
   y: 30;
 }}
->>>>>>> pr-10728
-              whileInView = {}
-  { opacity: 1,
+              whileInView = {}  { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0
 
@@ -908,9 +693,7 @@ export default function Blockchain(...args[]):  {}
               <h2 className="text-4xl font-bold text-white mb-4">
                 Business Benefits;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-                See measurable improvements in your business processes and customer trust;
+              <p className="text-xl text-zinc-400 max-w-3xl mx-auto">                See measurable improvements in your business processes and customer trust;
               </p>
 :pages.disabled/pages/services/Blockchain.tsx
             </motion.div>"
@@ -923,35 +706,8 @@ export default function Blockchain(...args[]):  {}
                   initial = {
 
   { opacity: 0,
-
-  x: index % 2 === 0 ? -30 : 30}}
-                  whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/Blockchain.tsx
-  x: 0}}
-
-  x: index % 2 === 0 ? -30 : 30
-
-            </motion.div>
-""
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {benefits.map(benefit: unknown, index: unknown (
-                <motion.div;
-                  key={index}""
-                  className="flex items-start space-x-4 p-6 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm""
-                  initial = {}
-  { opacity: 0,
-  x: index % 2 === 0 ? -30 : 30;
-}}
-                  whileInView = {}
-  { opacity: 1,
-:pages.disabled/pages/services/Blockchain.tsx
-  x: 0
-
-  x: 0;
-}}
->>>>>>> pr-10728
                   transition = {}
+  x: 0}}                  transition = {}
   { duration: 0.6,
 :pages.disabled/pages/services/Blockchain.tsx
   delay: index * 0.1
@@ -973,9 +729,7 @@ export default function Blockchain(...args[]):  {}
                     <benefit.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>""
->>>>>>> pr-10728
-                    <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>""
-                    <p className="text-zinc-400">{benefit.description}</p>
+                    <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>""                    <p className="text-zinc-400">{benefit.description}</p>
                   </div>
                 </motion.div>;
               ))}
@@ -989,9 +743,7 @@ export default function Blockchain(...args[]):  {}
 "
 
         {/* CTA Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">;""
-          <div className="container-responsive text-center">
+        <section className="py-20 bg-gradient-to-r from-orange-500/10 to-red-500/10">;""          <div className="container-responsive text-center">
             <motion.div;
               initial = {}
   { opacity: 0,
@@ -1003,9 +755,7 @@ export default function Blockchain(...args[]):  {}
 
   y: 30;
 }}
->>>>>>> pr-10728
-              whileInView = {}
-  { opacity: 1,
+              whileInView = {}  { opacity: 1,
 :pages.disabled/pages/services/Blockchain.tsx
   y: 0
 
@@ -1056,9 +806,7 @@ export default function Blockchain(...args[]):  {}
                   className="inline-flex items-center px-8 py-4 border border-orange-500/30 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-all duration-300""
                   Get Custom Quote;
                 </RouterLink>
->>>>>>> pr-10728
-              </div>
-            </motion.div>;
+              </div>            </motion.div>;
           </div>;
         </section>;
       </div>;

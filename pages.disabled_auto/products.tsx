@@ -9,7 +9,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
 
   const categories = [
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   return (
     <MainLayout
       title="Products - Zion Tech Group"
@@ -94,8 +93,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                   <div className="flex gap-3">
                     <Link 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                    >
-                      Learn More
+                    >                      Learn More
                     </Link>
                     <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-semibold transition-colors">
                       Demo

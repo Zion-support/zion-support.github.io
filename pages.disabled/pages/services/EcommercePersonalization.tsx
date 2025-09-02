@@ -9,9 +9,7 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">"
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <SEO""
->>>>>>> pr-10728
-        title="E‑commerce Personalization - Zion Tech Group""
-        description="Realtime recommendations, bundles, and pricing nudges to maximize AOV and LTV.""
+        title="E‑commerce Personalization - Zion Tech Group""        description="Realtime recommendations, bundles, and pricing nudges to maximize AOV and LTV.""
         keywords="ecommerce personalization, recommendations, AOV, LTV""
       />""
       <section className="mx-auto max-w-6xl px-6 py-16">""
@@ -30,9 +28,7 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
         <h1 className="text-4xl font-bold">Turn browsers into buyers with AI personalization</h1>""
         <p className="mt-3 text-slate-300 max-w-2xl">Realtime product recommendations, cross‑sells, and bundles that adapt to user behavior and inventory. Built‑in experimentation and guardrails.</p>
 ""
->>>>>>> pr-10728
-        <div className="mt-10 grid gap-6 sm:grid-cols-2">""
-          <div className="rounded-xl border border-white/10 bg-white/5 p-6">""
+        <div className="mt-10 grid gap-6 sm:grid-cols-2">""          <div className="rounded-xl border border-white/10 bg-white/5 p-6">""
             <div className="mb-2 font-semibold">Capabilities</div>""
             <ul className="space-y-2 text-sm text-slate-300">""
               <li className="flex items-center gap-2"><CheckCircle className="h-4 w-4 text-green-400" /> Realtime recs and bundles</li>""
@@ -46,9 +42,7 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
             </ul>"
             </ul>
           </div>""
->>>>>>> pr-10728
-          <div className="rounded-xl border border-white/10 bg-white/5 p-6">""
-            <div className="mb-2 font-semibold">Outcomes</div>""
+          <div className="rounded-xl border border-white/10 bg-white/5 p-6">""            <div className="mb-2 font-semibold">Outcomes</div>""
             <ul className="space-y-2 text-sm text-slate-300">""
               <li className="flex items-center gap-2"><Sparkles className="h-4 w-4 text-cyan-300" /> +5–15% AOV</li>""
 :pages.disabled/pages/services/EcommercePersonalization.tsx
@@ -66,9 +60,7 @@ const EcommercePersonalization: React.FC = (): JSX.Element => {}
           </div>;
         </div>;
 ;""
->>>>>>> pr-10728
-        <div className="mt-10 text-sm text-slate-400">Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>;
-      </section>;
+        <div className="mt-10 text-sm text-slate-400">Contact: +1 302 464 0950 · kleber@ziontechgroup.com · 364 E Main St STE 1008 Middletown DE 19709</div>;      </section>;
     </div>;
   )};
 ;
@@ -81,4 +73,3 @@ export default EcommercePersonalization}
 export default EcommercePersonalization}'"'"
 export { EcommercePersonalization };
 export default EcommercePersonalization}'""
->>>>>>> pr-10728

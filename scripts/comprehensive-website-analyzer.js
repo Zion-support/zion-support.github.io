@@ -31,7 +31,6 @@ class ComprehensiveWebsiteAnalyzer {
         timeout: 10000,
 ursor/automate-test-fix-improve-and-merge-code-99d1
       });
-
       if (response.status === 200) {
         this.workingLinks.push({
           url,
@@ -40,7 +39,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
           headers: response.headers,
 ursor/automate-test-fix-improve-and-merge-code-99d1
         });
-
         // Extract links from HTML content if it
   's an HTML page
         if (response.headers['content-type
@@ -49,8 +47,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
           const links = this.extractLinks(response.data, url);
           for (const link of links) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-              await this.checkUrl(fullUrl, url);
-            }
+              await this.checkUrl(fullUrl, url);            }
           }
         }
       } else {
@@ -84,8 +81,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     while ((match = linkRegex.exec(html)) !== null) {
       const link = match[1];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        links.push(link);
-      }
+        links.push(link);      }
     }
 
     return [...new Set(links)];
@@ -93,14 +89,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   async analyzeWebsite() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    // Start with the main page
-    await this.checkUrl(this.baseUrl);
+    // Start with the main page    await this.checkUrl(this.baseUrl);
 
     // Check common routes
     const commonRoutes = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     for (const route of commonRoutes) {
       await this.checkUrl(`${this.baseUrl}${route}`);
     }
@@ -109,7 +103,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const serviceRoutes = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     for (const serviceRoute of serviceRoutes) {
       await this.checkUrl(`${this.baseUrl}/services${serviceRoute}`);
     }
@@ -118,14 +111,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const solutionRoutes = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     for (const solutionRoute of solutionRoutes) {
       await this.checkUrl(`${this.baseUrl}/solutions${solutionRoute}`);
     }
 
     // Check about sub-routes
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
     for (const aboutRoute of aboutRoutes) {
       await this.checkUrl(`${this.baseUrl}/about${aboutRoute}`);
     }
@@ -134,7 +125,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const resourceRoutes = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     for (const resourceRoute of resourceRoutes) {
       await this.checkUrl(`${this.baseUrl}/resources${resourceRoute}`);
     }
@@ -182,20 +172,17 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         actions: this.brokenLinks.map(link => ({
           url: link.url,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      });
-    }
+      });    }
 
     if (this.workingLinks.length < 50) {
       recommendations.push({
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      });
-    }
+      });    }
 
     // Check for missing essential pages
     const essentialPages = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     const missingEssential = essentialPages.filter(
       page => !this.workingLinks.some(link => link.url.endsWith(page))
     );
@@ -209,8 +196,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         actions: missingEssential.map(page => ({
           url: page,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      });
-    }
+      });    }
 
     return recommendations;
   }
@@ -228,8 +214,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 async function main() {
   const analyzer = new ComprehensiveWebsiteAnalyzer(
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);
-    console.log(`Working links: ${report.summary.workingLinks}`);
+    console.log(`Total URLs checked: ${report.summary.totalLinksChecked}`);    console.log(`Working links: ${report.summary.workingLinks}`);
     console.log(`Broken links: ${report.summary.brokenLinks}`);
     console.log(`Success rate: ${report.summary.successRate}`);
     console.log(`Duration: ${report.summary.duration}`);

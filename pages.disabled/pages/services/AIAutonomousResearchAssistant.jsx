@@ -20,9 +20,7 @@ const AIAutonomousResearchAssistant = () => {}
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">"
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center">""
             <div className="flex justify-center mb-6">""
               <div className="p-3 bg-blue-600/20 rounded-full">""
@@ -40,9 +38,7 @@ const AIAutonomousResearchAssistant = () => {}
             <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               AI Autonomous Research Assistant;
             </h1>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Revolutionize your research capabilities with our AI-powered;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">              Revolutionize your research capabilities with our AI-powered;
               autonomous research assistant. Discover insights, analyze data,
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
               and accelerate breakthroughs across all domains."
@@ -73,9 +69,7 @@ const AIAutonomousResearchAssistant = () => {}
                 to="/case-studies""
                 className="border border-gray-600 text-gray-300 px-8 py-4 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg""
               >
->>>>>>> pr-10728
-                View Case Studies;
-              </Link>
+                View Case Studies;              </Link>
             </div>
           </div>
         </div>
@@ -129,9 +123,7 @@ const AIAutonomousResearchAssistant = () => {}
                 information, identifying patterns, and generating insights that;
                 human researchers might miss.
               </p>""
->>>>>>> pr-10728
-              <div className="flex items-center space-x-4">""
-                <div className="flex items-center space-x-2">""
+              <div className="flex items-center space-x-4">""                <div className="flex items-center space-x-2">""
                   <div className="w-3 h-3 bg-blue-400 rounded-full"></div>""
                   <span className="text-gray-300">
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
@@ -143,9 +135,7 @@ const AIAutonomousResearchAssistant = () => {}
                     24/7 Autonomous Operation;
                   </span>
                 </div>""
->>>>>>> pr-10728
-                <div className="flex items-center space-x-2">""
-                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>""
+                <div className="flex items-center space-x-2">""                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>""
                   <span className="text-gray-300">Multi-Domain Expertise</span>
                 </div>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
@@ -155,9 +145,7 @@ const AIAutonomousResearchAssistant = () => {}
               </div>"
               </div>
             </div>""
->>>>>>> pr-10728
-            <div className="relative">""
-              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-8 rounded-2xl border border-blue-500/30">""
+            <div className="relative">""              <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-8 rounded-2xl border border-blue-500/30">""
                 <div className="space-y-4">""
                   <div className="flex items-center space-x-3">""
                     <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">""
@@ -216,9 +204,7 @@ const AIAutonomousResearchAssistant = () => {}
                     <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">""
                       <Globe className="h-5 w-5 text-white" />
                     </div>""
->>>>>>> pr-10728
-                    <span className="text-lg font-semibold">Global Trends</span>
-                  </div>
+                    <span className="text-lg font-semibold">Global Trends</span>                  </div>
                 </div>
               </div>
             </div>
@@ -232,7 +218,6 @@ const AIAutonomousResearchAssistant = () => {}
 "
 
       {/* Key Features */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -243,9 +228,7 @@ const AIAutonomousResearchAssistant = () => {}
             Key Features"
             Key Features;
           </h2>""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
-            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""            <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">""
               <div className="w-12 h-12 bg-blue-600/20 rounded-lg flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
                 <Search className="h-8 w-8 text-blue-400" />"
@@ -260,9 +243,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-3">
                 Intelligent Search & Discovery;
               </h3>""
->>>>>>> pr-10728
-              <p className="text-gray-300">
-                Advanced semantic search capabilities that understand context;
+              <p className="text-gray-300">                Advanced semantic search capabilities that understand context;
                 and find relevant information across multiple sources and;
                 languages.
               </p>
@@ -287,9 +268,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-3">
                 Pattern Recognition;
               </h3>""
->>>>>>> pr-10728
-              <p className="text-gray-300">
-                Identifies hidden patterns, correlations, and trends in large;
+              <p className="text-gray-300">                Identifies hidden patterns, correlations, and trends in large;
                 datasets that human researchers might overlook.
               </p>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
@@ -313,9 +292,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-3">
                 Data Analysis & Visualization;
               </h3>""
->>>>>>> pr-10728
-              <p className="text-gray-300">
-                Comprehensive data analysis with interactive visualizations and;
+              <p className="text-gray-300">                Comprehensive data analysis with interactive visualizations and;
                 automated report generation.
               </p>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
@@ -339,9 +316,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-3">
                 Multi-Domain Expertise;
               </h3>""
->>>>>>> pr-10728
-              <p className="text-gray-300">
-                Specialized knowledge across scientific, business, medical, and;
+              <p className="text-gray-300">                Specialized knowledge across scientific, business, medical, and;
                 technological domains with continuous learning capabilities.
               </p>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
@@ -365,9 +340,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-3">
                 Autonomous Operation;
               </h3>""
->>>>>>> pr-10728
-              <p className="text-gray-300">
-                Self-directed research processes that can work independently,
+              <p className="text-gray-300">                Self-directed research processes that can work independently,
                 prioritize tasks, and adapt to new information automatically.
               </p>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
@@ -391,9 +364,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-3">
                 Global Knowledge Access;
               </h3>""
->>>>>>> pr-10728
-              <p className="text-gray-300">
-                Access to worldwide databases, research papers, patents, and;
+              <p className="text-gray-300">                Access to worldwide databases, research papers, patents, and;
                 real-time information sources across multiple languages.
               </p>
             </div>
@@ -407,7 +378,6 @@ const AIAutonomousResearchAssistant = () => {}
 "
 
       {/* How It Works */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -418,7 +388,6 @@ const AIAutonomousResearchAssistant = () => {}
             How It Works"
             How It Works;
           </h2>""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">""
             <div className="text-center">""
               <div className="w-16 h-16 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -429,9 +398,7 @@ const AIAutonomousResearchAssistant = () => {}
                 <span className="text-2xl font-bold text-blue-400">1</span>"
                 <span className="text-2xl font-bold text-blue-400">1</span>
               </div>""
->>>>>>> pr-10728
-              <h3 className="text-xl font-semibold mb-3">Research Request</h3>""
-              <p className="text-gray-300">
+              <h3 className="text-xl font-semibold mb-3">Research Request</h3>""              <p className="text-gray-300">
                 Submit your research query or topic through our intuitive;
                 interface. The AI analyzes your requirements and develops a;
                 research strategy.
@@ -457,9 +424,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-3">
                 Autonomous Investigation;
               </h3>""
->>>>>>> pr-10728
-              <p className="text-gray-300">
-                The AI independently searches multiple sources, analyzes data,
+              <p className="text-gray-300">                The AI independently searches multiple sources, analyzes data,
                 identifies patterns, and cross-references information across;
                 domains.
               </p>
@@ -478,9 +443,7 @@ const AIAutonomousResearchAssistant = () => {}
               <div className="w-16 h-16 bg-purple-600/20 rounded-full flex items-center justify-center mx-auto mb-4">""
                 <span className="text-2xl font-bold text-purple-400">3</span>
               </div>""
->>>>>>> pr-10728
-              <h3 className="text-xl font-semibold mb-3">Insight Generation</h3>""
-              <p className="text-gray-300">
+              <h3 className="text-xl font-semibold mb-3">Insight Generation</h3>""              <p className="text-gray-300">
                 Advanced algorithms process the collected data to generate;
                 insights, identify trends, and create comprehensive research;
                 summaries.
@@ -500,9 +463,7 @@ const AIAutonomousResearchAssistant = () => {}
               <div className="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4">""
                 <span className="text-2xl font-bold text-orange-400">4</span>
               </div>""
->>>>>>> pr-10728
-              <h3 className="text-xl font-semibold mb-3">Deliver Results</h3>""
-              <p className="text-gray-300">
+              <h3 className="text-xl font-semibold mb-3">Deliver Results</h3>""              <p className="text-gray-300">
                 Receive detailed reports, visualizations, and actionable;
                 insights with source citations and recommendations for further;
                 research.
@@ -518,7 +479,6 @@ const AIAutonomousResearchAssistant = () => {}
 "
 
       {/* Applications */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -529,7 +489,6 @@ const AIAutonomousResearchAssistant = () => {}
             Applications"
             Applications;
           </h2>""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             <div className="bg-slate-800/50 p-6 rounded-xl border border-slate-700">""
               <h3 className="text-xl font-semibold mb-4 text-blue-400">
@@ -540,9 +499,7 @@ const AIAutonomousResearchAssistant = () => {}
                 Academic Research"
                 Academic Research;
               </h3>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-gray-300">
-                <li>• Literature reviews and meta-analyses</li>
+              <ul className="space-y-2 text-gray-300">                <li>• Literature reviews and meta-analyses</li>
                 <li>• Research gap identification</li>
                 <li>• Citation analysis and impact assessment</li>
                 <li>• Cross-disciplinary research connections</li>
@@ -562,9 +519,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-4 text-green-400">
                 Business Intelligence;
               </h3>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-gray-300">
-                <li>• Market trend analysis</li>
+              <ul className="space-y-2 text-gray-300">                <li>• Market trend analysis</li>
                 <li>• Competitive intelligence</li>
                 <li>• Consumer behavior research</li>
                 <li>• Industry landscape mapping</li>
@@ -584,9 +539,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-4 text-purple-400">
                 Scientific Discovery;
               </h3>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-gray-300">
-                <li>• Hypothesis generation</li>
+              <ul className="space-y-2 text-gray-300">                <li>• Hypothesis generation</li>
                 <li>• Experimental design optimization</li>
                 <li>• Data pattern recognition</li>
                 <li>• Research collaboration identification</li>
@@ -606,9 +559,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-4 text-orange-400">
                 Patent Research;
               </h3>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-gray-300">
-                <li>• Prior art searches</li>
+              <ul className="space-y-2 text-gray-300">                <li>• Prior art searches</li>
                 <li>• Patent landscape analysis</li>
                 <li>• Innovation opportunity identification</li>
                 <li>• Technology trend forecasting</li>
@@ -628,9 +579,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-4 text-cyan-400">
                 Medical Research;
               </h3>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-gray-300">
-                <li>• Clinical trial analysis</li>
+              <ul className="space-y-2 text-gray-300">                <li>• Clinical trial analysis</li>
                 <li>• Drug discovery research</li>
                 <li>• Medical literature synthesis</li>
                 <li>• Treatment effectiveness studies</li>
@@ -650,9 +599,7 @@ const AIAutonomousResearchAssistant = () => {}
               <h3 className="text-xl font-semibold mb-4 text-pink-400">
                 Technology Innovation;
               </h3>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-gray-300">
-                <li>• Emerging technology tracking</li>
+              <ul className="space-y-2 text-gray-300">                <li>• Emerging technology tracking</li>
                 <li>• Innovation opportunity analysis</li>
                 <li>• Technology convergence research</li>
                 <li>• Future trend prediction</li>
@@ -668,7 +615,6 @@ const AIAutonomousResearchAssistant = () => {}
 "
 
       {/* Benefits */}""
->>>>>>> pr-10728
       <section className="py-16 px-4 sm:px-6 lg:px-8">""
         <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
@@ -679,9 +625,7 @@ const AIAutonomousResearchAssistant = () => {}
             Why Choose AI Autonomous Research Assistant?"
             Why Choose AI Autonomous Research Assistant?
           </h2>""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""
-            <div className="space-y-6">""
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">""            <div className="space-y-6">""
               <div className="flex items-start space-x-4">""
                 <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
@@ -698,9 +642,7 @@ const AIAutonomousResearchAssistant = () => {}
                   <h3 className="text-xl font-semibold mb-2">
                     Unprecedented Speed;
                   </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300">
-                    Complete research tasks in minutes that would take human;
+                  <p className="text-gray-300">                    Complete research tasks in minutes that would take human;
                     researchers weeks or months, dramatically accelerating your;
                     innovation timeline.
                   </p>
@@ -712,9 +654,7 @@ const AIAutonomousResearchAssistant = () => {}
               </div>"
               </div>
 ""
->>>>>>> pr-10728
-              <div className="flex items-start space-x-4">""
-                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
+              <div className="flex items-start space-x-4">""                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
                 </div>"
@@ -729,9 +669,7 @@ const AIAutonomousResearchAssistant = () => {}
                   <h3 className="text-xl font-semibold mb-2">
                     Comprehensive Coverage;
                   </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300">
-                    Access and analyze information from thousands of sources;
+                  <p className="text-gray-300">                    Access and analyze information from thousands of sources;
                     simultaneously, ensuring no relevant data is missed in your;
                     research.
                   </p>
@@ -743,9 +681,7 @@ const AIAutonomousResearchAssistant = () => {}
               </div>"
               </div>
 ""
->>>>>>> pr-10728
-              <div className="flex items-start space-x-4">""
-                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
+              <div className="flex items-start space-x-4">""                <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
                 </div>"
@@ -760,9 +696,7 @@ const AIAutonomousResearchAssistant = () => {}
                   <h3 className="text-xl font-semibold mb-2">
                     Pattern Discovery;
                   </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300">
-                    Identify hidden connections and patterns across multiple;
+                  <p className="text-gray-300">                    Identify hidden connections and patterns across multiple;
                     domains that human researchers might never discover, leading;
                     to breakthrough insights.
                   </p>
@@ -775,9 +709,7 @@ const AIAutonomousResearchAssistant = () => {}
             </div>"
             </div>
 ""
->>>>>>> pr-10728
-            <div className="space-y-6">""
-              <div className="flex items-start space-x-4">""
+            <div className="space-y-6">""              <div className="flex items-start space-x-4">""
                 <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
@@ -793,9 +725,7 @@ const AIAutonomousResearchAssistant = () => {}
                   <h3 className="text-xl font-semibold mb-2">
                     24/7 Availability;
                   </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300">
-                    Research never stops with our autonomous AI that works;
+                  <p className="text-gray-300">                    Research never stops with our autonomous AI that works;
                     around the clock, continuously learning and updating;
                     information.
                   </p>
@@ -807,9 +737,7 @@ const AIAutonomousResearchAssistant = () => {}
               </div>"
               </div>
 ""
->>>>>>> pr-10728
-              <div className="flex items-start space-x-4">""
-                <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
+              <div className="flex items-start space-x-4">""                <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
                 </div>"
@@ -824,9 +752,7 @@ const AIAutonomousResearchAssistant = () => {}
                   <h3 className="text-xl font-semibold mb-2">
                     Cost Efficiency;
                   </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300">
-                    Reduce research costs significantly by automating;
+                  <p className="text-gray-300">                    Reduce research costs significantly by automating;
                     time-consuming tasks and eliminating the need for extensive;
                     manual research teams.
                   </p>
@@ -838,9 +764,7 @@ const AIAutonomousResearchAssistant = () => {}
               </div>"
               </div>
 ""
->>>>>>> pr-10728
-              <div className="flex items-start space-x-4">""
-                <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
+              <div className="flex items-start space-x-4">""                <div className="w-8 h-8 bg-pink-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">""
                   <span className="text-white font-bold">✓</span>
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
                 </div>"
@@ -855,9 +779,7 @@ const AIAutonomousResearchAssistant = () => {}
                   <h3 className="text-xl font-semibold mb-2">
                     Scalable Research;
                   </h3>""
->>>>>>> pr-10728
-                  <p className="text-gray-300">
-                    Handle multiple research projects simultaneously without;
+                  <p className="text-gray-300">                    Handle multiple research projects simultaneously without;
                     compromising quality, scaling your research capabilities;
                     exponentially.
                   </p>
@@ -874,9 +796,7 @@ const AIAutonomousResearchAssistant = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">""
-        <div className="max-w-4xl mx-auto text-center">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600/20 to-cyan-600/20">""        <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
 :pages.disabled/pages/services/AIAutonomousResearchAssistant.jsx
             Ready to Transform Your Research?"
@@ -918,9 +838,7 @@ const AIAutonomousResearchAssistant = () => {}
               to="/pricing""
               className="border border-gray-600 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:border-gray-500 hover:text-white transition-all duration-300 text-lg""
             >
->>>>>>> pr-10728
-              View Pricing;
-            </Link>
+              View Pricing;            </Link>
           </div>
         </div>
       </section>
@@ -936,4 +854,3 @@ export default AIAutonomousResearchAssistant;'"
 '"'"
 export default AIAutonomousResearchAssistant;
 '""
->>>>>>> pr-10728

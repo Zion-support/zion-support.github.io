@@ -30,8 +30,7 @@ class ComprehensiveLinkChecker {
   'utf8');
       const $ = cheerio.load(sitemapContent, { xmlMode: true });
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        const url = $(elem).text().trim();
-        this.sitemapUrls.push(url);
+        const url = $(elem).text().trim();        this.sitemapUrls.push(url);
       });
 
       console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`);
@@ -68,7 +67,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         if (depth < this.maxDepth) {
           const $ = cheerio.load(response.data);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
           // Check extracted links
           for (const link of links) {
             if (link && link.startsWith(this.baseUrl)) {
@@ -126,7 +124,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const navigationUrls = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     const promises = navigationUrls.map(url =>
       this.checkUrl(`${this.baseUrl}${url}`, null, 0)
     );
@@ -139,7 +136,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const serviceUrls = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     const promises = serviceUrls.map(url =>
       this.checkUrl(`${this.baseUrl}${url}`, null, 0)
     );
@@ -201,14 +197,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   'Broken Links',
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention`,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      });
-    }
+      });    }
 
     // Check for missing important pages
     const importantPages = [
 ursor/automate-test-fix-improve-and-merge-code-99d1
     ];
-
     const missingImportant = importantPages.filter(
       page => !this.workingLinks.some(link => link.url.endsWith(page))
     );
@@ -222,8 +216,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   )}`,
         actions: [
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      });
-    }
+      });    }
 
     // Check for orphaned pages
     const orphanedPages = this.workingLinks.filter(
@@ -240,8 +233,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         description: `Found ${orphanedPages.length} pages that may be difficult to discover`,
         actions: [
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      });
-    }
+      });    }
 
     return recommendations;
   }
@@ -259,8 +251,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
       const report = this.generateReport();
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      console.log(`Total URLs checked: ${report.summary.totalUrls}`);
-      console.log(`Working links: ${report.summary.workingLinks}`);
+      console.log(`Total URLs checked: ${report.summary.totalUrls}`);      console.log(`Working links: ${report.summary.workingLinks}`);
       console.log(`Broken links: ${report.summary.brokenLinks}`);
       console.log(`Missing pages: ${report.summary.missingPages}`);
 
@@ -274,8 +265,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         });
       }
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    } catch (error) {
-      console.error(
+    } catch (error) {      console.error(
   '❌ Error during link check:', error.message);
     }
   }

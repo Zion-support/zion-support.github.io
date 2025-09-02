@@ -14,8 +14,7 @@ class TypeScriptErrorMonitor {
   'true';
     this.maxErrorsPerRun = parseInt(process.env.MAX_ERRORS_PER_RUN) || 50;
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    console.log(`Check interval: ${this.checkInterval}ms`);
-    console.log(`Auto-fix enabled: ${this.autoFixEnabled}`);
+    console.log(`Check interval: ${this.checkInterval}ms`);    console.log(`Auto-fix enabled: ${this.autoFixEnabled}`);
     console.log(`Max errors per run: ${this.maxErrorsPerRun}`);
   }
 
@@ -31,8 +30,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   async checkAndFixTypeScriptErrors() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    const report = {
-      timestamp: new Date().toISOString(),
+    const report = {      timestamp: new Date().toISOString(),
       summary: {
         totalErrors: 0,
         fixesApplied: 0,
@@ -117,8 +115,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   parseTypeScriptErrors(output) {
     const errors = [];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    for (const line of lines) {
-      // Parse TypeScript error format: file(line,col): error TS#### message
+    for (const line of lines) {      // Parse TypeScript error format: file(line,col): error TS#### message
       const match = line.match(
         /^(.+?)\\((\\d+),(\\d+)\\):\\s+error\\s+(TS\\d+):\\s+(.+)$/
       );
@@ -131,8 +128,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
           code,
           message: message.trim(),
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        });
-      }
+        });      }
     }
 
     return errors;
@@ -147,8 +143,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       }
 
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      if (line > lines.length) {
-        return false;
+      if (line > lines.length) {        return false;
       }
 
       let modified = false;
@@ -189,8 +184,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       if (modified) {
         // Create backup
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        // Write fixed content
-        const newContent = lines.join(
+        // Write fixed content        const newContent = lines.join(
   '\\n');
         fs.writeFileSync(file, newContent);
         return true;
@@ -209,14 +203,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   fixCannotFindName(lines, lineIndex, message) {
     const line = lines[lineIndex];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    if (nameMatch) {
-      const missingName = nameMatch[1];
+    if (nameMatch) {      const missingName = nameMatch[1];
 
       // Add common missing imports
       const commonImports = {
 ursor/automate-test-fix-improve-and-merge-code-99d1
       };
-
       if (commonImports[missingName]) {
         lines.unshift(commonImports[missingName]);
         return true;
@@ -224,8 +216,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
       // Add type annotation for undefined variables
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        lines[lineIndex] = line.replace(missingName, `${missingName}: any`);
-        return true;
+        lines[lineIndex] = line.replace(missingName, `${missingName}: any`);        return true;
       }
     }
 
@@ -235,8 +226,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   fixCannotFindModule(lines, lineIndex, message) {
     const line = lines[lineIndex];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    if (moduleMatch) {
-      const moduleName = moduleMatch[1];
+    if (moduleMatch) {      const moduleName = moduleMatch[1];
 
       // Fix relative imports
       if (moduleName.startsWith(
@@ -311,8 +301,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   fixImplicitAnyParameter(lines, lineIndex, message) {
     const line = lines[lineIndex];
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    if (paramMatch) {
-      const paramName = paramMatch[1];
+    if (paramMatch) {      const paramName = paramMatch[1];
       lines[lineIndex] = line.replace(
         new RegExp(`\\\\b${paramName}\\\\b`),
         `${paramName}: any`
@@ -328,8 +317,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
     // Generic type annotation fixes
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return true;
-    }
+      return true;    }
 
     return false;
   }
@@ -362,7 +350,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     const recommendations = {
 ursor/automate-test-fix-improve-and-merge-code-99d1
     };
-
     return recommendations[code];
   }
 

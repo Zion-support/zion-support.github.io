@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  Menu, X,
-  ChevronDown, Zap,
+  Menu, X,  ChevronDown, Zap,
   Shield, Cpu,
   Database, Globe,
   Smartphone, Lock,

@@ -67,15 +67,13 @@ class HealthChecker {
         if (res.statusCode === 200) {
           this.log(
 ursor/automate-test-fix-improve-and-merge-code-99d1
-          resolve({
-            status: 'healthy,
+          resolve({            status: 'healthy,
             responseTime,
             statusCode: res.statusCode,
           });
         } else {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-          resolve({
-            status: 'unhealthy,
+          resolve({            status: 'unhealthy,
             responseTime,
             statusCode: res.statusCode,
             reason: `HTTP ${res.statusCode}`,
@@ -84,8 +82,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       });
 
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        resolve({
-          status:
+        resolve({          status:
   'unhealthy',
           responseTime,
           reason: error.message,
@@ -102,16 +99,14 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
           status: 'unhealthy,
           responseTime,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        });
-      });
+        });      });
     });
   }
 
   async checkDiskSpace() {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return {
-        status,
+      return {        status,
         usage: usage,
         usagePercent,
         available: diskInfo[3],
@@ -124,8 +119,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ', error);
       return {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      };
-    }
+      };    }
   }
 
   async checkMemoryUsage() {
@@ -142,8 +136,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       const used = parseInt(memInfo[2]);
       const usagePercent = Math.round((used / total) * 100);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return {
-        status,
+      return {        status,
         usagePercent,
         used: `${used}MB`,
         total: `${total}MB`,
@@ -156,8 +149,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ', error);
       return {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      };
-    }
+      };    }
   }
 
   async checkPM2Processes() {
@@ -167,8 +159,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ', { encoding: 'utf8 });
       const processes = JSON.parse(result);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return {
-        status,
+      return {        status,
         total: processes.length,
         healthy: healthyProcesses.length,
         unhealthy: unhealthyProcesses.length,
@@ -188,8 +179,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ', error);
       return {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      };
-    }
+      };    }
   }
 
   async checkLogFiles() {
@@ -213,8 +203,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       const totalSize = logStats.reduce((sum, log) => sum + log.sizeBytes, 0);
       const totalSizeMB = Math.round(totalSize / (1024 * 1024));
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return {
-        status,
+      return {        status,
         fileCount: logFiles.length,
         totalSize: `${totalSizeMB}MB`,
         files: logStats,
@@ -226,15 +215,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ', error);
       return {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      };
-    }
+      };    }
   }
 
   async checkDependencies() {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      // Check if node_modules exists
-      const nodeModulesPath = path.join(this.projectRoot, 'node_modules
+      // Check if node_modules exists      const nodeModulesPath = path.join(this.projectRoot, 'node_modules
   ');
       const nodeModulesExists = fs.existsSync(nodeModulesPath);
 
@@ -252,8 +239,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         };
       }
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return {
-        status: 'healthy
+      return {        status: 'healthy
   ',
         dependencies: dependencyCount,
         devDependencies: devDependencyCount,
@@ -266,15 +252,13 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ', error);
       return {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      };
-    }
+      };    }
   }
 
   determineOverallHealth(checks) {
     const statuses = checks.map(check => check.status);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    } else {
-      return 'unknown
+    } else {      return 'unknown
   ';
     }
   }
@@ -285,8 +269,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   ') {
       try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-        return true;
-      } catch (error) {
+        return true;      } catch (error) {
         this.log('error
   ', 'Failed to restart application
   ', error);
@@ -315,14 +298,12 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    return report;
-  }
+    return report;  }
 
   async run() {
     try {
 ursor/automate-test-fix-improve-and-merge-code-99d1
       ];
-
       this.checks = [];
 
       for (const { name, check } of healthChecks) {
@@ -339,8 +320,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       // Trigger restart if needed
       await this.triggerRestartIfNeeded(overallHealth);
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      return report;
-    } catch (error) {
+      return report;    } catch (error) {
       this.log('error
   ', 'Health check failed
   ', error);
@@ -355,5 +335,4 @@ if (isMainModule) {
   const checker = new HealthChecker();
 ursor/automate-test-fix-improve-and-merge-code-99d1
 }
-
 export default HealthChecker;

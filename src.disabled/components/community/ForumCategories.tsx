@@ -1,4 +1,4 @@
-<<<<<<< HEAD:src.disabled/components/community/ForumCategories.tsx
+:src.disabled/components/community/ForumCategories.tsx
 import React from 'react.ts';
 interface ForumCategoryInfo {
 
@@ -165,4 +165,3 @@ export default function ForumCategories(...args[]: any):  {
   );
 }
 
->>>>>>> pr-10728:src/components/community/ForumCategories.tsx

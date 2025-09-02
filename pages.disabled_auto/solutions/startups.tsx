@@ -4,28 +4,24 @@ const Startups: NextPage = () => {
   const solutions = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      ]
-    }
+      ]    }
   ]
 
   const benefits = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const packages = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ];
+    }  ];
 
   return (
     <MainLayout
       title="Startup Solutions - Zion Tech Group"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    >
-      {/* Hero Section */}
+    >      {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-5xl md: text-6xl font-bold mb-6">
@@ -33,8 +29,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            From MVP development to scaling infrastructure, we help startups succeed.
-          </p>
+            From MVP development to scaling infrastructure, we help startups succeed.          </p>
           
           <div className="flex flex-col sm: flex-row justify-center gap-4 mb-12">
             <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors cursor-pointer inline-block text-lg">
@@ -130,8 +125,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Startup Packages</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            </p>
-          </div>
+            </p>          </div>
           
           <div className="grid md: grid-cols-3 gap-8 max-w-6xl mx-auto">
             {packages.map((pkg, index) => (
@@ -167,8 +161,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
                     pkg.popular
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                  }`}
-                >
+                  }`}                >
                   Get Started
                 </Link>
               </div>

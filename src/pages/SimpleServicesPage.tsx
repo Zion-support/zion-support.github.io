@@ -340,4 +340,3 @@ export default function SimpleServicesPage() {
     </div>
   );
 }
->>>>>>> pr-10705

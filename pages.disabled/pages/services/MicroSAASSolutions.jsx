@@ -19,9 +19,7 @@ import {}
   BarChart3} from 'lucide-react';
 
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
->>>>>>> pr-10728
-export default function MicroSAASSolutions() {
-  const services = [
+export default function MicroSAASSolutions() {  const services = [
     {
 '
       title:
@@ -173,9 +171,7 @@ export default function MicroSAASSolutions() {}
     {}
       title: 'Security',
       description: 'Enterprise-grade security and compliance standards',
->>>>>>> pr-10728
-      icon: Shield}
-  ];
+      icon: Shield}  ];
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
   const industries = [
     {,
@@ -218,7 +214,6 @@ export default function MicroSAASSolutions() {}
     {}
       name: 'Real Estate',
       description: 'Property management and client portals',
->>>>>>> pr-10728
       icon: Building}
   ];
   return()
@@ -229,9 +224,7 @@ export default function MicroSAASSolutions() {}
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">"
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple">
       <SEO""
->>>>>>> pr-10728
-        title="Micro SAAS Solutions - Zion Tech Group""
-        description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries.""
+        title="Micro SAAS Solutions - Zion Tech Group""        description="Custom software-as-a-service solutions designed for rapid deployment, scalability, and business growth across industries.""
         keywords="micro SAAS, custom software, subscription management, multi-tenant, API development, business software""
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
         canonical="https://ziontechgroup.com/services/micro-saas-solutions"
@@ -244,9 +237,7 @@ export default function MicroSAASSolutions() {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>""
+      <section className="relative overflow-hidden">""        <div className="absolute inset-0 bg-gradient-to-r from-zion-blue-dark/80 to-zion-purple/80"></div>""
         <div className="relative z-10 container mx-auto px-4 py-24 text-center">""
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">"
@@ -281,9 +272,7 @@ export default function MicroSAASSolutions() {}
             <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Start Your Project;
             </button>""
->>>>>>> pr-10728
-            <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-              View Portfolio;
+            <button className="border-2 border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">              View Portfolio;
             </button>
           </div>
         </div>
@@ -295,9 +284,7 @@ export default function MicroSAASSolutions() {}
 "
 
       {/* Services Grid */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-white">""        <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
@@ -307,9 +294,7 @@ export default function MicroSAASSolutions() {}
               Comprehensive SAAS Development Services"
               Comprehensive SAAS Development Services;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              From concept to deployment, we provide end-to-end micro SAAS;
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">              From concept to deployment, we provide end-to-end micro SAAS;
               development services that accelerate your business growth and;
               digital transformation.
             </p>
@@ -328,9 +313,7 @@ export default function MicroSAASSolutions() {}
             {services.map((service, index) => (
               <div;
                 key={index}""
->>>>>>> pr-10728
-                className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow""
-              >""
+                className="bg-white rounded-xl shadow-lg p-6 border border-zion-blue-light hover:shadow-xl transition-shadow""              >""
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mb-6">""
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
                   <service.icon className="w-8 h-8 text-white" />"
@@ -345,7 +328,6 @@ export default function MicroSAASSolutions() {}
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {service.title}
                 </h3>""
->>>>>>> pr-10728
                 <p className="text-zion-slate mb-4">{service.description}</p>""
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
@@ -356,9 +338,7 @@ export default function MicroSAASSolutions() {}
                     <li"
                     <li;
                       key={idx}""
->>>>>>> pr-10728
-                      className="flex items-center text-sm text-zion-slate""
-                    >""
+                      className="flex items-center text-sm text-zion-slate""                    >""
                       <div className="w-2 h-2 bg-zion-cyan rounded-full mr-3"></div>
                       {feature}
                     </li>
@@ -376,9 +356,7 @@ export default function MicroSAASSolutions() {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-zion-blue-light">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-zion-blue-light">""        <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
@@ -388,9 +366,7 @@ export default function MicroSAASSolutions() {}
               Why Choose Our Micro SAAS Solutions?"
               Why Choose Our Micro SAAS Solutions?
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Experience the advantages of rapid development, scalability, and;
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">              Experience the advantages of rapid development, scalability, and;
               cost-effective solutions designed for modern business needs.
             </p>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
@@ -418,9 +394,7 @@ export default function MicroSAASSolutions() {}
                 <h3 className="text-xl font-semibold text-zion-blue-dark mb-3">
                   {benefit.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-zion-slate">{benefit.description}</p>
-              </div>
+                <p className="text-zion-slate">{benefit.description}</p>              </div>
             ))}
           </div>
         </div>
@@ -432,9 +406,7 @@ export default function MicroSAASSolutions() {}
 "
 
       {/* Industry Solutions */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white">""
-        <div className="container mx-auto px-4">""
+      <section className="py-20 bg-white">""        <div className="container mx-auto px-4">""
           <div className="text-center mb-16">""
             <h2 className="text-4xl font-bold text-zion-blue-dark mb-4">
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
@@ -444,9 +416,7 @@ export default function MicroSAASSolutions() {}
               Industry-Specific Solutions"
               Industry-Specific Solutions;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate max-w-3xl mx-auto">
-              Tailored micro SAAS solutions designed for the unique requirements;
+            <p className="text-xl text-zion-slate max-w-3xl mx-auto">              Tailored micro SAAS solutions designed for the unique requirements;
               and compliance needs of different industries.
             </p>
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
@@ -464,9 +434,7 @@ export default function MicroSAASSolutions() {}
             {industries.map((industry, index) => (
               <div;
                 key={index}""
->>>>>>> pr-10728
-                className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow""
-              >""
+                className="bg-zion-blue-light rounded-xl p-6 text-center hover:shadow-lg transition-shadow""              >""
                 <div className="w-16 h-16 bg-gradient-to-br from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center mx-auto mb-4">""
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
                   <industry.icon className="w-8 h-8 text-white" />"
@@ -481,9 +449,7 @@ export default function MicroSAASSolutions() {}
                 <h3 className="text-lg font-semibold text-zion-blue-dark mb-2">
                   {industry.name}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-sm text-zion-slate">
-                  {industry.description}
+                <p className="text-sm text-zion-slate">                  {industry.description}
                 </p>
               </div>
             ))}
@@ -497,9 +463,7 @@ export default function MicroSAASSolutions() {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">""
-        <div className="container mx-auto px-4 text-center">""
+      <section className="py-20 bg-gradient-to-r from-zion-blue-dark to-zion-purple">""        <div className="container mx-auto px-4 text-center">""
           <h2 className="text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/MicroSAASSolutions.jsx
             Ready to Build Your Micro SAAS Solution?"
@@ -524,9 +488,7 @@ export default function MicroSAASSolutions() {}
             <button className="bg-zion-cyan hover:bg-zion-cyan-light text-white px-8 py-3 rounded-lg font-semibold transition-colors">
               Start Your Project;
             </button>""
->>>>>>> pr-10728
-            <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark px-8 py-3 rounded-lg font-semibold transition-colors">
-              Schedule Consultation;
+            <button className="border-2 border-white text-white hover:bg-white hover:text-zion-blue-dark px-8 py-3 rounded-lg font-semibold transition-colors">              Schedule Consultation;
             </button>
           </div>
         </div>
@@ -541,4 +503,3 @@ export default function MicroSAASSolutions() {}
 '"'"
 }
 '""
->>>>>>> pr-10728

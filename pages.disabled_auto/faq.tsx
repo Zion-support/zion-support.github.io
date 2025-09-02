@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 const FAQ: NextPage = () => {
   const [openItems, setOpenItems] = useState<number[]>([]);
 
@@ -14,14 +13,12 @@ const FAQ: NextPage = () => {
   const faqCategories = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-        {
-          question:
+        {          question:
   'What services does Zion Tech Group offer?,'
           answer:, Zion Tech Group offers a comprehensive range of technology services including AI development, quantum computing solutions, blockchain infrastructure, micro SaaS applications, IT services, and digital transformation consulting. We help businesses modernize their operations and leverage cutting-edge technologies.''
         }, {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-        }
-      ]
+        }      ]
     }
   ];
 
@@ -29,8 +26,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     <MainLayout
       title="Frequently Asked Questions - Zion Tech Group"
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      keywords="FAQ, frequently asked questions, support, help, services, pricing, technical support"
-    >
+      keywords="FAQ, frequently asked questions, support, help, services, pricing, technical support"    >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">

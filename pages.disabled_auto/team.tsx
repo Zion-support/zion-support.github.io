@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 const Team: React.FC = () => {
   const teamMembers = [
     {
@@ -71,8 +70,7 @@ const Team: React.FC = () => {
   const values = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      icon: Brain
-    }, {
+      icon: Brain    }, {
       title: "Client Success", description: "Our success is measured by the success of our clients", icon: Target
     }, {
       title: "Ethical AI", description: "We develop AI solutions that are fair, transparent, and beneficial", icon: Shield

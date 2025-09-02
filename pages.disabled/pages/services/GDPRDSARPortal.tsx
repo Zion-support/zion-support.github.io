@@ -15,9 +15,7 @@ export default function GDPRDSARPortal(...args: any[]): any {
 
 export default function GDPRDSARPortal(...args: any[]): any {}
   return()
->>>>>>> pr-10728
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">""
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">""
+    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">""      <section className="mx-auto max-w-7xl px-6 py-20 lg:py-28">""
         <div className="flex items-start justify-between gap-8 flex-col lg:flex-row">""
           <div className="max-w-3xl">""
             <h1 className="text-3xl sm:text-5xl font-bold flex items-center gap-3">""
@@ -28,9 +26,7 @@ export default function GDPRDSARPortal(...args: any[]): any {}
               <Shield className="w-8 h-8 text-cyan-400"  /> GDPR/CCPA DSAR Portal"
               <Shield className="w-8 h-8 text-cyan-400"  /> GDPR/CCPA DSAR Portal;
             </h1>""
->>>>>>> pr-10728
-            <p className="mt-4 text-slate-300">
-              Launch a branded privacy request portal with ID verification,
+            <p className="mt-4 text-slate-300">              Launch a branded privacy request portal with ID verification,
               workflow, SLAs, redaction, and audit-ready exports. Integrates;
               with common CRMs and ticketing tools.
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
@@ -81,9 +77,7 @@ export default function GDPRDSARPortal(...args: any[]): any {}
               ].map(f => (
                 <div;
                   key={f.title}""
->>>>>>> pr-10728
-                  className="rounded-xl border border-white/10 bg-white/5 p-5""
-                >""
+                  className="rounded-xl border border-white/10 bg-white/5 p-5""                >""
                   <div className="flex items-center gap-2 text-cyan-300 font-semibold">""
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
                     <CheckCircle className="w-4 h-4"  /> {f.title}"
@@ -119,9 +113,7 @@ export default function GDPRDSARPortal(...args: any[]): any {}
 ""
             <div className="mt-4 flex gap-4 text-sm">
               <a""
->>>>>>> pr-10728
-                className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
-                href="https://www.onetrust.com/pricing/""
+                className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""                href="https://www.onetrust.com/pricing/""
                 target="_blank""
                 rel="noreferrer""
               >""
@@ -133,9 +125,7 @@ export default function GDPRDSARPortal(...args: any[]): any {}
               </a>"
               </a>
               <a""
->>>>>>> pr-10728
-                className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-2  00""
-                href="https://transcend.io/pricing/""
+                className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-2  00""                href="https://transcend.io/pricing/""
                 target="_blank""
                 rel="noreferrer""
               >"                Transcend pricing <ExternalLink className="w-3 h-3"  />
@@ -163,9 +153,7 @@ export default function GDPRDSARPortal(...args: any[]): any {}
                 Request a demo;
               </Link>
               <a""
->>>>>>> pr-10728
-                href="mailto:kleber@ziontechgroup.com""
-                className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
+                href="mailto:kleber@ziontechgroup.com""                className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
               >""
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
                 <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com
@@ -176,9 +164,7 @@ export default function GDPRDSARPortal(...args: any[]): any {}
                 <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com;
               </a>
               <a""
->>>>>>> pr-10728
-                href="tel:+13024640950""
-                className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
+                href="tel:+13024640950""                className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
               >""
 :pages.disabled/pages/services/GDPRDSARPortal.tsx
                 <Phone className="w-4 h-4"  /> +1 302 464 0950
@@ -193,7 +179,6 @@ export default function GDPRDSARPortal(...args: any[]): any {}
             </div>
           </div>
 ""
->>>>>>> pr-10728
           <div className="w-full lg:w-96 rounded-2xl border border-white/10 bg-white/5 p-6 h-max">""
             <div className="text-sm text-slate-300">
               Looking for our existing DSAR implementation page?
@@ -204,7 +189,6 @@ export default function GDPRDSARPortal(...args: any[]): any {}
             </div>"
             </div>
             <Link""
->>>>>>> pr-10728
               to="/services/dsr-portal""
               className="mt-3 inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
             >""
@@ -215,9 +199,7 @@ export default function GDPRDSARPortal(...args: any[]): any {}
               Go to DSAR Portal <ExternalLink className="w-3 h-3"  />"
               Go to DSAR Portal <ExternalLink className="w-3 h-3"  />
             </Link>"            <div className="mt-6 text-xs text-slate-400">
->>>>>>> pr-10728
-              364 E Main St STE 1008, Middletown DE 19709;
-            </div>
+              364 E Main St STE 1008, Middletown DE 19709;            </div>
           </div>
         </div>
       </section>
@@ -230,4 +212,3 @@ export default function GDPRDSARPortal(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728

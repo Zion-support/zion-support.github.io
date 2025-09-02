@@ -21,9 +21,7 @@ export default function EnterpriseSolutions() {}
 "
         {}
             icon: Users,""
->>>>>>> pr-10728
-            title: "Digital Transformation",""
-            description: "End-to-end digital transformation strategies for enterprise growth",""
+            title: "Digital Transformation",""            description: "End-to-end digital transformation strategies for enterprise growth",""
             features: ["Process Automation", "Legacy System Modernization", "Change Management", "ROI Optimization"]
         },
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -34,9 +32,7 @@ export default function EnterpriseSolutions() {}
 "
         {}
             icon: Shield,""
->>>>>>> pr-10728
-            title: "Enterprise Security",""
-            description: "Comprehensive security solutions for enterprise environments",""
+            title: "Enterprise Security",""            description: "Comprehensive security solutions for enterprise environments",""
             features: ["Zero-Trust Architecture", "Compliance Management", "Threat Detection", "Incident Response"]
         },
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -47,9 +43,7 @@ export default function EnterpriseSolutions() {}
 "
         {}
             icon: BarChart3,""
->>>>>>> pr-10728
-            title: "Business Intelligence",""
-            description: "Advanced analytics and insights for data-driven decision making",""
+            title: "Business Intelligence",""            description: "Advanced analytics and insights for data-driven decision making",""
             features: ["Real-time Dashboards", "Predictive Analytics", "Data Warehousing", "KPI Tracking"]
         },
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -60,9 +54,7 @@ export default function EnterpriseSolutions() {}
 "
         {}
             icon: Cloud,""
->>>>>>> pr-10728
-            title: "Cloud Strategy",""
-            description: "Multi-cloud and hybrid cloud solutions for enterprise needs",""
+            title: "Cloud Strategy",""            description: "Multi-cloud and hybrid cloud solutions for enterprise needs",""
             features: ["Cloud Migration", "Cost Optimization", "Performance Monitoring", "Disaster Recovery"]
         },
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -73,9 +65,7 @@ export default function EnterpriseSolutions() {}
 "
         {}
             icon: Zap,""
->>>>>>> pr-10728
-            title: "AI Integration",""
-            description: "Seamless AI integration into existing enterprise workflows",""
+            title: "AI Integration",""            description: "Seamless AI integration into existing enterprise workflows",""
             features: ["Custom AI Models", "Workflow Automation", "Intelligent Analytics", "Process Optimization"]
 
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -85,9 +75,7 @@ export default function EnterpriseSolutions() {}
     ];"
     ];
     const benefits = [""
->>>>>>> pr-10728
-        "Increased operational efficiency by 40-60%",""
-        "Reduced IT costs through automation and optimization",""
+        "Increased operational efficiency by 40-60%",""        "Reduced IT costs through automation and optimization",""
         "Enhanced security and compliance posture",""
         "Improved customer experience and satisfaction",""
         "Faster time-to-market for new products/services",""
@@ -105,9 +93,7 @@ export default function EnterpriseSolutions() {}
     const caseStudies = []
         {}
 ""
->>>>>>> pr-10728
-            comp: "Fortune 500 Manufacturing",""
-            industry: "Manufacturing",""
+            comp: "Fortune 500 Manufacturing",""            industry: "Manufacturing",""
             challenge: "Legacy system modernization and digital transformation",""
             solution: "Implemented cloud-native architecture with AI-powered analytics",""
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -122,9 +108,7 @@ export default function EnterpriseSolutions() {}
         },
         {}
 ""
->>>>>>> pr-10728
-            comp: "Global Financial Services",""
-            industry: "Financial Services",""
+            comp: "Global Financial Services",""            industry: "Financial Services",""
             challenge: "Compliance automation and risk management",""
             solution: "AI-driven compliance monitoring and automated reporting",""
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -139,9 +123,7 @@ export default function EnterpriseSolutions() {}
     ];""
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center">""
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -165,9 +147,7 @@ export default function EnterpriseSolutions() {}
               <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
                 Get Enterprise Quote;
               </Link>""
->>>>>>> pr-10728
-              <Link to="/services/ai-autonomous-systems" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                Explore AI Solutions;
+              <Link to="/services/ai-autonomous-systems" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">                Explore AI Solutions;
               </Link>
             </div>
           </div>
@@ -179,9 +159,7 @@ export default function EnterpriseSolutions() {}
 "
 
         {/* Background Elements */}""
->>>>>>> pr-10728
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">""
-          <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>""
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">""          <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>""
           <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>""
           <div className="absolute bottom-20 left-1/3 w-1 h-1 bg-purple-400 rounded-full animate-bounce"></div>
         </div>
@@ -193,9 +171,7 @@ export default function EnterpriseSolutions() {}
 "
 
       {/* Solutions Grid */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -205,9 +181,7 @@ export default function EnterpriseSolutions() {}
               Comprehensive Enterprise Solutions"
               Comprehensive Enterprise Solutions;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From infrastructure to innovation, we provide end-to-end solutions that drive enterprise success;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              From infrastructure to innovation, we provide end-to-end solutions that drive enterprise success;
             </p>
 :pages.disabled/solutions/EnterpriseSolutions.jsx
           </div>"
@@ -231,9 +205,7 @@ export default function EnterpriseSolutions() {}
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">""
                     <Icon className="w-8 h-8 text-white"/>
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>""
-                  <p className="text-gray-300 mb-6">{solution.description}</p>""
+                  <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>""                  <p className="text-gray-300 mb-6">{solution.description}</p>""
                   <ul className="space-y-2">""
                     {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">""
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"/>
@@ -252,9 +224,7 @@ export default function EnterpriseSolutions() {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -264,7 +234,6 @@ export default function EnterpriseSolutions() {}
               Why Choose Zion Tech Group?"
               Why Choose Zion Tech Group?
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Proven results and measurable impact for enterprise organizations;
             </p>
@@ -275,7 +244,6 @@ export default function EnterpriseSolutions() {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {benefits.map((benefit, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -286,9 +254,7 @@ export default function EnterpriseSolutions() {}
                   <TrendingUp className="w-8 h-8 text-white"/>"
                   <TrendingUp className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>))}
+                <p className="text-gray-300 text-lg">{benefit}</p>              </div>))}
           </div>
         </div>
       </section>
@@ -299,9 +265,7 @@ export default function EnterpriseSolutions() {}
 "
 
       {/* Case Studies */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -311,7 +275,6 @@ export default function EnterpriseSolutions() {}
               Success Stories"
               Success Stories;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real results from real enterprise clients;
             </p>
@@ -322,9 +285,7 @@ export default function EnterpriseSolutions() {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">""
-            {caseStudies.map((study, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">""
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">""            {caseStudies.map((study, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">""
                 <div className="flex items-center mb-4">""
                   <Star className="w-5 h-5 text-yellow-400 mr-2"/>""
 :pages.disabled/solutions/EnterpriseSolutions.jsx
@@ -368,9 +329,7 @@ export default function EnterpriseSolutions() {}
                 </div>""
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                   Read Full Case Study""
->>>>>>> pr-10728
-                  <ArrowRight className="w-4 h-4 ml-2"/>
-                </Link>
+                  <ArrowRight className="w-4 h-4 ml-2"/>                </Link>
               </div>))}
           </div>
         </div>
@@ -382,9 +341,7 @@ export default function EnterpriseSolutions() {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">""
-        <div className="max-w-4xl mx-auto text-center">""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">""        <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/solutions/EnterpriseSolutions.jsx
             Ready to Transform Your Enterprise?"
@@ -407,9 +364,7 @@ export default function EnterpriseSolutions() {}
             <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
               Schedule Consultation;
             </Link>""
->>>>>>> pr-10728
-            <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-              View All Services;
+            <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">              View All Services;
             </Link>
           </div>
         </div>
@@ -424,4 +379,3 @@ export default function EnterpriseSolutions() {}
 }}}}'"'"
     </div>);
 }}}}'""
->>>>>>> pr-10728

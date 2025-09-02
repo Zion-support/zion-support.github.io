@@ -223,9 +223,7 @@ const CloudDevOps = () => {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto text-center">""
+      <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto text-center">""
           <div className="mb-8">""
             <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full text-sm font-medium mb-6">""
               <Cloud className="w-4 h-4 mr-2" />
@@ -251,9 +249,7 @@ const CloudDevOps = () => {}
                 Modern DevOps;
               </span>
             </h1>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              Expert cloud migration and DevOps implementation services for;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">              Expert cloud migration and DevOps implementation services for;
               modern, scalable, and secure infrastructure.
             </p>
           </div>
@@ -266,9 +262,7 @@ const CloudDevOps = () => {}
 "
 
       {/* Services Overview */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
 :pages.disabled/pages/services/CloudDevOps.jsx
             Our Cloud & DevOps Services"
@@ -285,9 +279,7 @@ const CloudDevOps = () => {}
             {cloudServices.map((service, index) => (
               <div;
                 key={index}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all""
-              >""
+                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 hover:border-blue-500/50 transition-all""              >""
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/CloudDevOps.jsx
                   <service.icon className="w-6 h-6 text-white" />"
@@ -316,9 +308,7 @@ const CloudDevOps = () => {}
                   {service.features.map((feature, idx) => (
                     <li;
                       key={idx}""
->>>>>>> pr-10728
-                      className="text-gray-400 text-sm flex items-center""
-                    >""
+                      className="text-gray-400 text-sm flex items-center""                    >""
                       <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                       {feature}
                     </li>
@@ -336,9 +326,7 @@ const CloudDevOps = () => {}
 "
 
       {/* Cloud Platforms */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">""        <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
 :pages.disabled/pages/services/CloudDevOps.jsx
             Cloud Platforms We Support"
@@ -355,9 +343,7 @@ const CloudDevOps = () => {}
             {platforms.map((platform, index) => (
               <div;
                 key={index}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all""
-              >""
+                className="bg-slate-800/50 border border-white/10 rounded-xl p-6 text-center hover:border-blue-500/50 transition-all""              >""
                 <div className="text-4xl mb-4">{platform.icon}</div>""
                 <h3 className="text-xl font-bold text-white mb-3">
 :pages.disabled/pages/services/CloudDevOps.jsx
@@ -367,9 +353,7 @@ const CloudDevOps = () => {}
                   {platform.name}"
                   {platform.name}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-300 text-sm">{platform.description}</p>
-              </div>
+                <p className="text-gray-300 text-sm">{platform.description}</p>              </div>
             ))}
           </div>
         </div>
@@ -381,9 +365,7 @@ const CloudDevOps = () => {}
 "
 
       {/* DevOps Tools */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <h2 className="text-3xl font-bold text-white text-center mb-12">
 :pages.disabled/pages/services/CloudDevOps.jsx
             DevOps Tools & Technologies"
@@ -400,9 +382,7 @@ const CloudDevOps = () => {}
             {devOpsTools.map((category, index) => (
               <div;
                 key={index}""
->>>>>>> pr-10728
-                className="bg-slate-800/50 border border-white/10 rounded-xl p-6""
-              >""
+                className="bg-slate-800/50 border border-white/10 rounded-xl p-6""              >""
                 <h3 className="text-xl font-bold text-white mb-4">
 :pages.disabled/pages/services/CloudDevOps.jsx
                   {category.category}"
@@ -419,9 +399,7 @@ const CloudDevOps = () => {}
                   {category.tools.map((tool, idx) => (
                     <div;
                       key={idx}""
->>>>>>> pr-10728
-                      className="text-gray-300 text-sm flex items-center""
-                    >""
+                      className="text-gray-300 text-sm flex items-center""                    >""
                       <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
                       {tool}
                     </div>
@@ -439,9 +417,7 @@ const CloudDevOps = () => {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-4xl mx-auto text-center">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8">""        <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl font-bold text-white mb-6">
 :pages.disabled/pages/services/CloudDevOps.jsx
             Ready to Transform Your Infrastructure?"
@@ -483,9 +459,7 @@ const CloudDevOps = () => {}
               href="/contact""
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-lg font-semibold text-lg transition-all""
             >
->>>>>>> pr-10728
-              Get Started;
-            </a>
+              Get Started;            </a>
           </div>
         </div>
       </section>
@@ -502,4 +476,3 @@ export default CloudDevOps;'"
 '"'"
 export default CloudDevOps;
 '""
->>>>>>> pr-10728

@@ -12,4 +12,3 @@ export default function MobileAppRoutes(function MobileAppRoutes() {): any {}
   )}'"'"
     </>
   )}'""
->>>>>>> pr-10728

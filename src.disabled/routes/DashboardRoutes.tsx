@@ -1,5 +1,4 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3:src/routes/DashboardRoutes.tsx
-  return (
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/routes/DashboardRoutes.tsx  return (
     <Suspense fallback={<LoadingSpinner />}><Routes>
         <Route path="/dashboard" element={"          <ProtectedRoute>"            <Dashboard />
           </ProtectedRoute>
@@ -26,8 +25,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/routes/DashboardRoutes.t
         } />
       </Routes>
     </Suspense>
-ursor/automate-test-fix-improve-and-merge-code-99d1:src/routes/DashboardRoutes.tsx
-  );
+ursor/automate-test-fix-improve-and-merge-code-99d1:src/routes/DashboardRoutes.tsx  );
 };
 ;
 export default DashboardRoutes;";

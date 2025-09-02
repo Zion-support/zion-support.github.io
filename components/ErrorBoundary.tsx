@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-  fallback?: ReactNode;
-}
+  fallback?: ReactNode;}
 
 interface State {
   hasError: boolean;
@@ -25,7 +24,6 @@ error, errorInfo,
 
     // Log error to monitoring service
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
@@ -41,8 +39,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <h1 className="text-2xl font-bold text-gray-900 mb-2">"              Oops! Something went wrong"            </h1>
             
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                  {this.state.errorInfo && (
-                    <div>
+                  {this.state.errorInfo && (                    <div>
                       <strong>Stack:</strong>
                       <pre className="whitespace-pre-wrap mt-1">"                        {this.state.errorInfo.componentStack}"                      </pre></div>
                   )}
@@ -58,8 +55,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             </div>
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            </div>
-          </div>
+            </div>          </div>
         </div>
       );
     }

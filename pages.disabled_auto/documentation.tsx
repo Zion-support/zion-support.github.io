@@ -18,8 +18,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
     }, {
       icon: Database,
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      articles: [
-        { title:
+      articles: [        { title:
   'Data Models, href:,'
   /docs/data/models' }, '
         { title: 'Data Import/Export, href:, '
@@ -65,7 +64,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
   const quickLinks = [
 ursor/automate-test-fix-improve-and-merge-code-48f3
   ];
-
   return (
     <MainLayout
       title="Documentation - Zion Tech Group"
@@ -228,8 +226,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <h2 className="text-3xl font-bold mb-4">Need Help?</h2>
             <p className="text-xl text-blue-200 mb-8 max-w-2xl mx-auto">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            </p>
-            <div className="flex flex-col sm: flex-row justify-center gap-4">
+            </p>            <div className="flex flex-col sm: flex-row justify-center gap-4">
               <Link
                 href="/help"
                 className="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"

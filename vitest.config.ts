@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 export default defineConfig({
   resolve: {
     alias: {
@@ -18,7 +17,6 @@ export default defineConfig({
     globals: true,
     coverage: {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-      ],
-    },
+      ],    },
   },
 });

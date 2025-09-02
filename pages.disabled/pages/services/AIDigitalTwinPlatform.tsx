@@ -28,9 +28,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
   return()
     <div className="min-h-screen bg-white">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-800 py-20 text-center text-white">""
-        <div className="max-w-5xl mx-auto px-6">""
+      <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-800 py-20 text-center text-white">""        <div className="max-w-5xl mx-auto px-6">""
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 text-white mb-6">""
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
             <Cpu className="w-4 h-4 mr-2"  /> AI-Powered Digital Twin Platform"
@@ -69,7 +67,6 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
               View Pricing;
             </a>
             <a""
->>>>>>> pr-10728
               href="https://ziontechgroup.com""
               target="_blank""
               rel="noreferrer""
@@ -80,9 +77,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors"
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors""
             >
->>>>>>> pr-10728
-              Learn More;
-            </a>
+              Learn More;            </a>
           </div>
         </div>
       </section>
@@ -93,7 +88,6 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
       <section className="py-16 max-w-6xl mx-auto px-6">""
         <div className="text-center mb-16">""
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -104,9 +98,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
             Advanced Digital Twin Intelligence"
             Advanced Digital Twin Intelligence;
           </h2>""
->>>>>>> pr-10728
-          <p className="text-xl text-gray-600">
-            Comprehensive digital twin creation and management powered by AI;
+          <p className="text-xl text-gray-600">            Comprehensive digital twin creation and management powered by AI;
           </p>
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
         </div>"
@@ -129,9 +121,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
             </h3>""
             <ul className="space-y-4">
               {features.map((feature, index) => (""
->>>>>>> pr-10728
-                <li key={index} className="flex items-start">""
-                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0"  />"                  <span className="text-gray-700">{feature}</span>
+                <li key={index} className="flex items-start">""                  <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0"  />"                  <span className="text-gray-700">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -157,9 +147,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
               {industries.map((industry, index) => (
                 <div;
                   key={index}""
->>>>>>> pr-10728
-                  className="flex items-center p-3 bg-gray-50 rounded-lg""
-                >""
+                  className="flex items-center p-3 bg-gray-50 rounded-lg""                >""
                   <Network className="w-4 h-4 text-blue-500 mr-3"  />"                  <span className="text-gray-700">{industry}</span>
                 </div>
               ))}
@@ -174,9 +162,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-16 bg-gray-50">""
-        <div className="max-w-6xl mx-auto px-6">""
+      <section className="py-16 bg-gray-50">""        <div className="max-w-6xl mx-auto px-6">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
@@ -186,9 +172,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
               Why Choose AI Digital Twin Platform?"
               Why Choose AI Digital Twin Platform?
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-600">
-              Transform your operations with intelligent digital twin technology;
+            <p className="text-xl text-gray-600">              Transform your operations with intelligent digital twin technology;
             </p>
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
           </div>"
@@ -205,7 +189,6 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
             {benefits.map((benefit, index) => (
               <div;
                 key={index}""
->>>>>>> pr-10728
                 className="bg-white p-6 rounded-xl shadow-sm border border-gray-100""
               >""
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">""
@@ -216,9 +199,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
                   <TrendingUp className="w-6 h-6 text-blue-600"  />"
                   <TrendingUp className="w-6 h-6 text-blue-600"  />
                 </div>"                <p className="text-gray-700 font-medium">{benefit}</p>
->>>>>>> pr-10728
-              </div>
-            ))}
+              </div>            ))}
           </div>
         </div>
       </section>
@@ -229,7 +210,6 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
 "
 
       {/* Use Cases Section */}""
->>>>>>> pr-10728
       <section className="py-16 max-w-6xl mx-auto px-6">""
         <div className="text-center mb-16">""
           <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -240,9 +220,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
             Industry Applications"
             Industry Applications;
           </h2>""
->>>>>>> pr-10728
-          <p className="text-xl text-gray-600">
-            Trusted by leading organizations across industries;
+          <p className="text-xl text-gray-600">            Trusted by leading organizations across industries;
           </p>
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
         </div>"
@@ -259,7 +237,6 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
           {useCases.map((useCase, index) => (
             <div;
               key={index}""
->>>>>>> pr-10728
               className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow""
             >""
               <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4">""
@@ -270,9 +247,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
                 <Monitor className="w-5 h-5 text-blue-600"  />"
                 <Monitor className="w-5 h-5 text-blue-600"  />
               </div>"              <h3 className="font-semibold text-gray-900 mb-2">{useCase}</h3>
->>>>>>> pr-10728
-            </div>
-          ))}
+            </div>          ))}
         </div>
       </section>
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
@@ -282,9 +257,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
 "
 
       {/* Pricing Section */}""
->>>>>>> pr-10728
-      <section id="pricing" className="py-16 bg-gray-50">""
-        <div className="max-w-6xl mx-auto px-6">""
+      <section id="pricing" className="py-16 bg-gray-50">""        <div className="max-w-6xl mx-auto px-6">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
@@ -294,7 +267,6 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-600">
               Choose the plan that fits your digital twin needs;
             </p>
@@ -305,32 +277,12 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid md:grid-cols-3 gap-8">            {pricing.map((plan, index) => (
               <div;
                 key={index}
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
-
-                className={`relative bg-white rounded-2xl shadow-lg border-2 ${,
-  `
-                  plan.popular ? 'border-blue-500
-  ': 'border-gray-200``
-                } p-8`}
-              >"{plan.popular && (""
-
-                className={`relative bg-white rounded-2xl shadow-lg border-2 ${
-'`
-                  plan.popular ? 'border-blue-500' : 'border-gray-200'``
-                } p-8`}
-              >"
-                className={`relative bg-white rounded-2xl shadow-lg border-2 ${}
-                  plan.popular ? 'border-blue-500' : 'border-gray-200'`
-                } p-8`}
-              >
-                {plan.popular && (""
->>>>>>> pr-10728
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
+              >"{plan.popular && (""                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">""
                     <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular;
                     </span>
@@ -366,37 +318,15 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
 ""
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature, featureIndex) => (""
->>>>>>> pr-10728
-                    <li key={featureIndex} className="flex items-start">""
-                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-700">{feature}</span>
+                    <li key={featureIndex} className="flex items-start">""                      <CheckCircle className="w-5 h-5 text-blue-500 mr-3 mt-0.5 flex-shrink-0"  />"                      <span className="text-gray-700">{feature}</span>
                     </li>
                   ))}
                 </ul>
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
 `
                 <button``
-
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${,
-  plan.popular'
-  '
-                      ? 'bg-blue-600 text-white hover: bg-blue-700''
-  '`
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200``}`}
-
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${
-'
-                    plan.popular''
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'''`
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'``
-
-                <button`
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors ${}
-                    plan.popular'
-                      ? 'bg-blue-600 text-white hover:bg-blue-700''
-                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200'`
-                  }`}
->>>>>>> pr-10728
                 >
+                      : 'bg-gray-100 text-gray-900 hover:bg-gray-200``}`}                >
                   Get Started;
                 </button>
               </div>
@@ -424,9 +354,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
               href="mailto:kleber@ziontechgroup.com""
               className="text-blue-600 hover:text-blue-700 font-semibold""
             >
->>>>>>> pr-10728
-              Contact Sales Team;
-            </a>
+              Contact Sales Team;            </a>
           </div>
         </div>
       </section>
@@ -437,7 +365,6 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
 "
 
       {/* ROI Section */}""
->>>>>>> pr-10728
       <section className="py-16 bg-blue-50">""
         <div className="max-w-6xl mx-auto px-6 text-center">""
           <h2 className="text-3xl font-bold text-gray-900 mb-6">
@@ -448,9 +375,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
             Proven Results"
             Proven Results;
           </h2>""
->>>>>>> pr-10728
-          <div className="grid md:grid-cols-3 gap-8">""
-            <div className="bg-white rounded-lg p-6 shadow-sm">""
+          <div className="grid md:grid-cols-3 gap-8">""            <div className="bg-white rounded-lg p-6 shadow-sm">""
               <div className="text-3xl font-bold text-blue-600 mb-2">
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
                 25-40%"
@@ -483,9 +408,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
               <div className="text-3xl font-bold text-blue-600 mb-2">
                 20-35%
               </div>""
->>>>>>> pr-10728
-              <p className="text-gray-700">Cut in maintenance costs</p>
-            </div>
+              <p className="text-gray-700">Cut in maintenance costs</p>            </div>
           </div>
         </div>
       </section>
@@ -496,9 +419,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-16 bg-gray-900 text-white">""
-        <div className="max-w-4xl mx-auto px-6 text-center">""
+      <section className="py-16 bg-gray-900 text-white">""        <div className="max-w-4xl mx-auto px-6 text-center">""
           <h2 className="text-3xl font-bold mb-6">
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
             Ready to Create Your Digital Twins?"
@@ -537,9 +458,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
               href="tel:+13024640950""
               className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-colors""
             >
->>>>>>> pr-10728
-              Call Us;
-            </a>
+              Call Us;            </a>
           </div>
         </div>
       </section>
@@ -559,9 +478,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
         <h2 className="text-3xl font-bold text-gray-900 mb-8">
           Questions? We're Here to Help;
         </h2>""
->>>>>>> pr-10728
-        <div className="grid md:grid-cols-2 gap-8">""
-          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">""
+        <div className="grid md:grid-cols-2 gap-8">""          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">""
             <Phone className="w-8 h-8 text-blue-500 mx-auto mb-4"  />""
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
@@ -572,31 +489,8 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
             </p>"
             <a""
               href="tel:+13024640950""
-
-              className="text-blue-600 hover:text-blue-700 font-semibold">
-              +1 302 464 0950;
-            </a>
-:pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
-          </div>"""
-
-              className="text-blue-600 hover:text-blue-700 font-semibold"
-              Call Us;
-            </h3>""
-            <p className="text-gray-600 mb-4">
-              Speak with our digital twin experts;
-            </p>
-            <a""
-              href="tel:+13024640950""
-              className="text-blue-600 hover:text-blue-700 font-semibold""
-            >
-              +1 302 464 0950;
-            </a>
-:pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
-          </div>"
-          </div>
-""
->>>>>>> pr-10728
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">""
+          </div>"""          <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">""
             <Mail className="w-8 h-8 text-blue-500 mx-auto mb-4"  />""
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
 :pages.disabled/pages/services/AIDigitalTwinPlatform.tsx
@@ -644,9 +538,7 @@ export default function AIDigitalTwinPlatform(function AIDigitalTwinPlatform() {
             Learn more about our complete suite of AI-powered business solutions;
           </p>
           <a""
->>>>>>> pr-10728
-            href="https://ziontechgroup.com""
-            target="_blank""
+            href="https://ziontechgroup.com""            target="_blank""
             rel="noreferrer""
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold""
           >""

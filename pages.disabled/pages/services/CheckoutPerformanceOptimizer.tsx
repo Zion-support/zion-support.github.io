@@ -70,9 +70,7 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
           ].map(f => (
             <div;
               key={f.title}""
->>>>>>> pr-10728
-              className="rounded-xl border border-white/10 bg-white/5 p-5""
-            >""
+              className="rounded-xl border border-white/10 bg-white/5 p-5""            >""
               <div className="flex items-center gap-2 text-cyan-300 font-semibold">""
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
                 <CheckCircle className="w-4 h-4"  /> {f.title}"
@@ -100,9 +98,7 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
         </div>""
         <div className="mt-4 flex gap-4 text-sm">
           <a""
->>>>>>> pr-10728
-            className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""
-            href="https://www.optimizely.com/pricing/""
+            className="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200""            href="https://www.optimizely.com/pricing/""
             target="_blank""
             rel="noreferrer""
           >"            Optimizely pricing <ExternalLink className="w-3 h-3"  />
@@ -129,9 +125,7 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
             Request audit;
           </Link>
           <a""
->>>>>>> pr-10728
-            href="mailto:kleber@ziontechgroup.com""
-            className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
+            href="mailto:kleber@ziontechgroup.com""            className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
           >""
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
             <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com
@@ -142,7 +136,6 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
             <Mail className="w-4 h-4"  /> kleber@ziontechgroup.com;
           </a>
           <a""
->>>>>>> pr-10728
             href="tel:+13024640950""
             className="rounded-lg border border-cyan-400/40 px-4 py-2 text-sm font-semibold text-cyan-300 hover:bg-white/5 inline-flex items-center gap-2""
           >""
@@ -153,9 +146,7 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
             <Phone className="w-4 h-4"  /> +1 302 464 0950
             <Phone className="w-4 h-4"  /> +1 302 464 0950;
           </a>
->>>>>>> pr-10728
-        </div>
-      </section>
+        </div>      </section>
     </div>
 :pages.disabled/pages/services/CheckoutPerformanceOptimizer.tsx
   )}'"
@@ -165,4 +156,3 @@ export default function CheckoutPerformanceOptimizer(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728

@@ -24,7 +24,6 @@ class ImportOptimizer {
 
   async optimizeImports() {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
     for (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir);
       if (fs.existsSync(dirPath)) {
@@ -101,7 +100,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     // Convert individual icon imports to single import
 ursor/automate-test-fix-improve-and-merge-code-99d1
     const matches = [...content.matchAll(lucidePattern)];
-
     if (matches.length > 1) {
       const allIcons = new Set();
       matches.forEach(match => {
@@ -111,7 +109,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       });
 ursor/automate-test-fix-improve-and-merge-code-99d1
     }
-
     return content;
   }
 
@@ -129,7 +126,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     // Group Radix UI imports
 ursor/automate-test-fix-improve-and-merge-code-99d1
     const matches = [...content.matchAll(radixPattern)];
-
     if (matches.length > 1) {
       const groupedImports = new Map();
       matches.forEach(match => {
@@ -142,8 +138,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
         components.forEach(comp => groupedImports.get(packageName).add(comp));
       });
 ursor/automate-test-fix-improve-and-merge-code-99d1
-      groupedImports.forEach((components, packageName) => {
-        optimizedImports += `import { ${Array.from(components).join(',
+      groupedImports.forEach((components, packageName) => {        optimizedImports += `import { ${Array.from(components).join(',
   ')} } from '@radix-ui/${packageName}
   ';\n`;
       });
@@ -173,8 +168,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
     // Remove unused imports (simplified)
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  }
-}
+  }}
 
 // Run the optimizer
 const optimizer = new ImportOptimizer();

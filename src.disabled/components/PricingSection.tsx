@@ -1,5 +1,4 @@
-ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx
-import { 
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsximport { 
   Check, Star, 
   Zap, Shield, 
   Users, ArrowRight,
@@ -10,7 +9,6 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
   ]
 
 ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx
-
   return (
     <section className="py-24 bg-gradient-to-b from-zion-blue to-zion-blue-light relative overflow-hidden">
       {/* Background Elements */}
@@ -29,8 +27,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white">
-ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx
-            <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx            <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Transparent Pricing
             </span>
           </h2>
@@ -107,8 +104,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSectio
                 )}
 
                 {/* Main Card */}
-ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx
-                }`}>
+ursor/automate-test-fix-improve-and-merge-code-48f3:src/components/PricingSection.tsx                }`}>
                   {/* Icon */}
                   <div className={`w-16 h-16 bg-gradient-to-br ${plan.color} rounded-2xl mb-6 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="w-8 h-8" />

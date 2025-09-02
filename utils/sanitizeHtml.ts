@@ -1,7 +1,6 @@
 // HTML sanitization utility to prevent CSP violations
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  return sanitized;
-}
+  return sanitized;}
 
 export function sanitizeUrl(url: string): string {
   // Remove javascript: URLs

@@ -11,9 +11,7 @@
             Mobile-First Survey Platform"
             Mobile-First Survey Platform;
           </h1>""
->>>>>>> pr-10728
-          <p className="mt-4 text-lg text-slate-300 max-w-3xl">
-            Launch beautiful, high-converting surveys optimized for mobile with;
+          <p className="mt-4 text-lg text-slate-300 max-w-3xl">            Launch beautiful, high-converting surveys optimized for mobile with;
             real-time analytics and multi-language support.
           </p>
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
@@ -23,9 +21,7 @@
         </header>"
         </header>
 ""
->>>>>>> pr-10728
-        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">""
-          <div className="lg:col-span-2 space-y-8">""
+        <section className="grid grid-cols-1 lg:grid-cols-3 gap-8">""          <div className="lg:col-span-2 space-y-8">""
             <div className="rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">Highlights</h2>""
               <ul className="grid sm:grid-cols-2 gap-3 text-slate-300">""
@@ -61,9 +57,7 @@
                 <li className="p-3 rounded-lg bg-slate-800/50">
                   Real-time dashboards and CSV export;
                 </li>""
->>>>>>> pr-10728
-                <li className="p-3 rounded-lg bg-slate-800/50">
-                  Webhooks and REST API;
+                <li className="p-3 rounded-lg bg-slate-800/50">                  Webhooks and REST API;
                 </li>
               </ul>
 :pages.disabled/pages/services/MobileFirstSurveyTool.tsx
@@ -81,9 +75,7 @@
               <h2 className="text-2xl font-semibold mb-3">
                 Pricing (avg market ranges)
               </h2>""
->>>>>>> pr-10728
-              <ul className="space-y-2 text-slate-300">
-                <li>Starter: $49–$99/mo — 1,000 responses/mo</li>
+              <ul className="space-y-2 text-slate-300">                <li>Starter: $49–$99/mo — 1,000 responses/mo</li>
                 <li>Growth: $199–$399/mo — 10,000 responses/mo, A/B testing</li>
                 <li>
                   Scale: $699–$1,499/mo — 100k responses/mo, SSO, audit logs;
@@ -96,7 +88,6 @@
             </div>"
             </div>
 ""
->>>>>>> pr-10728
             <div className="rounded-2xl border border-fuchsia-400/20 bg-slate-900/60 p-6">""
               <h2 className="text-2xl font-semibold mb-3">Resources</h2>""
               <ul className="list-disc ml-6 space-y-2 text-cyan-300">
@@ -107,7 +98,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://developers.google.com/forms/api""
                     target="_blank""
@@ -118,7 +108,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     Google Forms API;
                   </a>
                 </li>
@@ -129,7 +118,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://api.slack.com/""
                     target="_blank""
@@ -140,7 +128,6 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
                     Slack API;
                   </a>
                 </li>
@@ -151,7 +138,6 @@
                 <li>"
                 <li>
                   <a""
->>>>>>> pr-10728
                     className="hover:underline""
                     href="https://developers.hubspot.com/""
                     target="_blank""
@@ -162,9 +148,7 @@
                     rel="noreferrer"
                     rel="noreferrer""
                   >
->>>>>>> pr-10728
-                    HubSpot Developer;
-                  </a>
+                    HubSpot Developer;                  </a>
                 </li>
               </ul>
             </div>
@@ -189,9 +173,7 @@
                 href="/contact""
                 className="mt-4 inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-fuchsia-400 to-cyan-400 text-white hover:from-fuchsia-500 hover:to-cyan-500""
               >
->>>>>>> pr-10728
-                Request Access;
-              </a>
+                Request Access;              </a>
             </div>
           </aside>
         </section>
@@ -206,4 +188,3 @@ export default MobileFirstSurveyTool;"
 '"'"
 export default MobileFirstSurveyTool;
 '""
->>>>>>> pr-10728

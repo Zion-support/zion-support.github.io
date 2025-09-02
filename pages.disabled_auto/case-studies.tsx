@@ -1,5 +1,4 @@
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
-  TrendingUp,
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx  TrendingUp,
   Users,
   DollarSign,
   Clock,
@@ -23,7 +22,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
   Share2,
   Filter,
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
-
 const CaseStudies: React.FC = () => {
   const caseStudies = [
     {
@@ -216,8 +214,7 @@ const CaseStudies: React.FC = () => {
               Case Studies
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
-            </p>
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx            </p>
           </motion.div>
         </div>
       </section>
@@ -426,8 +423,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
                       <button
                         key={industry.name}
                         className={`w-full flex items-center justify-between p-3 rounded-lg transition-colors ${
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx
-                        }`}
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/case-studies.tsx                        }`}
                       >
                         <span>{industry.name}</span>
                         <Badge variant="secondary" className="text-xs">

@@ -16,9 +16,7 @@ const DigitalTransformation = () => {}
               Digital Transformation"
               Digital Transformation;
             </h1>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Modernize your business processes and operations.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              Modernize your business processes and operations.
             </p>
           </div>
 :pages.disabled/pages/services/Transformation.jsx
@@ -28,9 +26,7 @@ const DigitalTransformation = () => {}
         </div>"
         </div>
       </section>""
->>>>>>> pr-10728
-      <section className="py-16 bg-white">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+      <section className="py-16 bg-white">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">""
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl">""
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
@@ -73,9 +69,7 @@ const DigitalTransformation = () => {}
               <h3 className="text-xl font-semibold text-slate-900 mb-4">
                 Change Management;
               </h3>""
->>>>>>> pr-10728
-              <p className="text-slate-600">
-                Guide your team through digital adoption.
+              <p className="text-slate-600">                Guide your team through digital adoption.
               </p>
             </div>
           </div>
@@ -100,9 +94,7 @@ const DigitalTransformation = () => {}
             to="/contact""
             className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300""
           >
->>>>>>> pr-10728
-            Get Started;
-          </Link>
+            Get Started;          </Link>
         </div>
       </section>
     </div>
@@ -117,4 +109,3 @@ export default DigitalTransformation;'"
 '"'"
 export default DigitalTransformation;
 '""
->>>>>>> pr-10728

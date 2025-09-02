@@ -1,19 +1,5 @@
-
-import React from,
-  react';'
-import { Link } from
-  'react-router-dom';'
-import { Helmet } from
-  'react-helmet-async';
-;: pages.disabled/pages/services/ITInfrastructure.jsx
-
-import React from 'react';'
-import { Link } from 'react-router-dom';'
-import { Helmet } from 'react-helmet-async';
-;
-:pages.disabled/pages/services/ITInfrastructure.jsx
->>>>>>> pr-10728
 const ITInfrastructure = () => {
+;: pages.disabled/pages/services/ITInfrastructure.jsxconst ITInfrastructure = () => {
   const features = [
     {
   '
@@ -100,77 +86,6 @@ const ITInfrastructure = () => {
     {
 '
 
-      area: 'Storage Infrastructure,
-,
-  solutions: [''
-  'Storage arrays,Backup systems
-  ',Cloud storage',Data protection
-  ',
-      ]},];
-
-      area: 'Storage Infrastructure','
-      solutions: [''
-        'Storage arrays',Backup systems',Cloud storage',Data protection',
-      ]},
-const ITInfrastructure = () => {}
-  const features = []
-    {}
-      title: 'Network Management',
-      description:'
-        'Comprehensive network infrastructure design, implementation, and maintenance',
-      features: ['
-        'Network Design',Performance Optimization',Security Implementation',24/7 Monitoring'
-      ],
-      icon: '🌐'},
-    {}
-      title: 'System Administration',
-      description:'
-        'Expert management of servers, operating systems, and enterprise applications',
-      features: ['
-        'Server Management',OS Administration',Application Support',Performance Tuning'
-      ],
-      icon: '🖥️'},
-    {}
-      title: 'Data Center Operations',
-      description:'
-        'Professional data center management and optimization services',
-      features: ['
-        'Facility Management',Power & Cooling',Hardware Maintenance',Capacity Planning'
-      ],
-      icon: '🏢'},
-    {}
-      title: 'Performance Optimization',
-      description: 'System and network performance analysis and improvement',
-      features: ['
-        'Performance Monitoring',Bottleneck Analysis',Optimization Strategies',Capacity Planning'
-      ],
-      icon: '⚡'}
-  ];
-
-  const infrastructureAreas = []
-    {}
-      area: 'Hardware Infrastructure',
-      solutions: ['
-        'Servers',Storage systems',Network equipment',Workstations'
-      ]},
-    {}
-      area: 'Software Infrastructure',
-      solutions: ['
-        'Operating systems',Virtualization platforms',Database systems',Management tools'
-      ]},
-    {}
-      area: 'Network Infrastructure',
-      solutions: ['
-        'LAN/WAN setup',Wireless networks',VPN solutions',Network security'
-      ]},
-    {}
-      area: 'Storage Infrastructure',
-      solutions: ['
-        'Storage arrays',Backup systems',Cloud storage',Data protection'
-      ]}
-  ];
->>>>>>> pr-10728
-
   return()
     <>
       <Helmet>
@@ -247,9 +162,7 @@ const ITInfrastructure = () => {}
                 Infrastructure;
               </span>
             </h1>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Build a solid foundation for your business with enterprise-grade;
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">              Build a solid foundation for your business with enterprise-grade;
               IT infrastructure. Our comprehensive services ensure reliability,
 :pages.disabled/pages/services/ITInfrastructure.jsx
               scalability, and security."
@@ -280,9 +193,7 @@ const ITInfrastructure = () => {}
                 to="/services""
                 className="inline-flex items-center px-8 py-3 border border-gray-600 text-white font-semibold rounded-lg hover:bg-gray-800 transition-all duration-300""
               >
->>>>>>> pr-10728
-                View All Services;
-              </Link>
+                View All Services;              </Link>
             </div>
           </div>
         </section>
@@ -293,9 +204,7 @@ const ITInfrastructure = () => {}
 "
 
         {/* Features Grid */}""
->>>>>>> pr-10728
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto">""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""          <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ITInfrastructure.jsx
@@ -305,9 +214,7 @@ const ITInfrastructure = () => {}
                 Infrastructure Solutions"
                 Infrastructure Solutions;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Comprehensive IT infrastructure services for modern businesses;
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">                Comprehensive IT infrastructure services for modern businesses;
               </p>
 :pages.disabled/pages/services/ITInfrastructure.jsx
             </div>"
@@ -324,9 +231,7 @@ const ITInfrastructure = () => {}
               {features.map((feature, index) => (
                 <div;
                   key={index}""
->>>>>>> pr-10728
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20""
-                >""
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20""                >""
                   <div className="text-4xl mb-4">{feature.icon}</div>""
                   <h3 className="text-xl font-semibold text-white mb-3">
 :pages.disabled/pages/services/ITInfrastructure.jsx
@@ -342,9 +247,7 @@ const ITInfrastructure = () => {}
                   <p className="text-gray-300 mb-4">{feature.description}</p>""
                   <ul className="space-y-2">
                     {feature.features.map((item, idx) => (""
->>>>>>> pr-10728
-                      <li key={idx} className="text-gray-300 flex items-center">""
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                      <li key={idx} className="text-gray-300 flex items-center">""                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {item}
                       </li>
                     ))}
@@ -361,9 +264,7 @@ const ITInfrastructure = () => {}
 "
 
         {/* Infrastructure Areas */}""
->>>>>>> pr-10728
-        <section className="py-20 px-4 sm:px-6 lg:px-8">""
-          <div className="max-w-7xl mx-auto">""
+        <section className="py-20 px-4 sm:px-6 lg:px-8">""          <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ITInfrastructure.jsx
@@ -373,9 +274,7 @@ const ITInfrastructure = () => {}
                 Infrastructure Areas"
                 Infrastructure Areas;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Multi-layered approach to building robust IT infrastructure;
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">                Multi-layered approach to building robust IT infrastructure;
               </p>
 :pages.disabled/pages/services/ITInfrastructure.jsx
             </div>"
@@ -392,9 +291,7 @@ const ITInfrastructure = () => {}
               {infrastructureAreas.map((area, index) => (
                 <div;
                   key={index}""
->>>>>>> pr-10728
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20""
-                >""
+                  className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20""                >""
                   <h3 className="text-xl font-semibold text-white mb-4">
 :pages.disabled/pages/services/ITInfrastructure.jsx
                     {area.area}"
@@ -407,9 +304,7 @@ const ITInfrastructure = () => {}
                   </h3>""
                   <ul className="space-y-2">
                     {area.solutions.map((solution, idx) => (""
->>>>>>> pr-10728
-                      <li key={idx} className="text-gray-300 flex items-center">""
-                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                      <li key={idx} className="text-gray-300 flex items-center">""                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
                         {solution}
                       </li>
                     ))}
@@ -426,9 +321,7 @@ const ITInfrastructure = () => {}
 "
 
         {/* Benefits */}""
->>>>>>> pr-10728
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""
-          <div className="max-w-7xl mx-auto">""
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">""          <div className="max-w-7xl mx-auto">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ITInfrastructure.jsx
@@ -438,9 +331,7 @@ const ITInfrastructure = () => {}
                 Why Choose Our Infrastructure Services?"
                 Why Choose Our Infrastructure Services?
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Proven expertise and cutting-edge technology for reliable;
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">                Proven expertise and cutting-edge technology for reliable;
                 infrastructure;
               </p>
 :pages.disabled/pages/services/ITInfrastructure.jsx
@@ -458,9 +349,7 @@ const ITInfrastructure = () => {}
               <div className="text-center">""
                 <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg""
->>>>>>> pr-10728
-                    className="w-8 h-8 text-white""
-                    fill="none""
+                    className="w-8 h-8 text-white""                    fill="none""
                     stroke="currentColor""
 :pages.disabled/pages/services/ITInfrastructure.jsx
                     viewBox="0 0 24 24"
@@ -471,9 +360,7 @@ const ITInfrastructure = () => {}
                     viewBox="0 0 24 24""
                   >
                     <path""
->>>>>>> pr-10728
-                      strokeLinecap="round""
-                      strokeLinejoin="round""
+                      strokeLinecap="round""                      strokeLinejoin="round""
                       strokeWidth={2}""
 :pages.disabled/pages/services/ITInfrastructure.jsx
                       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
@@ -492,9 +379,7 @@ const ITInfrastructure = () => {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Reliability;
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-300">
-                  99.9% uptime guarantee with redundant systems;
+                <p className="text-gray-300">                  99.9% uptime guarantee with redundant systems;
                 </p>
 :pages.disabled/pages/services/ITInfrastructure.jsx
               </div>"
@@ -509,9 +394,7 @@ const ITInfrastructure = () => {}
               <div className="text-center">""
                 <div className="w-16 h-16 bg-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg""
->>>>>>> pr-10728
-                    className="w-8 h-8 text-white""
-                    fill="none""
+                    className="w-8 h-8 text-white""                    fill="none""
                     stroke="currentColor""
 :pages.disabled/pages/services/ITInfrastructure.jsx
                     viewBox="0 0 24 24"
@@ -522,9 +405,7 @@ const ITInfrastructure = () => {}
                     viewBox="0 0 24 24""
                   >
                     <path""
->>>>>>> pr-10728
-                      strokeLinecap="round""
-                      strokeLinejoin="round""
+                      strokeLinecap="round""                      strokeLinejoin="round""
                       strokeWidth={2}""
 :pages.disabled/pages/services/ITInfrastructure.jsx
                       d="M7 11l5-5m0 0l5 5m-5-5v12"
@@ -543,9 +424,7 @@ const ITInfrastructure = () => {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Scalability;
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-300">
-                  Grow your infrastructure as your business expands;
+                <p className="text-gray-300">                  Grow your infrastructure as your business expands;
                 </p>
 :pages.disabled/pages/services/ITInfrastructure.jsx
               </div>"
@@ -560,9 +439,7 @@ const ITInfrastructure = () => {}
               <div className="text-center">""
                 <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg""
->>>>>>> pr-10728
-                    className="w-8 h-8 text-white""
-                    fill="none""
+                    className="w-8 h-8 text-white""                    fill="none""
                     stroke="currentColor""
 :pages.disabled/pages/services/ITInfrastructure.jsx
                     viewBox="0 0 24 24"
@@ -573,9 +450,7 @@ const ITInfrastructure = () => {}
                     viewBox="0 0 24 24""
                   >
                     <path""
->>>>>>> pr-10728
-                      strokeLinecap="round""
-                      strokeLinejoin="round""
+                      strokeLinecap="round""                      strokeLinejoin="round""
                       strokeWidth={2}""
 :pages.disabled/pages/services/ITInfrastructure.jsx
                       d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
@@ -594,9 +469,7 @@ const ITInfrastructure = () => {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   Security;
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-gray-300">
-                  Multi-layered security for comprehensive protection;
+                <p className="text-gray-300">                  Multi-layered security for comprehensive protection;
                 </p>
               </div>
             </div>
@@ -609,9 +482,7 @@ const ITInfrastructure = () => {}
 "
 
         {/* CTA Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""
-          <div className="max-w-4xl mx-auto text-center">""
+        <section className="py-20 bg-gradient-to-r from-blue-900/50 to-cyan-900/50">""          <div className="max-w-4xl mx-auto text-center">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/pages/services/ITInfrastructure.jsx
               Ready to Build Your Infrastructure?"
@@ -637,9 +508,7 @@ const ITInfrastructure = () => {}
               to="/contact""
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300""
             >
->>>>>>> pr-10728
-              Get Infrastructure Consultation;
-            </Link>
+              Get Infrastructure Consultation;            </Link>
           </div>
         </section>
       </div>
@@ -655,4 +524,3 @@ export default ITInfrastructure;'"
 '"'"
 export default ITInfrastructure;
 '""
->>>>>>> pr-10728

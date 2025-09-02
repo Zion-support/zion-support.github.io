@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 // Optimized lazy loading with preloading hints
 const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {
   const LazyComponent = lazy(importFn);
@@ -11,7 +10,6 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 
 // Core pages with optimized imports
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
 // Error Fallback Component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorBoundary: () => void }) => (
   <div className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 flex items-center justify-center p-4">
@@ -24,8 +22,7 @@ const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error resetErrorB
       <div className="space-y-3">
 <button onClick={resetErrorBoundary} className="w-full bg-blue-600 hover: bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors">Try again</button>
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    </div>
-  </div>
+    </div>  </div>
 )
 
 function App() {
@@ -77,8 +74,7 @@ function App() {
 }
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {;const LazyComponent = lazy(importFn);
-  return(props: any) => (
+const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.ReactNode) => {;const LazyComponent = lazy(importFn);  return(props: any) => (
     <Suspense fallback={fallback || <LoadingSpinner />}>
       <LazyComponent {...props} />
     </Suspense>
@@ -87,8 +83,7 @@ const createLazyComponent = (importFn: () => Promise<any>, fallback?: React.Reac
 
 // Core pages with optimized imports
 ursor/automate-test-fix-improve-and-merge-code-48f3
-        </button>
-      </div>
+        </button>      </div>
     </div>
   </div>
 )

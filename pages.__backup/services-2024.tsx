@@ -1,5 +1,4 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
 // Import the new 2024 services
 import { realMicroSaasServices2024 } from
   '../data/2024-real-micro-saas-services';
@@ -19,24 +18,21 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
   from-indigo-500 to-blue-500',
     services: [
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  },
-  {
+  },  {
     id: 'api-development,
     title:,
   🔌 API & Development',
     description: 'Intelligent API management and development tools,
     icon: Code,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  },
-  {
+  },  {
     id: 'business-analytics,
     title:,
   💰 Business & Analytics',
     description: 'AI-powered business intelligence and optimization solutions,
     icon: BarChart,
 ursor/automate-test-fix-improve-and-merge-code-99d1
-  },
-  {
+  },  {
     id: 'marketing-automation,
     title:,
   📱 Marketing & Automation',
@@ -44,7 +40,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     icon: Target,
 ursor/automate-test-fix-improve-and-merge-code-99d1
 ];
-
 export default function Services2024Page() {
   const [searchTerm, setSearchTerm] = useState('
   ');
@@ -57,7 +52,6 @@ export default function Services2024Page() {
 
 ursor/automate-test-fix-improve-and-merge-code-99d1
   ];
-
   const getVariantIcon = (variant: string) => {
     if (variant.includes('ai
   ')) return Brain;
@@ -79,8 +73,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
   const getVariantColor = (variant: string) => {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    <>
-      <Head>
+    <>      <Head>
         <title>2024 Revolutionary Services - Zion Tech Group</title>
         <meta
           name="description"
@@ -204,8 +197,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                   </select>
                   <button
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                  </button>
-                </div>
+                  </button>                </div>
               </div>
             </div>
           </div>
@@ -324,8 +316,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
                         </Link>
                         <div className="text-xs text-gray-400 bg-gray-800/50 px-2 py-1 rounded">
 ursor/automate-test-fix-improve-and-merge-code-99d1
-                        </div>
-                      </div>
+                        </div>                      </div>
                     </div>
                   </motion.div>
                 ))}

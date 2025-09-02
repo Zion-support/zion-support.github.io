@@ -4,20 +4,17 @@ const Partners: NextPage = () => {
   const partnerTypes = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const currentPartners = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const partnershipBenefits = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ];
+    }  ];
 
   return (
     <MainLayout
@@ -74,8 +71,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Current Partners</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-              </p>
-            </div>
+              </p>            </div>
             
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">
               {currentPartners.map((partner, index) => (

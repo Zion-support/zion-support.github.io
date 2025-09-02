@@ -187,4 +187,3 @@ export { Sitemap };
 export { Sitemap };
 
 export { Sitemap };
->>>>>>> pr-10728

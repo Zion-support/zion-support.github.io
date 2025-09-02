@@ -1,18 +1,15 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const team = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ]
+    }  ]
 
   const timeline = [
     {
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    }
-  ];
+    }  ];
 
   return (
     <MainLayout
@@ -28,8 +25,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-200 leading-relaxed">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-              leverage cutting-edge technology to achieve their goals and drive growth.
-            </p>
+              leverage cutting-edge technology to achieve their goals and drive growth.            </p>
           </div>
         </div>
       </section>
@@ -51,8 +47,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               </p>
               <p className="text-lg text-gray-600">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-              </p>
-            </div>
+              </p>            </div>
             <div className="bg-gray-100 rounded-lg p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">What We Do</h3>
               <ul className="space-y-4">
@@ -176,8 +171,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Choose Zion Tech Group?</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-            </p>
-          </div>
+            </p>          </div>
           <div className="grid md: grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Expert Team</h3>
@@ -189,8 +183,7 @@ ursor/automate-test-fix-improve-and-merge-code-48f3
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Proven Track Record</h3>
               <p className="text-gray-600">
 ursor/automate-test-fix-improve-and-merge-code-48f3
-                and business sizes.
-              </p>
+                and business sizes.              </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Innovation Focus</h3>

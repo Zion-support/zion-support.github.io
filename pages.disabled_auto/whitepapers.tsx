@@ -1,46 +1,38 @@
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
-
 const Whitepapers: NextPage = () => {
   const whitepapers = [
     {
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
-      pages: 45,
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx      pages: 45,
       downloads:
   '12.5k',
       rating: 4.8,
       featured: true,
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
-      pages: 32,
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx      pages: 32,
       downloads:
   '8.2k',
       rating: 4.7,
       featured: true,
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
-      pages: 38,
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx      pages: 38,
       downloads:
   '6.8k',
       rating: 4.9,
       featured: false,
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
-      pages: 52,
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx      pages: 52,
       downloads:
   '5.4k',
       rating: 4.6,
       featured: false,
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
-      pages: 41,
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx      pages: 41,
       downloads:
   '4.9k',
       rating: 4.7,
       featured: false,
-ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
-      pages: 28,
+ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx      pages: 28,
       downloads:
   '3.7k',
       rating: 4.5,
       featured: false,
 ursor/automate-test-fix-improve-and-merge-code-99d1:pages/whitepapers.tsx
-
   return (
     <MainLayout
       title="Whitepapers - Zion Tech Group"

@@ -30,7 +30,6 @@ const sendPasswordResetEmail = async (
   }
 
 ursor/automate-test-fix-improve-and-merge-code-99d1
-
   const msg = {
     to: to,
     from: senderEmail,
@@ -42,7 +41,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
       <p>This link will expire in 1 hour.</p>
 ursor/automate-test-fix-improve-and-merge-code-99d1
   };
-
   try {
     await sgMail.send(msg);
     return {
@@ -51,8 +49,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     };
   } catch (error) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });
-  }
+    return res.status(405).json({ error: `Method ${req.method} Not Allowed` });  }
 
   try {
     const { email } = req.body;
@@ -70,7 +67,6 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
     if (!user) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
     }
-
     // Generate reset token
     const resetToken = crypto.randomBytes(32).toString(
   'hex');
@@ -94,8 +90,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1
 
     if (emailResult.success) {
 ursor/automate-test-fix-improve-and-merge-code-99d1
-    }
-  } catch (error) {
+    }  } catch (error) {
     console.error(
   'Error in forgot password handler:,
   , error);

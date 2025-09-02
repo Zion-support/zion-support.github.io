@@ -29,9 +29,7 @@ export default function AICustomerSupport(...args: any[]): any {}
       />
 
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative py-20 lg:py-32 overflow-hidden">""
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>""
+      <section className="relative py-20 lg:py-32 overflow-hidden">""        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-slate-900"></div>""
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center">""
             <div className="max-w-4xl mx-auto mb-12">"              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -42,9 +40,7 @@ export default function AICustomerSupport(...args: any[]): any {}
                 AI Customer Support"
                 AI Customer Support;
               </h1>""
->>>>>>> pr-10728
-              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                Intelligent support automation that provides 24/7 customer;
+              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">                Intelligent support automation that provides 24/7 customer;
                 assistance. Transform your customer support with AI-powered;
                 automation.
 :pages.disabled/pages/services/ai-customer-support.tsx
@@ -64,9 +60,7 @@ export default function AICustomerSupport(...args: any[]): any {}
                 href="/contact""
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25""
               >
->>>>>>> pr-10728
-                Get Started with AI Customer Support;
-              </a>
+                Get Started with AI Customer Support;              </a>
             </div>
           </div>
         </div>
@@ -78,9 +72,7 @@ export default function AICustomerSupport(...args: any[]): any {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20 bg-white/5">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+      <section className="py-20 bg-white/5">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/ai-customer-support.tsx
@@ -90,7 +82,6 @@ export default function AICustomerSupport(...args: any[]): any {}
               Revolutionary AI-Powered Support"
               Revolutionary AI-Powered Support;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Transform your customer support with our advanced AI automation;
             </p>
@@ -101,9 +92,7 @@ export default function AICustomerSupport(...args: any[]): any {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
-            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">""
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">""
               <div className="w-16 h-16 bg-blue-600/20 rounded-2xl flex items-center justify-center mb-6">""
 :pages.disabled/pages/services/ai-customer-support.tsx
                 <Bot className="w-8 h-8 text-blue-400"  />"
@@ -118,9 +107,7 @@ export default function AICustomerSupport(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 Intelligent Chatbots;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                Advanced AI chatbots that understand natural language and;
-                provide accurate responses;
+                Advanced AI chatbots that understand natural language and;                provide accurate responses;
               </p>
 :pages.disabled/pages/services/ai-customer-support.tsx
             </div>"
@@ -143,9 +130,7 @@ export default function AICustomerSupport(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 24/7 Availability;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                Provide instant customer support anytime, anywhere, without;
-                human limitations;
+                Provide instant customer support anytime, anywhere, without;                human limitations;
               </p>
 :pages.disabled/pages/services/ai-customer-support.tsx
             </div>"
@@ -168,9 +153,7 @@ export default function AICustomerSupport(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 Smart Issue Resolution;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                AI that learns from customer interactions to provide better;
-                solutions over time;
+                AI that learns from customer interactions to provide better;                solutions over time;
               </p>
 :pages.disabled/pages/services/ai-customer-support.tsx
             </div>"
@@ -193,9 +176,7 @@ export default function AICustomerSupport(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 Personalized Support;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                Tailored responses based on customer history and preferences;
-              </p>
+                Tailored responses based on customer history and preferences;              </p>
 :pages.disabled/pages/services/ai-customer-support.tsx
             </div>"
 ""
@@ -217,9 +198,7 @@ export default function AICustomerSupport(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 Performance Analytics;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                Comprehensive insights into support performance and customer;
-                satisfaction;
+                Comprehensive insights into support performance and customer;                satisfaction;
               </p>
 :pages.disabled/pages/services/ai-customer-support.tsx
             </div>"
@@ -242,9 +221,7 @@ export default function AICustomerSupport(...args: any[]): any {}
               <h3 className="text-xl font-bold text-white mb-4">
                 Secure & Compliant;
               </h3>"              <p className="text-gray-300">
->>>>>>> pr-10728
-                Enterprise-grade security with compliance for data protection;
-                regulations;
+                Enterprise-grade security with compliance for data protection;                regulations;
               </p>
             </div>
           </div>
@@ -257,9 +234,7 @@ export default function AICustomerSupport(...args: any[]): any {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20">""
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
+      <section className="py-20">""        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
 :pages.disabled/pages/services/ai-customer-support.tsx
             Ready to Transform Your Customer Support?"
@@ -282,9 +257,7 @@ export default function AICustomerSupport(...args: any[]): any {}
             href="/contact""
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-2xl hover:shadow-blue-500/25""
           >
->>>>>>> pr-10728
-            Get Started with AI Customer Support;
-          </a>
+            Get Started with AI Customer Support;          </a>
         </div>
       </section>
     </div>
@@ -298,4 +271,3 @@ export default function AICustomerSupport(...args: any[]): any {}
 '"'"
   )}
 '""
->>>>>>> pr-10728

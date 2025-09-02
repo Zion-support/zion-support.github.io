@@ -21,9 +21,7 @@ export default function GovernmentSolutions() {}
 "
         {}
             icon: Shield,""
->>>>>>> pr-10728
-            title: "Government Security",""
-            description: "Comprehensive cybersecurity and compliance solutions for government",""
+            title: "Government Security",""            description: "Comprehensive cybersecurity and compliance solutions for government",""
             features: ["FedRAMP Compliance", "Zero-Trust Security", "Data Protection", "Incident Response"]
         },
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -34,9 +32,7 @@ export default function GovernmentSolutions() {}
 "
         {}
             icon: Users,""
->>>>>>> pr-10728
-            title: "Citizen Experience",""
-            description: "AI-powered citizen engagement and service delivery",""
+            title: "Citizen Experience",""            description: "AI-powered citizen engagement and service delivery",""
             features: ["Smart Chatbots", "Personalized Services", "Multi-channel Support", "Accessibility"]
         },
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -47,9 +43,7 @@ export default function GovernmentSolutions() {}
 "
         {}
             icon: BarChart3,""
->>>>>>> pr-10728
-            title: "Government Analytics",""
-            description: "Advanced analytics and insights for government decision-making",""
+            title: "Government Analytics",""            description: "Advanced analytics and insights for government decision-making",""
             features: ["Performance Metrics", "Data Visualization", "Predictive Analytics", "Reporting"]
         },
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -60,9 +54,7 @@ export default function GovernmentSolutions() {}
 "
         {}
             icon: Lock,""
->>>>>>> pr-10728
-            title: "Compliance & Audit",""
-            description: "Automated compliance monitoring and regulatory reporting",""
+            title: "Compliance & Audit",""            description: "Automated compliance monitoring and regulatory reporting",""
             features: ["Regulatory Compliance", "Audit Trails", "Risk Management", "Policy Enforcement"]
         },
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -73,9 +65,7 @@ export default function GovernmentSolutions() {}
 "
         {}
             icon: Zap,""
->>>>>>> pr-10728
-            title: "Process Automation",""
-            description: "Intelligent automation for government operations and workflows",""
+            title: "Process Automation",""            description: "Intelligent automation for government operations and workflows",""
             features: ["Workflow Automation", "Document Processing", "Approval Systems", "Resource Management"]
 
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -85,9 +75,7 @@ export default function GovernmentSolutions() {}
     ];"
     ];
     const benefits = [""
->>>>>>> pr-10728
-        "Improved citizen satisfaction and engagement",""
-        "Enhanced operational efficiency and cost savings",""
+        "Improved citizen satisfaction and engagement",""        "Enhanced operational efficiency and cost savings",""
         "Better compliance and risk management",""
         "Increased transparency and accountability",""
         "Faster service delivery and response times",""
@@ -105,9 +93,7 @@ export default function GovernmentSolutions() {}
     const caseStudies = []
         {}
 ""
->>>>>>> pr-10728
-            organization: "State Government Agency",""
-            specialty: "Digital Services",""
+            organization: "State Government Agency",""            specialty: "Digital Services",""
             challenge: "Outdated citizen services and long processing times",""
             solution: "Implemented modern digital government platform with AI automation",""
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -122,9 +108,7 @@ export default function GovernmentSolutions() {}
         },
         {}
 ""
->>>>>>> pr-10728
-            organization: "Federal Department",""
-            specialty: "Security & Compliance",""
+            organization: "Federal Department",""            specialty: "Security & Compliance",""
             challenge: "Cybersecurity vulnerabilities and compliance gaps",""
             solution: "Comprehensive security framework with FedRAMP compliance",""
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -139,9 +123,7 @@ export default function GovernmentSolutions() {}
     ];""
     return (<div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900 text-white">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center">""
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-6">
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -165,9 +147,7 @@ export default function GovernmentSolutions() {}
               <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
                 Get Government Quote;
               </Link>""
->>>>>>> pr-10728
-              <Link to="/services/ai-autonomous-systems" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-                Explore AI Solutions;
+              <Link to="/services/ai-autonomous-systems" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">                Explore AI Solutions;
               </Link>
             </div>
           </div>
@@ -179,9 +159,7 @@ export default function GovernmentSolutions() {}
 "
 
         {/* Background Elements */}""
->>>>>>> pr-10728
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">""
-          <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>""
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">""          <div className="absolute top-20 left-10 w-2 h-2 bg-cyan-400 rounded-full animate-ping"></div>""
           <div className="absolute top-40 right-20 w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>""
           <div className="absolute bottom-20 left-1/3 w-1 h-1 bg-purple-400 rounded-full animate-bounce"></div>
         </div>
@@ -193,9 +171,7 @@ export default function GovernmentSolutions() {}
 "
 
       {/* Solutions Grid */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -205,9 +181,7 @@ export default function GovernmentSolutions() {}
               Comprehensive Government Solutions"
               Comprehensive Government Solutions;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From digital transformation to security compliance, we provide end-to-end government technology solutions;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">              From digital transformation to security compliance, we provide end-to-end government technology solutions;
             </p>
 :pages.disabled/solutions/GovernmentSolutions.jsx
           </div>"
@@ -231,9 +205,7 @@ export default function GovernmentSolutions() {}
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mb-6">""
                     <Icon className="w-8 h-8 text-white"/>
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>""
-                  <p className="text-gray-300 mb-6">{solution.description}</p>""
+                  <h3 className="text-xl font-bold text-white mb-4">{solution.title}</h3>""                  <p className="text-gray-300 mb-6">{solution.description}</p>""
                   <ul className="space-y-2">""
                     {solution.features.map((feature, featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-400">""
                         <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0"/>
@@ -252,9 +224,7 @@ export default function GovernmentSolutions() {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -264,7 +234,6 @@ export default function GovernmentSolutions() {}
               Government Transformation Benefits"
               Government Transformation Benefits;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Measurable improvements in citizen services, operational efficiency, and compliance;
             </p>
@@ -275,7 +244,6 @@ export default function GovernmentSolutions() {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">""
             {benefits.map((benefit, index) => (<div key={index} className="text-center">""
                 <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">""
@@ -286,9 +254,7 @@ export default function GovernmentSolutions() {}
                   <TrendingUp className="w-8 h-8 text-white"/>"
                   <TrendingUp className="w-8 h-8 text-white"/>
                 </div>""
->>>>>>> pr-10728
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>))}
+                <p className="text-gray-300 text-lg">{benefit}</p>              </div>))}
           </div>
         </div>
       </section>
@@ -299,9 +265,7 @@ export default function GovernmentSolutions() {}
 "
 
       {/* Case Studies */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">""
           <div className="text-center mb-16">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -311,7 +275,6 @@ export default function GovernmentSolutions() {}
               Government Success Stories"
               Government Success Stories;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Real results from government agencies using our solutions;
             </p>
@@ -322,9 +285,7 @@ export default function GovernmentSolutions() {}
           </div>"
           </div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">""
-            {caseStudies.map((study, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">""
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">""            {caseStudies.map((study, index) => (<div key={index} className="bg-gray-800/50 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-8">""
                 <div className="flex items-center mb-4">""
                   <Star className="w-5 h-5 text-yellow-400 mr-2"/>""
 :pages.disabled/solutions/GovernmentSolutions.jsx
@@ -368,9 +329,7 @@ export default function GovernmentSolutions() {}
                 </div>""
                 <Link to="/case-studies" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-300">
                   Read Full Case Study""
->>>>>>> pr-10728
-                  <ArrowRight className="w-4 h-4 ml-2"/>
-                </Link>
+                  <ArrowRight className="w-4 h-4 ml-2"/>                </Link>
               </div>))}
           </div>
         </div>
@@ -382,9 +341,7 @@ export default function GovernmentSolutions() {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">""
-        <div className="max-w-4xl mx-auto text-center">""
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-blue-500/10">""        <div className="max-w-4xl mx-auto text-center">""
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
 :pages.disabled/solutions/GovernmentSolutions.jsx
             Ready to Modernize Government?"
@@ -407,9 +364,7 @@ export default function GovernmentSolutions() {}
             <Link to="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105">
               Schedule Consultation;
             </Link>""
->>>>>>> pr-10728
-            <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">
-              View All Services;
+            <Link to="/services-overview" className="px-8 py-4 border border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400/20 transition-all duration-300">              View All Services;
             </Link>
           </div>
         </div>
@@ -424,4 +379,3 @@ export default function GovernmentSolutions() {}
 }}}}'"'"
     </div>);
 }}}}'""
->>>>>>> pr-10728

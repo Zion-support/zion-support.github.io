@@ -17,9 +17,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 ""
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}""
->>>>>>> pr-10728
-        <section className="relative pt-32 pb-20 overflow-hidden">""
-          <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-orange-600/10"></div>""
+        <section className="relative pt-32 pb-20 overflow-hidden">""          <div className="absolute inset-0 bg-gradient-to-r from-yellow-500/10 to-orange-600/10"></div>""
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center">""
               <div className="inline-flex items-center px-4 py-2 bg-yellow-500/10 border border-yellow-500/20 rounded-full text-yellow-400 text-sm font-medium mb-8">""
@@ -42,9 +40,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"> Enterprise</span>
               </h1>
 ""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-                Leverage the power of blockchain technology to transform your enterprise operations.
+              <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">                Leverage the power of blockchain technology to transform your enterprise operations.
                 Secure transactions, smart contracts, and decentralized applications for the modern business.
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
               </p>"
@@ -74,9 +70,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 <button className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200">""
                   <Play className="mr-2 w-5 h-5"  />                  Watch Demo;
                 </button>
->>>>>>> pr-10728
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </section>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
@@ -86,9 +80,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 "
 
         {/* Features Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
@@ -98,9 +90,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 Enterprise Blockchain Capabilities"
                 Enterprise Blockchain Capabilities;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our blockchain platform provides comprehensive enterprise solutions with security,
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our blockchain platform provides comprehensive enterprise solutions with security,
                 scalability, and compliance built-in.
               </p>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
@@ -190,9 +180,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-lg flex items-center justify-center mb-4">""
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""
-                  <p className="text-slate-300">{feature.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>""                  <p className="text-slate-300">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -205,9 +193,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 "
 
         {/* Use Cases Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
@@ -217,9 +203,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 Blockchain Use Cases"
                 Blockchain Use Cases;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Discover how blockchain technology can revolutionize different aspects of your business.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Discover how blockchain technology can revolutionize different aspects of your business.
               </p>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
             </div>"
@@ -340,9 +324,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   <p className="text-slate-300 mb-4">{useCase.description}</p>""
                   <ul className="space-y-1">
                     {useCase.benefits.map((benefit, benefitIndex) => (""
->>>>>>> pr-10728
-                      <li key={benefitIndex} className="text-sm text-yellow-400 flex items-center">""
-                        <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
+                      <li key={benefitIndex} className="text-sm text-yellow-400 flex items-center">""                        <CheckCircle className="w-3 h-3 mr-2"  />                        {benefit}
                       </li>
                     ))}
                   </ul>
@@ -358,9 +340,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 "
 
         {/* Technology Stack Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
@@ -370,9 +350,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 Advanced Blockchain Technology"
                 Advanced Blockchain Technology;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Built on cutting-edge blockchain technologies for maximum security, performance, and scalability.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Built on cutting-edge blockchain technologies for maximum security, performance, and scalability.
               </p>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
             </div>"
@@ -389,9 +367,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
               <div>""
                 <div className="space-y-6">
                   {[""
->>>>>>> pr-10728
-                    "Multi-chain architecture supporting multiple blockchain networks",""
-                    "Advanced consensus mechanisms for security and performance",""
+                    "Multi-chain architecture supporting multiple blockchain networks",""                    "Advanced consensus mechanisms for security and performance",""
                     "Smart contract development and deployment platform",""
                     "Enterprise-grade security with encryption and access controls",""
                     "Scalable infrastructure for high-volume transactions",""
@@ -417,9 +393,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 <h3 className="text-2xl font-semibold text-white mb-4">Blockchain Types</h3>""
                 <div className="space-y-4">
                   {[""
->>>>>>> pr-10728
-                    { type: "Public", icon: Globe, color: "from-blue-500 to-cyan-500", description: "Open, permissionless networks" },""
-                    { type: "Private", icon: Lock, color: "from-purple-500 to-pink-500", description: "Controlled, permissioned networks" },""
+                    { type: "Public", icon: Globe, color: "from-blue-500 to-cyan-500", description: "Open, permissionless networks" },""                    { type: "Private", icon: Lock, color: "from-purple-500 to-pink-500", description: "Controlled, permissioned networks" },""
                     { type: "Consortium", icon: Users, color: "from-green-500 to-emerald-500", description: "Multi-organization networks" },""
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
                     { type: "Hybrid", icon: LinkIcon, color: "from-orange-500 to-red-500", description: "Combination of public and private" }"
@@ -438,9 +412,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                         <item.icon className="w-4 h-4 text-white" />
                       </div>
                       <div>""
->>>>>>> pr-10728
-                        <span className="text-slate-300 font-medium">{item.type}</span>""
-                        <p className="text-xs text-slate-400">{item.description}</p>
+                        <span className="text-slate-300 font-medium">{item.type}</span>""                        <p className="text-xs text-slate-400">{item.description}</p>
                       </div>
                     </div>
                   ))}
@@ -456,9 +428,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 "
 
         {/* DeFi Solutions Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-slate-800/30">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-slate-800/30">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
@@ -468,9 +438,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 DeFi Enterprise Solutions"
                 DeFi Enterprise Solutions;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Decentralized finance solutions designed for enterprise use cases and compliance requirements.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Decentralized finance solutions designed for enterprise use cases and compliance requirements.
               </p>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
             </div>"
@@ -489,9 +457,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 <h3 className="text-2xl font-semibold text-white mb-6">DeFi Applications</h3>""
                 <div className="space-y-4">
                   {[""
->>>>>>> pr-10728
-                    "Decentralized exchanges (DEX) for enterprise trading",""
-                    "Lending and borrowing platforms with smart contracts",""
+                    "Decentralized exchanges (DEX) for enterprise trading",""                    "Lending and borrowing platforms with smart contracts",""
                     "Yield farming and liquidity provision strategies",""
                     "Asset tokenization and fractional ownership",""
                     "Automated market makers (AMM) for liquidity",""
@@ -516,9 +482,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 <h3 className="text-2xl font-semibold text-white mb-6">Enterprise Benefits</h3>""
                 <div className="space-y-4">
                   {[""
->>>>>>> pr-10728
-                    "Reduce transaction costs and eliminate intermediaries",""
-                    "Improve transparency and auditability of financial operations",""
+                    "Reduce transaction costs and eliminate intermediaries",""                    "Improve transparency and auditability of financial operations",""
                     "Enable 24/7 global financial services and trading",""
                     "Automate complex financial processes with smart contracts",""
                     "Access to new financial instruments and investment opportunities",""
@@ -540,9 +504,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 "
 
         {/* Implementation Process Section */}""
->>>>>>> pr-10728
-        <section className="py-20">;""
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
+        <section className="py-20">;""          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">""
             <div className="text-center mb-16">""
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
@@ -552,9 +514,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 Implementation Process"
                 Implementation Process;
               </h2>""
->>>>>>> pr-10728
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-                Our systematic approach ensures successful blockchain implementation for your enterprise.
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">                Our systematic approach ensures successful blockchain implementation for your enterprise.
               </p>
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
             </div>"
@@ -629,9 +589,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">""
                     <span className="text-white font-bold text-xl">{step.step}</span>
                   </div>""
->>>>>>> pr-10728
-                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""
-                  <p className="text-slate-300">{step.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>""                  <p className="text-slate-300">{step.description}</p>
                 </div>
               ))}
             </div>
@@ -644,9 +602,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
 "
 
         {/* CTA Section */}""
->>>>>>> pr-10728
-        <section className="py-20 bg-gradient-to-r from-yellow-500/10 to-orange-600/10">;""
-          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
+        <section className="py-20 bg-gradient-to-r from-yellow-500/10 to-orange-600/10">;""          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
 :pages.disabled/pages/services/blockchain-enterprise-solutions.tsx
               Ready to Transform Your Business with Blockchain?"
@@ -682,9 +638,7 @@ export { function };export default function BlockchainEnterpriseSolutions(...arg
                 to="/services""
                 className="inline-flex items-center px-8 py-4 border border-yellow-500/30 text-yellow-400 font-semibold rounded-lg hover:bg-yellow-500/10 transition-all duration-200""
               >
->>>>>>> pr-10728
-                Explore All Services;
-              </Link>;
+                Explore All Services;              </Link>;
             </div>;
           </div>;
         </section>;

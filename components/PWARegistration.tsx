@@ -1,6 +1,5 @@
 ursor/automate-test-fix-improve-and-merge-code-48f3
 }
-
 const PWARegistration: React.FC = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
@@ -10,7 +9,6 @@ const PWARegistration: React.FC = () => {
     // Check if app is already installed
 ursor/automate-test-fix-improve-and-merge-code-48f3
     }
-
     // Listen for the beforeinstallprompt event
     const handleBeforeInstallPrompt = (e: Event) => {;e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
@@ -24,15 +22,13 @@ const handleAppInstalled = () => {;setIsInstalled(true);
     };
 
 ursor/automate-test-fix-improve-and-merge-code-48f3
-
   const handleInstallClick = async () => {;if (!deferredPrompt) return;
 
     deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
     
 ursor/automate-test-fix-improve-and-merge-code-48f3
-    setShowInstallPrompt(false);
-  };
+    setShowInstallPrompt(false);  };
 
 const handleDismiss = () => {;setShowInstallPrompt(false);
     setDeferredPrompt(null);

@@ -326,9 +326,7 @@ import {}
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">"
   return()    <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-slate-light">
       {/* Hero Section */}""
->>>>>>> pr-10728
-      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">
+      <section className="relative overflow-hidden py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -338,9 +336,7 @@ import {}
             animate={{ opacity: 1, y: 0 }}"
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
-            className="text-center""
-          >""
+            className="text-center""          >""
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white text-sm font-medium mb-6">""
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
               <Sparkles className="w-4 h-4 mr-2"  />              AI-Powered Financial Compliance Platform"
@@ -405,9 +401,7 @@ import {}
               >""
                 <Settings className="w-5 h-5 mr-2"  />                Start Free Trial;
               </motion.button>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -417,9 +411,7 @@ import {}
 "
 
       {/* Key Metrics Section */}""
->>>>>>> pr-10728
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
-        <div className="max-w-7xl mx-auto">""
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""        <div className="max-w-7xl mx-auto">""
           <div className="grid grid-cols-2 md: anygrid-cols-4 gap-8">
             {keyMetrics.map((item, index) => (
               <motion.div;
@@ -432,7 +424,6 @@ import {}
                 whileInView={{ opacity: 1, scale: 1 }}"
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="text-center""
               >""
                 <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
@@ -443,9 +434,7 @@ import {}
                   {item.metric}"
                   {item.metric}
                 </div>""
->>>>>>> pr-10728
-                <div className="text-zion-slate-light text-lg">
-                  {item.label}
+                <div className="text-zion-slate-light text-lg">                  {item.label}
                 </div>
               </motion.div>
             ))}
@@ -459,9 +448,7 @@ import {}
 "
 
       {/* Features Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -471,7 +458,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -482,9 +468,7 @@ import {}
               Advanced AI-Powered Features"
               Advanced AI-Powered Features;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Our platform combines cutting-edge AI with comprehensive;
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">              Our platform combines cutting-edge AI with comprehensive;
               compliance methodologies;
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -494,9 +478,7 @@ import {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-8">            {features.map((feature, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -507,9 +489,7 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300""
-              >""
+                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20 hover:border-zion-slate-light/40 transition-all duration-300""              >""
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center mb-4">""
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
                   <feature.icon className="w-6 h-6 text-white" />"
@@ -524,9 +504,7 @@ import {}
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-zion-slate-light">{feature.description}</p>
-              </motion.div>
+                <p className="text-zion-slate-light">{feature.description}</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -538,9 +516,7 @@ import {}
 "
 
       {/* Benefits Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -550,7 +526,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -561,7 +536,6 @@ import {}
               Measurable Business Impact"
               Measurable Business Impact;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               See real results with our AI-powered financial compliance platform;
             </p>
@@ -572,9 +546,7 @@ import {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 lg:grid-cols-3 gap-6">            {benefits.map((benefit, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
@@ -585,9 +557,7 @@ import {}
                 whileInView={{ opacity: 1, x: 0 }}"
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="flex items-start space-x-3""
-              >""
+                className="flex items-start space-x-3""              >""
                 <CheckCircle className="w-6 h-6 text-purple-400 mt-1 flex-shrink-0"  />"                <span className="text-zion-slate-light text-lg">{benefit}</span>
               </motion.div>
             ))}
@@ -601,9 +571,7 @@ import {}
 "
 
       {/* Use Cases Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -613,7 +581,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -624,9 +591,7 @@ import {}
               Industry Solutions"
               Industry Solutions;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Tailored solutions for various financial industries and compliance;
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">              Tailored solutions for various financial industries and compliance;
               requirements;
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -636,9 +601,7 @@ import {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">
-            {useCases.map((useCase, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-2 gap-8">            {useCases.map((useCase, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -649,7 +612,6 @@ import {}
                 whileInView={{ opacity: 1, y: 0 }}"
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
                 className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border border-zion-slate-light/20""
               >""
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -660,9 +622,7 @@ import {}
                   {useCase.industry}"
                   {useCase.industry}
                 </h3>""
->>>>>>> pr-10728
-                <p className="text-zion-slate-light">{useCase.description}</p>
-              </motion.div>
+                <p className="text-zion-slate-light">{useCase.description}</p>              </motion.div>
             ))}
           </div>
         </div>
@@ -674,9 +634,7 @@ import {}
 "
 
       {/* Regulations Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -686,7 +644,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -697,7 +654,6 @@ import {}
               Comprehensive Regulation Coverage"
               Comprehensive Regulation Coverage;
             </h2>""
->>>>>>> pr-10728
             <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
               Stay compliant with all major financial regulations and standards;
             </p>
@@ -708,9 +664,7 @@ import {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-4">
-            {regulations.map((regulation, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-4">            {regulations.map((regulation, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -721,9 +675,7 @@ import {}
                 whileInView={{ opacity: 1, scale: 1 }}"
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-purple-400/40 transition-all duration-300""
-              >""
+                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-3 border border-zion-slate-light/20 text-center hover:border-purple-400/40 transition-all duration-300""              >""
                 <span className="text-zion-slate-light font-medium text-sm">
                   {regulation}
                 </span>
@@ -739,9 +691,7 @@ import {}
 "
 
       {/* Pricing Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -751,7 +701,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -762,9 +711,7 @@ import {}
               Transparent Pricing"
               Transparent Pricing;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Choose the plan that fits your compliance needs and scale as you;
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">              Choose the plan that fits your compliance needs and scale as you;
               grow;
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -774,29 +721,15 @@ import {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">
-            {pricing.map((plan, index) => (
+          <div className="grid grid-cols-1 md: anygrid-cols-3 gap-8">            {pricing.map((plan, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
-
-                className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${,
-  index === 1'
-  '
-                    ? 'border-purple-500/50 bg-gradient-to-b from-purple-500/10 to-transparent''
-  '`: 'border-zion-slate-light/20``
-
-                className={`bg-zion-slate-dark/80 backdrop-blur-sm rounded-xl p-6 border ${
-'
-                  index === 1''
-                    ? 'border-purple-500/50 bg-gradient-to-b from-purple-500/10 to-transparent'''`
-                    : 'border-zion-slate-light/20'``
->>>>>>> pr-10728
                 }`}"
+  '`: 'border-zion-slate-light/20``                }`}"
               >""
                 <div className="text-center mb-6">""
                   <h3 className="text-2xl font-bold text-white mb-2">
@@ -822,9 +755,7 @@ import {}
                     {plan.price}
                   </div>
                   {index === 1 && (""
->>>>>>> pr-10728
-                    <span className="inline-block bg-purple-500 text-white text-sm px-3 py-1 rounded-full">
-                      Most Popular;
+                    <span className="inline-block bg-purple-500 text-white text-sm px-3 py-1 rounded-full">                      Most Popular;
                     </span>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
                   )}"
@@ -841,9 +772,7 @@ import {}
                   {plan.features.map((feature, featureIndex) => (
                     <li;
                       key={featureIndex}""
->>>>>>> pr-10728
-                      className="flex items-center space-x-3""
-                    >""
+                      className="flex items-center space-x-3""                    >""
                       <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0"  />"                      <span className="text-zion-slate-light">{feature}</span>
                     </li>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -853,9 +782,7 @@ import {}
                   ))}"
                   ))}
                 </ul>""
->>>>>>> pr-10728
-                <button className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200">
-                  Get Started;
+                <button className="w-full py-3 px-6 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200">                  Get Started;
                 </button>
               </motion.div>
             ))}
@@ -869,9 +796,7 @@ import {}
 "
 
       {/* Integrations Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""        <div className="max-w-7xl mx-auto">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -881,7 +806,6 @@ import {}
             whileInView={{ opacity: 1, y: 0 }}"
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}""
->>>>>>> pr-10728
             className="text-center mb-16""
           >""
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -892,9 +816,7 @@ import {}
               Seamless Integrations"
               Seamless Integrations;
             </h2>""
->>>>>>> pr-10728
-            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">
-              Connect with your existing financial systems and accounting;
+            <p className="text-xl text-zion-slate-light max-w-2xl mx-auto">              Connect with your existing financial systems and accounting;
               platforms;
             </p>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -904,9 +826,7 @@ import {}
           </motion.div>"
           </motion.div>
 ""
->>>>>>> pr-10728
-          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-6">
-            {integrations.map((integration, index) => (
+          <div className="grid grid-cols-2 md: anygrid-cols-4 lg:grid-cols-6 gap-6">            {integrations.map((integration, index) => (
               <motion.div;
                 key={index}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -917,9 +837,7 @@ import {}
                 whileInView={{ opacity: 1, scale: 1 }}"
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}""
->>>>>>> pr-10728
-                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300""
-              >""
+                className="bg-zion-slate-dark/80 backdrop-blur-sm rounded-lg p-4 border border-zion-slate-light/20 text-center hover:border-zion-slate-light/40 transition-all duration-300""              >""
                 <span className="text-zion-slate-light font-medium text-sm">
                   {integration}
                 </span>
@@ -935,9 +853,7 @@ import {}
 "
 
       {/* CTA Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8">""
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">""        <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -992,9 +908,7 @@ import {}
               >""
                 <MessageSquare className="w-5 h-5 mr-2"  />                Schedule Demo;
               </motion.button>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
@@ -1004,9 +918,7 @@ import {}
 "
 
       {/* Contact Section */}""
->>>>>>> pr-10728
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-zion-slate-dark/50">""        <div className="max-w-4xl mx-auto text-center">
           <motion.div;
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -1039,9 +951,7 @@ import {}
               <div className="flex items-center justify-center space-x-3">""
                 <Phone className="w-6 h-6 text-purple-400"  />"                <span className="text-zion-slate-light">+1 302 464 0950</span>
               </div>""
->>>>>>> pr-10728
-              <div className="flex items-center justify-center space-x-3">""
-                <Mail className="w-6 h-6 text-purple-400"  />""
+              <div className="flex items-center justify-center space-x-3">""                <Mail className="w-6 h-6 text-purple-400"  />""
                 <span className="text-zion-slate-light">
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
                   kleber@ziontechgroup.com
@@ -1052,9 +962,7 @@ import {}
                   kleber@ziontechgroup.com;
                 </span>
               </div>""
->>>>>>> pr-10728
-              <div className="flex items-center justify-center space-x-3">""
-                <MapPin className="w-6 h-6 text-purple-400"  />""
+              <div className="flex items-center justify-center space-x-3">""                <MapPin className="w-6 h-6 text-purple-400"  />""
                 <span className="text-zion-slate-light">
                   364 E Main St STE 1008;
                   <br />
@@ -1069,9 +977,7 @@ import {}
               </div>
             </div>"            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a""
->>>>>>> pr-10728
-                href="https://ziontechgroup.com/contact""
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200""
+                href="https://ziontechgroup.com/contact""                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-indigo-700 transition-all duration-200""
               >""
 :pages.disabled/pages/services/AIFinancialCompliancePlatform.tsx
                 <ArrowRight className="w-5 h-5 mr-2"  />                Contact Us
@@ -1082,7 +988,6 @@ import {}
                 <ArrowRight className="w-5 h-5 mr-2"  />                Contact Us;
               </a>
               <a""
->>>>>>> pr-10728
                 href="https://ziontechgroup.com""
                 className="inline-flex items-center px-8 py-4 border-2 border-zion-slate-light text-zion-slate-light font-semibold rounded-lg hover:bg-zion-slate-light hover:text-zion-slate-dark transition-all duration-200""
               >""
@@ -1093,9 +998,7 @@ import {}
                 <Globe className="w-5 h-5 mr-2"  />                Visit Website
                 <Globe className="w-5 h-5 mr-2"  />                Visit Website;
               </a>
->>>>>>> pr-10728
-            </div>
-          </motion.div>
+            </div>          </motion.div>
         </div>
       </section>
     </div>
