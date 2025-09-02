@@ -69,6 +69,47 @@ const SEO: React.FC<SEOProps> = ({
           }}
         />
       )}
+
+      {/* Default Organization Structured Data */}
+      {!structuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/og-image.jpg",
+              "description": "Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud architecture, and innovative development services.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "US"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "availableLanguage": "English"
+              },
+              "sameAs": [
+                "https://github.com/Zion-Technologies",
+                "https://linkedin.com/company/zion-tech-group"
+              ],
+              "foundingDate": "2020",
+              "numberOfEmployees": "50-100",
+              "industry": "Technology Services",
+              "services": [
+                "AI Development",
+                "Cloud Architecture",
+                "Micro SaaS Solutions",
+                "IT Services",
+                "Cybersecurity",
+                "Data Analytics"
+              ]
+            })
+          }}
+        />
+      )}
     </Head>
   );
 };

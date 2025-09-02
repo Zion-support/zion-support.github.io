@@ -19,7 +19,10 @@ const nextConfig = {
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    styledComponents: true,
   },
+  poweredByHeader: false,
+  generateEtags: false,
   webpack: (config, { dev, isServer }) => {
     // Exclude contracts directory from compilation
     config.module.rules.push({

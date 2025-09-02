@@ -9,11 +9,28 @@ const PerformanceOptimizer: React.FC = () => {
         '/favicon.ico'
       ];
 
+      const criticalFonts = [
+        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+      ];
+
+      // Preload critical images
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
+        document.head.appendChild(link);
+      });
+
+      // Preload critical fonts
+      criticalFonts.forEach(href => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.as = 'style';
+        link.href = href;
+        link.onload = () => {
+          link.rel = 'stylesheet';
+        };
         document.head.appendChild(link);
       });
     };

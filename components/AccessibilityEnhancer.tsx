@@ -43,38 +43,7 @@ const AccessibilityEnhancer: React.FC = () => {
           clip: auto;
           white-space: normal;
         }
-      `;
-      document.head.appendChild(style);
-    };
 
-    // Add ARIA labels to interactive elements
-    const addAriaLabels = () => {
-      // Add ARIA labels to buttons without text
-      const iconButtons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-      iconButtons.forEach(button => {
-        const icon = button.querySelector('svg');
-        if (icon && !button.textContent?.trim()) {
-          const iconName = icon.getAttribute('data-icon') || 'button';
-          button.setAttribute('aria-label', iconName);
-        }
-      });
-
-      // Add ARIA labels to links
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(link => {
-        if (!link.textContent?.trim() && !link.getAttribute('aria-label')) {
-          const href = link.getAttribute('href');
-          if (href) {
-            link.setAttribute('aria-label', `Navigate to ${href}`);
-          }
-        }
-      });
-    };
-
-    // Enhance color contrast
-    const enhanceColorContrast = () => {
-      const style = document.createElement('style');
-      style.textContent = `
         /* Ensure minimum contrast ratios */
         .text-gray-600 {
           color: #4b5563 !important;
@@ -84,26 +53,25 @@ const AccessibilityEnhancer: React.FC = () => {
           color: #374151 !important;
         }
         
-        .text-gray-800 {
-          color: #1f2937 !important;
+        .bg-gray-100 {
+          background-color: #f3f4f6 !important;
         }
         
-        .text-gray-900 {
-          color: #111827 !important;
+        .bg-gray-200 {
+          background-color: #e5e7eb !important;
         }
-        
+
         /* High contrast mode support */
         @media (prefers-contrast: high) {
-          .bg-white {
-            background-color: #ffffff !important;
-            border: 1px solid #000000 !important;
-          }
-          
           .text-gray-600 {
             color: #000000 !important;
           }
+          
+          .text-gray-700 {
+            color: #000000 !important;
+          }
         }
-        
+
         /* Reduced motion support */
         @media (prefers-reduced-motion: reduce) {
           * {
@@ -116,15 +84,116 @@ const AccessibilityEnhancer: React.FC = () => {
       document.head.appendChild(style);
     };
 
+    // Add ARIA labels to interactive elements
+    const addAriaLabels = () => {
+      // Add ARIA labels to buttons without text
+      const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
+      buttons.forEach((button, index) => {
+        if (!button.textContent?.trim()) {
+          const icon = button.querySelector('svg');
+          if (icon) {
+            const iconName = icon.getAttribute('data-icon') || 'button';
+            button.setAttribute('aria-label', iconName);
+          } else {
+            button.setAttribute('aria-label', `Button ${index + 1}`);
+          }
+        }
+      });
+
+      // Add ARIA labels to images without alt text
+      const images = document.querySelectorAll('img:not([alt])');
+      images.forEach((img, index) => {
+        img.setAttribute('alt', `Image ${index + 1}`);
+      });
+
+      // Add ARIA labels to links without text
+      const links = document.querySelectorAll('a:not([aria-label]):not([aria-labelledby])');
+      links.forEach((link, index) => {
+        if (!link.textContent?.trim()) {
+          const href = link.getAttribute('href');
+          if (href) {
+            link.setAttribute('aria-label', `Navigate to ${href}`);
+          } else {
+            link.setAttribute('aria-label', `Link ${index + 1}`);
+          }
+        }
+      });
+    };
+
+    // Add semantic HTML structure
+    const enhanceSemanticStructure = () => {
+      // Add main landmark if missing
+      if (!document.querySelector('main')) {
+        const main = document.createElement('main');
+        main.id = 'main-content';
+        main.setAttribute('role', 'main');
+        
+        // Find the main content area and wrap it
+        const content = document.querySelector('#__next') || document.body;
+        if (content) {
+          const children = Array.from(content.children);
+          children.forEach(child => {
+            if (!['header', 'nav', 'footer'].includes(child.tagName.toLowerCase())) {
+              main.appendChild(child);
+            }
+          });
+          content.appendChild(main);
+        }
+      }
+
+      // Add navigation landmarks
+      const navElements = document.querySelectorAll('nav:not([aria-label]):not([aria-labelledby])');
+      navElements.forEach((nav, index) => {
+        nav.setAttribute('aria-label', `Navigation ${index + 1}`);
+      });
+
+      // Add heading hierarchy
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      headings.forEach((heading, index) => {
+        if (!heading.id) {
+          const text = heading.textContent?.toLowerCase().replace(/\s+/g, '-') || `heading-${index}`;
+          heading.id = text;
+        }
+      });
+    };
+
+    // Add keyboard navigation support
+    const enhanceKeyboardNavigation = () => {
+      // Add keyboard event listeners for better navigation
+      document.addEventListener('keydown', (e) => {
+        // Skip to main content with Alt + M
+        if (e.altKey && e.key === 'm') {
+          e.preventDefault();
+          const main = document.querySelector('main, #main-content');
+          if (main) {
+            main.focus();
+            main.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+
+        // Skip to navigation with Alt + N
+        if (e.altKey && e.key === 'n') {
+          e.preventDefault();
+          const nav = document.querySelector('nav');
+          if (nav) {
+            nav.focus();
+            nav.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    };
+
     // Initialize accessibility enhancements
     addSkipLink();
     enhanceFocusManagement();
     addAriaLabels();
-    enhanceColorContrast();
+    enhanceSemanticStructure();
+    enhanceKeyboardNavigation();
 
-    // Re-run ARIA label addition when DOM changes
+    // Re-run enhancements when DOM changes
     const observer = new MutationObserver(() => {
       addAriaLabels();
+      enhanceSemanticStructure();
     });
 
     observer.observe(document.body, {
