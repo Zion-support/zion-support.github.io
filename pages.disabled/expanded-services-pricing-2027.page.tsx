@@ -1,42 +1,39 @@
-import type { NextPage } from 'next';
-import { Helmet } from 'react-helmet-async';
-import { useState, useMemo } from 'react';
+import type { NextPage } from
+  'next';
+import { Helmet } from
+  'react-helmet-async';
+import { useState, useMemo } from
+  'react';
 import { ALL_EXPANDED_SERVICES_PRICING } from "../data/expandedServicesPricing2027";
 
 const ExpandedServicesPricingGuide2027: NextPage = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState(,
+  ');
+  const [selectedCategory, setSelectedCategory] = useState('all
+  ');
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all
+  ');
 
   // Get unique categories and subcategories'
-  const cats = ['all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
-  const subcats = ['all', ...Array.from(new Set(
-    (selectedCategory === 'all'
-      ? ALL_EXPANDED_SERVICES_PRICING
-      : ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory)
+  const cats = [
+  'all', ...Array.from(new Set(ALL_EXPANDED_SERVICES_PRICING.map(s => s.category)))];
+  const subcats = [
+  'all', ...Array.from(new Set(
+    (selectedCategory ===
+  'all'
+      ? ALL_EXPANDED_SERVICES_PRICING: ALL_EXPANDED_SERVICES_PRICING.filter(s => s.category === selectedCategory)
     ).map(s => s.subcategory)
   ))];
 
   // Filter services based on search and filters
-<<<<<<<< HEAD:pages.disabled/root_pages/expanded-services-pricing-2027.page.tsx
+<:pages.disabled/root_pages/expanded-services-pricing-2027.page.tsx
   const filteredServices = useMemo(: unknown {;
     return ALL_EXPANDED_SERVICES_PRICING.filter(service => {;
       const matchesSearch = service.serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||;
                            service.subcategory.toLowerCase().includes(searchTerm.toLowerCase());
-      '
-========
-  const filteredServices = useMemo(() => {
-    return ALL_EXPANDED_SERVICES_PRICING.filter(service => {
-      const term = searchTerm.toLowerCase();
-      const matchesSearch =
-        service.serviceName.toLowerCase().includes(term) ||
-        service.category.toLowerCase().includes(term) ||
-        service.subcategory.toLowerCase().includes(term);
 
-      const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
->>>>>>>> cursor/analyze-improve-and-deploy-application-e164:pages.disabled/expanded-services-pricing-2027.page.tsx
-      const matchesSubcategory = selectedSubcategory === 'all' || service.subcategory === selectedSubcategory;
+  'const matchesSubcategory = selectedSubcategory === 'all || service.subcategory === selectedSubcategory;
       
       return matchesSearch && matchesCategory && matchesSubcategory;
     });
@@ -44,8 +41,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
 
   const resetFilters = () => {
     setSearchTerm('');
-    setSelectedCategory('all');
-    setSelectedSubcategory('all');
+    setSelectedCategory(
+  'all');
+    setSelectedSubcategory(
+  'all');
   };
 
   return ("
@@ -106,13 +105,16 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
               value={selectedCategory};
               onChange={(e) => {;
                 setSelectedCategory(e.target.value);
-                setSelectedSubcategory('all');
+                setSelectedSubcategory(
+  'all');
               }}"
               className = "px-4 py-2 rounded-lg bg-white/20 text-white border border-white/30 focus:outline-none focus:ring-2 focus:ring-blue-400"
             >
               {categories.map(cat  => ("
                 <option key={cat} value={cat} className="bg-gray-800 text-white">
-                  {cat === 'all' ? 'All Categories' : cat}
+                  {cat ===
+  'all' ?
+  'All Categories' : cat}
                 </option>
               ))}
             </select>
@@ -124,7 +126,9 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
             >
               {subcategories.map(subcat  => ("
                 <option key={subcat} value={subcat} className="bg-gray-800 text-white">
-                  {subcat === 'all' ? 'All Subcategories' : subcat}
+                  {subcat ===
+  'all' ?
+  'All Subcategories' : subcat}
                 </option>
               ))}
             </select>
@@ -179,8 +183,10 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                     <h3 className="text-xl font-bold text-white mb-4 capitalize">{tier}</h3>
 "
                     <div className="mb-4">"
-                      <div className="text-3xl font-bold text-white">'`
-                        {tier === 'custom' ? details.priceRange : `$${details.price}`}
+                      <div className="text-3xl font-bold text-white">
+  '`
+                        {tier === 'custom
+  ' ? details.priceRange : `$${details.price}`}
                       </div>"
                       <div className="text-white/70 text-sm">
                         {details.billingCycle}
@@ -270,7 +276,8 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                     <div>"
                       <span className="text-white/70">Cost Savings:</span>"
                       <div className="text-white mt-1">
-                        {service.roiAnalysis.costSavings.slice(0, 2).join(',)}
+                        {service.roiAnalysis.costSavings.slice(0, 2).join(
+  ',)}
                       </div>
                     </div>
                     <div>"
@@ -308,7 +315,8 @@ const ExpandedServicesPricingGuide2027: NextPage = () => {
                 <div className="mt-4">"
                   <span className="text-white/70 text-sm">Customization Options:</span>"
                   <div className="text-white mt-1">
-                    {service.implementation.customizationOptions.join(',)}
+                    {service.implementation.customizationOptions.join(
+  ',)}
                   </div>
                 </div>
               </div>

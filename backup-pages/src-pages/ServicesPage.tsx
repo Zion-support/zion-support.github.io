@@ -26,47 +26,47 @@ import {
   Phone,
   Mail,
   MapPin,
-  Globe as GlobeIcon} from 'lucide-react';
+  Globe as GlobeIcon} from,
+  lucide-react';
 export default function ServicesPage() {
 
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState('all');
-  const [sortBy, setSortBy] = useState('featured');
+  const [searchQuery, setSearchQuery] = useState('
+  ');
+  const [selectedCategory, setSelectedCategory] = useState('all
+  ');
+  const [selectedPriceRange, setSelectedPriceRange] = useState('all
+  ');
+  const [sortBy, setSortBy] = useState('featured
+  ');
 
-  
-  
-  
   // Filter and sort services
-  
-  
-    
-    
-    
+
     return matchesSearch && matchesCategory && matchesPrice}) ;
 
   // Sort services
   
-      case 'price-high':
-        return b.price - a.price;
-=======
-        return a.price - b.price;'      case 'price-high':
+      case 'price-high
+  ': return b.price - a.price;
+return a.price - b.price;'      case
+  'price-high':
         return b.price - a.price;'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-      case 'newest':
-        return ('
-          new Date(b.createdAt || '2025-01-01').getTime() -'
-          new Date(a.createdAt || '2025-01-01').getTime()
+      case
+  'newest':
+        return (
+  '
+          new Date(b.createdAt || '2025-01-01
+  ').getTime() -'
+          new Date(a.createdAt ||
+  '2025-01-01).getTime()
         );
       default:
         return 0}
   }) ;
 
-  
     return cat ? cat.icon : Zap};
 
-  
-    return cat ? cat.color : 'from-zion-cyan to-zion-blue'};
+    return cat ? cat.color :
+  'from-zion-cyan to-zion-blue'};
   return()
     <>
       <SEO title="Innovative Micro SAAS Services - Zion Tech Group"
@@ -107,12 +107,8 @@ export default function ServicesPage() {
               <div className="relative">"
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-zion-slate-light w-5 h-5"  />
                 <input"
-<<<<<<< HEAD
-                  type="text"
-                  placeholder="Search for services, technologies, or solutions..."
-=======
+
                   type="text""                  placeholder="Search for services, technologies, or solutions..."
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
                   value={searchQuery}
                   onChange={e => setSearchQuery(e.target.value)}"
                   className="w-full bg-zion-slate-light/10 border border-zion-cyan/20 rounded-xl px-12 py-4 text-white placeholder-zion-slate-light focus:outline-none focus:ring-2 focus:ring-zion-cyan focus:border-transparent text-lg"
@@ -181,8 +177,8 @@ export default function ServicesPage() {
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
 
                   selectedCategory === category.id`
-                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`'
-                    : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white'`
+                    ? `bg-gradient-to-r ${category.color} text-white shadow-lg`,
+  : 'bg-zion-slate-light/10 text-zion-slate-light hover:bg-zion-slate-light/20 hover:text-white`
                 }`}
               >"
                 <category.icon className="w-4 h-4" />
@@ -230,7 +226,8 @@ export default function ServicesPage() {
             </div>
 "
             <div className="text-zion-slate-light">
-              Showing {sortedServices.length} of{' '}
+              Showing {sortedServices.length} of{' 
+  '}
               {INNOVATIVE_MICRO_SAAS_SERVICES_2025.length} services
             </div>
           </motion.div>
@@ -267,7 +264,8 @@ export default function ServicesPage() {
                           {getCategoryIcon(service.category) &&
                             React.createElement()
                               getCategoryIcon(service.category),
-                              { className: 'w-6 h-6 text-white' }
+                              { className: 'w-6 h-6 text-white
+  ' }
                             )}
                         </div>"
                         <div className="text-right">"
@@ -299,9 +297,11 @@ export default function ServicesPage() {
                         <span`
                           className={`px-2 py-1 rounded-full text-xs font-medium ${
 
-                            service.innovationLevel === 'Cutting-edge''
-                              ? 'bg-zion-cyan/20 text-zion-cyan''
-                              : 'bg-zion-purple/20 text-zion-purple'`
+                            service.innovationLevel ===,
+  Cutting-edge'
+  '
+                              ? 'bg-zion-cyan/20 text-zion-cyan'
+  ': 'bg-zion-purple/20 text-zion-purple`
                           }`}
                         >
                           {service.innovationLevel}
@@ -375,8 +375,10 @@ export default function ServicesPage() {
                   onClick={() => {
 
                     setSearchQuery('');
-                    setSelectedCategory('all');
-                    setSelectedPriceRange('all')}}"                  className="btn-futuristic px-6 py-3"
+                    setSelectedCategory(
+  'all');
+                    setSelectedPriceRange(
+  'all')}}"                  className="btn-futuristic px-6 py-3"
                 >
                   View All Services
                 </button>
@@ -472,16 +474,18 @@ export default function ServicesPage() {
                 📍 364 E Main St STE 1008, Middletown DE 19709
               </p>
               <p>
-                📧{' '}
+                📧{,
+  '}
                 <a"
-                  href="mailto:kleber@ziontechgroup.com"
+                  href="mailto: kleber@ziontechgroup.com"
                   className="text-zion-cyan hover:underline"
                 >
                   kleber@ziontechgroup.com
                 </a>
               </p>
               <p>
-                🌐{' '}
+                🌐{
+  '}
                 <a"
                   href="https://ziontechgroup.com"
                   target="_blank"

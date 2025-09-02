@@ -1,134 +1,110 @@
-<<<<<<< HEAD
-import {
 
-  Code,
-  BookOpen,
-  Zap,
-  Shield,
-  Users,
-  MessageSquare,
-  Github,
-  ExternalLink,
-  Terminal,
-  Webhook,
-  Key,
-  Mail,
-  ArrowRight,
-  Check,
-  Star,
-  Download,
-  Play,
-  Settings,
-  Database,
-  Globe,
-  Lock,
-  Rocket,
-  Crown,
-  Sparkles,
-  ChevronRight,
-  Clock,
-  BarChart3,
-  Target,
-  Award,
-  Lightbulb'
-} from 'lucide-react';
-
-const DeveloperPortal[, React.Dispatch<React.SetStateAction<any>>] = () => {
-
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  
-      title: 'Code Examples',
-      description: 'Ready-to-use code snippets in multiple languages',
-      category: 'Development'
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
     },
     {
 
       icon: Terminal,;
-      title: 'API Playground',
-      description: 'Test APIs directly in your browser',
-      category: 'Testing'
+      title:,
+  API Playground',
+      description: 'Test APIs directly in your browser,
+      category:
+  'Testing'
     },
     {
 
       icon: BookOpen,;
-      title: 'Documentation',
-      description: 'Comprehensive guides and tutorials',
-      category: 'Learning'
+      title:,
+  Documentation',
+      description: 'Comprehensive guides and tutorials,
+      category:
+  'Learning'
     },;
     {;
       icon: Download,;
-      title: 'SDKs & Libraries',;
-      description: 'Official client libraries for all platforms',;
-      category: 'Integration'};
+      title:,
+  SDKs & Libraries',;
+      description: 'Official client libraries for all platforms,;
+      category:,
+  Integration'};
   ];
 
-  
-      description: 'Quick start tutorial for new developers',
-      icon: '🚀',
+      description: 'Quick start tutorial for new developers,
+      icon:,
+  🚀',
       difficulty: 'Beginner'
-=======
-'
-      title: 'Getting Started Guide',;'
-      description: 'Quick start tutorial for new developers','
-      icon: '🚀','      difficulty: 'Beginner'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+
+  '
+      title: 'Getting Started Guide,;,
+  description: 'Quick start tutorial for new developers,
+,
+  icon: '🚀,'      difficulty:,
+  Beginner'
     },
     {
 
-      title: 'API Reference',;
-      description: 'Complete endpoint documentation',
-      icon: '📚',
-      difficulty: 'All Levels'
+      title: 'API Reference,;
+      description:,
+  Complete endpoint documentation',
+      icon: '📚,
+      difficulty:,
+  All Levels'
     },
     {
 
-      title: 'Best Practices',;
-      description: 'Development guidelines and patterns',
-      icon: '⭐',
-      difficulty: 'Intermediate'
+      title: 'Best Practices,;
+      description:,
+  Development guidelines and patterns',
+      icon: '⭐,
+      difficulty:,
+  Intermediate'
     },;
     {;
-      title: 'Code Samples',;
-      description: 'Real-world implementation examples',;
-      icon: '💻',;
-      difficulty: 'All Levels'};
+      title: 'Code Samples,;
+      description:,
+  Real-world implementation examples',;
+      icon: '💻,;
+      difficulty:,
+  All Levels'};
   ];
 
-  
       code: `
-    'Content-Type': 'application/json'}}) ;
+  'Content-Type':
+  'application/json}}) ;
 
 const data = await response.json();`
 // // // // // console.log(data);`,      icon: Code
     },
     {
 
-      name: 'GitHub Discussions',;
-      description: 'Open source collaboration',
-      members: '1.8K+',
-      icon: '🐙'
+      name:,
+  GitHub Discussions',;
+      description: 'Open source collaboration,
+      members:,
+  1.8K+',
+      icon: '🐙
     },
     {
 
-      name: 'Discord Server',;
-      description: 'Real-time developer chat',
-      members: '3.2K+',
-      icon: '🎮'
+      name:,
+  Discord Server',;
+      description: 'Real-time developer chat,
+      members:,
+  3.2K+',
+      icon: '🎮
     },
     {
 
-      name: 'Stack Overflow',;
-      description: 'Q&A platform integration',;
-      members: '5K+',;
-      icon: '📝'};  ];
+      name:,
+  Stack Overflow',;
+      description: 'Q&A platform integration,;
+      members:,
+  5K+',;
+      icon: '📝};  ];
 
   return()
     <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       <SEO "
-        title="Developer Portal - Zion Tech Group"'"        description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
+        title="Developer Portal - Zion Tech Group",
+  "        description="Access developer tools, documentation, SDKs, and community resources. Build amazing applications with Zion Tech Group's developer platform."
         />
 
       {/* Hero Section */}"
@@ -144,15 +120,17 @@ const data = await response.json();`
               <Code className="w-12 h-12 text-white"  />            </div>
           </div>
 "
-          <h1 className="text-6xl md:text-7xl font-bold text-white mb-8 leading-tight">
-            Developer{' '}"
+          <h1 className="text-6xl md: text-7xl font-bold text-white mb-8 leading-tight">
+            Developer{
+  '}"
             <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">
               Portal
             </span>
           </h1>"
           <p className="text-xl md:text-2xl text-zion-slate-light mb-12 max-w-4xl mx-auto leading-relaxed">
             Build amazing applications with our powerful APIs, comprehensive documentation,
-            and developer tools. Everything you need to integrate Zion Tech Group's services.
+            and developer tools. Everything you need to integrate Zion Tech Group
+  's services.
           </p>
 "
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -213,11 +191,6 @@ const data = await response.json();`
 
   { duration: 0.6,
   delay: index * 0.1 
-
-
-
-
-
 
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200 hover:scale-105"
@@ -298,7 +271,10 @@ const data = await response.json();`
                 <div className="flex items-center justify-between">`
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 
-                    feature.status === 'Stable' ? 'bg-green-500/20 text-green-400' : 'bg-yellow-500/20 text-yellow-400'`
+                    feature.status ===,
+  Stable
+  ' ? 'bg-green-500/20 text-green-400
+  ': 'bg-yellow-500/20 text-yellow-400`
                   }`}>
                     {feature.status}
                   </span>
@@ -387,11 +363,6 @@ const data = await response.json();`
   { duration: 0.6,
   delay: index * 0.1 
 
-
-
-
-
-
 }}"
                 className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-6 hover:border-green-400/30 transition-all duration-200"
 "
@@ -402,9 +373,15 @@ const data = await response.json();`
                       <h3 className="text-xl font-semibold text-white">{resource.title}</h3>`
                       <span className={`px-2 py-1 rounded-full text-xs ${
 
-                        resource.difficulty === 'Beginner' ? 'bg-green-500/20 text-green-400' :'
-                        resource.difficulty === 'Intermediate' ? 'bg-yellow-500/20 text-yellow-400' :'
-                        'bg-blue-500/20 text-blue-400'`
+                        resource.difficulty ===,
+  Beginner
+  ' ? 'bg-green-500/20 text-green-400
+  ': '
+                        resource.difficulty ===
+  'Intermediate' ?
+  'bg-yellow-500/20 text-yellow-400' :
+  '
+                        'bg-blue-500/20 text-blue-400`
                       }`}>
                         {resource.difficulty}
                       </span>
@@ -419,12 +396,26 @@ const data = await response.json();`
                 <div className="flex items-center justify-between">`
                   <span className={`px-2 py-1 rounded-full text-xs font-medium ${
 
-                    resource.badge === 'Complete' ? 'bg-green-500/20 text-green-400' :'
-                    resource.badge === 'Beginner' ? 'bg-blue-500/20 text-blue-400' :'
-                    resource.badge === 'Examples' ? 'bg-purple-500/20 text-purple-400' :'
-                    resource.badge === 'Download' ? 'bg-orange-500/20 text-orange-400' :'
-                    resource.badge === 'Community' ? 'bg-indigo-500/20 text-indigo-400' :'
-                    'bg-green-500/20 text-green-400'`
+                    resource.badge ===,
+  Complete
+  ' ? 'bg-green-500/20 text-green-400
+  ': '
+                    resource.badge ===
+  'Beginner' ?
+  'bg-blue-500/20 text-blue-400' :
+  '
+                    resource.badge === 'Examples
+  ' ? 'bg-purple-500/20 text-purple-400
+  ' :'
+                    resource.badge ===
+  'Download' ?
+  'bg-orange-500/20 text-orange-400' :
+  '
+                    resource.badge === 'Community
+  ' ? 'bg-indigo-500/20 text-indigo-400
+  ' :'
+
+  'bg-green-500/20 text-green-400`
                   }`}>
                     {resource.badge}
                   </span>
@@ -482,11 +473,6 @@ const data = await response.json();`
 
   { duration: 0.6,
   delay: 0.2 
-
-
-
-
-
 
 }}"
             className="bg-slate-800/50 border border-slate-700/50 rounded-xl p-8"

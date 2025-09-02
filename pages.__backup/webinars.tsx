@@ -1,5 +1,7 @@
-import React from 'react';
-import SEO from '../components/SEO';
+import React from
+  'react';
+import SEO from
+  '../components/SEO';
 
 export default function WebinarsPage() {
 	return (
@@ -13,13 +15,16 @@ export default function WebinarsPage() {
 						<h2 className="text-2xl font-semibold mb-2">No scheduled webinars</h2>
 						<p className="text-gray-400">New sessions will be announced soon. Follow us on LinkedIn for updates.</p>
 					</article>
-=======
-import SEO from '../components/SEO';
-import Link from 'next/link';
+import SEO from
+  '../components/SEO';
+import Link from
+  'next/link';
 
 export default function WebinarsPage() {
-	const pageTitle = 'Webinars | Zion Tech Group';
-	const pageDescription = 'Watch live and on-demand webinars on AI, quantum computing, and modern SaaS.';
+	const pageTitle =
+  'Webinars | Zion Tech Group';
+	const pageDescription =
+  'Watch live and on-demand webinars on AI, quantum computing, and modern SaaS.';
 	return (
 		<>
 			<SEO title={pageTitle} description={pageDescription} canonical="/webinars" />

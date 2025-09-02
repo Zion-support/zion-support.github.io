@@ -1,35 +1,5 @@
 
-<<<<<<< HEAD
-import { Shield,
 
-
-  Lock,
-  Eye,
-  AlertTriangle,
-  Users,
-  Globe,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  CheckCircle,
-  ArrowRight,
-  Zap,
-  Brain,
-  Network,
-  Server,
-  Database,
-  Key,
-  Monitor,
-  TrendingUp
-
- } from 'lucide-react.ts';
-
-// Filter cybersecurity services
-
-  CheckCircle,
-=======
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   Star,
   Clock,
   TrendingUp,
@@ -45,69 +15,89 @@ import { Shield,
   Users,
   Database,
   Server,
-  Key'
-} from 'lucide-react';
+  Key,
+  } from 'lucide-react
+  ';
 
-
-
-
-    name: 'Threat Detection & Response',
-    description: 'AI-powered security monitoring and incident response',
+    name: 'Threat Detection & Response,
+    description: 'AI-powered security monitoring and incident response
+  ',
     icon: Eye,
-    services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Threat Detection'))
+    services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes(,
+  Threat Detection
+  '))
   },
   {
 
-    id: anyzero-trust',;
-    name: 'Zero Trust Security',
-    description: 'Identity verification and access management',
+    id: anyzero-trust,;
+    name:,
+  Zero Trust Security',
+    description: 'Identity verification and access management,
     icon: Lock,
-=======
-'
-    id: anythreat-detection',;'
-    name: 'Threat Detection & Response','    description: 'AI-powered security monitoring and incident response',
+,
+  id: anythreat-detection,;,
+  name: 'Threat Detection & Response,
+,
+  description: 'AI-powered security monitoring and incident response,
     icon: Eye,'
-    services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Threat Detection'))
+    services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes(,
+  Threat Detection'))
   },
   {
-'
-    id: anyzero-trust',;'
-    name: 'Zero Trust Security','    description: 'Identity verification and access management',
+  '
+    id: anyzero-trust,;,
+  name: 'Zero Trust Security,
+,
+  description: 'Identity verification and access management,
     icon: Lock,'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-    services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes('Zero Trust'))
+    services: CYBERSECURITY_SERVICES.filter(s  => s.title.includes(
+  'Zero Trust'))
   }
 ];
 
 export default function CybersecurityServicesPage(...args: any[]): any {
 
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState(,
+  all');
   
     return categoryData?.icon || Shield};
   
-      case 'monthly': return 'Monthly';
-      case 'hourly': return 'Hourly';
-      case 'project-based': return 'Project-based';
+      case
+  'monthly': return
+  'Monthly';
+      case
+  'hourly': return
+  'Hourly';
+      case
+  'project-based': return
+  'Project-based;
       default: return model}
-=======
-'
-      case 'one-time': return 'One-time';'
-      case 'monthly': return 'Monthly';'
-      case 'hourly': return 'Hourly';'      case 'project-based': return 'Project-based';
+,
+  case 'one-time
+  ': return 'One-time
+  ';'
+      case
+  'monthly': return
+  'Monthly';'
+      case
+  'hourly': return
+  'Hourly';'      case
+  'project-based': return
+  'Project-based;
       default: return model}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
   return()
     <>
       <SEOHead
-<<<<<<< HEAD
-        title="Cybersecurity Services - Zion Tech Group"
-        description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."'
-        keywords={['cybersecurity',security services',threat detection',compliance',zero trust']}
-=======
+
         title="Cybersecurity Services - Zion Tech Group""
-        description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."'        keywords={['cybersecurity', 'security services', 'threat detection', 'compliance', 'zero trust']}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
+        description="Comprehensive cybersecurity solutions including zero trust security, threat detection, and compliance services to protect your business."
+  '        keywords={['cybersecurity
+  ', 'security services
+  ', 'threat detection
+  ', 'compliance
+  ', 'zero trust
+  ']}
         structuredData={{
 "
           "@context": "https://schema.org","
@@ -126,9 +116,11 @@ export default function CybersecurityServicesPage(...args: any[]): any {
         <section className="py-32 px-4 relative overflow-hidden">
           {/* Background Elements */}"
           <div className="absolute inset-0">"
-            <div className="absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse" />'"
-            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }} />'"
-            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s' }} />
+            <div className="absolute top-20 left-10 w-32 h-32 bg-red-500/10 rounded-full blur-xl animate-pulse" />,
+  "
+            <div className="absolute top-40 right-20 w-24 h-24 bg-orange-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s }} />,
+  "
+            <div className="absolute bottom-40 left-20 w-20 h-20 bg-red-600/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '4s }} />
           </div>"
           <div className="relative z-10 max-w-6xl mx-auto text-center">"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">"
@@ -171,7 +163,6 @@ export default function CybersecurityServicesPage(...args: any[]): any {
             <div className="grid gap-6 md: anygrid-cols-2">
               {SECURITY_SERVICE_CATEGORIES.map((category)  => {
 
-                
                 return ("
                   <Card key={category.id} className="text-center hover:shadow-lg transition-shadow cursor-pointer border-red-500/20">
                     <CardHeader>"
@@ -334,13 +325,22 @@ export default function CybersecurityServicesPage(...args: any[]): any {
 "
             <div className="grid gap-6 md: anygrid-cols-3 lg:grid-cols-6">
 
-              {['
-                { name: 'SOC2', icon: '🔒', description: 'Security Controls' },
-                { name: 'GDPR', icon: '🇪🇺', description: 'Data Protection' },
-                { name: 'HIPAA', icon: '🏥', description: 'Healthcare' },
-                { name: 'PCI DSS', icon: '💳', description: 'Payment Security' },
-                { name: 'ISO 27001', icon: '🌐', description: 'Information Security' },
-                { name: 'NIST', icon: '🇺🇸', description: 'Cybersecurity Framework' }
+              {[,
+  { name: 'SOC2, icon:,
+  🔒', description: 'Security Controls },
+                { name:,
+  GDPR', icon: '🇪🇺, description:,
+  Data Protection' },
+                { name: 'HIPAA, icon:,
+  🏥', description: 'Healthcare },
+                { name:,
+  PCI DSS', icon: '💳, description:,
+  Payment Security' },
+                { name: 'ISO 27001, icon:,
+  🌐', description: 'Information Security },
+                { name:,
+  NIST', icon: '🇺🇸, description:
+  'Cybersecurity Framework' }
 
               ].map((standard)  => (
 "
@@ -382,7 +382,8 @@ export default function CybersecurityServicesPage(...args: any[]): any {
               Ready to Secure Your Business?
             </h2>"
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Don't wait until it's too late. Get a comprehensive security assessment and protect your business today.
+              Don
+  't wait until it's too late. Get a comprehensive security assessment and protect your business today.
             </p>"
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link"
@@ -406,14 +407,7 @@ export default function CybersecurityServicesPage(...args: any[]): any {
 </>) }
 // Security Service Card Component
 
-function SecurityServiceCard(...args: any[]): any {
-<<<<<<< HEAD
-
-import { Search,
-=======
-'
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
-
+function SecurityServiceCard(...args: any[]): any {,
   Star,
   Clock,
   Users,
@@ -437,43 +431,61 @@ import { Search,
   Key,
   ShieldCheck
 
- } from 'lucide-react.ts';
+ } from 'lucide-react.ts
+  ';
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<any>('all');
-  const [priceRange, setPriceRange] = useState<any>('all');
+  const [selectedSubcategory, setSelectedSubcategory] = useState<any>(
+  'all');
+  const [priceRange, setPriceRange] = useState<any>(
+  'all');
 
   // Filter only security services
-  
-  
-    
+
     let matchesPrice = true;
-    if (priceRange === 'low') matchesPrice = service.price < 500;
-    else if (priceRange === 'medium') matchesPrice = service.price >= 500 && service.price < 1000;
-    else if (priceRange === 'high') matchesPrice = service.price >= 1000;
+    if (priceRange ===
+  'low') matchesPrice = service.price < 500;
+    else if (priceRange ===
+  'medium') matchesPrice = service.price >= 500 && service.price < 1000;
+    else if (priceRange ===
+  'high') matchesPrice = service.price >= 1000;
     return matchesSearch && matchesSubcategory && matchesPrice}) ;
 
   const getPricingModelIcon = (model: anystring) => {
 
     switch (model) {
-'"
-      case 'monthly': return <Clock className="w-4 h-4"  />;'"
-      case 'hourly': return <Zap className="w-4 h-4"  />;'"
-      case 'project-based': return <Zap className="w-4 h-4"  />;"
+  '"
+      case 'monthly
+  ': return <Clock className="w-4 h-4"  />;'"
+      case
+  'hourly': return <Zap className="w-4 h-4"  />;'"
+      case
+  'project-based: return <Zap className="w-4 h-4"  />;"
       default: return <DollarSign className="w-4 h-4"  />}
   };
 
-  
-      case 'monthly': return 'Monthly';
-      case 'hourly': return 'Hourly';
-      case 'project-based': return 'Project-based';
+      case,
+  monthly': return
+  'Monthly';
+      case
+  'hourly': return
+  'Hourly';
+      case
+  'project-based': return
+  'Project-based;
       default: return model}
-=======
-'
-      case 'one-time': return 'One-time';'
-      case 'monthly': return 'Monthly';'
-      case 'hourly': return 'Hourly';'      case 'project-based': return 'Project-based';
+,
+  case 'one-time
+  ': return 'One-time
+  ';'
+      case
+  'monthly': return
+  'Monthly';'
+      case
+  'hourly': return
+  'Hourly';'      case
+  'project-based': return
+  'Project-based;
       default: return model}
->>>>>>> 0fd73b8ff3a0ba02edb753912246afb53a531954
   };
   return ("
     <Card className="hover:shadow-lg transition-shadow border-red-500/20">"
@@ -585,10 +597,10 @@ import { Search,
   Monitor"
 } from "lucide-react";
 
-
-
-                setSelectedSubcategory('all');
-                setPriceRange('all')}}>                Clear Filters
+                setSelectedSubcategory(
+  'all');
+                setPriceRange(
+  'all')}}>                Clear Filters
               </Button>
             </div>) }
         </div>
@@ -1167,7 +1179,8 @@ import { Search,
             Secure Your Business Today
           </h2>"
           <p className="text-xl mb-8 text-red-100 max-w-3xl mx-auto">
-            Don't wait until it's too late. Our cybersecurity experts are ready to help you build
+            Don
+  't wait until it's too late. Our cybersecurity experts are ready to help you build
             a robust security posture and protect your valuable assets.
           </p>"
           <div className="flex flex-col sm:flex-row gap-4 justify-center">"

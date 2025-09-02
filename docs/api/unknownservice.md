@@ -6,10 +6,12 @@ This service provides API functionality for unknownservice operations.
 
 ## Functions
 
+
+
 ## Usage
 
 ```typescript
-import { UnknownService } from './pages/services/Cybersecurity.tsx';
+import { UnknownService } from './pages/CybersecuritySolutions.tsx';
 
 // Example usage
 const result = await UnknownService.methodName(params);
@@ -38,10 +40,9 @@ const data = await UnknownService.fetchData();
 // With parameters
 const result = await UnknownService.createItem({
   name: 'Example',
-  description: 'Test item',
+  description: 'Test item'
 });
 ```
 
 ---
-
-_Generated automatically by Smart Documentation Generator_
+*Generated automatically by Smart Documentation Generator*
