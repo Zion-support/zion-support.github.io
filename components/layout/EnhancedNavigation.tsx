@@ -38,7 +38,7 @@ const EnhancedNavigation: React.FC = () => {
                 <ChevronDown className="ml-1 w-4 h-4" />
               </button>
               <div 
-                className={`absolute top-full left-0 w-64 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
+                className={`absolute top-full left-0 w-80 bg-white shadow-lg rounded-lg py-2 ${servicesOpen ? 'block' : 'hidden'}`}
                 onMouseEnter={() => setServicesOpen(true)}
                 onMouseLeave={() => setServicesOpen(false)}
               >
@@ -51,6 +51,17 @@ const EnhancedNavigation: React.FC = () => {
                 <Link href="/services/micro-saas" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   Micro SaaS
                 </Link>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">AI Products</div>
+                <Link href="/services/ai-email-responder" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Email Responder
+                </Link>
+                <Link href="/services/ai-content-studio" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Content Studio
+                </Link>
+                <Link href="/services/ai-support-desk" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
+                  AI Support Desk
+                </Link>
+                <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">IT & Cloud</div>
                 <Link href="/services/ai-development" className="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-600">
                   AI Development
                 </Link>
@@ -157,6 +168,25 @@ const EnhancedNavigation: React.FC = () => {
               <div className="py-2">
                 <div className="text-gray-600 font-semibold mb-2">Services</div>
                 <div className="pl-4 space-y-2">
+                  <Link href="/services/ai-services" className="block py-1 text-gray-500 hover:text-blue-600">
+                    AI Services
+                  </Link>
+                  <Link href="/services/it-services" className="block py-1 text-gray-500 hover:text-blue-600">
+                    IT Services
+                  </Link>
+                  <Link href="/services/micro-saas" className="block py-1 text-gray-500 hover:text-blue-600">
+                    Micro SaaS
+                  </Link>
+                  <div className="text-xs uppercase text-gray-400 mt-2">AI Products</div>
+                  <Link href="/services/ai-email-responder" className="block py-1 text-gray-500 hover:text-blue-600">
+                    AI Email Responder
+                  </Link>
+                  <Link href="/services/ai-content-studio" className="block py-1 text-gray-500 hover:text-blue-600">
+                    AI Content Studio
+                  </Link>
+                  <Link href="/services/ai-support-desk" className="block py-1 text-gray-500 hover:text-blue-600">
+                    AI Support Desk
+                  </Link>
                   <Link href="/services/ai-development" className="block py-1 text-gray-500 hover:text-blue-600">
                     AI Development
                   </Link>

@@ -94,9 +94,9 @@ const Footer: React.FC = () => {
   ];
 
   const contactInfo = {
-    email: "contact@ziontechgroup.com",
-    phone: "+1 (555) 123-4567",
-    address: "123 Technology Drive, San Francisco, CA 94105"
+    email: "kleber@ziontechgroup.com",
+    phone: "+1 302 464 0950",
+    address: "364 E Main St STE 1008, Middletown, DE 19709"
   };
 
   return (

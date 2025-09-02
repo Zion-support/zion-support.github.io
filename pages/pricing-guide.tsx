@@ -66,7 +66,7 @@ const PricingGuide: React.FC = () => {
         "Complex integrations: $4,000 - $10,000",
         "Enterprise integrations: $10,000 - $25,000+"
       ],
-      icon: Network,
+      icon: Globe,
       color: "from-purple-500 to-pink-500"
     },
     {
