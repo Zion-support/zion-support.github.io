@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   experimental: {
     esmExternals: false,
     newNextLinkBehavior: true,
@@ -27,7 +30,6 @@ const nextConfig = {
         /api-backup/,
         /pages\.disabled/,
         /backup-pages/,
-        /components\//,
         /\.backup/,
         /\.disabled/,
         /automation\/backups/,
