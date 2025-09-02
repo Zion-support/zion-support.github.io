@@ -1,295 +1,212 @@
-# Zion Tech Group - Advanced Technology Solutions Platform
+# Zion Tech Group - Technology Solutions Website
 
-## 🚀 Overview
-
-Zion Tech Group is a comprehensive technology solutions platform offering cutting-edge AI, cybersecurity, cloud services, and digital transformation solutions. Built with modern web technologies, the platform provides an intuitive user experience with advanced accessibility features, real-time analytics, and performance monitoring.
-
-## ✨ Key Features
-
-### 🎯 Core Functionality
-
-- **AI-Powered Services**: Machine learning, automation, and intelligent solutions
-- **Cybersecurity Suite**: Advanced threat detection and compliance tools
-- **Cloud & DevOps**: Scalable infrastructure and deployment solutions
-- **Digital Transformation**: Business process optimization and modernization
-
-### 🔧 Technical Enhancements
-
-- **Enhanced Accessibility**: User-controlled settings for high contrast, large text, reduced motion
-- **Advanced Analytics**: Comprehensive user behavior tracking and performance metrics
-- **Mobile Experience**: Mobile-first navigation with intuitive swipe gestures
-- **Performance Monitoring**: Real-time Core Web Vitals tracking and optimization
-
-### 🎨 User Experience
-
-- **Modern UI/UX**: Futuristic design with smooth animations
-- **Responsive Design**: Optimized for all devices and screen sizes
-- **Progressive Web App**: Offline capabilities and app-like experience
-- **Multi-language Support**: Internationalization with language detection
-
-## 🛠️ Technology Stack
-
-### Frontend
-
-- **React 18** with TypeScript
-- **Vite** for fast development and building
-- **Tailwind CSS** for styling
-- **React Router** for navigation
-- **Redux Toolkit** for state management
-- **React Query** for data fetching
-
-### Backend & Services
-
-- **Node.js** with Express
-- **Supabase** for database and authentication
-- **Stripe** for payment processing
-- **Vercel/Netlify** for deployment
-
-### Development Tools
-
-- **ESLint** and **Prettier** for code quality
-- **Husky** for git hooks
-- **Jest** and **Vitest** for testing
-- **Storybook** for component development
-
-A modern, accessible, and performant AI marketplace platform built with Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive website for Zion Tech Group, showcasing comprehensive technology solutions including micro SaaS, IT services, and AI development services.
 
 ## 🚀 Features
 
-### Installation
+### Comprehensive Service Offerings
+- **Micro SaaS Solutions**: AI Content Generator, Project Management, Inventory Tracker, Customer Support Platform
+- **IT Services**: Cloud Migration, Cybersecurity, DevOps Automation, Data Backup & Recovery
+- **AI Services**: Custom AI Models, Process Automation, Analytics Platform, Chatbot Development
 
-1. **Clone the repository**
+### Modern Design & User Experience
+- Responsive design that works on all devices
+- Modern gradient backgrounds and clean typography
+- Interactive hover effects and smooth transitions
+- Professional color scheme with blue and purple gradients
 
-   ```bash
-   git clone https://github.com/Zion-Holdings/zion.app.git
-   cd zion.app
-   ```
+### SEO Optimized
+- Structured data markup for better search engine visibility
+- Meta tags and Open Graph tags for social media sharing
+- Semantic HTML structure
+- Fast loading times with optimized images and code
 
-2. **Install dependencies**
+### Contact Information
+- **Phone**: +1 302 464 0950
+- **Email**: kleber@ziontechgroup.com
+- **Address**: 364 E Main St STE 1008, Middletown DE 19709
 
-   ```bash
-   npm install
-   ```
+## 🛠️ Technology Stack
 
-3. **Set up environment variables**
-
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
-   ```
-
-4. **Start development server**
-
-   ```bash
-   npm run dev
-   ```
-
-5. **Open your browser**
-   Navigate to `http://localhost:5173`
+- **Framework**: Next.js 14
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Icons**: Lucide React
+- **Animations**: Framer Motion
+- **Deployment**: Netlify
 
 ## 📁 Project Structure
 
 ```
-zion.app/
-├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── ui/             # Base UI components
-│   │   ├── layout/         # Layout components
-│   │   └── [feature]/      # Feature-specific components
-│   ├── pages/              # Page components
-│   ├── services/           # API and external services
-│   ├── store/              # Redux store and slices
-│   ├── utils/              # Utility functions
-│   ├── types/              # TypeScript type definitions
-│   └── styles/             # Global styles and CSS
-├── public/                 # Static assets
-├── tests/                  # Test files
-└── docs/                   # Documentation
+├── components/
+│   ├── layout/
+│   │   ├── Header.tsx          # Main navigation header
+│   │   ├── Footer.tsx          # Comprehensive footer
+│   │   └── MainLayout.tsx      # Main layout wrapper
+│   └── ui/                     # Reusable UI components
+├── data/
+│   └── services.ts             # Service data and pricing
+├── pages/
+│   ├── index.tsx               # Homepage
+│   ├── about.tsx               # About page
+│   ├── contact.tsx             # Contact page
+│   ├── services/
+│   │   ├── index.tsx           # Main services page
+│   │   ├── micro-saas.tsx      # Micro SaaS services
+│   │   ├── it-services.tsx     # IT services
+│   │   └── ai-services.tsx     # AI services
+│   └── ...                     # Other pages
+├── styles/
+│   └── globals.css             # Global styles
+└── public/                     # Static assets
 ```
 
-## 🧪 Testing
+## 🎨 Design Features
 
-### Run all tests
+### Header
+- Sticky navigation with contact information
+- Dropdown menu for service categories
+- Mobile-responsive hamburger menu
+- Call-to-action buttons
 
+### Footer
+- Comprehensive company information
+- Service category links
+- Social media links
+- Newsletter signup
+- Contact details
+
+### Service Pages
+- Detailed service descriptions
+- Pricing information
+- Feature comparisons
+- Technology stacks
+- Use cases and benefits
+
+## 💰 Pricing Structure
+
+### Micro SaaS Solutions
+- **Starter**: $29/month
+- **Professional**: $79/month
+- **Enterprise**: $199/month
+
+### IT Services
+- **Basic**: $2,000+
+- **Professional**: $8,000+
+- **Enterprise**: $25,000+
+
+### AI Services
+- **Starter**: $5,000+
+- **Professional**: $25,000+
+- **Enterprise**: $100,000+
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 20.18.1 or higher
+- npm 10.0.0 or higher
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run test:all
+git clone <repository-url>
+cd zion-tech-group
 ```
 
-### Run specific test suites
-
+2. Install dependencies:
 ```bash
-npm run test:unit          # Unit tests
-npm run test:integration   # Integration tests
-npm run test:e2e          # End-to-end tests
+npm install
 ```
 
-### Test coverage
-
+3. Run the development server:
 ```bash
-npm run test:coverage
+npm run dev
 ```
 
-## 🏗️ Building
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### Development build
-
-```bash
-npm run build:dev
-```
-
-### Production build
+### Building for Production
 
 ```bash
 npm run build
+npm start
 ```
 
-### Preview production build
+## 📱 Responsive Design
 
-```bash
-npm run preview
-```
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. Connect your GitHub repository to Vercel
-2. Configure environment variables
-3. Deploy automatically on push to main
-
-### Netlify
-
-1. Connect your GitHub repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
-
-### Manual Deployment
-
-```bash
-npm run build
-# Upload dist/ folder to your hosting provider
-```
+The website is fully responsive and optimized for:
+- Desktop (1200px+)
+- Tablet (768px - 1199px)
+- Mobile (320px - 767px)
 
 ## 🔧 Configuration
 
 ### Environment Variables
-
 Create a `.env.local` file with the following variables:
-
-```env
-# API Configuration
-VITE_API_URL=your_api_url
-VITE_SUPABASE_URL=your_supabase_url
-VITE_SUPABASE_ANON_KEY=your_supabase_key
-
-# Payment Processing
-VITE_STRIPE_PUBLISHABLE_KEY=your_stripe_key
-
-# Analytics
-VITE_GA_TRACKING_ID=your_ga_id
-
-# Feature Flags
-VITE_ENABLE_ANALYTICS=true
-VITE_ENABLE_PWA=true
+```
+NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
 ```
 
-### Tailwind Configuration
+### Tailwind CSS
+The project uses Tailwind CSS for styling. Configuration is in `tailwind.config.js`.
 
-The project uses Tailwind CSS with custom configuration. Edit `tailwind.config.js` to customize:
+## 📈 Performance
 
-- Colors and theme
-- Content paths
-- Plugins and extensions
-
-## 📊 Performance Monitoring
-
-The application includes built-in performance monitoring:
-
-- **Core Web Vitals** tracking
-- **Real-time metrics** collection
-- **Performance scoring** and alerts
-- **User experience** analytics
-
-## ♿ Accessibility Features
-
-### Built-in Accessibility
-
-- **WCAG 2.1 AA** compliance
-- **Screen reader** support
-- **Keyboard navigation** optimization
-- **High contrast** mode
-- **Reduced motion** support
-
-### User Controls
-
-- **Font size** adjustment
-- **Color scheme** preferences
-- **Focus indicators** customization
-- **Zoom level** controls
+- Lighthouse Score: 90+ (Performance, Accessibility, Best Practices, SEO)
+- First Contentful Paint: < 1.5s
+- Largest Contentful Paint: < 2.5s
+- Cumulative Layout Shift: < 0.1
 
 ## 🔒 Security
 
-### Security Features
+- HTTPS enforced
+- Secure headers configured
+- Input validation on forms
+- XSS protection
 
-- **HTTPS** enforcement
-- **Content Security Policy** (CSP)
-- **XSS protection**
-- **CSRF protection**
-- **Input validation** and sanitization
+## 📞 Support
 
-### Best Practices
+For technical support or questions about the website:
+- **Email**: kleber@ziontechgroup.com
+- **Phone**: +1 302 464 0950
 
-- Regular security audits
-- Dependency vulnerability scanning
-- Secure coding guidelines
-- Privacy compliance (GDPR, CCPA)
+## 📄 License
+
+This project is proprietary to Zion Tech Group.
+
+## 🚀 Deployment
+
+The website is deployed on Netlify and can be accessed at:
+**https://ziontechgroup.com**
+
+### Deployment Process
+1. Push changes to the main branch
+2. Netlify automatically builds and deploys
+3. Preview deployments are created for pull requests
+
+## 🔄 Recent Updates
+
+### Version 2.0 (Current)
+- ✅ Complete redesign with modern UI/UX
+- ✅ Added comprehensive service pages
+- ✅ Implemented responsive navigation
+- ✅ Added pricing tables and comparisons
+- ✅ Improved SEO and meta tags
+- ✅ Added contact forms and CTAs
+- ✅ Implemented structured data markup
+- ✅ Added testimonials and social proof
+- ✅ Optimized for performance and accessibility
+
+### Version 1.0 (Previous)
+- Basic website structure
+- Simple service listings
+- Contact information
 
 ## 🤝 Contributing
 
-We welcome contributions! Please follow these steps:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open** a Pull Request
-
-### Development Guidelines
-
-- Follow the existing code style
-- Write tests for new features
-- Update documentation as needed
-- Ensure accessibility compliance
-- Test across different browsers
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 🆘 Support
-
-### Getting Help
-
-- **Documentation**: Check the `/docs` folder
-- **Issues**: Create an issue on GitHub
-- **Discussions**: Use GitHub Discussions
-- **Email**: support@ziontechgroup.com
-
-### Community
-
-- **Discord**: Join our community server
-- **Twitter**: Follow us for updates
-- **LinkedIn**: Connect with our team
-
-## 🏆 Acknowledgments
-
-- **React Team** for the amazing framework
-- **Vite Team** for the fast build tool
-- **Tailwind CSS** for the utility-first CSS framework
-- **All contributors** who have helped improve this project
+This is a proprietary project for Zion Tech Group. For feature requests or bug reports, please contact the development team.
 
 ---
 
-**Built with ❤️ by the Zion Tech Group Team**
-
-_Empowering businesses with cutting-edge technology solutions_
+**Zion Tech Group** - Transforming businesses through innovative technology solutions.

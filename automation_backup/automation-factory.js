@@ -27,17 +27,15 @@ class AutomationFactory {;
   };
   saveStatus() {;
     try {;
-      const status = {;
-  timestamp: new Date().toISOString(),;
-        runningScripts: Object.fromEntries(this.runningScripts),;
-  ;
-        totalScripts: this.scripts.size;
-;
-;
-};
-      fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2))} catch (error) {;
-      this.log(`Error saving status: ${error.message}`)};
-;
+      const status = {
+        timestamp: new Date().toISOString(),
+        runningScripts: Object.fromEntries(this.runningScripts),
+        totalScripts: this.scripts.size
+      };
+      fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2));
+    } catch (error) {
+      this.log(`Error saving status: ${error.message}`);
+    }
   totalScripts: this.scripts.size;
 ;
 ;
@@ -51,7 +49,7 @@ class AutomationFactory {;
     // // // // // // // // console.log(`[${level}] ${message}`);
     fs.appendFileSync(this.logFile, logMessage);
 ;
-;
+=======;
     };
   };
   log(message, level = 'INFO') {;
@@ -92,22 +90,16 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 class CodeQualityMonitor {;
-  constructor() {;
-    this.metrics = {;
-  complexity: 0,;
-      maintainability: 0,;
-      testCoverage: 0,;
-      performance: 0,;
-  ;
-      lastUpdated: new Date().toISOString();
-;
-;
-};
-    this.logFile = path.join(__dirname, 'logs', 'code-quality.log')};
-;
-  lastUpdated: new Date().toISOString();
-;
-;
+  constructor() {
+    this.metrics = {
+      complexity: 0,
+      maintainability: 0,
+      testCoverage: 0,
+      performance: 0,
+      lastUpdated: new Date().toISOString()
+    };
+    this.logFile = path.join(__dirname, 'logs', 'code-quality.log');
+  }
 ;
 ;
 ;
@@ -116,7 +108,7 @@ class CodeQualityMonitor {;
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
 ;
-;
+=======;
   };
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -187,7 +179,7 @@ class CodeQualityMonitor {;
         if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {;
     // // // // // // // // console.log('Metrics:', metrics);
   };
-;
+=======;
           walkDir(fullPath)} else if (item.endsWith('.ts') || item.endsWith('.tsx')) {;
           files.push(fullPath)};
       })};
@@ -227,7 +219,7 @@ class PerformanceOptimizer {;
     // // // // // // // // console.log(message);
     fs.appendFileSync(this.logFile, logMessage);
 ;
-;
+=======;
     this.logFile = path.join(__dirname, 'logs', 'performance-optimizer.log')};
   log(message) {;
     const timestamp = new Date().toISOString();
@@ -314,7 +306,7 @@ class PerformanceOptimizer {;
       'Use React.memo for expensive components';
     // // // // // // // // console.log('Performance report:', report);
   };
-;
+=======;
     ]};
   saveReport(report) {;
     const reportFile = path.join(__dirname, 'logs', 'performance-report.json');
@@ -415,7 +407,7 @@ optimizer.optimizePerformance().then(report => {;
       const duration = Date.now() - info.startTime;
       // // // // // // // // console.log(`${name}: Running for ${Math.floor(duration / 1000)}s`);
     };
-;
+=======;
 ;
       console.log(`\n${name}:`);
       console.log(`  Description: ${script.description}`);
@@ -477,7 +469,7 @@ switch (command) {;
     // // // // // // // // console.log('  node automation-factory.js continuous');
     break;
 }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}};
-;
+=======;
     console.log('Usage:');
     console.log('  node automation-factory.js list');
     console.log('  node automation-factory.js run [script-name]');

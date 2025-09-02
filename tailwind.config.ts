@@ -14,69 +14,74 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: 'hsl(var(--primary))',
-          foreground: 'hsl(var(--primary-foreground))'
+        // Zion Tech Group brand colors
+        zion: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0284c7',
+          700: '#0369a1',
+          800: '#075985',
+          900: '#0c4a6e',
+          950: '#082f49',
         },
-        secondary: {
-          DEFAULT: 'hsl(var(--secondary))',
-          foreground: 'hsl(var(--secondary-foreground))'
+        // Extended gray palette for better contrast
+        gray: {
+          950: '#0a0a0a',
+          960: '#050505',
+          970: '#030303',
+          980: '#020202',
+          990: '#010101',
         },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))'
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))'
-        },
+        // Accent colors
         accent: {
-          DEFAULT: 'hsl(var(--accent))',
-          foreground: 'hsl(var(--accent-foreground))'
-        },
-        popover: {
-          DEFAULT: 'hsl(var(--popover))',
-          foreground: 'hsl(var(--popover-foreground))'
-        },
-        card: {
-          DEFAULT: 'hsl(var(--card))',
-          foreground: 'hsl(var(--card-foreground))'
-        },
-        'zion-blue': {
-          DEFAULT: '#2e73ea',
-          light: '#8ab1f3',
-          dark: '#172d67'
-        },
-        'zion-purple': {
-          DEFAULT: '#a855f7',
-          light: '#c084fc',
-          dark: '#6b21a8'
-        },
-        'zion-cyan': {
-          DEFAULT: '#0d9488',
-          light: '#7aeae4',
-          dark: '#0f766e'
-        },
-        'zion-slate': {
-          DEFAULT: '#17072b',
-          light: '#451582',
-          dark: '#000000'
+          cyan: '#06b6d4',
+          blue: '#3b82f6',
+          purple: '#8b5cf6',
+          pink: '#ec4899',
+          emerald: '#10b981',
+          amber: '#f59e0b',
+          rose: '#f43f5e',
         }
       },
-      borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+      animation: {
+        'gradient': 'gradient 6s ease infinite',
+        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'bounce-slow': 'bounce 3s infinite',
+        'spin-slow': 'spin 8s linear infinite',
+      },
+      keyframes: {
+        gradient: {
+          '0%, 100%': {
+            'background-size': '200% 200%',
+            'background-position': 'left center'
+          },
+          '50%': {
+            'background-size': '200% 200%',
+            'background-position': 'right center'
+          }
+        }
       },
       fontFamily: {
         sans: [
-          'var(--font-inter), Inter',
-          ...defaultTheme.fontFamily.sans
+          'Inter',
+          'ui-sans-serif',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'Noto Sans',
+          'sans-serif',
+          'Apple Color Emoji',
+          'Segoe UI Emoji',
+          'Segoe UI Symbol',
+          'Noto Color Emoji',
         ],
         heading: [
           'var(--font-poppins), Poppins',

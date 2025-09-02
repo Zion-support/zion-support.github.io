@@ -71,10 +71,10 @@ setup_enhanced_ecosystem() {
     log "Setting up enhanced PM2 ecosystem..."
     
     # Create logs directory
-    mkdir -p "$PROJECT_ROOT/logs"
+    mkdir -p "logs"
     
     # Set proper permissions
-    chmod +x "$PROJECT_ROOT/scripts/automation/"*.cjs
+    chmod +x "scripts/automation/"*.cjs
     
     success "Enhanced ecosystem setup completed"
 }

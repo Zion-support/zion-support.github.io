@@ -1,32 +1,54 @@
-/** @type {import("next").NextConfig} */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Skip type checking for now
-  typescript: {
-    ignoreBuildErrors: true,
+  experimental: {
+    esmExternals: false,
   },
-  // Exclude problematic files from build
-  webpack: (config, { isServer }) => {
+  images: {
+    domains: ['ziontechgroup.com'],
+    unoptimized: true,
+  },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  webpack: (config, { dev, isServer }) => {
+    // Completely exclude problematic directories from the build
     config.module.rules.push({
-      test: /\.js$/,
-      include: /automation/,
-      use: "ignore-loader",
+      test: /\.(ts|tsx)$/,
+      exclude: [
+        /node_modules/,
+        /api-backup/,
+        /pages\.disabled/,
+        /backup-pages/,
+        /components\//,
+        /\.backup/,
+        /\.disabled/,
+        /automation\/backups/,
+        /automation_backup/,
+        /broken_files_backup/,
+        /contracts/,
+        /hardhat/,
+      ],
     });
-    // Exclude all problematic pages with merge conflicts
+    
+    // Add fallback for problematic modules
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      net: false,
+      tls: false,
+    };
+    
     return config;
   },
-  // Configure page extensions
+  // Try to exclude problematic directories at the Next.js level
   pageExtensions: ['tsx', 'ts', 'jsx', 'js'],
-  // Configure redirects
-  async redirects() {
-    return [
-      {
-        source: '/',
-        destination: '/home',
-        permanent: true,
-      },
-    ];
+  onDemandEntries: {
+    // period (in ms) where the server will keep pages in the buffer
+    maxInactiveAge: 25 * 1000,
+    // number of pages that should be kept simultaneously without being disposed
+    pagesBufferLength: 2,
   },
 };
 
-export default nextConfig; 
+export default nextConfig;

@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 const __dirname = path.dirname(__filename);
 // // // // // // // console.log('🔧 Starting continuous console error fixer automation...');
+
 // // // console.log('🔧 Starting continuous console error fixer automation...');
 // Get automation interval from environment variable (default: 15 minutes)
 const AUTOMATION_INTERVAL = parseInt(process.env.AUTOMATION_INTERVAL) || 900000; // 15 minutes
@@ -28,7 +29,8 @@ async function runConsoleErrorFixer() {
     } catch (error) {
       // // // // // // // console.log('⚠️  Build failed but continuing...');
       // // // // // // // console.log('Build error:', error.message);
-return;
+
+      return;
     // Check if dist folder exists
     const distPath = path.join(process.cwd(), 'dist');
     if (!fs.existsSync(distPath)) {
@@ -123,10 +125,12 @@ return;
     }
     // Generate console error fixer report
     // // // // // // // console.log('📊 Generating console error fixer report...');
-// Generate console error fixer report
+
+    // Generate console error fixer report
   status: 'completed'
 };
-console.log('📊 Generating console error fixer report...');
+
+    console.log('📊 Generating console error fixer report...');
     const reportPath = path.join(process.cwd(), 'console-error-fixer-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     // // // console.log(`✅ Console error fixer report saved to ${reportPath}`);
@@ -137,7 +141,8 @@ console.log('📊 Generating console error fixer report...');
     // // // // // // // console.log('✅ Continuous console error fixer completed successfully');
   } catch (error) {
     // // // // // // // console.error('❌ Continuous console error fixer failed:', error.message);
-// Don't exit, just log the error and continue
+
+    // Don't exit, just log the error and continue
 function findConsoleStatements(dir) {
   const consoleStatements = [];
   function scanDirectory(currentDir) {
@@ -212,7 +217,8 @@ function findErrorPatterns(dir) {
 // Main continuous loop
 async function runContinuous() {
   // // // // // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
-// // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
+
+  // // // console.log(`🚀 Starting continuous console error fixer with ${AUTOMATION_INTERVAL / 1000 / 60} minute intervals`);
   // Run initial console error fixer
   await runConsoleErrorFixer();
   // Set up continuous execution
@@ -224,7 +230,8 @@ async function runContinuous() {
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // // // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
-// // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
+
+  // // // console.log(`✅ Continuous console error fixer running. Next check in ${AUTOMATION_INTERVAL / 1000 / 60} minutes`);
 // Handle graceful shutdown
 process.on('SIGINT', () => {
   // // // console.log('🛑 Received SIGINT, shutting down gracefully...');
@@ -232,13 +239,15 @@ process.on('SIGINT', () => {
 });
 process.on('SIGTERM', () => {
   // // // // // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
-// // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
+
+  // // // console.log('🛑 Received SIGTERM, shutting down gracefully...');
   process.exit(0);
 });
 // Start the continuous console error fixer
 runContinuous().catch(error => {
   // // // // // // // console.error('❌ Failed to start continuous console error fixer:', error);
-// // // console.error('❌ Failed to start continuous console error fixer:', error);
+
+  // // // console.error('❌ Failed to start continuous console error fixer:', error);
   process.exit(1);
 });
 }}}}}}}}}}}}}}}}}}}}}}}}})))

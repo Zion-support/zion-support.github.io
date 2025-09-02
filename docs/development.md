@@ -41,5 +41,4 @@ src/
 - Optimize bundle size with code splitting
 
 ---
-
-_Generated automatically by Smart Documentation Generator_
+*Generated automatically by Smart Documentation Generator*

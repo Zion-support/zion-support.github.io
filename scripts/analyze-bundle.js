@@ -10,7 +10,8 @@ async function analyzeBundle() {
     try {
       // // // // // // // console.log(`📦 Installing ${BUNDLE_ANALYZER_PACKAGE}...`);
       execSync(`npm install --save-dev ${BUNDLE_ANALYZER_PACKAGE}`, { stdio: 'inherit' });
-require.resolve(BUNDLE_ANALYZER_PACKAGE)} catch {
+
+      require.resolve(BUNDLE_ANALYZER_PACKAGE)} catch {
       console.log(`📦 Installing ${BUNDLE_ANALYZER_PACKAGE}...`);
       execSync(`npm install --save-dev ${BUNDLE_ANALYZER_PACKAGE}`, { stdio: 'inherit' })}
     // Build the project
@@ -22,7 +23,8 @@ require.resolve(BUNDLE_ANALYZER_PACKAGE)} catch {
     // Generate bundle report
     // // // // // // // console.error('❌ Bundle analysis failed:', error.message);
     process.exit(1);
-generateBundleReport()} catch (error) {
+
+    generateBundleReport()} catch (error) {
     console.error('❌ Bundle analysis failed:', error.message);
     process.exit(1)}
 }
@@ -32,7 +34,8 @@ function generateBundleReport() {
   if (!fs.existsSync(jsPath)) {
     // // // // // // // console.log('⚠️  No dist/js directory found. Run build first.');
     return;
-console.log('⚠️  No dist/js directory found. Run build first.');
+
+    console.log('⚠️  No dist/js directory found. Run build first.');
     return}
   const jsFiles = fs.readdirSync(jsPath)
     .filter(file => file.endsWith('.js'))
@@ -70,7 +73,8 @@ console.log('⚠️  No dist/js directory found. Run build first.');
     });
     // // // // // // // console.log('   Consider code splitting or lazy loading for these components.');
   }
-console.log(`   - ${file.name}: ${file.sizeKB} KB`)});
+
+      console.log(`   - ${file.name}: ${file.sizeKB} KB`)});
     console.log('   Consider code splitting or lazy loading for these components.')}
   const mediumFiles = jsFiles.filter(file => file.size > 50 * 1024 && file.size <= 100 * 1024);
   if (mediumFiles.length > 0) {
@@ -83,7 +87,8 @@ console.log(`   - ${file.name}: ${file.sizeKB} KB`)});
   // // // // // // // console.log('   - Optimize images and use modern formats (WebP, AVIF)');
   // // // // // // // console.log('   - Enable gzip compression on your server');
 }
-console.log(`   - ${file.name}: ${file.sizeKB} KB`)})}
+
+      console.log(`   - ${file.name}: ${file.sizeKB} KB`)})}
   // Performance tips
   console.log('\n🚀 Performance Tips:');
   console.log('   - Use React.lazy() for route-based code splitting');

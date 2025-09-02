@@ -27,21 +27,28 @@ module.exports = {
       disabled: true
     },
 
-    // Error Monitor - Monitors and detects errors
+    // Error Monitor - runs every 10 minutes
     {
       name: 'error-monitor',
-      script: './scripts/automation/error-monitor.cjs',
-      cwd: '/workspace',
+      script: './scripts/error-monitor.js',
       instances: 1,
       autorestart: true,
       watch: false,
-      restart_delay: 5000,
-      max_restarts: 10,
-      min_uptime: '10s',
-      log_file: './logs/error-monitor.log',
-      out_file: './logs/error-monitor-out.log',
+      max_memory_restart: '500M',
+      env: {
+        NODE_ENV: 'production'
+      },
       error_file: './logs/error-monitor-error.log',
-      cron_restart: '0 */2 * * *' // Restart every 2 hours
+      out_file: './logs/error-monitor-out.log',
+      log_file: './logs/error-monitor-combined.log',
+      time: false,
+      log_date_format: 'YYYY-MM-DD HH:mm:ss Z',
+      merge_logs: false,
+      max_restarts: 10,
+      min_uptime: '5s',
+      restart_delay: 2000,
+      cron_restart: '*/10 * * * *', // Run every 10 minutes
+      pmx: true
     },
 
     // Syntax Fixer - Automatically fixes syntax errors
@@ -135,7 +142,7 @@ module.exports = {
 
   deploy: {
     production: {
-      user: 'ubuntu',
+      user: 'deploy',
       host: 'localhost',
       ref: 'origin/main',
       repo: 'https://github.com/Zion-Holdings/zion.app.git',
