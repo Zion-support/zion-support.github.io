@@ -1,4 +1,8 @@
 import React, { useEffect } from 'react';
+import { Header } from '../src/components/Header';
+import Footer from '../src/components/layout/Footer';
+import PerformanceMonitor from '../src/components/PerformanceMonitor';
+
 export default function App({ Component, pageProps }) {
   return (
     <div className="min-h-screen flex flex-col">
