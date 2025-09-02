@@ -1,5 +1,3 @@
-import { render, screen } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
 import AIChatbotSystem from './AIChatbotSystem';
 
 describe('AIChatbotSystem', () => {
