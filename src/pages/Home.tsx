@@ -248,6 +248,8 @@ export default function Home() {
               Zion Tech Group
             </h1>
           </motion.div>
+        </div>
+      </section>
 
       {/* Stats Section */}
       <section className="relative z-10 py-16">
