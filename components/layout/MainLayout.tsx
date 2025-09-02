@@ -1,9 +1,7 @@
 import React from 'react';
-import Head from 'next/head';
 import Header from './Header';
 import Footer from './Footer';
 import PerformanceOptimizer from '../PerformanceOptimizer';
-import SEOEnhancer from '../SEOEnhancer';
 import AccessibilityEnhancer from '../AccessibilityEnhancer';
 import AnalyticsTracker from '../AnalyticsTracker';
 import EnhancedPerformanceMonitor from '../EnhancedPerformanceMonitor';
@@ -26,7 +24,6 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 }) => {
   return (
     <>
-      <PerformanceOptimizer />
       <SEOEnhancer 
         title={title}
         description={description}
@@ -37,14 +34,27 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       <SecurityEnhancer />
       <EnhancedPerformanceMonitor />
       
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main id="main-content" className="flex-grow">
-          {children}
-        </main>
-        <Footer />
-        <AccessibilityEnhancer />
-      </div>
+      <PerformanceOptimizer 
+        preloadImages={[
+          '/hero-bg.jpg',
+          '/services-bg.jpg',
+          '/team-bg.jpg'
+        ]}
+        preloadFonts={[
+          'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap'
+        ]}
+      />
+      
+      <AccessibilityEnhancer>
+      
+        <div className="min-h-screen flex flex-col">
+          <Header />
+          <main id="main-content" className="flex-grow" role="main">
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </AccessibilityEnhancer>
     </>
   );
 };
